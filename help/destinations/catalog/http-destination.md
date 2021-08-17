@@ -2,14 +2,13 @@
 keywords: transmissão contínua;
 title: Conexão HTTP
 description: O destino HTTP no Adobe Experience Platform permite enviar dados do perfil para pontos de extremidade HTTP de terceiros.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 2%
+source-wordcount: '361'
+ht-degree: 3%
 
 ---
-
 
 # (Alfa) [!DNL HTTP] conexão
 
@@ -29,54 +28,39 @@ O destino [!DNL HTTP] é direcionado para clientes que precisam exportar dados d
 
 [!DNL HTTP] os endpoints podem ser sistemas próprios do cliente ou soluções de terceiros.
 
-## Conecte-se ao Destino {#connect-destination}
+## Conecte-se ao destino {#connect}
 
-Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione [!DNL HTTP API] e selecione **[!UICONTROL Configure]**.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../ui/connect-destination.md).
 
-![Ativar destino HTTP](../assets/catalog/http/activate.png)
+### Parâmetros de conexão {#parameters}
 
-Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+Enquanto [configurar](../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
-![Ativar destino HTTP](../assets/catalog/http/connect.png)
+* **[!UICONTROL httpEndpoint]**: o  [!DNL URL] do ponto de extremidade HTTP para o qual você deseja enviar os dados do perfil.
+   * Como opção, você pode adicionar parâmetros de consulta ao [!UICONTROL httpEndpoint] [!DNL URL].
+* **[!UICONTROL authEndpoint]**: o  [!DNL URL] do endpoint HTTP usado para  [!DNL OAuth2] autenticação.
+* **[!UICONTROL ID]** do cliente: o  [!DNL clientID] parâmetro usado nas credenciais do  [!DNL OAuth2] cliente.
+* **[!UICONTROL Segredo]** do cliente: o  [!DNL clientSecret] parâmetro usado nas credenciais do  [!DNL OAuth2] cliente.
 
-Na etapa [!UICONTROL Account], é necessário definir os detalhes da conexão do ponto de extremidade HTTP. Selecione **[!UICONTROL New account]** e insira os detalhes da conexão do ponto de extremidade HTTP ao qual você deseja se conectar.
-- **[!UICONTROL httpEndpoint]**: a conclusão  [!DNL URL] do ponto de extremidade HTTP para o qual você deseja enviar os dados do perfil.
-   - Opcionalmente, é possível adicionar parâmetros de consulta ao [!UICONTROL httpEndpoint] [!DNL URL].
-- **[!UICONTROL authEndpoint]**: a conclusão  [!DNL URL] do endpoint HTTP usado para  [!DNL OAuth2] autenticação.
-- **[!UICONTROL Client ID]**: o  [!DNL clientID] parâmetro usado nas credenciais do  [!DNL OAuth2] cliente.
-- **[!UICONTROL Client Secret]**: o  [!DNL clientSecret] parâmetro usado nas credenciais do  [!DNL OAuth2] cliente.
+   >[!NOTE]
+   >
+   >No momento, há suporte somente para [!DNL OAuth2] credenciais de cliente.
 
->[!NOTE]
->
->No momento, há suporte somente para [!DNL OAuth2] credenciais de cliente.
+* **[!UICONTROL Nome]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
+* **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
+* **[!UICONTROL Cabeçalhos]** personalizados: insira quaisquer cabeçalhos personalizados que você deseja incluir nas chamadas de destino, seguindo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
 
-![Conexão de ponto de extremidade HTTP](../assets/catalog/http/connect.png)
+   >[!IMPORTANT]
+   >
+   >A implementação atual requer pelo menos um cabeçalho personalizado. Essa limitação será resolvida em uma atualização futura.
 
-Clique em **[!UICONTROL Connect to destination]**. Depois que a conexão for bem-sucedida, clique em **[!UICONTROL Next]**.
+## Ativar segmentos para este destino {#activate}
 
-Na etapa [!UICONTROL Authentication], insira as credenciais de autenticação da conta:
-- **[!UICONTROL Name]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
-- **[!UICONTROL Description]**: insira uma descrição que ajudará a identificar esse destino no futuro.
-- **[!UICONTROL Custom Headers]**: insira quaisquer cabeçalhos personalizados que você deseja incluir nas chamadas de destino, seguindo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
-- **[!UICONTROL Marketing actions]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](/help/data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](/help/data-governance/policies/overview.md).
+Consulte [Ativar perfis e segmentos para um destino](../ui/activate-destinations.md#select-attributes) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
->[!IMPORTANT]
->
->A implementação atual requer pelo menos um cabeçalho personalizado. Essa limitação será resolvida em uma atualização futura.
+## Atributos de destino {#attributes}
 
-![Autenticação HTTP](../assets/catalog/http/authenticate.png)
-
-**[!UICONTROL Marketing action]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../data-governance/policies/overview.md).
-
-Clique em **[!UICONTROL Create destination]**.
-
-## Ativar segmentos
-
-Consulte [Ativar perfis e segmentos para um destino](../ui/activate-destinations.md#select-attributes) para obter informações sobre o fluxo de trabalho de ativação de segmentos.
-
-## Atributos de destino
-
-Durante a etapa [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes), ao ativar segmentos](../ui/activate-destinations.md) em um destino [!DNL HTTP], recomendamos que você selecione um identificador exclusivo no [schema de união](../../profile/home.md#profile-fragments-and-union-schemas). [ Selecione o identificador exclusivo e quaisquer outros campos XDM que deseja exportar para o destino.
+Na etapa [[!UICONTROL Selecionar atributos]](../ui/activate-destinations.md#select-attributes), quando [ativar segmentos](../ui/activate-destinations.md) para um destino [!DNL HTTP], o Adobe recomenda selecionar um identificador exclusivo do [esquema de união](../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que deseja exportar para o destino.
 
 ## Dados exportados {#exported-data}
 

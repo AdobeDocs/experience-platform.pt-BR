@@ -1,7 +1,7 @@
 ---
 title: Regras
 description: Saiba como as extensões de tag funcionam no Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 82%
@@ -168,7 +168,7 @@ A Adobe não pode garantir que qualquer outra regra será acionada e que o códi
 * **JavaScript:** O JavaScript é carregado do servidor como texto regular, envolvido em uma tag de script e adicionado ao documento usando Postscribe. Se a regra tiver vários scripts personalizados JavaScript, eles serão carregados simultaneamente a partir do servidor, mas executados na mesma ordem em que foram configurados na regra.
 * **HTML:** O HTML é carregado do servidor e adicionado ao documento usando Postscribe. Se a regra tiver vários scripts personalizados HTML, eles serão carregados simultaneamente a partir do servidor, mas executados na mesma ordem em que foram configurados na regra.
 
-## Sequência de componentes da regra
+## Sequência de componentes da regra {#sequencing}
 
 O comportamento do ambiente de tempo de execução da tag depende se **[!UICONTROL Executar componentes de regra na sequência]** está ativado ou desativado para a propriedade.
 

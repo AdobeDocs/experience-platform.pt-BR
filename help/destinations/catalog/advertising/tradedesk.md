@@ -3,9 +3,9 @@ keywords: publicidade; o serviço de comércio; suporte comercial de anúncios
 title: A conexão com o Trade Desk
 description: O Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar redirecionamento e campanhas digitais direcionadas ao público-alvo em fontes de exibição, vídeo e inventário móvel.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
@@ -63,9 +63,9 @@ Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve 
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
-Na etapa [Agendamento do segmento](../../ui/activate-destinations.md#segment-schedule), você deve mapear manualmente os segmentos para a ID correspondente ou para o nome amigável na plataforma de destino.
+Na etapa [Agendamento do segmento](../../ui/activate-segment-streaming-destinations.md#scheduling), você deve mapear manualmente os segmentos para a ID correspondente ou para o nome amigável na plataforma de destino.
 
 Ao mapear segmentos, recomendamos que você use o nome de segmento da Plataforma ou uma forma mais curta dele, para facilitar o uso. No entanto, a ID do segmento ou o nome no seu destino não precisam corresponder ao nome na sua conta da plataforma. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 

@@ -3,9 +3,9 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1259'
 ht-degree: 2%
 
 ---
@@ -130,7 +130,7 @@ Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve 
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
 Na etapa **[!UICONTROL Segment schedule]**, você deve fornecer o [!UICONTROL Origin of audience] ao enviar segmentos para [!DNL Facebook Custom Audiences].
 

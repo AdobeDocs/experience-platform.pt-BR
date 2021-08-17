@@ -4,9 +4,9 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como para enviar campanhas de email promocionais.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 4%
 
 ---
@@ -70,9 +70,9 @@ Leia os artigos de destino de marketing por email individuais para saber como im
 
 ## Ativar segmentos para destinos de marketing por email {#activate}
 
-Para obter instruções sobre como ativar segmentos para destinos de marketing por email, consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md).
+Para obter instruções sobre como ativar segmentos para destinos de marketing por email, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md).
 
 ## Recursos adicionais
 
-* [Ativar dados para destinos](../../ui/activate-destinations.md)
+* [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md)
 * [Criar destinos de marketing por email e ativar dados usando a API do Serviço de fluxo](../../api/email-marketing.md)

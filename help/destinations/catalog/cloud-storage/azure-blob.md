@@ -3,9 +3,9 @@ keywords: Azure Blob; destino Blob; s3; destino de blob do azure
 title: Conexão Blob do Azure
 description: Crie uma conexão de saída em tempo real com o armazenamento do Azure Blob para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
    * [Tutorial](../../../xdm/tutorials/create-schema-ui.md) do Editor de esquema: Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver um destino [!DNL Blob] válido, poderá ignorar o restante deste documento e prosseguir para o tutorial em [ativando segmentos para seu destino](../../ui/activate-destinations.md).
+Se você já tiver um destino [!DNL Blob] válido, poderá ignorar o restante deste documento e prosseguir para o tutorial em [ativando segmentos para seu destino](../../ui/activate-batch-profile-destinations.md).
 
 ## Formatos de arquivo não suportados {#file-formats}
 
 [!DNL Experience Platform] O suporta o seguinte formato de arquivo a ser exportado para o  [!DNL Blob]:
 
-* Valores separados por delimitador (DSV): No momento, o suporte para arquivos de dados formatados em DSV está limitado a valores separados por vírgula. O suporte para arquivos DSV gerais será fornecido no futuro. Para obter mais informações sobre arquivos compatíveis, leia a seção armazenamento em nuvem no tutorial em [ativando destinos](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Valores separados por delimitador (DSV): No momento, o suporte para arquivos de dados formatados em DSV está limitado a valores separados por vírgula. O suporte para arquivos DSV gerais será fornecido no futuro.
 
 ## Conecte-se ao destino {#connect}
 
@@ -54,4 +54,4 @@ Opcionalmente, é possível anexar sua chave pública formatada em RSA para adic
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
+Consulte [Ativar dados do público-alvo para exportar perfis em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.

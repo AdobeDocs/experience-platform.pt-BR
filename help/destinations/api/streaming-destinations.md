@@ -6,9 +6,9 @@ description: Este documento aborda a criação de destinos de transmissão usand
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial usa o destino [!DNL Amazon Kinesis] em todos os exemplos, mas as e
 
 ![Visão geral - as etapas para criar um destino de transmissão e ativar segmentos](../assets/api/streaming-destination/overview.png)
 
-Se preferir usar a interface do usuário no Platform para se conectar a um destino e ativar dados, consulte os tutoriais [Conectar um destino](../ui/connect-destination.md) e [Ativar perfis e segmentos a um destino](../ui/activate-destinations.md) .
+Se preferir usar a interface do usuário no Platform para se conectar a um destino e ativar dados, consulte os tutoriais [Conectar um destino](../ui/connect-destination.md) e [Ativar dados do público-alvo para transmitir destinos de exportação de segmento](../ui/activate-segment-streaming-destinations.md).
 
 ## Introdução
 

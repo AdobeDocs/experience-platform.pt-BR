@@ -3,9 +3,9 @@ keywords: SFTP; sftp
 title: Conexão SFTP
 description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,22 @@ Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodic
 
 ![Tipo de exportação com base em perfil SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Conectar destino {#connect-destination}
+## Conecte-se ao destino {#connect}
 
-Consulte o [Fluxo de trabalho de destinos de armazenamento na nuvem ](./workflow.md) para obter instruções sobre como se conectar aos destinos de armazenamento na nuvem, incluindo SFTP.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-Para destinos SFTP, insira as seguintes informações no workflow criar destino , na etapa **Authentication** :
+### Parâmetros de conexão {#parameters}
+
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
 * **Host**: O endereço do local de armazenamento SFTP
 * **Nome de usuário**: O nome de usuário para fazer logon no local de armazenamento SFTP
 * **Senha**: A senha para fazer logon no local de armazenamento SFTP
+* **[!UICONTROL Nome]**: insira um nome que ajudará a identificar esse destino.
+* **[!UICONTROL Descrição]**: insira uma descrição deste destino.
+* **[!UICONTROL Caminho]** da pasta: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+
+Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser gravada como uma sequência de caracteres [!DNL Base64] codificada.
 
 ## Dados exportados {#exported-data}
 
@@ -42,4 +49,4 @@ Para destinos [!DNL SFTP], a Platform cria um arquivo `.csv` delimitado por tabu
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Consulte [lista de permissões de endereço IP para destinos de armazenamento em nuvem](./ip-address-allow-list.md) se precisar adicionar IPs Adobe a uma lista de permissões.
+Consulte [lista de permissões de endereço IP para destinos de armazenamento em nuvem](ip-address-allow-list.md) se precisar adicionar IPs Adobe a uma lista de permissões.

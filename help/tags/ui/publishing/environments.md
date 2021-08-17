@@ -1,9 +1,9 @@
 ---
 title: Ambientes
 description: Saiba mais sobre o conceito de ambientes de tags e como eles funcionam no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 79%
 
 ---
@@ -128,7 +128,7 @@ Para obter mais informações sobre essa configuração, consulte o guia sobre [
 
 #### Implantação síncrona
 
-Quando o navegador lê um código de inserção usando implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página. Também é assim que o [Dynamic Tag Management (DTM)](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) funciona.
+Quando o navegador lê um código de inserção usando implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página.
 
 Os códigos integrados síncronos consistem em duas tags `<script>` que devem ser colocadas dentro do HTML do seu site. Uma tag `<script>` deve ser colocada no documento `<head>`, enquanto a outra deve ser colocada antes da tag `</body>` de fechamento.
 

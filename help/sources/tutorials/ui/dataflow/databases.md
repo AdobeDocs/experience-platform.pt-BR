@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta do banco de dados.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1450'
 ht-degree: 0%
 
 ---
@@ -31,12 +30,12 @@ Além disso, este tutorial requer que você já tenha criado uma conta de banco 
 
 ## Selecionar dados
 
-Depois de criar a conta do banco de dados, a etapa **[!UICONTROL Select data]** é exibida, fornecendo uma interface interativa para explorar a hierarquia do banco de dados.
+Depois de criar sua conta de banco de dados, a etapa **[!UICONTROL Select data]** é exibida, fornecendo uma interface interativa para explorar a hierarquia do banco de dados.
 
 - A metade esquerda da interface é um navegador, exibindo a lista de bancos de dados da sua conta.
 - A metade direita da interface permite visualizar até 100 linhas de dados.
 
-Você pode usar a opção **[!UICONTROL Search]** na parte superior da página para identificar rapidamente os dados de origem que pretende usar.
+Você pode usar a opção **[!UICONTROL Pesquisar]** na parte superior da página para identificar rapidamente os dados de origem que pretende usar.
 
 >[!NOTE]
 >
@@ -55,11 +54,11 @@ Escolha um conjunto de dados para os dados de entrada que serão assimilados. Vo
 
 ### Usar um conjunto de dados existente
 
-Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Existing dataset]** e clique no ícone do conjunto de dados.
+Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]** e clique no ícone do conjunto de dados.
 
 ![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-A caixa de diálogo **[!UICONTROL Select dataset]** é exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **[!UICONTROL Continue]**.
+A caixa de diálogo **[!UICONTROL Selecionar conjunto de dados]** é exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **[!UICONTROL Continuar]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
@@ -67,19 +66,19 @@ A caixa de diálogo **[!UICONTROL Select dataset]** é exibida. Encontre o conju
 
 Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL New dataset]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
 
-Você pode anexar um campo de esquema inserindo um nome de esquema na barra de pesquisa **[!UICONTROL Select schema]**. Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar **[!UICONTROL Advanced search]** para acessar a tela de esquemas existentes, incluindo seus respectivos detalhes.
+Você pode anexar um campo de esquema inserindo um nome de esquema na barra de pesquisa **[!UICONTROL Select schema]**. Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar **[!UICONTROL Pesquisa avançada]** para acessar a tela de esquemas existentes, incluindo seus respectivos detalhes.
 
 Durante essa etapa, você pode ativar seu conjunto de dados para [!DNL Real-time Customer Profile] e criar uma exibição holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados ativados serão incluídos em [!DNL Profile] e as alterações serão aplicadas quando você salvar o fluxo de dados.
 
-Alterne o botão **[!UICONTROL Profile dataset]** para ativar o conjunto de dados de destino para [!DNL Profile].
+Alterne o botão **[!UICONTROL Conjunto de dados de perfil]** para ativar seu conjunto de dados de destino para [!DNL Profile].
 
 ![create-new-dataset](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-A caixa de diálogo **[!UICONTROL Select schema]** é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Done]**.
+A caixa de diálogo **[!UICONTROL Selecionar esquema]** é exibida. Selecione o esquema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
-Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre mapeamento de dados e funções de mapeador, consulte o tutorial em [mapear dados CSV para campos de esquema XDM](../../../../ingestion/tutorials/map-a-csv-file.md).
+Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter mais informações sobre funções do mapeador e campos calculados, consulte o [Guia de funções de Preparação de Dados](../../../../data-prep/functions.md) ou o [guia de campos calculados](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >
@@ -87,13 +86,13 @@ Com base em suas necessidades, você pode optar por mapear campos diretamente ou
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
-Selecione **[!UICONTROL Preview data]** para ver os resultados do mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+Selecione **[!UICONTROL Preview data]** para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
 
 Durante a visualização, a coluna de identidade é priorizada como o primeiro campo, pois são as informações principais necessárias ao validar resultados de mapeamento.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
 
-Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Close]**.
+Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Fechar]**.
 
 ## Agendar execução de ingestão
 
@@ -104,7 +103,7 @@ A etapa **[!UICONTROL Scheduling]** é exibida, permitindo configurar um agendam
 | Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day` e `Week`. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
 | Hora de início | Um carimbo de data e hora UTC indicando quando a primeira assimilação está definida para ocorrer. |
-| Preenchimento retroativo | Um valor booleano que determina quais dados são assimilados inicialmente. Se **[!UICONTROL Backfill]** estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Se **[!UICONTROL Backfill]** estiver desativado, somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
+| Preenchimento retroativo | Um valor booleano que determina quais dados são assimilados inicialmente. Se **[!UICONTROL Backfill]** estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Se **[!UICONTROL Backfill]** estiver desativado, somente os arquivos carregados entre a primeira execução de assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos do schema de origem do tipo, data ou hora. Esse campo é usado para diferenciar dados novos e existentes. Os dados incrementais serão assimilados com base no carimbo de data e hora da coluna selecionada. |
 
 Os fluxos de dados são projetados para assimilar dados automaticamente de forma programada. Comece selecionando a frequência de assimilação. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
@@ -121,7 +120,7 @@ Para configurar a assimilação única, selecione a seta suspensa de frequência
 
 >[!TIP]
 >
->**[!UICONTROL Interval]** e não  **[!UICONTROL Backfill]** são visíveis durante uma ingestão única.
+>**** Intervale  **** Backfilter não é visível durante uma ingestão única.
 
 Depois de fornecer os valores apropriados ao agendamento, selecione **[!UICONTROL Next]**.
 
@@ -129,20 +128,20 @@ Depois de fornecer os valores apropriados ao agendamento, selecione **[!UICONTRO
 
 ## Fornecer detalhes do fluxo de dados
 
-A etapa **[!UICONTROL Dataflow detail]** é exibida, permitindo nomear e fornecer uma breve descrição sobre o novo fluxo de dados.
+A etapa **[!UICONTROL Detalhes do fluxo de dados]** é exibida, permitindo nomear e fornecer uma breve descrição sobre o novo fluxo de dados.
 
-Durante esse processo, também é possível ativar **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**. Habilitar **[!UICONTROL Partial ingestion]** fornece a capacidade de assimilar dados contendo erros até um determinado limite. Quando **[!UICONTROL Partial ingestion]** estiver ativado, arraste o seletor **[!UICONTROL Error threshold %]** para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a [visão geral da ingestão parcial de lote](../../../../ingestion/batch-ingestion/partial.md).
+Durante esse processo, você também pode ativar **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erro]**. Habilitar **[!UICONTROL Assimilação parcial]** fornece a capacidade de assimilar dados contendo erros até um determinado limite. Depois que **[!UICONTROL Assimilação parcial]** estiver ativado, arraste a marcação **[!UICONTROL Error threshold %]** para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a [visão geral da ingestão parcial de lote](../../../../ingestion/batch-ingestion/partial.md).
 Forneça valores para o fluxo de dados e selecione **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## Revisar o fluxo de dados
 
-A etapa **[!UICONTROL Review]** é exibida, permitindo que você revise o novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você revise o novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-- **[!UICONTROL Connection]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas dentro desse arquivo de origem.
-- **[!UICONTROL Assign dataset & map fields]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
-- **[!UICONTROL Scheduling]**: Mostra o período ativo, a frequência e o intervalo do agendamento de ingestão.
+- **[!UICONTROL Conexão]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas dentro desse arquivo de origem.
+- **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
+- **[!UICONTROL Agendamento]**: Mostra o período ativo, a frequência e o intervalo do agendamento de ingestão.
 
 Depois de revisar o fluxo de dados, clique em **[!UICONTROL Finish]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
@@ -154,7 +153,7 @@ Depois que o fluxo de dados for criado, você poderá monitorar os dados que est
 
 ## Excluir seu fluxo de dados
 
-Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho **[!UICONTROL Dataflows]**. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [excluir fluxos de dados na interface do usuário](../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho **[!UICONTROL Fluxos de dados]**. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [excluir fluxos de dados na interface do usuário](../delete.md).
 
 ## Próximas etapas
 
@@ -171,7 +170,7 @@ As seções a seguir fornecem informações adicionais para trabalhar com conect
 
 Quando um fluxo de dados é criado, ele imediatamente se torna ativo e assimila dados de acordo com o cronograma que foi fornecido. Você pode desativar um fluxo de dados ativo a qualquer momento seguindo as instruções abaixo.
 
-No espaço de trabalho **[!UICONTROL Sources]**, selecione a guia **[!UICONTROL Dataflows]**. Em seguida, selecione o fluxo de dados que deseja desativar.
+No espaço de trabalho **[!UICONTROL Fontes]**, selecione a guia **[!UICONTROL Fluxos de dados]**. Em seguida, selecione o fluxo de dados que deseja desativar.
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 

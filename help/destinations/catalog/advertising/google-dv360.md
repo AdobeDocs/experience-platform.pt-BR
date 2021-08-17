@@ -3,9 +3,9 @@ keywords: Gerenciador de lances DoubleClick, Gerenciador de lances DoubleClick, 
 title: Conexão Google Display & Video 360
 description: Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas para o público-alvo em fontes de inventário de Exibição, Vídeo e Dispositivo móvel.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -59,19 +59,13 @@ Antes de criar o destino [!DNL Google Display & Video 360] na Plataforma, você 
 * **ID** do cliente: ID da conta do cliente do Adobe com o Google. ID do cliente: 89690775.
 * **Seu tipo** de conta: use  **[!DNL Invite advertiser]** para permitir que os públicos-alvo sejam compartilhados somente com uma marca específica em sua conta do Display &amp; Video 360 ou use  **[!DNL Invite partner]** para permitir que os públicos-alvo sejam compartilhados com todas as marcas em sua conta do Display &amp; Video 360 .
 
-## Configurar destino
+## Conecte-se ao destino {#connect}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Display & Video 360] e selecione **[!UICONTROL Configurar]**.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-![Conecte o destino Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/catalog.png)
+### Parâmetros de conexão {#parameters}
 
->[!NOTE]
->
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre [!UICONTROL Ativate] e [!UICONTROL Configure], consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
-
-Na etapa **Setup** do workflow de criação de destino, preencha as [!UICONTROL Informações básicas] para o destino, bem como as ações de marketing que devem se aplicar a esse destino.
-
-![Informações básicas sobre Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
@@ -79,15 +73,14 @@ Na etapa **Setup** do workflow de criação de destino, preencha as [!UICONTROL 
    * Use `Invite Advertiser` para permitir que os públicos-alvo sejam compartilhados somente com uma marca específica em sua conta do Display &amp; Video 360 .
    * Use `Invite Partner` para permitir que os públicos-alvo sejam compartilhados com todas as marcas em sua conta do Display &amp; Video 360.
 * **[!UICONTROL ID]** da conta: Preencha a ID da  **[!DNL Invite partner]** conta do  **[!DNL Invite advertiser]** ou com o Google. Normalmente, essa é uma ID de seis ou sete dígitos.
-* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
 >Ao configurar um destino [!DNL Google Display & Video 360], trabalhe com seu [!DNL Google Account Manager] ou representante do Adobe para entender qual tipo de conta você tem.
 
-## Ativar segmentos para [!DNL Google Display & Video 360]
+## Ativar segmentos para este destino {#activate}
 
-Para obter instruções sobre como ativar segmentos para [!DNL Google Display & Video 360], consulte [Ativar dados para destinos](../../ui/activate-destinations.md).
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
 ## Dados exportados
 

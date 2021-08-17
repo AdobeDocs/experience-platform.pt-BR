@@ -1,9 +1,9 @@
 ---
 title: 'Acesso à ECID '
 description: Extensão do SDK da Web da Adobe Experience Platform aproveitando a ECID nas tags
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '124'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ O [!DNL Experience Cloud Identity (ECID)] é um identificador persistente para u
 
 Para acessar a ECID nas tags, o Adobe recomenda o seguinte:
 
-1. Certifique-se de que a propriedade esteja configurada com a [sequência de componentes da regra](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing) ativada.
+1. Certifique-se de que a propriedade esteja configurada com a [sequência de componentes da regra](../../tags/ui/managing-resources/rules.md#sequencing) ativada.
 1. Crie uma nova regra.
 1. Adicione um evento [!UICONTROL Biblioteca carregada] à regra.
 1. Adicione uma ação [!UICONTROL Condição personalizada] à regra com o seguinte código (supondo que o nome que você configurou para a instância do SDK seja `alloy`):

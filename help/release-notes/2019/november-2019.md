@@ -5,8 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 2%
@@ -78,7 +77,7 @@ Consulte o [catálogo de destino](../../destinations/catalog/overview.md) para o
 
 **Limitações conhecidas**
 
-* O controle para permitir agendamentos de ativação personalizados no [fluxo de ativação](../../destinations/ui/activate-destinations.md#activate-data) (etapa de agendamento) não está disponível com a versão inicial.
+* O controle para permitir agendamentos de ativação personalizados no fluxo de ativação (etapa de agendamento) não está disponível com a versão inicial.
 * No momento, não há como editar ou excluir uma configuração de destino. Para contornar essa limitação, você pode habilitar ou desabilitar o destino no canto superior direito da [página de detalhes do destino](../../destinations/ui/destination-details-page.md).
 * Nenhuma validação está em vigor no momento para detalhes da conta, caminho ou credenciais ao se conectar ao destino ou à conta de armazenamento. Certifique-se de inserir as credenciais corretas e verifique novamente se há erros de ortografia ou erros de digitação.
 * Não há renovações de credenciais em vigor com a versão inicial. Depois que uma conta expirar ou precisar de atualização, você deve criar uma nova conexão de destino e remapear os segmentos mapeados anteriormente.
@@ -116,7 +115,7 @@ O Adobe Experience Platform [!DNL Data Science Workspace] permite que os cientis
 
 Para obter mais informações, consulte a [Visão geral do Data Science Workspace](../../data-science-workspace/home.md).
 
-## [!DNL Experience Data Model] Sistema (XDM)  {#xdm}
+## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
 A normalização e a interoperabilidade são conceitos-chave subjacentes a [!DNL Experience Platform]. [!DNL Experience Data Model] O (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 

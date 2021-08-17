@@ -3,9 +3,9 @@ keywords: Google ads, google ads, google adwords, Google AdWords, Google Adwords
 title: Conexão com o Google Ads
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem anúncios por clique em pesquisas baseadas em texto, exibições gráficas, vídeos YouTube e exibições móveis no aplicativo.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -66,29 +66,22 @@ Antes de criar o destino [!DNL Google Ads] na Plataforma, você deve entrar em c
 * Seu tipo de conta: **AdWords**
 * **ID do Google AdWords**: Essa é a sua ID com  [!DNL Google]. Normalmente, o formato da ID é 123-456-7890.
 
-## Configurar destino
+## Conecte-se ao destino {#connect}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Ads] e selecione **[!UICONTROL Configurar]**.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-![Conectar destino do Google Ads](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### Parâmetros de conexão {#parameters}
 
->[!NOTE]
->
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
-
-Na etapa **Configurar** do workflow criar destino, preencha o [!UICONTROL Informações básicas] para o destino.
-
-![Informações básicas sobre o Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
 * **[!UICONTROL Tipo]** de conta: O AdWords é a única opção disponível.
 * **[!UICONTROL ID]** da conta: Preencha a ID da conta com  [!DNL Google Ads]. Normalmente, o formato da ID é 123-456-7890.
-* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
-## Ativar segmentos para [!DNL Google Ads]
+## Ativar segmentos para este destino {#activate}
 
-Para obter instruções sobre como ativar segmentos para [!DNL Google Ads], consulte [Ativar dados para destinos](../../ui/activate-destinations.md).
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
 ## Dados exportados
 

@@ -5,10 +5,10 @@ title: Mapeamento de campos para a fonte de Marketo Engage
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -111,7 +111,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 
 {style=&quot;table-layout:auto&quot;}
 
-## Associações do Programa {#program-memberships}
+## Associações do programa {#program-memberships}
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -310,7 +310,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 
 >[!NOTE]
 >
->O campo de origem `to_object('ECID',arrays_to_objects('id',explode(ecids)))` é um campo calculado que deve ser adicionado usando a opção [!UICONTROL Add calculated field] na interface do usuário da plataforma. Consulte o tutorial em [adicionar campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obter mais informações.
+>O campo de origem `to_object('ECID',arrays_to_objects('id',explode(ecids)))` é um campo calculado que deve ser adicionado usando a opção [!UICONTROL Add calculated field] na interface do usuário da plataforma. Consulte o tutorial em [adicionar campos calculados](../../../../data-prep/calculated-fields.md) para obter mais informações.
 
 ## Próximas etapas
 

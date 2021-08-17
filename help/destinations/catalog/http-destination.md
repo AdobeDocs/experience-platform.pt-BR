@@ -3,9 +3,9 @@ keywords: transmissão contínua;
 title: Conexão HTTP
 description: O destino HTTP no Adobe Experience Platform permite enviar dados do perfil para pontos de extremidade HTTP de terceiros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,11 @@ Enquanto [configurar](../ui/connect-destination.md) esse destino, você deve for
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar perfis e segmentos para um destino](../ui/activate-destinations.md#select-attributes) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
+Consulte [Ativar dados do público-alvo para exportar perfis de fluxo contínuo](../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
-## Atributos de destino {#attributes}
+### Atributos de destino {#attributes}
 
-Na etapa [[!UICONTROL Selecionar atributos]](../ui/activate-destinations.md#select-attributes), quando [ativar segmentos](../ui/activate-destinations.md) para um destino [!DNL HTTP], o Adobe recomenda selecionar um identificador exclusivo do [esquema de união](../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que deseja exportar para o destino.
+Na etapa [[!UICONTROL Select attributes]](../ui/activate-streaming-profile-destinations.md#select-attributes), o Adobe recomenda que você selecione um identificador exclusivo no [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que deseja exportar para o destino.
 
 ## Dados exportados {#exported-data}
 

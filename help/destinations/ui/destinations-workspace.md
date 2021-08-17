@@ -4,14 +4,14 @@ title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em quatro seções: Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '861'
 ht-degree: 2%
 
 ---
 
-# Espaço de trabalho Destinos {#destinations-workspace}
+# Área de trabalho Destinos {#destinations-workspace}
 
 No Adobe Experience Platform, selecione **[!UICONTROL Destinations]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Destinations].
 
@@ -72,7 +72,7 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 
 >[!TIP]
 >
-> * Use o botão ![Adicionar segmentos](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Nome]** para [ativar](activate-destinations.md) mais segmentos para esse destino.
+> * Use o botão ![Add segments](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Name]** para enviar segmentos para esse destino.
 > * Use o botão ![Excluir destinos](../assets/ui/workspace/delete-destination-symbol.png) na coluna **[!UICONTROL Nome]** para [excluir](delete-destinations.md) uma conexão existente com um destino.
 
 
@@ -88,7 +88,7 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 | [!UICONTROL Nome do usuário] | As credenciais de conta que você selecionou para o fluxo de destino. |
 | [!UICONTROL Dados de ativação] | Indica o número de segmentos que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os segmentos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os segmentos ativados. |
 | [!UICONTROL Criado] | A data e a hora UTC em que o fluxo de ativação para o destino foi criado. |
-| [!UICONTROL Status] | `Active` ou `Inactive`. Indica se os dados estão sendo ativados para esse destino. Para editar o status, consulte [Desativar ativação](./activate-destinations.md#disable-activation). |
+| [!UICONTROL Status] | `Active` ou `Inactive`. Indica se os dados estão sendo ativados para esse destino. |
 
 Clique em uma linha de destino para exibir mais informações sobre o destino no painel direito.
 

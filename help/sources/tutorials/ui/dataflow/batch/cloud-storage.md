@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2001'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ A caixa de diálogo **[!UICONTROL Selecionar esquema]** é exibida. Selecione o 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre mapeamento de dados e funções de mapeador, consulte o tutorial em [mapear dados CSV para campos de esquema XDM](../../../../../ingestion/tutorials/map-a-csv-file.md).
+Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter mais informações sobre funções do mapeador e campos calculados, consulte o [Guia de funções de Preparação de Dados](../../../../../data-prep/functions.md) ou o [guia de campos calculados](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -217,8 +217,8 @@ Você pode excluir fluxos de dados que não são mais necessários ou foram cria
 
 Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados de um armazenamento externo em nuvem e ganhou informações sobre o monitoramento de conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados recebidos agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile]visão geral](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace]visão geral](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] visão geral](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >

@@ -3,10 +3,10 @@ keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -51,37 +51,24 @@ Como comerciante, desejo direcionar usuários em um destino de envolvimento móv
 **[!DNL Profile-based]** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campo.
 [!DNL Adobe Experience Platform] segmentos são exportados para o  [!DNL Braze] sob o  `AdobeExperiencePlatformSegments` atributo .
 
-## Conecte-se ao destino {#connect-destination}
+## Conecte-se ao destino {#connect}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Braze] e selecione **[!UICONTROL Configurar]**.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-![Configurar Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/configure.png)
+### Parâmetros de conexão {#parameters}
 
->[!NOTE]
->
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
->
->![Ativar Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/activate.png)
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
-Na etapa [!UICONTROL Account], é necessário fornecer o token de conta [!DNL Braze]. Esta é sua chave [!DNL Braze] [!DNL API]. Você pode encontrar instruções detalhadas sobre como obter sua chave [!DNL API] aqui: [Visão geral da chave da API REST](https://www.braze.com/docs/api/api_key/). Insira o token e clique em **[!UICONTROL Conectar ao destino]**.
-
-![Etapa da Conta de Destino Brasileira](../../assets/catalog/mobile-engagement/braze/account.png)
-
-Clique em **[!UICONTROL Próximo]**. Na etapa [!UICONTROL Authentication], é necessário inserir os detalhes da conexão [!DNL Braze]:
+* **[!UICONTROL Token]** da conta do Brasil: Essa é a sua  [!DNL Braze] [!DNL API] chave. Você pode encontrar instruções detalhadas sobre como obter sua chave [!DNL API] aqui: [Visão geral da chave da API REST](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Nome]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
 * **[!UICONTROL Instância]** do ponto de extremidade: pergunte ao seu  [!DNL Braze] representante qual instância de ponto de extremidade você deve usar.
-* **[!UICONTROL Ação]** de marketing: as ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
-![Etapa de Autenticação Brasileira](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## Ativar segmentos para este destino {#activate}
 
-Clique em **[!UICONTROL Criar destino]**. Seu destino foi criado. Você pode clicar em **[!UICONTROL Salvar e sair]** se desejar ativar segmentos posteriormente, ou selecionar **[!UICONTROL Próximo]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
-## Ativar segmentos {#activate-segments}
-
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md#select-attributes) para obter informações sobre o fluxo de trabalho de ativação de segmentos.
-
-## Mapeamento de campo {#field-mapping}
+## Considerações de mapeamento {#mapping-considerations}
 
 Para enviar corretamente os dados do público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL Braze], é necessário percorrer a etapa de mapeamento de campo.
 

@@ -6,9 +6,9 @@ seo-title: Editar fluxos de ativação
 description: Siga as etapas neste artigo para editar um fluxo de ativação existente no Adobe Experience Platform.
 seo-description: Siga as etapas neste artigo para editar um fluxo de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,10 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes no Adobe Ex
 
    ![Selecionar destino](../assets/ui/edit-activation/destination-select.png)
 
-4. A página de detalhes do destino é exibida, mostrando os controles disponíveis. Selecione **[!UICONTROL Ativate]** no painel direito para alterar quais segmentos enviar para o destino.
+4. A página **[!UICONTROL Dataflow executa]** para o destino é exibida, mostrando seus controles disponíveis. Selecione **[!UICONTROL Ativate]** no painel direito para alterar quais segmentos enviar para o destino.
+
+   Além disso, é possível editar o nome e a descrição do destino.
 
    ![Detalhes do destino](../assets/ui/edit-activation/destination-details.png)
 
-5. Consulte [Visão geral de ativação](activation-overview.md) para obter detalhes sobre como ativar novos segmentos.
+5. Consulte [Ativation overview](activation-overview.md) para obter detalhes sobre como ativar novos segmentos para seus destinos.

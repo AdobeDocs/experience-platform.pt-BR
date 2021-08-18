@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
 seo-description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
-source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
+source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
@@ -76,63 +76,9 @@ Alguns destinos de transmissão de segmento exigem que você selecione atributos
 
 1. Para adicionar mais mapeamentos, repita as etapas de 1 a 5.
 
-### Exemplo de mapeamento: ativação de dados de público-alvo em [!DNL Facebook Custom Audience] {#example-facebook}
 
-Abaixo está um exemplo do mapeamento de identidade correto ao ativar dados de público-alvo em [!DNL Facebook Custom Audience].
 
-Seleção de campos de origem:
 
-* Selecione o namespace `Email` como identidade de origem se os endereços de email que você está usando não estiverem com hash.
-* Selecione o namespace `Email_LC_SHA256` como identidade de origem se tiver colocado hash em endereços de email de clientes na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de email](../catalog/social/facebook.md#email-hashing-requirements).
-* Selecione o namespace `PHONE_E.164` como identidade de origem se seus dados consistirem em números de telefone não com hash. [!DNL Platform] O hash os números de telefone estão em conformidade com  [!DNL Facebook] os requisitos.
-* Selecione o namespace `Phone_SHA256` como identidade de origem se você tiver hash de números de telefone na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de número de telefone](../catalog/social/facebook.md#phone-number-hashing-requirements).
-* Selecione o namespace `IDFA` como identidade de origem se os dados consistem em [!DNL Apple] IDs de dispositivo.
-* Selecione o namespace `GAID` como identidade de origem se os dados consistem em [!DNL Android] IDs de dispositivo.
-* Selecione o namespace `Custom` como identidade de origem se os dados consistirem de outro tipo de identificadores.
-
-Seleção de campos de destino:
-
-* Selecione o namespace `Email_LC_SHA256` como identidade de destino quando os namespaces de origem forem `Email` ou `Email_LC_SHA256`.
-* Selecione o namespace `Phone_SHA256` como identidade de destino quando os namespaces de origem forem `PHONE_E.164` ou `Phone_SHA256`.
-* Selecione os namespaces `IDFA` ou `GAID` como identidade de destino quando os namespaces de origem forem `IDFA` ou `GAID`.
-* Selecione o namespace `Extern_ID` como identidade de destino quando o namespace de origem for personalizado.
-
->[!IMPORTANT]
->
->Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DNL Platform] após a ativação.
-> 
->Os dados da fonte de atributo não são automaticamente transformados em hash. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação.
-
-![Mapeamento de identidade](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
-### Exemplo de mapeamento: ativação de dados de público-alvo em [!DNL Google Customer Match] {#example-gcm}
-
-Este é um exemplo do mapeamento de identidade correto ao ativar dados de público-alvo em [!DNL Google Customer Match].
-
-Seleção de campos de origem:
-
-* Selecione o namespace `Email` como identidade de origem se os endereços de email que você está usando não estiverem com hash.
-* Selecione o namespace `Email_LC_SHA256` como identidade de origem se tiver colocado hash em endereços de email de clientes na assimilação de dados em [!DNL Platform], de acordo com [!DNL Google Customer Match] [requisitos de hash de email](../catalog/social/../advertising/google-customer-match.md).
-* Selecione o namespace `PHONE_E.164` como identidade de origem se seus dados consistirem em números de telefone não com hash. [!DNL Platform] O hash os números de telefone estão em conformidade com  [!DNL Google Customer Match] os requisitos.
-* Selecione o namespace `Phone_SHA256_E.164` como identidade de origem se você tiver hash de números de telefone na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de número de telefone](../catalog/social/../advertising/google-customer-match.md).
-* Selecione o namespace `IDFA` como identidade de origem se os dados consistem em [!DNL Apple] IDs de dispositivo.
-* Selecione o namespace `GAID` como identidade de origem se os dados consistem em [!DNL Android] IDs de dispositivo.
-* Selecione o namespace `Custom` como identidade de origem se os dados consistirem de outro tipo de identificadores.
-
-Seleção de campos de destino:
-
-* Selecione o namespace `Email_LC_SHA256` como identidade de destino quando os namespaces de origem forem `Email` ou `Email_LC_SHA256`.
-* Selecione o namespace `Phone_SHA256_E.164` como identidade de destino quando os namespaces de origem forem `PHONE_E.164` ou `Phone_SHA256_E.164`.
-* Selecione os namespaces `IDFA` ou `GAID` como identidade de destino quando os namespaces de origem forem `IDFA` ou `GAID`.
-* Selecione o namespace `User_ID` como identidade de destino quando o namespace de origem for personalizado.
-
-![Mapeamento de identidade](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
-
-Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DNL Platform] após a ativação.
-
-Os dados da fonte de atributo não são automaticamente transformados em hash. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação.
-
-![Transformação de mapeamento de identidade](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Agendar exportação de segmentos {#scheduling}
 

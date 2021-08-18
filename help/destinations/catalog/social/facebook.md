@@ -3,10 +3,10 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 2%
+source-wordcount: '1498'
+ht-degree: 1%
 
 ---
 
@@ -135,6 +135,35 @@ Consulte [Ativar os dados do público-alvo para os destinos de exportação de s
 Na etapa **[!UICONTROL Segment schedule]**, você deve fornecer o [!UICONTROL Origin of audience] ao enviar segmentos para [!DNL Facebook Custom Audiences].
 
 ![Origem do público-alvo do facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+
+### Exemplo de mapeamento: ativação de dados de público-alvo em [!DNL Facebook Custom Audience] {#example-facebook}
+
+Abaixo está um exemplo do mapeamento de identidade correto ao ativar dados de público-alvo em [!DNL Facebook Custom Audience].
+
+Seleção de campos de origem:
+
+* Selecione o namespace `Email` como identidade de origem se os endereços de email que você está usando não estiverem com hash.
+* Selecione o namespace `Email_LC_SHA256` como identidade de origem se tiver colocado hash em endereços de email de clientes na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de email](#email-hashing-requirements).
+* Selecione o namespace `PHONE_E.164` como identidade de origem se seus dados consistirem em números de telefone não com hash. [!DNL Platform] O hash os números de telefone estão em conformidade com  [!DNL Facebook] os requisitos.
+* Selecione o namespace `Phone_SHA256` como identidade de origem se você tiver hash de números de telefone na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de número de telefone](#phone-number-hashing-requirements).
+* Selecione o namespace `IDFA` como identidade de origem se os dados consistem em [!DNL Apple] IDs de dispositivo.
+* Selecione o namespace `GAID` como identidade de origem se os dados consistem em [!DNL Android] IDs de dispositivo.
+* Selecione o namespace `Custom` como identidade de origem se os dados consistirem de outro tipo de identificadores.
+
+Seleção de campos de destino:
+
+* Selecione o namespace `Email_LC_SHA256` como identidade de destino quando os namespaces de origem forem `Email` ou `Email_LC_SHA256`.
+* Selecione o namespace `Phone_SHA256` como identidade de destino quando os namespaces de origem forem `PHONE_E.164` ou `Phone_SHA256`.
+* Selecione os namespaces `IDFA` ou `GAID` como identidade de destino quando os namespaces de origem forem `IDFA` ou `GAID`.
+* Selecione o namespace `Extern_ID` como identidade de destino quando o namespace de origem for personalizado.
+
+>[!IMPORTANT]
+>
+>Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DNL Platform] após a ativação.
+> 
+>Os dados da fonte de atributo não são automaticamente transformados em hash. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação.
+
+![Mapeamento de identidade](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Dados exportados {#exported-data}
 

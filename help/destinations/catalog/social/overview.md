@@ -3,10 +3,10 @@ keywords: social;destinos sociais;Livefyre;facebook;Facebook
 title: Visão geral dos destinos sociais
 description: Com destinos sociais, você pode ativar perfis para suas campanhas para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 1%
+source-wordcount: '105'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +20,9 @@ Com destinos sociais, você pode ativar perfis para suas campanhas para direcion
 
 Atualmente, o Adobe Experience Platform oferece suporte aos seguintes destinos sociais:
 
-* [Extensão do Adobe Livefyre](adobe-livefyre.md)
-* [[!DNL Facebook] extensão](facebook.md)
-* [Conexão de públicos-alvo correspondentes do Linkedin](linkedin.md)
+* [Adobe [!DNL Livefyre] extensão](adobe-livefyre.md)
+* [[!DNL Facebook] conexão](facebook.md)
+* [[!DNL LinkedIn Matched Audiences] conexão](linkedin.md)
 
 ## Conectar-se a um novo destino social {#connect-destination}
 

@@ -4,9 +4,9 @@ title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em quatro seções: Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -72,8 +72,8 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 
 >[!TIP]
 >
-> * Use o botão ![Add segments](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Name]** para enviar segmentos para esse destino.
-> * Use o botão ![Excluir destinos](../assets/ui/workspace/delete-destination-symbol.png) na coluna **[!UICONTROL Nome]** para [excluir](delete-destinations.md) uma conexão existente com um destino.
+> * Selecione os três pontos na coluna [!UICONTROL Nome] e use o botão ![Adicionar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**para enviar segmentos para esse destino.
+> * Selecione os três pontos na coluna [!UICONTROL Nome] e use o botão ![Excluir destinos](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**para [remover](delete-destinations.md) uma conexão existente para um destino.
 
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ A guia **[!UICONTROL Exibição do sistema]** exibe uma representação gráfica
 
 ![Fluxos de dados1](../assets/ui/workspace/data-flows1.png)
 
-Selecione qualquer um dos destinos exibidos na página e clique em **[!UICONTROL Exibir fluxos]** para ver informações sobre todas as conexões que você configurou para cada destino.
+Selecione qualquer destino exibido na página e clique em **[!UICONTROL Exibir fluxo de dados]** para ver informações sobre todas as conexões que você configurou para cada destino.
 
 ![Fluxos de dados2](../assets/ui/workspace/data-flows2.png)

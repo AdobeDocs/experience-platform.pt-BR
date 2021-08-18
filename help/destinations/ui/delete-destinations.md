@@ -4,9 +4,9 @@ title: Excluir destinos
 type: Tutorial
 description: Este tutorial lista as etapas para excluir um destino existente na interface do usuário do Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -40,10 +40,10 @@ Siga as etapas abaixo para excluir um destino da guia [!UICONTROL Procurar].
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecione o botão ![Delete](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** na coluna **[!UICONTROL Platform]** para remover um destino existente.
+3. Selecione o botão ![Mais](../assets/ui/delete-destinations/more-icon.png) na coluna Nome e selecione ![Botão Excluir](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Excluir]** para remover uma conexão de destino existente.
    ![Excluir destinos](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Selecione **[!UICONTROL Delete]** para confirmar a remoção do destino.
+4. Selecione **[!UICONTROL Delete]** para confirmar a remoção da conexão de destino.
 
    ![Confirmar exclusão de destino](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 

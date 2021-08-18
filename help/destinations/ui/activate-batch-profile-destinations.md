@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Ativar dados do público-alvo para destinos de exportação de perfil em lote
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 1%
 
 ---
@@ -270,7 +270,7 @@ Vamos considerar os dois perfis a seguir.
 }
 ```
 
-### Caso de uso de desduplicação 1: sem desduplicação
+### Caso de uso de desduplicação 1: sem desduplicação {#deduplication-use-case-1}
 
 Sem desduplicação, o arquivo de exportação conteria as seguintes entradas.
 
@@ -280,7 +280,7 @@ Sem desduplicação, o arquivo de exportação conteria as seguintes entradas.
 | johndoe@example.com | John | D |
 
 
-### Caso de uso de desduplicação 2: desduplicação com base no namespace de identidade
+### Caso de uso de desduplicação 2: desduplicação com base no namespace de identidade {#deduplication-use-case-2}
 
 Considerando a desduplicação pelo namespace [!DNL Email], o arquivo de exportação conteria as seguintes entradas. O Perfil B é o mais recente que se qualificou para o segmento, por isso é o único que está sendo exportado.
 
@@ -289,7 +289,7 @@ Considerando a desduplicação pelo namespace [!DNL Email], o arquivo de exporta
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### Caso de uso de desduplicação 3: desduplicação com base em um único atributo de perfil
+### Caso de uso de desduplicação 3: desduplicação com base em um único atributo de perfil {#deduplication-use-case-3}
 
 Considerando a desduplicação pelo atributo `personal Email`, o arquivo de exportação conteria a seguinte entrada. O Perfil B é o mais recente que se qualificou para o segmento, por isso é o único que está sendo exportado.
 
@@ -298,7 +298,7 @@ Considerando a desduplicação pelo atributo `personal Email`, o arquivo de expo
 | johndoe@example.com | John | D |
 
 
-### Caso de uso de desduplicação 4: desduplicação com base em dois atributos de perfil (chave de desduplicação composta)
+### Caso de uso de desduplicação 4: desduplicação com base em dois atributos de perfil {#deduplication-use-case-4}
 
 Considerando a desduplicação pela chave composta `personalEmail + lastName`, o arquivo de exportação conteria as seguintes entradas.
 

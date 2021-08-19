@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Ativar dados do público-alvo para destinos de exportação de perfil em lote
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
-source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
+source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1933'
 ht-degree: 1%
 
 ---
@@ -64,10 +64,10 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
 
 1. Use o seletor **[!UICONTROL Frequency]** para selecionar a frequência de exportação:
 
-   * **[!UICONTROL Uma vez]**: agendar uma exportação de arquivo sob demanda única.
-   * **[!UICONTROL Diariamente]**: agende exportações completas de arquivos uma vez por dia, todos os dias, da data de início à data de término às 12:00 AM UTC (7:00 PM EST).
+   * **[!UICONTROL Uma vez]**: agendar uma exportação de arquivo completo sob demanda única.
+   * **[!UICONTROL Diariamente]**: agendar exportações completas de arquivos uma vez por dia, todos os dias, no momento especificado.
 
-1. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer. Exportar um arquivo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data de início para a data de término no momento selecionado.
+1. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
    >[!IMPORTANT]
    >
@@ -89,14 +89,14 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expor
 
 1. Use o seletor **[!UICONTROL Frequency]** para selecionar a frequência de exportação:
 
-   * **[!UICONTROL Diariamente]**: agende exportações de arquivos incrementais uma vez por dia, todos os dias, da data de início à data de término às 12:00 AM UTC (7:00 PM EST).
+   * **[!UICONTROL Diariamente]**: agendar exportações de arquivos incrementais uma vez por dia, todos os dias, no momento especificado.
    * **[!UICONTROL Por hora]**: agendar exportações de arquivos incrementais a cada 3,6,7 ou 12 horas.
 
 2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
    >[!IMPORTANT]
    >
-   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. <br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+   >Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.

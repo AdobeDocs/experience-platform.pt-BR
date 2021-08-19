@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Ativar dados do público-alvo para destinos de exportação de perfil em lote
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
-source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
+source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '1990'
 ht-degree: 1%
 
 ---
@@ -58,24 +58,28 @@ Selecione o botão **[!UICONTROL Create schedule]** correspondente ao segmento q
 
 ### Exportar arquivos completos {#export-full-files}
 
-Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos exportados contenham um instantâneo completo de todos os perfis qualificados para esse segmento.
+Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportação de um arquivo contendo um instantâneo completo de todas as qualificações de perfil para o segmento selecionado.
 
 ![Exportar arquivos completos](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Use o seletor **[!UICONTROL Frequency]** para escolher entre exportações únicas (**[!UICONTROL Once]**) ou **[!UICONTROL Diariamente]**. Exportar um arquivo completo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 AM UTC (7:00 PM EST).
-2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer. Exportar um arquivo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data de início para a data de término no momento selecionado.
+1. Use o seletor **[!UICONTROL Frequency]** para selecionar a frequência de exportação:
+
+   * **[!UICONTROL Uma vez]**: agendar uma exportação de arquivo sob demanda única.
+   * **[!UICONTROL Diariamente]**: agende exportações completas de arquivos uma vez por dia, todos os dias, da data de início à data de término às 12:00 AM UTC (7:00 PM EST).
+
+1. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer. Exportar um arquivo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data de início para a data de término no momento selecionado.
 
    >[!IMPORTANT]
    >
-   >A opção de exportar arquivos em um determinado horário do dia está atualmente em beta e está disponível somente para um número selecionado de clientes.<br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+   >Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
-3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
-4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
+1. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
+1. Selecione **[!UICONTROL Create]** para salvar o agendamento.
 
 
 ### Exportar arquivos incrementais {#export-incremental-files}
 
-Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos exportados contenham apenas os perfis que se qualificaram para esse segmento desde a última exportação.
+Selecione **[!UICONTROL Exportar arquivos incrementais]** para acionar uma exportação onde o primeiro arquivo é um instantâneo completo de todas as qualificações de perfil para o segmento selecionado e os arquivos subsequentes são qualificações de perfil incrementais desde a exportação anterior.
 
 >[!IMPORTANT]
 >
@@ -83,12 +87,10 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
 ![Exportar arquivos incrementais](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Use o seletor **[!UICONTROL Frequency]** para escolher entre **[!UICONTROL Exportações Diárias]** ou **[!UICONTROL Por hora]**. Exportar um arquivo incremental **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 PM UTC (7:00 AM EST).
-   * Ao selecionar **[!UICONTROL Por hora]**, use o seletor **[!UICONTROL Cada]** para escolher entre as opções **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** por hora.
+1. Use o seletor **[!UICONTROL Frequency]** para selecionar a frequência de exportação:
 
-      >[!IMPORTANT]
-      >
-      >A opção para exportar arquivos incrementais a cada 3, 6, 8 ou 12 horas está atualmente em beta e está disponível somente para um número selecionado de clientes. Os clientes não beta podem exportar arquivos incrementais uma vez por dia.
+   * **[!UICONTROL Diariamente]**: agende exportações de arquivos incrementais uma vez por dia, todos os dias, da data de início à data de término às 12:00 AM UTC (7:00 PM EST).
+   * **[!UICONTROL Por hora]**: agendar exportações de arquivos incrementais a cada 3,6,7 ou 12 horas.
 
 2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
@@ -164,6 +166,8 @@ As exportações de arquivo variam das seguintes maneiras, dependendo se `segmen
 >abstract="Selecione os atributos de esquema XDM que todos os perfis exportados devem incluir. Os perfis sem a chave obrigatória não são exportados para o destino. A não seleção de uma chave obrigatória exporta todos os perfis qualificados, independentemente de seus atributos."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Saiba mais na documentação"
 
+Um atributo obrigatório é uma caixa de seleção ativada pelo usuário, que garante que todos os registros de perfil contenham o atributo selecionado. Por exemplo: todos os perfis exportados contêm um endereço de email. &#x200B;
+
 Você pode marcar atributos como obrigatórios para garantir que [!DNL Platform] exporte apenas os perfis que incluam o atributo específico. Como resultado, ele pode ser usado como uma forma adicional de filtragem. Marcar um atributo como obrigatório é **não** necessário.
 
 A não seleção de um atributo obrigatório exporta todos os perfis qualificados, independentemente de seus atributos.
@@ -178,9 +182,7 @@ Recomenda-se que um dos atributos seja um [identificador exclusivo](../../destin
 >abstract="Elimine vários registros do mesmo perfil nos arquivos de exportação selecionando uma chave de desduplicação. Selecione um namespace único ou até dois atributos de esquema XDM como uma chave de desduplicação. Não selecionar uma chave de desduplicação pode levar a entradas de perfil duplicadas nos arquivos de exportação."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Saiba mais na documentação"
 
->[!IMPORTANT]
->
->A opção para usar chaves de desduplicação está atualmente em beta e só está disponível para um número selecionado de clientes.
+Uma chave de desduplicação é uma chave primária definida pelo usuário que determina a identidade pela qual os usuários desejam que seus perfis sejam desduplicados. &#x200B;
 
 Chaves de desduplicação eliminam a possibilidade de ter vários registros do mesmo perfil em um arquivo de exportação.
 

@@ -4,9 +4,9 @@ user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Coleta de dados
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 79%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 79%
    * [Visão geral](./ui/administration/overview.md)
    * [Empresas e propriedades](./ui/administration/companies-and-properties.md)
    * [Permissões de usuário](./ui/administration/user-permissions.md)
+   * [Gerenciar permissões](./ui/administration/manage-permissions.md)
 * Extensões {#extensions}
    * [Visão geral](./extensions/overview.md)
    * Extensões da Adobe {#adobe}

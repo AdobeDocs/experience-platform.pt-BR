@@ -1,10 +1,10 @@
 ---
-title: Perguntas frequentes
+title: Guia de solução de problemas de tags
 description: Obtenha respostas para perguntas frequentes sobre tags no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 30%
+source-wordcount: '1055'
+ht-degree: 26%
 
 ---
 
@@ -92,6 +92,16 @@ A maioria dos clientes do Adobe aproveita os recursos mais modernos da plataform
 ## As tags funcionam em aplicativos móveis nativos?
 
 Sim! As tags agora oferecem suporte a propriedades e configuração móveis para o novo Adobe Experience Platform [Mobile SDKs](https://sdkdocs.com) para implementar a coleta e a entrega de dados em um ambiente de aplicativo móvel nativo. Visite a [documentação](https://sdkdocs.com) para saber mais.
+
+## Por que a interface do usuário está dizendo que houve um erro ao carregar minha conta?
+
+Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que sua conta não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](./ui/administration/manage-permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso à interface do usuário da coleta de dados.
+
+## Por que não posso adicionar nenhuma propriedade na interface do usuário do ?
+
+Se não for possível criar novas propriedades quando conectado à interface do usuário da coleta de dados, significa que a conta não pertence a um perfil de produto com o direito de Gerenciar propriedades.
+
+Consulte o guia sobre [gerenciamento de permissões](./ui/administration/manage-permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder o direito de Gerenciar propriedades. Para obter mais informações sobre os diferentes direitos para tags, consulte a visão geral sobre [permissões de usuário para tags](./ui/administration/user-permissions.md).
 
 ## E se eu tiver outras dúvidas?
 

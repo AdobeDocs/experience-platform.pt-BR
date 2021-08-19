@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
 seo-description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -43,14 +43,9 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 
 ## Mapear atributos e identidades {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Aplicar transformação"
->abstract="Marque essa opção ao usar campos de origem sem hash para que o Adobe Experience Platform os faça automaticamente com hash na ativação."
-
 >[!IMPORTANT]
 >
->Essa etapa se aplica somente a alguns destinos de transmissão de segmento. Se os destinos não tiverem uma etapa **[!UICONTROL Mapping]**, pule para [Schedule segment export](#scheduling).
+>Essa etapa se aplica somente a alguns destinos de transmissão de segmento. Se o destino não tiver uma etapa **[!UICONTROL Mapping]**, pule para [Schedule segment export](#scheduling).
 
 Alguns destinos de transmissão de segmento exigem que você selecione atributos de origem ou namespaces de identidade para mapear como identidades de destino no destino.
 
@@ -76,8 +71,17 @@ Alguns destinos de transmissão de segmento exigem que você selecione atributos
 
 1. Para adicionar mais mapeamentos, repita as etapas de 1 a 5.
 
+### Aplicar transformação {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Aplicar transformação"
+>abstract="Marque essa opção ao usar campos de origem sem hash para que o Adobe Experience Platform os faça automaticamente com hash na ativação."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Saiba mais na documentação"
 
+Quando você está mapeando atributos de origem sem hash para atributos de destino que o destino espera ter hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform faça o hash automático dos atributos de origem na ativação.
+
+![Mapeamento de identidade](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## Agendar exportação de segmentos {#scheduling}

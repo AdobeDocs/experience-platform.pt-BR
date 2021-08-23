@@ -3,9 +3,9 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, polític
 title: Visão geral das políticas de mesclagem
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma exibição completa de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a exibição unificada.
-source-git-commit: c2cc1428e3a70cf987adab583e9f9fb5d5140c74
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Quando os dados de várias fontes estão em conflito (por exemplo, um fragmento 
 
 As políticas de mesclagem são privadas para a Organização IMS, permitindo que você crie políticas diferentes para mesclar schemas de acordo com as maneiras específicas de que precisa. Você também pode especificar uma política de mesclagem padrão que será usada se não for fornecida explicitamente. Consulte a seção sobre [políticas de mesclagem padrão](#default-merge-policy) mais adiante neste documento para saber mais.
 
-## Mesclar métodos {#merge-methods}
+## Métodos de mesclagem {#merge-methods}
 
 Cada fragmento de perfil contém informações para apenas uma identidade do número total de identidades que podem existir para um indivíduo. Ao mesclar esses dados para formar um perfil de cliente, há a possibilidade de essas informações entrarem em conflito e a prioridade deve ser especificada.
 
@@ -45,7 +45,6 @@ Há dois métodos de mesclagem possíveis disponíveis para políticas de mescla
 
 * **[!UICONTROL Precedência do conjunto de dados]:** no caso de um conflito, dê prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Ao selecionar essa opção, você deve escolher os conjuntos de dados relacionados e sua ordem de prioridade. Saiba mais sobre o método de mesclagem [precedência do conjunto de dados](#dataset-precedence).
 * **[!UICONTROL Carimbo de data e hora solicitado]:** no caso de um conflito, a prioridade é dada ao fragmento de perfil que foi atualizado mais recentemente. Saiba mais sobre o método de mesclagem [timestamp ordered](#timestamp-ordered).
-   * **Carimbos de data e hora personalizados:** O método de mesclagem solicitada pelo carimbo de data e hora também oferece suporte a carimbos de data e hora personalizados que têm prioridade sobre os carimbos de data e hora do sistema ao mesclar dados no mesmo conjunto de dados (várias identidades) ou em vários conjuntos de dados. Para saber mais, consulte a seção sobre [uso de carimbos de data e hora personalizados](#custom-timestamps).
 
 ### Precedência do conjunto de dados {#dataset-precedence}
 
@@ -56,22 +55,6 @@ Para criar uma política de mesclagem usando **[!UICONTROL Dataset precedence]**
 ### Carimbo de data e hora ordenado {#timestamp-ordered}
 
 À medida que os registros de perfil são assimilados no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da assimilação e adicionado ao registro. Quando **[!UICONTROL Carimbo de data e hora solicitado]** é selecionado como o método de mesclagem para uma política de mesclagem, os perfis são mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora de quando o registro foi assimilado na Platform.
-
-#### Uso de carimbos de data e hora personalizados {#custom-timestamps}
-
-Ocasionalmente, pode haver casos de uso em que seja necessário fornecer um carimbo de data e hora personalizado e fazer com que a política de mesclagem honre o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema. Exemplos disso incluem o preenchimento retroativo de dados ou a garantia da ordem correta dos eventos se os registros forem assimilados fora de ordem.
-
-Para usar um carimbo de data e hora personalizado, o grupo de campos **[!UICONTROL Detalhes de Auditoria do Sistema de Origem Externa]** deve ser adicionado ao esquema Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o campo `lastUpdatedDate` . Quando um registro é assimilado com o campo `lastUpdatedDate` preenchido, o Experience Platform usará esse campo para unir registros em conjuntos de dados. Se `lastUpdatedDate` não estiver presente ou não estiver preenchida, a Platform continuará a usar o carimbo de data e hora do sistema.
-
->[!NOTE]
->
->Você deve garantir que o carimbo de data e hora `lastUpdatedDate` seja preenchido ao assimilar uma atualização no mesmo registro.
-
-A captura de tela a seguir exibe os campos no grupo de campos [!UICONTROL Detalhes de Auditoria do Sistema de Origem Externa]. Para obter instruções passo a passo sobre como trabalhar com esquemas usando a interface do usuário da plataforma, incluindo como adicionar grupos de campos a esquemas, visite o [tutorial para criar um esquema usando a interface do usuário](../../xdm/tutorials/create-schema-ui.md).
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-Para trabalhar com carimbos de data e hora personalizados usando a API, consulte a seção [guia do ponto de extremidade de políticas de mesclagem sobre o uso de carimbos de data e hora personalizados](../api/merge-policies.md#custom-timestamps).
 
 ## Compilação de identidade {#id-stitching}
 

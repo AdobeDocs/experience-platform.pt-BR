@@ -4,10 +4,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 14%
+source-wordcount: '639'
+ht-degree: 13%
 
 ---
 
@@ -73,6 +73,8 @@ ht-degree: 14%
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Conector Shopify](connectors/ecommerce/shopify.md)
+   - Sistema local {#local-system}
+      - [Conector de upload de arquivo local](connectors/local-system/local-file-upload.md)
    - Automação de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
       - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -214,6 +216,8 @@ ht-degree: 14%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - Sistema local {#local-system}
+         - [Upload de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automação de marketing {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)

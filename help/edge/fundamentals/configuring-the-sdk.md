@@ -4,10 +4,10 @@ description: Saiba como configurar o SDK da Web da Adobe Experience Platform.
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configurar; configuração; SDK; borda; SDK da Web; configurar; edgeConfigId; contexto; Web; dispositivo; ambiente; placeContext; debugEnabled; edgeDomain; orgId; clickCollectionEnabled; onBeforeEventSend; defaultConsent; configurações de sdk da web; prehideStyle; opacity; cookieDestinationsEnabled; urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 15%
+source-wordcount: '856'
+ht-degree: 14%
 
 ---
 
@@ -31,6 +31,10 @@ Há muitas opções que podem ser definidas durante a configuração. Todas as o
 ## Opções gerais
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**As configurações de borda foram remarcadas para Datastreams. Uma ID de conjunto de dados é igual a uma ID de configuração.**
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |

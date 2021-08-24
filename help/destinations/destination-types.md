@@ -4,9 +4,9 @@ title: Tipos e categorias de destino
 seo-title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,26 @@ No Adobe Experience Platform, distinguimos entre dois tipos de destino: conexõe
 
 ## Conexões {#connections}
 
-**[!UICONTROL Exportar]** perfis e  **[!UICONTROL segmentar destinos de]** exportação no Adobe Experience Platform capturar dados de evento, combiná-los com outras fontes de dados para formar o Perfil do cliente em tempo  [real](../profile/home.md), aplicar segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Perfil]** Exportar e  **[!UICONTROL Streaming de segmentos]** Exportar destinos em dados de evento de captura do Adobe Experience Platform, combiná-los com outras fontes de dados para formar o Perfil do cliente em tempo real [ ](../profile/home.md), aplicar segmentação e exportar segmentos e perfis qualificados para destinos.
 
 ## Destinos de exportação de perfil
 
-Os destinos de exportação de perfil geram um arquivo contendo perfis e/ou atributos. Esses destinos usam dados brutos, geralmente com endereço de email como a chave primária. O [destino de armazenamento em nuvem do Amazon S3](./catalog/cloud-storage/amazon-s3.md) é um exemplo de destino onde você pode depositar arquivos contendo exportações de perfil.
+Os destinos de exportação de perfil recebem dados brutos, geralmente com o endereço de email como a chave primária. Atualmente, o Experience Platform suporta dois tipos de destinos de exportação de perfil:
 
-## Destinos de exportação de segmento
+* [Destinos de exportação de perfil de transmissão](#streaming-profile-export)
+* [Destinos baseados em arquivo](#file-based)
 
-Os destinos de exportação de segmentos enviam os perfis e os segmentos para os quais eles se qualificaram nas plataformas de destino. Esses destinos usam ID de segmento ou IDs de usuário. Destinos de publicidade como [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) ou [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) são exemplos desses tipos de destinos.
+### Destinos de exportação de perfil de transmissão {#streaming-profile-export}
+
+Os destinos de exportação de perfil de fluxo recebem dados de segmento e perfil como fluxos de dados de Experience Platform. [O Amazon ](catalog/cloud-storage/amazon-kinesis.md) Kinesisand e o  [Azure Event ](catalog/cloud-storage/azure-event-hubs.md) Hubssão exemplos de tais destinos.
+
+### Destinos baseados em arquivo {#file-based}
+
+Os destinos baseados em arquivo recebem `.csv` arquivos contendo perfis e/ou atributos. [O Amazon S3](catalog/cloud-storage/amazon-s3.md) é um exemplo de destino onde é possível depositar arquivos contendo exportações de perfil.
+
+## Destinos de exportação de segmento de fluxo
+
+Os destinos de exportação de segmento recebem dados de Experience Platform segment. Esses destinos usam IDs de segmento ou IDs de usuário. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) e  [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) são exemplos desses destinos.
 
 ## Exportar perfis e exportar segmentos - visão geral do vídeo
 

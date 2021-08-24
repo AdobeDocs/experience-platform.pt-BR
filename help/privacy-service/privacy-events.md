@@ -5,10 +5,9 @@ title: Inscrever-se em eventos do Privacy Service
 topic-legacy: privacy events
 description: Saiba como assinar eventos do Privacy Service usando um webhook pré-configurado.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -39,11 +38,11 @@ Revise a seguinte documentação do Privacy Service antes de iniciar este tutori
 
 Para receber [!DNL Privacy Service Events], você deve usar o Console do desenvolvedor do Adobe para registrar um webhook na sua integração [!DNL Privacy Service].
 
-Siga o tutorial em [assinar [!DNL I/O Event] notificações](../observability/notifications/subscribe.md) para obter etapas detalhadas sobre como fazer isso. Certifique-se de escolher **[!UICONTROL Privacy Service Events]** como seu provedor de eventos para acessar os eventos listados acima.
+Siga o tutorial em [assinar [!DNL I/O Event] notificações](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso. Certifique-se de escolher **[!UICONTROL Privacy Service Events]** como seu provedor de eventos para acessar os eventos listados acima.
 
 ## Receber notificações [!DNL Privacy Service Event]
 
-Depois de registrar com êxito seu webhook e os trabalhos de privacidade tiverem sido executados, você poderá começar a receber notificações de eventos. Esses eventos podem ser visualizados usando o próprio webhook ou selecionando a guia **[!UICONTROL Debug Tracing]** na visão geral de registro de eventos do seu projeto no Console do desenvolvedor do Adobe.
+Depois de registrar com êxito seu webhook e os trabalhos de privacidade tiverem sido executados, você poderá começar a receber notificações de eventos. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando a guia **[!UICONTROL Debug Tracing]** na visão geral de registro de eventos do seu projeto no Console do desenvolvedor do Adobe.
 
 ![](images/privacy-events/debug-tracing.png)
 

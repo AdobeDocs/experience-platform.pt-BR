@@ -4,10 +4,10 @@ description: Notas de versão do Experience Platform de 25 de agosto de 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 12%
+source-wordcount: '457'
+ht-degree: 9%
 
 ---
 
@@ -20,6 +20,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Insights de capacidade de observação](#observability)
 - [Perfil do cliente em tempo real](#profile)
+- [Fontes](#sources)
 
 ## Insights de capacidade de observação {#observability}
 
@@ -42,3 +43,15 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 | Procurar perfis por política de mesclagem ou identidade | Ao navegar pelos perfis no Experience Platform, agora é possível navegar pela política de mesclagem para visualizar 20 perfis de amostra com base na política de mesclagem selecionada. Você também pode navegar por identidade para procurar por um perfil específico usando um namespace de identidade e valor de identidade relacionado. Para obter mais informações, consulte o [Guia da interface do usuário do perfil do cliente em tempo real](../../profile/ui/user-guide.md). |
 
 Para saber mais sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados de perfil, comece lendo a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+
+## Fontes {#sources}
+
+A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+
+O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Conector de origem de carregamento de arquivo local | A categoria de assimilação de arquivo foi renomeada para sistema local, permitindo trazer arquivos locais diretamente para a Platform usando o conector de upload de arquivo local. Os dados assimilados por meio desse conector podem ser monitorados pelo Painel de monitoramento. Consulte a [visão geral da fonte de upload de arquivo local](../../sources/connectors/local-system/local-file-upload.md) para obter mais informações. |
+
+Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

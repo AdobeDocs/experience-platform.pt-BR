@@ -5,10 +5,9 @@ title: Recuperando Diagnósticos de Erro de Ingestão de Dados
 topic-legacy: overview
 description: Este documento fornece informações sobre o monitoramento da ingestão em lote, o gerenciamento de erros de ingestão em lote parcial, bem como uma referência para tipos de ingestão em lote parcial.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '979'
 ht-degree: 2%
 
 ---
@@ -46,7 +45,7 @@ Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes 
 >
 >Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-## Download do diagnóstico de erro {#download-diagnostics}
+## Download do diagnóstico de erros {#download-diagnostics}
 
 O Adobe Experience Platform permite que os usuários baixem o diagnóstico de erro dos arquivos de entrada. Os diagnósticos serão retidos em [!DNL Platform] por até 30 dias.
 
@@ -107,7 +106,7 @@ Uma resposta bem-sucedida retornará objetos JSON detalhando onde os diagnóstic
 }
 ```
 
-### Recuperar o diagnóstico do arquivo de entrada {#retrieve-diagnostics}
+### Recuperar diagnósticos do arquivo de entrada {#retrieve-diagnostics}
 
 Depois de recuperar uma lista de todos os arquivos de entrada diferentes, você poderá recuperar os diagnósticos do arquivo individual usando a seguinte solicitação.
 
@@ -147,17 +146,19 @@ Se os lotes contiverem falhas, você deverá recuperar as informações do erro 
 
 ### Verificar status {#check-status}
 
-Para verificar o status do lote assimilado, é necessário fornecer a ID do lote no caminho de uma solicitação do GET.
+Para verificar o status do lote assimilado, é necessário fornecer a ID do lote no caminho de uma solicitação do GET. Para saber mais sobre como usar essa chamada de API, leia o [guia do endpoint do catálogo](../../catalog/api/list-objects.md).
 
 **Formato da API**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{BATCH_ID}` | O valor `id` do lote do qual você deseja verificar o status. |
+| `{FILTER}` | Um parâmetro de consulta usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por &quot;E&quot; comercial (`&`). Para obter mais informações, leia o guia em [filtrar dados do catálogo](../../catalog/api/filter-data.md). |
 
 **Solicitação**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da correspondência de segmentos
 topic-legacy: overview
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,17 @@ Os rótulos de uso de dados permitem categorizar os conjuntos de dados e campos 
 [!DNL Segment Match] O usa o rótulo C11, um rótulo de contrato específico para o  [!DNL Segment Match] qual você pode adicionar manualmente a qualquer conjunto de dados ou atributo para garantir que eles sejam excluídos do processo de compartilhamento de  [!DNL Segment Match] parceiros. O rótulo C11 indica dados que não devem ser usados em processos [!DNL Segment Match]. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir de [!DNL Segment Match] e adicionar o rótulo C11 de acordo, o rótulo é aplicado automaticamente pelo workflow [!DNL Segment Match]. [!DNL Segment Match] ativa automaticamente a política  [!UICONTROL Restrict data ] Sharingcore . Para obter instruções específicas sobre como aplicar rótulos de uso de dados a conjuntos de dados, consulte o tutorial em [gerenciar rótulos de uso de dados na interface do usuário](../../data-governance/labels/user-guide.md).
 
 Para obter uma lista de rótulos de uso de dados e suas definições, consulte o glossário de [rótulos de uso de dados](../../data-governance/labels/reference.md). Para obter informações sobre políticas de uso de dados, consulte a [visão geral das políticas de uso de dados](../../data-governance/policies/overview.md).
+
+### Como entender as permissões [!DNL Segment Match]
+
+Há duas permissões associadas a [!DNL Segment Match]:
+
+| Permissão | Descrição |
+| --- | --- |
+| Gerenciar conexões de compartilhamento de público-alvo | Essa permissão permite concluir o processo de handshake do parceiro, que conecta duas Organizações IMS para ativar os fluxos [!DNL Segment Match]. |
+| Gerenciar compartilhamentos de público-alvo | Essa permissão permite criar, editar e publicar feeds (o pacote de dados usado para [!DNL Segment Match]) com parceiros ativos (parceiros que foram conectados pelo usuário administrador com acesso a **[!UICONTROL Conexões de compartilhamento de público-alvo]**). |
+
+Consulte a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre controle de acesso e permissões.
 
 ## [!DNL Segment Match] fluxo de trabalho completo
 

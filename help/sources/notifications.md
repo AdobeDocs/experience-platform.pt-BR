@@ -5,10 +5,9 @@ solution: Experience Platform
 title: Notificações de Execução de Fluxo
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '785'
 ht-degree: 1%
 
 ---
@@ -33,14 +32,14 @@ Este documento também requer uma compreensão funcional de webhooks e como cone
 
 Para receber notificações de execução de fluxo, você deve usar o Console do desenvolvedor do Adobe para registrar um webhook em sua integração [!DNL Experience Platform].
 
-Siga o tutorial em [assinar [!DNL I/O Event] notificações](../observability/notifications/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
+Siga o tutorial em [assinar [!DNL I/O Event] notificações](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
 >Durante o processo de assinatura, selecione **[!UICONTROL Platform notifications]** como o provedor de eventos e selecione as seguintes assinaturas de eventos:
 >
->* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
->* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
+>* **[!UICONTROL Êxito na Execução do Fluxo da Fonte de Experience Platform]**
+>* **[!UICONTROL Falha na Execução de Fluxo da Fonte Experience Platform]**
 
 
 ## Receber notificações de execução de fluxo

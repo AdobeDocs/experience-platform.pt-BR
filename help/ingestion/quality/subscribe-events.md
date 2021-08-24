@@ -5,10 +5,9 @@ title: Notificações de assimilação de dados
 topic-legacy: overview
 description: Para auxiliar no monitoramento do processo de ingestão, a Adobe Experience Platform possibilita a assinatura de um conjunto de eventos publicados por cada etapa do processo, notificando o status dos dados assimilados e quaisquer possíveis falhas.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '681'
 ht-degree: 1%
 
 ---
@@ -25,15 +24,15 @@ Para auxiliar no monitoramento do processo de assimilação, [!DNL Experience Pl
 
 Para receber notificações de assimilação de dados, você deve usar [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui) para registrar um webhook na integração do Experience Platform.
 
-Siga o tutorial em [assinar [!DNL Adobe I/O Event] notificações](../../observability/notifications/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
+Siga o tutorial em [assinar [!DNL Adobe I/O Event] notificações](../../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
->Durante o processo de assinatura, selecione **[!UICONTROL Platform notifications]** como provedor de eventos e selecione a assinatura de evento **[!UICONTROL Data ingestion notification]** quando solicitado.
+>Durante o processo de assinatura, selecione **[!UICONTROL Platform notifications]** como o provedor de eventos e selecione a assinatura de evento **[!UICONTROL Data ingestion notification]** quando solicitado.
 
 ## Receber notificações de assimilação de dados
 
-Depois de registrar o webhook com êxito e os novos dados terem sido assimilados, você pode começar a receber notificações de eventos. Esses eventos podem ser visualizados usando o próprio webhook ou selecionando a guia **[!UICONTROL Debug Tracing]** na visão geral de registro de eventos do seu projeto no Console do desenvolvedor do Adobe.
+Depois de registrar o webhook com êxito e os novos dados terem sido assimilados, você pode começar a receber notificações de eventos. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando a guia **[!UICONTROL Debug Tracing]** na visão geral de registro de eventos do seu projeto no Console do desenvolvedor do Adobe.
 
 O JSON a seguir é um exemplo de carga de notificação que seria enviada para o seu webhook no caso de um evento de ingestão em lote com falha:
 
@@ -73,7 +72,7 @@ Para visualizar o esquema completo das notificações de eventos, consulte o [re
 
 ## Próximas etapas
 
-Depois de registrar [!DNL Platform] notificações no seu projeto, você poderá visualizar os eventos recebidos do [!UICONTROL Project overview]. Consulte o guia em [Rastreando eventos Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) para obter instruções detalhadas sobre como rastrear seus eventos.
+Depois de registrar as notificações [!DNL Platform] no seu projeto, você poderá visualizar os eventos recebidos da [!UICONTROL Visão geral do projeto]. Consulte o guia em [Rastreando eventos Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) para obter instruções detalhadas sobre como rastrear seus eventos.
 
 ## Apêndice
 
@@ -83,7 +82,7 @@ A seção a seguir contém informações adicionais sobre a interpretação de c
 
 A tabela a seguir lista as notificações de status da assimilação de dados disponíveis que podem ser assinadas.
 
-| Código do evento | Serviço de plataforma | Status | Descrição do Evento |
+| Código do evento | Serviço de plataforma | Status | Descrição do evento |
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | Um lote foi assimilado com êxito em um conjunto de dados dentro do [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | falha | Um lote não pôde ser assimilado em um conjunto de dados dentro do [!DNL Data Lake]. |

@@ -1,12 +1,12 @@
 ---
 title: Variáveis do Adobe Analytics mapeadas automaticamente no SDK da Web da Adobe Experience Platform
 description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analytics com o SDK da Web do Experience Platform
-seo-description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analytics com o SDK da Web da Adobe Experience Platform
+seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics; variáveis; analytics; mapa automático; mapeado automaticamente;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
+source-git-commit: 09c6986fcd3682377725ded389496d5076e9e1e2
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,8 @@ Abaixo está uma lista de variáveis que a Adobe Experience Platform Edge Networ
 | `placeContext.geo.postalCode` | `zip` | Mapeamento ZIP do parâmetro de consulta do AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Mapeamento de STATE do parâmetro de consulta AppMeasurement. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parâmetro de consulta AppMeasurement: mapeamento de Eventos de merchandise de produtos/Evars. |
-| `productlistitems.[N].name` | `products` | Parâmetro de consulta do AppMeasurement Mapeamento do nome dos produtos. |
+| `productListItems[N].lineItemId` | `products` | Parâmetro de consulta do AppMeasurement Mapeamento do nome dos produtos. |
+| `productlistitems.[N].name` | `products` | Parâmetro de consulta AppMeasurement Mapeamento de categoria de produtos. |
 | `productlistitems.[N].priceTotal` | `products` | Parâmetro de consulta AppMeasurement Mapeamento de preço de produtos. |
 | `productlistitems.[N].quantity` | `products` | Parâmetro de consulta AppMeasurement - Mapeamento de quantidade de produtos. |
 | `web.webInteraction.URL` | `pev1` | Mapeamento do parâmetro de consulta do AppMeasurement PAGE_EVENT_VAR1. |

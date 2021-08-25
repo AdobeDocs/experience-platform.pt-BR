@@ -3,16 +3,16 @@ title: Depuração no SDK da Web da Adobe Experience Platform
 description: Saiba como alternar recursos de depuração no SDK da Web do Experience Platform.
 keywords: depurar o sdk da web, depurar, configurar, comando configurar, comando depurar, edgeConfigId, setDebug, debugEnabled, depurar;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
 
 # Depuração
 
-Quando a depuração está ativada, o SDK gera mensagens para o console do navegador que podem ser úteis na depuração da implementação e na compreensão de como o SDK está se comportando. A depuração também resulta em uma validação síncrona do lado do servidor dos dados coletados com o esquema configurado.
+Quando a depuração está ativada, o SDK gera mensagens para o console do navegador que podem ser úteis na depuração da implementação e na compreensão de como o SDK está se comportando.
 
 A depuração é desativada por padrão, mas pode ser ativada de três maneiras diferentes:
 

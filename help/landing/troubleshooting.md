@@ -7,8 +7,7 @@ landing-page-description: Encontre respostas para perguntas frequentes e um guia
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-translation-type: tm+mt
-source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 4%
@@ -25,7 +24,7 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Adobe Exp
 
 ## O que são APIs [!DNL Experience Platform]? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] O oferece várias RESTful APIs que usam solicitações HTTP para acessar  [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem executar operações para listar (GET), pesquisar (GET), editar (PUT e/ou PATCH) e excluir recursos (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a [documentação de Referência da API](http://www.adobe.com/go/platform-api-reference-en) no Adobe I/O.
+[!DNL Experience Platform] O oferece várias RESTful APIs que usam solicitações HTTP para acessar  [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem executar operações para listar (GET), pesquisar (GET), editar (PUT e/ou PATCH) e excluir recursos (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a [documentação de Referência da API](https://www.adobe.com/go/platform-api-reference-en) no Adobe I/O.
 
 ## Como formatar uma solicitação de API? {#how-do-i-format-an-api-request}
 
@@ -95,9 +94,9 @@ Os seguintes códigos de status podem ser encontrados em qualquer API [!DNL Expe
 | 404 | Não encontrado | Não foi possível localizar o recurso solicitado no servidor. O recurso pode ter sido excluído ou o caminho solicitado foi inserido incorretamente. |
 | 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisa filtrar os resultados. (Consulte o subguia [!DNL Catalog Service] do guia do desenvolvedor de API em [filtrar dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar sua solicitação novamente e entre em contato com o administrador se o problema persistir. |
 
-## Erros de cabeçalho da solicitação {#request-header-errors}
+## Erros do cabeçalho da solicitação {#request-header-errors}
 
-Todas as chamadas de API em [!DNL Platform] exigem cabeçalhos de solicitação específicos. Para ver quais cabeçalhos são necessários para serviços individuais, consulte a [documentação de Referência da API](http://www.adobe.com/go/platform-api-reference-en). Para localizar os valores para os cabeçalhos de autenticação necessários, consulte o [Tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Se algum desses cabeçalhos estiver ausente ou inválido ao fazer uma chamada à API, os seguintes erros podem ocorrer.
+Todas as chamadas de API em [!DNL Platform] exigem cabeçalhos de solicitação específicos. Para ver quais cabeçalhos são necessários para serviços individuais, consulte a [documentação de Referência da API](https://www.adobe.com/go/platform-api-reference-en). Para localizar os valores para os cabeçalhos de autenticação necessários, consulte o [Tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Se algum desses cabeçalhos estiver ausente ou inválido ao fazer uma chamada à API, os seguintes erros podem ocorrer.
 
 ### O token OAuth está ausente {#oauth-token-is-missing}
 
@@ -190,7 +189,7 @@ Esta mensagem de erro é exibida quando uma solicitação POST, PUT ou PATCH tem
 
 Esta mensagem de erro é exibida quando sua conta (representada pelas credenciais de autenticação fornecidas) não está associada a um perfil de produto para o Experience Platform. Siga as etapas em [gerando credenciais de acesso](./api-authentication.md#authentication-for-each-session) no tutorial de autenticação da API da plataforma para adicionar a Platform à sua conta e atualizar suas credenciais de autenticação de acordo.
 
-## Diretório de solução de problemas de serviço {#service-troubleshooting-directory}
+## Diretório de solução de problemas do serviço {#service-troubleshooting-directory}
 
 Veja a seguir uma lista de guias de solução de problemas e a documentação de referência da API para APIs [!DNL Experience Platform]. Cada guia de solução de problemas fornece respostas a perguntas frequentes e soluções para problemas específicos a serviços individuais [!DNL Platform]. Os documentos de referência da API fornecem um guia abrangente de todos os endpoints disponíveis para cada serviço e mostram exemplos de corpos de solicitação, respostas e códigos de erro que você pode receber.
 

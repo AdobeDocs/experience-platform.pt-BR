@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '536'
 ht-degree: 10%
 
 ---
@@ -16,9 +16,22 @@ ht-degree: 10%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Destinos](#destinations)
 - [Insights de capacidade de observação](#observability)
 - [Perfil do cliente em tempo real](#profile)
 - [Fontes](#sources)
+
+## Destinos {#destinations}
+
+Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| [Aprimoramentos de usabilidade para destinos](../../destinations/ui/activation-overview.md) | As melhorias de usabilidade para destinos permitem que os profissionais de marketing ativem segmentos com facilidade para destinos existentes. |
+
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Insights de capacidade de observação {#observability}
 

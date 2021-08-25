@@ -5,10 +5,10 @@ solution: Experience Platform
 title: LISTA DE PERMISSÕES de endereço IP para conexões de origem
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: fcdf6209ef3fa7c4685fadd3322f631b608e4605
+source-git-commit: d6926fb32a5c14ef7c6eec4c7c28c2fd46d52f3a
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 2%
+source-wordcount: '111'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o tráfego para o serviço de transferência de dados. Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes.
 
-## VA7
+## VA7: América do Norte
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -31,7 +31,7 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## NLD2
+## NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -41,7 +41,7 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## AUS5
+## AUS5: Austrália
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`

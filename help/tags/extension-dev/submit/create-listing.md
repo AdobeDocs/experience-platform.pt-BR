@@ -1,7 +1,7 @@
 ---
 title: Criar uma lista do Exchange para uma extensão
 description: Saiba como adicionar sua extensão ao catálogo público no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8705cfa65cb1d3a738610821ece827c2af33615
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 59%
@@ -41,9 +41,9 @@ Se você já tiver uma conta da empresa ou se não planeja concluir a lista, ign
 1. Forneça suas informações de lista. Para obter informações detalhadas sobre o App Manager, leia todo o [artigo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). As informações de listagem devem ser muito claras sobre o que a extensão faz e por que são úteis. A listagem funciona como um espaço de marketing para seu aplicativo. Promova sua extensão aqui usando descrições claras, links para landing pages do site, links para documentos de ajuda ou endereços de email de suporte e assim por diante. Embora o espaço nas exibições de extensão seja limitado, a listagem do Exchange oferece uma oportunidade de promover sua extensão e sua empresa. Veja a seguir sugestões para melhorar a promoção da extensão:
    - **Ícone de aplicativo** - Verifique se o ícone da lista do Exchange tem as dimensões apropriadas, 512 x 512 para png ou proporção 1:1 para jpg.
 
-   >[!NOTE]
-   >
-   >Este é um formato de arquivo diferente do usado no código de extensão. A própria extensão conterá um arquivo svg como o [ícone](../manifest.md).
+      >[!NOTE]
+      >
+      >Este é um formato de arquivo diferente do usado no código de extensão. A própria extensão conterá um arquivo svg como o [ícone](../manifest.md).
 
    - **Imagem em destaque**  - Obtenha atenção usando uma imagem que pode ser independente e mostrará sua marca e destacará seu aplicativo. A Imagem em destaque é aquela que aparece quando alguém compartilha um link com sua listagem do Exchange ou posta sobre ela em redes sociais. Portanto, precisa ser uma representação modelo de sua marca.
    - **Logotipo do App Publisher** - este é o logotipo corporativo. Verifique se o ícone tem as dimensões apropriadas de 1280 x 720 ou 2560 x 1440 (16:9) em formato png ou jpg.

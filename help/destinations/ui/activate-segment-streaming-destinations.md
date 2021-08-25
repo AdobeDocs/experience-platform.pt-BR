@@ -2,12 +2,12 @@
 keywords: ativar destinos de transmissão de segmento, ativar destinos de transmissão de segmento, ativar dados
 title: Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
 type: Tutorial
-seo-title: Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
+seo-title: Activate audience data to streaming segment export destinations
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
-seo-description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ Para ativar dados em destinos, você deve ter [conectado com êxito a um destino
 
 ## Selecione o destino {#select-destination}
 
-1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Browse]**.
+1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Catalog]**.
 
-   ![Guia Navegação de destino](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![Guia Catálogo de destino](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Selecione o botão **[!UICONTROL Add segments]** correspondente ao destino onde você deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
+1. Selecione **[!UICONTROL Ativar segmentos]** no cartão correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
 
-   ![Botões Ativar](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![Botões Ativar](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. Selecione a conexão de destino que deseja usar para ativar seus segmentos e selecione **[!UICONTROL Next]**.
+
+   ![Selecionar destino](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Mova para a próxima seção para [selecionar seus segmentos](#select-segments).
 
@@ -81,10 +85,17 @@ Alguns destinos de transmissão de segmento exigem que você selecione atributos
 
 Quando você está mapeando atributos de origem sem hash para atributos de destino que o destino espera ter hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform faça o hash automático dos atributos de origem na ativação.
 
-![Mapeamento de identidade](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![Mapeamento de identidade](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Agendar exportação de segmentos {#scheduling}
+
+Por padrão, a página [!UICONTROL Segment schedule] mostra apenas os segmentos recém-selecionados que você escolheu no fluxo de ativação atual.
+
+![Novos segmentos](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+Para visualizar todos os segmentos que estão sendo ativados no seu destino, use a opção de filtragem e desative o filtro **[!UICONTROL Mostrar somente novos segmentos]**.
+
+![Todos os segmentos](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. Na página **[!UICONTROL Segment schedule]**, selecione cada segmento e use os seletores **[!UICONTROL Start date]** e **[!UICONTROL End date]** para configurar o intervalo de tempo para enviar dados ao seu destino.
 
@@ -120,7 +131,7 @@ Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL
 
 ## Verificar ativação de segmento {#verify}
 
-Verifique a conta de destino. Se a ativação tiver sido bem-sucedida, os públicos-alvo serão preenchidos na plataforma de destino.
+Verifique a [documentação de monitoramento de destino](../../dataflows/ui/monitor-destinations.md) para obter informações detalhadas sobre como monitorar o fluxo de dados para seus destinos.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.

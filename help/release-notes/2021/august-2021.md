@@ -4,10 +4,10 @@ description: Notas de versão do Experience Platform de 25 de agosto de 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 9%
+source-wordcount: '534'
+ht-degree: 8%
 
 ---
 
@@ -18,9 +18,22 @@ ht-degree: 9%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Destinos](#destinations)
 - [Insights de capacidade de observação](#observability)
 - [Perfil do cliente em tempo real](#profile)
 - [Fontes](#sources)
+
+## Destinos {#destinations}
+
+Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| [Aprimoramentos de usabilidade para destinos](../../destinations/ui/activation-overview.md) | As melhorias de usabilidade para destinos permitem que os profissionais de marketing ativem segmentos com facilidade para destinos existentes. |
+
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Insights de capacidade de observação {#observability}
 

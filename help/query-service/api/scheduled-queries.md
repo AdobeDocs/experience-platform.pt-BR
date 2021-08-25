@@ -5,7 +5,7 @@ title: Ponto de Extremidade da API de Consultas Agendadas
 topic-legacy: scheduled queries
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas agendadas com a API do serviço de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 2%
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | O nome do banco de dados para o qual você está criando uma consulta agendada. |
 | `query.sql` | A consulta SQL que você deseja criar. |
 | `query.name` | O nome da consulta agendada. |
-| `schedule.schedule` | O cronograma de execução do query. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Neste exemplo, &quot;30 * * * *&quot; significa que o query será executado a cada hora na marca de 30 minutos.<br><br>Como alternativa, você pode usar as seguintes expressões abreviadas:<ul><li>`@once`: A consulta só é executada uma vez.</li><li>`@hourly`: O query é executado a cada hora no início da hora. É equivalente à expressão cron `0 * * * *`.</li><li>`@daily`: O query é executado uma vez por dia à meia-noite. É equivalente à expressão cron `0 0 * * *`.</li><li>`@weekly`: O query é executado uma vez por semana, no domingo, à meia-noite. É equivalente à expressão cron `0 0 * * 0`.</li><li>`@monthly`: O query é executado uma vez por mês, no primeiro dia do mês, à meia-noite. É equivalente à expressão cron `0 0 1 * *`.</li><li>`@yearly`: O query é executado uma vez por ano, em 1º de janeiro, à meia-noite. É equivalente à expressão cron `1 0 0 1 1 *`. |
+| `schedule.schedule` | O cronograma de execução do query. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Neste exemplo, &quot;30 * * * *&quot; significa que o query será executado a cada hora na marca de 30 minutos.<br><br>Como alternativa, você pode usar as seguintes expressões abreviadas:<ul><li>`@once`: A consulta só é executada uma vez.</li><li>`@hourly`: O query é executado a cada hora no início da hora. É equivalente à expressão cron `0 * * * *`.</li><li>`@daily`: O query é executado uma vez por dia à meia-noite. É equivalente à expressão cron `0 0 * * *`.</li><li>`@weekly`: O query é executado uma vez por semana, no domingo, à meia-noite. É equivalente à expressão cron `0 0 * * 0`.</li><li>`@monthly`: O query é executado uma vez por mês, no primeiro dia do mês, à meia-noite. É equivalente à expressão cron `0 0 1 * *`.</li><li>`@yearly`: O query é executado uma vez por ano, em 1º de janeiro, à meia-noite. É equivalente à expressão cron `1 0 0 1 1 *`. |
 | `schedule.startDate` | A data de início da consulta agendada, escrita como um carimbo de data e hora UTC. |
 
 **Resposta**
@@ -364,7 +364,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte me
 
 ### Atualizar agendamento de consulta agendada
 
-Você pode usar `/schedule/schedule` para atualizar o cronograma do cron da consulta agendada. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Você pode usar `/schedule/schedule` para atualizar o cronograma do cron da consulta agendada. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Formato da API**
 

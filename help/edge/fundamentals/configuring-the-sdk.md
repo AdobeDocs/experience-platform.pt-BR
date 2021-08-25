@@ -1,13 +1,13 @@
 ---
 title: Configurar o SDK da Web da Adobe Experience Platform
 description: Saiba como configurar o SDK da Web da Adobe Experience Platform.
-seo-description: Saiba como configurar o SDK da Web do Experience Platform
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configurar; configuração; SDK; borda; SDK da Web; configurar; edgeConfigId; contexto; Web; dispositivo; ambiente; placeContext; debugEnabled; edgeDomain; orgId; clickCollectionEnabled; onBeforeEventSend; defaultConsent; configurações de sdk da web; prehideStyle; opacity; cookieDestinationsEnabled; urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 14%
+source-wordcount: '826'
+ht-degree: 15%
 
 ---
 
@@ -66,7 +66,6 @@ Indica se a depuração está ativada. Configurar essa configuração como `true
 
 | **Recurso** | **Função** |
 | ---------------------- | ------------------ |
-| Validação síncrona | Valida os dados que estão sendo coletados em relação ao esquema e retorna um erro na resposta sob o seguinte rótulo: `collect:error OR success` |
 | Registro do console | Permite que mensagens de depuração sejam exibidas no console JavaScript do navegador |
 
 {style=&quot;table-layout:auto&quot;}

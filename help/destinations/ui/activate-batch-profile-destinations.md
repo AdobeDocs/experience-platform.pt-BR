@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
+source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1925'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,17 @@ Para ativar dados em destinos, você deve ter [conectado com êxito a um destino
 
 ## Selecione o destino {#select-destination}
 
-1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Browse]**.
+1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Catalog]**.
 
-   ![Guia Navegação de destino](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
+   ![Guia Catálogo de destino](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Selecione o botão **[!UICONTROL Add segments]** correspondente ao destino onde você deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
+1. Selecione **[!UICONTROL Ativar segmentos]** no cartão correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
 
-   ![Botões Ativar](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
+   ![Botão Ativar segmentos](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+
+1. Selecione a conexão de destino que deseja usar para ativar seus segmentos e selecione **[!UICONTROL Next]**.
+
+   ![Selecionar destino](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Mova para a próxima seção para [selecionar seus segmentos](#select-segments).
 
@@ -144,9 +148,7 @@ Para destinos com base em perfil, você deve selecionar os atributos de perfil q
 
    ![Página Selecionar campo de origem](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-
 1. Para adicionar mais mapeamentos, repita as etapas de 1 a 3.
-
 
 >[!NOTE]
 >

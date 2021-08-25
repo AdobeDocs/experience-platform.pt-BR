@@ -5,8 +5,7 @@ title: Introdução às APIs do Adobe Experience Platform
 topic-legacy: api guide
 description: A Adobe Experience Platform fornece serviços de API que estão intimamente vinculados uns aos outros. Este guia contém informações sobre os serviços disponíveis, cabeçalhos necessários para operações CRUD, mensagens de erro, coleções de Postman e chamadas de API de exemplo.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -51,7 +50,7 @@ O Postman é uma plataforma de colaboração para desenvolvimento de API que per
 
 Para saber mais sobre o Postman, incluindo como configurar um ambiente, uma lista de coleções disponíveis e como importar coleções, visite a [documentação do Platform Postman](postman.md).
 
-## Lendo chamadas de API de exemplo {#sample-api}
+## Lendo exemplos de chamadas de API {#sample-api}
 
 Os formatos de solicitação variam de acordo com a API de plataforma em uso. A melhor maneira de aprender como estruturar suas chamadas de API é seguindo os exemplos fornecidos na documentação do serviço de plataforma específico que você está usando.
 
@@ -138,7 +137,7 @@ Para obter mais informações sobre endpoints específicos nas APIs da plataform
 | [[!DNL Segmentation Service] Guia da API](.././segmentation/api/overview.md) | A API [!DNL Segmentation Service] permite que os desenvolvedores gerenciem programaticamente as operações de segmentação no Adobe Experience Platform. Isso inclui a criação de segmentos e a geração de públicos-alvo a partir dos dados do Perfil do cliente em tempo real. |
 | [[!DNL Sensei Machine Learning] Guia da API](.././data-science-workspace/api/getting-started.md) <br>  (Data Science Workspace) | A API [!DNL Sensei Machine Learning] fornece um mecanismo para os cientistas de dados organizarem e gerenciarem os serviços de aprendizado de máquina (ML) a partir de integração de algoritmo, experimentação e implantação de serviço. |
 
-Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a [documentação de referência da API](http://www.adobe.com/go/platform-api-reference-en) no Adobe I/O.
+Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a [documentação de referência da API](https://www.adobe.com/go/platform-api-reference-en) no Adobe I/O.
 
 ## Próximas etapas
 

@@ -5,9 +5,9 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 1%
 
 ---
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 Observe que uma cláusula `SNAPSHOT` funciona com um alias de tabela ou tabela, mas não sobre uma subconsulta ou exibição. Uma cláusula `SNAPSHOT` funcionará em qualquer lugar em que uma consulta `SELECT` em uma tabela possa ser aplicada.
 
 Além disso, você pode usar `HEAD` e `TAIL` como valores de deslocamento especiais para cláusulas de instantâneo. Usar `HEAD` se refere a um deslocamento antes do primeiro instantâneo, enquanto `TAIL` se refere a um deslocamento após o último instantâneo.
+
+>[!NOTE]
+>
+>Se você estiver consultando entre duas IDs de instantâneo e o instantâneo de início expirar, os dois cenários a seguir poderão ocorrer, dependendo se o sinalizador opcional de comportamento de fallback (`resolve_fallback_snapshot_on_failure`) estiver definido:
+>
+>- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo mais antigo disponível, definirá-o como o instantâneo inicial e retornará os dados entre o instantâneo mais antigo disponível e o instantâneo final especificado. Esses dados são **inclusive** do instantâneo mais antigo disponível.
+>
+>- Se o sinalizador de comportamento de fallback opcional não estiver definido, um erro será retornado.
+
 
 ### cláusula WHERE
 

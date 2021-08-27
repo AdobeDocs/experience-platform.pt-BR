@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API, perfil unificado, perfil unificado, unificado, perfil, rtcp, ativar perfil, Ativar perfil
 title: Guia da API do perfil do cliente em tempo real
-description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo perfis de exibição, criem e atualizem políticas de mesclagem, exportem ou exemplificem dados de perfil, e excluam dados de perfil que não são mais necessários ou foram adicionados com erro. Siga este guia para saber como executar operações principais usando a API.
+description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo perfis de exibição, criem e atualizem políticas de mesclagem, exportem ou exemplificem dados de perfil, e excluam dados de perfil que não são mais necessários ou foram adicionados com erro. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 0%
+source-wordcount: '886'
+ht-degree: 1%
 
 ---
 
-# [!DNL Real-time Customer Profile] Guia da API
+# [!DNL Real-time Customer Profile] Manual da API
 
 [!DNL Real-time Customer Profile] O permite ver uma exibição holística de cada um dos clientes individuais no Adobe Experience Platform. [!DNL Profile] O permite consolidar dados diferentes do cliente de vários canais, como dados online, offline, CRM e de terceiros, em uma visualização unificada que oferece uma conta acionável com carimbo de data e hora de cada interação do cliente.
 
 A API [!DNL Real-time Customer Profile] inclui vários endpoints, descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte o [guia de introdução](getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 
-Para visualizar todos os endpoints e operações CRUD disponíveis, visite o [Swagger de referência da API do perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Para visualizar todos os endpoints e operações CRUD disponíveis, visite o [Swagger de referência da API do perfil do cliente em tempo real](https://www.adobe.com/go/profile-apis-en).
 
 Para obter um guia sobre como trabalhar com dados [!DNL Real-time Customer Profile] na interface do usuário [!DNL Experience Platform], consulte o [Guia do usuário de perfil](../ui/user-guide.md).
 
@@ -50,7 +50,7 @@ Ao reunir dados de várias fontes em [!DNL Experience Platform], as políticas d
 
 Para saber mais sobre as políticas de mesclagem e sua função na Plataforma, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
-## Visualizar o status da amostra ([!DNL Profile] visualização) {#profile-preview}
+## Visualizar o status da amostra ([!DNL Profile] pré-visualização) {#profile-preview}
 
 Como os dados ativados para o Perfil são assimilados no Experience Platform, eles são armazenados no armazenamento de dados do Perfil. À medida que o número de registros no armazenamento de perfil aumenta ou diminui, um trabalho de amostra é executado e inclui informações sobre quantos fragmentos de perfil e perfis mesclados estão no armazenamento de dados. Usando a API de perfil, é possível visualizar a amostra mais recente bem-sucedida, bem como a distribuição de perfil de lista por conjunto de dados e por namespace de identidade. Para começar a usar o endpoint `/profilepreviewstatus`, consulte o [guia do endpoint de status de amostra de visualização](preview-sample-status.md).
 

@@ -5,11 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite que você exclua um conjunto de dados ou lote do armazenamento de Perfil para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou foram adicionados com erro. Isso requer o uso da API de perfil para criar um trabalho do sistema de perfil ou excluir uma solicitação.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 2%
+source-wordcount: '1316'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +22,7 @@ O Adobe Experience Platform permite assimilar dados de várias fontes e criar pe
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Exibir solicitações de exclusão
 

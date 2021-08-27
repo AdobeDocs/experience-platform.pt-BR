@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: No Adobe Experience Platform, os atributos calculados são funções usadas para agregar dados a nível de evento em atributos a nível de perfil. Essas funções são calculadas automaticamente para que possam ser usadas na segmentação, ativação e personalização. Este guia mostra como criar, exibir, atualizar e excluir atributos calculados usando a API do Perfil do cliente em tempo real.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2272'
 ht-degree: 2%
 
 ---
@@ -25,7 +24,7 @@ Para saber mais sobre atributos calculados, comece lendo a [visão geral dos atr
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [API do Perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+O endpoint da API usado neste guia faz parte da [API do Perfil do cliente em tempo real](https://www.adobe.com/go/profile-apis-en).
 
 Antes de continuar, consulte o [Guia de introdução à API de perfil](../api/getting-started.md) para obter links para a documentação recomendada, um guia para ler as chamadas de API de exemplo que aparecem neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
@@ -284,7 +283,7 @@ As etapas para ambos os padrões de acesso são descritas neste documento. Selec
 * **[Listar todos os atributos calculados existentes](#list-all-computed-attributes):** Retorna uma lista de todos os atributos calculados existentes que sua organização criou.
 * **[Exibir um atributo calculado específico](#view-a-computed-attribute):** Retorna os detalhes de um único atributo calculado especificando sua ID durante a solicitação.
 
-### Lista todos os atributos calculados {#list-all-computed-attributes}
+### Listar todos os atributos calculados {#list-all-computed-attributes}
 
 Sua Organização IMS pode criar vários atributos calculados e a execução de uma solicitação de GET para o endpoint `/config/computedAttributes` permite listar todos os atributos calculados existentes para sua organização.
 
@@ -422,7 +421,7 @@ A resposta também inclui uma matriz `children` composta de um ou mais objetos, 
 | `id` | Um valor exclusivo, somente leitura, gerado pelo sistema, atribuído automaticamente a um atributo calculado quando ele é criado. Para obter mais informações sobre os componentes de um objeto de atributo calculado, consulte a seção [criar um atributo calculado](#create-a-computed-attribute) anteriormente neste tutorial. |
 | `_links.next` | Se uma única página de atributos calculados for retornada, `_links.next` será um objeto vazio, como mostrado na resposta de amostra acima. Se sua organização tiver muitos atributos calculados, eles serão retornados em várias páginas que você pode acessar fazendo uma solicitação GET para o valor `_links.next`. |
 
-### Visualizar um atributo calculado {#view-a-computed-attribute}
+### Exibir um atributo calculado {#view-a-computed-attribute}
 
 Você pode visualizar um atributo calculado específico fazendo uma solicitação do GET para o endpoint `/config/computedAttributes` e incluindo a ID do atributo calculada no caminho da solicitação.
 

@@ -2,12 +2,11 @@
 audience: user
 user-guide-title: Guia de catálogo e conjuntos de dados
 user-guide-description: Explore a linhagem de dados, os metadados, as descrições dos arquivos, os diretórios e os conjuntos de dados no Data Lake.
-feature: Gerenciamento de dados
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Management
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 23%
+source-wordcount: '102'
+ht-degree: 22%
 
 ---
 
@@ -34,5 +33,5 @@ ht-degree: 23%
    * [Criar e preencher um conjunto de dados usando APIs](datasets/create.md)
 * [Processamento de solicitação de privacidade no Data Lake](privacy.md)
 * [Proteção de dados no Experience Platform](data-protection.md)
-* [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

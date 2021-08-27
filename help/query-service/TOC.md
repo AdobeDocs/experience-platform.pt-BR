@@ -4,22 +4,21 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 21%
+source-wordcount: '131'
+ht-degree: 22%
 
 ---
 
 
-# Serviço de consulta da Adobe Experience Platform {#query}
+# Serviço de query Adobe Experience Platform {#query}
 
 - [Visão geral do Serviço de query](home.md)
 - [Manual de início rápido](quickstart.md)
 - API do Serviço de Consulta {#api}
    - [Introdução](api/getting-started.md)
-   - [Queries](api/queries.md)
+   - [Consultas](api/queries.md)
    - [Parâmetros de conexão](api/connection-parameters.md)
    - [Consultas agendadas](api/scheduled-queries.md)
    - [É executado para consultas agendadas](api/runs-scheduled-queries.md)
@@ -51,5 +50,5 @@ ht-degree: 21%
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
 - [Guia de solução de problemas](troubleshooting-guide.md)
-- [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
+- [Referência da API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

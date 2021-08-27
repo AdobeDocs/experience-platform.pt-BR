@@ -6,11 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 1%
+source-wordcount: '1800'
+ht-degree: 2%
 
 ---
 
@@ -77,7 +76,7 @@ Para todas as fontes baseadas em tabela, defina o valor como `tabular`.
 POST /sourceConnections
 ```
 
-### Crie uma conexão de origem usando arquivos personalizados {#using-custom-delimited-files}
+### Criar uma conexão de origem usando arquivos personalizados delimitados {#using-custom-delimited-files}
 
 **Solicitação**
 
@@ -302,7 +301,7 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ## Criar um conjunto de dados de destino
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API do Serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino dentro da carga útil.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API do Serviço de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino dentro da carga útil.
 
 **Formato da API**
 

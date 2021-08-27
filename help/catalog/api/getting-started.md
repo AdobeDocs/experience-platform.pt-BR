@@ -3,17 +3,16 @@ keywords: Experience Platform, home, tópicos populares, serviço de catálogo, 
 solution: Experience Platform
 title: Guia da API do Serviço de catálogo
 topic-legacy: developer guide
-description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem os metadados do conjunto de dados no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem os metadados do conjunto de dados no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 0%
+source-wordcount: '596'
+ht-degree: 3%
 
 ---
 
-# [!DNL Catalog Service] Guia da API
+# [!DNL Catalog Service] Manual da API
 
 [!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. [!DNL Catalog] O atua como um armazenamento de metadados ou &quot;catálogo&quot;, onde é possível encontrar informações sobre seus dados no  [!DNL Experience Platform], sem precisar acessar os dados propriamente ditos. Consulte a [[!DNL Catalog] visão geral](../home.md) para obter mais informações.
 
@@ -65,6 +64,6 @@ Como algumas consultas podem aumentar a carga da API, limites globais foram impl
 
 Este documento cobriu o conhecimento de pré-requisito necessário para fazer chamadas para a API [!DNL Catalog]. Agora você pode prosseguir para as chamadas de exemplo fornecidas neste guia do desenvolvedor e seguir com suas instruções.
 
-A maioria dos exemplos neste guia usa o endpoint `/dataSets`, mas os princípios podem ser aplicados a outros endpoints no [!DNL Catalog] (como `/batches` e `/accounts`). Consulte a [Referência da API do Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para obter uma lista completa de todas as chamadas e operações disponíveis para cada endpoint.
+A maioria dos exemplos neste guia usa o endpoint `/dataSets`, mas os princípios podem ser aplicados a outros endpoints no [!DNL Catalog] (como `/batches` e `/accounts`). Consulte a [Referência da API do Serviço de Catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/) para obter uma lista completa de todas as chamadas e operações disponíveis para cada endpoint.
 
 Para obter um fluxo de trabalho passo a passo que demonstra como a API [!DNL Catalog] está envolvida com a assimilação de dados, consulte o tutorial em [criar um conjunto de dados](../datasets/create.md).

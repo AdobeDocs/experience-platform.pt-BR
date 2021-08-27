@@ -5,17 +5,16 @@ title: Guia da API de assimilação em lote
 topic-legacy: developer guide
 description: Este documento fornece uma visão geral abrangente do uso de APIs de ingestão em lote.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
-ht-degree: 6%
+source-wordcount: '2552'
+ht-degree: 7%
 
 ---
 
 # Guia da API de assimilação em lote
 
-Este documento fornece uma visão geral abrangente do uso de [APIs de assimilação em lote](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Este documento fornece uma visão geral abrangente do uso de [APIs de assimilação em lote](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 O apêndice a este documento fornece informações para [formatação de dados a serem usados para assimilação](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
 
@@ -63,7 +62,7 @@ Por exemplo, nem JSON nem CSV têm um tipo de data ou hora. Como resultado, esse
 
 A tabela abaixo mostra as conversões suportadas ao assimilar dados.
 
-| Entrada (linha) vs Destino (col) | String | Byte | Curto | Número inteiro | Longo | Duplo | Data | Data e hora | Objeto | Mapa |
+| Entrada (linha) vs Destino (col) | String | Byte | Curto | Número inteiro | Longo | Duplo | Data  | Data e hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | String | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -71,7 +70,7 @@ A tabela abaixo mostra as conversões suportadas ao assimilar dados.
 | Número inteiro | X | X | X | X | X | X |  |  |  |  |
 | Longo | X | X | X | X | X | X | X | X |  |  |
 | Duplo | X | X | X | X | X | X |  |  |  |  |
-| Data |  |  |  |  |  |  | X |  |  |  |
+| Data  |  |  |  |  |  |  | X |  |  |  |
 | Data e hora |  |  |  |  |  |  |  | X |  |  |
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |

@@ -5,10 +5,9 @@ title: Guia de solução de problemas do serviço de identidade
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2185'
 ht-degree: 0%
 
 ---
@@ -286,7 +285,7 @@ Este erro é exibido quando uma exceção inesperada ocorre na execução de uma
 
 [!DNL Identity Service] assimila dados de identidade de dados de registro e de séries de tempo que são carregados para  [!DNL Platform] usar a Assimilação em lote. Como a assimilação em lote é um processo assíncrono, é necessário visualizar os detalhes de um lote para exibir erros. Os erros acumular-se-ão à medida que o lote avança até à conclusão do mesmo.
 
-Esta é uma lista de mensagens de erro relacionadas a [!DNL Identity Service] que podem ser encontradas ao usar a [API de assimilação de dados](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Esta é uma lista de mensagens de erro relacionadas a [!DNL Identity Service] que podem ser encontradas ao usar a [API de assimilação de dados](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 ### Esquema XDM desconhecido
 

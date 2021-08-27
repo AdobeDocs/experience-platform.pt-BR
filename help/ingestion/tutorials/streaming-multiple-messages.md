@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial para enviar várias mensagens para o Adobe Experience Platform em uma única solicitação HTTP usando assimilação de streaming.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -45,7 +44,7 @@ Após registrar uma conexão de transmissão, você, como produtor de dados, ter
 
 O exemplo a seguir mostra como enviar várias mensagens para um conjunto de dados específico em uma única solicitação HTTP. Insira a ID do conjunto de dados no cabeçalho da mensagem para que a mensagem seja assimilada diretamente nela.
 
-Você pode obter a ID de um conjunto de dados existente usando a interface do usuário [!DNL Platform] ou usando uma operação de listagem na API. A ID do conjunto de dados pode ser encontrada em [Experience Platform](https://platform.adobe.com) acessando a guia **[!UICONTROL Datasets]**, clicando no conjunto de dados para o qual deseja a ID e copiando a cadeia de caracteres do campo de ID do conjunto de dados na guia **[!UICONTROL Info]**. Consulte a [Visão geral do Serviço de catálogo](../../catalog/home.md) para obter informações sobre como recuperar conjuntos de dados usando a API.
+Você pode obter a ID de um conjunto de dados existente usando a interface do usuário [!DNL Platform] ou usando uma operação de listagem na API. A ID do conjunto de dados pode ser encontrada em [Experience Platform](https://platform.adobe.com) acessando a guia **[!UICONTROL Conjuntos de dados]**, clicando no conjunto de dados para o qual deseja a ID e copiando a cadeia de caracteres do campo ID do conjunto de dados na guia **[!UICONTROL Informações]**. Consulte a [Visão geral do Serviço de catálogo](../../catalog/home.md) para obter informações sobre como recuperar conjuntos de dados usando a API.
 
 Em vez de usar um conjunto de dados existente, você pode criar um novo conjunto de dados. Leia o tutorial [criar um conjunto de dados usando APIs](../../catalog/api/create-dataset.md) para obter mais informações sobre como criar um conjunto de dados usando APIs.
 
@@ -510,7 +509,7 @@ A segunda mensagem falhou porque não tinha um corpo de mensagem. A solicitaçã
     },
 ```
 
-A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual IMS Organization ID corresponde à conexão de transmissão que você está usando, é possível executar uma solicitação `GET inlet` usando o [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [recuperando uma conexão de transmissão](./create-streaming-connection.md#get-data-collection-url) para obter um exemplo de como recuperar as conexões de transmissão criadas anteriormente.
+A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual IMS Organization ID corresponde à conexão de transmissão que você está usando, é possível executar uma solicitação `GET inlet` usando o [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Consulte [recuperando uma conexão de transmissão](./create-streaming-connection.md#get-data-collection-url) para obter um exemplo de como recuperar as conexões de transmissão criadas anteriormente.
 
 A quarta mensagem falhou porque não seguiu o esquema XDM esperado. O `xdmSchema` incluído no cabeçalho e no corpo da solicitação não corresponde ao esquema XDM do `{DATASET_ID}`. A correção do esquema no cabeçalho e no corpo da mensagem permite que ele passe a validação do DCCS e seja enviado com êxito para [!DNL Platform]. O corpo da mensagem também deve ser atualizado para corresponder ao esquema XDM do `{DATASET_ID}` para que ele passe a validação de transmissão em [!DNL Platform]. Para obter mais informações sobre o que acontece com as mensagens que são transmitidas com êxito para a Plataforma, consulte a seção [confirm messages ingested](#confirm-messages-ingested) deste tutorial.
 
@@ -525,7 +524,7 @@ Leia o guia [recuperando lotes com falha](../quality/retrieve-failed-batches.md)
 
 As mensagens que passam pela validação do DCCS são transmitidas para [!DNL Platform]. Em [!DNL Platform], as mensagens em lote são testadas por validação de streaming antes de serem assimiladas no [!DNL Data Lake]. O status dos lotes, seja bem-sucedido ou não, é exibido dentro do conjunto de dados especificado por `{DATASET_ID}`.
 
-Você pode visualizar o status das mensagens em lote que são transmitidas com êxito para [!DNL Platform] usando a [interface do usuário do Experience Platform](https://platform.adobe.com) acessando a guia **[!UICONTROL Datasets]**, clicando no conjunto de dados para o qual você está fazendo streaming e verificando a guia **[!UICONTROL Dataset Activity]**.
+Você pode visualizar o status das mensagens em lote que são transmitidas com êxito para [!DNL Platform] usando a [interface do usuário do Experience Platform](https://platform.adobe.com) acessando a guia **[!UICONTROL Conjuntos de dados]**, clicando no conjunto de dados para o qual você está fazendo streaming e verificando a guia **[!UICONTROL Atividade do conjunto de dados]**.
 
 As mensagens em lote que passam pela validação do streaming em [!DNL Platform] são assimiladas no [!DNL Data Lake]. As mensagens ficam disponíveis para análise ou exportação.
 

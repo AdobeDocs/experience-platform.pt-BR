@@ -5,16 +5,16 @@ title: Notificações de assimilação de dados
 topic-legacy: overview
 description: Para auxiliar no monitoramento do processo de ingestão, a Adobe Experience Platform possibilita a assinatura de um conjunto de eventos publicados por cada etapa do processo, notificando o status dos dados assimilados e quaisquer possíveis falhas.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 1%
+source-wordcount: '677'
+ht-degree: 2%
 
 ---
 
 # Notificações de assimilação de dados
 
-O processo de assimilação de dados no Adobe Experience Platform é composto por várias etapas. Depois de identificar os arquivos de dados que precisam ser assimilados em [!DNL Platform], o processo de assimilação é iniciado e cada etapa ocorre consecutivamente até que os dados sejam assimilados com êxito ou falhem. O processo de assimilação pode ser iniciado usando a [API de assimilação de dados do Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ou a interface do usuário [!DNL Experience Platform].
+O processo de assimilação de dados no Adobe Experience Platform é composto por várias etapas. Depois de identificar os arquivos de dados que precisam ser assimilados em [!DNL Platform], o processo de assimilação é iniciado e cada etapa ocorre consecutivamente até que os dados sejam assimilados com êxito ou falhem. O processo de assimilação pode ser iniciado usando a [API de assimilação de dados do Adobe Experience Platform](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) ou a interface do usuário [!DNL Experience Platform].
 
 Os dados carregados em [!DNL Platform] devem passar por várias etapas para alcançar seu destino, o armazenamento de dados [!DNL Data Lake] ou [!DNL Real-time Customer Profile]. Cada etapa envolve processar os dados, validar os dados e armazenar os dados antes de passá-los para a próxima etapa. Dependendo da quantidade de dados assimilados, esse processo pode se tornar um processo demorado e sempre há uma chance de o processo falhar devido a erros de validação, semântica ou processamento. Em caso de falha, os problemas de dados precisam ser corrigidos e todo o processo de assimilação deve ser reiniciado usando os arquivos de dados corrigidos.
 

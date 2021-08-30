@@ -2,18 +2,17 @@
 keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, Registro do esquema, Registro do esquema;
 solution: Experience Platform
 title: Guia da API do Registro de Schema
-description: A API do Registro de Esquema permite aos desenvolvedores gerenciar programaticamente todos os esquemas e recursos relacionados do Experience Data Model (XDM) no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+description: A API do Registro de Esquema permite aos desenvolvedores gerenciar programaticamente todos os esquemas e recursos relacionados do Experience Data Model (XDM) no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# [!DNL Schema Registry] Guia da API
+# [!DNL Schema Registry] Manual da API
 
 O [!DNL Schema Registry] é usado para acessar a Biblioteca de schemas no Adobe Experience Platform, fornecendo uma interface do usuário e a API RESTful da qual todos os recursos de biblioteca disponíveis são acessíveis.
 
@@ -79,4 +78,4 @@ Consulte o [guia de ponto de extremidade do log de auditoria](./audit-log.md) pa
 
 ## Próximas etapas
 
-Para começar a fazer chamadas usando a API do Registro de Schema, leia o [guia de introdução](./getting-started.md) e selecione um dos guias de ponto de extremidade para saber como usar endpoints específicos.
+Para começar a fazer chamadas usando a API do registro de esquema, leia o [guia de introdução](./getting-started.md) e selecione um dos manuais de endpoint para saber como usar endpoints específicos.

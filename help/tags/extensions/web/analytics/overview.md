@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão do Adobe Analytics
-description: Saiba mais sobre a extensão de tag do Adobe Analytics no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre a extensão de tags do Adobe Analytics na Adobe Experience Platform.
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ Permite inserir o código principal [AppMeasurement.js](https://experienceleague
 
 >[!NOTE]
 >
->O validador usado no editor de código de tags foi projetado para identificar problemas com código escrito pelo desenvolvedor. O código que passou por um processo de minificação — como o código AppMeasurement.js baixado do Gerenciador de código — pode ser falsamente sinalizado como tendo problemas pelo validador de tags, que geralmente pode ser ignorado.
+>O validador usado no editor de código de tags foi projetado para identificar problemas em código escrito pelo desenvolvedor. O código que passou por um processo de minificação, como o código AppMeasurement.js baixado do Gerenciador de código, pode ser falsamente sinalizado como tendo problemas pelo validador de tags, que geralmente pode ser ignorado.
 
 #### Definir os seguintes conjuntos de relatórios no rastreador
 
@@ -110,7 +110,7 @@ Selecione uma opção na seção Geral da página de configuração. As opções
 
 Ativa ou desativa o rastreamento com base no cookie de privacidade UE.
 
-Quando você marca a caixa de seleção Conformidade com a UE, o campo [!UICONTROL Nome do cookie de rastreamento] é exibido. O cookie de rastreamento substitui o nome do cookie de rastreamento padrão. Você pode personalizar o nome que as tags usam para rastrear o status de opção de não participação para receber outros cookies.
+Quando você marca a caixa de seleção Conformidade com a UE, o campo [!UICONTROL Nome do cookie de rastreamento] é exibido. O cookie de rastreamento substitui o nome do cookie de rastreamento padrão. Você pode personalizar o nome que as tags usam a fim de rastrear o status de recusa para o recebimento de outros cookies.
 
 Quando uma página é carregada, o sistema verifica se um cookie chamado sat\_track está definido (ou o nome do cookie personalizado especificado na página Editar propriedade). Considere as seguintes informações:
 
@@ -270,7 +270,7 @@ As seguintes opções aparecem:
 
 O subdomínio do Audience Manager é atribuído pelo Adobe Audience Manager. Às vezes, ele é chamado de &quot;Nome do parceiro&quot; ou &quot;Subdomínio do parceiro&quot;. Entre em contato com o consultor da Adobe ou com o Atendimento ao cliente se você não souber o Nome do parceiro.
 
-Você pode definir configurações avançadas selecionando **Mostrar configurações avançadas** e inserindo suas preferências.
+Você pode definir as configurações avançadas selecionando **Mostrar configurações avançadas** e inserindo suas preferências.
 
 ![](../../../images/an-ext-aam-adv.png)
 
@@ -367,7 +367,7 @@ Use o editor para especificar o código de página personalizado.
 
 Selecione se deseja incrementar uma visualização de página.
 
-#### Não incrementar uma visualização de página - s.t()
+#### Não incrementar uma visualização de página - s.tl()
 
 Selecione se você não deseja incrementar uma visualização de página.
 

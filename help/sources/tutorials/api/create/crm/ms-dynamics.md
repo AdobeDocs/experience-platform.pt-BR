@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar a Platform a uma conta do Microsoft Dynamics usando a API de Serviço de Fluxo.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Microsoft Dynamics] (a seguir chamada &quot;[!DNL Dynamics]&quot;) usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Microsoft Dynamics] (a seguir chamada &quot;[!DNL Dynamics]&quot;) usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

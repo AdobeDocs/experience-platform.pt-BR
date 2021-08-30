@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1535'
 ht-degree: 2%
 
 ---
 
 # Colete dados de protocolos usando conectores de origem e APIs
 
-Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolo de terceiros e assimilá-los no Adobe Experience Platform por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolo de terceiros e assimilá-los no Adobe Experience Platform por meio de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao HubSpot usando a API do Serviço de Fluxo.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: 143f3b4a113c6f36cb1bb0c3624c8503f158a16d
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL HubSpot] usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL HubSpot] usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

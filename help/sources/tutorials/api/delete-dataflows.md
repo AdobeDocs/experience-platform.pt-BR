@@ -6,17 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como excluir fluxos de dados de lote e fluxo usando a API do Serviço de fluxo.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 2%
 
 ---
 
 # Excluir um fluxo de dados usando a API do Serviço de fluxo
 
-Você pode excluir fluxos de dados em lote e de fluxo que contenham erros ou que se tornaram obsoletos usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Você pode excluir fluxos de dados em lote e de fluxo que contenham erros ou que se tornaram obsoletos usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 Este tutorial aborda as etapas para excluir fluxos de dados feitos com fontes em lote e de transmissão usando [!DNL Flow Service].
 

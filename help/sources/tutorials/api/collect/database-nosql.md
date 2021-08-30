@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los no Platform usando conectores de origem e APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1619'
 ht-degree: 2%
 
 ---
 
 # Coletar dados de um banco de dados usando conectores de origem e APIs
 
-Este tutorial aborda as etapas para recuperar dados de um banco de dados de terceiros e assimilá-los na Platform por meio de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para recuperar dados de um banco de dados de terceiros e assimilá-los na Platform por meio de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
@@ -30,7 +30,7 @@ Este tutorial também requer uma compreensão funcional dos seguintes componente
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): A API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
 * [Sandboxes](../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um banco de dados de terceiros usando a API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um banco de dados de terceiros usando a API [!DNL Flow Service].
 
 ### Lendo exemplos de chamadas de API
 
@@ -431,7 +431,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Recuperar especificações do fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a plataforma. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação do GET para a API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). As especificações de fluxo de dados são responsáveis pela coleta de dados de um banco de dados externo ou do sistema NoSQL.
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a plataforma. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação do GET para a API [!DNL Flow Service]. As especificações de fluxo de dados são responsáveis pela coleta de dados de um banco de dados externo ou do sistema NoSQL.
 
 **Formato da API**
 

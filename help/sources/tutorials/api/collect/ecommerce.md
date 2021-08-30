@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1515'
 ht-degree: 2%
 
 ---
 
 # Coletar dados de comércio eletrônico usando conectores de origem e APIs
 
-Este tutorial aborda as etapas para recuperar dados de um sistema **[!UICONTROL eCommerce]** de terceiros e assimilá-los em [!DNL Platform] por meio de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para recuperar dados de um sistema **[!UICONTROL eCommerce]** de terceiros e assimilá-los em [!DNL Platform] por meio de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

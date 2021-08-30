@@ -6,17 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e programação, usando a API do Serviço de Fluxo.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 1%
+source-wordcount: '611'
+ht-degree: 2%
 
 ---
 
 # Atualizar fluxos de dados usando a API do Serviço de Fluxo
 
-Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e agendamento usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e agendamento usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los na Plataforma usando conectores de origem e a API do Serviço de Fluxo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1539'
 ht-degree: 2%
 
 ---
 
 # Colete dados de publicidade usando conectores de origem e APIs
 
-Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los no Adobe Experience Platform por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los no Adobe Experience Platform por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

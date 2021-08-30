@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como excluir uma conta usando a API do Serviço de fluxo.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -20,7 +19,7 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para excluir usando o [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para excluir usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 

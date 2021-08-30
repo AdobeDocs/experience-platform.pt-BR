@@ -1,18 +1,18 @@
 ---
-title: Ponto de extremidade de pesquisa
-description: Saiba como fazer chamadas para o endpoint /search na API do reator.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Pesquisar endpoint
+description: Saiba como fazer chamadas para o endpoint /search na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 1%
+source-wordcount: '658'
+ht-degree: 97%
 
 ---
 
-# Ponto de extremidade de pesquisa
+# Pesquisar endpoint
 
-O endpoint `/search` na API do reator fornece uma maneira de encontrar recursos que correspondam aos critérios desejados, expressos como uma consulta.
+O endpoint `/search` na API do Reactor fornece uma maneira de encontrar recursos que correspondem aos critérios desejados, por meio de uma consulta.
 
-Os seguintes tipos de recursos de API podem ser pesquisados, utilizando a mesma estrutura de dados dos documentos baseados em recursos retornados pela API:
+Os seguintes tipos de recursos de API podem ser pesquisados, utilizando a mesma estrutura de dados que os documentos baseados em recursos retornados pela API:
 
 * `audit_events`
 * `builds`
@@ -27,21 +27,21 @@ Os seguintes tipos de recursos de API podem ser pesquisados, utilizando a mesma 
 * `rule_components`
 * `rules`
 
-Todas as consultas têm escopo para sua empresa atual e propriedades acessíveis.
+Todas as consultas têm como escopo sua empresa atual e as propriedades acessíveis.
 
 >[!IMPORTANT]
 >
->A funcionalidade de pesquisa tem os seguintes avisos e exceções:
->* meta não é pesquisável e não é retornado nos resultados da pesquisa.
->* Campos de esquema para delegados de pacote de extensão (ações, condições etc.) são pesquisáveis como texto, não como uma estrutura de dados aninhada.
->* Atualmente, as consultas de intervalo só suportam números inteiros.
+>A funcionalidade de pesquisa tem as seguintes ressalvas e exceções:
+>* meta não é pesquisável nem é retornado nos resultados de pesquisa.
+>* Os campos de esquema para delegados de pacote de extensão (ações, condições etc.) são pesquisáveis como texto, não como uma estrutura de dados aninhada.
+>* Atualmente, as consultas de intervalo só aceitam números inteiros.
 
 
-Para obter informações mais detalhadas sobre como usar essa funcionalidade, consulte o [guia de pesquisa](../guides/search.md).
+Para obter informações mais detalhadas sobre como usar essa funcionalidade, consulte o [manual de pesquisa](../guides/search.md).
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [Guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
 ## Executar uma pesquisa {#perform}
 
@@ -93,17 +93,17 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `from` | O número de resultados com os quais a resposta deve ser compensada. |
+| `from` | O número de resultados para compensar a resposta. |
 | `size` | A quantidade máxima de resultados a serem retornados. Os resultados não podem exceder 100 itens. |
-| `query` | Um objeto que representa a consulta de pesquisa. Para cada propriedade nesse objeto, a chave deve representar um caminho de campo para query e o valor deve ser um objeto cujas subpropriedades determinam o que consultar.<br><br>Para cada caminho de campo, você pode usar as seguintes subpropriedades:<ul><li>`exists`: Retorna true se o campo existir no recurso.</li><li>`value`: Retorna true se o valor do campo corresponder ao valor dessa propriedade.</li><li>`value_operator`: Lógica booleana usada para determinar como uma  `value` consulta deve ser tratada. Os valores permitidos são `AND` e `OR`. Quando excluída, a lógica `AND` é assumida. Consulte a seção [value operator logic](#value-operator) para obter mais informações.</li><li>`range` Retorna true se o valor do campo estiver dentro de um intervalo numérico específico. O intervalo em si é determinado pelas seguintes subpropriedades:<ul><li>`gt`: Maior que o valor fornecido, não inclusivo.</li><li>`gte`: Maior que ou igual ao valor fornecido.</li><li>`lt`: Menor que o valor fornecido, não inclusivo.</li><li>`lte`: Menor que ou igual ao valor fornecido.</li></ul></li></ul> |
-| `sort` | Uma matriz de objetos, indicando a ordem na qual classificar os resultados. Cada objeto deve conter uma única propriedade: a chave representa o caminho do campo para classificar por, e o valor representa a ordem de classificação (`asc` para crescente, `desc` para decrescente). |
+| `query` | Um objeto que representa uma consulta de pesquisa. Para cada propriedade nesse objeto, a chave deve representar um caminho de campo para consulta e o valor deve ser um objeto cujas subpropriedades determinem o que consultar.<br><br>Para cada caminho de campo, é possível usar as seguintes subpropriedades:<ul><li>`exists`: retornará true se o campo existir no recurso.</li><li>`value`: retornará true se o valor do campo corresponder ao valor dessa propriedade.</li><li>`value_operator`: lógica booliana usada para determinar como uma consulta de `value` deve ser tratada. Os valores permitidos são `AND` e `OR`. Quando excluída, a lógica `AND` é presumida. Consulte a seção sobre [lógica do operador value](#value-operator) para obter mais informações.</li><li>`range` Retornará true se o valor do campo estiver em um intervalo numérico específico. O intervalo em si é determinado pelas seguintes subpropriedades:<ul><li>`gt`: Maior que o valor fornecido, não inclusivo.</li><li>`gte`: Maior que ou igual ao valor fornecido.</li><li>`lt`: Menor que o valor fornecido, não inclusivo.</li><li>`lte`: Menor que ou igual ao valor fornecido.</li></ul></li></ul> |
+| `sort` | Uma matriz de objetos, indicando a ordem na qual classificar os resultados. Cada objeto deve conter uma única propriedade: a chave representa o caminho do campo de acordo com o qual classificar, e o valor representa a ordem de classificação (`asc` para crescente, `desc` para decrescente). |
 | `resource_types` | Uma matriz de sequências de caracteres, indicando os tipos de recurso específicos a serem pesquisados. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de recursos correspondentes para a query. Para obter detalhes sobre como a API determina correspondências para valores específicos, consulte a seção Apêndice em [convenções correspondentes](#conventions).
+Uma resposta bem-sucedida retorna uma lista de recursos correspondentes para a consulta. Para obter detalhes sobre como a API determina correspondências para valores específicos, consulte a seção do apêndice sobre [convenções correspondentes](#conventions).
 
 ```json
 {
@@ -214,22 +214,22 @@ A seção a seguir contém informações adicionais sobre o uso do endpoint `/se
 
 ### Lógica do operador de valor {#value-operator}
 
-Os valores de consulta de pesquisa são divididos em termos para corresponder a documentos indexados. Entre cada termo, uma relação `AND` é assumida.
+Os valores de consulta de pesquisa são divididos em termos para corresponder a documentos indexados. Entre cada termo, uma relação `AND` é feita.
 
-Ao usar `AND` como o `value_operator`, um valor de query de `My Rule Holiday Sale` é interpretado como documentos com um campo contendo `My AND Rule AND Holiday AND Sale`.
+Quando você usa `AND` como o `value_operator`, um valor de consulta de `My Rule Holiday Sale` é interpretado como documentos com um campo que contém `My AND Rule AND Holiday AND Sale`.
 
-Ao usar `OR` como o `value_operator`, um valor de query de `My Rule Holiday Sale` é interpretado como documentos com um campo contendo `My OR Rule OR Holiday OR Sale`. Quanto mais termos corresponderem, maior será o `match_score`. Devido à natureza da correspondência de termos parciais, quando nada corresponde ao valor desejado, é possível obter um conjunto de resultados no qual o valor é correspondido somente em um nível muito básico, como alguns caracteres de texto.
+Quando você usa `OR` como o `value_operator`, um valor de consulta de `My Rule Holiday Sale` é interpretado como documentos com um campo que contém `My OR Rule OR Holiday OR Sale`. Quanto mais termos corresponderem, maior será o `match_score`. Devido à natureza da correspondência de termos parciais, quando nada corresponde ao valor desejado, é possível obter um conjunto de resultados no qual o valor é correspondido somente em um nível muito básico, como alguns caracteres de texto.
 
 ### Convenções de correspondência {#conventions}
 
-A pesquisa está preocupada em responder a quão relevante um documento é para uma consulta fornecida. A forma como os dados do documento são analisados e indexados afeta diretamente isso.
+A pesquisa se destina a esclarecer o grau de relevância de um documento para uma consulta fornecida. A forma como os dados do documento são analisados e indexados afeta diretamente isso.
 
 A tabela a seguir detalha as convenções de correspondência para tipos de campos comuns:
 
-| Tipo de campo | Combinar convenções |
+| Tipo de campo | Convenções de correspondência |
 | --- | --- |
-| Cadeias | Texto com uma análise de termo parcial, não diferencia maiúsculas de minúsculas |
-| Valores Enum | Correspondência exata, diferencia maiúsculas de minúsculas |
+| Strings | Texto com uma análise de termo parcial, não diferencia maiúsculas de minúsculas |
+| Valores de enumeração | Correspondência exata, diferencia maiúsculas de minúsculas |
 | Inteiros | Correspondência exata |
 | Flutuantes | Correspondência exata |
 | Carimbos de data e hora | Correspondência exata (formato DateTime) |
@@ -237,10 +237,10 @@ A tabela a seguir detalha as convenções de correspondência para tipos de camp
 
 Há convenções adicionais para campos específicos que aparecem na API:
 
-| Campo | Combinar convenções |
+| Campo | Convenções de correspondência |
 | --- | --- |
 | `id` | Correspondência exata, diferencia maiúsculas de minúsculas |
-| `delegate_descriptor_id` | Correspondência exata, diferencia maiúsculas de minúsculas, com termos divididos em `::` |
+| `delegate_descriptor_id` | Correspondência exata. Diferencia maiúsculas de minúsculas, com termos divididos em `::` |
 | `name` | Correspondência exata, diferencia maiúsculas de minúsculas |
 | `settings` | Texto com uma análise de termo parcial, não diferencia maiúsculas de minúsculas |
 | `type` | Correspondência exata, diferencia maiúsculas de minúsculas |

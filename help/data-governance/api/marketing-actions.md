@@ -5,11 +5,10 @@ title: Endpoint da API de ações de marketing
 topic-legacy: developer guide
 description: Uma ação de marketing, no contexto da Governança de dados do Adobe Experience Platform, é uma ação que um consumidor de dados do Experience Platform toma, para a qual é necessário verificar violações das políticas de uso de dados.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 2%
+source-wordcount: '730'
+ht-degree: 3%
 
 ---
 
@@ -21,9 +20,9 @@ Você pode gerenciar ações de marketing de sua organização usando o terminal
 
 ## Introdução
 
-Os endpoints de API usados neste guia fazem parte da [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
+Os endpoints de API usados neste guia fazem parte da [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
-## Recupere uma lista de ações de marketing {#list}
+## Recuperar uma lista de ações de marketing {#list}
 
 Você pode recuperar uma lista de ações de marketing principais ou personalizadas fazendo uma solicitação do GET para `/marketingActions/core` ou `/marketingActions/custom`, respectivamente.
 
@@ -106,7 +105,7 @@ Uma resposta bem-sucedida retorna os detalhes de cada ação de marketing recupe
 | `name` | O nome da ação de marketing, que atua como seu identificador exclusivo ao [pesquisar uma ação de marketing específica](#lookup). |
 | `_links.self.href` | Uma referência de URI para a ação de marketing, que pode ser usada para concluir a matriz `marketingActionsRefs` ao [criar uma política de uso de dados](policies.md#create-policy). |
 
-## Procure uma ação de marketing específica {#lookup}
+## Pesquisar uma ação de marketing específica {#lookup}
 
 Você pesquisa os detalhes de uma ação de marketing específica ao incluir a propriedade `name` da ação de marketing no caminho de uma solicitação de GET.
 

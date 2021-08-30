@@ -6,10 +6,10 @@ description: Em circunstâncias específicas, pode ser necessário criar um esqu
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 3%
+source-wordcount: '828'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Em circunstâncias específicas, pode ser necessário criar um esquema [!DNL Experience Data Model] (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é chamado de schema &quot;ad-hoc&quot;. Esquemas ad-hoc são usados em vários workflows de assimilação de dados para [!DNL Experience Platform], incluindo a assimilação de arquivos CSV e a criação de determinados tipos de conexões de origem.
 
-Este documento fornece etapas gerais para criar um esquema ad-hoc usando a [API do Registro de Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Ela deve ser usada em conjunto com outros tutoriais [!DNL Experience Platform] que exigem a criação de um schema ad hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um esquema ad hoc para seu caso de uso específico.
+Este documento fornece etapas gerais para criar um esquema ad-hoc usando a [API do Registro de Schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Ela deve ser usada em conjunto com outros tutoriais [!DNL Experience Platform] que exigem a criação de um schema ad hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um esquema ad hoc para seu caso de uso específico.
 
 ## Introdução
 

@@ -5,11 +5,10 @@ title: Rótulos do ponto de extremidade da API
 topic-legacy: developer guide
 description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API do serviço de política.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 3%
+source-wordcount: '506'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +22,7 @@ Os rótulos de uso de dados permitem categorizar os dados de acordo com as polí
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
+O endpoint da API usado neste guia faz parte do [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
 ## Recuperar uma lista de rótulos {#list}
 
@@ -107,7 +106,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 }
 ```
 
-## Procure um rótulo {#look-up}
+## Pesquisar um rótulo {#look-up}
 
 Você pode pesquisar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação GET para a API [!DNL Policy Service].
 

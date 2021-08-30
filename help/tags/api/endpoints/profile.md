@@ -1,26 +1,26 @@
 ---
 title: Ponto de extremidade de perfis
-description: Saiba como fazer chamadas para o endpoint /profiles na API do Reator.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+description: Saiba como fazer chamadas para o ponto de extremidade /profiles na API do reator.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 5%
+source-wordcount: '170'
+ht-degree: 97%
 
 ---
 
 # Ponto de extremidade do perfil
 
-Na API do reator, um perfil representa um usuário do Adobe Experience Platform. A API do reator não mantém seu próprio banco de dados de usuários e permissões e, em vez disso, depende de IDs de Adobe gerenciadas pelo [Adobe&#39;s identity management system (IMS)](https://helpx.adobe.com/br/enterprise/using/identity.html).
+Na API do Reactor, um perfil representa um usuário da Adobe Experience Platform. A API do Reactor não mantém seu próprio banco de dados de usuários e permissões. Em vez disso, depende de Adobe IDs gerenciadas pelo [Sistema de gerenciamento de identidades (IMS) da Adobe](https://helpx.adobe.com/br/enterprise/using/identity.html).
 
 Um perfil contém todas as informações sobre o usuário conectado, incluindo todas as Organizações IMS às quais ele pertence, os perfis de produto aos quais ele pertence em cada Organização e os direitos que eles têm de cada perfil de produto.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
 ## Recuperar o perfil atual {#lookup}
 
-Você pode recuperar os detalhes do perfil conectado no momento fazendo uma solicitação de GET para o endpoint `/profile`.
+Você pode recuperar os detalhes do perfil conectado no momento fazendo uma solicitação GET para o ponto de extremidade `/profile`.
 
 **Formato da API**
 

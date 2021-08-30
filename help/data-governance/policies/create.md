@@ -6,17 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: A API de serviço de política permite criar e gerenciar políticas de uso de dados para determinar quais ações de marketing podem ser realizadas em relação aos dados que contêm determinados rótulos de uso de dados. Este documento fornece um tutorial passo a passo para a criação de uma política usando a API do serviço de política.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1215'
 ht-degree: 2%
 
 ---
 
 # Criar uma política de uso de dados na API
 
-A [API do Serviço de Política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) permite criar e gerenciar políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados.
+A [API do Serviço de Política](https://www.adobe.io/experience-platform-apis/references/policy-service/) permite criar e gerenciar políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados.
 
 Este documento fornece um tutorial passo a passo para a criação de uma política usando a API [!DNL Policy Service]. Para obter um guia mais abrangente para as diferentes operações disponíveis na API, consulte o [Guia do desenvolvedor do Serviço de Política](../api/getting-started.md).
 
@@ -40,7 +39,7 @@ A primeira etapa na criação de uma política de uso de dados é determinar qua
 * [Pesquisar uma ação de marketing existente](#look-up)
 * [Criar uma nova ação de marketing](#create-new)
 
-### Procure uma ação de marketing existente {#look-up}
+### Pesquisar uma ação de marketing existente {#look-up}
 
 Você pode pesquisar ações de marketing existentes que serão avaliadas por sua política, fazendo uma solicitação de GET para um dos endpoints `/marketingActions`.
 

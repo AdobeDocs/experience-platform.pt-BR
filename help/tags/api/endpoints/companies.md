@@ -1,26 +1,26 @@
 ---
-title: Ponto de extremidade das empresas
-description: Saiba como fazer chamadas para o endpoint /company na API do Reator.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Ponto de extremidade de empresas
+description: Saiba como fazer chamadas para o ponto de extremidade /company na API do reator.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 4%
+source-wordcount: '243'
+ht-degree: 97%
 
 ---
 
-# Ponto de extremidade das empresas
+# Ponto de extremidade de empresas
 
-Uma empresa representa uma organização de cliente, geralmente um negócio. Na API do reator, essas empresas correspondem 1:1 com a IMS Organization ID. Os usuários da API só têm visibilidade sobre as empresas às quais têm acesso. Uma empresa pode conter muitas [propriedades](./properties.md). Uma propriedade pertence a exatamente uma empresa.
+Uma empresa representa uma organização de cliente, geralmente um negócio. Na API do Reactor, essas empresas correspondem 1:1 à ID de organização IMS. Os usuários da API só têm visibilidade das empresas às quais têm acesso. Uma empresa pode conter muitas [propriedades](./properties.md). Uma propriedade pertence a exatamente uma empresa.
 
-O endpoint `/companies` na API do reator permite recuperar programaticamente as empresas às quais você tem acesso no aplicativo de experiência.
+O ponto de extremidade `/companies` na API do reator permite recuperar programaticamente as empresas às quais você tem acesso no aplicativo de experiência.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
 ## Recuperar uma lista de empresas {#list}
 
-Você pode listar as empresas para as quais está autorizado a usar, fazendo uma solicitação de GET para o endpoint `/companies`. Na maioria dos casos, há exatamente um.
+É possível listar as empresas às quais você têm autorização de acesso fazendo uma solicitação GET para o ponto de extremidade `/companies`. Na maioria dos casos, há exatamente um.
 
 **Formato da API**
 
@@ -30,7 +30,7 @@ GET /companies
 
 >[!NOTE]
 >
->Usando parâmetros de consulta, empresas listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
+>Usando parâmetros de consulta, as empresas listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Consulte o manual sobre [filtragem de respostas](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -106,9 +106,9 @@ Uma resposta bem-sucedida retorna uma lista de empresas às quais você tem aces
 }
 ```
 
-## Procurar uma empresa {#lookup}
+## Pesquisar uma empresa {#lookup}
 
-Você pode pesquisar uma empresa específica incluindo a ID no caminho de uma solicitação do GET.
+Você pode pesquisar uma empresa específica incluindo a respectiva ID no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -118,7 +118,7 @@ GET /companies/{COMPANY_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{COMPANY_ID}` | O valor `id` da empresa que você deseja procurar. |
+| `{COMPANY_ID}` | O valor `id` da empresa que você deseja pesquisar. |
 
 {style=&quot;table-layout:auto&quot;}
 

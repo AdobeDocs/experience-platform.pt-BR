@@ -1,28 +1,28 @@
 ---
-title: Ponto de extremidade de pacotes de extensão
-description: Saiba como fazer chamadas para o endpoint /extension_packages na API do Reator.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint dos pacotes de extensão
+description: Saiba como fazer chamadas para o endpoint /extension_packages na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 5%
+source-wordcount: '951'
+ht-degree: 73%
 
 ---
 
-# Ponto de extremidade de pacotes de extensão
+# Endpoint dos pacotes de extensão
 
 >[!WARNING]
 >
->A implementação do endpoint `/extension_packages` está em fluxo à medida que os recursos são adicionados, removidos e retrabalhados.
+>A implementação do endpoint `/extension_packages` ocorre em fluxo, à medida que os recursos são adicionados, removidos e retrabalhados.
 
-Um pacote de extensão representa uma [extensão](./extensions.md) como criada por um desenvolvedor de extensão. Um pacote de extensão define recursos adicionais que podem ser disponibilizados para usuários de tags. Normalmente, esses recursos vêm na forma de [componentes de regra](./rule-components.md) (eventos, condições e ações) e [elementos de dados](./data-elements.md), mas também podem incluir módulos principais e módulos compartilhados.
+Um pacote de extensão representa uma [extensão](./extensions.md) criada por um desenvolvedor de extensões. Um pacote de extensão define recursos adicionais que podem ser disponibilizados para usuários de tags. Normalmente, esses recursos vêm na forma de [componentes de regra](./rule-components.md) (eventos, condições e ações) e [elementos de dados](./data-elements.md), mas também podem incluir módulos principais e compartilhados.
 
-Os pacotes de extensão são exibidos no catálogo de extensões na interface do usuário da coleção de dados para que os usuários instalem. A adição de um pacote de extensão a uma propriedade é realizada com a criação de uma extensão com um link para o pacote de extensão.
+Os pacotes de extensão são exibidos no catálogo de extensões na interface da Coleção de dados para que os usuários os instalem. A adição de um pacote de extensão a uma propriedade é realizada por meio da criação de uma extensão com um link para o pacote de extensão.
 
 Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor que o criou.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [Guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
 Além de entender como fazer chamadas para a API do Reator, também é importante entender como os atributos `status` e `availability` de um pacote de extensão afetam quais ações você pode executar nele. Elas são explicadas nas seções abaixo.
 
@@ -52,7 +52,7 @@ Há níveis de disponibilidade para um pacote de extensão: `development`, `priv
 
 ## Recuperar uma lista de pacotes de extensão {#list}
 
-Você pode recuperar uma lista de pacotes de extensão fazendo uma solicitação GET para `/extension_packages`.
+É possível recuperar uma lista de pacotes de extensão fazendo uma solicitação GET para `/extension_packages`.
 
 **Formato da API**
 
@@ -236,7 +236,7 @@ Uma resposta bem-sucedida retorna uma lista de pacotes de extensão.
 
 ## Pesquisar um pacote de extensão {#lookup}
 
-Você pode procurar um pacote de extensão fornecendo sua ID no caminho de uma solicitação do GET.
+É possível pesquisar um pacote de extensão informando a respectiva ID no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -246,7 +246,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão que você deseja pesquisar. |
+| `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão que você deseja consultar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do pacote de extensão, incluindo seus recursos delegados, como `actions`, `conditions`, `data_elements` e muito mais. O exemplo de resposta abaixo foi truncado para espaço.
+Uma resposta bem-sucedida retorna os detalhes do pacote de extensão, incluindo seus recursos delegados, como `actions`, `conditions`, `data_elements`, entre outros. O exemplo de resposta a seguir foi truncado por questões de espaço.
 
 ```json
 {
@@ -471,9 +471,9 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão, incluindo 
 
 ## Criar um pacote de extensão {#create}
 
-Os pacotes de extensão são criados usando uma ferramenta de scaffolding Node.js e salvos em sua máquina local antes de serem enviados à API Reator. Para obter mais informações sobre como configurar um pacote de extensão, consulte o guia sobre [introdução ao desenvolvimento de extensão](../../extension-dev/getting-started.md).
+Os pacotes de extensão são criados usando uma ferramenta de andaime Node.js e salvos em seu computador local antes de serem enviados à API do Reactor. Para obter mais informações sobre como configurar um pacote de extensão, consulte o manual sobre [introdução ao desenvolvimento de extensões](../../extension-dev/getting-started.md).
 
-Depois de criar o arquivo de pacote de extensão, você pode enviá-lo para a API do Reator por meio de uma solicitação POST.
+Depois de criar o arquivo de pacote de extensão, você pode enviá-lo para a API do Reactor por meio de uma solicitação POST.
 
 **Formato da API**
 
@@ -483,7 +483,7 @@ POST /extension_packages
 
 **Solicitação**
 
-A solicitação a seguir cria um novo pacote de extensão. O caminho local para o arquivo de pacote que está sendo carregado é referenciado como dados de formulário (`package`) e, portanto, esse ponto de extremidade requer um cabeçalho `Content-Type` de `multipart/form-data`.
+A solicitação a seguir cria um novo pacote de extensão. O caminho local para o arquivo de pacote que está sendo carregado é referenciado como dados de formulário (`package`). Portanto, esse endpoint requer um cabeçalho `Content-Type` de `multipart/form-data`.
 
 ```shell
 curl -X POST \
@@ -720,7 +720,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Solicitação**
 
-Assim como em [criar um pacote de extensão](#create), uma versão local do pacote atualizado deve ser carregada por meio de dados de formulário.
+Assim como na [criação de um pacote de extensão](#create), uma versão local do pacote atualizado deve ser carregada por meio de dados de formulário.
 
 ```shell
 curl -X PATCH \
@@ -939,11 +939,11 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão atualizado.
 }
 ```
 
-## Libere um pacote de extensão de forma privada {#private-release}
+## Liberar um pacote de extensão de forma privada {#private-release}
 
-Depois de concluir o teste do pacote de extensão, você pode liberá-lo em privado. Isso o disponibiliza para qualquer propriedade na empresa.
+Depois de concluir o teste do pacote de extensão, você pode liberá-lo de forma privada. Isso o torna disponível para qualquer propriedade na empresa.
 
-Depois de ter lançado em privado, você pode iniciar o processo de lançamento público preenchendo o [formulário de solicitação de versão pública](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
+Depois de liberá-lo de forma privada, é possível iniciar o processo de liberação pública preenchendo o [formulário de solicitação de liberação pública](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
 
 **Formato da API**
 
@@ -959,7 +959,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Solicitação**
 
-Uma versão privada é alcançada fornecendo um `action` com um valor `release_private` no `meta` dos dados da solicitação.
+Uma liberação privada é realizada mediante o fornecimento de um `action` com um valor `release_private` no `meta` dos dados da solicitação.
 
 ```shell
 curl -X PATCH \
@@ -1188,7 +1188,7 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão.
 
 ## Descontinuar um pacote de extensão {#discontinue}
 
-Você pode descontinuar um pacote de extensão definindo seu atributo `discontinued` para `true` por meio de uma solicitação PATCH.
+É possível descontinuar um pacote de extensão definindo seu atributo `discontinued` como `true` por meio de uma solicitação PATCH.
 
 **Formato da API**
 
@@ -1204,7 +1204,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Solicitação**
 
-Uma versão privada é alcançada fornecendo um `action` com um valor `release_private` no `meta` dos dados da solicitação.
+Uma liberação privada é realizada mediante o fornecimento de um `action` com um valor `release_private` no `meta` dos dados da solicitação.
 
 ```shell
 curl -X PATCH \
@@ -1281,7 +1281,7 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão.
 
 ## Listar as versões de um pacote de extensão
 
-Você pode listar as versões de um pacote de extensão ao anexar `/versions` ao caminho de uma solicitação de pesquisa.
+Você pode listar as versões de um pacote de extensão acrescentando `/versions` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -1309,4 +1309,4 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de versões anteriores do pacote de extensão. Um exemplo de resposta foi omitido para espaço.
+Uma resposta bem-sucedida retorna uma matriz de versões anteriores do pacote de extensão. Um exemplo de resposta foi omitido por razões de espaço.

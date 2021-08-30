@@ -1,20 +1,20 @@
 ---
-title: Ponto de extremidade de retornos de chamada
-description: Saiba como fazer chamadas para o endpoint /callbacks na API do Reator.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint de retornos de chamada
+description: Saiba como fazer chamadas para o endpoint /callbacks na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 8%
+source-wordcount: '621'
+ht-degree: 99%
 
 ---
 
-# Ponto de extremidade de retornos de chamada
+# Endpoint de retornos de chamada
 
-Um retorno de chamada é uma mensagem que a API de reator envia para um URL específico (geralmente um que é hospedado por sua organização).
+Um retorno de chamada é uma mensagem que a API do Reactor envia a uma URL específica (geralmente, uma que é hospedada por sua organização).
 
-Os retornos de chamada devem ser usados junto com [eventos de auditoria](./audit-events.md) para rastrear atividades na API do reator. Cada vez que um evento de auditoria de um determinado tipo é gerado, um retorno de chamada pode enviar uma mensagem correspondente ao URL especificado.
+Os retornos de chamada devem ser usados juntamente com [eventos de auditoria](./audit-events.md) para rastrear atividades na API do Reactor. Sempre que um evento de auditoria de determinado tipo é gerado, um retorno de chamada pode enviar uma mensagem correspondente à URL especificada.
 
-O serviço por trás do URL especificado no retorno de chamada deve responder com o código de status HTTP 200 (OK) ou 201 (Created). Se o serviço não responder com nenhum desses códigos de status, o delivery da mensagem será repetido nos seguintes intervalos:
+O serviço por trás da URL especificada no retorno de chamada deve responder com o código de status HTTP 200 (OK) ou 201 (Criado). Se o serviço não responder com nenhum desses códigos de status, o envio da mensagem será repetido nos seguintes intervalos:
 
 * 1 minuto
 * 5 minutos
@@ -26,19 +26,19 @@ O serviço por trás do URL especificado no retorno de chamada deve responder co
 
 >[!NOTE]
 >
->Os intervalos de repetição são relativos ao intervalo anterior. Por exemplo, se a tentativa de um minuto falhar, a próxima tentativa será agendada por cinco minutos após a falha da tentativa de um minuto (seis minutos após a mensagem ter sido gerada).
+>Os intervalos de repetição são relativos ao intervalo anterior. Por exemplo, se a repetição em um minuto falhar, a próxima tentativa será agendada para cinco minutos após a tentativa de um minuto que falhou (seis minutos após a mensagem ter sido gerada).
 
-Se todas as tentativas de delivery não forem bem-sucedidas, a mensagem será descartada.
+Se todas as tentativas de envio falharem, a mensagem será descartada.
 
-Um retorno de chamada pertence a exatamente um [propriedade](./properties.md). Uma propriedade pode ter muitos retornos de chamada.
+Um retorno de chamada pertence a apenas uma [propriedade](./properties.md). Uma propriedade pode ter muitos retornos de chamada.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte novamente o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação para a API.
 
 ## Listar retornos de chamada {#list}
 
-Você pode listar todos os retornos de chamada em uma propriedade, fazendo uma solicitação do GET.
+Você pode listar todos os retornos de chamada em uma propriedade fazendo uma solicitação GET.
 
 **Formato da API**
 
@@ -54,7 +54,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 >[!NOTE]
 >
->Usando parâmetros de consulta, retornos de chamada listados podem ser filtrados com base nos seguintes atributos:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
+>Usando parâmetros de consulta, os retornos de chamada listados podem ser filtrados com base nos seguintes atributos:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Consulte o manual sobre [filtragem de respostas](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de retornos de chamada para a propriedade especificada.
+Uma resposta bem-sucedida retorna uma lista de retornos de chamada da propriedade especificada.
 
 ```json
 {
@@ -117,9 +117,9 @@ Uma resposta bem-sucedida retorna uma lista de retornos de chamada para a propri
 
 ## Pesquisar um retorno de chamada {#lookup}
 
-Você pode pesquisar um retorno de chamada fornecendo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar um retorno de chamada fornecendo a respectiva ID no caminho de uma solicitação GET.
 
-**Formato da API**
+**Formato de API**
 
 ```http
 GET /callbacks/{CALLBACK_ID}
@@ -145,7 +145,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da chamada de retorno.
+Uma resposta bem-sucedida retorna os detalhes do retorno de chamada.
 
 ```json
 {
@@ -181,7 +181,7 @@ Uma resposta bem-sucedida retorna os detalhes da chamada de retorno.
 
 ## Criar um retorno de chamada {#create}
 
-Você pode criar um novo retorno de chamada fazendo uma solicitação de POST.
+Você pode criar um novo retorno de chamada fazendo uma solicitação POST.
 
 **Formato da API**
 
@@ -191,7 +191,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `PROPERTY_ID` | O `id` do [propriedade](./properties.md) em que você está definindo o retorno de chamada. |
+| `PROPERTY_ID` | O `id` da [propriedade](./properties.md) sob a qual o retorno de chamada está sendo definido. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -218,8 +218,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `url` | O destino do URL da mensagem de retorno de chamada. O URL deve usar a extensão de protocolo HTTPS. |
-| `subscriptions` | Uma matriz de sequências de caracteres, indicando os tipos de evento de auditoria que acionarão a chamada de retorno. Consulte o [guia de ponto de extremidade de eventos de auditoria](./audit-events.md) para obter uma lista de tipos de eventos possíveis. |
+| `url` | O destino da URL para a mensagem de retorno de chamada. A URL deve usar a extensão de protocolo HTTPS. |
+| `subscriptions` | Uma matriz de strings, indicando os tipos de evento de auditoria que acionarão o retorno de chamada. Consulte o [manual de endpoint de eventos de auditoria](./audit-events.md) para obter uma lista de tipos de eventos possíveis. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -261,7 +261,7 @@ Uma resposta bem-sucedida retorna os detalhes do retorno de chamada recém-criad
 
 ## Atualizar um retorno de chamada
 
-Você pode atualizar um retorno de chamada ao incluir sua ID no caminho de uma solicitação do PUT.
+É possível atualizar um retorno de chamada incluindo a respectiva ID no caminho de uma solicitação PUT.
 
 **Formato da API**
 
@@ -271,7 +271,7 @@ PUT /callbacks/{CALLBACK_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `CALLBACK_ID` | O `id` do retorno de chamada que você deseja atualizar. |
+| `CALLBACK_ID` | A `id` do retorno de chamada que você deseja atualizar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -302,9 +302,9 @@ curl -X PUT \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Um objeto cujas propriedades representam os atributos a serem atualizados para o retorno de chamada. Cada chave representa o atributo de retorno de chamada específico a ser atualizado, juntamente com o valor correspondente ao qual deve ser atualizado.<br><br>Os atributos a seguir podem ser atualizados para retornos de chamada:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | O `id` do retorno de chamada que você deseja atualizar. Isso deve corresponder ao valor `{CALLBACK_ID}` fornecido no caminho da solicitação. |
-| `type` | O tipo de recurso que está sendo atualizado. Para esse ponto de extremidade, o valor deve ser `callbacks`. |
+| `attributes` | Um objeto cujas propriedades representam os atributos a serem atualizados para o retorno de chamada. Cada chave representa o atributo de retorno de chamada específico a ser atualizado, juntamente com o valor correspondente para o qual ele deve ser atualizado.<br><br>Os seguintes atributos podem ser atualizados para retornos de chamada:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | A `id` do retorno de chamada que você deseja atualizar. Isso deve corresponder ao valor `{CALLBACK_ID}` informado no caminho da solicitação. |
+| `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `callbacks`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -347,7 +347,7 @@ Uma resposta bem-sucedida retorna os detalhes do retorno de chamada atualizado.
 
 ## Excluir um retorno de chamada
 
-Você pode excluir um retorno de chamada ao incluir sua ID no caminho de uma solicitação do DELETE.
+É possível excluir um retorno de chamada incluindo a respectiva ID no caminho de uma solicitação DELETE.
 
 **Formato da API**
 
@@ -357,7 +357,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `CALLBACK_ID` | O `id` do retorno de chamada que você deseja excluir. |
+| `CALLBACK_ID` | A `id` do retorno de chamada que você deseja excluir. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -373,4 +373,4 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) sem nenhum corpo de resposta, indicando que o retorno de chamada foi excluído.
+Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) sem corpo de resposta, indicando que o retorno de chamada foi excluído.

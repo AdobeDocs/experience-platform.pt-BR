@@ -1,20 +1,20 @@
 ---
-title: Ponto de extremidade de eventos de auditoria
-description: Saiba como fazer chamadas para o endpoint /audit_events na API do reator.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint de eventos de auditoria
+description: Saiba como fazer chamadas para o endpoint /audit_events na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 4%
+source-wordcount: '262'
+ht-degree: 98%
 
 ---
 
-# Ponto de extremidade de eventos de auditoria
+# Endpoint de eventos de auditoria
 
 >[!WARNING]
 >
->A implementação do endpoint `/audit_events` está em fluxo à medida que os recursos são adicionados, removidos e retrabalhados.
+>A implementação do endpoint `/audit_events` ocorre em fluxo, à medida que os recursos são adicionados, removidos e retrabalhados.
 
-Um evento de auditoria é um registro de uma alteração específica para outro recurso na API do Reator, gerada no momento em que a alteração é feita. Esses são eventos do sistema que podem ser inscritos por meio do uso de um [callback](./callbacks.md). O endpoint `/audit_events` na API do reator permite gerenciar programaticamente eventos de auditoria no aplicativo de experiência.
+Um evento de auditoria é um registro de uma alteração específica em outro recurso na API do Reactor, gerada no momento em que a alteração é feita. Trata-se de eventos do sistema que é possível assinar por meio do uso de um [callback](./callbacks.md). O endpoint `/audit_events` na API do Reactor permite gerenciar de forma programática eventos de auditoria no aplicativo de experiência.
 
 Os eventos de auditoria são estruturados no formato de `{RESOURCE_TYPE}.{EVENT}`, como `build.created` ou `rule.updated`.
 
@@ -38,11 +38,11 @@ Os seguintes eventos são compatíveis para cada tipo de recurso:
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
 ## Recuperar uma lista de eventos de auditoria {#list}
 
-Você pode recuperar uma lista de eventos de auditoria para todas as propriedades de sua organização, fazendo uma solicitação de GET para o endpoint `/audit_events`.
+Você pode recuperar uma lista de eventos de auditoria para todas as propriedades de sua organização fazendo uma solicitação GET para o endpoint `/audit_events`.
 
 **Formato da API**
 
@@ -64,7 +64,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de eventos de auditoria. O exemplo de resposta abaixo foi truncado para espaço.
+Uma resposta bem-sucedida retorna uma lista de eventos de auditoria. O exemplo de resposta a seguir foi truncado por questões de espaço.
 
 ```json
 {
@@ -159,7 +159,7 @@ Uma resposta bem-sucedida retorna uma lista de eventos de auditoria. O exemplo d
 
 ## Pesquisar um evento de auditoria {#lookup}
 
-Você pode pesquisar um evento de auditoria fornecendo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar um evento de auditoria fornecendo a respectiva ID no caminho de uma solicitação GET.
 
 **Formato da API**
 

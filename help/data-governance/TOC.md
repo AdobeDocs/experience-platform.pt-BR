@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Data Governance
 breadcrumb-title: Guia do Data Governance
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas.
-feature: Governança de dados
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Governance
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 35%
 
 ---
@@ -36,5 +35,5 @@ ht-degree: 35%
    * [Políticas](api/policies.md)
    * [Ações de marketing](api/marketing-actions.md)
    * [Avaliação](api/evaluation.md)
-* [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [Referência da API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

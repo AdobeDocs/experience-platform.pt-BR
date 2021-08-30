@@ -6,11 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para impor a conformidade do uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 1%
+source-wordcount: '1358'
+ht-degree: 2%
 
 ---
 
@@ -189,7 +188,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 >
 > Essa etapa pressupõe que você tenha pelo menos uma política de uso de dados ativa que impede que ações de marketing específicas sejam executadas em dados que contenham determinados rótulos. Se não tiver políticas de uso aplicáveis para os conjuntos de dados que estão sendo avaliados, siga o [tutorial de criação de política](../../data-governance/policies/create.md) para criar um antes de continuar com esta etapa.
 
-Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a [API do Serviço de Política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar esses conjuntos de dados em relação a ações de marketing específicas, a fim de verificar violações da política de uso de dados.
+Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a [API do Serviço de Política](https://www.adobe.io/experience-platform-apis/references/policy-service/) para avaliar esses conjuntos de dados em relação a ações de marketing específicas, a fim de verificar violações da política de uso de dados.
 
 Para avaliar os conjuntos de dados, você deve fornecer o nome da ação de marketing no caminho de uma solicitação do POST, enquanto fornece as IDs do conjunto de dados no corpo da solicitação, conforme mostrado no exemplo abaixo.
 

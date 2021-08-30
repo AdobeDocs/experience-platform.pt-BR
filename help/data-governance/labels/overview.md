@@ -5,10 +5,9 @@ title: Visão geral dos rótulos de uso de dados
 topic-legacy: labels
 description: A Governança de dados do Adobe Experience Platform permite aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Este documento fornece uma visão geral de rótulos de uso de dados no Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
@@ -49,13 +48,13 @@ Você pode gerenciar rótulos de uso de dados usando [!DNL Experience Platform] 
 
 ### Uso da interface do usuário
 
-A área de trabalho **[!UICONTROL Policies]** na interface do usuário [!DNL Experience Platform] permite visualizar e gerenciar rótulos principais e personalizados para sua organização. O espaço de trabalho **[!DNL Datasets]** permite aplicar rótulos a conjuntos de dados e campos. Para obter mais informações, consulte o [guia do usuário de rótulos](user-guide.md).
+O espaço de trabalho **[!UICONTROL Policies]** na interface do usuário [!DNL Experience Platform] permite visualizar e gerenciar rótulos principais e personalizados para sua organização. O espaço de trabalho **[!DNL Datasets]** permite aplicar rótulos a conjuntos de dados e campos. Para obter mais informações, consulte o [guia do usuário de rótulos](user-guide.md).
 
 ### Uso de APIs
 
-O endpoint `/labels` na [API do Serviço de Política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) permite gerenciar programaticamente os rótulos de uso de dados, incluindo a criação de rótulos personalizados. Consulte o [guia de ponto de extremidade de rótulos](../api/labels.md) para obter mais informações.
+O endpoint `/labels` na [API do Serviço de Política](https://www.adobe.io/experience-platform-apis/references/policy-service/) permite gerenciar programaticamente os rótulos de uso de dados, incluindo a criação de rótulos personalizados. Consulte o [guia de ponto de extremidade de rótulos](../api/labels.md) para obter mais informações.
 
-A [API do Serviço de Conjunto de Dados](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) é usada para gerenciar rótulos para campos e conjuntos de dados. Consulte o guia em [gerenciar rótulos do conjunto de dados](./dataset-api.md) para obter mais informações.
+A [API do Serviço de Conjunto de Dados](https://www.adobe.io/experience-platform-apis/references/dataset-service/) é usada para gerenciar rótulos para campos e conjuntos de dados. Consulte o guia em [gerenciar rótulos do conjunto de dados](./dataset-api.md) para obter mais informações.
 
 ## Próximas etapas
 

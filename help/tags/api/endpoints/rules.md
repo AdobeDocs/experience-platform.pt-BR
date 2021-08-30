@@ -1,30 +1,30 @@
 ---
 title: Ponto de extremidade de regras
-description: Saiba como fazer chamadas para o endpoint /rules na API do Reator.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+description: Saiba como fazer chamadas para o ponto de extremidade /rules na API do reator.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 8%
+source-wordcount: '933'
+ht-degree: 99%
 
 ---
 
 # Ponto de extremidade de regras
 
-No contexto de tags de coleta de dados, as regras controlam o comportamento dos recursos em uma biblioteca implantada. Uma regra é composta de um ou mais [componentes da regra](./rule-components.md), existe para unir os componentes da regra de maneira lógica. O endpoint `/rules` na API do Reator permite gerenciar regras de tags de forma programática.
+No contexto de tags de coleção de dados, as regras controlam o comportamento dos recursos em uma biblioteca implantada. Uma regra é composta por um ou mais [componentes de regra](./rule-components.md); existe para unir os componentes da regra de maneira lógica. O ponto de extremidade `/rules` na API do reator permite gerenciar regras de tags de forma programática.
 
 >[!NOTE]
 >
->Este documento aborda como gerenciar regras na API do reator. Para obter informações sobre como interagir com as regras na interface do usuário da Coleta de dados, consulte o [guia da interface do usuário](../../ui/managing-resources/rules.md).
+>Este documento aborda como gerenciar regras na API do reator. Para obter informações sobre como interagir com as regras na Interface da Coleção de dados, consulte o [manual da interface](../../ui/managing-resources/rules.md).
 
 Uma regra pertence a exatamente uma [propriedade](./properties.md). Uma propriedade pode ter muitas regras.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
 ## Recuperar uma lista de regras {#list}
 
-Você pode recuperar uma lista de regras pertencentes a uma propriedade, incluindo, fazendo uma solicitação do GET.
+Você pode recuperar uma lista de regras que pertencem a uma propriedade fazendo uma solicitação GET.
 
 **Formato da API**
 
@@ -40,7 +40,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Usando parâmetros de consulta, as regras listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
+>Usando parâmetros de consulta, as regras listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte o manual sobre [filtragem de respostas](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -141,11 +141,11 @@ Uma resposta bem-sucedida retorna uma lista de regras para a propriedade especif
 
 ## Pesquisar uma regra {#lookup}
 
-Você pode pesquisar uma regra fornecendo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar uma regra fornecendo a respectiva ID no caminho de uma solicitação GET.
 
 >[!NOTE]
 >
->Quando as regras são excluídas, elas são marcadas como excluídas, mas não são realmente removidas do sistema. Portanto, é possível recuperar uma regra excluída. As regras excluídas podem ser identificadas pela presença de uma propriedade `meta.deleted_at` .
+>Quando excluídas, as regras são marcadas como excluídas, mas não são realmente removidas do sistema. Portanto, é possível recuperar uma regra excluída. As regras excluídas podem ser identificadas pela presença de uma propriedade `meta.deleted_at`.
 
 **Formato da API**
 
@@ -247,7 +247,7 @@ Uma resposta bem-sucedida retorna os detalhes da regra.
 
 ## Criar uma regra {#create}
 
-Você pode criar uma nova regra fazendo uma solicitação de POST.
+Você pode criar uma nova regra fazendo uma solicitação POST.
 
 **Formato da API**
 
@@ -285,7 +285,7 @@ curl -X POST \
 | --- | --- |
 | `attributes.name` | **(Obrigatório)** Um nome legível para a regra. |
 | `attributes.enabled` | Um valor booleano indicando se a regra está ativada. |
-| `type` | O tipo de recurso que está sendo criado. Para esse ponto de extremidade, o valor deve ser `rules`. |
+| `type` | O tipo de recurso que está sendo criado. Para esse endpoint, o valor deve ser `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,11 +365,11 @@ Uma resposta bem-sucedida retorna os detalhes da regra recém-criada.
 
 ## Adicionar eventos, condições e ações a uma regra {#components}
 
-Depois de [criar uma regra](#create), você pode começar a desenvolver sua lógica adicionando eventos, condições e ações (coletivamente chamadas de componentes de regra). Consulte a seção sobre [criar um componente de regra](./rule-components.md#create) no guia de endpoint `/rule_components` para saber como fazer isso na API do Reator.
+Depois de [criar uma regra](#create), você pode começar a desenvolver a lógica dela adicionando eventos, condições e ações (coletivamente chamados de componentes de regra). Consulte a seção sobre a [criação de um componente de regra](./rule-components.md#create) no manual de endpoint `/rule_components` para saber como fazer isso na API do Reactor.
 
 ## Atualizar uma regra {#update}
 
-Você pode atualizar os atributos de uma regra ao incluir sua ID no caminho de uma solicitação de PATCH.
+Você pode atualizar os atributos de uma regra incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 **Formato da API**
 
@@ -407,9 +407,9 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Um objeto cujas regras representam os atributos a serem atualizados para a regra. Os atributos a seguir podem ser atualizados para uma regra: <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | O `id` da regra que você deseja atualizar. Isso deve corresponder ao valor `{RULE_ID}` fornecido no caminho da solicitação. |
-| `type` | O tipo de recurso que está sendo atualizado. Para esse ponto de extremidade, o valor deve ser `rules`. |
+| `attributes` | Um objeto cujas regras representam os atributos que serão atualizados para a regra. Os atributos a seguir podem ser atualizados para uma regra: <ul><li>`name`</li><li>`enabled`</li></ul> |
+| `id` | O `id` da regra que você deseja atualizar. Ele deve corresponder ao valor `{RULE_ID}` fornecido no caminho da solicitação. |
+| `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -489,7 +489,7 @@ Uma resposta bem-sucedida retorna os detalhes da regra atualizada.
 
 ## Excluir uma regra
 
-É possível excluir uma regra ao incluir sua ID no caminho de uma solicitação de DELETE.
+É possível excluir uma regra ao incluir sua ID no caminho de uma solicitação DELETE.
 
 **Formato da API**
 
@@ -519,15 +519,15 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) sem corpo de
 
 ## Gerenciar notas de uma regra {#notes}
 
-As regras são recursos &quot;notáveis&quot;, o que significa que você pode criar e recuperar notas baseadas em texto em cada recurso individual. Consulte o [guia de ponto de extremidade de notas](./notes.md) para obter mais informações sobre como gerenciar notas para regras e outros recursos compatíveis.
+As regras são recursos &quot;notáveis&quot;, o que significa que você pode criar e recuperar notas de texto em cada recurso individual. Consulte o [manual de endpoint de notas](./notes.md) para obter mais informações sobre como gerenciar notas para regras e outros recursos compatíveis.
 
-## Recuperar recursos relacionados para uma regra {#related}
+## Recuperar recursos relacionados de uma regra {#related}
 
-As chamadas a seguir demonstram como recuperar os recursos relacionados de uma regra. Quando [procurar uma regra](#lookup), esses relacionamentos são listados na regra `relationships`.
+As chamadas a seguir demonstram como recuperar os recursos relacionados de uma regra. Quando você [pesquisa uma regra](#lookup), esses relacionamentos são listados na regra `relationships`.
 
-Consulte o [guia de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API de Reator.
+Consulte o [manual de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API do Reactor.
 
-### Listar as bibliotecas relacionadas para uma regra {#libraries}
+### Listar as bibliotecas relacionadas de uma regra {#libraries}
 
 Você pode listar as bibliotecas que utilizam uma regra específica ao anexar `/libraries` ao caminho de uma solicitação de pesquisa.
 
@@ -829,7 +829,7 @@ Uma resposta bem-sucedida retorna uma lista de revisões que usam a regra especi
 
 ### Pesquisar a origem relacionada de uma regra {#origin}
 
-Você pode buscar a origem (versão anterior) de uma regra ao anexar `/origin` ao caminho de uma solicitação de pesquisa.
+Você pode pesquisar a origem (versão anterior) de uma regra anexando `/origin` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -931,7 +931,7 @@ Uma resposta bem-sucedida retorna os detalhes da extensão da regra especificada
 
 ### Pesquisar a propriedade relacionada de uma regra {#property}
 
-Você pode pesquisar a propriedade que possui uma regra ao anexar `/property` ao caminho de uma solicitação de pesquisa.
+Você pode pesquisar a propriedade que possui uma regra anexando `/property` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 

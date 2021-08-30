@@ -1,9 +1,9 @@
 ---
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem fez quais ações no Adobe Experience Platform.
-source-git-commit: eb8144ace087c68a159aab89195832860df431e2
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '463'
 ht-degree: 4%
 
 ---
@@ -58,7 +58,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## Gerenciamento de logs de auditoria na API
 
-Todas as ações que você pode executar na interface do usuário também podem ser realizadas usando chamadas de API. Consulte o [documento de referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml) para obter mais informações.
+Todas as ações que você pode executar na interface do usuário também podem ser realizadas usando chamadas de API. Consulte o [documento de referência da API](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obter mais informações.
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 

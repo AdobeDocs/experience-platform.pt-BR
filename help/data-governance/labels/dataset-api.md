@@ -5,17 +5,16 @@ title: 'Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs '
 topic-legacy: developer guide
 description: A API do Serviço de conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do Serviço de catálogo que gerencia os metadados do conjunto de dados.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '957'
 ht-degree: 2%
 
 ---
 
 # Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 
-O [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados do Adobe Experience Platform, mas é separada da API [!DNL Catalog Service] que gerencia os metadados do conjunto de dados.
+O [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados do Adobe Experience Platform, mas é separada da API [!DNL Catalog Service] que gerencia os metadados do conjunto de dados.
 
 Este documento aborda como gerenciar rótulos para conjuntos de dados e campos usando o [!DNL Dataset Service API]. Para obter etapas sobre como gerenciar os próprios rótulos de uso de dados usando chamadas de API, consulte o [guia de ponto de extremidade de rótulos](../api/labels.md) para o [!DNL Policy Service API].
 
@@ -200,7 +199,7 @@ Para obter mais informações sobre como gerenciar conjuntos de dados em [!DNL E
 
 A seção a seguir contém informações adicionais sobre como trabalhar com rótulos usando a API do serviço de conjunto de dados.
 
-### [!DNL If-Match] header  {#if-match}
+### [!DNL If-Match] header {#if-match}
 
 Ao fazer chamadas de API que atualizam os rótulos existentes de um conjunto de dados (PUT e DELETE), um cabeçalho `If-Match` que indica a versão atual da entidade de rótulo do conjunto de dados no Serviço de conjunto de dados deve ser incluído. Para evitar colisões de dados, o serviço só atualizará a entidade do conjunto de dados se a string incluída `If-Match` corresponder à tag da versão mais recente gerada pelo sistema para esse conjunto de dados.
 

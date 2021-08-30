@@ -4,11 +4,10 @@ solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados usando APIs '
 topic-legacy: developer guide
 description: A API do Serviço de conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do Serviço de catálogo que gerencia os metadados do conjunto de dados.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 2%
+source-wordcount: '1141'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 2%
 
 Este documento fornece etapas sobre como gerenciar rótulos de uso de dados usando a API [!DNL Policy Service] e a API [!DNL Dataset Service].
 
-O [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornece vários endpoints que permitem criar e gerenciar rótulos de uso de dados para sua organização.
+O [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) fornece vários endpoints que permitem criar e gerenciar rótulos de uso de dados para sua organização.
 
 A API [!DNL Dataset Service] permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados do Adobe Experience Platform, mas é separada da API [!DNL Catalog Service] que gerencia os metadados do conjunto de dados.
 
@@ -27,7 +26,7 @@ Antes de ler este guia, siga as etapas descritas na seção [introdução](../..
 
 Para fazer chamadas para os endpoints [!DNL Dataset Service] descritos neste documento, você deve ter o valor exclusivo `id` para um conjunto de dados específico. Se você não tiver esse valor, consulte o guia em [listando objetos do catálogo](../../catalog/api/list-objects.md) para encontrar as IDs de seus conjuntos de dados existentes.
 
-## Lista todos os rótulos {#list-labels}
+## Listar todos os rótulos {#list-labels}
 
 Usando a API [!DNL Policy Service], é possível listar todos os rótulos `core` ou `custom` fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
 
@@ -109,7 +108,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 }
 ```
 
-## Procure um rótulo {#look-up-label}
+## Pesquisar um rótulo {#look-up-label}
 
 Você pode pesquisar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação GET para a API [!DNL Policy Service].
 

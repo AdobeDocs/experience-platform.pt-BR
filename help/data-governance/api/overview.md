@@ -3,23 +3,22 @@ keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Guia da API do Serviço de Política
 topic-legacy: developer guide
-description: A API do Serviço de política permite aos desenvolvedores gerenciar rótulos e políticas de uso de dados no Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+description: A API do Serviço de política permite aos desenvolvedores gerenciar rótulos e políticas de uso de dados no Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
 
-# [!DNL Policy Service] Guia da API
+# [!DNL Policy Service] Manual da API
 
 O Adobe Experience Platform [!DNL Data Governance] permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial em [!DNL Experience Platform] em vários níveis, incluindo catálogos, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle o uso de dados para ações de marketing.
 
 A API [!DNL Policy Service] fornece vários endpoints que permitem gerenciar programaticamente rótulos e políticas de uso de dados, bem como avaliar ações de marketing para violações de política. Esses endpoints são descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 
-Para exibir todos os pontos de extremidade disponíveis e operações CRUD, visite o [[!DNL Policy Service] API swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Para exibir todos os pontos de extremidade disponíveis e operações CRUD, visite o [[!DNL Policy Service] API swagger](https://www.adobe.io/experience-platform-apis/references/policy-service/).
 
 ## Rótulos
 

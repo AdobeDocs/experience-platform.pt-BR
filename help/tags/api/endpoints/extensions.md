@@ -1,26 +1,26 @@
 ---
-title: Ponto de extremidade de extensões
-description: Saiba como fazer chamadas para o endpoint /extensions na API do reator.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint de extensões
+description: Saiba como fazer chamadas para o ponto de extremidade /extensions na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 8%
+source-wordcount: '977'
+ht-degree: 99%
 
 ---
 
-# Ponto de extremidade de extensões
+# Endpoint de extensões
 
-Na API do reator, uma extensão representa a instância instalada de um pacote de extensão [e ](./extension-packages.md). Uma extensão disponibiliza os recursos definidos por um pacote de extensão para uma [propriedade](./properties.md). Esses recursos são aproveitados ao criar [extensões](./data-elements.md) e [componentes de regra](./rule-components.md).
+Na API do Reactor, uma extensão representa a instância instalada de um [pacote de extensão](./extension-packages.md). Uma extensão disponibiliza os recursos definidos por um pacote de extensão para uma [propriedade](./properties.md). Esses recursos são aproveitados ao serem criadas [extensões](./data-elements.md) e [componentes de regra](./rule-components.md).
 
-Uma extensão pertence a exatamente uma propriedade. Uma propriedade pode ter muitas extensões, mas não mais de uma instância instalada de um determinado pacote de extensão.
+Uma extensão pertence a exatamente uma propriedade. Uma propriedade pode ter muitas extensões, mas não mais de uma instância instalada de um pacote de extensão específico.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação para a API.
 
 ## Recuperar uma lista de extensões {#list}
 
-Você pode recuperar uma lista de extensões para uma propriedade fazendo uma solicitação do GET.
+Você pode recuperar uma lista de extensões para uma propriedade fazendo uma solicitação GET.
 
 **Formato da API**
 
@@ -36,7 +36,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->Usando parâmetros de consulta, as extensões listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
+>Usando parâmetros de consulta, as extensões listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Consulte o manual sobre [filtragem de respostas](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -155,7 +155,7 @@ Uma resposta bem-sucedida retorna uma lista de extensões definidas na proprieda
 
 ## Pesquisar uma extensão {#lookup}
 
-Você pode pesquisar uma extensão fornecendo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar uma extensão fornecendo a respectiva ID no caminho de uma solicitação GET.
 
 >[!NOTE]
 >
@@ -279,7 +279,7 @@ Uma resposta bem-sucedida retorna os detalhes da extensão.
 
 ## Criar ou atualizar uma extensão {#create}
 
-As extensões são criadas referenciando um [pacote de extensão](./extension-packages.md) e adicionando a extensão instalada a uma propriedade. Quando a tarefa de instalação for concluída, uma resposta será retornada indicando se a extensão foi instalada com êxito.
+As extensões são criadas referenciando um [pacote de extensão](./extension-packages.md) e adicionando a extensão instalada a uma propriedade. Quando a tarefa de instalação for concluída, uma resposta será retornada para indicar se a extensão foi instalada com êxito.
 
 **Formato da API**
 
@@ -325,8 +325,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `relationships.extension_package` | **(Obrigatório)** Um objeto que faz referência à ID do pacote de extensão que está sendo instalado. |
-| `attributes.delegate_descriptor_id` | Se sua extensão exigir configurações personalizadas, ela também exigirá uma ID de descritor delegado. Consulte o guia em [IDs do descritor delegado](../guides/delegate-descriptor-ids.md) para obter mais informações. |
-| `attributes.enabled` | Um booleano que indica se a extensão está ativada. |
+| `attributes.delegate_descriptor_id` | Se sua extensão exigir configurações personalizadas, ela também exigirá uma ID de descritor delegado. Consulte o manual sobre [IDs de descritor delegado](../guides/delegate-descriptor-ids.md) para obter mais informações. |
+| `attributes.enabled` | Um booliano que indica se a extensão está ativada. |
 | `attributes.settings` | Um objeto JSON de configurações representado como uma string. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -425,7 +425,7 @@ Uma resposta bem-sucedida retorna os detalhes da extensão recém-criada.
 
 ## Revisar uma extensão {#revise}
 
-É possível revisar uma extensão ao incluir sua ID no caminho de uma solicitação do PATCH.
+É possível revisar uma extensão incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 **Formato da API**
 
@@ -441,7 +441,7 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Solicitação**
 
-Assim como em [criar uma extensão](#create), uma versão local do pacote revisado deve ser carregada por meio de dados de formulário.
+Assim como ocorre na [criação de uma extensão](#create), uma versão local do pacote revisado deve ser carregada por meio de dados de formulário.
 
 ```shell
 curl -X PATCH \
@@ -466,14 +466,14 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Os atributos que você deseja revisar. Para extensões, você pode revisar seus atributos `delegate_descriptor_id`, `enabled` e `settings`. |
-| `meta.action` | Deve ser incluído com um valor `revise` ao fazer uma revisão. |
+| `attributes` | Os atributos que você deseja revisar. Para extensões, você pode revisar os atributos `delegate_descriptor_id`, `enabled` e `settings`. |
+| `meta.action` | Deve ser incluído com um valor `revise` ao ser feita uma revisão. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da extensão revisada, com sua propriedade `meta.latest_revision_number` aumentada em 1.
+Uma resposta bem-sucedida retorna os detalhes da extensão revisada, com a propriedade `meta.latest_revision_number` aumentada em 1.
 
 ```json
 {
@@ -565,7 +565,7 @@ Uma resposta bem-sucedida retorna os detalhes da extensão revisada, com sua pro
 
 ## Excluir uma extensão {#private-release}
 
-Você pode excluir uma extensão incluindo sua ID no caminho de uma solicitação de DELETE.
+Você pode excluir uma extensão incluindo a respectiva ID no caminho de uma solicitação DELETE.
 
 **Formato da API**
 
@@ -595,17 +595,17 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) sem corpo de
 
 ## Gerenciar notas de uma extensão {#notes}
 
-As extensões são recursos &quot;notáveis&quot;, o que significa que você pode criar e recuperar notas baseadas em texto em cada recurso individual. Consulte o [guia de ponto de extremidade de notas](./notes.md) para obter mais informações sobre como gerenciar notas para extensões e outros recursos compatíveis.
+As extensões são recursos &quot;anotáveis&quot;, o que significa que você pode criar e recuperar notas baseadas em texto em cada recurso individual. Consulte o [manual de endpoint de notas](./notes.md) para obter mais informações sobre como gerenciar notas de extensões e outros recursos compatíveis.
 
-## Recuperar recursos relacionados para uma extensão {#related}
+## Recuperar recursos relacionados a uma extensão {#related}
 
-As chamadas a seguir demonstram como recuperar os recursos relacionados para uma extensão. Quando [estiver procurando uma extensão](#lookup), esses relacionamentos são listados na propriedade `relationships`.
+As chamadas a seguir demonstram como recuperar os recursos relacionados a uma extensão. Quando você [pesquisa uma extensão](#lookup), esses relacionamentos são listados na propriedade `relationships`.
 
-Consulte o [guia de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API de Reator.
+Consulte o [manual de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API do reator.
 
-### Listar as bibliotecas relacionadas para uma extensão {#libraries}
+### Listar as bibliotecas relacionadas a uma extensão {#libraries}
 
-Você pode listar as bibliotecas que utilizam uma extensão ao anexar `/libraries` ao caminho de uma solicitação de pesquisa.
+Você pode listar as bibliotecas que utilizam uma extensão anexando `/libraries` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -727,7 +727,7 @@ Uma resposta bem-sucedida retorna uma lista de bibliotecas que usam a extensão 
 
 ### Listar as revisões relacionadas de uma extensão {#revisions}
 
-Você pode listar as revisões anteriores de uma extensão ao anexar `/revisions` ao caminho de uma solicitação de pesquisa.
+Você pode listar as revisões anteriores de uma extensão anexando `/revisions` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -755,7 +755,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de revisões para a extensão especificada.
+Uma resposta bem-sucedida retorna uma lista de revisões da extensão especificada.
 
 ```json
 {
@@ -939,9 +939,9 @@ Uma resposta bem-sucedida retorna uma lista de revisões para a extensão especi
 }
 ```
 
-### Procure um pacote de extensão relacionado para uma extensão {#extension}
+### Procurar o pacote relacionado a uma extensão {#extension}
 
-Você pode buscar o pacote de extensão no qual uma extensão se baseia, anexando `/extension_package` ao caminho de uma solicitação do GET.
+Você pode pesquisar o pacote no qual uma extensão se baseia anexando `/extension_package` ao caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -969,7 +969,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do pacote de extensão em que a extensão especificada se baseia. O exemplo de resposta abaixo foi truncado para espaço.
+Uma resposta bem-sucedida retorna os detalhes do pacote em que a extensão especificada se baseia. O exemplo de resposta a seguir foi truncado por questões de espaço.
 
 ```json
 {
@@ -1174,9 +1174,9 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão em que a ex
 }
 ```
 
-### Pesquisar a origem relacionada de uma extensão {#origin}
+### Procurar a origem relacionada a uma extensão {#origin}
 
-Você pode buscar a origem de uma extensão ao anexar `/origin` ao caminho de uma solicitação do GET. A origem de uma extensão é a revisão anterior que foi atualizada para criar a revisão atual.
+É possível pesquisar a origem de uma extensão anexando `/origin` ao caminho de uma solicitação GET. A origem de uma extensão é a revisão anterior que foi atualizada para criar a revisão atual.
 
 **Formato da API**
 
@@ -1294,9 +1294,9 @@ Uma resposta bem-sucedida retorna os detalhes da origem da extensão especificad
 }
 ```
 
-### Procure uma extensão na propriedade relacionada {#property}
+### Pesquisar uma extensão na propriedade relacionada {#property}
 
-Você pode pesquisar a propriedade que possui uma extensão ao anexar `/property` ao caminho de uma solicitação do GET.
+Você pode pesquisar a propriedade que possui uma extensão anexando `/property` ao caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -1324,7 +1324,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da propriedade proprietária da extensão especificada.
+Uma resposta bem-sucedida retorna os detalhes da propriedade que possui a extensão especificada.
 
 ```json
 {

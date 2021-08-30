@@ -1,28 +1,28 @@
 ---
 title: Ponto de extremidade de bibliotecas
-description: Saiba como fazer chamadas para o endpoint /bibliotecas na API do Reator.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+description: Saiba como fazer chamadas para o ponto de extremidade /bibliotecas na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 8%
+source-wordcount: '1584'
+ht-degree: 99%
 
 ---
 
 # Ponto de extremidade de bibliotecas
 
-Uma biblioteca é uma coleção de recursos de tag ([extensions](./extensions.md), [rules](./rules.md) e [data elements](./data-elements.md)) que representam o comportamento desejado de uma [propriedade](./properties.md). O endpoint `/libraries` na API do Reator permite gerenciar programaticamente as bibliotecas nas propriedades da tag.
+Uma biblioteca é uma coleção de recursos de tag ([extensões](./extensions.md), [regras](./rules.md) e [elementos de dados](./data-elements.md)) que representam o comportamento desejado de uma [propriedade](./properties.md). O ponto de extremidade `/libraries` na API do reator permite gerenciar programaticamente as bibliotecas nas propriedades da tag.
 
 Uma biblioteca pertence a exatamente uma propriedade. Uma propriedade pode ter muitas bibliotecas.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [Guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
-Antes de trabalhar com bibliotecas na API do Reator, é importante entender as funções que os ambientes e o estado da biblioteca desempenham ao determinar quais ações você pode realizar em uma biblioteca específica. Consulte o guia no [fluxo de publicação da biblioteca](../../ui/publishing/publishing-flow.md) para obter mais informações.
+Antes de trabalhar com bibliotecas na API do reator, é importante entender as funções que os ambientes e o estado da biblioteca desempenham ao determinar quais ações você pode realizar em uma biblioteca específica. Consulte o manual no [fluxo de publicação da biblioteca](../../ui/publishing/publishing-flow.md) para obter mais informações.
 
 ## Recuperar uma lista de bibliotecas {#list}
 
-Você pode recuperar uma lista de bibliotecas para uma propriedade, incluindo a ID da propriedade no caminho de uma solicitação do GET.
+Você pode recuperar uma lista de bibliotecas de uma propriedade, incluindo a ID da propriedade no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -32,13 +32,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `PROPERTY_ID` | O `id` da propriedade que possui as bibliotecas. |
+| `PROPERTY_ID` | O `id` da propriedade que tem as bibliotecas. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Usando parâmetros de consulta, as bibliotecas listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
+>Usando parâmetros de consulta, as bibliotecas listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Consulte o manual sobre [filtragem de respostas](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -148,7 +148,7 @@ Uma resposta bem-sucedida retorna uma lista de bibliotecas para a propriedade es
 
 ## Pesquisar uma biblioteca {#lookup}
 
-Você pode pesquisar uma biblioteca fornecendo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar uma biblioteca fornecendo a ID dela no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -259,7 +259,7 @@ Uma resposta bem-sucedida retorna os detalhes da biblioteca.
 
 ## Criar uma biblioteca {#create}
 
-Você pode criar uma nova biblioteca fazendo uma solicitação de POST.
+Você pode criar uma nova biblioteca fazendo uma solicitação POST.
 
 **Formato da API**
 
@@ -297,7 +297,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `attributes.name` | **(Obrigatório)** Um nome legível para a biblioteca. |
-| `type` | O tipo de recurso que está sendo atualizado. Para esse ponto de extremidade, o valor deve ser `libraries`. |
+| `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -405,11 +405,11 @@ Uma resposta bem-sucedida retorna os detalhes da biblioteca recém-criada.
 
 ## Gerenciar recursos de uma biblioteca {#resources}
 
-Os elementos de dados, extensões, regras e ambientes associados a uma biblioteca são estabelecidos por meio de relacionamentos. As seções abaixo abordam como gerenciar esses relacionamentos por meio de chamadas de API.
+Os elementos de dados, as extensões, as regras e os ambientes associados a uma biblioteca são estabelecidos por meio de relacionamentos. As seções abaixo abordam como gerenciar esses relacionamentos por meio de chamadas de API.
 
-### Adicionar recursos a uma biblioteca {#add-resources}
+### Adicionar a uma biblioteca {#add-resources}
 
-Você pode adicionar recursos a uma biblioteca ao anexar `/relationships` ao caminho de uma solicitação do POST, seguido pelo tipo de recurso.
+Você pode adicionar recursos a uma biblioteca anexando `/relationships` ao caminho de uma solicitação POST, seguido pelo tipo de recurso.
 
 **Formato da API**
 
@@ -459,7 +459,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes dos relacionamentos adicionados. Executar uma solicitação de pesquisa [](#lookup) para a biblioteca mostra os relacionamentos adicionados na propriedade `relationships`.
+Uma resposta bem-sucedida retorna os detalhes dos relacionamentos adicionados. Executar uma [solicitação de pesquisa](#lookup) para a biblioteca mostra as relações adicionadas na propriedade `relationships`.
 
 ```json
 {
@@ -482,7 +482,7 @@ Uma resposta bem-sucedida retorna os detalhes dos relacionamentos adicionados. E
 
 ### Substituir os recursos de uma biblioteca {#replace-resources}
 
-Você pode substituir todos os recursos existentes de um determinado tipo para uma biblioteca ao anexar `/relationships` ao caminho de uma solicitação do PATCH, seguido pelo tipo de recurso que está substituindo.
+Você pode substituir todos os recursos existentes de um tipo específico de uma biblioteca anexando `/relationships` ao caminho de uma solicitação PATCH, seguido do tipo de recurso que você está substituindo.
 
 **Formato da API**
 
@@ -528,7 +528,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes dos relacionamentos atualizados. Executar uma solicitação de pesquisa [](#lookup) para a biblioteca mostra os relacionamentos sob a propriedade `relationships`.
+Uma resposta bem-sucedida retorna os detalhes dos relacionamentos atualizados. A execução de uma [solicitação de pesquisa](#lookup) para a biblioteca mostra as relações na propriedade `relationships`.
 
 ```json
 {
@@ -547,7 +547,7 @@ Uma resposta bem-sucedida retorna os detalhes dos relacionamentos atualizados. E
 
 ### Remover recursos de uma biblioteca {#remove-resources}
 
-Você pode remover recursos existentes de uma biblioteca ao anexar `/relationships` ao caminho de uma solicitação do DELETE, seguido pelo tipo de recurso que está removendo.
+Você pode remover recursos existentes de uma biblioteca anexando `/relationships` ao caminho de uma solicitação DELETE, seguido do tipo de recurso que você está removendo.
 
 **Formato da API**
 
@@ -564,7 +564,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Solicitação**
 
-A solicitação a seguir remove uma regra de uma biblioteca. Quaisquer regras existentes que não estejam incluídas na matriz `data` não são excluídas.
+A solicitação a seguir remove uma regra de uma biblioteca. As regras existentes que não estão na matriz `data` não são excluídas.
 
 ```shell
 curl -X DELETE \
@@ -593,7 +593,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes dos relacionamentos atualizados para o tipo de recurso. Se não houver relações para esse tipo de recurso, a propriedade `data` será retornada como uma matriz vazia. Executar uma solicitação de pesquisa [](#lookup) para a biblioteca mostra os relacionamentos sob a propriedade `relationships`.
+Uma resposta bem-sucedida retorna os detalhes dos relacionamentos atualizados para o tipo de recurso. Se não houver relações para esse tipo de recurso, a propriedade `data` será retornada como uma matriz vazia. A execução de uma [solicitação de pesquisa](#lookup) para a biblioteca mostra as relações na propriedade `relationships`.
 
 ```json
 {
@@ -609,7 +609,7 @@ Uma resposta bem-sucedida retorna os detalhes dos relacionamentos atualizados pa
 
 ## Atribuir uma biblioteca a um ambiente {#environment}
 
-Você pode atribuir uma biblioteca a um ambiente `/relationships/environment` ao caminho de uma solicitação de POST.
+Você pode atribuir uma biblioteca a um ambiente `/relationships/environment` para o caminho de uma solicitação POST.
 
 **Formato da API**
 
@@ -650,7 +650,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da relação. Executar uma solicitação de pesquisa [](#lookup) para a biblioteca mostra o relacionamento adicionado sob a propriedade `relationships`.
+Uma resposta bem-sucedida retorna os detalhes da relação. A execução de uma [solicitação de pesquisa](#lookup) para a biblioteca mostra as relações adicionadas na propriedade `relationships`.
 
 ```json
 {
@@ -667,7 +667,7 @@ Uma resposta bem-sucedida retorna os detalhes da relação. Executar uma solicit
 
 ## Transição de uma biblioteca {#transition}
 
-Você pode fazer a transição de uma biblioteca para um estado de publicação diferente ao incluir sua ID no caminho de uma solicitação do PATCH e fornecer um valor `meta.action` apropriado no payload.
+Você pode fazer a transição de uma biblioteca para outro estado de publicação incluindo a ID dela no caminho de uma solicitação PATCH e fornecendo um valor `meta.action` apropriado na carga.
 
 **Formato da API**
 
@@ -683,7 +683,7 @@ PATCH /libraries/{LIBRARY_ID}
 
 **Solicitação**
 
-A solicitação a seguir transita o estado de uma biblioteca existente, com base no valor de `meta.action` fornecido no payload. As ações disponíveis para uma biblioteca dependem do estado de publicação atual, conforme descrito no [fluxo de publicação](../../ui/publishing/publishing-flow.md#state).
+A solicitação a seguir faz a transição do estado de uma biblioteca existente, com base no valor de `meta.action` fornecido na carga. As ações disponíveis para uma biblioteca dependem do estado de publicação atual, conforme descrito no [fluxo de publicação](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
@@ -706,8 +706,8 @@ curl -X PATCH \
 | Propriedade | Descrição |
 | --- | --- |
 | `meta.action` | A ação de transição específica que você deseja realizar na biblioteca. As seguintes ações estão disponíveis, dependendo do estado de publicação atual da biblioteca: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | O `id` da biblioteca que deseja atualizar. Isso deve corresponder ao valor `{LIBRARY_ID}` fornecido no caminho da solicitação. |
-| `type` | O tipo de recurso que está sendo atualizado. Para esse ponto de extremidade, o valor deve ser `libraries`. |
+| `id` | O `id` da biblioteca que você deseja atualizar. Ele deve corresponder ao valor `{LIBRARY_ID}` fornecido no caminho da solicitação. |
+| `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -803,7 +803,7 @@ Uma resposta bem-sucedida retorna os detalhes da biblioteca atualizada.
 >
 >Somente as bibliotecas aprovadas podem ser publicadas para produção.
 
-Para publicar uma biblioteca na produção, verifique se um ambiente de produção foi adicionado à biblioteca e crie uma build.
+Para publicar uma biblioteca para produção, verifique se um ambiente de produção foi adicionado à biblioteca e crie um build.
 
 **Formato da API**
 
@@ -819,7 +819,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 **Solicitação**
 
-Essa solicitação não requer uma carga.
+Essa solicitação não exige uma carga.
 
 ```shell
 curl -X POST \
@@ -904,17 +904,17 @@ curl -X POST \
 
 ## Gerenciar notas de uma biblioteca {#notes}
 
-As bibliotecas são recursos &quot;notáveis&quot;, o que significa que você pode criar e recuperar notas baseadas em texto em cada recurso individual. Consulte o [guia de ponto de extremidade de notas](./notes.md) para obter mais informações sobre como gerenciar notas para bibliotecas e outros recursos compatíveis.
+As bibliotecas são recursos &quot;notáveis&quot;, o que significa que você pode criar e recuperar notas de texto em cada recurso individual. Consulte o [manual de endpoint de notas](./notes.md) para obter mais informações sobre como gerenciar notas para bibliotecas e outros recursos compatíveis.
 
 ## Recuperar recursos relacionados para uma biblioteca {#related}
 
-As chamadas a seguir demonstram como recuperar os recursos relacionados para uma biblioteca. Quando [procurar uma biblioteca](#lookup), esses relacionamentos são listados na propriedade `relationships`.
+As chamadas a seguir demonstram como recuperar os recursos relacionados de uma biblioteca. Quando você [pesquisa uma biblioteca](#lookup), esses relacionamentos são listados na propriedade `relationships`.
 
-Consulte o [guia de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API de Reator.
+Consulte o [manual de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API do Reactor.
 
-### Listar os elementos de dados relacionados para uma biblioteca {#data-elements}
+### Listar os elementos de dados relacionados de uma biblioteca {#data-elements}
 
-Você pode listar os elementos de dados que uma biblioteca usa ao anexar `/data_elements` ao caminho de uma solicitação de pesquisa.
+Você pode listar os elementos de dados que uma biblioteca usa anexando `/data_elements` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -1053,7 +1053,7 @@ Uma resposta bem-sucedida retorna uma lista de elementos de dados que usam a bib
 }
 ```
 
-### Listar as extensões relacionadas para uma biblioteca {#extensions}
+### Listar as extensões relacionadas de uma biblioteca {#extensions}
 
 Você pode listar as extensões que uma biblioteca usa ao anexar `/extensions` ao caminho de uma solicitação de pesquisa.
 
@@ -1184,7 +1184,7 @@ Uma resposta bem-sucedida retorna uma lista de extensões que usam a biblioteca 
 }
 ```
 
-### Listar as regras relacionadas para uma biblioteca {#rules}
+### Listar as regras relacionadas de uma biblioteca {#rules}
 
 Você pode listar as regras que uma biblioteca usa ao anexar `/rules` ao caminho de uma solicitação de pesquisa.
 
@@ -1297,9 +1297,9 @@ Uma resposta bem-sucedida retorna uma lista de regras que usam a biblioteca espe
 }
 ```
 
-### Procure uma biblioteca no ambiente relacionado {#related-environment}
+### Pesquisar o ambiente relacionado de uma biblioteca {#related-environment}
 
-Você pode pesquisar o ambiente ao qual uma biblioteca é atribuída ao anexar `/environment` ao caminho de uma solicitação do GET.
+Você pode pesquisar o ambiente ao qual uma biblioteca é atribuída anexando `/environment` ao caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -1309,7 +1309,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{LIBRARY_ID}` | O `id` da biblioteca cujo ambiente você deseja visualizar. |
+| `{LIBRARY_ID}` | O `id` da biblioteca cujo ambiente você deseja pesquisar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1409,9 +1409,9 @@ Uma resposta bem-sucedida retorna os detalhes do ambiente ao qual a biblioteca e
 }
 ```
 
-### Pesquisar a propriedade relacionada de uma biblioteca {#property}
+### Pesquisar a propriedade relacionada a uma biblioteca {#property}
 
-Você pode pesquisar a propriedade que possui uma biblioteca ao anexar `/property` ao caminho de uma solicitação do GET.
+Você pode pesquisar a propriedade pertencente a uma biblioteca anexando `/property` ao caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -1439,7 +1439,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da propriedade proprietária da biblioteca especificada.
+Uma resposta bem-sucedida retorna os detalhes da propriedade detentora da biblioteca especificada.
 
 ```json
 {
@@ -1532,9 +1532,9 @@ Uma resposta bem-sucedida retorna os detalhes da propriedade proprietária da bi
 }
 ```
 
-### Procure uma biblioteca no upstream {#upstream}
+### Procurar uma biblioteca no upstream {#upstream}
 
-Você pode procurar a próxima biblioteca upstream de uma biblioteca ao anexar `/upstream_library` ao caminho de uma solicitação do GET.
+Você pode procurar a próxima biblioteca upstream de uma biblioteca anexando `/upstream_library` ao caminho de uma solicitação GET.
 
 **Formato da API**
 

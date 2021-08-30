@@ -6,10 +6,10 @@ description: Este documento fornece um tutorial para definir uma relação um pa
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 2%
+source-wordcount: '1365'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ A capacidade de entender os relacionamentos entre seus clientes e suas interaç�
 
 Embora os relacionamentos de esquema possam ser inferidos por meio do uso do schema de união e [!DNL Real-time Customer Profile], isso se aplica somente a esquemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo de relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
 
-Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela organização usando o [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela organização usando o [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Introdução
 
@@ -342,7 +342,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 }
 ```
 
-## Crie um descritor de identidade de referência {#reference-identity}
+## Criar um descritor de identidade de referência {#reference-identity}
 
 Os campos de esquema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros esquemas em um relacionamento. Como o campo `favoriteHotel` em &quot;[!DNL Loyalty Members]&quot; fará referência ao campo `hotelId` em &quot;[!DNL Hotels]&quot;, `hotelId` deve receber um descritor de identidade de referência.
 
@@ -401,7 +401,7 @@ Uma resposta bem-sucedida retorna os detalhes do descritor de referência recém
 }
 ```
 
-## Criar um descritor de relação {#create-descriptor}
+## Criar um descritor de relacionamento {#create-descriptor}
 
 Os descritores de relacionamento estabelecem uma relação um para um entre um schema de origem e um schema de destino. Depois de definir um descritor de referência para o schema de destino, você pode criar um novo descritor de relacionamento fazendo uma solicitação de POST para o endpoint `/tenant/descriptors`.
 

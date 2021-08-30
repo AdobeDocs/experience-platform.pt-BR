@@ -5,15 +5,14 @@ title: Visão geral do Privacy Service
 topic-legacy: overview
 description: O Privacy Service permite facilitar a conformidade automatizada com as normas legais de privacidade em suas operações de dados do Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '1390'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# [!DNL Privacy Service]visão geral
+# [!DNL Privacy Service] visão geral
 
 Para oferecer melhores experiências ao cliente, é necessário coletar e armazenar os dados pessoais dos clientes. Ao usar esses dados, é importante entender e respeitar a privacidade de seus clientes. As novas regulamentações legais e organizacionais dão aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados, mediante solicitação.
 
@@ -38,7 +37,7 @@ Estas decisões podem ser resumidas através das seguintes questões:
 
 As seções abaixo fornecem orientação geral sobre essas etapas importantes de pré-requisito e também fornecem links para a documentação adicional [!DNL Privacy Service] para obter mais detalhes.
 
-### Determine os requisitos de privacidade de sua organização {#requirements}
+### Determine os requisitos de privacidade da sua organização {#requirements}
 
 Dependendo da natureza da sua empresa e das jurisdições sob as quais ela opera, suas operações de dados podem estar sujeitas a regulamentos legais de privacidade. Essas regulamentações geralmente dão aos clientes o direito de solicitar acesso aos dados coletados deles e o direito de solicitar a exclusão desses dados armazenados. Essas solicitações de clientes para seus dados pessoais são chamadas de &quot;solicitações de privacidade&quot; em toda a documentação.
 
@@ -74,7 +73,7 @@ Depois de determinar as necessidades de privacidade da sua empresa e decidir qua
 
 #### Uso da API
 
-O [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornece vários endpoints para criar e gerenciar tarefas de privacidade usando chamadas RESTful API, permitindo que você aborde programaticamente a conformidade do regulamento de privacidade para seus aplicativos [!DNL Experience Cloud]. Para obter etapas detalhadas sobre como usar a API, consulte o [Guia do desenvolvedor da API do Privacy Service](api/getting-started.md).
+O [[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) fornece vários endpoints para criar e gerenciar tarefas de privacidade usando chamadas RESTful API, permitindo que você aborde programaticamente a conformidade do regulamento de privacidade para seus aplicativos [!DNL Experience Cloud]. Para obter etapas detalhadas sobre como usar a API, consulte o [Guia do desenvolvedor da API do Privacy Service](api/getting-started.md).
 
 #### Uso da interface do usuário
 
@@ -82,9 +81,9 @@ O [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home
 >
 >No momento, a interface do usuário [!DNL Privacy Service] suporta apenas solicitações de acesso e exclusão. Todas as solicitações de recusa devem ser feitas por meio da API .
 
-A interface [!DNL Privacy Service] permite criar e monitorar tarefas de privacidade usando uma interface gráfica. A interface do usuário inclui um **[!UICONTROL Status Report]** widget que fornece uma representação visual do status de todas as solicitações ativas e permite criar novas solicitações usando o **[!UICONTROL Request Builder]** incorporado ou fazendo upload de arquivos JSON. Para obter mais informações sobre como usar a interface do usuário, consulte o [guia do usuário do Privacy Service](ui/overview.md).
+A interface [!DNL Privacy Service] permite criar e monitorar tarefas de privacidade usando uma interface gráfica. A interface do usuário inclui um widget **[!UICONTROL Relatório de status]** que fornece uma representação visual do status de todas as solicitações ativas e permite criar novas solicitações usando o **[!UICONTROL Construtor de solicitações]** incorporado ou carregando arquivos JSON. Para obter mais informações sobre como usar a interface do usuário, consulte o [guia do usuário do Privacy Service](ui/overview.md).
 
-### Monitorar tarefas de privacidade {#monitor}
+### Monitorar trabalhos de privacidade {#monitor}
 
 Depois de fazer tarefas de privacidade, você tem várias opções para monitorar seu status e resultados:
 

@@ -1,58 +1,58 @@
 ---
-title: Introdução à API do reator
-description: Saiba como começar a usar a API do Reator, incluindo etapas para gerar as credenciais de acesso necessárias.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+title: Introdução à API do Reactor
+description: Saiba como começar a usar a API do Reactor, incluindo etapas para gerar as credenciais de acesso necessárias.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 1%
+source-wordcount: '1060'
+ht-degree: 97%
 
 ---
 
-# Introdução à API do reator
+# Introdução à API do Reactor
 
-Para usar a [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml), cada solicitação deve incluir os seguintes cabeçalhos de autenticação:
+Para usar a [API do reator](https://www.adobe.io/experience-platform-apis/references/reactor/), cada solicitação deve incluir os seguintes cabeçalhos de autenticação:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Este guia aborda como usar o Console do desenvolvedor do Adobe para coletar os valores de cada um desses cabeçalhos para que você possa começar a fazer chamadas para a API do reator.
+Este guia mostra como usar o Adobe Developer Console a fim de coletar os valores de cada um desses cabeçalhos para que você possa começar a fazer chamadas à API do reator.
 
-## Obter acesso do desenvolvedor ao Adobe Experience Platform
+## Obter acesso de desenvolvedor à Adobe Experience Platform
 
-Antes de gerar valores de autenticação para a API do Reator, você deve ter acesso de desenvolvedor ao Experience Platform. Para obter acesso de desenvolvedor, siga as etapas iniciais no [tutorial de autenticação do Experience Platform](http://www.adobe.com/go/platform-api-authentication-en). Depois de chegar à etapa &quot;Gerar credenciais de acesso no Console do Desenvolvedor do Adobe&quot;, retorne a este tutorial para gerar as credenciais específicas da API do Reator.
+A fim de gerar valores de autenticação para a API do reator, você deve ter acesso de desenvolvedor à Experience Platform. Para obter acesso de desenvolvedor, siga as etapas iniciais no [tutorial de autenticação da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=pt-BR). Depois de chegar à etapa “Gerar credenciais de acesso no Adobe Developer Console”, retorne a este tutorial para gerar as credenciais específicas da API do reator.
 
 ## Gerar credenciais de acesso
 
-Usando o Console do Desenvolvedor do Adobe, você deve gerar as três credenciais de acesso a seguir:
+Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso descritas a seguir:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-A ID da organização IMS (`{IMS_ORG}`) e a chave da API (`{API_KEY}`) podem ser reutilizadas em chamadas de API futuras depois de terem sido geradas inicialmente. No entanto, seu token de acesso (`{ACCESS_TOKEN}`) é temporário e deve ser gerado novamente a cada 24 horas.
+Sua ID de organização IMS (`{IMS_ORG}`) e a chave da API (`{API_KEY}`) podem ser reutilizadas em chamadas de API futuras depois de terem sido geradas. No entanto, seu token de acesso (`{ACCESS_TOKEN}`) é temporário e deve ser gerado novamente a cada 24 horas.
 
-As etapas para gerar esses valores são abordadas detalhadamente abaixo.
+As etapas de geração desses valores são descritas em detalhes abaixo.
 
 ### Configuração única
 
-Vá para [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor.
+Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Depois, siga as etapas descritas no tutorial sobre como [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Developer Console.
 
 Depois de criar um projeto, selecione **Adicionar API** na tela **Visão geral do projeto**.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-A tela **Adicionar uma API** é exibida. Selecione **Experience Platform Reator API** na lista de APIs disponíveis antes de selecionar **Next**.
+A tela **Adicionar uma API** é exibida. Selecione **API do Reactor da Experience Platform** na lista de APIs disponíveis antes de clicar em **Avançar**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Na próxima tela, você será solicitado a criar uma credencial JSON Web Token (JWT) para gerar um novo par de chaves ou fazer upload de sua própria chave pública. Para este tutorial, selecione a opção **Generate a key pair** e selecione **Generate keypair** no canto inferior direito.
+Na próxima tela, você será solicitado a criar uma credencial JSON Web Token (JWT). Para fazer isso, gere um novo par de chaves ou carregue sua própria chave pública. Para este tutorial, selecione a opção **Gerar um par de chaves** e selecione **Gerar par de chaves** no canto inferior direito.
 
 ![](../images/api/getting-started/create-jwt.png)
 
-A próxima tela confirma que o par de chaves foi gerado com êxito e uma pasta compactada contendo um certificado público e uma chave privada é baixada automaticamente no computador. Essa chave privada é necessária em uma etapa posterior para gerar um token de acesso.
+A próxima tela confirma que o par de chaves foi gerado com êxito, e uma pasta compactada que contém um certificado público e uma chave privada é baixada automaticamente para seu computador. Essa chave privada é necessária em uma etapa posterior para gerar um token de acesso.
 
-Selecione **Next** para continuar.
+Clique em **Avançar** para continuar.
 
 ![](../images/api/getting-started/keypair-generated.png)
 
@@ -60,67 +60,67 @@ A próxima tela solicita que você selecione um ou mais perfis de produto para a
 
 >[!NOTE]
 >
->Os perfis de produtos são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto selecionar para a API, entre em contato com o administrador.
+>Os perfis de produtos são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto deve selecionar para a API, entre em contato com o administrador.
 
 Selecione os perfis de produto desejados na lista e selecione **Salvar API configurada** para concluir o registro da API.
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página da API do Reator do Experience Platform. A partir daqui, role para baixo até a seção **Conta de Serviço (JWT)** , que fornece as seguintes credenciais de acesso que são necessárias em todas as chamadas para a API do Reator:
+Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página da API do Reactor da Experience Platform. Daqui, role para baixo até a seção **Conta de Serviço (JWT)**, que fornece as seguintes credenciais de acesso necessárias em todas as chamadas à API do Reactor:
 
-* **ID** DO CLIENTE: A ID do cliente é a ID necessária,  `{API_KEY}` que deve ser fornecida no  `x-api-key` cabeçalho.
-* **ID** DA ORGANIZAÇÃO: A ID da organização é o  `{IMS_ORG}` valor que deve ser usado no  `x-gw-ims-org-id` cabeçalho.
+* **ID DO CLIENTE**: a ID do cliente é a `{API_KEY}` necessária que deve ser informada no cabeçalho `x-api-key`.
+* **ID DA ORGANIZAÇÃO**: a ID da organização é o valor `{IMS_ORG}` que deve ser usado no cabeçalho `x-gw-ims-org-id`.
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### Autenticação para cada sessão
 
-Agora que você tem seus valores `{API_KEY}` e `{IMS_ORG}`, a etapa final está gerando um valor `{ACCESS_TOKEN}`.
+Agora que você tem os valores `{API_KEY}` e `{IMS_ORG}`, a etapa final é gerar um valor `{ACCESS_TOKEN}`.
 
 >[!NOTE]
 >
->Esses tokens expiram após 24 horas. Se você estiver usando essa integração para um aplicativo, é uma boa ideia obter o token do portador de forma programática de dentro do aplicativo.
+>Esses tokens expiram após 24 horas. Se você está usando essa integração para um aplicativo, convém obter o token de portador de forma programática por meio do aplicativo.
 
-Você tem duas opções para gerar seus tokens de acesso, dependendo do seu caso de uso:
+Você tem duas opções para gerar os tokens de acesso, dependendo do caso de uso:
 
 * [Gerar tokens manualmente](#manual)
-* [Gerar tokens programaticamente](#program)
+* [Gerar tokens de forma programática](#program)
 
 #### Gerar tokens de acesso manualmente {#manual}
 
-Abra a chave privada baixada anteriormente em um editor de texto ou navegador e copie seu conteúdo. Em seguida, volte para o Console do desenvolvedor e cole a chave privada na seção **Generate access token** na página API do reator para seu projeto antes de selecionar **Generate Token**.
+Abra em um editor de texto ou um navegador a chave privada baixada anteriormente e copie o conteúdo. Volte para o Developer Console e cole a chave privada na seção **Gerar token de acesso** na página da API do Reactor do projeto antes de selecionar **Gerar token**.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-Um novo token de acesso é gerado e um botão para copiar o token para a área de transferência é fornecido. Esse valor é usado para o cabeçalho `Authorization` necessário e deve ser fornecido no formato `Bearer {ACCESS_TOKEN}`.
+É gerado um novo token de acesso, e é fornecido um botão para copiá-lo para a área de transferência. Esse valor é usado para o cabeçalho `Authorization` necessário e deve ser fornecido no formato `Bearer {ACCESS_TOKEN}`.
 
 ![](../images/api/getting-started/token-generated.png)
 
-#### Gerar tokens de acesso programaticamente {#program}
+#### Gerar tokens de acesso de forma programática {#program}
 
-Se você estiver usando a integração para um aplicativo, poderá gerar tokens de acesso de forma programática por meio de solicitações de API. Para fazer isso, você deve obter os seguintes valores:
+Se estiver usando a integração do para um aplicativo, você poderá gerar tokens de acesso de forma programática por meio de solicitações de API. Para fazer isso, você deve obter os seguintes valores:
 
 * ID do cliente (`{API_KEY}`)
 * Segredo do cliente (`{SECRET}`)
-* Um token Web JSON (`{JWT}`)
+* Um JSON Web Token (`{JWT}`)
 
-A ID do cliente e o segredo podem ser obtidos na página principal do seu projeto, conforme visto na [etapa anterior](#one-time-setup).
+O ID do cliente e o segredo podem ser obtidos na página principal do projeto, conforme visto na [etapa anterior](#one-time-setup).
 
 ![](../images/api/getting-started/auto-access-creds.png)
 
-Para obter sua credencial JWT, navegue até **Conta de serviço (JWT)** na navegação à esquerda e selecione a guia **Gerar JWT**. Nesta página, em **Generate custom JWT**, cole o conteúdo da sua chave privada na caixa de texto fornecida e selecione **Generate Token**.
+Para obter a credencial JWT, acesse **Conta de serviço (JWT)** na navegação à esquerda e selecione a guia **Gerar JWT**. Nessa página, em **Gerar JWT personalizada**, cole o conteúdo da chave privada na caixa de texto fornecida e selecione **Gerar token**.
 
 ![](../images/api/getting-started/generate-jwt.png)
 
-O JWT gerado aparece abaixo quando ele terminar o processamento, juntamente com um comando cURL de amostra que você pode usar para testar o token, se desejar. Use o botão **Copiar** para copiar o token para a área de transferência.
+O JWT gerado aparece abaixo quando o processamento é concluído, junto com um comando cURL de amostra que você poderá usar para testar o token, se desejar. Use o botão **Copiar** a fim de copiar o token para a área de transferência.
 
 ![](../images/api/getting-started/jwt-generated.png)
 
-Depois de reunir suas credenciais, você pode integrar a chamada da API abaixo em seu aplicativo para gerar tokens de acesso de forma programática.
+Depois de obter as credenciais, você pode integrar a chamada da API abaixo ao aplicativo para gerar tokens de acesso de forma programática.
 
 **Solicitação**
 
-A solicitação deve enviar uma carga `multipart/form-data`, fornecendo suas credenciais de autenticação, conforme mostrado abaixo:
+A solicitação deve enviar uma carga `multipart/form-data`, fornecendo suas credenciais de autenticação, conforme mostrado a seguir:
 
 ```shell
 curl -X POST \
@@ -133,7 +133,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um novo token de acesso, bem como o número de segundos restantes até sua expiração.
+Uma resposta bem-sucedida retorna um novo token de acesso, bem como o número de segundos restantes até a expiração dele.
 
 ```json
 {
@@ -152,13 +152,13 @@ Uma resposta bem-sucedida retorna um novo token de acesso, bem como o número de
 
 ## Próximas etapas
 
-Ao seguir as etapas deste tutorial, você deve ter um valor válido para `{IMS_ORG}`, `{API_KEY}` e `{ACCESS_TOKEN}`. Agora é possível testar esses valores usando-os em uma simples solicitação de cURL para a API do reator.
+Seguindo as etapas deste tutorial, você deve ter um valor válido para `{IMS_ORG}`, `{API_KEY}` e `{ACCESS_TOKEN}`. Agora é possível testar esses valores usando-os em uma solicitação de cURL simples para a API do Reactor.
 
-Comece tentando fazer uma chamada de API para [listar todas as empresas](./endpoints/companies.md#list).
+Para começar, tente fazer uma chamada de API para [listar todas as empresas](./endpoints/companies.md#list).
 
 >[!NOTE]
 >
->Você pode não ter empresas em sua organização, nesse caso, a resposta será o status HTTP 404 (Não encontrado). Desde que não receba um erro 403 (Proibido), suas credenciais de acesso são válidas e estão funcionando.
+>Talvez você não tenha empresas em sua organização. Nesse caso, a resposta será o status HTTP 404 (Não encontrado). Desde que você não receba um erro 403 (Proibido), suas credenciais de acesso são válidas e estão funcionando.
 
 Depois de confirmar que suas credenciais de acesso estão funcionando, continue explorando a outra documentação de referência da API para saber mais sobre os vários recursos da API.
 

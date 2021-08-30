@@ -1,42 +1,42 @@
 ---
-title: Ponto de extremidade dos componentes da regra
-description: Saiba como fazer chamadas para o endpoint /rule_components na API do Reator.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint de componentes de regra
+description: Saiba como fazer chamadas para o endpoint /rule_components na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 6%
+source-wordcount: '1207'
+ht-degree: 99%
 
 ---
 
-# Ponto de extremidade dos componentes da regra
+# Endpoint de componentes de regra
 
-Nas tags de coleta de dados, [rules](./rules.md) controlam o comportamento dos recursos em uma [biblioteca](./libraries.md) implantada. **Os** componentes da regra são as partes individuais que compõem uma regra. Se uma regra for uma receita, um componente de regra será um dos ingredientes. O endpoint `/rule_components` na API do reator permite gerenciar programaticamente os componentes da regra.
+Nas tags de coleção de dados, as [regras](./rules.md) controlam o comportamento dos recursos em uma [biblioteca](./libraries.md) implantada. **Componentes de regra** são as partes individuais que compõem uma regra. Se uma regra for uma fórmula, um componente de regra será um dos ingredientes. O endpoint `/rule_components` na API do Reactor permite gerenciar de forma programática os componentes de regra.
 
 >[!NOTE]
 >
->Este documento aborda como gerenciar componentes de regras na API do reator. Para obter detalhes sobre como interagir com componentes de regras e regras na interface do usuário da coleta de dados, consulte o [guia da interface do usuário](../../ui/managing-resources/rules.md).
+>Este documento aborda como gerenciar componentes de regra na API do Reactor. Para obter detalhes sobre como interagir com regras e componentes de regras na interface da Coleção de dados, consulte o [manual da interface](../../ui/managing-resources/rules.md).
 
-Os componentes da regra têm três tipos básicos:
+Há três tipos básicos de componentes de regra:
 
-| Tipo de componente da regra | Descrição |
+| Tipo de componente de regra | Descrição |
 | --- | --- |
-| Eventos | Um evento é o acionador de uma regra. A regra é iniciada quando o evento ocorre em tempo de execução no dispositivo cliente. &quot;[!UICONTROL Library Load]&quot;, &quot;[!UICONTROL Page Top]&quot; e &quot;[!UICONTROL Click]&quot; são exemplos de eventos. |
-| Condições | Uma condição é uma avaliação para determinar se determinados critérios foram atendidos antes da execução de qualquer ação. Quando um evento ocorre, as condições são avaliadas. As ações da regra são executadas somente se todas as condições forem atendidas. |
+| Eventos | Um evento é o acionador de uma regra. A regra é iniciada quando o evento ocorre em tempo de execução no dispositivo cliente. [!UICONTROL Carregamento de biblioteca]&quot;, &quot;[!UICONTROL Topo da página]&quot; e &quot;[!UICONTROL Clicar]&quot; são exemplos de eventos. |
+| Condições | Uma condição é uma avaliação do cumprimento de certos critérios antes de qualquer ação ser executada. Quando um evento ocorre, as condições são avaliadas. As ações da regra só serão executadas se todas as condições forem atendidas. |
 | Ações | Essas são as ações que você deseja que a regra realmente execute, como enviar um beacon do Adobe Analytics, recuperar uma ID de visitante personalizada ou acionar uma mbox específica. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Um componente de regra pertence a exatamente uma regra. Uma regra pode (e deve) ter muitos componentes de regra.
 
-Um componente de regra é fornecido por exatamente um [extension](./extensions.md). As extensões podem fornecer vários tipos de componentes de regras.
+Um componente de regra é fornecido por exatamente uma [extensão](./extensions.md). As extensões podem fornecer vários tipos de componentes de regras.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação para a API.
 
-## Recuperar uma lista de componentes da regra {#list}
+## Recuperar uma lista de componentes de regra {#list}
 
-Você pode recuperar uma lista de componentes da regra pertencentes a uma regra ao incluir a ID da regra no caminho de uma solicitação do GET.
+Você pode recuperar uma lista de componentes pertencentes a uma regra incluindo a ID da regra no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -52,7 +52,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->Usando parâmetros de consulta, os componentes de regra listados podem ser filtrados com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
+>Usando parâmetros de consulta, os componentes de regra listados podem ser filtrados com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte o manual sobre [filtragem de respostas](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de componentes da regra para a regra especificada.
+Uma resposta bem-sucedida retorna uma lista de componentes da regra especificada.
 
 ```json
 {
@@ -175,7 +175,7 @@ Uma resposta bem-sucedida retorna uma lista de componentes da regra para a regra
 
 ## Pesquisar um componente de regra {#lookup}
 
-Você pode pesquisar um componente de regra fornecendo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar um componente de regra fornecendo a respectiva ID no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -299,7 +299,7 @@ Uma resposta bem-sucedida retorna os detalhes do componente de regra.
 
 ## Criar um componente de regra {#create}
 
-Você pode criar um novo componente de regra fazendo uma solicitação de POST.
+Você pode criar um novo componente de regra fazendo uma solicitação POST.
 
 **Formato da API**
 
@@ -315,7 +315,7 @@ POST /rules/{RULE_ID}/rule_components
 
 **Solicitação**
 
-A solicitação a seguir cria um novo componente de regra para a regra especificada. A chamada também associa o componente de regra a uma extensão existente por meio da propriedade `relationships` . Consulte o guia sobre [relações](../guides/relationships.md) para obter mais informações.
+A solicitação a seguir cria um novo componente para a regra especificada. A chamada também associa o componente de regra a uma extensão existente por meio da propriedade `relationships`. Consulte o manual sobre [relacionamentos](../guides/relationships.md) para obter mais informações.
 
 ```shell
 curl -X POST \
@@ -358,15 +358,15 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obrigatório)** Os tipos de componentes de regra que você pode definir são fornecidos por pacotes de  [extensão](./extension-packages.md). Ao criar um novo componente de regra, você deve fornecer uma ID de descritor delegado para indicar em qual pacote de extensão esse componente de regra se baseia, o tipo do componente (evento, condição ou ação) e o nome do componente específico conforme definido pela extensão (como o evento &quot;Clique&quot; na extensão principal).<br><br>Consulte o guia sobre  [ ](../guides/delegate-descriptor-ids.md) IDs de descritor delegado para obter mais informações. |
-| `attributes.name` | **(Obrigatório)** Um nome legível para o componente de regra. |
-| `attributes.delay_next` | Um booleano que indica se deve atrasar ações posteriores. |
+| `attributes.delegate_descriptor_id` | **(Obrigatório)** Os tipos de componentes de regra que você pode definir são fornecidos por [pacotes de extensão](./extension-packages.md). Ao criar um novo componente de regra, você deve fornecer uma ID de descritor delegado para indicar em qual pacote de extensão esse componente de regra se baseia, o tipo do componente (evento, condição ou ação) e o nome do componente específico conforme definido pela extensão (como o evento &quot;Clique&quot; na extensão principal).<br><br>Consulte o manual sobre [IDs de descritor delegado](../guides/delegate-descriptor-ids.md) para obter mais informações. |
+| `attributes.name` | **(Obrigatório)** Um nome em formato legível por humanos para o componente de regra. |
+| `attributes.delay_next` | Um booliano que indica se é necessário atrasar ações posteriores. |
 | `attributes.order` | Um número inteiro que indica a ordem para carregar o componente por tipo. |
 | `attributes.rule_order` | Um número inteiro que indica a prioridade do acionamento da regra associada. |
 | `attributes.settings` | Um objeto JSON de configurações representado como uma string. |
 | `attributes.timeout` | Um número inteiro que indica o tempo limite da ação que é executada em sequência. |
-| `relationships` | Um objeto que estabelece os relacionamentos necessários para o componente de regra. Devem ser estabelecidas duas relações: <ol><li>`extension`: A extensão que define esse componente de regra. Esta deve ser a mesma extensão cujo pacote de extensão é indicado pelo `delegate_descriptor_id`.</li><li>`rules`: A regra em que esse componente está sendo definido. Deve ser a mesma ID de regra fornecida no caminho da solicitação.</li></ol>Para obter informações mais gerais sobre relacionamentos, consulte o [guia de relacionamentos](../guides/relationships.md). |
-| `type` | O tipo de recurso que está sendo criado. Para esse ponto de extremidade, o valor deve ser `rule_components`. |
+| `relationships` | Um objeto que estabelece os relacionamentos necessários para o componente de regra. Devem ser estabelecidas duas relações: <ol><li>`extension`: a extensão que define esse componente de regra. Deve ser a mesma extensão cujo pacote de extensão é indicado pelo `delegate_descriptor_id`.</li><li>`rules`: a regra em que esse componente está sendo definido. Deve ser a mesma ID de regra fornecida no caminho da solicitação.</li></ol>Para obter informações mais gerais sobre relacionamentos, consulte o [manual de relacionamentos](../guides/relationships.md). |
+| `type` | O tipo de recurso que está sendo criado. Para esse endpoint, o valor deve ser `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -468,11 +468,11 @@ Uma resposta bem-sucedida retorna os detalhes do componente de regra recém-cria
 
 ## Atualizar um componente de regra {#update}
 
-Você pode atualizar um componente de regra incluindo sua ID no caminho de uma solicitação de PATCH.
+Você pode atualizar um componente de regra incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 >[!NOTE]
 >
->Atualizar um componente de regra também atualiza o carimbo de data e hora `updated_at` da regra pai.
+>A atualização de um componente de regra também atualiza o carimbo de data e hora `updated_at` da regra pai.
 
 **Formato da API**
 
@@ -511,9 +511,9 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Um objeto cujos componentes de regra representam os atributos a serem atualizados para o componente de regra. Os atributos a seguir podem ser atualizados para um componente de regra: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
+| `attributes` | Um objeto cujos componentes de regra representam os atributos a serem atualizados para o componente de regra. Os seguintes atributos podem ser atualizados para um componente de regra: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
 | `id` | O `id` do componente de regra que você deseja atualizar. Isso deve corresponder ao valor `{RULE_COMPONENT_ID}` fornecido no caminho da solicitação. |
-| `type` | O tipo de recurso que está sendo atualizado. Para esse ponto de extremidade, o valor deve ser `rule_components`. |
+| `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -615,7 +615,7 @@ Uma resposta bem-sucedida retorna os detalhes do componente de regra atualizado.
 
 ## Excluir um componente de regra
 
-É possível excluir um componente de regra ao incluir sua ID no caminho de uma solicitação de DELETE.
+É possível excluir um componente de regra incluindo a respectiva ID no caminho de uma solicitação DELETE.
 
 **Formato da API**
 
@@ -645,17 +645,17 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) sem corpo de
 
 ## Gerenciar notas de um componente de regra {#notes}
 
-Os componentes da regra são recursos &quot;notáveis&quot;, o que significa que você pode criar e recuperar notas baseadas em texto em cada recurso individual. Consulte o [guia de ponto de extremidade de notas](./notes.md) para obter mais informações sobre como gerenciar notas para componentes de regras e outros recursos compatíveis.
+Os componentes da regra são recursos &quot;anotáveis&quot;, o que significa que você pode criar e recuperar notas com base em texto em cada recurso individual. Consulte o [manual de endpoint de notas](./notes.md) para obter mais informações sobre como gerenciar notas para componentes de regras e outros recursos compatíveis.
 
 ## Recuperar recursos relacionados de um componente de regra {#related}
 
-As chamadas a seguir demonstram como recuperar os recursos relacionados para um componente de regra. Quando [procurando um componente de regra](#lookup), esses relacionamentos são listados no componente de regra `relationships`.
+As chamadas a seguir demonstram como recuperar os recursos relacionados a um componente de regra. Quando você [pesquisa um componente de regra](#lookup), esses relacionamentos são listados no componente de regra `relationships`.
 
-Consulte o [guia de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API de Reator.
+Consulte o [manual de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API do Reactor.
 
 ### Listar as regras relacionadas para um componente de regra {#rules}
 
-Você pode listar as regras que utilizam um componente de regra específico ao anexar `/rules` ao caminho de uma solicitação de pesquisa.
+Você pode listar as regras que utilizam um componente de regra específico anexando `/rules` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -665,7 +665,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | O `id` do componente de regra cujas regras você deseja listar. |
+| `{RULE_COMPONENT_ID}` | O `id` do componente cujas regras você deseja listar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -759,7 +759,7 @@ Uma resposta bem-sucedida retorna uma lista de regras que usam o componente de r
 
 ### Pesquisar a extensão relacionada para um componente de regra {#extension}
 
-Você pode pesquisar a extensão que fornece um componente de regra ao anexar `/extension` ao caminho de uma solicitação de pesquisa.
+Você pode pesquisar a extensão que fornece um componente de regra anexando `/extension` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 
@@ -877,9 +877,9 @@ Uma resposta bem-sucedida retorna os detalhes da extensão do componente de regr
 }
 ```
 
-### Pesquisar a origem relacionada de um componente de regra {#origin}
+### Pesquisar a origem relacionada a um componente de regra {#origin}
 
-Você pode procurar a origem (revisão anterior) de um componente de regra ao anexar `/origin` ao caminho de uma solicitação de pesquisa.
+Você pode pesquisar a origem (revisão anterior) de um componente de regra anexando `/origin` ao caminho de uma solicitação de pesquisa.
 
 **Formato da API**
 

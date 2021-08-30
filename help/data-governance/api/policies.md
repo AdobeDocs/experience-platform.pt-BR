@@ -5,11 +5,10 @@ title: Endpoint da API de políticas
 topic-legacy: developer guide
 description: As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito, executando em dados no Experience Platform. O endpoint /Policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão das políticas de uso de dados.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 2%
+source-wordcount: '1813'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +18,7 @@ As políticas de uso de dados são regras que descrevem os tipos de ações de m
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
+O endpoint da API usado neste guia faz parte da [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
 ## Recuperar uma lista de políticas {#list}
 
@@ -147,7 +146,7 @@ Uma resposta bem-sucedida inclui uma matriz `children` que lista os detalhes de 
 | `description` | Uma descrição opcional que fornece contexto adicional para o caso de uso da política. |
 | `deny` | Um objeto que descreve os rótulos específicos de uso de dados em que a ação de marketing associada a uma política está restrita de ser executada. Consulte a seção sobre [criar uma política](#create-policy) para obter mais informações sobre essa propriedade. |
 
-## Pesquisar uma política {#look-up}
+## Procurar uma política {#look-up}
 
 Você pode pesquisar uma política específica incluindo a propriedade `id` dessa política no caminho de uma solicitação do GET.
 

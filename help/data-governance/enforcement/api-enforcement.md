@@ -6,17 +6,16 @@ topic-legacy: guide
 type: Tutorial
 description: Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing em relação a esses rótulos, você pode usar a API do Serviço de política para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 1%
+source-wordcount: '1002'
+ht-degree: 2%
 
 ---
 
 # Impor políticas de uso de dados usando a API [!DNL Policy Service]
 
-Depois de criar rótulos de uso de dados para seus dados e ter criado políticas de uso para ações de marketing em relação a esses rótulos, você pode usar o [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
+Depois de criar rótulos de uso de dados para seus dados e ter criado políticas de uso para ações de marketing em relação a esses rótulos, você pode usar o [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 
 >[!NOTE]
 >

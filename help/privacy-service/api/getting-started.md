@@ -2,22 +2,21 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Guia da API do Privacy Service
-description: A API do Privacy Service permite que os desenvolvedores criem e gerenciem solicitações de clientes para acessar ou excluir seus dados pessoais em aplicativos do Experience Cloud, em conformidade com as regulamentações legais de privacidade. Siga este guia para saber como executar operações principais usando a API.
+description: A API do Privacy Service permite que os desenvolvedores criem e gerenciem solicitações de clientes para acessar ou excluir seus dados pessoais em aplicativos do Experience Cloud, em conformidade com as regulamentações legais de privacidade. Siga este manual para saber como executar operações importantes usando a API.
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 0%
+source-wordcount: '787'
+ht-degree: 16%
 
 ---
 
-# [!DNL Privacy Service] Guia da API
+# [!DNL Privacy Service] Manual da API
 
 O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e a interface do usuário que permitem gerenciar (acessar e excluir) os dados pessoais dos titulares de dados (clientes) nos aplicativos Adobe Experience Cloud. [!DNL Privacy Service] O também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de tarefas envolvendo  [!DNL Experience Cloud] aplicativos.
 
-Este guia aborda como usar a API [!DNL Privacy Service]. Para obter detalhes sobre como usar a interface do usuário, consulte a [Visão geral da interface do usuário do Privacy Service](../ui/overview.md). Para obter uma lista abrangente de todos os endpoints disponíveis na API [!DNL Privacy Service], consulte a [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml).
+Este guia aborda como usar a API [!DNL Privacy Service]. Para obter detalhes sobre como usar a interface do usuário, consulte a [Visão geral da interface do usuário do Privacy Service](../ui/overview.md). Para obter uma lista abrangente de todos os endpoints disponíveis na API [!DNL Privacy Service], consulte a [Referência da API](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
 ## Introdução {#getting-started}
 
@@ -47,7 +46,7 @@ Para obter acesso de desenvolvedor a [!DNL Platform], siga as etapas iniciais no
 
 ### Gerar credenciais de acesso
 
-Usando o Console do Desenvolvedor do Adobe, você deve gerar as três credenciais de acesso a seguir:
+Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso descritas a seguir:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -55,32 +54,32 @@ Usando o Console do Desenvolvedor do Adobe, você deve gerar as três credenciai
 
 Seu `{IMS_ORG}` e `{API_KEY}` precisam ser gerados apenas uma vez e podem ser reutilizados em futuras chamadas de API. No entanto, seu `{ACCESS_TOKEN}` é temporário e deve ser gerado novamente a cada 24 horas.
 
-As etapas para gerar esses valores são abordadas detalhadamente abaixo.
+As etapas de geração desses valores são descritas em detalhes abaixo.
 
 #### Configuração única
 
-Vá para [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
+Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
 
-Depois de criar um novo projeto, selecione **[!UICONTROL Add API]** na tela **[!UICONTROL Project Overview]**.
+Depois de criar um novo projeto, selecione **[!UICONTROL Adicionar API]** na tela **[!UICONTROL Visão geral do projeto]**.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-A tela **[!UICONTROL Add an API]** é exibida. Selecione **[!UICONTROL Privacy Service API]** na lista de APIs disponíveis antes de selecionar **[!UICONTROL Next]**.
+A tela **[!UICONTROL Adicionar uma API]** é exibida. Selecione **[!UICONTROL Privacy Service API]** na lista de APIs disponíveis antes de selecionar **[!UICONTROL Next]**.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-A tela **[!UICONTROL Configure API]** é exibida. Selecione a opção para **[!UICONTROL Generate a key pair]** e selecione **[!UICONTROL Generate keypair]** no canto inferior direito.
+A tela **[!UICONTROL Configurar API]** é exibida. Selecione a opção **[!UICONTROL Generate a key pair]** e selecione **[!UICONTROL Generate keypair]** no canto inferior direito.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
-O par de chaves é gerado automaticamente e um arquivo ZIP contendo uma chave privada e um certificado público é baixado no computador local (para ser usado em uma etapa posterior). Selecione **[!UICONTROL Save configured API]** para concluir a configuração.
+O par de chaves é gerado automaticamente e um arquivo ZIP contendo uma chave privada e um certificado público é baixado no computador local (para ser usado em uma etapa posterior). Selecione **[!UICONTROL Salvar API configurada]** para concluir a configuração.
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página **Visão geral da API do Privacy Service**. A partir daqui, role para baixo até a seção **[!UICONTROL Service Account (JWT)]** , que fornece as seguintes credenciais de acesso que são necessárias em todas as chamadas para a API [!DNL Privacy Service]:
+Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página **Visão geral da API do Privacy Service**. Daqui, role para baixo até a seção **[!UICONTROL Conta de Serviço (JWT)]**, que fornece as seguintes credenciais de acesso necessárias em todas as chamadas à API do [!DNL Privacy Service]
 
-* **[!UICONTROL CLIENT ID]**: A ID do cliente é o necessário  `{API_KEY}` para que o possa ser fornecido no cabeçalho x-api-key.
-* **[!UICONTROL ORGANIZATION ID]**: A ID da organização é o  `{IMS_ORG}` valor que deve ser usado no cabeçalho x-gw-ims-org-id.
+* **[!UICONTROL ID]** DO CLIENTE: A ID do cliente é o necessário  `{API_KEY}` para que o possa ser fornecido no cabeçalho x-api-key.
+* **[!UICONTROL ID]** DA ORGANIZAÇÃO: A ID da organização é o  `{IMS_ORG}` valor que deve ser usado no cabeçalho x-gw-ims-org-id.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
@@ -92,7 +91,7 @@ Para gerar um novo `{ACCESS_TOKEN}`, abra a chave privada baixada anteriormente 
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-Um novo token de acesso é gerado e um botão para copiar o token para a área de transferência é fornecido. Esse valor é usado para o cabeçalho de Autorização necessário e deve ser fornecido no formato `Bearer {ACCESS_TOKEN}`.
+É gerado um novo token de acesso, e é fornecido um botão para copiá-lo para a área de transferência. Esse valor é usado para o cabeçalho de Autorização necessário e deve ser fornecido no formato `Bearer {ACCESS_TOKEN}`.
 
 ![](../images/api/getting-started/generated-access-token.png)
 

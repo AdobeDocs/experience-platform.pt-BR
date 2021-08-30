@@ -1,26 +1,26 @@
 ---
-title: Ponto de extremidade de notas
-description: Saiba como fazer chamadas para o endpoint /notes na API do Reator.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint de notas
+description: Saiba como fazer chamadas ao endpoint /notes na API do Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 7%
+source-wordcount: '526'
+ht-degree: 99%
 
 ---
 
-# Ponto de extremidade de notas
+# Endpoint de notas
 
-Na API do reator, as notas são anotações textuais que podem ser adicionadas a determinados recursos. As notas são essencialmente comentários sobre os respectivos recursos. O conteúdo das notas não tem impacto no comportamento dos recursos e pode ser usado para uma variedade de casos de uso, incluindo o seguinte:
+Na API do Reactor, as notas são anotações textuais que podem ser adicionadas a determinados recursos. Basicamente, as notas são comentários sobre os respectivos recursos. O conteúdo das notas não tem impacto sobre o comportamento dos recursos e pode ser usados para diversos casos de uso, inclusive os seguintes:
 
-* Fornecimento de informações de fundo
-* Funcionando como listas de itens
-* Envio de conselhos de uso de recursos
-* Dar instruções aos outros membros da equipe
-* Registro do contexto histórico
+* Fornecer informações de referência
+* Funcionar como listas de tarefas
+* Repassar conselhos sobre o uso de recursos
+* Dar instruções a outros membros da equipe
+* Registrar contexto histórico
 
-O endpoint `/notes` na API do reator permite gerenciar essas notas de forma programática.
+O endpoint `/notes` na API do Reactor permite gerenciar essas notas de forma programática.
 
-As observações podem ser aplicadas aos seguintes recursos:
+As notas podem ser aplicadas aos seguintes recursos:
 
 * [Elementos de dados](./data-elements.md)
 * [Extensões](./extensions.md)
@@ -29,21 +29,21 @@ As observações podem ser aplicadas aos seguintes recursos:
 * [Componentes da regra](./rule-components.md)
 * [Regras](./rules.md)
 
-Esses seis tipos são coletivamente conhecidos como recursos &quot;notáveis&quot;. Quando um recurso notável é excluído, as notas associadas também são excluídas.
+Esses seis tipos são coletivamente conhecidos como recursos “anotáveis”. Quando um recurso anotável é excluído, as notas associadas a ele também são excluídas.
 
 >[!NOTE]
 >
->Para recursos que podem ter várias revisões, quaisquer notas devem ser criadas na revisão (head) atual. Não podem ser anexadas a outras revisões.
+>Para recursos que podem ter várias revisões, quaisquer notas devem ser criadas na revisão atual (head). Elas não podem ser anexadas a outras revisões.
 >
->Todavia, as notas podem ainda ser lidas com base em revisões. Nesses casos, a API retorna apenas as notas existentes antes da criação da revisão. Eles fornecem um instantâneo das anotações como eram quando a revisão foi recortada. Por outro lado, a leitura de notas da revisão (head) atual retorna todas as suas notas.
+>No entanto, as notas ainda podem ser lidas nas revisões. Nesses casos, a API retorna apenas as notas existentes antes da criação da revisão. É fornecida uma captura de tela que mostra a aparência das anotações antes de a revisão ser removida. Por outro lado, a leitura de notas na revisão atual (head) retorna todas as notas.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte novamente o [guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação para a API.
 
 ## Recuperar uma lista de notas {#list}
 
-Você pode recuperar uma lista de observações para um recurso ao anexar `/notes` ao caminho de uma solicitação do GET para o recurso em questão.
+Você pode recuperar uma lista de notas para um recurso acrescentando `/notes` ao caminho de uma solicitação GET para o recurso em questão.
 
 **Formato da API**
 
@@ -117,9 +117,9 @@ Uma resposta bem-sucedida retorna uma lista de notas anexadas ao recurso especif
 }
 ```
 
-## Procurar uma nota {#lookup}
+## Pesquisar uma nota {#lookup}
 
-Você pode pesquisar uma nota fornecendo sua ID no caminho de uma solicitação do GET.
+É possível pesquisar uma nota fornecendo a respectiva ID no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -129,7 +129,7 @@ GET /notes/{NOTE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `NOTE_ID` | O `id` da nota que pretende procurar. |
+| `NOTE_ID` | O `id` da nota que você deseja pesquisar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -183,9 +183,9 @@ Uma resposta bem-sucedida retorna os detalhes da nota.
 
 >[!WARNING]
 >
->Antes de criar uma nova nota, lembre-se de que as notas não são editáveis e que a única maneira de excluí-las é excluir o recurso correspondente.
+>Antes de criar uma nova nota, lembre-se de que elas não são editáveis e a única maneira de excluí-las é excluir o recurso correspondente.
 
-Você pode criar uma nova nota ao anexar `/notes` ao caminho de uma solicitação POST para o recurso em questão.
+Você pode criar uma nova nota acrescentando `/notes` ao caminho de uma solicitação POST para o recurso em questão.
 
 **Formato da API**
 
@@ -196,7 +196,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | Parâmetro | Descrição |
 | --- | --- |
 | `RESOURCE_TYPE` | O tipo de recurso para o qual você está criando uma nota. Deve ser um dos seguintes valores: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | O `id` do recurso específico para o qual você deseja criar uma nota. |
+| `RESOURCE_ID` | A `id` do recurso específico para o qual você deseja criar uma nota. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -223,8 +223,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | **(Obrigatório)** O tipo de recurso que está sendo atualizado. Para esse ponto de extremidade, o valor deve ser `notes`. |
-| `attributes.text` | **(Obrigatório)** O texto que compreende a nota. Cada nota é limitada a 512 caracteres Unicode. |
+| `type` | **(Obrigatório)** O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `notes`. |
+| `attributes.text` | **(Obrigatório)** O texto que compõe a nota. Cada nota é limitada a 512 caracteres Unicode. |
 
 {style=&quot;table-layout:auto&quot;}
 

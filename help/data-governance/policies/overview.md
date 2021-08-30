@@ -5,9 +5,9 @@ title: Visão geral das políticas de uso de dados
 topic-legacy: policies
 description: Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro do Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto 
 >
 >As ações de marketing por si só não restringem o uso de dados. Eles devem ser incluídos nas políticas de uso de dados ativadas para que essas ações sejam avaliadas em caso de violações de política.
 
-Quando o uso de dados ocorre no serviço da organização, as ações de marketing relevantes devem ser indicadas para que qualquer violação de política possa ser identificada. Em seguida, você pode usar a [API do Serviço de Política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para verificar violações de política em sua integração.
+Quando o uso de dados ocorre no serviço da organização, as ações de marketing relevantes devem ser indicadas para que qualquer violação de política possa ser identificada. Em seguida, você pode usar a [API do Serviço de Política](https://www.adobe.io/experience-platform-apis/references/policy-service/) para verificar violações de política em sua integração.
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Este documento forneceu uma introdução às políticas de uso de dados dentro d
 
 A seção a seguir fornece informações adicionais sobre as políticas de uso de dados.
 
-### Ações de marketing definidas pelo Adobe {#core-actions}
+### Ações de marketing definidas por Adobe {#core-actions}
 
 A tabela abaixo descreve as principais ações de marketing fornecidas prontas para uso pelo Adobe.
 

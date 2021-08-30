@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de identidade
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2177'
 ht-degree: 0%
 
 ---
@@ -78,11 +78,11 @@ Os namespaces de identidade padrão são namespaces disponíveis para todas as o
 
 ## Onde posso encontrar a lista de namespaces de identidade disponíveis para minha organização?
 
-Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode listar todos os namespaces de identidade disponíveis para sua organização, fazendo uma solicitação de GET para o endpoint `/idnamespace/identities`. Consulte a seção [listando namespaces disponíveis](./api/list-namespaces.md) na visão geral da API do Serviço de identidade para obter mais informações.
+Usando a [API do Serviço de identidade](https://www.adobe.io/experience-platform-apis/references/identity-service), você pode listar todos os namespaces de identidade disponíveis para sua organização, fazendo uma solicitação de GET para o endpoint `/idnamespace/identities`. Consulte a seção [listando namespaces disponíveis](./api/list-namespaces.md) na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## Como criar um namespace personalizado para minha organização?
 
-Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode criar um namespace de identidade personalizado para sua organização, fazendo uma solicitação de POST para o endpoint `/idnamespace/identities`. Consulte a seção [criar um namespace personalizado](./api/create-custom-namespace.md) na visão geral da API do Serviço de identidade para obter mais informações.
+Usando a [API do Serviço de identidade](https://www.adobe.io/experience-platform-apis/references/identity-service), você pode criar um namespace de identidade personalizado para sua organização, fazendo uma solicitação de POST para o endpoint `/idnamespace/identities`. Consulte a seção [criar um namespace personalizado](./api/create-custom-namespace.md) na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## O que são identidades compostas e XIDs?
 

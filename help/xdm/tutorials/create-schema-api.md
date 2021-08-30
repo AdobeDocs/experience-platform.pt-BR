@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial usa a API do Registro de esquema para orientá-lo pelas etapas para compor um esquema usando uma classe padrão.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 1%
+source-wordcount: '2422'
+ht-degree: 2%
 
 ---
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Você pode listar os valores &quot;xdm:namespace&quot; disponíveis ou criar novos, usando o [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). O valor para &quot;xdm:property&quot; pode ser &quot;xdm:code&quot; ou &quot;xdm:id&quot;, dependendo do &quot;xdm:namespace&quot; usado.
+>Você pode listar os valores &quot;xdm:namespace&quot; disponíveis ou criar novos, usando o [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). O valor para &quot;xdm:property&quot; pode ser &quot;xdm:code&quot; ou &quot;xdm:id&quot;, dependendo do &quot;xdm:namespace&quot; usado.
 
 **Resposta**
 
@@ -1180,7 +1180,7 @@ Depois de criar mais de um schema, você pode definir relacionamentos entre eles
 
 As informações a seguir complementam o tutorial da API.
 
-## Concluir esquema Membros da Fidelidade {#complete-schema}
+## Schema Concluir Membros da Fidelidade {#complete-schema}
 
 Ao longo deste tutorial, um schema é composto para descrever os membros de um programa de fidelidade de varejo.
 

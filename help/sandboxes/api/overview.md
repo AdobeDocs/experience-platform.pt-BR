@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Guia da API do Sandbox
 topic-legacy: developer guide
 description: As sandboxes no Adobe Experience Platform fornecem ambientes de desenvolvimento isolados que permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar seu ambiente de produção.
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 0%
+source-wordcount: '330'
+ht-degree: 2%
 
 ---
 
-# [!DNL Sandbox] Guia da API
+# [!DNL Sandbox] Manual da API
 
 A API [!DNL Sandbox] fornece vários endpoints que permitem gerenciar programaticamente todas as sandboxes disponíveis na organização de IMS. Esses endpoints são descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 
-Para ver todos os endpoints e operações CRUD disponíveis, visite a [[!DNL Sandbox] referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml).
+Para ver todos os endpoints e operações CRUD disponíveis, visite a [[!DNL Sandbox] referência da API](https://www.adobe.io/experience-platform-apis/references/sandbox).
 
 ## sandboxes disponíveis
 

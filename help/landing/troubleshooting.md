@@ -7,9 +7,9 @@ landing-page-description: Encontre respostas para perguntas frequentes e um guia
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1731'
 ht-degree: 5%
 
 ---
@@ -206,4 +206,4 @@ Veja a seguir uma lista de guias de solução de problemas e a documentação de
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] Perguntas frequentes e guia de solução de problemas](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] e [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] guia de solução de problemas](../profile/troubleshooting.md) |
-| Sandboxes | [API de sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guia de solução de problemas de sandboxes](../sandboxes/troubleshooting-guide.md) |
+| Sandboxes | [API de sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guia de solução de problemas de sandboxes](../sandboxes/troubleshooting-guide.md) |

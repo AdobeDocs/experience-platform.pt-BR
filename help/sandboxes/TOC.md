@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Ajuda do Sandoboxes na Adobe Experience Platform
 breadcrumb-title: Guia de Sandoxes
 user-guide-description: Particionamento de uma instância do Platform em ambientes virtuais para desenvolvimento, teste e implantação de aplicativos.
-feature: Gerenciamento de dados
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+feature: Data Management
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 45%
+source-wordcount: '60'
+ht-degree: 46%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 45%
    * [Tipos de sandbox](api/types.md)
    * [Apêndice](api/appendix.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
-* [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [Referência da API](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

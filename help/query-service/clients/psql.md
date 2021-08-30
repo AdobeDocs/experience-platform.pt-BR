@@ -5,10 +5,9 @@ title: Conectar o PSQL ao Serviço de Consulta
 topic-legacy: connect
 description: O PSQL é uma interface de linha de comando que vem quando você instala o PostgreSQL em sua máquina. Você pode instalá-lo seguindo estas instruções.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '275'
 ht-degree: 1%
 
 ---
@@ -25,11 +24,11 @@ Depois de instalar o PSQL no computador, você está pronto para conectar o PSQL
 
 ![Imagem](../images/clients/psql/connect-bi.png)
 
-Selecione o ícone para copiar a seção denominada **[!UICONTROL PSQL Command]** e cole a string de comando em um terminal ou janela de linha de comando antes de pressionar Enter.
+Selecione o ícone para copiar a seção denominada **[!UICONTROL PSQL Command]** e cole a cadeia de caracteres de comando em um terminal ou janela de linha de comando antes de pressionar Enter.
 
 >[!IMPORTANT]
 >
->Se você estiver em um PC, use um editor de texto para remover as quebras de linha na string de comando e, em seguida, copie a string. Além disso, se estiver usando a versão 12.0 ou superior, será necessário adicionar `PGGSSENCMODE=disable` à string de conexão.
+>Se você estiver em um PC, use um editor de texto para remover as quebras de linha na string de comando e, em seguida, copie a string. Se estiver usando a versão 12.0 ou superior, será necessário adicionar `PGGSSENCMODE=disable` à string de conexão. Além disso, se você estiver usando credenciais que não estão expirando, substitua o campo de senha pela senha de credencial que não está expirando. Para saber mais sobre credenciais que não expiram, leia o [guia de credenciais](../ui/credentials.md).
 
 Você deve ver um resultado como este:
 

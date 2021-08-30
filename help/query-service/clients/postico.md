@@ -5,10 +5,9 @@ title: Ligar Postico ao Serviço de Consulta
 topic-legacy: connect
 description: Este documento contém o link para instalar o cliente de backup Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -29,7 +28,7 @@ Para conectar [!DNL Postico] ao Serviço de query, abra [!DNL Postico] e selecio
 
 Agora você pode inserir valores para se conectar ao Adobe Experience Platform.
 
-Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, visite a página [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
+Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
 
 Após inserir suas credenciais, selecione **[!DNL Connect]** para se conectar ao Serviço de query.
 

@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
+source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1363'
+ht-degree: 3%
 
 ---
 
@@ -115,6 +115,7 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | [!DNL Dashboards] | [!UICONTROL Exibir painel de uso de licença] | Acesso somente leitura para exibir o painel de uso da licença. |
 | [!DNL Dashboards] | [!UICONTROL Gerenciar painéis padrão] | Adicione atributos personalizados que ainda não estão no data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Gerenciar Consultas] | Acesso para ler, criar, editar e excluir consultas SQL estruturadas para dados da plataforma. |
+| [!DNL Query Service] | [!UICONTROL Gerenciar integração do serviço de consulta] | Acesso para criar, atualizar e excluir credenciais que não estão expirando para acesso ao Serviço de query. |
 
 ## Próximas etapas
 

@@ -5,10 +5,9 @@ title: Conectar Looker ao Serviço de Consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Looker ao Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -41,7 +40,7 @@ Aqui, você pode preencher os detalhes das configurações de conexão.
 
 >[!NOTE]
 >
->Para obter mais informações sobre como encontrar o host e a porta, o nome do banco de dados e as credenciais de logon, visite a página [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
+>Para obter mais informações sobre como encontrar o host e a porta, o nome do banco de dados e as credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
 
 Depois de inserir os detalhes da conexão, selecione **[!DNL Test These Settings]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem indicando que você pode se conectar será exibida abaixo. Se a conexão for realmente bem-sucedida, selecione **[!DNL Add Connection]** para criar a conexão.
 

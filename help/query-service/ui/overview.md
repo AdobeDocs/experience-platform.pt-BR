@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -57,7 +57,7 @@ A guia **[!UICONTROL Log]** fornece uma lista de consultas que foram executadas 
 
 ## Credenciais
 
-A guia **[!UICONTROL Credenciais]** exibe suas credenciais [!DNL Postgres]. Selecione o ícone **[!UICONTROL Copiar]** ao lado de qualquer campo para armazenar seu conteúdo no buffer de teclado. Para obter mais informações sobre como usar essas credenciais para se conectar com clientes externos, leia o [guia de conexão com clientes](../clients/overview.md).
+A guia **[!UICONTROL Credentials]** exibe suas credenciais que estão expirando e que não estão expirando. Para obter mais informações sobre como usar essas credenciais para se conectar a clientes externos, leia o [guia de credenciais](../clients/overview.md).
 
 ![Imagem](../images/ui/overview/credentials.png)
 

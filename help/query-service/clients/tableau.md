@@ -1,15 +1,14 @@
 ---
 keywords: Experience Platform, home, tópicos populares, tableau, Tableau, serviço de consulta, serviço de consulta, conectar ao serviço de consulta;
 solution: Experience Platform
-title: Conectar o Tableau ao Serviço de Consulta
+title: Conectar o Tableau ao Serviço de consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Tableau ao Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '208'
+ht-degree: 3%
 
 ---
 
@@ -25,9 +24,9 @@ Para conectar [!DNL Tableau] a [!DNL Query Service], abra [!DNL Tableau] e, na s
 
 ![](../images/clients/tableau/open-connection.png)
 
-Agora você pode inserir valores para se conectar ao Adobe Experience Platform. Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, visite a página [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
+Agora você pode inserir valores para se conectar ao Adobe Experience Platform. Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
 
-Verifique se você marcou a caixa **[!UICONTROL SSL Required]** antes de tentar se conectar.
+Verifique se você marcou a caixa **[!UICONTROL SSL obrigatório]** antes de tentar se conectar.
 
 Depois de preencher todas as suas credenciais, selecione **[!DNL Sign In]** para continuar.
 

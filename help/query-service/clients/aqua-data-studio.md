@@ -5,10 +5,9 @@ title: Conectar o Aqua Data Studio ao Serviço de Consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Aqua Data Studio com o Adobe Experience Platform Query Service.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '295'
 ht-degree: 1%
 
 ---
@@ -34,7 +33,7 @@ A caixa de diálogo **[!DNL Register Server]** é exibida. Na guia **[!DNL Gener
 
 >[!NOTE]
 >
->Para obter mais informações sobre como encontrar suas credenciais de logon, host, porta e nome do banco de dados, visite a página [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
+>Para obter mais informações sobre como encontrar suas credenciais de logon, host, porta e nome do banco de dados, leia o [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 

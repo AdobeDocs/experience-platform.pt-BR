@@ -7,10 +7,10 @@ landing-page-description: Encontre respostas para perguntas frequentes e um guia
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f83e4150210af8d3e9e67285d1f9665b6e243f54
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '1727'
-ht-degree: 5%
+source-wordcount: '1723'
+ht-degree: 4%
 
 ---
 
@@ -195,7 +195,7 @@ Veja a seguir uma lista de guias de solução de problemas e a documentação de
 
 | Serviço de | Referência da API | Solução de problemas |
 | --- | --- | --- |
-| Controle de acesso | [API de controle de acesso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guia de solução de problemas de controle de acesso](../access-control/troubleshooting-guide.md) |
+| Controle de acesso | [API de controle de acesso](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guia de solução de problemas de controle de acesso](../access-control/troubleshooting-guide.md) |
 | Ingestão de dados do Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Guia de solução de problemas de assimilação em lote ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guia de solução de problemas de assimilação de streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guia de solução de problemas](../data-science-workspace/troubleshooting-guide.md) |
 | Governança de dados do Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |

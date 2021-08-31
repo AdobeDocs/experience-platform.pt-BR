@@ -5,19 +5,18 @@ title: Guia da API de controle de acesso
 topic-legacy: developer guide
 description: O controle de acesso no Adobe Experience Platform permite gerenciar funções e permissões para vários recursos da plataforma usando a Adobe Admin Console. As seções a seguir fornecem informações adicionais que os desenvolvedores precisarão saber para fazer chamadas com êxito para a API do Registro de Schema.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 3%
+source-wordcount: '385'
+ht-degree: 2%
 
 ---
 
-# [!DNL Access Control] Guia da API
+# [!DNL Access Control] Manual da API
 
 [!DNL Access control] O para  [!DNL Experience Platform] é administrado por meio da  [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../home.md) para obter mais informações.
 
-Este guia do desenvolvedor fornece informações sobre como formatar suas solicitações para [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), e abrange as seguintes operações:
+Este guia do desenvolvedor fornece informações sobre como formatar suas solicitações para [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/), e abrange as seguintes operações:
 
 - [Listar nomes de permissões e tipos de recursos](./permissions-and-resource-types.md)
 - [Exibir políticas eficazes para o usuário atual](./effective-policies.md)

@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
-feature: Assimilação de dados, Fontes
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 13%
+source-wordcount: '643'
+ht-degree: 14%
 
 ---
 
@@ -248,4 +248,5 @@ ht-degree: 13%
 - [Notificações de execução de fluxo](notifications.md)
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
+- [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

@@ -5,10 +5,9 @@ title: Entrada e saída no Customer AI
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela API do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: c534b66d7617023df8dbac57115036146c2cab01
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2971'
 ht-degree: 1%
 
 ---
@@ -65,29 +64,35 @@ O Customer AI depende de tipos de evento diferentes para criar recursos do model
 
 Não é necessário ter dados para cada um dos eventos padrão listados abaixo, mas determinados eventos são necessários para determinados cenários. Se você tiver algum dos dados de eventos padrão disponíveis, é recomendável incluí-lo no esquema . Por exemplo, se você quisesse criar um aplicativo do Customer AI para prever eventos de compra, seria útil ter dados dos tipos de dados `Commerce` e `Web page details` .
 
-Para exibir um grupo de campos na interface do usuário da plataforma, selecione a guia **[!UICONTROL Schemas]** no painel à esquerda, em seguida, selecione a guia **[!UICONTROL Field groups]** .
+Para exibir um grupo de campos na interface do usuário da plataforma, selecione a guia **[!UICONTROL Schemas]** no painel à esquerda, em seguida, selecione a guia **[!UICONTROL Field groups]**.
 
 | Grupo de campos | Tipo de evento | Caminho do campo XDM |
 | --- | --- | --- |
-| [!UICONTROL Commerce Details] | pedido | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Detalhes de comércio] | pedido | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
 |  | check-outs | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
 |  | compras | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
 |  | productListRemoments | <li> commerce.productListRemovals.value </li> <li> productListItems.SKU </li> |
 |  | productListOpens | <li> commerce.productListOpens.value </li> <li> productListItems.SKU </li> |
 |  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
-| [!UICONTROL Web Details] | webVisit | web.webPageDetails.name |
+| [!UICONTROL Detalhes da Web] | webVisit | web.webPageDetails.name |
 |  | webInteraction | web.webInteraction.linkClicks.value |
-| [!UICONTROL Application Details] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
+| [!UICONTROL Detalhes do aplicativo] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
 |  | applicationCrashes | <li> application.crashes.value </li> <li> application.name </li> |
 |  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
 |  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
-| [!UICONTROL Search Details] | pesquisa | search.keywords |
+| [!UICONTROL Detalhes da pesquisa] | pesquisa | search.keywords |
 
 Além disso, o Customer AI pode usar os dados de assinatura para criar melhores modelos de rotatividade. Os dados de assinatura são necessários para cada perfil usando o formato de tipo de dados [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) . A maioria dos campos é opcional, no entanto, para um modelo de rotatividade ideal, é altamente recomendável fornecer dados para o maior número possível de campos, como `startDate`, `endDate` e quaisquer outros detalhes relevantes.
+
+### Adicionar grupos de campos personalizados
+
+Se você tiver informações adicionais que deseja incluir além dos [campos de evento padrão](#standard-events) usados pelo Customer AI. Uma opção de eventos personalizados é fornecida durante a [configuração de instância](./user-guide/configure.md#custom-events).
+
+Se o conjunto de dados selecionado incluir eventos personalizados, como uma reserva de hotel ou restaurante definida em seu esquema, você poderá adicioná-los à sua instância. Esses eventos personalizados adicionais são usados pela API do cliente para melhorar a qualidade do modelo e fornecer resultados mais precisos.
 
 ### Dados históricos {#data-requirements}
 

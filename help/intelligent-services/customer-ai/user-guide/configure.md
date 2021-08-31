@@ -5,10 +5,9 @@ title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
 description: Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b6fff24d6298bad968e16516f2e555927c3a4a12
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1549'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ O Customer AI, como parte dos Serviços inteligentes, permite gerar pontuações
 
 Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 
-## Configure sua instância {#set-up-your-instance}
+## Configurar a instância {#set-up-your-instance}
 
 Na interface do usuário da plataforma, selecione **[!UICONTROL Services]** no painel de navegação esquerdo. O navegador **[!UICONTROL Services]** é exibido e exibe todos os serviços disponíveis à sua disposição. No contêiner do Customer AI, selecione **[!UICONTROL Open]**.
 
@@ -27,18 +26,18 @@ Na interface do usuário da plataforma, selecione **[!UICONTROL Services]** no p
 
 A interface do usuário **Customer AI** é exibida e exibe todas as instâncias de serviço.
 
-- Você pode encontrar a métrica **[!UICONTROL Total profiles scored]** localizada no lado inferior direito do contêiner **[!UICONTROL Create instance]**. Essa métrica rastreia o número total de perfis pontuados pelo Customer AI para o ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
+- Você pode encontrar a métrica **[!UICONTROL Total profiles scored]** localizada no lado inferior direito do contêiner **[!UICONTROL Create instance]** . Essa métrica rastreia o número total de perfis pontuados pelo Customer AI para o ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
 
 ![](../images/user-guide/total-profiles.png)
 
 As instâncias de serviço podem ser editadas, clonadas e excluídas usando os controles no lado direito da interface do usuário. Para exibir esses controles, selecione uma instância de seu **[!UICONTROL Service instances]** existente. Os controles contêm o seguinte:
 
-- **[!UICONTROL Edit]**: Selecionar  **[!UICONTROL Edit]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
-- **[!UICONTROL Clone]**: A seleção  **[!UICONTROL Clone]** copia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
-- **[!UICONTROL Delete]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
-- **[!UICONTROL Data source]**: Um link para o conjunto de dados usado por esta instância.
-- **[!UICONTROL Last run details]**: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
-- **[!UICONTROL Score definition]**: Uma visão geral rápida da meta que você configurou para esta instância.
+- **[!UICONTROL Editar]**: Selecionar  **** Editar permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
+- **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados usado por esta instância.
+- **[!UICONTROL Detalhes]** da última execução: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
+- **[!UICONTROL Definição]** de pontuação: Uma visão geral rápida da meta que você configurou para esta instância.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -64,23 +63,23 @@ Forneça os valores necessários e selecione **[!UICONTROL Next]**.
 
 ### Definir uma meta {#define-a-goal}
 
-A etapa **[!UICONTROL Define goal]** é exibida e fornece um ambiente interativo para que você defina visualmente uma meta de previsão. Um objetivo é composto por um ou mais eventos, em que a ocorrência de cada evento se baseia na condição que ele contém. O objetivo de uma instância do Customer AI é determinar a probabilidade de atingir sua meta em um determinado período.
+A etapa **[!UICONTROL Definir meta]** é exibida e fornece um ambiente interativo para que você defina visualmente uma meta de previsão. Um objetivo é composto por um ou mais eventos, em que a ocorrência de cada evento se baseia na condição que ele contém. O objetivo de uma instância do Customer AI é determinar a probabilidade de atingir sua meta em um determinado período.
 
-Para criar uma meta, selecione **[!UICONTROL Enter Field Name]** e selecione um campo na lista suspensa. Selecione a segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor de destino para concluir o evento. Eventos adicionais podem ser configurados selecionando **[!UICONTROL Add event]**. Por fim, complete a meta aplicando um período de previsão em número de dias e selecione **[!UICONTROL Next]**.
+Para criar uma meta, selecione **[!UICONTROL Inserir nome do campo]** e selecione um campo na lista suspensa. Selecione a segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor de destino para concluir o evento. Eventos adicionais podem ser configurados selecionando **[!UICONTROL Adicionar evento]**. Por fim, conclua a meta aplicando um período de previsão em número de dias e selecione **[!UICONTROL Next]**.
 
 ![](../images/user-guide/goal.png)
 
 #### Ocorrerá e não ocorrerá
 
-Ao definir sua meta, você tem a opção de selecionar **[!UICONTROL Will occur]** ou **[!UICONTROL Will not occur]**. Selecionar **[!UICONTROL Will occur]** significa que as condições do evento definidas precisam ser atendidas para que os dados do evento de um cliente sejam incluídos na interface do usuário do insights.
+Ao definir sua meta, você tem a opção de selecionar **[!UICONTROL Will occur]** ou **[!UICONTROL Will not occur]**. Selecionar **[!UICONTROL Ocorrerá]** significa que as condições do evento que você definir precisam ser atendidas para que os dados do evento de um cliente sejam incluídos na interface do usuário do insights.
 
-Por exemplo, se você quiser configurar um aplicativo para prever se um cliente fará uma compra, poderá selecionar **[!UICONTROL Will occur]** seguido por **[!UICONTROL All of]** e inserir **commerce.purchase.id** e **exists** como operador.
+Por exemplo, se você deseja configurar um aplicativo para prever se um cliente fará uma compra, você pode selecionar **[!UICONTROL Will occur]** seguido por **[!UICONTROL All of]** e inserir **commerce.purchase.id** e **exists** como operador.
 
 ![ocorrerá](../images/user-guide/occur.png)
 
 No entanto, pode haver casos em que você esteja interessado em prever se algum evento não acontecerá em um determinado período. Para configurar uma meta com essa opção, selecione **[!UICONTROL Will not occur]** na lista suspensa de nível superior.
 
-Por exemplo, se você estiver interessado em prever quais clientes se tornam menos envolvidos e não visitar sua página de logon de conta no próximo mês. Selecione **[!UICONTROL Will not occur]** seguido por **[!UICONTROL All of]** e insira **web.webInteraction.URL** e **[!UICONTROL equals]** como operador com **account-login** como o valor.
+Por exemplo, se você estiver interessado em prever quais clientes se tornam menos envolvidos e não visitar sua página de logon de conta no próximo mês. Selecione **[!UICONTROL Will not occur]** seguido por **[!UICONTROL All of]** e digite **web.webInteraction.URL** e **[!UICONTROL equal]** como operador com **account-login** como o valor.
 
 ![não ocorrerá](../images/user-guide/not-occur.png)
 
@@ -92,23 +91,45 @@ Por exemplo, você pode querer prever se um cliente compra um produto específic
 
 ![Todos os exemplos](../images/user-guide/all-of.png)
 
-Para prever se um cliente terá algum evento de um determinado conjunto, você pode usar a opção **[!UICONTROL Any of]** .
+Para prever se um cliente terá algum evento de um determinado conjunto, você pode usar a opção **[!UICONTROL Qualquer um de]**.
 
 Por exemplo, você pode querer prever se um cliente visita um determinado URL ou uma página da Web com um nome específico. Essa meta de previsão é definida por duas condições: `web.webPageDetails.URL` **começa com** um valor específico e `web.webPageDetails.name` **começa com** um valor específico.
 
 ![Qualquer exemplo](../images/user-guide/any-of.png)
 
+### Eventos personalizados (*opcional*) {#custom-events}
+
+Se você tiver informações adicionais além dos [campos de evento padrão](../input-output.md#standard-events) usados pela AI do cliente para gerar pontuações de propensão, uma opção de eventos personalizados será fornecida. Se o conjunto de dados selecionado incluir eventos personalizados definidos no esquema, é possível adicioná-los à instância.
+
+![recurso de evento](../images/user-guide/event-feature.png)
+
+Para adicionar um evento personalizado, selecione **[!UICONTROL Adicionar evento personalizado]**. Em seguida, insira um nome de evento personalizado e o mapeie para o campo de evento no esquema . Os nomes de evento personalizados são exibidos no lugar do valor dos campos, ao analisar fatores influentes e outros insights. Isso significa que a ID do usuário, a ID da reserva, as informações do dispositivo e outros valores personalizados são listados com o nome do evento personalizado, em vez da ID/valor do evento. Esses eventos personalizados adicionais são usados pela API do cliente para melhorar a qualidade do modelo e fornecer resultados mais precisos.
+
+![Campo de evento personalizado](../images/user-guide/custom-event.png)
+
+Em seguida, selecione o operador que deseja usar no menu suspenso operadores disponíveis. Somente operadores compatíveis com o evento são listados.
+
+![Operador de evento personalizado](../images/user-guide/custom-operator.png)
+
+Por fim, insira os valores do campo se o operador selecionado exigir um. Neste exemplo, precisamos apenas ver se existe uma reserva de hotel ou restaurante. No entanto, se quisermos ser mais exatos, poderemos usar o operador equals e inserir um valor exato no prompt de valor.
+
+![Valor do campo Evento personalizado](../images/user-guide/custom-value.png)
+
+Depois de concluir, selecione **[!UICONTROL Next]** no canto superior direito para continuar.
+
 ### Configurar um agendamento *(opcional)* {#configure-a-schedule}
 
-A etapa **[!UICONTROL Advanced]** é exibida. Essa etapa opcional permite configurar um agendamento para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou selecionar **[!UICONTROL Finish]** se nada for necessário.
+A etapa **[!UICONTROL Avançado]** é exibida. Essa etapa opcional permite configurar um agendamento para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou selecionar **[!UICONTROL Finalizar]** se nada for necessário.
 
-Configure um agendamento de pontuação configurando o **[!UICONTROL Scoring Frequency]**. As execuções de previsão automatizada podem ser programadas para serem executadas semanalmente ou mensalmente.
+Configure um agendamento de pontuação configurando a **[!UICONTROL Frequência de Pontuação]**. As execuções de previsão automatizada podem ser programadas para serem executadas semanalmente ou mensalmente.
 
 ![](../images/user-guide/schedule.png)
 
-Abaixo da configuração da programação, você tem a capacidade de definir exclusões de previsão para evitar que eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Esse recurso pode ser usado para filtrar entradas de dados irrelevantes.
+### Exclusões de previsão
 
-Para excluir determinados eventos, selecione **[!UICONTROL Add exclusion]** e defina o evento da mesma maneira que a meta é definida. Para remover uma exclusão, selecione os elipses (**[!UICONTROL ...]**) no canto superior direito do contêiner de evento e selecione **[!UICONTROL Remove Container]**.
+Se o conjunto de dados continha colunas adicionadas como dados de teste, é possível adicionar essa coluna ou evento a uma lista de exclusão selecionando **Adicionar exclusão** e depois inserindo o campo que deseja excluir. Isso impede que os eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Esse recurso pode ser usado para filtrar entradas de dados irrelevantes ou determinadas promoções.
+
+Para excluir um evento, selecione **[!UICONTROL Adicionar exclusão]** e defina o evento. Para remover uma exclusão, selecione os elipses (**[!UICONTROL ...]**) na parte superior direita do contêiner de evento, em seguida, selecione **[!UICONTROL Remover contêiner]**.
 
 ![](../images/user-guide/exclusion.png)
 

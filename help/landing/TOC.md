@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real.
-source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
+source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 23%
@@ -46,10 +46,10 @@ ht-degree: 23%
       * Adobe standard {#adobe}
          * [Visão geral](./governance-privacy-security/consent/adobe/overview.md)
          * [Configurar um conjunto de dados para capturar dados de consentimento e preferência](./governance-privacy-security/consent/adobe/dataset.md)
-         * [Integre o SDK da Web da plataforma para processar dados de consentimento e preferência](./governance-privacy-security/consent/adobe/sdk.md)
       * TCF do IAB 2.0 {#iab}
          * [Visão geral](./governance-privacy-security/consent/iab/overview.md)
          * [Configurar um conjunto de dados para capturar dados de consentimento e preferência](./governance-privacy-security/consent/iab/dataset.md)
+      * [Integre o SDK da Web da plataforma para processar dados de consentimento e preferência](./governance-privacy-security/consent/sdk.md)
    * Logs de auditoria (Beta) {#audit-logs}
       * [Visão geral](./governance-privacy-security/audit-logs/overview.md)
 * [Painel de uso da licença](license-usage-dashboard.md)

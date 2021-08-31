@@ -3,10 +3,10 @@ keywords: Gerenciador de lances DoubleClick, Gerenciador de lances DoubleClick, 
 title: Conexão Google Display & Video 360
 description: Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas para o público-alvo em fontes de inventário de Exibição, Vídeo e Dispositivo móvel.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 0%
+source-wordcount: '709'
+ht-degree: 2%
 
 ---
 
@@ -45,13 +45,13 @@ Observe os seguintes detalhes que são específicos para os destinos [!DNL Googl
 
 **Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) para o destino do Google.
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 ### Lista de permissões
 
 >[!NOTE]
 >
->A lista de permissões é obrigatória antes de configurar seu primeiro destino [!DNL Google Display & Video 360] na Plataforma. Verifique se o processo de lista de permissões descrito abaixo foi concluído pelo Google antes de criar um destino.
+>A lista de permissões é obrigatória antes de configurar seu primeiro destino [!DNL Google Display & Video 360] na Plataforma. Certifique-se de que o processo de lista de permissões descrito abaixo foi concluído pelo Google antes de criar um destino.
 
 Antes de criar o destino [!DNL Google Display & Video 360] na Plataforma, você deve entrar em contato com o Google solicitando que o Adobe seja colocado na lista de provedores de dados permitidos e que sua conta seja adicionada à lista de permissões. Entre em contato com o Google e forneça as seguintes informações:
 
@@ -85,3 +85,13 @@ Consulte [Ativar os dados do público-alvo para os destinos de exportação de s
 ## Dados exportados
 
 Para verificar se os dados foram exportados com êxito para o destino [!DNL Google Display & Video 360], verifique sua conta [!DNL Google Display & Video 360]. Se a ativação foi bem-sucedida, os públicos-alvo são preenchidos na sua conta.
+
+## Solução de problemas {#troubleshooting}
+
+### 400 Mensagem de erro de solicitação incorreta {#bad-request}
+
+Ao configurar esse destino, você pode receber o seguinte erro:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+Esse erro ocorre quando as contas do cliente não estão em conformidade com os [pré-requisitos](#prerequisites). Para corrigir esse problema, entre em contato com o Google e verifique se sua conta está incluída na lista de permissões.

@@ -3,9 +3,9 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Guia da API do perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo perfis de exibição, criem e atualizem políticas de mesclagem, exportem ou exemplificem dados de perfil, e excluam dados de perfil que não são mais necessários ou foram adicionados com erro. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Para saber mais sobre as políticas de mesclagem e sua função na Plataforma, c
 
 ## Visualizar o status da amostra ([!DNL Profile] pré-visualização) {#profile-preview}
 
-Como os dados ativados para o Perfil são assimilados no Experience Platform, eles são armazenados no armazenamento de dados do Perfil. À medida que o número de registros no armazenamento de perfil aumenta ou diminui, um trabalho de amostra é executado e inclui informações sobre quantos fragmentos de perfil e perfis mesclados estão no armazenamento de dados. Usando a API de perfil, é possível visualizar a amostra mais recente bem-sucedida, bem como a distribuição de perfil de lista por conjunto de dados e por namespace de identidade. Para começar a usar o endpoint `/profilepreviewstatus`, consulte o [guia do endpoint de status de amostra de visualização](preview-sample-status.md).
+À medida que os dados são assimilados no Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real. Os resultados desse trabalho de amostra podem ser exibidos usando o endpoint `/previewsamplestatus`, parte da API do Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar distribuições de perfil pelo conjunto de dados e namespace de identidade, bem como para gerar vários relatórios para ganhar visibilidade sobre a composição da Loja de perfis da sua organização.  Para começar a usar o endpoint `/profilepreviewstatus`, consulte o [guia do endpoint de status de amostra de visualização](preview-sample-status.md).
 
 ## Tarefas do sistema de perfil {#profile-system-jobs}
 

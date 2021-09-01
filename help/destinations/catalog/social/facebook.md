@@ -3,9 +3,9 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,9 @@ Antes de enviar seus segmentos de público-alvo para [!DNL Facebook], verifique 
    >
    > Ao configurar as permissões para o Adobe Experience Cloud, você deve habilitar a permissão **Gerenciar campanhas**. A permissão é necessária para a integração [!DNL Adobe Experience Platform].
 * Leia e assine os [!DNL Facebook Custom Audiences] Termos de serviço. Para fazer isso, vá para `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, onde `accountID` é seu [!DNL Facebook Ad Account ID].
+   >[!IMPORTANT]
+   >
+   >Ao assinar os [!DNL Facebook Custom Audiences] Termos de serviço, use a mesma conta de usuário que você usou para autenticar na API do Facebook.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 

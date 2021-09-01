@@ -1,15 +1,14 @@
 ---
-title: Executar comandos do SDK da Web da Adobe Experience Platform
-description: Saiba como executar comandos do SDK da Web da Experience Platform
+title: Executar comandos Adobe Experience Platform Web SDK
+description: Saiba como executar comandos do SDK da Web do Experience Platform
 keywords: Executar comandos; commandName; Promessas; getLibraryInfo; objetos de resposta; consentimento;
-translation-type: tm+mt
-source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
+exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
+source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 2%
 
 ---
-
 
 # Executar comandos
 
@@ -28,7 +27,7 @@ O `commandName` informa o SDK sobre o que fazer, enquanto `options` são os par�
 
 [](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) As promessas são fundamentais para a forma como o SDK se comunica com o código em sua página da Web. Uma promessa é uma estrutura de programação comum e não é específica para esse SDK ou até mesmo para JavaScript. Uma promessa atua como um proxy para um valor que não é conhecido quando a promessa é criada. Quando o valor for conhecido, a promessa será &quot;resolvida&quot; com o valor . As funções do manipulador podem ser associadas a uma promessa, para que você possa ser notificado quando a promessa tiver sido resolvida ou quando um erro tiver ocorrido no processo de resolver a promessa. Para saber mais sobre promessas, leia [este tutorial](https://javascript.info/promise-basics) ou qualquer outro recurso na Web.
 
-## Lidar com sucesso ou falha {#handling-success-or-failure}
+## Manipulação de sucesso ou falha {#handling-success-or-failure}
 
 Cada vez que um comando é executado, uma promessa é retornada. A promessa representa a conclusão final do comando. No exemplo abaixo, você pode usar os métodos `then` e `catch` para determinar quando o comando foi bem-sucedido ou falhou.
 
@@ -71,7 +70,7 @@ Todas as promessas retornadas de comandos são resolvidas com um objeto `result`
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
-    console.log(results.libraryInfo.version);
+    console.log(result.libraryInfo.version);
   });
 ```
 

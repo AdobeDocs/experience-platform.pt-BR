@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
 
 # Criar uma conexão de origem do Adobe Analytics na interface do usuário
 
-Este tutorial fornece etapas para criar uma conexão de origem Adobe Analytics na interface do usuário para trazer [!DNL Analytics] dados do conjunto de relatórios para o Adobe Experience Platform.
+Este tutorial fornece etapas para criar uma conexão de origem Adobe Analytics na interface do usuário para trazer [!DNL Analytics] dados do Conjunto de relatórios para o Adobe Experience Platform.
 
 ## Introdução
 
@@ -30,7 +30,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 É importante entender os seguintes termos principais usados em todo este documento:
 
 * **Atributo** padrão: Atributos padrão são qualquer atributo predefinido pelo Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis nos grupos de campos [!DNL Analytics] de origem e [!DNL Analytics] de esquema.
-* **Atributo** personalizado: Atributos personalizados são qualquer atributo na hierarquia de dimensão personalizada no  [!DNL Analytics]. Eles também estão entre os esquemas definidos pelo Adobe, mas podem ser interpretados de forma diferente por clientes diferentes. Os atributos personalizados incluem eVars, props e listas. Consulte a documentação a seguir [[!DNL Analytics] sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre eVars.
+* **Atributo** personalizado: Atributos personalizados são qualquer atributo na hierarquia de variável personalizada no  [!DNL Analytics]. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um Conjunto de relatórios e podem diferir em seu uso, de Conjunto de relatórios a Conjunto de relatórios. Os atributos personalizados incluem eVars, props e listas. Consulte a documentação a seguir [[!DNL Analytics] sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre eVars.
 * **Qualquer atributo em grupos** de campos personalizados: Os atributos originados de grupos de campos criados por clientes são definidos pelo usuário e não são considerados atributos padrão ou personalizados.
 * **Nomes** amigáveis: Nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em uma  [!DNL Analytics] implementação. Consulte a documentação a seguir [[!DNL Analytics] sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre nomes amigáveis.
 
@@ -46,15 +46,15 @@ Na categoria **[!UICONTROL Adobe applications]**, selecione **[!UICONTROL Adobe 
 
 ### Selecionar dados
 
-A etapa **[!UICONTROL Adicionar dados de origem do Analytics]** é exibida. Selecione **[!UICONTROL Conjunto de relatórios]** para começar a criar uma conexão de origem para os dados do conjunto de relatórios do Analytics e selecione o conjunto de relatórios que deseja assimilar. Selecione **[!UICONTROL Next]** para continuar.
+A etapa **[!UICONTROL Adicionar dados de origem do Analytics]** é exibida. Selecione **[!UICONTROL Report Suite]** para começar a criar uma conexão de origem para os dados do Conjunto de relatórios do Analytics e selecione o Report Suite que deseja assimilar. Os Conjuntos de relatórios que não podem ser selecionados já foram assimilados nessa sandbox ou em uma sandbox diferente. Selecione **[!UICONTROL Next]** para continuar.
 
 >[!NOTE]
 >
->Várias conexões de entrada para uma fonte podem ser feitas para trazer dados diferentes.
+>Várias conexões de entrada podem ser feitas para trazer vários Conjuntos de relatórios, no entanto, apenas um Conjunto de relatórios pode ser usado com a Plataforma de dados do cliente em tempo real de cada vez.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mapeamento
 
@@ -66,7 +66,7 @@ A página [!UICONTROL Mapeamento] fornece uma interface para mapear campos de or
 
 >[!TIP]
 >
->Somente os esquemas que têm o grupo de campos do modelo [!DNL Analytics] são exibidos no menu de seleção de esquema. Outros esquemas são omitidos. Se não houver esquemas apropriados disponíveis para seus dados de conjunto de relatórios, você deverá criar um novo esquema. Para obter etapas detalhadas sobre como criar schemas, consulte o guia sobre [como criar e editar schemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md).
+>Somente os esquemas que têm o grupo de campos do modelo [!DNL Analytics] são exibidos no menu de seleção de esquema. Outros esquemas são omitidos. Se não houver esquemas apropriados disponíveis para seus dados do Conjunto de relatórios, você deverá criar um novo esquema. Para obter etapas detalhadas sobre como criar schemas, consulte o guia sobre [como criar e editar schemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
@@ -74,9 +74,9 @@ A seção [!UICONTROL Mapear campos padrão] exibe painéis para [!UICONTROL Map
 
 | Mapear campos padrão | Descrição |
 | --- | --- |
-| [!UICONTROL Mapeamentos padrão aplicados] | O painel [!UICONTROL Mapeamentos padrão aplicados] exibe o número total de atributos padrão mapeados. Os mapeamentos padrão referem-se a conjuntos de mapeamento entre atributos padrão nos dados de origem [!DNL Analytics] e atributos padrão no grupo de campos [!DNL Analytics]. Eles são pré-mapeados e não podem ser editados. |
-| [!UICONTROL Mapeamentos padrão não correspondentes] | O painel [!UICONTROL Mapeamentos padrão não correspondentes] refere-se ao número de atributos padrão mapeados que contêm conflitos de nome amigáveis. Esses conflitos aparecem quando você reutiliza um esquema que já tem um conjunto preenchido de descritores de campo. Você pode continuar com seu fluxo de dados [!DNL Analytics] mesmo com conflitos de nome amigáveis. |
-| [!UICONTROL Mapeamentos personalizados] | O painel [!UICONTROL Mapeamentos personalizados] exibe o número de atributos personalizados mapeados, incluindo eVars, props e listas. Os mapeamentos personalizados referem-se a conjuntos de mapeamento entre atributos personalizados nos dados de origem [!DNL Analytics] e atributos personalizados no grupo de campos [!DNL Analytics]. Atributos personalizados podem ser mapeados para outros atributos personalizados, bem como atributos padrão. |
+| [!UICONTROL Mapeamentos padrão aplicados] | O painel [!UICONTROL Mapeamentos padrão aplicados] exibe o número total de atributos mapeados. Os mapeamentos padrão referem-se a conjuntos de mapeamento entre todos os atributos nos dados [!DNL Analytics] de origem e os atributos correspondentes no grupo de campos [!DNL Analytics]. Eles são pré-mapeados e não podem ser editados. |
+| [!UICONTROL Mapeamentos padrão não correspondentes] | O painel [!UICONTROL Mapeamentos padrão não correspondentes] refere-se ao número de atributos mapeados que contêm conflitos de nome amigáveis. Esses conflitos são exibidos quando você está reutilizando um esquema que já tem um conjunto preenchido de descritores de campo de um conjunto de relatórios diferente. Você pode continuar com seu fluxo de dados [!DNL Analytics] mesmo com conflitos de nome amigáveis. |
+| [!UICONTROL Mapeamentos personalizados] | O painel [!UICONTROL Mapeamentos personalizados] exibe o número de atributos personalizados mapeados, incluindo eVars, props e listas. Os mapeamentos personalizados referem-se a conjuntos de mapeamento entre atributos personalizados nos dados [!DNL Analytics] de origem e atributos em grupos de campos personalizados incluídos no esquema selecionado. |
 
 ![campos padrão do mapa](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ A Platform detecta automaticamente seus conjuntos de mapeamento para qualquer co
 
 ![mapeamento](../../../../images/tutorials/create/analytics/mapping.png)
 
-Se houver conflitos de nome amigáveis em seus conjuntos de mapeamento, você ainda poderá continuar com seu fluxo de dados [!DNL Analytics], reconhecendo que os descritores de campo serão os mesmos. Como alternativa, você pode optar por criar um novo schema com um conjunto em branco de descritores.
+Se houver conflitos de nome amigáveis entre o Conjunto de relatórios de origem e o esquema selecionado, você ainda poderá continuar com o fluxo de dados [!DNL Analytics], reconhecendo que os descritores de campo não serão alterados. Como alternativa, você pode optar por criar um novo schema com um conjunto em branco de descritores.
 
 Selecione **[!UICONTROL Next]** para continuar.
 
@@ -147,7 +147,7 @@ A etapa **[!UICONTROL Detalhes do fluxo de dados]** é exibida, onde você deve 
 A etapa [!UICONTROL Revisar] é exibida, permitindo que você revise o novo fluxo de dados do Analytics antes de ele ser criado. Os detalhes da conexão são agrupados por categorias, incluindo:
 
 * [!UICONTROL Conexão]: Exibe a plataforma de origem da conexão.
-* [!UICONTROL Tipo] de dados: Exibe o conjunto de relatórios selecionado e sua ID de conjunto de relatórios correspondente.
+* [!UICONTROL Tipo] de dados: Exibe o Conjunto de relatórios selecionado e sua ID de conjunto de relatórios correspondente.
 
 ![revisão](../../../../images/tutorials/create/analytics/review.png)
 
@@ -181,7 +181,7 @@ Para excluir um fluxo de dados, vá para a página [!UICONTROL Fluxos de dados] 
 
 ## Próximas etapas e recursos adicionais
 
-Depois que a conexão é criada, um esquema de destino e um fluxo de dados são criados automaticamente para conter os dados recebidos. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a assimilação inicial for concluída, [!DNL Analytics] dados e serão usados por serviços de plataforma downstream, como [!DNL Real-time Customer Profile] e Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, o fluxo de dados é criado automaticamente para conter os dados recebidos e preencher um conjunto de dados com o esquema selecionado. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a assimilação inicial for concluída, [!DNL Analytics] dados e serão usados por serviços de plataforma downstream, como [!DNL Real-time Customer Profile] e Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
 
 * [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] visão geral](../../../../../segmentation/home.md)

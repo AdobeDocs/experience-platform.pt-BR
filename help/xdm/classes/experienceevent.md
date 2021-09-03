@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe XDM ExperienceEvent e práticas recomendadas para modelagem de dados de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
@@ -82,18 +82,18 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 
 | Valor | Definição |
 | --- | --- |
-| `advertising.completes` | Um ativo de mídia cronometrada foi observado até a conclusão. Isso não significa necessariamente que o visualizador assistiu a todo o vídeo, pois o visualizador poderia ter avançado. |
-| `advertising.timePlayed` | Descreve a quantidade de tempo gasto por um usuário em um ativo de mídia programado específico. |
-| `advertising.federated` | Indica se um evento de experiência foi criado por meio da federação de dados (compartilhamento de dados entre clientes). |
 | `advertising.clicks` | Clique em ações em um anúncio. |
+| `advertising.completes` | Um ativo de mídia cronometrada foi observado até a conclusão. Isso não significa necessariamente que o visualizador assistiu a todo o vídeo, pois o visualizador poderia ter avançado. |
 | `advertising.conversions` | Ações predefinidas executadas por um cliente que aciona um evento para avaliação de desempenho. |
+| `advertising.federated` | Indica se um evento de experiência foi criado por meio da federação de dados (compartilhamento de dados entre clientes). |
 | `advertising.firstQuartiles` | Um anúncio de vídeo digital executou 25% de sua duração em velocidade normal. |
 | `advertising.impressions` | Impressão(ões) de um anúncio para um cliente com o potencial de ser visualizado. |
 | `advertising.midpoints` | Um anúncio de vídeo digital tem 50% de sua duração em velocidade normal. |
 | `advertising.starts` | Um anúncio de vídeo digital começou a ser reproduzido. |
 | `advertising.thirdQuartiles` | Um anúncio de vídeo digital foi reproduzido por 75% de sua duração em velocidade normal. |
-| `web.webpagedetails.pageViews` | Uma página da Web recebeu uma ou mais visualizações. |
-| `web.webinteraction.linkClicks` | Um link foi selecionado uma ou mais vezes. |
+| `advertising.timePlayed` | Descreve a quantidade de tempo gasto por um usuário em um ativo de mídia programado específico. |
+| `application.close` | Um aplicativo foi fechado ou enviado para o plano de fundo. |
+| `application.launch` | Um aplicativo foi iniciado ou trazido para o primeiro plano. |
 | `commerce.checkouts` | Ocorreu um evento de finalização para uma lista de produtos. Pode haver mais de um evento de check-out se houver várias etapas em um processo de check-out. Se houver várias etapas, o carimbo de data e hora e a página/experiência referenciada para cada evento serão usados para identificar cada evento individual (etapa), representado em ordem. |
 | `commerce.productListAdds` | Um produto foi adicionado à lista de produtos ou ao carrinho de compras. |
 | `commerce.productListOpens` | Uma nova lista de produtos (carrinho de compras) foi inicializada ou criada. |
@@ -103,9 +103,32 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 | `commerce.productViews` | Um produto recebeu uma ou mais visualizações. |
 | `commerce.purchases` | Um pedido foi aceito. Essa é a única ação necessária em uma conversão de comércio. Um evento de compra deve ter uma lista de produtos referenciada. |
 | `commerce.saveForLaters` | Uma lista de produtos foi salva para uso futuro, como uma lista de desejos de produtos. |
+| `decisioning.propositionDisplay` | Uma proposta de decisão foi exibida para uma pessoa. |
+| `decisioning.propositionInteract` | Uma pessoa interagiu com uma proposta de decisão. |
 | `delivery.feedback` | Eventos de feedback para um delivery, como um delivery de email. |
+| `directMarketing.emailBounced` | Um email para uma pessoa retornou. |
+| `directMarketing.emailBouncedSoft` | Um e-mail para uma pessoa que retornou por soft. |
+| `directMarketing.emailClicked` | Uma pessoa clicou em um link em um email de marketing. |
+| `directMarketing.emailDelivered` | Um email foi entregue com êxito ao serviço de email da pessoa |
+| `directMarketing.emailOpened` | Uma pessoa abriu um email de marketing. |
+| `directMarketing.emailUnsubscribed` | Uma pessoa cancelou a assinatura de um email de marketing. |
+| `leadOperation.convertLead` | Um lead foi convertido. |
+| `leadOperation.interestingMoment` | Um momento interessante foi gravado para uma pessoa. |
+| `leadOperation.newLead` | Um lead foi criado. |
+| `leadOperation.scoreChanged` | O valor do atributo de pontuação do lead foi alterado. |
+| `leadOperation.statusInCampaignProgressionChanged` | O status de um cliente potencial em uma campanha foi alterado. |
+| `listOperation.addToList` | Uma pessoa foi adicionada a uma lista de marketing. |
+| `listOperation.removeFromList` | Uma pessoa foi removida de uma lista de marketing. |
 | `message.feedback` | Eventos de feedback como enviado/rejeição/erro para mensagens enviadas a um cliente. |
 | `message.tracking` | Rastreamento de eventos como ações abertas/click/personalizadas em mensagens enviadas a um cliente. |
+| `opportunityEvent.addToOpportunity` | Uma pessoa foi adicionada a uma oportunidade. |
+| `opportunityEvent.opportunityUpdated` | Uma oportunidade foi atualizada. |
+| `opportunityEvent.removeFromOpportunity` | Uma pessoa foi removida de uma oportunidade. |
+| `pushTracking.applicationOpened` | Uma pessoa abriu um aplicativo de uma notificação por push. |
+| `pushTracking.customAction` | Uma pessoa clicou em uma ação personalizada em uma notificação por push. |
+| `web.formFilledOut` | Uma pessoa preencheu um formulário em uma página da wep. |
+| `web.webinteraction.linkClicks` | Um link foi selecionado uma ou mais vezes. |
+| `web.webpagedetails.pageViews` | Uma página da Web recebeu uma ou mais visualizações. |
 
 {style=&quot;table-layout:auto&quot;}
 

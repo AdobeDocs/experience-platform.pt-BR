@@ -3,9 +3,9 @@ title: Rastrear eventos usando o SDK da Web da Adobe Experience Platform
 description: Saiba como rastrear eventos do SDK da Web da Adobe Experience Platform.
 keywords: sendEvent; xdm; eventType; datasetId; sendBeacon; send Beacon; documentUnloading; document Unloading; onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -103,34 +103,7 @@ alloy("sendEvent", {
 
 ### Configuração `eventType` {#event-types}
 
-Em um evento de experiência XDM, há um campo opcional `eventType`. Isso mantém o tipo de evento principal para o registro. Definir um tipo de evento pode ajudar você a diferenciar os diferentes eventos que serão enviados. O XDM fornece vários tipos de evento predefinidos que podem ser usados ou você sempre cria seus próprios tipos de evento personalizados para seus casos de uso. Abaixo está uma lista de todos os tipos de evento predefinidos fornecidos pelo XDM. [Leia mais no repositório público XDM](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
-
-
-| **Tipo de evento:** | **Definição:** |
-| ---------------------------------- | ------------ |
-| advertising.completes | Indica se um ativo de mídia cronometrado foi observado até o fim - não significa necessariamente que o visualizador assistiu a todo o vídeo; o visualizador poderia ter ignorado com antecedência |
-| advertising.timePlayed | Descreve o tempo gasto por um usuário em um ativo de mídia programado específico |
-| advertising.federated | Indica se um evento de experiência foi criado por meio da federação de dados (compartilhamento de dados entre clientes) |
-| advertising.clicks | Ações de clique em um anúncio |
-| advertising.conversions | Uma(s) ação(ões) predefinida(s) do cliente que aciona um evento para avaliação de desempenho |
-| advertising.firstQuartiles | Um anúncio de vídeo digital foi reproduzido por 25% de sua duração em velocidade normal |
-| advertising.impressions | Impressão(ões) de um anúncio para um usuário final com o potencial de ser visualizado |
-| advertising.midpoints | Um anúncio de vídeo digital foi reproduzido por 50% de sua duração em velocidade normal |
-| advertising.starts | Um anúncio de vídeo digital começou a ser reproduzido |
-| advertising.thirdQuartiles | Um anúncio de vídeo digital foi reproduzido por 75% de sua duração em velocidade normal |
-| web.webpagedetails.pageViews | Ocorreram exibições de uma página da Web |
-| web.webinteraction.linkClicks | Ocorreu um clique de um link da Web |
-| commerce.checkouts | Uma ação durante um processo de finalização de uma lista de produtos, pode haver mais de um evento de finalização se houver várias etapas em um processo de finalização. Se houver várias etapas, as informações de tempo do evento e a página ou experiência referenciada serão usadas para identificar a etapa que os eventos individuais representam em ordem |
-| commerce.productListAdds | Adição de um produto à lista de produtos. Exemplo: um produto é adicionado ao carrinho de compras |
-| commerce.productListOpens | Inicializações de uma nova lista de produtos. Exemplo de criação de um carrinho de compras |
-| commerce.productListRemovals | Remoção(ões) de uma entrada de produto de uma lista de produtos. Exemplo: um produto é removido de um carrinho de compras |
-| commerce.productListReopens | Uma lista de produtos que não estava mais acessível (abandonada) foi reativada pelo usuário. Exemplo por meio de uma atividade de re-marketing |
-| commerce.productListViews | Ocorreu a(s) exibição(s) de uma lista de produtos |
-| commerce.productViews | Ocorreram exibições de um produto |
-| commerce.purchases | Um pedido foi aceito. A compra é a única ação necessária em uma conversão de comércio. A compra deve ter uma lista de produtos referenciada |
-| commerce.saveForLaters | A lista de produtos é salva para uso futuro. Exemplo de uma lista de desejos de produto |
-| delivery.feedback | Eventos de feedback para um delivery. Exemplo de eventos de feedback para um delivery de email |
-
+Em esquemas XDM ExperienceEvent, há um campo opcional `eventType`. Isso mantém o tipo de evento principal para o registro. Definir um tipo de evento pode ajudar você a diferenciar os diferentes eventos que serão enviados. O XDM fornece vários tipos de evento predefinidos que podem ser usados ou você sempre cria seus próprios tipos de evento personalizados para seus casos de uso. Consulte a documentação XDM para obter uma lista [de todos os tipos de evento predefinidos](../../xdm/classes/experienceevent.md#eventType).
 
 Esses tipos de evento serão mostrados em uma lista suspensa se você estiver usando a extensão de tag ou sempre puder transmiti-los sem tags. Eles podem ser transmitidos como parte da opção `xdm` .
 

@@ -4,10 +4,10 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 11%
+source-wordcount: '627'
+ht-degree: 10%
 
 ---
 
@@ -139,5 +139,38 @@ ht-degree: 11%
       * [Extensão de Tags Invoca](./catalog/voice/invoca.md)
       * [Extensão Medallia](./catalog/voice/medallia.md)
       * [Extensão da Caixa de entrada do URL de conversa](./catalog/voice/talkurl.md)
+* SDK de destino {#destination-sdk}
+   * [Visão geral](./destination-sdk/overview.md)
+   * [Pré-requisitos de integração](./destination-sdk/integration-prerequisites.md)
+   * [Introdução](./destination-sdk/getting-started.md)
+   * Funcionalidade de SDK de destino {#functionality}
+      * [Opções de configuração](./destination-sdk/configuration-options.md)
+      * [Configuração de destino](./destination-sdk/destination-configuration.md)
+      * [Especificações do servidor e do modelo](./destination-sdk/server-and-template-configuration.md)
+      * [Formato de mensagem](./destination-sdk/message-format.md)
+      * [Gerenciamento de metadados do público-alvo](./destination-sdk/audience-metadata-management.md)
+      * [Configuração de autenticação](./destination-sdk/credentials-configuration.md)
+      * [Autenticação OAuth 2](./destination-sdk/oauth2-authentication.md)
+      * Ferramentas de desenvolvedor {#developer-tools}
+         * [Criar e testar um modelo de transformação de mensagem](./destination-sdk/create-template.md)
+         * [Testar a configuração de destino](./destination-sdk/test-destination.md)
+   * Referência da API {#api-reference}
+      * [Operações de API do endpoint de destinos](./destination-sdk/destination-configuration-api.md)
+      * [Operações da API de ponto de extremidade do servidor de destino](./destination-sdk/destination-server-api.md)
+      * [Operações da API de ponto de extremidade de metadados de público-alvo](./destination-sdk/audience-metadata-api.md)
+      * [Operações da API do endpoint de credenciais](./destination-sdk/credentials-configuration-api.md)
+      * [Publicar operações da API de ponto de extremidade](./destination-sdk/destination-publish-api.md)
+      * Referência de ferramentas do desenvolvedor {#developer-tools-reference}
+         * [Obter exemplos de operações da API de modelo](./destination-sdk/sample-template-api.md)
+         * [Renderizar operações da API do modelo](./destination-sdk/render-template-api.md)
+         * [Operações da API de teste de destino](./destination-sdk/destination-testing-api.md)
+         * [Exemplos de operações da API de geração de perfil](./destination-sdk/sample-profile-generation-api.md)
+   * Guias {#guides}
+      * [Use o SDK de destino para configurar seu destino](./destination-sdk/configure-destination-instructions.md)
+   * Documente seu destino {#document-destination}
+      * [Documente seu destino no Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Usar a interface da Web do GitHub para criar uma página de documentação de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Usar um editor de texto no ambiente local para criar uma página de documentação de destino](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Modelo de autoatendimento da documentação](./destination-sdk/docs-framework/self-service-template.md)
 * [Perguntas frequentes](./destinations-faq.md)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

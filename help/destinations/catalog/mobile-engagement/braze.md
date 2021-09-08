@@ -3,18 +3,14 @@ keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL Braze] conexão
-
->[!IMPORTANT]
->
->O destino da brasileira no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# [!DNL Braze] conexão
 
 ## Visão geral {#overview}
 
@@ -99,11 +95,9 @@ Na seção [!UICONTROL Campo de destino], clique no ícone de mapeamento à dire
 
 ![Mapeamento de Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Na janela [!UICONTROL Select target field], é possível escolher entre três categorias de campos de destino:
-* [!UICONTROL Selecionar atributos]: Use essa opção para mapear os atributos XDM para  [!DNL Braze] atributos padrão.
+Na janela [!UICONTROL Select target field], é possível escolher entre duas categorias de campos de destino:
 * [!UICONTROL Selecionar namespace] de identidade: Use esta opção para mapear namespaces de  [!DNL Platform] identidade para namespaces de  [!DNL Braze] identidade.
-* [!UICONTROL Selecionar atributos] personalizados: Use esta opção para mapear atributos XDM para  [!DNL Braze] atributos personalizados que você definiu em sua  [!DNL Braze] conta.
-* Também é possível usar essa opção para renomear atributos XDM existentes em [!DNL Braze]. Por exemplo, mapear um atributo `lastName` XDM para um atributo `Last_Name` personalizado em [!DNL Braze], criará o atributo `Last_Name` em [!DNL Braze], se ele ainda não existir, e mapeará o atributo `lastName` XDM para ele.
+* [!UICONTROL Selecionar atributos] personalizados: Use esta opção para mapear atributos XDM para  [!DNL Braze] atributos personalizados que você definiu em sua  [!DNL Braze] conta. <br> Também é possível usar essa opção para renomear atributos XDM existentes no  [!DNL Braze]. Por exemplo, mapear um atributo `lastName` XDM para um atributo `Last_Name` personalizado em [!DNL Braze], criará o atributo `Last_Name` em [!DNL Braze], se ele ainda não existir, e mapeará o atributo `lastName` XDM para ele.
 
 ![Campos de mapeamento de destino do site](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 

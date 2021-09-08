@@ -1,15 +1,15 @@
 ---
 title: Conexão da Lista de clientes do pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
-source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-
-# Conexão da Lista de clientes do pinterest
+# [!DNL Pinterest Customer List] conexão
 
 ## Visão geral {#overview}
 
@@ -27,14 +27,14 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Identidades suportadas {#supported-identities}
 
-O destino Lista de clientes do Pinterest oferece suporte à ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+O destino [!DNL Pinterest Customer List] suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest.
 
 | Identidade do Target | Descrição | Considerações |
 |---|---|---|
-| GAID | ID de publicidade do Google | Mapeie o namespace de identidade de origem *GAID* para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
-| IDFA | Apple ID para anunciantes | Mapeie o namespace de identidade de origem *IDFA* para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Mapeie o namespace de identidade de origem *GAID* para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o namespace de identidade de origem *IDFA* para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
 | EMAIL | Endereços de email (texto limpo ou com hash com o algoritmo SHA256) | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. <br> Mapeie o namespace de identidade de origem  ** Email_LC_ *SHA256* para o campo de identidade de destino  *pinterest_audience*. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destin
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando usar o destino Lista de clientes da Pinterest, veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pinterest Customer List], aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
 
 
 ### Caso de uso nº 1

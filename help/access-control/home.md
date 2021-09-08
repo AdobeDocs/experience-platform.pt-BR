@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
@@ -103,6 +103,7 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar, editar e desativar destinos. |
 | [!DNL Destinations] | [!UICONTROL Exibir destinos] | Acesso somente leitura aos destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **[!UICONTROL Procurar]**. |
 | [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Essa permissão requer que &quot;Exibir destinos&quot; ou &quot;Gerenciar [!UICONTROL Destinos&quot;] seja concedida ao usuário que ativará destinos. |
+| [!DNL Destinations] | [!UICONTROL Criação de destinos] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
 | [!DNL Data Ingestion] | [!UICONTROL Exibir fontes] | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas Organizações de IMS e habilitar [!DNL Segment Match] fluxos. |

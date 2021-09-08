@@ -1,10 +1,11 @@
 ---
 title: Referência a Objeto Satélite
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 43%
+source-wordcount: '1285'
+ht-degree: 83%
 
 ---
 
@@ -30,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` O aciona todas as regras usando o tipo de evento Chamada direta que foi configurado com o identificador especificado na extensão de tag principal. O exemplo acima aciona todas as regras usando um tipo de evento Chamada direta em que o identificador configurado é `contact_submit`. Um objeto opcional contendo informações relacionadas também é transmitido. O objeto detalhado pode ser acessado digitando `%event.detail%` em um campo de texto em uma condição ou ação ou `event.detail` dentro do editor de códigos em uma condição ou ação de código personalizado.
+`track` aciona todas as regras usando o tipo de evento Chamada direta que foi configurado com o identificador especificado na extensão de tag principal. O exemplo acima aciona todas as regras usando um tipo de evento Chamada direta em que o identificador configurado é `contact_submit`. Um objeto opcional contendo informações relacionadas também é transmitido. O objeto detalhado pode ser acessado digitando `%event.detail%` em um campo de texto em uma condição ou ação ou `event.detail` dentro do editor de códigos em uma condição ou ação de código personalizado.
 
 ## `getVar`
 
@@ -48,7 +49,7 @@ var product = _satellite.getVar('product');
 
 No exemplo fornecido, se um elemento de dados existir com um nome correspondente, o valor do elemento de dados será retornado. Se não houver nenhum elemento de dados correspondente, ele verificará se uma variável personalizada com um nome correspondente foi definida anteriormente usando o `_satellite.setVar()`. Se uma variável personalizada correspondente for encontrada, seu valor será retornado.
 
-Observe que em muitos campos de formulário na interface do usuário da Coleta de dados, é possível usar a sintaxe `%%` para fazer referência às variáveis, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usar %product% acessará o valor do elemento de dados do produto ou a variável personalizada.
+Observe que, em muitos campos de formulário na interface da Coleção de dados, é possível usar a sintaxe `%%` para fazer referência a variáveis, reduzindo a necessidade de chamadas a `_satellite.getVar()`. Por exemplo, usar %product% acessará o valor do elemento de dados do produto ou a variável personalizada.
 
 ## `setVar`
 
@@ -64,7 +65,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` define uma variável personalizada com um determinado nome e valor. O valor da variável pode ser acessado posteriormente usando `_satellite.getVar()`.
+`setVar()` define uma variável personalizada com determinado nome e valor. O valor da variável pode ser acessado posteriormente usando `_satellite.getVar()`.
 
 Como opção, é possível definir várias variáveis de uma vez transmitindo um objeto em que as chaves são nomes de variáveis e os valores são os respectivos valores de variáveis.
 
@@ -114,7 +115,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-O objeto `logger` permite que uma mensagem seja registrada no console do navegador. A mensagem será exibida somente se a depuração de tag estiver habilitada pelo usuário (chamando `_satellite.setDebug(true)` ou usando uma extensão apropriada do navegador).
+O objeto `logger` permite que uma mensagem seja registrada no console do navegador. A mensagem será exibida somente se a depuração de tag for habilitada pelo usuário (chamando `_satellite.setDebug(true)` ou usando uma extensão apropriada no navegador).
 
 ### Registro de avisos de descontinuação
 
@@ -128,11 +129,11 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-Isso registra um aviso no console do navegador. A mensagem é exibida independentemente de a depuração de tag estar ou não habilitada pelo usuário.
+Isso registra um aviso no console do navegador. A mensagem é exibida independentemente de a depuração da tag ser ou não ativada pelo usuário.
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contém funções para ler e gravar cookies. É uma cópia exposta do cookie js de biblioteca de terceiros. Para obter detalhes sobre o uso mais avançado desta biblioteca, consulte a [documentação do cookie js](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contém funções para ler e gravar cookies. Essa é uma cópia exposta do js-cookie de biblioteca de terceiros. Para obter detalhes sobre o uso mais avançado desta biblioteca, consulte a [documentação do cookie js](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Definir um cookie {#cookie-set}
 
@@ -200,11 +201,11 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-Esse objeto contém informações sobre a build da biblioteca de tempo de execução de tag atual. O objeto contém as seguintes propriedades:
+Esse objeto contém informações sobre o build da biblioteca de tempo de execução de tag atual. O objeto contém as seguintes propriedades:
 
 ### `turbineVersion`
 
-Fornece a versão [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) usada dentro da biblioteca atual.
+Isso fornece a versão [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) usada na biblioteca atual.
 
 ### `turbineBuildDate`
 
@@ -214,7 +215,31 @@ A data da ISO 8601 quando a versão de [Turbine](https://www.npmjs.com/package/@
 
 A data da ISO 8601 quando a biblioteca atual foi criada.
 
-### `environment`
+Este exemplo demonstra os valores do objeto:
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Código**
+
+```javascript
+_satellite.environment
+```
+
+Esse objeto contém informações sobre o ambiente em que a biblioteca de tempo de execução de tags atual está implantada. O objeto contém as seguintes propriedades:
+
+### `id`
+
+A ID do ambiente.
+
+### `stage`
 
 O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são:
 
@@ -226,10 +251,8 @@ Este exemplo demonstra os valores do objeto:
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
@@ -251,9 +274,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` registra uma mensagem no console do navegador. A mensagem será exibida somente se a depuração de tag estiver habilitada pelo usuário (chamando `_satellite.setDebug(true)` ou usando uma extensão apropriada do navegador).
+`notify` registra uma mensagem no console do navegador. A mensagem será exibida somente se a depuração de tag for habilitada pelo usuário (chamando `_satellite.setDebug(true)` ou usando uma extensão de navegador apropriada).
 
-Um nível de registro opcional pode ser transmitido, o que afetará o estilo e a filtragem da mensagem que está sendo registrada. Os níveis suportados são os seguintes:
+Um nível de registro opcional poderá ser passado, o que afetará o estilo e a filtragem da mensagem que está sendo registrada. Os níveis suportados são os seguintes:
 
 3 - Mensagens informativas.
 
@@ -301,7 +324,7 @@ _satellite.readCookie(name: string) => string
 var product = _satellite.readCookie('product');
 ```
 
-Isso lê um cookie no navegador do usuário.
+Isso lê um cookie do navegador do usuário.
 
 ## `removeCookie`
 
@@ -325,7 +348,7 @@ Isso remove um cookie do navegador do usuário.
 
 ## Funções de depuração
 
-As seguintes funções não devem ser acessadas do código de produção. Elas são destinados apenas à depuração e serão alteradas ao longo do tempo, conforme necessário.
+As funções a seguir não devem ser acessadas do código de produção. Elas são destinados apenas à depuração e serão alteradas ao longo do tempo, conforme necessário.
 
 ### `container`
 
@@ -357,7 +380,7 @@ _satellite._monitors
 
 **Amostra**
 
-Em sua página da Web que executa uma biblioteca de tags, adicione um snippet de código ao seu HTML. Normalmente, o código é inserido no elemento `<head>` antes do elemento `<script>` que carrega a biblioteca de tags. Isso permite que o monitor capture os primeiros eventos do sistema que ocorrerem na biblioteca de tags. Por exemplo:
+Na página da Web que está executando uma biblioteca de tags, adicione um trecho de código ao HTML. Normalmente, o código é inserido no elemento `<head>` antes do elemento `<script>` que carrega a biblioteca de tags. Isso permite que o monitor capture os primeiros eventos do sistema que ocorrerem na biblioteca de tags. Por exemplo:
 
 ```html
 <!DOCTYPE html>
@@ -399,15 +422,15 @@ Em sua página da Web que executa uma biblioteca de tags, adicione um snippet de
 </html>
 ```
 
-No primeiro elemento de script, como a biblioteca de tags ainda não foi carregada, o objeto inicial `_satellite` é criado e uma matriz em `_satellite._monitors` é inicializada. O script então adiciona um objeto de monitor a essa matriz. O objeto do monitor pode especificar os seguintes métodos que serão chamados, posteriormente, pela biblioteca de tags:
+No elemento do primeiro script, como a biblioteca de tags ainda não foi carregada, o objeto `_satellite` é criado e uma matriz é inicializada em `_satellite._monitors`. O script então adiciona um objeto de monitor a essa matriz. O objeto do monitor pode especificar os seguintes métodos que serão chamados posteriormente pela biblioteca de tags:
 
 ### `ruleTriggered`
 
-Essa função é chamada depois que um evento aciona uma regra, mas antes que as condições e ações da regra tenham sido processadas. O objeto do evento transmitido para `ruleTriggered` contém informações sobre a regra que foi acionada.
+Essa função é chamada depois que um evento aciona uma regra, mas antes de as condições e ações da regra terem sido processadas. O objeto do evento transmitido para `ruleTriggered` contém informações sobre a regra que foi acionada.
 
 ### `ruleCompleted`
 
-Essa função é chamada depois que uma regra é totalmente processada. Em outras palavras, o evento ocorreu, todas as condições foram transmitidas e todas as ações foram executadas. O objeto de evento transmitido para `ruleCompleted` contém informações sobre a regra que foi concluída.
+Essa função é chamada depois que uma regra é totalmente processada. Em outras palavras, o evento ocorreu, todas as condições foram passadas e todas as ações foram executadas. O objeto do evento passado para `ruleCompleted` contém informações sobre a regra que foi concluída.
 
 ### `ruleConditionFailed`
 
@@ -417,7 +440,7 @@ Se `ruleTriggered` for chamado, `ruleCompleted` ou `ruleConditionFailed` será c
 
 >[!NOTE]
 >
->Um monitor não precisa especificar todos os três métodos (`ruleTriggered`, `ruleCompleted` e `ruleConditionFailed`). As tags no Adobe Experience Platform funcionam com os métodos compatíveis fornecidos pelo monitor.
+>Um monitor não precisa especificar todos os três métodos (`ruleTriggered`, `ruleCompleted` e `ruleConditionFailed`). As tags no Adobe Experience Platform funcionam com quaisquer métodos compatíveis que o monitor tenha fornecido.
 
 ### Teste do monitor
 
@@ -430,4 +453,4 @@ Se você abrir a página em [!DNL Chrome], abrir o console do navegador e seleci
 
 ![](../../images/debug.png)
 
-Os ganchos ou informações adicionais podem ser adicionados a esses manipuladores, conforme necessário.
+É possível adicionar trechos ou informações suplementares a esses manipuladores, conforme necessário.

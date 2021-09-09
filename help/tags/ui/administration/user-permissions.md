@@ -1,10 +1,11 @@
 ---
 title: Permissões de usuário para tags
 description: Saiba mais sobre os diferentes tipos de permissões disponíveis para tags e algumas estratégias básicas de implementação para diferentes casos de uso comercial.
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 16%
+ht-degree: 23%
 
 ---
 
@@ -33,13 +34,13 @@ Em um perfil de produto, as permissões para tags são divididas em quatro categ
 
 ### Plataformas
 
-Cada propriedade de tag tem uma plataforma. Atualmente, existem duas plataformas que podem ser usadas para tags: Web e móvel. Você pode usar esse tipo de permissão para restringir ou conceder acesso a um tipo específico de propriedade. Isso pode ser útil quando a equipe que gerencia seus aplicativos móveis for diferente da que gerencia seus sites.
+Cada propriedade de tag tem uma plataforma. Atualmente, existem duas plataformas que podem ser usadas para tags: Web e Móvel. Você pode usar esse tipo de permissão para restringir ou conceder acesso a um tipo específico de propriedade. Isso pode ser útil quando a equipe que gerencia seus aplicativos móveis for diferente da que gerencia seus sites.
 
 ### Propriedades
 
 Por padrão, os perfis de produtos concedem acesso a todas as propriedades que existem na empresa, no momento e no futuro. Usando esse tipo de permissão, você pode restringir ou conceder acesso a propriedades existentes específicas por nome.
 
-### Direitos de propriedade
+### Direitos de propriedade {#property-rights}
 
 Qualquer propriedade criada na interface do usuário da coleta de dados fica disponível no Admin Console, permitindo agrupar a propriedade com direitos de propriedade específicos no mesmo perfil de produto.
 
@@ -51,7 +52,7 @@ A tabela a seguir descreve os direitos de propriedade disponíveis e as funciona
 
 | Direito de propriedade | Descrição |
 | --- | --- |
-| **Desenvolver** | Isso permite executar as seguintes ações:<ul><li>Criar regras e elementos de dados</li><li>Crie bibliotecas e as crie em ambientes de desenvolvimento existentes</li><li>Enviar uma biblioteca para aprovação</li></ul>A maioria das tarefas diárias na interface do usuário da Coleta de dados requer esse direito. |
+| **Desenvolver** | Isso permite executar as seguintes ações:<ul><li>Criar regras e elementos de dados</li><li>Crie bibliotecas e as crie em ambientes de desenvolvimento existentes</li><li>Enviar uma biblioteca para aprovação</li></ul>A maioria das tarefas diárias na interface da coleção de dados exige esse direito. |
 | **Aprovar** | Isso permite pegar uma biblioteca enviada e criar no ambiente de preparo. Você também pode aprovar uma biblioteca para publicação depois que o teste for concluído. |
 | **Publicar** | Isso permite publicar bibliotecas aprovadas no ambiente de produção. |
 | **Gerenciar extensões** | Isso permite executar as seguintes ações: <ul><li>Instalar novas extensões em uma propriedade</li><li>Modificar a configuração de uma extensão já instalada</li><li>Excluir uma extensão</li></ul>Consulte a documentação de visão geral das extensões para obter [mais informações sobre extensões](../managing-resources/extensions/overview.md). Normalmente, essa função pertence aos setores de TI ou de Marketing, dependendo de como funciona a sua organização. |
@@ -67,7 +68,7 @@ Os direitos da empresa se aplicam às permissões que abrangem várias proprieda
 | --- | --- |
 | **Gerenciar propriedades** | Isso permite executar as seguintes ações:<ul><li>Criar novas propriedades</li><li>Modificar metadados e configurações no nível da propriedade</li><li>Excluir propriedades</li></ul>São administradores que normalmente executam essa função. Consulte a [documentação de propriedades](companies-and-properties.md) para obter mais informações. |
 | **Desenvolver extensões** | Concede a capacidade de criar e modificar pacotes de extensão da empresa, incluindo versões privadas e solicitações de lançamento de versão pública. |
-| **Gerenciar configurações do aplicativo** | Isso só estará disponível se você tiver uma licença do Adobe Journey Optimizer ou outra solução que conceda acesso a mensagens por push e no aplicativo móvel.  Isso permite gerenciar os aplicativos que o Experience Cloud conhece, juntamente com as credenciais de push necessárias para se comunicar com o serviço Firebase Cloud Messaging e o serviço de notificação por push da Apple. |
+| **Gerenciar configurações do aplicativo** | Isso só estará disponível se você tiver uma licença do Adobe Journey Optimizer ou outra solução que conceda acesso a mensagens por push e no aplicativo móvel.  Permite gerenciar os aplicativos que a Experience Cloud conhece, juntamente com as credenciais de push necessárias para se comunicar com o serviço Firebase Cloud Messaging e o Apple Push Notification Service. |
 
 {style=&quot;table-layout:auto&quot;}
 

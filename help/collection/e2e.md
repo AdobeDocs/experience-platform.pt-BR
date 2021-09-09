@@ -1,16 +1,16 @@
 ---
-title: Visão geral completa da coleta de dados do Adobe Experience Platform
-description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando a Coleta de dados da Adobe Experience Platform.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: Visão geral de ponta a ponta da coleta de dados
+description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando as tecnologias de coleta de dados fornecidas pela Adobe Experience Platform.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
 
-# Visão geral completa da coleta de dados do Adobe Experience Platform
+# Visão geral completa da coleta de dados
 
-A coleta de dados da Adobe Experience Platform oferece várias tecnologias que trabalham juntas para coletar e transferir seus dados para outros produtos de Adobe ou destinos de terceiros. Para enviar dados de evento do seu aplicativo para a Rede de borda da Adobe Experience Platform, é importante entender essas tecnologias principais e configurá-las para fornecer os dados aos destinos necessários, quando necessário.
+No Adobe Experience Platform, a coleta de dados se refere a várias tecnologias que trabalham juntas para coletar e transferir seus dados para outros produtos de Adobe ou destinos de terceiros. Para enviar dados de evento do seu aplicativo para a Rede de borda da Adobe Experience Platform, é importante entender essas tecnologias principais e configurá-las para fornecer os dados aos destinos necessários, quando necessário.
 
 Este guia fornece um tutorial de alto nível sobre como enviar um evento por meio da Edge Network usando tecnologias de coleta de dados. Especificamente, o tutorial percorre as etapas de instalação e configuração da extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados.
 
@@ -50,7 +50,7 @@ Depois de enviar dados para a Rede de Borda, você também pode [configurar o en
 
 [O Experience Data Model (XDM)](../xdm/home.md)  é uma especificação de código aberto que fornece estruturas e definições comuns para dados no formato de schemas. Em outras palavras, o XDM é uma maneira de estruturar e formatar seus dados de uma maneira que seja acionável pela Edge Network e por outros aplicativos da Adobe Experience Cloud.
 
-A primeira etapa na configuração das operações de Coleta de dados é criar um esquema XDM para representar seus dados. Em uma etapa posterior deste tutorial, você mapeará os dados que deseja enviar para a estrutura deste schema.
+A primeira etapa na configuração das operações de coleta de dados é criar um esquema XDM para representar seus dados. Em uma etapa posterior deste tutorial, você mapeará os dados que deseja enviar para a estrutura deste schema.
 
 >[!NOTE]
 >

@@ -1,9 +1,10 @@
 ---
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem fez quais ações no Adobe Experience Platform.
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '469'
 ht-degree: 4%
 
 ---
@@ -36,7 +37,7 @@ A tabela a seguir descreve quais ações em que os recursos são registrados pel
 
 Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleta de log.
 
-Para visualizar e exportar logs de auditoria, você deve ter a permissão de controle de acesso &quot;Exibir logs de auditoria&quot; concedida. Para saber como gerenciar permissões individuais para recursos da plataforma, consulte a [documentação de controle de acesso](../../../access-control/home.md).
+Para visualizar e exportar logs de auditoria, você deve ter a permissão de controle de acesso &quot;Exibir logs de auditoria&quot; concedida (localizada na categoria &quot;Governança de dados&quot;). Para saber como gerenciar permissões individuais para recursos da plataforma, consulte a [documentação de controle de acesso](../../../access-control/home.md).
 
 ## Gerenciamento de logs de auditoria na interface do usuário
 

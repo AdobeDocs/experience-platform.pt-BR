@@ -2,8 +2,7 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, painéis, painel, perfis, segmentos, destinos, uso de licença, widgets, métricas;
 title: Criação de widgets personalizados para painéis
 description: 'Este guia fornece instruções passo a passo para a criação de widgets personalizados para uso em painéis do Adobe Experience Platform. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%

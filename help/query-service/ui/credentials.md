@@ -4,8 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
-exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: aabe89f236bc68a51f14ee1909687982f4fe5973
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%

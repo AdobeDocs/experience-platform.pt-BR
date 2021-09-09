@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Tipo de dados da moeda
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados Moeda XDM.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '127'
 ht-degree: 5%
 
 ---
@@ -19,9 +20,9 @@ ht-degree: 5%
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `amount` | Duplo | O número de cores que a exibição pode representar. |
-| `conversionDate` | DateTime | O número de cores que a exibição pode representar. |
-| `currencyCode` | String | O número de cores que a exibição pode representar. |
+| `amount` | Duplo | A quantidade de moeda definida pelo `currencyCode`. |
+| `conversionDate` | DateTime | Um carimbo de data e hora de quando a conversão de moeda foi feita. |
+| `currencyCode` | String | Um código ISO 4217 que indica o tipo de moeda que `amount` representa. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -5,10 +5,9 @@ title: Solução de problemas de fontes
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre fontes no Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -74,3 +73,7 @@ A assimilação parcial deve ser usada se você **not** tiver restrições, como
 ### Qual é o limite de erro de ingestão parcial típico?
 
 Não há um &quot;limite de erro típico&quot; para a ingestão parcial. Em vez disso, esse valor pode variar de caso de uso para caso de uso. Por padrão, o limite de erro é definido como 5%.
+
+### Quanto tempo leva para um status de execução de fluxo ser atualizado após a criação de um novo fluxo de dados?
+
+As execuções de fluxo não são geradas instantaneamente e podem levar de dois a três minutos para serem atualizadas após seu `startTime` designado. Verificar o status de uma execução de fluxo, imediatamente após a criação de um novo fluxo de dados não retorna informações sobre o `lastRunDetails` da execução do fluxo, pois ele ainda não aconteceu. É recomendável permitir que o fluxo de dados seja gerado alguns minutos antes de verificar o status da execução do fluxo.

@@ -2,13 +2,14 @@
 keywords: Experience Platform, home, tópicos populares, intervalo de datas
 title: Visão geral dos alertas
 description: Saiba mais sobre alertas no Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
-
 
 # Visão geral dos alertas
 
@@ -56,6 +57,10 @@ Os alertas podem ser recebidos e gerenciados por meio de dois canais:
 Os alertas podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar seu webhook para receber alertas da Platform no Console do desenvolvedor do Adobe. Consulte o guia em [assinar notificações de Adobe I/O Event](./subscribe.md) para obter etapas específicas.
 
 ### Interface do usuário da plataforma {#ui}
+
+A interface do usuário da plataforma permite visualizar alertas recebidos e gerenciar regras de alerta. O vídeo a seguir apresenta uma introdução a esses recursos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Para trabalhar com alertas na interface do usuário da plataforma, você deve ter as seguintes permissões de controle de acesso ativadas por meio do Adobe Admin Console:
 

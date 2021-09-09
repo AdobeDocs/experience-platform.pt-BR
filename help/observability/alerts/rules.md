@@ -1,14 +1,15 @@
 ---
 keywords: Experience Platform, home, tópicos populares, intervalo de datas
 title: Regras padrão de alerta
-description: 'Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform. '
-source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
+description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 12%
 
 ---
-
 
 # Regras padrão de alerta
 

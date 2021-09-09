@@ -2,11 +2,12 @@
 keywords: Experience Platform, home, tópicos populares, intervalo de datas
 title: Assinar notificações de evento do Adobe I/O
 description: Este documento fornece etapas sobre como assinar notificações de evento do Adobe I/O para serviços da Adobe Experience Platform. Também são fornecidas informações de referência sobre os tipos de evento disponíveis, juntamente com links para outra documentação sobre como interpretar os dados de evento retornados para cada serviço aplicável [!DNL Platform] .
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '773'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -34,7 +35,7 @@ Durante o processo de validação inicial, [!DNL I/O Events] envia um parâmetro
 
 ## Crie um novo projeto no Console do desenvolvedor do Adobe
 
-Vá para [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
+Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
 
 ## Inscrever-se em eventos
 
@@ -58,8 +59,8 @@ A próxima tela exibe uma lista de tipos de eventos para assinatura. Selecione o
 >Se não tiver certeza sobre quais eventos assinar o serviço com o qual você está trabalhando, consulte a documentação de notificação específica do serviço:
 >
 >* [[!DNL Privacy Service] notificações](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] notificações](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] notificações](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] notificações](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] notificações](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -72,7 +73,7 @@ Para os fins deste tutorial, a primeira opção é seguida. Selecione a caixa de
 
 Quando o par de chaves é gerado, ele é baixado automaticamente pelo navegador. Você mesmo deve armazenar esse arquivo, pois ele não é persistente no Console do desenvolvedor.
 
-A próxima tela permite que você analise os detalhes do par de chaves recém-gerado. Selecione **[!UICONTROL Next]** para continuar.
+A próxima tela permite que você analise os detalhes do par de chaves recém-gerado. Clique em **[!UICONTROL Avançar]** para continuar.
 
 ![](../images/notifications/keypair-generated.png)
 

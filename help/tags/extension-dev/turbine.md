@@ -2,10 +2,10 @@
 title: Variável sem turbina
 description: Saiba mais sobre o objeto turbine, uma variável livre que fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 91%
+source-wordcount: '602'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 O objeto `turbine` é uma &quot;variável livre&quot; no escopo dos módulos de biblioteca da extensão. Ela fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform e está sempre disponível para módulos de biblioteca sem usar `require()`.
 
-## [!DNL buildInfo]
+## `buildInfo`
 
 ```js
 console.log(turbine.buildInfo.turbineBuildDate);
@@ -40,7 +40,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `buildDate` | A data da ISO 8601 quando a biblioteca atual foi criada. |
 
 
-## [!DNL environment]
+## `environment`
 
 ```js
 console.log(turbine.environment.stage);
@@ -50,7 +50,7 @@ console.log(turbine.environment.stage);
 
 ```js
 {
-    id: "EN123456...",
+    id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
     stage: "development"
 }
 ```
@@ -58,16 +58,16 @@ console.log(turbine.environment.stage);
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID do ambiente. |
-| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores aceitos são `development`, `staging` e `production`. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging` e `production`. |
 
 
-## [!DNL debugEnabled]
+## `debugEnabled`
 
-Independentemente de a depuração de tag estar ativada no momento.
+Um valor booleano indicando se a depuração de tag está atualmente ativada.
 
 Se você está apenas tentando registrar mensagens, é improvável que precise usar isso. Em vez disso, sempre registre mensagens usando `turbine.logger` para garantir que as mensagens só sejam impressas no console quando a depuração de tag estiver habilitada.
 
-### [!DNL getDataElementValue]
+### `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +75,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Retorna o valor de um elemento de dados.
 
-### [!DNL getExtensionSettings] {#get-extension-settings}
+### `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +85,7 @@ Retorna o objeto de configurações salvo pela última vez na visualização de 
 
 Observe que os valores nas configurações retornadas podem ser provenientes de elementos de dados. Por isso, chamar `getExtensionSettings()` em momentos diferentes poderá gerar resultados diferentes se os valores dos elementos de dados tiverem sido alterados. Para obter os valores mais atualizados, aguarde o máximo possível antes de chamar `getExtensionSettings()`.
 
-### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
+### `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +96,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 A propriedade [hostedLibFiles](./manifest.md) pode ser definida no manifesto da extensão para hospedar vários arquivos junto com a biblioteca de tempo de execução da tag. Este módulo retorna o URL no qual o arquivo de biblioteca especificado está hospedado.
 
-### [!DNL getSharedModule] {#shared}
+### `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +104,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Recupera um módulo que foi compartilhado de outra extensão. Se nenhum módulo correspondente for encontrado, `undefined` será retornado. Consulte [Implementação de módulos compartilhados](./web/shared.md) para obter mais informações sobre módulos compartilhados.
 
-### [!DNL logger]
+### `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -118,13 +118,13 @@ O utilitário de registro é usado para registrar mensagens no console. As mensa
 * `logger.error(message: string)`: registra uma mensagem de erro no console.
 * `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver ativado no console do navegador.)
 
-### [!DNL onDebugChanged]
+### `onDebugChanged`
 
 Se for passada uma função de retorno de chamada para `turbine.onDebugChanged`, as tags chamarão seu retorno de chamada sempre que a depuração for alternada. As tags passarão um valor booliano para a função de retorno de chamada, que será verdadeira se a depuração estiver ativada ou falsa se a depuração estiver desativada.
 
 Se você está apenas tentando registrar mensagens, é improvável que precise usar isso. Em vez disso, sempre registre mensagens usando `turbine.logger`, e as tags garantirão que suas mensagens só sejam impressas no console quando a depuração de tag estiver habilitada.
 
-### [!DNL propertySettings] {#property-settings}
+### `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);

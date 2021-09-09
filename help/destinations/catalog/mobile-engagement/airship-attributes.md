@@ -3,18 +3,14 @@ keywords: atributos do dirigível, destino do dirigível
 title: Conexão de atributos de aeróstato
 description: Transmita dados de público-alvo do Adobe diretamente para o Airship como atributos de público-alvo para direcionamento dentro do Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 1%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Airship Attributes] conexão {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->O destino [!DNL Airship Attributes] no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# [!DNL Airship Attributes] conexão {#airship-attributes-destination}
 
 ## Visão geral {#overview}
 

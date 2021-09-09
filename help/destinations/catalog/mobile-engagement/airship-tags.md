@@ -3,18 +3,14 @@ keywords: etiquetas de aeróstato, destino de aeróstato
 title: Ligação de Etiquetas de Avião
 description: Transmita dados de público-alvo do Adobe para o Airship como tags de público-alvo para definição de metas dentro do Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 1%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Airship Tags] conexão {#airship-tags-destination}
-
->[!IMPORTANT]
->
->O destino [!DNL Airship Tags] no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# [!DNL Airship Tags] conexão {#airship-tags-destination}
 
 ## Visão geral
 

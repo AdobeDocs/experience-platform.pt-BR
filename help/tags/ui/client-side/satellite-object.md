@@ -2,9 +2,9 @@
 title: Referência a Objeto Satélite
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 83%
 
 ---
@@ -227,34 +227,27 @@ Este exemplo demonstra os valores do objeto:
 
 ## `environment`
 
+Esse objeto contém informações sobre o ambiente em que a biblioteca de tempo de execução de tags atual está implantada.
+
 **Código**
 
 ```javascript
 _satellite.environment
 ```
 
-Esse objeto contém informações sobre o ambiente em que a biblioteca de tempo de execução de tags atual está implantada. O objeto contém as seguintes propriedades:
-
-### `id`
-
-A ID do ambiente.
-
-### `stage`
-
-O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são:
-
-* desenvolvimento
-* armazenamento temporário
-* produção
-
-Este exemplo demonstra os valores do objeto:
+O objeto contém as seguintes propriedades:
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `id` | A ID do ambiente. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging` e `production`. |
 
 ## `notify`
 

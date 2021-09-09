@@ -2,10 +2,10 @@
 title: Variável sem turbina
 description: Saiba mais sobre o objeto turbine, uma variável livre que fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 89%
+source-wordcount: '619'
+ht-degree: 86%
 
 ---
 
@@ -117,6 +117,7 @@ O utilitário de registro é usado para registrar mensagens no console. As mensa
 * `logger.warn(message: string)`: registra uma mensagem de aviso no console.
 * `logger.error(message: string)`: registra uma mensagem de erro no console.
 * `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver ativado no console do navegador.)
+* `logger.deprecation(message: string)`: Registra uma mensagem de aviso no console independentemente de a depuração de tag estar ou não habilitada pelo usuário.
 
 ### `onDebugChanged`
 

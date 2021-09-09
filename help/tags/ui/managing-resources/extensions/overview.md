@@ -1,10 +1,11 @@
 ---
 title: Extensões
-description: Saiba como as extensões de tag funcionam no Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+description: Saiba como as extensões funcionam na Adobe Experience Platform.
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
+source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 70%
+ht-degree: 93%
 
 ---
 
@@ -32,11 +33,11 @@ Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e al
 >
 >As alterações não entrarão em vigor até serem [publicadas](../../publishing/overview.md).
 
-Por padrão, o Adobe fornece extensões que oferecem suporte a integrações comuns. As extensões podem ser modificadas com configurações personalizadas. Configurações são fornecidas por meio das extensões. Para criar uma configuração, selecione o cartão de extensão e, em seguida, selecione **[!UICONTROL Adicionar nova configuração]**.
+Por padrão, a Adobe fornece extensões que oferecem suporte a integrações comuns. As extensões podem ser modificadas com configurações personalizadas. Configurações são fornecidas por meio das extensões. Para criar uma configuração, selecione o cartão de extensão e, em seguida, selecione **[!UICONTROL Adicionar nova configuração]**.
 
 ## Catálogo de extensões
 
-Use o catálogo de extensões para procurar, configurar e implantar tecnologia de marketing e publicidade projetada e mantida por fornecedores de software independentes, bem como extensões para soluções de Adobe.
+Use o catálogo de extensões para procurar, configurar e implantar tecnologia de marketing e publicidade projetada e mantida por fornecedores de software independentes, além de extensões para soluções da Adobe.
 
 A página Extensões fornece três exibições:
 
@@ -52,16 +53,16 @@ A página Extensões fornece três exibições:
 
 Selecione **[!UICONTROL Extensões]** para ver todas as extensões instaladas. Você também pode usar o catálogo para ver uma lista de todas as extensões disponíveis e quais extensões têm atualizações disponíveis.
 
-Consulte [Referência de extensões](../../../extensions/web/overview.md) para obter detalhes sobre as extensões de propriedade do Adobe.
+Consulte [Referência de extensões](../../../extensions/web/overview.md) para obter detalhes sobre as extensões de propriedade da Adobe.
 
 ## Adicione uma nova extensão {#add-a-new-extension}
 
-As tags são altamente extensíveis. Extensões adicionam funcionalidades importantes às tags. Um uso comum das extensões é criar integrações com outros aplicativos.
+As tags são altamente extensíveis. Extensões adicionam funcionalidade importante a tags. Um uso comum das extensões é criar integrações com outros aplicativos.
 
 1. Na página de visão geral de uma propriedade, abra a guia **[!UICONTROL Extensões]**.
 1. Selecione uma extensão.
 
-   ![]()../../../images/extensions.png)
+   ![Extensão principal](../../../images/extensions.png)
 
    * Se a extensão existir, selecione-a no catálogo de extensões.
    * Passe o mouse sobre uma extensão na lista para configurá-la ou desativá-la.
@@ -85,4 +86,4 @@ Passe o mouse sobre uma extensão instalada e selecione **[!UICONTROL Configurar
 >
 >Algumas extensões não exigem configuração e não oferecem opções de configuração.
 
-Cada extensão configurável tem opções exclusivas. Consulte [Referência de extensões](../../../extensions/web/overview.md) para obter informações sobre as opções disponíveis para cada extensão do Adobe.
+Cada extensão configurável tem opções exclusivas. Consulte [Referência de extensões](../../../extensions/web/overview.md) para obter informações sobre as opções disponíveis para cada extensão da Adobe.

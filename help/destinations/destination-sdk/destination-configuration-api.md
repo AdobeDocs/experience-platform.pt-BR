@@ -1,10 +1,11 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 4%
+source-wordcount: '2381'
+ht-degree: 5%
 
 ---
 
@@ -383,7 +384,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de configurações d
 | `uiAttributes.connectionType` | String | `Server-to-server` no momento, é a única opção disponível. |
 | `uiAttributes.frequency` | String | `Streaming` no momento, é a única opção disponível. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se o destino aceita atributos de perfil padrão. Normalmente, esses atributos são destacados na documentação de nossos parceiros. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se os clientes podem configurar namespaces personalizados no seu destino. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se os clientes podem configurar namespaces personalizados no seu destino. Leia mais sobre [namespaces personalizados](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) no Adobe Experience Platform. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | String | _Não mostrado na configuração_ de exemplo. Usado, por exemplo, quando o cliente [!DNL Platform] tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. É aqui que você fornece a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Não mostrado na configuração_ de exemplo. Usado para casos em que sua plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que você possa restringir os usuários da plataforma a selecionar apenas esses namespaces de identidade. |
 | `destinationDelivery.authenticationRule` | String | Indica como os clientes [!DNL Platform] se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o cliente [!DNL Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando a configuração [Credentials](./credentials-configuration.md). </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
@@ -396,6 +397,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de configurações d
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controla se a id de mapeamento de segmento no fluxo de trabalho de ativação de destino é o nome do segmento de Experience Platform. |
 | `segmentMappingConfig.audienceTemplateId` | Booleano | O `instanceId` do [modelo de metadados de público-alvo](./audience-metadata-management.md) usado para esse destino. Para configurar um modelo de metadados de público-alvo, leia a [referência da API de metadados de público-alvo](./audience-metadata-api.md). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Atualizar uma configuração de destino existente {#update}
 

@@ -1,9 +1,10 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/destinationInstance/`, para testar se o destino está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Operações da API de teste de destino
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '657'
 ht-degree: 2%
 
 ---
@@ -158,6 +159,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com a resposta da
 | `results.httpCalls.response` | Inclui a resposta recebida pelo Adobe de seu destino. |
 | `inputProfiles` | Inclui os perfis que foram exportados na chamada para seu destino. Os perfis correspondem ao esquema de origem. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Teste a configuração de destino com perfis adicionados à chamada {#test-with-added-profiles}
 

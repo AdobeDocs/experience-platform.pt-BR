@@ -1,10 +1,11 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser executadas usando o endpoint da API `/authoring/sample-profiles' para gerar perfis de amostra para usar em testes de destino.
 title: Exemplos de operações da API de geração de perfil
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 2%
+source-wordcount: '805'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +48,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino com base na qual você está gerando perfis de amostra. |
 | `{COUNT}` | *Opcional*. O número de perfis de amostra que você está gerando. O parâmetro pode obter valores entre `1 - 1000`. <br> Se o parâmetro count não for especificado, o número padrão de perfis gerados será determinado pelo  `maxUsersPerRequest` valor na configuração [ do servidor de ](./destination-server-api.md#create)destino. Se essa propriedade não estiver definida, o Adobe gerará um perfil de amostra. |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 **Solicitação**
@@ -170,6 +173,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 | `xdm:status` | Indica se a associação de segmento foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
 | `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, leia [Base da composição do schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Gerar perfis de amostra com base no schema de destino {#generate-sample-profiles-target-schema}
 
@@ -191,6 +195,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | A ID da configuração de destino com base na qual você está gerando perfis de amostra. |
 | `{COUNT}` | *Opcional*. O número de perfis de amostra que você está gerando. O parâmetro pode obter valores entre `1 - 1000`. <br> Se o parâmetro count não for especificado, o número padrão de perfis gerados será determinado pelo  `maxUsersPerRequest` valor na configuração [ do servidor de ](./destination-server-api.md#create)destino. Se essa propriedade não estiver definida, o Adobe gerará um perfil de amostra. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

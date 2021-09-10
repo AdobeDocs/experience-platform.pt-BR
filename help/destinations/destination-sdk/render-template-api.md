@@ -1,10 +1,11 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/template/render`, para renderizar dados exportados para seu destino, com base no modelo de transformação de mensagem.
 title: Renderizar operações da API do modelo
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | A ID da configuração de destino para a qual você está renderizando os dados exportados. |
 | `template` | A versão do modelo com escape do caractere com base na qual você está renderizando os dados exportados. |
 | `profiles` | Se quiser adicionar perfis ao corpo da chamada, gere alguns usando a [Sample profile generation API](./sample-profile-generation-api.md). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Você pode renderizar dados exportados, conforme mostrado nos exemplos abaixo:

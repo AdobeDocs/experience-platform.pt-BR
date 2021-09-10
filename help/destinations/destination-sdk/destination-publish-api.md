@@ -1,9 +1,10 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination/publish`.
 title: Publicar operações de endpoint da API de destinos
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 5%
 
 ---
@@ -123,6 +124,8 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de destinos enviados
 | `publishDetailsList.allowedOrgs` | String | Retorna as organizações Experience Platform para as quais o destino deve estar disponível. |
 | `publishDetailsList.status` | String | O status da solicitação de publicação de destino. Os valores possíveis são `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
 | `publishDetailsList.publishedDate` | String | A data em que o destino foi enviado para publicação, em época. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Atualizar uma solicitação de publicação de destino existente {#update}
 

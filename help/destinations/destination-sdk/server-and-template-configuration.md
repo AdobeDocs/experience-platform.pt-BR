@@ -1,7 +1,8 @@
 ---
 description: As especificações do servidor e do modelo podem ser configuradas no SDK de destino do Adobe Experience Platform por meio do endpoint comum `/authoring/destination-servers`.
 title: Opções de configuração para especificações do servidor e do modelo no SDK de destino
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 7%
@@ -23,7 +24,7 @@ As especificações do servidor e do modelo podem ser configuradas no SDK de Des
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -49,7 +50,7 @@ Esse processo fornece dados do usuário como uma série de mensagens HTTP para s
 |---|---|---|
 | `name` | String | Representa um nome amigável do seu servidor, visível somente para o Adobe. Este nome não está visível para parceiros ou clientes. Exemplo `Moviestar destination server`. |
 | `destinationServerType` | String | `URL_BASED` no momento, é a única opção disponível. |
-| `templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar o URL no campo `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar o URL no campo `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | String | Preencha o endereço do ponto de extremidade da API ao qual o Experience Platform deve se conectar. |
 
 {style=&quot;table-layout:auto&quot;}

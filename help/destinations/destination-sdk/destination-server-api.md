@@ -1,7 +1,8 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination-servers`. As especificações do servidor e do modelo para o seu destino podem ser configuradas no SDK de destino do Adobe Experience Platform por meio do endpoint comum `/authoring/destination-servers`.
 title: Operações da API de ponto de extremidade do servidor de destino
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 5%
@@ -49,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -67,7 +68,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | String | Representa um nome amigável do seu servidor, visível somente para o Adobe. Este nome não está visível para parceiros ou clientes. Exemplo `Moviestar destination server`. |
 | `destinationServerType` | String | `URL_BASED` no momento, é a única opção disponível. |
-| `urlBasedDestination.url.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar o URL no campo `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{endpoint.region}}/items`. </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar o URL no campo `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | String | Preencha o endereço do ponto de extremidade da API ao qual o Experience Platform deve se conectar. |
 | `urlBasedDestination.maxUsersPerRequest` | Número inteiro | O Adobe pode agregar vários perfis exportados em uma única chamada HTTP. Especifique o número máximo de perfis que seu terminal deve receber em uma única chamada HTTP. Observe que esta é a melhor agregação de esforço. Por exemplo, se você especificar o valor 100, o Adobe pode enviar qualquer número de perfis menor que 100 em uma chamada. <br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como 1. |
 | `urlBasedDestination.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
@@ -216,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -270,7 +271,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{

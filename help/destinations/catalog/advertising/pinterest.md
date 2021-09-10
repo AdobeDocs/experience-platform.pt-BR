@@ -1,7 +1,7 @@
 ---
 title: Conexão da Lista de clientes do pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+source-git-commit: 96086324e644d4e2b2b2a3d03dce393c49c2d52e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%

@@ -2,9 +2,9 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando as tecnologias de coleta de dados fornecidas pela Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Consulte a [visão geral da interface do usuário de controle de acesso](../acce
 
 ## Resumo do processo
 
-O processo de configuração da Edge Network para seu site pode ser resumido da seguinte maneira:
+O processo de configuração da coleta de dados para seu site pode ser resumido da seguinte maneira:
 
 1. [Crie um ](#schema) schema para determinar como seus dados serão estruturados quando forem enviados para a Edge Network.
 1. [Crie um ](#datastream) armazenamento de dados para configurar para quais destinos deseja que seus dados sejam enviados.

@@ -1,9 +1,10 @@
 ---
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando as tecnologias de coleta de dados fornecidas pela Adobe Experience Platform.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 No Adobe Experience Platform, a coleta de dados se refere a várias tecnologias que trabalham juntas para coletar e transferir seus dados para outros produtos de Adobe ou destinos de terceiros. Para enviar dados de evento do seu aplicativo para a Rede de borda da Adobe Experience Platform, é importante entender essas tecnologias principais e configurá-las para fornecer os dados aos destinos necessários, quando necessário.
 
-Este guia fornece um tutorial de alto nível sobre como enviar um evento por meio da Edge Network usando tecnologias de coleta de dados. Especificamente, o tutorial percorre as etapas de instalação e configuração da extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados.
+Este guia fornece um tutorial de alto nível sobre como enviar um evento por meio da Edge Network usando tecnologias de coleta de dados. Especificamente, o tutorial percorre as etapas de instalação e configuração da extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados (antigo Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ Um armazenamento de dados é uma configuração que informa à Rede de borda ond
 >
 >Se você quiser usar [event encaminhamento](../tags/ui/event-forwarding/overview.md) (supondo que sua organização esteja licenciada para a funcionalidade), deverá habilitá-lo para um datastream da mesma forma que habilita os produtos Adobe. Os detalhes sobre esse processo são abordados em [seção posterior](#event-forwarding).
 
-Na interface do usuário da coleta de dados, selecione **[!UICONTROL Datastreams]**. Aqui, você pode selecionar um armazenamento de dados existente na lista para editar ou pode criar uma nova configuração selecionando **[!UICONTROL New Datastream]**.
+Na interface do usuário da coleta de dados, selecione **[!UICONTROL Datastreams]**. Aqui, você pode selecionar um armazenamento de dados existente na lista para editar, ou criar uma nova configuração selecionando **[!UICONTROL New Datastream]**.
 
 ![Datastreams](./images/e2e/datastreams.png)
 
@@ -179,9 +180,26 @@ Quando terminar de mapear os dados para o schema, forneça um nome para o elemen
 
 Depois de salvar o elemento de dados, a próxima etapa é criar uma regra que o envie para a Edge Network sempre que um determinado evento ocorrer em seu site (como quando um cliente adiciona um produto a um carrinho).
 
-Como exemplo, esta seção mostra como criar uma regra que será acionada quando um cliente adicionar um item ao carrinho. No entanto, você pode configurar regras para praticamente qualquer evento que possa ocorrer em seu site.
+Você pode configurar regras para praticamente qualquer evento que possa ocorrer em seu site. Como exemplo, esta seção mostra como criar uma regra que será acionada quando um cliente enviar um formulário. O HTML a seguir representa uma página da Web simples com um formulário &quot;Adicionar ao carrinho&quot;, que será o assunto da regra:
 
-Selecione **[!UICONTROL Regras]** no painel de navegação esquerdo e selecione **[!UICONTROL Criar nova regra]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+Na interface do usuário da coleta de dados, selecione **[!UICONTROL Regras]** no painel de navegação esquerdo, em seguida, selecione **[!UICONTROL Criar nova regra]**.
 
 ![Regras](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ Na próxima tela, forneça um nome para a regra. A partir daqui, o próximo pass
 
 ![Nomear regra](./images/e2e/name-rule.png)
 
-A página de configuração do evento é exibida. Para configurar um evento, primeiro selecione o tipo de evento. Os tipos de evento são fornecidos por extensões. Para configurar um evento de &quot;envio de formulário&quot;, por exemplo, selecione a extensão **[!UICONTROL Core]** e selecione o tipo de evento **[!UICONTROL Enviar]** na categoria **[!UICONTROL Formulário]**. Na caixa de diálogo de configuração exibida, é possível fornecer o seletor de CSS para o formulário específico no qual deseja que essa regra seja acionada.
+A página de configuração do evento é exibida. Para configurar um evento, primeiro selecione o tipo de evento. Os tipos de evento são fornecidos por extensões. Para configurar um evento de &quot;envio de formulário&quot;, por exemplo, selecione a extensão **[!UICONTROL Core]** e selecione o tipo de evento **[!UICONTROL Enviar]** na categoria **[!UICONTROL Formulário]**.
 
 >[!NOTE]
 >
 >Para obter mais informações sobre os diferentes tipos de eventos fornecidos pelas extensões da Web do Adobe, incluindo como configurá-los, consulte a [Referência de extensões do Adobe](../tags/extensions/web/overview.md) na documentação de tags.
 
-Selecione **[!UICONTROL Manter alterações]** para adicionar o evento à regra.
+O evento de envio de formulário permite usar um [seletor de CSS](https://www.w3schools.com/css/css_selectors.asp) para fazer referência a um elemento específico no qual a regra será acionada. No exemplo abaixo, a ID `add-to-cart-form` é usada para que essa regra seja acionada somente para o formulário &quot;Adicionar ao carrinho&quot;. Selecione **[!UICONTROL Manter alterações]** para adicionar o evento à regra.
 
 ![Configuração de evento](./images/e2e/event-config.png)
 

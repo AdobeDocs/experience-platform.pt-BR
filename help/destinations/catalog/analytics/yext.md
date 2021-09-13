@@ -3,9 +3,9 @@ keywords: Rastreamento de conversão de texto; Yext; yext; rastreamento de conve
 title: Extensão de rastreamento de conversão de texto
 description: A extensão Rastreamento de conversão do Yext é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '464'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Essa extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões. e solicite que conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

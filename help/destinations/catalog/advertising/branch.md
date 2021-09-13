@@ -3,9 +3,9 @@ keywords: ramificação; extensão da ramificação; destino da ramificação
 title: Extensão de ramificação
 description: A extensão Branch é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '435'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Essa extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões. e solicite que conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

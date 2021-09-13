@@ -3,9 +3,9 @@ keywords: Caixa de entrada do URL de palestra, caixa de entrada do url de fala, 
 title: Extensão da Caixa de entrada do URL de conversa
 description: A extensão Caixa de entrada do URL de conversa é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '486'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Essa extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões. e solicite que conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

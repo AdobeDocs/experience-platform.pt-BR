@@ -3,10 +3,10 @@ keywords: extensão dialogtech, dialogtech, dialog tech destination, DialogTech,
 title: Extensão DialogTech
 description: A extensão DialogTech é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 3%
+source-wordcount: '414'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões. e solicite que conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar tags no Adobe Experience Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

@@ -1,10 +1,11 @@
 ---
 title: Notas de versão da extensão do Adobe Analytics
-description: As notas de versão mais recentes para a extensão de tag do Adobe Analytics no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: As notas de versão mais recentes da extensão de tag do Adobe Analytics na Adobe Experience Platform.
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 94%
+source-wordcount: '1249'
+ht-degree: 97%
 
 ---
 
@@ -13,6 +14,15 @@ ht-degree: 94%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 24 de agosto de 2021
+
+### Extensão do Adobe Analytics versão 1.8.6
+
+#### Correções de erros
+
+* Atualização do [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
+* Atualização de fallback linkName para espelhar a lógica de Activity Map em vez de usar innerHTML.
 
 ## 6 de agosto de 2020
 
@@ -24,7 +34,7 @@ ht-degree: 94%
 
 #### Recursos
 
-* [AppMeasurement atualizado para a versão 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
+* [AppMeasurement atualizado para a versão 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Pequenas alterações na interface do usuário para que as configurações adicionais agora apareçam recolhidas em forma de acordeão em vez de em uma caixa de seleção.
 
 ## 2 de junho de 2020
@@ -148,7 +158,7 @@ ht-degree: 94%
 
 #### Correções de erros
 
-* A extensão foi revertida depois que um erro foi encontrado no appMeasurement 2.13.0. O appMeasurement 2.13.0 estava causando um problema que não enviava o ECID. Se você instalou a versão 1.7.3, recomendamos a atualização para a 1.7.4 de forma a evitar esse problema. Observe que clearVars continuará até que uma versão atualizada do appMeasurement seja lançada
+* A extensão foi revertida depois que um erro foi encontrado no AppMeasurement 2.13.0. O estava causando um problema que não enviava o ECID. Se você instalou a versão 1.7.3, recomendamos a atualização para a 1.7.4 de forma a evitar esse problema. Observe que clearVars continuará até que uma versão atualizada do AppMeasurement seja lançada
 
 ## 12 de abril de 2019
 
@@ -156,7 +166,7 @@ ht-degree: 94%
 
 #### Correções de erros
 
-* Atualização da extensão do Adobe Analytics para appMeasurement 2.13.0, que inclui uma correção para um problema conhecido de clearVars.
+* Atualização da extensão do Adobe Analytics para AppMeasurement 2.13.0, que inclui uma correção para um problema conhecido de clearVars.
 
 ## 21 de março de 2019
 
@@ -165,7 +175,7 @@ ht-degree: 94%
 #### Recursos
 
 * Atualização da extensão do Adobe Analytics para DIL 9.1.
-* Atualização da extensão do Adobe Analytics para appMeasurement 2.12.
+* Atualização da extensão do Adobe Analytics para AppMeasurement 2.12.
 * Atualização da exibição de extensão do Adobe Analytics para o React-Spectrum.
 * Ao configurar os conjuntos de relatórios na página de configuração, você verá uma lista suspensa de todos os conjuntos de relatórios na empresa para facilitar a seleção do conjunto de relatórios apropriado.
 
@@ -255,7 +265,7 @@ ht-degree: 94%
 #### **Recursos**
 
 * O AppMeasurement foi atualizado para a versão 2.6
-* O rastreador inicializado do Analytics agora é exposto por meio de um módulo compartilhado na extensão de tag do Adobe Experience Platform para que outras extensões possam incluir o código para interagir com ele.
+* O rastreador inicializado do Analytics agora é exposto por meio de um módulo compartilhado na extensão de tag da Adobe Experience Platform para que outras extensões possam incluir o código a fim de interagir com ele.
 
 #### **Correções de erros**
 

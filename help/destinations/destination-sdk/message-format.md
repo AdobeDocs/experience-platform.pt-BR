@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Formato de mensagem
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 3%
 
 ---
@@ -779,7 +779,7 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
 
 Ao usar [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino, você pode editar o modelo de transformação de mensagem para agrupar os perfis exportados para seu destino com base em critérios como ID do segmento, alias do segmento, associação de segmento ou namespaces de identidade, conforme mostrado nos exemplos abaixo.
 
-#### Exemplo de uso da chave de agregação de ID de segmento no modelo {#aggregation-key-segment-id}
+#### Usar chave de agregação de ID de segmento no modelo {#aggregation-key-segment-id}
 
 Se você usar [agregação configurável](./destination-configuration.md#configurable-aggregation) e definir `includeSegmentId` como true, poderá usar `segmentId` no template para agrupar perfis nas mensagens HTTP exportadas para o seu destino:
 
@@ -942,7 +942,7 @@ Quando exportados para seu destino, os perfis são divididos em dois grupos, com
 }
 ```
 
-#### Exemplo de uso da chave de agregação de alias de segmento no modelo {#aggregation-key-segment-alias}
+#### Usar chave de agregação de alias de segmento no modelo {#aggregation-key-segment-alias}
 
 Se você usar [agregação configurável](./destination-configuration.md#configurable-aggregation) e definir `includeSegmentId` como true, poderá usar o alias de segmento no modelo para agrupar perfis nas mensagens HTTP exportadas para o seu destino.
 
@@ -952,7 +952,7 @@ Adicione a linha abaixo ao template para agrupar perfis exportados com base no a
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### Exemplo de uso da chave de agregação de status do segmento no modelo {#aggregation-key-segment-status}
+#### Usar chave de agregação de status de segmento no modelo {#aggregation-key-segment-status}
 
 Se você usar [agregação configurável](./destination-configuration.md#configurable-aggregation) e definir `includeSegmentId` e `includeSegmentStatus` como true, poderá usar o status do segmento no modelo para agrupar perfis nas mensagens HTTP exportadas para seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
 
@@ -968,7 +968,7 @@ Adicione a linha abaixo ao modelo para adicionar ou remover perfis dos segmentos
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### Exemplo de uso da chave de agregação de namespace de identidade no modelo {#aggregation-key-identity}
+#### Usar chave de agregação de namespace de identidade no modelo {#aggregation-key-identity}
 
 Abaixo está um exemplo em que o [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino é definido para agregar perfis exportados por namespaces de identidade, no formato `"identityNamespaces": ["email", "phone"]`
 
@@ -1071,7 +1071,7 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
 }
 ```
 
-#### Exemplo de uso da chave de agregação em um modelo de URL
+#### Usar a chave de agregação em um modelo de URL
 
 Observe que, dependendo do seu caso de uso, você também pode usar as chaves de agregação descritas aqui em um URL, conforme mostrado abaixo:
 

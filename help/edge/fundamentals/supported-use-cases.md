@@ -2,13 +2,13 @@
 title: Casos de uso compatíveis com o SDK da Web da Adobe Experience Platform
 description: Saiba quais casos de uso são compatíveis com o SDK da Web da Adobe Experience Platform.
 keywords: web sdk; casos de uso
-source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
+exl-id: e0643c2c-ceb3-4ea2-aafa-1e18e0c66453
+source-git-commit: ed092b85d74eaa0fdc29f3a8d28f84fe81ccca17
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 14%
+source-wordcount: '445'
+ht-degree: 18%
 
 ---
-
 
 # Casos de uso suportados
 
@@ -21,12 +21,11 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | SDK único simplificado |  |
 | Rede global de coleta de dados |  |
 | Consentimento adquirido do curso |  |
-| Cadeias de consentimento do IAB 2.0 | [Suporte à TCF 2.0 do IAB](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
-| Coletar consentimento refinado | [Integração do SDK da Web com o consentimento do Adobe 2.0](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
+| Colete o consentimento do cliente de acordo com vários padrões | <ul><li>[Suporte ao Adobe Consent 2.0](../../landing/governance-privacy-security/consent/adobe/overview.md)</li><li>[Suporte à TCF 2.0 do IAB](../../landing/governance-privacy-security/consent/iab/overview.md)</li><li>[Integre o SDK para enviar sinais de consentimento à rede de borda](../../landing/governance-privacy-security/consent/sdk.md)</li></ul> |
 | Suporte à ECID | Para obter informações sobre como recuperar o ECID, consulte nossa documentação [aqui](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) e [aqui](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) |
 | Coletar várias entidades |  |
 | Suporte ao Gráfico de dispositivos (público/privado) | [Documentação](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
-| Enviar dados para várias organizações na página | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
+| Enviar dados para várias organizações na página | [Documentação](./interacting-with-multiple-properties.md) |
 | Registros e relatórios detalhados de erros |  |
 | Rastrear solicitações do lado do cliente e do lado do servidor |  |
 | extensão de tag | [Documentos de extensão do SDK da Web](../../tags/extensions/web/sdk/overview.md) |
@@ -39,10 +38,10 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | Caso de uso | Mais Informações |
 | --- | --- |
 | Enviar eventos de experiência |  |
-| Offer Decisioning | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
+| Offer Decisioning | [Documentação](../personalization/offer-decisioning/offer-decisioning-overview.md) |
 | Se o conjunto de dados estiver ativado para o perfil, a capacidade de enviar dados para o Perfil de dados do cliente em tempo real |  |
 | Enviar dados para o Customer Journey Analytics em tempo real |  |
-| Consentimento de gravação no perfil | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
+| Consentimento de gravação no perfil | [Documentação](../../landing/governance-privacy-security/consent/sdk.md) |
 | Encaminhar dados do lado do servidor em tempo real para terceiros | [Documentação](../../tags/ui/event-forwarding/overview.md) |
 | Suporte ao namespace de identidade |  |
 
@@ -59,14 +58,14 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | Props, eVars e eventos |  |
 | Suporte a ListVar para Adobe Analytics |  |
 | Versão do SO e do navegador |  |
-| Variáveis prontas para uso | [Variáveis mapeadas automaticamente](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en#data-collection) |
+| Variáveis prontas para uso | [Variáveis mapeadas automaticamente](../data-collection/adobe-analytics/automatically-mapped-vars.md) |
 | Regras VISTA/regras de processamento |  |
 | Suporte a atributos do visitante |  |
 | Suporte a link de saída |  |
 | Links personalizados/links de download |  |
 | Rastreamento de estado e ação |  |
 | Serialização de eventos para eventos padrão |  |
-| Variável products  | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
+| Variável products  | [Documentação](../data-collection/collect-commerce-data.md#actions-related-to-products) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,10 +74,10 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | Caso de uso | Mais Informações |
 | --- | --- |
 | Todos os tipos de atividades |  |
-| Suporte nativo e SPA do Visual Experience Composer | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=en#personalization) |
+| Suporte nativo e SPA do Visual Experience Composer | [Documentação](../personalization/adobe-target/spa-implementation.md) |
 | Compositor baseado em formulário |  |
-| Suporte para mbox global | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) |
-| MBoxes personalizadas | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content) |
+| Suporte para mbox global | [Documentação](../personalization/rendering-personalization-content.md#automatically-rendering-content) |
+| MBoxes personalizadas | [Documentação](../personalization/rendering-personalization-content.md#manually-rendering-content) |
 | Analytics for Target (A4T) |  |
 | Suporte ao ambiente |  |
 | Suporte ao espaço de trabalho |  |
@@ -88,10 +87,10 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | Scripts de perfil |  |
 | XDM se tornar parâmetros da mbox |  |
 | Ofertas de redirecionamento compatíveis com relatórios A4T | [Documentação](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
-| Atualização do perfil do Target | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Atualização do perfil do Target | [Documentação](../personalization/adobe-target/target-overview.md#single-profile-update) |
 | Recomendações |  |
 | ID de terceiros da mBox |  |
-| Tokens de resposta | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
+| Tokens de resposta | [Documentação](../personalization/adobe-target/accessing-response-tokens.md) |
 
 {style=&quot;table-layout:auto&quot;}
 

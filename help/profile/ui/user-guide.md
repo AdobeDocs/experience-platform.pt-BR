@@ -4,9 +4,9 @@ title: Guia da interface do usuário do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real cria uma visualização holística de cada cliente individual, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento é um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -75,15 +75,21 @@ Semelhante à métrica [profile count](#profile-count), quando a assimilação d
 
 Na guia **[!UICONTROL Browse]**, é possível exibir perfis de amostra usando uma política de mesclagem ou buscar perfis específicos usando um namespace e um valor de identidade.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### Navegue por [!UICONTROL Mesclar política]
 
-O seletor **[!UICONTROL Procurar por]** é definido como [!UICONTROL Mesclar política] por padrão e a **[!UICONTROL Mesclar política]** selecionada é a política de mesclagem padrão para sua organização.
+A guia **[!UICONTROL Browse]** é definida como a política de mesclagem padrão para sua organização por padrão. Para escolher uma política de mesclagem diferente, selecione `X` ao lado do nome da política de mesclagem e use o seletor para abrir a caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]**.
 
-Para saber mais sobre as políticas de mesclagem e sua função na Platform, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
+>[!NOTE]
+>
+>Se não houver política de mesclagem selecionada, use o botão seletor ao lado do campo **[!UICONTROL Merge policy]** para abrir a caixa de diálogo de seleção.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+Para escolher uma política de mesclagem na caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]**, selecione o botão de opção ao lado do nome da política e use **[!UICONTROL Selecionar]** para retornar à guia [!UICONTROL Procurar]. Você pode selecionar **[!UICONTROL View]** para atualizar os perfis de amostra e ver uma amostra de perfis com a nova política de mesclagem aplicada.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 Os perfis mostrados representam uma amostra de até 20 perfis do armazenamento de perfis de sua organização, após a aplicação da política de mesclagem selecionada. As amostras de perfis para a política de mesclagem selecionada são atualizadas quando novos dados são adicionados ao armazenamento de perfil da sua organização.
 
@@ -91,21 +97,16 @@ Para exibir os detalhes de um dos perfis de amostra, selecione a **[!UICONTROL I
 
 ![](../images/user-guide/sample-profiles.png)
 
-Para escolher uma política de mesclagem diferente, selecione `X` ao lado do nome da política de mesclagem e use o seletor para abrir a caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]**.
+Para saber mais sobre as políticas de mesclagem e sua função na Platform, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policy-select.png)
-
-Para escolher uma política de mesclagem na caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]**, selecione o botão de opção ao lado do nome da política e use **[!UICONTROL Selecionar]** para retornar à guia [!UICONTROL Procurar]. Você pode selecionar **[!UICONTROL View]** para atualizar os perfis de amostra e ver uma amostra de perfis com a nova política de mesclagem aplicada.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### Navegue por [!UICONTROL Identidade]
 
-Usando o seletor **[!UICONTROL Procurar por]**, você pode escolher [!UICONTROL Identidade] para procurar um perfil específico por um valor de identidade. A navegação por uma identidade também exige que você forneça uma política de mesclagem, um namespace de identidade e um valor de identidade.
+Na guia **[!UICONTROL Browse]**, você pode usar um namespace de identidade para buscar um perfil específico por um valor de identidade. A navegação por uma identidade requer que você forneça uma política de mesclagem, um namespace de identidade e um valor de identidade.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-Use o seletor **[!UICONTROL Merge policy]** para abrir a caixa de diálogo **[!UICONTROL Select merge policy]** e escolha a política de mesclagem que deseja usar.
+Se necessário, use o seletor **[!UICONTROL Merge policy]** para abrir a caixa de diálogo **[!UICONTROL Select merge policy]** e escolha a política de mesclagem que deseja usar.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 

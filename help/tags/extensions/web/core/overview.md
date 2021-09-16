@@ -2,10 +2,10 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 94%
+source-wordcount: '5257'
+ht-degree: 92%
 
 ---
 
@@ -708,6 +708,61 @@ Forneça o nome do item de armazenamento local no campo Local Storage Item Name.
 O armazenamento local fornece aos navegadores uma maneira de armazenar informações de página a página ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). O armazenamento local funciona de forma bem semelhante aos cookies, mas é muito maior e mais flexível.
 
 Use o campo fornecido para especificar o valor criado para um item de armazenamento local, como `lastProductViewed.`
+
+### Objetos Mesclados
+
+Selecione vários elementos de dados que fornecerão um objeto cada. Esses objetos serão profundamente (recursivamente) unidos para produzir um novo objeto. Os objetos de origem não serão modificados. Se uma propriedade for encontrada no mesmo local em vários objetos de origem, o valor do último objeto será usado. Se um valor de propriedade de origem for `undefined`, ele não substituirá um valor de um objeto de origem anterior. Se as matrizes forem encontradas no mesmo local em vários objetos de origem, elas serão concatenadas.
+
+Como exemplo, suponha que você selecione um elemento de dados que forneça o seguinte objeto:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Suponha que você também selecione outro elemento de dados que forneça o seguinte objeto:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+O resultado do elemento de dados Objetos Mesclados seria o seguinte objeto:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### Informações da página
 

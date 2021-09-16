@@ -1,7 +1,7 @@
 ---
 title: Extensão de rastreamento de conversão do pinterest
 description: A extensão de Rastreamento de conversão do Pinterest é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
+source-git-commit: e7959e678ec7d086a50f3142e9e64b34adb57214
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 4%

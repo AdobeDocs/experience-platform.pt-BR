@@ -1,10 +1,11 @@
 ---
 title: Visão geral da extensão principal
-description: Saiba mais sobre a extensão da tag principal no Adobe Experience Platform.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
+description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '4905'
-ht-degree: 75%
+source-wordcount: '5130'
+ht-degree: 94%
 
 ---
 
@@ -14,146 +15,146 @@ ht-degree: 75%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-A extensão de tag principal é a extensão padrão lançada com o Adobe Experience Platform.
+A extensão de tag principal é a extensão padrão lançada com a Adobe Experience Platform.
 
 Este documento fornece informações sobre as opções disponíveis ao usar a extensão principal para criar uma regra.
 
 ## Tipos de evento da extensão principal {#core-extension-event-types}
 
-Este tópico descreve os tipos de evento disponíveis na extensão principal. Para obter informações sobre as opções que podem ser definidas para vários tipos de evento diferentes, consulte a seção [Options](#options).
+Este tópico descreve os tipos de evento disponíveis na extensão principal. Para obter informações sobre as opções que podem ser definidas para vários tipos de evento diferentes, consulte a seção [Opções](#options).
 
-### Eventos com base no navegador
+### Eventos no navegador
 
 #### Tab Blur
 
-O evento de desfoque de guia aciona a ação quando uma guia perde o foco. Não há configurações para esse tipo de evento.
+O evento de desfoque de guia dispara a ação quando uma guia perde o foco. Não há configurações para esse tipo de evento.
 
 #### Tab Focus
 
-O evento de foco na guia aciona a ação quando uma guia recebe o foco. Não há configurações para esse tipo de evento.
+O evento de foco na guia dispara a ação quando uma guia obtém o foco. Não há configurações para esse tipo de evento.
 
 ### Formulário
 
 #### Blur
 
-O evento de desfoque aciona a ação quando um formulário perde o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento de desfoque dispara a ação quando um formulário perde o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Focus
 
-O evento focus aciona a ação quando um formulário recebe o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento de foco dispara a ação quando um formulário obtém o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Submit
 
-O evento Enviar aciona a ação quando um formulário é enviado. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento de envio dispara a ação quando um formulário é enviado. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 ### Eventos controlados por teclado
 
 #### Key Press
 
-O evento é acionado quando uma tecla é pressionada. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento é acionado quando uma tecla é pressionada. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 ### Eventos com base em mídia
 
 #### Media Ended
 
-O evento é acionado quando a mídia termina. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento é acionado quando a mídia termina. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
-#### Dados carregados pela mídia
+#### Dados carregados por mídia
 
-O evento é acionado quando a mídia carrega dados. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento é acionado quando a mídia carrega dados. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Media Pause
 
-O evento é acionado quando a mídia é pausada. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento é acionado quando a mídia é pausada. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Media Play
 
-O evento é acionado quando a mídia é reproduzida. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento é acionado quando a mídia é reproduzida. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Media Stalled
 
-O evento será acionado se a mídia for interrompida. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento é acionado caso a mídia seja interrompida. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
-#### Media-Time Played
+#### Tempo de reprodução de mídia
 
-O evento é acionado se a mídia for reproduzida por um período especificado. Você deve especificar a duração para a qual a mídia deve ser reproduzida para acionar o evento. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento será acionado se a mídia for reproduzida por um período específico. É preciso especificar o tempo de reprodução da mídia para acionar o evento. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 
-#### Media-Volume Changed
+#### Alteração de volume de mídia
 
-O evento dispara se o volume for aumentado ou diminuído. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento será acionado se o volume for aumentado ou diminuído. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 ### Eventos orientados para dispositivos móveis
 
 #### Orientation Change
 
-O evento dispara se a orientação do dispositivo mudar. Você deve especificar a duração para a qual a orientação deve ser alterada para acionar o evento. Não há configurações para esse tipo de evento.
+O evento será acionado se a orientação do dispositivo mudar. É preciso especificar a duração da mudança de orientação para acionar o evento. Não há configurações para esse tipo de evento.
 
 #### Zoom Change
 
-O evento dispara se o usuário aumentar ou diminuir o zoom. Não há configurações para esse tipo de evento.
+O evento será acionado se o usuário aumentar ou diminuir o zoom. Não há configurações para esse tipo de evento.
 
 ### Eventos controlados pelo mouse
 
 #### Click
 
-O evento dispara se o elemento especificado estiver selecionado (clicado). Como opção, você pode especificar valores de propriedade que devem ser verdadeiros para o elemento antes que o evento seja acionado.
+O evento será acionado se o elemento especificado for selecionado (clicado). Como opção, você pode especificar valores de propriedade que devem ser verdadeiros para o elemento antes que o evento seja acionado.
 
-Se o elemento for uma tag de âncora (`<a>`) para o conteúdo vinculado, também será possível especificar se a navegação deve ser atrasada por um período de tempo. Isso poderá ser útil se sua regra exigir tempo extra para ser executada e se ela normalmente não for concluída antes de ocorrer a navegação na página.
+Se o elemento for uma tag de âncora (`<a>`) para um conteúdo vinculado, você também poderá indicar se deseja atrasar a navegação por um período. Isso poderá ser útil se sua regra exigir tempo extra para ser executada e se ela normalmente não for concluída antes de ocorrer a navegação na página.
 
 >[!WARNING]
 >
 >Essa opção deve ser usada com extrema cautela devido às possíveis consequências negativas que ela acarreta à experiência do usuário se usada incorretamente.
 
-Quando você usa o atraso de link, a Platform na verdade impede que o navegador navegue para fora da página. Em seguida, ele executa um redirecionamento do JavaScript para o destino original após o tempo limite especificado. Isso é especialmente perigoso quando sua marcação de página tem tags `<a>` em que a funcionalidade desejada não leva o usuário para fora da página. Se não for possível resolver seu problema de outra forma, você deverá ser extremamente preciso na definição do seletor, para que esse evento seja disparado exatamente onde é necessário e em nenhum outro lugar.
+Quando você usa o atraso de link, a Platform na verdade impede que o navegador saia da página. Em seguida, ele executa um redirecionamento do JavaScript para o destino original após o tempo limite especificado. Isso é especialmente perigoso quando sua marcação de página tem tags `<a>` em que a funcionalidade desejada não leva o usuário para fora da página. Se não for possível resolver seu problema de outra forma, você deverá ser extremamente preciso na definição do seletor, para que esse evento seja disparado exatamente onde é necessário e em nenhum outro lugar.
 
-O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre esperarão pela quantidade de tempo especificada e não estarão conectadas à execução das ações da regra de forma alguma. É possível que o atraso obrigue o usuário a aguardar mais tempo do que o necessário e também que o atraso não seja suficientemente longo para que todas as ações da regra sejam concluídas com êxito. Atrasos maiores fornecem mais tempo para a execução da regra, mas também agravam a experiência do usuário.
+O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre aguardarão o tempo especificado, e isso não está conectado de forma alguma à execução das ações da regra. É possível que o atraso obrigue o usuário a aguardar mais tempo do que o necessário e também que o atraso não seja suficientemente longo para que todas as ações da regra sejam concluídas com êxito. Atrasos maiores fornecem mais tempo para a execução da regra, mas também prejudicam a experiência do usuário.
 
-Para acionar o atraso, é necessário fornecer o elemento selecionado que aciona o evento e o período de tempo específico antes que ele seja acionado.
+Para acionar o atraso, é necessário fornecer o elemento selecionado que aciona o evento e o período específico antes que ele seja acionado.
 
-Para obter as opções avançadas, consulte a seção [Opções](#options) para obter mais informações.
+Para as opções avançadas, consulte a seção [Opções](#options) para obter mais informações.
 
 #### Hover
 
-O evento é acionado se o usuário passar o mouse sobre um elemento especificado. Você também deve configurar se a regra é acionada imediatamente ou após um número especificado de milissegundos. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento será acionado se o usuário passar o mouse sobre um elemento especificado. Você também deve configurar se a regra é acionada imediatamente ou após determinado número de milissegundos. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 ### Outros eventos
 
 #### Custom Event
 
-O evento será acionado se ocorrer um tipo de evento personalizado. As funções JavaScript nomeadas que são definidas em outro lugar na base de código podem ser usadas como um tipo de evento personalizado. Você deve especificar o nome do tipo de evento personalizado e definir quaisquer outras configurações conforme descrito na seção [Options](#options) abaixo.
+O evento será acionado se ocorrer um tipo de evento personalizado. As funções JavaScript nomeadas que são definidas em outro lugar na base de código podem ser usadas como um tipo de evento personalizado. Especifique o nome do tipo de evento personalizado e defina as outras configurações conforme descrito na seção [Opções](#options) a seguir.
 
 #### Data Element Changed
 
-O evento é acionado se um elemento de dados especificado for alterado. Você deve fornecer um nome para o elemento de dados. Você pode selecionar o elemento de dados digitando seu nome no campo de texto ou selecionando o ícone do elemento de dados no lado direito do campo de texto e escolhendo em uma lista fornecida na caixa de diálogo exibida.
+O evento será acionado se um elemento de dados especificado for alterado. É preciso fornecer um nome para o elemento de dados. Você pode selecionar o elemento de dados digitando seu nome no campo de texto ou selecionando o ícone do elemento de dados no lado direito do campo de texto e escolhendo em uma lista fornecida na caixa de diálogo exibida.
 
 #### Direct Call
 
-O evento de chamada direta ignora a detecção de eventos e os sistemas de pesquisa. As regras de chamada direta são ideais para situações em que se deseja informar à Platform exatamente o que está acontecendo. Além disso, são adequadas quando o Platform não consegue detectar um evento no DOM, como no Adobe Flash. Especifique a string `_satellite.track` no campo de texto do identificador.
+O evento de chamada direta ignora a detecção de eventos e os sistemas de pesquisa. As regras de chamada direta são perfeitas para situações em que você deseja informar à Platform exatamente o que está acontecendo. Além disso, são adequadas quando o Platform não consegue detectar um evento no DOM, como no Adobe Flash. Especifique a string `_satellite.track` no campo de texto do identificador.
 
 #### Element Exists
 
-O evento dispara se um elemento especificado existir. Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+O evento será acionado se um elemento especificado existir. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Enters Viewport
 
-O evento dispara se o usuário entrar em um visor especificado. Você deve fornecer um seletor de CSS como critério para direcionar elementos correspondentes. Você também deve configurar se a regra é acionada imediatamente ou após um número especificado de milissegundos e se o evento deve ser acionado sempre que o evento ocorrer ou somente na primeira vez.
+O evento será acionado se o usuário acessar um visor especificado. Você deve fornecer um seletor de CSS como critério para direcionar elementos correspondentes. Você também deve configurar se a regra é acionada imediatamente ou após um número especificado de milissegundos e se o evento deverá ser acionado sempre que o evento ocorrer ou somente na primeira vez.
 
-Consulte a seção [Opções](#options) para obter mais informações sobre configurações personalizáveis de eventos.
+Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### History Change
 
-O evento é disparado se ocorrer um evento pushState ou hashchange. Não há configurações para esse tipo de evento.
+O evento será acionado se ocorrer um evento pushState ou hashchange. Não há configurações para esse tipo de evento.
 
 #### Tempo gasto na página
 
-O evento dispara se o usuário permanecer na página por um número especificado de segundos. Você deve especificar o número de segundos que devem decorrer antes que o evento seja acionado.
+O evento será acionado se o usuário permanecer na página por um número específico de segundos. Especifique o número de segundos que devem decorrer antes que o evento seja acionado.
 
 ### Eventos de carregamento de página
 
 #### DOM Ready
 
-O evento é acionado quando o DOM está pronto e o usuário pode interagir com a página. Não há configurações para esse tipo de evento.
+O evento será acionado quando o DOM estiver pronto e o usuário puder interagir com a página. Não há configurações para esse tipo de evento.
 
 #### Library Loaded (Page Top) {#library-loaded-page-top}
 
@@ -161,11 +162,11 @@ O evento é acionado assim que a biblioteca de tags é carregada. Não há confi
 
 #### Page Bottom {#page-bottom}
 
-O evento dispara uma vez que `_satellite.pageBottom();` é chamado. Ao carregar a biblioteca de tags de forma assíncrona, esse tipo de evento não deve ser usado. Não há configurações para esse tipo de evento.
+O evento será acionado quando `_satellite.pageBottom();` for chamado. Quando a biblioteca de tags é carregada de maneira assíncrona, esse tipo de evento não deve ser usado. Não há configurações para esse tipo de evento.
 
 #### Window Loaded
 
-O evento dispara quando o onLoad é chamado pelo navegador e a página conclui o carregamento. Não há configurações para esse tipo de evento.
+O evento será acionado quando onLoad for chamado pelo navegador e a página terminar de ser carregada. Não há configurações para esse tipo de evento.
 
 ### Opções {#options}
 
@@ -555,11 +556,11 @@ Execute a regra em um navegador e inspecione o objeto de evento registrado no co
 
 ### Processamento de ação do Custom Code
 
-A extensão principal, disponível para todos os usuários do Adobe Experience Platform, contém uma ação de Código personalizado para executar o JavaScript ou HTML fornecido pelo usuário. Geralmente, é útil que os usuários entendam como as regras com ações Custom Code são processadas.
+A extensão principal, disponível para todos os usuários da Adobe Experience Platform, contém uma ação de Código personalizado para executar o JavaScript ou o HTML fornecido pelo usuário. Geralmente, é útil que os usuários entendam como as regras com ações Custom Code são processadas.
 
 #### Regras que usam os eventos do início ou do final da página
 
-O código de ações personalizadas é incorporado na biblioteca principal de tags. O código é gravado no documento usando document.write. Se uma regra tiver várias ações Custom Code, o código será escrito na ordem configurada na regra.
+O código de ações personalizadas está incorporado à biblioteca de tags principal. O código é gravado no documento usando document.write. Se uma regra tiver várias ações Custom Code, o código será escrito na ordem configurada na regra.
 
 #### Regras que usam qualquer evento diferente dos eventos de início ou de final da página
 
@@ -569,7 +570,7 @@ Ao usar document.write depois que uma página é carregada normalmente causa pro
 
 #### Custom Code Validation
 
-O validador usado no editor de código de tags foi projetado para identificar problemas com código escrito pelo desenvolvedor. O código que passou por um processo de &quot;minificação&quot; — como o código AppMeasurement.js baixado do Gerenciador de código — pode ser falsamente sinalizado como tendo problemas pelo validador do, que geralmente pode ser ignorado.
+O validador usado no editor de código de tags foi projetado para identificar problemas em código escrito pelo desenvolvedor. O código que passou por um processo de &quot;minificação&quot; — como o código AppMeasurement.js baixado do Gerenciador de código — pode ser falsamente sinalizado como tendo problemas pelo validador do, que geralmente pode ser ignorado.
 
 #### Sequência de ação
 
@@ -581,7 +582,7 @@ Ao criar uma ação de código personalizado JavaScript, você pode retornar uma
 
 >[!NOTE]
 >
->Isso só funciona quando o JavaScript não está definido para execução global. Se você estiver executando a ação de código personalizado no escopo global, as tags tratarão a promessa como imediatamente resolvida e avançarão para o próximo item na fila de processamento.
+>Isso só funciona quando o JavaScript não está definido para execução global. Se você estiver executando a ação de código personalizado no escopo global, as tags tratarão a promessa como imediatamente resolvida, avançando para o próximo item na fila de processamento.
 
 Um exemplo de uma ação de código personalizado JavaScript que retorna uma promessa:
 
@@ -599,7 +600,7 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Ao criar uma ação de código personalizado HTML, uma função chamada `onCustomCodeSuccess()` estará disponível para uso dentro do código personalizado. Você pode chamar essa função para indicar que seu código personalizado foi concluído e que as tags podem continuar a executar ações subsequentes. Por outro lado, se o código personalizado falhar de alguma forma, você pode chamar o `onCustomCodeFailure()`. Isso informará as tags para não executar as ações subsequentes dessa regra.
+Ao criar uma ação de código personalizado HTML, uma função chamada `onCustomCodeSuccess()` estará disponível para uso dentro do código personalizado. É possível chamar essa função para indicar que o código personalizado foi concluído e que as tags podem continuar a executar ações subsequentes. Por outro lado, se o código personalizado falhar de alguma forma, você pode chamar o `onCustomCodeFailure()`. Assim, as tags serão instruídas a não executar as ações subsequentes dessa regra.
 
 Um exemplo de uma ação de código personalizado HTML que usa os novos retornos de chamada:
 
@@ -681,9 +682,9 @@ Obtenha o valor de:
 
 Todo objeto ou variável disponíveis do JavaScript pode ser referido usando o campo de caminho.
 
-Os elementos de dados de tag podem ser usados para capturar as variáveis de JavaScript de marcação ou as propriedades do objeto. Esses valores podem ser usados em suas extensões ou regras personalizadas, fazendo referência aos elementos de dados da tag . Se a fonte de dados for alterada, será necessário atualizar a referência para a fonte na interface do usuário da coleta de dados.
+Elementos de dados de tag podem ser usados para capturar as variáveis de JavaScript de marcação ou as propriedades do objeto. Esses valores podem ser usados em suas extensões ou regras personalizadas, fazendo referência aos elementos de dados da tag. Se a fonte de dados for alterada, será necessário apenas atualizar a referência para a fonte na interface da coleção de dados.
 
-No exemplo abaixo, a marcação contém uma variável de JavaScript chamada `Page_Name`.
+No exemplo abaixo, a marcação contém uma variável JavaScript chamada `Page_Name`.
 
 ```markup
 <script>
@@ -692,9 +693,9 @@ No exemplo abaixo, a marcação contém uma variável de JavaScript chamada `Pag
 </script>
 ```
 
-Ao criar o elemento de dados na interface do usuário da Coleta de dados, forneça apenas o caminho para essa variável.
+Ao criar o elemento de dados na interface da coleção de dados, forneça apenas o caminho dessa variável.
 
-Se você usar um objeto coletor de dados como parte da camada de dados, use a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName`, e assim por diante.
+Se você usar um objeto de coleção de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e à propriedade que deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName` e assim por diante.
 
 #### Exemplo:
 
@@ -756,7 +757,7 @@ O armazenamento de sessão é semelhante ao armazenamento local, a diferença é
 
 ### Visitor behavior
 
-Semelhante às Informações da página, esse elemento de dados usa tipos de comportamento comuns para enriquecer a lógica dentro de regras e outras soluções da plataforma.
+De forma semelhante às informações da página, esse elemento de dados usa tipos de comportamento comuns para aprimorar a lógica nas regras além de outras soluções da Platform.
 
 Selecione um dos seguintes atributos de comportamento do visitante:
 
@@ -774,3 +775,36 @@ Alguns casos de uso comuns incluem:
 * Se esta for a landing page para a visita, preencher uma métrica do Analytics
 * Mostrar uma nova oferta ao visitante depois do número X de Contagens de sessão
 * Exibir um cadastro de informativo se for uma primeira visita
+
+### Valor condicional
+
+Um invólucro para a condição [Value Comparison](#value-comparison-value-comparison). Com base no resultado da comparação, o retornará um dos dois valores disponíveis no formulário. Pode, assim, lidar com &quot;If... Então.. Senão...&quot; cenários sem a necessidade de regras adicionais.
+
+### Ambiente de tempo de execução
+
+Permite selecionar uma das seguintes variáveis:
+
+* Estágio do ambiente - Retorna `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/preparo/produção.
+* Data de build da biblioteca - Retorna `turbine.buildInfo.buildDate` que contém o mesmo valor como `_satellite.buildInfo.buildDate`.
+* Nome da propriedade - Retorna `_satellite.property.name` para obter o nome da propriedade do Launch.
+* ID da propriedade - Retorna `_satellite.property.id` para obter a ID da propriedade do Launch
+* Nome da regra - Retorna `event.$rule.name` contendo o nome da regra executada.
+* ID da regra - Retorna `event.$rule.id` contendo a ID da regra executada.
+* Tipo de evento - Retorna `event.$type` contendo o tipo de evento que acionou a regra.
+* Carga de detalhes do evento - Retorna `event.detail` contendo a carga útil de um evento personalizado ou de uma regra de chamada direta.
+* Identificador de chamada direta - Retorna `event.identifier` contendo o identificador de uma Regra de chamada direta.
+
+### Atributos do dispositivo
+
+Retorna um dos seguintes atributos de dispositivo do visitante:
+
+* Tamanho da janela do navegador
+* Tamanho da tela
+
+### Ferramentas JavaScript
+
+É um wrapper para operações comuns do JavaScript. Ele recebe um elemento de dados como uma entrada. Ele retorna o resultado de uma das seguintes transformações do valor do elemento de dados:
+
+* Manipulação básica da sequência de caracteres (substituir, substring, correspondência de regex, primeiro e último índice, divisão, fatia)
+* Operações básicas de matriz (fatia, junção, pop, turno)
+* Operações universais básicas (fatia, comprimento)

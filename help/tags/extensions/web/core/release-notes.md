@@ -1,9 +1,10 @@
 ---
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1417'
 ht-degree: 81%
 
 ---
@@ -13,6 +14,18 @@ ht-degree: 81%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 16 de setembro de 2021
+
+v3.1.0
+
+Novos elementos de dados foram adicionados:
+
+* Objeto mesclado - Selecione vários elementos de dados que fornecerão cada um um um objeto. Esses objetos serão profundamente (recursivamente) unidos para produzir um novo objeto.
+* Valor condicional - Retorna um de dois valores (conditionalValue ou fallbackValue) com base no resultado da comparação.
+* Ambiente de tempo de execução - Retorne uma das seguintes variáveis de ambiente do Launch: estágio do ambiente, data de build da biblioteca, nome da propriedade, ID da propriedade, nome da regra, id da regra, tipo de evento, carga útil detalhada do evento, identificador de chamada direta.
+* Ferramentas do JavaScript - Wrapper para operações comuns do JavaScript: manipulação básica da sequência de caracteres (substituir, substring, correspondência de regex, primeiro e último índice, divisão, fatia), operações básicas da matriz (fatia, junção, pop, shift) e operações básicas universais (fatia, comprimento).
+* Atributos do dispositivo - Retorna atributos do dispositivo, como tamanho da janela ou tamanho da tela.
 
 ## 11 de agosto de 2021
 
@@ -49,7 +62,7 @@ v2.0.4
 
 * Adição de Suporte ao elemento de dados para vários campos - O suporte ao elemento de dados foi adicionado aos seguintes eventos: &quot;Tempo na página&quot;, &quot;Insere Viewport&quot;, &quot;Passe o mouse&quot; e &quot;Tempo de mídia reproduzido&quot;. Além das seguintes condições: &quot;Tempo no site&quot; e &quot;Comparação de valores&quot;
 * Adiciona suporte para comportamento padrão para ctrl/cmd + clique e clique do meio do mouse ao usar o atraso de link
-* **Atraso de link marcado no evento de clique como &quot;não é mais compatível&quot;.** - mais informações podem ser encontradas no  [Data Collection ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) Blogfor Adobe Experience Platform
+* **Atraso de link marcado no evento de clique como &quot;não é mais compatível&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) da Adobe Experience Platform
 
 ## 6 de janeiro de 2021
 
@@ -113,7 +126,7 @@ v1.6.2
 
 v1.6.1
 
-* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados por uma tag à página usarão o nonce que você configurou. Essa alteração suporta o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
+* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração suporta o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junho de 2019
 
@@ -141,8 +154,8 @@ v1.4.2
 ## 8 de novembro de 2018
 
 * **Opção Persisti Cohort** - A opção para persistir uma cohort foi adicionada à condição de amostragem. Essa opção tem o efeito de manter um usuário dentro ou fora da coorte de amostra nas sessões. Por exemplo, se a caixa de seleção “persist cohort” estiver marcada e a condição retornar &quot;true&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;true&quot; em todas as execuções subsequentes da condição para o mesmo visitante. Da mesma forma, se a caixa de seleção “persist cohort” estiver marcada e a condição retornar &quot;false&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;false&quot; em todas as execuções subsequentes da condição para o mesmo visitante.
-* **Correção de erros**  - Correção de um problema em que uma regra que utiliza um evento Page Bottom e uma ação Custom Code em uma página em que as tags estavam sendo carregadas de forma síncrona, mas instaladas incorretamente (sem chamada para  `_satellite.pageBottom()`), limpava o conteúdo do site.
-* **Correção de erros**  - Corrigido um problema em que a opção Inserir Viewport não funcionava se a biblioteca de tags fosse carregada de forma assíncrona e terminasse de ser carregada após o evento DOMContentLoaded do navegador ser disparado.
+* **Correção de erros** — foi corrigido um problema em que uma regra que usava um evento Page Bottom e uma ação de código personalizado em uma página em que tags estavam sendo carregadas sincronicamente, mas estavam incorretamente instaladas (sem chamada para `_satellite.pageBottom()`) limpava o conteúdo do site.
+* **Correção de erros** — foi corrigido um problema em que a opção Enters Viewport não funcionava se a biblioteca de tags fosse carregada de forma assíncrona e terminasse de ser carregada após o evento DOMContentLoaded do navegador ser disparado.
 
 ## 24 de maio de 2018
 

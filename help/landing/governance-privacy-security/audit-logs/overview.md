@@ -2,10 +2,10 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem fez quais ações no Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
+source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 4%
+source-wordcount: '598'
+ht-degree: 5%
 
 ---
 
@@ -21,16 +21,18 @@ Em um sentido básico, um log de auditoria informa **quem** executou a ação **
 
 Este documento aborda logs de auditoria na Platform, incluindo como visualizá-los e gerenciá-los na interface do usuário ou na API.
 
-## Tipos de evento capturados por logs de auditoria
+## Tipos de evento capturados por logs de auditoria {#category}
 
 A tabela a seguir descreve quais ações em que os recursos são registrados pelos logs de auditoria:
 
 | Recurso | Ações |
 | --- | --- |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Redefinir</li><li>Excluir</li></ul> |
 | [Conjunto de dados](../../../catalog/datasets/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar para [Perfil do cliente em tempo real](../../../profile/home.md)</li></ul> |
 | [Esquema](../../../xdm/schema/composition.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Tipo de dados](../../../xdm/schema/composition.md#data-type) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Redefinir</li><li>Excluir</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Ativar</li></ul> |
 
 ## Acesso a logs de auditoria
@@ -50,6 +52,23 @@ O sistema exibe somente logs de auditoria do ano passado. Todos os logs que exce
 Selecione um evento na lista para exibir seus detalhes no painel direito.
 
 ![Detalhes do evento](../../images/audit-logs/select-event.png)
+
+Selecione o ícone de funil (![Filter icon](../../images/audit-logs/icon.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
+
+![Filtros](../../images/audit-logs/filters.png)
+
+Os seguintes filtros estão disponíveis para eventos de auditoria na interface do usuário:
+
+| Filtro | Descrição |
+| --- | --- |
+| [!UICONTROL Categoria] | Use o menu suspenso para filtrar os resultados exibidos por [category](#category). |
+| [!UICONTROL Ação] | Filtrar por ação. Atualmente, somente as ações [!UICONTROL Create] e [!UICONTROL Delete] podem ser filtradas. |
+| [!UICONTROL Status do Controle de Acesso] | Filtre se a ação foi permitida (concluída) ou negada devido à falta de permissões de [controle de acesso](../../../access-control/home.md). |
+| [!UICONTROL Data] | Selecione uma data inicial e/ou uma data final para definir um intervalo de datas para filtrar os resultados. |
+
+Para remover um filtro, selecione o &quot;X&quot; no ícone de comprimido do filtro em questão ou selecione **[!UICONTROL Limpar todos]** para remover todos os filtros.
+
+![Limpar filtros](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log

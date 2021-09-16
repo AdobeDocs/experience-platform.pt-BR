@@ -4,9 +4,9 @@ description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analy
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics; variáveis; analytics; mapa automático; mapeado automaticamente;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: b2d949232674bb4c4ebcb7754726730b966a0e02
+source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '907'
 ht-degree: 5%
 
 ---
@@ -19,21 +19,21 @@ Abaixo está uma lista de variáveis que a Adobe Experience Platform Edge Networ
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | Mapeamento de dados de contexto do AppMeasurement `c.a.appid`. |
 | application.launches.value | c.a.launches | Mapeamento de dados de contexto do AppMeasurement `c.a.launches`. |
-| commerce.checkouts.id | events | `scCheckout` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
-| commerce.checkouts.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta do AppMeasurement com conversão COMMERCE_SC_CHECKOUT, usando delimitador `,`. |
+| commerce.checkouts.id | eventos | `scCheckout` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
+| commerce.checkouts.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta do AppMeasurement com conversão COMMERCE_SC_CHECKOUT, usando delimitador `,`. |
 | commerce.order.currencyCode | cc | Mapeamento de MOEDA do parâmetro de consulta AppMeasurement. |
 | commerce.order.purchaseID | pi | Mapeamento PURCHASEID do parâmetro de consulta AppMeasurement. |
-| commerce.productListAdds.id | events | `scAdd` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
-| commerce.productListAdds.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_SC_ADD, usando delimitador `,`. |
-| commerce.productListOpens.id | events | `scOpen` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
-| commerce.productListOpens.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta do AppMeasurement com conversão COMMERCE_SC_OPEN, usando delimitador `,`. |
-| commerce.productListRemovals.id | events | `scRemove` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
-| commerce.productListRemovals.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_SC_REMOVE, usando delimitador `,`. |
-| commerce.productListViews.id | events | `scView` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
-| commerce.productListViews.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta do AppMeasurement com conversão COMMERCE_SC_VIEW, usando delimitador `,`. |
-| commerce.productViews.id | events | `prodView` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
-| commerce.productViews.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_PROD_VIEW, usando delimitador `,`. |
-| commerce.purchases.value | events | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_PURCHASE, usando delimitador `,`. |
+| commerce.productListAdds.id | eventos | `scAdd` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
+| commerce.productListAdds.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_SC_ADD, usando delimitador `,`. |
+| commerce.productListOpens.id | eventos | `scOpen` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
+| commerce.productListOpens.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta do AppMeasurement com conversão COMMERCE_SC_OPEN, usando delimitador `,`. |
+| commerce.productListRemovals.id | eventos | `scRemove` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
+| commerce.productListRemovals.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_SC_REMOVE, usando delimitador `,`. |
+| commerce.productListViews.id | eventos | `scView` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
+| commerce.productListViews.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta do AppMeasurement com conversão COMMERCE_SC_VIEW, usando delimitador `,`. |
+| commerce.productViews.id | eventos | `prodView` serialização de eventos. Se esse campo for excluído (ou seja, para eventos não serializados), o sistema gera e atribui seu próprio valor de ID à entidade. |
+| commerce.productViews.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_PROD_VIEW, usando delimitador `,`. |
+| commerce.purchases.value | eventos | Mapeamento EVENT_LIST_FULL do parâmetro de consulta AppMeasurement com conversão COMMERCE_PURCHASE, usando delimitador `,`. |
 | device.colorDepth | c | Mapeamento C_COLOR do parâmetro de consulta do AppMeasurement. |
 | device.screenHeight | s | Mapeamento da resolução de tela do parâmetro de consulta do AppMeasurement. |
 | device.screenWidth | s | Mapeamento da resolução de tela do parâmetro de consulta do AppMeasurement. |
@@ -88,9 +88,8 @@ Abaixo está uma lista de variáveis que a Adobe Experience Platform Edge Networ
 | placeContext.geo.longitude | lon | Mapeamento LONGITUDE do parâmetro de consulta do AppMeasurement. |
 | placeContext.geo.postalCode | CEP | Mapeamento ZIP do parâmetro de consulta do AppMeasurement. |
 | placeContext.geo.stateProvince | estado | Mapeamento de STATE do parâmetro de consulta AppMeasurement. |
-| productlistitems.[N]._[NAME_SPACE].* | produtos | Parâmetro de consulta AppMeasurement: mapeamento de Eventos de merchandise de produtos/Evars. |
-| productListItems[N].lineItemId | produtos | Parâmetro de consulta do AppMeasurement Mapeamento do nome dos produtos. |
-| productlistitems.[N].name | produtos | Parâmetro de consulta AppMeasurement Mapeamento de categoria de produtos. |
+| productListItems[N].lineItemId | produtos | Parâmetro de consulta AppMeasurement Mapeamento de categoria de produtos. |
+| productlistitems.[N].name | produtos | Parâmetro de consulta do AppMeasurement Mapeamento do nome dos produtos. |
 | productlistitems.[N].priceTotal | produtos | Parâmetro de consulta AppMeasurement Mapeamento de preço de produtos. |
 | productlistitems.[N].quantidade | produtos | Parâmetro de consulta AppMeasurement - Mapeamento de quantidade de produtos. |
 | web.webInteraction.URL | pev1 | Mapeamento do parâmetro de consulta do AppMeasurement PAGE_EVENT_VAR1. |

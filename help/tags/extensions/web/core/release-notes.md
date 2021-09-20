@@ -2,9 +2,9 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1434'
 ht-degree: 81%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 81%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 17 de setembro de 2021
+
+v3.1.1
+
+* Correção de um erro de JS que impedia o carregamento da exibição de condição do intervalo de datas.
 
 ## 16 de setembro de 2021
 

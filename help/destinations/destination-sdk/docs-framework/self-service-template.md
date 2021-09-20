@@ -2,7 +2,7 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do seu destino
 description: Use este modelo para criar documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substitua pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 1%
@@ -58,7 +58,6 @@ ht-degree: 1%
 ## Casos de uso
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino *YOURDESTINATION*, aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
-
 
 ### Caso de uso nº 1
 

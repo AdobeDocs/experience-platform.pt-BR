@@ -3,10 +3,10 @@ title: Pré-requisitos para usar o SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre os pré-requisitos para usar o Adobe Experience Platform Web SDK.
 keywords: Domínio próprio; CNAME; esquema; criar esquema; iniciar; extensão do sdk da aep web; extensão; id de configuração; ferramenta de configuração; elemento de dados; criar elemento de dados; objeto XDM; enviar evento; enviar evento;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 5f3b82edbc52d96cad13932be1d201e275780f3c
+source-git-commit: 9d3965be1956de754f0d2a82178bf5dcd871e239
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 0%
+source-wordcount: '405'
+ht-degree: 1%
 
 ---
 
@@ -23,3 +23,17 @@ Para usar o SDK da Web da plataforma, primeiro você deve:
 
 - Tenha direito ao Adobe Experience Platform. Se você não tiver comprado o Adobe Experience Platform, o Adobe fornecerá o acesso necessário para uso de forma limitada com o SDK, sem custos adicionais.
 - Se o seu site já estiver usando o [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) em seu site, por meio da API de visitante ou da extensão do Serviço de Experience Cloud ID no Adobe Experience Platform Launch, e você quiser continuar usando o serviço durante a migração para o Adobe Experience Platform Web SDK, será necessário usar a versão mais recente da API de visitante ou a extensão do Serviço de Experience Cloud ID. Consulte [Migração de ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) para obter mais informações.
+
+## Gerenciamento de permissões para o Adobe Experience Platform Web SDK
+
+O uso do Adobe Experience Platform não requer permissões especiais, mas você precisa ter as [permissões](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=br) certas para criar seus esquemas no Adobe Experience Platform. As permissões mínimas necessárias podem ser encontradas na categoria Modelagem de dados e identidades .
+
+![](../images/AEP-permission-categories.png)
+
+Na categoria Modelagem de dados, conceda aos usuários as permissões Gerenciar esquemas e Visualizar esquemas .
+
+![](../images/data-modeling-permissions.png)
+
+Na categoria Identity Management , conceda aos usuários as permissões Gerenciar namespaces de identidade e Exibir namespaces de identidade .
+
+![](../images/identity-management-permissions.png)

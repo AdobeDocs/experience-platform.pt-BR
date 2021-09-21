@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta do banco de dados.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 Além disso, este tutorial requer que você já tenha criado uma conta de banco de dados. Uma lista de tutoriais para criar diferentes conectores de banco de dados na interface do usuário pode ser encontrada na [visão geral dos conectores de origem](../../../home.md).
 
-## Selecionar dados
+## Adicionar dados
 
-Depois de criar sua conta de banco de dados, a etapa **[!UICONTROL Select data]** é exibida, fornecendo uma interface interativa para explorar a hierarquia do banco de dados.
+Depois de criar a conta do banco de dados, a etapa **[!UICONTROL Adicionar dados]** é exibida, fornecendo uma interface interativa para explorar a hierarquia do banco de dados.
 
-- A metade esquerda da interface é um navegador, exibindo a lista de bancos de dados da sua conta.
+- A metade esquerda da interface é um navegador, exibindo a lista de tabelas de dados da sua conta.
 - A metade direita da interface permite visualizar até 100 linhas de dados.
 
 Você pode usar a opção **[!UICONTROL Pesquisar]** na parte superior da página para identificar rapidamente os dados de origem que pretende usar.
@@ -41,7 +41,7 @@ Você pode usar a opção **[!UICONTROL Pesquisar]** na parte superior da págin
 >
 >A opção de dados de origem da pesquisa está disponível para todos os conectores de origem baseados em tabelas, excluindo os conectores Analytics, Classificações, Hubs de eventos e Kinesis.
 
-Depois de encontrar os dados de origem, selecione o diretório e clique em **[!UICONTROL Next]**.
+Depois de encontrar os dados de origem, selecione a tabela e selecione **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 

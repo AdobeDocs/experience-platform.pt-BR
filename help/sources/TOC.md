@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Data Ingestion, Sources
-source-git-commit: ebe620b078096349c514420746902ce406a910d1
+source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 14%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 14%
       - [Conector do oracle](connectors/databases/oracle.md)
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
+      - [conector Snowflake](connectors/databases/snowflake.md)
    - eCommerce {#ecommerce}
       - [Conector Shopify](connectors/ecommerce/shopify.md)
    - Sistema local {#local-system}
@@ -125,6 +126,7 @@ ht-degree: 14%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -214,6 +216,7 @@ ht-degree: 14%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Sistema local {#local-system}

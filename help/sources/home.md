@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,7 @@ O Experience Platform oferece suporte para assimilar dados de um banco de dados 
 - [[!DNL Oracle] conector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] conector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] conector](connectors/databases/postgres.md)
+- [[!DNL Snowflake] conector](connectors/databases/snowflake.md)
 
 ### eCommerce
 

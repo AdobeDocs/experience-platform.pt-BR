@@ -5,9 +5,9 @@ title: Apêndice do Guia da API do Registro de Schema
 description: Este documento fornece informações complementares relacionadas ao trabalho com a API do Registro de Esquema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '984'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ Os parâmetros de consulta mais comuns para paginação incluem:
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `start` | Especifique onde os resultados listados devem começar. Esse valor pode ser obtido do atributo `_page.next` de uma resposta de lista e usado para acessar a próxima página de resultados. Se o valor `_page.next` for nulo, então não há página adicional disponível. |
-| `limit` | Limite o número de recursos retornados. Exemplo: `limit=5` retornará uma lista de cinco recursos. |
 | `orderby` | Classifique os resultados por uma propriedade específica. Exemplo: `orderby=title` classificará os resultados por título em ordem crescente (A-Z). Adicionar um `-` antes do valor do parâmetro (`orderby=-title`) classificará os itens por título em ordem decrescente (Z-A). |
+| `limit` | Quando usado em conjunto com um parâmetro `orderby` , `limit` restringe o número máximo de itens que devem ser retornados para uma determinada solicitação. Esse parâmetro não pode ser usado sem um parâmetro `orderby` presente.<br><br>O  `limit` parâmetro especifica um número inteiro positivo (entre  `0` e  `500`) como uma  ** cinta para o número máximo de itens que devem ser retornados. Por exemplo, `limit=5` retorna apenas cinco recursos na lista. No entanto, esse valor não é rigorosamente respeitado. O tamanho real da resposta pode ser menor ou maior, conforme restringido pela necessidade de fornecer a operação confiável do parâmetro `start`, se fornecido. |
+| `start` | Quando usado em conjunto com um parâmetro `orderby` , `start` especifica onde a lista subdefinida de itens deve começar. Esse parâmetro não pode ser usado sem um parâmetro `orderby` presente. Esse valor pode ser obtido do atributo `_page.next` de uma resposta de lista e usado para acessar a próxima página de resultados. Se o valor `_page.next` for nulo, então não há página adicional disponível.<br><br>Normalmente, esse parâmetro é omitido para obter a primeira página de resultados. Depois disso, `start` deve ser definido como o valor máximo da propriedade de classificação primária do campo `orderby` recebido na página anterior. A resposta da API retorna entradas que começam com aquelas que têm uma propriedade de classificação primária de `orderby` estritamente maior que (para crescente) ou estritamente menor que (para decrescente) o valor especificado.<br><br>Por exemplo, se o  `orderby` parâmetro for definido como  `orderby=name,firstname`, o  `start` parâmetro conterá um valor para a  `name` propriedade. Nesse caso, se você quiser mostrar as próximas 20 entradas de um recurso imediatamente após o nome &quot;Miller&quot;, você usaria: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 

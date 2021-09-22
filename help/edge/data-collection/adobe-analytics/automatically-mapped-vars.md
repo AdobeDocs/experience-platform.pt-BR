@@ -4,7 +4,7 @@ description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analy
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics; variáveis; analytics; mapa automático; mapeado automaticamente;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 5%
@@ -46,7 +46,7 @@ Abaixo está uma lista de variáveis que a Adobe Experience Platform Edge Networ
 | environment.browserDetails.viewportWidth | bw | Mapeamento BROWSER_WIDTH do parâmetro de consulta do AppMeasurement. |
 | environment.connectionType | ct | Mapeamento CT_CONNECT_TYPE do parâmetro de consulta do AppMeasurement. |
 | environment.ipV4 | X-Forwarded-For | Este é um HTTP Header mapping, X-FORWARDED-FOR. |
-| identityMap.ECID.[0].id | mid | Mapeamento de MID do parâmetro de consulta do AppMeasurement. |
+| identityMap.ECID[0].id | mid | Mapeamento de MID do parâmetro de consulta do AppMeasurement. |
 | marketing.trackingCode | v0 | Mapeamento CAMPAIGN do parâmetro de consulta do AppMeasurement. |
 | media.mediaTimed.completes.value | c.a.media.complete | Dados de contexto do AppMeasurement. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | Dados de contexto do AppMeasurement. |
@@ -58,10 +58,10 @@ Abaixo está uma lista de variáveis que a Adobe Experience Platform Edge Networ
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | Mapeamento de dados de contexto do AppMeasurement `c.a.media.pauseCount`. |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset | Dados de contexto do AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | Mapeamento de dados de contexto do AppMeasurement `c.a.media.friendlyName`. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | Dados de contexto do AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | Dados de contexto do AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | Mapeamento de dados de contexto do AppMeasurement `c.a.media.episode`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | Dados de contexto do AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | Dados de contexto do AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | Dados de contexto do AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | Mapeamento de dados de contexto do AppMeasurement `c.a.media.season`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | Mapeamento de dados de contexto do AppMeasurement `a.media.name`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | Mapeamento de dados de contexto do AppMeasurement `c.a.media.show`. |
@@ -89,9 +89,9 @@ Abaixo está uma lista de variáveis que a Adobe Experience Platform Edge Networ
 | placeContext.geo.postalCode | CEP | Mapeamento ZIP do parâmetro de consulta do AppMeasurement. |
 | placeContext.geo.stateProvince | estado | Mapeamento de STATE do parâmetro de consulta AppMeasurement. |
 | productListItems[N].lineItemId | produtos | Parâmetro de consulta AppMeasurement Mapeamento de categoria de produtos. |
-| productlistitems.[N].name | produtos | Parâmetro de consulta do AppMeasurement Mapeamento do nome dos produtos. |
-| productlistitems.[N].priceTotal | produtos | Parâmetro de consulta AppMeasurement Mapeamento de preço de produtos. |
-| productlistitems.[N].quantidade | produtos | Parâmetro de consulta AppMeasurement - Mapeamento de quantidade de produtos. |
+| productlistitems[N].name | produtos | Parâmetro de consulta do AppMeasurement Mapeamento do nome dos produtos. |
+| productlistitems[N].priceTotal | produtos | Parâmetro de consulta AppMeasurement Mapeamento de preço de produtos. |
+| productlistitems[N].quantity | produtos | Parâmetro de consulta AppMeasurement - Mapeamento de quantidade de produtos. |
 | web.webInteraction.URL | pev1 | Mapeamento do parâmetro de consulta do AppMeasurement PAGE_EVENT_VAR1. |
 | web.webInteraction.name | pev2 | Mapeamento do parâmetro de consulta do AppMeasurement PAGE_EVENT_VAR2. |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` para  `pe=lnk_o`;  `web.webInteraction.type=download` para  `pe=lnk_d`;  `web.webInteraction.type=exit` para  `pe=lnk_e` |

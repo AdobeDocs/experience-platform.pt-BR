@@ -2,10 +2,10 @@
 description: As especificações do servidor e do modelo podem ser configuradas no SDK de destino do Adobe Experience Platform por meio do endpoint comum `/authoring/destination-servers`.
 title: Opções de configuração para especificações do servidor e do modelo no SDK de destino
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 7%
+source-wordcount: '419'
+ht-degree: 9%
 
 ---
 
@@ -48,10 +48,10 @@ Esse processo fornece dados do usuário como uma série de mensagens HTTP para s
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `name` | String | Representa um nome amigável do seu servidor, visível somente para o Adobe. Este nome não está visível para parceiros ou clientes. Exemplo `Moviestar destination server`. |
-| `destinationServerType` | String | `URL_BASED` no momento, é a única opção disponível. |
-| `templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar o URL no campo `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | String | Preencha o endereço do ponto de extremidade da API ao qual o Experience Platform deve se conectar. |
+| `name` | String | *Obrigatório.* Representa um nome amigável do seu servidor, visível somente para o Adobe. Este nome não está visível para parceiros ou clientes. Exemplo `Moviestar destination server`. |
+| `destinationServerType` | String | *Obrigatório.* `URL_BASED` no momento, é a única opção disponível. |
+| `templatingStrategy` | String | *Obrigatório.* <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar o URL no campo `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | String | *Obrigatório.* Preencha o endereço do ponto de extremidade da API ao qual o Experience Platform deve se conectar. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,10 +83,10 @@ A especificação do modelo permite configurar como formatar a mensagem exportad
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `httpMethod` | String | O método que o Adobe usará nas chamadas para o seu servidor. As opções são `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `templatingStrategy` | String | Use  `PEBBLE_V1`. |
-| `value` | String | Essa é a versão sem caracteres que transforma os dados dos clientes da Platform no formato que seu serviço espera. <br> Para obter informações sobre como gravar o modelo, leia a seção  [Uso do modelo](./message-format.md#using-templating) . <br> Para obter mais informações sobre o escape de caracteres, consulte o padrão JSON  [RFC, seção 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Para obter um exemplo de uma transformação simples, consulte a transformação  [dos atributos ](./message-format.md#attributes) de perfil . |
-| `contentType` | String | O tipo de conteúdo que seu servidor aceita. Esse valor provavelmente é `application/json`. |
+| `httpMethod` | String | *Obrigatório.* O método que o Adobe usará nas chamadas para o seu servidor. As opções são `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
+| `value` | String | *Obrigatório.* Essa é a versão sem caracteres que transforma os dados dos clientes da Platform no formato que seu serviço espera. <br> Para obter informações sobre como gravar o modelo, leia a seção  [Uso do modelo](./message-format.md#using-templating) . <br> Para obter mais informações sobre o escape de caracteres, consulte o padrão JSON  [RFC, seção 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Para obter um exemplo de uma transformação simples, consulte a transformação  [dos atributos ](./message-format.md#attributes) de perfil . |
+| `contentType` | String | *Obrigatório.* O tipo de conteúdo que seu servidor aceita. Esse valor provavelmente é `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser executadas usando o endpoint da API `/authoring/sample-profiles' para gerar perfis de amostra para usar em testes de destino.
 title: Exemplos de operações da API de geração de perfil
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,10 @@ Você pode gerar perfis de amostra com base no schema de origem Adobe XDM ou no 
 Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
 
 ## Gerar perfis de amostra com base no schema de origem {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Adicione os perfis de amostra gerados aqui a chamadas HTTP quando [testar seu destino](./test-destination.md).
 
 Você pode gerar perfis de amostra com base no schema de origem, fazendo uma solicitação de GET para o endpoint `authoring/sample-profiles/` e fornecendo a ID de uma instância de destino criada com base na configuração de destino que deseja testar.
 
@@ -176,6 +180,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 {style=&quot;table-layout:auto&quot;}
 
 ## Gerar perfis de amostra com base no schema de destino {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Use os perfis de amostra gerados aqui ao criar seu modelo, na [etapa do modelo de renderização](./render-template-api.md#multiple-profiles-with-body).
 
 Você pode gerar perfis de amostra com base no schema de destino fazendo uma solicitação GET para o endpoint `authoring/sample-profiles/` e fornecendo a ID de destino da configuração de destino com base na qual você está criando seu template.
 

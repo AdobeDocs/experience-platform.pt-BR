@@ -1,10 +1,11 @@
 ---
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/template/sample`, para obter um template de transformação de mensagem de teste para o seu destino.
 title: Obter exemplos de operações da API de modelo
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com um modelo de amostra que pode ser editado para corresponder ao formato de dados esperado.
 
-Se a ID de destino fornecida corresponder a um modelo de servidor de destino com `maxUsersPerRequest=1`, a solicitação retornará um modelo de amostra semelhante a este:
+Se a ID de destino fornecida corresponder a uma configuração de destino com [melhor agregação de esforço](./destination-configuration.md#best-effort-aggregation) e `maxUsersPerRequest=1` na política de agregação, a solicitação retornará um modelo de amostra semelhante a este:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ Se a ID de destino fornecida corresponder a um modelo de servidor de destino com
 }
 ```
 
-Se a ID de destino fornecida corresponder a um modelo de servidor de destino com `maxUsersPerRequest` maior que um, a solicitação retornará um modelo de amostra semelhante a este:
+Se a ID de destino fornecida corresponder a um modelo de servidor de destino com [agregação configurável](./destination-configuration.md#configurable-aggregation) ou [melhor agregação de esforço](./destination-configuration.md#best-effort-aggregation) com `maxUsersPerRequest` maior que um, a solicitação retornará um modelo de amostra semelhante a este:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

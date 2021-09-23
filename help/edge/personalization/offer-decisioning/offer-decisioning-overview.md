@@ -3,9 +3,9 @@ title: Usar o Offer Decisioning com o SDK da Web da plataforma
 description: O SDK da Web da Adobe Experience Platform pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. É possível criar suas ofertas e outros objetos relacionados usando a interface do usuário do Offer Decisioning ou a API.
 keywords: offer decisioning, decisão, Web SDK, Platform Web SDK, ofertas personalizadas, delivery de ofertas, delivery de ofertas, personalização de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '826'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->O uso do Offer Decisioning no Adobe Experience Platform Web SDK está disponível no momento com acesso antecipado a usuários selecionados. Essa funcionalidade não está disponível para todas as organizações IMS.
+>O uso do Offer Decisioning no Adobe Experience Platform Web SDK está disponível com acesso antecipado para usuários selecionados. Essa funcionalidade não está disponível para todas as organizações IMS.
 
 O Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar ofertas personalizadas que são gerenciadas no Offer Decisioning. É possível criar suas ofertas e outros objetos relacionados usando a interface do usuário (UI) ou as APIs do Offer Decisioning.
 
@@ -30,7 +30,7 @@ O Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar ofertas pe
 
 * **Contêiner:** um contêiner é um mecanismo de isolamento para manter diferentes preocupações separadas. A ID do contêiner é o primeiro elemento de caminho para todas as APIs do repositório. Todos os objetos de decisão residem em um contêiner.
 
-* **Escopos de decisão:** no Offer Decisioning, essas são as strings codificadas em Base64 do JSON que contêm as IDs de atividade e disposição que você deseja que o serviço offer decisioning use para propor ofertas.
+* **Escopos de decisão:** para o Offer Decisioning, os escopos de decisão são as strings codificadas Base64 do JSON que contêm as IDs de atividade e disposição que você deseja que o serviço offer decisioning use para propor ofertas.
 
    *Âmbito de decisão JSON:*
 
@@ -59,7 +59,7 @@ O Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar ofertas pe
 
 ## Ativar o Offer Decisioning
 
-Para ativar o Offer Decisioning, é necessário executar as seguintes etapas:
+Para ativar o Offer Decisioning, execute as seguintes etapas:
 
 1. Ativação do Adobe Experience Platform no [datastream](../../fundamentals/datastreams.md) e marque a caixa &quot;Offer decisioning&quot;
 
@@ -85,7 +85,7 @@ Para ativar o Offer Decisioning, é necessário executar as seguintes etapas:
 
       1. [Criar uma propriedade de tag](../../../tags/ui/administration/companies-and-properties.md)
       1. [Adicionar o código incorporado](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Instale e configure a extensão SDK da Web da plataforma com o Datastream que você acabou de criar ao selecionar a configuração no menu suspenso &quot;Datastream&quot;. Consulte a documentação sobre [extensões](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. Instale e configure a extensão SDK da Web da plataforma com o Datastream criado selecionando a configuração na lista suspensa &quot;Datastream&quot;. Consulte a documentação sobre [extensões](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ Para ativar o Offer Decisioning, é necessário executar as seguintes etapas:
 | `content` | Conteúdo associado à oferta proposta no formato de uma string. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Conteúdo da imagem associada à oferta proposta no formato de um URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Características associadas à oferta proposta no formato de um objeto JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## Limitações
+
+No momento, algumas restrições de oferta não são compatíveis com os fluxos de trabalho da borda da experiência móvel, por exemplo, Limitação. O valor do campo Limitação especifica o número de vezes que uma oferta pode ser apresentada em todos os usuários. Para obter mais detalhes, consulte a [Documentação de regras e restrições de elegibilidade da oferta](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

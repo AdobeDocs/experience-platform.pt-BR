@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 81%
+source-wordcount: '1522'
+ht-degree: 76%
 
 ---
 
@@ -14,6 +14,22 @@ ht-degree: 81%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 23 de setembro de 2021
+
+v3.2.1
+
+* Correção de um erro em que a inicialização da exibição do elemento de dados do valor condicional não funcionava corretamente quando os valores do campo eram 0.
+
+## 23 de setembro de 2021
+
+v3.2.0
+
+As seguintes alterações foram introduzidas no elemento de dados Valor condicional:
+
+* Adicione uma caixa de seleção para os valores condicionais e de fallback que permite que o usuário escolha se deseja que indefinido seja o valor retornado.
+* Valores numéricos são expostos como números no objeto de configurações.
+* O valor condicional não é mais necessário para que possa se comportar da mesma maneira que o valor de fallback.
 
 ## 17 de setembro de 2021
 

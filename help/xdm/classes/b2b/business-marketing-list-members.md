@@ -1,10 +1,10 @@
 ---
 title: Classe de Membros da Lista de Marketing Corporativo XDM
 description: Este documento fornece uma visão geral da classe de membros da lista de negócios XDM no Experience Data Model (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 3%
+source-wordcount: '226'
+ht-degree: 2%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Essa classe só está disponível para organizações que têm acesso à edição B2B da Plataforma de dados do cliente em tempo real.
+>Essa classe só está disponível para organizações que têm acesso à Plataforma de dados do cliente em tempo real B2B Edition.
 
 [!UICONTROL A ] associação da lista de marketing comercial XDM é uma classe padrão do Experience Data Model (XDM) que descreve membros, pessoas ou contatos associados a uma lista de marketing.
 
@@ -28,3 +28,5 @@ ht-degree: 3%
 | `marketingListID` | String | Uma ID exclusiva para a lista de marketing. |
 | `marketingListMemberID` | String | Uma ID exclusiva para a entidade de associação da lista de marketing. |
 | `personId` | String | Uma ID exclusiva para a pessoa. |
+
+Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

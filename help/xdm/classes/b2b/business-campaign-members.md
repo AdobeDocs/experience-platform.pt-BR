@@ -1,10 +1,10 @@
 ---
 title: Classe de Membros da Campanha Comercial XDM
 description: Este documento fornece uma visão geral da classe de membros da campanha comercial XDM no Experience Data Model (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 3%
+source-wordcount: '220'
+ht-degree: 2%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Essa classe só está disponível para organizações que têm acesso à edição B2B da Plataforma de dados do cliente em tempo real.
+>Essa classe só está disponível para organizações que têm acesso à Plataforma de dados do cliente em tempo real B2B Edition.
 
 [!UICONTROL A ] associação de campanha comercial XDM é uma classe padrão do Experience Data Model (XDM) que descreve um contato ou um cliente potencial associado a uma campanha comercial.
 
@@ -28,3 +28,5 @@ ht-degree: 3%
 | `campaignID` | String | Uma ID exclusiva para a campanha associada. |
 | `campaignMemberID` | String | Uma ID exclusiva para a entidade de associação de campanha. |
 | `personId` | String | Uma ID exclusiva para a pessoa que é membro da campanha associada. |
+
+Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

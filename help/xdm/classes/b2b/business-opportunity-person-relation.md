@@ -1,18 +1,18 @@
 ---
 title: Classe de Relação de Pessoa da Oportunidade Comercial XDM
 description: Este documento fornece uma visão geral da classe de relação de pessoa da oportunidade de negócios XDM no Experience Data Model (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Classe de ] Relacionamento de Pessoa da Oportunidade de Negócios XDM
+# [!UICONTROL Classe de ] Relacionamento de Pessoa da Oportunidade Comercial XDM (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Essa classe só está disponível para organizações que têm acesso à Plataforma de dados do cliente em tempo real B2B Edition.
+>Essa classe está disponível como parte da Real-time Customer Data Platform B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 [!UICONTROL O XDM Business Oportunity Person ] Relationé uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma pessoa associada a uma oportunidade de negócios.
 

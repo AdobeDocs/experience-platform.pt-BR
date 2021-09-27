@@ -1,18 +1,18 @@
 ---
 title: Classe de Conta Comercial XDM
 description: Este documento fornece uma visão geral da classe de conta comercial XDM no Experience Data Model (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '172'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Classe de ] Conta Comercial XDM
+# [!UICONTROL Classe de ] Conta Comercial XDM (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Essa classe só está disponível para organizações que têm acesso à Plataforma de dados do cliente em tempo real B2B Edition.
+>Essa classe está disponível como parte da Real-time Customer Data Platform B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 [!UICONTROL A XDM Business ] Accountis é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas exigidas de uma conta comercial.
 

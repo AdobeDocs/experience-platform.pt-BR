@@ -1,7 +1,8 @@
 ---
 description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no seu destino. O Adobe fornece um modelo de metadados de público-alvo extensível, que pode ser configurado com base nas especificações da sua API de marketing. Após definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas da API para seu destino.
 title: Gerenciamento de metadados do público-alvo
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 1%
@@ -54,7 +55,7 @@ Você pode usar o modelo genérico para [criar um novo modelo de público-alvo](
 
 A equipe de engenharia do Adobe pode trabalhar com você para expandir o modelo genérico com campos personalizados, se seus casos de uso exigirem isso.
 
-## Exemplos de modelo {#template-examples}
+## Exemplos de configuração {#configuration-examples}
 
 Esta seção inclui três exemplos de configurações genéricas de metadados de público-alvo, para sua referência, juntamente com descrições das seções principais da configuração. Observe como o url, os cabeçalhos, a solicitação e o corpo da resposta diferem entre as três configurações de exemplo. Isso se deve às diferentes especificações da API de marketing das três plataformas de amostra.
 

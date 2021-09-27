@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a um servidor SFTP (Secure File Transfer Protocol) usando a API do Serviço de Fluxo.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 9ad09fba3119b631576f22574a2151c74f91e07b
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '809'
 ht-degree: 2%
 
 ---
@@ -39,6 +39,7 @@ Para que [!DNL Flow Service] se conecte a [!DNL SFTP], você deve fornecer valor
 | Credencial | Descrição |
 | ---------- | ----------- |
 | `host` | O nome ou endereço IP associado ao servidor [!DNL SFTP]. |
+| `port` | A porta do servidor SFTP à qual você está se conectando. Se não for fornecido, o valor assumirá `22` como padrão. |
 | `username` | O nome de usuário com acesso ao seu servidor [!DNL SFTP]. |
 | `password` | A senha do servidor [!DNL SFTP]. |
 | `privateKeyContent` | O conteúdo da chave privada SSH codificada em Base64. O tipo de chave OpenSSH deve ser classificado como RSA ou DSA. |
@@ -55,7 +56,7 @@ Uma conexão base retém informações entre a fonte e a Plataforma, incluindo a
 
 Para criar uma ID de conexão base, faça uma solicitação de POST ao endpoint `/connections`, fornecendo as credenciais de autenticação [!DNL SFTP] como parte dos parâmetros da solicitação.
 
-### Criar uma conexão [!DNL SFTP] usando autenticação básica
+### Criar uma conexão base [!DNL SFTP] usando autenticação básica
 
 Para criar uma conexão base [!DNL SFTP] usando a autenticação básica, faça uma solicitação POST para a API [!DNL Flow Service], fornecendo valores para as `host`, `userName` e `password` da sua conexão.
 
@@ -113,7 +114,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão r
 }
 ```
 
-### Criar uma conexão [!DNL SFTP] usando a autenticação de chave pública SSH
+### Criar uma conexão base [!DNL SFTP] usando a autenticação de chave pública SSH
 
 Para criar uma conexão base [!DNL SFTP] usando a autenticação de chave pública SSH, faça uma solicitação POST para a API [!DNL Flow Service], fornecendo valores para as `host`, `userName`, `privateKeyContent` e `passPhrase` da sua conexão.
 

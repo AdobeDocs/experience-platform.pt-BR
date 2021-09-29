@@ -4,9 +4,9 @@ title: Visão geral do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos relacionados à série de tempo. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,10 @@ Para direcionar experiências coordenadas, consistentes e personalizadas para se
 ### Métricas de assimilação de perfil
 
 O Observability Insights permite expor as métricas principais no Adobe Experience Platform. Além das [!DNL Experience Platform] estatísticas de uso e indicadores de desempenho para várias [!DNL Platform] funcionalidades, há métricas específicas relacionadas a perfis que permitem obter informações sobre as taxas de solicitação recebidas, taxas de ingestão bem-sucedidas, tamanhos de registro assimilados e muito mais. Para saber mais, comece lendo a [Visão geral da API do Observability Insights](../observability/api/overview.md) e para obter uma lista completa das métricas do Perfil do cliente em tempo real, consulte a documentação sobre [métricas disponíveis](../observability/api/metrics.md#available-metrics).
+
+## Atualizar dados do armazenamento de perfis
+
+Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio de assimilação em lote ou streaming e requer um conjunto de dados habilitado para perfil configurado com uma tag de atualização. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributos, consulte o tutorial para [ativar um conjunto de dados para Perfil e sert](../catalog/datasets/enable-upsert.md).
 
 ## [!DNL Data governance] e [!DNL Privacy]
 

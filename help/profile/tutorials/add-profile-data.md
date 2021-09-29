@@ -5,13 +5,13 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial descreve as etapas necessárias para adicionar dados ao Perfil do cliente em tempo real.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
+
 
 # Adicionar dados a [!DNL Real-time Customer Profile]
 
@@ -40,3 +40,7 @@ Ao fazer upload de dados para um novo conjunto de dados pela primeira vez ou com
 Usando a API de acesso [!DNL Real-time Customer Profile], é possível recuperar dados em lote à medida que eles são carregados em um conjunto de dados. Se não conseguir recuperar nenhuma das entidades esperadas, o conjunto de dados pode não estar habilitado para [!DNL Profile]. Depois de confirmar que seu conjunto de dados foi ativado, verifique se o formato e os identificadores de dados de origem são compatíveis com suas expectativas.
 
 Para obter instruções detalhadas sobre como acessar entidades usando a API [!DNL Real-time Customer Profile], consulte o [guia do ponto de extremidade de entidades](../api/entities.md), também conhecido como &quot;[!DNL Profile Access] API&quot;.
+
+## Atualizar dados do armazenamento de perfis
+
+Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio de assimilação em lote ou streaming e requer um conjunto de dados habilitado para perfil configurado com uma tag de atualização. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributos, consulte o tutorial para [ativar um conjunto de dados para Perfil e sert](../../catalog/datasets/enable-upsert.md).

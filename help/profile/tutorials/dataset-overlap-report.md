@@ -3,13 +3,13 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Gerar o relatório de sobreposição de conjunto de dados
 type: Tutorial
 description: Este tutorial descreve as etapas necessárias para gerar o relatório de sobreposição de conjunto de dados usando a API do perfil do cliente em tempo real.
-source-git-commit: f30f87527f5e903c851a140e7cbaad1964a48803
+exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
 
 ---
-
 
 # Gerar o relatório de sobreposição de conjunto de dados
 
@@ -99,7 +99,7 @@ Uma solicitação bem-sucedida retorna o status HTTP 200 (OK) e o relatório de 
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
-## Interpretar os dados do relatório de sobreposição de conjunto de dados {#interpret-the-report}
+## Interpretar os dados do relatório de sobreposição do conjunto de dados {#interpret-the-report}
 
 O relatório de sobreposição de conjunto de dados gerado fornece um carimbo de data e hora que mostra a data e a hora do relatório e um objeto de dados que inclui combinações exclusivas de IDs de conjunto de dados como listas separadas por vírgulas. As seções a seguir fornecem informações adicionais sobre os componentes do relatório.
 
@@ -124,6 +124,7 @@ Para interpretar os resultados do relatório, considere o seguinte exemplo:
 ```
 
 Este relatório fornece as seguintes informações:
+
 * Há 123 perfis compostos de dados provenientes dos seguintes conjuntos de dados: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Há 454.412 perfis compostos de dados provenientes desses dois conjuntos de dados: `5d92921872831c163452edc8` e `5eb2cdc6fa3f9a18a7592a98`.
 * Há 107 perfis que são compostos apenas de dados do conjunto de dados `5eeda0032af7bb19162172a7`.

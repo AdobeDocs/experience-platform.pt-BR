@@ -4,10 +4,10 @@ user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
 breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para o Platform por meio de uma assimilação em lote ou streaming.
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 26%
+source-wordcount: '124'
+ht-degree: 25%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 26%
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Solução de problemas](streaming-ingestion/troubleshooting.md)
 - Assimilação em lote{#batch}
-   - [Visão geral](batch-ingestion/overview.md)
-   - [API de assimilação em lote](batch-ingestion/api-overview.md)
+   - [Introdução às APIs de assimilação em lote](batch-ingestion/getting-started.md)
+   - [Visão geral da API](batch-ingestion/overview.md)
+   - [Guia do desenvolvedor da API](batch-ingestion/api-overview.md)
    - [Ingestão parcial por lote](batch-ingestion/partial.md)
    - [Solução de problemas](batch-ingestion/troubleshooting.md)
 - Tutoriais {#tutorials}

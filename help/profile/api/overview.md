@@ -3,9 +3,9 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Guia da API do perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo perfis de exibição, criem e atualizem políticas de mesclagem, exportem ou exemplificem dados de perfil, e excluam dados de perfil que não são mais necessários ou foram adicionados com erro. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '963'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ Para saber mais sobre as políticas de mesclagem e sua função na Plataforma, c
 ## Tarefas do sistema de perfil {#profile-system-jobs}
 
 Os dados habilitados para perfil assimilados em [!DNL Platform] são armazenados no [!DNL Data Lake], bem como no armazenamento de dados [!DNL Real-time Customer Profile]. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do armazenamento [!DNL Profile] para remover dados que você não precisa mais ou que foram adicionados com erro. Isso requer o uso da API para criar um [!DNL Profile System Job], também conhecido como &quot;[!DNL delete request]&quot;, que pode ser modificado, monitorado ou excluído, se necessário. Para saber como trabalhar com solicitações de exclusão usando o endpoint `/system/jobs` na API [!DNL Real-time Customer Profile], siga as etapas descritas no [guia do endpoint de tarefas do sistema de perfil](profile-system-jobs.md).
+
+## Atualizar atributos de perfis {#update-profile}
+
+Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio de assimilação em lote ou streaming e requer um conjunto de dados habilitado para perfil configurado com uma tag de atualização. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributos, consulte o tutorial para [ativar um conjunto de dados para Perfil e sert](../../catalog/datasets/enable-upsert.md).
 
 ## Próximas etapas {#next-steps}
 

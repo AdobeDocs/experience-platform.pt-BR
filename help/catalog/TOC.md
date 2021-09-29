@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guia de catálogo e conjuntos de dados
 user-guide-description: Explore a linhagem de dados, os metadados, as descrições dos arquivos, os diretórios e os conjuntos de dados no Data Lake.
 feature: Data Management
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 22%
+source-wordcount: '116'
+ht-degree: 19%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 22%
    * [Visão geral dos conjuntos de dados](datasets/overview.md)
    * [Guia do usuário de conjuntos de dados](datasets/user-guide.md)
    * [Criar e preencher um conjunto de dados usando APIs](datasets/create.md)
+   * [Ativar um conjunto de dados para Perfil e identidade](datasets/enable-for-profile.md)
+   * [Ativar um conjunto de dados para atualizações de Perfil (atualização)](datasets/enable-upsert.md)
 * [Processamento de solicitação de privacidade no Data Lake](privacy.md)
 * [Proteção de dados no Experience Platform](data-protection.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/)

@@ -2,90 +2,26 @@
 keywords: Experience Platform, home, tópicos populares, ingestão em lote, ingestão em lote, ingestão, guia do desenvolvedor, guia da api, carregar, assimilar parquet, assimilar json;
 solution: Experience Platform
 title: Guia da API de assimilação em lote
-topic-legacy: developer guide
-description: Este documento fornece uma visão geral abrangente do uso de APIs de ingestão em lote.
+description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 7%
+source-wordcount: '2373'
+ht-degree: 5%
 
 ---
 
-# Guia da API de assimilação em lote
+# Guia do desenvolvedor de assimilação em lote
 
-Este documento fornece uma visão geral abrangente do uso de [APIs de assimilação em lote](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Este documento fornece um guia abrangente para usar [pontos de extremidade da API de assimilação em lote](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) no Adobe Experience Platform. Para obter uma visão geral das APIs de ingestão em lote, incluindo pré-requisitos e práticas recomendadas, comece lendo a [visão geral da API de ingestão em lote](overview.md).
 
 O apêndice a este documento fornece informações para [formatação de dados a serem usados para assimilação](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
 
 ## Introdução
 
-A assimilação de dados fornece uma RESTful API através da qual você pode executar operações básicas de CRUD em relação aos tipos de objetos suportados.
+Os endpoints de API usados neste guia fazem parte da [API de assimilação de dados](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). A assimilação de dados fornece uma RESTful API através da qual você pode executar operações básicas de CRUD em relação aos tipos de objetos suportados.
 
-As seções a seguir fornecem informações adicionais que você precisará saber ou ter em mãos para fazer chamadas com êxito para a API de assimilação de lote.
-
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
-
-- [Ingestão](./overview.md) em lote: Permite assimilar dados no Adobe Experience Platform como arquivos em lote.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
-
-### Lendo exemplos de chamadas de API
-
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
-
-### Coletar valores para cabeçalhos necessários
-
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
-
-As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um cabeçalho `Content-Type` adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros de chamada .
-
-## Tipos
-
-Ao assimilar dados, é importante entender como os esquemas [!DNL Experience Data Model] (XDM) funcionam. Para obter mais informações sobre como os tipos de campos XDM mapeiam para diferentes formatos, leia o [Guia do desenvolvedor do Registro de Schema](../../xdm/api/getting-started.md).
-
-Há alguma flexibilidade na assimilação de dados - se um tipo não corresponder ao que está no schema de target, os dados serão convertidos para o tipo de target expresso. Se não for possível, ocorrerá falha no lote com um `TypeCompatibilityException`.
-
-Por exemplo, nem JSON nem CSV têm um tipo de data ou hora. Como resultado, esses valores são expressos usando [ISO 8061 strings formatadas](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Unix Time formatado em milissegundos (153126 (3959000) e são convertidos no momento da assimilação para o tipo XDM de destino.
-
-A tabela abaixo mostra as conversões suportadas ao assimilar dados.
-
-| Entrada (linha) vs Destino (col) | String | Byte | Curto | Número inteiro | Longo | Duplo | Data  | Data e hora | Objeto | Mapa |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Curto | X | X | X | X | X | X |  |  |  |  |
-| Número inteiro | X | X | X | X | X | X |  |  |  |  |
-| Longo | X | X | X | X | X | X | X | X |  |  |
-| Duplo | X | X | X | X | X | X |  |  |  |  |
-| Data  |  |  |  |  |  |  | X |  |  |  |
-| Data e hora |  |  |  |  |  |  |  | X |  |  |
-| Objeto |  |  |  |  |  |  |  |  | X | X |
-| Mapa |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
->Booleanos e matrizes não podem ser convertidos em outros tipos.
-
-## Restrições de assimilação
-
-A assimilação de dados em lote tem algumas restrições:
-- Número máximo de arquivos por lote: 1500
-- Tamanho máximo do lote: 100 GB
-- Número máximo de propriedades ou campos por linha: 10000
-- Número máximo de lotes por minuto, por usuário: 138
+Antes de continuar, reveja a [visão geral da API de assimilação em lote](overview.md) e o [guia de introdução](getting-started.md).
 
 ## Assimilar arquivos JSON
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Upload de arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, é possível usar a ID do lote da resposta de criação do lote para fazer upload de arquivos para o lote. Você pode fazer upload de vários arquivos para o lote.
 
 >[!NOTE]
 >
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Assimilar arquivos do Parquet
+## Assimilar arquivos do Parquet {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -812,6 +748,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
+## Patch um lote
+
+Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. O Adobe Experience Platform oferece suporte à atualização ou ao patch dos dados da Loja de perfil por meio de uma ação de atualização ou &quot;correção de um lote&quot;.
+
+>[!NOTE]
+>
+>Essas atualizações são permitidas somente em registros de perfil, não em eventos de experiência.
+
+Para aplicar um sistema transdérmico num lote é necessário o seguinte:
+
+- **Um conjunto de dados habilitado para atualizações de perfil e atributo.** Isso é feito por meio de tags de conjunto de dados e requer que uma  `isUpsert:true` tag específica seja adicionada à  `unifiedProfile` matriz. Para obter detalhes sobre as etapas que mostram como criar um conjunto de dados ou configurar um conjunto de dados existente para atualização, siga o tutorial para [ativar um conjunto de dados para atualizações de perfil](../../catalog/datasets/enable-upsert.md).
+- **Um arquivo Parquet contendo os campos a serem corrigidos e os campos de identidade do Perfil.** O formato de dados para aplicar patches a um lote é semelhante ao processo normal de ingestão em lote. A entrada necessária é um arquivo Parquet e, além dos campos a serem atualizados, os dados carregados devem conter os campos de identidade para corresponderem aos dados na Loja de perfis.
+
+Depois que você tiver um conjunto de dados ativado para Perfil e Upsert e um arquivo Parquet contendo os campos que deseja corrigir, bem como os campos de identidade necessários, você poderá seguir as etapas para [assimilação de arquivos Parquet](#ingest-parquet-files) para concluir o patch por meio da ingestão em lote.
+
 ## Reproduzir um lote
 
 Se quiser substituir um lote já assimilado, faça isso com &quot;repetição em lote&quot; - essa ação é equivalente a excluir o lote antigo e assimilar um novo.
@@ -963,6 +914,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## Apêndice
+
+A seção a seguir contém informações adicionais para assimilação de dados no Experience Platform usando a ingestão em lote.
 
 ### Transformação de dados para ingestão em lote
 

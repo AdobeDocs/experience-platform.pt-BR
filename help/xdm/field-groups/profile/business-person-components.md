@@ -1,19 +1,19 @@
 ---
 title: Grupo de Campos de Esquema Componentes da Pessoa Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Componentes de pessoa comercial do XDM.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Grupo de campos Componentes ] da Pessoa Comercial XDM (Beta)
 
-# [!UICONTROL Grupo de campos ] Componentes da Pessoa Comercial XDM
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Esse grupo de campos só está disponível para organizações que têm acesso à edição B2B da Plataforma de dados do cliente em tempo real (CDP em tempo real).
+>Esse grupo de campos está disponível como parte da Plataforma de dados do cliente em tempo real B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 [!UICONTROL O Componente de pessoa comercial do XDM ] é um grupo de campo de esquema padrão para a  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe que captura vários registros de origem de uma pessoa e outros atributos necessários para a segmentação da pessoa.
 

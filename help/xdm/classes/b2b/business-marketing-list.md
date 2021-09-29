@@ -1,10 +1,11 @@
 ---
 title: Classe da Lista de Marketing Comercial XDM
 description: Este documento fornece uma visão geral da classe de Lista de Marketing de Negócios XDM no Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 2%
+source-wordcount: '213'
+ht-degree: 4%
 
 ---
 
@@ -26,5 +27,7 @@ ht-degree: 2%
 | `marketingListDescription` | String | Uma descrição para a lista de marketing. |
 | `marketingListID` | String | Uma ID exclusiva para a entidade da lista de marketing. |
 | `marketingListName` | String | O nome da lista de marketing. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

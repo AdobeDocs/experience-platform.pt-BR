@@ -1,10 +1,11 @@
 ---
 title: Classe de Oportunidade de Negócios XDM
 description: Este documento fornece uma visão geral da classe de Oportunidade de Negócios XDM no Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 4%
+source-wordcount: '225'
+ht-degree: 5%
 
 ---
 
@@ -30,5 +31,7 @@ ht-degree: 4%
 | `opportunityName` | String | O nome da oportunidade. |
 | `opportunityStage` | String | O estágio de vendas da oportunidade. |
 | `opportunityType` | String | O tipo de oportunidade. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

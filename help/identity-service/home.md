@@ -5,9 +5,9 @@ title: Visão geral do serviço de identidade
 topic-legacy: overview
 description: O serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visão de seu cliente e de seu comportamento ao unir identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Antes de entrar nos detalhes de [!DNL Identity Service], veja um breve resumo do
 | Namespace de identidade | Um namespace de identidade serve para distinguir o contexto ou o tipo de uma identidade. Por exemplo, uma identidade distingue &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica. Os namespaces de identidade são usados para buscar identidades individuais e fornecer o contexto para valores de identidade. Isso permite determinar se dois fragmentos [!DNL Profile] que contêm IDs primárias diferentes, mas compartilham o mesmo valor para o namespace de identidade `email`, são, de fato, o mesmo indivíduo. Consulte a [visão geral do namespace de identidade](./namespaces.md) para obter mais informações. |
 | Gráfico de identidade | Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades, permitindo visualizar e entender melhor quais identidades de cliente são unidas e como. Consulte o tutorial em [usando o visualizador de gráfico de identidade](./ui/identity-graph-viewer.md) para obter mais informações. |
 | Informações pessoais identificáveis (PII) | PII são informações que podem identificar diretamente um cliente, como um endereço de email ou um número de telefone. Os valores de PII geralmente são usados para corresponder. várias identidades de um cliente em diferentes sistemas. |
-| Identidade única | Uma identidade exclusiva é uma identidade que existe somente em uma sandbox específica. |
 | Identidades desconhecidas ou anônimas | Identidades desconhecidas ou anônimas são indicadores que isolam dispositivos sem identificar a pessoa real que usa o dispositivo. Identidades desconhecidas e anônimas incluem informações como o endereço IP de um visitante e a ID do cookie. Embora identidades desconhecidas e anônimas possam fornecer dados comportamentais, elas são limitadas até que um cliente forneça suas PII. |
 
 ## O que é o [!DNL Identity Service]?

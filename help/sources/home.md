@@ -5,7 +5,7 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -38,7 +38,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 - [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
 - [Criar uma conexão de origem  [!DNL Marketo Engage] na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Publicidade
+### Advertising
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
@@ -55,6 +55,7 @@ As fontes de armazenamento em nuvem podem trazer seus próprios dados para a pla
 - [[!DNL Apache HDFS] conector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] conector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] conector](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
 - [[!DNL FTP] conector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] conector](connectors/cloud-storage/google-cloud-storage.md)
 - [[!DNL Google PubSub] conector](connectors/cloud-storage/google-pubsub.md)

@@ -5,9 +5,9 @@ title: 'Segmentação de borda usando a API '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Este guia do desenvolvedor requer uma compreensão funcional dos vários serviç
 - [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de seus  [!DNL Real-time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Platform] organiza os dados de experiência do cliente.
 
-Para fazer chamadas com êxito para endpoints da API [!DNL Data Prep], leia o guia sobre a [introdução às APIs da plataforma](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
+Para fazer chamadas com êxito para qualquer endpoint da API do Experience Platform, leia o guia sobre a [introdução às APIs da plataforma](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
 
 ## Tipos de query de segmentação de borda {#query-types}
 

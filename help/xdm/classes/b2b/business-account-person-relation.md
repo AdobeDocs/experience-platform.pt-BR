@@ -1,10 +1,11 @@
 ---
 title: Classe de Relação de Pessoa da Conta Funcional XDM
 description: Este documento fornece uma visão geral da classe de relação de pessoa da conta comercial XDM no Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 3%
+source-wordcount: '337'
+ht-degree: 4%
 
 ---
 
@@ -35,5 +36,7 @@ ht-degree: 3%
 | `personRole` | String | A função da pessoa no relacionamento conta-pessoa. |
 | `relationEndDate` | DateTime | A data em que o relacionamento entre a conta e a pessoa terminou. |
 | `relationStartDate` | DateTime | A data em que a relação entre a conta e a pessoa começou. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

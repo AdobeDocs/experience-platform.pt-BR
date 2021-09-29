@@ -1,18 +1,19 @@
 ---
 title: Tipo de Dados de Origem B2B
 description: Este documento fornece uma visão geral do tipo de dados do Modelo de Dados de Experiência de Origem B2B (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 3%
+source-wordcount: '302'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Tipo de ] fonte B2B
+# [!UICONTROL Tipo de ] fonte B2B (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Esse tipo de dados só está disponível para organizações que têm acesso à edição B2B da Plataforma de dados do cliente em tempo real.
+>Esse tipo de dados está disponível como parte da Real-time Customer Data Platform B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 [!UICONTROL Fontes B2B ] é um tipo de dados padrão do Experience Data Model (XDM) que representa um identificador composto para uma entidade B2B (como uma  [conta](../classes/b2b/business-account.md), uma  [oportunidade](../classes/b2b/business-opportunity.md) ou uma  [campanha](../classes/b2b/business-campaign.md)).
 

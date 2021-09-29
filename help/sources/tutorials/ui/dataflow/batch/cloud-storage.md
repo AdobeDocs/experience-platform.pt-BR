@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
+source-git-commit: e980ca69517d6e51ce00f102492829aabaa52976
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Observe que não é possível mapear em tipos diferentes. Por exemplo, não é p
 
 >[!TIP]
 >
->[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. Você pode ajustar manualmente as regras de mapeamento de acordo com seus casos de uso.
+>A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. Você pode ajustar manualmente as regras de mapeamento de acordo com seus casos de uso.
 
 Selecione **[!UICONTROL Preview data]** para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
 

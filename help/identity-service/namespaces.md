@@ -5,9 +5,9 @@ title: Visão geral do Namespace de identidade
 topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1598'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ Para exibir namespaces de identidade na interface do usuário, selecione **[!UIC
 
 ![navegar](./images/browse.png)
 
-Uma lista de namespaces de identidade aparece na interface principal da página, exibindo informações sobre seus nomes, símbolos de identidade, data da última atualização e se eles são um namespace padrão ou personalizado. O painel direito contém informações sobre [!UICONTROL Identidades exclusivas] e [!UICONTROL Intensidade do gráfico de identidade].  Identidades exclusivas referem-se ao número de identidades que existem na sandbox específica que você está usando, enquanto o gráfico de  [!UICONTROL identidade ] fortalece a exibição de informações sobre o número de IDs de cookie e não cookie na sandbox.
+Uma lista de namespaces de identidade aparece na interface principal da página, exibindo informações sobre seus nomes, símbolos de identidade, data da última atualização e se eles são um namespace padrão ou personalizado. O painel direito contém informações sobre [!UICONTROL Intensidade do gráfico de identidade].
 
 ![identidades](./images/identities.png)
 

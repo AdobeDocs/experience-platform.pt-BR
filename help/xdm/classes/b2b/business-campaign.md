@@ -1,10 +1,11 @@
 ---
 title: Classe de Campanha Comercial XDM
 description: Este documento fornece uma visão geral da classe de Campanha comercial XDM no Experience Data Model (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 3%
+source-wordcount: '194'
+ht-degree: 5%
 
 ---
 
@@ -27,5 +28,7 @@ ht-degree: 3%
 | `campaignID` | String | Um identificador exclusivo para a entidade de campanha. |
 | `campaignName` | String | O nome da campanha. |
 | `campaignType` | String | O tipo de campanha ou público-alvo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

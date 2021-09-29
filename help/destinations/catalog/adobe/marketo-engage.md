@@ -2,9 +2,9 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
+source-git-commit: 6ea82e0589843f15b1486e1242aa68ef8e2fe9d3
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->O Destino do Marketo Engage no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>O destino do Marketo Engage no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 
 O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 
-O conector de segmento permite que os profissionais de marketing enviem segmentos criados no Adobe Experience Platform para o Marketo, onde serão exibidos como listas estáticas.
+O destino permite que os profissionais de marketing enviem segmentos criados no Adobe Experience Platform para o Marketo, onde serão exibidos como listas estáticas.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -30,7 +30,7 @@ O conector de segmento permite que os profissionais de marketing enviem segmento
 
 ## Tipo de exportação {#export-type}
 
-Exportar segmento - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino do Marketo Engage.
+Exportar segmento - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (email, ECID) usados no destino do Marketo Engage.
 
 ## Configurar destinos e ativar segmentos {#set-up}
 

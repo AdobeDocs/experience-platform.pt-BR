@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 12%
+source-wordcount: '381'
+ht-degree: 11%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 12%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Assimilação de dados](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Fontes](#sources)
+
+## Assimilação de dados {#ingestion}
+
+A Assimilação de dados da Adobe Experience Platform representa os vários métodos pelos quais a Platform assimila dados de várias fontes, bem como como esses dados são mantidos no Data Lake para uso pelos serviços downstream da plataforma.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+|------- | -----------|
+| Atualizar ou corrigir registros de Perfil usando a assimilação em lote | O Perfil do cliente em tempo real agora permite atualizações para atributos de perfil em dados de registro de perfil individuais por meio da assimilação em lote. Para saber mais, consulte o [guia do desenvolvedor de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md). |
+
+Para saber mais sobre como assimilar dados na Platform, visite a [Documentação de assimilação de dados](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 

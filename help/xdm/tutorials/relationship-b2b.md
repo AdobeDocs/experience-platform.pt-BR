@@ -1,14 +1,15 @@
 ---
 title: Definir um relacionamento entre dois esquemas na Plataforma de dados do cliente em tempo real B2B Edition
 description: Saiba como definir uma relação muitos para um entre dois esquemas na Plataforma de dados do cliente em tempo real B2B Edition.
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
+source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
 
-# Definir uma relação entre dois esquemas na Real-time Customer Data Platform B2B Edition
+# Definir uma relação entre dois esquemas na Plataforma de dados do cliente em tempo real B2B Edition (Beta)
 
 >[!IMPORTANT]
 >

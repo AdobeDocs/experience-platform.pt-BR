@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,9 @@ O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mes
 
 >[!NOTE]
 >
->O widget [!UICONTROL Perfis adicionados] reflete o número de perfis adicionados ao sistema após a configuração inicial da organização. Por exemplo, se quatro milhões de perfis foram adicionados durante a configuração e você adicionou um milhão de perfis adicionais nos últimos 30 dias, o widget [!UICONTROL Perfis adicionados] exibiria &quot;1.000.000&quot;, enquanto o widget [!UICONTROL Contagem de perfis] exibiria &quot;5.000.00&quot;.
+>O widget [!UICONTROL Perfis adicionados] reflete o número de perfis adicionados ao sistema após a configuração inicial da organização. Para saber mais sobre como adicionar perfis à Loja de perfis, consulte a [documentação do Perfil do cliente em tempo real](../../profile/home.md).
+>
+>Por exemplo, se quatro milhões de perfis foram adicionados durante a configuração e você adicionou um milhão de perfis adicionais nos últimos 30 dias, o widget [!UICONTROL Perfis adicionados] exibiria &quot;1.000.000&quot;, enquanto o widget [!UICONTROL Contagem de perfis] exibiria &quot;5.000.00&quot;.
 
 ![](../images/profiles/profiles-added.png)
 

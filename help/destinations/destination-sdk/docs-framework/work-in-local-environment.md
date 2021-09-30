@@ -2,9 +2,9 @@
 title: Usar um editor de texto no ambiente local para criar uma página de documentação de destino
 description: As instruções desta página mostram como usar um editor de texto para trabalhar no ambiente local para criar uma página de documentação para o destino do Experience Platform e enviá-la para revisão.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ As instruções desta página mostram como usar um editor de texto para trabalha
 ## Conecte-se ao GitHub e configure seu ambiente de criação local {#set-up-environment}
 
 1. No navegador, navegue até `https://github.com/AdobeDocs/experience-platform.en`
-2. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) o repositório, clique em **Bifurcar** como mostrado na captura de tela.
+2. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) o repositório, clique em **Bifurcar** conforme mostrado abaixo. Isso cria uma cópia do repositório do Experience Platform em sua própria conta GitHub.
 
    ![Repositório de documentação do Fork Adobe](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ As instruções desta página mostram como usar um editor de texto para trabalha
 
    ![Empurrar sua confirmação](./assets/push-local-to-remote.png)
 
-1. Na interface da Web do GitHub, abra uma solicitação de pull (PR) para mesclar sua ramificação de trabalho na ramificação principal do repositório da documentação do Adobe. Verifique se a ramificação em que você trabalhou está selecionada e selecione **Solicitação de pull**.
+1. Na interface da Web do GitHub, abra uma solicitação de pull (PR) para mesclar sua ramificação de trabalho na ramificação principal do repositório da documentação do Adobe. Verifique se a ramificação em que você trabalhou está selecionada e selecione **Contribute > Abrir solicitação de pull**.
 
    ![Criar solicitação de pull](./assets/ssd-create-pull-request-1.gif)
 

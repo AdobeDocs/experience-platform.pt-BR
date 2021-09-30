@@ -1,13 +1,13 @@
 ---
 keywords: ativar destinos de solicitação de perfil; ativar dados; destinos de solicitação de perfil
-title: Ativar dados do público-alvo para destinos de solicitação de perfil
+title: Ativar dados do público-alvo para destinos de solicitação de perfil (Beta)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, mapeando segmentos para destinos de solicitação de perfil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Para ativar dados em destinos, você deve ter [conectado com êxito a um destino
 
 ### Política de mesclagem de segmentos {#merge-policy}
 
-Os destinos de solicitação de perfil suportam atualmente apenas a ativação de segmentos que usam a política de mesclagem padrão. Tentar ativar segmentos com uma política de mesclagem diferente resulta em um erro na página [[!UICONTROL Revisar]](#review).
+Atualmente, os destinos de solicitação de perfil oferecem suporte apenas à ativação de segmentos que usam a [política de mesclagem padrão](../../segmentation/ui/segment-builder.md#merge-policies).
 
 ## Selecione o destino {#select-destination}
 

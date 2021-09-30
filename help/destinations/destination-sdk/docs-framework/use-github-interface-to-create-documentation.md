@@ -1,13 +1,11 @@
 ---
 title: 'Usar a interface da Web do GitHub para criar uma página de documentação de destino '
-seo-title: Use the GitHub web interface to create a destination documentation page
-description: As instruções desta página mostram como usar a interface da Web do GitHub para criar documentação e enviar uma solicitação de pull.
-seo-description: The instructions on this page show you how to use the GitHub web interface to author documentation and submit a pull request.
+description: As instruções desta página mostram como usar a interface da Web do GitHub para criar uma página de documentação para o destino do Experience Platform e enviá-la para revisão.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 2%
+source-wordcount: '768'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +26,7 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 1. No navegador, navegue até `https://github.com/AdobeDocs/experience-platform.en`.
 2. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) o repositório, clique em **Bifurcar** conforme mostrado na imagem abaixo.
 
-   ![Repositório de documentação do Fork Adobe](./assets/ssd-fork-repo.png)
+   ![Repositório de documentação do Fork Adobe](./assets/ssd-fork-repository.gif)
 
 3. Na bifurcação do repositório, crie uma nova ramificação para o projeto, conforme mostrado abaixo. Use esta nova ramificação para o seu trabalho.
 
@@ -44,6 +42,10 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 
 1. Você criará o conteúdo da página de destino com base no [modelo de autoatendimento de documentação](./self-service-template.md). **[](assets/yourdestination-template.zip)** Baixe o template e descompacte-o para extrair o template  `.md` de arquivo.
 2. Cole e edite o conteúdo do modelo com informações relevantes para seu destino em um editor de marcação online, como [dillinger.io](https://dillinger.io/). Siga as instruções no modelo para obter detalhes sobre o que você deve preencher e quais parágrafos podem ser removidos.
+
+   >[!TIP]
+   >
+   >Você pode fechar a janela do navegador a qualquer momento e reabrir mais tarde. Seu trabalho é salvo automaticamente e estará aguardando você ao reabrir o navegador.
 3. Copie o conteúdo do editor de marcação para o novo arquivo no GitHub.
 4. Para capturas de tela ou imagens que você planeja usar, use a interface do GitHub para fazer upload dos arquivos para `experience-platform.en/help/destinations/assets/catalog/[...]`, onde `[...]` é a categoria desejada para seu destino. Por exemplo, se estiver adicionando um destino de personalização ao Experience Platform, selecione a categoria `personalization`. Você precisa vincular às imagens da página que está criando. Consulte [instruções sobre como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
 
@@ -55,9 +57,13 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 
 ## Envie sua documentação para revisão {#submit-review}
 
-1. Depois de salvar o arquivo e fazer upload das imagens desejadas, você pode abrir uma solicitação de pull (PR) para mesclar sua ramificação de trabalho na ramificação principal do repositório da documentação do Adobe. Verifique se a ramificação em que você trabalhou está selecionada e selecione **Solicitação de pull**.
+>[!TIP]
+>
+>Observe que não há nada que você possa quebrar aqui. Ao seguir as instruções desta seção, você está apenas sugerindo uma atualização de documentação. Sua atualização sugerida será aprovada ou editada pela equipe de documentação da Adobe Experience Platform.
 
-![Criar solicitação de pull](./assets/ssd-create-pull-request-1.png)
+1. Depois de salvar o arquivo e fazer upload das imagens desejadas, você pode abrir uma solicitação de pull (PR) para mesclar sua ramificação de trabalho na ramificação principal do repositório da documentação do Adobe. Certifique-se de que a ramificação em que você trabalhou esteja selecionada e selecione **Contribute > Solicitar pull**.
+
+![Criar solicitação de pull](./assets/ssd-create-pull-request-1.gif)
 
 1. Certifique-se de que as ramificações base e comparativas estejam corretas. Adicione uma nota ao PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho da bifurcação na ramificação principal do repositório do Adobe.
 

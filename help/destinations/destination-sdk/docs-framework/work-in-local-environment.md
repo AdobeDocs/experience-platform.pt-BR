@@ -1,13 +1,11 @@
 ---
 title: Usar um editor de texto no ambiente local para criar uma página de documentação de destino
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: As instruções desta página mostram como usar um editor de texto para trabalhar no ambiente local para criar documentação e enviar uma solicitação de pull.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: As instruções desta página mostram como usar um editor de texto para trabalhar no ambiente local para criar uma página de documentação para o destino do Experience Platform e enviá-la para revisão.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 3%
+source-wordcount: '871'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +26,7 @@ As instruções desta página mostram como usar um editor de texto para trabalha
 1. No navegador, navegue até `https://github.com/AdobeDocs/experience-platform.en`
 2. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) o repositório, clique em **Bifurcar** como mostrado na captura de tela.
 
-   ![Repositório de documentação do Fork Adobe](./assets/ssd-fork-repo.png)
+   ![Repositório de documentação do Fork Adobe](./assets/ssd-fork-repository.gif)
 
 3. Clone o repositório no computador local. Selecione **Code > HTTPS > Open with GitHub Desktop**, conforme mostrado abaixo. Verifique se o [GitHub Desktop](https://desktop.github.com/) está instalado. Para obter mais referência, leia [Create a local clone of the repository](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) no guia do colaborador do Adobe.
 
@@ -47,6 +45,10 @@ As instruções desta página mostram como usar um editor de texto para trabalha
 
 ## Envie sua documentação para revisão {#submit-review}
 
+>[!TIP]
+>
+>Observe que não há nada que você possa quebrar aqui. Ao seguir as instruções desta seção, você está apenas sugerindo uma atualização de documentação. Sua atualização sugerida será aprovada ou editada pela equipe de documentação da Adobe Experience Platform.
+
 1. No GitHub Desktop, crie uma ramificação de trabalho para suas atualizações e selecione **Publicar ramificação** para publicar a ramificação no GitHub.
 
 ![Nova ramificação local](./assets/new-branch-local.gif)
@@ -61,7 +63,7 @@ As instruções desta página mostram como usar um editor de texto para trabalha
 
 1. Na interface da Web do GitHub, abra uma solicitação de pull (PR) para mesclar sua ramificação de trabalho na ramificação principal do repositório da documentação do Adobe. Verifique se a ramificação em que você trabalhou está selecionada e selecione **Solicitação de pull**.
 
-   ![Criar solicitação de pull](./assets/ssd-create-pull-request-1.png)
+   ![Criar solicitação de pull](./assets/ssd-create-pull-request-1.gif)
 
 1. Certifique-se de que as ramificações base e comparativas estejam corretas. Adicione uma nota ao PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho da bifurcação na ramificação principal do repositório do Adobe.
    >[!TIP]

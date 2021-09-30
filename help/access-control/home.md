@@ -5,7 +5,7 @@ topic-legacy: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 3%
@@ -72,7 +72,7 @@ A permissão &quot;Gerenciamento de sandbox&quot; permite que os usuários geren
 
 A guia de permissões em um perfil de produto exibe as sandboxes e as permissões ativas para esse perfil:
 
-![permissões-visão geral](./images/permissions-overview.png)
+![permissões-visão geral](./images/permissions.png)
 
 As permissões concedidas por meio do [!DNL Admin Console] são classificadas por categoria, com algumas permissões concedendo acesso a várias funcionalidades de baixo nível.
 

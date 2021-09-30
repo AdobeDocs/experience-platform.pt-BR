@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '644'
 ht-degree: 10%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 10%
       * [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](./ui/activate-segment-streaming-destinations.md)
       * [Ativar dados do público-alvo para destinos de exportação de perfil de fluxo](./ui/activate-streaming-profile-destinations.md)
       * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](./ui/activate-batch-profile-destinations.md)
+      * [Ativar dados do público-alvo para destinos de solicitação de perfil (Beta)](./ui/activate-profile-request-destinations.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Atualizar contas de destino](./ui/update-accounts.md)
    * [Editar fluxos de ativação](./ui/edit-activation.md)
@@ -114,9 +115,11 @@ ht-degree: 10%
       * [Ligação de brasa](./catalog/mobile-engagement/braze.md)
    * Destinos de personalização {#personalization}
       * [Visão geral dos destinos de personalização](./catalog/personalization/overview.md)
+      * [Conexão Adobe Target (Beta)](./catalog/personalization/adobe-target-connection.md)
       * [Extensão do Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extensão do Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Extensão do Beemray](./catalog/personalization/beemray.md)
+      * [Conexão de personalização personalizada (Beta)](./catalog/personalization/custom-personalization.md)
       * [Extensão Inteligência do visitante D&amp;B](./catalog/personalization/dnb.md)
       * [Extensão do Experience Cloud ID Service](./catalog/personalization/adobe-ecid.md)
       * [Extensão do Gainsight](./catalog/personalization/gainsight.md)

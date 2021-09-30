@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Data Ingestion, Sources
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 14%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 14%
       - [Conector de origem do Analytics](connectors/adobe-applications/analytics.md)
       - [Conector de fonte Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de origem dos atributos do cliente](connectors/adobe-applications/customer-attributes.md)
-      - Mapeamentos de campo do aplicativo Adobe {#mapping}
+      - Mapeamentos de campo {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de destino](connectors/adobe-applications/mapping/target.md)
          - [Mapeamentos de campo Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
-      - Marketo Engage {#marketo}
+      - B2B {#b2b}
          - [conector Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guia de autenticação de Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
-         - [Marketo Engage namespaces e schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [Espaços de nomes e esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Conector do Google AdWords](connectors/advertising/ads.md)
    - Armazenamento em nuvem {#cloud-storage}

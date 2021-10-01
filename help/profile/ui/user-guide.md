@@ -4,9 +4,9 @@ title: Guia da interface do usuário do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real cria uma visualização holística de cada cliente individual, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento é um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -136,9 +136,33 @@ Os campos padrão mostrados também podem ser alterados em um nível organizacio
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-É possível exibir informações adicionais relacionadas ao perfil individual ao selecionar outra das guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de segmento que mostra os segmentos para os quais o perfil está qualificado no momento.
+Você pode exibir informações adicionais relacionadas ao perfil individual do cliente selecionando outra das guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de segmento que mostra os segmentos para os quais o perfil está qualificado no momento.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Guia Atributos
+
+A guia **[!UICONTROL Attributes]** fornece uma exibição de lista resumindo todos os atributos relacionados a um único perfil, após a política de mesclagem especificada ter sido aplicada.
+
+Esses atributos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para qualquer usuário que deseje entender melhor como os atributos de perfil são assimilados na Platform.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Guia Eventos
+
+A guia **[!UICONTROL Events]** contém dados relacionados a ExperienceEvents associados ao cliente. Isso pode incluir aberturas de email, atividades do carrinho, exibições de página e muito mais. Selecionar **[!UICONTROL Exibir todos]** para qualquer evento individual fornece campos e valores adicionais como parte do evento.
+
+Os eventos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para entender como os eventos são capturados na Platform.
+
+![](../images/user-guide/profiles-events.png)
+
+### Guia Associação de segmento
+
+A guia **[!UICONTROL Segment membership]** exibe uma lista com o nome e a descrição dos segmentos aos quais o perfil individual do cliente pertence no momento. Essa lista é atualizada automaticamente à medida que o perfil se qualifica ou expira dos segmentos. A contagem total de segmentos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia .
+
+Para obter mais informações sobre a segmentação no Experience Platform, consulte a [documentação do Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Mesclar políticas
 

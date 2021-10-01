@@ -5,9 +5,9 @@ title: Gerenciar detalhes e serviços adicionais para um perfil de produto
 topic-legacy: user guide
 description: Este documento aborda as etapas necessárias para gerenciar detalhes e serviços adicionais para um perfil de produto no Adobe Admin Console. Você pode configurar os detalhes de um perfil e o acesso a serviços adicionais no menu Configurações do perfil .
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,6 @@ Quando terminar, selecione **[!UICONTROL Save]**.
 
 Os clientes autorizados para a B2B ou B2P Edition têm acesso à interface B2B. A interface B2B pode ser provisionada para usuários por meio do [!UICONTROL Ativar menu de serviços]. Selecione a alternância ao lado de [!UICONTROL B2B UI] para habilitar o serviço para um perfil de produto específico e selecione **[!UICONTROL Salvar]**.
 
-A alternância da interface B2B permite que os usuários visualizem workflows B2B ao gerenciar Contas e Oportunidades, bem como criem segmentos relacionados a B2B.
+A alternância da interface B2B permite que os usuários visualizem workflows B2B ao gerenciar Contas e Oportunidades, bem como criem segmentos relacionados a B2B. Para obter mais informações, consulte a documentação em [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)

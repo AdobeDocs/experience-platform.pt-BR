@@ -4,9 +4,8 @@ title: Visão geral da CDP B2B Edition em tempo real
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Visão geral da conta da Plataforma de dados do cliente em tempo real B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
-hide: true
-hidefromtoc: true
-source-git-commit: 193e709ccf6d4cec0a1ce2182f0106cc20c155ab
+exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
+source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 1%
@@ -21,7 +20,7 @@ ht-degree: 1%
 
 Baseada na Plataforma de dados do cliente em tempo real (CDP em tempo real), a CDP B2B Edition em tempo real é projetada especificamente para profissionais de marketing que operam em um modelo de serviço de negócios para empresas. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
 
-Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem a CDP B2B Edition em tempo real da sua contraparte B2C. Eles incluem aprimoramentos no Experience Data Model (XDM) para casos de uso B2B, atualizações na resolução de identidade e na segmentação de perfil, bem como um conector e destino personalizados para [!DNL Marketo Engage]. O conector [!DNL Marketo] permite que as marcas B2B conectem seus dados de envolvimento B2B líderes do setor com informações comportamentais para alimentar leads e aprimorar as operações de marketing baseadas em conta.
+Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem a CDP B2B Edition em tempo real da sua contraparte B2C. Eles incluem aprimoramentos no Experience Data Model (XDM) para casos de uso B2B, atualizações para resolução de identidade e segmentação de perfil, bem como um conector e destino personalizado para [!DNL Marketo Engage]. O conector [!DNL Marketo] permite que as marcas B2B conectem seus dados de envolvimento B2B líderes do setor com informações comportamentais para alimentar leads e aprimorar as operações de marketing baseadas em conta.
 
 Com a CDP B2B Edition em tempo real, você pode:
 

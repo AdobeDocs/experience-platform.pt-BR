@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guia da plataforma de dados do cliente em tempo real
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, criar segmentos de público-alvo a partir desses perfis e ativar esses segmentos para destinos de terceiros.
-source-git-commit: 213f6f1cad7ab2bec6f62f292f3492bd9aefc69c
+source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '147'
+ht-degree: 37%
 
 ---
 
@@ -17,8 +17,11 @@ ht-degree: 0%
 * [Visão geral da CDP em tempo real](overview.md)
 * [Visão geral da CDP B2B Edition em tempo real](b2b-overview.md)
 * Introdução {#intro}
-   * [Introdução](get-started.md)
-   * [Visão geral das métricas](home-page-dashboards.md)
+   * CDP em tempo real {#rtcdp-intro}
+      * [Introdução à CDP em tempo real](get-started.md)
+      * [Visão geral das métricas](home-page-dashboards.md)
+   * CDP B2B Edition em tempo real {#rtcdpb2b-intro}
+      * [Introdução à CDP B2B Edition em tempo real](./b2b-use-case.md)
 * Administração {#admin}
    * [Visão geral de administração](administration/admin-overview.md)
 * Conjuntos de dados {#datasets}

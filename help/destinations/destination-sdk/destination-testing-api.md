@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/destinationInstance/`, para testar se o destino está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Operações da API de teste de destino
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,8 @@ Esta página lista e descreve todas as operações de API que podem ser executad
 Você faz solicitações ao endpoint de teste com ou sem adicionar perfis à chamada. Se você não enviar perfis na solicitação, o Adobe gerará esses perfis internamente para você e os adicionará à solicitação.
 
 Você pode usar a [Amostra da API de geração de perfil](./sample-profile-generation-api.md) para criar perfis para usar em solicitações para a API de teste de destino.
+
+## Como obter a ID da instância de destino {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >

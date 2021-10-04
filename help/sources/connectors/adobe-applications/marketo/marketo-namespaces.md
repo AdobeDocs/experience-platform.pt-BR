@@ -5,14 +5,18 @@ title: Espaços de nomes e esquemas B2B
 topic-legacy: overview
 description: Este documento fornece uma visão geral de namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: a67e411c7d07bc5d94876b6bafbbea5056b7a9bc
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1588'
 ht-degree: 4%
 
 ---
 
-# Espaços de nomes e esquemas B2B
+# (Beta) Namespaces e esquemas B2B
+
+>[!IMPORTANT]
+>
+>No momento, esse recurso está em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Este documento fornece informações sobre a configuração subjacente para os namespaces e esquemas a serem usados com fontes B2B. Este documento também fornece detalhes sobre como configurar seu utilitário de automação do Postman necessário para gerar namespaces e esquemas B2B.
 

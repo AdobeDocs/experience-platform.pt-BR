@@ -2,14 +2,18 @@
 title: Fontes na Plataforma de dados do cliente em tempo real B2B Edition
 description: Uma visão geral da função das fontes na Plataforma de dados do cliente em tempo real B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 # Fontes na Plataforma de dados do cliente em tempo real B2B Edition
+
+>[!IMPORTANT]
+>
+>A Plataforma de dados do cliente em tempo real B2B Edition está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 A Real-time Customer Data Platform B2B Edition permite trazer seus dados B2B através do [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) conector de origem, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços.
 

@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de fonte Marketo Engage na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 9c8b63bf577a4258a7ef87c11bc8f87c1a01cc20
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
 
-# Crie um conector de origem [!DNL Marketo Engage] na interface do usuário
+# (Beta) Crie um conector de origem [!DNL Marketo Engage] na interface do usuário
+
+>[!IMPORTANT]
+>
+>A fonte [!DNL Marketo Engage] no Adobe Experience Platform está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Este tutorial fornece etapas para criar um conector de origem [!DNL Marketo Engage] (a seguir chamado &quot;[!DNL Marketo]&quot;) na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 

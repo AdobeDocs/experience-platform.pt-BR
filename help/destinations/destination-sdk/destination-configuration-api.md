@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2407'
 ht-degree: 5%
 
 ---
@@ -125,33 +125,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -195,18 +168,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Booleano | Use `true` se os usuários forem capazes de mapear atributos de perfil do Experience Platform para atributos personalizados no lado do seu destino, como mostrado na configuração de exemplo acima. |
 | `schemaConfig.segmentRequired` | Booleano | Sempre use `segmentRequired:true`. |
 | `schemaConfig.identityRequired` | Booleano | Use `true` se os usuários puderem mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
-| `aggregation.aggregationType` | - | Selecione `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. Embora a configuração de exemplo acima inclua ambos os tipos de agregação, você só precisará selecionar um deles para o seu destino. |
+| `aggregation.aggregationType` | - | Selecione `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. A configuração de exemplo acima inclui `BEST_EFFORT` agregação. Para obter um exemplo de `CONFIGURABLE_AGGREGATION`, consulte a configuração de exemplo no documento [configuração de destino](./destination-configuration.md#example-configuration). Observe que os parâmetros relevantes para a agregação configurável estão documentados abaixo nesta tabela. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Número inteiro | O Experience Platform pode agregar vários perfis exportados em uma única chamada HTTP. Especifique o número máximo de perfis que seu terminal deve receber em uma única chamada HTTP. Observe que esta é a melhor agregação de esforço. Por exemplo, se você especificar o valor 100, a Platform poderá enviar qualquer número de perfis menor que 100 em uma chamada. <br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
-| `aggregation.configurableAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Número inteiro | *Valor máximo: 3600*. Juntamente com `maxNumEventsInBatch`, isso determina por quanto tempo o Experience Platform deve aguardar até enviar uma chamada de API para o terminal. <br> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada da API, o que ocorrer primeiro. |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | Número inteiro | *Valor máximo: 10000*. Consulte `maxBatchAgeInSecs` logo acima. |
-| `aggregation.configurableAggregation.aggregationKey` | Booleano | Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros abaixo: <br> <ul><li>ID do segmento</li><li> status do segmento </li><li> namespace de identidade </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Defina como `true` se desejar agrupar perfis exportados para seu destino por ID de segmento. |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Você deve definir `includeSegmentId:true` e `includeSegmentStatus:true` se quiser agrupar perfis exportados para seu destino por ID de segmento E status de segmento. |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Booleano | Defina como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Use esse parâmetro para especificar se deseja que os perfis exportados sejam agregados em grupos de uma única identidade (GAID, IDFA, números de telefone, email, etc.). |
-| `aggregation.configurableAggregation.aggregationKey.groups` | String | Crie listas de grupos de identidade se quiser agrupar perfis exportados para seu destino por grupos de namespace de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para seu destino e emails em outra usando a configuração no exemplo. |
+| `aggregation.configurableAggregation.splitUserById` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Número inteiro | *Valor máximo: 3600*. Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Juntamente com `maxNumEventsInBatch`, isso determina por quanto tempo o Experience Platform deve aguardar até enviar uma chamada de API para o terminal. <br> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada da API, o que ocorrer primeiro. |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | Número inteiro | *Valor máximo: 10000*. Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Consulte `maxBatchAgeInSecs` logo acima. |
+| `aggregation.configurableAggregation.aggregationKey` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros abaixo: <br> <ul><li>ID do segmento</li><li> status do segmento </li><li> namespace de identidade </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Defina como `true` se desejar agrupar perfis exportados para seu destino por ID de segmento. |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Você deve definir `includeSegmentId:true` e `includeSegmentStatus:true` se quiser agrupar perfis exportados para seu destino por ID de segmento E status de segmento. |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Defina como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Use esse parâmetro para especificar se deseja que os perfis exportados sejam agregados em grupos de uma única identidade (GAID, IDFA, números de telefone, email, etc.). |
+| `aggregation.configurableAggregation.aggregationKey.groups` | String | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Crie listas de grupos de identidade se quiser agrupar perfis exportados para seu destino por grupos de namespace de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para seu destino e emails em outra usando a configuração no exemplo. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -330,33 +303,6 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de configurações d
             "bestEffortAggregation":{
                "maxUsersPerRequest":10,
                "splitUserById":false
-            }
-         },
-         "aggregation":{
-            "aggregationType":"CONFIGURABLE_AGGREGATION",
-            "configurableAggregation":{
-               "splitUserById":true,
-               "maxBatchAgeInSecs":0,
-               "maxNumEventsInBatch":0,
-               "aggregationKey":{
-                  "includeSegmentId":true,
-                  "includeSegmentStatus":true,
-                  "includeIdentity":true,
-                  "oneIdentityPerGroup":false,
-                  "groups":[
-                     {
-                        "namespaces":[
-                           "IDFA",
-                           "GAID"
-                        ]
-                     },
-                     {
-                        "namespaces":[
-                           "EMAIL"
-                        ]
-                     }
-                  ]
-               }
             }
          },
          "destinationDelivery":[
@@ -551,33 +497,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -735,33 +654,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
       "bestEffortAggregation":{
          "maxUsersPerRequest":10,
          "splitUserById":false
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
       }
    },
    "destinationDelivery":[

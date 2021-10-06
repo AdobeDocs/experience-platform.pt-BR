@@ -5,10 +5,9 @@ title: Funções SQL Spark no Serviço de Consulta
 topic-legacy: spark sql functions
 description: Esta documentação contém informações sobre funções SQL Spark que estendem a funcionalidade SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3909'
 ht-degree: 1%
 
 ---
@@ -104,7 +103,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | Retorna a variação de população calculada |
 | [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp),  [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | Retorna a variação calculada da amostra |
 
-### Operadores lógicos e funções {#logical-operators}
+### Operadores e funções lógicos {#logical-operators}
 
 | Operador/Função | Descrição |
 | ----------------- | ----------- |
@@ -154,8 +153,8 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Retorna o primeiro dia depois da entrada |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Retorna o trimestre da entrada |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Retorna o segundo da cadeia de caracteres |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data. **Observação:** a string  **** deve estar no formato  `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a string em um carimbo de data e hora. **Observação:** a string  **** deve estar no formato  `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora Unix |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Trunca a data |
@@ -198,7 +197,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`sort_array`](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array) | Classifique uma matriz, considerando uma ordem |
 | [`zip_with`](https://spark.apache.org/docs/latest/api/sql/index.html#zip_with) | Une os dois arrays em um único array, antes de aplicar uma função |
 
-### Funções de transmissão do tipo de dados {#datatype-casting}
+### Funções de vazamento do tipo de dados {#datatype-casting}
 
 | Função | Descrição |
 | -------- | ----------- |
@@ -255,7 +254,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`unhex`](https://spark.apache.org/docs/latest/api/sql/index.html#unhex) | Converter o hexadecimal em binário |
 | [`uuid`](https://spark.apache.org/docs/latest/api/sql/index.html#uuid) | Retornar um UUID |
 
-### Avaliação de dados {#data-evaluation}
+### Avaliação dos dados {#data-evaluation}
 
 | Função | Descrição |
 | -------- | ----------- |

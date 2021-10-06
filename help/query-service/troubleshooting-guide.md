@@ -5,10 +5,10 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
+source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 6%
+source-wordcount: '699'
+ht-degree: 4%
 
 ---
 
@@ -60,6 +60,10 @@ LIMIT 100;
 
 Ao consultar os dados das séries de tempo, você deve usar o filtro de carimbo de data e hora sempre que possível para obter uma análise mais precisa.
 
+>[!NOTE]
+>
+> A string de data **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`.
+
 Um exemplo de uso do filtro de carimbo de data e hora pode ser visto abaixo:
 
 ```sql
@@ -74,6 +78,60 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### Devo usar curingas, como *, para obter todas as linhas dos meus conjuntos de dados?
 
 Não é possível usar curingas para obter todos os dados de suas linhas, pois o Serviço de query deve ser tratado como um **columnar-store** em vez de um sistema de armazenamento tradicional baseado em linha.
+
+### Devo usar `NOT IN` no meu query SQL?
+
+O operador `NOT IN` é frequentemente usado para recuperar linhas que não são encontradas em outra tabela ou instrução SQL. Esse operador pode retardar o desempenho e retornar resultados inesperados se as colunas que estão sendo comparadas aceitarem `NOT NULL`, ou se você tiver um grande número de registros.
+
+Em vez de usar `NOT IN`, você pode usar `NOT EXISTS` ou `LEFT OUTER JOIN`.
+
+Por exemplo, se você tiver criado as seguintes tabelas:
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+Se você estiver usando o operador `NOT EXISTS`, poderá replicar usando o operador `NOT IN` usando a seguinte query:
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+Como alternativa, se estiver usando o operador `LEFT OUTER JOIN`, você pode replicar usando o operador `NOT IN` usando a seguinte query:
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
+### Qual é o uso correto dos operadores `OR` e `UNION`?
+
+### Como uso corretamente o operador `CAST` para converter meus carimbos de data e hora em consultas SQL?
+
+Ao usar o operador `CAST` para converter um carimbo de data e hora, é necessário incluir a data **e** hora.
+
+Por exemplo, a falta do componente de tempo, como mostrado abaixo, resultará em um erro:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+Um uso correto do operador `CAST` é mostrado abaixo:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## Erros da API REST
 

@@ -2,9 +2,9 @@
 title: Variável sem turbina
 description: Saiba mais sobre o objeto turbine, uma variável livre que fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
+source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 86%
 
 ---
@@ -39,6 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | A data da ISO 8601 quando a versão de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) usada no container foi criada. |
 | `buildDate` | A data da ISO 8601 quando a biblioteca atual foi criada. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `environment`
 
@@ -60,6 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | A ID do ambiente. |
 | `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging` e `production`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `debugEnabled`
 
@@ -67,7 +69,7 @@ Um valor booleano indicando se a depuração de tag está atualmente ativada.
 
 Se você está apenas tentando registrar mensagens, é improvável que precise usar isso. Em vez disso, sempre registre mensagens usando `turbine.logger` para garantir que as mensagens só sejam impressas no console quando a depuração de tag estiver habilitada.
 
-### `getDataElementValue`
+## `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +77,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Retorna o valor de um elemento de dados.
 
-### `getExtensionSettings` {#get-extension-settings}
+## `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +87,7 @@ Retorna o objeto de configurações salvo pela última vez na visualização de 
 
 Observe que os valores nas configurações retornadas podem ser provenientes de elementos de dados. Por isso, chamar `getExtensionSettings()` em momentos diferentes poderá gerar resultados diferentes se os valores dos elementos de dados tiverem sido alterados. Para obter os valores mais atualizados, aguarde o máximo possível antes de chamar `getExtensionSettings()`.
 
-### `getHostedLibFileUrl` {#get-hosted-lib-file}
+## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +98,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 A propriedade [hostedLibFiles](./manifest.md) pode ser definida no manifesto da extensão para hospedar vários arquivos junto com a biblioteca de tempo de execução da tag. Este módulo retorna o URL no qual o arquivo de biblioteca especificado está hospedado.
 
-### `getSharedModule` {#shared}
+## `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +106,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Recupera um módulo que foi compartilhado de outra extensão. Se nenhum módulo correspondente for encontrado, `undefined` será retornado. Consulte [Implementação de módulos compartilhados](./web/shared.md) para obter mais informações sobre módulos compartilhados.
 
-### `logger`
+## `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -119,13 +121,13 @@ O utilitário de registro é usado para registrar mensagens no console. As mensa
 * `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver ativado no console do navegador.)
 * `logger.deprecation(message: string)`: Registra uma mensagem de aviso no console independentemente de a depuração de tag estar ou não habilitada pelo usuário.
 
-### `onDebugChanged`
+## `onDebugChanged`
 
 Se for passada uma função de retorno de chamada para `turbine.onDebugChanged`, as tags chamarão seu retorno de chamada sempre que a depuração for alternada. As tags passarão um valor booliano para a função de retorno de chamada, que será verdadeira se a depuração estiver ativada ou falsa se a depuração estiver desativada.
 
 Se você está apenas tentando registrar mensagens, é improvável que precise usar isso. Em vez disso, sempre registre mensagens usando `turbine.logger`, e as tags garantirão que suas mensagens só sejam impressas no console quando a depuração de tag estiver habilitada.
 
-### `propertySettings` {#property-settings}
+## `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);

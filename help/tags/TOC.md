@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
-feature: Coleta de dados
-source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
+feature: Data Collection
+source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 79%
+source-wordcount: '378'
+ht-degree: 88%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 79%
 * Introdução {#get-started}
    * [Manual de início rápido](./quick-start/quick-start.md)
    * [Guias de implementação](./quick-start/implementation-guides.md)
-* Interface do usuário da coleta de dados {#ui}
+* Interface da coleção de dados {#ui}
    * [Visão geral](./ui/managing-resources/overview.md)
    * Extensões {#extensions}
       * [Visão geral](./ui/managing-resources/extensions/overview.md)
@@ -72,7 +72,7 @@ ht-degree: 79%
          * [Notas de versão](./extensions/web/product-string/release-notes.md)
       * Adobe Audience Manager {#audience-manager}
          * [Visão geral](./extensions/web/audience-manager/overview.md)
-      * Camada de dados do cliente Adobe {#client-data-layer}
+      * Camada de dados de clientes Adobe {#client-data-layer}
          * [Visão geral](./extensions/web/client-data-layer/overview.md)
          * [Notas de versão](./extensions/web/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
@@ -154,7 +154,7 @@ ht-degree: 79%
    * [Hospedagem de bibliotecas de terceiros](./extension-dev/third-party-libraries.md)
    * [Variável sem turbina](./extension-dev/turbine.md)
    * [Padrão de compatibilidade com versões anteriores](./extension-dev/backwards-compatibility.md)
-* API do Reactor {#api}
+* API Reactor {#api}
    * [Visão geral](./api/overview.md)
    * [Introdução](./api/getting-started.md)
    * Pontos de extremidade {#endpoints}
@@ -179,11 +179,11 @@ ht-degree: 79%
       * [Delegar IDs do descritor](./api/guides/delegate-descriptor-ids.md)
       * [Criptografar valores](./api/guides/encrypting-values.md)
       * [Tratamento de erros](./api/guides/error-handling.md)
-      * [Filtrar respostas](./api/guides/filtering.md)
+      * [Filtragem de respostas](./api/guides/filtering.md)
       * [Paginação de respostas](./api/guides/pagination.md)
       * [Classificação de respostas](./api/guides/sorting.md)
       * [Relações](./api/guides/relationships.md)
-      * [Pesquisar recursos](./api/guides/search.md)
+      * [Pesquisa de recursos](./api/guides/search.md)
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * Notas de versão {#release-notes}

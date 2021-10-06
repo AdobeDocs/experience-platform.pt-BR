@@ -5,16 +5,16 @@ title: Guia da interface do usuário de segmentação de borda
 topic-legacy: ui guide
 description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: 6bb1f417b5856f153adebe4deaac4fab264ef3a8
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '417'
 ht-degree: 3%
 
 ---
 
 # Guia da interface de usuário de segmentação de borda (beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >A segmentação de borda está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
@@ -22,7 +22,15 @@ A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experienc
 
 ## Tipos de query de segmentação de borda
 
-Um query pode ser avaliado com segmentação de borda se atender a qualquer um dos seguintes critérios:
+Atualmente, somente os tipos de consulta selecionados podem ser avaliados com a segmentação de borda. As seções a seguir fornecem uma lista de tipos de query que podem ser avaliados com a segmentação de borda e aqueles que não são compatíveis no momento.
+
+### Tipos de consulta compatíveis
+
+Um query pode ser avaliado com segmentação de borda se atender a qualquer um dos critérios descritos na tabela a seguir.
+
+>[!NOTE]
+>
+>Se a query corresponder a qualquer um dos tipos de query na tabela a seguir, ela será avaliada automaticamente usando a segmentação de borda. O sistema determina essa capacidade automaticamente com base na expressão de consulta.
 
 | Tipo de consulta | Detalhes | Exemplo |
 | ---------- | ------- | ------- |
@@ -31,7 +39,7 @@ Um query pode ser avaliado com segmentação de borda se atender a qualquer um d
 | Ocorrência recebida com uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um único evento de entrada em 24 horas |  |
 | Ocorrência recebida que se refere a um perfil com uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um único evento de entrada em 24 horas e um ou mais atributos de perfil |  |
 
-Se a query corresponder a qualquer um dos tipos de query acima, ela será avaliada automaticamente usando a segmentação de borda.
+### Tipos de query não suportados no momento
 
 Os seguintes tipos de query são **não** compatíveis atualmente com a segmentação de borda:
 
@@ -43,6 +51,4 @@ Os seguintes tipos de query são **não** compatíveis atualmente com a segmenta
 
 ## Próximas etapas
 
-Este guia do usuário explica como avaliar segmentos com segmentação de borda no Adobe Experience Platform.
-
-Para saber mais sobre como usar a interface do usuário do Adobe Experience Platform, leia o [Guia do usuário de segmentação](./overview.md). Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o [guia da API de segmentação de borda](../api/edge-segmentation.md).
+Este guia explica como avaliar segmentos com segmentação de borda no Adobe Experience Platform. Para saber mais sobre como usar a interface do usuário do Experience Platform, leia o [Guia do usuário de segmentação](./overview.md). Para saber como executar ações semelhantes e trabalhar com segmentos usando APIs do Experience Platform, visite o [guia da API de segmentação de borda](../api/edge-segmentation.md).

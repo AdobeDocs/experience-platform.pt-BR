@@ -4,14 +4,14 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
+source-git-commit: 05f2ba2e8e7abadeef18a908ba8b0e9a02d4c3f8
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
 
-#  Painel de perfis
+#  Profilesdashboard
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel pelo qual você pode visualizar informações importantes sobre seus dados [!DNL Real-time Customer Profile], conforme capturados durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel [!UICONTROL Perfis] na interface do usuário e fornece informações sobre as métricas exibidas no painel.
 
@@ -19,7 +19,7 @@ Para obter uma visão geral de todos os recursos de Perfil na interface do usuá
 
 ## Dados do painel de perfis
 
-O painel [!UICONTROL Profiles] exibe um instantâneo dos dados do atributo (registro) que sua organização tem no armazenamento de Perfis no Experience Platform. O instantâneo não inclui nenhum dado de evento (série de tempo).
+O painel [!UICONTROL Perfis] exibe um instantâneo dos dados do atributo (registro) que sua organização tem na Loja de perfis no Experience Platform. O instantâneo não inclui nenhum dado de evento (série de tempo).
 
 Os dados do atributo no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel de Perfil não está sendo atualizado em tempo real.
 
@@ -77,7 +77,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 
 ### [!UICONTROL Contagem de perfis] {#profile-count}
 
-O widget **[!UICONTROL Profile count]** exibe o número total de perfis mesclados no armazenamento de dados do perfil no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+O widget **[!UICONTROL Profile count]** exibe o número total de perfis mesclados no Loja de perfis no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Consulte a seção [sobre políticas de mesclagem anteriormente neste documento](#merge-policies) para saber mais.
 
@@ -91,19 +91,17 @@ Consulte a seção [sobre políticas de mesclagem anteriormente neste documento]
 
 ### [!UICONTROL Perfis adicionados] {#profiles-added}
 
-O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do Perfil a partir do último instantâneo tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir os perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
+O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mesclados que foram adicionados ao Armazenamento de perfil a partir do último instantâneo que foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir os perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
 
 >[!NOTE]
 >
->O widget [!UICONTROL Perfis adicionados] reflete o número de perfis adicionados ao sistema após a configuração inicial da organização. Para saber mais sobre como adicionar perfis à Loja de perfis, consulte a [documentação do Perfil do cliente em tempo real](../../profile/home.md).
->
->Por exemplo, se quatro milhões de perfis foram adicionados durante a configuração e você adicionou um milhão de perfis adicionais nos últimos 30 dias, o widget [!UICONTROL Perfis adicionados] exibiria &quot;1.000.000&quot;, enquanto o widget [!UICONTROL Contagem de perfis] exibiria &quot;5.000.00&quot;.
+>O widget [!UICONTROL Perfis adicionados] reflete o número de perfis adicionados após a configuração da Loja de perfis e a assimilação de perfis. Em outras palavras, se sua organização configurar a Loja de perfis e assimilar 4.000.000 no Dia 1, em 24 horas o painel estará disponível, no entanto, o widget [!UICONTROL Perfis adicionados] será definido como 0. Isso é feito para evitar um pico associado à assimilação inicial de perfis no sistema. Nos próximos 30 dias, sua organização assimilará mais 1.000.000 perfis na Loja de perfis. Depois que o próximo instantâneo é tirado, o widget [!UICONTROL Perfis adicionados] mostraria um total de 1.000.000 perfis adicionados, enquanto o widget [!UICONTROL Contagem de perfis] exibiria 5.000.000 perfis totais.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendência da contagem de perfis] {#profiles-count-trend}
 
-O widget **[!UICONTROL Profiles count tend]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+O widget **[!UICONTROL Perfis conta tendência]** exibe o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Consulte a seção [sobre políticas de mesclagem anteriormente neste documento](#merge-policies) para saber mais.
 
@@ -111,7 +109,7 @@ Consulte a seção [sobre políticas de mesclagem anteriormente neste documento]
 
 ### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
 
-O widget **[!UICONTROL Perfis por identidade]** exibe o detalhamento das identidades em todos os perfis mesclados no armazenamento de Perfis. O número total de perfis por identidade (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
+O widget **[!UICONTROL Perfis por identidade]** exibe o detalhamento das identidades em todos os perfis mesclados na Loja de perfis. O número total de perfis por identidade (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
 Consulte a seção [sobre políticas de mesclagem anteriormente neste documento](#merge-policies) para saber mais.
 
@@ -121,7 +119,7 @@ Para saber mais sobre identidades, visite a [documentação do Adobe Experience 
 
 ### [!UICONTROL Sobreposição de identidade] {#identity-overlap}
 
-O widget **[!UICONTROL Sobreposição de identidade]** exibe um diagrama Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis em seu armazenamento de perfil que contém várias identidades.
+O widget **[!UICONTROL Sobreposição de identidade]** exibe um diagrama Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis em sua Loja de perfis que contém várias identidades.
 
 Depois de usar os menus suspensos no widget para selecionar as identidades que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada identidade, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos. Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
 

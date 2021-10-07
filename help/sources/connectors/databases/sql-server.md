@@ -5,9 +5,9 @@ title: Visão Geral do Conector de Origem do SQL Server
 topic-legacy: overview
 description: Saiba como conectar o Microsoft SQL Server ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 ## LISTA DE PERMISSÕES de endereço IP
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
-
->[!IMPORTANT]
->
->O [!DNL Microsoft] conector de origem do SQL Server atualmente não oferece suporte à conectividade de mesma região com o Platform. Isso significa que se a instância do Azure estiver usando a mesma região de rede que a Plataforma, uma conexão com as fontes da Plataforma não poderá ser estabelecida. Atualmente, somente a conectividade entre regiões é compatível. Entre em contato com o gerente de conta do Adobe para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Microsoft] SQL Server a [!DNL Platform] usando APIs ou a interface do usuário:
 

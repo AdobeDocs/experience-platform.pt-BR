@@ -5,9 +5,9 @@ title: Visão geral do Microsoft Dynamics Source Connector
 topic-legacy: overview
 description: Saiba como conectar o Microsoft Dynamics ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '229'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,11 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
->[!IMPORTANT]
->
->No momento, o conector de origem [!DNL Microsoft Dynamics] não oferece suporte à conectividade de mesma região com a Plataforma. Isso significa que se a instância do Azure estiver usando a mesma região de rede que a Plataforma, uma conexão com as fontes da Plataforma não poderá ser estabelecida. Atualmente, somente a conectividade entre regiões é compatível. Entre em contato com o gerente de conta do Adobe para obter mais informações.
-
 A documentação abaixo fornece informações sobre como se conectar [!DNL Microsoft Dynamics] a [!DNL Platform] usando APIs ou a interface do usuário:
 
 ## Conecte [!DNL Microsoft Dynamics] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão básica do Microsoft Dynamics usando a API do Serviço de Fluxo](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Criar uma conexão básica do Microsoft Dynamics usando a API de Serviço de Fluxo](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Explore a estrutura de dados e o conteúdo de uma fonte de CRM usando a API do Serviço de Fluxo](../../tutorials/api/explore/crm.md)
 - [Crie um fluxo de dados para uma fonte CRM usando a API do Serviço de Fluxo](../../tutorials/api/collect/crm.md)
 

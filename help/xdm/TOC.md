@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '398'
 ht-degree: 14%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 14%
       * [Consentimento do IAB TCF 2.0](./field-groups/event/iab.md)
       * [Reserva de Loja](./field-groups/event/lodging-reservation.md)
       * [Detalhes da Reserva](./field-groups/event/reservation-details.md)
+      * [Detalhes da atualização](./field-groups/event/upgrade-details.md)
+      * [Detalhes da venda adicional](./field-groups/event/upsell-details.md)
       * [Detalhes da Web](./field-groups/event/web-details.md)
    * [Atualizações do nome do grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
@@ -91,6 +93,7 @@ ht-degree: 14%
    * [Detalhes da interação geográfica](./data-types/geo-interaction-details.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Identidade](./data-types/identity.md)
+   * [Impressões](./data-types/impressions.md)
    * [Marketing](./data-types/marketing.md)
    * [Medição](./data-types/measure.md)
    * [Ordem](./data-types/order.md)

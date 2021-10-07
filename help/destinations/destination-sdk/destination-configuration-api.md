@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2405'
 ht-degree: 5%
 
 ---
@@ -168,7 +168,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Booleano | Use `true` se os usuários forem capazes de mapear atributos de perfil do Experience Platform para atributos personalizados no lado do seu destino, como mostrado na configuração de exemplo acima. |
 | `schemaConfig.segmentRequired` | Booleano | Sempre use `segmentRequired:true`. |
 | `schemaConfig.identityRequired` | Booleano | Use `true` se os usuários puderem mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
-| `aggregation.aggregationType` | - | Selecione `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. A configuração de exemplo acima inclui `BEST_EFFORT` agregação. Para obter um exemplo de `CONFIGURABLE_AGGREGATION`, consulte a configuração de exemplo no documento [configuração de destino](./destination-configuration.md#example-configuration). Observe que os parâmetros relevantes para a agregação configurável estão documentados abaixo nesta tabela. |
+| `aggregation.aggregationType` | - | Selecione `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. A configuração de exemplo acima inclui `BEST_EFFORT` agregação. Para obter um exemplo de `CONFIGURABLE_AGGREGATION`, consulte a configuração de exemplo no documento [configuração de destino](./destination-configuration.md#example-configuration). Os parâmetros relevantes para a agregação configurável são documentados abaixo nesta tabela. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Número inteiro | O Experience Platform pode agregar vários perfis exportados em uma única chamada HTTP. Especifique o número máximo de perfis que seu terminal deve receber em uma única chamada HTTP. Observe que esta é a melhor agregação de esforço. Por exemplo, se você especificar o valor 100, a Platform poderá enviar qualquer número de perfis menor que 100 em uma chamada. <br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
 | `aggregation.configurableAggregation.splitUserById` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |

@@ -3,9 +3,10 @@ title: API de higiene de dados (alfa)
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
+exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
+source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '535'
 ht-degree: 3%
 
 ---
@@ -17,6 +18,8 @@ ht-degree: 3%
 >A API da Higiene de dados está atualmente em alfa e sua organização pode ainda não ter acesso a ela. A funcionalidade descrita neste documento está sujeita a alterações.
 
 A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform. Diferentemente da API do Privacy Service, essas operações não precisam ser associadas às regulamentações legais de privacidade e podem ser usadas apenas para manter seus dados limpos e precisos.
+
+Você pode acessar a API por meio do seguinte caminho raiz: `https://platform.adobe.io/data/core/hygiene/`
 
 ## Introdução
 

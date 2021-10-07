@@ -4,10 +4,10 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Formato de mensagem
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
+source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1995'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,6 @@ Para entender o processo no Adobe, familiarize-se com os seguintes conceitos de 
 
 * **Experience Data Model (XDM)**. [Visão ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR) geral do XDM e   [Como criar um esquema XDM no Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Classe**. [Crie e edite classes na interface do usuário](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **Grupo de campos**. [Definição de grupo de campos ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#field-group) e  [mais informações sobre grupos](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group) de campos.
 * **Mapa de identidade**. O mapa de identidade representa um mapa de todas as identidades de usuário final no Adobe Experience Platform. Consulte `xdm:identityMap` no [Dicionário de campo XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. O atributo XDM [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) informa quais segmentos um perfil é membro. Para os três valores diferentes no campo `status`, leia a documentação no [grupo de campos Detalhes da associação ao segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
@@ -31,22 +30,26 @@ O Adobe Experience Platform exporta dados para um número significativo de desti
 
 O Experience Platform pode ajustar o formato de mensagem exportado para corresponder ao formato esperado no seu lado. Para entender essa personalização, os seguintes conceitos são importantes:
 * O esquema XDM de origem (1) e de destino (2) no Adobe Experience Platform
-* O formato da mensagem no lado do parceiro (3) e
-* A camada de transformação entre os dois, que pode ser definida ao criar um [template de transformação de mensagem](./message-format.md#using-templating).
+* O formato de mensagem esperado no lado do parceiro (3) e
+* A camada de transformação entre o esquema XDM e o formato de mensagem esperado, que você pode definir criando um [template de transformação de mensagem](./message-format.md#using-templating).
 
 ![Schema para transformação JSON](./assets/transformations-3-steps.png)
 
-A Experience Platform utiliza esquemas para descrever a estrutura dos dados de forma consistente e reutilizável.
+O Experience Platform usa esquemas XDM para descrever a estrutura dos dados de uma maneira consistente e reutilizável.
 
-Os usuários que desejam ativar os dados no seu destino precisam mapear os campos usados para seus conjuntos de dados no Experience Platform para um esquema que se traduz no formato esperado do seu destino. O Adobe criará um grupo de campos personalizados para sua empresa adicionar ao schema de destino. Os campos no grupo de campos dependem dos campos de atributo de perfil que você pode receber.
+<!--
 
-**Esquema XDM de origem (1)**: Refere-se ao schema que um cliente usa no Experience Platform. Na Experience Platform, no [etapa de mapeamento](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) do workflow para ativar destino, os clientes mapeariam campos de seu schema de origem para o schema de destino do seu destino (2).
+Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Esquema XDM do Target (2)**: Com base no esquema padrão JSON (3) compartilhado com o Adobe, a equipe no Adobe criará um esquema personalizado para seu destino. Observe que em uma [fase futura do projeto](./overview.md#phased-approach), você poderá criar o esquema personalizado para seu destino por conta própria.
+-->
 
-**Esquema padrão JSON dos atributos de perfil de destino (3)**: Compartilhe conosco um  [esquema ](https://json-schema.org/learn/miscellaneous-examples.html) JSON de todos os atributos de perfil compatíveis com sua plataforma e seus tipos (por exemplo: objeto, string, matriz). Os campos de exemplo que seu destino poderia suportar podem ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e assim por diante.
+**Esquema XDM de origem (1)**: Este item se refere ao schema usado pelos clientes no Experience Platform. Na Experience Platform, no [etapa de mapeamento](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) do workflow para ativar destino, os clientes mapeariam campos de seu schema de origem para o schema de destino do seu destino (2).
 
-Com base nas transformações de schema descritas acima, veja como a estrutura de uma mensagem muda entre o schema XDM de origem e o schema de amostra no lado do parceiro:
+**Esquema XDM do Target (2)**: Com base no esquema padrão JSON (3) do formato esperado do seu destino, você pode definir atributos e identidades de perfil no esquema XDM de destino. Você pode fazer isso na configuração de destinos, nos objetos [schemaConfig](./destination-configuration.md#schema-configuration) e [identityNamespaces](./destination-configuration.md#identities-and-attributes).
+
+**Esquema padrão JSON dos atributos de perfil de destino (3)**: Este item representa um esquema  [JSON ](https://json-schema.org/learn/miscellaneous-examples.html) de todos os atributos de perfil compatíveis com sua plataforma e seus tipos (por exemplo: objeto, string, matriz). Os campos de exemplo que seu destino poderia suportar podem ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e assim por diante. Você precisa de um [template de transformação de mensagem](./message-format.md#using-templating) para adaptar os dados exportados do Experience Platform para o formato esperado.
+
+Com base nas transformações de schema descritas acima, veja como a estrutura de uma mensagem muda entre o schema XDM de origem e um schema de amostra no lado do parceiro:
 
 ![Exemplo de mensagem de transformações](./assets/transformations-with-examples.png)
 
@@ -59,7 +62,7 @@ Para demonstrar o processo de transformação, o exemplo abaixo usa três atribu
 
 >[!NOTE]
 >
->O cliente mapeia os atributos do esquema XDM de origem para o esquema XDM do parceiro na interface do usuário do Adobe Experience Platform, na etapa **Mapping** do [workflow de destino de ativação](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html#mapping).
+>O cliente mapeia os atributos do esquema XDM de origem para o esquema XDM do parceiro na interface do usuário do Adobe Experience Platform, na etapa **Mapping** do [workflow de destino de ativação](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 Considere que sua plataforma pode receber um formato de mensagem como:
 
@@ -94,7 +97,7 @@ Esta seção fornece vários exemplos de como essas transformações são feitas
 
 1. Exemplos simples de transformação. Saiba como a modelagem funciona com transformações simples para campos [Atributos de perfil](./message-format.md#attributes), [Associação de segmento](./message-format.md#segment-membership) e [Identidade](./message-format.md#identities).
 2. Exemplos de complexidade maior de modelos que combinam os campos acima: [Crie um modelo que envie segmentos e identidades](./message-format.md#segments-and-identities) e [Crie um modelo que envie segmentos, identidades e atributos de perfil](./message-format.md#segments-identities-attributes).
-3. Os modelos incluem a chave de agregação. Ao usar [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para seu destino com base em critérios como ID do segmento, status do segmento ou namespaces de identidade.
+3. Modelos que incluem a chave de agregação. Ao usar [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para seu destino com base em critérios como ID do segmento, status do segmento ou namespaces de identidade.
 
 ### Atributos do perfil {#attributes}
 
@@ -139,7 +142,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -237,7 +240,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -341,7 +344,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -479,7 +482,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -661,7 +664,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -779,7 +782,7 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
 
 Ao usar [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino, você pode agrupar os perfis exportados para seu destino com base em critérios como ID do segmento, alias do segmento, associação de segmento ou namespaces de identidade.
 
-No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos nas seções a seguir. Isso ajuda a formatar a mensagem HTTP exportada do Experience Platform para corresponder ao formato esperado pelo seu destino.
+No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos nas seções a seguir. Use chaves de agregação para estruturar a mensagem HTTP exportada do Experience Platform para corresponder aos limites de formato e taxa esperados pelo seu destino.
 
 #### Usar chave de agregação de ID de segmento no modelo {#aggregation-key-segment-id}
 
@@ -880,9 +883,9 @@ Perfil 4:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe abaixo como `audienceId` é usado no modelo para acessar IDs de segmento. Isso pressupõe que você use `audienceId` para associação de segmento em sua taxonomia de destino. Você pode usar qualquer outro nome de campo, dependendo da sua própria taxonomia.
+Observe abaixo como `audienceId` é usado no modelo para acessar IDs de segmento. Este exemplo assume que você usa `audienceId` para associação de segmento em sua taxonomia de destino. Você pode usar qualquer outro nome de campo, dependendo da sua própria taxonomia.
 
 ```python
 {
@@ -944,7 +947,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Usar chave de agregação de status de segmento no modelo {#aggregation-key-segment-status}
 
-Se você usar [agregação configurável](./destination-configuration.md#configurable-aggregation) e definir `includeSegmentId` e `includeSegmentStatus` como true, poderá acessar o status do segmento no modelo para agrupar perfis nas mensagens HTTP exportadas para seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
+Se você usar [agregação configurável](./destination-configuration.md#configurable-aggregation) e definir `includeSegmentId` e `includeSegmentStatus` como true, poderá acessar o status do segmento no template. Dessa forma, você pode agrupar perfis nas mensagens HTTP exportadas para o seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
 
 Os valores possíveis são:
 
@@ -960,7 +963,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Usar chave de agregação de namespace de identidade no modelo {#aggregation-key-identity}
 
-Abaixo está um exemplo em que a [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino é definida para agregar perfis exportados por namespaces de identidade, no formato `"namespaces": ["email", "phone"]` e `"namespaces": ["GAID", "IDFA"]`. Consulte o parâmetro `groups` no [Referência da API de configuração de destino](./destination-configuration-api.md) para ver como isso é feito.
+Abaixo está um exemplo em que a [agregação configurável](./destination-configuration.md#configurable-aggregation) na configuração de destino é definida para agregar perfis exportados por namespaces de identidade, no formato `"namespaces": ["email", "phone"]` e `"namespaces": ["GAID", "IDFA"]`. Consulte o parâmetro `groups` no [referência da API de configuração de destino](./destination-configuration-api.md) para obter mais informações sobre esse agrupamento.
 
 **Entrada**
 
@@ -1032,7 +1035,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Para todos os modelos que você usa, você deve evitar os caracteres ilegais, como aspas duplas `""` antes de inserir o modelo no [configuração do servidor de destino](./server-and-template-configuration.md#template-specs). Para obter mais informações sobre o escape de aspas duplas, consulte o Capítulo 9 no [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Observe que `input.aggregationKey.identityNamespaces` é usado no modelo abaixo
 
@@ -1056,7 +1059,7 @@ Observe que `input.aggregationKey.identityNamespaces` é usado no modelo abaixo
 
 **Resultado**
 
-Quando exportados para seu destino, os perfis são divididos em dois grupos, com base em seus namespaces de identidade (email e telefone em um grupo, GAID e IDFA em outro).
+Quando exportados para seu destino, os perfis são divididos em dois grupos, com base em seus namespaces de identidade. E-mail e telefone estão em um grupo, enquanto GAID e IDFA estão em outro.
 
 ```json
 {
@@ -1108,7 +1111,7 @@ Quando exportados para seu destino, os perfis são divididos em dois grupos, com
 
 #### Usar a chave de agregação em um modelo de URL {#aggregation-key-url-template}
 
-Observe que, dependendo do seu caso de uso, você também pode usar as chaves de agregação descritas aqui em um URL, conforme mostrado abaixo:
+Dependendo do caso de uso, você também pode usar as chaves de agregação descritas aqui em um URL, conforme mostrado abaixo:
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}

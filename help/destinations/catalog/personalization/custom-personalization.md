@@ -2,9 +2,10 @@
 keywords: personalização personalizada; destino; destino personalizado da experience platform;
 title: Conexão de personalização personalizada (Beta)
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em seu site para recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece 1:1 em tempo real e personalização com base na associação de segmento de um perfil de usuário.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---
@@ -61,6 +62,28 @@ Leia [Ativar perfis e segmentos para destinos de solicitação de perfil](../../
 ## Dados exportados {#exported-data}
 
 Se estiver usando [Tags do Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use a funcionalidade [enviar evento concluído](../../../edge/extension/event-types.md) e sua ação de código personalizado terá uma variável `event.destinations` que poderá ser usada para ver os dados exportados.
+
+Este é um exemplo de valor para a variável `event.destinations` :
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 Se você não estiver usando [Tags do Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use a funcionalidade [manipular respostas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver os dados exportados.
 

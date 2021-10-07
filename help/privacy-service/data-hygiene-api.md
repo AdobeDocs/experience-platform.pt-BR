@@ -3,9 +3,9 @@ title: API de higiene de dados (alfa)
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 3%
 
 ---
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | Uma matriz contendo informações de autenticação para sua organização. Ele deve conter um único objeto com as seguintes propriedades: <ul><li>`namespace`: Deve ser definido como `imsOrgID`.</li><li>`value`: Seu ID da Org de IMS. Esse é o mesmo valor fornecido no cabeçalho `x-gw-ims-org-id`.</li></ul> |
 | `users` | Uma matriz contendo uma coleção de pelo menos um usuário cujas informações você gostaria de excluir. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: Um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É prática recomendada escolher uma string exclusiva e facilmente identificável para esse valor, para que ele possa ser referenciado ou pesquisado posteriormente.</li><li>`action`: Uma matriz que lista as ações desejadas para executar nos dados do usuário. Deve conter um único valor de string: `delete`.</li><li>`userIDs`: Uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade contém as seguintes propriedades: <ul><li>`namespace`: O  [namespace de ](../identity-service/namespaces.md) identidade associado à ID. Pode ser um [namespace padrão](./api/appendix.md#standard-namespaces) reconhecido pela Platform ou pode ser um namespace personalizado definido pela organização. O tipo de namespace usado deve ser refletido na propriedade `type`.</li><li>`value`: O valor de identidade.</li><li>`type`: Deve ser definido como  `standard` se estiver usando um namespace reconhecido globalmente ou  `custom` se estiver usando um namespace definido pela organização.</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 

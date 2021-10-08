@@ -1,10 +1,11 @@
 ---
 title: Introdução ao encaminhamento de eventos
-description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 46%
+ht-degree: 92%
 
 ---
 
@@ -14,21 +15,21 @@ ht-degree: 46%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Para usar o encaminhamento de eventos no Adobe Experience Platform, os dados devem ser enviados para a Rede de borda da Adobe Experience Platform usando uma ou mais das três opções a seguir:
+Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da rede da Adobe Experience Platform usando uma ou mais das três seguintes opções:
 
 * [SDK da Web da Adobe Experience Platform](../../extensions/web/sdk/overview.md)
-* [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [API servidor para servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [SDK móvel da Adobe Experience Platform](https://sdkdocs.com)
+* [API servidor para servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=pt-BR)
 
 >[!NOTE]
->O SDK da Web da plataforma e o SDK móvel da plataforma não exigem implantação por meio de tags no Adobe Experience Platform. No entanto, usar tags para implantar esses SDKs é a abordagem recomendada.
+>O SDK da Web da Platform e o SDK móvel da Platform não exigem implantação por meio de tags na Adobe Experience Platform. No entanto, a utilização de tags para implantar esses SDKs é a abordagem recomendada.
 
-Depois de enviar dados para a rede de borda, você pode alternar entre as soluções da Adobe para enviar dados para lá. Para enviar dados para uma solução que não seja o Adobe, configure-os no encaminhamento de eventos.
+Depois de enviar dados para a rede de borda, você pode alternar entre as soluções da Adobe para enviar dados para lá. Para enviar dados a uma solução que não seja da Adobe, configure-os no encaminhamento de eventos.
 
 ## Pré-requisitos
 
 * Adobe Experience Platform Collection Enterprise (Entre em contato com seu gerente de conta para obter preços)
-* Encaminhamento de eventos no Adobe Experience Platform
+* Encaminhamento de eventos na Adobe Experience Platform
 * SDK da Web ou móvel da Adobe Experience Platform, configurado para enviar dados para a rede de borda
 * Mapear dados para o Experience Data Model (XDM) (esse mapeamento pode ser feito usando tags)
 
@@ -40,11 +41,11 @@ Na Adobe Experience Platform, crie seu esquema.
 
 1. Dê um nome e uma breve descrição ao esquema.
 
-1. Você pode adicionar o grupo de campos &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos de Campo]**.
+1. Você pode adicionar o campo &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos do campo]**.
 
    >[!NOTE]
    >
-   >Vários grupos de campos podem ser adicionados, se desejado.
+   >É possível adicionar vários grupos de campo, se desejado.
 
 1. Salve o esquema e anote o nome que você deu a ele.
 
@@ -52,7 +53,7 @@ Para obter mais informações sobre esquemas, consulte [Ajuda do sistema do Expe
 
 ## Criar uma propriedade de encaminhamento de evento
 
-Na interface do usuário da coleta de dados, crie uma propriedade do tipo &quot;Edge&quot;.
+Na interface da Coleção de dados, crie uma propriedade do tipo &quot;Edge&quot;.
 
 1. Selecione **[!UICONTROL Nova propriedade]**.
 
@@ -65,13 +66,13 @@ Na interface do usuário da coleta de dados, crie uma propriedade do tipo &quot;
 Depois de criar a propriedade, vá para a guia **[!UICONTROL Ambientes]** da nova propriedade e
 anote as IDs de ambiente. Se a Organização do Adobe usada no datastream for diferente da Organização do Adobe usada no encaminhamento de eventos, você poderá copiar a ID do ambiente da guia **[!UICONTROL Ambientes]** e colá-la ao criar um datastreamento. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
 
-## Criar um conjunto de dados
+## Criar um fluxo de dados
 
-Para criar seu armazenamento de dados no Adobe Experience Platform, use a ID de ambiente gerada ao criar a propriedade de encaminhamento de eventos.
+Para criar o fluxo de dados na Adobe Experience Platform, use a ID de ambiente gerada ao criar a propriedade de encaminhamento de eventos.
 
-1. Use o link no painel à esquerda da interface do usuário da Coleta de dados para abrir a interface dos conjuntos de dados.
+1. Use o link no painel à esquerda da interface da Coleção de dados para abrir a interface dos fluxos de dados.
 
-1. Selecione **[!UICONTROL Datastreams]**.
+1. Selecione **[!UICONTROL Fluxos de dados]**.
 
 1. Nomeie a configuração e forneça uma descrição opcional.
 A descrição ajuda a identificar configurações em uma lista de várias configurações.
@@ -80,27 +81,27 @@ A descrição ajuda a identificar configurações em uma lista de várias config
 
 
 
-## Ativar encaminhamento de eventos
+## Ativar o encaminhamento de eventos
 
-Em seguida, configure a Edge Network para enviar dados para o encaminhamento do evento e para outros produtos do Adobe.
+Em seguida, configure o Edge Network para enviar dados ao encaminhamento de eventos e a outros produtos da Adobe.
 
-1. Na interface do usuário do datastreams, selecione a propriedade criada.
+1. Na interface dos fluxos de dados, selecione a propriedade que você criou.
 
 1. Selecione Desenvolvimento, Produção ou Ambiente de preparo.
 
-   Ou, para enviar dados para um ambiente de encaminhamento de eventos fora da organização do Adobe, selecione **[!UICONTROL Alternar para o modo avançado]** e cole em uma ID. A ID é fornecida ao criar uma propriedade de encaminhamento de evento.
+   Ou, para enviar dados a um ambiente de encaminhamento de eventos fora da organização da Adobe, selecione **[!UICONTROL Alternar para o modo avançado]** e cole uma ID. A ID é fornecida quando você cria uma propriedade de encaminhamento de eventos.
 
 1. Ative as ferramentas necessárias e configure conforme necessário.
 
    * A Adobe Analytics exige uma ID de conjunto de relatórios.
 
-   * O encaminhamento de eventos no Adobe Experience Platform exige uma ID de propriedade e uma ID de ambiente. Esse é o caminho de publicação da propriedade de encaminhamento do evento.
+   * O encaminhamento de eventos na Adobe Experience Platform exige uma ID de propriedade e uma ID de ambiente. Esse é o caminho de publicação da propriedade de encaminhamento de eventos.
 
 Depois de configurar, anote as IDs de ambiente para a nova propriedade.
 
-## Configure a extensão SDK da Web da tag para enviar dados para o armazenamento de dados criado anteriormente
+## Configure a extensão SDK da Web da plataforma para enviar dados para o armazenamento de dados criado anteriormente
 
-Crie sua propriedade na interface do usuário da Coleta de dados, em seguida, use a extensão Adobe Experience Platform Web SDK para configurá-la.
+Crie a propriedade na interface da Coleção de dados. Em seguida, use a extensão SDK da Web da Adobe Experience Platform para configurá-la.
 
 1. Nomeie a propriedade.
 
@@ -112,9 +113,9 @@ Crie sua propriedade na interface do usuário da Coleta de dados, em seguida, us
 
 Consulte a [documentação da extensão SDK da Web](../../extensions/web/sdk/overview.md) para obter mais opções de configuração.
 
-## Criar uma regra de tag para enviar dados para o SDK da Web da plataforma
+## Criar uma regra de tag para enviar dados ao SDK da Web da Platform
 
-Depois que o acima estiver em vigor, crie definições de dados, regras e assim por diante, que utilizem o encaminhamento de eventos e tags , mas precisem apenas de uma única solicitação da página.
+Depois que tudo estiver configurado, crie definições de dados, regras e assim por diante, que usam encaminhamento de eventos e tags, mas que só precisam de uma única solicitação da página.
 
 Crie uma nova regra de carregamento de página usando a extensão SDK da Web da plataforma e o tipo de ação &quot;Enviar evento&quot;:
 
@@ -134,9 +135,9 @@ Em outro exemplo, você pode criar uma regra que enviará a camada de dados para
 
 ## Resumo
 
-Com o seguinte em vigor, agora você pode criar regras de encaminhamento de eventos para encaminhar dados para destinos que não sejam Adobe.
+Com os itens a seguir preparados, agora é possível criar regras de encaminhamento de eventos para encaminhar dados a destinos que não são da Adobe.
 
 * Esquema do Experience Data Model (Anote o nome que você deu a ele.)
-* Uma propriedade de encaminhamento de evento (rastreie a ID de propriedade e as IDs de ambiente).
-* Um armazenamento de dados (observe a ID do ambiente, para não ser confundido com a ID do ambiente do encaminhamento do evento).
+* Uma propriedade de encaminhamento de eventos (mantenha o controle da ID de propriedade e das IDs de ambiente).
+* Um fluxo de dados (observe a ID de ambiente, que não deve ser confundida com a ID de ambiente do encaminhamento de eventos).
 * Uma propriedade de tag

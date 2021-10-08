@@ -5,7 +5,7 @@ title: Apêndice do Guia da API do Registro de Schema
 description: Este documento fornece informações complementares relacionadas ao trabalho com a API do Registro de Esquema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
+source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 1%
@@ -77,50 +77,52 @@ Veja a seguir uma comparação lado a lado que mostra campos relacionados ao ani
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:birthDate": {
-              "Título": "Data de nascimento",
-              "type": "string",
-              "format": "date",
-          },
-          "xdm:birthDayAndMonth": {
-              "Título": "Data de nascimento",
-              "type": "string",
-              "padrão": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:birthYear": {
-              "Título": "Ano de nascimento",
-              "type": "integer",
-              "mínimo": 1,
-              "máximo": 32767
-        }
+{
+  "xdm:birthDate": {
+    "Título": "Data de nascimento",
+    "type": "string",
+    "format": "date"
+  },
+  "xdm:birthDayAndMonth": {
+    "Título": "Data de nascimento",
+    "type": "string",
+    "padrão": "[0-1][0-9]-[0-9][0-9]"
+  },
+  "xdm:birthYear": {
+    "Título": "Ano de nascimento",
+    "type": "integer",
+    "mínimo": 1,
+    "máximo": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "birthDate": {
-              "Título": "Data de nascimento",
-              "type": "string",
-              "format": "date",
-              "meta:xdmField": "xdm:birthDate",
-              "meta:xdmType": "date"
-          },
-          "birthDayAndMonth": {
-              "Título": "Data de nascimento",
-              "type": "string",
-              "padrão": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:birthDayAndMonth",
-              "meta:xdmType": "string"
-          },
-          "birthYear": {
-              "Título": "Ano de nascimento",
-              "type": "integer",
-              "mínimo": 1,
-              "máximo": 32767
-              "meta:xdmField": "xdm:birthYear",
-              "meta:xdmType": "short"
-        }
+{
+  "birthDate": {
+    "Título": "Data de nascimento",
+    "type": "string",
+    "format": "date",
+    "meta:xdmField": "xdm:birthDate",
+    "meta:xdmType": "date"
+  },
+  "birthDayAndMonth": {
+    "Título": "Data de nascimento",
+    "type": "string",
+    "padrão": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:birthDayAndMonth",
+    "meta:xdmType": "string"
+  },
+  "birthYear": {
+    "Título": "Ano de nascimento",
+    "type": "integer",
+    "mínimo": 1,
+    "máximo": 32767
+    "meta:xdmField": "xdm:birthYear",
+    "meta:xdmType": "short"
+  }
+}
       </pre>
   </td>
   </tr>

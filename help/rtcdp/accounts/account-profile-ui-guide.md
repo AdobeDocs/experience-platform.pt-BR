@@ -2,13 +2,13 @@
 keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem rtcdp, perfil do cliente em tempo real
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Real-time Customer Data Platform B2B Edition permite unificar as informações da conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
-
 
 # Guia da interface do usuário do perfil da conta
 
@@ -24,7 +24,7 @@ Os perfis de conta permitem unificar as informações da conta de várias fontes
 
 ## Procurar perfis de conta
 
-Para procurar perfis de conta, comece selecionando **[!UICONTROL Profiles]** em Accounts no painel de navegação esquerdo.
+Para procurar perfis de conta, comece selecionando **[!UICONTROL Profiles]** em [!UICONTROL Accounts] no painel de navegação esquerdo.
 
 ![](images/b2b-account-browse.png)
 
@@ -34,7 +34,7 @@ Na guia **[!UICONTROL Browse]**, você pode explorar perfis de conta usando uma 
 
 ### Navegue por [!UICONTROL Origem empresarial conectada]
 
-Para procurar perfis de conta por uma origem corporativa conectada, primeiro selecione uma origem conectada usando o botão seletor ao lado do campo **[!UICONTROL Source]**.
+Para procurar perfis de conta por uma fonte corporativa conectada, selecione **[!UICONTROL Connected enterprise source]** na lista suspensa **[!UICONTROL Procurar por]** e escolha uma fonte conectada usando o botão seletor ao lado do campo **[!UICONTROL Origem]**.
 
 ![](images/b2b-account-browse.png)
 
@@ -50,7 +50,7 @@ Para saber mais sobre como conectar origens empresariais, consulte a [visão ger
 
 Você pode escolher uma fonte selecionando o botão de opção ao lado do nome da conexão e usando **[!UICONTROL Select]** para retornar à guia [!UICONTROL Browse].
 
-Com uma origem selecionada, agora você deve inserir um **[!UICONTROL Account id]** relacionado à origem. Por exemplo, selecionar uma origem do Salesforce exigiria que você informasse uma ID de conta da instância do Salesforce para exibir o perfil de conta vinculado a essa ID.
+Com uma origem selecionada, agora você deve inserir um **[!UICONTROL Account ID]** relacionado à origem. Por exemplo, selecionar uma origem do Salesforce exigiria que você informasse uma ID de conta da instância do Salesforce para exibir o perfil de conta vinculado a essa ID.
 
 >[!NOTE]
 >
@@ -60,13 +60,15 @@ Com uma origem selecionada, agora você deve inserir um **[!UICONTROL Account id
 
 ![](images/b2b-account-browse-id.png)
 
-### Navegue por [!UICONTROL Other]
+### Navegue por [!UICONTROL Others]
 
-A CDP em tempo real, B2B Edition, suporta a capacidade de executar uma pesquisa direta permitindo que você insira um **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** e **[!UICONTROL Account id]** para uma conta que você gostaria de visualizar. Ao inserir o nome de origem e a instância diretamente, você fornece o contexto necessário para o Experience Platform procurar e exibir os dados corretos do perfil da conta.
+A CDP em tempo real, B2B Edition, suporta a capacidade de executar uma pesquisa direta permitindo que você insira um **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** e **[!UICONTROL Account ID]** para uma conta que você gostaria de visualizar. Ao inserir o nome de origem e a instância diretamente, você fornece o contexto necessário para o Experience Platform procurar e exibir os dados corretos do perfil da conta.
 
 A capacidade de executar uma pesquisa direta é útil em circunstâncias em que uma conexão de origem diretamente aos dados não é possível. Por exemplo, se sua organização tiver políticas de governança de dados em vigor que impedem a conexão diretamente com um CRM, você poderá exportar esses dados para um sistema de armazenamento em nuvem e assimilá-los no Experience Platform.
 
 Outro exemplo pode ser que você está realizando uma transformação nos dados entre o momento em que sai de um sistema e entra na Plataforma. Você pode usar a funcionalidade de pesquisa direta para fornecer contexto para os dados (como especificar que são dados do Marketo, apesar de provirem de um bucket do Amazon S3, por exemplo), para que o sistema saiba onde procurar e como renderizar corretamente os dados.
+
+Para iniciar uma pesquisa direta, selecione **[!UICONTROL Others]** na lista suspensa **[!UICONTROL Browse by]**, digite um **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** e **[!UICONTROL Account ID]** para a conta que deseja visualizar.
 
 ![](images/b2b-account-browse-adhoc.png)
 

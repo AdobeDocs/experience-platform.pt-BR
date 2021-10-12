@@ -3,16 +3,17 @@ title: Tipos de evento na extensão SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre como usar tipos de evento fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 solution: Experience Platform
 feature: Web SDK
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
 
 # Tipos de evento
 
-Esta página descreve os tipos de evento do Adobe Experience Platform fornecidos pela extensão de tag Adobe Experience Platform Web SDK. Eles são usados para [criar regras](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) e não devem ser confundidos com o campo [`eventType` no XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=pt-BR).
+Esta página descreve os tipos de evento do Adobe Experience Platform fornecidos pela extensão de tag Adobe Experience Platform Web SDK. Eles são usados para [criar regras](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) e não devem ser confundidos com o campo [`eventType` no XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=pt-BR).
 
 ## [!UICONTROL Enviar evento concluído]
 
@@ -169,12 +170,12 @@ Neste exemplo, se as apresentações forem encontradas no servidor que correspon
 ]
 ```
 
-Nesse ponto, é possível renderizar o conteúdo da proposta da maneira que quiser. Neste exemplo, a proposta que corresponde ao escopo `discount` é uma proposta HTML criada usando o Experience Composer baseado em formulário do Adobe Target. Suponha que você tenha um elemento em sua página com a ID de `daily-special` e deseje renderizar o conteúdo da proposta `discount` no elemento `daily-special`. Faça o seguinte:
+Nesse ponto, é possível renderizar o conteúdo da proposta da maneira que quiser. Neste exemplo, a proposta correspondente ao escopo `discount` é uma apresentação de HTML criada usando o Experience Composer baseado em formulário do Adobe Target. Suponha que você tenha um elemento em sua página com a ID de `daily-special` e deseje renderizar o conteúdo da proposta `discount` no elemento `daily-special`. Faça o seguinte:
 
 1. Extraia apresentações do objeto `event`.
 1. Faça o loop por cada proposta, procurando a proposta com um escopo de `discount`.
-1. Se você encontrar uma proposta, faça um loop por cada item na proposta, procurando pelo item que é conteúdo HTML. (É melhor verificar do que assumir.)
-1. Se você encontrar um item contendo conteúdo HTML, encontre o elemento `daily-special` na página e substitua seu HTML pelo conteúdo personalizado.
+1. Se você encontrar uma proposta, faça um loop por cada item na proposta, procurando pelo item que é conteúdo de HTML. (É melhor verificar do que assumir.)
+1. Se você encontrar um item contendo conteúdo de HTML, encontre o elemento `daily-special` na página e substitua seu HTML com o conteúdo personalizado.
 
 Seu código personalizado dentro da ação [!UICONTROL Custom code] pode aparecer da seguinte maneira:
 
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-

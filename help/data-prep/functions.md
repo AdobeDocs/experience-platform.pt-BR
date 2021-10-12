@@ -5,9 +5,9 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
+source-git-commit: ed14e0745ef105a35477f933b2ec435162f847de
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3933'
 ht-degree: 4%
 
 ---
@@ -34,7 +34,7 @@ Os dados nos subcampos podem ser acessados usando a notação de pontos. Por exe
 
 As tabelas a seguir listam todas as funções de mapeamento compatíveis, incluindo expressões de amostra e suas saídas resultantes.
 
-### Funções da string {#string}
+### Funções de string {#string}
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | arrays_to_object | Cria uma lista de objetos. | <ul><li>ENTRADA: **Obrigatório** Um agrupamento de pares de chave e matriz.</li></ul> | arrays_to_object(INPUT) | amostra necessária | amostra necessária |
 | to_object | Cria um objeto com base nos pares de chave/valor simples fornecidos. | <ul><li>ENTRADA: **Obrigatório** Uma lista simples de pares de chave/valor.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Cria um objeto a partir da string de entrada. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que está sendo analisada para criar um objeto.</li><li>VALUE_DELIMITITER: *Opcional* O delimitador que separa um campo do valor. O delimitador padrão é `:`.</li><li>FIELD_DELIMITADOR: *Opcional* O delimitador que separa pares de valores de campo. O delimitador padrão é `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | phone - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
-| is_set | Verifica se o objeto existe nos dados de origem. | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se existir nos dados de origem.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | true |
+| contains_key | Verifica se o objeto existe nos dados de origem. | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se existir nos dados de origem.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | nula | Define o valor do atributo para `null`. Isso deve ser usado quando você não deseja copiar o campo para o schema de destino. |  | nullify() | nullify() | `null` |
 | get_keys | Analisa os pares de chave/valor e retorna todas as chaves. | <ul><li>OBJETO: **Obrigatório** O objeto do qual as chaves serão extraídas.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Orgulho e Preconceito&quot;, &quot;livro2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analisa os pares de chave/valor e retorna o valor da string, com base na chave fornecida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que você deseja analisar.</li><li>CHAVE: **Obrigatório** A chave para a qual o valor deve ser extraído.</li><li>VALUE_DELIMITITER: **Obrigatório** O delimitador que separa o campo e o valor. Se um `null` ou uma string vazia for fornecida, esse valor será `:`.</li><li>FIELD_DELIMITADOR: *Opcional* O delimitador que separa pares de campos e valores. Se um `null` ou uma string vazia for fornecida, esse valor será `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
@@ -191,7 +191,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 {style=&quot;table-layout:auto&quot;}
 
-### Digite conversões {#type-conversions}
+### Tipo de conversões {#type-conversions}
 
 >[!NOTE]
 >

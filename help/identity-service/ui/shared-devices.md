@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: A Detecção de dispositivo compartilhado identifica diferentes usuários autenticados do mesmo dispositivo, permitindo uma representação mais precisa dos dados do cliente nos gráficos de identidade
 hide: true
 hidefromtoc: true
-source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
+source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 O Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visão de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais impactantes em tempo real.
 
-[!DNL Shared Device] refere-se aos dispositivos usados por mais de um indivíduo. Os exemplos de um dispositivo compartilhado incluem tablets, computadores de biblioteca e quiosques. Por meio do recurso [!DNL Shared Device Detection], é possível impedir que usuários diferentes do mesmo dispositivo sejam mesclados em uma única identidade, permitindo uma representação mais precisa.
+[!DNL Shared Device] refere-se aos dispositivos usados por mais de um indivíduo. Os exemplos de um dispositivo compartilhado incluem tablets, computadores de biblioteca e quiosques. Por meio do recurso [!DNL Shared Device Detection], é possível impedir que usuários diferentes do mesmo dispositivo sejam mesclados em uma única identidade, permitindo uma representação mais precisa de um indivíduo.
 
 Com [!DNL Shared Device Detection] você pode:
 
@@ -31,7 +31,7 @@ Com [!DNL Shared Device Detection] você pode:
 
 >[!TIP]
 >
->As configurações para [!DNL Shared Device Detection] devem ser concluídas antes de habilitar [!DNL Profile] para o conjunto de dados, pois não é mais possível revisar as configurações, uma vez que os gráficos são gerados em [!DNL Identity Service].
+>As configurações para [!DNL Shared Device Detection] devem ser concluídas antes de habilitar o Perfil para o conjunto de dados, pois não é mais possível revisar as configurações depois que os gráficos são gerados em [!DNL Identity Service].
 
 ## Introdução
 

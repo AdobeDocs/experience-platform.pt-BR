@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
+source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 76%
+source-wordcount: '1543'
+ht-degree: 75%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 76%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 8 de outubro de 2021
+
+v3.2.2
+
+* Corrija o esquema JSON do elemento de dados de valor condicional para todos os operadores disponíveis.
+* Correção https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23 de setembro de 2021
 

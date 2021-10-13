@@ -2,9 +2,8 @@
 title: Tipos de evento na extensão SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre como usar tipos de evento fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 solution: Experience Platform
-feature: Web SDK
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%

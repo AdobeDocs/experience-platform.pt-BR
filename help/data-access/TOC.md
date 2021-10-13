@@ -3,17 +3,16 @@ audience: user
 user-guide-title: Adobe Experience Platform Data Access
 breadcrumb-title: Guia do Data Access
 user-guide-description: Descubra e acesse conjuntos de dados assimilados no Platform.
-feature: Gerenciamento de dados, assimilação de dados
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Access
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 51%
+source-wordcount: '37'
+ht-degree: 56%
 
 ---
 
 
-# Adobe Experience Platform Data Access {#data-access}
+# Acesso aos dados do Adobe Experience Platform {#data-access}
 
 - [Visão geral do acesso a dados](home.md)
 - [API de acesso a dados](api.md)

@@ -1,10 +1,12 @@
 ---
 title: Visão geral do encaminhamento de eventos
-description: Saiba mais sobre o encaminhamento de eventos no Adobe Experience Platform, que permite usar a Rede de borda da plataforma para executar tarefas sem alterar a implementação de tags.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
+feature: Event Forwarding
+exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '547'
-ht-degree: 39%
+ht-degree: 96%
 
 ---
 
@@ -14,14 +16,14 @@ ht-degree: 39%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-O encaminhamento de eventos no Adobe Experience Platform diminui o peso da página da Web e do aplicativo usando a Rede de borda da Adobe Experience Platform para executar tarefas normalmente realizadas no cliente. As regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos sem alterar as implementações do lado do cliente.
+O encaminhamento de eventos da Adobe Experience Platform diminui o peso da página da Web e do aplicativo usando a Adobe Experience Platform Edge Network para executar tarefas normalmente realizadas no cliente. As regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos sem alterar as implementações do lado do cliente.
 
-O encaminhamento de eventos combinado com os SDKs da Web e do Mobile da Adobe Experience Platform possibilita:
+O encaminhamento de eventos, combinado a SDKs da Web e móveis da Adobe Experience Platform, torna possível:
 
-* Faça uma única chamada da página que contenha uma carga de dados. Os dados então federam o lado do servidor para reduzir o tráfego de rede do lado do cliente e fornecer uma experiência mais rápida para os clientes.
+* Fazer uma chamada única da página que contém uma carga de dados. Os dados são então federados do lado do servidor para reduzir o tráfego de rede do lado do cliente e fornecer uma experiência mais rápida.
 * Diminuir o tempo de carregamento das páginas da Web para que seu site esteja em conformidade com as práticas recomendadas do setor em relação ao desempenho.
-* Aumente a transparência e o controle sobre quais tipos de dados são enviados em todas as propriedades de tags.
-* Crie uma regra de encaminhamento de eventos para enviar dados rastreados anteriormente para um novo destino.
+* Aumentar a transparência e o controle sobre quais tipos de dados são enviados e para onde, em todas as propriedades de tag.
+* Criar uma regra de encaminhamento de eventos para enviar dados rastreados anteriormente para um novo destino.
 
 ## Desempenho aprimorado
 
@@ -29,9 +31,9 @@ Em um ambiente cada vez mais competitivo, as empresas devem priorizar o desempen
 
 ## Melhor governança de dados
 
-À medida que a pilha de tecnologia cresce e os dados são enviados para mais e mais destinos, o desafio de controlar quais dados são enviados torna-se mais difícil. A normalização de regulamentos como o GDPR e a CCPA força as empresas a exercerem mais controle sobre um problema de dados que está se tornando cada vez mais difícil.
+À medida que a pilha de tecnologia cresce e os dados são enviados para mais e mais destinos, o desafio de controlar quais dados são enviados torna-se mais difícil. A normalização de regulamentos como o GDPR e o CCPA forçam as empresas a exercer mais controle sobre um problema de dados que está se tornando cada vez mais difícil.
 
-O encaminhamento de eventos ajuda as equipes de marketing a expandir seus negócios e, ao mesmo tempo, controla os dados. Ele diminui o número de tecnologias do lado do cliente que os profissionais de marketing precisam usar para chegar ao mercado alvo e enviar dados a destinos que não são da Adobe. Isso torna mais fácil para as equipes de implementação gerenciarem os dados que fluem do cliente para vários destinos
+O encaminhamento de eventos ajuda as equipes de marketing a expandir os negócios enquanto controlam os dados. Ele diminui o número de tecnologias do lado do cliente que os profissionais de marketing precisam usar para chegar ao mercado alvo e enviar dados a destinos que não são da Adobe. Isso torna mais fácil para as equipes de implementação gerenciarem os dados que fluem do cliente para vários destinos
 
 ## Diferenças entre o encaminhamento de eventos e as tags
 
@@ -39,9 +41,9 @@ O encaminhamento de eventos ajuda as equipes de marketing a expandir seus negóc
 
 * Tokenização do elemento de dados
 
-   * Tags: Em uma regra, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados. Por exemplo, `%viewportHeight%`.
+   * Tags: em uma regra, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados. Por exemplo, `%viewportHeight%`.
 
-   * Encaminhamento de evento: Em uma regra, os elementos de dados são tokenizados com `{{` no início e `}}` no final do nome do elemento de dados. Por exemplo, `{{viewportHeight}}`.
+   * Encaminhamento de eventos: em uma regra, os elementos de dados são tokenizados com um `{{` no início e `}}` no fim do nome do elemento de dados. Por exemplo, `{{viewportHeight}}`.
 
 * Como os dados são referenciados
 
@@ -58,10 +60,10 @@ O encaminhamento de eventos ajuda as equipes de marketing a expandir seus negóc
 
 * Sequência de ações de regras
 
-   Na seção Ação de uma regra, as regras de encaminhamento do evento são sempre executadas sequencialmente. Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser escolhida como pode com tags.
+   Na seção Ação de uma regra, as regras do encaminhamento de eventos são sempre executadas sequencialmente. Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser escolhida como acontece com as tags.
 
 * Versões JavaScript de código personalizado
 
-   As tags usam a versão do JavaScript es5. O encaminhamento de eventos usa a versão es6.
+   As tags usam a versão es5 do JavaScript. O encaminhamento de eventos usa a versão es6.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->

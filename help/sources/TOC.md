@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 14%
@@ -42,7 +42,7 @@ ht-degree: 14%
       - [Conector de Armazenamento de Arquivos do Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Zona de aterrissagem de dados](connectors/cloud-storage/data-landing-zone.md)
       - [Conector FTP](connectors/cloud-storage/ftp.md)
-      - [Conector de armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Conector de armazenamento em nuvem Google](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Armazenamento de objetos de oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Conector SFTP](connectors/cloud-storage/sftp.md)
@@ -62,7 +62,7 @@ ht-degree: 14%
       - [Conector do Azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
       - [Conector Couchbase](connectors/databases/couchbase.md)
-      - [Conector do Google BigQuery](connectors/databases/bigquery.md)
+      - [Conector Google BigQuery](connectors/databases/bigquery.md)
       - [Conector GreenPlum](connectors/databases/greenplum.md)
       - [Conector HP Vertica](connectors/databases/hp-vertica.md)
       - [Conector IBM DB2](connectors/databases/ibm-db2.md)
@@ -100,7 +100,7 @@ ht-degree: 14%
          - [Armazenamento de Arquivos do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zona de aterrissagem de dados](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Armazenamento no Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Armazenamento em nuvem Google](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Armazenamento de objetos de oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -189,7 +189,7 @@ ht-degree: 14%
          - [Armazenamento de Arquivos do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Zona de aterrissagem de dados](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Armazenamento no Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Armazenamento em nuvem Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Armazenamento de objetos de oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)

@@ -3,12 +3,11 @@ audience: user
 user-guide-title: Guia do ETL para a Adobe Experience Platform
 breadcrumb-title: Guia do ETL
 user-guide-description: Saiba mais sobre as etapas gerais para criar conectores seguros e de alto desempenho para assimilar dados no Platform.
-feature: Gerenciamento de dados, assimilação de dados
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Ingestion
+source-git-commit: d1f50cc228cc6bc31a94981edb3109d07378911f
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 44%
+source-wordcount: '43'
+ht-degree: 48%
 
 ---
 

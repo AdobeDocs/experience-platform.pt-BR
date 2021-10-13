@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Endpoint da API de gerenciamento de sandbox
 topic-legacy: developer guide
 description: O endpoint /sandboxes na API do Sandbox permite gerenciar sandboxes de forma programática no Adobe Experience Platform.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 3%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -190,6 +191,10 @@ Uma resposta bem-sucedida retorna os detalhes da sandbox, incluindo `name`, `tit
 | `eTag` | Um identificador para uma versão específica da sandbox. Usado para controle de versão e eficiência de armazenamento em cache, esse valor é atualizado sempre que uma alteração é feita na sandbox. |
 
 ## Criar uma sandbox {#create}
+
+>[!NOTE]
+>
+>Quando uma nova sandbox é criada, você deve primeiro adicionar essa nova sandbox ao perfil do produto em [Adobe Admin Console](https://adminconsole.adobe.com/) antes de começar a usar a nova sandbox. Consulte a documentação sobre [gerenciamento de permissões para um perfil de produto](../../access-control/ui/permissions.md) para obter informações sobre como provisionar uma sandbox para um perfil de produto.
 
 Você pode criar uma nova sandbox de desenvolvimento ou produção, fazendo uma solicitação POST para o endpoint `/sandboxes`.
 
@@ -400,7 +405,7 @@ Uma resposta bem-sucedida retorna os detalhes da sandbox atualizada, mostrando q
 }
 ```
 
-A sandbox de produção padrão e qualquer sandbox de produção criada pelo usuário não podem ser redefinidas se o gráfico de identidade hospedado nela também estiver sendo usado pelo Adobe Analytics para o recurso [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou se o gráfico de identidade hospedado nele também estiver sendo usado pelo Adobe Audience Manager para o recurso [Destinos baseados em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+A sandbox de produção padrão e qualquer sandbox de produção criada pelo usuário não podem ser redefinidas se o gráfico de identidade hospedado nela também estiver sendo usado pelo Adobe Analytics para o recurso [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) ou se o gráfico de identidade hospedado nele também estiver sendo usado pelo Adobe Audience Manager para o recurso [Destinos baseados em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
 Veja a seguir uma lista de possíveis exceções que podem impedir a redefinição de uma sandbox:
 

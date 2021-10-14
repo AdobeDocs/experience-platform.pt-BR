@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform, baixar pontuações, atendimento ao cliente, tópicos populares, Exportar, exportar, download de ai do cliente, pontuações do atendimento ao cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Fazer download de pontuações no Customer AI
 topic-legacy: Downloading scores
 description: O Customer AI permite baixar pontuações no formato de arquivo Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 2%
+source-wordcount: '961'
+ht-degree: 3%
 
 ---
 
@@ -30,7 +30,7 @@ Atualmente, há duas maneiras de baixar as pontuações do Customer AI:
 
 ## Encontrar a ID do conjunto de dados {#dataset-id}
 
-Na instância de serviço do Customer AI insights, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Access scores]**.
+Na instância de serviço do Customer AI insights, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Pontuações de acesso]**.
 
 ![mais ações](../images/insights/more-actions.png)
 
@@ -167,7 +167,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto `_links`. No obje
 }
 ```
 
-## Recupere seus arquivos {#retrieving-your-files}
+## Recuperar arquivos {#retrieving-your-files}
 
 Usando o valor `href` obtido na etapa anterior como uma chamada de API, faça uma nova solicitação do GET para recuperar o diretório de arquivos.
 

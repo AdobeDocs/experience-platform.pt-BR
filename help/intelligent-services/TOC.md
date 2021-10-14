@@ -4,11 +4,10 @@ audience: user
 user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
-feature: Data Science Workspace
-source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 25%
+source-wordcount: '121'
+ht-degree: 23%
 
 ---
 

@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform, guia do usuário, ajuda de atribuição, tópicos populares, região
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1765'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ Este documento é um guia para interagir com o Attribution AI na interface do us
 
 ## Criar uma instância
 
-Na interface [!DNL Adobe Experience Platform], clique em **[!UICONTROL Services]** no painel de navegação esquerdo. O navegador **[!UICONTROL Services]** é exibido e exibe os serviços Adobe inteligentes disponíveis. No contêiner do Attribution AI, clique em **[!UICONTROL Open]**.
+Na interface [!DNL Adobe Experience Platform], clique em **[!UICONTROL Services]** no painel de navegação esquerdo. O navegador **[!UICONTROL Services]** é exibido e exibe os serviços Adobe inteligentes disponíveis. No contêiner do Attribution AI, clique em **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
@@ -33,21 +32,21 @@ Você pode encontrar a métrica **[!UICONTROL Total conversion events scored]** 
 
 As instâncias de serviço podem ser editadas, clonadas e excluídas usando os controles no lado direito da interface do usuário. Para exibir esses controles, selecione uma instância de seu **[!UICONTROL Service instances]** existente. Os controles contêm as seguintes informações:
 
-- **[!UICONTROL Edit]**: Selecionar  **[!UICONTROL Edit]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição, o status e a frequência de pontuação da instância.
-- **[!UICONTROL Clone]**: Selecionar  **[!UICONTROL Clone]** copia a instância de serviço selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
-- **[!UICONTROL Delete]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
-- **[!UICONTROL Data source]**: Um link para o conjunto de dados que está sendo usado por esta instância.
-- **[!UICONTROL Last run details]**: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
+- **[!UICONTROL Editar]**: Selecionar  **** Editar permite modificar uma instância de serviço existente. É possível editar o nome, a descrição, o status e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopies a instância de serviço selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
+- **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados que está sendo usado por esta instância.
+- **[!UICONTROL Detalhes]** da última execução: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL Conversion events]**: Uma visão geral rápida dos eventos de conversão configurados para esta instância.
-- **[!UICONTROL Lookback window]**: O período definido, indicando quantos dias antes dos pontos de contato do evento de conversão foram incluídos.
-- **[!UICONTROL Touchpoints]**: Uma lista de todos os pontos de contato definidos ao criar essa instância.
+- **[!UICONTROL Eventos]** de conversão: Uma visão geral rápida dos eventos de conversão configurados para esta instância.
+- **[!UICONTROL Janela]** de pesquisa: O período definido, indicando quantos dias antes dos pontos de contato do evento de conversão foram incluídos.
+- **[!UICONTROL Pontos de contato]**: Uma lista de todos os pontos de contato definidos ao criar essa instância.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Selecione **[!UICONTROL Create instance]** para começar.
+Selecione **[!UICONTROL Criar instância]** para começar.
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
@@ -57,7 +56,7 @@ Em seguida, a página de configuração do Attribution AI é exibida, onde é po
 
 ### Nomeie a instância
 
-Em **[!UICONTROL Basic information]**, forneça um nome e uma descrição opcional para a instância de serviço.
+Em **[!UICONTROL Basic information]**, forneça um nome e uma descrição opcional para a instância do serviço.
 
 ![nomear uma instância](./images/user-guide/naming_instance.png)
 
@@ -93,15 +92,15 @@ Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. 
 
 ![sem lista suspensa](./images/user-guide/conversion_event_1.png)
 
-Os botões **[!UICONTROL Add event]** e **[!UICONTROL Add Group]** são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar os botões **[!UICONTROL Add event]** e **[!UICONTROL Add group]** para fornecer mais contexto.
+Os botões **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar Grupo]** são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar os botões **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** para fornecer mais contexto.
 
 ![adicionar evento](./images/user-guide/add_event.png)
 
-Clicar em **[!UICONTROL Add event]** cria campos adicionais que podem ser preenchidos usando o mesmo método descrito acima. Isso adiciona uma instrução AND à definição da string abaixo do nome da conversão. Clique em **x** para remover um evento que foi adicionado.
+Clicar em **[!UICONTROL Adicionar evento]** cria campos adicionais que podem ser preenchidos usando o mesmo método descrito acima. Isso adiciona uma instrução AND à definição da string abaixo do nome da conversão. Clique em **x** para remover um evento que foi adicionado.
 
 ![adicionar menu de eventos](./images/user-guide/add_event_result.png)
 
-Clicar em **[!UICONTROL Add Group]** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *And* é exibido. Clicar em **And** dá uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;And&quot; estende o caminho de conversão para incluir condições adicionais.
+Clicar em **[!UICONTROL Adicionar grupo]** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *And* é exibido. Clicar em **And** dá uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;And&quot; estende o caminho de conversão para incluir condições adicionais.
 
 ![usando e ou](./images/user-guide/and_or.png)
 
@@ -159,7 +158,7 @@ Quando terminar de definir todos os pontos de contato necessários, role para ci
 
 ## Configuração avançada de treinamento e pontuação
 
-A página final no Attribution AI é a página **[!UICONTROL Advanced]** usada para configurar o treinamento e a pontuação.
+A página final no Attribution AI é a página **[!UICONTROL Avançado]** usada para configurar o treinamento e a pontuação.
 
 ![nova página avançada](./images/user-guide/advanced_settings.png)
 
@@ -185,11 +184,11 @@ Por padrão, um conjunto de dados de pontuação é criado para cada instância 
 
 ![pontuar adição da coluna do conjunto de dados](./images/user-guide/Add-score-dataset.png)
 
-### Modelagem baseada em região (opcional) {#region-based-modeling-optional}
+### Modelagem com base na região (opcional) {#region-based-modeling-optional}
 
 Os comportamentos dos seus clientes podem diferir significativamente por país e região geográfica. Para empresas globais, usar modelos baseados em país ou em região pode aumentar a precisão da atribuição. Cada região adicionada cria um novo modelo com os dados dessa região.
 
-Para definir uma nova região, comece clicando em **[!UICONTROL Add region]**. No contêiner exibido, forneça um nome para a região. Somente um valor (&quot;placeContext.geo.countryCode&quot;) é preenchido a partir da lista suspensa **[!UICONTROL Enter Field Name]**. Selecione este valor.
+Para definir uma nova região, comece clicando em **[!UICONTROL Add region]**. No contêiner exibido, forneça um nome para a região. Somente um valor (&quot;placeContext.geo.countryCode&quot;) é preenchido a partir da lista suspensa **[!UICONTROL Inserir nome de campo]**. Selecione este valor.
 
 ![Selecionar região em](./images/user-guide/select_region_att.png)
 
@@ -197,7 +196,7 @@ Em seguida, selecione um operador.
 
 ![operador de região](./images/user-guide/region_operators.png)
 
-Por fim, digite o código do país na lista suspensa **[!UICONTROL Enter Field Value]**.
+Por fim, digite o código do país na lista suspensa **[!UICONTROL Inserir valor do campo]**.
 
 >[!NOTE]
 >

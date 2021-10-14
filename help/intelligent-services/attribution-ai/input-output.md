@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform, introdução, Attribution ai, tópicos populares, Attribution ai input, Attribution ai output,
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 3%
@@ -45,7 +45,7 @@ Nem todas as colunas no esquema [!DNL Consumer Experience Event] (CEE) são obri
 | Marketing.trackingCode | Ponto de contato |
 | Marketing.campaignname | Ponto de contato |
 | Marketing.campaigngroup | Ponto de contato |
-| Comércio | Conversão |
+| Commerce | Conversão |
 
 Normalmente, a atribuição é executada em colunas de conversão, como pedido, compras e check-outs em &quot;comércio&quot;. As colunas para &quot;canal&quot; e &quot;marketing&quot; são usadas para definir pontos de contato para o Attribution AI (por exemplo, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Para obter resultados e insights ideais, é altamente recomendável incluir o máximo possível de colunas de conversão e ponto de contato. Além disso, você não está limitado apenas às colunas acima. Você pode incluir qualquer outra coluna recomendada ou personalizada como conversão ou definição de ponto de contato.
 

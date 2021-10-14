@@ -1,14 +1,13 @@
 ---
 keywords: insights, ajuda da atribuição, insights do ai da atribuição, serviço de consulta AAI, consultas de atribuição, pontuações de atribuição
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Analisando Pontuações de Atribuição Usando O Serviço De Query
 topic-legacy: Attribution AI queries
 description: Saiba como usar o Serviço de query da Adobe Experience Platform para analisar pontuações do Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Cada linha nos dados representa uma conversão, na qual as informações dos pon
 
 ## Encontrar os caminhos de dados
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo. A página **[!UICONTROL Datasets]** é exibida. Em seguida, selecione a guia **[!UICONTROL Browse]** e localize o conjunto de dados de saída para suas pontuações do Attribution AI.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo. A página **[!UICONTROL Datasets]** é exibida. Em seguida, selecione a guia **[!UICONTROL Browse]** e localize o conjunto de dados de saída para suas pontuações de Attribution AI.
 
 ![Acessar sua instância](./images/aai-query/datasets_browse.png)
 
@@ -41,13 +40,13 @@ Após visualizar seus dados, selecione o schema no painel direito. Um provedor �
 
 ![selecionar o esquema](./images/aai-query/select_schema.png)
 
-Usando o esquema de pontuação, você pode selecionar ou pesquisar um valor. Depois de selecionado, o painel lateral **[!UICONTROL Field properties]** é aberto, permitindo copiar o caminho para uso na criação de consultas.
+Usando o esquema de pontuação, você pode selecionar ou pesquisar um valor. Depois de selecionado, o painel lateral **[!UICONTROL Propriedades do campo]** é aberto, permitindo copiar o caminho para uso na criação de consultas.
 
 ![copiar o caminho](./images/aai-query/copy_path.png)
 
 ## Acessar Serviço de Query
 
-Para acessar o Serviço de query na interface do usuário da plataforma, comece selecionando **[!UICONTROL Queries]** na navegação à esquerda e selecione a guia **[!UICONTROL Browse]**. Uma lista de suas consultas salvas anteriormente é carregada.
+Para acessar o Serviço de query na interface do usuário da plataforma, comece selecionando **[!UICONTROL Queries]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]**. Uma lista de suas consultas salvas anteriormente é carregada.
 
 ![navegação do serviço de query](./images/aai-query/query_tab.png)
 

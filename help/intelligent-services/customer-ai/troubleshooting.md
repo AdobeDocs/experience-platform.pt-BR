@@ -1,17 +1,18 @@
 ---
 keywords: Experience Platform, introdução, atendimento ao cliente, tópicos populares, entrada de atendimento ao cliente, saída de atendimento ao cliente, solução de problemas de atendimento ao cliente, erros de atendimento ao cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Solução de problemas de erro de AI do cliente
 topic-legacy: Getting started
 description: Encontre respostas para erros comuns no Customer AI.
 type: Documentation
-source-git-commit: ceb203899cda83aa79b994d45798d6147c3ff3b8
+exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
 
 ---
-
 
 # Solução de problemas de erro de AI do cliente
 
@@ -44,4 +45,3 @@ Se os dados não parecerem ser o problema, tente alterar a condição de popula�
 Se a restrição da população de qualificação não funcionou ou não for possível, altere sua janela de previsão.
 
 - Tente alterar a janela de previsão para 7 dias e veja se o erro continua ocorrendo. Se o erro não ocorrer mais, isso indica que talvez você não tenha dados suficientes para a janela de previsão definida.
-

@@ -5,7 +5,7 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -117,6 +117,8 @@ O Experience Platform oferece suporte para assimilar dados do sistema local. Con
 O Experience Platform oferece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL HubSpot] conector](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Pagamentos
@@ -155,7 +157,7 @@ Para obter mais informações sobre as permissões disponíveis concedidas por m
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), Você reconhece que o Beta é fornecido ***&quot;no estado em que se encontra&quot; sem garantia de qualquer tipo***.
 
-O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. É aconselhável ter cuidado e não depender de forma alguma do correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
+O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. Recomenda-se que tenha cuidado e não se baseie de forma alguma no correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
 
 Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta, incluindo, mas não se limitando a problemas ou defeitos que você encontra ao usar o Beta, sugestões, melhorias e recomendações) fornecidas por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
 

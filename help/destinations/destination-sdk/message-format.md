@@ -1,12 +1,10 @@
 ---
-description: Use o conteúdo desta página junto com o restante das opções de configuração para destinos de parceiros. Esta página endereça o formato de mensagem dos dados exportados do Adobe Experience Platform para destinos, enquanto a outra página aborda especificamente a conexão e autenticação com seu destino.
-seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
-seo-title: Message format
+description: Esta página aborda o formato da mensagem e a transformação do perfil em dados exportados do Adobe Experience Platform para destinos .
 title: Formato de mensagem
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1981'
 ht-degree: 2%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 2%
 
 ## Pré-requisitos - Conceitos do Adobe Experience Platform {#prerequisites}
 
-Para entender o processo no Adobe, familiarize-se com os seguintes conceitos de Experience Platform:
+Para entender o formato da mensagem, a configuração do perfil e o processo de transformação no Adobe, familiarize-se com os seguintes conceitos do Experience Platform:
 
 * **Experience Data Model (XDM)**. [Visão ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR) geral do XDM e   [Como criar um esquema XDM no Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Classe**. [Crie e edite classes na interface do usuário](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
@@ -24,11 +22,11 @@ Para entender o processo no Adobe, familiarize-se com os seguintes conceitos de 
 
 ## Visão geral {#overview}
 
-Use o conteúdo desta página junto com o restante das opções de configuração [para destinos de parceiros](./configuration-options.md). Esta página endereça o formato de mensagem dos dados exportados do Adobe Experience Platform para destinos, enquanto a outra página aborda especificamente a conexão e autenticação com seu destino.
+Use o conteúdo desta página junto com o restante das opções de configuração [para destinos de parceiros](./configuration-options.md). Esta página aborda o formato da mensagem e a transformação do perfil em dados exportados do Adobe Experience Platform para destinos . A outra página aborda especificamente a conexão e autenticação com seu destino.
 
-O Adobe Experience Platform exporta dados para um número significativo de destinos, em vários formatos de dados. Alguns exemplos de tipos de destino são plataformas de publicidade (Google), redes sociais (Facebook), locais de armazenamento em nuvem (Amazon S3, Hubs de eventos do Azure).
+O Adobe Experience Platform exporta dados para um número significativo de destinos, em vários formatos de dados. Alguns exemplos de tipos de destino são plataformas de publicidade (Google), redes sociais (Facebook) e locais de armazenamento em nuvem (Amazon S3, Hubs de Eventos do Azure).
 
-O Experience Platform pode ajustar o formato de mensagem exportado para corresponder ao formato esperado no seu lado. Para entender essa personalização, os seguintes conceitos são importantes:
+O Experience Platform pode ajustar o formato de mensagem dos perfis exportados para corresponder ao formato esperado no seu lado. Para entender essa personalização, os seguintes conceitos são importantes:
 * O esquema XDM de origem (1) e de destino (2) no Adobe Experience Platform
 * O formato de mensagem esperado no lado do parceiro (3) e
 * A camada de transformação entre o esquema XDM e o formato de mensagem esperado, que você pode definir criando um [template de transformação de mensagem](./message-format.md#using-templating).
@@ -49,7 +47,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **Esquema padrão JSON dos atributos de perfil de destino (3)**: Este item representa um esquema  [JSON ](https://json-schema.org/learn/miscellaneous-examples.html) de todos os atributos de perfil compatíveis com sua plataforma e seus tipos (por exemplo: objeto, string, matriz). Os campos de exemplo que seu destino poderia suportar podem ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e assim por diante. Você precisa de um [template de transformação de mensagem](./message-format.md#using-templating) para adaptar os dados exportados do Experience Platform para o formato esperado.
 
-Com base nas transformações de schema descritas acima, veja como a estrutura de uma mensagem muda entre o schema XDM de origem e um schema de amostra no lado do parceiro:
+Com base nas transformações de schema descritas acima, veja como uma configuração de perfil muda entre o schema XDM de origem e um schema de amostra no lado do parceiro:
 
 ![Exemplo de mensagem de transformações](./assets/transformations-with-examples.png)
 
@@ -58,7 +56,7 @@ Com base nas transformações de schema descritas acima, veja como a estrutura d
 
 ## Introdução - transformação de três atributos básicos {#getting-started}
 
-Para demonstrar o processo de transformação, o exemplo abaixo usa três atributos comuns de perfil no Adobe Experience Platform: **nome**, **sobrenome** e **endereço de e-mail**.
+Para demonstrar o processo de transformação do perfil, o exemplo abaixo usa três atributos comuns do perfil no Adobe Experience Platform: **nome**, **sobrenome** e **endereço de e-mail**.
 
 >[!NOTE]
 >
@@ -93,7 +91,7 @@ Considerando o formato da mensagem, as transformações correspondentes são as 
 
 O Adobe usa uma linguagem de modelo semelhante a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) para transformar os campos do esquema XDM em um formato compatível com seu destino.
 
-Esta seção fornece vários exemplos de como essas transformações são feitas, do schema XDM de entrada por meio do template e da saída em formatos de carga aceitos pelo seu destino. Os exemplos abaixo são classificados por complexidade crescente, da seguinte maneira:
+Esta seção fornece vários exemplos de como essas transformações são feitas - do schema XDM de entrada, por meio do template e da saída em formatos de carga aceitos pelo seu destino. Os exemplos abaixo são apresentados pela complexidade crescente, como a seguir:
 
 1. Exemplos simples de transformação. Saiba como a modelagem funciona com transformações simples para campos [Atributos de perfil](./message-format.md#attributes), [Associação de segmento](./message-format.md#segment-membership) e [Identidade](./message-format.md#identities).
 2. Exemplos de complexidade maior de modelos que combinam os campos acima: [Crie um modelo que envie segmentos e identidades](./message-format.md#segments-and-identities) e [Crie um modelo que envie segmentos, identidades e atributos de perfil](./message-format.md#segments-identities-attributes).

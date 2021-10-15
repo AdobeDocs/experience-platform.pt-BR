@@ -1,9 +1,10 @@
 ---
-description: Essa configuração determina como os usuários do Adobe Experience Platform são autenticados no terminal de destino para ativar os dados.
-title: Opções de configuração para credenciais no SDK de destino
-source-git-commit: 11f6421665acc2041aa9483b1e0efb6fe48b6dfb
+description: Use as configurações de autenticação compatíveis no SDK de Destino do Adobe Experience Platform para autenticar usuários e ativar dados no terminal de destino.
+title: Configuração de autenticação
+exl-id: 33eaab24-f867-4744-b424-4ba71727373c
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 ## Tipos de autenticação compatíveis {#supported-authentication-types}
 
-O Adobe Experience Platform oferece suporte a vários tipos de autenticação:
+O Adobe Experience Platform Destination SDK oferece suporte a vários tipos de autenticação:
 
 * Autenticação do portador
 * OAuth 2 com código de autorização

@@ -5,9 +5,9 @@ title: Espaços de nomes e esquemas B2B
 topic-legacy: overview
 description: Este documento fornece uma visão geral de namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1679'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ A tabela a seguir contém informações sobre a configuração subjacente para n
 | Membro da Campanha B2B | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | Lista de marketing B2B | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | Membro da Lista de Marketing B2B | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| Relação de Pessoa da Conta B2B | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ A tabela a seguir contém informações sobre a configuração subjacente dos es
 | Lista de marketing B2B | Lista de marketing comercial XDM | Nenhum | Ativado | `marketingListKey.sourceKey` na classe base | Lista de marketing B2B | Nenhum | Nenhum | Nenhum | A Lista estática não é sincronizada de [!DNL Salesforce] e, portanto, não tem uma identidade secundária. |
 | Membro da Lista de Marketing B2B | Membros da Lista de Marketing Comercial XDM | Nenhum | Ativado | `marketingListMemberKey.sourceKey` na classe base | Membro da Lista de Marketing B2B | Nenhum | Nenhum | **Primeira relação**<ul><li>`PersonKey.sourceKey` na classe base</li><li>Tipo: Muitos para um</li><li>Esquema de referência: Pessoa B2B</li><li>Namespace: Pessoa B2B</li><li>Propriedade de destino: `b2b.personKey.sourceKey`</li><li>Nome do relacionamento do schema atual: Pessoa</li><li>Nome do relacionamento do schema de referência: Listas de marketing</li></ul>**Segunda relação**<ul><li>`marketingListKey.sourceKey` na classe base</li><li>Tipo: Muitos para um</li><li>Esquema de referência: Lista de marketing B2B</li><li>Namespace: Lista de marketing B2B</li><li>Propriedade de destino: `marketingListKey.sourceKey`</li><li>Nome do relacionamento do schema atual: Lista de marketing</li><li>Nome do relacionamento do schema de referência: Pessoas</li></ul> | O membro da lista estática não é sincronizado de [!DNL Salesforce] e, portanto, não tem uma identidade secundária. |
 | Atividade B2B | ExperiênciaEvento XDM | <ul><li>Visitar WebPage</li><li>Novo cliente potencial</li><li>Converter lead</li><li>Adicionar à lista</li><li>Remover da lista</li><li>Adicionar à Oportunidade</li><li>Remover da Oportunidade</li><li>Formulário preenchido</li><li>Cliques em links</li><li>Email Entregue</li><li>Email aberto</li><li>Email clicado</li><li>Rejeição de email</li><li>Enviar email com rejeição suave</li><li>Email Inscrito</li><li>Pontuação alterada</li><li>Oportunidade Atualizada</li><li>Status in Campaign Progression Changed (Status da Progressão da Campanha Alterado)</li><li>Identificador de pessoa</li><li>URL da Web do Marketo</li><li>Momento interessante</li></ul> | Ativado | `personKey.sourceKey` do grupo de campos Identificador de Pessoa | Pessoa B2B | Nenhum | Nenhum | **Primeira relação**<ul><li>`listOperations.listKey.sourceKey` campo</li><li>Tipo: um para um</li><li>Esquema de referência: Lista de marketing B2B</li><li>Namespace: Lista de marketing B2B</li></ul>**Segunda relação**<ul><li>`opportunityEvent.opportunityKey.sourceKey` campo</li><li>Tipo: um para um</li><li>Esquema de referência: Oportunidade B2B</li><li>Namespace: Oportunidade B2B</li></ul>**Terceiro relacionamento**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` campo</li><li>Tipo: um para um</li><li>Esquema de referência: Campanha B2B</li><li>Namespace: Campanha B2B</li></ul> | `ExperienceEvent` é diferente das entidades. A identidade do evento de experiência é a pessoa que fez a atividade. |
+| Relação de Pessoa da Conta B2B | Relação de Pessoa da Conta Comercial XDM | Mapa de identidade | Ativado | `accountPersonKey.sourceKey` na classe base | Relação de Pessoa da Conta B2B | Nenhum | Nenhum | **Primeira relação**<ul><li>`personKey.sourceKey` na classe base</li><li>Tipo: Muitos para um</li><li>Esquema de referência: Pessoa B2B</li><li>Namespace: Pessoa B2B</li><li>Propriedade de destino: `b2b.personKey.SourceKey`</li><li>Nome do relacionamento do schema atual: Pessoas</li><li>Nome do relacionamento do schema de referência: Conta</li></ul>**Segunda relação**<ul><li>`accountKey.sourceKey` na classe base</li><li>Tipo: Muitos para um</li><li>Esquema de referência: Conta B2B</li><li>Namespace: Conta B2B</li><li>Propriedade de destino: `accountKey.sourceKey`</li><li>Nome do relacionamento do schema atual: Conta</li><li>Nome do relacionamento do schema de referência: Pessoas</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

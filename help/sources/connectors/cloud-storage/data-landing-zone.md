@@ -5,16 +5,16 @@ title: Fonte da Zona de Aterrissagem de Dados
 topic-legacy: overview
 description: Saiba como conectar a Zona de aterrissagem de dados ao Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] O é uma interface  [!DNL Azure Blob] de armazenamento provisionada pela Adobe Experience Platform, permitindo acessar um recurso de armazenamento de arquivos seguro e baseado em nuvem para assimilar e retirar arquivos da plataforma por meio de fontes e destinos. Você tem acesso a um [!DNL Data Landing Zone] contêiner por sandbox e o volume total de dados em todos os contêineres está limitado aos dados totais fornecidos com sua licença de Produtos e Serviços da plataforma . Todos os clientes da Platform e seus serviços de aplicativos, como [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] e [!DNL Real-time Customer Data Platform], são provisionados com um contêiner [!DNL Data Landing Zone] por sandbox. Você pode ler e gravar arquivos no contêiner por meio de [!DNL Azure Storage Explorer] ou da interface da linha de comando.
+[!DNL Data Landing Zone] O é uma interface  [!DNL Azure Blob] de armazenamento provisionada pela Adobe Experience Platform, permitindo acessar um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Platform. Você tem acesso a um [!DNL Data Landing Zone] contêiner por sandbox e o volume total de dados em todos os contêineres está limitado aos dados totais fornecidos com sua licença de Produtos e Serviços da plataforma . Todos os clientes da Platform e seus serviços de aplicativos, como [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] e [!DNL Real-time Customer Data Platform], são provisionados com um contêiner [!DNL Data Landing Zone] por sandbox. Você pode ler e gravar arquivos no contêiner por meio de [!DNL Azure Storage Explorer] ou da interface da linha de comando.
 
 [!DNL Data Landing Zone] O suporta autenticação baseada em SAS e seus dados são protegidos com mecanismos de segurança de  [!DNL Azure Blob] armazenamento padrão em repouso e em trânsito. A autenticação baseada em SAS permite que você acesse com segurança seu contêiner [!DNL Data Landing Zone] por meio de uma conexão pública com a Internet. Não são necessárias alterações de rede para que você acesse seu contêiner [!DNL Data Landing Zone], o que significa que não é necessário configurar nenhuma configuração lista de permissões ou entre regiões para sua rede. A Platform impõe um TTL (time-to-live) estrito de sete dias em todos os arquivos carregados em um contêiner [!DNL Data Landing Zone]. Todos os arquivos são excluídos após sete dias.
 

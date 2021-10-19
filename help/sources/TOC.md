@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '644'
 ht-degree: 14%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 14%
       - [Conector de origem do Analytics](connectors/adobe-applications/analytics.md)
       - [Conector de fonte Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de origem dos atributos do cliente](connectors/adobe-applications/customer-attributes.md)
-      - Mapeamentos de campo {#mapping}
+      - Mapeamentos de campos {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de destino](connectors/adobe-applications/mapping/target.md)
@@ -32,7 +32,7 @@ ht-degree: 14%
          - [Espaços de nomes e esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Conector do Google AdWords](connectors/advertising/ads.md)
-   - Armazenamento em nuvem {#cloud-storage}
+   - armazenamento na nuvem {#cloud-storage}
       - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Amazon S3](connectors/cloud-storage/s3.md)
       - [Conector HDFS do Apache](connectors/cloud-storage/hdfs.md)
@@ -90,7 +90,7 @@ ht-degree: 14%
    - Criar uma conexão base {#create}
       - Publicidade {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
-      - Armazenamento em nuvem {#cloud-storage}
+      - armazenamento na nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -130,7 +130,7 @@ ht-degree: 14%
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - comércio eletrônico {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automação de marketing {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -164,8 +164,6 @@ ht-degree: 14%
       - [Coletar dados de pagamento](tutorials/api/collect/payments.md)
       - [Coletar dados de protocolo](tutorials/api/collect/protocols.md)
       - [Coletar dados de transmissão](tutorials/api/collect/streaming.md)
-   - [Assimilar dados do Parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
-   - [Criar uma conexão de conjunto de dados](tutorials/api/create-dataset-base-connection.md)
    - [Monitorar fluxos de dados](tutorials/api/monitor.md)
    - [Atualizar contas](tutorials/api/update.md)
    - [Atualizar fluxos de dados](tutorials/api/update-dataflows.md)
@@ -181,7 +179,7 @@ ht-degree: 14%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicidade {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - Armazenamento em nuvem {#cloud-storage}
+      - armazenamento na nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -222,7 +220,7 @@ ht-degree: 14%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-      - eCommerce {#ecommerce}
+      - comércio eletrônico {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Sistema local {#local-system}
          - [Upload de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)

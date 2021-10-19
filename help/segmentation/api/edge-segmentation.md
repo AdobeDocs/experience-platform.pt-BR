@@ -5,10 +5,10 @@ title: 'Segmentação de borda usando a API '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 4%
+source-wordcount: '917'
+ht-degree: 2%
 
 ---
 
@@ -22,40 +22,37 @@ A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experienc
 
 ## Introdução
 
-Este guia do desenvolvedor requer uma compreensão funcional dos vários serviços [!DNL Adobe Experience Platform] envolvidos com a segmentação de borda. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este guia do desenvolvedor requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de borda. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de seus  [!DNL Real-time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Platform] organiza os dados de experiência do cliente.
+- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
-Para fazer chamadas com êxito para qualquer endpoint da API do Experience Platform, leia o guia sobre a [introdução às APIs da plataforma](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
+Para fazer chamadas com êxito para qualquer endpoint da API do Experience Platform, leia o guia em [introdução às APIs do Platform](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
 
 ## Tipos de query de segmentação de borda {#query-types}
 
 Para que um segmento seja avaliado usando a segmentação de borda, a query deve estar em conformidade com as seguintes diretrizes:
 
-| Tipo de consulta | Detalhes |
-| ---------- | ------- |
-| Ocorrência de entrada | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. |
-| Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. |
-| Ocorrência recebida com uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um único evento de entrada em 24 horas |
-| Ocorrência recebida que se refere a um perfil com uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um único evento de entrada em 24 horas e um ou mais atributos de perfil |
-
-{style=&quot;table-layout:auto&quot;}
-
-Os seguintes tipos de query são **não** suportados atualmente pela segmentação de borda:
-
-| Tipo de consulta | Detalhes |
-| ---------- | ------- |
-| Vários eventos | Se uma consulta contiver mais de um evento, ela não poderá ser avaliada usando a segmentação de borda. |
-| Consulta de frequência | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes. |
-| Consulta de frequência que se refere a um perfil | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes e tem um ou mais atributos de perfil. |
+| Tipo de consulta | Detalhes | Exemplo |
+| ---------- | ------- | ------- |
+| Evento único | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. | Pessoas que adicionaram um item ao carrinho. |
+| Evento único que se refere a um perfil | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um único evento de entrada sem restrição de tempo. | Pessoas que vivem nos EUA que visitaram a página inicial. |
+| Evento único negado com um atributo de perfil | Qualquer definição de segmento que se refere a um evento de entrada único negado e um ou mais atributos de perfil | Pessoas que vivem nos EUA e têm **not** visitou a página inicial. |
+| Evento único dentro de um período de 24 horas | Qualquer definição de segmento que se refere a um único evento de entrada em 24 horas. | Pessoas que visitaram a página inicial nas últimas 24 horas. |
+| Evento único com um atributo de perfil em uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento de entrada único negado em 24 horas. | Pessoas que vivem nos EUA que visitaram a página inicial nas últimas 24 horas. |
+| Evento único negado com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento de entrada único negado em 24 horas. | Pessoas que vivem nos EUA e têm **not** visitou a página inicial nas últimas 24 horas. |
+| Evento de frequência dentro de um período de 24 horas | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. |
+| Evento de frequência com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. |
+| Evento de frequência negado com um perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento negado que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que não visitaram a página inicial **more** mais de cinco vezes nas últimas 24 horas. |
+| Várias ocorrências recebidas em um perfil de tempo de 24 horas | Qualquer definição de segmento que se refere a vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **ou** visitou a página de checkout nas últimas 24 horas. |
+| Vários eventos com um perfil dentro de uma janela de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **e** visitou a página de checkout nas últimas 24 horas. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Recuperar todos os segmentos ativados para a segmentação de borda
 
-Você pode recuperar uma lista de todos os segmentos que são ativados para segmentação de borda na organização IMS fazendo uma solicitação de GET para o endpoint `/segment/definitions`.
+Você pode recuperar uma lista de todos os segmentos que são ativados para a segmentação de borda em sua Organização IMS fazendo uma solicitação de GET para a `/segment/definitions` endpoint .
 
 **Formato da API**
 
@@ -78,7 +75,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS que são ativados para a segmentação de borda. Informações mais detalhadas sobre a definição de segmento retornada podem ser encontradas no [guia do ponto de extremidade das definições de segmento](./segment-definitions.md).
+Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS que são ativados para a segmentação de borda. Informações mais detalhadas sobre a definição de segmento retornada podem ser encontradas no [guia do endpoint de definições de segmento](./segment-definitions.md).
 
 ```json
 {
@@ -167,7 +164,7 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS q
 
 ## Criar um segmento que esteja habilitado para a segmentação de borda
 
-Você pode criar um segmento habilitado para a segmentação de borda, fazendo uma solicitação de POST ao endpoint `/segment/definitions` que corresponda a um dos tipos de consulta de segmentação de borda [listados acima](#query-types).
+Você pode criar um segmento habilitado para a segmentação de borda, fazendo uma solicitação de POST para a `/segment/definitions` endpoint que corresponde a uma das [tipos de consulta de segmentação de borda listados acima](#query-types).
 
 **Formato da API**
 
@@ -179,7 +176,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->O exemplo abaixo é uma solicitação padrão para criar um segmento. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial em [criar um segmento](../tutorials/create-a-segment.md).
+>O exemplo abaixo é uma solicitação padrão para criar um segmento. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial em [criação de um segmento](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \

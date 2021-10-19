@@ -1,25 +1,27 @@
 ---
-description: Esta página descreve como usar as informações de referência nas opções de Configuração do SDK de Destinos para configurar seu destino usando o SDK de destino.
-seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-title: How to use Destination SDK to configure your destination
-title: Como usar o SDK de destino para configurar o destino
+description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o SDK de destino.
+title: Como usar o SDK de destino para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
 
-# Como usar o SDK de destino para configurar o destino
+# Como usar o SDK de destino para configurar um destino de transmissão
 
 ## Visão geral {#overview}
 
-Esta página descreve como usar as informações de referência em [Opções de configuração no SDK de destinos](./configuration-options.md) para configurar o destino. As etapas são apresentadas na ordem sequencial abaixo.
+Esta página descreve como usar as informações em [Opções de configuração no SDK de destinos](./configuration-options.md) e em outros documentos de referência da API e funcionalidade do SDK de destino para configurar um [destino de transmissão](/help/destinations/destination-types.md#streaming-destinations). As etapas são apresentadas na ordem sequencial abaixo.
+
+>[!NOTE]
+>
+>No momento, não há suporte para a configuração de um destino em lote por meio do SDK de destino.
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de seguir para as etapas ilustradas abaixo, leia a página [SDK de destino que começa](./getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O necessárias e outros pré-requisitos para funcionar com APIs de SDK de destino.
+Antes de avançar para as etapas ilustradas abaixo, leia o [Introdução ao SDK de destino](./getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O necessárias e outros pré-requisitos para funcionar com as APIs do SDK de destino.
 
 ## Etapas para usar as opções de configuração no SDK de destino para configurar o destino {#steps}
 
@@ -27,9 +29,9 @@ Antes de seguir para as etapas ilustradas abaixo, leia a página [SDK de destino
 
 ## Etapa 1: Criar um servidor e uma configuração de modelo {#create-server-template-configuration}
 
-Comece criando um servidor e uma configuração de modelo usando o ponto de extremidade `/destinations-server` (leia [Referência da API](./destination-server-api.md)). Para obter mais informações sobre a configuração do servidor e do modelo, consulte [Especificações do servidor e do modelo](./configuration-options.md#server-and-template) na seção de referência.
+Comece criando uma configuração de servidor e modelo usando o `/destinations-server` endpoint (lido) [Referência da API](./destination-server-api.md)). Para obter mais informações sobre o servidor e a configuração do modelo, consulte [Especificações do servidor e do modelo](./configuration-options.md#server-and-template) na seção de referência.
 
-Veja abaixo um exemplo de configuração. Observe que o modelo de transformação de mensagem no parâmetro `requestBody.value` é abordado na etapa 3, [Criar modelo de transformação](./configure-destination-instructions.md#create-transformation-template).
+Veja abaixo um exemplo de configuração. Observe que o modelo de transformação de mensagem no `requestBody.value` é abordado na etapa 3, [Criar modelo de transformação](./configure-destination-instructions.md#create-transformation-template).
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -56,9 +58,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Etapa 2: Criar configuração de destino {#create-destination-configuration}
 
-Veja abaixo um exemplo de configuração para um modelo de destino, criado usando o ponto de extremidade da API `/destinations`. Para obter mais informações sobre esse template, consulte [Configuração de destino](./destination-configuration.md).
+Veja abaixo um exemplo de configuração para um modelo de destino, criado usando o `/destinations` Ponto de extremidade da API. Para obter mais informações sobre esse template, consulte [Configuração de destino](./destination-configuration.md).
 
-Para conectar o servidor e a configuração do modelo na etapa 1 a essa configuração de destino, adicione a ID da instância do servidor e a configuração do modelo como `destinationServerId` aqui.
+Para conectar o servidor e a configuração do modelo na etapa 1 a essa configuração de destino, adicione a ID da instância da configuração do servidor e do modelo como `destinationServerId` aqui.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -144,37 +146,36 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Etapa 3: Criar modelo de transformação de mensagem - use a linguagem de modelo para especificar o formato de saída da mensagem {#create-transformation-template}
 
-Com base nas cargas que seu destino suporta, você deve criar um modelo que transforma o formato dos dados exportados do formato Adobe XDM em um formato compatível com seu destino. Consulte exemplos de modelo na seção [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento](./message-format.md#using-templating) e use a [ferramenta de criação de modelo](./create-template.md) fornecida pelo Adobe.
+Com base nas cargas que seu destino suporta, você deve criar um modelo que transforma o formato dos dados exportados do formato Adobe XDM em um formato compatível com seu destino. Consulte exemplos de modelo na seção [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento](./message-format.md#using-templating) e use o [ferramenta de criação de modelo](./create-template.md) fornecido pelo Adobe.
 
 Depois de criar um template de transformação de mensagem que funcione para você, adicione-o à configuração de servidor e modelo criada na etapa 1.
 
 ## Etapa 4: Criar configuração de metadados de público-alvo {#create-audience-metadata-configuration}
 
-Para alguns destinos, o SDK de destino requer a configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no destino. Consulte [Gerenciamento de metadados de público-alvo](./audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
+Para alguns destinos, o SDK de destino requer a configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no destino. Consulte [Gerenciamento de metadados do público-alvo](./audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
 
 Se você usar uma configuração de metadados de público-alvo, é necessário conectá-los à configuração de destino criada na etapa 2. Adicione a ID da instância da configuração de metadados do público-alvo à configuração de destino como `audienceTemplateId`.
 
 ## Etapa 5: Criar configuração de credenciais / Configurar autenticação {#set-up-authentication}
 
-Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` na configuração de destino acima, é possível configurar a autenticação para seu destino usando o ponto de extremidade `/destination` ou `/credentials`.
+Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` na configuração de destino acima, você pode configurar a autenticação para seu destino usando o `/destination` ou `/credentials` endpoint .
 
-* **Caso** mais comum: Se você tiver selecionado  `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino e seu destino suportar o método de autenticação OAuth 2, leia autenticação  [OAuth 2](./oauth2-authentication.md).
+* **Caso mais comum**: Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino e seu destino oferece suporte ao método de autenticação OAuth 2, leia [Autenticação OAuth 2](./oauth2-authentication.md).
 * Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte [Configuração de credenciais](./credentials-configuration.md) na documentação de referência.
 
 ## Etapa 6: Teste seu destino {#test-destination}
 
-Depois de configurar seu destino usando os pontos de extremidade de configuração nas etapas anteriores, você pode usar a [ferramenta de teste de destino](./create-template.md) para testar a integração entre o Adobe Experience Platform e seu destino.
+Depois de configurar seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar a variável [ferramenta de teste de destino](./create-template.md) para testar a integração entre o Adobe Experience Platform e seu destino.
 
 Como parte do processo para testar seu destino, você deve usar a interface do usuário do Experience Platform para criar segmentos, que você ativará no seu destino. Consulte os dois recursos abaixo para obter instruções sobre como criar segmentos no Experience Platform:
 
 * [Criar uma página de documentação do segmento](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Criar uma apresentação de vídeo de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-
 ## Etapa 7: Publicar o destino {#publish-destination}
 
-Após configurar e testar seu destino, use a [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
+Após configurar e testar seu destino, use o [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
 
 ## Etapa 8: Documente seu destino {#document-destination}
 
-Se você for um Fornecedor de Software Independente (ISV) ou Integrador de Sistema (SI) criando um [integração produtizada](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [catálogo de destinos do Experience League](/help/destinations/catalog/overview.md).
+Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience League](/help/destinations/catalog/overview.md).

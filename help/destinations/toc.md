@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '645'
 ht-degree: 10%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 10%
 
 # Destinos {#destinations}
 
-* [Destinos visão geral](./home.md)
+* [Visão geral dos destinos](./home.md)
 * [Tipos e categorias de destino](./destination-types.md)
 * Tutoriais da API {#api}
    * [Conecte-se a destinos de fluxo e ative dados usando a API do Serviço de fluxo](./api/streaming-destinations.md)
    * [Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/email-marketing.md)
-* Guias da interface {#ui}
+* Guias da interface do usuário {#ui}
    * [Área de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
    * Ativar dados do público-alvo para destinos{#activate}
@@ -36,7 +36,7 @@ ht-degree: 10%
 * Catálogo de destinos {#catalog}
    * [Visão geral do catálogo de destinos](./catalog/overview.md)
    * [ Conexão HTTP (alfa)](./catalog/http-destination.md)
-   * Destinos Adobe{#adobe}
+   * Destinos de Adobe{#adobe}
       * [Visão geral dos destinos Adobe](./catalog/adobe/overview.md)
       * [Conexão Marketo Engage (Beta)](./catalog/adobe/marketo-engage.md)
       * [Compartilhamento de segmento Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
@@ -50,14 +50,14 @@ ht-degree: 10%
       * [Extensão DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extensão facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Extensão Flashtalk OneTag](./catalog/advertising/flashtalking.md)
-      * [Conexão com o Google Ads](./catalog/advertising/google-ads-destination.md)
+      * [Conexão Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensão do Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Conexão com o Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [Conexão de correspondência do cliente do Google](./catalog/advertising/google-customer-match.md)
+      * [Conexão Google Customer Match](./catalog/advertising/google-customer-match.md)
       * [Conexão Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
-      * [Extensão gtag do Google](./catalog/advertising/gtag-advertising.md)
+      * [Extensão de tag do Google](./catalog/advertising/gtag-advertising.md)
       * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
-      * [Conexão do Microsoft Bing](./catalog/advertising/bing.md)
+      * [Conexão Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensão de rastreamento de conversão do pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexão da Lista de clientes do pinterest](./catalog/advertising/pinterest.md)
       * [A conexão com o Trade Desk](./catalog/advertising/tradedesk.md)
@@ -73,7 +73,7 @@ ht-degree: 10%
       * [Extensão Decibel](./catalog/analytics/decibel.md)
       * [Extensão do Demandbase](./catalog/analytics/demandbase.md)
       * [Extensão DialogTech](./catalog/analytics/dialogtech.md)
-      * [Extensão de tag do Google Global Site](./catalog/analytics/gtag-analytics.md)
+      * [Extensão de tag de site global do Google](./catalog/analytics/gtag-analytics.md)
       * [Extensão do Google Universal Analytics](./catalog/analytics/google-universal-analytics.md)
       * [Extensão JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)
       * [Extensão BSDK da Nielsen](./catalog/analytics/nielsen-bsdk.md)
@@ -84,7 +84,7 @@ ht-degree: 10%
       * [Extensão SessionCam](./catalog/analytics/sessioncam.md)
       * [Extensão TMMData](./catalog/analytics/tmmdata.md)
       * [Extensão de rastreamento de conversão de texto](./catalog/analytics/yext.md)
-   * Destinos de armazenamento em nuvem {#cloud-storage}
+   * Destinos de armazenamento na nuvem {#cloud-storage}
       * [Visão geral dos destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
       * [(Beta) Conexão Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexão Amazon S3](./catalog/cloud-storage/amazon-s3.md)
@@ -100,7 +100,7 @@ ht-degree: 10%
       * [Extensão do Marketo](./catalog/email/marketo.md)
       * [Extensão do Marketo Munchkin](./catalog/email/marketo-munchkin.md)
       * [Extensão PebblePost](./catalog/email/pebblepost.md)
-   * Destinos de marketing de email {#email-marketing}
+   * Destinos de marketing por email {#email-marketing}
       * [Visão geral dos destinos de marketing por email](./catalog/email-marketing/overview.md)
       * [Conexão Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Conexão Eloqua do Oracle](./catalog/email-marketing/oracle-eloqua.md)
@@ -147,7 +147,7 @@ ht-degree: 10%
    * [Visão geral](./destination-sdk/overview.md)
    * [Pré-requisitos de integração](./destination-sdk/integration-prerequisites.md)
    * [Introdução](./destination-sdk/getting-started.md)
-   * Funcionalidade de SDK de destino {#functionality}
+   * Funcionalidade do SDK de destino {#functionality}
       * [Opções de configuração](./destination-sdk/configuration-options.md)
       * [Configuração de destino](./destination-sdk/destination-configuration.md)
       * [Especificações do servidor e do modelo](./destination-sdk/server-and-template-configuration.md)
@@ -155,7 +155,7 @@ ht-degree: 10%
       * [Gerenciamento de metadados do público-alvo](./destination-sdk/audience-metadata-management.md)
       * [Configuração de autenticação](./destination-sdk/credentials-configuration.md)
       * [Autenticação OAuth 2](./destination-sdk/oauth2-authentication.md)
-      * Ferramentas de desenvolvedor {#developer-tools}
+      * Ferramentas do desenvolvedor {#developer-tools}
          * [Criar e testar um modelo de transformação de mensagem](./destination-sdk/create-template.md)
          * [Testar a configuração de destino](./destination-sdk/test-destination.md)
    * Referência da API {#api-reference}
@@ -170,7 +170,7 @@ ht-degree: 10%
          * [Operações da API de teste de destino](./destination-sdk/destination-testing-api.md)
          * [Exemplos de operações da API de geração de perfil](./destination-sdk/sample-profile-generation-api.md)
    * Guias {#guides}
-      * [Use o SDK de destino para configurar seu destino](./destination-sdk/configure-destination-instructions.md)
+      * [Usar o SDK de destino para configurar um destino de transmissão](./destination-sdk/configure-destination-instructions.md)
    * Documente seu destino {#document-destination}
       * [Documente seu destino no Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Usar a interface da Web do GitHub para criar uma página de documentação de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

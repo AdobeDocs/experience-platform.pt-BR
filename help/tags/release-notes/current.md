@@ -1,10 +1,11 @@
 ---
 title: Notas de versão
-description: As notas de versão mais recentes para tags no Adobe Experience Platform.
-source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
+description: As notas de versão mais recentes de tags na Adobe Experience Platform.
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
+source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 54%
+source-wordcount: '578'
+ht-degree: 68%
 
 ---
 
@@ -14,9 +15,19 @@ ht-degree: 54%
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
+## 21 de outubro de 2021
+
+**Enviar dados para endpoints autenticados no encaminhamento de eventos** - Usando segredos, você pode enviar dados para endpoints que exigem os seguintes protocolos de autenticação:
+
+* **[!UICONTROL Token]**: Uma única string de caracteres que representa um valor de token de autenticação.
+* **[!UICONTROL HTTP simples]**: Contém dois atributos de string para um nome de usuário e senha.
+* **[!UICONTROL OAuth2]**: Contém vários atributos para suportar a variável [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) especificações.
+
+Para obter mais informações, consulte os guias em [gerenciamento de segredos na interface do usuário da coleção de dados](../ui/event-forwarding/secrets.md) ou [gerenciamento de segredos na API do reator](../api/guides/secrets.md).
+
 ## 19 de julho de 2021
 
-**Ajustes ao direito**  &quot;Gerenciar propriedades&quot; - O direito de Gerenciar propriedades encontrou um problema em que o usuário tinha permissão para criar uma nova propriedade, mas não podia vê-la depois de ter sido criada (conforme descrito no thread da comunidade  [aqui](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Uma correção agora está ativa com permissões sendo aplicadas, conforme descrito no artigo.
+**Ajustes para o direito &quot;Gerenciar propriedades&quot;** - O direito Gerenciar propriedades encontrou um problema em que um usuário tinha permissão para criar uma nova propriedade, mas não podia vê-la depois de ter sido criada (como descrito no encadeamento da comunidade [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Uma correção agora está ativa com permissões sendo aplicadas, conforme descrito no artigo.
 
 >[!NOTE]
 >
@@ -32,9 +43,9 @@ ht-degree: 54%
 
 ## 22 de abril de 2021
 
-**Coleta de dados no Adobe Experience Platform**  - O envio de dados para o Adobe não é apenas sobre a implantação de tags no site ou a configuração no aplicativo.  O uso dos SDKs do Experience Platform e da Edge Network requer acesso a outros recursos da plataforma. Isso costumava exigir o logon em algumas ferramentas diferentes, mas agora elas estão reunidas em um único lugar.
+**Coleção de dados da Adobe Experience Platform** — o envio de dados à Adobe não se resume à implantação de tags no site ou à configuração no aplicativo.  O uso dos SDKs do Experience Platform e da Edge Network requer acesso a outros recursos da plataforma. Isso costumava exigir o logon em algumas ferramentas diferentes, mas agora elas estão reunidas em um único lugar.
 
-A Coleta de dados na plataforma consiste em seis recursos, e a navegação recém-simplificada conterá apenas os itens aos quais sua empresa e conta de usuário têm acesso.  Alguns dos recursos também foram atualizados para corresponder aos padrões de nomenclatura do Experience Platform.
+A Coleção de dados da Platform consiste em seis recursos, e sua navegação recentemente simplificada conterá apenas os itens aos quais sua empresa e conta de usuário têm acesso.  Alguns dos recursos também foram atualizados para corresponder aos padrões de nomenclatura do Experience Platform.
 
 * Cliente (acessado anteriormente como lado do cliente)
 * Datastreams (acessados anteriormente como configurações de borda)
@@ -47,12 +58,12 @@ Aguarde mais atualizações à medida que o Experience Platform e a Coleção de
 
 ## 18 de fevereiro de 2021
 
-* Atualização da interface do usuário da coleta de dados para o espectro de reação v3
+* Atualização da interface da Coleção de dados para o react-spectrum v3
 * Placas de extensão atualizadas para os padrões mais recentes do Spectrum
 * Aumento do tamanho dos campos de nome em todo o aplicativo
 
 ## 13 de janeiro de 2021
 
-**Disponibilidade geral: Encaminhamento** de eventosEnvie dados a nível de evento para o Adobe Experience Platform Edge, em seguida, use o encaminhamento de eventos para transformar, enriquecer e enviar esses dados para um endpoint que não seja o Adobe usando servidores Adobe Network, não o cliente, com baixa latência.
+**Disponibilidade geral: encaminhamento de eventos** Envie dados de nível de evento à Adobe Experience Platform Edge Network e, em seguida, use o encaminhamento de eventos para transformar, enriquecer e enviar esses dados a um endpoint que não seja da Adobe usando servidores da Adobe, não o cliente, com baixa latência.
 
-Consulte a [visão geral do encaminhamento de eventos](../ui/event-forwarding/overview.md) e o [guia de introdução](../ui/event-forwarding/getting-started.md) para obter mais informações.
+Consulte a [visão geral do encaminhamento de eventos](../ui/event-forwarding/overview.md) e [guia de introdução](../ui/event-forwarding/getting-started.md) para obter mais informações.

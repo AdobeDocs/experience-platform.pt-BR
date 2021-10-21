@@ -1,10 +1,11 @@
 ---
 title: Endpoint de notas
 description: Saiba como fazer chamadas ao endpoint /notes na API do Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 99%
+source-wordcount: '527'
+ht-degree: 98%
 
 ---
 
@@ -28,6 +29,7 @@ As notas podem ser aplicadas aos seguintes recursos:
 * [Propriedades](./properties.md)
 * [Componentes da regra](./rule-components.md)
 * [Regras](./rules.md)
+* [Segredos](./secrets.md)
 
 Esses seis tipos são coletivamente conhecidos como recursos “anotáveis”. Quando um recurso anotável é excluído, as notas associadas a ele também são excluídas.
 

@@ -4,10 +4,10 @@ user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 88%
+source-wordcount: '380'
+ht-degree: 87%
 
 ---
 
@@ -84,7 +84,7 @@ ht-degree: 88%
          * [Visão geral](./extensions/web/platform-demo/overview.md)
       * SDK da Web da Adobe Experience Platform {#sdk}
          * [Visão geral](./extensions/web/sdk/overview.md)
-      * Conector da nuvem Adobe Experience Platform {#cloud-connector}
+      * Conector da Adobe Experience Platform Cloud {#cloud-connector}
          * [Visão geral](./extensions/web/cloud-connector/overview.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Visão geral](./extensions/web/asset-insights/overview.md)
@@ -113,7 +113,7 @@ ht-degree: 88%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Visão geral](./extensions/web/marketo/overview.md)
          * [Notas de versão](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] rastreamento de vídeo  {#brightcove}
+      * [!DNL BrightCove] rastreamento de vídeo {#brightcove}
          * [Visão geral](./extensions/web/brightcove/overview.md)
          * [Notas de versão](./extensions/web/brightcove/release-notes.md)
       * Extensão de rastreamento de vídeo do [!DNL YouTube] {#youtube}
@@ -175,6 +175,7 @@ ht-degree: 88%
       * [Notas](./api/endpoints/notes.md)
       * [Perfil](./api/endpoints/profile.md)
       * [Pesquisa](./api/endpoints/search.md)
+      * [Segredos](./api/endpoints/secrets.md)
    * Guias {#guides}
       * [Delegar IDs do descritor](./api/guides/delegate-descriptor-ids.md)
       * [Criptografar valores](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 88%
       * [Classificação de respostas](./api/guides/sorting.md)
       * [Relações](./api/guides/relationships.md)
       * [Pesquisa de recursos](./api/guides/search.md)
+      * [Segredos](./api/guides/secrets.md)
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * Notas de versão {#release-notes}

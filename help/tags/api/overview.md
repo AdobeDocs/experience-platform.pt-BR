@@ -1,10 +1,11 @@
 ---
 title: Manual da API do Reactor
 description: A API do Reactor permite que os desenvolvedores gerenciem de forma programática todos os recursos de tags na Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 99%
+source-wordcount: '1082'
+ht-degree: 95%
 
 ---
 
@@ -113,6 +114,10 @@ Consulte o [manual de endpoint de perfil](./endpoints/profile.md) para saber com
 ## Pesquisa
 
 O endpoint `/search` fornece uma maneira de encontrar recursos que correspondem a um critério desejado, expresso como uma consulta. Todas as consultas têm como escopo sua empresa atual e as propriedades acessíveis. Consulte o [manual de endpoint de pesquisa](./endpoints/search.md) para saber como usar essa funcionalidade.
+
+## Segredos
+
+Um segredo contém credenciais que permitem o encaminhamento de eventos para autenticação em outro sistema para troca de dados segura. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos, e a variável [guia do endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
 
 ## Próximas etapas
 

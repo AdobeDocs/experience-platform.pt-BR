@@ -5,10 +5,9 @@ title: Visão geral da segmentação de várias entidades
 topic-legacy: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais com base em produtos, lojas ou outras classes que não sejam de perfil. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos no esquema Perfil.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -22,10 +21,10 @@ A segmentação de várias entidades é um recurso avançado disponível como pa
 A segmentação de várias entidades requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos na segmentação. Antes de continuar com este guia, reveja a seguinte documentação:
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-   * [Medidas de proteção](../profile/guardrails.md) do perfil: Práticas recomendadas para criar modelos de dados compatíveis com o  [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos a partir de  [!DNL Real-time Customer Profile] dados.
+   * [Medidas de proteção de perfil](../profile/guardrails.md): Práticas recomendadas para a criação de modelos de dados compatíveis com o [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos a partir de [!DNL Real-time Customer Profile] dados.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../xdm/schema/composition.md#union) do schema: Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform.
+   * [Noções básicas da composição do schema](../xdm/schema/composition.md#union): Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform. Para utilizar melhor a Segmentação, verifique se os dados são assimilados como perfis e eventos de acordo com a variável [práticas recomendadas para modelagem de dados](../xdm/schema/best-practices.md).
 
 ## Casos de uso
 
@@ -41,7 +40,7 @@ Geralmente é complexo criar e qualificar usuários em segmentos direcionados ao
 
 ## Criação de segmentos de várias entidades
 
-A criação de um segmento de várias entidades exige primeiro a definição de relacionamentos entre schemas, antes de usar a API [!DNL Segmentation] ou a interface do usuário do Construtor de segmentos para criar a definição de segmentos.
+A criação de um segmento de várias entidades requer primeiro a definição de relações entre schemas, antes de usar o [!DNL Segmentation] API ou interface do usuário do Construtor de segmentos para criar a definição de segmentos.
 
 ### Definir relacionamentos
 
@@ -61,4 +60,4 @@ Depois de definir as relações XDM necessárias, você pode começar a criar um
 
 ## Avaliar e acessar segmentos de várias entidades
 
-Depois de criar um segmento, você pode avaliar e acessar os resultados do segmento usando a API de segmentação. A avaliação de um segmento de várias entidades é muito semelhante à avaliação de um segmento padrão. Esse processo só pode ser feito usando a API de segmentação. Para obter um guia detalhado mostrando como usar a API para avaliar e acessar segmentos, leia o tutorial [avaliar e acessar segmentos](./tutorials/evaluate-a-segment.md).
+Depois de criar um segmento, você pode avaliar e acessar os resultados do segmento usando a API de segmentação. A avaliação de um segmento de várias entidades é muito semelhante à avaliação de um segmento padrão. Esse processo só pode ser feito usando a API de segmentação. Para obter um guia detalhado que mostra como usar a API para avaliar e acessar segmentos, leia o [avaliação e acesso a segmentos](./tutorials/evaluate-a-segment.md) tutorial.

@@ -2,7 +2,7 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o SDK de destino.
 title: Como usar o SDK de destino para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
@@ -178,4 +178,4 @@ Após configurar e testar seu destino, use o [API de publicação de destino](./
 
 ## Etapa 8: Documente seu destino {#document-destination}
 
-Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience League](/help/destinations/catalog/overview.md).
+Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md).

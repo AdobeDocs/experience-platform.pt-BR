@@ -4,10 +4,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 14%
+source-wordcount: '651'
+ht-degree: 15%
 
 ---
 
@@ -51,6 +51,7 @@ ht-degree: 14%
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Conector Salesforce](connectors/crm/salesforce.md)
       - [Conector Veeva CRM](connectors/crm/veeva.md)
+      - [Conector Zoho CRM](connectors/crm/zoho.md)
    - Sucesso do cliente {#customer-success}
       - [Conector da Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
@@ -108,6 +109,7 @@ ht-degree: 14%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Sucesso do cliente {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -198,6 +200,7 @@ ht-degree: 14%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Sucesso do cliente {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)

@@ -3,7 +3,7 @@ keywords: personalização personalizada; destino; destino personalizado da expe
 title: Conexão de personalização personalizada (Beta)
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em seu site para recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece 1:1 em tempo real e personalização com base na associação de segmento de um perfil de usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
+source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 1%
@@ -22,11 +22,11 @@ Esse destino fornece uma maneira de recuperar informações do segmento do Adobe
 
 ## Pré-requisitos {#prerequisites}
 
-Essa integração é disponibilizada pelo [Adobe Experience Platform Web SDK](../../../edge/home.md). Você deve usar esse SDK para usar esse destino.
+Essa integração é alimentada pela variável [Adobe Experience Platform Web SDK](../../../edge/home.md). Você deve usar esse SDK para usar esse destino.
 
 ## Tipo de exportação {#export-type}
 
-**Solicitação de perfil**  - você está solicitando todos os segmentos que estão mapeados no destino de personalização personalizada para um único perfil. Diferentes destinos de personalização personalizados podem ser configurados para diferentes [Data Collection datastreams](../../../edge/fundamentals/datastreams.md) do Adobe.
+**Solicitação de perfil** - você está solicitando todos os segmentos que estão mapeados no destino de personalização personalizada para um único perfil. Diferentes destinos de personalização personalizada podem ser configurados para diferentes [Datastreams de coleta de dados do Adobe](../../../edge/fundamentals/datastreams.md).
 
 ## Casos de uso {#use-cases}
 
@@ -44,26 +44,26 @@ Usando um destino de personalização personalizado separado para o servidor de 
 
 ## Conecte-se ao destino {#connect}
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
+Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **[!UICONTROL Alias]** da integração: Esse valor é enviado para o SDK da Web do Experience Platform como um nome de objeto JSON.
-* **[!UICONTROL ID]** do conjunto de dados: Isso determina em qual conjunto de dados da Coleta de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Consulte [Configurar um conjunto de dados](../../../edge/fundamentals/datastreams.md) para obter mais detalhes.
+* **[!UICONTROL Alias de integração]**: Esse valor é enviado para o SDK da Web do Experience Platform como um nome de objeto JSON.
+* **[!UICONTROL ID do fluxo de dados]**: Isso determina em qual conjunto de dados da Coleta de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Consulte [Configurar um conjunto de dados](../../../edge/fundamentals/datastreams.md) para obter mais detalhes.
 
 ## Ativar segmentos para este destino {#activate}
 
-Leia [Ativar perfis e segmentos para destinos de solicitação de perfil](../../ui/activate-profile-request-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
+Ler [Ativar perfis e segmentos para destinos de solicitação de perfil](../../ui/activate-profile-request-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
 ## Dados exportados {#exported-data}
 
-Se estiver usando [Tags do Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use a funcionalidade [enviar evento concluído](../../../edge/extension/event-types.md) e sua ação de código personalizado terá uma variável `event.destinations` que poderá ser usada para ver os dados exportados.
+Se estiver usando [Tags de Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [enviar evento concluído](../../../edge/extension/event-types.md) e sua ação de código personalizado terá uma `event.destinations` que pode ser usada para ver os dados exportados.
 
-Este é um exemplo de valor para a variável `event.destinations` :
+Este é um exemplo de valor para a variável `event.destinations` variável:
 
 ```
 [
@@ -85,7 +85,7 @@ Este é um exemplo de valor para a variável `event.destinations` :
 ]
 ```
 
-Se você não estiver usando [Tags do Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use a funcionalidade [manipular respostas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver os dados exportados.
+Se você não estiver usando [Tags de Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [tratamento de respostas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver os dados exportados.
 
 A resposta JSON do Adobe Experience Platform pode ser analisada para encontrar o alias de integração correspondente do aplicativo que você está integrando com o Adobe Experience Platform. As IDs de segmento podem ser passadas para o código do aplicativo como parâmetros de direcionamento. Abaixo está uma amostra do que seria específico para a resposta de destino.
 
@@ -102,15 +102,15 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
-    if(results.destinations) { // Looking to see if the destination results are there
+}).then(function(result) {
+    if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -124,4 +124,4 @@ alloy("sendEvent", {
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, leia a [Visão geral da governança de dados](../../../data-governance/home.md).
+Todos [!DNL Adobe Experience Platform] Os destinos são compatíveis com as políticas de uso de dados ao manipular os dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, leia a [Visão geral da governança de dados](../../../data-governance/home.md).

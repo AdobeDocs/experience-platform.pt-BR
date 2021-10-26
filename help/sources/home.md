@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,8 @@ O Experience Platform oferece suporte para assimilar dados de fontes de transmis
 
 O Experience Platform oferece suporte para assimilação de dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [[!DNL Generic OData] conector](connectors/protocols/odata.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md)
+- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
 
 ## Controle de acesso para fontes na assimilação de dados
 

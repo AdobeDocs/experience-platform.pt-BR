@@ -5,9 +5,9 @@ title: Visão geral do sistema XDM
 topic-legacy: overview
 description: A padronização e a interoperabilidade são conceitos-chave por trás do Adobe Experience Platform. O Experience Data Model (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2015'
 ht-degree: 2%
 
 ---
@@ -51,14 +51,19 @@ Para obter mais informações sobre como gerenciar e interagir com schemas no Pl
 
 ## Comportamentos de dados no sistema XDM {#data-behaviors}
 
-Os dados destinados ao uso no Experience Platform são agrupados em dois tipos de comportamento:
+Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento:
 
-* **Registrar dados**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
-* **Dados da série cronológica**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
+* **Registro**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
+* **Série cronológica**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
+* **Ad-hoc**: Captura campos com namespaces para uso somente por um único conjunto de dados. Esquemas ad-hoc são usados em vários workflows de assimilação de dados para o Experience Platform, incluindo a assimilação de arquivos CSV e a criação de determinados tipos de conexões de origem.
 
 Todos os esquemas XDM descrevem dados que podem ser categorizados como registro ou série de tempo. O comportamento de dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM descrevem o menor número de propriedades que um schema deve conter para representar um comportamento de dados específico.
 
-Embora você possa definir suas próprias classes no [!DNL Schema Registry], é recomendável usar as classes preferenciais **[!UICONTROL Perfil individual XDM]** e **[!UICONTROL ExperiênciaEvento XDM]** para os dados relativos a registros e séries cronológicas, respectivamente. Essas classes são descritas com mais detalhes abaixo.
+Embora você possa definir suas próprias classes no [!DNL Schema Registry], é recomendável usar as classes padrão **[!UICONTROL Perfil individual XDM]** e **[!UICONTROL ExperiênciaEvento XDM]** para os dados relativos a registros e séries cronológicas, respectivamente. Essas classes são descritas com mais detalhes abaixo.
+
+>[!NOTE]
+>
+>Não há classes padrão baseadas no comportamento ad-hoc. Esquemas ad-hoc são gerados automaticamente pelos processos da plataforma que os utilizam, mas também podem ser [criado manualmente usando a API do Registro de Esquema](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL Perfil individual XDM] {#xdm-individual-profile}
 

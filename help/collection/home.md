@@ -5,10 +5,10 @@ title: Visão geral da coleção de dados
 topic-legacy: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 3%
+source-wordcount: '357'
+ht-degree: 6%
 
 ---
 
@@ -28,9 +28,14 @@ As tecnologias de coleta de dados fornecidas pelo Experience Platform se concent
 * [Tags](../tags/home.md)
 * [Encaminhamento de evento](../tags/ui/event-forwarding/overview.md)
 * [SDK da Web da Adobe Experience Platform](../edge/home.md)
+* [SDK móvel da Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [Experience Data Model (XDM)](../xdm/home.md)
+* [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
+<!-- (Outdated terminology)
 ![](./images/Collection.png)
+-->
 
 ## Implementações mais simples, desempenho mais rápido do lado do cliente
 
@@ -40,14 +45,18 @@ Os SDKs móveis e da Web da Adobe Experience Platform recolhem e compactam todas
 
 A Platform Edge Network é uma rede distribuída globalmente, rápida e confiável, de servidores capazes de receber e processar dados em grande escala. Usando tags, você pode configurar [datastreams](../edge/fundamentals/datastreams.md) para produtos como Adobe Target, Adobe Audience Manager e Adobe Analytics, que permitem ativar esses produtos no lado do servidor sem alterar o código do lado do cliente.
 
+<!-- (Outdated terminology)
 ![](./images/deploy.png)
+-->
 
 >[!NOTE]
 >
->Para obter uma introdução de alto nível à Platform Edge Network, consulte o seguinte [tour interativo do produto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
+>Para obter uma introdução de alto nível à Rede de borda da plataforma, consulte o seguinte [tour interativo de produtos](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Transformar, enriquecer e enviar dados de forma rápida e segura
 
-[O encaminhamento de eventos na Adobe Experience ](../tags/ui/event-forwarding/overview.md) Platform pode entrar em qualquer fluxo de dados da plataforma. Você pode transformar, enriquecer e enviar dados para qualquer destino que não seja Adobe com latência extrema de baixa latência sem adicionar nenhum código de terceiros ao dispositivo cliente, fornecendo coleta e distribuição de dados mais rápida e segura.
+[Encaminhamento de eventos no Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) pode tocar em qualquer fluxo de dados da plataforma. Você pode transformar, enriquecer e enviar dados para qualquer destino que não seja Adobe com latência extrema de baixa latência sem adicionar nenhum código de terceiros ao dispositivo cliente, fornecendo coleta e distribuição de dados mais rápida e segura.
 
+<!-- (Outdated terminology)
 ![](./images/launch.png)
+-->

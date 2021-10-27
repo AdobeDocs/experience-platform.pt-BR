@@ -5,11 +5,10 @@ title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-translation-type: tm+mt
-source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
+source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 1%
+source-wordcount: '1411'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +16,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->O documento a seguir explica como usar a segmentação de transmissão usando a API. Para obter informações sobre como usar a segmentação de transmissão usando a interface do usuário, leia o [guia da interface do usuário de segmentação de transmissão](../ui/streaming-segmentation.md).
+>O documento a seguir explica como usar a segmentação de transmissão usando a API. Para obter informações sobre como usar a segmentação de transmissão usando a interface do usuário, leia o [guia da interface do usuário de segmentação por streaming](../ui/streaming-segmentation.md).
 
-A segmentação por streaming em [!DNL Adobe Experience Platform] permite que os clientes façam a segmentação quase em tempo real, concentrando-se na riqueza de dados. Com a segmentação de transmissão, a qualificação de segmento agora acontece à medida que os dados de transmissão chegam [!DNL Platform], o que diminui a necessidade de agendar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
+Transmitir a segmentação em [!DNL Adobe Experience Platform] O permite que os clientes façam segmentação quase em tempo real, concentrando-se na riqueza de dados. Com a segmentação por streaming, a qualificação de segmento agora acontece à medida que os dados de streaming chegam [!DNL Platform], aliviando a necessidade de agendar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -29,33 +28,33 @@ A segmentação por streaming em [!DNL Adobe Experience Platform] permite que os
 
 ## Introdução
 
-Este guia do desenvolvedor requer uma compreensão funcional dos vários serviços [!DNL Adobe Experience Platform] envolvidos com a segmentação de transmissão. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este guia do desenvolvedor requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de fluxo. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de seus  [!DNL Real-time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Platform] organiza os dados de experiência do cliente.
+- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs [!DNL Platform].
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas para o [!DNL Platform] APIs.
 
 ### Lendo exemplos de chamadas de API
 
-Este guia do desenvolvedor fornece exemplos de chamadas da API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este guia do desenvolvedor fornece exemplos de chamadas da API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -63,26 +62,26 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 Cabeçalhos adicionais podem ser necessários para concluir solicitações específicas. Os cabeçalhos corretos são mostrados em cada um dos exemplos neste documento. Preste especial atenção às solicitações de amostra para garantir que todos os cabeçalhos necessários sejam incluídos.
 
-### Tipos de query com segmentação de fluxo ativado {#streaming-segmentation-query-types}
+### Tipos de consulta ativados para segmentação de fluxo {#streaming-segmentation-query-types}
 
 >[!NOTE]
 >
->Você precisará ativar a segmentação agendada para a organização para que a segmentação de fluxo funcione. As informações sobre como ativar a segmentação agendada podem ser encontradas na seção [ativar segmentação agendada](#enable-scheduled-segmentation)
+>Você precisará ativar a segmentação agendada para a organização para que a segmentação de fluxo funcione. É possível encontrar informações sobre como ativar a segmentação agendada na variável [habilitar a seção de segmentação agendada](#enable-scheduled-segmentation)
 
 Para que um segmento seja avaliado usando a segmentação de transmissão, a consulta deve estar em conformidade com as diretrizes a seguir.
 
 | Tipo de consulta | Detalhes |
 | ---------- | ------- |
-| Ocorrência de entrada | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. |
-| Ocorrência recebida em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. |
-| Ocorrência recebida com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento de entrada com uma janela de tempo. |
+| Evento único | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. |
+| Evento único em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. |
+| Evento único com janela de tempo | Qualquer definição de segmento que se refere a um único evento de entrada com uma janela de tempo. |
 | Somente perfil | Qualquer definição de segmento que se refere somente a um atributo de perfil. |
-| Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. |
-| Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada e um ou mais atributos de perfil. |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. **Observação:** se um segmento de segmentos for usado, a desativação de perfil ocorrerá a  **cada 24 horas**. |
-| Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
+| Evento único com um atributo de perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. **Observação:** O query é avaliado imediatamente quando o evento ocorre. No entanto, no caso de um evento de perfil, ele deve aguardar 24 horas para ser incorporado. |
+| Evento único com um atributo de perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada e um ou mais atributos de perfil. |
+| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. **Observação:** Se um segmento de segmentos for usado, a desativação do perfil ocorrerá **a cada 24 horas**. |
+| Vários eventos com um atributo de perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
-Uma definição de segmento **não** será ativada para a segmentação de fluxo nos seguintes cenários:
+Uma definição de segmento **not** ser habilitado para segmentação de transmissão nos seguintes cenários:
 
 - A definição de segmento inclui segmentos ou características do Adobe Audience Manager (AAM).
 - A definição de segmento inclui várias entidades (consultas de várias entidades).
@@ -92,11 +91,11 @@ Além disso, algumas diretrizes se aplicam ao fazer a segmentação de fluxo:
 | Tipo de consulta | Orientação |
 | ---------- | -------- |
 | Query de evento único | Não há limites para a janela de retrospectiva. |
-| Consulta com histórico de eventos | <ul><li>A janela de retrospectiva é limitada a **um dia**.</li><li>Uma condição de ordem de tempo estrita **deve** existir entre os eventos.</li><li>Consultas com pelo menos um evento negado são suportadas. No entanto, o evento inteiro **não pode** ser uma negação.</li></ul> |
+| Consulta com histórico de eventos | <ul><li>A janela de retrospectiva está limitada a **um dia**.</li><li>Uma condição de ordem de tempo estrita **must** existir entre os eventos.</li><li>Consultas com pelo menos um evento negado são suportadas. No entanto, o evento inteiro **cannot** ser uma negação.</li></ul> |
 
 ## Recuperar todos os segmentos habilitados para a segmentação de streaming
 
-Você pode recuperar uma lista de todos os seus segmentos que são ativados para segmentação de fluxo na Organização IMS fazendo uma solicitação GET para o terminal `/segment/definitions`.
+Você pode recuperar uma lista de todos os seus segmentos ativados para a segmentação de streaming na Organização IMS fazendo uma solicitação GET para a `/segment/definitions` endpoint .
 
 **Formato da API**
 
@@ -209,7 +208,7 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos na organização IMS q
 
 ## Criar um segmento habilitado para transmissão
 
-Um segmento será ativado automaticamente para transmissão se corresponder a um dos [tipos de segmentação de transmissão listados acima](#streaming-segmentation-query-types).
+Um segmento será ativado automaticamente para transmissão se corresponder a um dos [tipos de segmentação de fluxo listados acima](#streaming-segmentation-query-types).
 
 **Formato da API**
 
@@ -244,7 +243,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Esta é uma solicitação padrão de &quot;criar um segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial em [criar um segmento](../tutorials/create-a-segment.md).
+>Esta é uma solicitação padrão de &quot;criar um segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial em [criação de um segmento](../tutorials/create-a-segment.md).
 
 **Resposta**
 
@@ -294,11 +293,11 @@ Após habilitar a avaliação do streaming, é necessário criar uma linha de ba
 
 >[!NOTE]
 >
->A avaliação agendada pode ser ativada para sandboxes com no máximo cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] em um único ambiente de sandbox, você não poderá usar a avaliação agendada.
+>A avaliação programada pode ser ativada para sandboxes com no máximo cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] em um único ambiente de sandbox, você não poderá usar a avaliação agendada.
 
 ### Criar um agendamento
 
-Ao fazer uma solicitação de POST para o endpoint `/config/schedules`, é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
+Ao fazer uma solicitação de POST para a `/config/schedules` endpoint , é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
 
 **Formato da API**
 
@@ -334,8 +333,8 @@ curl -X POST \
 | `name` | **(Obrigatório)** O nome da programação. Deve ser uma string. |
 | `type` | **(Obrigatório)** O tipo de trabalho no formato de string. Os tipos suportados são `batch_segmentation` e `export`. |
 | `properties` | **(Obrigatório)** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | **(Obrigatório quando  `type` é igual  `batch_segmentation`)** Usar  `["*"]` garante que todos os segmentos sejam incluídos. |
-| `schedule` | **(Obrigatório)** Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. O exemplo mostrado (`0 0 1 * * ?`) significa que o trabalho é acionado todos os dias às 1:00:00 UTC. Para obter mais informações, consulte a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
+| `properties.segments` | **(Obrigatório quando `type` igual `batch_segmentation`)** Usando `["*"]` garante que todos os segmentos sejam incluídos. |
+| `schedule` | **(Obrigatório)** Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. O exemplo mostrado (`0 0 1 * * ?`) significa que o trabalho é acionado todos os dias às 1:00:00 UTC. Para obter mais informações, consulte a [formato de expressão cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. |
 | `state` | *(Opcional)* Sequência de caracteres contendo o estado da programação. Valores disponíveis: `active` e `inactive`. O valor padrão é `inactive`. Uma Organização IMS só pode criar uma programação. As etapas para atualizar o cronograma estão disponíveis posteriormente neste tutorial. |
 
 **Resposta**
@@ -368,7 +367,7 @@ Uma resposta bem-sucedida retorna os detalhes do agendamento recém-criado.
 
 ### Habilitar um agendamento
 
-Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (defina `state` como `active`) fazendo uma solicitação de PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
+Por padrão, um agendamento fica inativo ao ser criado, a menos que a variável `state` está definida como `active` no corpo da solicitação de criação (POST). Você pode ativar uma programação (defina a variável `state` para `active`), fazendo uma solicitação de PATCH à `/config/schedules` endpoint e incluindo a ID do agendamento no caminho.
 
 **Formato da API**
 
@@ -378,7 +377,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Solicitação**
 
-A solicitação a seguir usa [JSON Patch formatting](http://jsonpatch.com/) para atualizar `state` do agendamento para `active`.
+A solicitação a seguir usa [Formatação de patch JSON](http://jsonpatch.com/) para atualizar o `state` do calendário para `active`.
 
 ```shell
 curl -X POST \

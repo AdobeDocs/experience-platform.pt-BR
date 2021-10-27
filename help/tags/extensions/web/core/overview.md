@@ -2,10 +2,10 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5257'
-ht-degree: 92%
+source-wordcount: '5292'
+ht-degree: 91%
 
 ---
 
@@ -219,7 +219,13 @@ Especifique o nome e o valor do cookie que deve existir para um evento acionar u
 
 #### Custom Code
 
-Especifique qualquer código personalizado que deve existir como uma condição do evento. Use o editor de código incorporado para inserir o código personalizado.
+Especifique qualquer código personalizado que deve existir como uma condição do evento.
+
+>[!NOTE]
+>
+>O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não suportam ES6+. Para entender o impacto do uso de funções ES6+, teste todos os navegadores da Web que devem ser compatíveis.
+
+Use o editor de código incorporado para inserir o código personalizado:
 
 1. Selecione **[!UICONTROL Abrir editor]**.
 1. Digite o código personalizado.
@@ -833,21 +839,21 @@ Alguns casos de uso comuns incluem:
 
 ### Valor condicional
 
-Um invólucro para a condição [Value Comparison](#value-comparison-value-comparison). Com base no resultado da comparação, o retornará um dos dois valores disponíveis no formulário. Pode, assim, lidar com &quot;If... Então.. Senão...&quot; cenários sem a necessidade de regras adicionais.
+Um invólucro para o [Comparação de valores](#value-comparison-value-comparison) condição. Com base no resultado da comparação, o retornará um dos dois valores disponíveis no formulário. Pode, assim, lidar com &quot;If... Então.. Senão...&quot; cenários sem a necessidade de regras adicionais.
 
 ### Ambiente de tempo de execução
 
 Permite selecionar uma das seguintes variáveis:
 
-* Estágio do ambiente - Retorna `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/preparo/produção.
+* Estágio do ambiente - Retornos `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/armazenamento temporário/produção.
 * Data de build da biblioteca - Retorna `turbine.buildInfo.buildDate` que contém o mesmo valor como `_satellite.buildInfo.buildDate`.
 * Nome da propriedade - Retorna `_satellite.property.name` para obter o nome da propriedade do Launch.
 * ID da propriedade - Retorna `_satellite.property.id` para obter a ID da propriedade do Launch
 * Nome da regra - Retorna `event.$rule.name` contendo o nome da regra executada.
 * ID da regra - Retorna `event.$rule.id` contendo a ID da regra executada.
 * Tipo de evento - Retorna `event.$type` contendo o tipo de evento que acionou a regra.
-* Carga de detalhes do evento - Retorna `event.detail` contendo a carga útil de um evento personalizado ou de uma regra de chamada direta.
-* Identificador de chamada direta - Retorna `event.identifier` contendo o identificador de uma Regra de chamada direta.
+* Carga dos detalhes do evento - Retorna `event.detail` contendo a carga útil de um evento personalizado ou regra de chamada direta.
+* Identificador de chamada direta - Retorna `event.identifier` contendo o identificador de uma regra de chamada direta.
 
 ### Atributos do dispositivo
 

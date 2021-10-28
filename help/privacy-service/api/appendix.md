@@ -5,11 +5,10 @@ title: Apêndice do guia da API do Privacy Service
 topic-legacy: developer guide
 description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-translation-type: tm+mt
-source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
+source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 5%
+source-wordcount: '480'
+ht-degree: 8%
 
 ---
 
@@ -19,9 +18,9 @@ As seções a seguir contêm informações adicionais para trabalhar com a API d
 
 ## Namespaces de identidade padrão {#standard-namespaces}
 
-Todas as identidades enviadas para [!DNL Privacy Service] devem ser fornecidas sob um namespace de identidade específico. Os namespaces de identidade são um componente do [Adobe Experience Platform Identity Service](../../identity-service/home.md) que indica o contexto ao qual uma identidade está relacionada.
+Todas as identidades enviadas para [!DNL Privacy Service] deve ser fornecido em um namespace de identidade específico. Os namespaces de identidade são um componente do [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md) que indicam o contexto ao qual uma identidade está relacionada.
 
-A tabela a seguir descreve vários tipos de identidade predefinidos e usados com frequência, disponibilizados por [!DNL Experience Platform], juntamente com seus valores `namespace` associados:
+A tabela a seguir descreve vários tipos de identidade predefinidos e usados com frequência, disponibilizados por [!DNL Experience Platform], juntamente com os `namespace` valores:
 
 | Tipo de identidade | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -39,13 +38,13 @@ A tabela a seguir descreve vários tipos de identidade predefinidos e usados com
 
 >[!NOTE]
 >
->Cada tipo de identidade também tem um valor inteiro `namespaceId`, que pode ser usado no lugar da string `namespace` ao definir a propriedade `type` da identidade como &quot;namespaceId&quot;. Consulte a seção em [qualificadores de namespace](#namespace-qualifiers) para obter mais informações.
+>Cada tipo de identidade também tem uma `namespaceId` valor inteiro, que pode ser usado no lugar do `namespace` ao definir o `type` para &quot;namespaceId&quot;. Consulte a seção sobre [qualificadores de namespace](#namespace-qualifiers) para obter mais informações.
 
-Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação do GET para o endpoint `idnamespace/identities` na API [!DNL Identity Service]. Consulte o [Guia do desenvolvedor do Serviço de identidade](../../identity-service/api/getting-started.md) para obter mais informações.
+Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação do GET para a `idnamespace/identities` endpoint no [!DNL Identity Service] API. Consulte a [Guia do desenvolvedor do Serviço de identidade](../../identity-service/api/getting-started.md) para obter mais informações.
 
 ## Qualificadores de namespace
 
-Ao especificar um valor `namespace` na API [!DNL Privacy Service], um **qualificador de namespace** deve ser incluído em um parâmetro `type` correspondente. A tabela a seguir descreve os diferentes qualificadores de namespace aceitos.
+Ao especificar uma `namespace` na variável [!DNL Privacy Service] API, um **qualificador de namespace** deve ser incluída em um `type` parâmetro. A tabela a seguir descreve os diferentes qualificadores de namespace aceitos.
 
 | Qualificador | Definição |
 | --------- | ---------- |
@@ -61,9 +60,9 @@ Ao especificar um valor `namespace` na API [!DNL Privacy Service], um **qualific
 
 ## Valores do produto aceitos
 
-A tabela a seguir descreve os valores aceitos para especificar um Adobe product no atributo `include` de uma solicitação de criação de trabalho.
+A tabela a seguir descreve os valores aceitos para especificar um produto de Adobe no `include` de uma solicitação de criação de emprego.
 
-| Produto | Valor para uso no atributo `include` |
+| Produto | Valor para uso na variável `include` atributo |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
@@ -74,6 +73,7 @@ A tabela a seguir descreve os valores aceitos para especificar um Adobe product 
 | Adobe Target | `target` |
 | Produto de automação | `automationProduct` |
 | Atributos do cliente (CRS) | `CRS` |
+| Identity Service | `Identity` |
 | Perfil do cliente em tempo real | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}

@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
+source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 12%
+source-wordcount: '458'
+ht-degree: 9%
 
 ---
 
@@ -12,12 +12,30 @@ ht-degree: 12%
 
 **Data de lançamento: 27 de outubro de 2021**
 
+## Atualizações no Experience Platform
+
+Atualizações no Experience Platform.
+
+### [Interface do usuário] {#ui}
+
+A interface do usuário foi atualizada com as seguintes alterações:
+
+| Recurso | Descrição |
+| --- | --- |
+| Tema escuro | Use a troca de tema escuro para alternar entre temas claros e escuros na interface da plataforma. O switch está localizado no perfil do usuário abaixo do nome de usuário e email. |
+| Alternar navegação à esquerda | Use a alternância de navegação aprimorada na parte superior do cabeçalho do aplicativo para mostrar ou ocultar o menu que exibe seus recursos do Experience Platform. O sistema lembra da última seleção e mostra apenas os recursos aos quais você tem acesso. |
+| Visibilidade de acesso | A barra de navegação esquerda mostra apenas os recursos que você pode acessar. Em versões anteriores do Adobe Experience Platform, os itens indisponíveis ficavam visíveis, mesmo se você não conseguisse acessá-los. |
+
+Consulte a [Guia da interface do usuário da plataforma](../../landing/ui-guide.md) para saber mais.
+
+## Atualizações dos recursos existentes
+
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [Fontes](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] O permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
@@ -30,7 +48,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 Consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md) para saber mais sobre esse serviço.
 
-## Fontes {#sources}
+### Fontes {#sources}
 
 A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 

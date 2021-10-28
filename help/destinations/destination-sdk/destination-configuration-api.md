@@ -2,7 +2,7 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '2405'
 ht-degree: 5%
@@ -13,17 +13,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**Ponto de extremidade** da API:  `platform.adobe.io/data/core/activation/authoring/destinations`
+>**Ponto de extremidade da API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Esta página lista e descreve todas as operações de API que podem ser executadas usando o endpoint da API `/authoring/destinations`. Para obter uma descrição da funcionalidade suportada por este ponto de extremidade, leia [configuração de destino](./destination-configuration.md).
+Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/destinations` Ponto de extremidade da API. Para obter uma descrição da funcionalidade suportada por este ponto de extremidade, leia [configuração de destino](./destination-configuration.md).
 
 ## Introdução às operações da API de destino {#get-started}
 
-Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
+Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
 
 ## Criar configuração para um destino {#create}
 
-Você pode criar uma nova configuração de destino fazendo uma solicitação POST para o endpoint `/authoring/destinations`.
+Você pode criar uma nova configuração de destino, fazendo uma solicitação de POST para o `/authoring/destinations` endpoint .
 
 **Formato da API**
 
@@ -34,7 +34,7 @@ POST /authoring/destinations
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova configuração de destino, configurada pelos parâmetros fornecidos no payload. A carga abaixo inclui todos os parâmetros aceitos pelo ponto de extremidade `/authoring/destinations`. Observe que não é necessário adicionar todos os parâmetros na chamada do e que o modelo é personalizável, de acordo com os requisitos da API.
+A solicitação a seguir cria uma nova configuração de destino, configurada pelos parâmetros fornecidos no payload. A carga abaixo inclui todos os parâmetros aceitos pela `/authoring/destinations` endpoint . Observe que não é necessário adicionar todos os parâmetros na chamada do e que o modelo é personalizável, de acordo com os requisitos da API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `name` | String | Indica o título do seu destino no catálogo de Experience Platform |
 | `description` | String | Forneça uma descrição que o Adobe usará no catálogo de destinos do Experience Platform para o cartão de destino. Mire por não mais do que 4 a 5 frases. |
 | `status` | String | Indica o status do ciclo de vida do cartão de destino. Os valores aceitos são `TEST`, `PUBLISHED` e `DELETED`. Use `TEST` ao configurar o destino pela primeira vez. |
-| `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para obter os valores aceitos. |
+| `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para valores aceitos. |
 | `customerAuthenticationConfigurations.authType` | String | Os valores aceitos são `OAUTH2, BEARER`. |
 | `customerDataFields.name` | String | Forneça um nome para o campo personalizado que está sendo introduzido. |
 | `customerDataFields.type` | String | Indica o tipo de campo personalizado que está sendo introduzido. Os valores aceitos são `string`, `object`, `integer` |
@@ -148,38 +148,38 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.description` | String | Forneça uma descrição para o campo personalizado. |
 | `customerDataFields.isRequired` | Booleano | Indica se esse campo é necessário no fluxo de trabalho de configuração de destino. |
 | `customerDataFields.enum` | String | Renderiza o campo personalizado como um menu suspenso e lista as opções disponíveis para o usuário. |
-| `customerDataFields.pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para impor um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, digite `^[A-Za-z]+$` neste campo. |
-| `uiAttributes.documentationLink` | String | Refere-se à página de documentação no [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para seu destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `https://www.adobe.com/go/destinations-moviestar-en`. |
-| `uiAttributes.category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `customerDataFields.pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para impor um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, insira `^[A-Za-z]+$` neste campo. |
+| `uiAttributes.documentationLink` | String | Refere-se à página de documentação na [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para o seu destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `https://www.adobe.com/go/destinations-moviestar-en`. |
+| `uiAttributes.category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de Destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `uiAttributes.connectionType` | String | `Server-to-server` no momento, é a única opção disponível. |
 | `uiAttributes.frequency` | String | `Streaming` no momento, é a única opção disponível. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se o destino aceita atributos de perfil padrão. Normalmente, esses atributos são destacados na documentação de nossos parceiros. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se os clientes podem configurar namespaces personalizados no seu destino. |
-| `identityNamespaces.externalId.allowedAttributesTransformation` | String | _Não mostrado na configuração_ de exemplo. Usado, por exemplo, quando o cliente [!DNL Platform] tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. É aqui que você fornece a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Usado para casos em que sua plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que você possa restringir os usuários da plataforma a selecionar apenas esses namespaces de identidade. <br> Ao usar o  `acceptedGlobalNamespaces`, você pode usar  `"requiredTransformation":"sha256(lower($))"` para endereços de email em letras minúsculas e em hash ou números de telefone. |
-| `destinationDelivery.authenticationRule` | String | Indica como os clientes [!DNL Platform] se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o cliente [!DNL Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando a configuração [Credentials](./credentials-configuration.md). </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
-| `destinationDelivery.destinationServerId` | String | O `instanceId` do [modelo de servidor de destino](./destination-server-api.md) usado para este destino. |
-| `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`:  [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`:  [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
+| `identityNamespaces.externalId.allowedAttributesTransformation` | String | _Não mostrado na configuração de exemplo_. Usado, por exemplo, quando a variável [!DNL Platform] o cliente tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. É aqui que você fornece a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Usado para casos em que a plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que seja possível restringir usuários da plataforma a selecionar somente esses namespaces de identidade. <br> Ao utilizar `acceptedGlobalNamespaces`, você pode usar `"requiredTransformation":"sha256(lower($))"` para endereços de email em minúsculas e hash ou números de telefone. |
+| `destinationDelivery.authenticationRule` | String | Indica como [!DNL Platform] Os clientes do se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o [!DNL Platform] o cliente não precisa fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando o [Credenciais](./credentials-configuration-api.md) configuração. </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
+| `destinationDelivery.destinationServerId` | String | O `instanceId` do [modelo do servidor de destino](./destination-server-api.md) usado para este destino. |
+| `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`: [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`: [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
 | `segmentMappingConfig.mapUserInput` | Booleano | Controla se a id de mapeamento de segmento no workflow de ativação de destino é inserida pelo usuário. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controla se a ID de mapeamento de segmento no fluxo de trabalho de ativação de destino é a ID de segmento de Experience Platform. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controla se a id de mapeamento de segmento no fluxo de trabalho de ativação de destino é o nome do segmento de Experience Platform. |
-| `segmentMappingConfig.audienceTemplateId` | Booleano | O `instanceId` do [modelo de metadados de público-alvo](./audience-metadata-api.md) usado para esse destino. |
-| `schemaConfig.profileFields` | Matriz | Ao adicionar `profileFields` predefinido, conforme mostrado na configuração acima, os usuários terão a opção de mapear atributos de Experience Platform para os atributos predefinidos no lado do destino. |
+| `segmentMappingConfig.audienceTemplateId` | Booleano | O `instanceId` do [modelo de metadados de público-alvo](./audience-metadata-api.md) usado para este destino. |
+| `schemaConfig.profileFields` | Matriz | Ao adicionar predefinido `profileFields` como mostrado na configuração acima, os usuários terão a opção de mapear atributos de Experience Platform para os atributos predefinidos no lado do destino. |
 | `schemaConfig.profileRequired` | Booleano | Use `true` se os usuários forem capazes de mapear atributos de perfil do Experience Platform para atributos personalizados no lado do seu destino, como mostrado na configuração de exemplo acima. |
 | `schemaConfig.segmentRequired` | Booleano | Sempre use `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | Booleano | Use `true` se os usuários puderem mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
-| `aggregation.aggregationType` | - | Selecione `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. A configuração de exemplo acima inclui `BEST_EFFORT` agregação. Para obter um exemplo de `CONFIGURABLE_AGGREGATION`, consulte a configuração de exemplo no documento [configuração de destino](./destination-configuration.md#example-configuration). Os parâmetros relevantes para a agregação configurável são documentados abaixo nesta tabela. |
+| `schemaConfig.identityRequired` | Booleano | Use `true` se os usuários forem capazes de mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
+| `aggregation.aggregationType` | - | Selecione `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. A configuração de exemplo acima inclui `BEST_EFFORT` agregação. Para obter um exemplo de `CONFIGURABLE_AGGREGATION`, consulte o exemplo de configuração no [configuração de destino](./destination-configuration.md#example-configuration) documento. Os parâmetros relevantes para a agregação configurável são documentados abaixo nesta tabela. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Número inteiro | O Experience Platform pode agregar vários perfis exportados em uma única chamada HTTP. Especifique o número máximo de perfis que seu terminal deve receber em uma única chamada HTTP. Observe que esta é a melhor agregação de esforço. Por exemplo, se você especificar o valor 100, a Platform poderá enviar qualquer número de perfis menor que 100 em uma chamada. <br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como 1. |
-| `aggregation.bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
-| `aggregation.configurableAggregation.splitUserById` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Número inteiro | *Valor máximo: 3600*. Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Juntamente com `maxNumEventsInBatch`, isso determina por quanto tempo o Experience Platform deve aguardar até enviar uma chamada de API para o terminal. <br> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada da API, o que ocorrer primeiro. |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | Número inteiro | *Valor máximo: 10000*. Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Consulte `maxBatchAgeInSecs` logo acima. |
-| `aggregation.configurableAggregation.aggregationKey` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros abaixo: <br> <ul><li>ID do segmento</li><li> status do segmento </li><li> namespace de identidade </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Defina como `true` se desejar agrupar perfis exportados para seu destino por ID de segmento. |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Você deve definir `includeSegmentId:true` e `includeSegmentStatus:true` se quiser agrupar perfis exportados para seu destino por ID de segmento E status de segmento. |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Defina como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Use esse parâmetro para especificar se deseja que os perfis exportados sejam agregados em grupos de uma única identidade (GAID, IDFA, números de telefone, email, etc.). |
-| `aggregation.configurableAggregation.aggregationKey.groups` | String | Consulte o parâmetro na configuração de exemplo [aqui](./destination-configuration.md#example-configuration). Crie listas de grupos de identidade se quiser agrupar perfis exportados para seu destino por grupos de namespace de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para seu destino e emails em outra usando a configuração no exemplo. |
+| `aggregation.bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina este sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
+| `aggregation.configurableAggregation.splitUserById` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina este sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Número inteiro | *Valor máximo: 3600*. Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Junto com `maxNumEventsInBatch`, determina por quanto tempo o Experience Platform deve aguardar até enviar uma chamada de API para o terminal. <br> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada da API, o que ocorrer primeiro. |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | Número inteiro | *Valor máximo: 10000*. Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Consulte `maxBatchAgeInSecs` logo acima. |
+| `aggregation.configurableAggregation.aggregationKey` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros abaixo: <br> <ul><li>ID do segmento</li><li> status do segmento </li><li> namespace de identidade </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Defina como `true` se desejar agrupar perfis exportados para seu destino por ID de segmento. |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Você deve definir ambos `includeSegmentId:true` e `includeSegmentStatus:true` se desejar agrupar perfis exportados para seu destino por ID de segmento E status do segmento. |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Defina como `true` se quiser agrupar perfis exportados para seu destino pelo namespace de identidade. |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Use esse parâmetro para especificar se deseja que os perfis exportados sejam agregados em grupos de uma única identidade (GAID, IDFA, números de telefone, email, etc.). |
+| `aggregation.configurableAggregation.aggregationKey.groups` | String | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Crie listas de grupos de identidade se quiser agrupar perfis exportados para seu destino por grupos de namespace de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para seu destino e emails em outra usando a configuração no exemplo. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -189,7 +189,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuraç�
 
 ## Listar configurações de destino {#retrieve-list}
 
-Você pode recuperar uma lista de todas as configurações de destino para sua Organização IMS fazendo uma solicitação de GET para o endpoint `/authoring/destinations`.
+Você pode recuperar uma lista de todas as configurações de destino para sua Organização IMS fazendo uma solicitação de GET para a `/authoring/destinations` endpoint .
 
 **Formato da API**
 
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Resposta**
 
-A resposta a seguir retorna o status HTTP 200 com uma lista de configurações de destino às quais você tem acesso, com base na IMS Organization ID e no nome da sandbox usados. Um `instanceId` corresponde ao modelo para um destino. A resposta é truncada por brevidade.
+A resposta a seguir retorna o status HTTP 200 com uma lista de configurações de destino às quais você tem acesso, com base na IMS Organization ID e no nome da sandbox usados. One `instanceId` corresponde ao modelo para um destino. A resposta é truncada por brevidade.
 
 ```json
 {
@@ -324,7 +324,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de configurações d
 | `name` | String | Indica o título do destino no catálogo de Experience Platform. |
 | `description` | String | Forneça uma descrição que o Adobe usará no catálogo de destinos do Experience Platform para o cartão de destino. Mire por não mais do que 4 a 5 frases. |
 | `status` | String | Indica o status do ciclo de vida do cartão de destino. Os valores aceitos são `TEST`, `PUBLISHED` e `DELETED`. Use `TEST` ao configurar o destino pela primeira vez. |
-| `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para obter os valores aceitos. |
+| `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para valores aceitos. |
 | `customerAuthenticationConfigurations.authType` | String | Os valores aceitos são `OAUTH2, BEARER`. |
 | `customerDataFields.name` | String | Forneça um nome para o campo personalizado que está sendo introduzido. |
 | `customerDataFields.type` | String | Indica o tipo de campo personalizado que está sendo introduzido. Os valores aceitos são `string`, `object`, `integer` |
@@ -332,29 +332,29 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de configurações d
 | `customerDataFields.description` | String | Forneça uma descrição para o campo personalizado. |
 | `customerDataFields.isRequired` | Booleano | Indica se esse campo é necessário no fluxo de trabalho de configuração de destino. |
 | `customerDataFields.enum` | String | Renderiza o campo personalizado como um menu suspenso e lista as opções disponíveis para o usuário. |
-| `customerDataFields.pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para impor um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, digite `^[A-Za-z]+$` neste campo. |
-| `uiAttributes.documentationLink` | String | Refere-se à página de documentação no [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para seu destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `https://www.adobe.com/go/destinations-moviestar-en` |
-| `uiAttributes.category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+| `customerDataFields.pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para impor um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, insira `^[A-Za-z]+$` neste campo. |
+| `uiAttributes.documentationLink` | String | Refere-se à página de documentação na [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para o seu destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `https://www.adobe.com/go/destinations-moviestar-en` |
+| `uiAttributes.category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de Destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | String | `Server-to-server` no momento, é a única opção disponível. |
 | `uiAttributes.frequency` | String | `Streaming` no momento, é a única opção disponível. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se o destino aceita atributos de perfil padrão. Normalmente, esses atributos são destacados na documentação de nossos parceiros. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se os clientes podem configurar namespaces personalizados no seu destino. Leia mais sobre [namespaces personalizados](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) no Adobe Experience Platform. |
-| `identityNamespaces.externalId.allowedAttributesTransformation` | String | _Não mostrado na configuração_ de exemplo. Usado, por exemplo, quando o cliente [!DNL Platform] tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. É aqui que você fornece a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Usado para casos em que sua plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que você possa restringir os usuários da plataforma a selecionar apenas esses namespaces de identidade. |
-| `destinationDelivery.authenticationRule` | String | Indica como os clientes [!DNL Platform] se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o cliente [!DNL Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando a configuração [Credentials](./credentials-configuration.md). </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
-| `destinationDelivery.destinationServerId` | String | O `instanceId` do [modelo de servidor de destino](./destination-server-api.md) usado para este destino. |
+| `identityNamespaces.externalId.allowedAttributesTransformation` | String | _Não mostrado na configuração de exemplo_. Usado, por exemplo, quando a variável [!DNL Platform] o cliente tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. É aqui que você fornece a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Usado para casos em que a plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que seja possível restringir usuários da plataforma a selecionar somente esses namespaces de identidade. |
+| `destinationDelivery.authenticationRule` | String | Indica como [!DNL Platform] Os clientes do se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o [!DNL Platform] o cliente não precisa fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando o [Credenciais](./authentication-configuration.md) configuração. </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
+| `destinationDelivery.destinationServerId` | String | O `instanceId` do [modelo do servidor de destino](./destination-server-api.md) usado para este destino. |
 | `destConfigId` | String | Este campo é gerado automaticamente e não requer sua entrada. |
-| `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`:  [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`:  [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
+| `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`: [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`: [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
 | `segmentMappingConfig.mapUserInput` | Booleano | Controla se a id de mapeamento de segmento no workflow de ativação de destino é inserida pelo usuário. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controla se a ID de mapeamento de segmento no fluxo de trabalho de ativação de destino é a ID de segmento de Experience Platform. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controla se a id de mapeamento de segmento no fluxo de trabalho de ativação de destino é o nome do segmento de Experience Platform. |
-| `segmentMappingConfig.audienceTemplateId` | Booleano | O `instanceId` do [modelo de metadados de público-alvo](./audience-metadata-management.md) usado para esse destino. Para configurar um modelo de metadados de público-alvo, leia a [referência da API de metadados de público-alvo](./audience-metadata-api.md). |
+| `segmentMappingConfig.audienceTemplateId` | Booleano | O `instanceId` do [modelo de metadados de público-alvo](./audience-metadata-management.md) usado para este destino. Para configurar um modelo de metadados de público-alvo, leia a [referência da API de metadados do público-alvo](./audience-metadata-api.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Atualizar uma configuração de destino existente {#update}
 
-Você pode atualizar uma configuração de destino existente fazendo uma solicitação de PUT para o endpoint `/authoring/destinations` e fornecendo a ID da instância da configuração de destino que deseja atualizar. No corpo da chamada , forneça a configuração de destino atualizada.
+Você pode atualizar uma configuração de destino existente fazendo uma solicitação de PUT para a variável `/authoring/destinations` endpoint e fornecer a ID da instância da configuração de destino que deseja atualizar. No corpo da chamada , forneça a configuração de destino atualizada.
 
 **Formato da API**
 
@@ -369,7 +369,7 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 **Solicitação**
 
-A solicitação a seguir atualiza uma configuração de destino existente, configurada pelos parâmetros fornecidos no payload. Na chamada de exemplo abaixo, estamos atualizando a configuração [criada anteriormente](./destination-configuration-api.md#create) para agora aceitar identificadores de email com hash, GAID e IDFA como namespaces de identidade.
+A solicitação a seguir atualiza uma configuração de destino existente, configurada pelos parâmetros fornecidos no payload. Na chamada de exemplo abaixo, estamos atualizando a configuração [criado anteriormente](./destination-configuration-api.md#create) para aceitar agora identificadores de email com hash, GAID e IDFA como namespaces de identidade.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
@@ -509,7 +509,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## Recuperar uma configuração de destino específica {#get}
 
-Você pode recuperar informações detalhadas sobre uma configuração de destino específica fazendo uma solicitação de GET para o endpoint `/authoring/destinations` e fornecendo a ID da instância da configuração de destino que deseja recuperar.
+Você pode recuperar informações detalhadas sobre uma configuração de destino específica fazendo uma solicitação de GET para o `/authoring/destinations` endpoint e fornecer a ID da instância da configuração de destino que deseja recuperar.
 
 **Formato da API**
 
@@ -669,7 +669,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Excluir uma configuração de destino específica {#delete}
 
-Você pode excluir a configuração de destino especificada, fazendo uma solicitação DELETE ao ponto de extremidade `/authoring/destinations` e fornecendo a ID da configuração de destino que deseja excluir no caminho da solicitação.
+Você pode excluir a configuração de destino especificada, fazendo uma solicitação DELETE para a variável `/authoring/destinations` endpoint e fornecer a ID da configuração de destino que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -679,7 +679,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | O `id` da configuração de destino que você deseja excluir. |
+| `{INSTANCE_ID}` | O `id` da configuração de destino que deseja excluir. |
 
 **Solicitação**
 
@@ -701,4 +701,4 @@ Os pontos de extremidade da API do SDK de destino seguem os princípios gerais d
 
 ## Próximas etapas
 
-Depois de ler este documento, você agora sabe como configurar seu destino usando o endpoint da API `/authoring/destinations`. Leia [como usar o SDK de destino para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, você agora sabe como configurar seu destino usando o `/authoring/destinations` Ponto de extremidade da API. Ler [como usar o SDK de destino para configurar o destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '657'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # Destinos {#destinations}
 
-* [Visão geral dos destinos](./home.md)
+* [Destinos visão geral](./home.md)
 * [Tipos e categorias de destino](./destination-types.md)
 * Tutoriais da API {#api}
    * [Conecte-se a destinos de fluxo e ative dados usando a API do Serviço de fluxo](./api/streaming-destinations.md)
@@ -153,12 +153,14 @@ ht-degree: 10%
       * [Especificações do servidor e do modelo](./destination-sdk/server-and-template-configuration.md)
       * [Formato de mensagem](./destination-sdk/message-format.md)
       * [Gerenciamento de metadados do público-alvo](./destination-sdk/audience-metadata-management.md)
-      * [Configuração de autenticação](./destination-sdk/credentials-configuration.md)
-      * [Autenticação OAuth 2](./destination-sdk/oauth2-authentication.md)
+      * Autenticação {#authentication}
+         * [Configuração de autenticação](./destination-sdk/authentication-configuration.md)
+         * [Autenticação OAuth 2](./destination-sdk/oauth2-authentication.md)
       * Ferramentas do desenvolvedor {#developer-tools}
          * [Criar e testar um modelo de transformação de mensagem](./destination-sdk/create-template.md)
          * [Testar a configuração de destino](./destination-sdk/test-destination.md)
-   * Referência da API {#api-reference}
+   * Operações de API {#api}
+      * [Referência de API do SDK de destino (criação de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Operações de API do endpoint de destinos](./destination-sdk/destination-configuration-api.md)
       * [Operações da API de ponto de extremidade do servidor de destino](./destination-sdk/destination-server-api.md)
       * [Operações da API de ponto de extremidade de metadados de público-alvo](./destination-sdk/audience-metadata-api.md)

@@ -2,7 +2,7 @@
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino para o SDK de destino
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '1757'
 ht-degree: 5%
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 Essa configuração permite indicar informações essenciais, como nome de destino, categoria, descrição e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 
-Essa configuração também conecta as outras configurações necessárias para que o destino funcione - servidor de destino e metadados de público-alvo - a essa configuração. Leia como você pode fazer referência às duas configurações em uma seção [mais abaixo](./destination-configuration.md#connecting-all-configurations).
+Essa configuração também conecta as outras configurações necessárias para que o destino funcione - servidor de destino e metadados de público-alvo - a essa configuração. Leia como você pode fazer referência às duas configurações em uma [seção mais abaixo](./destination-configuration.md#connecting-all-configurations).
 
-Você pode configurar a funcionalidade descrita neste documento usando o ponto de extremidade da API `/authoring/destinations`. Leia [Operações de ponto de extremidade da API de Destinos](./destination-configuration-api.md) para obter uma lista completa de operações que podem ser executadas no ponto de extremidade.
+Você pode configurar a funcionalidade descrita neste documento usando o `/authoring/destinations` Ponto de extremidade da API. Ler [Operações de endpoint da API de destinos](./destination-configuration-api.md) para obter uma lista completa de operações que podem ser realizadas no ponto de extremidade.
 
 ## Exemplo de configuração {#example-configuration}
 
@@ -135,7 +135,7 @@ Abaixo está um exemplo de configuração de um destino ficcional, Moviestar, qu
 
 ## Configurações de autenticação do cliente {#customer-authentication-configurations}
 
-Esta seção na configuração de destinos gera a página [Configure new destination](/help/destinations/ui/connect-destination.md) na interface do usuário do Experience Platform, onde os usuários conectam o Experience Platform às contas que eles têm com seu destino. Dependendo de qual opção de autenticação você indicar no campo `authType`, a página Experience Platform será gerada para os usuários da seguinte maneira:
+Essa seção na configuração de destinos gera a variável [Configurar novo destino](/help/destinations/ui/connect-destination.md) na interface do usuário do Experience Platform, onde os usuários conectam o Experience Platform às contas que têm com seu destino. Dependendo da opção de autenticação que você indicar na `authType` , a Experience Platform é gerada para os usuários da seguinte maneira:
 
 **Autenticação do portador**
 
@@ -145,21 +145,21 @@ Ao configurar o tipo de autenticação do portador, os usuários são solicitado
 
 **Autenticação OAuth 2**
 
-Os usuários selecionam **[!UICONTROL Conectar ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, conforme mostrado no exemplo abaixo para o destino de Públicos-alvo personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o terminal de destino, leia a página de autenticação [SDK de destino OAuth 2 dedicada](./oauth2-authentication.md).
+Usuários selecionados **[!UICONTROL Ligar ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, como mostrado no exemplo abaixo para o destino de Públicos personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o terminal de destino, leia o [Página de autenticação OAuth 2 do SDK de destino](./oauth2-authentication.md).
 
 ![Renderização da interface do usuário com autenticação OAuth 2](./assets/oauth2-authentication-ui.png)
 
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para obter os valores aceitos. |
-| `authType` | String | Os valores aceitos são `OAUTH2, BEARER`. <br><ul><li> Se o destino oferecer suporte à autenticação OAuth 2, selecione o valor `OAUTH2` e adicione os campos obrigatórios para OAuth 2, conforme mostrado na [página de autenticação OAuth 2 do SDK de destino](./oauth2-authentication.md). Além disso, você deve selecionar `authenticationRule=CUSTOMER_AUTHENTICATION` na seção [delivery de destino](./destination-configuration.md). </li><li>Para autenticação do portador, selecione `BEARER` e selecione `authenticationRule=CUSTOMER_AUTHENTICATION` na seção [entrega de destino](./destination-configuration.md).</li></ul> |
+| `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para valores aceitos. |
+| `authType` | String | Os valores aceitos são `OAUTH2, BEARER`. <br><ul><li> Se o destino oferecer suporte à autenticação OAuth 2, selecione a `OAUTH2` e adicione os campos obrigatórios para o OAuth 2, como mostrado no [Página de autenticação OAuth 2 do SDK de destino](./oauth2-authentication.md). Além disso, você deve selecionar `authenticationRule=CUSTOMER_AUTHENTICATION` no [seção delivery de destino](./destination-configuration.md). </li><li>Para autenticação do portador, selecione `BEARER` e selecione `authenticationRule=CUSTOMER_AUTHENTICATION` no [seção delivery de destino](./destination-configuration.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Campos de dados do cliente {#customer-data-fields}
 
-Esta seção permite que os parceiros introduzam campos personalizados. No exemplo de configuração acima, `customerDataFields` requer que os usuários selecionem um terminal no fluxo de autenticação e indiquem a ID do cliente com o destino. A configuração é refletida no fluxo de autenticação, como mostrado abaixo:
+Esta seção permite que os parceiros introduzam campos personalizados. Na configuração de exemplo acima, `customerDataFields` O exige que os usuários selecionem um terminal no fluxo de autenticação e indiquem a ID do cliente com o destino. A configuração é refletida no fluxo de autenticação, como mostrado abaixo:
 
 ![Fluxo de autenticação de campo personalizado](./assets/custom-field-authentication-flow.png)
 
@@ -171,7 +171,7 @@ Esta seção permite que os parceiros introduzam campos personalizados. No exemp
 | `description` | String | Forneça uma descrição para o campo personalizado. |
 | `isRequired` | Booleano | Indica se esse campo é necessário no fluxo de trabalho de configuração de destino. |
 | `enum` | String | Renderiza o campo personalizado como um menu suspenso e lista as opções disponíveis para o usuário. |
-| `pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para impor um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, digite `^[A-Za-z]+$` neste campo. |
+| `pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para impor um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, insira `^[A-Za-z]+$` neste campo. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -181,8 +181,8 @@ Esta seção se refere aos elementos da interface do usuário na configuração 
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `documentationLink` | String | Refere-se à página de documentação no [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para seu destino. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `http://www.adobe.com/go/destinations-moviestar-en` |
-| `category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `documentationLink` | String | Refere-se à página de documentação na [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para o seu destino. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `http://www.adobe.com/go/destinations-moviestar-en` |
+| `category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de Destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | String | `Server-to-server` no momento, é a única opção disponível. |
 | `frequency` | String | `Streaming` no momento, é a única opção disponível. |
 
@@ -196,21 +196,21 @@ Use os parâmetros em `schemaConfig` para habilitar a etapa de mapeamento do wor
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `profileFields` | Matriz | *Não mostrado no exemplo de configuração acima.* Ao adicionar atributos predefinidos  `profileFields`, os usuários do Experience Platform têm a opção de mapear atributos da plataforma para os atributos predefinidos no lado do destino. |
+| `profileFields` | Matriz | *Não mostrado no exemplo de configuração acima.* Ao adicionar predefinido `profileFields`, os usuários do Experience Platform têm a opção de mapear atributos da plataforma para os atributos predefinidos no lado do destino. |
 | `profileRequired` | Booleano | Use `true` se os usuários forem capazes de mapear atributos de perfil do Experience Platform para atributos personalizados no lado do seu destino, como mostrado na configuração de exemplo acima. |
 | `segmentRequired` | Booleano | Sempre use `segmentRequired:true`. |
-| `identityRequired` | Booleano | Use `true` se os usuários puderem mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
+| `identityRequired` | Booleano | Use `true` se os usuários forem capazes de mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Identidades e atributos {#identities-and-attributes}
 
-Os parâmetros desta seção determinam quais identidades seu destino aceita. Essa configuração também preenche as identidades e os atributos de destino na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) da interface do usuário do Experience Platform, onde os usuários mapeiam identidades e atributos de seus esquemas XDM para o esquema em seu destino.
+Os parâmetros desta seção determinam quais identidades seu destino aceita. Essa configuração também preenche as identidades e os atributos de direcionamento no [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) da interface do usuário do Experience Platform, onde os usuários mapeiam identidades e atributos de seus esquemas XDM para o esquema no seu destino.
 
-Você deve indicar quais [!DNL Platform] identidades os clientes podem exportar para seu destino. Alguns exemplos são [!DNL Experience Cloud ID], email com hash, ID do dispositivo ([!DNL IDFA], [!DNL GAID]). Esses valores são [!DNL Platform] namespaces de identidade que os clientes podem mapear para namespaces de identidade a partir do seu destino. Você também pode indicar se os clientes podem mapear namespaces personalizados para identidades suportadas pelo seu destino.
+Você deve indicar qual [!DNL Platform] identidades que os clientes podem exportar para o seu destino. Alguns exemplos são [!DNL Experience Cloud ID], email com hash, ID do dispositivo ([!DNL IDFA], [!DNL GAID]). Esses valores são [!DNL Platform] namespaces de identidade que os clientes podem mapear para namespaces de identidade a partir do seu destino. Você também pode indicar se os clientes podem mapear namespaces personalizados para identidades suportadas pelo seu destino.
 
 Os namespaces de identidade não exigem uma correspondência de 1 para 1 entre [!DNL Platform] e seu destino.
-Por exemplo, os clientes podem mapear um namespace [!DNL Platform] [!DNL IDFA] para um namespace [!DNL IDFA] do destino, ou podem mapear o mesmo namespace [!DNL Platform] [!DNL IDFA] para um namespace [!DNL Customer ID] no destino.
+Por exemplo, os clientes podem mapear uma [!DNL Platform] [!DNL IDFA] namespace para um [!DNL IDFA] namespace do seu destino ou podem mapear o mesmo [!DNL Platform] [!DNL IDFA] namespace para um [!DNL Customer ID] namespace no seu destino.
 
 Leia mais na [Visão geral do Namespace de identidade](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR).
 
@@ -220,8 +220,8 @@ Leia mais na [Visão geral do Namespace de identidade](https://experienceleague.
 |---------|----------|------|
 | `acceptsAttributes` | Booleano | Indica se o destino aceita atributos de perfil padrão. Normalmente, esses atributos são destacados na documentação dos parceiros. |
 | `acceptsCustomNamespaces` | Booleano | Indica se os clientes podem configurar namespaces personalizados no seu destino. |
-| `allowedAttributesTransformation` | String | *Não mostrado na configuração* de exemplo. Usado, por exemplo, quando o cliente [!DNL Platform] tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. Nesse objeto, é possível aplicar a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). Para obter um exemplo, consulte `requiredTransformation` no [Referência da API de configuração de destino](./destination-configuration-api.md#update). |
-| `acceptedGlobalNamespaces` | - | Usado para casos em que sua plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que você possa restringir os usuários da plataforma a selecionar apenas esses namespaces de identidade. |
+| `allowedAttributesTransformation` | String | *Não mostrado na configuração de exemplo*. Usado, por exemplo, quando a variável [!DNL Platform] o cliente tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. Nesse objeto, é possível aplicar a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). Para ver um exemplo, consulte `requiredTransformation` no [referência da API de configuração de destino](./destination-configuration-api.md#update). |
+| `acceptedGlobalNamespaces` | - | Usado para casos em que a plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que seja possível restringir usuários da plataforma a selecionar somente esses namespaces de identidade. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -229,8 +229,8 @@ Leia mais na [Visão geral do Namespace de identidade](https://experienceleague.
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `authenticationRule` | String | Indica como os clientes [!DNL Platform] se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o cliente [!DNL Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando a configuração [Credentials](./credentials-configuration.md). </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
-| `destinationServerId` | String | O `instanceId` da [configuração do servidor de destino](./destination-server-api.md) usada para este destino. |
+| `authenticationRule` | String | Indica como [!DNL Platform] Os clientes do se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon em seu sistema por meio de um nome de usuário e senha, um token portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` em `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e o [!DNL Platform] o cliente não precisa fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando o [Credenciais](./credentials-configuration-api.md) configuração. </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
+| `destinationServerId` | String | O `instanceId` do [configuração do servidor de destino](./destination-server-api.md) usado para este destino. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -240,9 +240,9 @@ Leia mais na [Visão geral do Namespace de identidade](https://experienceleague.
 
 Esta seção da configuração de destino está relacionada a como os metadados do segmento, como nomes de segmento ou IDs, devem ser compartilhados entre o Experience Platform e seu destino.
 
-Por meio do `audienceTemplateId`, esta seção também vincula essa configuração à [configuração de metadados de público-alvo](./audience-metadata-management.md).
+Por meio da `audienceTemplateId`, esta seção também vincula essa configuração ao [configuração de metadados do público-alvo](./audience-metadata-management.md).
 
-Os parâmetros mostrados na configuração acima são descritos na [referência da API do ponto de extremidade de destinos](./destination-configuration-api.md).
+Os parâmetros mostrados na configuração acima são descritos na seção [referência da API do endpoint de destinos](./destination-configuration-api.md).
 
 ## Política de agregação {#aggregation}
 
@@ -254,7 +254,7 @@ Uma política de agregação determina como os perfis exportados são combinados
 * Melhor agregação de esforço
 * Agregação configurável (mostrada na configuração acima)
 
-Leia a seção em [usando o modelo](./message-format.md#using-templating) e os [exemplos de chaves de agregação](./message-format.md#template-aggregation-key) para entender como incluir a política de agregação no modelo de transformação de mensagem com base em sua política de agregação selecionada.
+Leia a seção em [uso de modelos](./message-format.md#using-templating) e [exemplos de chaves de agregação](./message-format.md#template-aggregation-key) para entender como incluir a política de agregação em seu template de transformação de mensagem com base em sua política de agregação selecionada.
 
 ### Melhor agregação de esforço {#best-effort-aggregation}
 
@@ -264,7 +264,7 @@ Leia a seção em [usando o modelo](./message-format.md#using-templating) e os [
 
 Essa opção funciona melhor para destinos que preferem menos perfis por solicitação e preferem receber mais solicitações com menos dados do que menos solicitações com mais dados.
 
-Use o parâmetro `maxUsersPerRequest` para especificar o número máximo de perfis que seu destino pode receber em uma solicitação.
+Use o `maxUsersPerRequest` para especificar o número máximo de perfis que seu destino pode receber em uma solicitação.
 
 ### Agregação configurável {#configurable-aggregation}
 
@@ -277,19 +277,19 @@ Essa opção permite:
    * Status do segmento;
    * Identidade ou grupos de identidades.
 
-Para obter explicações detalhadas dos parâmetros de agregação, consulte a página de referência [Destinations API endpoint operations](./destination-configuration-api.md) , onde cada parâmetro é descrito.
+Para obter explicações detalhadas dos parâmetros de agregação, consulte [Operações de endpoint da API de destinos](./destination-configuration-api.md) página de referência, onde cada parâmetro é descrito.
 
 ## Qualificações de perfil histórico {#profile-backfill}
 
-Você pode usar o parâmetro `backfillHistoricalProfileData` na configuração de destinos para determinar se as qualificações de perfil histórico devem ser exportadas para o seu destino.
+Você pode usar o `backfillHistoricalProfileData` na configuração de destinos para determinar se as qualificações de perfil histórico devem ser exportadas para o seu destino.
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`:  [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`:  [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
+| `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`: [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`: [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
 
 ## Como essa configuração conecta todas as informações necessárias ao seu destino {#connecting-all-configurations}
 
-Algumas das configurações de destino devem ser configuradas por meio do [servidor de destino](./server-and-template-configuration.md) ou da [configuração de metadados de público-alvo](./audience-metadata-management.md). A configuração de destino descrita aqui conecta todas essas configurações fazendo referência às duas outras configurações da seguinte maneira:
+Algumas de suas configurações de destino devem ser configuradas por meio do [servidor de destino](./server-and-template-configuration.md) ou [configuração de metadados do público-alvo](./audience-metadata-management.md). A configuração de destino descrita aqui conecta todas essas configurações fazendo referência às duas outras configurações da seguinte maneira:
 
-* Use o `destinationServerId` para fazer referência ao servidor de destino e à configuração do modelo configurada para seu destino.
-* Use o `audienceMetadataId` para fazer referência à configuração de metadados do público-alvo configurada para seu destino.
+* Use o `destinationServerId` para fazer referência ao servidor de destino e à configuração do modelo configurada para o seu destino.
+* Use o `audienceMetadataId` para fazer referência à configuração de metadados do público-alvo configurada para o seu destino.

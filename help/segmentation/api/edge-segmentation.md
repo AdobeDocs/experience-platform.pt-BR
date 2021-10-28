@@ -5,9 +5,9 @@ title: 'Segmentação de borda usando a API '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Para que um segmento seja avaliado usando a segmentação de borda, a query deve
 | Várias ocorrências recebidas em um perfil de tempo de 24 horas | Qualquer definição de segmento que se refere a vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **ou** visitou a página de checkout nas últimas 24 horas. |
 | Vários eventos com um perfil em uma janela de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **e** visitou a página de checkout nas últimas 24 horas. |
 
-{style=&quot;table-layout:auto&quot;}
+Além disso, o segmento **must** estar vinculado a uma política de mesclagem ativa no Edge. Para obter mais informações sobre as políticas de mesclagem, leia o [guia de políticas de mesclagem](../../profile/api/merge-policies.md).
 
 ## Recuperar todos os segmentos ativados para a segmentação de borda
 

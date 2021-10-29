@@ -1,20 +1,21 @@
 ---
-title: Esquemas na Plataforma de dados do cliente em tempo real B2B Edition
-description: Uma visão geral da função dos esquemas do Experience Data Model (XDM) na Plataforma de dados do cliente em tempo real B2B Edition.
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+title: Esquemas no Real-time Customer Data Platform B2B Edition (Beta)
+description: Uma visão geral da função dos esquemas do Experience Data Model (XDM) no Real-time Customer Data Platform B2B Edition.
+exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
-# Esquemas na Plataforma de dados do cliente em tempo real B2B Edition (Beta)
+# Esquemas no Real-time Customer Data Platform B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
->A Plataforma de dados do cliente em tempo real B2B Edition está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>Atualmente, o Real-time Customer Data Platform B2B Edition está em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
-A Plataforma de dados do cliente em tempo real B2B Edition fornece várias classes padrão [Experience Data Model (XDM)](../../xdm/schema/composition.md#class) que capturam detalhes sobre entidades essenciais de dados B2B, como contas, oportunidades, campanhas e muito mais. Além disso, a CDP B2B Edition em tempo real permite definir relacionamentos muitos para um entre esses esquemas para que eles possam participar de casos de uso de segmentação avançada.
+O Real-time Customer Data Platform B2B Edition fornece vários padrões [Classes do Experience Data Model (XDM)](../../xdm/schema/composition.md#class) que capturam detalhes sobre entidades essenciais de dados B2B, como contas, oportunidades, campanhas e muito mais. Além disso, a CDP B2B Edition em tempo real permite definir relacionamentos muitos para um entre esses esquemas para que eles possam participar de casos de uso de segmentação avançada.
 
 As seguintes classes padrão são fornecidas na Real-time CDP B2B Edition:
 
@@ -27,6 +28,6 @@ As seguintes classes padrão são fornecidas na Real-time CDP B2B Edition:
 * [Lista de marketing comercial XDM](../../xdm/classes/b2b/business-marketing-list.md)
 * [Membros da Lista de Marketing Comercial XDM](../../xdm/classes/b2b/business-marketing-list-members.md)
 
-Para obter etapas sobre como criar uma relação muitos para um entre dois schemas, consulte o tutorial em [definindo relações de esquema B2B](../../xdm/tutorials/relationship-b2b.md).
+Para obter etapas sobre como criar uma relação muitos para um entre dois schemas, consulte o tutorial em [definição de relações de esquema B2B](../../xdm/tutorials/relationship-b2b.md).
 
-Se estiver usando uma conexão de origem B2B, você poderá usar uma ferramenta para gerar automaticamente os esquemas necessários e os relacionamentos entre eles. Consulte o guia em [namespaces B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) na documentação de fontes para obter mais informações.
+Se estiver usando uma conexão de origem B2B, você poderá usar uma ferramenta para gerar automaticamente os esquemas necessários e os relacionamentos entre eles. Consulte o guia sobre [Namespaces B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) na documentação de fontes para obter mais informações.

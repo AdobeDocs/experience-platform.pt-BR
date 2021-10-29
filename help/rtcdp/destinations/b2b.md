@@ -1,15 +1,23 @@
 ---
-title: Destinos no Real-time Customer Data Platform B2B Edition
+title: Destinos no Real-time Customer Data Platform B2B Edition (Beta)
 description: Uma visão geral da função dos destinos no Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 44d5abbc9644c4fc138aad3b3ad8eb106de159e9
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-# Uma visão geral dos destinos no Real-time Customer Data Platform B2B Edition
+# Destinos no Real-time Customer Data Platform B2B Edition (Beta)
+
+>[!IMPORTANT]
+>
+>Atualmente, o Real-time Customer Data Platform B2B Edition está em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+
+>[!NOTE]
+>
+>Se você não estiver usando o Real-time Customer Data Platform B2B Edition, consulte [visão geral dos destinos](../../destinations/home.md) em vez disso.
 
 Os destinos Experience Platform totalmente compatíveis com a Real-time CDP B2B Edition incluem Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads e Google Ad Manager.
 

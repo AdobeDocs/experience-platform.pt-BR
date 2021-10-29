@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP; CDP; B2B Edition; Real-time Customer Data Platform; plataforma de dados do cliente em tempo real; cdp em tempo real; b2b; cdp; Customer AI
-title: Visão geral da CDP B2B Edition em tempo real
+title: Visão geral da CDP B2B Edition em tempo real (Beta)
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Visão geral da conta Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1092'
 ht-degree: 1%
 
 ---
 
-# Visão geral do Real-time Customer Data Platform B2B Edition
+# Visão geral do Real-time Customer Data Platform B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
@@ -83,4 +83,15 @@ Para empresas com mais de um CRM, a CDP B2B Edition em tempo real oferece a opç
 
 Agora que você entende melhor os benefícios para os profissionais de marketing oferecidos pela CDP B2B Edition em tempo real, e as diferenças entre ela e a CDP em tempo real, você pode aprender a aplicar esses recursos à sua própria organização IMS.
 
-Para entender como a CDP B2B Edition em tempo real pode beneficiar seu modelo de serviço de negócios para empresa, consulte o [exemplo de caso de uso da CDP B2B em tempo real](./b2b-use-case.md). Como alternativa, você pode consultar a [esquemas no Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentação para obter orientações mais específicas sobre a criação de schemas e definição de relações para entidades de dados B2B essenciais.
+Para entender como a CDP B2B Edition em tempo real pode beneficiar seu modelo de serviço empresa a empresa, consulte a seguinte documentação para ajudar você a começar:
+
+* [Um exemplo de caso de uso da CDP B2B em tempo real](./b2b-use-case.md)
+* [Como assimilar dados](./sources/b2b.md)
+* [Como acessar perfis](./profile/profile-overview.md)
+* [Esquemas no Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+* [Como criar segmentos](./segmentation/b2b.md)
+* [Como ativar segmentos para destinos](./destinations/b2b.md)
+* [Como definir e aplicar políticas de controle de dados](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

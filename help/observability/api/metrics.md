@@ -5,9 +5,9 @@ title: Endpoint da API de métricas
 topic-legacy: developer guide
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API do Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
+source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `granularity` | Um campo opcional que indica o intervalo de tempo para dividir os dados da métrica. Por exemplo, um valor de `DAY` retorna métricas para cada dia entre as `start` e `end` , considerando um valor de `MONTH` agruparia os resultados da métrica por mês. Ao usar esse campo, uma `downsample` deve também ser fornecida para indicar a função de agregação pela qual agrupar dados. |
 | `metrics` | Uma matriz de objetos, um para cada métrica que você deseja recuperar. |
 | `name` | O nome de uma métrica reconhecida pelos Insights de capacidade de observação. Consulte a [apêndice](#available-metrics) para obter uma lista completa dos nomes de métricas aceitas. |
-| `filters` | Um campo opcional que permite filtrar métricas por conjuntos de dados específicos. O campo é uma matriz de objetos (um para cada filtro), com cada objeto contendo as seguintes propriedades: <ul><li>`name`: O tipo de entidade para o qual filtrar métricas. Atualmente, somente `dataSets` é compatível.</li><li>`value`: A ID de um ou mais conjuntos de dados. Várias IDs de conjunto de dados podem ser fornecidas como uma única string, com cada ID separada por caracteres de barra vertical (`|`).</li><li>`groupBy`: Quando definido como true, indica que a variável `value` representa vários conjuntos de dados cujos resultados de métrica devem ser retornados separadamente. Se definido como falso, os resultados da métrica desses conjuntos de dados serão agrupados.</li></ul> |
+| `filters` | Um campo opcional que permite filtrar métricas por conjuntos de dados específicos. O campo é uma matriz de objetos (um para cada filtro), com cada objeto contendo as seguintes propriedades: <ul><li>`name`: O tipo de entidade para o qual filtrar métricas. Atualmente, somente `dataSets` é compatível.</li><li>`value`: A ID de um ou mais conjuntos de dados. Várias IDs de conjunto de dados podem ser fornecidas como uma única string, com cada ID separada por caracteres de barra vertical (`\|`).</li><li>`groupBy`: Quando definido como true, indica que a variável `value` representa vários conjuntos de dados cujos resultados de métrica devem ser retornados separadamente. Se definido como falso, os resultados da métrica desses conjuntos de dados serão agrupados.</li></ul> |
 | `aggregator` | Especifica a função de agregação que deve ser usada para agrupar vários registros de séries de tempo em resultados únicos. Para obter informações detalhadas sobre agregadores disponíveis, consulte [Documentação do OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Um campo opcional que permite especificar uma função de agregação para reduzir a taxa de amostragem de dados de métrica, classificando campos em intervalos (ou &quot;buckets&quot;). O intervalo para a diminuição da amostragem é determinado pela `granularity` propriedade. Para obter informações detalhadas sobre a diminuição da amostragem, consulte [Documentação do OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 

@@ -3,9 +3,9 @@ keywords: email; Email; email; destinos de email; destino da responsys do oracle
 title: Conexão Oracle Responsys
 description: O Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecidas pelo Oracle para personalizar interações em email, dispositivos móveis, exibição e redes sociais.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL Nome]**: Escolha um nome relevante para o seu destino.
 * **[!UICONTROL Descrição]**: Insira uma descrição para o seu destino.
 * **[!UICONTROL Caminho da pasta]**: Forneça o caminho no local de armazenamento onde a Platform depositará seus dados de exportação como arquivos CSV.
-* **[!UICONTROL Formato de arquivo]**: **CSV** ou **TAB_DELIMITED**. Selecione o formato de arquivo a ser exportado para o local de armazenamento.
+* **[!UICONTROL Formato de arquivo]**: Selecionar **CSV** para exportar arquivos CSV para o local de armazenamento.
 
 <!--
 

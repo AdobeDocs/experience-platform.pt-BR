@@ -3,9 +3,9 @@ keywords: email; Email; email; destinos de email; salesforce; destino do salesfo
 title: Conexão do Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL Nome]**: Escolha um nome relevante para o seu destino.
 * **[!UICONTROL Descrição]**: Insira uma descrição para o seu destino.
 * **[!UICONTROL Caminho da pasta]**: Forneça o caminho no local de armazenamento onde a Platform depositará seus dados de exportação como arquivos CSV.
-* **[!UICONTROL Formato de arquivo]**: **CSV** ou **TAB_DELIMITED**. Selecione o formato de arquivo a ser exportado para o local de armazenamento.
+* **[!UICONTROL Formato de arquivo]**: Selecionar **CSV** para exportar arquivos CSV para o local de armazenamento.
 
 <!--
 

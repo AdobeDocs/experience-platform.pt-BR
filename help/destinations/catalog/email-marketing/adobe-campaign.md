@@ -3,9 +3,9 @@ keywords: email; Email; email; destinos de email; adobe campaign; campanha
 title: Conexão Adobe Campaign
 description: O Adobe Campaign é um conjunto de soluções que ajudam você a personalizar e entregar campanhas em todos os seus canais online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL Nome do bucket]**: *Para conexões S3*. Insira o local do seu bucket S3, onde [!DNL Platform] O depositará seus dados de exportação como arquivos CSV.
 * **[!UICONTROL Caminho da pasta]**: Forneça o caminho no local de armazenamento onde [!DNL Platform] O depositará seus dados de exportação como arquivos CSV.
 * **[!UICONTROL Contêiner]**: *Para conexões Blob*. O contêiner que contém o Blob em que seu caminho de pasta está.
-* **[!UICONTROL Formato de arquivo]**: **CSV** ou **TAB_DELIMITED**. Selecione o formato de arquivo a ser exportado para o local de armazenamento.
+* **[!UICONTROL Formato de arquivo]**: Selecionar **CSV** para exportar arquivos CSV para o local de armazenamento.
 
 ## Ativar segmentos para este destino {#activate}
 

@@ -1,7 +1,7 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
+source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 9%
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 Atualizações no Experience Platform.
 
-### [Interface do usuário] {#ui}
+### Interface do usuário {#ui}
 
 A interface do usuário foi atualizada com as seguintes alterações:
 

@@ -5,7 +5,7 @@ title: (Beta) Ativar segmentos de público-alvo por meio da API de ativação ad
 description: Este artigo ilustra o fluxo de trabalho completo para ativar segmentos por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
@@ -124,9 +124,9 @@ Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de e
 
 Depois que o trabalho de exportação de segmento for concluído, é possível acionar a ativação.
 
->[!WARNING]
+>[!NOTE]
 >
->Você pode ativar no máximo 50 segmentos por trabalho de ativação ad-hoc. Tentar ativar mais segmentos fará com que a tarefa falhe.
+>Você pode ativar no máximo 20 segmentos por trabalho de ativação ad-hoc. Tentar ativar mais segmentos fará com que a tarefa falhe.
 
 ### Solicitação
 

@@ -5,18 +5,14 @@ title: Conector Kafka
 topic-legacy: overview
 description: O conector de fluxo para Adobe Experience Platform é baseado no Apache Kafka Connect. Essa biblioteca pode ser usada para transmitir eventos JSON de tópicos Kafka no seu data center diretamente para o Experience Platform em tempo real.
 exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
-source-git-commit: 5a3aa74ca7319235c10902422abc0e897ad823b8
+source-git-commit: 04a43df2da34c563b3c919115e271843a279ac56
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
-# [!DNL Kafka] conector para Adobe Experience Platform (obsoleto)
-
->[!IMPORTANT]
->
->O conector Kafka está obsoleto. Para criar uma conexão de transmissão e trazer dados para o Adobe Experience Platform, consulte o tutorial em [criação de uma conexão de transmissão API HTTP](../../sources/connectors/streaming/http.md)
+# [!DNL Kafka] conector para Adobe Experience Platform
 
 O conector de fluxo para Adobe Experience Platform é baseado em [!DNL Apache Kafka Connect]. Essa biblioteca pode ser usada para transmitir eventos JSON de [!DNL Kafka] tópicos em seu data center diretamente para [!DNL Experience Platform] em tempo real.
 

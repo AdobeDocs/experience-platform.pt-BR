@@ -5,9 +5,9 @@ title: Aplicação Automática de Política
 topic-legacy: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1231'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Depois que os dados forem rotulados e as políticas de uso forem definidas, é p
 
 Este guia requer um entendimento prático dos serviços da plataforma envolvidos na aplicação automática. Consulte a seguinte documentação para saber mais antes de continuar com este guia:
 
-* [Governança](../home.md) de dados do Adobe Experience Platform: A estrutura pela qual a Platform aplica a conformidade do uso de dados por meio do uso de rótulos e políticas.
-* [Perfil](../../profile/home.md) do cliente em tempo real: Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
-* [Serviço](../../segmentation/home.md) de segmentação do Adobe Experience Platform: O mecanismo de segmentação no  [!DNL Platform] usado para criar segmentos de público-alvo a partir dos perfis de clientes com base nos comportamentos e atributos do cliente.
+* [Governança de dados do Adobe Experience Platform](../home.md): A estrutura pela qual a Platform aplica a conformidade do uso de dados por meio do uso de rótulos e políticas.
+* [Perfil do cliente em tempo real](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md): O mecanismo de segmentação em [!DNL Platform] usado para criar segmentos de público-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
 * [Destinos](../../destinations/home.md): Os destinos são integrações pré-criadas com aplicativos comumente usados que permitem a ativação simplificada de dados da Platform para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 
 ## Fluxo de imposição {#flow}
@@ -31,7 +31,7 @@ O diagrama a seguir ilustra como a aplicação de política é integrada ao flux
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica se há violações de política com base nos seguintes fatores:
+Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica violações de políticas com base nos seguintes fatores:
 
 * Os rótulos de uso de dados aplicados aos campos e conjuntos de dados no segmento a ser ativado.
 * O objetivo de marketing do destino.
@@ -48,14 +48,14 @@ Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica 
 
 A linhagem de dados desempenha um papel fundamental na forma como as políticas são aplicadas na Plataforma. Em termos gerais, a linhagem de dados refere-se à origem de um conjunto de dados e o que acontece com ele (ou onde ele se move) ao longo do tempo.
 
-No contexto de [!DNL Data Governance], a linhagem permite que os rótulos de uso de dados se propaguem de conjuntos de dados para serviços downstream que consomem seus dados, como Perfil do cliente em tempo real e destinos. Isso permite que as políticas sejam avaliadas e aplicadas em vários pontos-chave na jornada dos dados por meio da plataforma, e fornece contexto aos consumidores de dados sobre o motivo da violação de uma política.
+No contexto da Governança de dados, a linhagem permite que os rótulos de uso de dados se propaguem de conjuntos de dados a serviços de downstream que consomem seus dados, como Perfil do cliente em tempo real e destinos. Isso permite que as políticas sejam avaliadas e aplicadas em vários pontos-chave na jornada dos dados por meio da plataforma, e fornece contexto aos consumidores de dados sobre o motivo da violação de uma política.
 
 No Experience Platform, a aplicação da política está relacionada com a seguinte linhagem:
 
-1. Os dados são assimilados na plataforma e armazenados em **datasets**.
-1. Os perfis do cliente são identificados e construídos a partir desses conjuntos de dados unindo fragmentos de dados de acordo com a **política de mesclagem**.
+1. Os dados são assimilados na Platform e armazenados em **conjuntos de dados**.
+1. Os perfis do cliente são identificados e construídos a partir desses conjuntos de dados ao mesclar fragmentos de dados de acordo com a variável **política de mesclagem**.
 1. Grupos de perfis são divididos em **segmentos** com base em atributos comuns.
-1. Os segmentos são ativados em **destinos downstream**.
+1. Os segmentos são ativados para downstream **destinos**.
 
 Cada estágio na linha do tempo acima representa uma entidade que pode contribuir para uma política sendo violada, conforme descrito na tabela abaixo:
 
@@ -68,15 +68,15 @@ Cada estágio na linha do tempo acima representa uma entidade que pode contribui
 
 >[!IMPORTANT]
 >
->Algumas políticas de uso de dados podem especificar dois ou mais rótulos com uma relação AND. Por exemplo, uma política pode restringir uma ação de marketing se os rótulos `C1` E `C2` estiverem presentes, mas não restringir a mesma ação se apenas um desses rótulos estiver presente.
+>Algumas políticas de uso de dados podem especificar dois ou mais rótulos com uma relação AND. Por exemplo, uma política pode restringir uma ação de marketing se os rótulos `C1` E `C2` estão presentes, mas não restringem a mesma ação se apenas um desses rótulos estiver presente.
 >
->Quando se trata de imposição automática, a estrutura de Governança de dados não considera a ativação de segmentos separados em um destino como uma combinação de dados. Portanto, a política `C1 AND C2` de exemplo é **NOT** aplicada se esses rótulos estiverem incluídos em segmentos separados. Em vez disso, essa política só é aplicada quando ambos os rótulos estão presentes no mesmo segmento após a ativação.
+>Quando se trata de imposição automática, a estrutura de Governança de dados não considera a ativação de segmentos separados em um destino como uma combinação de dados. Portanto, o exemplo `C1 AND C2` a política **NOT** imposta se esses rótulos estiverem incluídos em segmentos separados. Em vez disso, essa política só é aplicada quando ambos os rótulos estão presentes no mesmo segmento após a ativação.
 
 Quando ocorrem violações de política, as mensagens resultantes que aparecem na interface do usuário fornecem ferramentas úteis para explorar a linhagem de dados de contribuição da violação para ajudar a resolver o problema. Mais detalhes são fornecidos na próxima seção.
 
 ## Mensagens de violação de política {#enforcement}
 
-Se ocorrer uma violação de política ao tentar ativar um segmento (ou [fazer edições em um segmento já ativado](#policy-enforcement-for-activated-segments)), a ação será impedida e uma portagem será exibida indicando que uma ou mais políticas foram violadas. Depois que uma violação é acionada, o botão **[!UICONTROL Save]** é desativado para a entidade que você está modificando até que os componentes apropriados sejam atualizados para estar em conformidade com as políticas de uso de dados.
+Se ocorrer uma violação de política ao tentar ativar um segmento (ou [fazer edições em um segmento já ativado](#policy-enforcement-for-activated-segments)) a ação é impedida e aparece uma portadora indicando que uma ou mais políticas foram violadas. Depois que uma violação é acionada, a variável **[!UICONTROL Salvar]** estiver desabilitado para a entidade que você está modificando até que os componentes apropriados sejam atualizados para estar em conformidade com as políticas de uso de dados.
 
 Selecione uma violação de política na coluna esquerda do portador para exibir detalhes dessa violação.
 
@@ -90,17 +90,17 @@ Um gráfico de linhagem de dados é exibido abaixo do resumo da violação, perm
 
 ![](../images/enforcement/data-lineage.png)
 
-Você também pode usar o ícone **[!UICONTROL Filter]** (![](../images/enforcement/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
+Também é possível usar a variável **[!UICONTROL Filtro]** ícone (![](../images/enforcement/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
 
 ![](../images/enforcement/lineage-filter.png)
 
-Selecione **[!UICONTROL List view]** para exibir a linhagem de dados como uma lista. Para voltar ao gráfico visual, selecione **[!UICONTROL Exibição de caminho]**.
+Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados como uma lista. Para voltar ao gráfico visual, selecione **[!UICONTROL Exibição do caminho]**.
 
 ![](../images/enforcement/list-view.png)
 
-## Aplicação de política para segmentos ativados {#policy-enforcement-for-activated-segments}
+## Aplicação de políticas para segmentos ativados {#policy-enforcement-for-activated-segments}
 
-A aplicação de políticas ainda se aplica aos segmentos depois de terem sido ativados, restringindo quaisquer alterações a um segmento ou ao seu destino que resultariam em uma violação de política. Devido a como [a linhagem de dados](#lineage) funciona na imposição de políticas, qualquer uma das seguintes ações pode possivelmente acionar uma violação:
+A aplicação de políticas ainda se aplica aos segmentos depois de terem sido ativados, restringindo quaisquer alterações a um segmento ou ao seu destino que resultariam em uma violação de política. Devido a como [linhagem de dados](#lineage) funciona na aplicação de políticas, qualquer uma das ações a seguir pode possivelmente acionar uma violação:
 
 * Atualização de rótulos de uso de dados
 * Alteração de conjuntos de dados para um segmento
@@ -111,4 +111,4 @@ Se qualquer uma das ações acima acionar uma violação, essa ação será impe
 
 ## Próximas etapas
 
-Este documento cobriu como a aplicação automática de política funciona no Experience Platform. Para obter etapas sobre como integrar programaticamente a aplicação de políticas em seus aplicativos usando chamadas de API, consulte o guia em [imposição baseada em API](./api-enforcement.md).
+Este documento cobriu como a aplicação automática de política funciona no Experience Platform. Para obter etapas sobre como integrar programaticamente a aplicação de políticas em seus aplicativos usando chamadas de API, consulte o guia em [Aplicação baseada em API](./api-enforcement.md).

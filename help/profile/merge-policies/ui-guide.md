@@ -4,9 +4,9 @@ title: Guia da interface do usuário de políticas de mesclagem
 type: Documentation
 description: Ao reunir dados de várias fontes no Experience Platform, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a exibição unificada. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Depois de fazer as alterações necessárias, revise a política de mesclagem e 
 
 ## Violações da política de governança de dados
 
-Ao criar ou atualizar uma política de mesclagem, é feita uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte do Adobe Experience Platform [!DNL Data Governance] e são regras que descrevem os tipos de ações de marketing das quais você tem permissão ou é restrito para executar em [!DNL Platform] dados. Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tinha uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma **[!UICONTROL Violação da política de controle de dados detectada]** ao tentar salvar sua política de mesclagem.
+Ao criar ou atualizar uma política de mesclagem, é feita uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados do Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em ações específicas [!DNL Platform] dados. Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tinha uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma **[!UICONTROL Violação da política de controle de dados detectada]** ao tentar salvar sua política de mesclagem.
 
 Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite visualizar os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a variável **[!UICONTROL Linhagem de dados]** A guia fornece o motivo da violação e das ativações afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
 

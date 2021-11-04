@@ -5,9 +5,9 @@ title: Glossário de rótulos de uso de dados
 topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1984'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Os rótulos de uso de dados permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Governança de dados do Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que você pode usar para começar a categorizar seus dados.
 
-Este documento descreve os rótulos de uso de dados principais fornecidos atualmente por [!DNL Experience Platform]. Mais informações sobre [!DNL Data Governance] podem ser encontradas na [Visão geral da governança de dados](../home.md).
+Este documento descreve os principais rótulos de uso de dados atualmente fornecidos por [!DNL Experience Platform]. Mais informações sobre a Governança de dados podem ser encontradas na seção [Visão geral da governança de dados](../home.md).
 
 ## Rótulos do contrato
 
@@ -70,7 +70,7 @@ Alguns dados só podem ser exportados do Adobe Experience Cloud em um formulári
 
 #### C2 {#c2}
 
-Alguns provedores de dados têm termos em seus contratos que proíbem a exportação de dados de onde eles foram originalmente coletados. Por exemplo, os contratos de rede social geralmente restringem a transferência de dados que você recebe deles. O rótulo C2 é mais restritivo do que [C1](#c1), o que requer apenas agregação e dados anônimos.
+Alguns provedores de dados têm termos em seus contratos que proíbem a exportação de dados de onde eles foram originalmente coletados. Por exemplo, os contratos de rede social geralmente restringem a transferência de dados que você recebe deles. O rótulo C2 é mais restritivo do que [C1](#c1), que requer apenas agregação e dados anônimos.
 
 #### C3 {#c3}
 
@@ -78,7 +78,7 @@ Alguns provedores de dados têm termos em seus contratos que proíbem a combina�
 
 #### C4 {#c4}
 
-O C4 é o rótulo mais restritivo: abrange os rótulos [C5](#c5), [C6](#c6) e [C7](#c7).
+C4 é o rótulo mais restritivo - engloba rótulos [C5](#c5), [C6](#c6)e [C7](#c7).
 
 #### C5 {#c5}
 
@@ -98,7 +98,7 @@ DAA: Anúncio comportamental online. Coleta de dados de um computador ou disposi
 
 #### C6 {#c6}
 
-Anúncios são mensagens ou notificações, incluindo texto e imagens, que aparecem em um site ou aplicativo e destinam-se principalmente a promover a venda de bens ou serviços. Cabe a você determinar a finalidade dessas mensagens ou notificações. Os anúncios são separados do conteúdo no site, coberto pelo rótulo [C7](#c7). Os dados com um rótulo C6 não podem ser usados para direcionamento de anúncios no site, incluindo a seleção e o delivery de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tais anúncios. Isso inclui o uso de dados no site coletados anteriormente sobre os interesses dos usuários para selecionar anúncios, processar dados sobre quais anúncios foram mostrados, quando e onde foram exibidos e se os usuários tomaram alguma ação relacionada ao anúncio, como selecionar um anúncio ou fazer uma compra. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de anúncios no site não seria qualificado como direcionamento com base em juros (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
+Anúncios são mensagens ou notificações, incluindo texto e imagens, que aparecem em um site ou aplicativo e destinam-se principalmente a promover a venda de bens ou serviços. Cabe a você determinar a finalidade dessas mensagens ou notificações. Os anúncios são separados do conteúdo no site, cobertos por um rótulo [C7](#c7). Os dados com um rótulo C6 não podem ser usados para direcionamento de anúncios no site, incluindo a seleção e o delivery de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tais anúncios. Isso inclui o uso de dados no site coletados anteriormente sobre os interesses dos usuários para selecionar anúncios, processar dados sobre quais anúncios foram mostrados, quando e onde foram exibidos e se os usuários tomaram alguma ação relacionada ao anúncio, como selecionar um anúncio ou fazer uma compra. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de anúncios no site não seria qualificado como direcionamento com base em juros (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado é da sua responsabilidade. Para referência, as estruturas IAB e DAA são fornecidas abaixo:
 
@@ -108,7 +108,7 @@ DAA: A Publicidade comportamental online não inclui as atividades de Primárias
 
 #### C7 {#c7}
 
-O conteúdo no site é um texto e imagens projetadas para informar, educar ou entreter e que não são criadas para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se ele se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos pelo rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em conteúdo selecionado, dados de processamento sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de conteúdo no site não seria qualificado como direcionamento com base em juros (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
+O conteúdo no site é um texto e imagens projetadas para informar, educar ou entreter e que não são criadas para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se ele se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos por um rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em conteúdo selecionado, dados de processamento sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de conteúdo no site não seria qualificado como direcionamento com base em juros (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado é da sua responsabilidade. Para referência, as estruturas IAB e DAA são fornecidas abaixo:
 
@@ -130,4 +130,4 @@ Algumas políticas de uso de dados restringem o uso de dados de identidade compi
 
 #### C11 {#c11}
 
-A Correspondência de segmentos do Adobe Experience Platform permite que você corresponda segmentos primários com preferências de privacidade e consentimento, facilitando a criação de perfis enriquecidos e insights de downstream. O rótulo C11 indica dados que não devem ser usados em processos [!DNL Segment Match]. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir da Correspondência de segmentos e adicionar o rótulo C11 de acordo, o rótulo é aplicado automaticamente pelo fluxo de trabalho Correspondência de segmentos .
+A Correspondência de segmentos do Adobe Experience Platform permite que você corresponda segmentos primários com preferências de privacidade e consentimento, facilitando a criação de perfis enriquecidos e insights de downstream. O rótulo C11 indica dados que não devem ser usados em [!DNL Segment Match] processos. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir da Correspondência de segmentos e adicionar o rótulo C11 de acordo, o rótulo é aplicado automaticamente pelo fluxo de trabalho Correspondência de segmentos .

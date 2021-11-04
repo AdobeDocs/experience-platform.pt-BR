@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '859'
 ht-degree: 6%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [[!DNL Data Governance]](#governance)
+- [Governança de dados](#governance)
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
@@ -26,9 +26,9 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## Governança de dados {#governance}
 
-A Governança de dados da Adobe Experience Platform é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial em [!DNL Experience Platform] em vários níveis, incluindo catálogos, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso a dados para ações de marketing.
+A Governança de dados da Adobe Experience Platform é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental no [!DNL Experience Platform] em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso a dados para ações de marketing.
 
 **Novos recursos**
 
@@ -46,9 +46,9 @@ Em [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Melhorias no UX | Os usuários podem acessar ações de tabelas em linha para facilitar o acesso às ações primárias, como adicionar dados, editar o agendamento e adicionar segmentos. Consulte o documento [espaço de trabalho de destinos](../../destinations/ui/destinations-workspace.md) para obter mais informações. |
+| Melhorias no UX | Os usuários podem acessar ações de tabelas em linha para facilitar o acesso às ações primárias, como adicionar dados, editar o agendamento e adicionar segmentos. Consulte a [espaço de trabalho destinos](../../destinations/ui/destinations-workspace.md) para obter mais informações. |
 
-Para saber mais, visite a [visão geral de destinos](../../destinations/home.md)
+Para saber mais, visite o [visão geral dos destinos](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -64,15 +64,15 @@ Consulte a [[!DNL Observability Insights] visão geral](../../observability/home
 
 ## [!DNL Privacy Service] {#privacy}
 
-Várias regulamentações legais e organizacionais dão aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados, mediante solicitação. O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e a interface do usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com [!DNL Privacy Service], você pode enviar solicitações para acessar e excluir dados privados ou pessoais de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
+Várias regulamentações legais e organizacionais dão aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados, mediante solicitação. Adobe Experience Platform [!DNL Privacy Service] O fornece uma RESTful API e interface do usuário para ajudar você a gerenciar essas solicitações de dados de seus clientes. Com [!DNL Privacy Service], você pode enviar solicitações para acessar e excluir dados pessoais de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte para LGPD (Brasil) | Os trabalhos de privacidade agora podem ser criados sob o regulamento [!DNL Lei Geral de Proteção de Dados] (LGPD) do Brasil. Essas tarefas são rastreadas pelo código de regulamento `lgpd_bra`. |
+| Suporte para LGPD (Brasil) | Trabalhos de privacidade agora podem ser criados no Brasil [!DNL Lei Geral de Proteção de Dados] (LGPD). Esses trabalhos são rastreados pelo código do regulamento `lgpd_bra`. |
 
-Consulte a [Privacy Service overview](../../privacy-service/home.md) para obter mais informações sobre o serviço.
+Consulte a [Visão geral do Privacy Service](../../privacy-service/home.md) para obter mais informações sobre o serviço.
 
 ## Perfil do cliente em tempo real {#profile}
 
@@ -82,11 +82,11 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 | ------- | ----------- |
 | Visualizador de perfil | O visualizador de perfil, na interface do usuário da plataforma, foi atualizado para ser um painel com personalização completa. O usuário agora tem a opção de realizar as seguintes tarefas: <ul><li>Atualize os atributos padrão e personalizados selecionados no widget de informações básicas.</li><li>Criar, editar e remover widgets personalizados</li><li>Redimensionar e reorganizar os widgets</li></ul> |
 
-Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com dados [!DNL Profile], leia a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com o [!DNL Profile] leia os [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir dos dados [!DNL Real-time Customer Profile]. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-os acessíveis a qualquer aplicativo do Adobe.
+O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -97,11 +97,11 @@ O Serviço de segmentação do Adobe Experience Platform fornece uma interface d
 | Exportar trabalhos | Um sinalizador foi adicionado para permitir que os segmentos sejam avaliados como parte de um trabalho de exportação. Como resultado, os usuários podem executar a segmentação e as exportações em uma única tarefa. |
 | Mesclar políticas | Várias políticas de mesclagem podem ser incluídas em um único trabalho de segmentação em lote. |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a [Visão geral da segmentação](../../segmentation/home.md)
+Para obter mais informações sobre [!DNL Segmentation Service]consulte o [Visão geral da segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permite estruturar, rotular e aprimorar esses dados usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] O fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -110,6 +110,6 @@ O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Mapeamento automático | [!DNL Platform] O fornece recomendações inteligentes para mapeamento automático durante o fluxo de trabalho de assimilação de dados, com base em um esquema de destino ou conjunto de dados selecionado pelo usuário. Você pode ajustar manualmente as regras flexíveis de mapeamento automático para atender aos seus casos de uso. |
-| Melhorias no UX | Os usuários podem acessar ações de tabelas em linha para facilitar o acesso às ações primárias, como adicionar dados, editar o agendamento e adicionar segmentos. Consulte o documento [monitorando os fluxos de dados](../../sources/tutorials/ui/monitor.md) para obter mais informações. |
+| Melhorias no UX | Os usuários podem acessar ações de tabelas em linha para facilitar o acesso às ações primárias, como adicionar dados, editar o agendamento e adicionar segmentos. Consulte a [monitoramento de fluxos de dados](../../sources/tutorials/ui/monitor.md) para obter mais informações. |
 
-Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).
+Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).

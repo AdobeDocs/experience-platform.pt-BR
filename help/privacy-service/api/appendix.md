@@ -5,9 +5,9 @@ title: Apêndice do guia da API do Privacy Service
 topic-legacy: developer guide
 description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '482'
 ht-degree: 8%
 
 ---
@@ -75,5 +75,6 @@ A tabela a seguir descreve os valores aceitos para especificar um produto de Ado
 | Atributos do cliente (CRS) | `CRS` |
 | Identity Service | `Identity` |
 | Perfil do cliente em tempo real | `profileService` |
+| Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}

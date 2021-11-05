@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
+source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '141'
 ht-degree: 20%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 20%
 
 - [Visão geral do Serviço de query](home.md)
 - [Manual de início rápido](quickstart.md)
-- API do Serviço de Consulta {#api}
+- API do serviço de consulta {#api}
    - [Introdução](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parâmetros de conexão](api/connection-parameters.md)
@@ -35,6 +35,7 @@ ht-degree: 20%
    - [Exemplos de consultas do Adobe Analytics](best-practices/adobe-analytics.md)
    - [Exemplos de consultas do Adobe Target](best-practices/adobe-target.md)
    - [Exemplos de consultas de bloco anônimo](best-practices/anonymous-block.md)
+   - [Carregamento incremental](best-practices/incremental-load.md)
 - Referência SQL {#sql}
    - [Visão geral do SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)
@@ -42,7 +43,7 @@ ht-degree: 20%
    - [Funções SQL Spark](sql/spark-sql-functions.md)
    - [Comandos de metadados](sql/metadata.md)
    - [Instruções preparadas](sql/prepared-statements.md)
-- Conectar clientes ao Serviço de consulta {#clients}
+- Conectar clientes ao Serviço de query {#clients}
    - [Visão geral das conexões do cliente](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)

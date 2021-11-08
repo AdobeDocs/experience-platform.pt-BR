@@ -5,9 +5,9 @@ title: (Beta) Ativar segmentos de público-alvo para destinos em lote por meio d
 description: Este artigo ilustra o fluxo de trabalho completo para ativar segmentos de público-alvo por meio da API de ativação ad hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
+source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1065'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Os gerentes de TI podem usar a API de ativação ad-hoc do Experience Platform p
 
 Lembre-se das seguintes medidas de proteção ao usar a API de ativação ad hoc.
 
-* Cada trabalho de ativação ad-hoc pode ativar até 20 segmentos. Tentar ativar mais de 20 segmentos por trabalho causará falha na tarefa.
+* Atualmente, cada trabalho de ativação ad-hoc pode ativar até 20 segmentos. Tentar ativar mais de 20 segmentos por trabalho causará falha na tarefa. Esse comportamento está sujeito a alterações em versões futuras.
 * Os trabalhos de ativação ad-hoc não podem ser executados em paralelo com o agendado [tarefas de exportação de segmento](../../segmentation/api/export-jobs.md). Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação do segmento agendado foi concluído. Consulte [monitoramento de fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o seu fluxo de dados de ativação mostrar uma **[!UICONTROL Processamento]** , aguarde até que ele seja concluído antes de executar o trabalho de ativação ad-hoc.
 * Não execute mais de um trabalho de ativação ad hoc simultâneo por segmento.
 
@@ -126,7 +126,7 @@ Depois que o trabalho de exportação de segmento for concluído, é possível a
 
 >[!NOTE]
 >
->Você pode ativar no máximo 20 segmentos por trabalho de ativação ad-hoc. Tentar ativar mais segmentos fará com que a tarefa falhe.
+>Atualmente, cada trabalho de ativação ad-hoc pode ativar até 20 segmentos. Tentar ativar mais de 20 segmentos por trabalho causará falha na tarefa. Esse comportamento está sujeito a alterações em versões futuras.
 
 ### Solicitação
 
@@ -166,20 +166,21 @@ Uma resposta bem-sucedida retorna o status HTTP 200.
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `code` | O código de resposta da API. Uma chamada bem-sucedida retorna `DEST-ADH-200` (código de status 200), enquanto um incorretamente formatado retorna `DEST-ADH-400` (código de status 400). |
-| `message` | A mensagem de sucesso ou erro retornada pela API. |
-| `statusURLs` | O URL de status do fluxo de ativação. Você pode acompanhar o progresso do fluxo usando o [API de Serviço de Fluxo](../../sources/tutorials/api/monitor.md). |
+| `segment` | A ID do segmento ativado. |
+| `order` | A ID do destino para o qual o segmento foi ativado. |
+| `statusURL` | O URL de status do fluxo de ativação. Você pode acompanhar o progresso do fluxo usando o [API de Serviço de Fluxo](../../sources/tutorials/api/monitor.md). |
 
 
 ## Tratamento de erros da API

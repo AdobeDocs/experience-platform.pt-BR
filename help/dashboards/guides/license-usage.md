@@ -4,14 +4,14 @@ title: Painel de uso de licença
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
+source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 0%
+source-wordcount: '837'
+ht-degree: 1%
 
 ---
 
-# Painel de uso de licença {#license-usage-dashboard}
+# Painel de uso da licença {#license-usage-dashboard}
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre o uso de licenças de sua organização, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de uso da licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
@@ -27,11 +27,11 @@ O painel de uso da licença exibe um instantâneo dos dados relacionados à lice
 
 ## Explorar o painel de uso de licença
 
-Para navegar até o painel de uso da licença na interface do usuário da plataforma, selecione **[!UICONTROL License usage]** no painel esquerdo. Isso abre a guia **[!UICONTROL Visão geral]** exibindo o painel.
+Para navegar até o painel de uso da licença na interface do usuário da plataforma, selecione **[!UICONTROL Uso da licença]** no painel esquerdo. Isso abre o **[!UICONTROL Visão geral]** exibindo o painel.
 
 >[!NOTE]
 >
->O painel de uso da licença não é habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poder visualizar o painel. Para obter etapas sobre como conceder permissões de acesso para visualizar o painel de uso da licença, consulte o [guia de permissões do painel](../permissions.md).
+>O painel de uso da licença não é habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poder visualizar o painel. Para obter etapas sobre a concessão de permissões de acesso para exibir o painel de uso da licença, consulte [guia de permissões do painel](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
@@ -39,7 +39,7 @@ Para navegar até o painel de uso da licença na interface do usuário da plataf
 
 Para escolher uma sandbox para exibir no painel, selecione [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento]. A sandbox selecionada é indicada pelo botão de opção ao lado do nome da sandbox.
 
-O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
+O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] O fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -58,13 +58,13 @@ Depois de selecionar uma sandbox, você pode usar a lista suspensa intervalo de 
 
 ![](../images/license-usage/select-date-range.png)
 
-Você também pode selecionar **[!UICONTROL Custom date]** para escolher o período exibido.
+Você também pode selecionar **[!UICONTROL Data personalizada]** para escolher o período exibido.
 
 ![](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
-O painel de uso da licença é composto de widgets, que exibem métricas somente leitura, fornecendo informações importantes sobre o uso da licença de sua organização. As métricas visíveis dependem do licenciamento específico de sua organização (consulte a seção [métricas disponíveis](#available-metrics) para obter detalhes).
+O painel de uso da licença é composto de widgets, que exibem métricas somente leitura, fornecendo informações importantes sobre o uso da licença de sua organização. As métricas visíveis dependem do licenciamento específico da sua organização (consulte o [métricas disponíveis](#available-metrics) para obter detalhes).
 
 Cada widget exibe gráficos de linha que comparam os números reais de sua organização ao total disponível com o licenciamento de sua organização e fornecem uma porcentagem do uso total.
 
@@ -72,20 +72,12 @@ Cada widget exibe gráficos de linha que comparam os números reais de sua organ
 
 ## Métricas disponíveis
 
-O painel de uso da licença informa sobre quatro métricas principais, com mais métricas a serem adicionadas em versões subsequentes. As métricas disponíveis estão listadas abaixo.
-
->[!NOTE]
->
->Três das métricas disponíveis estão atualmente em beta.
+O painel de uso da licença informa sobre quatro métricas principais, com mais métricas a serem adicionadas em versões subsequentes. As métricas disponíveis são:
 
 * [!UICONTROL Público-alvo endereçável]
-* [!UICONTROL Riqueza média do perfil]  (Beta)
-* [!UICONTROL Dados digitalizados por proporção de segmentação]  (Beta)
-* [!UICONTROL Armazenamento total consumido]  (Beta)
-
->[!WARNING]
->
->Limitação conhecida da métrica [!UICONTROL Total de armazenamento consumido]: Ao excluir dados em lote, esse lote é colocado em um estado de exclusão flexível por um período de 7 dias para suportar casos de uso de recuperação de dados. Após 7 dias, o lote é movido para um estado de exclusão permanente. Os relatórios sobre o armazenamento total consumido não refletirão qualquer alteração no gráfico de tendências até que o lote esteja no estado de exclusão permanente. Esse problema será resolvido em uma versão futura.
+* [!UICONTROL Riqueza média do perfil]
+* [!UICONTROL Dados digitalizados por proporção de segmentação]
+* [!UICONTROL Total de armazenamento consumido]
 
 A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada da Descrição do produto:
 
@@ -105,4 +97,4 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 Após ler este documento, é possível localizar o painel de uso da licença e selecionar uma sandbox para exibir. Você também pode encontrar mais informações sobre as métricas disponíveis para a sua organização, com base no licenciamento que sua organização adquiriu.
 
-Para saber mais sobre outros recursos disponíveis na interface do usuário do Experience Platform, consulte o [Guia da interface do usuário da plataforma](../../landing/ui-guide.md).
+Para saber mais sobre outros recursos disponíveis na interface do usuário do Experience Platform, consulte [Guia da interface do usuário da plataforma](../../landing/ui-guide.md).

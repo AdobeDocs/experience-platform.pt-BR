@@ -5,20 +5,20 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 6f697bb249c50e58f9e8a5821fa71f2d4c9a7aac
+source-git-commit: b0cd372589be1db3d7ae571edaac68df9a3c493f
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2207'
 ht-degree: 1%
 
 ---
 
 # Sintaxe SQL no Serviço de Consulta
 
-O Adobe Experience Platform Query Service fornece a capacidade de usar o SQL ANSI padrão para instruções `SELECT` e outros comandos limitados. Este documento cobre a sintaxe SQL suportada por [!DNL Query Service].
+O Adobe Experience Platform Query Service fornece a capacidade de usar o SQL ANSI padrão para `SELECT` instruções e outros comandos limitados. Este documento aborda a sintaxe SQL suportada por [!DNL Query Service].
 
 ## SELECIONAR consultas {#select-queries}
 
-A sintaxe a seguir define uma consulta `SELECT` suportada por [!DNL Query Service]:
+A sintaxe a seguir define um `SELECT` query suportada por [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -36,7 +36,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-onde `from_item` pode ser uma das seguintes opções:
+em que `from_item` pode ser uma das seguintes opções:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -90,7 +90,7 @@ As subseções a seguir fornecem detalhes sobre cláusulas adicionais que podem 
 
 ### Cláusula SNAPSHOT
 
-Essa cláusula pode ser usada para ler dados de forma incremental em uma tabela com base nas IDs de snapshot. Uma ID de instantâneo é um marcador de ponto de verificação representado por um número de tipo longo aplicado a uma tabela de lago de dados sempre que os dados são gravados nela. A cláusula `SNAPSHOT` se anexa à relação da tabela à qual é usada ao lado.
+Essa cláusula pode ser usada para ler dados de forma incremental em uma tabela com base nas IDs de snapshot. Uma ID de instantâneo é um marcador de ponto de verificação representado por um número de tipo longo aplicado a uma tabela de lago de dados sempre que os dados são gravados nela. O `SNAPSHOT` anexa-se à relação de tabela à qual é usada ao lado.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -114,22 +114,22 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Observe que uma cláusula `SNAPSHOT` funciona com um alias de tabela ou tabela, mas não sobre uma subconsulta ou exibição. Uma cláusula `SNAPSHOT` funcionará em qualquer lugar em que uma consulta `SELECT` em uma tabela possa ser aplicada.
+Observe que uma `SNAPSHOT` A cláusula funciona com um alias de tabela ou tabela, mas não em cima de uma subconsulta ou exibição. A `SNAPSHOT` a cláusula funcionará em qualquer lugar que uma `SELECT` é possível aplicar a query em uma tabela.
 
-Além disso, você pode usar `HEAD` e `TAIL` como valores de deslocamento especiais para cláusulas de instantâneo. Usar `HEAD` se refere a um deslocamento antes do primeiro instantâneo, enquanto `TAIL` se refere a um deslocamento após o último instantâneo.
+Além disso, você pode usar `HEAD` e `TAIL` como valores de deslocamento especiais para cláusulas de instantâneo. Usando `HEAD` refere-se a um deslocamento antes do primeiro instantâneo, enquanto `TAIL` refere-se a um deslocamento após o último instantâneo.
 
 >[!NOTE]
 >
->Se você estiver consultando entre duas IDs de instantâneo e o instantâneo de início expirar, os dois cenários a seguir poderão ocorrer, dependendo se o sinalizador opcional de comportamento de fallback (`resolve_fallback_snapshot_on_failure`) estiver definido:
+>Se você estiver consultando entre duas IDs de instantâneo e o instantâneo de início expirar, os dois cenários a seguir poderão ocorrer, dependendo do sinalizador opcional de comportamento de fallback (`resolve_fallback_snapshot_on_failure`) está definido:
 >
->- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo mais antigo disponível, definirá-o como o instantâneo inicial e retornará os dados entre o instantâneo mais antigo disponível e o instantâneo final especificado. Esses dados são **inclusive** do instantâneo mais antigo disponível.
+>- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo mais antigo disponível, definirá-o como o instantâneo inicial e retornará os dados entre o instantâneo mais antigo disponível e o instantâneo final especificado. Esses dados são **inclusivo** do primeiro instantâneo disponível.
 >
 >- Se o sinalizador de comportamento de fallback opcional não estiver definido, um erro será retornado.
 
 
 ### cláusula WHERE
 
-Por padrão, as correspondências produzidas por uma cláusula `WHERE` em uma consulta `SELECT` fazem distinção entre maiúsculas e minúsculas. Se desejar que as correspondências não diferenciem maiúsculas de minúsculas, você pode usar a palavra-chave `ILIKE` em vez de `LIKE`.
+Por padrão, corresponde produzidas por um `WHERE` cláusula sobre uma `SELECT` As consultas fazem distinção entre maiúsculas e minúsculas. Se quiser que as correspondências não diferenciem maiúsculas de minúsculas, você pode usar a palavra-chave `ILIKE` em vez de `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -155,7 +155,7 @@ Esse query retorna clientes com nomes começando em &quot;A&quot; ou &quot;a&quo
 
 ### JOIN
 
-Uma consulta `SELECT` que usa associações tem a seguinte sintaxe:
+A `SELECT` A consulta que usa associações tem a seguinte sintaxe:
 
 ```sql
 SELECT statement
@@ -166,7 +166,7 @@ ON join condition
 
 ### UNIÃO, INTERSECT e EXCETO
 
-As cláusulas `UNION`, `INTERSECT` e `EXCEPT` são usadas para combinar ou excluir linhas como de duas ou mais tabelas:
+O `UNION`, `INTERSECT`e `EXCEPT` as cláusulas são usadas para combinar ou excluir como linhas de duas ou mais tabelas:
 
 ```sql
 SELECT statement 1
@@ -176,7 +176,7 @@ SELECT statement 2
 
 ### CRIAR TABELA COMO SELECIONADO
 
-A sintaxe a seguir define uma consulta `CREATE TABLE AS SELECT` (CTAS):
+A sintaxe a seguir define um `CREATE TABLE AS SELECT` Consulta (CTAS):
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
@@ -186,7 +186,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 - `schema`: O título do esquema XDM. Use esta cláusula somente se desejar usar um esquema XDM existente para o novo conjunto de dados criado pela consulta CTAS.
 - `rowvalidation`: (Opcional) Especifica se o usuário deseja a validação em nível de linha de cada novo lote assimilado para o conjunto de dados recém-criado. O valor padrão é `true`.
-- `select_query`: Uma  `SELECT` declaração. A sintaxe da consulta `SELECT` pode ser encontrada na seção [SELECT queries](#select-queries).
+- `select_query`: A `SELECT` instrução. A sintaxe da variável `SELECT` pode ser encontrada no [Seção SELECT queries](#select-queries).
 
 **Exemplo**
 
@@ -200,11 +200,11 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->A instrução `SELECT` deve ter um alias para as funções agregadas, como `COUNT`, `SUM`, `MIN` e assim por diante. Além disso, a declaração `SELECT` pode ser fornecida com ou sem parênteses (). Você pode fornecer uma cláusula `SNAPSHOT` para ler deltas incrementais na tabela de destino.
+>O `SELECT` deve ter um alias para as funções agregadas, como `COUNT`, `SUM`, `MIN`e assim por diante. Além disso, a variável `SELECT` pode ser fornecida com ou sem parênteses (). Você pode fornecer uma `SNAPSHOT` cláusula para ler deltas incrementais na tabela de destino.
 
 ## INSERIR EM
 
-O comando `INSERT INTO` é definido da seguinte maneira:
+O `INSERT INTO` O comando é definido da seguinte maneira:
 
 ```sql
 INSERT INTO table_name select_query
@@ -213,7 +213,7 @@ INSERT INTO table_name select_query
 **Parâmetros**
 
 - `table_name`: O nome da tabela na qual você deseja inserir o query.
-- `select_query`: Uma  `SELECT` declaração. A sintaxe da consulta `SELECT` pode ser encontrada na seção [SELECT queries](#select-queries).
+- `select_query`: A `SELECT` instrução. A sintaxe da variável `SELECT` pode ser encontrada no [Seção SELECT queries](#select-queries).
 
 **Exemplo**
 
@@ -224,11 +224,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
 >[!NOTE]
-> A instrução `SELECT` **não deve** ser colocada entre parênteses (). Além disso, o schema do resultado da instrução `SELECT` deve estar em conformidade com o da tabela definida na instrução `INSERT INTO`. Você pode fornecer uma cláusula `SNAPSHOT` para ler deltas incrementais na tabela de destino.
+> O `SELECT` declaração **não deve** entre parênteses (). Além disso, o schema do resultado da variável `SELECT` deve estar em conformidade com o da tabela definida no `INSERT INTO` instrução. Você pode fornecer uma `SNAPSHOT` cláusula para ler deltas incrementais na tabela de destino.
 
 ## TABELA DE SOLTAÇÕES
 
-O comando `DROP TABLE` solta uma tabela existente e exclui o diretório associado à tabela do sistema de arquivos se não for uma tabela externa. Se a tabela não existir, ocorre uma exceção.
+O `DROP TABLE` solta uma tabela existente e exclui o diretório associado à tabela do sistema de arquivos se não for uma tabela externa. Se a tabela não existir, ocorre uma exceção.
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -236,11 +236,11 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 **Parâmetros**
 
-- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se a tabela  **** não existir.
+- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se a tabela fizer **not** existe.
 
 ## SOLTAR BANCO DE DADOS
 
-O comando `DROP DATABASE` elimina um banco de dados existente.
+O `DROP DATABASE` solta um banco de dados existente.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -248,11 +248,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 **Parâmetros**
 
-- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se o banco de dados  **** não existir.
+- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se o banco de dados fizer **not** existe.
 
 ## ESQUEMA DE SOLTAR
 
-O comando `DROP SCHEMA` elimina um esquema existente.
+O `DROP SCHEMA` solta um esquema existente.
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -260,15 +260,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 **Parâmetros**
 
-- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se o schema  **** não existir.
+- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se o schema fizer **not** existe.
 
-- `RESTRICT`: Valor padrão para o modo . Se isso for especificado, o schema só será descartado se **não** contiver nenhuma tabela.
+- `RESTRICT`: Valor padrão para o modo . Se isso for especificado, o schema só será descartado se ele for especificado **does not** contém qualquer tabela.
 
 - `CASCADE`: Se isso for especificado, o schema será descartado junto com todas as tabelas presentes no schema.
 
 ## CRIAR EXIBIÇÃO
 
-A sintaxe a seguir define uma consulta `CREATE VIEW`:
+A sintaxe a seguir define um `CREATE VIEW` query:
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -277,7 +277,7 @@ CREATE VIEW view_name AS select_query
 **Parâmetros**
 
 - `view_name`: O nome da exibição a ser criada.
-- `select_query`: Uma  `SELECT` declaração. A sintaxe da consulta `SELECT` pode ser encontrada na seção [SELECT queries](#select-queries).
+- `select_query`: A `SELECT` instrução. A sintaxe da variável `SELECT` pode ser encontrada no [Seção SELECT queries](#select-queries).
 
 **Exemplo**
 
@@ -289,7 +289,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ## EXIBIÇÃO DE SOLTAR
 
-A sintaxe a seguir define uma consulta `DROP VIEW`:
+A sintaxe a seguir define um `DROP VIEW` query:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -297,7 +297,7 @@ DROP VIEW [IF EXISTS] view_name
 
 **Parâmetro**
 
-- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se a exibição  **** não existir.
+- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se a exibição **not** existe.
 - `view_name`: O nome da exibição a ser excluída.
 
 **Exemplo**
@@ -307,13 +307,51 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
+## Bloco anônimo
+
+Um bloco anônimo consiste em duas seções: seções executáveis e de tratamento de exceções. Em um bloco anônimo, a seção executável é obrigatória. No entanto, a seção de tratamento de exceções é opcional.
+
+O exemplo a seguir mostra como criar um bloco com uma ou mais instruções a serem executadas juntas:
+
+```sql
+BEGIN
+  statementList
+[EXCEPTION exceptionHandler]
+END
+
+exceptionHandler:
+      WHEN OTHER
+      THEN statementList
+
+statementList:
+    : (statement (';')) +
+```
+
+Abaixo está um exemplo de uso de bloco anônimo.
+
+```sql
+$$
+BEGIN
+   SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_log_id = select now();
+   CREATE TABLE tracking_email_id_incrementally
+     AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
+
+EXCEPTION
+  WHEN OTHER THEN
+    DROP TABLE IF EXISTS tracking_email_id_incrementally;
+    SELECT 'ERROR';
+END$$;
+```
+
 ## [!DNL Spark] Comandos SQL
 
 A subseção abaixo cobre os comandos SQL Spark suportados pelo Serviço de Consulta.
 
 ### DEFINIR
 
-O comando `SET` define uma propriedade e retorna o valor de uma propriedade existente ou lista todas as propriedades existentes. Se um valor for fornecido para uma chave de propriedade existente, o valor antigo será substituído.
+O `SET` O comando define uma propriedade e retorna o valor de uma propriedade existente ou lista todas as propriedades existentes. Se um valor for fornecido para uma chave de propriedade existente, o valor antigo será substituído.
 
 ```sql
 SET property_key = property_value
@@ -332,7 +370,7 @@ As subseções abaixo abordam os comandos PostgreSQL suportados pelo Serviço de
 
 ### INÍCIO
 
-O comando `BEGIN` ou, alternativamente, o comando `BEGIN WORK` ou `BEGIN TRANSACTION`, inicia um bloco de transações. Quaisquer instruções inseridas após o comando begin serão executadas em uma única transação até que um comando COMMIT ou ROLLBACK explícito seja fornecido. Esse comando é igual a `START TRANSACTION`.
+O `BEGIN` ou, em alternativa, `BEGIN WORK` ou `BEGIN TRANSACTION` inicia um bloco de transação. Quaisquer instruções inseridas após o comando begin serão executadas em uma única transação até que um comando COMMIT ou ROLLBACK explícito seja fornecido. Este comando é igual ao `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -342,29 +380,29 @@ BEGIN TRANSACTION
 
 ### FECHAR
 
-O comando `CLOSE` libera os recursos associados a um cursor aberto. Depois que o cursor é fechado, nenhuma operação subsequente é permitida nele. Um cursor deve ser fechado quando não for mais necessário.
+O `CLOSE` libera os recursos associados a um cursor aberto. Depois que o cursor é fechado, nenhuma operação subsequente é permitida nele. Um cursor deve ser fechado quando não for mais necessário.
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-Se `CLOSE name` for usado, `name` representa o nome de um cursor aberto que precisa ser fechado. Se `CLOSE ALL` for usado, todos os cursores abertos serão fechados.
+If `CLOSE name` é utilizada, `name` representa o nome de um cursor aberto que precisa ser fechado. If `CLOSE ALL` for usado, todos os cursores abertos serão fechados.
 
 ### DESALOCAR
 
-O comando `DEALLOCATE` permite desalocar uma instrução SQL preparada anteriormente. Se você não desalocar explicitamente uma declaração preparada, ela será desalocada quando a sessão terminar. Mais informações sobre instruções preparadas podem ser encontradas na seção [PREPARE command](#prepare).
+O `DEALLOCATE` permite desalocar uma instrução SQL preparada anteriormente. Se você não desalocar explicitamente uma declaração preparada, ela será desalocada quando a sessão terminar. Mais informações sobre instruções preparadas podem ser encontradas na seção [comando PREPARAR](#prepare) seção.
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-Se `DEALLOCATE name` for usado, `name` representa o nome da instrução preparada que precisa ser desalocada. Se `DEALLOCATE ALL` for usado, todas as instruções preparadas serão desalocadas.
+If `DEALLOCATE name` é utilizada, `name` representa o nome da declaração preparada que precisa ser desalocada. If `DEALLOCATE ALL` for usada, todas as instruções preparadas serão desalocadas.
 
 ### DECLARAR
 
-O comando `DECLARE` permite que o usuário crie um cursor, que pode ser usado para recuperar um pequeno número de linhas de uma consulta maior. Após a criação do cursor, as linhas são buscadas usando `FETCH`.
+O `DECLARE` permite que um usuário crie um cursor, que pode ser usado para recuperar um pequeno número de linhas de uma consulta maior. Após a criação do cursor, as linhas são buscadas com ele `FETCH`.
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -373,13 +411,13 @@ DECLARE name CURSOR FOR query
 **Parâmetros**
 
 - `name`: O nome do cursor a ser criado.
-- `query`: Um  `SELECT` comando  `VALUES` ou que fornece as linhas a serem retornadas pelo cursor.
+- `query`: A `SELECT` ou `VALUES` comando que fornece as linhas a serem retornadas pelo cursor.
 
 ### EXECUTAR
 
-O comando `EXECUTE` é usado para executar uma instrução preparada anteriormente. Como as instruções preparadas existem apenas para a duração de uma sessão, a instrução preparada deve ter sido criada por uma instrução `PREPARE` executada anteriormente na sessão atual. Mais informações sobre o uso de instruções preparadas podem ser encontradas na seção [`PREPARE` command](#prepare).
+O `EXECUTE` é usado para executar uma instrução preparada anteriormente. Como as instruções preparadas existem apenas para a duração de uma sessão, a instrução preparada deve ter sido criada por um `PREPARE` executada anteriormente na sessão atual. Mais informações sobre o uso de instruções preparadas podem ser encontradas no [`PREPARE` comando](#prepare) seção.
 
-Se a instrução `PREPARE` que criou a instrução especificou alguns parâmetros, um conjunto de parâmetros compatível deve ser transmitido à instrução `EXECUTE`. Se esses parâmetros não forem enviados, um erro será gerado.
+Se a variável `PREPARE` uma instrução que criou a instrução especificou alguns parâmetros, um conjunto de parâmetros compatível deve ser transmitido para a `EXECUTE` instrução. Se esses parâmetros não forem enviados, um erro será gerado.
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -392,7 +430,7 @@ EXECUTE name [ ( parameter ) ]
 
 ### EXPLICAR
 
-O comando `EXPLAIN` exibe o plano de execução da instrução fornecida. O plano de execução mostra como as tabelas referenciadas pela instrução serão digitalizadas.  Se houver referência a várias tabelas, elas mostrarão quais algoritmos de junção são usados para reunir as linhas necessárias de cada tabela de entrada.
+O `EXPLAIN` exibe o plano de execução da instrução fornecida. O plano de execução mostra como as tabelas referenciadas pela instrução serão digitalizadas.  Se houver referência a várias tabelas, elas mostrarão quais algoritmos de junção são usados para reunir as linhas necessárias de cada tabela de entrada.
 
 ```sql
 EXPLAIN option statement
@@ -407,17 +445,17 @@ FORMAT { TEXT | JSON }
 
 **Parâmetros**
 
-- `ANALYZE`: Se o  `option` contiver  `ANALYZE`, os tempos de execução e outras estatísticas serão mostrados.
-- `FORMAT`: Se o  `option` contiver  `FORMAT`, ele especificará o formato de saída, que pode ser  `TEXT` ou  `JSON`. A saída não textual contém as mesmas informações que o formato de saída de texto, mas é mais fácil para os programas analisar. Esse parâmetro assume como padrão `TEXT`.
-- `statement`: Qualquer  `SELECT`,  `INSERT`,  `UPDATE`,  `DELETE`,  `VALUES`,  `EXECUTE`,  `DECLARE`,  `CREATE TABLE AS` ou  `CREATE MATERIALIZED VIEW AS` instrução, cujo plano de execução você deseja ver.
+- `ANALYZE`: Se a variável `option` contém `ANALYZE`, os tempos de execução e outras estatísticas são mostrados.
+- `FORMAT`: Se a variável `option` contém `FORMAT`, ele especifica o formato de saída, que pode ser `TEXT` ou `JSON`. A saída não textual contém as mesmas informações que o formato de saída de texto, mas é mais fácil para os programas analisar. Esse parâmetro assume como padrão `TEXT`.
+- `statement`: Qualquer `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`ou `CREATE MATERIALIZED VIEW AS` , cujo plano de execução você deseja ver.
 
 >[!IMPORTANT]
 >
->Lembre-se de que a instrução é realmente executada quando a opção `ANALYZE` é usada. Embora `EXPLAIN` descarte qualquer saída que `SELECT` retorne, outros efeitos colaterais da declaração ocorrem como de costume.
+>Lembre-se de que a instrução é executada quando a variável `ANALYZE` é usada. Embora `EXPLAIN` descarta qualquer saída que uma `SELECT` retorna, outros efeitos colaterais da declaração ocorrem como de costume.
 
 **Exemplo**
 
-O exemplo a seguir mostra o plano de uma consulta simples em uma tabela com uma única coluna `integer` e 10000 linhas:
+O exemplo a seguir mostra o plano de uma consulta simples em uma tabela com um único `integer` coluna e 10000 linhas:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -432,7 +470,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### BUSCA
 
-O comando `FETCH` recupera linhas usando um cursor criado anteriormente.
+O `FETCH` recupera linhas usando um cursor criado anteriormente.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -445,7 +483,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARAR {#prepare}
 
-O comando `PREPARE` permite criar uma instrução preparada. Uma instrução preparada é um objeto do lado do servidor que pode ser usado para modelar instruções SQL semelhantes.
+O `PREPARE` permite criar uma instrução preparada. Uma instrução preparada é um objeto do lado do servidor que pode ser usado para modelar instruções SQL semelhantes.
 
 As instruções preparadas podem receber parâmetros, que são valores substituídos na instrução quando é executada. Os parâmetros são referenciados por posição, usando $1, $2, etc., ao usar instruções preparadas.
 
@@ -462,7 +500,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 ### ROLLBACK
 
-O comando `ROLLBACK` desfaz a transação atual e descarta todas as atualizações feitas pela transação.
+O `ROLLBACK` desfaz a transação atual e descarta todas as atualizações feitas pela transação.
 
 ```sql
 ROLLBACK
@@ -471,7 +509,7 @@ ROLLBACK WORK
 
 ### SELECIONAR EM
 
-O comando `SELECT INTO` cria uma nova tabela e a preenche com dados calculados por uma query. Os dados não são retornados ao cliente, pois estão com um comando normal `SELECT`. As colunas da nova tabela têm os nomes e os tipos de dados associados às colunas de saída do comando `SELECT`.
+O `SELECT INTO` cria uma nova tabela e a preenche com dados calculados por um query. Os dados não são retornados ao cliente, pois estão em um `SELECT` comando. As colunas da nova tabela têm os nomes e os tipos de dados associados às colunas de saída do `SELECT` comando.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -493,15 +531,15 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 **Parâmetros**
 
-Mais informações sobre os parâmetros de consulta SELECT padrão podem ser encontradas na seção [SELECT query](#select-queries). Esta seção listará apenas parâmetros exclusivos ao comando `SELECT INTO`.
+Mais informações sobre os parâmetros de consulta SELECT padrão podem ser encontradas no [Seção SELECIONAR query](#select-queries). Esta seção listará apenas os parâmetros exclusivos ao `SELECT INTO` comando.
 
-- `TEMPORARY` ou  `TEMP`: Um parâmetro opcional. Se especificado, a tabela criada será uma tabela temporária.
-- `UNLOGGED`: Um parâmetro opcional. Se especificado, a tabela criada como será uma tabela desconectada. Mais informações sobre tabelas desconectadas podem ser encontradas na documentação [PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html).
+- `TEMPORARY` ou `TEMP`: Um parâmetro opcional. Se especificado, a tabela criada será uma tabela temporária.
+- `UNLOGGED`: Um parâmetro opcional. Se especificado, a tabela criada como será uma tabela desconectada. Mais informações sobre tabelas desconectadas podem ser encontradas no [Documentação PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html).
 - `new_table`: O nome da tabela a ser criada.
 
 **Exemplo**
 
-A consulta a seguir cria uma nova tabela `films_recent` que consiste apenas em entradas recentes da tabela `films`:
+A consulta a seguir cria uma nova tabela `films_recent` que consiste apenas em entradas recentes do quadro `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -509,7 +547,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### MOSTRAR
 
-O comando `SHOW` exibe a configuração atual dos parâmetros de tempo de execução. Essas variáveis podem ser definidas usando a instrução `SET`, editando o arquivo de configuração `postgresql.conf` por meio da variável ambiental `PGOPTIONS` (ao usar libpq ou um aplicativo baseado em libpq) ou por meio de sinalizadores de linha de comando ao iniciar o servidor Postgres.
+O `SHOW` exibe a configuração atual dos parâmetros de tempo de execução. Essas variáveis podem ser definidas usando a variável `SET` , editando o `postgresql.conf` arquivo de configuração, por meio do `PGOPTIONS` variável ambiental (ao usar libpq ou um aplicativo baseado em libpq) ou por meio de sinalizadores de linha de comando ao iniciar o servidor Postgres.
 
 ```sql
 SHOW name
@@ -543,7 +581,7 @@ SHOW DateStyle;
 
 ### COPIAR
 
-O comando `COPY` despeja a saída de qualquer consulta `SELECT` para um local especificado. O usuário deve ter acesso a esse local para que esse comando seja bem-sucedido.
+O `COPY` despeja a saída de qualquer `SELECT` consulta a um local especificado. O usuário deve ter acesso a esse local para que esse comando seja bem-sucedido.
 
 ```sql
 COPY query
@@ -554,7 +592,7 @@ COPY query
 **Parâmetros**
 
 - `query`: A consulta que você deseja copiar.
-- `format_name`: O formato no qual você deseja copiar a consulta. O `format_name` pode ser um dos `parquet`, `csv` ou `json`. Por padrão, o valor é `parquet`.
+- `format_name`: O formato no qual você deseja copiar a consulta. O `format_name` pode ser um dos `parquet`, `csv`ou `json`. Por padrão, o valor é `parquet`.
 
 >[!NOTE]
 >
@@ -562,7 +600,7 @@ COPY query
 
 ### ALTERAR TABELA
 
-O comando `ALTER TABLE` permite adicionar ou soltar restrições de chave primária ou estrangeira, bem como adicionar colunas à tabela.
+O `ALTER TABLE` permite adicionar ou soltar restrições de chave primária ou estrangeira, bem como adicionar colunas à tabela.
 
 #### ADICIONAR OU SOLTAR RESTRIÇÃO
 
@@ -610,7 +648,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ### MOSTRAR CHAVES PRIMÁRIAS
 
-O comando `SHOW PRIMARY KEYS` lista todas as restrições de chave primária para o banco de dados especificado.
+O `SHOW PRIMARY KEYS` lista todas as restrições de chave primária para o banco de dados em questão.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -625,7 +663,7 @@ SHOW PRIMARY KEYS
 
 ### MOSTRAR CHAVES ESTRANGEIRAS
 
-O comando `SHOW FOREIGN KEYS` lista todas as restrições de chave estrangeira para o banco de dados especificado.
+O `SHOW FOREIGN KEYS` lista todas as restrições de chave estrangeira para o banco de dados em questão.
 
 ```sql
 SHOW FOREIGN KEYS

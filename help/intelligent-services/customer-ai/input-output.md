@@ -6,9 +6,9 @@ title: Entrada e saída no Customer AI
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela API do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
 workflow-type: tm+mt
-source-wordcount: '2971'
+source-wordcount: '3054'
 ht-degree: 1%
 
 ---
@@ -21,15 +21,18 @@ O documento a seguir descreve os diferentes eventos, entradas e saídas necessá
 
 O Customer AI funciona analisando um dos seguintes conjuntos de dados para prever pontuações de abandono ou propensão de conversão:
 
+- Dados do Adobe Analytics usando o [Conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Dados do Adobe Audience Manager usando o [Conector de fonte Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- Conjunto de dados Evento de experiência (EE)
 - Conjunto de dados CEE (Evento de experiência do consumidor)
-- Dados do Adobe Analytics usando o [conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Dados do Adobe Audience Manager usando o [conector de fonte Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+
+É possível adicionar vários conjuntos de dados de fontes diferentes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Para obter mais informações sobre como adicionar vários conjuntos de dados, visite o [Guia do usuário de IA do cliente](./user-guide/configure.md#select-data)
 
 >[!IMPORTANT]
 >
->Os conectores de origem levam até quatro semanas para preencher dados. Se você tiver configurado um conector recentemente, verifique se o conjunto de dados tem o comprimento mínimo de dados necessário para a API do cliente. Revise a seção [histórico de dados](#data-requirements) para verificar se você tem dados suficientes para sua meta de previsão.
+>Os conectores de origem levam até quatro semanas para preencher dados. Se você tiver configurado um conector recentemente, verifique se o conjunto de dados tem o comprimento mínimo de dados necessário para a API do cliente. Revise o [dados históricos](#data-requirements) para verificar se você tem dados suficientes para sua meta de previsão.
 
-Este documento requer uma compreensão básica do esquema CEE. Consulte a documentação de [Preparação de dados dos Serviços inteligentes](../data-preparation.md) antes de continuar.
+Este documento requer uma compreensão básica do esquema CEE. Revise o [Preparação de dados dos Serviços inteligentes](../data-preparation.md) documentação antes de continuar.
 
 A tabela a seguir descreve algumas terminologias comuns usadas neste documento:
 
@@ -38,7 +41,7 @@ A tabela a seguir descreve algumas terminologias comuns usadas neste documento:
 | [Experience Data Model (XDM)](../../xdm/home.md) | O XDM é a estrutura fundamental que permite ao Adobe Experience Cloud, desenvolvido pela Adobe Experience Platform, enviar a mensagem certa para a pessoa certa, no canal certo, no momento certo. A metodologia na qual o Experience Platform é criado, o Sistema XDM, opera esquemas do Experience Data Model para uso pelos serviços da plataforma. |
 | Esquema do XDM | A Experience Platform utiliza esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados. Para que os dados possam ser assimilados na Platform, um schema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que pode ser contido em cada campo. Os esquemas consistem em uma classe base XDM e zero ou mais grupos de campos de esquema. |
 | Classe XDM | Todos os esquemas XDM descrevem dados que podem ser categorizados como registro ou série de tempo. O comportamento de dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM descrevem o menor número de propriedades que um schema deve conter para representar um comportamento de dados específico. |
-| [Grupos de campos](../../xdm/schema/composition.md) | Um componente que define um ou mais campos em um schema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado pelo atributo `meta:intendedToExtend`. |
+| [Grupos de campos](../../xdm/schema/composition.md) | Um componente que define um ou mais campos em um schema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado por seus `meta:intendedToExtend` atributo. |
 | [Tipo de dados](../../xdm/schema/composition.md) | Um componente que também pode fornecer um ou mais campos para um schema. No entanto, ao contrário de grupos de campos, os tipos de dados não estão restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes. Os tipos de dados descritos neste documento são compatíveis com os esquemas CEE e Adobe Analytics. |
 | Churn | Uma medida da porcentagem de contas que cancelam ou optam por não renovar suas assinaturas. Uma alta taxa de churn pode afetar negativamente a Receita recorrente mensal (MRR) e também pode indicar insatisfação com um produto ou serviço. |
 | [Perfil do cliente em tempo real](../../profile/home.md) | O Perfil do cliente em tempo real oferece um perfil de consumidor centralizado para gerenciamento de experiência direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas, bem como contas acionáveis com carimbos de data e hora de eventos que envolvem o indivíduo e que ocorreram em qualquer um dos sistemas usados com o Experience Platform. |
@@ -49,9 +52,9 @@ A tabela a seguir descreve algumas terminologias comuns usadas neste documento:
 >
 > O Customer AI determina automaticamente quais eventos são úteis para previsões e emite um aviso se os dados disponíveis não forem suficientes para gerar previsões de qualidade.
 
-O Customer AI é compatível com conjuntos de dados CEE, Adobe Analytics e Adobe Audience Manager. O esquema CEE requer que você adicione grupos de campos durante o processo de criação do schema. Se você estiver usando conjuntos de dados do Adobe Analytics ou Adobe Audience Manager, o conector de origem mapeia diretamente os eventos padrão (Comércio, detalhes da página da Web, Aplicativo e Pesquisa) listados abaixo durante o processo de conexão.
+O Customer AI é compatível com os conjuntos de dados Adobe Analytics, Adobe Audience Manager, Evento de experiência (EE) e CEE (Consumer Experience Event). O esquema CEE requer que você adicione grupos de campos durante o processo de criação do schema. Se você estiver usando conjuntos de dados do Adobe Analytics ou Adobe Audience Manager, o conector de origem mapeia diretamente os eventos padrão (Comércio, detalhes da página da Web, Aplicativo e Pesquisa) listados abaixo durante o processo de conexão. É possível adicionar vários conjuntos de dados de fontes diferentes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID.
 
-Para obter mais informações sobre o mapeamento de dados do Adobe Analytics ou de Audience Manager, visite o guia [Mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/analytics.md) ou [Mapeamentos de campo Audience Manager](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Para obter mais informações sobre o mapeamento de dados do Adobe Analytics ou de dados do Audience Manager, visite a [Mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/analytics.md) ou [Mapeamentos de campo Audience Manager](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guia.
 
 ### Eventos padrão usados pelo Customer AI {#standard-events}
 
@@ -63,9 +66,9 @@ O Customer AI depende de tipos de evento diferentes para criar recursos do model
 >
 >Se você estiver usando dados do Adobe Analytics ou Adobe Audience Manager, o esquema será criado automaticamente com os eventos padrão necessários para capturar seus dados. Se você estiver criando seu próprio esquema CEE personalizado para capturar dados, precisará considerar quais grupos de campos são necessários para capturar seus dados.
 
-Não é necessário ter dados para cada um dos eventos padrão listados abaixo, mas determinados eventos são necessários para determinados cenários. Se você tiver algum dos dados de eventos padrão disponíveis, é recomendável incluí-lo no esquema . Por exemplo, se você quisesse criar um aplicativo do Customer AI para prever eventos de compra, seria útil ter dados dos tipos de dados `Commerce` e `Web page details` .
+Não é necessário ter dados para cada um dos eventos padrão listados abaixo, mas determinados eventos são necessários para determinados cenários. Se você tiver algum dos dados de eventos padrão disponíveis, é recomendável incluí-lo no esquema . Por exemplo, se você quiser criar um aplicativo de API do cliente para prever eventos de compra, seria útil ter dados do `Commerce` e `Web page details` tipos de dados.
 
-Para exibir um grupo de campos na interface do usuário da plataforma, selecione a guia **[!UICONTROL Schemas]** no painel à esquerda, em seguida, selecione a guia **[!UICONTROL Field groups]**.
+Para exibir um grupo de campos na interface do usuário da plataforma, selecione o **[!UICONTROL Esquemas]** no painel à esquerda, em seguida, selecione o **[!UICONTROL Grupos de campos]** guia .
 
 | Grupo de campos | Tipo de evento | Caminho do campo XDM |
 | --- | --- | --- |
@@ -87,13 +90,13 @@ Para exibir um grupo de campos na interface do usuário da plataforma, selecione
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL Detalhes da pesquisa] | pesquisa | search.keywords |
 
-Além disso, o Customer AI pode usar os dados de assinatura para criar melhores modelos de rotatividade. Os dados de assinatura são necessários para cada perfil usando o formato de tipo de dados [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) . A maioria dos campos é opcional, no entanto, para um modelo de rotatividade ideal, é altamente recomendável fornecer dados para o maior número possível de campos, como `startDate`, `endDate` e quaisquer outros detalhes relevantes.
+Além disso, o Customer AI pode usar os dados de assinatura para criar melhores modelos de rotatividade. Os dados de assinatura são necessários para cada perfil usando o [[!UICONTROL Assinatura]](../../xdm/data-types/subscription.md) formato do tipo de dados. A maioria dos campos é opcional, no entanto, para um modelo de rotatividade ideal, é altamente recomendável fornecer dados para o maior número possível de campos, como `startDate`, `endDate`e quaisquer outros elementos pertinentes.
 
-### Adicionar grupos de campos personalizados
+### Adicionar eventos personalizados e atributos de perfil
 
-Se você tiver informações adicionais que deseja incluir além dos [campos de evento padrão](#standard-events) usados pelo Customer AI. Uma opção de eventos personalizados é fornecida durante a [configuração de instância](./user-guide/configure.md#custom-events).
+Se você tiver informações que deseja incluir além do [campos de evento padrão](#standard-events) usado pelo Customer AI, uma opção de atributo de perfil personalizado e evento é fornecida durante o [configuração da instância](./user-guide/configure.md#custom-events).
 
-Se o conjunto de dados selecionado incluir eventos personalizados, como uma reserva de hotel ou restaurante definida em seu esquema, você poderá adicioná-los à sua instância. Esses eventos personalizados adicionais são usados pela API do cliente para melhorar a qualidade do modelo e fornecer resultados mais precisos.
+Se o conjunto de dados selecionado incluir eventos personalizados ou atributos de perfil, como uma &quot;reserva de hotel&quot; ou &quot;funcionário de X empresa&quot; definido em seu esquema, você poderá adicioná-los à sua instância. Esses eventos personalizados e atributos de perfil adicionais são usados pelo Customer AI para melhorar a qualidade do modelo e fornecer resultados mais precisos.
 
 ### Dados históricos {#data-requirements}
 
@@ -131,7 +134,7 @@ Nesta seção, cenários diferentes para instâncias do Customer AI são descrit
 
 ### Cenário 1: Conversão de compra em um site de varejo de comércio eletrônico
 
-**Objetivo de previsão:** prevê a tendência de conversão para que os perfis elegíveis comprem um determinado artigo de roupas em um site.
+**Objetivo de previsão:** Preveja a tendência de conversão para os perfis elegíveis comprarem um determinado artigo de roupas em um site.
 
 **Tipos de evento padrão obrigatórios:**
 
@@ -145,11 +148,11 @@ Os tipos de evento listados abaixo são necessários para uma saída de IA do cl
 
 **Tipos de evento padrão recomendados adicionais:**
 
-Qualquer um dos [tipos de evento restantes](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância do Customer AI. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
+Qualquer um dos restantes [tipos de evento](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância da API do cliente. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
 
 ### Cenário 2: Conversão de assinatura em um site de serviço de transmissão de mídia
 
-**Objetivo de previsão:** prevê a propensão de conversão de assinatura para que os perfis qualificados se comprometam a um determinado nível de assinatura, como um plano padrão ou premium.
+**Objetivo de previsão:** Faça previsão da propensão de conversão de assinatura para que os perfis qualificados se comprometam a um determinado nível de assinatura, como um plano padrão ou premium.
 
 **Tipos de evento padrão obrigatórios:**
 
@@ -161,17 +164,17 @@ Os tipos de evento listados abaixo são necessários para uma saída de IA do cl
 - webVisit
 - pesquisa
 
-Neste exemplo, `order`, `checkouts` e `purchases` são usados para indicar que uma assinatura foi comprada e seu tipo.
+Neste exemplo, `order`, `checkouts`e `purchases` são usadas para indicar que uma assinatura foi comprada e seu tipo.
 
-Além disso, para um modelo preciso, sugerimos que você use algumas das propriedades disponíveis no [subscription data type](../../xdm/data-types/subscription.md).
+Além disso, para um modelo preciso, sugerimos que você use algumas das propriedades disponíveis no [tipo de dados da assinatura](../../xdm/data-types/subscription.md).
 
 **Tipos de evento padrão recomendados adicionais:**
 
-Qualquer um dos [tipos de evento restantes](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância do Customer AI. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
+Qualquer um dos restantes [tipos de evento](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância da API do cliente. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
 
 ### Cenário 3: Churn em um site de varejo de comércio eletrônico
 
-**Objetivo de previsão:** prevê a probabilidade de um evento de compra não ocorrer.
+**Objetivo de previsão:** Preveja a probabilidade de um evento de compra não ocorrer.
 
 **Tipos de evento padrão obrigatórios:**
 
@@ -185,11 +188,11 @@ Os tipos de evento listados abaixo são necessários para uma saída de IA do cl
 
 **Tipos de evento padrão recomendados adicionais:**
 
-Qualquer um dos [tipos de evento restantes](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância do Customer AI. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
+Qualquer um dos restantes [tipos de evento](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância da API do cliente. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
 
 ### Cenário 4: Conversão de venda adicional em um site de varejo de comércio eletrônico
 
-**Objetivo de previsão:** prevê a propensão de compra da população que comprou um produto específico para comprar um novo produto relacionado.
+**Objetivo de previsão:** Preveja a propensão de compra da população que comprou um produto específico para comprar um novo produto relacionado.
 
 **Tipos de evento padrão obrigatórios:**
 
@@ -203,11 +206,11 @@ Os tipos de evento listados abaixo são necessários para uma saída de IA do cl
 
 **Tipos de evento padrão recomendados adicionais:**
 
-Qualquer um dos [tipos de evento restantes](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância do Customer AI. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
+Qualquer um dos restantes [tipos de evento](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância da API do cliente. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
 
 ### Cenário 5: Cancelar a assinatura (churn) em um canal de notícias online
 
-**Objetivo de previsão:** prevê a propensão da população qualificada para cancelar a assinatura de um serviço no próximo mês.
+**Objetivo de previsão:** Preveja a propensão da população qualificada para cancelar a assinatura de um serviço no próximo mês.
 
 **Tipos de evento padrão obrigatórios:**
 
@@ -216,15 +219,15 @@ Os tipos de evento listados abaixo são necessários para uma saída de IA do cl
 - webVisit
 - pesquisa
 
-Além disso, para um modelo preciso, sugerimos que você use algumas das propriedades disponíveis no [subscription data type](../../xdm/data-types/subscription.md).
+Além disso, para um modelo preciso, sugerimos que você use algumas das propriedades disponíveis no [tipo de dados da assinatura](../../xdm/data-types/subscription.md).
 
 **Tipos de evento padrão recomendados adicionais:**
 
-Qualquer um dos [tipos de evento restantes](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância do Customer AI. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
+Qualquer um dos restantes [tipos de evento](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância da API do cliente. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
 
 ### Cenário 6: Iniciar aplicativo móvel
 
-**Objetivo de previsão:** prevê a propensão de perfis qualificados para iniciar um aplicativo móvel pago nos próximos X dias. É semelhante a prever o KPI (Indicador-chave de desempenho) dos &quot;Usuários ativos mensais&quot;.
+**Objetivo de previsão:** Preveja a propensão de perfis qualificados para iniciar um aplicativo móvel pago nos próximos X dias. É semelhante a prever o KPI (Indicador-chave de desempenho) dos &quot;Usuários ativos mensais&quot;.
 
 **Tipos de evento padrão obrigatórios:**
 
@@ -242,25 +245,25 @@ Os tipos de evento listados abaixo são necessários para uma saída de IA do cl
 - applicationLaunches
 - applicationUpgrades
 
-Neste exemplo, `order`, `checkouts` e `purchases` são usados quando um aplicativo móvel precisa ser comprado.
+Neste exemplo, `order`, `checkouts`e `purchases` são usadas quando um aplicativo móvel precisa ser comprado.
 
 **Tipos de evento padrão recomendados adicionais:**
 
-Qualquer um dos [tipos de evento restantes](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância do Customer AI. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
+Qualquer um dos restantes [tipos de evento](#standard-events) pode ser necessário com base na complexidade de sua meta e população qualificada ao configurar a instância da API do cliente. É recomendável que, se os dados estiverem disponíveis para um tipo de dados específico, esses dados sejam incluídos no esquema.
 
 ### Cenário 7: Características realizadas (Adobe Audience Manager)
 
-**Objetivo de previsão:** prevê a propensão para que algumas características sejam realizadas.
+**Objetivo de previsão:** Preveja a propensão para que algumas características sejam realizadas.
 
 **Tipos de evento padrão obrigatórios:**
 
-Para usar características do Adobe Audience Manager, é necessário criar uma conexão de origem usando o [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). O conector de origem cria automaticamente o schema com os grupos de campos adequados. Não é necessário adicionar manualmente outros tipos de evento para que o esquema funcione com o Customer AI.
+Para usar características do Adobe Audience Manager, é necessário criar uma conexão de origem usando o [Conector de fonte Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). O conector de origem cria automaticamente o schema com os grupos de campos adequados. Não é necessário adicionar manualmente outros tipos de evento para que o esquema funcione com o Customer AI.
 
-Ao configurar uma nova instância do AI do cliente, `audienceName` e `audienceID` podem ser usadas para selecionar uma característica específica para pontuação ao definir sua meta.
+Ao configurar uma nova instância do Customer AI, `audienceName` e `audienceID` pode ser usada para selecionar uma característica específica para pontuação ao definir sua meta.
 
 ## Dados de saída do Customer AI
 
-O Customer AI gera vários atributos para perfis individuais considerados elegíveis. Há duas maneiras de consumir a pontuação (saída) com base no que você provisionou. Se você tiver um conjunto de dados ativado para o Perfil do cliente em tempo real, poderá consumir insights do Perfil do cliente em tempo real no [Construtor de segmentos](../../segmentation/ui/segment-builder.md). Se você não tiver um conjunto de dados habilitado para perfil, poderá [baixar o conjunto de dados do Customer AI output](./user-guide/download-scores.md) disponível no lago de dados.
+O Customer AI gera vários atributos para perfis individuais considerados elegíveis. Há duas maneiras de consumir a pontuação (saída) com base no que você provisionou. Se você tiver um conjunto de dados habilitado para o Perfil do cliente em tempo real, poderá consumir insights do Perfil do cliente em tempo real na [Construtor de segmentos](../../segmentation/ui/segment-builder.md). Se você não tiver um conjunto de dados habilitado para perfil, poderá [faça o download da saída do Customer AI](./user-guide/download-scores.md) conjunto de dados disponível no lago de dados.
 
 >[!NOTE]
 >
@@ -279,4 +282,4 @@ A tabela abaixo descreve os vários atributos encontrados na saída do Customer 
 
 ## Próximas etapas {#next-steps}
 
-Depois de preparar seus dados e ter todas as credenciais e esquemas em vigor, comece seguindo o guia [Configurar uma instância do Customer AI](./user-guide/configure.md) . Este guia aborda a criação de uma instância para o Customer AI.
+Depois de preparar seus dados e ter todas as credenciais e esquemas em vigor, comece seguindo a [Configurar uma instância do Customer AI](./user-guide/configure.md) guia. Este guia aborda a criação de uma instância para o Customer AI.

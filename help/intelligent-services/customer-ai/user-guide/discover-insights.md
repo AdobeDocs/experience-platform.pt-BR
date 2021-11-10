@@ -6,9 +6,9 @@ title: Insights do Discover com o Customer AI
 topic-legacy: Discovering insights
 description: Este documento é um guia para interagir com insights da instância de serviço na interface do usuário da API do cliente de Serviços inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 63d6ec7d72b448e9d1bf1da96a1f148838d99cec
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1716'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Para utilizar insights para o Customer AI, você precisa ter uma instância de s
 
 ## Visão geral da instância de serviço
 
-Na interface [!DNL Adobe Experience Platform], clique em **[!UICONTROL Services]** no painel de navegação esquerdo. O navegador *Services* é exibido e exibe os Serviços inteligentes disponíveis. No contêiner do Customer AI, clique em **[!UICONTROL Abrir]**.
+No [!DNL Adobe Experience Platform] UI, selecione **[!UICONTROL Serviços]** no painel de navegação esquerdo. O *Serviços* O navegador é exibido e exibe os Serviços inteligentes disponíveis. No contêiner do Customer AI, selecione **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](../images/insights/navigate-to-service.png)
 
@@ -41,57 +41,69 @@ Selecione um nome de instância de serviço para começar.
 
 ![Criar instância](../images/insights/click-the-name.png)
 
-Em seguida, a página de insights para essa instância de serviço aparece com a opção de selecionar **[!UICONTROL Pontuações mais recentes]** ou **[!UICONTROL Resumo de desempenho]**. A guia padrão **[!UICONTROL Pontuações mais recentes]** fornece visualizações de seus dados. As visualizações e o que você pode fazer com os dados são explicadas com mais detalhes neste guia.
+Em seguida, a página de insights para essa instância de serviço aparece com a opção de selecionar **[!UICONTROL Pontuações mais recentes]** ou **[!UICONTROL Resumo de desempenho]**. A guia padrão **[!UICONTROL Pontuações mais recentes]** O fornece visualizações de seus dados. As visualizações e o que você pode fazer com os dados são explicadas com mais detalhes neste guia.
 
-A guia **[!UICONTROL Performance summary]** mostra as taxas de churn ou conversão reais para cada bucket de propensão. Para saber mais, consulte a seção sobre [métricas de resumo de desempenho](#performance-metrics).
+O **[!UICONTROL Resumo de desempenho]** mostra as taxas de churn ou conversão reais para cada bucket de propensão. Para saber mais, consulte a seção em [métricas de resumo do desempenho](#performance-metrics).
 
 ![página de configuração](../images/insights/landing_page_insights.png)
 
-### Detalhes da instância de serviço
+## Detalhes da instância de serviço
 
 Há duas maneiras de exibir os detalhes da instância do serviço: no painel ou na instância do serviço.
 
+### Painel da instância de serviço
+
 Para exibir uma visão geral dos detalhes da instância de serviço no painel, selecione um contêiner de instância de serviço, evitando o hiperlink anexado ao nome. Isso abre um painel à direita que fornece detalhes adicionais. Os controles contêm o seguinte:
 
-- **[!UICONTROL Editar]**: Selecionar  **** Editar permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
-- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopies a instância de serviço atualmente selecionada configurada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
-- **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados usado por esta instância.
-- **[!UICONTROL Executar Frequência]**: Com que frequência uma execução de pontuação ocorre e quando.
-- **[!UICONTROL Definição]** de pontuação: Uma visão geral rápida da meta que você configurou para esta instância.
+- **[!UICONTROL Fonte de dados]**: Um link para o conjunto de dados usado por esta instância.
+- **[!UICONTROL Executar frequência]**: Com que frequência uma execução de pontuação ocorre e quando.
+- **[!UICONTROL Definição de pontuação]**: Uma visão geral rápida da meta que você configurou para esta instância.
 
 ![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->Caso ocorra uma falha na execução da pontuação, uma mensagem de erro é fornecida. A mensagem de erro é listada em **Last run details** no painel direito, que só é visível para falhas de execução.
+>Caso ocorra uma falha na execução da pontuação, uma mensagem de erro é fornecida. A mensagem de erro está listada em **Detalhes da última execução** no painel direito, que está visível apenas para executar com falha.
 
 ![mensagem de execução com falha](../images/insights/failed-run.png)
 
-A segunda maneira de exibir detalhes adicionais de uma instância de serviço está localizada na página insights . Você pode clicar em **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados, como a definição da pontuação, quando foi criada e o tipo de propensão. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configuração de uma instância do Customer AI](./configure.md).
+### Mostrar mais insights
+
+A segunda maneira de exibir detalhes adicionais de uma instância de serviço está localizada na página insights . Selecionar **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados, como a definição da pontuação, quando foi criada, o tipo de propensão e os conjuntos de dados usados. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configuração de uma instância do Customer AI](./configure.md).
 
 ![mostrar mais](../images/insights/landing-show-more.png)
 
-![mostrar mais](../images/insights/show-more.png)
+### Fornecedor de visualização do conjunto de dados do Customer AI
+
+Se mais de um conjunto de dados for usado pelo Customer AI, um hiperlink rotulado como **[!UICONTROL Vários]** seguido pelo número de conjuntos de dados entre parênteses `()` é fornecida.
+
+![vários conjuntos de dados](../images/insights/insights-multi-datasets.png)
+
+Selecionar o link de vários conjuntos de dados abre o provedor de visualização do conjunto de dados do Customer AI. Cada cor na visualização representa um conjunto de dados, conforme mostrado pela chave de cor à esquerda das colunas do conjunto de dados. Neste exemplo, você pode ver que somente **Conjunto de dados 1** contém a variável `PROP1` coluna.
+
+![mostrar mais](../images/insights/dataset-preview.png)
 
 ### Editar uma instância
 
-Para editar uma instância, clique em **[!UICONTROL Edit]** na navegação superior direita.
+Para editar uma instância, selecione **[!UICONTROL Editar]** no canto superior direito da navegação.
 
 ![clique no botão editar](../images/insights/edit-button.png)
 
-A caixa de diálogo Editar é exibida, permitindo editar o nome, a descrição, o status e a frequência de pontuação da instância. Para confirmar as alterações e fechar a caixa de diálogo, selecione **[!UICONTROL Save]** no canto inferior direito.
+A caixa de diálogo Editar é exibida, permitindo editar o nome, a descrição, o status e a frequência de pontuação da instância. Para confirmar as alterações e fechar a caixa de diálogo, selecione **[!UICONTROL Salvar]** no canto inferior direito.
 
 ![editar fornecedor](../images/insights/edit-instance.png)
 
 ### Mais ações
 
-O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Clicar em **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
+O **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Selecionar **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
-- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopies a instância de serviço configurada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: Exclui a instância.
-- **[!UICONTROL Pontuações]** de acesso: Selecionar  **[!UICONTROL Acessar]** pontuações abre uma caixa de diálogo fornecendo um link para as pontuações de  [download do ](./download-scores.md) AItutorial do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
-- **[!UICONTROL Exibir histórico]** de execução: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
+- **[!UICONTROL Pontuações de acesso]**: Selecionar **[!UICONTROL Pontuações de acesso]** abre uma caixa de diálogo que fornece um link para a [download de pontuações para o Customer AI](./download-scores.md) tutorial, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
+- **[!UICONTROL Exibir histórico de execução]**: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
 
 ![mais ações](../images/insights/more-actions.png)
 
@@ -111,7 +123,7 @@ Você pode passar o mouse sobre qualquer cor do anel para exibir informações a
 
 ## Distribuição de pontuações
 
-O cartão **[!UICONTROL Distribution of Scores]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão [!UICONTROL Distribution of Scores] representam o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer distribuição de pontuação fornece a contagem exata pertencente a essa distribuição.
+O **[!UICONTROL Distribuição de pontuações]** O cartão fornece um resumo visual da população com base na pontuação. As cores que você vê no [!UICONTROL Distribuição de pontuações] representa o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer distribuição de pontuação fornece a contagem exata pertencente a essa distribuição.
 
 ![distribuição de pontuações](../images/insights/distribution-of-scores.png)
 
@@ -135,17 +147,17 @@ Você pode ver que os perfis com baixa propensão à conversão têm menos proba
 
 ### Criar um segmento
 
-Selecionar o botão **[!UICONTROL Criar segmento]** em qualquer um dos compartimentos para baixa, média e alta propensão redireciona você para o construtor de segmentos.
+Selecionar o **[!UICONTROL Criar segmento]** em qualquer um dos compartimentos para baixa, média e alta propensão redireciona você para o construtor de segmentos.
 
 >[!NOTE]
 >
->O botão **[!UICONTROL Criar segmento]** só estará disponível se o Perfil do cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite a [Visão geral do perfil do cliente em tempo real](../../../rtcdp/overview.md).
+>O **[!UICONTROL Criar segmento]** só estará disponível se o Perfil do cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite o [Visão geral do perfil do cliente em tempo real](../../../rtcdp/overview.md).
 
 ![Clique em criar segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Criar um segmento](../images/insights/create-segment.png)
 
-O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights, o Customer AI adiciona automaticamente as informações dos buckets selecionados ao segmento. Para concluir a criação do segmento, basta preencher os contêineres *Name* e *Description* localizados no painel direito da interface do usuário do construtor de segmentos. Depois de dar um nome e uma descrição ao segmento, clique em **[!UICONTROL Salvar]** no canto superior direito.
+O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights , o Customer AI adiciona automaticamente as informações dos buckets selecionados ao segmento. Para concluir a criação do segmento, preencha o **Nome** e **Descrição** contêineres localizados no painel direito da interface do usuário do construtor de segmentos. Depois de dar um nome e uma descrição ao segmento, selecione **[!UICONTROL Salvar]** no canto superior direito.
 
 >[!NOTE]
 >
@@ -153,13 +165,13 @@ O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!U
 
 ![Preenchimento do segmento](../images/insights/segment-saving.png)
 
-Para exibir seu novo segmento na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** na navegação à esquerda. A página **[!UICONTROL Procurar]** é exibida e exibe todos os segmentos disponíveis.
+Para exibir seu novo segmento na interface do usuário da plataforma, selecione **[!UICONTROL Segmentos]** no painel de navegação esquerdo. O **[!UICONTROL Procurar]** é exibida e exibe todos os segmentos disponíveis.
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 
 ## Métricas de resumo de desempenho {#performance-metrics}
 
-A guia **[!UICONTROL Performance summary]** mostra as taxas de churn ou conversão reais, separadas em cada um dos buckets de propensão pontuados pelo Customer AI.
+O **[!UICONTROL Resumo de desempenho]** mostra as taxas de churn ou conversão reais, separadas em cada um dos buckets de propensão classificados pelo Customer AI.
 
 ![Guia Resumo de desempenho](../images/insights/summary_tab.png)
 
@@ -169,21 +181,21 @@ Passar o mouse sobre as linhas exibe a data e a taxa real/esperada para o dia ne
 
 ![Exemplo de bucket](../images/insights/churn_tab.png)
 
-Você pode filtrar o período para as taxas esperadas e reais que estão sendo exibidas. Selecione o ícone **do calendário** ![ícone](../images/insights/calendar_icon.png)e selecione um novo intervalo de datas. Os resultados em cada um dos compartimentos são atualizados para serem exibidos no novo intervalo de datas.
+Você pode filtrar o período para as taxas esperadas e reais que estão sendo exibidas. Selecione o **ícone do calendário** ![ícone](../images/insights/calendar_icon.png)em seguida, selecione um novo intervalo de datas. Os resultados em cada um dos compartimentos são atualizados para serem exibidos no novo intervalo de datas.
 
 ![Seletor de data](../images/insights/date_selector.png)
 
 ### Taxas de execução de pontuação individuais
 
-A metade inferior da guia **[!UICONTROL Performance summary]** exibe os resultados de cada execução de pontuação individual. Selecione a data suspensa no canto superior direito para exibir os resultados de uma execução de pontuação diferente.
+A metade inferior do **[!UICONTROL Resumo de desempenho]** exibe os resultados de cada execução de pontuação individual. Selecione a data suspensa no canto superior direito para exibir os resultados de uma execução de pontuação diferente.
 
-Dependendo de se você estiver prevendo churn ou conversão, o gráfico [!UICONTROL Distribution of Scores] exibe a distribuição de perfis encurtados/convertidos e não encurtados/não convertidos em cada incremento.
+Dependendo de se você estiver prevendo churn ou conversão, a variável [!UICONTROL Distribuição de pontuações] O gráfico exibe a distribuição de perfis encurtados/convertidos e não encurtados/não convertidos em cada incremento.
 
 ![pontuação individual](../images/insights/scoring_tab.png)
 
 ## Próximas etapas
 
-Este documento destacou os insights fornecidos por uma instância de serviço do Customer AI. Agora você pode continuar com o tutorial em [baixar pontuações no Customer AI](./download-scores.md) ou navegar pelos outros guias [Adobe Intelligent Services](../../home.md) oferecidos.
+Este documento destacou os insights fornecidos por uma instância de serviço do Customer AI. Agora você pode continuar para o tutorial em [download de pontuações no Customer AI](./download-scores.md) ou navegue pelo outro [Serviços inteligentes do Adobe](../../home.md) guias oferecidos.
 
 ## Recursos adicionais
 

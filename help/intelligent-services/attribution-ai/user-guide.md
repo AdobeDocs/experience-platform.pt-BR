@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '2281'
 ht-degree: 1%
 
 ---
@@ -20,111 +20,153 @@ Este documento é um guia para interagir com o Attribution AI na interface do us
 
 ## Criar uma instância
 
-Na interface [!DNL Adobe Experience Platform], clique em **[!UICONTROL Services]** no painel de navegação esquerdo. O navegador **[!UICONTROL Services]** é exibido e exibe os serviços Adobe inteligentes disponíveis. No contêiner do Attribution AI, clique em **[!UICONTROL Abrir]**.
+No [!DNL Adobe Experience Platform] UI, selecione **[!UICONTROL Serviços]** no painel de navegação esquerdo. O **[!UICONTROL Serviços]** é exibido e exibe os serviços Adobe inteligentes disponíveis. No contêiner do Attribution AI, selecione **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
 A página Attribution AI service é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência com que a instância é executada e o status da última atualização.
 
-Você pode encontrar a métrica **[!UICONTROL Total conversion events scored]** localizada no lado inferior direito do contêiner **[!UICONTROL Create instance]**. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI no ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
+Você pode encontrar a variável **[!UICONTROL Total de eventos de conversão classificados]** localizada no lado inferior direito da **[!UICONTROL Criar instância]** contêiner. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI no ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
 
-![](./images/user-guide/total_conversions.png)
+![total de conversões](./images/user-guide/total_conversions.png)
 
-As instâncias de serviço podem ser editadas, clonadas e excluídas usando os controles no lado direito da interface do usuário. Para exibir esses controles, selecione uma instância de seu **[!UICONTROL Service instances]** existente. Os controles contêm as seguintes informações:
+As instâncias de serviço podem ser editadas, clonadas e excluídas usando os controles no lado direito da interface do usuário. Para exibir esses controles, selecione uma instância do **[!UICONTROL Instâncias do serviço]**. Os controles contêm as seguintes informações:
 
-- **[!UICONTROL Editar]**: Selecionar  **** Editar permite modificar uma instância de serviço existente. É possível editar o nome, a descrição, o status e a frequência de pontuação da instância.
-- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopies a instância de serviço selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição, o status e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a instância de serviço selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
-- **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados que está sendo usado por esta instância.
-- **[!UICONTROL Detalhes]** da última execução: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
+- **[!UICONTROL Fonte de dados]**: Um link para o conjunto de dados que está sendo usado. Se mais de um conjunto de dados estiver sendo usado pelo Attribution AI, &quot;Vários&quot; seguido pelo número de conjuntos de dados será exibido. Ao selecionar o hiperlink, a janela de visualização dos conjuntos de dados é exibida.
+- **[!UICONTROL Detalhes da última execução]**: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 
-![](./images/user-guide/side_panel.png)
+![Painel lateral](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Eventos]** de conversão: Uma visão geral rápida dos eventos de conversão configurados para esta instância.
-- **[!UICONTROL Janela]** de pesquisa: O período definido, indicando quantos dias antes dos pontos de contato do evento de conversão foram incluídos.
+- **[!UICONTROL Eventos de conversão]**: Uma visão geral rápida dos eventos de conversão configurados para esta instância.
+- **[!UICONTROL Janela de pesquisa]**: O período definido, indicando quantos dias antes dos pontos de contato do evento de conversão foram incluídos.
 - **[!UICONTROL Pontos de contato]**: Uma lista de todos os pontos de contato definidos ao criar essa instância.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Selecione **[!UICONTROL Criar instância]** para começar.
+Selecionar **[!UICONTROL Criar instância]** para começar.
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
-Em seguida, a página de configuração do Attribution AI é exibida, onde é possível fornecer informações básicas e especificar um conjunto de dados para a instância.
-
-![página de configuração](./images/user-guide/setup_attribution.png)
-
-### Nomeie a instância
-
-Em **[!UICONTROL Basic information]**, forneça um nome e uma descrição opcional para a instância do serviço.
+Em seguida, a página de configuração do Attribution AI é exibida, onde você pode fornecer um nome e uma descrição opcional para a instância de serviço.
 
 ![nomear uma instância](./images/user-guide/naming_instance.png)
 
-### Selecionar um conjunto de dados
+## Selecionar dados {#select-data}
 
-Depois de preencher as informações básicas, clique na lista suspensa denominada **Selecionar conjunto de dados** para selecionar seu conjunto de dados. O conjunto de dados é usado para treinar o modelo e pontuar os dados subsequentes produzidos. Ao selecionar um conjunto de dados no seletor suspenso, somente aqueles que são compatíveis com o Attribution AI e estão em conformidade com o esquema do Experience Data Model (XDM) são listados. Depois que um conjunto de dados for escolhido, clique em **Next** no canto superior direito para prosseguir para a página definir eventos.
+<!-- https://www.adobe.com/go/aai-select-data -->
 
->[!TIP]
+Por design, o Attribution AI pode usar os dados do Adobe Analytics, do evento de experiência e do evento de experiência do consumidor para calcular as pontuações de atribuição. Ao selecionar um conjunto de dados, somente os que são compatíveis com o Attribution AI são listados. Para selecionar um conjunto de dados, selecione o (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados ao mesmo tempo. Você também pode usar a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que está interessado.
+
+Depois de selecionar os conjuntos de dados que deseja usar, selecione o **[!UICONTROL Adicionar]** para adicionar os conjuntos de dados ao painel de visualização do conjunto de dados.
+
+![Selecionar conjuntos de dados](./images/user-guide/select-datasets.png)
+
+Seleção do ícone de informações ![ícone de informações](./images/user-guide/info-icon.png) ao lado de um conjunto de dados, o abre o provedor de visualização do conjunto de dados.
+
+![Selecionar e pesquisar por conjunto de dados](./images/user-guide/dataset-preview.png)
+
+A visualização do conjunto de dados contém dados como a hora da última atualização, o schema de origem e uma pré-visualização das dez primeiras colunas.
+
+### Integridade do conjunto de dados {#dataset-completeness}
+
+<!-- https://www.adobe.com/go/aai-dataset-completeness -->
+
+Na visualização do conjunto de dados, há um valor percentual de integridade do conjunto de dados. Esse valor fornece um instantâneo rápido de quantas colunas do conjunto de dados estão vazias/nulas. Se um conjunto de dados contiver muitos valores ausentes e esses valores forem capturados em outro lugar, é altamente recomendável incluir o conjunto de dados que contém os valores ausentes.
+
+>[!NOTE]
 >
->Os conjuntos de dados do Adobe Analytics são suportados por meio do Conector de origem do Analytics.
+>A integridade do conjunto de dados é calculada usando a janela de treinamento máxima para Attribution AI (um ano). Isso significa que os dados com mais de um ano não são considerados ao exibir o valor de integridade do conjunto de dados.
 
-![página de configuração](./images/user-guide/dataset_selector.png)
+![Integridade do conjunto de dados](./images/user-guide/dataset-completeness.png)
 
-## Definição de eventos
+### Selecionar uma identidade {#identity}
+
+Para que vários conjuntos de dados se associem, você deve selecionar um tipo de identidade (também conhecido como &quot;namespace de identidade&quot;) e um valor de identidade dentro desse namespace. Se você atribuiu mais de um campo como uma identidade dentro do esquema sob o mesmo namespace, todos os valores de identidade atribuídos serão exibidos na lista suspensa de identidade anexada pelo namespace, como `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+
+>[!IMPORTANT]
+>
+>O mesmo tipo de identidade (namespace) deve ser usado para cada conjunto de dados selecionado. Uma marca de seleção verde aparece ao lado do tipo de identidade na coluna de identidade, indicando que os conjuntos de dados são compatíveis. Por exemplo, ao usar o namespace de Telefone e `mobilePhone.number` como o identificador, todos os identificadores dos conjuntos de dados restantes devem conter e usar o namespace Phone .
+
+Para selecionar uma identidade, selecione o valor sublinhado localizado na coluna de identidade. A opção selecionar um provedor de identidade é exibida.
+
+![selecionar o mesmo namespace](./images/user-guide/identity-type.png)
+
+Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. Isso significa que você selecionaria `EMAIL (personalEmail.address)` como sua identidade.
+
+![Chave do conjunto de dados não selecionada](./images/user-guide/select-identity.png)
+
+>[!NOTE]
+>
+> Se não existir nenhum tipo de identidade válido (namespace) para um conjunto de dados, você deverá definir uma identidade primária e atribuí-la a um namespace de identidade usando a variável [editor de esquema](../../xdm/schema/composition.md#identity). Para saber mais sobre namespaces e identidades, visite o [Namespaces do serviço de identidade](../../identity-service/namespaces.md) documentação.
+
+## Mapeamento de canais de mídia e campos de campanha {#aai-mapping}
+
+<!-- https://www.adobe.com/go/aai-mapping -->
+
+Depois de concluir a seleção e adição de conjuntos de dados, a variável **Mapa** a etapa de configuração é exibida. O Attribution AI exige que você mapeie o campo Canal de mídia para cada conjunto de dados selecionado na etapa anterior. Isso ocorre porque, sem o mapeamento do canal de mídia entre conjuntos de dados, os insights derivados do Attribution AI podem não ser exibidos apropriadamente, dificultando a interpretação da página de insights. Embora somente o Canal de mídia seja necessário, é altamente recomendável mapear alguns dos campos opcionais, como ação de mídia, nome da campanha, grupo de campanha e tag de campanha. Isso permite que o Attribution AI forneça insights mais claros e resultados ideais.
+
+![mapeamento](./images/user-guide/mapping.png)
+
+## Definição de eventos {#define-events}
+
+<!-- https://www.adobe.com/go/aai-define-events -->
 
 Há três tipos diferentes de dados de entrada usados para definir eventos:
 
-- **Eventos de conversão:** objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
-- **Janela de pesquisa:** fornece um período que indica quantos dias antes dos pontos de contato do evento de conversão devem ser incluídos.
+- **Eventos de conversão:** Objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
+- **Janela de pesquisa:** Fornece um período que indica quantos dias antes dos pontos de contato do evento de conversão devem ser incluídos.
 - **Pontos de contato:** eventos de marketing de recipients, individuais e ou de cookies usados para avaliar o impacto numérico ou baseado na receita das conversões.
 
 ### Definir eventos de conversão {#define-conversion-events}
 
-Para definir um evento de conversão, é necessário dar um nome ao evento e selecionar o tipo de evento clicando no menu suspenso **Inserir nome de campo**.
+Para definir um evento de conversão, é necessário dar um nome ao evento e selecionar o tipo de evento selecionando a variável **Inserir Nome do Campo** menu suspenso.
 
 ![lista suspensa sim](./images/user-guide/conversion_event_2.png)
 
-Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. A segunda lista suspensa é usada para fornecer mais contexto ao evento por meio do uso de operações . Para esse evento de conversão, a operação padrão *exists* é usada.
+Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. A segunda lista suspensa é usada para fornecer mais contexto ao evento por meio do uso de operações . Para este evento de conversão, a operação padrão *existe* é usada.
 
 >[!NOTE]
 >
->Uma string em seu *nome de conversão* é atualizada à medida que você define seu evento.
+>Uma string abaixo de sua *nome da conversão* é atualizada à medida que você define seu evento.
 
 ![sem lista suspensa](./images/user-guide/conversion_event_1.png)
 
-Os botões **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar Grupo]** são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar os botões **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** para fornecer mais contexto.
+O **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar a variável **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** botões para fornecer mais contexto.
 
 ![adicionar evento](./images/user-guide/add_event.png)
 
-Clicar em **[!UICONTROL Adicionar evento]** cria campos adicionais que podem ser preenchidos usando o mesmo método descrito acima. Isso adiciona uma instrução AND à definição da string abaixo do nome da conversão. Clique em **x** para remover um evento que foi adicionado.
+Selecionar **[!UICONTROL Adicionar evento]** O cria campos adicionais que podem ser preenchidos usando o mesmo método descrito acima. Isso adiciona uma instrução AND à definição da string abaixo do nome da conversão. Selecione o **x** para remover um evento que foi adicionado.
 
 ![adicionar menu de eventos](./images/user-guide/add_event_result.png)
 
-Clicar em **[!UICONTROL Adicionar grupo]** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *And* é exibido. Clicar em **And** dá uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;And&quot; estende o caminho de conversão para incluir condições adicionais.
+Selecionar **[!UICONTROL Adicionar grupo]** O oferece a opção de criar campos adicionais separados do original. Com a adição de grupos, um azul *E* é exibido. Selecionar **E** O fornece uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;And&quot; estende o caminho de conversão para incluir condições adicionais.
 
 ![usando e ou](./images/user-guide/and_or.png)
 
-Se você precisar de mais de uma conversão, clique em **Adicionar conversão** para criar um novo cartão de conversão. Você pode repetir o processo acima para definir várias conversões.
+Se precisar de mais de uma conversão, selecione **Adicionar conversão** para criar um novo cartão de conversão. Você pode repetir o processo acima para definir várias conversões.
 
 ![adicionar conversão](./images/user-guide/add_conversion.png)
 
 ### Definir janela de pesquisa {#lookback-window}
 
-Após terminar de definir sua conversão, você precisa confirmar sua janela de lookback. Usando as teclas de seta ou clicando no valor padrão (56), especifique quantos dias antes do evento de conversão você deseja incluir pontos de contato. Os pontos de contato são definidos na próxima etapa.
+Após terminar de definir sua conversão, você precisa confirmar sua janela de lookback. Usando as teclas de seta ou selecionando o valor padrão (56), especifique quantos dias antes do evento de conversão você deseja incluir pontos de contato. Os pontos de contato são definidos na próxima etapa.
 
 ![retrospectiva](./images/user-guide/lookback_window.png)
 
 ### Definir pontos de contato
 
-A definição de pontos de contato segue um fluxo de trabalho semelhante ao [definindo conversões](#define-conversion-events). Inicialmente, é necessário nomear seu ponto de contato e selecionar um valor de ponto de contato no menu suspenso *Inserir nome de campo*. Depois de selecionado, a lista suspensa do operador aparece com o valor padrão &quot;exists&quot;. Clique na lista suspensa para exibir uma lista de operadores.
+A definição de pontos de contato segue um fluxo de trabalho semelhante a [definição de conversões](#define-conversion-events). Inicialmente, é necessário nomear seu ponto de contato e selecionar um valor de ponto de contato do *Inserir Nome do Campo* menu suspenso. Depois de selecionado, a lista suspensa do operador aparece com o valor padrão &quot;exists&quot;. Selecione a lista suspensa para exibir uma lista de operadores.
 
 ![operadores](./images/user-guide/operators.png)
 
-Para a finalidade deste ponto de contato, selecione **igual a**.
+Para o objetivo deste ponto de contato, selecione **igual**.
 
 ![etapa 1](./images/user-guide/touchpoint_step1.png)
 
-Quando um operador para um ponto de contato é selecionado, *Inserir valor do campo* é disponibilizado. Os valores suspensos para *Inserir valor do campo* são preenchidos com base no operador e no valor do ponto de contato selecionado anteriormente. Se um valor não for preenchido na lista suspensa, é possível digitar esse valor manualmente. Clique na lista suspensa e selecione **CLIQUE**.
+Depois que um operador para um ponto de contato é selecionado, *Inserir Valor do Campo* é disponibilizada. Os valores suspensos para *Inserir Valor do Campo* preencha com base no operador e no valor do ponto de contato selecionado anteriormente. Se um valor não for preenchido na lista suspensa, é possível digitar esse valor manualmente. Selecione a lista suspensa e selecione **CLIQUE EM**.
 
 >[!NOTE]
 >
@@ -132,13 +174,13 @@ Quando um operador para um ponto de contato é selecionado, *Inserir valor do ca
 
 ![lista suspensa de pontos de contato](./images/user-guide/touchpoint_dropdown.png)
 
-Os botões *Adicionar evento* e *Adicionar Grupo* são usados para definir ainda mais o ponto de contato. Devido à natureza complexa dos pontos de contato, não é incomum ter vários eventos e grupos para um único ponto de contato.
+O **Adicionar evento** e **Adicionar grupo** botões são usados para definir ainda mais o ponto de contato. Devido à natureza complexa dos pontos de contato, não é incomum ter vários eventos e grupos para um único ponto de contato.
 
-Quando clicado, **Adicionar evento** permite que campos adicionais sejam adicionados. Clique em **x** para remover um evento que foi adicionado.
+Quando selecionado, **Adicionar evento** permite a adição de campos adicionais. selecione o **x** para remover um evento que foi adicionado.
 
 ![adicionar evento](./images/user-guide/touchpoint_add_event.png)
 
-Clicar em **Adicionar grupo** dá a você a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *And* é exibido. Clique em **And** para alterar o parâmetro, o novo parâmetro &quot;Ou&quot; é usado para definir vários caminhos bem-sucedidos. Este ponto de contato específico tem apenas um caminho bem-sucedido, portanto, &quot;Ou&quot; não é necessário.
+Selecionar **Adicionar grupo** oferece a opção de criar campos adicionais separados do original. Com a adição de grupos, um azul *E* é exibido. Selecionar **E** para alterar o parâmetro , o novo parâmetro &quot;Ou&quot; é usado para definir vários caminhos bem-sucedidos. Este ponto de contato específico tem apenas um caminho bem-sucedido, portanto, &quot;Ou&quot; não é necessário.
 
 ![visão geral do ponto de contato](./images/user-guide/add_group_touchpoint.png)
 
@@ -148,29 +190,29 @@ Clicar em **Adicionar grupo** dá a você a opção de criar campos adicionais s
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Você pode adicionar pontos de contato adicionais clicando em **Adicionar ponto de contato** e repetindo o processo acima.
+Você pode adicionar pontos de contato adicionais selecionando **Adicionar ponto de contato** e repetir o processo acima.
 
 ![adicionar ponto de contato](./images/user-guide/add_touchpoint.png)
 
-Quando terminar de definir todos os pontos de contato necessários, role para cima e clique em **Next** no canto superior direito para prosseguir para a etapa final.
+Quando terminar de definir todos os pontos de contato necessários, role para cima e selecione **Próximo** no canto superior direito para prosseguir para a etapa final.
 
 ![definição concluída](./images/user-guide/define_event_next.png)
 
 ## Configuração avançada de treinamento e pontuação
 
-A página final no Attribution AI é a página **[!UICONTROL Avançado]** usada para configurar o treinamento e a pontuação.
+A página final no Attribution AI é a variável **[!UICONTROL Avançado]** página usada para configurar treinamento e pontuação.
 
 ![nova página avançada](./images/user-guide/advanced_settings.png)
 
 ### Agendar treinamento
 
-Usando o *Agendamento*, você pode selecionar um dia e hora da semana em que deseja que a pontuação ocorra.
+Usar o *Agendar*, você pode selecionar o dia e a hora da semana em que deseja que a pontuação ocorra.
 
-Clique na lista suspensa em *Frequência de pontuação* para selecionar entre pontuação diária, semanal e mensal. Em seguida, selecione os dias da semana em que deseja que a pontuação ocorra. Vários dias podem ser selecionados. Clique um dia uma segunda vez para desmarcá-lo.
+Selecione a lista suspensa em *Frequência de pontuação* para selecionar entre pontuação diária, semanal e mensal. Em seguida, selecione os dias da semana em que deseja que a pontuação ocorra. Vários dias podem ser selecionados. Selecionar o mesmo dia novamente desmarca a seleção.
 
 ![Agendar treinamento](./images/user-guide/schedule_training.png)
 
-Para alterar a hora do dia em que deseja que a pontuação ocorra, clique no ícone do relógio. Na nova sobreposição exibida, insira a hora do dia em que deseja que a pontuação ocorra. Clique fora da sobreposição para fechá-la.
+Para alterar a hora do dia em que deseja que a pontuação ocorra, selecione o ícone do relógio. Na nova sobreposição exibida, insira a hora do dia em que deseja que a pontuação ocorra. Selecione fora da sobreposição para fechá-la.
 
 >[!NOTE]
 >
@@ -180,7 +222,7 @@ Para alterar a hora do dia em que deseja que a pontuação ocorra, clique no íc
 
 ### Colunas adicionais do conjunto de dados de pontuação (opcional)
 
-Por padrão, um conjunto de dados de pontuação é criado para cada instância de serviço em um esquema padrão. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e Ponto de contato à saída do conjunto de dados de pontuação. Comece selecionando colunas do seu conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo o botão esquerdo do mouse pressionado sobre o ícone do hambúrguer.
+Por padrão, um conjunto de dados de pontuação é criado para cada instância de serviço em um esquema padrão. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e Pontos de contato à saída do conjunto de dados de pontuação. Comece selecionando colunas do seu conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo o botão esquerdo do mouse pressionado sobre o ícone do hambúrguer.
 
 ![pontuar adição da coluna do conjunto de dados](./images/user-guide/Add-score-dataset.png)
 
@@ -188,7 +230,7 @@ Por padrão, um conjunto de dados de pontuação é criado para cada instância 
 
 Os comportamentos dos seus clientes podem diferir significativamente por país e região geográfica. Para empresas globais, usar modelos baseados em país ou em região pode aumentar a precisão da atribuição. Cada região adicionada cria um novo modelo com os dados dessa região.
 
-Para definir uma nova região, comece clicando em **[!UICONTROL Add region]**. No contêiner exibido, forneça um nome para a região. Somente um valor (&quot;placeContext.geo.countryCode&quot;) é preenchido a partir da lista suspensa **[!UICONTROL Inserir nome de campo]**. Selecione este valor.
+Para definir uma nova região, comece selecionando **[!UICONTROL Adicionar região]**. No contêiner exibido, forneça um nome para a região. Somente um valor (&quot;placeContext.geo.countryCode&quot;) é preenchido a partir da variável **[!UICONTROL Inserir Nome do Campo]** lista suspensa. Selecione este valor.
 
 ![Selecionar região em](./images/user-guide/select_region_att.png)
 
@@ -196,7 +238,7 @@ Em seguida, selecione um operador.
 
 ![operador de região](./images/user-guide/region_operators.png)
 
-Por fim, digite o código do país na lista suspensa **[!UICONTROL Inserir valor do campo]**.
+Por fim, digite o código do país na variável **[!UICONTROL Inserir Valor do Campo]** lista suspensa.
 
 >[!NOTE]
 >
@@ -214,13 +256,13 @@ Para garantir que você obtenha o modelo mais preciso possível, é importante t
 
 ![janela de treinamento](./images/user-guide/training_window.png)
 
-Depois de selecionar sua janela de treinamento, clique em **[!UICONTROL Finish]** no canto superior direito. Permita que os dados sejam processados por algum tempo. Uma vez concluída, uma caixa de diálogo de instância é exibida, confirmando que a configuração da instância foi concluída. Clique em **[!UICONTROL Ok]** para ser redirecionado para a página **[!UICONTROL Service instances]** onde você pode ver sua instância de serviço.
+Depois de selecionar sua janela de treinamento, selecione **[!UICONTROL Concluir]** no canto superior direito. Permita que os dados sejam processados por algum tempo. Uma vez concluída, uma caixa de diálogo de instância é exibida, confirmando que a configuração da instância foi concluída. Selecionar **[!UICONTROL Ok]** para ser redirecionado para o **[!UICONTROL Instâncias do serviço]** onde você pode ver a instância do serviço.
 
 ![configuração concluída](./images/user-guide/instance_setup_complete.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de pontuar (aguarde até 24 horas), você estará pronto para [descobrir insights do Attribution AI](./discover-insights.md). Além disso, se desejar baixar os resultados da pontuação, visite a documentação de [downloading scores](./download-scores.md) .
+Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de pontuar (aguarde até 24 horas), você estará pronto para [insights do discover Attribution AI](./discover-insights.md). Além disso, se desejar baixar os resultados da pontuação, visite a [download de pontuações](./download-scores.md) documentação.
 
 ## Recursos adicionais
 

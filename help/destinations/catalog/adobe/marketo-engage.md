@@ -2,18 +2,14 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6ea82e0589843f15b1486e1242aa68ef8e2fe9d3
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
 
-# (Beta) Marketo Engage destination {#beta-marketo-engage-destination}
-
->[!IMPORTANT]
->
->O destino do Marketo Engage no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# destino Marketo Engage {#beta-marketo-engage-destination}
 
 ## Visão geral {#overview}
 
@@ -34,7 +30,7 @@ Exportar segmento - você está exportando todos os membros de um segmento (púb
 
 ## Configurar destinos e ativar segmentos {#set-up}
 
-Para obter instruções detalhadas sobre como configurar o destino e ativar segmentos, leia [Encaminhar um segmento do Adobe Experience Platform para uma Lista Estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) na documentação do Marketo.
+Para obter instruções detalhadas sobre como configurar o destino e ativar segmentos, leia [Encaminhar um segmento do Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) na documentação do Marketo.
 
 <!--
 
@@ -46,7 +42,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte a [visão geral do controle de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Todos [!DNL Adobe Experience Platform] Os destinos são compatíveis com as políticas de uso de dados ao manipular os dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte [visão geral de governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 <!--
 

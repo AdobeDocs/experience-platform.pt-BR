@@ -5,16 +5,16 @@ seo-title: Real-time Customer Data Platform Overview
 description: Visão geral do Real-time Customer Data Platform
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 # Visão geral do Real-time Customer Data Platform
 
-Criada na Adobe Experience Platform, a Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes que podem ser usados para fornecer experiências personalizadas de clientes em todos os canais e dispositivos em tempo real.
+Criada na Adobe Experience Platform, a Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e anônimos de várias fontes corporativas, a fim de criar perfis de clientes que possam ser usados para fornecer experiências personalizadas de clientes em todos os canais e dispositivos em tempo real.
 
 A CDP em tempo real inclui ferramentas para governança de dados, gerenciamento de identidade, segmentação avançada e ciência de dados, para que você possa criar perfis e definir públicos-alvo, bem como obter insights avançados e, ao mesmo tempo, poder aplicar políticas rigorosas de governança de dados.
 
@@ -27,7 +27,7 @@ Com o Real-time Customer Data Platform, você pode:
 * Gere insights acionáveis e dimensione públicos-alvo com IA e aprendizado de máquina fornecidos pela Adobe Sensei e criados para profissionais de marketing.
 * Forneça experiências personalizadas em tempo real em todos os canais e destinos.
 
-## Real-time Customer Data Platform B2B Edition (Beta)
+## Real-time Customer Data Platform B2B Edition
 
 Há também uma edição diferente da CDP em tempo real disponível para atender às necessidades organizacionais empresa a empresa. A CDP B2B Edition em tempo real foi criada para expandir a funcionalidade da CDP em tempo real para profissionais de marketing. Ele tem diferentes recursos habilitados no ecossistema da Adobe Experience Platform para se adequar melhor ao funcionamento em um modelo de serviço de empresa para empresa.
 

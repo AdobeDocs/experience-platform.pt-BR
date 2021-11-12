@@ -2,9 +2,9 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '334'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,10 @@ O destino permite que os profissionais de marketing enviem segmentos criados no 
 |---|---|
 | ECID | Um namespace que representa ECID. Esse namespace também pode ser mencionado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](/help/identity-service/ecid.md) para obter mais informações. |
 | Email | Um namespace que representa um endereço de email. Esse tipo de namespace geralmente é associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
+
+>[!NOTE]
+>
+>No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow ativar destino, ele é *mandatory* para mapear identidades e *opcional* para mapear atributos. Mapear o email e/ou a ECID na guia Namespace de identidade é a coisa mais importante a se fazer para garantir que a pessoa corresponda no Marketo. Mapear email garante a maior taxa de correspondência.
 
 ## Tipo de exportação {#export-type}
 

@@ -4,18 +4,18 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
+source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '661'
 ht-degree: 15%
 
 ---
 
 
-# Conectores de origem {#sources}
+# Source connectors {#sources}
 
-- [Visão geral dos conectores de origem](home.md)
-- Conectores de origem disponíveis {#connectors}
+- [Source connectors overview](home.md)
+- Available source connectors {#connectors}
    - Aplicativos Adobe {#adobe-applications}
       - [Conector de origem das Classificações do Analytics](connectors/adobe-applications/classifications.md)
       - [Conector de origem do Analytics](connectors/adobe-applications/analytics.md)
@@ -26,6 +26,7 @@ ht-degree: 15%
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de destino](connectors/adobe-applications/mapping/target.md)
          - [Mapeamentos de campo Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+         - [Mapeamentos de campo do Salesforce](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [conector Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guia de autenticação de Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
@@ -34,7 +35,7 @@ ht-degree: 15%
       - [Conector do Google AdWords](connectors/advertising/ads.md)
    - armazenamento na nuvem {#cloud-storage}
       - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
-      - [Conector Amazon S3](connectors/cloud-storage/s3.md)
+      - [Amazon S3 connector](connectors/cloud-storage/s3.md)
       - [Conector HDFS do Apache](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
       - [Conector de blob do Azure](connectors/cloud-storage/blob.md)
@@ -45,7 +46,7 @@ ht-degree: 15%
       - [Conector de armazenamento em nuvem Google](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Armazenamento de objetos de oracle](connectors/cloud-storage/oracle-object-storage.md)
-      - [Conector SFTP](connectors/cloud-storage/sftp.md)
+      - [SFTP connector](connectors/cloud-storage/sftp.md)
       - [Conector Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
@@ -89,7 +90,7 @@ ht-degree: 15%
    - Streaming {#streaming}
       - [Conector da API HTTP](connectors/streaming/http.md)
 - Tutoriais da API {#api-tutorials}
-   - Criar uma conexão base {#create}
+   - Create a base connection {#create}
       - Publicidade {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - armazenamento na nuvem {#cloud-storage}
@@ -97,7 +98,7 @@ ht-degree: 15%
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
-         - [Gen2 do Armazenamento Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Hubs de Eventos do Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Armazenamento de Arquivos do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zona de aterrissagem de dados](tutorials/api/create/cloud-storage/data-landing-zone.md)
@@ -151,10 +152,10 @@ ht-degree: 15%
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento na nuvem](tutorials/api/explore/cloud-storage.md)
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)
-      - [Explorar os dados de sucesso do cliente](tutorials/api/explore/customer-success.md)
+      - [Explore customer success data](tutorials/api/explore/customer-success.md)
       - [Explorar dados do banco de dados](tutorials/api/explore/database-nosql.md)
       - [Explorar dados de comércio eletrônico](tutorials/api/explore/ecommerce.md)
-      - [Explorar dados de automação de marketing](tutorials/api/explore/marketing-automation.md)
+      - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
       - [Explorar dados de pagamento](tutorials/api/explore/payments.md)
       - [Explorar dados de protocolo](tutorials/api/explore/protocols.md)
    - Coletar dados {#collect}
@@ -255,9 +256,9 @@ ht-degree: 15%
    - [Atualizar contas](tutorials/ui/update.md)
    - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)
-   - [Excluir fluxos de dados](tutorials/ui/delete.md)
+   - [Delete dataflows](tutorials/ui/delete.md)
 - [Notificações de execução de fluxo](notifications.md)
-- [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
+- [IP address allow list](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

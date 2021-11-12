@@ -1,38 +1,43 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Salesforce, salesforce, mapeamento de campo, mapeamento de campo, mapeamento, marketo, B2B, b2b
-solution: Experience Platform
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 title: Campos de mapeamento do Salesforce
-topic-legacy: overview
-description: As tabelas abaixo contêm os mapeamentos entre os campos de origem do Salesforce e seus campos XDM correspondentes.
-source-git-commit: 00207ae10979b48d190cbda63aecf55e0f6d0f9c
+description: The tables below contain the mappings between Salesforce source fields and their corresponding XDM fields.
+source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 14%
+source-wordcount: '279'
+ht-degree: 9%
 
 ---
 
 # [!DNL Salesforce] mapeamentos de campo
 
-As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesforce] e seus campos correspondentes do Experience Data Model (XDM).
+As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de origem e seus campos correspondentes do Experience Data Model (XDM).
 
 ## Contato {#contact}
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
-| `AccountId` | `b2b.accountID` |
-| `AccountId` | `personComponents.sourceAccountID` |
+| `AccountId` | `b2b.accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
+| `"Salesforce"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Department` | `extendedWorkDetails.departments` |
-| `Email` | `workEmail.address` | Essa é a identidade secundária. |
+| `Email` | `workEmail.address` | Identidade secundária. |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
-| `Id` | `personID` | Esta é a identidade primária |
-| `Id` | `personComponents.sourcePersonID` |
+| `Id` | `b2b.personKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
+| `Id` | `personComponents.sourcePersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastName` | `person.name.lastName` |
@@ -64,7 +69,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 
 {style=&quot;table-layout:auto&quot;}
 
-## Líder {#lead}
+## Lead {#lead}
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
@@ -73,13 +78,19 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 | `ConvertedContactId` | `personComponents.sourceConvertedContactID` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
-| `Email` | `workEmail.address` | Essa é a identidade secundária |
+| `Email` | `workEmail.address` | Identidade secundária. |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
-| `Id` | `personID` | Esta é a identidade primária |
-| `Id` | `personComponents.sourcePersonID` |
+| `"Salesforce"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
+| `Id` | `b2b.personKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
+| `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
+| `Id` | `personComponents.sourcePersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastName` | `person.name.lastName` |
@@ -99,6 +110,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 | `Street` | `workAddress.street1` |
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `Suffix` | `person.name.suffix` |
+| `Company` | `b2b.companyName` |
+| `Website` | `b2b.companyWebsite` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -106,10 +119,12 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
+| `"Salesforce"` | `accountKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
 | `AccountNumber` | `accountNumber` |
 | `AccountSource` | `accountSourceType` |
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
-| `BillingCity` | endereço | `accountBillingAddress.city` |
+| `BillingCity` | `accountBillingAddress.city` |
 | `BillingCountry` | `accountBillingAddress.country` |
 | `BillingLatitude` | `accountBillingAddress._schema.latitude` |
 | `BillingLongitude` | `accountBillingAddress._schema.longitude` |
@@ -120,7 +135,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | recurso data.com |
 | `Fax` | `accountFax.number` |
-| `Id` | `accountID` | Esta é a identidade primária |
+| `Id` | `accountKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -132,7 +148,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 | `Name` | `accountName` |
 | `NumberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `Ownership` | `accountOwnership` |
-| `ParentId` | `accountParentID` |
+| `ParentId` | `accountParentKey.sourceID` |
+| `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number` |
 | `Rating` | `accountOrganization.rating` |
 | `ShippingCity` | `accountShippingAddress.city` |
@@ -153,11 +170,16 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 
 ## Oportunidade {#opportunity}
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Target XDM field path | Notas |
 | --- | --- | --- |
-| `AccountId` | `accountID` | Relação |
+| `"Salesforce"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | Relação. |
 | `Amount` | `opportunityAmount.amount` |
-| `CampaignId` | `campaignID` |
+| `CampaignId` | `campaignKey.sourceID` |
+| `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
 | `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
@@ -166,7 +188,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 | `FiscalYear` | `fiscalYear` |
 | `ForecastCategory` | `forecastCategory` |
 | `ForecastCategoryName` | `forecastCategoryName` |
-| `Id` | `opportunityID` | Esta é a identidade primária |
+| `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -183,16 +205,25 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 
 {style=&quot;table-layout:auto&quot;}
 
-## Função de contato da oportunidade {#opportunity-contact-role}
+## Opportunity contact role {#opportunity-contact-role}
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
-| `ContactId` | `personID` | Relação |
+| `"Salesforce"` | `opportunityPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"Salesforce"` | `personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personKey.sourceInstanceID` |
+| `ContactId` | `personKey.sourceID` |
+| `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
-| `Id` | `opportunityPersonID` | Esta é a identidade primária |
+| `Id` | `opportunityPersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Identidade primária. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
-| `OpportunityId` | `opportunityID` | Relação |
+| `"Salesforce"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` |
+| `OpportunityId` | `opportunityKey.sourceID` |
+| `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -201,32 +232,45 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
-| `Id` | `xdm: campaignID` | Esta é a identidade primária |
-| `Name` | `xdm: campaignName` |
-| `ParentId` | `xdm: parentCampaignID` |
-| `Type` | `xdm: campaignType` |
-| `Status` | `xdm: campaignStatus` |
-| `StartDate` | `xdm: campaignStartDate` |
-| `EndDate` | `xdm: campaignEndDate` |
-| `ExpectedRevenue` | `xdm: expectedRevenue.amount` |
-| `BudgetedCost` | `xdm: budgetedCost.amount` |
-| `ActualCost` | `xdm: actualCost.amount` |
-| `ExpectedResponse` | `xdm: expectedResponse` |
-| `IsActive` | `xdm: isActive` |
-| `Description` | `xdm: campaignDescription` |
-| `CreatedDate` | `xdm: extSourceSystemAudit.createdDate` |
-| `LastModifiedDate` | `xdm: extSourceSystemAudit.lastUpdatedDate` |
-| `LastActivityDate` | `xdm: extSourceSystemAudit.lastActivityDate` |
-| `LastViewedDate` | `xdm: extSourceSystemAudit.lastViewedDate` |
-| `LastReferencedDate` | `xdm: extSourceSystemAudit.lastReferencedDate` |
+| `"Salesforce"` | `campaignKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `Id` | `campaignKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Primary identity. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `Name` | `campaignName` |
+| `ParentId` | `parentCampaignKey.sourceID` |
+| `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
+| `Type` | `campaignType` |
+| `Status` | `campaignStatus` |
+| `StartDate` | `campaignStartDate` |
+| `EndDate` | `campaignEndDate` |
+| `ExpectedRevenue` | `expectedRevenue.amount` |
+| `BudgetedCost` | `budgetedCost.amount` |
+| `ActualCost` | `actualCost.amount` |
+| `ExpectedResponse` | `expectedResponse` |
+| `IsActive` | `isActive` |
+| `Description` | `campaignDescription` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
 
 ## Membro da campanha {#campaign-member}
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
-| `Id` | `campaignMemberID` | Esta é a identidade primária |
-| `CampaignId` | `campaignID` | Relação |
-| `LeadOrContactId` | `personID` | Relação |
+| `"Salesforce"` | `campaignMemberKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `Id` | `campaignMemberKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"Salesforce"` | `campaignKey.sourceType` |
+| `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
+| `CampaignId` | `campaignKey.sourceID` |
+| `concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` |
+| `"Salesforce"` | `personKey.sourceType` |
+| `${CRM_ORG_ID}` | `personKey.sourceInstanceID` |
+| `LeadOrContactId` | `personKey.sourceID` |
+| `concat(LeadOrContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `Status` | `memberStatus` |
 | `HasResponded` | `hasResponded` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
@@ -235,4 +279,4 @@ As tabelas abaixo contêm os mapeamentos entre os campos de origem [!DNL Salesfo
 
 ## Próximas etapas
 
-Ao ler este documento, você ganhou informações sobre a relação de mapeamento entre os campos de origem [!DNL Salesforce] e seus campos XDM correspondentes. Consulte o tutorial em [criar uma [!DNL Salesforce] conexão de origem](../../../tutorials/ui/create/crm/salesforce.md) para iniciar o fluxo de dados [!DNL Salesforce].
+By reading this document, you have gained insight on the mapping relationship between [!DNL Salesforce] source fields and their corresponding XDM fields. Consulte a documentação em [criar um [!DNL Salesforce] conexão de origem](../../../connectors/crm/salesforce.md) para obter mais informações.

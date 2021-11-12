@@ -5,32 +5,28 @@ title: Autentique seu conector de origem do Marketo
 topic-legacy: overview
 description: Este documento fornece informações sobre como gerar suas credenciais de autenticação da Marketo.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
 
-# (Beta) Autentique seu conector de origem [!DNL Marketo Engage]
+# Autentique seu [!DNL Marketo Engage] conector de origem
 
->[!IMPORTANT]
->
->A fonte [!DNL Marketo Engage] no Adobe Experience Platform está atualmente na versão Beta. A documentação e a funcionalidade estão sujeitas a alterações.
+Antes de criar um [!DNL Marketo Engage] (a seguir designado por &quot;[!DNL Marketo]&quot;) conector de origem, você deve primeiro configurar um serviço personalizado por meio do [!DNL Marketo] , bem como recuperar valores para sua ID do Munchkin, ID do cliente e segredo do cliente.
 
-Antes de criar um conector de origem [!DNL Marketo Engage] (a seguir denominado &quot;[!DNL Marketo]&quot;), primeiro você deve configurar um serviço personalizado por meio da interface [!DNL Marketo], bem como recuperar valores para a ID do Munchkin, a ID do cliente e o segredo do cliente.
-
-A documentação abaixo fornece etapas sobre como adquirir credenciais de autenticação para criar um conector de origem [!DNL Marketo].
+A documentação abaixo fornece etapas sobre como adquirir credenciais de autenticação para criar um [!DNL Marketo] conector de origem.
 
 ## Configurar uma nova função
 
-A primeira etapa para adquirir suas credenciais de autenticação é configurar uma nova função por meio da interface [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1).
+A primeira etapa para adquirir suas credenciais de autenticação é configurar uma nova função por meio do [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) interface.
 
 Faça logon em [!DNL Marketo] e selecione **[!DNL Admin]** na barra de navegação superior.
 
 ![Administrador para uma nova função](../images/marketo/home.png)
 
-A página *[!DNL Users & Role]s* contém informações sobre usuários, funções e históricos de logon. Para criar uma nova função, selecione **[!DNL Roles]** no cabeçalho superior e selecione **[!DNL New Role]**.
+O *[!DNL Users & Role]s* contém informações sobre usuários, funções e históricos de logon. Para criar uma nova função, selecione **[!DNL Roles]** no cabeçalho superior e selecione **[!DNL New Role]**.
 
 ![nova função](../images/marketo/new-role.png)
 
@@ -56,7 +52,7 @@ Você pode gerenciar permissões restritas na API ao criar funções com [!DNL M
 
 ## Configurar um novo usuário
 
-Semelhante às funções, você pode configurar um novo usuário na página **[!DNL Users & Roles]** . A página **[!DNL Users]** fornece uma lista de usuários ativos atualmente provisionados no Marketo. Selecione **[!DNL Invite New User]** para provisionar um novo usuário.
+Semelhante às funções, você pode configurar um novo usuário no **[!DNL Users & Roles]** página. O **[!DNL Users]** fornece uma lista de usuários ativos provisionados atualmente no Marketo. Selecionar **[!DNL Invite New User]** para provisionar um novo usuário.
 
 ![convidar-novo-usuário](../images/marketo/invite-new-user.png)
 
@@ -68,7 +64,7 @@ Um menu de diálogo adequado é exibido. Forneça as informações apropriadas p
 
 ![user-info](../images/marketo/new-user-info.png)
 
-Selecione os campos apropriados na etapa **[!DNL Permissions]** e marque a caixa de seleção **[!DNL API Only]** para fornecer uma função de API ao novo usuário. Selecione **[!DNL Next]** para continuar.
+Selecione os campos apropriados no **[!DNL Permissions]** e selecione o **[!DNL API Only]** caixa de seleção para fornecer uma função de API ao novo usuário. Selecionar **[!DNL Next]** para continuar.
 
 ![permissões](../images/marketo/permissions.png)
 
@@ -78,21 +74,21 @@ Para concluir o processo, selecione **[!DNL Send]**.
 
 ## Configurar um serviço personalizado
 
-Depois de estabelecer um novo usuário, você pode configurar um serviço personalizado para recuperar suas novas credenciais. Na página do administrador, selecione **[!DNL LaunchPoint]**.
+Depois de estabelecer um novo usuário, você pode configurar um serviço personalizado para recuperar suas novas credenciais. Na página de administração, selecione **[!DNL LaunchPoint]**.
 
 ![admin-launchpoint](../images/marketo/admin-launchpoint.png)
 
-A página **[!DNL Installed services]** contém uma lista de serviços existentes, para criar um novo serviço personalizado, selecione **[!DNL New]** e selecione **[!DNL New Service]**.
+O **[!DNL Installed services]** página contém uma lista de serviços existentes, para criar um novo serviço personalizado, selecione **[!DNL New]** e depois selecione **[!DNL New Service]**.
 
 ![new-service](../images/marketo/new-service.png)
 
-Forneça um nome de exibição descritivo ao novo serviço e selecione **[!DNL Custom]** no menu suspenso **[!DNL Service]**. Forneça uma descrição apropriada e selecione o usuário que deseja provisionar no menu suspenso **[!DNL API Only User]**. Depois de preencher os detalhes necessários, selecione **[!DNL Create]** para criar seu novo serviço personalizado.
+Forneça um nome de exibição descritivo ao novo serviço e selecione **[!DNL Custom]** do **[!DNL Service]** menu suspenso. Forneça uma descrição apropriada e selecione o usuário que deseja provisionar na **[!DNL API Only User]** menu suspenso. Depois de preencher os detalhes necessários, selecione **[!DNL Create]** para criar seu novo serviço personalizado.
 
 ![criar](../images/marketo/create.png)
 
 ## Obter a ID do cliente e o segredo do cliente
 
-Com um novo serviço personalizado criado, agora é possível recuperar valores para a ID do cliente e o segredo do cliente. No menu **[!DNL Installed Services]**, localize o serviço personalizado que deseja acessar e selecione **[!DNL View Details]**.
+Com um novo serviço personalizado criado, agora é possível recuperar valores para a ID do cliente e o segredo do cliente. No **[!DNL Installed Services]** , localize o serviço personalizado que deseja acessar e selecione **[!DNL View Details]**.
 
 ![detalhes da exibição](../images/marketo/view-details.png)
 
@@ -102,12 +98,12 @@ Uma caixa de diálogo é exibida, contendo a ID do cliente e o segredo do client
 
 ## Obter a ID do Munchkin
 
-A etapa final que você deve concluir para autenticar o conector de origem [!DNL Marketo] é recuperar a ID do Munchkin. Na página do administrador, selecione **[!DNL Munchkin]** no painel **[!DNL Integration]**.
+A etapa final que deve ser concluída para autenticar seu [!DNL Marketo] O conector de origem é para recuperar a ID do Munchkin. Na página de administração, selecione **[!DNL Munchkin]** nos termos do **[!DNL Integration]** painel.
 
 ![admin-munchkin](../images/marketo/admin-munchkin.png)
 
-A página *[!DNL Munchkin]* é exibida, com sua ID exclusiva do Munchkin listada na parte superior do painel.
+O *[!DNL Munchkin]* será exibida, com sua ID exclusiva do Munchkin listada na parte superior do painel.
 
 ![munchkin-Id](../images/marketo/munchkin-id.png)
 
-Combinado à ID do cliente e ao segredo do cliente, você pode usar a ID do Munchkin para configurar uma nova conta e [criar uma nova [!DNL Marketo] conexão de origem](../../../tutorials/ui/create/adobe-applications/marketo.md) no Experience Platform.
+Combinado à ID do cliente e ao segredo do cliente, você pode usar a ID do Munchkin para configurar uma nova conta e [criar um novo [!DNL Marketo] conexão de origem](../../../tutorials/ui/create/adobe-applications/marketo.md) na Experience Platform.

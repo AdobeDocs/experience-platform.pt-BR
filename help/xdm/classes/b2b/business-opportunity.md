@@ -2,20 +2,16 @@
 title: Classe de Oportunidade de Negócios XDM
 description: Este documento fornece uma visão geral da classe de Oportunidade de Negócios XDM no Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 5%
+source-wordcount: '197'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Ciclo de ] oportunidades de negócios XDM (Beta)
+# [!UICONTROL Oportunidade de negócios XDM] classe
 
->[!IMPORTANT]
->
->Essa classe está disponível como parte da Real-time Customer Data Platform B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-[!UICONTROL A XDM Business ] Oportunity é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma oportunidade de negócios.
+[!UICONTROL Oportunidade de negócios XDM] é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma oportunidade de negócios.
 
 ![](../../images/classes/b2b/business-opportunity.png)
 
@@ -24,7 +20,7 @@ ht-degree: 5%
 | `accountKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a conta à qual esta oportunidade está associada. |
 | `extSourceSystemAudit` | [[!UICONTROL Atributos de Auditoria do Sistema de Origem Externa]](../../data-types/external-source-system-audit-attributes.md) | Se a oportunidade vem de um sistema de origem externo, esse objeto captura atributos de auditoria para esse sistema. |
 | `opportunityKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de oportunidade. |
-| `_id` | String | Um identificador exclusivo para o registro. Este é um valor gerado pelo sistema separado do `opportunityID`. |
+| `_id` | String | Um identificador exclusivo para o registro. Esse é um valor gerado pelo sistema separado da variável `opportunityID`. |
 | `accountID` | String | Uma ID exclusiva para a conta à qual esta oportunidade está associada. |
 | `opportunityDescription` | String | Uma descrição para a oportunidade. |
 | `opportunityID` | String | Uma ID exclusiva para a entidade de oportunidade. |
@@ -34,4 +30,4 @@ ht-degree: 5%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.
+Consulte o guia sobre [relações de esquema na Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

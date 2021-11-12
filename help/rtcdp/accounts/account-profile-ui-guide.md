@@ -1,20 +1,16 @@
 ---
 keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem rtcdp, perfil do cliente em tempo real
-title: Guia da interface do usuário do perfil da conta (Beta)
+title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Real-time Customer Data Platform B2B Edition permite unificar as informações da conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
 
-# Guia da interface do usuário do perfil da conta (Beta)
-
->[!IMPORTANT]
->
->Atualmente, o Real-time Customer Data Platform B2B Edition está em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# Guia da interface do usuário do perfil da conta
 
 >[!NOTE]
 >

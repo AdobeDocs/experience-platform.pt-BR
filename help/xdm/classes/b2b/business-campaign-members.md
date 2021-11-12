@@ -2,20 +2,16 @@
 title: Classe de Membros da Campanha Comercial XDM
 description: Este documento fornece uma visão geral da classe de membros da campanha comercial XDM no Experience Data Model (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '205'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Classe de ] membros da campanha comercial XDM (Beta)
+# [!UICONTROL Membros da Campanha Comercial XDM] classe
 
->[!IMPORTANT]
->
->Essa classe está disponível como parte da Real-time Customer Data Platform B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-[!UICONTROL A ] associação de campanha comercial XDM é uma classe padrão do Experience Data Model (XDM) que descreve um contato ou um cliente potencial associado a uma campanha comercial.
+[!UICONTROL Membros da Campanha Comercial XDM] é uma classe padrão do Experience Data Model (XDM) que descreve um contato ou um cliente potencial associado a uma campanha comercial.
 
 ![](../../images/classes/b2b/business-campaign-members.png)
 
@@ -25,11 +21,11 @@ ht-degree: 3%
 | `campaignMemberKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de associação da campanha. |
 | `extSourceSystemAudit` | [[!UICONTROL Atributos de Auditoria do Sistema de Origem Externa]](../../data-types/external-source-system-audit-attributes.md) | Se a associação da campanha provém de um sistema de origem externo, esse objeto captura atributos de auditoria para esse sistema. |
 | `personKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa que é membro da campanha associada. |
-| `_id` | String | Um identificador exclusivo para o registro. Este é um valor gerado pelo sistema separado do `campaignMemberID`. |
+| `_id` | String | Um identificador exclusivo para o registro. Esse é um valor gerado pelo sistema separado da variável `campaignMemberID`. |
 | `campaignID` | String | Uma ID exclusiva para a campanha associada. |
 | `campaignMemberID` | String | Uma ID exclusiva para a entidade de associação de campanha. |
 | `personId` | String | Uma ID exclusiva para a pessoa que é membro da campanha associada. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulte o guia sobre [relações de esquema na CDP em tempo real B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.
+Consulte o guia sobre [relações de esquema na Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.

@@ -1,19 +1,15 @@
 ---
-title: Destinos no Real-time Customer Data Platform B2B Edition (Beta)
+title: Destinos no Real-time Customer Data Platform B2B Edition
 description: Uma visão geral da função dos destinos no Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# Destinos no Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Atualmente, o Real-time Customer Data Platform B2B Edition está em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# Destinos no Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >

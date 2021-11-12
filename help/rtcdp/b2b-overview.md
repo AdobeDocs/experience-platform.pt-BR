@@ -1,22 +1,18 @@
 ---
 keywords: RTCDP; CDP; B2B Edition; Real-time Customer Data Platform; plataforma de dados do cliente em tempo real; cdp em tempo real; b2b; cdp; Customer AI
-title: Visão geral da CDP B2B Edition em tempo real (Beta)
+title: Visão geral da CDP B2B Edition em tempo real
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Visão geral da conta Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1092'
-ht-degree: 1%
+source-wordcount: '1072'
+ht-degree: 0%
 
 ---
 
-# Visão geral do Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->A CDP B2B Edition em tempo real está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# Visão geral do Real-time Customer Data Platform B2B Edition
 
 Baseada na Real-time Customer Data Platform (CDP em tempo real), a CDP B2B Edition em tempo real é projetada especificamente para profissionais de marketing que operam em um modelo de serviço de negócios para empresas. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
 

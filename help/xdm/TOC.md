@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 14%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 14%
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [ExperiênciaEvento XDM](./classes/experienceevent.md)
    * [Definição de segmento](./classes/segment-definition.md)
-   * Classes B2B (Beta) {#b2b}
+   * Classes B2B {#b2b}
       * [Conta Comercial XDM](./classes/b2b/business-account.md)
       * [Relação de Pessoa da Conta Comercial XDM](./classes/b2b/business-account-person-relation.md)
       * [Campanha comercial XDM](./classes/b2b/business-campaign.md)
@@ -74,7 +74,7 @@ ht-degree: 14%
    * [Beacon](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Origem B2B](./data-types/b2b-source.md)
-   * [Comércio](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [Sequência de consentimento](./data-types/consent-string.md)
    * [Consentimentos e preferências](./data-types/consents.md)
    * [Moeda](./data-types/currency.md)
@@ -113,7 +113,7 @@ ht-degree: 14%
    * [Informações da Web](./data-types/web-information.md)
    * [Interação da Web](./data-types/web-interaction.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)
-*  SchemasUI  {#ui}
+* [!UICONTROL Esquemas] interface {#ui}
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}
@@ -153,7 +153,7 @@ ht-degree: 14%
    * [Criar um esquema na API](tutorials/create-schema-api.md)
    * [Definir um relacionamento de esquema na interface do usuário](tutorials/relationship-ui.md)
    * [Definir uma relação de esquema na API](tutorials/relationship-api.md)
-   * [Definir uma relação de esquema na CDP B2B Edition em tempo real (Beta)](tutorials/relationship-b2b.md)
+   * [Definir um relacionamento de esquema na Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Criar um esquema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

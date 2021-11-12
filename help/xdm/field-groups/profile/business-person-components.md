@@ -2,24 +2,20 @@
 title: Grupo de Campos de Esquema Componentes da Pessoa Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Componentes de pessoa comercial do XDM.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '412'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Grupo de campos Componentes ] da Pessoa Comercial XDM (Beta)
+# [!UICONTROL Componentes de Pessoa Comercial XDM] grupo de campos de esquema
 
->[!IMPORTANT]
->
->Esse grupo de campos está disponível como parte da Plataforma de dados do cliente em tempo real B2B Edition, que está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+[!UICONTROL Componentes de Pessoa Comercial XDM] é um grupo de campos de esquema padrão para a variável [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura vários registros de origem de uma pessoa e outros atributos necessários para a segmentação de pessoa.
 
-[!UICONTROL O Componente de pessoa comercial do XDM ] é um grupo de campo de esquema padrão para a  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe que captura vários registros de origem de uma pessoa e outros atributos necessários para a segmentação da pessoa.
+Quando um perfil é criado para uma pessoa por meio de [Perfil do cliente em tempo real](../../../profile/home.md) na edição B2B da CDP em tempo real, as informações usadas para criar esse perfil podem vir de muitos registros de origem. Por exemplo, se uma pessoa trabalha para duas empresas diferentes, muitos sistemas de CRM criariam uma cópia intencionalmente duplicada dessa pessoa para que uma cópia estivesse vinculada à Empresa A, enquanto a outra estivesse vinculada à Empresa B. Ao trazer esses dados para o Adobe Experience Platform, esse grupo de campos é usado para unir esses diferentes registros de origem em uma única representação.
 
-Quando um perfil é criado para uma pessoa por meio do [Real-time Customer Profile](../../../profile/home.md) na edição B2B da CDP em tempo real, as informações usadas para criar esse perfil podem vir de muitos registros de origem. Por exemplo, se uma pessoa trabalha para duas empresas diferentes, muitos sistemas de CRM criariam uma cópia intencionalmente duplicada dessa pessoa para que uma cópia estivesse vinculada à Empresa A, enquanto a outra estivesse vinculada à Empresa B. Ao trazer esses dados para o Adobe Experience Platform, esse grupo de campos é usado para unir esses diferentes registros de origem em uma única representação.
-
-O grupo de campos fornece um campo `personComponents` de nível raiz, que é uma matriz de objetos. Cada objeto na matriz representa um registro de origem diferente.
+O grupo de campos fornece um nível raiz `personComponents` , que é uma matriz de objetos. Cada objeto na matriz representa um registro de origem diferente.
 
 ![](../../images/field-groups/business-person-components.png)
 

@@ -1,31 +1,31 @@
 ---
-description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o SDK de destino.
-title: Como usar o SDK de destino para configurar um destino de transmissão
+description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
+title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# Como usar o SDK de destino para configurar um destino de transmissão
+# Usar o Destination SDK para configurar um destino de transmissão
 
 ## Visão geral {#overview}
 
-Esta página descreve como usar as informações em [Opções de configuração no SDK de destinos](./configuration-options.md) e em outros documentos de referência da API e funcionalidade do SDK de destino para configurar um [destino de transmissão](/help/destinations/destination-types.md#streaming-destinations). As etapas são apresentadas na ordem sequencial abaixo.
+Esta página descreve como usar as informações em [Opções de configuração no SDK de destinos](./configuration-options.md) e em outros documentos de referência da API e funcionalidade do Destination SDK para configurar um [destino de transmissão](/help/destinations/destination-types.md#streaming-destinations). As etapas são apresentadas na ordem sequencial abaixo.
 
 >[!NOTE]
 >
->No momento, não há suporte para a configuração de um destino em lote por meio do SDK de destino.
+>No momento, não há suporte para configurar um destino em lote por meio do Destination SDK.
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de avançar para as etapas ilustradas abaixo, leia o [Introdução ao SDK de destino](./getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O necessárias e outros pré-requisitos para funcionar com as APIs do SDK de destino.
+Antes de avançar para as etapas ilustradas abaixo, leia o [Introdução ao Destination SDK](./getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O e outros pré-requisitos necessários para funcionar com as APIs do Destination SDK.
 
-## Etapas para usar as opções de configuração no SDK de destino para configurar o destino {#steps}
+## Etapas para usar as opções de configuração no Destination SDK para configurar o destino {#steps}
 
-![Etapas ilustradas do uso de endpoints do SDK de destino](./assets/destination-sdk-steps.png)
+![Etapas ilustradas do uso de pontos de extremidade do Destination SDK](./assets/destination-sdk-steps.png)
 
 ## Etapa 1: Criar um servidor e uma configuração de modelo {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ Depois de criar um template de transformação de mensagem que funcione para voc
 
 ## Etapa 4: Criar configuração de metadados de público-alvo {#create-audience-metadata-configuration}
 
-Para alguns destinos, o SDK de destino requer a configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no destino. Consulte [Gerenciamento de metadados do público-alvo](./audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
+Para alguns destinos, o Destination SDK exige que você configure uma configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no seu destino. Consulte [Gerenciamento de metadados do público-alvo](./audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
 
 Se você usar uma configuração de metadados de público-alvo, é necessário conectá-los à configuração de destino criada na etapa 2. Adicione a ID da instância da configuração de metadados do público-alvo à configuração de destino como `audienceTemplateId`.
 

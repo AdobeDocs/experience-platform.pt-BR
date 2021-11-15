@@ -6,7 +6,7 @@ title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
 description: Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Depois de selecionar os conjuntos de dados que deseja usar, selecione o **[!UICO
 
 Seleção do ícone de informações ![ícone de informações](../images/user-guide/info-icon.png) ao lado do conjunto de dados, o abre o provedor de visualização do conjunto de dados.
 
-![Selecionar e pesquisar por conjunto de dados](../images/user-guide/dataset-info-2.png)
+![Selecionar e pesquisar por conjunto de dados](../images/user-guide/dataset-info.png)
 
 A visualização do conjunto de dados contém dados como a hora da última atualização, o schema de origem e uma pré-visualização das dez primeiras colunas.
 
@@ -85,8 +85,8 @@ Há um valor percentual de integridade do conjunto de dados na visualização do
 >[!NOTE]
 >
 >A integridade do conjunto de dados é calculada usando a janela de treinamento máximo para a API do cliente (um ano). Isso significa que os dados com mais de um ano não são considerados ao exibir o valor de integridade do conjunto de dados.
-<!-- training dataset completness needs to change -->
-![Integridade do conjunto de dados](../images/user-guide/dataset-info.png)
+
+![Integridade do conjunto de dados](../images/user-guide/dataset-info-2.png)
 
 ### Selecionar uma identidade {#identity}
 

@@ -4,18 +4,18 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 15%
+source-wordcount: '741'
+ht-degree: 14%
 
 ---
 
 
-# Source connectors {#sources}
+# Conectores de origem {#sources}
 
-- [Source connectors overview](home.md)
-- Available source connectors {#connectors}
+- [Visão geral dos conectores de origem](home.md)
+- Conectores de origem disponíveis {#connectors}
    - Aplicativos Adobe {#adobe-applications}
       - [Conector de origem das Classificações do Analytics](connectors/adobe-applications/classifications.md)
       - [Conector de origem do Analytics](connectors/adobe-applications/analytics.md)
@@ -35,7 +35,7 @@ ht-degree: 15%
       - [Conector do Google AdWords](connectors/advertising/ads.md)
    - armazenamento na nuvem {#cloud-storage}
       - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
-      - [Amazon S3 connector](connectors/cloud-storage/s3.md)
+      - [Conector Amazon S3](connectors/cloud-storage/s3.md)
       - [Conector HDFS do Apache](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
       - [Conector de blob do Azure](connectors/cloud-storage/blob.md)
@@ -46,7 +46,7 @@ ht-degree: 15%
       - [Conector de armazenamento em nuvem Google](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Armazenamento de objetos de oracle](connectors/cloud-storage/oracle-object-storage.md)
-      - [SFTP connector](connectors/cloud-storage/sftp.md)
+      - [Conector SFTP](connectors/cloud-storage/sftp.md)
       - [Conector Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
@@ -90,7 +90,7 @@ ht-degree: 15%
    - Streaming {#streaming}
       - [Conector da API HTTP](connectors/streaming/http.md)
 - Tutoriais da API {#api-tutorials}
-   - Create a base connection {#create}
+   - Criar uma conexão base {#create}
       - Publicidade {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - armazenamento na nuvem {#cloud-storage}
@@ -98,7 +98,7 @@ ht-degree: 15%
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
-         - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Gen2 do Armazenamento Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Hubs de Eventos do Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Armazenamento de Arquivos do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zona de aterrissagem de dados](tutorials/api/create/cloud-storage/data-landing-zone.md)
@@ -152,10 +152,10 @@ ht-degree: 15%
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento na nuvem](tutorials/api/explore/cloud-storage.md)
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)
-      - [Explore customer success data](tutorials/api/explore/customer-success.md)
+      - [Explorar os dados de sucesso do cliente](tutorials/api/explore/customer-success.md)
       - [Explorar dados do banco de dados](tutorials/api/explore/database-nosql.md)
       - [Explorar dados de comércio eletrônico](tutorials/api/explore/ecommerce.md)
-      - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
+      - [Explorar dados de automação de marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorar dados de pagamento](tutorials/api/explore/payments.md)
       - [Explorar dados de protocolo](tutorials/api/explore/protocols.md)
    - Coletar dados {#collect}
@@ -256,9 +256,28 @@ ht-degree: 15%
    - [Atualizar contas](tutorials/ui/update.md)
    - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)
-   - [Delete dataflows](tutorials/ui/delete.md)
+   - [Excluir fluxos de dados](tutorials/ui/delete.md)
+- [SDK de fontes] {#sources-sdk}
+   - [Visão geral](sources-sdk/overview.md)
+   - [Funcionalidade SDK de fontes] {#functionality}
+      - [Opções de configuração](sources-sdk/config/config.md)
+      - [Configurar especificação de autenticação](sources-sdk/config/authspec.md)
+      - [Configurar especificação de origem](sources-sdk/config/sourcespec.md)
+      - [Configurar especificação de exploração](sources-sdk/config/explorespec.md)
+   - [Tutoriais da API do SDK de fontes] {#sdk-tutorials}
+      - [Visão geral da API do SDK de fontes](sources-sdk/api/overview.md)
+      - [Introdução](sources-sdk/api/getting-started.md)
+      - [Criar uma especificação de conexão](sources-sdk/api/create.md)
+      - [Atualizar uma especificação de conexão](sources-sdk/api/update-connection-specs.md)
+      - [Atualizar uma especificação de fluxo](sources-sdk/api/update-flow-specs.md)
+      - [Enviar sua fonte](sources-sdk/api/submit.md)
+   - [Documente sua origem] {#document}
+      - [Documente sua fonte no Adobe Experience Platform](sources-sdk/documentation/overview.md)
+      - [Usar a interface da Web do GitHub para criar uma página de documentação de fontes](sources-sdk/documentation/github.md)
+      - [Usar um editor de texto no ambiente local para criar uma página de documentação de fontes](sources-sdk/documentation/text-editor.md)
+      - [Modelo de autoatendimento da documentação](sources-sdk/documentation/template.md)
 - [Notificações de execução de fluxo](notifications.md)
-- [IP address allow list](ip-address-allow-list.md)
+- [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

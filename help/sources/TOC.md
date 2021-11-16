@@ -4,7 +4,7 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 14%
@@ -257,14 +257,14 @@ ht-degree: 14%
    - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
-- [SDK de fontes] {#sources-sdk}
+- [SDK de fontes] {#sdk}
    - [Visão geral](sources-sdk/overview.md)
-   - [Funcionalidade SDK de fontes] {#functionality}
+   - [Configuração do SDK de fontes] {#config}
       - [Opções de configuração](sources-sdk/config/config.md)
       - [Configurar especificação de autenticação](sources-sdk/config/authspec.md)
       - [Configurar especificação de origem](sources-sdk/config/sourcespec.md)
       - [Configurar especificação de exploração](sources-sdk/config/explorespec.md)
-   - [Tutoriais da API do SDK de fontes] {#sdk-tutorials}
+   - [Tutoriais da API do SDK de fontes] {#sdk-api}
       - [Visão geral da API do SDK de fontes](sources-sdk/api/overview.md)
       - [Introdução](sources-sdk/api/getting-started.md)
       - [Criar uma especificação de conexão](sources-sdk/api/create.md)

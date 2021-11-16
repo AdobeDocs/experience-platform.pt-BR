@@ -6,7 +6,7 @@ topic-legacy: overview
 description: O SDK das Fontes da Adobe Experience Platform é um conjunto de APIs de configuração que permitem integrar uma fonte baseada na API REST usando a API do Serviço de fluxo para trazer seus dados para o Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: bfe6be73ed05b494a4a3eb1153e53ee8b9864ecf
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -41,17 +41,17 @@ Para obter mais informações sobre fontes e ver uma lista de fontes diferentes 
 
 Por meio do SDK de Fontes, você pode integrar sua própria fonte baseada em API REST e trazer seus dados para a plataforma com o [!DNL Flow Service]. O SDK de Fontes permite integrar uma nova fonte com a Plataforma, criando e enviando uma nova especificação de conexão por meio do [!DNL Flow Service] API.
 
-Consulte o guia sobre [criação de uma nova especificação de conexão](./api/overview.md) para obter informações sobre como integrar uma nova fonte à plataforma.
+Consulte o guia sobre [criação de uma nova especificação de conexão](./api/api-overview.md) para obter informações sobre como integrar uma nova fonte à plataforma.
 
 ## Documente sua origem
 
-Depois que a fonte for criada, consulte a [guia de documentação](./documentation/overview.md) para obter instruções sobre como documentar sua fonte pelo [!DNL GitHub] interface da Web ou por meio de seu próprio editor de texto.
+Depois que a fonte for criada, consulte a [guia de documentação](./documentation/doc-overview.md) para obter instruções sobre como documentar sua fonte pelo [!DNL GitHub] interface da Web ou por meio de seu próprio editor de texto.
 
 ## Processo de alto nível
 
 O processo passo a passo para configurar sua fonte no Experience Platform é descrito abaixo:
 
-* Leia o [Guia da API do SDK de fontes](./api/overview.md);
+* Leia o [Guia da API do SDK de fontes](./api/api-overview.md);
    * Leia o [guia de introdução](./api/getting-started.md);
    * Siga o tutorial em [criação de uma nova especificação de conexão](./api/create.md);
    * Siga o tutorial em [atualização da especificação de conexão](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ O processo passo a passo para configurar sua fonte no Experience Platform é des
    * Consulte o guia sobre [configuração das especificações de autenticação](./config/authspec.md);
    * Consulte o guia sobre [configurar suas especificações de origem](./config/sourcespec.md);
    * Consulte o guia sobre [configurar suas especificações do explorador](./config/explorespec.md);
-* Para começar a documentar sua fonte, consulte o [visão geral sobre como criar documentação para o SDK do SDK do SDK do Sources](./documentation/overview.md)
+* Para começar a documentar sua fonte, consulte o [visão geral sobre como criar documentação para o SDK do SDK do SDK do Sources](./documentation/doc-overview.md)
    * Você pode usar [modelo de documentação das fontes](./documentation/template.md) para estruturar sua documentação;
    * Consulte o guia sobre [uso da interface da Web do GitHub](./documentation/github.md) para obter etapas sobre como criar documentação usando o GitHub;
    * Consulte o guia sobre [uso de um editor de texto](./documentation/text-editor.md) para obter etapas sobre como criar a documentação usando o computador local.

@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de Serviço de Fluxo para SDK de Fontes.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -616,4 +616,4 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo consul
 
 ## Próximas etapas
 
-Com sua nova especificação de conexão adicionada à especificação de fluxo apropriada, agora você pode continuar testando e enviando sua nova fonte. Consulte o guia sobre [teste e envio de uma nova fonte](./overview.md#submit) para obter mais informações.
+Com sua nova especificação de conexão adicionada à especificação de fluxo apropriada, agora você pode continuar testando e enviando sua nova fonte. Consulte o guia sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.

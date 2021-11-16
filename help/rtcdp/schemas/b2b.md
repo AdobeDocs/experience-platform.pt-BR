@@ -2,9 +2,9 @@
 title: Esquemas no Real-time Customer Data Platform B2B Edition
 description: Uma visão geral da função dos esquemas do Experience Data Model (XDM) no Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Esquemas no Real-time Customer Data Platform B2B Edition
 
 O Real-time Customer Data Platform B2B Edition fornece vários padrões [Classes do Experience Data Model (XDM)](../../xdm/schema/composition.md#class) que capturam detalhes sobre entidades essenciais de dados B2B, como contas, oportunidades, campanhas e muito mais. Além disso, a CDP B2B Edition em tempo real permite definir relacionamentos muitos para um entre esses esquemas para que eles possam participar de casos de uso de segmentação avançada.
+
+>[!IMPORTANT]
+>
+>Você deve ter acesso à CDP B2B Edition em tempo real para que os esquemas B2B participem de [Perfil do cliente em tempo real](../../profile/home.md).
 
 As seguintes classes padrão são fornecidas na Real-time CDP B2B Edition:
 

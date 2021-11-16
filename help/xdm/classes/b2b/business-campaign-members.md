@@ -2,14 +2,18 @@
 title: Classe de Membros da Campanha Comercial XDM
 description: Este documento fornece uma visão geral da classe de membros da campanha comercial XDM no Experience Data Model (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 4%
+source-wordcount: '245'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Membros da Campanha Comercial XDM] classe
+
+>[!IMPORTANT]
+>
+>Esta classe destina-se a ser utilizada por organizações com acesso a [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso à CDP B2B Edition em tempo real para que essa classe participe do [Perfil do cliente em tempo real](../../../profile/home.md).
 
 [!UICONTROL Membros da Campanha Comercial XDM] é uma classe padrão do Experience Data Model (XDM) que descreve um contato ou um cliente potencial associado a uma campanha comercial.
 

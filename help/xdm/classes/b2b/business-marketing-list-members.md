@@ -2,14 +2,18 @@
 title: Classe de Membros da Lista de Marketing Corporativo XDM
 description: Este documento fornece uma visão geral da classe de membros da lista de negócios XDM no Experience Data Model (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 4%
+source-wordcount: '251'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Membros da Lista de Marketing Comercial XDM] classe
+
+>[!IMPORTANT]
+>
+>Esta classe destina-se a ser utilizada por organizações com acesso a [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso à CDP B2B Edition em tempo real para que essa classe participe do [Perfil do cliente em tempo real](../../../profile/home.md).
 
 [!UICONTROL Membros da Lista de Marketing Comercial XDM] é uma classe padrão do Experience Data Model (XDM) que descreve membros, pessoas ou contatos associados a uma lista de marketing.
 

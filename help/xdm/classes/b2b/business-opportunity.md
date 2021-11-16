@@ -2,14 +2,18 @@
 title: Classe de Oportunidade de Negócios XDM
 description: Este documento fornece uma visão geral da classe de Oportunidade de Negócios XDM no Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 6%
+source-wordcount: '237'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL Oportunidade de negócios XDM] classe
+
+>[!IMPORTANT]
+>
+>Esta classe destina-se a ser utilizada por organizações com acesso a [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso à CDP B2B Edition em tempo real para que essa classe participe do [Perfil do cliente em tempo real](../../../profile/home.md).
 
 [!UICONTROL Oportunidade de negócios XDM] é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma oportunidade de negócios.
 

@@ -5,9 +5,9 @@ title: Espaços de nomes e esquemas B2B
 topic-legacy: overview
 description: Este documento fornece uma visão geral de namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1688'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 4%
 # Espaços de nomes e esquemas B2B
 
 Este documento fornece informações sobre a configuração subjacente para os namespaces e esquemas a serem usados com fontes B2B. Este documento também fornece detalhes sobre como configurar seu utilitário de automação do Postman necessário para gerar namespaces e esquemas B2B.
+
+>[!IMPORTANT]
+>
+>Você deve ter acesso ao [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para que os esquemas B2B participem em [Perfil do cliente em tempo real](../../../../profile/home.md).
 
 ## Configurar namespaces B2B e utilitário de geração automática de esquema
 

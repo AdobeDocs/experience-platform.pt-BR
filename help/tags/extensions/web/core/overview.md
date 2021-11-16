@@ -2,10 +2,10 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 91%
+source-wordcount: '5362'
+ht-degree: 90%
 
 ---
 
@@ -542,6 +542,10 @@ Esta seção descreve os tipos de ação disponíveis na extensão principal.
 
 ### Código personalizado
 
+>[!NOTE]
+>
+>O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não suportam ES6+. Para entender o impacto do uso de funções ES6+, teste todos os navegadores da Web que devem ser compatíveis.
+
 Forneça o código que é executado depois que o evento é acionado e as condições são avaliadas.
 
 1. Dê um nome ao código da ação.
@@ -645,6 +649,10 @@ Qualquer valor constante de string que possa ser referenciado em ações ou cond
 `string`
 
 ### Custom code
+
+>[!NOTE]
+>
+>O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não suportam ES6+. Para entender o impacto do uso de funções ES6+, teste todos os navegadores da Web que devem ser compatíveis.
 
 JavaScript personalizado pode ser inserido na interface selecionando Abrir editor e inserindo o código na janela do editor.
 

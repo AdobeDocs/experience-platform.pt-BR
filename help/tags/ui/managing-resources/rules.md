@@ -1,10 +1,11 @@
 ---
 title: Regras
-description: Saiba como as extensões de tag funcionam no Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+description: Saiba como as extensões funcionam na Adobe Experience Platform.
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 82%
+source-wordcount: '1969'
+ht-degree: 99%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 82%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-As tags no Adobe Experience Platform seguem um sistema baseado em regras. Eles procuram a interação do usuário e dados associados. Quando os critérios definidos nas regras são cumpridos, a regra aciona a extensão, o script ou o código do lado do cliente identificado.
+As tags na Adobe Experience Platform seguem um sistema baseado em regras. Elas buscam a interação do usuário e dados associados. Quando os critérios definidos nas regras são cumpridos, a regra aciona a extensão, o script ou o código do lado do cliente identificado.
 
 Crie regras para integrar os dados e a funcionalidade de tecnologia de marketing e de anúncios que unifique produtos diferentes em uma única solução.
 
@@ -22,7 +23,7 @@ Crie regras para integrar os dados e a funcionalidade de tecnologia de marketing
 
 **Eventos (If):** O evento é o que você deseja que a regra procure. Isso é definido escolhendo um evento, quaisquer condições aplicáveis e quaisquer exceções.
 
-**Ações (Then):** Os acionadores ocorrem depois que os eventos de uma regra ocorrem e todas as condições são satisfeitas. Uma regra de tag pode acionar quantas ações distintas você desejar e você pode controlar a ordem em que essas ações ocorrem. Por exemplo, uma única regra para uma página de agradecimento de comércio eletrônico pode acionar ferramentas de análise e tags de terceiros a partir de uma única regra. Não há necessidade de criar regras diferentes para cada extensão ou tag.
+**Ações (Then):** Os acionadores ocorrem depois que os eventos de uma regra ocorrem e todas as condições são satisfeitas. Uma regra de tags pode acionar quantas ações distintas você quiser, e você pode controlar a ordem em que essas ações ocorrem. Por exemplo, uma única regra para uma página de agradecimento de comércio eletrônico pode acionar ferramentas de análise e tags de terceiros a partir de uma única regra. Não há necessidade de criar regras diferentes para cada extensão ou tag.
 
 Você pode adicionar mais tipos de eventos. Vários eventos são unidos com um OR, portanto, as condições da regra serão avaliadas se qualquer um dos eventos for atendido.
 
@@ -36,9 +37,9 @@ Eventos com qualquer condição são a parte *If* de uma regra.
 
 Se um evento especificado ocorrer, as condições serão avaliadas e, em seguida, as ações especificadas ocorrerão, se necessário.
 
-* **Eventos**: Especifique um ou mais eventos que devem ocorrer para acionar a regra. Vários eventos são unidos por um OR. Qualquer um dos eventos especificados acionará a regra.
+* **Eventos**: especifique um ou mais eventos que devem ocorrer para acionar a regra. Vários eventos são unidos por um OR. Qualquer um dos eventos especificados acionará a regra.
 
-* **Condições**: Restrinja o evento configurando quaisquer condições que devem ser verdadeiras para um evento acionar a regra. Uma exceção é definida como uma condição NOT. Várias condições são unidas por um AND.
+* **Condições**: restrinja o evento configurando quaisquer condições que devem ser verdadeiras para um evento acionar a regra. Uma exceção é definida como uma condição NOT. Várias condições são unidas por um AND.
 
 Os eventos disponíveis dependem das extensões instaladas. Para obter informações sobre os eventos na extensão principal, consulte [Tipos de evento da extensão principal](../../extensions/web/core/overview.md#core-extension-event-types).
 
@@ -64,7 +65,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
    >[!IMPORTANT]
    >
-   >Em uma regra do lado do cliente, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados. Por exemplo, `%viewportHeight%`. Em uma regra de encaminhamento de eventos, os elementos de dados são tokenizados com `{{` no início e `}}` no final do nome do elemento de dados. Por exemplo, `{{viewportHeight}}`.
+   >Em uma regra do lado do cliente, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados. Por exemplo, `%viewportHeight%`. Em uma regra de encaminhamento de eventos, os elementos de dados são tokenizados com `{{` no começo e `}}` no fim do nome do elemento de dados. Por exemplo, `{{viewportHeight}}`.
 
    Para referenciar dados da rede de borda, o caminho do elemento de dados deve ser `arc.event._<element>_`.
 
@@ -107,7 +108,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
    Os tipos de ação disponíveis dependem da extensão selecionada. As configurações de ação serão diferentes de acordo com o tipo de ação.
 
-   (Avançado) Aguarde para executar a próxima ação: essa opção está disponível quando a sequência de componentes da regra está ativada em sua propriedade. Quando marcado, as tags não chamarão a próxima ação até que esta seja concluída. Quando desmarcada, a próxima ação começa a ser executada imediatamente. O padrão é **[!UICONTROL Marcado]**.
+   (Avançado) Aguarde para executar a próxima ação: essa opção está disponível quando a sequência de componentes da regra está ativada em sua propriedade. Quando marcadas, as tags não chamam a próxima ação até que a ação atual seja concluída. Quando desmarcada, a próxima ação começa a ser executada imediatamente. O padrão é **[!UICONTROL Marcado]**.
 
    (Avançado) Tempo limite: essa opção está disponível quando a sequência de componentes da regra está ativada em sua propriedade. Define o tempo máximo permitido para a ação ser concluída. Se o tempo limite for atingido, a ação falhará e qualquer ação subsequente para essa regra será removida da fila de processamento. O padrão é 2000 ms.
 
@@ -124,9 +125,9 @@ A ordenação de regras permite controlar a ordem de execução das regras que c
 
 Geralmente, é importante ter as regras acionadas em uma ordem específica. Exemplos: (1) você tem várias regras que definem condicionalmente [!DNL Analytics] variáveis e você deve se certificar de que a regra com Enviar Beacon vai por último. (2) você tem uma regra que é acionada [!DNL Target] e outra regra que é acionada [!DNL Analytics] e deseja que [!DNL Target] a regra seja executada primeiro.
 
-Em última análise, a responsabilidade de executar ações em ordem é do desenvolvedor de extensão do tipo de evento que está usando. Os desenvolvedores de extensão do Adobe garantem que suas extensões funcionem conforme o esperado. Para extensões de terceiros, o Adobe fornece orientação aos desenvolvedores de extensão para implementarem isso corretamente, mas cabe a eles fazê-lo.
+Em última análise, a responsabilidade de executar ações em ordem é do desenvolvedor de extensão do tipo de evento que está usando. Os desenvolvedores de extensão da Adobe garantem que suas extensões funcionem conforme o esperado. Para extensões de terceiros, a Adobe fornece orientação aos desenvolvedores de extensão para que implementem isso corretamente, mas cabe a eles fazê-lo.
 
-O Adobe recomenda que você ordene suas regras com números positivos entre 1 e 100 (o padrão é 50). Quanto mais simples, melhor. Lembre-se de que é necessário manter sua ordem. No entanto, o Adobe reconhece que pode haver casos que podem ser limitantes, de modo que outros números são permitidos. As tags suportam números entre +/- 2.147.483.648. Você também pode usar cerca de uma dúzia de casas decimais, mas se estiver em uma situação na qual acha que precisa fazer isso, repense algumas das decisões tomadas para chegar onde você está agora.
+A Adobe recomenda que você ordene suas regras com números positivos de 1 a 100 (o padrão é 50). Quanto mais simples, melhor. Lembre-se de que é necessário manter sua ordem. No entanto, a Adobe reconhece que pode haver casos excepcionais em que isso pareça restritivo. Portanto, outros números são permitidos. As tags aceitam números entre +/- 2.147.483.648. Você também pode usar cerca de uma dúzia de casas decimais, mas se estiver em uma situação na qual acha que precisa fazer isso, repense algumas das decisões tomadas para chegar onde você está agora.
 
 >[!IMPORTANT]
 >
@@ -143,23 +144,19 @@ A ordem de carregamento das regras depende de a ação da regra estar configurad
 
 Você pode usar `document.write` nos scripts personalizados, independentemente dos eventos configurados para a regra.
 
-É possível ordenar tipos de código personalizados diferentes entre si. Por exemplo, agora você pode ter uma ação de código personalizado JavaScript e, em seguida, uma ação de código personalizado HTML, depois uma ação de código personalizado JavaScript. As tags garantem que sejam executadas nessa ordem.
+É possível ordenar tipos de código personalizados diferentes entre si. Por exemplo, agora você pode ter uma ação de código personalizado JavaScript e, em seguida, uma ação de código personalizado HTML, depois uma ação de código personalizado JavaScript. As tags garante que elas sejam executadas nessa ordem.
 
 ## Pacote de regras
 
-Os eventos e as condições da regra são sempre agrupados na biblioteca principal de tags. As ações podem ser agrupadas na biblioteca principal ou carregadas depois como subrecursos, conforme necessário. Se as ações são agrupadas ou não é determinado pelo tipo de evento da regra.
+Os eventos e as condições das regras são sempre agrupados na biblioteca de tags principal. As ações podem ser agrupadas na biblioteca principal ou carregadas depois como subrecursos, conforme necessário. Se as ações são agrupadas ou não é determinado pelo tipo de evento da regra.
 
 ### Regras com eventos &quot;Core - Library Loaded&quot; ou &quot;Core - Page Top&quot;
 
 Esses eventos precisam ser executados quase sempre (a menos que as condições avaliem como falso), de modo que, para ter eficiência, eles são agrupados na biblioteca principal, o arquivo referenciado pelo código incorporado.
 
-* **Javascript:** O JavaScript é incorporado na biblioteca principal de tags. O script personalizado é colocado em uma tag de script e gravado no documento usando `document.write`. Se a regra tiver vários scripts personalizados, eles serão escritos em ordem.
+* **JavaScript:** o JavaScript é incorporado à biblioteca de tags principal. O script personalizado é colocado em uma tag de script e gravado no documento usando `document.write`. Se a regra tiver vários scripts personalizados, eles serão escritos em ordem.
 
-   >[!NOTE]
-   >
-   >As tags usam ES5 JavaScript. O encaminhamento de eventos usa o ES6.
-
-* **HTML:** O HTML é incorporado na biblioteca principal de tags. O `document.write` é usado para gravar o HTML no documento. Se a regra tiver vários scripts personalizados, eles serão escritos em ordem.
+* **HTML:** o HTML é incorporado à biblioteca de tags principal. O `document.write` é usado para gravar o HTML no documento. Se a regra tiver vários scripts personalizados, eles serão escritos em ordem.
 
 ### Regras com qualquer outro evento
 
@@ -170,11 +167,11 @@ A Adobe não pode garantir que qualquer outra regra será acionada e que o códi
 
 ## Sequência de componentes da regra {#sequencing}
 
-O comportamento do ambiente de tempo de execução da tag depende se **[!UICONTROL Executar componentes de regra na sequência]** está ativado ou desativado para a propriedade.
+O comportamento do ambiente de tempo de execução das tags depende de a opção **[!UICONTROL Executar os componentes da regra em sequência]** estar ativada ou desativada na propriedade.
 
 ### Ativado
 
-Se estiver ativado, quando um evento é acionado no tempo de execução, as condições e ações da regra são adicionadas a uma fila de processamento, com base na ordem definida, e processadas uma de cada vez de acordo com a metodologia FIFO. A tag aguarda a conclusão do componente antes de passar para o próximo.
+Se estiver ativado, quando um evento é acionado no tempo de execução, as condições e ações da regra são adicionadas a uma fila de processamento, com base na ordem definida, e processadas uma de cada vez de acordo com a metodologia FIFO. A tag aguarda a conclusão de um componente antes de passar para o próximo.
 
 Se uma condição for avaliada como falsa ou atingir o tempo limite definido, as condições e ações subsequentes da regra serão removidas da fila.
 

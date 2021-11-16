@@ -3,9 +3,9 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 96%
 
 ---
@@ -61,9 +61,5 @@ O encaminhamento de eventos ajuda as equipes de marketing a expandir os negócio
 * Sequência de ações de regras
 
    Na seção Ação de uma regra, as regras do encaminhamento de eventos são sempre executadas sequencialmente. Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser escolhida como acontece com as tags.
-
-* Versões JavaScript de código personalizado
-
-   As tags usam a versão es5 do JavaScript. O encaminhamento de eventos usa a versão es6.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->

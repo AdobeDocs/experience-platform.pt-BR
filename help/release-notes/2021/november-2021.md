@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de novembro de 2021 para o Adobe Experience Platform.
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 24%
 
 ---
@@ -26,7 +26,7 @@ O Attribution AI é usado para atribuir créditos a pontos de contato que levam 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Suporte para vários conjuntos de dados | Agora, o Attribution AI pode assimilar vários conjuntos de dados facilmente diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Essa nova capacidade de economia de tempo oferece pontuações mais potentes e precisas com dados mais ricos de vários conjuntos de dados. |
-| Mapeamento de canal de mídia e campo de campanha | O Attribution AI agora oferece suporte para mapear canais de mídia e campos de campanha. O mapeamento do canal de mídia entre conjuntos de dados melhora os insights derivados do Attribution AI e ajuda a fornecer resultados mais claros e fáceis de interpretar. |
+| Mapeamento de canal de mídia e campo de campanha | O Attribution AI agora é compatível com o mapeamento de canais de mídia e campos de campanha. O mapeamento do canal de mídia entre conjuntos de dados melhora os insights derivados do Attribution AI e ajuda a fornecer resultados mais claros e fáceis de interpretar. |
 
 Para obter mais informações sobre o Attribution AI, consulte o [Documentação do Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 

@@ -2,9 +2,9 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
+source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,14 @@ Exportar segmento - você está exportando todos os membros de um segmento (púb
 ## Configurar destinos e ativar segmentos {#set-up}
 
 Para obter instruções detalhadas sobre como configurar o destino e ativar segmentos, leia [Encaminhar um segmento do Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) na documentação do Marketo.
+
+O vídeo abaixo também demonstra as etapas para configurar um destino do Marketo e ativar segmentos.
+
+>[!NOTE]
+>
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o guia vinculado acima.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 <!--
 

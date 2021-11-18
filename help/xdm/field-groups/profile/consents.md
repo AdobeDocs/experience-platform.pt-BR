@@ -4,45 +4,32 @@ title: Grupo de campos Esquema de Consentimento e Preferências
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Consents and Preferences schema .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
 workflow-type: tm+mt
-source-wordcount: '2317'
-ht-degree: 2%
+source-wordcount: '958'
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL Grupo Consentimentos e ] Preferências
+# [!UICONTROL Consentimentos e preferências] grupo de campos
 
-[!UICONTROL Consentimentos e ]preferências é um grupo de campos padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md), que é usada para capturar informações de consentimento e preferência do cliente.
+[!UICONTROL Consentimentos e preferências] é um grupo de campos padrão para a variável [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura informações de consentimento e preferência para um cliente individual.
 
 >[!NOTE]
 >
->Como esse grupo de campos é compatível somente com [!DNL XDM Individual Profile], ele não pode ser usado para schemas [!DNL XDM ExperienceEvent]. Se desejar incluir dados de consentimento e preferência no esquema Evento de experiência, adicione o tipo de dados [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md) ao schema por meio do uso de um [grupo de campos personalizado](../../ui/resources/field-groups.md#create).
+>Como esse grupo de campos é compatível somente com [!DNL XDM Individual Profile], ele não pode ser usado para [!DNL XDM ExperienceEvent] esquemas. Se desejar incluir dados de consentimento e preferência no esquema Evento de experiência, adicione a variável [[!UICONTROL Consentimento para privacidade, personalização e preferências de marketing] tipo de dados](../../data-types/consents.md) para o schema por meio do uso de um [grupo de campos personalizado](../../ui/resources/field-groups.md#create) em vez disso.
 
 ## Estrutura do grupo de campos {#structure}
 
->[!IMPORTANT]
->
->O grupo de campos [!UICONTROL Consentimentos e Preferências] foi projetado para abranger uma variedade de casos de uso de consentimento e gerenciamento de preferências. Como resultado, este documento descreve o uso dos campos do grupo de campos em termos gerais, e só faz sugestões sobre como você deve interpretar o uso desses campos. Consulte sua equipe jurídica de privacidade para alinhar a estrutura do grupo de campo à maneira como sua organização interpreta e apresenta essas opções de consentimento e preferência aos clientes.
-
-O grupo de campos [!UICONTROL Consentimentos e Preferências] fornece vários campos usados para capturar informações **consentimento** e **preferência**.
-
-Um consentimento é uma opção que permite ao cliente especificar como seus dados podem ser usados. A maioria dos consentimentos tem um aspecto legal, na medida em que algumas jurisdições exigem a obtenção de permissão antes que os dados possam ser usados de uma maneira específica, ou exigem que o cliente tenha a opção de interromper esse uso (recusa) se não for necessário consentimento afirmativo.
-
-Uma preferência é uma opção que permite ao cliente especificar como os diferentes aspectos de sua experiência com uma marca devem ser tratados. Eles se encaixam em duas categorias:
-
-* **Preferências** de personalização: Preferências sobre como a marca deve personalizar experiências entregues a um cliente.
-* **Preferências** de marketing: Preferências sobre se uma marca tem permissão para entrar em contato com um cliente por meio de vários canais.
-
-A captura de tela a seguir mostra como a estrutura do grupo de campos é representada na interface do usuário da plataforma:
+O [!UICONTROL Consentimentos e preferências] o grupo de campos fornece um único campo do tipo objeto, `consents`, para capturar informações de consentimento e preferência. Esse campo estende o [[!UICONTROL Consentimento para privacidade, personalização e preferências de marketing] tipo de dados](../../data-types/consents.md), removendo o `adID` e adicionar um `idSpecific` campo de mapa.
 
 ![](../../images/field-groups/consent.png)
 
 >[!TIP]
 >
->Consulte o guia em [exploração de recursos XDM](../../ui/explore.md) para obter etapas sobre como pesquisar qualquer recurso XDM e inspecionar sua estrutura na interface do usuário da plataforma.
+>Consulte o guia sobre [exploração de recursos XDM](../../ui/explore.md) para obter etapas sobre como pesquisar qualquer recurso XDM e inspecionar sua estrutura na interface do usuário da plataforma.
 
-O JSON a seguir mostra um exemplo do tipo de dados que o grupo de campos [!UICONTROL Consents and Preferences] pode processar. As informações sobre o uso específico de cada um desses campos são fornecidas nas seções a seguir.
+O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL Consentimentos e preferências] grupo de campos pode processar. As informações sobre o uso específico de cada um desses campos são fornecidas nas seções a seguir.
 
 ```json
 {
@@ -107,177 +94,24 @@ O JSON a seguir mostra um exemplo do tipo de dados que o grupo de campos [!UICON
 >Você pode gerar dados JSON de amostra para qualquer esquema XDM definido no Experience Platform para ajudar a visualizar como os dados de consentimento e preferência do cliente devem ser mapeados. Consulte a documentação a seguir para obter mais informações:
 >
 >* [Gerar dados de amostra na interface do usuário](../../ui/sample.md)
-* [Gerar dados de amostra na API](../../api/sample-data.md)
+>* [Gerar dados de amostra na API](../../api/sample-data.md)
 
 
-## Casos de uso do campo
-
-Os casos de uso planejados para cada um desses campos são fornecidos nas seções abaixo.
-
-### `collect`
-
-`collect` representa o consentimento do cliente em ter seus dados coletados.
-
-```json
-"collect" : {
-  "val": "y"
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
-
-{style=&quot;table-layout:auto&quot;}
-
-### `share`
-
-`share` representa o consentimento do cliente para saber se seus dados podem ser compartilhados com (ou vendidos a) terceiros.
-
-```json
-"share" : {
-  "val": "y"
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
-
-{style=&quot;table-layout:auto&quot;}
-
-### `personalize` {#personalize}
-
-`personalize` O captura as preferências do cliente sobre quais maneiras seus dados podem ser usados para personalização. Os clientes podem recusar casos de uso de personalização específica ou recusar totalmente a personalização.
-
->[!IMPORTANT]
-`personalize` não abrange casos de uso de marketing. Por exemplo, se um cliente recusar a personalização de todos os canais, ele não deverá parar de receber comunicações por meio desses canais. Em vez disso, as mensagens recebidas devem ser genéricas e não baseadas no seu perfil.
-Pelo mesmo exemplo, se um cliente recusar o marketing direto para todos os canais (por meio de `marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber mensagens, mesmo que a personalização seja permitida.
-
-```json
-"personalize": {
-  "content": {
-    "val": "y",
-  }
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `content` | Representa as preferências do cliente para conteúdo personalizado em seu site ou aplicativo. |
-| `val` | A preferência de personalização fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não precisa ser solicitado a fornecer o consentimento, o valor desse campo deve indicar a base em que a personalização deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
-
-{style=&quot;table-layout:auto&quot;}
-
-### `marketing` {#marketing}
-
-`marketing` O captura as preferências do cliente com relação aos fins de marketing para os quais seus dados podem ser usados. Os clientes podem recusar casos de uso de marketing específicos ou recusar totalmente o marketing direto.
-
-```json
-"marketing": {
-  "preferred": "email",
-  "any": {
-    "val": "u"
-  },
-  "email": {
-    "val": "n",
-    "reason": "Too Frequent"
-  },
-  "push": {
-    "val": "y"
-  },
-  "sms": {
-    "val": "y"
-  }
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `preferred` | Indica o canal preferencial do cliente para receber comunicações. Consulte o [apêndice](#preferred-values) para obter os valores aceitos. |
-| `any` | Representa as preferências do cliente para o marketing direto como um todo. A preferência de consentimento fornecida neste campo é considerada a preferência &quot;padrão&quot; para qualquer canal de marketing, a menos que seja substituída por subcampos adicionais fornecidos em `marketing`. Se você planeja usar opções de consentimento mais granulares, é recomendável excluir esse campo.<br><br>Se o valor estiver definido como  `n`, então todas as configurações de personalização mais específicas deverão ser ignoradas. Se o valor estiver definido como `y`, então todas as opções de personalização com granularidade mais fina também deverão ser tratadas como `y`, a menos que explicitamente definidas como `n`. Se o valor não for definido, os valores para cada opção de personalização deverão ser honrados conforme especificado. |
-| `email` | Indica se o cliente concorda em receber mensagens de email. O cliente também pode fornecer preferências para assinaturas individuais dentro desse canal. Consulte a seção [subscriptions](#subscriptions) abaixo para obter mais informações. |
-| `push` | Indica se o cliente permite receber notificações por push. O cliente também pode fornecer preferências para assinaturas individuais dentro desse canal. Consulte a seção [subscriptions](#subscriptions) abaixo para obter mais informações. |
-| `sms` | Indica se o cliente concorda em receber mensagens de texto. O cliente também pode fornecer preferências para assinaturas individuais dentro desse canal. Consulte a seção [subscriptions](#subscriptions) abaixo para obter mais informações. |
-| `val` | A preferência fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não tenha que ser solicitado a fornecer o consentimento, o valor desse campo deve indicar a base em que o caso de uso de marketing deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
-| `time` | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing foi alterada, se aplicável. Observe que, se o carimbo de data e hora de qualquer preferência individual for igual ao fornecido em `metadata`, esse campo não precisará ser definido para essa preferência. |
-| `reason` | Quando um cliente recusa um caso de uso de marketing, esse campo de cadeia de caracteres representa o motivo pelo qual o cliente optou por não participar. |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### `subscriptions` {#subscriptions}
-
-As propriedades `email`, `push` e `sms` do objeto `marketing` podem representar as assinaturas do cliente para esses canais individuais. Isso é feito adicionando uma propriedade `subscriptions` ao canal de marketing em questão.
-
-```json
-"marketing": {
-  "email": {
-    "val": "y",
-    "subscriptions": {
-      "daily-mail": {
-        "val": "y",
-        "type": "paid",
-        "subscribers": {
-          "john@xyz.com": {
-            "time": "2019-01-01T15:52:25+00:00",
-            "source": "website"
-          }
-        }
-      },
-      "shipped": {
-        "val": "y",
-
-        "subscribers": {
-          "john@xyz.com": {
-            "time": "2021-01-01T08:32:53+07:00",
-            "source": "website"
-          },
-          "jane@xyz.com": {
-            "time": "2020-02-03T07:54:21+07:00",
-            "source": "call center",
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `type` | O tipo de assinatura. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos. |
-| `subscribers` | Um campo opcional tipo mapa que representa um conjunto de identificadores (como endereços de email ou números de telefone) que assinaram uma assinatura específica. Cada chave nesse objeto representa o identificador em questão e contém duas subpropriedades: <ul><li>`time`: Um carimbo de data e hora ISO 8601, de quando a identidade é subscrita, se aplicável.</li><li>`source`: A origem do assinante. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-
-### `metadata`
-
-`metadata` captura metadados gerais sobre os consentimentos e preferências do cliente sempre que foram atualizados pela última vez.
-
-```json
-"metadata": {
-  "time": "2019-01-01T15:52:25+00:00",
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `time` | Um carimbo de data e hora ISO 8601 para a última vez que qualquer consentimento e preferência do cliente foi atualizado. Esse campo pode ser usado em vez de aplicar carimbos de data e hora a preferências individuais para reduzir a carga e a complexidade. Fornecer um valor `time` em uma preferência individual substitui o carimbo de data e hora `metadata` dessa preferência específica. |
-
-{style=&quot;table-layout:auto&quot;}
+Para obter informações sobre como usar a maioria dos campos fornecidos pelo grupo de campos, consulte o guia no [Tipo de dados de Consentimentos e Preferências](../../data-types/consents.md). As subseções abaixo focalizam os atributos exclusivos adicionados pelo grupo de campos ao tipo de dados.
 
 ### `idSpecific`
 
 `idSpecific` pode ser usado quando um consentimento ou preferência específico não se aplica universalmente a um cliente, mas é restrito a um único dispositivo ou ID. Por exemplo, um cliente pode recusar o recebimento de emails para um endereço, enquanto pode permitir emails em outro.
 
 >[!IMPORTANT]
-Os consentimentos e preferências de nível de canal (ou seja, aqueles fornecidos em `consents` fora de `idSpecific`) se aplicam às IDs nesse canal. Portanto, todos os consentimentos e preferências no nível do canal afetam diretamente se configurações equivalentes específicas de ID ou dispositivo são respeitadas:
-* Se o cliente tiver optado por não participar no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` serão ignorados.
-* Se o consentimento ou a preferência no nível do canal não estiver definida ou o cliente tiver optado por participar, os consentimentos ou preferências equivalentes em `idSpecific` serão honrados.
+>
+>Consentimentos e preferências no nível do canal (ou seja, aqueles fornecidos em `consents` fora de `idSpecific`) se aplicam a todas as IDs nesse canal. Portanto, todos os consentimentos e preferências no nível do canal afetam diretamente se configurações equivalentes específicas de ID ou dispositivo são respeitadas:
+>
+>* Se o cliente tiver optado por não participar no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` são ignoradas.
+>* Se o consentimento ou a preferência no nível do canal não estiver definida ou o cliente tiver optado por participar, os consentimentos ou preferências equivalentes em `idSpecific` são honradas.
 
 
-Cada chave no objeto `idSpecific` representa um namespace de identidade específico reconhecido pelo Adobe Experience Platform Identity Service. Embora você possa definir seus próprios namespaces personalizados para categorizar identificadores diferentes, é recomendável usar um dos namespaces padrão fornecidos pelo Serviço de identidade para reduzir os tamanhos de armazenamento para o Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte a [visão geral do namespace de identidade](../../../identity-service/namespaces.md) na documentação do Serviço de identidade.
+Cada tecla na `idSpecific` representa um namespace de identidade específico reconhecido pelo Adobe Experience Platform Identity Service. Embora você possa definir seus próprios namespaces personalizados para categorizar identificadores diferentes, é recomendável usar um dos namespaces padrão fornecidos pelo Serviço de identidade para reduzir os tamanhos de armazenamento para o Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte [visão geral do namespace de identidade](../../../identity-service/namespaces.md) na documentação do Serviço de identidade.
 
 As chaves de cada objeto de namespace representam os valores de identidade exclusivos para os quais o cliente definiu preferências. Cada valor de identidade pode conter um conjunto completo de consentimentos e preferências, formatados da mesma forma que `consents`.
 
@@ -310,13 +144,13 @@ As chaves de cada objeto de namespace representam os valores de identidade exclu
 }
 ```
 
-Nos objetos `marketing` fornecidos na seção `idSpecific`, os campos `any` e `preferred` não são compatíveis. Esses campos só podem ser configurados no nível do usuário. Além disso, as `idSpecific` preferências de marketing para `email`, `sms` e `push` não são compatíveis com os campos `subscriptions`.
+Within `marketing` objetos fornecidos no `idSpecific` seção , a variável `any` e `preferred` campos não são compatíveis. Esses campos só podem ser configurados no nível do usuário. Além disso, a variável `idSpecific` preferências de marketing para `email`, `sms`e `push` não suporta `subscriptions` campos.
 
-Também há um consentimento que só pode ser fornecido na seção `idSpecific`: `adID`. Este campo é coberto pela subseção abaixo.
+Há também um consentimento que só pode ser fornecido no `idSpecific` seção: `adID`. Este campo é coberto pela subseção abaixo.
 
 #### `adID`
 
-O consentimento `adID` representa o consentimento do cliente para saber se uma ID do anunciante (IDFA ou GAID) pode ser usada para vincular o cliente entre aplicativos neste dispositivo. Esse valor só pode ser configurado no namespace de identidade `ECID` na seção `idSpecific` e não pode ser definido para outros namespaces ou no nível do usuário para esse grupo de campos.
+O `adID` o consentimento representa o consentimento do cliente para se uma ID do anunciante (IDFA ou GAID) pode ser usada para vincular o cliente entre aplicativos neste dispositivo. Esse valor só pode ser configurado na variável `ECID` namespace de identidade na `idSpecific` e não pode ser definido para outros namespaces ou no nível do usuário para esse grupo de campos.
 
 ```json
 "idSpecific": {
@@ -339,66 +173,25 @@ O consentimento `adID` representa o consentimento do cliente para saber se uma I
 ```
 
 >[!NOTE]
-Não é esperado que você defina esse valor diretamente, pois o Adobe Experience Platform Mobile SDK o define automaticamente quando apropriado.
+>
+>Não é esperado que você defina esse valor diretamente, pois o Adobe Experience Platform Mobile SDK o define automaticamente quando apropriado.
 
 ## Inserção de dados usando o grupo de campos {#ingest}
 
-Para usar o grupo de campos [!UICONTROL Consents and Preferences] para assimilar dados de consentimento dos clientes, você deve criar um conjunto de dados com base em um esquema que contenha esse grupo de campos.
+Para usar o [!UICONTROL Consentimentos e preferências] para assimilar dados de consentimento dos clientes, é necessário criar um conjunto de dados com base em um esquema que contenha esse grupo de campos.
 
-Consulte o tutorial em [criar um esquema na interface do usuário](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir grupos de campos a campos. Depois de criar um schema contendo um campo com o grupo de campos [!UICONTROL Consents and Preferences], consulte a seção sobre [criação de um conjunto de dados](../../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, seguindo as etapas para criar um conjunto de dados com um esquema existente.
+Veja o tutorial em [criação de um schema na interface do usuário](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir grupos de campos a campos. Depois de criar um schema contendo um campo com a variável [!UICONTROL Consentimentos e preferências] grupo de campos, consulte a seção em [criação de um conjunto de dados](../../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, siga as etapas para criar um conjunto de dados com um esquema existente.
 
 >[!IMPORTANT]
-Se desejar enviar dados de consentimento para [!DNL Real-time Customer Profile], é necessário criar um schema habilitado para [!DNL Profile] com base na classe [!DNL XDM Individual Profile] que contém o grupo de campos [!UICONTROL Consentes e Preferências]. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas aos requisitos [!DNL Real-time Customer Profile] para schemas e conjuntos de dados.
-Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral sobre [mesclar políticas](../../../rtcdp/profile/merge-policies.md) para obter mais informações.
+>
+>Se desejar enviar dados de consentimento para o [!DNL Real-time Customer Profile], é necessário criar um [!DNL Profile]-enabled schema baseado no [!DNL XDM Individual Profile] classe que contém [!UICONTROL Consentimentos e preferências] grupo de campos. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas a [!DNL Real-time Customer Profile] requisitos para esquemas e conjuntos de dados.
+>
+>Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral em [políticas de mesclagem](../../../rtcdp/profile/merge-policies.md) para obter mais informações.
 
 ## Lidar com alterações de consentimento e preferência
 
 Quando um cliente altera seus consentimentos ou preferências no seu site, essas alterações devem ser coletadas e aplicadas imediatamente usando o [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). Se um cliente recusar a coleta de dados, toda a coleta de dados deverá ser interrompida imediatamente. Se um cliente recusar a personalização, então não deverá haver personalização na próxima página que visitar.
 
-## Apêndice {#appendix}
+## Próximas etapas
 
-As seções abaixo fornecem informações de referência adicionais relacionadas ao grupo de campos [!UICONTROL Consentimentos e Preferências].
-
-### Valores aceitos para `val` {#choice-values}
-
-A tabela a seguir descreve os valores aceitos para `val`:
-
-| Valor | Title | Descrição |
-| --- | --- | --- |
-| `y` | Sim | O cliente aceitou o consentimento ou a preferência. Em outras palavras, eles **do** consentiram com o uso de seus dados, conforme indicado pelo consentimento ou preferência em questão. |
-| `n` | Não | O cliente recusou o consentimento ou a preferência. Em outras palavras, eles **não** consentiram com o uso de seus dados, conforme indicado pelo consentimento ou preferência em questão. |
-| `p` | Verificação pendente | O sistema ainda não recebeu um consentimento ou valor de preferência final. Isso é usado com mais frequência como parte de um consentimento que requer verificação em duas etapas. Por exemplo, se um cliente optar por receber emails, esse consentimento será definido como `p` até que selecione um link em um email para verificar se forneceu o endereço de email correto, momento em que o consentimento seria atualizado para `y`.<br><br>Se esse consentimento ou preferência não usar um processo de verificação de dois conjuntos, a  `p` escolha poderá ser usada para indicar que o cliente ainda não respondeu ao prompt de consentimento. Por exemplo, você pode definir automaticamente o valor para `p` na primeira página de um site, antes que o cliente tenha respondido ao prompt de consentimento. Em jurisdições que não exigem consentimento explícito, você também pode usá-lo para indicar que o cliente não recusou explicitamente (em outras palavras, o consentimento é presumido). |
-| `u` | Desconhecido | As informações de consentimento ou preferência do cliente são desconhecidas. |
-| `LI` | Interesse legítimo | O interesse comercial legítimo em recolher e processar esses dados para a finalidade especificada supera o potencial dano que isso representa para o indivíduo. |
-| `CT` | Contrato | A recolha de dados para o fim especificado é necessária para cumprir as obrigações contratuais com o indivíduo. |
-| `CP` | Cumprimento de uma obrigação legal | A recolha de dados para a finalidade especificada é necessária para cumprir as obrigações legais da empresa. |
-| `VI` | Interesse vital do indivíduo | A recolha de dados para o fim especificado é necessária para proteger os interesses vitais do indivíduo. |
-| `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para levar a cabo uma missão de interesse público ou no exercício da autoridade oficial. |
-
-{style=&quot;table-layout:auto&quot;}
-
-### Valores aceitos para `preferred` {#preferred-values}
-
-A tabela a seguir descreve os valores aceitos para `preferred`:
-
-| Valor | Descrição |
-| --- | --- |
-| `email` | Mensagens de email. |
-| `push` | Notificações por push. |
-| `inApp` | Mensagens no aplicativo. |
-| `sms` | Mensagens SMS. |
-| `phone` | Interações de chamada telefônica. |
-| `phyMail` | Correio físico. |
-| `inVehicle` | Mensagens no veículo. |
-| `inHome` | Mensagens na casa. |
-| `iot` | Mensagens de Internet of stuff (IoT). |
-| `social` | Conteúdo de redes sociais. |
-| `other` | Um canal que não se encaixa em uma categoria padrão. |
-| `none` | Nenhum canal preferencial. |
-| `unknown` | O canal preferido é desconhecido. |
-
-{style=&quot;table-layout:auto&quot;}
-
-### Schema completo [!UICONTROL Consentimentos e Preferências] {#full-schema}
-
-Para exibir o esquema completo do grupo de campos [!UICONTROL Consents and Preferences], consulte o [repositório XDM oficial](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
+Este documento abrangia a estrutura e a utilização do [!UICONTROL Consentimentos e preferências] grupo de campos. Para obter mais informações sobre os outros campos fornecidos pelo grupo de campos, consulte o documento no [[!UICONTROL Consentimento para privacidade, personalização e preferências de marketing] tipo de dados](../../data-types/consents.md).

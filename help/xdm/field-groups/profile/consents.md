@@ -4,9 +4,9 @@ title: Grupo de campos Esquema de Consentimento e Preferências
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Consents and Preferences schema .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ O [!UICONTROL Consentimentos e preferências] o grupo de campos fornece um únic
 >
 >Consulte o guia sobre [exploração de recursos XDM](../../ui/explore.md) para obter etapas sobre como pesquisar qualquer recurso XDM e inspecionar sua estrutura na interface do usuário da plataforma.
 
-O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL Consentimentos e preferências] grupo de campos pode processar. As informações sobre o uso específico de cada um desses campos são fornecidas nas seções a seguir.
+O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL Consentimentos e preferências] grupo de campos pode processar. Para obter informações sobre como usar a maioria dos campos fornecidos pelo grupo de campos, consulte o guia no [Tipo de dados de Consentimentos e Preferências](../../data-types/consents.md). As subseções abaixo focalizam os atributos exclusivos adicionados pelo grupo de campos ao tipo de dados.
 
 ```json
 {
@@ -96,8 +96,6 @@ O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL C
 >* [Gerar dados de amostra na interface do usuário](../../ui/sample.md)
 >* [Gerar dados de amostra na API](../../api/sample-data.md)
 
-
-Para obter informações sobre como usar a maioria dos campos fornecidos pelo grupo de campos, consulte o guia no [Tipo de dados de Consentimentos e Preferências](../../data-types/consents.md). As subseções abaixo focalizam os atributos exclusivos adicionados pelo grupo de campos ao tipo de dados.
 
 ### `idSpecific`
 

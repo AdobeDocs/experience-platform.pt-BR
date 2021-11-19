@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: Respostas às perguntas mais frequentes sobre os destinos do Adobe Experience Platform
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '798'
 ht-degree: 4%
 
 ---
@@ -77,7 +77,7 @@ Para obter explicações detalhadas sobre os requisitos de correspondência de I
 
 **Posso criar vários destinos do Facebook na interface do usuário da plataforma para contas Facebook separadas?**
 
-Um destino Facebook no Experience Platform é 1:1 para uma conta de anúncio no Facebook. Você pode criar um destino Facebook separado para cada conta de anúncio do Facebook em sua empresa. Siga as [tutorial de conexão de destino](/help/destinations/ui/connect-destination.md) e conecte-se a uma conta Facebook separada para cada novo destino do Facebook na interface do usuário da plataforma.
+Sim. Um destino Facebook no Experience Platform é 1:1 para uma conta de anúncio no Facebook. Você pode criar um destino Facebook separado para cada conta de anúncio do Facebook em sua empresa. Siga as [tutorial de conexão de destino](/help/destinations/ui/connect-destination.md) e conecte-se a uma conta Facebook separada para cada novo destino do Facebook na interface do usuário da plataforma. Não há limite para o número de contas de anúncio do Facebook às quais você pode se conectar.
 
 ## Públicos-alvo correspondentes ao linkedIn {#linkedin}
 

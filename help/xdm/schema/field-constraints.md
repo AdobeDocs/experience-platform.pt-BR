@@ -5,10 +5,10 @@ title: Restrições de Tipo de Campo XDM
 topic-legacy: overview
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
+source-git-commit: 684237122e7384f6c611e1c602c30af2518aba58
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 4%
+source-wordcount: '1153'
+ht-degree: 3%
 
 ---
 
@@ -18,9 +18,9 @@ Nos esquemas do Experience Data Model (XDM), o tipo de campo restringe o tipo de
 
 ## Introdução
 
-Antes de usar este guia, revise as [noções básicas da composição do schema](./composition.md) para obter uma introdução a esquemas XDM, classes e grupos de campos de esquema.
+Antes de usar este guia, reveja o [noções básicas da composição do schema](./composition.md) para obter uma introdução a esquemas, classes e grupos de campos do esquema XDM.
 
-Se você planeja definir seus próprios tipos de campo na API, é altamente recomendável começar com o [Guia do desenvolvedor do Registro de Schema](../api/getting-started.md) para saber como criar grupos de campo e tipos de dados para incluir seus campos personalizados. Se você estiver usando a interface do usuário do Experience Platform para criar seus esquemas, consulte o guia sobre [definição de campos na interface do usuário](../ui/fields/overview.md) para saber como implementar restrições em campos definidos em grupos de campos personalizados e tipos de dados.
+Se você planeja definir seus próprios tipos de campo na API, é altamente recomendável começar com a variável [Guia do desenvolvedor do Registro de Schema](../api/getting-started.md) para saber como criar grupos de campos e tipos de dados para incluir campos personalizados no. Se você estiver usando a interface do usuário do Experience Platform para criar seus esquemas, consulte o guia em [definição de campos na interface do usuário](../ui/fields/overview.md) para saber como implementar restrições em campos definidos em grupos de campos e tipos de dados personalizados.
 
 ## Estrutura básica e exemplos
 
@@ -28,7 +28,7 @@ O XDM é criado sobre o Esquema JSON e, portanto, os campos XDM herdam uma sinta
 
 >[!NOTE]
 >
->Consulte o [Guia de fundamentos da API](../../landing/api-fundamentals.md#json-schema) para obter mais informações sobre o Esquema JSON e outras tecnologias subjacentes nas APIs da plataforma.
+>Consulte a [Guia de fundamentos da API](../../landing/api-fundamentals.md#json-schema) para obter mais informações sobre o Esquema JSON e outras tecnologias subjacentes nas APIs da plataforma.
 
 A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON, juntamente com um exemplo de valor que está em conformidade com o tipo :
 
@@ -61,11 +61,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Longo]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "máximo": 9007199254740991,
-  "mínimo": -9007199254740991
-}</pre>
+{ "type": "integer", "maximum": 9007199254740991, "mínimo": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -73,11 +69,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Número inteiro]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "máximo": 2147483648,
-  "mínimo": -2147483648
-}</pre>
+{ "type": "integer", "maximum": 2147483648, "mínimo": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -85,11 +77,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Curto]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "máximo": 32768
-  "mínimo": -32768
-}</pre>
+{ "type": "integer", "maximum": 32768, "mínimo": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -97,11 +85,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "máximo": 128,
-  "mínimo": -128
-}</pre>
+{ "type": "integer", "maximum": 128, "mínimo": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -109,10 +93,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Data]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "string",
-  "format": "date"
-}</pre>
+{ "type": "string", "format": "date" }</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -120,10 +101,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "string",
-  "format": "date-time"
-}</pre>
+{ "type": "string", "format": "date-time" }</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -138,7 +116,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
   </tbody>
 </table>
 
-**Todas as cadeias de caracteres formatadas por data devem estar em conformidade com o padrão ISO 8601 ([RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**Todas as strings formatadas na data devem estar em conformidade com o padrão ISO 8601 ([RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
 
 ## Mapeamento de tipos XDM para outros formatos
 
@@ -150,7 +128,7 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 
 >[!IMPORTANT]
 >
->Entre os tipos XDM padrão listados nas tabelas abaixo, o tipo [!UICONTROL Map] também é incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem razoavelmente ser incluídas em um schema estático e devem ser tratadas como valores de dados.
+>Entre os tipos XDM padrão listados nas tabelas abaixo, a variável [!UICONTROL Mapa] também está incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem razoavelmente ser incluídas em um schema estático e devem ser tratadas como valores de dados.
 >
 >Os campos do tipo mapa são reservados para uso do setor e do schema do fornecedor e, portanto, não podem ser usados em recursos personalizados definidos por você. A inclusão do tipo de mapa nas tabelas abaixo destina-se apenas a ajudar você a determinar como mapear os dados existentes para XDM se eles estiverem armazenados atualmente em qualquer um dos formatos listados abaixo.
 
@@ -164,10 +142,10 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | [!UICONTROL Número inteiro] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Curto] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotação: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Data ] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Data] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotação: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Booleano] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Mapa] | `MAP`-grupo anotado<br><br> (`<key-type>` deve ser  `STRING`) | `MapType`<br><br>(`keyType` deve ser  `StringType`) | `java.util.Map` |
+| [!UICONTROL Mapa] | `MAP`-grupo anotado<br><br>(`<key-type>` deve ser `STRING`) | `MapType`<br><br>(`keyType` deve ser `StringType`) | `java.util.Map` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -181,7 +159,7 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | [!UICONTROL Número inteiro] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Curto] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Data ] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Data] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL Booleano] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Mapa] | `Map` | (N/D) | `object` |
@@ -198,7 +176,7 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | [!UICONTROL Número inteiro] | `int` | `Integer` | `int32` |
 | [!UICONTROL Curto] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Data ] | `date` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
+| [!UICONTROL Data] | `date` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
 | [!UICONTROL Booleano] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
 | [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
@@ -207,15 +185,15 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 
 ## Definição de tipos de campo XDM na API {#define-fields}
 
-Todos os campos XDM são definidos usando as restrições padrão [JSON Schema](https://json-schema.org/) que se aplicam ao tipo de campo, com restrições adicionais para nomes de campo que são impostas por [!DNL Experience Platform]. A API de Registro de Esquema permite definir tipos de campo adicionais por meio do uso de formatos e restrições opcionais. Os tipos de campo XDM são expostos pelo atributo de nível de campo, `meta:xdmType`.
+Todos os campos XDM são definidos usando o padrão [Esquema JSON](https://json-schema.org/) restrições que se aplicam ao tipo de campo, com restrições adicionais para nomes de campo que são aplicadas por [!DNL Experience Platform]. A API de Registro de Esquema permite definir tipos de campo adicionais por meio do uso de formatos e restrições opcionais. Os tipos de campo XDM são expostos pelo atributo de nível de campo, `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` é um valor gerado pelo sistema e, portanto, você não é obrigado a adicionar essa propriedade ao JSON do seu campo ao usar a API. A prática recomendada é usar os tipos de Esquema JSON (como `string` e `integer`) com as restrições mínimas/máximas apropriadas, conforme definido na tabela abaixo.
+>`meta:xdmType` é um valor gerado pelo sistema e, portanto, você não é obrigado a adicionar essa propriedade ao JSON do seu campo ao usar a API. A prática recomendada é usar tipos de Esquema JSON (como `string` e `integer`) com as restrições mínimas/máximas apropriadas, conforme definido na tabela abaixo.
 
-A tabela a seguir descreve a formatação apropriada para definir tipos de campos diferentes, incluindo aqueles com propriedades opcionais. Mais informações sobre propriedades opcionais e palavras-chave específicas do tipo estão disponíveis na [documentação do Esquema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
+A tabela a seguir descreve a formatação apropriada para definir tipos de campos diferentes, incluindo aqueles com propriedades opcionais. Mais informações sobre propriedades opcionais e palavras-chave específicas do tipo estão disponíveis no [Documentação do Esquema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Para começar, encontre o tipo de campo desejado e use o código de amostra fornecido para criar sua solicitação de API para [criar um grupo de campos](../api/field-groups.md#create) ou [criar um tipo de dados](../api/data-types.md#create).
+Para começar, encontre o tipo de campo desejado e use o código de amostra fornecido para criar sua solicitação de API para [criação de um grupo de campos](../api/field-groups.md#create) ou [criação de um tipo de dados](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
@@ -234,11 +212,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-    "type": "string",
-    "padrão": "^[A-Z]{2}$",
-    "maxLength": 2
-}</pre>
+"sampleField": { "type": "string", "pattern": "^[A-Z]{2}$", "maxLength": 2 }</pre>
     </td>
   </tr>
   <tr>
@@ -246,10 +220,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "format": "uri"
-}</pre>
+"sampleField": { "type": "string", "format": "uri" }</pre>
     </td>
   </tr>
   <tr>
@@ -260,22 +231,10 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
         <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>Os valores de enum restritos são fornecidos sob a matriz <code>enum</code>, enquanto rótulos opcionais voltados para o cliente para cada valor podem ser fornecidos em <code>meta:enum</code>:
+    <td>Os valores de enum restritos são fornecidos sob a variável <code>enum</code> , enquanto etiquetas opcionais voltadas para o cliente para cada valor podem ser fornecidas em <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "enum": [
-      "value1",
-      "value2",
-      "value3"
-  ],
-  "meta:enum": {
-      "value1": "Valor 1",
-      "value2": "Valor 2",
-      "value3": "Valor 3"
-  },
-  "default": "value1"
-}</pre>
+"sampleField": { "type": "string", "enum": [ "value1", "value2", "value3" ], "meta:enum": { "value1": "Valor 1", "valor 2": "Value 2", "value3": "Value 3" }, "default": "value1" }</pre>
+    <br>Observe que a variável <code>meta:enum</code> valor faz <strong>not</strong> declare uma enumeração ou direcione qualquer validação de dados sozinha. Na maioria dos casos, as cadeias de caracteres fornecidas em <code>meta:enum</code> são igualmente fornecidas nos termos do <code>enum</code> para garantir que os dados sejam restritos. No entanto, existem alguns casos de uso em que <code>meta:enum</code> é fornecido sem um <code>enum</code> matriz. Veja o tutorial em <a href="../tutorials/extend-soft-enum.md">extensão de enumerações suaves</a> para obter mais informações.
     </td>
   </tr>
   <tr>
@@ -283,9 +242,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "número"
-}</pre>
+"sampleField": { "type": "number" }</pre>
     </td>
   </tr>
   <tr>
@@ -293,11 +250,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "mínimo": -9007199254740992,
-  "máximo": 9007199254740992
-}</pre>
+"sampleField": { "type": "integer", "Minimum": -9007199254740992, "máximo": 9007199254740992 }</pre>
     </td>
   </tr>
   <tr>
@@ -305,11 +258,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "mínimo": -2147483648,
-  "máximo": 2147483648
-}</pre>
+"sampleField": { "type": "integer", "Minimum": -2147483648, "máximo": 2147483648 }</pre>
     </td>
   </tr>
   <tr>
@@ -317,11 +266,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "mínimo": -32768
-  "máximo": 32768
-}</pre>
+"sampleField": { "type": "integer", "Minimum": -32768, "máximo": 32768 }</pre>
     </td>
   </tr>
   <tr>
@@ -329,11 +274,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "integer",
-  "mínimo": -128,
-  "máximo": 128
-  }</pre>
+"sampleField": { "type": "integer", "Minimum": -128, "máximo": 128 }</pre>
     </td>
   </tr>
   <tr>
@@ -345,10 +286,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "booleano",
-  "default": false
-}</pre>
+"sampleField": { "type": "booleano", "padrão": false }</pre>
     </td>
   </tr>
   <tr>
@@ -356,11 +294,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "format": "date",
-  "exemplos": ["2004-10-23"]
-}</pre>
+"sampleField": { "type": "string", "format": "date", "example": ["2004-10-23"] }</pre>
     </td>
   </tr>
   <tr>
@@ -368,11 +302,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "format": "date-time",
-  "exemplos": ["2004-10-23T12:00:00-06:00"]
-}</pre>
+"sampleField": { "type": "string", "format": "date-time", "example": ["2004-10-23T12:00:00-06:00"] }</pre>
     </td>
   </tr>
   <tr>
@@ -380,76 +310,35 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td></td>
     <td>Uma matriz de tipos escalares básicos (por exemplo, strings):
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "array",
-  "itens": {
-    "type": "string"
-  }
-}</pre>
+"sampleField": { "type": "array", "items": { "type": "string" }</pre>
       Uma matriz de objetos definidos por outro schema:<br/>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "array",
-  "itens": {
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
-  }
-}</pre>
+"sampleField": { "type": "array", "items": { "$ref": "https://ns.adobe.com/xdm/data/paymentitem" }</pre>
     </td>
   </tr>
   <tr>
     <td>[!UICONTROL Objeto]</td>
     <td></td>
-    <td>O atributo <code>type</code> de cada subcampo definido em <code>properties</code> pode ser definido usando qualquer tipo escalar:
+    <td>O <code>type</code> atributo de cada subcampo definido em <code>properties</code> pode ser definido usando qualquer tipo escalar:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "properties": {
-    "field1": {
-      "type": "string"
-    },
-    "field2": {
-      "type": "número"
-    }
-  }
-}</pre>
-      Os campos do tipo de objeto podem ser definidos referenciando o <code>$id</code> de um tipo de dados:
+"sampleField": { "type": "object", "properties": { "field1": { "type": "string" }, "field2": { "type": "number" }</pre>
+      Os campos do tipo objeto podem ser definidos fazendo referência à variável <code>$id</code> de um tipo de dados:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction"
-}</pre>
+"sampleField": { "type": "object", "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction" }</pre>
     </td>
   </tr>
   <tr>
     <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>Um mapa <strong>não deve</strong> definir quaisquer propriedades. Ele <strong>deve</strong> definir um único schema <code>additionalProperties</code> para descrever o tipo de valores contidos no mapa (cada mapa só pode conter um único tipo de dados). Os valores podem ser qualquer atributo XDM <code>type</code> válido ou uma referência a outro esquema usando um atributo <code>$ref</code>.<br/><br/>Um campo de mapa com valores do tipo string:
+    <td>Um mapa <strong>não deve</strong> defina quaisquer propriedades. It <strong>must</strong> defina uma <code>additionalProperties</code> para descrever o tipo de valores contidos no mapa (cada mapa só pode conter um único tipo de dados). Os valores podem ser qualquer XDM válido <code>type</code> ou uma referência a outro schema usando um <code>$ref</code> atributo.<br/><br/>Um campo de mapa com valores do tipo string:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "type": "string"
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "type": "string" }</pre>
     Um campo de mapa com matrizes de sequências para valores:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "type": "array",
-    "itens": {
-      "type": "string"
-    }
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "type": "array", "items": { "type": "string" } }</pre>
     Um campo de mapa que faz referência a outro tipo de dados:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "$ref": "https://ns.adobe.com/xdm/data/paymentitem" }</pre>
     </td>
   </tr>
 </table>

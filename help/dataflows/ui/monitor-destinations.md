@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,18 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 | Erro | O `Error` status indica que o processo de ativação de um fluxo de dados foi interrompido. |
 
 ### O fluxo de dados é executado para destinos de transmissão
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesactivated"
+>title="Identidades ativadas"
+>abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesexcluded"
+>title="Identidades excluídas"
+>abstract="A contagem de registros de perfil individuais excluídos da ativação do destino selecionado com base em atributos ausentes e violação de consentimento."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"
 
 Para destinos de transmissão, a variável [!UICONTROL Execuções do fluxo de dados] A guia fornece uma atualização por hora para dados de métrica em suas execuções de fluxo de dados. As estatísticas mais proeminentes rotuladas são para identidades.
 

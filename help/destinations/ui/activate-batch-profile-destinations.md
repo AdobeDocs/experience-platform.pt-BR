@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '2114'
 ht-degree: 1%
 
 ---
@@ -48,6 +48,12 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 
 ## Agendar exportação de segmentos {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule"
+>title="Agendar"
+>abstract="O tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e o agendamento não podem ser alterados depois que o segmento é salvo."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Saiba mais na documentação"
+
 [!DNL Adobe Experience Platform] exporta dados para marketing por email e destinos de armazenamento em nuvem na forma de [!DNL CSV] arquivos. No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada segmento que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
 
 >[!IMPORTANT]
@@ -61,6 +67,12 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao segmen
 ![Botão Criar programação](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportar arquivos completos {#export-full-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exportoptions"
+>title="Opções de exportação de arquivo"
+>abstract="Selecionar **Exportar arquivos completos** para exportar um instantâneo completo de todos os perfis qualificados para o segmento. <br> Selecionar **Exportar arquivos incrementais** para exportar apenas os perfis que se qualificaram para o segmento desde a última exportação. A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o segmento, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os perfis que se qualificaram para o segmento desde a primeira exportação de arquivos incrementais."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Saiba mais na documentação"
 
 Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportação de um arquivo contendo um instantâneo completo de todas as qualificações de perfil para o segmento selecionado.
 
@@ -112,6 +124,12 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
 1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
 ### Configurar nomes de arquivo {#file-names}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_filename"
+>title="Configurar nome de arquivo"
+>abstract="Para destinos com base em arquivo, um nome de arquivo exclusivo é gerado por segmento. Use o editor de nome de arquivo para criar e editar um nome de arquivo exclusivo ou manter o nome padrão."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="Saiba mais na documentação"
 
 Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para ter o tempo de exportação de dados anexado aos arquivos.
 

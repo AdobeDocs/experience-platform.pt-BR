@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activate audience data to streaming segment export destinations
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
-
 
 # Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
 
@@ -21,27 +21,27 @@ Este artigo explica o fluxo de trabalho necessário para ativar os dados do púb
 
 ## Pré-requisitos {#prerequisites}
 
-Para ativar dados em destinos, você deve ter [conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
+Para ativar dados em destinos, você deve ter [conectado a um destino](./connect-destination.md). Se ainda não o fez, acesse o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
 
 ## Selecione o destino {#select-destination}
 
-1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Catalog]**.
+1. Ir para **[!UICONTROL Conexões > Destinos]** e selecione o **[!UICONTROL Catálogo]** guia .
 
    ![Guia Catálogo de destino](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Selecione **[!UICONTROL Ativar segmentos]** no cartão correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
+1. Selecionar **[!UICONTROL Ativar segmentos]** no cartão correspondente ao destino onde você deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
 
    ![Botões Ativar](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
 
-1. Selecione a conexão de destino que deseja usar para ativar seus segmentos e selecione **[!UICONTROL Next]**.
+1. Selecione a conexão de destino que deseja usar para ativar seus segmentos e selecione **[!UICONTROL Próximo]**.
 
    ![Selecionar destino](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. Mova para a próxima seção para [selecionar seus segmentos](#select-segments).
+1. Mova para a próxima seção para [selecione seus segmentos](#select-segments).
 
 ## Selecione seus segmentos {#select-segments}
 
-Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os segmentos que deseja ativar para o destino e selecione **[!UICONTROL Next]**.
+Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os segmentos que deseja ativar para o destino e, em seguida, selecione **[!UICONTROL Próximo]**.
 
 ![Selecionar segmentos](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
@@ -49,27 +49,27 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 
 >[!IMPORTANT]
 >
->Essa etapa se aplica somente a alguns destinos de transmissão de segmento. Se o destino não tiver uma etapa **[!UICONTROL Mapping]**, pule para [Schedule segment export](#scheduling).
+>Essa etapa se aplica somente a alguns destinos de transmissão de segmento. Se o destino não tiver uma **[!UICONTROL Mapeamento]** etapa, pule para [Agendar exportação de segmentos](#scheduling).
 
 Alguns destinos de transmissão de segmento exigem que você selecione atributos de origem ou namespaces de identidade para mapear como identidades de destino no destino.
 
-1. Na página **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**.
+1. No **[!UICONTROL Mapeamento]** página, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
    ![Adicionar novo mapeamento](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Selecione a seta à direita da entrada **[!UICONTROL Source field]**.
+1. Selecione a seta à direita da **[!UICONTROL Campo de origem]** entrada.
 
    ![Selecionar campo de origem](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
-1. Na página **[!UICONTROL Selecionar campo de origem]**, use as opções **[!UICONTROL Selecionar atributos]** ou **[!UICONTROL Selecionar namespace de identidade]** para alternar entre as duas categorias de campos de origem disponíveis. Nos [!DNL XDM] atributos de perfil e namespaces de identidade disponíveis, selecione aqueles que deseja mapear para o destino e escolha **[!UICONTROL Selecionar]**.
+1. No **[!UICONTROL Selecionar campo de origem]** use a **[!UICONTROL Selecionar atributos]** ou **[!UICONTROL Selecionar namespace de identidade]** opções para alternar entre as duas categorias de campos de origem disponíveis. Em [!DNL XDM] atributos do perfil e namespaces de identidade, selecione aqueles que deseja mapear para o destino e escolha **[!UICONTROL Selecionar]**.
 
    ![Página Selecionar campo de origem](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
-1. Selecione o botão à direita da entrada **[!UICONTROL Target field]**.
+1. Selecione o botão à direita do **[!UICONTROL Campo de destino]** entrada.
 
    ![Selecionar campo de destino](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
-1. Na página **[!UICONTROL Selecionar campo de destino]**, selecione o namespace de identidade de destino para o qual deseja mapear o campo de origem e escolha **[!UICONTROL Selecionar]**.
+1. No **[!UICONTROL Selecionar campo de destino]** selecione o namespace de identidade de destino para o qual deseja mapear o campo de origem e escolha **[!UICONTROL Selecionar]**.
 
    ![Página Selecionar campo de destino](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
@@ -89,43 +89,49 @@ Quando você está mapeando atributos de origem sem hash para atributos de desti
 
 ## Agendar exportação de segmentos {#scheduling}
 
-Por padrão, a página [!UICONTROL Segment schedule] mostra apenas os segmentos recém-selecionados que você escolheu no fluxo de ativação atual.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_enddate"
+>title="Data de término"
+>abstract="A adição de uma data de término para a programação de segmentos não está disponível."
+>additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Saiba mais na documentação"
+
+Por padrão, a variável [!UICONTROL Agendamento do segmento] mostra somente os segmentos recém-selecionados que você escolheu no fluxo de ativação atual.
 
 ![Novos segmentos](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
 
-Para visualizar todos os segmentos que estão sendo ativados no seu destino, use a opção de filtragem e desative o filtro **[!UICONTROL Mostrar somente novos segmentos]**.
+Para ver todos os segmentos ativados para o seu destino, use a opção de filtragem e desative o **[!UICONTROL Mostrar somente novos segmentos]** filtro.
 
 ![Todos os segmentos](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
-1. Na página **[!UICONTROL Segment schedule]**, selecione cada segmento e use os seletores **[!UICONTROL Start date]** e **[!UICONTROL End date]** para configurar o intervalo de tempo para enviar dados ao seu destino.
+1. No **[!UICONTROL Agendamento do segmento]** selecione cada segmento e use a **[!UICONTROL Data de início]** e **[!UICONTROL Data final]** seletores para configurar o intervalo de tempo para enviar dados ao seu destino.
 
    ![Agendamento do segmento](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
 
-   * Alguns destinos exigem que você selecione a **[!UICONTROL Origin of audience]** para cada segmento, usando o menu suspenso abaixo dos seletores de calendário. Se o destino não incluir esse seletor, pule esta etapa.
+   * Alguns destinos exigem que você selecione a variável **[!UICONTROL Origem do público]** para cada segmento, usando o menu suspenso abaixo dos seletores de calendário. Se o destino não incluir esse seletor, pule esta etapa.
 
       ![ID de mapeamento](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Alguns destinos exigem que você mapeie manualmente os segmentos [!DNL Platform] para sua contraparte no destino. Para fazer isso, selecione cada segmento e insira a ID de segmento correspondente na plataforma de destino no campo **[!UICONTROL Mapping ID]**. Se o destino não incluir este campo, pule esta etapa.
+   * Alguns destinos exigem o mapeamento manual [!DNL Platform] segmentos para sua contrapartida no destino do target. Para fazer isso, selecione cada segmento e insira a ID de segmento correspondente na plataforma de destino na **[!UICONTROL ID de mapeamento]** campo. Se o destino não incluir este campo, pule esta etapa.
 
       ![ID de mapeamento](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-   * Alguns destinos exigem que você insira uma **[!UICONTROL ID do aplicativo]** ao ativar os segmentos [!DNL IDFA] ou [!DNL GAID]. Se o destino não incluir este campo, pule esta etapa.
+   * Alguns destinos exigem que você insira um **[!UICONTROL ID do aplicativo]** ao ativar [!DNL IDFA] ou [!DNL GAID] segmentos. Se o destino não incluir este campo, pule esta etapa.
 
       ![ID do aplicativo](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
-1. Selecione **[!UICONTROL Next]** para ir para a página [!UICONTROL Review].
+1. Selecionar **[!UICONTROL Próximo]** para acessar o [!UICONTROL Revisão] página.
 
 ## Revisão {#review}
 
-Na página **[!UICONTROL Revisar]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados para o destino.
+No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações, ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
 >[!IMPORTANT]
 >
->Nesta etapa, o Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação de política](../../rtcdp/privacy/data-governance-overview.md#enforcement) na seção Documentação de governança de dados.
+>Nesta etapa, o Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação da política](../../rtcdp/privacy/data-governance-overview.md#enforcement) na seção de documentação de governança de dados .
 
 ![violação da política de dados](../assets/common/data-policy-violation.png)
 
-Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Finish]** para confirmar a seleção e iniciar o envio de dados para o destino.
+Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
 ![Revisão](../assets/ui/activate-segment-streaming-destinations/review.png)
 

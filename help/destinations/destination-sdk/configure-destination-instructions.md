@@ -2,7 +2,7 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"
 
 ## Etapa 6: Teste seu destino {#test-destination}
 
-Depois de configurar seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar a variável [ferramenta de teste de destino](./create-template.md) para testar a integração entre o Adobe Experience Platform e seu destino.
+Depois de configurar seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar a variável [ferramenta de teste de destino](./test-destination.md) para testar a integração entre o Adobe Experience Platform e seu destino.
 
 Como parte do processo para testar seu destino, você deve usar a interface do usuário do Experience Platform para criar segmentos, que você ativará no seu destino. Consulte os dois recursos abaixo para obter instruções sobre como criar segmentos no Experience Platform:
 

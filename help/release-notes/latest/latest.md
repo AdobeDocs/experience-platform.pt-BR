@@ -1,10 +1,11 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 15%
+source-wordcount: '798'
+ht-degree: 13%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 15%
 Novos recursos no Adobe Experience Platform:
 
 - [Real-time Customer Data Platform Edição B2B](#B2B)
+- [(Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc](#ad-hoc-activation)
 
 ## Atualizações dos recursos existentes
 
@@ -62,6 +64,10 @@ As classes padrão B2B XDM, os grupos de campos e os tipos de dados estão dispo
 
 Consulte a [Esquemas no Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentação para saber mais sobre como capturar entidades de dados B2B.
 
+### (Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc {#ad-hoc-activation}
+
+A API de ativação ad-hoc permite que os profissionais de marketing ativem programaticamente segmentos de público-alvo para destinos, de maneira rápida e eficiente, para situações em que a ativação imediata é necessária. A ativação ad-hoc de público-alvo é compatível somente com [destinos com base em arquivo em lote](../../destinations/destination-types.md#file-based) e está atualmente em beta. Para obter mais informações, consulte o [documentação da API de ativação ad-hoc](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
@@ -85,3 +91,4 @@ O Customer AI disponível no Real-time Customer Data Platform é usado para gera
 | Atributos de perfil personalizados | O Customer AI agora é compatível com a definição de campos do conjunto de dados de perfil personalizado (com carimbos de data e hora) em seus dados, além de campos de evento padrão. Usar essa opção permite adicionar atributos de perfil adicionais que você considera influentes, o que pode melhorar a qualidade do modelo e fornecer resultados mais precisos. |
 
 Para obter mais informações sobre a API do cliente, consulte o [Documentação do Customer AI](../../intelligent-services/customer-ai/overview.md).
+

@@ -6,7 +6,7 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
 workflow-type: tm+mt
 source-wordcount: '1785'
 ht-degree: 0%
@@ -48,13 +48,13 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 ### O fluxo de dados é executado para destinos de transmissão
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesactivated"
+>id="platform_destinations_dataflow_identitiesactivated"
 >title="Identidades ativadas"
 >abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesexcluded"
+>id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identidades excluídas"
 >abstract="A contagem de registros de perfil individuais excluídos da ativação do destino selecionado com base em atributos ausentes e violação de consentimento."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"

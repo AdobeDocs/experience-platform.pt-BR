@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser executadas usando o endpoint da API `/authoring/sample-profiles' para gerar perfis de amostra para usar em testes de destino.
 title: Exemplos de operações da API de geração de perfil
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 7f0dcc916b72145705ecd09b45aadd40eac99b23
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '989'
 ht-degree: 3%
 
 ---
@@ -13,27 +13,36 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**Ponto de extremidade** da API:  `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
+>**Ponto de extremidade da API**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-Esta página lista e descreve todas as operações de API que podem ser executadas usando o endpoint da API `/authoring/sample-profiles`.
+Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/sample-profiles` Ponto de extremidade da API.
 
-Esse endpoint da API permite gerar perfis de amostra para usar:
-* Ao testar um template de transformação de mensagem. Leia mais em [Criar e testar um modelo de transformação de mensagem](./create-template.md).
-* Ao testar se o destino está configurado corretamente. Leia mais em [Teste a configuração de destino](./test-destination.md).
-
-Você pode gerar perfis de amostra com base no schema de origem Adobe XDM ou no schema de destino suportado pelo seu destino. Para entender a diferença entre o schema de origem Adobe XDM e o schema de destino, leia o artigo [Message format](./message-format.md).
-
-## Introdução a operações de API de geração de perfil de amostra {#get-started}
-
-Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
-
-## Gerar perfis de amostra com base no schema de origem {#generate-sample-profiles-source-schema}
+## Gerar diferentes tipos de perfil para APIs diferentes {#different-profiles-different-apis}
 
 >[!IMPORTANT]
 >
->Adicione os perfis de amostra gerados aqui a chamadas HTTP quando [testar seu destino](./test-destination.md).
+>Use esse ponto de extremidade de API para gerar perfis de amostra para dois casos de uso separados. Você pode:
+>* gerar perfis para usar quando [criação e teste de um template de transformação de mensagem](./create-template.md) - utilizando *ID de destino* como parâmetro de consulta.
+>* gerar perfis para usar ao fazer chamadas para [teste se o destino está configurado corretamente](./test-destination.md) - utilizando *ID da instância de destino* como parâmetro de consulta.
 
-Você pode gerar perfis de amostra com base no schema de origem, fazendo uma solicitação de GET para o endpoint `authoring/sample-profiles/` e fornecendo a ID de uma instância de destino criada com base na configuração de destino que deseja testar.
+
+Você pode gerar perfis de amostra com base no esquema de origem Adobe XDM (para usar ao testar seu destino) ou no esquema de destino compatível com seu destino (para usar ao criar seu modelo). Para entender a diferença entre o schema de origem Adobe XDM e o schema de destino, leia a seção de visão geral do [Formato de mensagem](./message-format.md) artigo 10. o
+
+Observe que as finalidades para as quais os perfis de amostra podem ser usados não são permutáveis. Perfis gerados com base no *ID de destino* só podem ser usados para criar os modelos e perfis de transformação de mensagem gerados com base na variável *ID da instância de destino* O só pode ser usado para testar o terminal de destino.
+
+## Introdução a operações de API de geração de perfil de amostra {#get-started}
+
+Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
+
+## Gere perfis de amostra com base no schema de origem a ser usado ao testar seu destino {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Adicione os perfis de amostra gerados aqui para chamadas HTTP quando [teste do destino](./test-destination.md).
+
+Você pode gerar perfis de amostra com base no schema de origem, fazendo uma solicitação de GET para o `authoring/sample-profiles/` endpoint e fornecer a ID de uma instância de destino criada com base na configuração de destino que você deseja testar.
+
+Para obter a ID de uma instância de destino, primeiro crie uma conexão na interface do usuário do Experience Platform para o destino antes de tentar testar o destino. Leia o [tutorial ativar destino](/help/destinations/ui/activation-overview.md) e consulte a dica abaixo sobre como obter a ID da instância de destinos a ser usada para essa API.
 
 >[!TIP]
 >
@@ -51,14 +60,14 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | Parâmetro de consulta | Descrição |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino com base na qual você está gerando perfis de amostra. |
-| `{COUNT}` | *Opcional*. O número de perfis de amostra que você está gerando. O parâmetro pode obter valores entre `1 - 1000`. <br> Se o parâmetro count não for especificado, o número padrão de perfis gerados será determinado pelo  `maxUsersPerRequest` valor na configuração [ do servidor de ](./destination-server-api.md#create)destino. Se essa propriedade não estiver definida, o Adobe gerará um perfil de amostra. |
+| `{COUNT}` | *Opcional*. O número de perfis de amostra que você está gerando. O parâmetro pode ter valores entre `1 - 1000`. <br> Se o parâmetro de contagem não for especificado, o número padrão de perfis gerados será determinado pela variável `maxUsersPerRequest` na variável [configuração do servidor de destino](./destination-server-api.md#create). Se essa propriedade não estiver definida, o Adobe gerará um perfil de amostra. |
 
 {style=&quot;table-layout:auto&quot;}
 
 
 **Solicitação**
 
-A solicitação a seguir gera perfis de amostra, configurados pelos parâmetros de consulta `{DESTINATION_INSTANCE_ID}` e `{COUNT}`.
+A solicitação a seguir gera perfis de amostra, configurados pela variável `{DESTINATION_INSTANCE_ID}` e `{COUNT}` parâmetros de consulta.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -172,24 +181,24 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentMembership` | Um objeto de mapa que descreve as associações de segmento de cada indivíduo. Para obter mais informações sobre `segmentMembership`, leia [Detalhes de associação ao segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | Um objeto de mapa que descreve as associações de segmento de cada indivíduo. Para obter mais informações sobre `segmentMembership`, ler [Detalhes da associação ao segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Um carimbo de data e hora da última vez que esse perfil se qualificou para o segmento. |
 | `xdm:status` | Indica se a associação de segmento foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
-| `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, leia [Base da composição do schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, ler [Base da composição do schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Gerar perfis de amostra com base no schema de destino {#generate-sample-profiles-target-schema}
+## Gerar perfis de amostra com base no schema de destino para usar ao criar um template de transformação de mensagem {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
->Use os perfis de amostra gerados aqui ao criar seu modelo, na [etapa do modelo de renderização](./render-template-api.md#multiple-profiles-with-body).
+>Use os perfis de amostra gerados aqui ao criar seu modelo no [etapa do modelo de renderização](./render-template-api.md#multiple-profiles-with-body).
 
-Você pode gerar perfis de amostra com base no schema de destino fazendo uma solicitação GET para o endpoint `authoring/sample-profiles/` e fornecendo a ID de destino da configuração de destino com base na qual você está criando seu template.
+Você pode gerar perfis de amostra com base no schema de destino fazendo uma solicitação de GET para o `authoring/sample-profiles/` endpoint e fornecer a ID de destino da configuração de destino com base na qual você está criando o modelo.
 
 >[!TIP]
 >
->* A ID de destino que você deve usar aqui é a `instanceId` que corresponde a uma configuração de destino, criada usando o ponto de extremidade `/destinations`. Consulte a [referência da API de configuração de destino](./destination-configuration-api.md#retrieve-list).
+>* A ID de destino que você deve usar aqui é a variável `instanceId` que corresponde a uma configuração de destino, criada usando o `/destinations` endpoint . Consulte a [referência da API de configuração de destino](./destination-configuration-api.md#retrieve-list).
 
 
 **Formato da API**
@@ -202,13 +211,13 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | Parâmetro de consulta | Descrição |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | A ID da configuração de destino com base na qual você está gerando perfis de amostra. |
-| `{COUNT}` | *Opcional*. O número de perfis de amostra que você está gerando. O parâmetro pode obter valores entre `1 - 1000`. <br> Se o parâmetro count não for especificado, o número padrão de perfis gerados será determinado pelo  `maxUsersPerRequest` valor na configuração [ do servidor de ](./destination-server-api.md#create)destino. Se essa propriedade não estiver definida, o Adobe gerará um perfil de amostra. |
+| `{COUNT}` | *Opcional*. O número de perfis de amostra que você está gerando. O parâmetro pode ter valores entre `1 - 1000`. <br> Se o parâmetro de contagem não for especificado, o número padrão de perfis gerados será determinado pela variável `maxUsersPerRequest` na variável [configuração do servidor de destino](./destination-server-api.md#create). Se essa propriedade não estiver definida, o Adobe gerará um perfil de amostra. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
-A solicitação a seguir gera perfis de amostra, configurados pelos parâmetros de consulta `{DESTINATION_ID}` e `{COUNT}`.
+A solicitação a seguir gera perfis de amostra, configurados pela variável `{DESTINATION_ID}` e `{COUNT}` parâmetros de consulta.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -366,8 +375,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 ## Tratamento de erros da API {#api-error-handling}
 
-Os pontos de extremidade da API do SDK de destino seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [erros do cabeçalho da solicitação](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) no guia de solução de problemas da plataforma.
+Os endpoints da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [erros do cabeçalho da solicitação](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) no guia de solução de problemas da plataforma.
 
 ## Próximas etapas
 
-Depois de ler este documento, você agora sabe como gerar perfis de amostra a serem usados ao [testar um template de transformação de mensagem](./create-template.md) ou ao [testar se o destino está configurado corretamente](./test-destination.md).
+Depois de ler este documento, você agora sabe como gerar perfis de amostra para serem usados ao [teste de um template de transformação de mensagem](./create-template.md) ou quando [teste se o destino está configurado corretamente](./test-destination.md).

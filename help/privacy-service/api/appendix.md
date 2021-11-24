@@ -5,10 +5,10 @@ title: Apêndice do guia da API do Privacy Service
 topic-legacy: developer guide
 description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
+source-git-commit: 445c8158dbf012defb32e9cd7aa4c27c6be1fb88
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 8%
+source-wordcount: '484'
+ht-degree: 7%
 
 ---
 
@@ -68,7 +68,7 @@ A tabela a seguir descreve os valores aceitos para especificar um produto de Ado
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform | `AdobeCloudPlatform` |
+| Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Autenticação Adobe Primetime | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Produto de automação | `automationProduct` |

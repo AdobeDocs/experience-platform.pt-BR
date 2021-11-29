@@ -2,9 +2,9 @@
 title: Notas de versão da extensão do Adobe Analytics
 description: As notas de versão mais recentes da extensão de tag do Adobe Analytics na Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
+source-git-commit: 73fe3c2e060dbdd7607ed3b54c5b8e9cca752d8f
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1272'
 ht-degree: 96%
 
 ---
@@ -14,6 +14,14 @@ ht-degree: 96%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 29 de novembro de 2021
+
+### Extensão do Adobe Analytics versão 1.8.8
+
+#### Correções de erros
+
+* AppMeasurement atualizado para v2.22.3.
 
 ## 16 de setembro de 2021
 
@@ -30,7 +38,7 @@ ht-degree: 96%
 
 #### Correções de erros
 
-* Atualização do [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
+* Atualizado [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
 * Atualização de fallback linkName para espelhar a lógica de Activity Map em vez de usar innerHTML.
 
 ## 6 de agosto de 2020

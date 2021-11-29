@@ -1,9 +1,9 @@
 ---
 keywords: 'publicidade; bing; '
-title: Conexão do Microsoft Bing
-description: Com o destino de conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas ao público-alvo em todo o Microsoft Display Advertising.
+title: Conexão Microsoft Bing
+description: Com o destino de conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas ao público-alvo através do Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 1%
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-O destino [!DNL Microsoft Bing] ajuda a enviar os dados do perfil para [!DNL Microsoft Display Advertising].
+O [!DNL Microsoft Bing] O destino ajuda a enviar dados de perfil para o [!DNL Microsoft Display Advertising].
 
-Para enviar dados de perfil para [!DNL Microsoft Bing], primeiro você deve se conectar ao destino.
+Para enviar dados de perfil para o [!DNL Microsoft Bing], primeiro você deve se conectar ao destino.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, eu desejo poder usar segmentos criados a partir de [!DNL Microsoft Advertising IDs] para direcionar usuários por meio de publicidade de exibição em [!DNL Microsoft Advertising] canais.
+Como profissional de marketing, desejo poder usar segmentos criados [!DNL Microsoft Advertising IDs] para direcionar usuários por meio da exibição de publicidade em [!DNL Microsoft Advertising] canais.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -28,40 +28,42 @@ Como profissional de marketing, eu desejo poder usar segmentos criados a partir 
 
 | Identidade do Target | Descrição |
 |---|---|
-| MAID | ID de publicidade da Microsoft |
+| MAID | Microsoft Advertising ID |
 
 ## Tipo de exportação {#export-type}
 
-**[!DNL Segment Export]** - você está exportando todos os membros de um segmento (público-alvo) para o  [!DNL Microsoft Bing] destino.
+**[!DNL Segment Export]** - você está exportando todos os membros de um segmento (público-alvo) para a [!DNL Microsoft Bing] destino.
 
 ## Pré-requisitos {#prerequisites}
 
-Se você deseja criar seu primeiro destino com [!DNL Microsoft Bing] e não ativou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já havia configurado [!DNL Microsoft Bing] integrações no Audience Manager, as sincronizações de ID que você havia configurado continuam para a Platform.
+>[!IMPORTANT]
+>
+>Se você deseja criar seu primeiro destino com [!DNL Microsoft Bing] e não ativou a variável [Funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já havia configurado [!DNL Microsoft Bing] integrações no Audience Manager, as sincronizações de ID que você configurou continuam para a Platform.
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 
-* [!UICONTROL ID] da conta: este é seu  [!DNL Bing Ads CID], no formato inteiro.
+* [!UICONTROL ID da conta]: este é o seu [!DNL Bing Ads CID], em formato inteiro.
 
 ## Conecte-se ao destino {#connect}
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
+Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID]** da conta: Seu  [!DNL Bing Ads CID].
+* **[!UICONTROL ID da conta]**: Seu [!DNL Bing Ads CID].
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
-Na etapa [Agendamento do segmento](../../ui/activate-segment-streaming-destinations.md#scheduling), você deve mapear manualmente os segmentos para a ID correspondente ou para o nome amigável no destino.
+No [Agendamento do segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) , você deve mapear manualmente os segmentos para a ID correspondente ou para o nome amigável no destino.
 
-Ao mapear segmentos, recomendamos que você use o nome do segmento [!DNL Platform] ou uma forma mais curta dele, para facilitar o uso. No entanto, a ID do segmento ou o nome no seu destino não precisam corresponder àquela em sua conta [!DNL Platform]. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
+Ao mapear segmentos, recomendamos que você use a variável [!DNL Platform] nome do segmento ou uma forma mais curta dele, para facilitar o uso. No entanto, a ID do segmento ou o nome no seu destino não precisam corresponder ao nome em seu [!DNL Platform] conta. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 
 ## Dados exportados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito para o destino [!DNL Microsoft Bing], verifique sua conta [!DNL Microsoft Bing Ads]. Se a ativação foi bem-sucedida, os públicos-alvo são preenchidos na sua conta.
+Para verificar se os dados foram exportados com êxito para a [!DNL Microsoft Bing] destino, verifique seu [!DNL Microsoft Bing Ads] conta. Se a ativação foi bem-sucedida, os públicos-alvo são preenchidos na sua conta.

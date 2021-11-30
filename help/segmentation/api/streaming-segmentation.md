@@ -5,10 +5,10 @@ title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 2%
+source-wordcount: '1828'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 Cabeçalhos adicionais podem ser necessários para concluir solicitações específicas. Os cabeçalhos corretos são mostrados em cada um dos exemplos neste documento. Preste especial atenção às solicitações de amostra para garantir que todos os cabeçalhos necessários sejam incluídos.
 
-### Tipos de consulta ativados para segmentação de fluxo {#streaming-segmentation-query-types}
+### Tipos de consulta ativados para segmentação de fluxo {#query-types}
 
 >[!NOTE]
 >
@@ -86,12 +86,16 @@ Uma definição de segmento **not** ser habilitado para segmentação de transmi
 - A definição de segmento inclui segmentos ou características do Adobe Audience Manager (AAM).
 - A definição de segmento inclui várias entidades (consultas de várias entidades).
 
-Além disso, algumas diretrizes se aplicam ao fazer a segmentação de fluxo:
+Observe que as seguintes diretrizes se aplicam ao fazer a segmentação de fluxo:
 
 | Tipo de consulta | Orientação |
 | ---------- | -------- |
 | Query de evento único | Não há limites para a janela de retrospectiva. |
 | Consulta com histórico de eventos | <ul><li>A janela de retrospectiva está limitada a **um dia**.</li><li>Uma condição de ordem de tempo estrita **must** existir entre os eventos.</li><li>Consultas com pelo menos um evento negado são suportadas. No entanto, o evento inteiro **cannot** ser uma negação.</li></ul> |
+
+Se uma definição de segmento for modificada para que não atenda mais aos critérios para a segmentação de transmissão, a definição de segmento mudará automaticamente de &quot;Streaming&quot; para &quot;Lote&quot;.
+
+Além disso, a inqualificação de segmentos, de forma semelhante à qualificação de segmentos, ocorre em tempo real. Como resultado, se um público-alvo não se qualificar mais para um segmento, ele será imediatamente desqualificado. Por exemplo, se a definição de segmento solicitar &quot;Todos os usuários que compraram sapatos vermelhos nas últimas três horas&quot;, após três horas, todos os perfis que inicialmente se qualificaram para a definição do segmento serão não qualificados.
 
 ## Recuperar todos os segmentos habilitados para a segmentação de streaming
 
@@ -208,7 +212,7 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos na organização IMS q
 
 ## Criar um segmento habilitado para transmissão
 
-Um segmento será ativado automaticamente para transmissão se corresponder a um dos [tipos de segmentação de fluxo listados acima](#streaming-segmentation-query-types).
+Um segmento será ativado automaticamente para transmissão se corresponder a um dos [tipos de segmentação de fluxo listados acima](#query-types).
 
 **Formato da API**
 
@@ -407,3 +411,31 @@ A mesma operação pode ser usada para desabilitar um agendamento, substituindo 
 Agora que você ativou segmentos novos e existentes para a segmentação de streaming e habilitou a segmentação agendada para desenvolver uma linha de base e realizar avaliações recorrentes, você pode começar a criar segmentos ativados para streaming para sua organização.
 
 Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).
+
+## Apêndice
+
+A seção a seguir lista as perguntas mais frequentes sobre a segmentação de fluxo:
+
+### A &quot;inqualificação&quot; da segmentação por streaming também ocorre em tempo real?
+
+Para a maioria das instâncias, a inqualificação da segmentação de streaming ocorre em tempo real. No entanto, os segmentos de fluxo que usam segmentos de segmentos **not** não se qualificam em tempo real, em vez disso, não se qualificam após 24 horas.
+
+### Em quais dados a segmentação de fluxo funciona?
+
+A segmentação de transmissão funciona em todos os dados assimilados por meio de uma fonte de transmissão. Os segmentos assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para a segmentação de transmissão.
+
+### Como os segmentos são definidos como segmentação em lote ou streaming?
+
+Um segmento é definido como segmentação em lote ou em fluxo com base em uma combinação de tipo de query e duração do histórico do evento. Uma lista de quais segmentos serão avaliados como um segmento de transmissão pode ser encontrada no [seção de tipos de consulta de segmentação de fluxo](#query-types).
+
+### Um usuário pode definir um segmento como segmentação em lote ou em fluxo?
+
+No momento, o usuário não pode definir se um segmento é avaliado por meio da assimilação em lote ou streaming, pois o sistema determinará automaticamente com qual método o segmento será avaliado.
+
+### Por que o número de segmentos &quot;qualificados totais&quot; continua aumentando enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes do segmento?
+
+O número total de segmentos qualificados é obtido do trabalho de segmentação diário, que inclui públicos-alvo qualificados para segmentos em lote e em fluxo. Esse valor é mostrado para segmentos em lote e streaming.
+
+O número em &quot;Últimos X dias&quot; **only** inclui públicos-alvo qualificados na segmentação de transmissão, e **only** O aumenta se você tiver transmitido dados para o sistema e isso contar para essa definição de transmissão. Este valor é **only** exibido para segmentos de transmissão. Como resultado, esse valor **pode** exibir como 0 para segmentos em lote.
+
+Como resultado, se você perceber que o número em &quot;Últimos X dias&quot; é zero, e o gráfico de linha também está relatando zero, você terá que **not** os perfis eram transmitidos no sistema e se qualificavam para esse segmento.

@@ -5,31 +5,30 @@ title: Ponto de extremidade da API de tarefas de segmento
 topic-legacy: developer guide
 description: O endpoint de tarefas de segmento na API do Serviço de segmentação da Adobe Experience Platform permite gerenciar programaticamente tarefas de segmento para sua organização.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 2%
+source-wordcount: '1169'
+ht-degree: 3%
 
 ---
 
 # Ponto de extremidade de trabalhos de segmento
 
-Um trabalho de segmento é um processo assíncrono que cria um novo segmento de público-alvo. Ele faz referência a uma [definição de segmento](./segment-definitions.md), bem como a qualquer [política de mesclagem](../../profile/api/merge-policies.md) controlando como [!DNL Real-time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
+Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a um [definição de segmento](./segment-definitions.md), bem como qualquer [políticas de mesclagem](../../profile/api/merge-policies.md) controlar como [!DNL Real-time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
 
 Este guia fornece informações para ajudá-lo a entender melhor as tarefas do segmento e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte da API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
 
-## Recuperar uma lista de tarefas de segmento {#retrieve-list}
+## Recuperar uma lista de tarefas do segmento {#retrieve-list}
 
-Você pode recuperar uma lista de todas as tarefas de segmento para sua Organização IMS fazendo uma solicitação de GET para o endpoint `/segment/jobs`.
+Você pode recuperar uma lista de todos os trabalhos de segmento para sua Organização IMS fazendo uma solicitação de GET para a `/segment/jobs` endpoint .
 
 **Formato da API**
 
-O ponto de extremidade `/segment/jobs` oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Efetuar uma chamada para esse endpoint sem parâmetros recuperará todos os trabalhos de exportação disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+O `/segment/jobs` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Efetuar uma chamada para esse endpoint sem parâmetros recuperará todos os trabalhos de exportação disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /segment/jobs
@@ -182,7 +181,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de tarefas de 
 
 ## Criar um novo trabalho de segmento {#create}
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o endpoint `/segment/jobs` e incluindo no corpo a ID da definição de segmento da qual deseja criar um novo público-alvo.
+Você pode criar um novo trabalho de segmento fazendo uma solicitação de POST para a variável `/segment/jobs` endpoint e incluir no corpo a ID da definição de segmento da qual deseja criar um novo público-alvo.
 
 **Formato da API**
 
@@ -209,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. Mais informações sobre definições de segmento podem ser encontradas no [guia de ponto de extremidade de definição de segmento](./segment-definitions.md). |
+| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. Mais informações sobre definições de segmento podem ser encontradas na seção [guia do endpoint de definição de segmento](./segment-definitions.md). |
 
 **Resposta**
 
@@ -276,7 +275,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do seu trabalho
 
 ## Recuperar um trabalho de segmento específico {#get}
 
-Você pode recuperar informações detalhadas sobre um trabalho de segmento específico fazendo uma solicitação de GET para o terminal `/segment/jobs` e fornecendo a ID do trabalho de segmento que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um trabalho de segmento específico, fazendo uma solicitação de GET para o `/segment/jobs` endpoint e fornecer a ID do trabalho do segmento que você deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -286,7 +285,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | O valor `id` do trabalho de segmento que você deseja recuperar. |
+| `{SEGMENT_JOB_ID}` | O `id` valor do trabalho de segmento que você deseja recuperar. |
 
 **Solicitação**
 
@@ -373,7 +372,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Recuperar trabalhos de segmento em massa {#bulk-get}
 
-Você pode recuperar informações detalhadas sobre vários trabalhos de segmento, fazendo uma solicitação de POST para o terminal `/segment/jobs/bulk-get` e fornecendo os valores `id` dos trabalhos de segmento no corpo da solicitação.
+Você pode recuperar informações detalhadas sobre vários trabalhos de segmento, fazendo uma solicitação de POST para o `/segment/jobs/bulk-get` endpoint e fornecer a variável  `id` valores dos trabalhos do segmento no corpo da solicitação.
 
 **Formato da API**
 
@@ -479,7 +478,7 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento
 
 ## Cancelar ou excluir um trabalho de segmento específico {#delete}
 
-Você pode excluir um trabalho de segmento específico fazendo uma solicitação de DELETE ao terminal `/segment/jobs` e fornecendo a ID do trabalho de segmento que deseja excluir no caminho da solicitação.
+Você pode excluir um trabalho de segmento específico fazendo uma solicitação de DELETE para a variável `/segment/jobs` endpoint e fornecer a ID do trabalho do segmento que você deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >
@@ -493,7 +492,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | O valor `id` do trabalho de segmento que você deseja excluir. |
+| `{SEGMENT_JOB_ID}` | O `id` valor do trabalho de segmento que deseja excluir. |
 
 **Solicitação**
 

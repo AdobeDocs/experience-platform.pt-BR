@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: aac052502ea9ac0d6fae5839d8af02a077c3d6db
+source-git-commit: 85a68d49614f021ec7e4be2c11f91ef835e88929
 workflow-type: tm+mt
 source-wordcount: '2076'
 ht-degree: 0%
@@ -187,13 +187,14 @@ Depois de fornecer os valores apropriados ao agendamento, selecione **[!UICONTRO
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Fornecer detalhes do fluxo de dados
+## Fornecer detalhes do fluxo de dados {#provide-dataflow-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Assinar alertas de origens"
 >abstract="Marque essa opção para assinar alertas de notificação para seus fluxos de dados de fontes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Saiba mais na documentação"
+
 
 O **[!UICONTROL Detalhes do fluxo de dados]** será exibida, permitindo nomear e fornecer uma breve descrição sobre o novo fluxo de dados.
 

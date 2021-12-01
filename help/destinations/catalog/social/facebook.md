@@ -3,9 +3,9 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,21 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 >title="Origem do público"
 >abstract="Escolha como os dados do cliente no segmento foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Saiba mais na documentação"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Origem do público"
+>abstract="Os anunciantes coletaram dados diretamente dos clientes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Origem do público"
+>abstract="Os anunciantes coletaram dados diretamente de seus parceiros."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Origem do público"
+>abstract="Os anunciantes coletaram dados diretamente de seus clientes e parceiros."
 
 Consulte [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
+source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -187,13 +187,7 @@ Depois de fornecer os valores apropriados ao agendamento, selecione **[!UICONTRO
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Fornecer detalhes do fluxo de dados {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="Assinar alertas de origens"
->abstract="Selecione as opções que deseja assinar para receber alertas de notificação para seus fluxos de dados de fontes."
->text="Learn more in documentation"
+## Fornecer detalhes do fluxo de dados
 
 O **[!UICONTROL Detalhes do fluxo de dados]** será exibida, permitindo nomear e fornecer uma breve descrição sobre o novo fluxo de dados.
 

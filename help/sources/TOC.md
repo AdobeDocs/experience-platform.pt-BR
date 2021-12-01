@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '735'
 ht-degree: 14%
 
 ---
@@ -257,6 +257,7 @@ ht-degree: 14%
    - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
+   - [Assinar alertas de origens](tutorials/ui/alerts.md)
 - SDK de fontes {#sdk}
    - [Visão geral](sources-sdk/overview.md)
    - [Opções de configuração](sources-sdk/config/config.md)

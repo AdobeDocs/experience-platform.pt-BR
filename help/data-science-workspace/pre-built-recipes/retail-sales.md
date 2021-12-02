@@ -5,8 +5,7 @@ title: Receita de Vendas de Varejo
 topic-legacy: overview
 description: A receita Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período. Com um modelo de previsão preciso, o varejista poderia encontrar a relação entre as políticas de demanda e de preços e tomar decisões otimizadas de preços para maximizar as vendas e a receita.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -32,13 +31,13 @@ A fórmula Previsão de Vendas de Varejo usa aprendizagem de máquina para preve
 
 ## Como começar?
 
-Você pode começar seguindo este [tutorial](../jupyterlab/create-a-recipe.md).
+Você pode começar seguindo este exemplo [tutorial](../jupyterlab/create-a-model.md).
 
 Este tutorial irá criar a receita de Vendas de varejo em um Bloco de Notas de Júpiter e usar o bloco de notas para receber fluxo de trabalho para criar a receita no Adobe Experience Platform.
 
 ## Schema de dados
 
-Essa fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
+Esta receita usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |
@@ -57,7 +56,7 @@ Essa fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) para mode
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no esquema *DSWRetailSales* é carregado. A partir daqui, o modelo é treinado usando um algoritmo [de regressão de reforço de gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). A valorização de gradiente usa a ideia de que os aprendentes fracos (um que é pelo menos ligeiramente melhor do que o acaso aleatório) podem formar uma sucessão de aprendentes focados em melhorar as fraquezas do aluno anterior. Juntas, elas podem ser usadas para criar um modelo preditivo poderoso.
+Primeiro, o conjunto de dados de treinamento no *DSWRetailSales* O esquema é carregado. A partir daqui, o modelo é treinado usando um [algoritmo de regressor de reforço de gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). A valorização de gradiente usa a ideia de que os aprendentes fracos (um que é pelo menos ligeiramente melhor do que o acaso aleatório) podem formar uma sucessão de aprendentes focados em melhorar as fraquezas do aluno anterior. Juntas, elas podem ser usadas para criar um modelo preditivo poderoso.
 
 O processo envolve três elementos: uma função de perda, um aprendiz fraco e um modelo aditivo.
 

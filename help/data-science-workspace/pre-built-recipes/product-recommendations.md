@@ -5,11 +5,10 @@ title: Receita de recomendação do produto
 topic-legacy: overview
 description: A fórmula do Recommendations do produto permite fornecer recomendações personalizadas de produtos, adaptadas às necessidades e interesses do cliente. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer informações sobre quais produtos eles podem estar interessados.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -27,14 +26,14 @@ A fórmula do Recommendations do produto usa o aprendizado de máquina para anal
 
 ## Como começar?
 
-Você pode começar seguindo o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a receita do Recommendations do produto em um Notebook de Júpiter seguindo o fluxo de trabalho [notebook para receita](../jupyterlab/create-a-recipe.md) e implementando a receita em [!DNL Experience Platform] [!DNL Data Science Workspace].
+Você pode começar seguindo o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a receita do Recommendations do produto em um notebook Júpiter seguindo o [notebook para receita](../jupyterlab/create-a-model.md) e implementar a receita em [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Laboratório: Preveja o futuro com o Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos do laboratório](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Schema de dados
 
-Essa fórmula usa esquemas [XDM](../../xdm/schema/field-dictionary.md) personalizados para modelar os dados de entrada e saída:
+Esta fórmula usa personalizado [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados de entrada e saída:
 
 ### Schema de dados de entrada
 

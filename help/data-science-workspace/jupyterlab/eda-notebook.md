@@ -6,15 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Este guia tem como foco o Notebook de análise de dados exploratórios (EDA) para descobrir padrões em dados da Web, agregar eventos com uma meta de previsão, limpar dados agregados e entender a relação entre preditores e uma meta.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%
 
 ---
 
-# Explorar dados baseados na Web para modelos preditivos usando o notebook de análise de dados exploratórios (EDA)
+# Explorar dados baseados na Web para modelos preditivos usando o notebook de análise de dados exploratória (EDA)
 
 O notebook de análise de dados exploratórios (EDA) foi projetado para ajudá-lo a descobrir padrões em dados, verificar a integridade dos dados e resumir os dados relevantes para modelos preditivos.
 
@@ -24,11 +23,11 @@ A segunda parte inicia com a realização de análises descritivas em dados agre
 
 ## Introdução
 
-Antes de ler este guia, revise o [[!DNL JupyterLab] guia do usuário](./overview.md) para obter uma introdução de alto nível a [!DNL JupyterLab] e sua função no Data Science Workspace. Além disso, se estiver usando seus próprios dados, revise a documentação para [data access in [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Este guia contém informações importantes sobre limites de dados do notebook.
+Antes de ler este guia, reveja o [[!DNL JupyterLab] guia do usuário](./overview.md) para uma introdução de alto nível ao [!DNL JupyterLab] e seu papel no Data Science Workspace. Além disso, se você estiver usando seus próprios dados, revise a documentação de [acesso aos dados em [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Este guia contém informações importantes sobre limites de dados do notebook.
 
 Esse notebook usa um conjunto de dados de valores médios na forma de dados do Adobe Analytics Experience Events encontrados no Analysis Workspace do Analytics. Para usar o bloco de notas EDA, é necessário definir a tabela de dados com os seguintes valores `target_table` e `target_table_id`. Qualquer conjunto de dados de valores médios pode ser usado.
 
-Para localizar esses valores, siga as etapas descritas na seção [write to a data set no python](./access-notebook-data.md#write-python) do guia de acesso a dados do JupyterLab. O nome do conjunto de dados (`target_table`) está localizado no diretório do conjunto de dados. Depois de clicar com o botão direito do mouse no conjunto de dados para explorar ou gravar dados em um notebook, uma ID de conjunto de dados (`target_table_id`) é fornecida na entrada de código executável.
+Para encontrar esses valores, siga as etapas descritas na [gravar em um conjunto de dados em python](./access-notebook-data.md#write-python) seção do guia de acesso a dados do JupyterLab. O nome do conjunto de dados (`target_table`) está localizado no diretório do conjunto de dados. Depois de clicar com o botão direito do mouse no conjunto de dados para explorar ou gravar dados em um notebook, uma ID de conjunto de dados (`target_table_id`) é fornecido na entrada de código executável.
 
 ## Detecção de dados
 
@@ -66,9 +65,9 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Conectar-se ao Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] no Platform permite usar o SQL em um  [!DNL Python] notebook para acessar dados por meio do Serviço de  [query](https://www.adobe.com/go/query-service-home-en). O acesso aos dados por meio de [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos tempos de execução superiores. Observe que a consulta de dados usando [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
+[!DNL JupyterLab] no Platform permite usar o SQL em um [!DNL Python] notebook para acessar os dados por meio de [Serviço de query](https://www.adobe.com/go/query-service-home-en). Acesso aos dados por meio do [!DNL Query Service] pode ser útil para lidar com conjuntos de dados grandes devido a seus tempos de execução superiores. Observe que consultar dados usando [!DNL Query Service] O tem um limite de tempo de processamento de dez minutos.
 
-Antes de usar [!DNL Query Service] em [!DNL JupyterLab], certifique-se de ter uma compreensão funcional da [[!DNL Query Service] sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
+Antes de utilizar [!DNL Query Service] em [!DNL JupyterLab], certifique-se de ter um entendimento prático do [[!DNL Query Service] Sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Para utilizar o Serviço de Consulta no JupyterLab, você deve primeiro criar uma conexão entre seu notebook Python e o Serviço de Consulta. Isso pode ser feito executando-se a seguinte célula.
 
@@ -78,7 +77,7 @@ qs_connect()
 
 ### Definir o conjunto de dados de valores médios para exploração
 
-Para começar a consultar e explorar dados, uma tabela de conjunto de dados de valores médios deve ser fornecida. Copie e substitua os valores `table_name` e `table_id` por seus próprios valores da tabela de dados.
+Para começar a consultar e explorar dados, uma tabela de conjunto de dados de valores médios deve ser fornecida. Copie e substitua o `table_name` e `table_id` com seus próprios valores da tabela de dados.
 
 ```python
 target_table = "table_name"
@@ -120,7 +119,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Detecção de conjunto de dados
 
-Depois de configurar todos os seus parâmetros, iniciados [!DNL Query Service] e com um intervalo de datas, você estará pronto para começar a ler linhas de dados. É necessário limitar o número de linhas lidas.
+Depois de configurar todos os parâmetros, inicie [!DNL Query Service]e tiver um intervalo de datas, você estará pronto para começar a ler linhas de dados. É necessário limitar o número de linhas lidas.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -285,7 +284,7 @@ iplot(fig)
 
 **Os dez principais produtos visualizados**
 
-Este query fornece uma lista dos dez principais produtos visualizados. No exemplo abaixo, a função `Explode()` é usada para retornar cada produto no objeto `productlistitems` para sua própria linha. Isso permite que você faça uma consulta aninhada para agregar visualizações de produtos para diferentes SKUs.
+Este query fornece uma lista dos dez principais produtos visualizados. No exemplo abaixo, a variável `Explode()` é usada para retornar cada produto na função `productlistitems` à sua própria linha. Isso permite que você faça uma consulta aninhada para agregar visualizações de produtos para diferentes SKUs.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -369,7 +368,7 @@ threshold = 1
 
 ### Agregação de dados para criação de recursos e objetivos
 
-Para iniciar a análise exploratória, é necessário criar uma meta no nível do perfil, seguida pela agregação do conjunto de dados. Neste exemplo, dois queries são fornecidos. A primeira query contém a criação de uma meta. A segunda query precisa ser atualizada para incluir variáveis diferentes daquelas na primeira query. Talvez você queira atualizar o `limit` para sua query. Depois de executar os seguintes queries, os dados agregados agora estão disponíveis para exploração.
+Para iniciar a análise exploratória, é necessário criar uma meta no nível do perfil, seguida pela agregação do conjunto de dados. Neste exemplo, dois queries são fornecidos. A primeira query contém a criação de uma meta. A segunda query precisa ser atualizada para incluir variáveis diferentes daquelas na primeira query. Talvez você queira atualizar o `limit` para seu query. Depois de executar os seguintes queries, os dados agregados agora estão disponíveis para exploração.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -630,11 +629,11 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Depois de remover as colunas de valor único, verifique as colunas restantes em busca de erros usando o comando `Data.columns` em uma nova célula.
+Depois de remover as colunas de valor único, verifique se as colunas restantes estão com erros usando a `Data.columns` em uma nova célula.
 
 ### Correto para valores ausentes
 
-A seção a seguir contém algumas abordagens de amostra sobre a correção de valores ausentes. Embora nos dados acima apenas uma coluna tenha um valor ausente, as células de exemplo abaixo dos valores corretos para todos os tipos de dados. Isso inclui:
+A seção a seguir contém algumas abordagens de amostra sobre a correção de valores ausentes. Embora nos dados acima apenas uma coluna tenha um valor ausente, as células de exemplo abaixo dos valores corretos para todos os tipos de dados. As melhorias incluem:
 
 - Tipos de dados numéricos: input 0 ou max, se aplicável
 - Tipos de dados categóricos: valor modal de entrada
@@ -677,10 +676,10 @@ Uma vez concluídos, os dados limpos estarão prontos para análise binária.
 A análise binária é usada para ajudar a entender a relação entre dois conjuntos de valores, como seus recursos e uma variável de destino. Uma vez que diferentes parcelas abrangem tipos de dados categóricos e numéricos, esta análise deve ser efetuada separadamente para cada tipo de dados. Os gráficos a seguir são recomendados para análise binante:
 
 - **Correlação**: Um coeficiente de correlação é a medida da intensidade de uma relação entre duas características. A correlação tem valores entre -1 e 1, onde: 1 indica uma relação positiva forte, -1 indica uma relação negativa forte e um resultado de zero indica que nenhuma relação existe.
-- **Gráfico** de pares: As parcelas de pares são uma forma simples de visualizar as relações entre cada variável. Ele produz uma matriz de relacionamentos entre cada variável nos dados.
-- **Mapa de calor**: Os mapas de calor são o coeficiente de correlação para todas as variáveis no conjunto de dados.
-- **Gráficos** de caixa: Os gráficos de caixa são uma maneira padronizada de exibir a distribuição de dados com base em um resumo de cinco números (mínimo, primeiro quartil (Q1), mediana, terceiro quartil (Q3) e máximo).
-- **Contagem de gráfico**: Um gráfico de contagem é como um histograma ou um gráfico de barras para algumas características categóricas. Ele mostra o número de ocorrências de um item com base em um determinado tipo de categoria.
+- **Gráfico de pares**: As parcelas de pares são uma forma simples de visualizar as relações entre cada variável. Ele produz uma matriz de relacionamentos entre cada variável nos dados.
+- **HeatMap**: Os mapas de calor são o coeficiente de correlação para todas as variáveis no conjunto de dados.
+- **Gráficos de caixa**: Os gráficos de caixa são uma maneira padronizada de exibir a distribuição de dados com base em um resumo de cinco números (mínimo, primeiro quartil (Q1), mediana, terceiro quartil (Q3) e máximo).
+- **Gráfico de contagem**: Um gráfico de contagem é como um histograma ou um gráfico de barras para algumas características categóricas. Ele mostra o número de ocorrências de um item com base em um determinado tipo de categoria.
 
 Para entender a relação entre a variável &quot;meta&quot; e os prediores/recursos, os gráficos são usados com base em tipos de dados. Para recursos numéricos, você deve usar um gráfico de caixa se a variável &quot;meta&quot; for categórica, além de um gráfico de pares e um mapa de calor se a variável &quot;meta&quot; for numérica.
 
@@ -810,7 +809,7 @@ A correção de outliers requer uma compreensão dos negócios e da indústria e
 
 Para obter mais informações sobre outliers e se deseja removê-los ou não, leia esta entrada do [fator de análise](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-O exemplo a seguir contém limites de célula e pontos de dados de piso que são outliers usando [intervalo interquartil](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+O exemplo a seguir contém limites de célula e pontos de dados de piso que são outliers usando [gama interquartil](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -832,4 +831,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Após concluir a análise de dados exploratórios, você estará pronto para começar a criar um modelo. Como alternativa, você pode usar os dados e insights derivados para criar um painel com ferramentas como o Power BI.
 
-O Adobe Experience Platform separa o processo de criação do modelo em dois estágios distintos, Receitas (uma instância de modelo) e Modelos. Para iniciar o processo de criação de receita, visite a documentação para [criar uma receita em notebooks JupyerLab](./create-a-recipe.md). Este documento contém informações e exemplos para criar, treinar e pontuar, uma receita dentro de [!DNL JupyterLab] notebooks.
+O Adobe Experience Platform separa o processo de criação do modelo em dois estágios distintos, Receitas (uma instância de modelo) e Modelos. Para iniciar o processo de criação da receita, visite a documentação para [criação de uma receita em notebooks JupyerLab](./create-a-model.md). Este documento contém informações e exemplos para criar, treinar e pontuar, uma receita dentro de [!DNL JupyterLab] Notebooks.

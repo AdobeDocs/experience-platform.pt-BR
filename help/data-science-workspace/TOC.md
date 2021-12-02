@@ -5,11 +5,10 @@ breadcrumb-title: Guia do Data Science Workspace
 user-guide-description: Use o aprendizado de máquina para desenvolver, treinar e pontuar modelos e receitas com Adobe Sensei e notebooks JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 18%
+source-wordcount: '248'
+ht-degree: 16%
 
 ---
 
@@ -19,13 +18,13 @@ ht-degree: 18%
 * [Visão geral do Data Science Workspace](home.md)
 * [Acesso e recursos da Data Science Workspace](access-features-dsw.md)
 * [Apresentação do Data Science Workspace](walkthrough.md)
-* Blocos de anotações do JupyterLab {#jupyterlab}
+* Notebooks JupyterLab {#jupyterlab}
    * [Visão geral](jupyterlab/overview.md)
    * [Acesso aos dados](jupyterlab/access-notebook-data.md)
    * [Analisar seus dados](jupyterlab/analyze-your-data.md)
    * [Serviço de query](jupyterlab/query-service.md)
    * [Análise de dados exploratória (EDA)](jupyterlab/eda-notebook.md)
-   * [Criar uma receita](jupyterlab/create-a-recipe.md)
+   * [Criar um modelo usando o construtor de fórmulas](jupyterlab/create-a-model.md)
    * [Colaborar no JupyterLab usando Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizado de máquina do Sensei {#api}
    * [Introdução](api/getting-started.md)
@@ -45,7 +44,7 @@ ht-degree: 18%
    * [Fórmula de recomendação do produto](pre-built-recipes/product-recommendations.md)
    * [Previsão de compra do produto](pre-built-recipes/product-purchase-prediction.md)
    * [Receita de vendas de varejo](pre-built-recipes/retail-sales.md)
-* Criação de modelo {#authoring}
+* Criação de modelos {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
    * [Criação de modelo usando o SDK da plataforma (Python)](authoring/platform-sdk.md)
@@ -53,6 +52,7 @@ ht-degree: 18%
    * [Acesso aos dados do Spark](authoring/spark.md)
 * Tutoriais de modelo e receita {#models-recipes}
    * [Criar e publicar um modelo de aprendizado de máquina](models-recipes/create-publish-model.md)
+   * [Crie esquemas e conjuntos de dados de demonstração do Luma](models-recipes/create-luma-data.md)
    * [Criar o esquema de vendas de varejo e o conjunto de dados](models-recipes/create-retails-sales-dataset.md)
    * [Visualizar esquemas e conjuntos de dados](models-recipes/preview-schema-data.md)
    * [Compactar arquivos de origem em uma receita](models-recipes/package-source-files-recipe.md)

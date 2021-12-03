@@ -2,10 +2,10 @@
 title: Notas de versão
 description: As notas de versão mais recentes de tags na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 68%
+source-wordcount: '658'
+ht-degree: 60%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 68%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 15 de novembro de 2021
+
+**Aceitar o código ES6 em Tags** - As extensões e o código personalizado contendo o código ES6 agora podem ser usados em Tags. No catálogo de extensões, você verá um rótulo ES6+ dentro do cartão de cada extensão que contém o código ES6. IE10 e IE11 não oferecem suporte ao código ES6. Antes de usar o código ES6 nas bibliotecas de tags, faça a análise necessária.
+
+**Uso do Terser como compressor JavaScript** - Uglifier foi substituído por Terser. A partir desta versão, todas as bibliotecas de Tags serão minificadas pelo Terser.
 
 ## 21 de outubro de 2021
 

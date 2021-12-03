@@ -1,27 +1,27 @@
 ---
-title: Configuração do SDK da Web da Adobe Experience Platform
-description: Saiba mais sobre a extensão de tag do SDK da Web da Adobe Experience Platform.
+title: Configurar a extensão Adobe Experience Platform Web SDK
+description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 8%
+source-wordcount: '1049'
+ht-degree: 7%
 
 ---
 
-# Visão geral
+# Configurar a extensão Adobe Experience Platform Web SDK
 
-A extensão Adobe Experience Platform Web SDK envia dados para a Adobe Experience Cloud a partir de propriedades da Web por meio da rede de borda Adobe Experience Platform. A extensão permite fazer o stream de dados para a Plataforma, sincronizar identidades, processar sinais de consentimento do cliente e coletar dados de contexto automaticamente.
+A extensão de tag do SDK da Web da Adobe Experience Platform envia dados para a Adobe Experience Cloud a partir de propriedades da Web por meio da Rede de borda da Adobe Experience Platform. A extensão permite fazer o stream de dados para a Plataforma, sincronizar identidades, processar sinais de consentimento do cliente e coletar dados de contexto automaticamente.
 
 Este documento aborda como configurar a extensão na interface do usuário da coleta de dados.
 
-## Configurar a extensão
+## Introdução
 
-Se a extensão SDK da Web da plataforma já tiver sido instalada para uma propriedade, abra a propriedade na interface do usuário da coleta de dados e selecione a guia **[!UICONTROL Extensões]**. No SDK da Web da plataforma, selecione **[!UICONTROL Configurar]**.
+Se a extensão SDK da Web da plataforma já tiver sido instalada para uma propriedade, abra a propriedade na interface do usuário da coleta de dados e selecione a variável **[!UICONTROL Extensões]** guia . No SDK da Web da plataforma, selecione **[!UICONTROL Configurar]**.
 
 ![](../images/extension/overview/configure.png)
 
-Se ainda não tiver instalado a extensão, selecione a guia **[!UICONTROL Catalog]**. Na lista de extensões disponíveis, encontre a extensão SDK da Web da plataforma e selecione **[!UICONTROL Instalar]**.
+Se ainda não tiver instalado a extensão, selecione a **[!UICONTROL Catálogo]** guia . Na lista de extensões disponíveis, encontre a extensão SDK da Web da plataforma e selecione **[!UICONTROL Instalar]**.
 
 ![](../images/extension/overview/install.png)
 
@@ -37,11 +37,11 @@ As opções de configuração na parte superior da página informam à Adobe Exp
 
 A extensão Adobe Experience Platform Web SDK oferece suporte a várias instâncias na página. O nome é usado para enviar dados para várias organizações com uma configuração de tag.
 
-O nome da extensão assume como padrão &quot;[!DNL alloy]&quot;. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
+O nome padrão da extensão é &quot;[!DNL alloy]&quot;. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
 
 ### **[!UICONTROL ID da organização IMS]**
 
-A [!UICONTROL IMS Organization ID] é a organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha este campo com o valor da segunda organização para a qual deseja enviar dados.
+O [!UICONTROL IMS Organization ID] é a organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha este campo com o valor da segunda organização para a qual deseja enviar dados.
 
 ### **[!UICONTROL Domínio de borda]**
 
@@ -51,14 +51,14 @@ O [!UICONTROL Domínio de borda] é o domínio do qual a extensão Adobe Experie
 
 Quando uma solicitação é enviada para a Rede de borda da Adobe Experience Platform, uma ID de armazenamento de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código em seu site.
 
-Consulte o guia em [datastreams](../fundamentals/datastreams.md) para obter mais informações.
+Consulte o guia sobre [datastreams](../fundamentals/datastreams.md) para obter mais informações.
 
 
 ## [!UICONTROL Privacidade]
 
 ![](../images/extension/overview/privacy.png)
 
-A seção [!UICONTROL Privacy] permite configurar como o SDK lida com sinais de consentimento do usuário em seu site. Especificamente, permite selecionar o nível padrão de consentimento que é presumido de um usuário se nenhuma outra preferência de consentimento explícita tiver sido fornecida. O nível de consentimento padrão não é salvo no perfil do usuário. O quadro a seguir detalha o que cada opção implica:
+O [!UICONTROL Privacidade] permite configurar como o SDK lida com sinais de consentimento do usuário em seu site. Especificamente, permite selecionar o nível padrão de consentimento que é presumido de um usuário se nenhuma outra preferência de consentimento explícita tiver sido fornecida. O nível de consentimento padrão não é salvo no perfil do usuário. O quadro a seguir detalha o que cada opção implica:
 
 | [!UICONTROL Nível de consentimento padrão] | Descrição |
 | --- | --- |
@@ -85,7 +85,7 @@ Essa opção permite que o SDK tente armazenar um identificador de usuário em u
 
 ![](../images/extension/overview/personalization.png)
 
-Se você quiser ocultar determinadas partes se o site enquanto o conteúdo personalizado estiver carregado, é possível especificar os elementos a serem ocultados no editor de estilo pré-ocultado. Em seguida, você pode copiar o trecho pré-ocultação padrão fornecido a você e colá-lo dentro do elemento `<head>`do site HTML.
+Se você quiser ocultar determinadas partes se o site enquanto o conteúdo personalizado estiver carregado, é possível especificar os elementos a serem ocultados no editor de estilo pré-ocultado. Em seguida, você pode copiar o trecho pré-ocultação padrão fornecido para você e colá-lo dentro do `<head>`elemento do seu HTML site.
 
 ## [!UICONTROL Coleta de dados]
 
@@ -93,15 +93,15 @@ Se você quiser ocultar determinadas partes se o site enquanto o conteúdo perso
 
 ### [!UICONTROL Função de retorno de chamada]
 
-A função de retorno de chamada fornecida na extensão também é chamada de função [`onBeforeEventSend`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) na biblioteca. Essa função permite modificar eventos globalmente antes de serem enviados para a Adobe Edge Network. Informações mais detalhadas sobre como usar esta função podem ser encontradas [aqui](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+A função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) na biblioteca. Essa função permite modificar eventos globalmente antes de serem enviados para a Adobe Edge Network. Encontre informações mais detalhadas sobre como usar essa função [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Clique em coleção de dados]
 
-O SDK pode coletar automaticamente as informações de clique do link para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas na caixa de texto [!UICONTROL Baixar qualificador de link]. O Adobe fornece alguns qualificadores padrão de link de download, mas eles podem ser editados a qualquer momento.
+O SDK pode coletar automaticamente as informações de clique do link para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas na [!UICONTROL Qualificador de link de download] caixa de texto. O Adobe fornece alguns qualificadores padrão de link de download, mas eles podem ser editados a qualquer momento.
 
 ### [!UICONTROL Dados de contexto coletados automaticamente]
 
-Por padrão, o SDK coleta determinados dados de contexto relacionados ao dispositivo, à Web, ao ambiente e ao contexto de local. Se quiser ver uma lista das informações coletadas pelo Adobe, poderá encontrá-la [aqui](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Se não quiser que esses dados sejam coletados ou se quiser que apenas determinadas categorias de dados sejam coletadas, é possível alterar essas opções.
+Por padrão, o SDK coleta determinados dados de contexto relacionados ao dispositivo, à Web, ao ambiente e ao contexto de local. Se quiser ver uma lista das informações coletadas pelo Adobe, poderá encontrá-la [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Se não quiser que esses dados sejam coletados ou se quiser que apenas determinadas categorias de dados sejam coletadas, é possível alterar essas opções.
 
 ## [!UICONTROL Configurações avançadas]
 

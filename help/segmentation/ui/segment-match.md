@@ -5,7 +5,7 @@ title: Visão geral da correspondência de segmentos
 topic-legacy: overview
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 1%
@@ -59,7 +59,7 @@ A lista de namespaces suportados é a seguinte:
 
 Você deve fornecer uma configuração de consentimento e definir seu valor padrão como `opt-in` ou `opt-out` para uma verificação de consentimento.
 
-A verificação de consentimento de aceitação e recusa determina se você pode operar com o consentimento para compartilhar dados do usuário por padrão. Se o padrão de configuração de consentimento estiver definido como `opt-in`, os dados do usuário podem ser compartilhados, a menos que um usuário recuse explicitamente a adesão. Se o padrão estiver definido como `opt-out`, os dados do usuário não podem ser compartilhados, a menos que um usuário faça a aceitação explícita.
+A verificação de consentimento de aceitação e recusa determina se você pode operar com o consentimento para compartilhar dados do usuário por padrão. Se o padrão de configuração de consentimento estiver definido como `opt-out`, os dados do usuário podem ser compartilhados, a menos que um usuário recuse explicitamente a adesão. Se o padrão estiver definido como `opt-in`, os dados do usuário não podem ser compartilhados, a menos que um usuário faça a aceitação explícita.
 
 A configuração de consentimento padrão para o [!DNL Segment Match] está definida como `opt-out`. Para aplicar um modelo de aceitação aos seus dados, envie uma solicitação por email para seu Gerente de conta do Adobe.
 

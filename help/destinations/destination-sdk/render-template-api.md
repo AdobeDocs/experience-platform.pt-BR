@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/template/render`, para renderizar dados exportados para seu destino, com base no modelo de transformação de mensagem.
 title: Renderizar operações da API do modelo
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,8 @@ Antes de continuar, reveja o [guia de introdução](./getting-started.md) para o
 ## Renderizar perfis exportados com base no modelo de transformação de mensagem {#render-exported-data}
 
 Você pode renderizar perfis exportados fazendo uma solicitação POST para a variável `authoring/testing/template/render` endpoint e fornecer a ID de destino da configuração de destino e o modelo criado usando o [exemplo de ponto de extremidade da API do modelo](./sample-template-api.md).
+
+Você pode começar usando um modelo simples que exporta seus perfis brutos sem aplicar transformações e depois seguir para um modelo mais complexo, que aplica transformações a perfis. A sintaxe do modelo simples é: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
@@ -1069,4 +1071,4 @@ Os endpoints da API do Destination SDK seguem os princípios gerais da mensagem 
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, você agora sabe como usar o modelo de transformação de mensagem para gerar perfis exportados que correspondam ao formato de dados esperado do seu destino. Ler [como usar o SDK de destino para configurar o destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, você agora sabe como usar o modelo de transformação de mensagem para gerar perfis exportados que correspondam ao formato de dados esperado do seu destino. Ler [como usar o Destination SDK para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

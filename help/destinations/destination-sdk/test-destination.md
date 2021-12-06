@@ -1,10 +1,10 @@
 ---
-description: Como parte do SDK de destino, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino.
+description: Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino.
 title: Testar a configuração de destino
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '526'
 ht-degree: 1%
 
 ---
@@ -13,17 +13,21 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-Como parte do SDK de destino, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino. Para obter informações sobre como criar um modelo de transformação de mensagem, leia [Criar e testar um modelo de transformação de mensagem](./create-template.md).
+Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino. Para obter informações sobre como criar um modelo de transformação de mensagem, leia [Criar e testar um modelo de transformação de mensagem](./create-template.md).
 
-Para **testar se o destino está configurado corretamente e para verificar a integridade dos fluxos de dados para o destino configurado**, use a *Ferramenta de teste de destino*. Com essa ferramenta, você pode testar a configuração de destino enviando mensagens para o terminal REST API.
+Para **teste se o destino está configurado corretamente e para verificar a integridade dos fluxos de dados para o destino configurado**, use o *Ferramenta de teste de destino*. Com essa ferramenta, você pode testar a configuração de destino enviando mensagens para o terminal REST API.
 
-Ilustração abaixo: como testar seu destino se encaixa no [fluxo de trabalho de configuração de destino](./configure-destination-instructions.md) no SDK de destino:
+A ilustração abaixo mostra como o teste do seu destino se encaixa na variável [fluxo de trabalho de configuração de destino](./configure-destination-instructions.md) no Destination SDK:
 
 ![Gráfico de onde a etapa de teste de destino se encaixa no fluxo de trabalho de configuração de destino](./assets/test-destination-step.png)
 
-## Ferramenta de teste de destino {#destination-testing-tool}
+## Ferramenta de teste de destino - Finalidade e pré-requisitos {#destination-testing-tool}
 
-Use essa ferramenta para testar a configuração de destino enviando mensagens para o terminal do parceiro fornecido no [configuração do servidor](./server-and-template-configuration.md).
+Use a ferramenta de teste de destino para testar a configuração de destino, enviando mensagens para o terminal do parceiro fornecido na [configuração do servidor](./server-and-template-configuration.md).
+
+Antes de usar a ferramenta, verifique se:
+* Configure seu destino seguindo as etapas descritas na [fluxo de trabalho de configuração de destino](./configure-destination-instructions.md) e
+* Estabeleça uma conexão com seu destino, conforme detalhado em [Como obter a ID da instância de destino](./destination-testing-api.md#get-destination-instance-id).
 
 Com essa ferramenta, depois de ter configurado seu destino, você pode:
 * Teste se o destino está configurado corretamente;
@@ -37,16 +41,16 @@ Com essa ferramenta, depois de ter configurado seu destino, você pode:
 
 Você pode fazer chamadas para o endpoint da API de teste de destino com ou sem adicionar perfis na solicitação.
 
-Se você não adicionar perfis na solicitação, o Adobe gerará esses perfis internamente para você e os adicionará à solicitação. Se desejar gerar perfis para usar nesta solicitação, consulte a [Referência da API de geração de perfil de amostra](./sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado no [API reference](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o schema de origem é o [union schema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) da sandbox que você está usando.
+Se você não adicionar perfis na solicitação, o Adobe gerará esses perfis internamente para você e os adicionará à solicitação. Se desejar gerar perfis para usar nessa solicitação, consulte [Referência da API de geração de perfil de amostra](./sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado no [Referência da API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o schema de origem é o [schema de união](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) da sandbox que você está usando.
 
 A resposta contém o resultado do processamento da solicitação de destino. A solicitação inclui três seções principais:
 * A solicitação gerada pelo Adobe para o destino.
 * A resposta recebida do seu destino.
-* A lista de perfis enviados na solicitação, sejam eles [adicionados por você na solicitação](./destination-testing-api.md/#test-with-added-profiles) ou gerados pelo Adobe se [o corpo da solicitação de teste de destino estiver vazio](./destination-testing-api.md#test-without-adding-profiles).
+* A lista de perfis enviados na solicitação, se os perfis foram [adicionado por você na solicitação](./destination-testing-api.md/#test-with-added-profiles)ou gerada por Adobe if [o corpo da solicitação de teste de destino estava vazio](./destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->O Adobe pode gerar vários pares de solicitação e resposta. Por exemplo, se você enviar 10 perfis para um destino que tenha um valor `maxUsersPerRequest` de 7, haverá uma solicitação com 7 perfis e outra solicitação com 3 perfis.
+>O Adobe pode gerar vários pares de solicitação e resposta. Por exemplo, se você enviar 10 perfis para um destino que tenha um `maxUsersPerRequest` valor de 7, haverá uma solicitação com 7 perfis e outra solicitação com 3 perfis.
 
 **Solicitação de exemplo com parâmetro de perfis no corpo**
 
@@ -121,7 +125,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Resposta de exemplo**
 
-Observe que o conteúdo do parâmetro `results.httpCalls` é específico para sua API REST.
+Observe que o conteúdo da variável `results.httpCalls` é específico para sua REST API.
 
 ```json
 {
@@ -229,4 +233,4 @@ Para obter descrições dos parâmetros de solicitação e resposta, consulte [O
 
 ## Próximas etapas
 
-Após testar seu destino e confirmar que ele está configurado corretamente, use a [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
+Depois de testar seu destino e confirmar que ele está configurado corretamente, use a [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.

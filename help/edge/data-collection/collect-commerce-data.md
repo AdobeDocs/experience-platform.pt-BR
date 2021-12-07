@@ -3,9 +3,9 @@ title: Colete informações de comércio e produto usando o SDK da Web da Adobe 
 description: Saiba como adicionar dados relacionados a produtos ou a um carrinho de compras usando o SDK da Web da Adobe Experience Platform.
 keywords: produtos, comércio, medidas, medida, pedido, carrinho de compras, check-outs, productListAdds, productListOpens, productListRemoments, productListReopens, productListViews, productViews, compras, saveForLaters, currencyCode, pagamentos, paymentAmount, paymentID, transactionTotal, purchaseID, purchaseID, purchaseID Número;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
+source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1326'
 ht-degree: 6%
 
 ---
@@ -114,7 +114,7 @@ A lista de produtos indica quais produtos estão relacionados à ação correspo
 | **Campo** | **Recomendação** | **Descrição** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Opcional | O [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) moeda do produto. Isso só é útil quando você pode ter produtos com códigos de moeda diferentes e quando ele se aplica. Por exemplo, quando há uma compra ou adição ao carrinho. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Altamente recomendado | Só deve ser definido quando aplicável. Por exemplo, talvez não seja possível definir em `productView` porque diferentes variações do produto podem ter preços diferentes, mas com uma `productListAdds`. |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Altamente recomendado | Só deve ser definido quando aplicável. Por exemplo, talvez não seja possível definir em `productView` uma vez que diferentes variações do produto podem ter preços diferentes, mas com uma variação `productListAdds` evento. |
 | [produto](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Altamente recomendado | A ID XDM do produto. |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Altamente recomendado | O método usado para adicionar um item de produto à lista pelo visitante. Defina com `productListAdds` , e só devem ser usadas quando um produto for adicionado à lista. Os exemplos incluem `add to cart button`, `quick add` e `upsell`. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | Altamente recomendado | Isso é definido como o nome de exibição ou o nome legível do produto. |

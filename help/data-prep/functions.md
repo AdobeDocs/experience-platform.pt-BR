@@ -5,9 +5,9 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 16484a5cf9f8ae7e4d0802cb8957c8627466db5f
+source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3971'
 ht-degree: 4%
 
 ---
@@ -114,8 +114,8 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera a hora atual. |  | now() | now() | `2021-10-26T10:10:24Z` |
 | carimbo de data e hora | Recupera o horário Unix atual. |  | carimbo de data e hora() | carimbo de data e hora() | 1571850624571 |
-| date_to_string | Formata a data de entrada de acordo com um formato especificado. | <ul><li>DATA: **Obrigatório** A data de entrada, como um objeto ZoningDateTime, que você deseja formatar.</li><li>FORMATO: **Obrigatório** O formato para o qual você deseja alterar a data.</li></ul> | date_to_string(DATE, FORMAT) | date_to_string(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| long_to_date | Converte um carimbo de data e hora em uma string de data de acordo com um formato especificado. | <ul><li>CARIMBO DE DATA E HORA: **Obrigatório** O carimbo de data e hora que você deseja formatar. Isso é escrito em milissegundos.</li><li>FORMATO: **Obrigatório** O formato no qual você deseja que o carimbo de data e hora se torne.</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, &quot;aaaa-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
+| format | Formata a data de entrada de acordo com um formato especificado. | <ul><li>DATA: **Obrigatório** A data de entrada, como um objeto ZoningDateTime, que você deseja formatar.</li><li>FORMATO: **Obrigatório** O formato para o qual você deseja alterar a data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
+| dformat | Converte um carimbo de data e hora em uma string de data de acordo com um formato especificado. | <ul><li>CARIMBO DE DATA E HORA: **Obrigatório** O carimbo de data e hora que você deseja formatar. Isso é escrito em milissegundos.</li><li>FORMATO: **Obrigatório** O formato no qual você deseja que o carimbo de data e hora se torne.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;aaaa-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | data | Converte uma cadeia de caracteres de data em um objeto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obrigatório** A string que representa a data.</li><li>FORMATO: **Obrigatório** A string que representa o formato da data de origem.**Observação:** Isso faz **not** representa o formato no qual você deseja converter a string de data. </li><li>DEFAULT_DATE: **Obrigatório** A data padrão retornada, se a data fornecida for nula.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
 | data | Converte uma cadeia de caracteres de data em um objeto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obrigatório** A string que representa a data.</li><li>FORMATO: **Obrigatório** A string que representa o formato da data de origem.**Observação:** Isso faz **not** representa o formato no qual você deseja converter a string de data. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | data | Converte uma cadeia de caracteres de data em um objeto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obrigatório** A string que representa a data.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |

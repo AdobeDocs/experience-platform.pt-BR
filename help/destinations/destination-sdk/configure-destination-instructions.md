@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 Veja abaixo um exemplo de configuração para um modelo de destino, criado usando o `/destinations` Ponto de extremidade da API. Para obter mais informações sobre esse template, consulte [Configuração de destino](./destination-configuration.md).
 
 Para conectar o servidor e a configuração do modelo na etapa 1 a essa configuração de destino, adicione a ID da instância da configuração do servidor e do modelo como `destinationServerId` aqui.
+
+>[!IMPORTANT]
+>
+>Para criar um destino configurado corretamente, *must* adicionar pelo menos uma identidade de destino em `identityNamespaces`, conforme mostrado abaixo. Se nenhuma identidade de destino estiver configurada, os usuários não poderão continuar após a [Etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations

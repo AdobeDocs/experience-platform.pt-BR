@@ -5,7 +5,7 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Para saber mais, visite o [guia do painel de segmentos](../../dashboards/guides/
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## Procurar
+## Procurar {#browse}
 
 Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definições de segmento para sua Organização IMS.
 

@@ -2,9 +2,9 @@
 title: Esquemas no Real-time Customer Data Platform B2B Edition
 description: Uma visão geral da função dos esquemas do Experience Data Model (XDM) no Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ As seguintes classes padrão são fornecidas na Real-time CDP B2B Edition:
 * [Relação de Pessoa da Oportunidade de Negócios XDM](../../xdm/classes/b2b/business-opportunity-person-relation.md)
 * [Lista de marketing comercial XDM](../../xdm/classes/b2b/business-marketing-list.md)
 * [Membros da Lista de Marketing Comercial XDM](../../xdm/classes/b2b/business-marketing-list-members.md)
+
+Para entender como os esquemas se encaixam no fluxo de trabalho B2B, consulte [tutorial completo](../b2b-tutorial.md).
 
 Para obter etapas sobre como criar uma relação muitos para um entre dois schemas, consulte o tutorial em [definição de relações de esquema B2B](../../xdm/tutorials/relationship-b2b.md).
 

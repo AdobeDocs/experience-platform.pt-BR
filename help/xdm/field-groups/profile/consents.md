@@ -4,7 +4,7 @@ title: Grupo de campos Esquema de Consentimento e Preferências
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Consents and Preferences schema .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -124,7 +124,7 @@ As chaves de cada objeto de namespace representam os valores de identidade exclu
       }
     }
   },
-  "ECID" : {
+  "ECID": {
     "37784337855396895622558625508046772577": {
       "collect": {
         "val": "y"
@@ -152,7 +152,7 @@ O `adID` o consentimento representa o consentimento do cliente para se uma ID do
 
 ```json
 "idSpecific": {
-  "ECID" : {
+  "ECID": {
     "37784337855396895622558625508046772577": {
       "collect": {
         "val": "y"

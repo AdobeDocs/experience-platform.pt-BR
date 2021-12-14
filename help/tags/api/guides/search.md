@@ -1,20 +1,21 @@
 ---
-title: Pesquisando recursos na API do reator
-description: Saiba como pesquisar recursos na API do reator.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Pesquisar recursos na API do Reactor
+description: Saiba como pesquisar recursos na API do Reactor.
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Pesquisar recursos na API do reator
+# Pesquisar recursos na API do Reactor
 
-O endpoint `/search` na API do reator permite fazer consultas estruturadas em recursos armazenados. Este documento fornece exemplos de diferentes consultas de pesquisa para vários casos de uso comuns.
+O endpoint `/search` na API do Reactor permite fazer consultas estruturadas em recursos armazenados. Este documento fornece exemplos de diferentes consultas de pesquisa para vários casos de uso comuns.
 
 >[!NOTE]
 >
->Antes de ler este guia, consulte o [guia do endpoint de pesquisa](../endpoints/search.md) para obter informações sobre a sintaxe de consulta aceita e outras diretrizes de uso.
+>Antes de ler este manual, consulte o [manual do endpoint de pesquisa](../endpoints/search.md) para obter informações sobre a sintaxe de consulta aceita e outras diretrizes de uso.
 
 ## Estratégias básicas de consulta
 
@@ -26,7 +27,7 @@ Uma pesquisa pode ser realizada em vários campos usando curingas no nome do cam
 
 ```json
 {
-  "data" : {
+  "data": {
     "query": {
       "attributes.*": {
         "value": "evar7"
@@ -38,15 +39,15 @@ Uma pesquisa pode ser realizada em vários campos usando curingas no nome do cam
 
 >[!IMPORTANT]
 >
->Normalmente, os valores de pesquisa devem corresponder ao tipo de dados que está sendo pesquisado. Por exemplo, um valor de consulta de `evar7` em relação a um campo inteiro falharia. Ao pesquisar em vários campos, o requisito do tipo de query é tornado leve para evitar erros, mas pode produzir resultados indesejados.
+>Normalmente, os valores de pesquisa devem corresponder ao tipo de dados que está sendo pesquisado. Por exemplo, um valor de consulta de `evar7` em relação a um campo inteiro falharia. Quando você pesquisa em vários campos, o requisito do tipo de consulta passa a ser tolerante para evitar erros, mas pode produzir resultados indesejados.
 
 ### Pesquisas de escopo para tipos de recursos específicos
 
-Você pode escoar uma pesquisa para um tipo de recurso específico fornecendo `resource_types` na solicitação. Por exemplo, para pesquisar por `data_elements`, e `rule_components`:
+Você pode analisar uma pesquisa para um tipo de recurso específico fornecendo `resource_types` na solicitação. Por exemplo, para pesquisar `data_elements`, e `rule_components`:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -64,11 +65,11 @@ Você pode escoar uma pesquisa para um tipo de recurso específico fornecendo `r
 
 ### Classificar respostas
 
-A propriedade `sort` pode ser usada para classificar respostas. Por exemplo, para classificar por `created_at` com o mais recente primeiro:
+A propriedade `sort` pode ser usada para classificar respostas. Por exemplo, para classificar por `created_at` com os itens mais recentes primeiro:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -91,7 +92,7 @@ A propriedade `sort` pode ser usada para classificar respostas. Por exemplo, par
 
 ## Exemplos de pesquisa comuns
 
-O exemplo a seguir demonstra padrões de pesquisa comuns adicionais.
+O exemplo a seguir demonstra mais padrões de pesquisa comuns.
 
 ### Qualquer recurso com um nome específico
 
@@ -104,7 +105,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.name": {
               "value": "Adobe"
@@ -125,7 +126,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.*": {
               "value": "evar7"
@@ -146,7 +147,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.delegate_descriptor_id": {
               "value": "custom-code"
@@ -168,7 +169,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.settings": {
               "value": "myDataElement8"
@@ -190,7 +191,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "relationships.property.data.id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -212,7 +213,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -222,7 +223,7 @@ curl -X POST \
       }'
 ```
 
-### Realize uma pesquisa usando a lógica de termo &quot;OU&quot;
+### Realizar uma pesquisa usando a lógica de termo &quot;OR&quot;
 
 ```shell
 curl -X POST \
@@ -233,7 +234,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.display_name": {
               "value": "My Rule Holiday Sale",

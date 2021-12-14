@@ -5,8 +5,7 @@ title: Ponto de extremidade da API de modelos
 topic-legacy: Developer guide
 description: Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver um caso de uso comercial.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%
@@ -95,7 +94,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes de seus Modelos
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID correspondente ao Modelo. |
-| `modelArtifactUri` | Um URI que indica onde o modelo está armazenado. O URI termina com o valor `name` do modelo. |
+| `modelArtifactUri` | Um URI que indica onde o modelo está armazenado. O URI termina com a variável `name` para o modelo. |
 | `experimentId` | Uma ID de Experimento válida. |
 | `experimentRunId` | Uma ID de Execução de Experimento válida. |
 
@@ -130,7 +129,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Modelo, incluindo o identificador exclusivo de Modelos (`id`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do seu modelo, incluindo o identificador exclusivo de Modelos (`id`).
 
 ```json
 {
@@ -159,13 +158,13 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Modelo, incl
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID correspondente ao Modelo. |
-| `modelArtifactUri` | Um URI que indica onde o modelo está armazenado. O URI termina com o valor `name` do modelo. |
+| `modelArtifactUri` | Um URI que indica onde o modelo está armazenado. O URI termina com a variável `name` para o modelo. |
 | `experimentId` | Uma ID de Experimento válida. |
 | `experimentRunId` | Uma ID de Execução de Experimento válida. |
 
-## Registrar um Modelo pré-gerado {#register-a-model}
+## Registrar um modelo pré-gerado {#register-a-model}
 
-Você pode registrar um Modelo pré-gerado fazendo uma solicitação de POST para o endpoint `/models`. Para registrar seu Modelo, os valores do arquivo `modelArtifact` e da propriedade `model` precisam ser incluídos no corpo da solicitação.
+Você pode registrar um Modelo pré-gerado fazendo uma solicitação de POST para a variável `/models` endpoint . Para registrar seu Modelo, a variável `modelArtifact` e `model` os valores de propriedade precisam ser incluídos no corpo da solicitação.
 
 **Formato da API**
 
@@ -175,7 +174,7 @@ POST /models
 
 **Solicitação**
 
-O POST a seguir contém os valores de arquivo `modelArtifact` e de propriedade `model` necessários. Consulte a tabela abaixo para obter mais informações sobre esses valores.
+O POST a seguir contém a variável `modelArtifact` e `model` valores de propriedade necessários. Consulte a tabela abaixo para obter mais informações sobre esses valores.
 
 ```shell
 curl -X POST \
@@ -198,7 +197,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Modelo, incluindo o identificador exclusivo de Modelos (`id`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do seu modelo, incluindo o identificador exclusivo de Modelos (`id`).
 
 ```json
 {
@@ -215,7 +214,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Modelo, incl
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID correspondente ao Modelo. |
-| `modelArtifactUri` | Um URI que indica onde o modelo está armazenado. O URI termina com o valor `id` para o modelo. |
+| `modelArtifactUri` | Um URI que indica onde o modelo está armazenado. O URI termina com a variável `id` para o seu modelo. |
 
 ## Atualizar um modelo por ID
 
@@ -319,7 +318,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um status 200 confirmando a
 
 ## Criar uma nova transcodificação para um Modelo {#create-transcoded-model}
 
-A transcodificação é a conversão digital-digital direta de uma codificação para outra. Você cria uma nova transcodificação para um Modelo fornecendo o `{MODEL_ID}` e um `targetFormat` em que deseja que a nova saída esteja.
+A transcodificação é a conversão digital-digital direta de uma codificação para outra. Você cria uma nova transcodificação para um Modelo fornecendo a variável `{MODEL_ID}` e `targetFormat` você deseja que a nova saída esteja em.
 
 **Formato da API**
 
@@ -343,7 +342,7 @@ curl -X POST \
     -H 'Content-Type: text/plain' \
     -D '{
  "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
- "modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
+ "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
  "targetFormat": "CoreML",
  "created": "2019-12-16T19:59:08.360Z",
  "createdBy": {
@@ -356,7 +355,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo um objeto JSON com as informações da transcodificação. Isso inclui o identificador exclusivo de transcodificações (`id`) usado em [recuperar um Modelo transcodificado específico](#retrieve-transcoded-model).
+Uma resposta bem-sucedida retorna uma carga contendo um objeto JSON com as informações da transcodificação. Isso inclui o identificador exclusivo de transcodificações (`id`) usada em [recuperar um modelo transcodificado específico](#retrieve-transcoded-model).
 
 ```json
 {
@@ -434,7 +433,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto json com uma list
 
 ## Recuperar um modelo transcodificado específico {#retrieve-transcoded-model}
 
-Você pode recuperar um Modelo transcodificado específico executando uma solicitação de GET com seu `{MODEL_ID}` e o ID de um modelo transcodificado.
+Você pode recuperar um Modelo transcodificado específico executando uma solicitação do GET com seu `{MODEL_ID}` e a id de um modelo transcodificado.
 
 **Formato da API**
 

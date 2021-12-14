@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 2%
@@ -130,7 +130,7 @@ Onde `{IDENTITY_GRAPH_TYPE}` é um dos seguintes:
 
 ### Mesclagem de atributos {#attribute-merge}
 
-Um fragmento de perfil é a informação do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há um potencial para conflitante entre atributos de perfil e a prioridade deve ser especificada. Usando `attributeMerge`, é possível especificar quais atributos de perfil priorizar no caso de um conflito de mesclagem entre conjuntos de dados do tipo Valor-chave (dados de registro).
+Um fragmento de perfil é a informação do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há um potencial para conflitantes atributos de perfil e a prioridade deve ser especificada. Usando `attributeMerge`, é possível especificar quais atributos de perfil priorizar no caso de um conflito de mesclagem entre conjuntos de dados do tipo Valor-chave (dados de registro).
 
 **objeto attributeMerge**
 
@@ -143,7 +143,7 @@ Um fragmento de perfil é a informação do perfil para apenas uma identidade da
 Onde `{ATTRIBUTE_MERGE_TYPE}` é um dos seguintes:
 
 * **`timestampOrdered`**: (padrão) Dar prioridade ao perfil que foi atualizado por último. Usando esse tipo de mesclagem, a variável `data` não é necessário.
-* **`dataSetPrecedence`** : Atribua prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em relação aos dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, a variável `order` é necessário, pois lista os conjuntos de dados na ordem de prioridade.
+* **`dataSetPrecedence`**: Atribua prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em relação aos dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, a variável `order` é necessário, pois lista os conjuntos de dados na ordem de prioridade.
    * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, um `order` A matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será mesclado. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados a um perfil. O `order` lista as IDs dos conjuntos de dados em ordem de prioridade.
 
 #### Exemplo `attributeMerge` objeto usando `dataSetPrecedence` type
@@ -151,7 +151,7 @@ Onde `{ATTRIBUTE_MERGE_TYPE}` é um dos seguintes:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -483,12 +483,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]

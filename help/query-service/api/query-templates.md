@@ -5,11 +5,10 @@ title: Ponto de extremidade da API de modelos de consulta
 topic-legacy: query templates
 description: A documentação a seguir aborda as várias chamadas de API que você pode fazer usando modelos de consulta para a API do serviço de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '674'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -17,11 +16,11 @@ ht-degree: 3%
 
 ## Exemplos de chamadas de API
 
-Agora que você sabe quais cabeçalhos usar, está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que você pode fazer usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de templates de query
 
-Você pode recuperar uma lista de todos os modelos de consulta para sua Organização IMS fazendo uma solicitação de GET para o endpoint `/query-templates`.
+Você pode recuperar uma lista de todos os modelos de consulta para sua Organização IMS fazendo uma solicitação de GET para a `/query-templates` endpoint .
 
 **Formato da API**
 
@@ -40,10 +39,10 @@ Esta é uma lista de parâmetros de consulta disponíveis para listar templates 
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criado (`orderby=-created`) classificará os itens por criado em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20º*) |
 | `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
-| `property` | Filtre os resultados com base nos campos. Os filtros **devem** ter escape de HTML. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `name` e `userId`. O único operador suportado é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
+| `property` | Filtre os resultados com base nos campos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `name` e `userId`. O único operador suportado é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
 
 **Solicitação**
 
@@ -83,7 +82,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
                 "update": {
                     "href": "https://platform.adobe.io/data/foundation/query/query-templates/f7cb5155-29da-4b95-8131-8c5deadfbe7f",
                     "method": "PUT",
-                    "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+                    "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
                 }
             }
         }
@@ -108,11 +107,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu template de query](#delete-a-specified-query-template).
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de consulta](#delete-a-specified-query-template).
 
 ### Criar um modelo de consulta
 
-Você pode criar um template de query fazendo uma solicitação POST ao endpoint `/query-templates`.
+Você pode criar um template de query fazendo uma solicitação POST para a variável `/query-templates` endpoint .
 
 **Formato da API**
 
@@ -163,7 +162,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes do m
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -171,11 +170,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes do m
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu template de query](#delete-a-specified-query-template).
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de consulta](#delete-a-specified-query-template).
 
 ### Recuperar um modelo de consulta especificado
 
-Você pode recuperar um template de query específico fazendo uma solicitação GET ao endpoint `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do template de query no caminho da solicitação.
+Você pode recuperar um template de query específico fazendo uma solicitação do GET para o `/query-templates/{TEMPLATE_ID}` e fornecer a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -185,7 +184,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O `id` valor do template de query que deseja recuperar. |
 
 **Solicitação**
 
@@ -221,7 +220,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de co
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -229,11 +228,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de co
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu template de query](#delete-a-specified-query-template).
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de consulta](#delete-a-specified-query-template).
 
 ### Atualizar um modelo de consulta especificado
 
-Você pode atualizar um template de query específico fazendo uma solicitação PUT ao endpoint `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do template de query no caminho da solicitação.
+Você pode atualizar um template de query específico fazendo uma solicitação de PUT para a variável `/query-templates/{TEMPLATE_ID}` e fornecer a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -243,13 +242,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O `id` valor do template de query que deseja recuperar. |
 
 **Solicitação**
 
 >[!NOTE]
 >
->A solicitação de PUT requer que o sql e o campo de nome sejam preenchidos e **substituirá** o conteúdo atual desse template de query.
+>A solicitação de PUT requer que o sql e o campo de nome sejam preenchidos e o **substituir** o conteúdo atual desse template de query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -293,7 +292,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com as informaç�
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query_templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -301,11 +300,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com as informaç�
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu template de query](#delete-a-specified-query-template).
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de consulta](#delete-a-specified-query-template).
 
 ### Excluir um modelo de consulta especificado
 
-Você pode excluir um modelo de consulta específico fazendo uma solicitação DELETE para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
+Você pode excluir um modelo de consulta específico fazendo uma solicitação DELETE para a variável `/query-templates/{TEMPLATE_ID}` e fornecer a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -315,7 +314,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O `id` valor do template de query que deseja recuperar. |
 
 **Solicitação**
 

@@ -5,8 +5,7 @@ title: Referência de nó de aprendizado de máquina em tempo real
 topic-legacy: Nodes reference
 description: Um nó é a unidade fundamental da formação dos gráficos. Cada nó executa uma tarefa específica e pode ser encadeado usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou esquema ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para o(s) próximo(s) nó(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -25,7 +24,7 @@ O guia a seguir descreve as bibliotecas de nós compatíveis para o Aprendizado 
 
 ## Descobrir nós para uso em seu pipeline ML
 
-Copie o código a seguir em um bloco de anotações [!DNL Python] para exibir todos os nós disponíveis para uso.
+Copie o código a seguir em um [!DNL Python] para exibir todos os nós disponíveis para uso.
 
 ```python
 from pprint import pprint
@@ -83,9 +82,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-O nó Paindas a seguir permite importar qualquer método `pd.DataFrame` ou qualquer função de nível superior de painéis gerais. Para saber mais sobre os métodos do Pandas, visite a [documentação sobre métodos dos Paindas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [Guia de referência da API dos painéis para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+O seguinte nó de Painéis permite importar qualquer `pd.DataFrame` ou qualquer função de nível superior dos painéis gerais. Para saber mais sobre os métodos do Pandas, visite o [Documentação de métodos de painéis](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [Guia de referência da API de painéis para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguida por inserir os parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base em se deseja aplicar transformação no local ou não. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna é definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas em que deseja aplicar a transformação. Neste exemplo, `device` é especificado.
+O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, em seguida, insira os parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` as `True` ou `False`. Definir `inplace` as `True` ou `False` com base em se você deseja aplicar transformação no local ou não. Por padrão `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna é definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas em que deseja aplicar a transformação. Neste exemplo `device` é especificado.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -116,7 +115,7 @@ model_train = ScikitLearn(params={
     "model_path": "resources/model.onnx",
     "params": {
         "model": "sklearn.linear_model.LogisticRegression",
-        "model_params": {"solver" : 'lbfgs'}
+        "model_params": {"solver": 'lbfgs'}
     }})
 msg6 = model_train.process(msg5)
 ```
@@ -128,12 +127,12 @@ msg6 = model_train.process(msg5)
 | modo | Comboio/ensaio (corda). |
 | model_path | Caminho para o modelo salvo localmente no formato onnx. |
 | params.model | Caminho de importação absoluto para o modelo (cadeia de caracteres) por exemplo: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modelos de hiperparâmetros, consulte a documentação da [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obter mais informações. |
-| node_instance.process(data_message_from_previous_node) | O método `process()` pega DataMsg do nó anterior e aplica a transformação. Depende do nó atual que está sendo usado. |
+| params.model_params | Hiperparâmetros do modelo, consulte o [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentação para obter mais informações. |
+| node_instance.process(data_message_from_previous_node) | O método `process()` O pega DataMsg do nó anterior e aplica a transformação. Depende do nó atual que está sendo usado. |
 
 ### Dividir
 
-Use o seguinte nó para dividir o dataframe em um trem e testar passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar dados de trem e teste usando o exemplo a seguir, `msg5.data.xs(“train”)`.
+Use o seguinte nó para dividir o dataframe em um trem e testar passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar dados de treinamento e teste usando o exemplo a seguir, `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

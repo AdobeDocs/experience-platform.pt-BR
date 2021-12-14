@@ -6,27 +6,26 @@ topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform permite usar a Linguagem de consulta estruturada (SQL) no Data Science Workspace ao integrar o Serviço de consulta ao JupyterLab como um recurso padrão. Este tutorial demonstra exemplos de consultas SQL para casos de uso comuns para explorar, transformar e analisar dados do Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
 
 # Serviço de query no notebook Júpiter
 
-[!DNL Adobe Experience Platform] O permite usar a Linguagem de consulta estruturada (SQL) no  [!DNL Data Science Workspace] ao integrar  [!DNL Query Service] no  [!DNL JupyterLab] como um recurso padrão.
+[!DNL Adobe Experience Platform] permite usar a Linguagem de Consulta Estruturada (SQL) em [!DNL Data Science Workspace] integrando [!DNL Query Service] em [!DNL JupyterLab] como um recurso padrão.
 
-Este tutorial demonstra exemplos de consultas SQL para casos de uso comuns para explorar, transformar e analisar dados [!DNL Adobe Analytics].
+Este tutorial demonstra exemplos de consultas SQL para casos de uso comuns para explorar, transformar e analisar [!DNL Adobe Analytics] dados.
 
 ## Introdução
 
 Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
-- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de continuar
+- Acesso ao [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma Organização IMS no [!DNL Experience Platform]fale com o administrador do sistema antes de continuar
 
-- Um conjunto de dados [!DNL Adobe Analytics]
+- Um [!DNL Adobe Analytics] conjunto de dados
 
 - Um entendimento prático dos seguintes conceitos principais usados neste tutorial:
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
@@ -34,17 +33,17 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## Acesse [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
+## Acesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Em [[!DNL Experience Platform]](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** a partir da coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
+1. Em [[!DNL Experience Platform]](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** na coluna de navegação à esquerda. Aguarde um momento para o JupyterLab carregar.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >Se uma nova guia do Iniciador não for exibida automaticamente, abra uma nova guia do Iniciador clicando em **[!UICONTROL File]** e selecione **[!UICONTROL New Launcher]**.
+   >Se uma nova guia do Launcher não for exibida automaticamente, abra uma nova guia do Launcher clicando em **[!UICONTROL Arquivo]** em seguida, selecione **[!UICONTROL Novo Iniciador]**.
 
-2. Na guia Iniciador, clique no ícone **[!UICONTROL Blank]** em um ambiente Python 3 para abrir um bloco de anotações vazio.
+2. Na guia Iniciador, clique no botão **[!UICONTROL Em branco]** ícone em um ambiente Python 3 para abrir um notebook vazio.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -52,21 +51,21 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    >
    >O Python 3 é atualmente o único ambiente suportado para o Serviço de Consulta em notebooks.
 
-3. No painel de seleção à esquerda, clique no ícone **[!UICONTROL Data]** e clique duas vezes no diretório **[!UICONTROL Datasets]** para listar todos os conjuntos de dados.
+3. No painel de seleção à esquerda, clique no botão **[!UICONTROL Dados]** e clique duas vezes no ícone **[!UICONTROL Conjuntos de dados]** diretório para listar todos os conjuntos de dados.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Encontre um conjunto de dados [!DNL Adobe Analytics] para explorar e clique com o botão direito do mouse na listagem. Clique em **[!UICONTROL Query Data in Notebook]** para gerar consultas SQL no notebook vazio.
+4. Encontre um [!DNL Adobe Analytics] conjunto de dados para explorar e clicar com o botão direito do mouse na listagem, clique em **[!UICONTROL Dados de consulta no notebook]** para gerar consultas SQL no bloco de notas vazio.
 
-5. Clique na primeira célula gerada que contém a função `qs_connect()` e execute-a clicando no botão Reproduzir. Essa função cria uma conexão entre a instância do notebook e o [!DNL Query Service].
+5. Clique na primeira célula gerada que contém a função `qs_connect()` e execute-o clicando no botão play . Essa função cria uma conexão entre a instância do notebook e a [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copie o nome do conjunto de dados [!DNL Adobe Analytics] da segunda consulta SQL gerada, ele será o valor após `FROM`.
+6. Copie as [!DNL Adobe Analytics] nome do conjunto de dados da segunda consulta SQL gerada, ele será o valor após `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. Insira uma nova célula do bloco de notas clicando no botão **+**.
+7. Insira uma nova célula do bloco de notas clicando no botão **+** botão.
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
@@ -87,20 +86,20 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    target_day = "01"
    ```
 
-   - `target_table` : Nome do  [!DNL Adobe Analytics] conjunto de dados.
-   - `target_year` : Ano específico do qual os dados do target são provenientes.
-   - `target_month` : Mês específico do qual o target é.
-   - `target_day` : Dia específico do qual os dados do target são originados.
+   - `target_table`: Nome da sua [!DNL Adobe Analytics] conjunto de dados.
+   - `target_year`: Ano específico do qual os dados do target são provenientes.
+   - `target_month`: Mês específico do qual o target é.
+   - `target_day`: Dia específico do qual os dados do target são originados.
 
    >[!NOTE]
    >
    >É possível alterar esses valores a qualquer momento. Ao fazer isso, certifique-se de executar a célula de variáveis para as alterações a serem aplicadas.
 
-## Consulte seus dados {#query-your-data}
+## Consultar os dados {#query-your-data}
 
-Insira as seguintes consultas SQL em células de bloco de notas individuais. Execute um query selecionando em sua célula seguida selecionando o botão **[!UICONTROL play]**. Resultados de query bem-sucedidos ou registros de erro são exibidos abaixo da célula executada.
+Insira as seguintes consultas SQL em células de bloco de notas individuais. Execute um query selecionando na célula seguida selecionando o **[!UICONTROL play]** botão. Resultados de query bem-sucedidos ou registros de erro são exibidos abaixo da célula executada.
 
-Quando um notebook está inativo por um longo período de tempo, a conexão entre o notebook e [!DNL Query Service] pode se romper. Nesses casos, reinicie [!DNL JupyterLab] selecionando o botão **Restart** ![restart button](../images/jupyterlab/user-guide/restart_button.png) localizado no canto superior direito próximo ao botão liga/desliga.
+Quando um notebook estiver inativo por um longo período de tempo, a conexão entre o notebook e o [!DNL Query Service] pode romper. Nesses casos, reinicie o [!DNL JupyterLab] selecionando o **Reiniciar** botão ![botão reiniciar](../images/jupyterlab/user-guide/restart_button.png) localizado no canto superior direito próximo ao botão liga/desliga.
 
 O kernel do notebook é redefinido, mas as células permanecerão, execute novamente todas as células para continuar onde você tinha parado.
 
@@ -108,7 +107,7 @@ O kernel do notebook é redefinido, mas as células permanecerão, execute novam
 
 A consulta a seguir retorna a contagem de visitantes por hora em uma data especificada:
 
-#### Query
+#### Consulta
 
 ```sql
 %%read_sql hourly_visitor -c QS_CONNECTION
@@ -122,9 +121,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Na consulta acima, o carimbo de data e hora na cláusula `WHERE` é definido para ser o valor de `target_year`. Inclua variáveis em queries SQL contendo-as entre chaves (`{}`).
+Na query acima, o carimbo de data e hora na variável `WHERE` está definida como sendo o valor de `target_year`. Inclua variáveis em queries SQL, contendo-as entre chaves (`{}`).
 
-A primeira linha da query contém a variável opcional `hourly_visitor`. Os resultados da consulta serão armazenados nesta variável como um dataframe de Pandas. Armazenar resultados em um dataframe permite visualizar posteriormente os resultados da consulta usando um pacote [!DNL Python] desejado. Execute o seguinte código [!DNL Python] em uma nova célula para gerar um gráfico de barras:
+A primeira linha da query contém a variável opcional `hourly_visitor`. Os resultados da consulta serão armazenados nesta variável como um dataframe de Pandas. O armazenamento dos resultados em um dataframe permite visualizar posteriormente os resultados da consulta usando um [!DNL Python] pacote. Execute o seguinte [!DNL Python] código em uma nova célula para gerar um gráfico de barras:
 
 ```python
 trace = go.Bar(
@@ -168,9 +167,9 @@ A execução da consulta acima armazenará os resultados em `hourly_actions` com
 hourly_actions.head()
 ```
 
-A consulta acima pode ser modificada para retornar a contagem de ações por hora para um intervalo de datas especificado usando operadores lógicos na cláusula **WHERE**:
+A consulta acima pode ser modificada para retornar a contagem de ações por hora para um intervalo de datas especificado usando operadores lógicos no **ONDE** cláusula:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql hourly_actions_date_range -d -c QS_CONNECTION
@@ -196,7 +195,7 @@ hourly_actions_date_rage.head()
 
 A consulta a seguir retorna o número de eventos por sessão de visitante para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql events_per_session -c QS_CONNECTION
@@ -210,7 +209,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Execute o seguinte código [!DNL Python] para gerar um histograma do número de eventos por sessão de visita:
+Execute o seguinte [!DNL Python] código para gerar um histograma do número de eventos por sessão de visita:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -229,7 +228,7 @@ iplot(fig)
 
 A consulta a seguir retorna as dez páginas mais populares de uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql popular_pages -c QS_CONNECTION
@@ -246,7 +245,7 @@ LIMIT  10;
 
 A consulta a seguir retorna os dez usuários mais ativos para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql active_users -c QS_CONNECTION
@@ -263,7 +262,7 @@ LIMIT  10;
 
 A consulta a seguir retorna as dez cidades que estão gerando a maioria das atividades do usuário para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql active_cities -c QS_CONNECTION
@@ -278,4 +277,4 @@ LIMIT  10;
 
 ## Próximas etapas
 
-Este tutorial demonstrou alguns casos de uso de exemplo para utilizar [!DNL Query Service] em blocos de anotações [!DNL Jupyter]. Siga o tutorial [Analise seus dados usando os notebooks Júpiter](./analyze-your-data.md) para ver como operações semelhantes são executadas usando o SDK de acesso a dados.
+Este tutorial demonstrou alguns casos de uso de exemplo para utilizar o [!DNL Query Service] em [!DNL Jupyter] notebooks. Siga as [Analise seus dados usando notebooks Jupyter](./analyze-your-data.md) para ver como operações semelhantes são executadas usando o SDK de acesso a dados.

@@ -5,7 +5,7 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 3%
@@ -87,7 +87,7 @@ Comprimento mínimo dos dados necessários = janela de treinamento + janela de l
 >
 > O comprimento mínimo de dados necessário para um aplicativo com configurações padrão é: 2 trimestres (180 dias) + 56 dias = 236 dias.
 
-Exemplo :
+Exemplo:
 
 - Você deseja atribuir os eventos de conversão que ocorreram nos últimos 90 dias (3 meses) e rastrear todos os pontos de contato que ocorreram dentro de 4 semanas antes do evento de conversão. A duração dos dados de entrada deve abranger os últimos 90 dias + 28 dias (4 semanas). A janela de treinamento é de 90 dias e a janela de lookback é de 28 dias, totalizando 118 dias.
 
@@ -139,7 +139,7 @@ A tabela a seguir descreve os campos de esquema na saída de exemplo de pontuaç
 | skuId (cadeia de caracteres) | Verdadeiro | Unidade de manutenção de estoque (SKU), o identificador exclusivo de um produto definido pelo fornecedor. <br> **Exemplo:** MJ-03-XS-Black |
 | timestamp (DateTime) | Verdadeiro | Carimbo de data e hora da conversão. <br> **Exemplo:** 2020-06-09T00:01:51.000Z |
 | passThrough (Objeto) | Verdadeiro | Colunas Adicionais do Conjunto de Dados de Pontuação especificadas pelo usuário ao configurar o modelo. |
-| commerce_order_purchaseCity (String) | Verdadeiro | Coluna adicional do conjunto de dados da pontuação. <br> **Exemplo:** cidade : San Jose |
+| commerce_order_purchaseCity (String) | Verdadeiro | Coluna adicional do conjunto de dados da pontuação. <br> **Exemplo:** cidade: San Jose |
 | customerProfile (Objeto) | Falso | Detalhes de identidade do usuário usado para criar o modelo. |
 | identidade (Objeto) | Falso | Contém os detalhes do usuário usado para criar o modelo, como `id` e `namespace`. |
 | id (cadeia de caracteres) | Verdadeiro | ID de identidade do usuário, como ID de cookie ou AAID ou MCID etc. <br> **Exemplo:** 17348762725408656344688320891369597404 |

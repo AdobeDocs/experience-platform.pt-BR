@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: Saiba como conectar o Adobe Experience Platform ao YOURCE usando a API do Serviço de Fluxo.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2300'
 ht-degree: 3%
@@ -54,7 +55,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para *SUA FONTE* :
+A solicitação a seguir cria uma conexão base para *SUA FONTE*:
 
 ```shell
 curl -X POST \
@@ -237,7 +238,7 @@ POST /sourceConnections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão de origem para *SUA FONTE* :
+A solicitação a seguir cria uma conexão de origem para *SUA FONTE*:
 
 ```shell
 curl -X POST \
@@ -312,7 +313,7 @@ POST /targetConnections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão de destino para *SUA FONTE* :
+A solicitação a seguir cria uma conexão de destino para *SUA FONTE*:
 
 ```shell
 curl -X POST \

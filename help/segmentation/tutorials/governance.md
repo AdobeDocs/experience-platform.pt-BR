@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para impor a conformidade do uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -168,7 +168,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
     "attributeMerge": {
         "type":"dataSetPrecedence", 
         "data": {
-            "order" : ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
+            "order": ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
         }
     },
     "default": false,
@@ -372,7 +372,7 @@ Se o segmento de público-alvo não passar na avaliação, você poderá ajustar
 
 ### Atualizar a política de mesclagem da definição de segmento
 
-Atualizar a política de mesclagem de uma definição de segmento ajusta os conjuntos de dados e os campos que serão incluídos quando o trabalho do segmento for executado. Consulte a seção sobre [atualização de uma política de mesclagem existente](../../profile/api/merge-policies.md#update) no tutorial de política de mesclagem de API para obter mais informações.
+A atualização da política de mesclagem de uma definição de segmento ajusta os conjuntos de dados e os campos que serão incluídos quando o trabalho do segmento for executado. Consulte a seção sobre [atualização de uma política de mesclagem existente](../../profile/api/merge-policies.md#update) no tutorial de política de mesclagem de API para obter mais informações.
 
 ### Restringir campos de dados específicos ao exportar o segmento
 

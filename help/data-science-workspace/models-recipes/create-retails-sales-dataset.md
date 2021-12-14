@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do Adobe Experience Platform Data Science Workspace. Após a conclusão, o esquema de Vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros de sua Organização IMS no Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -67,11 +67,11 @@ O esquema Vendas de varejo e os conjuntos de dados são criados automaticamente 
        kernel_type: Python
    ```
 
-   - `platform_gateway` : O caminho base para chamadas de API. Não modifique esse valor.
-   - `ims_token` : Seu `{ACCESS_TOKEN}` vai aqui.
-   - `ingest_data` : Para a finalidade deste tutorial, defina esse valor como `"True"` para criar esquemas e conjuntos de dados de Vendas de Varejo. Um valor de `"False"` criará somente os schemas.
-   - `build_recipe_artifacts` : Para a finalidade deste tutorial, defina esse valor como `"False"` para impedir que o script gere um artefato de Receita.
-   - `kernel_type` : O tipo de execução do artefato Recipe. Deixe esse valor como `Python` if `build_recipe_artifacts` está definida como `"False"`, caso contrário, especifique o tipo de execução correto.
+   - `platform_gateway`: O caminho base para chamadas de API. Não modifique esse valor.
+   - `ims_token`: Seu `{ACCESS_TOKEN}` vai aqui.
+   - `ingest_data`: Para a finalidade deste tutorial, defina esse valor como `"True"` para criar esquemas e conjuntos de dados de Vendas de Varejo. Um valor de `"False"` criará somente os schemas.
+   - `build_recipe_artifacts`: Para a finalidade deste tutorial, defina esse valor como `"False"` para impedir que o script gere um artefato de Receita.
+   - `kernel_type`: O tipo de execução do artefato Recipe. Deixe esse valor como `Python` if `build_recipe_artifacts` está definida como `"False"`, caso contrário, especifique o tipo de execução correto.
 
 4. Em `Titles` , forneça as seguintes informações adequadamente para os dados de amostra de Vendas de varejo, salve e feche o arquivo depois que as edições estiverem em vigor. Exemplo mostrado abaixo:
 

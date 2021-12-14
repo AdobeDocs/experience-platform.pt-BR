@@ -6,7 +6,7 @@ title: Entrada e saída no Customer AI
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela API do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 1%
@@ -114,7 +114,7 @@ Comprimento mínimo dos dados necessários = população elegível + janela de r
 >
 > 30 é o número mínimo de dias necessário para a população elegível. Se isso não for fornecido, o padrão será 120 dias.
 
-Exemplos :
+Exemplos:
 
 - Você deseja prever se um cliente provavelmente comprará um relógio nos próximos 30 dias. Você também deseja pontuar os usuários que têm alguma atividade da Web nos últimos 60 dias. Nesse caso, o comprimento mínimo de dados exigido é de 60 dias + 30 dias. A população elegível é de 60 dias e a janela de resultado é de 30 dias, totalizando 90 dias.
 

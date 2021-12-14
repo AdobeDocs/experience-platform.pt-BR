@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da API de assimilação em lote
 description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 5%
@@ -13,15 +13,15 @@ ht-degree: 5%
 
 # Guia do desenvolvedor de assimilação em lote
 
-Este documento fornece um guia abrangente para usar [pontos de extremidade da API de assimilação em lote](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) no Adobe Experience Platform. Para obter uma visão geral das APIs de ingestão em lote, incluindo pré-requisitos e práticas recomendadas, comece lendo a [visão geral da API de ingestão em lote](overview.md).
+Este documento fornece um guia abrangente sobre como usar o [endpoints da API de assimilação em lote](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) no Adobe Experience Platform. Para obter uma visão geral das APIs de ingestão em lote, incluindo pré-requisitos e práticas recomendadas, comece lendo o [visão geral da API de assimilação de lote](overview.md).
 
-O apêndice a este documento fornece informações para [formatação de dados a serem usados para assimilação](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
+O apêndice deste documento contém informações para [formatação de dados a serem usados para assimilação](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
 
 ## Introdução
 
-Os endpoints de API usados neste guia fazem parte da [API de assimilação de dados](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). A assimilação de dados fornece uma RESTful API através da qual você pode executar operações básicas de CRUD em relação aos tipos de objetos suportados.
+Os endpoints de API usados neste guia fazem parte do [API de assimilação de dados](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). A assimilação de dados fornece uma RESTful API através da qual você pode executar operações básicas de CRUD em relação aos tipos de objetos suportados.
 
-Antes de continuar, reveja a [visão geral da API de assimilação em lote](overview.md) e o [guia de introdução](getting-started.md).
+Antes de continuar, reveja o [visão geral da API de assimilação de lote](overview.md) e [guia de introdução](getting-started.md).
 
 ## Assimilar arquivos JSON
 
@@ -35,7 +35,7 @@ Primeiro, você precisará criar um lote, com JSON como o formato de entrada. Ao
 
 >[!NOTE]
 >
->Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, o sinalizador `isMultiLineJson` precisará ser definido. Para obter mais informações, leia o [guia de solução de problemas de ingestão em lote](./troubleshooting.md).
+>Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, a variável `isMultiLineJson` será necessário definir o sinalizador . Para obter mais informações, leia o [guia de solução de problemas de ingestão em lote](./troubleshooting.md).
 
 **Formato da API**
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -97,7 +97,7 @@ Agora que você criou um lote, é possível usar a ID do lote da resposta de cri
 
 >[!NOTE]
 >
->Consulte a seção de apêndice para obter um [exemplo de um arquivo de dados JSON corretamente formatado](#data-transformation-for-batch-ingestion).
+>Consulte a seção de apêndice para obter uma [exemplo de um arquivo de dados JSON formatado corretamente](#data-transformation-for-batch-ingestion).
 
 **Formato da API**
 
@@ -122,7 +122,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Upload de arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, é possível usar a variável `batchId` de antes para carregar arquivos no lote. Você pode fazer upload de vários arquivos para o lote.
 
 **Formato da API**
 
@@ -257,7 +257,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, é possível usar a variável `batchId` de antes para carregar arquivos no lote. Você pode fazer upload de vários arquivos para o lote.
 
 **Formato da API**
 
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Upload de arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, é possível usar a variável `batchId` de antes para carregar arquivos no lote. Você pode fazer upload de vários arquivos para o lote.
 
 >[!NOTE]
 >
->Consulte a seção de apêndice para obter um [exemplo de um arquivo de dados CSV corretamente formatado](#data-transformation-for-batch-ingestion).
+>Consulte a seção de apêndice para obter uma [exemplo de um arquivo de dados CSV corretamente formatado](#data-transformation-for-batch-ingestion).
 
 **Formato da API**
 
@@ -646,7 +646,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Excluir um lote {#delete-a-batch}
 
-Um lote pode ser excluído executando a seguinte solicitação de POST com o parâmetro de consulta `action=REVERT` para a ID do lote que você deseja excluir. O lote é o marcado como &quot;inativo&quot;, tornando-o elegível para a coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
+Um lote pode ser excluído executando a seguinte solicitação de POST com o `action=REVERT` parâmetro de consulta para a ID do lote que você deseja excluir. O lote é o marcado como &quot;inativo&quot;, tornando-o elegível para a coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
 
 **Formato da API**
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -758,10 +758,10 @@ Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis de sua
 
 Para aplicar um sistema transdérmico num lote é necessário o seguinte:
 
-- **Um conjunto de dados habilitado para atualizações de perfil e atributo.** Isso é feito por meio de tags de conjunto de dados e requer que uma  `isUpsert:true` tag específica seja adicionada à  `unifiedProfile` matriz. Para obter detalhes sobre as etapas que mostram como criar um conjunto de dados ou configurar um conjunto de dados existente para atualização, siga o tutorial para [ativar um conjunto de dados para atualizações de perfil](../../catalog/datasets/enable-upsert.md).
+- **Um conjunto de dados habilitado para atualizações de perfil e atributo.** Isso é feito por meio de tags de conjunto de dados e requer um `isUpsert:true` será adicionada à tag `unifiedProfile` matriz. Para obter detalhes sobre as etapas que mostram como criar um conjunto de dados ou configurar um conjunto de dados existente para atualização, siga o tutorial para [habilitar um conjunto de dados para atualizações de perfil](../../catalog/datasets/enable-upsert.md).
 - **Um arquivo Parquet contendo os campos a serem corrigidos e os campos de identidade do Perfil.** O formato de dados para aplicar patches a um lote é semelhante ao processo normal de ingestão em lote. A entrada necessária é um arquivo Parquet e, além dos campos a serem atualizados, os dados carregados devem conter os campos de identidade para corresponderem aos dados na Loja de perfis.
 
-Depois que você tiver um conjunto de dados ativado para Perfil e Upsert e um arquivo Parquet contendo os campos que deseja corrigir, bem como os campos de identidade necessários, você poderá seguir as etapas para [assimilação de arquivos Parquet](#ingest-parquet-files) para concluir o patch por meio da ingestão em lote.
+Depois que você tiver um conjunto de dados ativado para Perfil e Upsert e um arquivo Parquet contendo os campos que deseja corrigir, bem como os campos de identidade necessários, você poderá seguir as etapas para [assimilação de arquivos do Parquet](#ingest-parquet-files) para completar o sistema através da ingestão de lote.
 
 ## Reproduzir um lote
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Upload de arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, é possível usar a variável `batchId` de antes para carregar arquivos no lote. Você pode fazer upload de vários arquivos para o lote.
 
 **Formato da API**
 
@@ -868,7 +868,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -919,9 +919,9 @@ A seção a seguir contém informações adicionais para assimilação de dados 
 
 ### Transformação de dados para ingestão em lote
 
-Para assimilar um arquivo de dados em [!DNL Experience Platform], a estrutura hierárquica do arquivo deve estar em conformidade com o esquema [Experience Data Model (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual o upload está sendo feito.
+Para assimilar um arquivo de dados no [!DNL Experience Platform], a estrutura hierárquica do processo deve estar em conformidade com a [Experience Data Model (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual está sendo carregado.
 
-Informações sobre como mapear um arquivo CSV para estar em conformidade com um esquema XDM podem ser encontradas no documento [de transformações de amostra](../../etl/transformations.md), juntamente com um exemplo de um arquivo de dados JSON formatado corretamente. Arquivos de exemplo fornecidos no documento podem ser encontrados aqui:
+Informações sobre como mapear um arquivo CSV para estar em conformidade com um esquema XDM podem ser encontradas no [transformações de amostra](../../etl/transformations.md) documento, juntamente com um exemplo de um arquivo de dados JSON corretamente formatado. Arquivos de exemplo fornecidos no documento podem ser encontrados aqui:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

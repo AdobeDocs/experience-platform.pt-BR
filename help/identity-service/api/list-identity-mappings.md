@@ -5,11 +5,10 @@ title: Mapeamentos de identidade da lista
 topic-legacy: API guide
 description: Um mapeamento é uma coleção de todas as identidades em um cluster, para um namespace especificado.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -29,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Solicitação**
 
-Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
+Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor da ID (`id`).
 
 ```shell
 curl -X GET \
@@ -40,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 2: Forneça a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
+Opção 2: Forneça a identidade como namespace (`ns`, por nome) e o valor da ID (`id`).
 
 ```shell
 curl -X GET \
@@ -51,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento cobrindo [obter o XID para uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda [obter o XID para uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,7 +63,7 @@ curl -X GET \
 
 ### Obter mapeamentos de identidade para várias identidades
 
-Use o método `POST` como um equivalente em lote do método `GET` descrito acima para recuperar mapeamentos para várias identidades.
+Use o `POST` método como equivalente em lote do `GET` método descrito acima para recuperar mapeamentos de várias identidades.
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Opção 1: Forneça uma lista de XIDs para as quais recuperar mapeamentos.
 }
 ```
 
-Opção 2: Forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra como usar esse método ao substituir o `graph-type` padrão de &quot;Gráfico privado&quot;.
+Opção 2: Forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra como usar esse método ao substituir o padrão `graph-type` de &quot;Gráfico privado&quot;.
 
 ```shell
 {
@@ -116,7 +115,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp
@@ -146,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se nenhuma identidade relacionada tiver sido encontrada com a entrada fornecida, um código de resposta `HTTP 204` será retornado sem conteúdo.
+Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, uma `HTTP 204` o código de resposta é retornado sem conteúdo.
 
 **Resposta**
 
@@ -185,8 +184,8 @@ Se nenhuma identidade relacionada tiver sido encontrada com a entrada fornecida,
 ```
 
 - `lastAssociationTime`: O carimbo de data e hora quando a identidade de entrada foi associada pela última vez a essa identidade.
-- `regions`: Fornece o  `regionId` e  `lastAssociationTime` para onde a identidade foi vista.
+- `regions`: Fornece o `regionId` e `lastAssociationTime` para onde a identidade foi vista.
 
 ## Próximas etapas
 
-Prossiga para o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).
+Acesse o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).

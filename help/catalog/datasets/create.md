@@ -5,10 +5,10 @@ title: Criar um conjunto de dados usando APIs
 topic-legacy: datasets
 description: Este documento fornece etapas gerais para criar um conjunto de dados usando APIs do Adobe Experience Platform e preencher o conjunto de dados usando um arquivo.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -20,31 +20,31 @@ Este documento fornece etapas gerais para criar um conjunto de dados usando APIs
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Ingestão](../../ingestion/batch-ingestion/overview.md) em lote:  [!DNL Experience Platform] O permite assimilar dados como arquivos em lote.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Ingestão em lote](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] O permite assimilar dados como arquivos em lote.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs [!DNL Platform].
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas para o [!DNL Platform] APIs.
 
 ### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -54,15 +54,15 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 Para criar um conjunto de dados, um schema deve ser definido primeiro. Um schema é um conjunto de regras para ajudar a representar dados. Além de descrever a estrutura dos dados, os esquemas fornecem restrições e expectativas que podem ser aplicadas e usadas para validar dados conforme são movidos entre sistemas.
 
-Essas definições padrão permitem que os dados sejam interpretados de forma consistente, independentemente da origem, e removem a necessidade de tradução entre aplicativos. Para obter mais informações sobre a composição de schemas, consulte o guia sobre as [noções básicas da composição do schema](../../xdm/schema/composition.md)
+Essas definições padrão permitem que os dados sejam interpretados de forma consistente, independentemente da origem, e removem a necessidade de tradução entre aplicativos. Para obter mais informações sobre a composição de schemas, consulte o guia sobre o [noções básicas da composição do schema](../../xdm/schema/composition.md)
 
 ## Pesquisar um esquema de conjunto de dados
 
-Este tutorial começa onde o [Tutorial da API do Registro de Esquema](../../xdm/tutorials/create-schema-api.md) termina, utilizando o esquema Membros da Fidelidade criado durante esse tutorial.
+Este tutorial começa onde a variável [Tutorial da API do Registro de Schema](../../xdm/tutorials/create-schema-api.md) termina, utilizando o schema Membros de Fidelidade criado durante esse tutorial.
 
-Se você não concluiu o tutorial [!DNL Schema Registry], comece por lá e continue com este tutorial de conjunto de dados somente depois de ter composto o schema necessário.
+Se você não tiver concluído o [!DNL Schema Registry] tutorial, comece por lá e continue com este tutorial de conjunto de dados somente depois de ter composto o schema necessário.
 
-A chamada a seguir pode ser usada para exibir o esquema Membros de Fidelidade criado durante o tutorial da API [!DNL Schema Registry]:
+A chamada a seguir pode ser usada para exibir o schema Membros de Fidelidade que você criou durante a [!DNL Schema Registry] Tutorial de API:
 
 **Formato da API**
 
@@ -209,12 +209,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `schemaRef.id` | O valor de URI `$id` para o esquema XDM no qual o conjunto de dados será baseado. |
-| `schemaRef.contentType` | Indica o formato e a versão do esquema. Consulte a seção sobre [controle de versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
+| `schemaRef.id` | O URI `$id` para o esquema XDM, o conjunto de dados será baseado. |
+| `schemaRef.contentType` | Indica o formato e a versão do esquema. Consulte a seção sobre [versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
 
 >[!NOTE]
 >
->Este tutorial usa o formato de arquivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md)
+>Este tutorial usa o [Apache Parquet](https://parquet.apache.org/documentation/latest/) formato de arquivo para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](../../ingestion/batch-ingestion/api-overview.md)
 
 **Resposta**
 
@@ -246,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -255,7 +255,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta contendo detalhes do lote recém-criado, incluindo seu `id`, uma sequência de caracteres gerada pelo sistema somente leitura.
+Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta contendo detalhes do lote recém-criado, incluindo seu `id`, uma string gerada pelo sistema somente leitura.
 
 ```JSON
 {
@@ -309,7 +309,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{BATCH_ID}` | O `id` do lote para o qual você está fazendo upload. |
-| `{DATASET_ID}` | O `id` do conjunto de dados no qual o lote será mantido. |
+| `{DATASET_ID}` | O `id` do conjunto de dados, o lote será mantido. |
 | `{FILE_NAME}` | O nome do arquivo que você está fazendo upload. |
 
 **Solicitação**
@@ -317,7 +317,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c/datasets/5c8c3c555033b814b69f947f/files/loyaltyData.parquet' \
   -H 'content-type: application/octet-stream' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   --data-binary '@{FILE_PATH_AND_NAME}.parquet'
@@ -329,7 +329,7 @@ Um arquivo carregado com êxito retorna um corpo de resposta em branco e o Statu
 
 ## Conclusão do lote de sinais
 
-Após fazer upload de todos os arquivos de dados para o lote, é possível sinalizar o lote para conclusão. A conclusão da sinalização faz com que o serviço crie entradas [!DNL Catalog] `DataSetFile` para os arquivos carregados e as associe ao lote gerado anteriormente. O lote [!DNL Catalog] é marcado como bem-sucedido, o que aciona todos os fluxos de downstream que podem então funcionar nos dados agora disponíveis.
+Após fazer upload de todos os arquivos de dados para o lote, é possível sinalizar o lote para conclusão. A conclusão de sinalização faz com que o serviço crie [!DNL Catalog] `DataSetFile` entradas para os arquivos carregados e associá-los ao lote gerado anteriormente. O [!DNL Catalog] o lote é marcado como bem-sucedido, o que aciona todos os fluxos de downstream que podem então funcionar nos dados agora disponíveis.
 
 **Formato da API**
 
@@ -339,13 +339,13 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BATCH_ID}` | O `id` do lote que você está marcando como concluído. |
+| `{BATCH_ID}` | O `id` do lote que estiver marcando como concluído. |
 
 **Solicitação**
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c?action=COMPLETE" \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
@@ -356,7 +356,7 @@ Um lote concluído com êxito retorna um corpo de resposta em branco e o Status 
 
 ## Assimilação do monitor
 
-Dependendo do tamanho dos dados, os lotes levam longos períodos de tempo variáveis para serem assimilados. Você pode monitorar o status de um lote ao anexar um parâmetro de solicitação `batch` contendo a ID do lote a uma solicitação `GET /batches`. A API pesquisa o conjunto de dados para o status do lote a partir da assimilação até que `status` na resposta indique conclusão (&quot;sucesso&quot; ou &quot;falha&quot;).
+Dependendo do tamanho dos dados, os lotes levam longos períodos de tempo variáveis para serem assimilados. É possível monitorar o status de um lote ao anexar um `batch` parâmetro de solicitação contendo a ID do lote para um `GET /batches` solicitação. A API pesquisa o conjunto de dados para o status do lote a partir da assimilação até a `status` na resposta indica conclusão (&quot;sucesso&quot; ou &quot;falha&quot;).
 
 **Formato da API**
 
@@ -366,14 +366,14 @@ GET /batches?batch={BATCH_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BATCH_ID}` | O `id` do lote que você deseja monitorar. |
+| `{BATCH_ID}` | O `id` do lote que deseja monitorar. |
 
 **Solicitação**
 
 ```SHELL
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?batch=5d01230fc78a4e4f8c0c6b387b4b8d1c' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
@@ -381,7 +381,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta positiva retorna um objeto com seu atributo `status` contendo o valor de `success`:
+Uma resposta positiva retorna um objeto com seu `status` atributo contendo o valor de `success`:
 
 ```JSON
 {
@@ -413,7 +413,7 @@ Uma resposta positiva retorna um objeto com seu atributo `status` contendo o val
 }
 ```
 
-Uma resposta negativa retorna um objeto com o valor `"failed"` em seu atributo `"status"` e inclui quaisquer mensagens de erro relevantes:
+Uma resposta negativa retorna um objeto com o valor de `"failed"` no `"status"` e inclui qualquer mensagem de erro relevante:
 
 ```JSON
 {
@@ -465,14 +465,14 @@ Com a ID de lote, é possível usar a API de acesso a dados para ler novamente e
 
 Você também pode usar a API de acesso a dados para retornar o nome, o tamanho em bytes e um link para baixar o arquivo ou a pasta.
 
-As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encontradas no [Guia do desenvolvedor de acesso a dados](../../data-access/home.md).
+As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encontradas no [Guia do desenvolvedor do Data Access](../../data-access/home.md).
 
 ## Atualizar o esquema do conjunto de dados
 
 Você pode adicionar campos e assimilar dados adicionais em conjuntos de dados criados. Para fazer isso, primeiro é necessário atualizar o schema adicionando propriedades adicionais que definem os novos dados. Isso pode ser feito usando operações PATCH e/ou PUT para atualizar o schema existente.
 
-Para obter mais informações sobre a atualização de schemas, consulte o [Guia do desenvolvedor da API do Registro de Schema](../../xdm/api/getting-started.md).
+Para obter mais informações sobre como atualizar schemas, consulte o [Guia do desenvolvedor da API do Registro de Schema](../../xdm/api/getting-started.md).
 
 Depois de atualizar o schema, você pode seguir novamente as etapas deste tutorial para assimilar novos dados que estejam em conformidade com o schema revisado.
 
-É importante lembrar que a evolução do schema é meramente aditiva, o que significa que não é possível introduzir uma alteração de quebra em um schema depois de ele ter sido salvo no registro e usado para assimilação de dados. Para saber mais sobre as práticas recomendadas para compor o schema a ser usado com o Adobe Experience Platform, consulte o guia sobre as [noções básicas da composição do schema](../../xdm/schema/composition.md).
+É importante lembrar que a evolução do schema é meramente aditiva, o que significa que não é possível introduzir uma alteração de quebra em um schema depois de ele ter sido salvo no registro e usado para assimilação de dados. Para saber mais sobre as práticas recomendadas para compor esquemas para uso com o Adobe Experience Platform, consulte o guia sobre [noções básicas da composição do schema](../../xdm/schema/composition.md).

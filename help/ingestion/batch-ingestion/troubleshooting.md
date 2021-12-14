@@ -5,8 +5,7 @@ title: Guia de solução de problemas de assimilação em lote
 topic-legacy: troubleshooting
 description: Essa documentação ajudará a responder às perguntas frequentes sobre as APIs de assimilação de dados em lote do Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -15,13 +14,13 @@ ht-degree: 1%
 
 # Guia de solução de problemas de assimilação em lote
 
-Esta documentação ajudará a responder a perguntas frequentes sobre as APIs [!DNL Batch Data Ingestion] do Adobe Experience Platform.
+Esta documentação ajudará a responder perguntas frequentes sobre o Adobe Experience Platform [!DNL Batch Data Ingestion] APIs.
 
 ## Chamadas de API em lote
 
 ### Os lotes estão ativos imediatamente após receber um HTTP 200 OK da API CompleteBatch?
 
-A resposta `200 OK` da API significa que o lote foi aceito para processamento; ele não está ativo até que seja transferido para o estado final, como Ativo ou Falha.
+O `200 OK` resposta da API significa que o lote foi aceito para processamento; ele não está ativo até ser transferido para seu estado final, como Ativo ou Falha.
 
 ### É seguro repetir a chamada da API CompleteBatch após uma falha?
 
@@ -29,7 +28,7 @@ Sim - é seguro repetir a chamada da API. Apesar do fracasso, é possível que a
 
 ### Quando a API de upload de arquivo grande deve ser usada?
 
-O tamanho de arquivo recomendado para usar a API de upload de arquivo grande é de 256 MB ou maior. Mais informações sobre como usar a API de upload de arquivo grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
+O tamanho de arquivo recomendado para usar a API de upload de arquivo grande é de 256 MB ou maior. Encontre mais informações sobre como usar a API de upload de arquivo grande [here](./api-overview.md#ingest-large-parquet-files).
 
 ### Por que a chamada da API Large File Complete está falhando?
 
@@ -50,7 +49,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
@@ -67,20 +66,20 @@ Para que os dados apareçam no conjunto de dados, o lote deve ser marcado como c
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### Como o JSON de várias linhas é assimilado?
 
-Para assimilar JSON de várias linhas, o sinalizador `isMultiLineJson` precisa ser definido no momento da criação do lote. Um exemplo disso pode ser visto abaixo:
+Para assimilar JSON de várias linhas, a variável `isMultiLineJson` O sinalizador precisa ser definido no momento da criação do lote. Um exemplo disso pode ser visto abaixo:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
@@ -122,7 +121,7 @@ Para JSON de várias linhas, um objeto pode ocupar várias linhas, enquanto todo
 ]
 ```
 
-Por padrão, [!DNL Batch Data Ingestion] usa JSON de linha única.
+Por padrão, [!DNL Batch Data Ingestion] O usa JSON de linha única.
 
 ### A assimilação de CSV é compatível?
 
@@ -140,7 +139,7 @@ Há três níveis de validação executados nos dados:
 
 ### Como substituir um lote já ingerido?
 
-Um lote já assimilado pode ser substituído usando o recurso Reprodução em lote. Mais informações sobre a Reprodução em Lote podem ser encontradas [aqui](./api-overview.md#replay-a-batch).
+Um lote já assimilado pode ser substituído usando o recurso Reprodução em lote. Mais informações sobre a Reprodução em lote podem ser encontradas [here](./api-overview.md#replay-a-batch).
 
 ### Como é monitorizada a ingestão de lote?
 
@@ -150,7 +149,7 @@ Depois que um lote for sinalizado para promoção em lote, o progresso da assimi
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 Com essa solicitação, você receberá uma resposta semelhante a esta:
@@ -184,17 +183,17 @@ Um lote pode, em seu ciclo de vida, passar pelos seguintes estados:
 | Status | Dados gravados no Principal | Descrição |
 | ------ | ---------------------- | ----------- |
 | Abandonado |  | O cliente não conseguiu concluir o lote no período de tempo esperado. |
-| Abortado |  | O cliente chamou explicitamente, por meio das APIs [!DNL Batch Data Ingestion], uma operação abort para o lote especificado. Quando um lote está no estado Carregado, o lote não pode ser anulado. |
-| Ativo/Sucesso | x | O lote foi promovido com sucesso de estágio para principal e agora está disponível para consumo downstream. **Observação:** ativo e bem-sucedido são usados alternadamente. |
+| Abortado |  | O cliente chamou explicitamente, por meio da [!DNL Batch Data Ingestion] APIs, uma operação de anulação para o lote especificado. Quando um lote está no estado Carregado, o lote não pode ser anulado. |
+| Ativo/Sucesso | x | O lote foi promovido com sucesso de estágio para principal e agora está disponível para consumo downstream. **Observação:** Ative e Success são usados alternadamente. |
 | Arquivado |  | O lote foi arquivado no frigorífico. |
-| Falha/Falha |  | Um estado de terminal que resulta de uma configuração incorreta e/ou dados incorretos. Um erro acionável é registrado, juntamente com o lote, para permitir que os clientes corrijam e reenviem os dados. **Observação:** falha e falha são usadas alternadamente. |
+| Falha/Falha |  | Um estado de terminal que resulta de uma configuração incorreta e/ou dados incorretos. Um erro acionável é registrado, juntamente com o lote, para permitir que os clientes corrijam e reenviem os dados. **Observação:** Falha e Falha são usadas alternadamente. |
 | Inativo | x | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não estará mais disponível para consumo downstream, mas os dados subjacentes permanecerão Principais até que tenham sido retidos, arquivados ou excluídos de outra forma. |
-| Carregamento |  | No momento, o cliente está gravando dados para o lote. O lote está **não** pronto para promoção, neste momento. |
+| Carregamento |  | No momento, o cliente está gravando dados para o lote. O lote é **not** pronto para promoção, neste momento. |
 | Carregado |  | O cliente concluiu a gravação de dados para o lote. O lote está pronto para promoção. |
 | Mantido |  | Os dados foram retirados do Principal e em um arquivo designado no Adobe Data Lake. |
 | Armazenamento temporário |  | O cliente assinou com êxito o lote para promoção e os dados estão sendo preparados para consumo downstream. |
 | Tentando novamente |  | O cliente sinalizou o lote para promoção, mas devido a um erro, o lote está sendo repetido por um serviço de Monitoramento de Lote. Esse estado pode ser usado para informar aos clientes que pode haver um atraso na assimilação dos dados. |
-| Paralisado |  | O cliente sinalizou o lote para promoção, mas após `n` novas tentativas por um serviço de Monitoramento de Lote, a promoção em lote parou. |
+| Paralisado |  | O cliente assinou o lote para promoção, mas depois `n` novas tentativas por um serviço de Monitoramento em Lote, a promoção em lote foi paralisada. |
 
 ### O que significa &quot;Preparo&quot; para lotes?
 
@@ -206,7 +205,7 @@ Quando um lote está em &quot;Tentando novamente&quot;, significa que a assimila
 
 ### O que significa quando um lote está &quot;Paralisado&quot;?
 
-Quando um lote está em &quot;Stalled&quot; (Paralisado), significa que [!DNL Data Ingestion Services] está enfrentando dificuldades para assimilar o lote e todas as tentativas foram esgotadas.
+Quando um lote está em &quot;Stalled&quot; (Paralisado), significa que [!DNL Data Ingestion Services] O está enfrentando dificuldades para assimilar o lote e todas as tentativas foram esgotadas.
 
 ### O que significa se um lote ainda estiver &quot;Carregando&quot;?
 
@@ -214,11 +213,11 @@ Quando um lote está em &quot;Carregamento&quot;, significa que a API CompleteBa
 
 ### Existe uma maneira de saber se um lote foi assimilado com êxito?
 
-Quando o status do lote for &quot;Ativo&quot;, o lote será assimilado com êxito. Para descobrir o status do lote, siga as etapas detalhadas [previous](#how-is-batch-ingestion-monitored).
+Quando o status do lote for &quot;Ativo&quot;, o lote será assimilado com êxito. Para descobrir o status do lote, siga as etapas detalhadas [before](#how-is-batch-ingestion-monitored).
 
 ### O que acontece depois que um lote falha?
 
-Quando um lote falha, o motivo da falha pode ser identificado na seção `errors` do payload. Exemplos de erros podem ser vistos abaixo:
+Quando um lote falha, o motivo da falha pode ser identificado na variável `errors` da carga. Exemplos de erros podem ser vistos abaixo:
 
 ```json
     "errors":[
@@ -252,10 +251,10 @@ As seguintes métricas em nível de lote estão disponíveis para lotes no estad
 
 | Métrica | Descrição |
 | ------ | ----------- |
-| inputByteSize | O número total de bytes preparados para [!DNL Data Ingestion Services] processar. |
-| inputRecordSize | O número total de linhas preparadas para [!DNL Data Ingestion Services] processar. |
+| inputByteSize | O número total de bytes preparados para [!DNL Data Ingestion Services] para processar. |
+| inputRecordSize | O número total de linhas preparadas para [!DNL Data Ingestion Services] para processar. |
 | outputByteSize | O número total de bytes enviados por [!DNL Data Ingestion Services] para [!DNL Data Lake]. |
-| outputRecordSize | O número total de linhas distribuídas por [!DNL Data Ingestion Services] para [!DNL Data Lake]. |
+| outputRecordSize | O número total de linhas geradas por [!DNL Data Ingestion Services] para [!DNL Data Lake]. |
 | partitionCount | O número total de partições gravadas em [!DNL Data Lake]. |
 
 ### Por que as métricas não estão disponíveis em alguns lotes?
@@ -270,8 +269,8 @@ Existem dois motivos pelos quais as métricas podem não estar disponíveis em s
 | Código de status | Descrição |
 | ----------- | ----------- |
 | 106 | O arquivo do conjunto de dados está vazio. |
-| 118º | O arquivo CSV contém uma linha de cabeçalho vazia. |
-| 200 | O lote foi aceito para processamento e será transferido para um estado final, como Ativo ou Falha. Depois de enviado, o lote pode ser monitorado usando o endpoint `GetBatch`. |
+| 118 | O arquivo CSV contém uma linha de cabeçalho vazia. |
+| 200 | O lote foi aceito para processamento e será transferido para um estado final, como Ativo ou Falha. Uma vez submetido, o lote pode ser monitorizado utilizando o método `GetBatch` endpoint . |
 | 400 | Solicitação inválida. Retornado se houver partes ausentes ou sobrepostas em um lote. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

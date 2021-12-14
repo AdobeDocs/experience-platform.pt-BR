@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a uma conta de Hubs de Eventos do Azure usando a API do Serviço de Fluxo.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 2%
@@ -149,7 +149,7 @@ curl -X POST \
 | `name` | O nome da sua conexão de origem. Certifique-se de que o nome da conexão de origem seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de origem. |
 | `description` | Um valor opcional que pode ser fornecido para incluir mais informações sobre a conexão de origem. |
 | `baseConnectionId` | A ID de conexão do [!DNL Event Hubs] fonte gerada na etapa anterior. |
-| `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Event Hubs]. Essa ID é : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Event Hubs]. Essa ID é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 | `data.format` | O formato do [!DNL Event Hubs] dados que você deseja assimilar. Atualmente, o único formato de dados compatível é `json`. |
 | `params.eventHubName` | O nome da sua [!DNL Event Hubs] fonte. |
 | `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados compatíveis incluem: `raw` e `xdm`. |

@@ -1,14 +1,15 @@
 ---
-title: Segredos de encaminhamento de eventos
+title: Configuração de segredos no encaminhamento de eventos
 description: Saiba como configurar segredos na interface do usuário da coleção de dados para autenticar em endpoints usados em propriedades de encaminhamento de eventos.
-source-git-commit: 43d593cd8adf5a29c3283a328c24b0994009222b
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1449'
 ht-degree: 1%
 
 ---
 
-# Segredo do encaminhamento do evento
+# Configurar segredos no encaminhamento de eventos
 
 No encaminhamento de eventos, um segredo é um recurso que representa uma credencial de autenticação para outro sistema, permitindo a troca segura de dados. Segredos só podem ser criados nas propriedades de encaminhamento de eventos.
 

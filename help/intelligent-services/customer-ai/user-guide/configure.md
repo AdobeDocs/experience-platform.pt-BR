@@ -6,9 +6,9 @@ title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
 description: Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
+source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2608'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ O Customer AI, como parte dos Serviços inteligentes, permite gerar pontuações
 
 Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 
-## Configurar a instância {#set-up-your-instance}
+## Criar uma instância {#set-up-your-instance}
 
 Na interface do usuário da plataforma, selecione **[!UICONTROL Serviços]** no painel de navegação esquerdo. O **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No contêiner do Customer AI, selecione **[!UICONTROL Abrir]**.
 
@@ -46,9 +46,9 @@ Para criar uma nova instância, selecione **[!UICONTROL Criar instância]**.
 
 ![](../images/user-guide/dashboard.png)
 
-## Configuração
+## Configurar
 
-O fluxo de trabalho de criação da instância é exibido, começando no **[!UICONTROL Configuração]** etapa.
+O fluxo de trabalho de criação da instância é exibido, começando no **[!UICONTROL Configurar]** etapa.
 
 Abaixo estão informações importantes sobre valores que você deve fornecer à instância com:
 
@@ -108,7 +108,7 @@ Caso haja mais de uma identidade disponível em um namespace, selecione o campo 
 >
 > Se não existir nenhum tipo de identidade válido (namespace) para um conjunto de dados, você deverá definir uma identidade primária e atribuí-la a um namespace de identidade usando a variável [editor de esquema](../../../xdm/schema/composition.md#identity). Para saber mais sobre namespaces e identidades, visite o [Namespaces do serviço de identidade](../../../identity-service/namespaces.md) documentação.
 
-## Definir uma meta {#define-a-goal}
+## Definir meta {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
@@ -156,9 +156,13 @@ Por padrão, as pontuações de propensão são geradas para todos os perfis, a 
 
 Se você tiver informações adicionais além do [campos de evento padrão](../input-output.md#standard-events) usada pelo Customer AI para gerar pontuações de propensão, uma opção de eventos personalizados é fornecida. Usar essa opção permite adicionar eventos adicionais que você considera influentes, o que pode melhorar a qualidade do modelo e ajudar a fornecer resultados mais precisos. Se o conjunto de dados selecionado incluir eventos personalizados definidos no esquema, é possível adicioná-los à instância.
 
+>[!NOTE]
+>
+> Para obter uma explicação detalhada sobre como os eventos personalizados afetam os resultados da pontuação do Customer AI, visite o [Exemplo de evento personalizado](#custom-event) seção.
+
 ![recurso de evento](../images/user-guide/event-feature.png)
 
-Para adicionar um evento personalizado, selecione **[!UICONTROL Adicionar evento personalizado]**. Em seguida, insira um nome de evento personalizado e o mapeie para o campo de evento no esquema . Os nomes de evento personalizados são exibidos no lugar do valor dos campos, ao analisar fatores influentes e outros insights. Isso significa que a ID do usuário, a ID da reserva, as informações do dispositivo e outros valores personalizados são listados com o nome do evento personalizado, em vez da ID/valor do evento. Esses eventos personalizados adicionais são usados pela API do cliente para melhorar a qualidade do modelo e fornecer resultados mais precisos.
+Para adicionar um evento personalizado, selecione **[!UICONTROL Adicionar evento personalizado]**. Em seguida, insira um nome de evento personalizado e o mapeie para o campo de evento no esquema . Os nomes de evento personalizados são exibidos no lugar do valor dos campos, ao analisar fatores influentes e outros insights. Isso significa que o nome do evento personalizado será usado em vez da ID/valor do evento. Para obter mais informações sobre como os eventos personalizados são exibidos, consulte a [seção de exemplo de evento personalizado](#custom-event). Esses eventos personalizados adicionais são usados pela API do cliente para melhorar a qualidade do modelo e fornecer resultados mais precisos.
 
 ![Campo de evento personalizado](../images/user-guide/custom-event.png)
 
@@ -178,21 +182,31 @@ Você pode definir campos importantes do conjunto de dados do Perfil (com carimb
 
 >[!NOTE]
 >
->A adição de um atributo de perfil personalizado segue o mesmo fluxo de trabalho da adição de um evento personalizado.
+>A adição de um atributo de perfil personalizado segue o mesmo fluxo de trabalho da adição de um evento personalizado. Semelhante aos eventos personalizados, os atributos de perfil personalizados afetam a pontuação do modelo da mesma maneira. Para obter uma explicação detalhada, visite o [Exemplo de evento personalizado](#custom-event) seção.
 
 ![adicionar um atributo de perfil personalizado](../images/user-guide/profile-attributes.png)
 
+### Adicionar um exemplo de evento personalizado {#custom-event}
+
+No exemplo a seguir, um evento personalizado e um atributo de perfil são adicionados a uma instância do Customer AI. O objetivo da instância da API do cliente é prever a probabilidade de um cliente comprar outro produto Luma nos próximos 60 dias. Normalmente, os dados do produto são vinculados a um SKU de produto. Nesse caso, o SKU é `prd1013`. Depois que o modelo do Customer AI é treinado/pontuado, esse SKU pode ser vinculado a um evento e exibido como um fator influente para um bucket de propensão.
+
+O Customer AI aplica automaticamente a geração de recursos, como &quot;Dias desde&quot; ou &quot;Contagens de&quot;, contra eventos personalizados, como **Compra de relógio**. Se esse evento foi considerado um fator influente no motivo pelo qual os clientes têm alta, média ou baixa propensão, o Customer AI o exibe como `Days since prd1013 purchase` ou `Count of prd1013 purchase`. Ao criar esse evento como um evento Personalizado, você pode dar um novo nome ao evento, tornando os resultados muito mais fáceis de ler. Por exemplo, `Days since Watch purchase`. Além disso, o Customer AI usa esse evento em seu treinamento e pontuação, mesmo se o evento não for um evento padrão. Isso significa que é possível adicionar vários eventos que você acha que podem ser influentes e personalizar ainda mais seu modelo, incluindo dados como reservas, logs de visitantes e outros eventos. A adição desses pontos de dados aumenta ainda mais a precisão do modelo do Customer AI.
+
+![exemplo de um evento personalizado](../images/user-guide/custom-event-name.png)
+
+## Definir opções
+
+A etapa definir opções permite configurar um agendamento para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos e alternar **[!UICONTROL Perfil]** ligado/desligado.
+
 ### Configurar um agendamento *(opcional)* {#configure-a-schedule}
 
-O **[!UICONTROL Avançado]** será exibida. Essa etapa opcional permite configurar um agendamento para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou selecionar **[!UICONTROL Concluir]** se nada for necessário.
-
-Configure um agendamento de pontuação configurando o **[!UICONTROL Frequência de pontuação]**. As execuções de previsão automatizada podem ser programadas para serem executadas semanalmente ou mensalmente.
+Para configurar um agendamento de pontuação, comece configurando o **[!UICONTROL Frequência de pontuação]**. As execuções de previsão automatizada podem ser programadas para serem executadas semanalmente ou mensalmente.
 
 ![](../images/user-guide/schedule.png)
 
-### Exclusões de previsão
+### Exclusões de previsão *(opcional)*
 
-Se o conjunto de dados continha colunas adicionadas como dados de teste, é possível adicionar essa coluna ou evento a uma lista de exclusão ao selecionar **Adicionar exclusão** seguido por inserir o campo que deseja excluir. Isso impede que os eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Esse recurso pode ser usado para filtrar entradas de dados irrelevantes ou determinadas promoções.
+Se o conjunto de dados continha colunas adicionadas como dados de teste, é possível adicionar essa coluna ou evento a uma lista de exclusão ao selecionar **[!UICONTROL Adicionar exclusão]** seguido por inserir o campo que deseja excluir. Isso impede que os eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Esse recurso pode ser usado para filtrar entradas ou promoções de dados irrelevantes.
 
 Para excluir um evento, selecione **[!UICONTROL Adicionar exclusão]** e defina o evento. Para remover uma exclusão, selecione as reticências (**[!UICONTROL ...]**) na parte superior direita do contêiner de evento, em seguida, selecione **[!UICONTROL Remover contêiner]**.
 
@@ -202,7 +216,7 @@ Para excluir um evento, selecione **[!UICONTROL Adicionar exclusão]** e defina 
 
 A opção Profile permite que o Customer AI exporte os resultados da pontuação para o Real-time Customer Profile. Desativar essa alternância impede que os resultados da pontuação de modelos sejam adicionados ao Perfil. Os resultados da pontuação do Customer AI ainda estão disponíveis com esse recurso desativado.
 
-Ao usar o Customer AI pela primeira vez, você deve desativar esse recurso até estar satisfeito com os resultados de saída do modelo. Isso evita que você carregue vários conjuntos de dados de pontuação no Perfil do cliente em tempo real e ajuste o modelo.
+Ao usar o Customer AI pela primeira vez, é possível desativar esse recurso até estar satisfeito com os resultados de saída do modelo. Isso evita que você carregue vários conjuntos de dados de pontuação em seus Perfis de cliente e ajuste seu modelo. Depois de terminar de calibrar seu modelo, você pode clonar o modelo usando o [opção clone](#set-up-your-instance) do **Instâncias do serviço** página. Isso permite criar uma cópia do modelo e ativar o perfil.
 
 ![Ativar/desativar perfil](../images/user-guide/advanced-workflow.png)
 

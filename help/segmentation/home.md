@@ -5,9 +5,9 @@ title: Visão geral do serviço de segmentação
 topic-legacy: overview
 description: Saiba mais sobre o Adobe Experience Platform Segmentation Service e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -61,18 +61,6 @@ Para saber mais sobre a segmentação de streaming, leia o [documentação de se
 Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, esse segmento é salvo e armazenado, para que você possa exportá-lo para uso.
 
 Segmentos em lote são avaliados automaticamente a cada 24 horas. Se quiser avaliar um segmento de lote sob demanda, você pode usar um trabalho de segmento. Para saber mais sobre tarefas de segmento, leia a [documentação do segment jobs](./api/segment-jobs.md).
-
-**Segmentação incremental (beta)**
-
-Segmentos em lote são avaliados a cada 24 horas. No entanto, para segmentos existentes, a segmentação incremental mantém os segmentos atualizados por até uma hora.
-
-A segmentação incremental é executada em novos dados que entram no armazenamento de perfis. No entanto, os seguintes avisos se aplicam à segmentação incremental:
-
-- Para qualquer segmento novo ou modificado recentemente, os perfis com novos dados começarão a se qualificar na próxima execução incremental. No entanto, os perfis sem alterações aparecerão no próximo trabalho de segmentação de lote completo.
-- Segmentos de várias entidades serão atualizados na segmentação incremental. Se houver atualizações de entidade, todos os perfis com novos dados começarão a usá-los na próxima execução incremental. No entanto, os perfis sem alterações aparecerão no próximo trabalho de segmentação de lote completo.
-- Os eventos que soltarem a janela de tempo de um segmento serão reconciliados no próximo trabalho de segmentação de lote completo.
-
-Para saber como avaliar segmentos, consulte a [tutorial de avaliação de segmento](./tutorials/evaluate-a-segment.md).
 
 ### Segmentação de borda
 

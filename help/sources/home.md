@@ -5,7 +5,7 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -38,7 +38,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 - [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
 - [Crie um [!DNL Marketo Engage] conexão de origem na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising 
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
@@ -139,7 +139,7 @@ O Experience Platform oferece suporte para assimilar dados de fontes de transmis
 O Experience Platform oferece suporte para assimilação de dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
-- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
 
 ## Controle de acesso para fontes na assimilação de dados
 
@@ -159,7 +159,7 @@ Para obter mais informações sobre as permissões disponíveis concedidas por m
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), Você reconhece que o Beta é fornecido ***&quot;no estado em que se encontra&quot; sem garantia de qualquer tipo***.
 
-O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. É aconselhável ter cuidado e não depender de forma alguma do correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
+O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. Recomenda-se que tenha cuidado e não se baseie de forma alguma no correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
 
 Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta, incluindo, mas não se limitando a problemas ou defeitos que você encontra ao usar o Beta, sugestões, melhorias e recomendações) fornecidas por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
 

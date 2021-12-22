@@ -4,7 +4,7 @@ title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consent for Privacy, Personalization and Marketing Preferences tem como objetivo oferecer suporte à coleta de permissões e preferências do cliente geradas pelas CMPs (Consent Management Platforms) e outras fontes de suas operações de dados.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ Este documento cobre a estrutura e o uso pretendido dos campos fornecidos pelo [
 
 Este documento requer uma compreensão funcional do XDM e o uso dos esquemas no [!DNL Experience Platform]. Consulte a seguinte documentação antes de continuar:
 
-* [Visão geral do sistema XDM](http://www.adobe.com/go/xdm-home-en)
-* [Noções básicas da composição do schema](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [Visão geral do sistema XDM](https://www.adobe.com/go/xdm-home-en)
+* [Noções básicas da composição do schema](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Estrutura do tipo de dados {#structure}
 
@@ -255,7 +255,7 @@ O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL C
 
 Para usar o [!UICONTROL Consentimentos e preferências] para assimilar dados de consentimento dos clientes, é necessário criar um conjunto de dados com base em um esquema que contenha esse tipo de dados.
 
-Veja o tutorial em [criação de um schema na interface do usuário](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir tipos de dados a campos. Depois de criar um schema contendo um campo com a variável [!UICONTROL Consentimentos e preferências] tipo de dados, consulte a seção em [criação de um conjunto de dados](../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, siga as etapas para criar um conjunto de dados com um esquema existente.
+Veja o tutorial em [criação de um schema na interface do usuário](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir tipos de dados a campos. Depois de criar um schema contendo um campo com a variável [!UICONTROL Consentimentos e preferências] tipo de dados, consulte a seção em [criação de um conjunto de dados](../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, siga as etapas para criar um conjunto de dados com um esquema existente.
 
 >[!IMPORTANT]
 >

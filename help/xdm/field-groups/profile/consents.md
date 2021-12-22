@@ -4,7 +4,7 @@ title: Grupo de campos Esquema de Consentimento e Preferências
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Consents and Preferences schema .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ O `adID` o consentimento representa o consentimento do cliente para se uma ID do
 
 Para usar o [!UICONTROL Consentimentos e preferências] para assimilar dados de consentimento dos clientes, é necessário criar um conjunto de dados com base em um esquema que contenha esse grupo de campos.
 
-Veja o tutorial em [criação de um schema na interface do usuário](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir grupos de campos a campos. Depois de criar um schema contendo um campo com a variável [!UICONTROL Consentimentos e preferências] grupo de campos, consulte a seção em [criação de um conjunto de dados](../../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, siga as etapas para criar um conjunto de dados com um esquema existente.
+Veja o tutorial em [criação de um schema na interface do usuário](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir grupos de campos a campos. Depois de criar um schema contendo um campo com a variável [!UICONTROL Consentimentos e preferências] grupo de campos, consulte a seção em [criação de um conjunto de dados](../../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, siga as etapas para criar um conjunto de dados com um esquema existente.
 
 >[!IMPORTANT]
 >

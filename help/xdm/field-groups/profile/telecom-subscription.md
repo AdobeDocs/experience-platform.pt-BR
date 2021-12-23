@@ -4,31 +4,32 @@ solution: Experience Platform
 title: Grupo de campos do esquema de assinatura Telecom
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Telecom Subscription schema .
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '730'
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Grupo ] de campos Telecom Subscriptionschema
+# [!UICONTROL Subscrição Telecom] grupo de campos de esquema
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL A ] Subscrição Telecom é um grupo de campos de esquema padrão para a  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe que descreve um plano de assinatura de telecom do cliente, incluindo preços, pacotes e subscrições individuais de produtos.
+[!UICONTROL Subscrição Telecom] é um grupo de campos de esquema padrão para a variável [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve um plano de assinatura de telecom do cliente, incluindo preços, pacotes e subscrições individuais de produtos.
 
-O grupo de campos fornece um único campo do tipo de objeto, `telecomSubscription`, cujas propriedades são descritas abaixo.
+O grupo de campos fornece um único campo do tipo objeto, `telecomSubscription`, cujas propriedades estão descritas abaixo.
 
 ![Estrutura de assinatura Telecom](../../images/field-groups/telecom-subscription/structure.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `internetSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura da Internet, como limite de dados, tipo de conexão e detalhes de velocidade. Consulte a seção [abaixo](#internetSubscription) para obter mais informações. |
-| `landlineSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura da linha de terra, incluindo recursos selecionados, minutos e planos de discagem. Consulte a seção [abaixo](#landlineSubscription) para obter mais informações. |
-| `mediaSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura de mídia, incluindo o número de canais e os serviços de transmissão incluídos. Consulte a seção [abaixo](#mediaSubscription) para obter mais informações. |
-| `mobileSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura móvel, incluindo o número de linhas, taxas de dados, custo e muito mais. Consulte a seção [abaixo](#mobileSubscription) para obter mais informações. |
+| `internetSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura da Internet, como limite de dados, tipo de conexão e detalhes de velocidade. Consulte a [seção abaixo](#internetSubscription) para obter mais informações. |
+| `landlineSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura da linha de terra, incluindo recursos selecionados, minutos e planos de discagem. Consulte a [seção abaixo](#landlineSubscription) para obter mais informações. |
+| `mediaSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura de mídia, incluindo o número de canais e os serviços de transmissão incluídos. Consulte a [seção abaixo](#mediaSubscription) para obter mais informações. |
+| `mobileSubscription` | Matriz de objetos | Descreve detalhes do plano de assinatura móvel, incluindo o número de linhas, taxas de dados, custo e muito mais. Consulte a [seção abaixo](#mobileSubscription) para obter mais informações. |
 | `primarySubscriber` | [[!UICONTROL Pessoa]](../../data-types/person.md) | Descreve o proprietário da subscrição. |
 | `bundleName` | String | Captura o nome de qualquer tipo de pacote de assinatura em que o cliente está inscrito, como `Internet + Media`. |
 | `primaryPartyID` | String | Um identificador da pessoa principal responsável pela assinatura, que normalmente pode ser o número de telefone do dispositivo. |
@@ -42,7 +43,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` O é fornecido com uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
+`internetSubscription` é fornecido como uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
 
 ![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -59,7 +60,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` O é fornecido com uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
+`landlineSubscription` é fornecido como uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
 
 ![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -70,7 +71,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 | `callBlocking` | Booleano | Indica se os recursos de assinatura fixa incluem bloqueio de chamada. |
 | `callForwarding` | Booleano | Indica se os recursos de assinatura fixa incluem o encaminhamento de chamadas. |
 | `callWaiting` | Booleano | Indica se os recursos de assinatura fixa incluem espera de chamada. |
-| `callerID` | Booleano | Indica se os recursos de assinatura fixa incluem a ID do chamador. |
+| `callerID` | Booleano | Indica se os recursos de assinatura em linha incluem a ID do chamador. |
 | `internationalCalling` | Booleano | Indica se os recursos de assinatura fixa incluem chamadas internacionais. |
 | `minutes` | Número inteiro | O número de minutos mensais disponíveis na assinatura. |
 | `threeWayCalling` | Booleano | Indica se os recursos de assinatura fixa incluem uma chamada de três vias. |
@@ -82,7 +83,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` O é fornecido com uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
+`mediaSubscription` é fornecido como uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -96,7 +97,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` O é fornecido com uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
+`mobileSubscription` é fornecido como uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 
@@ -109,4 +110,3 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 | `portedNumber` | Booleano | Indica se o cliente portas o número de outra operadora. |
 
 {style=&quot;table-layout:auto&quot;}
-

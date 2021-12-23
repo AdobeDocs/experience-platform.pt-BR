@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: c0e6477907fa616aecebf57b0465d9f8d82c740a
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2187'
 ht-degree: 1%
 
 ---
@@ -89,10 +89,12 @@ Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç
    >
    >Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa limitação será solucionada em versões futuras.
 
-1. Use o **[!UICONTROL Data]** seletor para escolher o dia ou o intervalo em que a exportação deve ocorrer.
-   >[!TIP]
+1. Use o **[!UICONTROL Data]** seletor para escolher o dia ou o intervalo em que a exportação deve ocorrer. Para exportações diárias, a prática recomendada é definir sua data de início e término para estar alinhada à duração de suas campanhas em suas plataformas de downstream.
+
+   >[!IMPORTANT]
    >
-   > Para exportações diárias, defina sua data de início e término para estar alinhada à duração das campanhas em suas plataformas de downstream.
+   > Ao selecionar um intervalo de exportação, o último dia do intervalo não é incluído nas exportações. Por exemplo, se você selecionar um intervalo de 4 a 11 de janeiro, a última exportação de arquivo ocorrerá em 10 de janeiro.
+
 1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
 
@@ -117,10 +119,12 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
    >
    >Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa limitação será solucionada em versões futuras.
 
-1. Use o **[!UICONTROL Data]** seletor para escolher o dia ou o intervalo em que a exportação deve ocorrer.
-   >[!TIP]
+1. Use o **[!UICONTROL Data]** seletor para escolher o intervalo em que a exportação deve ocorrer. A prática recomendada é definir sua data de início e término para alinhar-se à duração de suas campanhas em suas plataformas de downstream.
+
+   >[!IMPORTANT]
    >
-   >Defina sua data de início e término para se alinhar com a duração de suas campanhas em suas plataformas de downstream.
+   >O último dia do intervalo não está incluído nas exportações. Por exemplo, se você selecionar um intervalo de 4 a 11 de janeiro, a última exportação de arquivo ocorrerá em 10 de janeiro.
+
 1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
 ### Configurar nomes de arquivo {#file-names}

@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 75%
+source-wordcount: '1565'
+ht-degree: 74%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 75%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 4 de janeiro de 2022
+
+v3.3.0
+
+* Altera o [Acionar ação Chamada direta](./overview.md#direct-call-action) para que você possa fornecer informações de evento personalizadas para enviar para regras de chamada direta.
 
 ## 8 de outubro de 2021
 
@@ -62,7 +68,7 @@ v3.0.0
 
 * PDCL-6153: Adiciona suporte para obter de maneira confiável o URL totalmente qualificado para ações de código personalizado em cache.
 
-A v3.0.0 da extensão principal é combinada com alterações em [v27.2.0 do Tempo de execução Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário suportar o CDN Premium.
+A v3.0.0 da extensão principal está associada a alterações na [v27.2.0 do tempo de execução da Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário suportar o Premium CDN.
 
 Essa atualização é opcional e compatível com versões anteriores para usuários sem CDN Premium e é obrigatória para clientes com CDN Premium habilitado em sua empresa.
 
@@ -155,7 +161,7 @@ v1.6.2
 
 v1.6.1
 
-* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração suporta o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
+* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração suporta o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com uma CSP [here](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junho de 2019
 

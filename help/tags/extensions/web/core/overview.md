@@ -2,10 +2,10 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
 workflow-type: tm+mt
-source-wordcount: '5362'
-ht-degree: 90%
+source-wordcount: '5492'
+ht-degree: 87%
 
 ---
 
@@ -128,9 +128,13 @@ O evento será acionado se ocorrer um tipo de evento personalizado. As funções
 
 O evento será acionado se um elemento de dados especificado for alterado. É preciso fornecer um nome para o elemento de dados. Você pode selecionar o elemento de dados digitando seu nome no campo de texto ou selecionando o ícone do elemento de dados no lado direito do campo de texto e escolhendo em uma lista fornecida na caixa de diálogo exibida.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-O evento de chamada direta ignora a detecção de eventos e os sistemas de pesquisa. As regras de chamada direta são perfeitas para situações em que você deseja informar à Platform exatamente o que está acontecendo. Além disso, são adequadas quando o Platform não consegue detectar um evento no DOM, como no Adobe Flash. Especifique a string `_satellite.track` no campo de texto do identificador.
+Um evento de chamada direta ignora a detecção de eventos e os sistemas de pesquisa. As regras de chamada direta são perfeitas para situações em que se deseja informar ao sistema exatamente o que está acontecendo. Além disso, são adequadas quando o sistema não consegue detectar um evento no DOM.
+
+Ao definir um evento de chamada direta, você deve especificar uma string que atuará como o identificador desse evento. Se uma [acionar ação de chamada direta](#direct-call-action) contendo o mesmo identificador é acionado e, em seguida, qualquer regra de evento de chamada direta que acompanha esse identificador é executada.
+
+![Captura de tela de um evento de Chamada direta na interface do usuário da coleta de dados](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### Acionar chamada direta {#direct-call-action}
+
+Essa ação aciona todas as regras que usam um [evento de chamada direta](#direct-call-event). Ao configurar a ação, você deve fornecer a string de identificador do evento de chamada direta que deseja acionar. Opcionalmente, também é possível passar dados para o evento de chamada direta por meio de um `detail` , que pode conter um conjunto personalizado de pares de valores chave.
+
+![Captura de tela de uma ação Acionar chamada direta na interface do usuário da coleta de dados](../../../images/extensions/core/direct-call-action.png)
+
+A ação mapeia diretamente para a [`track` método](../../../ui/client-side/satellite-object.md?lang=en#track) no `satellite` objeto , que pode ser acessado pelo código do lado do cliente.
 
 ## Tipos de elementos de dados da extensão principal
 

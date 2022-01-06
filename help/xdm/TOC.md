@@ -4,10 +4,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
+source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 14%
+source-wordcount: '405'
+ht-degree: 15%
 
 ---
 
@@ -18,15 +18,16 @@ ht-degree: 14%
 * Esquemas {#schema}
    * [Noções básicas da composição do schema](schema/composition.md)
    * [Práticas recomendadas para modelagem de dados](schema/best-practices.md)
+   * [Dados confidenciais e pessoais](./schema/sensitive-and-personal-data.md)
    * [Restrições do tipo de campo XDM](schema/field-constraints.md)
    * [Namespacing no XDM](./schema/namespaces.md)
-   * [Dicionário de campo XDM](schema/field-dictionary.md)
    * Modelos de dados do setor {#industries}
       * [Visão geral](./schema/industries/overview.md)
       * [Varejo](./schema/industries/retail.md)
       * [Serviços financeiros](./schema/industries/financial.md)
       * [Telecomunicações](./schema/industries/telecom.md)
       * [Viagem e hospitalidade](./schema/industries/travel-hospitality.md)
+   * [Dicionário de campo XDM](schema/field-dictionary.md)
 * Classes {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [ExperiênciaEvento XDM](./classes/experienceevent.md)
@@ -70,7 +71,7 @@ ht-degree: 14%
       * [Detalhes da Web](./field-groups/event/web-details.md)
    * [Atualizações do nome do grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
-   * [aplicação](./data-types/application.md)
+   * [Aplicação](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Origem B2B](./data-types/b2b-source.md)

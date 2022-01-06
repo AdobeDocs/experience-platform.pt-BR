@@ -1,9 +1,10 @@
 ---
 title: Conexão da Lista de clientes do pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
-source-git-commit: a071aaaf5e9b8ef9223ef4f9ea204460f18bf95e
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
@@ -20,31 +21,31 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Pré-requisitos {#prerequisites}
 
-* O usuário precisaria se autenticar com uma conta do Pinterest que tenha acesso à conta do anunciante à qual deseja adicionar um público-alvo. Detalhes sobre o compartilhamento de contas de anunciante podem ser encontrados [aqui](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Especificamente, o usuário precisaria dos níveis de acesso de &quot;público-alvo&quot;.
-* Detalhes sobre os formatos de identidade da lista de clientes podem ser encontrados [aqui](https://help.pinterest.com/en/business/article/audience-targeting).
+* O usuário precisaria se autenticar com uma conta do Pinterest que tenha acesso à conta do anunciante à qual deseja adicionar um público-alvo. Detalhes sobre o compartilhamento de contas de anunciante podem ser encontrados [here](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Especificamente, o usuário precisaria dos níveis de acesso de &quot;público-alvo&quot;.
+* Detalhes sobre os formatos de identidade da lista de clientes podem ser encontrados [here](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## Identidades suportadas {#supported-identities}
 
-O destino [!DNL Pinterest Customer List] suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+O [!DNL Pinterest Customer List] O destino oferece suporte à ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest.
+No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest.
 
 | Identidade do Target | Descrição | Considerações |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Mapeie o namespace de identidade de origem *GAID* para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o namespace de identidade de origem *IDFA* para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
-| EMAIL | Endereços de email (texto limpo ou com hash com o algoritmo SHA256) | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. <br> Mapeie o namespace de identidade de origem  ** Email_LC_ *SHA256* para o campo de identidade de destino  *pinterest_audience*. |
+| GAID | [!DNL Google Advertising ID] | Mapeie o *GAID* namespace da identidade de origem para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o *IDFA* namespace da identidade de origem para o campo de identidade de destino *pinterest_audience*. As identidades são distintas e resolvidas após a assimilação de dados no Pinterest. |
+| EMAIL | Endereços de email (texto limpo ou com hash com o algoritmo SHA256) | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. <br> Mapeie o *Email* ou *Email_LC_SHA256* namespace da identidade de origem para o campo de identidade de destino *pinterest_audience*. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Tipo de exportação {#export-type}
 
-**Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest.
+**Exportar segmento** - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest.
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pinterest Customer List], aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar a variável [!DNL Pinterest Customer List] destino, aqui estão casos de uso de exemplo que os clientes do Adobe Experience Platform podem resolver usando esse destino.
 
 
 ### Caso de uso nº 1
@@ -53,26 +54,25 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Ligar ao destino {#connect}
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
-
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
+Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID]** da conta: Sua ID de conta de publicidade da Pinterest.
+* **[!UICONTROL ID do anunciante]**: Sua ID de anunciante da Pinterest.
 
 ## Ativar segmentos para este destino {#activate}
 
-Leia [Ativar perfis e segmentos para os destinos de exportação de segmentos de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
+Ler [Ativar perfis e segmentos para destinos de exportação de segmentos de fluxo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte a [Visão geral da governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Todos [!DNL Adobe Experience Platform] Os destinos são compatíveis com as políticas de uso de dados ao manipular os dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte [Visão geral da governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Recursos adicionais {#additional-resources}
 
-Consulte a página [Central de Ajuda do Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter mais informações.
+Consulte a [Página da Central de ajuda do pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter mais informações.

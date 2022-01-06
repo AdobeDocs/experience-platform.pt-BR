@@ -5,9 +5,9 @@ title: Funções SQL Spark no Serviço de Consulta
 topic-legacy: spark sql functions
 description: Esta documentação contém informações sobre funções SQL Spark que estendem a funcionalidade SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
+source-git-commit: f291c0db5b751227e979e70ea8f91a0c133ecf34
 workflow-type: tm+mt
-source-wordcount: '3909'
+source-wordcount: '3866'
 ht-degree: 1%
 
 ---
@@ -16,33 +16,21 @@ ht-degree: 1%
 
 O Adobe Experience Platform Query Service fornece várias funções SQL Spark incorporadas para estender a funcionalidade SQL. Este documento lista as funções SQL Spark suportadas pelo Serviço de Consulta.
 
-Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, uso e exemplos, leia a [documentação da função SQL Spark](https://spark.apache.org/docs/latest/api/sql/index.html).
+Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, uso e exemplos, leia o [Documentação da função SQL Spark](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
 >Nem todas as funções na documentação externa são compatíveis.
 
-## Categorias
-
-- [Operadores e funções de matemática e estatística](#math)
-- [Operadores lógicos](#logical-operators)
-- [Funções de data/hora](#datetime-functions)
-- [Matrizes](#arrays)
-- [Funções de vazamento do tipo de dados](#datatype-casting)
-- [Funções de conversão e formatação](#conversion)
-- [Avaliação dos dados](#data-evaluation)
-- [Informações atuais](#current-information)
-- [Funções de ordem mais alta](#higher-order)
-
 ## Operadores e funções de matemática e estatística {#math}
 
 | Operador/Função | Descrição |
 | ----------------- | ----------- |
-| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_2) | Retorna o restante dos dois números |
-| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_4) | Multiplica os dois números |
-| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Adiciona os dois números |
-| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Subtrai os dois números |
-| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Divide os dois números |
+| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_3) | Retorna o restante dos dois números |
+| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Multiplica os dois números |
+| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Adiciona os dois números |
+| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Subtrai os dois números |
+| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Divide os dois números |
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | Retorna o valor absoluto da entrada |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | Retorna o valor cosseno inverso |
 | [`approx_count_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_count_distinct) | Retorna a cardinalidade estimada de HyperLog++ |
@@ -84,13 +72,13 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Retorna pi |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Retorna o módulo positivo entre dois valores |
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Retorna o valor positivo |
-| [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow),  [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Retorna o primeiro valor para a potência do segundo valor |
+| [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Retorna o primeiro valor para a potência do segundo valor |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | Converte o valor em radianos |
 | [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | Retorna um número aleatório entre 0 e 1 |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | Retorna um valor aleatório |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | Retorna o valor duplo mais próximo |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | Retorna o valor arredondado mais próximo |
-| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign),  [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | Retorna o sinal do número |
+| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign), [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | Retorna o sinal do número |
 | [`sin`](https://spark.apache.org/docs/latest/api/sql/index.html#sin) | Retorna seno do valor |
 | [`sinh`](https://spark.apache.org/docs/latest/api/sql/index.html#sinh) | Retorna o seno hiperbólico do valor |
 | [`sqrt`](https://spark.apache.org/docs/latest/api/sql/index.html#sqrt) | Retorna a raiz quadrada do valor |
@@ -101,22 +89,21 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`tan`](https://spark.apache.org/docs/latest/api/sql/index.html#tan) | Retorna a tangente do valor |
 | [`tanh`](https://spark.apache.org/docs/latest/api/sql/index.html#tanh) | Retorna a tangente hiperbólica do valor |
 | [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | Retorna a variação de população calculada |
-| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp),  [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | Retorna a variação calculada da amostra |
+| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | Retorna a variação calculada da amostra |
 
 ### Operadores e funções lógicos {#logical-operators}
 
 | Operador/Função | Descrição |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) ou [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Lógica não |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Less than |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Less than or equal to |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_10) | Equal to |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Greater than |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
-| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Exclusivo ou em bits |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Maior que ou igual a |
-| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Em nível de bits ou |
-| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | No sentido de bits |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Menos que |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Less than or equal to |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Equal to |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Greater than |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Maior que ou igual a |
+| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Exclusivo ou em bits |
+| [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | Em nível de bits ou |
+| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | No sentido de bits |
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | Retorna os elementos comuns |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | Asserta se a expressão for verdadeira |
 | [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | Se a expressão for avaliada como true, retornará a segunda expressão. Caso contrário, retorne a terceira expressão. |
@@ -140,7 +127,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`date_sub`](https://spark.apache.org/docs/latest/api/sql/index.html#date_sub) | Subtrair dias a partir da data |
 | [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | Retorna a data truncada para a unidade especificada |
 | [`datediff`](https://spark.apache.org/docs/latest/api/sql/index.html#datediff) | Retorna a diferença entre datas em dias |
-| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day),  [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Retorna o dia do mês |
+| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Retorna o dia do mês |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Retorna o dia da semana (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Retorna o dia do ano |
 | [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Retorna a data em horário Unix |
@@ -153,8 +140,8 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Retorna o primeiro dia depois da entrada |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Retorna o trimestre da entrada |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Retorna o segundo da cadeia de caracteres |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data. **Observação:** a string  **** deve estar no formato  `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a string em um carimbo de data e hora. **Observação:** a string  **** deve estar no formato  `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data. **Observação:** A string **must** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a string em um carimbo de data e hora. **Observação:** A string **must** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora Unix |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Trunca a data |
@@ -180,7 +167,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | Cria uma matriz contendo o valor contado vezes |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | Classifica a matriz |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | Une a matriz, sem duplicatas |
-| [`array_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | CEP |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combina os valores de determinadas matrizes com os valores da coleção original em um determinado índice |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | Retornar o tamanho do storage |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | Retorna o elemento na posição |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | Separe elementos da matriz em várias linhas, excluindo nulo |
@@ -189,8 +176,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Nivela uma matriz |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Array separado de estruturas em uma tabela, excluindo nulo |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Array separado de estruturas em uma tabela, incluindo nulo |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separe elementos da matriz em várias linhas com posições, excluindo nulo |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separe elementos da matriz em várias linhas com posições, incluindo null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separe elementos da matriz em várias linhas com posições, excluindo nulo |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Elementos inversos da matriz |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Retornar uma permuta aleatória do array |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Subdefine uma matriz |
@@ -224,16 +210,16 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`base64`](https://spark.apache.org/docs/latest/api/sql/index.html#base64) | Alterar o argumento para uma string base64 |
 | [`bin`](https://spark.apache.org/docs/latest/api/sql/index.html#bin) | Alterar o argumento para um valor binário |
 | [`bit_length`](https://spark.apache.org/docs/latest/api/sql/index.html#bit_length) | Retorna o comprimento do bit |
-| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char),  [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | Retorna o caractere ASCII |
-| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length),  [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | Retorna o comprimento da string |
+| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char), [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | Retorna o caractere ASCII |
+| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length), [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | Retorna o comprimento da string |
 | [`crc32`](https://spark.apache.org/docs/latest/api/sql/index.html#crc32) | Retorna o valor de verificação de redundância cíclica |
 | [`degrees`](https://spark.apache.org/docs/latest/api/sql/index.html#degrees) | Converter radianos em graus |
 | [`format_number`](https://spark.apache.org/docs/latest/api/sql/index.html#format_number) | Alterar o formato do número |
-| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json),  [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Obter dados do JSON |
+| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Obter dados do JSON |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | Retorna o valor de hash |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | Converter o argumento em um valor hexadecimal |
 | [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Altera a string para ser classificada como título |
-| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase),  [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Altera a cadeira de caracteres para estar todas em minúsculas |
+| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Altera a cadeira de caracteres para estar todas em minúsculas |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | Prepara o lado esquerdo de uma cadeira de caracteres |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | Criar um mapa |
 | [`map_from_arrays`](https://spark.apache.org/docs/latest/api/sql/index.html#map_from_arrays) | Criar um mapa a partir de uma matriz |
@@ -241,15 +227,15 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`md5`](https://spark.apache.org/docs/latest/api/sql/index.html#md5) | Retorna o valor md5 |
 | [`rpad`](https://spark.apache.org/docs/latest/api/sql/index.html#rpad) | Preenche o lado direito de uma cadeira de caracteres |
 | [`rtrim`](https://spark.apache.org/docs/latest/api/sql/index.html#rtrim) | Remove espaços à direita |
-| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha),  [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | Retorna o valor SHA1 |
+| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha), [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | Retorna o valor SHA1 |
 | [`sha2`](https://spark.apache.org/docs/latest/api/sql/index.html#sha2) | Retorna o valor SHA2 |
 | [`soundex`](https://spark.apache.org/docs/latest/api/sql/index.html#soundex) | Retorna o código soundex |
 | [`stack`](https://spark.apache.org/docs/latest/api/sql/index.html#stack) | Separar valores em linhas |
-| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr),  [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | Retornar a subcadeia de caracteres |
+| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr), [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | Retornar a subcadeia de caracteres |
 | [`to_json`](https://spark.apache.org/docs/latest/api/sql/index.html#to_json) | Retorna uma string JSON |
 | [`translate`](https://spark.apache.org/docs/latest/api/sql/index.html#translate) | Substituir valores na cadeia de caracteres |
 | [`trim`](https://spark.apache.org/docs/latest/api/sql/index.html#trim) | Remover caracteres à esquerda e à direita |
-| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase),  [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | Alterar a cadeia de caracteres para estar em maiúsculas |
+| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase), [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | Alterar a cadeia de caracteres para estar em maiúsculas |
 | [`unbase64`](https://spark.apache.org/docs/latest/api/sql/index.html#unbase64) | Converta a string base64 em binário |
 | [`unhex`](https://spark.apache.org/docs/latest/api/sql/index.html#unhex) | Converter o hexadecimal em binário |
 | [`uuid`](https://spark.apache.org/docs/latest/api/sql/index.html#uuid) | Retornar um UUID |
@@ -265,19 +251,19 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | Concatenação com separador |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | Retorna a contagem total de linhas |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | Decodificar usando um conjunto de caracteres |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Retorna a entrada [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)th |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Retorne o [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)a entrada |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | Codificar usando um conjunto de caracteres |
-| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first),  [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Retorna o primeiro valor |
+| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Retorna o primeiro valor |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Indica se uma coluna foi agrupada |
 | [`grouping_id`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping_id) | Retorna o nível de agrupamento |
 | [`instr`](https://spark.apache.org/docs/latest/api/sql/index.html#instr) | Retorna um índice de ocorrência de caractere com base em 1 |
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | Retorna uma tupla de uma entrada JSON |
-| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag),  [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Retorna o valor antes do deslocamento |
-| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last),  [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Retorna o último valor |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Retorna os primeiros [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caracteres |
+| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Retorna o valor antes do deslocamento |
+| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Retorna o último valor |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Retorna o primeiro [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caracteres |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | Retorna o comprimento da cadeira de caracteres |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | Retorna a distância Levenshtein entre cadeias de caracteres |
-| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate),  [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Retorna a posição da primeira ocorrência de uma substring |
+| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Retorna a posição da primeira ocorrência de uma substring |
 | [`map_concat`](https://spark.apache.org/docs/latest/api/sql/index.html#map_concat) | Concatenar um mapa |
 | [`map_keys`](https://spark.apache.org/docs/latest/api/sql/index.html#map_keys) | Retornar as chaves de um mapa |
 | [`map_values`](https://spark.apache.org/docs/latest/api/sql/index.html#map_values) | Retornar os valores de um mapa |
@@ -300,12 +286,12 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`shiftright`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftright) | Sinal de desvio bit a bit à direita |
 | [`shiftrightunsigned`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftrightunsigned) | Deslocamento bit a bit não assinado à direita |
 | [`size`](https://spark.apache.org/docs/latest/api/sql/index.html#size) | Retornar o tamanho do storage |
-| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Retornar uma string com espaços [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) |
+| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Retornar uma sequência de caracteres com [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) espaços |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | Split string |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | Índice de retorno da substring |
 | [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Window |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | Analisar nós XML |
-| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double),  [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | Analisar nós XML para double |
+| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | Analisar nós XML para double |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | Analisar nós XML para flutuante |
 | [`xpath_int`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_int) | Analisar nós XML para inteiro |
 | [`xpath_long`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_long) | Analisar nós XML por muito tempo |
@@ -318,7 +304,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | -------- | ----------- |
 | [`current_database`](https://spark.apache.org/docs/latest/api/sql/index.html#current_database) | Retorna o banco de dados atual |
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | Retorna a data atual |
-| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp),  [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Retorna o carimbo de data e hora atual |
+| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Retorna o carimbo de data e hora atual |
 
 ### Funções de ordem mais alta {#higher-order}
 

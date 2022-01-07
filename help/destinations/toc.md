@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '686'
 ht-degree: 9%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 9%
    * [Conecte-se a destinos de fluxo e ative dados usando a API do Serviço de fluxo](./api/streaming-destinations.md)
    * [Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/email-marketing.md)
    * [(Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc](./api/ad-hoc-activation-api.md)
+   * [Excluir contas de destino](./api/delete-destination-account.md)
+   * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
 * Guias da interface do usuário {#ui}
    * [Área de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
@@ -149,7 +151,7 @@ ht-degree: 9%
    * [Visão geral](./destination-sdk/overview.md)
    * [Pré-requisitos de integração](./destination-sdk/integration-prerequisites.md)
    * [Introdução](./destination-sdk/getting-started.md)
-   * Funcionalidade do Destination SDK {#functionality}
+   * funcionalidade Destination SDK {#functionality}
       * [Opções de configuração](./destination-sdk/configuration-options.md)
       * [Configuração de destino](./destination-sdk/destination-configuration.md)
       * [Especificações do servidor e do modelo](./destination-sdk/server-and-template-configuration.md)
@@ -174,7 +176,7 @@ ht-degree: 9%
          * [Operações da API de teste de destino](./destination-sdk/destination-testing-api.md)
          * [Exemplos de operações da API de geração de perfil](./destination-sdk/sample-profile-generation-api.md)
    * Guias {#guides}
-      * [Usar o Destination SDK para configurar um destino de transmissão](./destination-sdk/configure-destination-instructions.md)
+      * [Use o Destination SDK para configurar um destino de transmissão](./destination-sdk/configure-destination-instructions.md)
       * [Enviar para revisão de um destino criado no Destination SDK](./destination-sdk/submit-destination.md)
    * Documente seu destino {#document-destination}
       * [Documente seu destino no Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)

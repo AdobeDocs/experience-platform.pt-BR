@@ -1,11 +1,11 @@
 ---
 keywords: transmissão contínua;
-title: Conexão HTTP
+title: Conexão da API HTTP
 description: O destino da API HTTP no Adobe Experience Platform permite enviar dados do perfil para pontos de extremidade HTTP de terceiros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---

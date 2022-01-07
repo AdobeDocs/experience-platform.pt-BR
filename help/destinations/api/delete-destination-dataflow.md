@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Excluir um fluxo de dados de destino usando a API de Serviço de Fluxo
 type: Tutorial
 description: Saiba como excluir fluxos de dados para destinos de lote e fluxo por meio da API de Serviço de Fluxo.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
@@ -90,3 +91,5 @@ Os endpoints de API neste tutorial seguem os princípios gerais da mensagem de e
 Ao seguir este tutorial, você usou com sucesso a variável [!DNL Flow Service] API para excluir um fluxo de dados existente para um destino.
 
 Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface do usuário](../ui/delete-destinations.md).
+
+Pode agora prosseguir e [excluir contas de destino](/help/destinations/api/delete-destination-account.md) usando o [!DNL Flow Service] API.

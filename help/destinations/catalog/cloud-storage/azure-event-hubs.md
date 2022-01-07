@@ -1,11 +1,11 @@
 ---
 keywords: Destino do hub de eventos do Azure; hub de eventos do azure; azure eventhub
-title: (Beta) !Hubs de Eventos do Azure]
-description: Crie uma conexão de saída em tempo real com o armazenamento do !DNL Azure Event Hubs] para fazer o stream de dados do Experience Platform.
+title: (Beta) [!DNL Azure Event Hubs] conexão
+description: Crie uma conexão de saída em tempo real com o [!DNL Azure Event Hubs] armazenamento de dados para fluxo de dados do Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---

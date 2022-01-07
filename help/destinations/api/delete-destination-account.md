@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Excluir uma conta de destino usando a API de Serviço de Fluxo
 type: Tutorial
 description: Saiba como excluir uma conta de destino usando a API de Serviço de Fluxo.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -184,4 +185,4 @@ Os endpoints de API neste tutorial seguem os princípios gerais da mensagem de e
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com sucesso a variável [!DNL Flow Service] API para excluir contas de destino existentes.
+Ao seguir este tutorial, você usou com sucesso a variável [!DNL Flow Service] API para excluir contas de destino existentes. Para obter mais informações sobre o uso de destinos, consulte [visão geral dos destinos](/help/destinations/home.md).

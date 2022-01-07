@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2387'
 ht-degree: 5%
 
 ---
@@ -509,7 +509,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## Recuperar uma configuração de destino específica {#get}
 
-Você pode recuperar informações detalhadas sobre uma configuração de destino específica fazendo uma solicitação de GET para o `/authoring/destinations` endpoint e fornecer a ID da instância da configuração de destino que deseja recuperar.
+Você pode recuperar informações detalhadas sobre uma configuração de destino específica fazendo uma solicitação de GET para a `/authoring/destinations` endpoint e fornecer a ID da instância da configuração de destino que deseja recuperar.
 
 **Formato da API**
 
@@ -697,8 +697,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com uma resposta HTTP 
 
 ## Tratamento de erros da API
 
-Os pontos de extremidade da API do SDK de destino seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [erros do cabeçalho da solicitação](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) no guia de solução de problemas da plataforma.
+Os pontos de extremidade da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
 
 ## Próximas etapas
 
-Depois de ler este documento, você agora sabe como configurar seu destino usando o `/authoring/destinations` Ponto de extremidade da API. Ler [como usar o SDK de destino para configurar o destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, você agora sabe como configurar seu destino usando o `/authoring/destinations` Ponto de extremidade da API. Ler [como usar o Destination SDK para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

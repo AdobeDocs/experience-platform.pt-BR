@@ -2,9 +2,9 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/destinationInstance/`, para testar se o destino está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Operações da API de teste de destino
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Antes de continuar, reveja o [guia de introdução](./getting-started.md) para o
 
 ## Teste a configuração de destino sem adicionar perfis à chamada {#test-without-adding-profiles}
 
-Você pode testar a configuração de destino fazendo uma solicitação de POST para a variável `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint e fornecer a ID da instância de destino do destino que você está testando.
+Você pode testar a configuração de destino fazendo uma solicitação POST para a variável `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint e fornecer a ID da instância de destino do destino que você está testando.
 
 **Formato da API**
 
@@ -321,7 +321,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com a resposta da
 
 ## Tratamento de erros da API {#api-error-handling}
 
-Os endpoints da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [erros do cabeçalho da solicitação](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) no guia de solução de problemas da plataforma.
+Os pontos de extremidade da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
 
 ## Próximas etapas
 

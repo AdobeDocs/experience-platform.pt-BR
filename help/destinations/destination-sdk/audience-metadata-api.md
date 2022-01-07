@@ -1,9 +1,10 @@
 ---
 description: Esta página descreve todas as operações da API que podem ser executadas usando o endpoint da API `/authoring/audience-templates`.
 title: Operações da API de ponto de extremidade de metadados de público-alvo
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '879'
 ht-degree: 5%
 
 ---
@@ -12,17 +13,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**Ponto de extremidade** da API:  `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**Ponto de extremidade da API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Esta página lista e descreve todas as operações de API que podem ser executadas usando o endpoint da API `/authoring/audience-templates`. Para obter uma descrição de quando usar esse ponto de extremidade, leia [gerenciamento de metadados de público-alvo](./audience-metadata-management.md).
+Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/audience-templates` Ponto de extremidade da API. Para obter uma descrição de quando usar este endpoint, leia [gerenciamento de metadados do público-alvo](./audience-metadata-management.md).
 
 ## Introdução às operações de API dos templates de público-alvo {#get-started}
 
-Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
+Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
 
 ## Criar um novo modelo de público-alvo {#create}
 
-Você pode criar um novo modelo de público-alvo fazendo uma solicitação de POST ao ponto de extremidade `/authoring/audience-templates`.
+Você pode criar um novo modelo de público-alvo fazendo uma solicitação de POST para o `/authoring/audience-templates` endpoint .
 
 **Formato da API**
 
@@ -33,7 +34,7 @@ POST /authoring/audience-templates
 
 **Solicitação**
 
-A solicitação a seguir cria um novo modelo de metadados de público-alvo, configurado pelos parâmetros fornecidos no payload. A carga abaixo inclui todos os parâmetros aceitos pelo ponto de extremidade `/authoring/audience-templates`. Observe que não é necessário adicionar todos os parâmetros na chamada do e que o modelo é personalizável, de acordo com os requisitos da API.
+A solicitação a seguir cria um novo modelo de metadados de público-alvo, configurado pelos parâmetros fornecidos no payload. A carga abaixo inclui todos os parâmetros aceitos pela `/authoring/audience-templates` endpoint . Observe que não é necessário adicionar todos os parâmetros na chamada do e que o modelo é personalizável, de acordo com os requisitos da API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -163,10 +164,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | String | O método usado no terminal para criar, atualizar, excluir ou validar programaticamente o segmento/público-alvo no destino. Por exemplo: `POST`, `PUT`, `DELETE` |
 | `headers.header` | String | Especifica todos os cabeçalhos HTTP que devem ser adicionados à chamada para sua API. Por exemplo, `"Content-Type"` |
 | `headers.value` | String | Especifica o valor dos cabeçalhos HTTP que devem ser adicionados à chamada para sua API. Por exemplo, `"application/x-www-form-urlencoded"` |
-| `requestBody` | String | Especifica o conteúdo do corpo da mensagem que deve ser enviado para sua API. Os parâmetros que devem ser adicionados ao objeto `requestBody` dependem dos campos que sua API aceita. Para obter um exemplo, consulte o [primeiro exemplo de modelo](./audience-metadata-management.md#example-1) no documento de funcionalidade Metadados de público-alvo . |
-| `responseFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte os [exemplos de modelo](./audience-metadata-management.md#examples) no documento de funcionalidade de metadados de público-alvo . |
+| `requestBody` | String | Especifica o conteúdo do corpo da mensagem que deve ser enviado para sua API. Os parâmetros que devem ser adicionados à variável `requestBody` dependem dos campos aceitos pela API. Para obter um exemplo, consulte a [primeiro exemplo de modelo](./audience-metadata-management.md#example-1) no documento de funcionalidade Metadados de público-alvo . |
+| `responseFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte a [exemplos de modelo](./audience-metadata-management.md#examples) no documento de funcionalidade Metadados de público-alvo . |
 | `responseFields.value` | String | Especifique o valor de qualquer campo de resposta que sua API retorna quando chamada. |
-| `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte os [ exemplos de modelo](./audience-metadata-management.md#examples) no documento de funcionalidade de metadados de público-alvo . |
+| `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte a [ exemplos de modelo](./audience-metadata-management.md#examples) no documento de funcionalidade Metadados de público-alvo . |
 | `responseErrorFields.value` | String | Analisa todas as mensagens de erro retornadas nas respostas de chamada da API do seu destino. Essas mensagens de erro serão exibidas para os usuários na interface do usuário do Experience Platform. |
 | `validations.field` | String | Indica se as validações devem ser executadas para qualquer campo antes que as chamadas de API sejam feitas ao seu destino. Por exemplo, você pode usar `{{validations.accountId}}` para validar a ID da conta do usuário. |
 | `validations.regex` | String | Indica como o campo deve ser estruturado para que a validação seja aprovada. |
@@ -179,7 +180,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de p�
 
 ## Atualizar modelo de público-alvo {#update}
 
-Você pode atualizar um modelo de público-alvo existente, fazendo uma solicitação de PUT para o endpoint `/authoring/audience-templates` e fornecendo a ID da instância do modelo de público-alvo que deseja atualizar. No corpo da chamada , forneça o template atualizado.
+Você pode atualizar um modelo de público-alvo existente fazendo uma solicitação de PUT para a variável `/authoring/audience-templates` endpoint e fornecer a ID da instância do modelo de público-alvo que deseja atualizar. No corpo da chamada , forneça o template atualizado.
 
 **Formato da API**
 
@@ -295,7 +296,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## Recuperar uma lista de modelos de público-alvo {#retrieve-list}
 
-Você pode recuperar uma lista de todos os modelos de público-alvo para sua Organização IMS fazendo uma solicitação GET para o endpoint `/authoring/audience-templates`.
+Você pode recuperar uma lista de todos os modelos de público-alvo para sua Organização IMS fazendo uma solicitação ao `/authoring/audience-templates` endpoint .
 
 **Formato da API**
 
@@ -318,7 +319,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Resposta**
 
-A resposta a seguir retorna o status HTTP 200 com uma lista de modelos de metadados de público-alvo aos quais você tem acesso, com base na IMS Organization ID e no nome da sandbox usados. Um `instanceId` corresponde ao modelo para um destino. A resposta é truncada por brevidade.
+A resposta a seguir retorna o status HTTP 200 com uma lista de modelos de metadados de público-alvo aos quais você tem acesso, com base na IMS Organization ID e no nome da sandbox usados. One `instanceId` corresponde ao modelo para um destino. A resposta é truncada por brevidade.
 
 ```json
 {
@@ -426,7 +427,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de modelos de metada
 
 ## Recuperar um modelo de público-alvo específico {#get}
 
-Você pode recuperar informações detalhadas sobre um modelo de público-alvo específico fazendo uma solicitação de GET para o terminal `/authoring/audience-templates` e fornecendo a ID da instância do modelo de público-alvo que deseja recuperar.
+Você pode recuperar informações detalhadas sobre um modelo de público-alvo específico fazendo uma solicitação do GET para a `/authoring/audience-templates` endpoint e fornecer a ID da instância do modelo de público-alvo que deseja recuperar.
 
 **Formato da API**
 
@@ -563,7 +564,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Excluir um modelo de público-alvo específico {#delete}
 
-Você pode excluir o modelo de público-alvo especificado, fazendo uma solicitação de DELETE ao ponto de extremidade `/authoring/audience-templates` e fornecendo a ID do modelo de público-alvo que deseja excluir no caminho da solicitação.
+Você pode excluir o modelo de público-alvo especificado, fazendo uma solicitação de DELETE para a variável `/authoring/audience-templates` endpoint e fornecer a ID do modelo de público-alvo que você deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -573,7 +574,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | O `id` do modelo de público-alvo que você deseja excluir. |
+| `{INSTANCE_ID}` | O `id` do modelo de público-alvo que deseja excluir. |
 
 **Solicitação**
 
@@ -591,8 +592,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com uma resposta HTTP 
 
 ## Tratamento de erros da API
 
-Os pontos de extremidade da API do SDK de destino seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [erros do cabeçalho da solicitação](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) no guia de solução de problemas da plataforma.
+Os pontos de extremidade da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
 
 ## Próximas etapas
 
-Depois de ler este documento, você agora sabe quando usar modelos de metadados de público-alvo e como configurar um modelo de metadados de público-alvo usando o endpoint da API `/authoring/audience-templates`. Leia [como usar o SDK de destino para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, você agora sabe quando usar modelos de metadados de público-alvo e como configurar um modelo de metadados de público-alvo usando o `/authoring/audience-templates` Ponto de extremidade da API. Ler [como usar o Destination SDK para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

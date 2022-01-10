@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino cinesis;cinesis
 title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para fazer o stream de dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: f7f3bc229ddad046dca5ea8d2889942fc9cb2cab
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ Observe que todos os atributos mapeados são exportados para um perfil, independ
 
 ## Dados exportados {#exported-data}
 
-Seu exportado [!DNL Experience Platform] os dados chegam em [!DNL Amazon Kinesis] no formato JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de um público que se qualificou para um determinado segmento e saiu de outro. As identidades desse prospecto são ECID e email.
+Seu exportado [!DNL Experience Platform] os dados chegam em [!DNL Amazon Kinesis] no formato JSON. Por exemplo, a exportação abaixo contém um perfil que se qualificou para um determinado segmento e saiu de outro segmento, e inclui o nome do atributo de perfil, o sobrenome, a data de nascimento e o endereço de email pessoal. As identidades desse perfil são ECID e email.
 
 ```json
 {

@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c0e6477907fa616aecebf57b0465d9f8d82c740a
+source-git-commit: f529a49c994d20f4b8da4c0d6bfe4c06a1a32655
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 1%
@@ -71,8 +71,8 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao segmen
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opções de exportação de arquivo"
->abstract="Selecionar **Exportar arquivos completos** para exportar um instantâneo completo de todos os perfis qualificados para o segmento. <br> Selecionar **Exportar arquivos incrementais** para exportar apenas os perfis que se qualificaram para o segmento desde a última exportação. A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o segmento, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os perfis que se qualificaram para o segmento desde a primeira exportação de arquivos incrementais."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Saiba mais na documentação"
+>abstract="Selecione Exportar arquivos completos para exportar um instantâneo completo de todos os perfis qualificados para o segmento. Selecione Exportar arquivos incrementais para exportar apenas os perfis que se qualificaram para o segmento desde a última exportação. A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o segmento, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os perfis que se qualificaram para o segmento desde a primeira exportação de arquivos incrementais."
+>additional-url="https://www.adobe.com/go/destinations-incremental-files-en" text="Exportar arquivos incrementais"
 
 Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportação de um arquivo contendo um instantâneo completo de todas as qualificações de perfil para o segmento selecionado.
 

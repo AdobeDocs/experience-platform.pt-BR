@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 - [Destinos](../../destinations/home.md): Os destinos são integrações pré-criadas com aplicativos comumente usados que permitem a ativação simplificada de dados da Platform para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Monitorar fluxos de dados no espaço de trabalho Destinos
+## Monitorar fluxos de dados no espaço de trabalho Destinos {#monitor-dataflows-in-the-destinations-workspace}
 
 No **[!UICONTROL Destinos]** na interface do usuário da plataforma, navegue até o **[!UICONTROL Procurar]** e selecione o nome de um destino que deseja visualizar.
 
@@ -45,18 +45,24 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 | Processamento | O `Processing` status indica que um fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados. |
 | Erro | O `Error` status indica que o processo de ativação de um fluxo de dados foi interrompido. |
 
-### O fluxo de dados é executado para destinos de transmissão
+### O fluxo de dados é executado para destinos de transmissão {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Identidades ativadas"
 >abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identidades excluídas"
 >abstract="A contagem de registros de perfil individuais excluídos da ativação do destino selecionado com base em atributos ausentes e violação de consentimento."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Falha de identidades"
+>abstract="A contagem de identidades de perfil individuais que falharam no destino selecionado. Verifique o diagnóstico de erro para obter detalhes."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"
 
 Para destinos de transmissão, a variável [!UICONTROL Execuções do fluxo de dados] A guia fornece uma atualização por hora para dados de métrica em suas execuções de fluxo de dados. As estatísticas mais proeminentes rotuladas são para identidades.
@@ -93,7 +99,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### O fluxo de dados é executado para destinos em lote
+### O fluxo de dados é executado para destinos em lote {#dataflow-runs-for-batch-destinations}
 
 Para destinos de lote, a variável [!UICONTROL Execuções do fluxo de dados] A guia fornece dados de métrica em suas execuções de fluxo de dados. Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais para identidades:
 

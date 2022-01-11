@@ -5,17 +5,16 @@ title: Declarações Preparadas no Serviço de Consulta
 topic-legacy: prepared statements
 description: No SQL, as instruções preparadas são usadas para modelar consultas ou atualizações semelhantes. O Adobe Experience Platform Query Service oferece suporte a instruções preparadas usando uma consulta parametrizada.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 9%
+source-wordcount: '374'
+ht-degree: 11%
 
 ---
 
 # Instruções preparadas
 
-No SQL, as instruções preparadas são usadas para modelar consultas ou atualizações semelhantes. O Adobe Experience Platform [!DNL Query Service] suporta instruções preparadas usando uma consulta parametrizada. Isso pode ser usado para otimizar o desempenho, pois você não precisará mais analisar uma consulta repetidamente.
+No SQL, as instruções preparadas são usadas para modelar consultas ou atualizações semelhantes. Adobe Experience Platform [!DNL Query Service] O suporta instruções preparadas usando uma consulta parametrizada. Isso pode otimizar o desempenho, pois não é mais necessário analisar novamente uma consulta de forma repetitiva.
 
 ## Uso de instruções preparadas
 
@@ -27,7 +26,7 @@ Ao usar instruções preparadas, as seguintes sintaxes são suportadas:
 
 ### Preparar uma instrução preparada {#prepare}
 
-Esta consulta SQL salva a consulta SELECT gravada com o nome fornecido como `PLAN_NAME`. Você pode usar variáveis, como `$1` no lugar de valores reais. Essa instrução preparada será salva durante a sessão atual. Observe que os nomes de plano **não** fazem distinção entre maiúsculas e minúsculas.
+Esta consulta SQL salva a consulta SELECT escrita com o nome dado como `PLAN_NAME`. Você pode usar variáveis, como `$1` em vez dos valores reais. Essa instrução preparada será salva durante a sessão atual. Observe que os nomes dos planos são **not** diferencia maiúsculas de minúsculas.
 
 #### Formato SQL
 

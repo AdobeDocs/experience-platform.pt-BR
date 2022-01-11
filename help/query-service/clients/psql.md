@@ -5,7 +5,7 @@ title: Conectar o PSQL ao Serviço de Consulta
 topic-legacy: connect
 description: O PSQL é uma interface de linha de comando que vem quando você instala o PostgreSQL em sua máquina. Você pode instalá-lo seguindo estas instruções.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 06d3a8aa6f2f73c2d5392a76fb5b36b18691cf0d
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 1%
@@ -14,21 +14,21 @@ ht-degree: 1%
 
 # Conectar o PSQL ao Serviço de Consulta
 
-O PSQL é uma interface de linha de comando que vem instalada quando você instala [!DNL PostgreSQL] em sua máquina. Este documento aborda as etapas para conectar o PSQL com o Adobe Experience Platform [!DNL Query Service].
+PSQL é uma interface de linha de comando que vem instalada quando você instala [!DNL PostgreSQL] na sua máquina. Este documento aborda as etapas para conectar o PSQL com o Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Este guia supõe que você já tenha acesso a [!DNL PSQL] e está familiarizado com como usá-lo. Mais informações sobre [!DNL PSQL] podem ser encontradas na [documentação oficial [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html).
+> Este guia supõe que você já tenha acesso ao [!DNL PSQL] e estão familiarizados com como usá-lo. Mais informações sobre [!DNL PSQL] podem ser encontradas no [funcionário [!DNL PSQL] documentação](https://www.postgresql.org/docs/current/app-psql.html).
 
-Depois de instalar o PSQL no computador, você está pronto para conectar o PSQL com o Serviço de query. Retorne à interface [!DNL Platform] e selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
+Depois de instalar o PSQL no computador, você está pronto para conectar o PSQL com o Serviço de query. Retorne ao [!DNL Platform] UI, em seguida selecione **[!UICONTROL Queries]**, seguida de **[!UICONTROL Credenciais]**.
 
 ![Imagem](../images/clients/psql/connect-bi.png)
 
-Selecione o ícone para copiar a seção denominada **[!UICONTROL PSQL Command]** e cole a cadeia de caracteres de comando em um terminal ou janela de linha de comando antes de pressionar Enter.
+Selecione o ícone para copiar a seção rotulada **[!UICONTROL Comando PSQL]** e cole a string do comando em um terminal ou uma janela de linha de comando antes de pressionar Enter.
 
 >[!IMPORTANT]
 >
->Se você estiver em um PC, use um editor de texto para remover as quebras de linha na string de comando e, em seguida, copie a string. Se estiver usando a versão 12.0 ou superior, será necessário adicionar `PGGSSENCMODE=disable` à string de conexão. Além disso, se você estiver usando credenciais que não estão expirando, substitua o campo de senha pela senha de credencial que não está expirando. Para saber mais sobre credenciais que não expiram, leia o [guia de credenciais](../ui/credentials.md).
+>Se você estiver em um PC, use um editor de texto para remover as quebras de linha na string de comando e, em seguida, copie a string. Se estiver usando a versão 12.0 ou superior, será necessário adicionar `PGGSSENCMODE=disable` à string de conexão. Além disso, se você estiver usando credenciais que não estão expirando, substitua o campo de senha pela senha de credencial que não está expirando. Para saber mais sobre credenciais que não estão expirando, leia o [guia de credenciais](../ui/credentials.md).
 
 Você deve ver um resultado como este:
 
@@ -43,4 +43,4 @@ Se você não vir pelo menos a versão 10.5, será necessário baixar essa vers�
 
 ## Próximas etapas
 
-Agora que você se conectou a [!DNL Query Service], é possível usar o PSQL para gravar queries. Para obter mais informações sobre como gravar e executar consultas, leia o guia em [executar consultas](../best-practices/writing-queries.md).
+Agora que você se conectou a [!DNL Query Service], você pode usar o PSQL para gravar queries. Para obter mais informações sobre como gravar e executar consultas, leia o guia em [execução de consultas](../best-practices/writing-queries.md).

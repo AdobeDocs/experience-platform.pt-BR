@@ -4,9 +4,9 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "atualização" para fazer atualizações nos dados de Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Este tutorial aborda o processo de ativação de um conjunto de dados com recurs
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfil. Antes de iniciar este tutorial, reveja a documentação desses serviços da plataforma DNL relacionados:
+Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfil. Antes de iniciar este tutorial, revise a documentação referente a esses [!DNL Platform] serviços:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Catalog Service]](../../catalog/home.md): Uma RESTful API que permite criar conjuntos de dados e configurá-los para [!DNL Real-time Customer Profile] e [!DNL Identity Service].

@@ -4,9 +4,9 @@ title: Ativar um conjunto de dados para o Perfil e o serviço de identidade usan
 type: Tutorial
 description: Este tutorial mostra como ativar um conjunto de dados para uso com o Perfil do cliente em tempo real e o Serviço de identidade usando APIs do Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Este tutorial aborda o processo de ativação de um conjunto de dados para uso n
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfil. Antes de iniciar este tutorial, reveja a documentação desses serviços da plataforma DNL relacionados:
+Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfil. Antes de iniciar este tutorial, revise a documentação referente a esses [!DNL Platform] serviços:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Identity Service]](../../identity-service/home.md): Habilitar [!DNL Real-time Customer Profile] ao ligar identidades de fontes de dados diferentes que estão sendo assimiladas em [!DNL Platform].

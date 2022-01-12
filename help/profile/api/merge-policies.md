@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2472'
 ht-degree: 2%
 
 ---
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 |---|---|
-| `op` | Especifica a operação a ser executada. Exemplos de outras operações do PATCH podem ser encontrados no [Documentação do patch JSON](http://jsonpatch.com) |
+| `op` | Especifica a operação a ser executada. Exemplos de outras operações do PATCH podem ser encontrados no [Documentação do patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | O caminho do campo a ser atualizado. Os valores aceitos são: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | O valor para definir o campo especificado como. |
 

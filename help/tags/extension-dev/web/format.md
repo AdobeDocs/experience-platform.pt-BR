@@ -1,10 +1,11 @@
 ---
 title: Módulos de biblioteca em extensões da Web
 description: Saiba como formatar módulos de biblioteca para extensões da Web no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 72%
+source-wordcount: '378'
+ht-degree: 93%
 
 ---
 
@@ -18,9 +19,9 @@ ht-degree: 72%
 >
 >Este documento aborda o formato do módulo de biblioteca para extensões da Web. Se você estiver desenvolvendo uma extensão de borda, consulte o manual sobre [formatação de módulos de extensão de borda](../edge/format.md).
 
-Um módulo de biblioteca é um pedaço de código reutilizável fornecido por uma extensão emitida dentro da biblioteca de tempo de execução de tag no Adobe Experience Platform. Essa biblioteca é executada no site do cliente. Por exemplo, um tipo de evento `gesture` terá um módulo de biblioteca que será executado no site do cliente e detectará os gestos do usuário.
+Um módulo de biblioteca consiste em código reutilizável fornecido por uma extensão emitida na biblioteca de tempo de execução de tag na Adobe Experience Platform. Essa biblioteca é executada no site do cliente. Por exemplo, um tipo de evento `gesture` terá um módulo de biblioteca que será executado no site do cliente e detectará os gestos do usuário.
 
-O módulo da biblioteca está estruturado como um [módulo CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1). Em um módulo CommonJS, as seguintes variáveis estão disponíveis para uso:
+O módulo da biblioteca está estruturado como um [módulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). Em um módulo CommonJS, as seguintes variáveis estão disponíveis para uso:
 
 ## [!DNL require]
 
@@ -60,7 +61,7 @@ exports.sayHello = function(…) { … }
 
 ## Execução e armazenamento em cache
 
-Quando a biblioteca de tempo de execução da tag for executada, os módulos serão &quot;instalados&quot; imediatamente e suas exportações serão armazenadas em cache. Presumindo o seguinte módulo:
+Quando a biblioteca de tempo de execução de tag for executada, os módulos serão &quot;instalados&quot; imediatamente e suas exportações serão armazenadas em cache. Presumindo o seguinte módulo:
 
 ```javascript
 console.log('runs on startup');
@@ -70,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` será registrado imediatamente, enquanto  `runs when necessary` será registrado somente quando a função exportada for chamada pelo mecanismo de tag. Embora possa ser desnecessário para a finalidade de seu módulo específico, você pode aproveitar isso executando qualquer configuração necessária antes de exportar a função.
+`runs on startup` serão registrados imediatamente, enquanto `runs when necessary` serão registrados somente depois que a função exportada for chamada pelo mecanismo de tag. Embora possa ser desnecessário para a finalidade de seu módulo específico, você pode aproveitar isso executando qualquer configuração necessária antes de exportar a função.

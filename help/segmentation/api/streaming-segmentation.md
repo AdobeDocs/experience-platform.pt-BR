@@ -5,9 +5,9 @@ title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **(Obrigatório)** O tipo de trabalho no formato de string. Os tipos suportados são `batch_segmentation` e `export`. |
 | `properties` | **(Obrigatório)** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
 | `properties.segments` | **(Obrigatório quando `type` igual `batch_segmentation`)** Usando `["*"]` garante que todos os segmentos sejam incluídos. |
-| `schedule` | **(Obrigatório)** Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. O exemplo mostrado (`0 0 1 * * ?`) significa que o trabalho é acionado todos os dias às 1:00:00 UTC. Para obter mais informações, consulte a [formato de expressão cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. |
+| `schedule` | **(Obrigatório)** Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. O exemplo mostrado (`0 0 1 * * ?`) significa que o trabalho é acionado todos os dias às 1:00:00 UTC. Para obter mais informações, consulte a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. |
 | `state` | *(Opcional)* Sequência de caracteres contendo o estado da programação. Valores disponíveis: `active` e `inactive`. O valor padrão é `inactive`. Uma Organização IMS só pode criar uma programação. As etapas para atualizar o cronograma estão disponíveis posteriormente neste tutorial. |
 
 **Resposta**
@@ -381,7 +381,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Solicitação**
 
-A solicitação a seguir usa [Formatação de patch JSON](http://jsonpatch.com/) para atualizar o `state` do calendário para `active`.
+A solicitação a seguir usa [Formatação de patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) para atualizar o `state` do calendário para `active`.
 
 ```shell
 curl -X POST \

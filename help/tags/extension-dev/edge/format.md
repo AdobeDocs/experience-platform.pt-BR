@@ -1,10 +1,11 @@
 ---
 title: Módulos de biblioteca em extensões de borda
-description: Formatar módulos de biblioteca para extensões de tag em uma propriedade edge .
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Formatar módulos de biblioteca para extensões de tag em uma propriedade de borda.
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 75%
+source-wordcount: '307'
+ht-degree: 92%
 
 ---
 
@@ -18,9 +19,9 @@ ht-degree: 75%
 >
 >Este documento aborda o formato do módulo da biblioteca para extensões de borda. Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [formatar módulos de extensão da Web](../web/format.md).
 
-Um módulo de biblioteca é uma parte do código reutilizável fornecido por uma extensão emitida dentro da biblioteca de tempo de execução de tags no Adobe Experience Platform (a biblioteca que é executada no nó de borda). Por exemplo, um tipo de ação `sendBeacon` terá um módulo de biblioteca que será executado no nó de borda e enviará um beacon.
+Um módulo de biblioteca consiste em código reutilizável fornecido por uma extensão emitida na biblioteca de tempo de execução de tag na Adobe Experience Platform (a biblioteca que é executada no nó de borda). Por exemplo, um tipo de ação `sendBeacon` terá um módulo de biblioteca que será executado no nó de borda e enviará um beacon.
 
-O módulo da biblioteca está estruturado como um [módulo CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1). Em um módulo CommonJS, as seguintes variáveis estão disponíveis para uso:
+O módulo da biblioteca está estruturado como um [módulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). Em um módulo CommonJS, as seguintes variáveis estão disponíveis para uso:
 
 ## [!DNL require]
 

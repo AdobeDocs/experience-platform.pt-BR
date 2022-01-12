@@ -5,9 +5,9 @@ title: Endpoint da API de métricas
 topic-legacy: developer guide
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API do Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | Uma matriz de objetos, um para cada métrica que você deseja recuperar. |
 | `name` | O nome de uma métrica reconhecida pelos Insights de capacidade de observação. Consulte a [apêndice](#available-metrics) para obter uma lista completa dos nomes de métricas aceitas. |
 | `filters` | Um campo opcional que permite filtrar métricas por conjuntos de dados específicos. O campo é uma matriz de objetos (um para cada filtro), com cada objeto contendo as seguintes propriedades: <ul><li>`name`: O tipo de entidade para o qual filtrar métricas. Atualmente, somente `dataSets` é compatível.</li><li>`value`: A ID de um ou mais conjuntos de dados. Várias IDs de conjunto de dados podem ser fornecidas como uma única string, com cada ID separada por caracteres de barra vertical (`\|`).</li><li>`groupBy`: Quando definido como true, indica que a variável `value` representa vários conjuntos de dados cujos resultados de métrica devem ser retornados separadamente. Se definido como falso, os resultados da métrica desses conjuntos de dados serão agrupados.</li></ul> |
-| `aggregator` | Especifica a função de agregação que deve ser usada para agrupar vários registros de séries de tempo em resultados únicos. Para obter informações detalhadas sobre agregadores disponíveis, consulte [Documentação do OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Um campo opcional que permite especificar uma função de agregação para reduzir a taxa de amostragem de dados de métrica, classificando campos em intervalos (ou &quot;buckets&quot;). O intervalo para a diminuição da amostragem é determinado pela `granularity` propriedade. Para obter informações detalhadas sobre a diminuição da amostragem, consulte [Documentação do OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | Especifica a função de agregação que deve ser usada para agrupar vários registros de séries de tempo em resultados únicos. Para obter informações detalhadas sobre agregadores disponíveis, consulte [Documentação do OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | Um campo opcional que permite especificar uma função de agregação para reduzir a taxa de amostragem de dados de métrica, classificando campos em intervalos (ou &quot;buckets&quot;). O intervalo para a diminuição da amostragem é determinado pela `granularity` propriedade. Para obter informações detalhadas sobre a diminuição da amostragem, consulte [Documentação do OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -214,7 +214,7 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Data 
 | **time.data.collection.validation.category.range.count** | Número total de mensagens de &quot;intervalo&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **time.data.collection.validation.category.format.count** | Número total de mensagens de &quot;formato&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **time.data.collection.validation.category.pattern.count** | Número total de mensagens de &quot;padrão&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **timesries.data.collection.validation.category.presence.count** | Número total de mensagens de &quot;presença&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
+| **time.data.collection.validation.category.presence.count** | Número total de mensagens de &quot;presença&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **time.data.collection.validation.category.enum.count** | Número total de mensagens &quot;enum&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **time.data.collection.validation.category.unclassification.count** | Número total de mensagens &quot;não classificadas&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **time.data.collection.validation.category.unknown.count** | Número total de mensagens &quot;desconhecidas&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |

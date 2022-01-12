@@ -5,29 +5,28 @@ title: Agendamentos do Ponto de Extremidade da API
 topic-legacy: developer guide
 description: Os agendamentos são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 3%
+source-wordcount: '1209'
+ht-degree: 5%
 
 ---
 
 # Ponto de extremidade de agendamentos
 
-Os agendamentos são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia. Você pode usar o endpoint `/config/schedules` para recuperar uma lista de programações, criar uma nova programação, recuperar detalhes de uma programação específica, atualizar uma programação específica ou excluir uma programação específica.
+Os agendamentos são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia. Você pode usar o `/config/schedules` endpoint para recuperar uma lista de programações, criar uma nova programação, recuperar detalhes de uma programação específica, atualizar uma programação específica ou excluir uma programação específica.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte da API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
 
 ## Recuperar uma lista de programações {#retrieve-list}
 
-Você pode recuperar uma lista de todos os agendamentos para sua Organização IMS fazendo uma solicitação de GET para o endpoint `/config/schedules`.
+Você pode recuperar uma lista de todas as programações para sua Organização IMS fazendo uma solicitação de GET para a `/config/schedules` endpoint .
 
 **Formato da API**
 
-O ponto de extremidade `/config/schedules` oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Fazer uma chamada para esse terminal sem parâmetros recuperará todos os agendamentos disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+O `/config/schedules` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Fazer uma chamada para esse terminal sem parâmetros recuperará todos os agendamentos disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /config/schedules
@@ -100,13 +99,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamento
 | `children.name` | O nome do agendamento como uma string. |
 | `children.type` | O tipo de trabalho como uma string. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `children.properties` | Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `children.properties.segments` | Usar `["*"]` garante que todos os segmentos sejam incluídos. |
-| `children.schedule` | Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. |
+| `children.properties.segments` | Usando `["*"]` garante que todos os segmentos sejam incluídos. |
+| `children.schedule` | Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. |
 | `children.state` | Uma string contendo o estado do agendamento. Os dois estados compatíveis são &quot;ativos&quot; e &quot;inativos&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
 ## Criar um novo agendamento {#create}
 
-Você pode criar um novo agendamento fazendo uma solicitação POST para o endpoint `/config/schedules`.
+Você pode criar um novo agendamento fazendo uma solicitação POST para o `/config/schedules` endpoint .
 
 **Formato da API**
 
@@ -142,8 +141,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Obrigatório.** O nome do agendamento como uma string. |
 | `type` | **Obrigatório.** O tipo de trabalho como uma string. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `properties` | **Obrigatório.** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | **Obrigatório quando  `type` é igual a &quot;batch_segmentation&quot;.** O uso de  `["*"]` garante que todos os segmentos sejam incluídos. |
-| `schedule` | *Opcional.* Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. <br><br>Se essa sequência de caracteres não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
+| `properties.segments` | **Obrigatório quando `type` é igual a &quot;batch_segmentation&quot;.** Usando `["*"]` garante que todos os segmentos sejam incluídos. |
+| `schedule` | *Opcional.* Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. <br><br>Se essa sequência de caracteres não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
 | `state` | *Opcional.* Uma string contendo o estado do agendamento. Os dois estados compatíveis são &quot;ativos&quot; e &quot;inativos&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
 **Resposta**
@@ -174,9 +173,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do agendamento 
 }
 ```
 
-## Recuperar um agendamento específico {#get}
+## Recuperar uma programação específica {#get}
 
-Você pode recuperar informações detalhadas sobre um agendamento específico, fazendo uma solicitação do GET para o endpoint `/config/schedules` e fornecendo a ID do agendamento que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma programação específica fazendo uma solicitação do GET para a `/config/schedules` endpoint e fornecer a ID do agendamento que deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -186,7 +185,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` do agendamento que deseja recuperar. |
+| `{SCHEDULE_ID}` | O `id` valor do agendamento que deseja recuperar. |
 
 **Solicitação**
 
@@ -229,21 +228,21 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | Propriedade | Descrição |
 | -------- | ------------ |
 | `name` | O nome do agendamento como uma string. |
-| `type` | O tipo de trabalho como uma string. Os dois tipos suportados são `batch_segmentation` e `export`. |
+| `type` | O tipo de trabalho como uma string. Os dois tipos compatíveis são `batch_segmentation` e `export`. |
 | `properties` | Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | Usar `["*"]` garante que todos os segmentos sejam incluídos. |
-| `schedule` | Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações cron, leia a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. |
+| `properties.segments` | Usando `["*"]` garante que todos os segmentos sejam incluídos. |
+| `schedule` | Uma string que contém a programação de tarefas. As tarefas só podem ser programadas para serem executadas uma vez por dia, o que significa que você não pode programar uma tarefa para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. |
 | `state` | Uma string contendo o estado do agendamento. Os dois estados compatíveis são `active` e `inactive`. Por padrão, o estado é definido como `inactive`. |
 
 ## Atualizar detalhes de um agendamento específico {#update}
 
-Você pode atualizar um agendamento específico, fazendo uma solicitação PATCH para o endpoint `/config/schedules` e fornecendo a ID do agendamento que está tentando atualizar no caminho da solicitação.
+Você pode atualizar um agendamento específico fazendo uma solicitação de PATCH para o `/config/schedules` endpoint e fornecendo a ID do agendamento que você está tentando atualizar no caminho da solicitação.
 
-A solicitação PATCH permite atualizar o [state](#update-state) ou o [cron schedule](#update-schedule) para um agendamento individual.
+A solicitação do PATCH permite atualizar a variável [state](#update-state) ou [programação do cron](#update-schedule) para um agendamento individual.
 
-### Atualizar estado do agendamento {#update-state}
+### Atualizar estado da agenda {#update-state}
 
-Você pode usar uma operação Patch JSON para atualizar o estado do agendamento. Para atualizar o estado, declare a propriedade `path` como `/state` e defina `value` como `active` ou `inactive`. Para obter mais informações sobre o Patch JSON, leia a documentação [Patch JSON](http://jsonpatch.com/).
+Você pode usar uma operação Patch JSON para atualizar o estado do agendamento. Para atualizar o estado, você declara a variável `path` propriedade como `/state` e defina a `value` para `active` ou `inactive`. Para obter mais informações sobre o Patch JSON, leia o [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentação.
 
 **Formato da API**
 
@@ -253,7 +252,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` do agendamento que deseja atualizar. |
+| `{SCHEDULE_ID}` | O `id` valor do agendamento que deseja atualizar. |
 
 **Solicitação**
 
@@ -275,16 +274,16 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado do agendamento, é necessário definir o valor de `path` como &quot;/state&quot;. |
+| `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado do agendamento, é necessário definir o valor de `path` para &quot;/state&quot;. |
 | `value` | O valor atualizado do estado do agendamento. Esse valor pode ser definido como &quot;ativo&quot; ou &quot;inativo&quot; para ativar ou desativar o agendamento. |
 
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
 
-### Atualizar programação de cron {#update-schedule}
+### Atualizar programação do cron {#update-schedule}
 
-Você pode usar uma operação de Patch JSON para atualizar o agendamento do cron. Para atualizar o agendamento, declare a propriedade `path` como `/schedule` e defina `value` como um agendamento cron válido. Para obter mais informações sobre o Patch JSON, leia a documentação [Patch JSON](http://jsonpatch.com/). Para obter mais informações sobre programações cron, leia a documentação [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Você pode usar uma operação de Patch JSON para atualizar o agendamento do cron. Para atualizar o agendamento, declare o `path` propriedade como `/schedule` e defina a `value` para uma programação cron válida. Para obter mais informações sobre o Patch JSON, leia o [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentação. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação.
 
 **Formato da API**
 
@@ -294,7 +293,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` do agendamento que deseja atualizar. |
+| `{SCHEDULE_ID}` | O `id` valor do agendamento que deseja atualizar. |
 
 **Solicitação**
 
@@ -316,7 +315,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `path` | O caminho do valor que você deseja atualizar. Nesse caso, como você está atualizando o cronograma do cron, é necessário definir o valor de `path` como `/schedule`. |
+| `path` | O caminho do valor que você deseja atualizar. Nesse caso, como você está atualizando o cronograma do cron, é necessário definir o valor de `path` para `/schedule`. |
 | `value` | O valor atualizado da programação do cron. Esse valor precisa estar no formato de um cronograma de execução. Neste exemplo, o agendamento será executado no segundo de cada mês. |
 
 **Resposta**
@@ -325,7 +324,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
 
 ## Excluir uma programação específica
 
-Você pode solicitar a exclusão de um agendamento específico, fazendo uma solicitação DELETE para o endpoint `/config/schedules` e fornecendo a ID do agendamento que deseja excluir no caminho da solicitação.
+Você pode solicitar a exclusão de uma programação específica fazendo uma solicitação de DELETE para a variável `/config/schedules` endpoint e fornecer a ID do agendamento que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -335,7 +334,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` do agendamento que deseja excluir. |
+| `{SCHEDULE_ID}` | O `id` valor do agendamento que deseja excluir. |
 
 **Solicitação**
 

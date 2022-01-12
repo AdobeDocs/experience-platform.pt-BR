@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
+source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 - **[!UICONTROL Tempo de processamento]**: O tempo necessário para o processamento do fluxo de dados.
 - **[!UICONTROL Perfis recebidos]**: O número total de perfis recebidos no fluxo de dados.
 - **[!UICONTROL Identidades ativadas]**: O número total de identidades de perfil que foram ativadas com êxito para o destino selecionado.
-- **[!UICONTROL Identidades excluídas]**: O número total de identidades de perfil que são excluídas para ativação com base em atributos ausentes e violação de consentimento.
+- **[!UICONTROL Identidades excluídas]**: O número total de identidades de perfil que são excluídas da ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Falha de identidades]** O número total de identidades de perfil que não estão ativadas para o destino devido a erros.
 - **[!UICONTROL Taxa de ativação]**: A porcentagem de identidades recebidas que foram ativadas ou ignoradas com êxito. A fórmula a seguir demonstra como esse valor é calculado:
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
@@ -101,10 +101,21 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 
 ### O fluxo de dados é executado para destinos em lote {#dataflow-runs-for-batch-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Detalhes da execução do fluxo de dados"
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métricas."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="Perfis recebidos"
+>abstract="O número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Saiba mais na documentação"
+
 Para destinos de lote, a variável [!UICONTROL Execuções do fluxo de dados] A guia fornece dados de métrica em suas execuções de fluxo de dados. Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais para identidades:
 
 - **[!UICONTROL Identidades ativadas]**: A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado.
-- **[!UICONTROL Identidades excluídas]**: A contagem de identidades de perfil individuais excluídas para ativação do destino selecionado, com base nos atributos ausentes e na violação de consentimento.
+- **[!UICONTROL Identidades excluídas]**: A contagem de identidades de perfil individuais excluídas da ativação para o destino selecionado, com base nos atributos ausentes e na violação de consentimento.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -114,7 +125,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 - **[!UICONTROL Tempo de processamento]**: O tempo que levou para a execução do fluxo de dados ser processada.
 - **[!UICONTROL Perfis recebidos]**: O número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos.
 - **[!UICONTROL Identidades ativadas]**: O número total de identidades de perfil que foram ativadas com êxito para o destino selecionado.
-- **[!UICONTROL Identidades excluídas]**: O número total de identidades de perfil que são excluídas para ativação com base em atributos ausentes e violação de consentimento.
+- **[!UICONTROL Identidades excluídas]**: O número total de identidades de perfil que são excluídas da ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Status]**: Representa o estado em que o fluxo de dados está. Pode ser um dos três estados: [!UICONTROL Sucesso], [!UICONTROL Falha]e [!UICONTROL Processamento]. [!UICONTROL Sucesso] significa que o fluxo de dados está ativo e exporta dados de acordo com o agendamento fornecido. [!UICONTROL Falha] significa que a ativação dos dados foi suspensa devido a erros. [!UICONTROL Processamento] significa que o fluxo de dados ainda não está ativo e geralmente é encontrado quando um novo fluxo de dados é criado.
 
 Para exibir detalhes de uma execução específica do fluxo de dados, selecione a hora de início da execução na lista.
@@ -136,6 +147,11 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Painel de monitoramento de destinos {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activation"
+>abstract="A ativação de destino contém informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
 
 Para acessar o [!UICONTROL Monitoramento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Destinos]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre as tarefas de execução de destino.
 

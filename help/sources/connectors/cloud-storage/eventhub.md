@@ -5,9 +5,9 @@ title: Visão Geral do Conector de Origem dos Hubs de Eventos do Azure
 topic-legacy: overview
 description: Saiba como conectar Hubs de Eventos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: cda9ca9c560b1af2147c00ea4e89dff09b7428ba
+source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,20 @@ ht-degree: 0%
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como o AWS, [!DNL Google Cloud Platform]e [!DNL Azure]. Você pode trazer seus dados desses sistemas para a Plataforma.
 
 As fontes de armazenamento em nuvem podem trazer seus próprios dados para a plataforma sem precisar baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes . A Platform permite trazer dados do [!DNL Event Hubs] em tempo real.
+
+## Dimensionamento com [!DNL Event Hubs]
+
+O fator de escala do [!DNL Event Hubs] A instância deve ser aumentada se você precisar assimilar dados de alto volume, aumentar o paralelismo ou aumentar a velocidade da plataforma de assimilação.
+
+### Assimilar dados de maior volume
+
+Atualmente, o volume máximo de dados que você pode obter do [!DNL Event Hubs] A conta para a Platform é de 2000 registros por segundo. Para aumentar e assimilar dados de volume mais alto, entre em contato com o representante do Adobe.
+
+### Aumentar o paralelismo em [!DNL Event Hubs] e Plataforma
+
+O paralelismo refere-se à execução simultânea das mesmas tarefas em várias unidades de processamento para aumentar a velocidade e o desempenho. Você pode aumentar o paralelismo no [!DNL Event Hubs] além disso, aumentando a partição ou adquirindo mais unidades de processamento para sua [!DNL Event Hubs] conta. Veja isso [[!DNL Event Hubs] documento sobre dimensionamento](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) para obter mais informações.
+
+Para aumentar a taxa de velocidade de assimilação no lado da plataforma, a Platform deve aumentar o número de tarefas no conector de origem para ler em seu [!DNL Event Hubs] partições. Uma vez que tenha aumentado o paralelismo no [!DNL Event Hubs] além disso, entre em contato com o representante do Adobe para dimensionar as tarefas da Platform com base em sua nova partição. Atualmente, esse processo não é automatizado.
 
 ## Usar uma rede virtual à qual se conectar [!DNL Event Hubs] para a plataforma
 

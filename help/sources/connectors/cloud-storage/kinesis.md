@@ -5,35 +5,39 @@ title: Visão geral do Amazon Kinesis Source Connector
 topic-legacy: overview
 description: Saiba como conectar o Amazon Kinesis ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon Kinesis] conector
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como o AWS, [!DNL Google Cloud Platform]e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 
-As fontes de armazenamento em nuvem podem trazer seus próprios dados para [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes . [!DNL Platform] O permite trazer dados do  [!DNL Amazon Kinesis] em tempo real.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes . [!DNL Platform] permite trazer dados do [!DNL Amazon Kinesis] em tempo real.
+
+>[!NOTE]
+>
+>O fator de escala para [!DNL Kinesis] deve ser aumentado se precisar assimilar dados de alto volume. Atualmente, o volume máximo de dados que você pode trazer de seu [!DNL Kinesis] A conta para a Platform é de 4000 registros por segundo. Para aumentar e assimilar dados de volume mais alto, entre em contato com o representante do Adobe.
 
 ## Pré-requisitos
 
-A seção a seguir fornece mais informações sobre a configuração de pré-requisito necessária antes que você possa criar uma conexão de origem [!DNL Kinesis].
+A seção a seguir fornece mais informações sobre a configuração de pré-requisito necessária antes que você possa criar um [!DNL Kinesis] conexão de origem.
 
 ### Configurar política de acesso
 
-Um fluxo [!DNL Kinesis] requer as seguintes permissões para criar uma conexão de origem:
+A [!DNL Kinesis] O fluxo requer as seguintes permissões para criar uma conexão de origem:
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-Essas permissões são organizadas por meio do console [!DNL Kinesis] e são verificadas pela Platform depois de inserir suas credenciais e selecionar seu fluxo de dados.
+Essas permissões são organizadas por meio do [!DNL Kinesis] e são marcados pela Platform depois de inserir suas credenciais e selecionar seu fluxo de dados.
 
-O exemplo abaixo exibe os direitos mínimos de acesso necessários para criar uma conexão de origem [!DNL Kinesis].
+O exemplo abaixo exibe os direitos mínimos de acesso necessários para criar um [!DNL Kinesis] conexão de origem.
 
 ```json
 {
@@ -76,13 +80,13 @@ Para obter mais informações sobre como controlar o acesso para [!DNL Kinesis] 
 | `TRIM_HORIZON` | Os dados são lidos a partir do registro de dados mais antigo. |
 | `LATEST` | Os dados são lidos a partir do registro de dados mais recente. |
 
-No momento, uma fonte de interface [!DNL Kinesis] suporta apenas `TRIM_HORIZON`, enquanto a API suporta `TRIM_HORIZON` e `LATEST` como modos para obter dados. O valor padrão do iterador que a Platform usa para a origem [!DNL Kinesis] é `TRIM_HORIZON`.
+A [!DNL Kinesis] A origem da interface de usuário é compatível no momento `TRIM_HORIZON`, enquanto a API suporta ambos `TRIM_HORIZON` e `LATEST` como modos para obter dados. O valor padrão do iterador que a Platform usa para a variável [!DNL Kinesis] source is `TRIM_HORIZON`.
 
-Para obter mais informações sobre tipos de iterador, consulte o seguinte [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
+Para obter mais informações sobre tipos de iterador, consulte o seguinte [[!DNL Kinesis] documento](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## Conecte [!DNL Amazon Kinesis] a [!DNL Platform]
+## Connect [!DNL Amazon Kinesis] para [!DNL Platform]
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Amazon Kinesis] a [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Amazon Kinesis] para [!DNL Platform] usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 

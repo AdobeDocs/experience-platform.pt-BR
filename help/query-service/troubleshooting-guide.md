@@ -5,16 +5,16 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
+source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '769'
 ht-degree: 4%
 
 ---
 
 # [!DNL Query Service] guia de solução de problemas
 
-Este documento fornece respostas a perguntas frequentes sobre o Serviço de query e fornece uma lista de códigos de erro vistos com frequência ao usar o Serviço de query. Para dúvidas e solução de problemas relacionados a outros serviços no Adobe Experience Platform, consulte o [Guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Serviço de query e fornece uma lista de códigos de erro vistos com frequência ao usar o Serviço de query. Para dúvidas e solução de problemas relacionados a outros serviços na Adobe Experience Platform, consulte a [Guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
 ## Perguntas frequentes
 
@@ -62,7 +62,7 @@ Ao consultar os dados das séries de tempo, você deve usar o filtro de carimbo 
 
 >[!NOTE]
 >
-> A string de data **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`.
+> A string de data **must** estar no formato `yyyy-mm-ddTHH24:MM:SS`.
 
 Um exemplo de uso do filtro de carimbo de data e hora pode ser visto abaixo:
 
@@ -79,9 +79,9 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 Não é possível usar curingas para obter todos os dados de suas linhas, pois o Serviço de query deve ser tratado como um **columnar-store** em vez de um sistema de armazenamento tradicional baseado em linha.
 
-### Devo usar `NOT IN` no meu query SQL?
+### Devo usar `NOT IN` na minha consulta SQL?
 
-O operador `NOT IN` é frequentemente usado para recuperar linhas que não são encontradas em outra tabela ou instrução SQL. Esse operador pode retardar o desempenho e retornar resultados inesperados se as colunas que estão sendo comparadas aceitarem `NOT NULL`, ou se você tiver um grande número de registros.
+O `NOT IN` O operador é frequentemente usado para recuperar linhas que não são encontradas em outra tabela ou instrução SQL. Esse operador pode retardar o desempenho e retornar resultados inesperados se as colunas que estão sendo comparadas aceitarem `NOT NULL`ou você tiver grandes números de registros.
 
 Em vez de usar `NOT IN`, você pode usar `NOT EXISTS` ou `LEFT OUTER JOIN`.
 
@@ -97,7 +97,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Se você estiver usando o operador `NOT EXISTS`, poderá replicar usando o operador `NOT IN` usando a seguinte query:
+Se estiver usando o `NOT EXISTS` , você pode replicar usando o `NOT IN` usando a seguinte query:
 
 ```sql
 SELECT ID FROM T1
@@ -105,7 +105,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-Como alternativa, se estiver usando o operador `LEFT OUTER JOIN`, você pode replicar usando o operador `NOT IN` usando a seguinte query:
+Como alternativa, se estiver usando o `LEFT OUTER JOIN` , você pode replicar usando o `NOT IN` usando a seguinte query:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -113,11 +113,11 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
-### Qual é o uso correto dos operadores `OR` e `UNION`?
+### Qual é a utilização correta do `OR` e `UNION` operadores?
 
-### Como uso corretamente o operador `CAST` para converter meus carimbos de data e hora em consultas SQL?
+### Como usar corretamente a variável `CAST` operador para converter meus carimbos de data e hora em consultas SQL?
 
-Ao usar o operador `CAST` para converter um carimbo de data e hora, é necessário incluir a data **e** hora.
+Ao usar a variável `CAST` para converter um carimbo de data e hora, é necessário incluir a data **e** hora.
 
 Por exemplo, a falta do componente de tempo, como mostrado abaixo, resultará em um erro:
 
@@ -126,12 +126,16 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-Um uso correto do operador `CAST` é mostrado abaixo:
+Um uso correto da variável `CAST` O operador é mostrado abaixo:
 
 ```sql
 SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
+
+### Como posso baixar os resultados da minha consulta como um arquivo CSV?
+
+Esse não é um recurso que o Serviço de query oferece diretamente. No entanto, se a variável [!DNL PostgreSQL] cliente usado para se conectar ao servidor de banco de dados tem o recurso , a resposta de uma consulta SELECT pode ser gravada e baixada como um arquivo CSV. Consulte a documentação do utilitário ou da ferramenta de terceiros que você está usando para obter esclarecimentos sobre esse processo.
 
 ## Erros da API REST
 
@@ -156,7 +160,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 | **53400** | Consulta | Tempo limite do demonstrativo | A declaração ao vivo enviada demorou mais de 10 minutos |
 | **58000** | Consulta | Erro do sistema | Falha do sistema interno |
 | **0A000** | Query/Comando | Não suportado | Não há suporte para o recurso/funcionalidade no query/comando |
-| **42501** | Consulta DROP TABLE | Eliminar tabela não criada pelo Serviço de Consulta | A tabela que está sendo solta não foi criada pelo Serviço de Consulta usando a instrução `CREATE TABLE` |
+| **42501** | Consulta DROP TABLE | Eliminar tabela não criada pelo Serviço de Consulta | A tabela que está sendo solta não foi criada pelo Serviço de Consulta usando o `CREATE TABLE` declaração |
 | **42501** | Consulta DROP TABLE | Tabela não criada pelo usuário autenticado | A tabela que está sendo solta não foi criada pelo usuário conectado no momento |
 | **42P01** | Consulta DROP TABLE | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
 | **42P12** | Consulta DROP TABLE | Nenhuma tabela encontrada para `dbName`: verifique o `dbName` | Nenhuma tabela foi encontrada no banco de dados atual |

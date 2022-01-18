@@ -2,10 +2,10 @@
 title: Regras
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 99%
+source-wordcount: '1973'
+ht-degree: 81%
 
 ---
 
@@ -19,7 +19,7 @@ As tags na Adobe Experience Platform seguem um sistema baseado em regras. Elas b
 
 Crie regras para integrar os dados e a funcionalidade de tecnologia de marketing e de anúncios que unifique produtos diferentes em uma única solução.
 
-## Estrutura da regra
+## Estrutura das regras
 
 **Eventos (If):** O evento é o que você deseja que a regra procure. Isso é definido escolhendo um evento, quaisquer condições aplicáveis e quaisquer exceções.
 
@@ -121,22 +121,18 @@ Ao criar ou editar regras, você pode salvar e incorporar em sua [biblioteca ati
 
 ## Ordem de regra {#rule-ordering}
 
-A ordenação de regras permite controlar a ordem de execução das regras que compartilham um evento.
+A ordenação de regras permite controlar a ordem de execução das regras que compartilham um evento. Cada regra contém um número inteiro que determina a prioridade da ordem (o valor padrão é 50). As regras que contêm valores mais baixos para sua ordem são executadas antes daquelas com valores mais altos.
 
-Geralmente, é importante ter as regras acionadas em uma ordem específica. Exemplos: (1) você tem várias regras que definem condicionalmente [!DNL Analytics] variáveis e você deve se certificar de que a regra com Enviar Beacon vai por último. (2) você tem uma regra que é acionada [!DNL Target] e outra regra que é acionada [!DNL Analytics] e deseja que [!DNL Target] a regra seja executada primeiro.
+Considere um conjunto de cinco regras que compartilham um evento e todas têm prioridade padrão:
 
-Em última análise, a responsabilidade de executar ações em ordem é do desenvolvedor de extensão do tipo de evento que está usando. Os desenvolvedores de extensão da Adobe garantem que suas extensões funcionem conforme o esperado. Para extensões de terceiros, a Adobe fornece orientação aos desenvolvedores de extensão para que implementem isso corretamente, mas cabe a eles fazê-lo.
+* Se houver uma regra que você deseja executar por último, é possível editar esse um componente de regra e atribuir a ele um número maior que 50 (60 por exemplo).
+* Se houver uma regra que você deseja executar primeiro, é possível editar esse um componente de regra e atribuir a ele um número menor que 50 (40 por exemplo).
 
-A Adobe recomenda que você ordene suas regras com números positivos de 1 a 100 (o padrão é 50). Quanto mais simples, melhor. Lembre-se de que é necessário manter sua ordem. No entanto, a Adobe reconhece que pode haver casos excepcionais em que isso pareça restritivo. Portanto, outros números são permitidos. As tags aceitam números entre +/- 2.147.483.648. Você também pode usar cerca de uma dúzia de casas decimais, mas se estiver em uma situação na qual acha que precisa fazer isso, repense algumas das decisões tomadas para chegar onde você está agora.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Na seção Ação de uma regra, as regras do lado do servidor são executadas sequencialmente. Verifique se a ordem está correta ao criar a regra.
+>Em última análise, a responsabilidade de executar ações em ordem é do desenvolvedor de extensão do tipo de evento que você está usando. Os desenvolvedores de extensão da Adobe garantem que suas extensões funcionem conforme o esperado. O Adobe fornece orientação a desenvolvedores de extensão de terceiros para fazer isso corretamente, mas não pode garantir como essas diretrizes são seguidas.
 
-### Cenários
-
-* Cinco regras compartilham um evento. Todas têm prioridade padrão. Quero que uma delas seja executada por último. Só preciso editar um componente de regra e atribuir a ele um número maior que 50 (60 por exemplo).
-* Cinco regras compartilham um evento. Todas têm prioridade padrão. Quero que uma delas seja executada primeiro. Só preciso editar esse um componente de regra e atribuir a ele um número menor que 50 (40 por exemplo).
+É altamente recomendável ordenar suas regras com números positivos entre 1 e 100 (o padrão é 50). Como a ordem das regras deve ser mantida manualmente, é prática recomendada manter o esquema de pedidos o mais simples possível. Se houver casos de borda em que essa restrição é muito limitante, as tags suportarão números de ordem de regra entre +/- 2.147.483.648.
 
 ### Manuseio de regras no lado do cliente
 
@@ -167,19 +163,21 @@ A Adobe não pode garantir que qualquer outra regra será acionada e que o códi
 
 ## Sequência de componentes da regra {#sequencing}
 
-O comportamento do ambiente de tempo de execução das tags depende de a opção **[!UICONTROL Executar os componentes da regra em sequência]** estar ativada ou desativada na propriedade.
+O comportamento do ambiente de tempo de execução do depende de a opção **[!UICONTROL Executar os componentes da regra em sequência]** estar ativada ou desativada na propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
+
+>[!IMPORTANT]
+>
+>Essa configuração determina somente como as condições e ações são avaliadas em cada regra e não afeta a sequência em que as regras são executadas em sua propriedade. Consulte a seção anterior em [ordenação de regra](#rule-ordering) para obter mais informações sobre como determinar a ordem de execução de várias regras.
+>
+>Em [encaminhamento de eventos](../event-forwarding/overview.md) propriedades, as ações da regra são sempre executadas sequencialmente e essa configuração não está disponível. Verifique se a ordem está correta ao criar a regra.
 
 ### Ativado
 
-Se estiver ativado, quando um evento é acionado no tempo de execução, as condições e ações da regra são adicionadas a uma fila de processamento, com base na ordem definida, e processadas uma de cada vez de acordo com a metodologia FIFO. A tag aguarda a conclusão de um componente antes de passar para o próximo.
+Se a configuração estiver ativada quando um evento for acionado no tempo de execução, as condições e ações da regra serão adicionadas a uma fila de processamento (com base na ordem definida) e processadas uma de cada vez na base &quot;primeiro a entrar, primeiro a sair&quot; (FIFO). A regra aguarda a conclusão do componente antes de passar para o próximo.
 
 Se uma condição for avaliada como falsa ou atingir o tempo limite definido, as condições e ações subsequentes da regra serão removidas da fila.
 
 Se uma ação falhar ou atingir o tempo limite definido, as ações subsequentes dessa regra serão removidas da fila.
-
->[!NOTE]
->
->Com essa configuração ativada, todas as condições e ações são executadas de forma assíncrona, mesmo que você tenha carregado a biblioteca de tags de forma síncrona.
 
 ### Desativado
 

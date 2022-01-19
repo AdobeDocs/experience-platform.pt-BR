@@ -3,7 +3,7 @@ title: Renderizar conteúdo personalizado usando o SDK da Web da Adobe Experienc
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web da Adobe Experience Platform.
 keywords: personalização; renderDecisões; sendEvent; decisionScopes; propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0246de5810c632134288347ac7b35abddf2d4308
+source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # Renderizar conteúdo personalizado
 
-O Adobe Experience Platform Web SDK oferece suporte à recuperação de conteúdo personalizado de soluções de personalização no Adobe, incluindo [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) e [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=pt-BR). O conteúdo criado no Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) pode ser recuperado e renderizado automaticamente pelo SDK. O conteúdo criado no Adobe Target [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) ou Offer Decisioning não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo por conta própria.
+O Adobe Experience Platform Web SDK oferece suporte à recuperação de conteúdo personalizado de soluções de personalização no Adobe, incluindo [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) e [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=pt-BR). Conteúdo criado no Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) pode ser recuperada e renderizada automaticamente pelo SDK. Conteúdo criado no Adobe Target [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) ou o Offer Decisioning não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo por conta própria.
 
 ## Renderização automática de conteúdo
 
-Ao enviar eventos para o servidor, você pode definir a opção `renderDecisions` como `true`. Isso força o SDK a renderizar automaticamente qualquer conteúdo personalizado elegível para renderização automática.
+Ao enviar eventos para o servidor, você pode definir a variável `renderDecisions` para `true`. Isso força o SDK a renderizar automaticamente qualquer conteúdo personalizado elegível para renderização automática.
 
 ```javascript
 alloy("sendEvent", {
@@ -38,7 +38,7 @@ A renderização do conteúdo personalizado é assíncrona, portanto, não é ne
 
 ## Renderização manual do conteúdo
 
-Para acessar qualquer conteúdo de personalização, você pode fornecer uma função de retorno de chamada, que será chamada depois que o SDK receber uma resposta bem-sucedida do servidor. A chamada de retorno é fornecida com um objeto `result`, que pode conter uma propriedade `propositions` contendo qualquer conteúdo de personalização retornado. Abaixo está um exemplo de como você fornece uma função de retorno de chamada ao enviar um evento.
+Para acessar qualquer conteúdo de personalização, você pode fornecer uma função de retorno de chamada, que será chamada depois que o SDK receber uma resposta bem-sucedida do servidor. O retorno de chamada é fornecido como `result` objeto , que pode conter uma `propositions` propriedade contendo qualquer conteúdo de personalização retornado. Abaixo está um exemplo de como você fornece uma função de retorno de chamada ao enviar um evento.
 
 ```javascript
 alloy("sendEvent", {
@@ -50,9 +50,9 @@ alloy("sendEvent", {
   });
 ```
 
-Neste exemplo, `result.propositions`, se existir, é uma matriz contendo apresentações de personalização relacionadas ao evento. Por padrão, inclui apenas propostas qualificadas para renderização automática.
+Neste exemplo, `result.propositions`, se existir, é uma matriz que contém apresentações de personalização relacionadas ao evento. Por padrão, inclui apenas propostas qualificadas para renderização automática.
 
-A matriz `propositions` pode ser semelhante a este exemplo:
+O `propositions` matriz pode ser semelhante a este exemplo:
 
 ```json
 [
@@ -99,11 +99,11 @@ A matriz `propositions` pode ser semelhante a este exemplo:
 ]
 ```
 
-No exemplo, a opção `renderDecisions` não estava definida como `true` quando o comando `sendEvent` era executado, portanto, o SDK não tentava renderizar automaticamente nenhum conteúdo. No entanto, o SDK ainda recuperou automaticamente o conteúdo elegível para renderização automática, e forneceu isso para renderizar manualmente se desejar. Observe que cada objeto de proposta tem sua propriedade `renderAttempted` definida como `false`.
+No exemplo, a variável `renderDecisions` não foi definida como `true` quando a variável `sendEvent` foi executado, portanto, o SDK não tentou renderizar automaticamente qualquer conteúdo. No entanto, o SDK ainda recuperou automaticamente o conteúdo elegível para renderização automática, e forneceu isso para renderizar manualmente se desejar. Observe que cada objeto de proposta tem seu `renderAttempted` propriedade definida como `false`.
 
-Se, em vez disso, você tivesse definido a opção `renderDecisions` como `true` ao enviar o evento, o SDK teria tentado renderizar quaisquer propostas qualificadas para renderização automática (conforme descrito anteriormente). Como consequência, cada um dos objetos de proposta teria sua propriedade `renderAttempted` definida como `true`. Nesse caso, não haveria necessidade de renderizar manualmente essas apresentações.
+Se, em vez disso, você tivesse definido a variável `renderDecisions` para `true` ao enviar o evento, o SDK tentaria renderizar quaisquer propostas qualificadas para renderização automática (conforme descrito anteriormente). Como consequência, cada um dos objetos de proposta teria seu `renderAttempted` propriedade definida como `true`. Nesse caso, não haveria necessidade de renderizar manualmente essas apresentações.
 
-Até agora, só discutimos o conteúdo de personalização qualificado para renderização automática (ou seja, qualquer conteúdo criado no Adobe Target Visual Experience Composer). Para recuperar qualquer conteúdo de personalização _not_ elegível para renderização automática, é necessário solicitar o conteúdo preenchendo a opção `decisionScopes` ao enviar o evento. Um escopo é uma string que identifica uma proposta específica que você deseja recuperar do servidor.
+Até agora, só discutimos o conteúdo de personalização qualificado para renderização automática (ou seja, qualquer conteúdo criado no Adobe Target Visual Experience Composer). Para recuperar qualquer conteúdo de personalização _not_ se qualificável para renderização automática, é necessário solicitar o conteúdo preenchendo a variável `decisionScopes` ao enviar o evento. Um escopo é uma string que identifica uma proposta específica que você deseja recuperar do servidor.
 
 Exemplo:
 
@@ -118,7 +118,7 @@ alloy("sendEvent", {
   });
 ```
 
-Neste exemplo, se as apresentações forem encontradas no servidor que corresponde ao escopo `salutation` ou `discount`, elas serão retornadas e incluídas na matriz `result.propositions`. Esteja ciente de que as apresentações qualificadas para renderização automática continuarão a ser incluídas na matriz `propositions`, independentemente de como você configura as opções `renderDecisions` ou `decisionScopes`. A matriz `propositions`, nesse caso, seria semelhante a este exemplo:
+Neste exemplo, se as apresentações forem encontradas no servidor que corresponde à variável `salutation` ou `discount` são retornadas e incluídas no `result.propositions` matriz. Esteja ciente de que as apresentações qualificadas para renderização automática continuarão a ser incluídas no `propositions` , independentemente de como você configura `renderDecisions` ou `decisionScopes` opções. O `propositions` nesse caso, o array seria semelhante a este exemplo:
 
 ```json
 [
@@ -216,13 +216,13 @@ Neste exemplo, se as apresentações forem encontradas no servidor que correspon
 ]
 ```
 
-Nesse ponto, é possível renderizar o conteúdo da proposta da maneira que quiser. Neste exemplo, a proposta que corresponde ao escopo `discount` é uma proposta HTML criada usando o Experience Composer baseado em formulário do Adobe Target. Supondo que você tenha um elemento em sua página com a ID de `daily-special` e deseje renderizar o conteúdo da apresentação `discount` no elemento `daily-special`, faça o seguinte:
+Nesse ponto, é possível renderizar o conteúdo da proposta da maneira que quiser. Neste exemplo, a proposta que corresponde à variável `discount` O escopo é uma apresentação de HTML criada com o Experience Composer baseado em formulário do Adobe Target. Supondo que você tenha um elemento em sua página com a ID de `daily-special` e deseja renderizar o conteúdo do `discount` proposta na `daily-special` , faça o seguinte:
 
-1. Extraia apresentações do objeto `result`.
-1. Faça o loop por cada proposta, procurando a proposta com um escopo de `discount`.
-1. Se você encontrar uma proposta, faça um loop por cada item na proposta, procurando pelo item que é conteúdo HTML. (É melhor verificar do que assumir.)
-1. Se você encontrar um item contendo conteúdo HTML, encontre o elemento `daily-special` na página e substitua seu HTML pelo conteúdo personalizado.
-1. Depois que o conteúdo for renderizado, envie um evento `display`.
+1. Extrair apresentações do `result` objeto.
+1. Faça o loop por cada proposta, procurando pela proposta com um escopo de `discount`.
+1. Se você encontrar uma proposta, faça um loop por cada item na proposta, procurando pelo item que é conteúdo de HTML. (É melhor verificar do que assumir.)
+1. Se você encontrar um item contendo conteúdo de HTML, encontre a variável `daily-special` na página e substitua seu HTML pelo conteúdo personalizado.
+1. Após a renderização do conteúdo, envie um `display` evento.
 
 Seu código seria o seguinte:
 
@@ -266,7 +266,7 @@ alloy("sendEvent", {
       // Send a "display" event 
     alloy("sendEvent", {
       xdm: {
-        eventType: "display",
+        eventType: "decisioning.propositionDisplay",
         _experience: {
           decisioning: {
             propositions: [
@@ -291,4 +291,4 @@ alloy("sendEvent", {
 
 ### Gerenciar cintilação
 
-O SDK fornece recursos para [gerenciar a cintilação](../personalization/manage-flicker.md) durante o processo de personalização.
+O SDK fornece recursos para [gerenciar cintilação](../personalization/manage-flicker.md) durante o processo de personalização.

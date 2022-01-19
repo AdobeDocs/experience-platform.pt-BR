@@ -3,32 +3,57 @@ keywords: transmissão contínua;
 title: Conexão da API HTTP
 description: O destino da API HTTP no Adobe Experience Platform permite enviar dados do perfil para pontos de extremidade HTTP de terceiros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '833'
 ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL HTTP] Conexão da API
+# Conexão da API HTTP (Beta)
 
 >[!IMPORTANT]
 >
->O [!DNL HTTP] no Platform está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>O destino da API HTTP no Platform está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 
-O [!DNL HTTP] O destino da API é um [!DNL Adobe Experience Platform] destino de transmissão que ajuda a enviar dados de perfil para terceiros [!DNL HTTP] endpoints.
+O destino da API HTTP é um [!DNL Adobe Experience Platform] destino de fluxo que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
-Para enviar dados de perfil para o [!DNL HTTP] endpoints, primeiro você deve se conectar ao destino em [[!DNL Adobe Experience Platform]](#connect-destination).
+Para enviar dados de perfil para pontos de extremidade HTTP, primeiro é necessário [conectar-se ao destino](#connect-destination) em [!DNL Adobe Experience Platform].
 
 ## Casos de uso {#use-cases}
 
-O [!DNL HTTP] O destino é direcionado para clientes que precisam exportar dados de perfil XDM e segmentos de público-alvo para genéricos [!DNL HTTP] endpoints.
+O destino HTTP é direcionado para clientes que precisam exportar dados de perfil XDM e segmentos de público-alvo para pontos de extremidade HTTP genéricos.
 
-[!DNL HTTP] os endpoints podem ser sistemas próprios do cliente ou soluções de terceiros.
+Os endpoints HTTP podem ser sistemas próprios do cliente ou soluções de terceiros.
 
-## Conecte-se ao destino {#connect}
+## Pré-requisitos {#prerequisites}
+
+>[!IMPORTANT]
+>
+>Entre em contato com os representantes do Adobe ou com o Atendimento ao cliente do Adobe se desejar ativar a funcionalidade beta de destino da API HTTP para sua empresa.
+
+Para usar o destino da API HTTP para exportar dados do Experience Platform, você deve atender aos seguintes pré-requisitos:
+
+* Você deve ter um terminal HTTP compatível com REST API.
+* Seu terminal HTTP deve oferecer suporte ao esquema de perfil Experience Platform. Nenhuma transformação em um esquema de carga de terceiros é compatível com o destino da API HTTP. Consulte a [dados exportados](#exported-data) para obter um exemplo do schema de saída Experience Platform.
+* Seu terminal HTTP deve suportar cabeçalhos.
+* Seu ponto de extremidade HTTP deve ser compatível com [Credenciais do cliente OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticação. Esse requisito é válido enquanto o destino da API HTTP está na fase beta.
+* A credencial do cliente precisa ser incluída no corpo das solicitações do POST para o terminal, conforme mostrado no exemplo abaixo.
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+
+Você também pode usar [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar uma integração e enviar dados de perfil do Experience Platform para um endpoint HTTP.
+
+## Conecte-se ao destino {#connect-destination}
 
 Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 

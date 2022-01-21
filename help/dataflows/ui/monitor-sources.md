@@ -6,7 +6,7 @@ title: Monitorar fluxos de dados para fontes na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 0%
@@ -41,13 +41,13 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Assimilação de origem"
->abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. <br> Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Detalhes da execução do fluxo de dados"
->abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. <br> Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
 No [Interface do usuário da plataforma](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** na navegação à esquerda para acessar o [!UICONTROL Monitoramento] painel. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre todos os fluxos de dados de fontes, incluindo insights sobre a integridade do tráfego de dados de uma fonte para o [!DNL Identity Service]e para [!DNL Profile].
@@ -151,7 +151,7 @@ Selecionar **[!UICONTROL Identidades]** para ver a assimilação no [!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Processamento de identidade"
->abstract="O processamento de identidade contém informações sobre registros assimilados ao serviço de identidade, incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados. <br> Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>abstract="O processamento de identidade contém informações sobre registros assimilados ao serviço de identidade, incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
 O [!UICONTROL Processamento de identidade] contém informações sobre registros assimilados a [!DNL Identity Service], incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados.

@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para fontes na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
+source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -154,6 +154,11 @@ Selecionar **[!UICONTROL Identidades]** para ver a assimilação no [!UICONTROL 
 >abstract="O processamento de identidade contém informações sobre registros assimilados ao serviço de identidade, incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Detalhes da execução do fluxo de dados"
+>abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados de identidade, incluindo a ID de organização IMS e a ID de execução do fluxo de dados."
+
 O [!UICONTROL Processamento de identidade] contém informações sobre registros assimilados a [!DNL Identity Service], incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados.
 
 Selecione o ícone de filtro ![filter](../assets/ui/monitor-sources/filter.png) além do tempo de início da execução do fluxo de dados para ver mais informações sobre o [!DNL Identity] execução do fluxo de dados.
@@ -191,6 +196,11 @@ No [!UICONTROL Processamento de identidade] página, selecione **[!UICONTROL Per
 >title="Processamento de perfil"
 >abstract="O processamento de perfil contém informações sobre registros assimilados ao serviço de Perfil, incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Detalhes da execução do fluxo de dados"
+>abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados do Perfil, incluindo a ID de organização IMS e a ID de execução do fluxo de dados."
 
 O [!UICONTROL Processamento de perfil] contém informações sobre registros assimilados a [!DNL Profile], incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil.
 

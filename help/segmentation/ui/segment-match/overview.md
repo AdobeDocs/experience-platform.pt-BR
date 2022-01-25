@@ -5,18 +5,14 @@ title: Visão geral da correspondência de segmentos
 topic-legacy: overview
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 3c0be965189c7c62b0b3509cf8a07d37ed9cbb68
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '1984'
-ht-degree: 1%
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Segment Match] visão geral
-
->[!IMPORTANT]
->
->A Correspondência de segmento está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+# [!DNL Segment Match] visão geral
 
 A Correspondência de segmentos do Adobe Experience Platform é um serviço de compartilhamento de segmentos que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade. [!DNL Segment Match] O usa padrões de privacidade da plataforma e identificadores pessoais, como emails com hash, números de telefone com hash e identificadores de dispositivos, como IDFAs e GAIDs.
 

@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
+source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -135,6 +135,11 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 >title="Perfis recebidos"
 >abstract="O número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Detalhes da execução do fluxo de dados"
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"

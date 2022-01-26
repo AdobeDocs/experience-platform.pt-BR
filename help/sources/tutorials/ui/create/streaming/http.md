@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este guia da interface do usuário ajudará você a criar uma conexão de transmissão usando o Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,8 @@ Para usar um conjunto de dados existente, selecione **[!UICONTROL Conjunto de da
 
 ### Mapear campos padrão
 
-Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter mais informações sobre funções mapeadoras e campos calculados, consulte a [Guia de funções de Preparação de dados](../../../../../data-prep/functions.md) ou [guia de campos calculados](../../../../../data-prep/calculated-fields.md).
+
+Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e dos campos calculados, consulte o [Guia da interface do usuário de preparação de dados](../../../../../data-prep/ui/mapping.md).
 
 Para adicionar um novo campo de origem, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 

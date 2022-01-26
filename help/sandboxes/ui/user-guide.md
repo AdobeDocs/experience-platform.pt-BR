@@ -5,7 +5,7 @@ title: Guia da interface do usuário do Sandbox
 topic-legacy: user guide
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -88,7 +88,7 @@ Na janela de confirmação final, digite o nome da sandbox na caixa de diálogo 
 
 >[!WARNING]
 >
->Não é possível excluir a sandbox de produção padrão. No entanto, uma sandbox de produção criada pelo usuário e usada para o compartilhamento bidirecional de segmentos com a [!DNL Audience Manager] ou [!DNL Audience Core Service] pode ser excluída após uma mensagem de aviso.
+>Não é possível excluir a sandbox de produção padrão. No entanto, qualquer sandbox de produção criada pelo usuário que seja usada para o compartilhamento de segmentos bidirecionais com a [!DNL Audience Manager] ou [!DNL Audience Core Service] pode ser excluída após uma mensagem de aviso.
 
 A exclusão de uma sandbox de produção ou desenvolvimento remove permanentemente todos os recursos associados a essa sandbox, incluindo permissões.
 

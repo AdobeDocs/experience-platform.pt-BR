@@ -5,7 +5,7 @@ title: Mapeamento de campos para a fonte de Marketo Engage
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -343,7 +343,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 >[!NOTE]
 >
->O `to_object('ECID',arrays_to_objects('id',explode(ecids)))` O campo de origem é um campo calculado que deve ser adicionado usando o [!UICONTROL Adicionar campo calculado] na interface do usuário da plataforma. Veja o tutorial em [adição de campos calculados](../../../../data-prep/calculated-fields.md) para obter mais informações.
+>O `to_object('ECID',arrays_to_objects('id',explode(ecids)))` O campo de origem é um campo calculado que deve ser adicionado usando o [!UICONTROL Adicionar campo calculado] na interface do usuário da plataforma. Veja o tutorial em [adição de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obter mais informações.
 
 ## Próximas etapas
 

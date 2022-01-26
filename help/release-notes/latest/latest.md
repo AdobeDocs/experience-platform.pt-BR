@@ -1,7 +1,8 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: 74e2ebd324265744702a385dbaca2ac4a10ea1f7
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 78f9b8434d577909ccb1c62211a802e05c8291e1
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 6%
@@ -58,6 +59,31 @@ Para obter mais informações sobre [!DNL Dashboards]consulte o [[!DNL Dashboard
 | Experiência de mapeamento consolidado | A nova interface de mapeamento na interface do usuário da plataforma fornece uma experiência de mapeamento consistente para aproveitar as recomendações de mapeamento inteligente, configurar manualmente as regras de mapeamento e depurar todos os erros que ocorrerem nos conjuntos de mapeamento. Para obter mais informações, consulte o [[!DNL Data Prep] Guia da interface do usuário](../../data-prep/ui/mapping.md). |
 
 Para obter mais informações sobre [!DNL Data Prep]consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+
+<!--
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+| Feature | Description |
+| ----------- | ----------- |
+| Placeholder for next-hit personalization | Description |
+| Placeholder for batch monitoring | Description |
+| Placeholder for re-introducing scheduling in the UI | Description |
+| Placeholder for Marketo destination update | Description |
+
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| Placeholder for Target | Description |
+| Placeholder for Custom Personalization | Description |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+-->
 
 ## Serviço de query {#query-service}
 

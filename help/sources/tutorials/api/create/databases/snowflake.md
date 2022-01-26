@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Snowflake usando a API de Serviço de Fluxo.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
+source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
@@ -43,7 +43,7 @@ Para [!DNL Flow Service] para conectar-se com [!DNL Snowflake], você deve forne
 | `database` | O [!DNL Snowflake] O banco de dados contém os dados que você deseja trazer para a Plataforma. |
 | `username` | O nome de usuário para a [!DNL Snowflake] conta. |
 | `password` | A senha do [!DNL Snowflake] conta do usuário. |
-| `connectionString` | A cadeia de conexão usada para se conectar ao seu [!DNL Snowflake] instância. O padrão da string de conexão para [!DNL Snowflake] é `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `connectionString` | A cadeia de conexão usada para se conectar ao seu [!DNL Snowflake] instância. O padrão da string de conexão para [!DNL Snowflake] é `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL Snowflake] é `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 Para obter mais informações sobre a introdução, consulte esta seção [[!DNL Snowflake] documento](https://docs.snowflake.com/en/user-guide/oauth-custom.html).

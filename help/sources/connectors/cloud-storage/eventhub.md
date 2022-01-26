@@ -5,9 +5,9 @@ title: Visão Geral do Conector de Origem dos Hubs de Eventos do Azure
 topic-legacy: overview
 description: Saiba como conectar Hubs de Eventos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
+source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,29 @@ Para aumentar a taxa de velocidade de assimilação no lado da plataforma, a Pla
 
 ## Usar uma rede virtual à qual se conectar [!DNL Event Hubs] para a plataforma
 
-Você pode configurar uma rede virtual para se conectar [!DNL Event Hubs] para a Platform enquanto as medidas de firewall estão ativadas. Para configurar uma rede virtual, vá para [[!DNL Event Hubs] documento de conjunto de regras de rede](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) e depois selecione **Experimente** no painel REST API. Em seguida, autentique seu [!DNL Azure] conta usando suas credenciais e selecione a [!DNL Event Hubs] namespace, grupo de recursos e assinatura que você deseja trazer para a plataforma.
+Você pode configurar uma rede virtual para se conectar [!DNL Event Hubs] para a Platform enquanto as medidas de firewall estão ativadas. Para configurar uma rede virtual, vá para [[!DNL Event Hubs] documento de conjunto de regras de rede](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) e siga as etapas listadas abaixo:
 
-Após a configuração, atualize o **corpo da solicitação** com o JSON que corresponde à sua região de rede, na lista abaixo:
+* Selecionar **Experimente** do painel REST API;
+* Autentique seu [!DNL Azure] conta usando suas credenciais no mesmo navegador;
+* Selecione o [!DNL Event Hubs] namespace, grupo de recursos e assinatura que você deseja trazer para a Platform e, em seguida, selecionar **EXECUTAR**;
+* No corpo JSON exibido, adicione a seguinte sub-rede da plataforma em `virtualNetworkRules` inside `properties`:
 
->[!TIP]
+
+>[!IMPORTANT]
 >
->Você deve fazer um backup das regras de filtragem IP do firewall existentes, pois elas serão excluídas após esta chamada.
+>Você deve fazer um backup do corpo JSON que recebe, antes de atualizar `virtualNetworkRules` com a sub-rede da plataforma , pois ela contém suas regras de filtragem de IP existentes. Caso contrário, as regras serão excluídas após a chamada .
+
+
+```json
+{
+    "subnet": {
+        "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+    },
+    "ignoreMissingVnetServiceEndpoint": true
+}
+```
+
+Consulte a lista abaixo para obter as diferentes regiões das sub-redes da plataforma:
 
 ### VA7: América do Norte
 
@@ -108,10 +124,10 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Event
 
 ### Uso de APIs
 
-- [Criar uma conexão de origem de Hubs de Eventos usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Coletar dados de fluxo usando a API do Serviço de fluxo](../../tutorials/api/collect/streaming.md)
+* [Criar uma conexão de origem de Hubs de Eventos usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [Coletar dados de fluxo usando a API do Serviço de fluxo](../../tutorials/api/collect/streaming.md)
 
 ### Uso da interface do usuário
 
-- [Criar uma conexão de origem de Hubs de eventos na interface do usuário](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [Criar uma conexão de origem de Hubs de eventos na interface do usuário](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2effccfa9b1975292f350369201269099dc1b2a1
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '1383'
-ht-degree: 3%
+source-wordcount: '1384'
+ht-degree: 4%
 
 ---
 
@@ -103,7 +103,7 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar, editar e desativar destinos. |
 | [!DNL Destinations] | [!UICONTROL Exibir destinos] | Acesso somente leitura a destinos disponíveis na **[!UICONTROL Catálogo]** e destinos autenticados no **[!UICONTROL Procurar]** guia . |
 | [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Esta permissão requer &quot;Exibir destinos&quot; ou &quot;Gerenciar [!UICONTROL Destinos&quot;] a ser concedido ao usuário que ativará destinos. |
-| [!DNL Destinations] | [!UICONTROL Criação de destinos] | Capacidade de criar destinos usando [SDK de destino do Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
+| [!DNL Destinations] | [!UICONTROL Criação de destinos] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
 | [!DNL Data Ingestion] | [!UICONTROL Exibir fontes] | Acesso somente leitura a fontes disponíveis no **[!UICONTROL Catálogo]** e fontes autenticadas na **[!UICONTROL Procurar]** guia . |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas Organizações de IMS e habilitar [!DNL Segment Match] fluxos. |
@@ -112,7 +112,7 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | Governança de dados | [!UICONTROL Aplicar rótulos de uso de dados] | Acesso para ler, criar e excluir rótulos de uso. |
 | Governança de dados | [!UICONTROL Gerenciar políticas de uso de dados] | Acesso para ler, criar, editar e excluir políticas de uso de dados. |
 | Governança de dados | [!UICONTROL Exibir políticas de uso de dados] | Acesso somente leitura para políticas de uso de dados pertencentes à sua organização. |
-| Governança de dados | [!UICONTROL Exibir registro de auditoria] | Acesso somente leitura para exibição gravada [logs de auditoria](../landing/governance-privacy-security/audit-logs/overview.md) de atividades da plataforma. |
+| Governança de dados | [!UICONTROL Exibir registro de atividades do usuário] | Acesso somente leitura para exibição gravada [logs de auditoria](../landing/governance-privacy-security/audit-logs/overview.md) de atividades da plataforma. |
 | [!DNL Dashboards] | [!UICONTROL Exibir painel de uso de licença] | Acesso somente leitura para exibir o painel de uso da licença. |
 | [!DNL Dashboards] | [!UICONTROL Gerenciar painéis padrão] | Adicione atributos personalizados que ainda não estão no data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Gerenciar Consultas] | Acesso para ler, criar, editar e excluir consultas SQL estruturadas para dados da plataforma. |

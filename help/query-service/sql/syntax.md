@@ -5,9 +5,9 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c2c543e64a4f2aef0064abf5e4fb9d7f2738159b
+source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -343,6 +343,23 @@ EXCEPTION
     SELECT 'ERROR';
 END;
 ```
+
+## Organização do ativo de dados
+
+É importante organizar logicamente seus ativos de dados no lago de dados do Adobe Experience Platform à medida que crescem. O Serviço de Consulta estende construções SQL que permitem agrupar logicamente ativos de dados em uma sandbox. Esse método de organização permite o compartilhamento de ativos de dados entre esquemas sem a necessidade de movê-los fisicamente.
+
+As construções SQL a seguir que usam a sintaxe SQL padrão são suportadas para que você organize seus dados logicamente.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+Consulte o guia sobre [organização lógica de ativos de dados](../best-practices/organize-data-assets.md) para obter mais explicações detalhadas sobre as práticas recomendadas do Serviço de query.
 
 ## [!DNL Spark] Comandos SQL
 

@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
+source-git-commit: d939624d222839532f4601ceed8dfa6e291f37aa
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 20%
+source-wordcount: '146'
+ht-degree: 19%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 20%
    - [Geração de conjuntos de dados a partir de resultados de query](ui/create-datasets.md)
 - Práticas recomendadas {#best-practices}
    - [Orientações gerais para a execução de consultas](best-practices/writing-queries.md)
+   - [Orientação para a organização de ativos de dados](./best-practices/organize-data-assets.md)
    - [Desduplicação de dados](best-practices/deduplication.md)
    - [Exemplos de consultas de eventos de experiência](best-practices/experience-event-queries.md)
    - [Exemplos de consultas do Adobe Analytics](best-practices/adobe-analytics.md)

@@ -5,20 +5,26 @@ title: 'Segmentação de borda usando a API '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 2%
+source-wordcount: '989'
+ht-degree: 1%
 
 ---
 
-# Segmentação de borda (beta)
+# Segmentação de borda
 
 >[!NOTE]
 >
->O documento a seguir explica como executar a segmentação de borda usando a API . Para obter informações sobre como executar a segmentação de borda usando a interface do usuário, leia o [guia da interface do usuário de segmentação de borda](../ui/edge-segmentation.md). Além disso, a segmentação de borda está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>O documento a seguir explica como executar a segmentação de borda usando a API . Para obter informações sobre como executar a segmentação de borda usando a interface do usuário, leia o [guia da interface do usuário de segmentação de borda](../ui/edge-segmentation.md).
+>
+>A segmentação de borda agora está disponível para todos os usuários da plataforma. Se você criou segmentos de borda durante o beta, esses segmentos continuarão operacionais.
 
 A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experience Platform instantaneamente na borda, permitindo casos de uso de personalização de página igual e próxima.
+
+>[!IMPORTANT]
+>
+> Os dados de borda serão armazenados em um local de servidor de borda mais próximo de onde foram coletados e podem ser armazenados em um local diferente daquele designado como o data center (ou principal) da Adobe Experience Platform.
 
 ## Introdução
 

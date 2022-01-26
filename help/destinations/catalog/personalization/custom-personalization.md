@@ -1,28 +1,24 @@
 ---
 keywords: personalização personalizada; destino; destino personalizado da experience platform;
 title: Conexão de personalização personalizada (Beta)
-description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em seu site para recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece 1:1 em tempo real e personalização com base na associação de segmento de um perfil de usuário.
+description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em seu site para recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação de segmentos de perfis de usuários.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
 
-# Conexão de personalização personalizada (Beta) {#custom-personalization-connection}
+# Conexão de personalização personalizada {#custom-personalization-connection}
 
 ## Visão geral {#overview}
-
->[!IMPORTANT]
->
->A conexão de personalização personalizada no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Esse destino fornece uma maneira de recuperar informações do segmento do Adobe Experience Platform para plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em sites do cliente.
 
 ## Pré-requisitos {#prerequisites}
 
-Essa integração é alimentada pela variável [Adobe Experience Platform Web SDK](../../../edge/home.md). Você deve usar esse SDK para usar esse destino.
+Essa integração é alimentada pela variável [Adobe Experience Platform Web SDK](../../../edge/home.md) ou [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). Você deve usar um desses SDKs para usar esse destino.
 
 ## Tipo de exportação {#export-type}
 
@@ -73,12 +69,10 @@ Este é um exemplo de valor para a variável `event.destinations` variável:
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }
@@ -87,7 +81,7 @@ Este é um exemplo de valor para a variável `event.destinations` variável:
 
 Se você não estiver usando [Tags de Adobe](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [tratamento de respostas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver os dados exportados.
 
-A resposta JSON do Adobe Experience Platform pode ser analisada para encontrar o alias de integração correspondente do aplicativo que você está integrando com o Adobe Experience Platform. As IDs de segmento podem ser passadas para o código do aplicativo como parâmetros de direcionamento. Abaixo está uma amostra do que seria específico para a resposta de destino.
+A resposta JSON do Adobe Experience Platform pode ser analisada para encontrar o alias de integração correspondente do aplicativo que você está integrando com o Adobe Experience Platform. As IDs de segmento podem ser passadas para o código do aplicativo como parâmetros de direcionamento. Abaixo está uma amostra de como isso pareceria específico para a resposta de destino.
 
 ```
 alloy("sendEvent", {

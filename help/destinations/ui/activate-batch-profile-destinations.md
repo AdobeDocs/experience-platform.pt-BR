@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2188'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Agendar"
->abstract="O tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e o agendamento não podem ser alterados depois que o segmento é salvo."
+>abstract="Defina o tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e a frequência de exportação."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Saiba mais na documentação"
 
 [!DNL Adobe Experience Platform] exporta dados para marketing por email e destinos de armazenamento em nuvem na forma de [!DNL CSV] arquivos. No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada segmento que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.

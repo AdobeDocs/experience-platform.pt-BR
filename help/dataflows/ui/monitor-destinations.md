@@ -6,7 +6,7 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fbcaa4c9010835f7a21f9f555671f6de2344f892
+source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
 workflow-type: tm+mt
 source-wordcount: '3204'
 ht-degree: 0%
@@ -200,6 +200,11 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 
 ## Painel de monitoramento de trabalhos de segmento {#monitoring-segment-jobs-dashboard}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Trabalhos de segmento"
+>abstract="O painel de tarefas do segmento contém informações sobre os trabalhos de avaliação e exportação para todos os seus segmentos."
+
 Para acessar o [!UICONTROL Trabalhos de segmento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Trabalhos de segmento]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre a avaliação de segmentos e as tarefas de exportação.
 
 ![Painel de monitoramento de trabalhos do segmento](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
@@ -222,11 +227,6 @@ As seguintes métricas estão disponíveis para tarefas de segmento:
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="A ativação de destino contém informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Trabalhos de segmento"
->abstract="O painel de tarefas do segmento contém informações sobre os trabalhos de avaliação e exportação para todos os seus segmentos."
 
 Para acessar o [!UICONTROL Monitoramento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Destinos]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre as tarefas de execução de destino.
 

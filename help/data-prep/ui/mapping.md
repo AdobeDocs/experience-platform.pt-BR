@@ -2,7 +2,8 @@
 keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário; mapeador; mapeamento; preparação de dados; preparação de dados;
 title: Guia da interface do usuário de preparação de dados
 description: Este documento fornece instruções sobre como usar funções de preparação de dados na interface do usuário da plataforma para mapear arquivos CSV para um esquema XDM.
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 1%
@@ -80,18 +81,18 @@ O **[!UICONTROL mapeamento]** A interface fornece uma ferramenta abrangente para
 
 ### Noções básicas da interface de mapeamento
 
-A interface de mapeamento inclui um painel que fornece informações sobre a integridade dos conjuntos de mapeamento no contexto do fluxo de trabalho de assimilação. O painel exibe os seguintes detalhes sobre os conjuntos de mapeamento:
+A interface de mapeamento inclui um painel que fornece informações sobre a integridade dos campos de mapeamento no contexto do fluxo de trabalho de assimilação. O painel exibe os seguintes detalhes sobre os campos de mapeamento:
 
 | Propriedade | Descrição |
 | --- | --- |
 | [!UICONTROL Campos mapeados] | Exibe o número total de campos de origem que foram mapeados para um campo XDM de destino, independentemente dos erros. |
 | [!UICONTROL Campos obrigatórios] | Exibe o número de campos de mapeamento necessários. |
-| [!UICONTROL Campos de identidade] | Exibe o número total de conjuntos de mapeamento definidos como identidade. Esses conjuntos de mapeamentos são representados por um ícone de impressão digital. |
-| [!UICONTROL Erros] | Exibe o número de conjuntos de mapeamento incorretos. |
+| [!UICONTROL Campos de identidade] | Exibe o número total de campos de mapeamento definidos como identidade. Esses campos de mapeamento são representados por um ícone de impressão digital. |
+| [!UICONTROL Erros] | Exibe o número de campos de mapeamento incorretos. |
 
 ![painel superior](../images/ui/mapping/top-panel.png)
 
-A interface de mapeamento também fornece um painel de opções que você pode escolher para interagir ou filtrar melhor por meio dos conjuntos de mapeamento.
+A interface de mapeamento também fornece um painel de opções que você pode escolher para interagir ou filtrar melhor por meio dos campos de mapeamento.
 
 ![segundo painel](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ As opções de filtragem são:
 | [!UICONTROL Campos não mapeados] | Essa opção filtra o schema de origem para exibir apenas os campos que ainda precisam ser mapeados. |
 | [!UICONTROL Campos com recomendação] | Essa opção filtra o schema de origem para exibir apenas os campos que contêm recomendações de mapeamento. |
 
-Selecionar **[!UICONTROL Campos com erros]** para ver todos os conjuntos de mapeamento com erros.
+Selecionar **[!UICONTROL Campos com erros]** para ver todos os campos de mapeamento com erros.
 
 ![filtro](../images/ui/mapping/filter.png)
 
-Uma exibição isolada de conjuntos de mapeamento incorretos é exibida, permitindo corrigir erros por meio de recomendações de mapeamento inteligentes ou pela árvore de mapeamento manual.
+Uma exibição isolada de campos de mapeamento incorretos é exibida, permitindo corrigir erros por meio de recomendações de mapeamento inteligente ou pela árvore de mapeamento manual.
 
 ![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ Durante a visualização, a coluna de identidade é priorizada como o primeiro c
 
 ![tela de visualização](../images/ui/mapping/preview-screen.png)
 
-Para remover todos os conjuntos de mapeamento, selecione **[!UICONTROL Limpar todos os mapeamentos]**.
+Para remover todos os campos de mapeamento, selecione **[!UICONTROL Limpar todos os mapeamentos]**.
 
 ![limpar tudo](../images/ui/mapping/clear-all.png)
 
 ### Usar a interface de mapeamento
 
-A Platform fornece automaticamente recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso ou corrigir qualquer conjunto de mapeamento duplicado para apagar erros.
+A Platform fornece automaticamente recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso ou corrigir quaisquer campos de mapeamento duplicados para apagar erros.
 
 ![interface de mapeamento](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ Como alternativa, você pode selecionar **[!UICONTROL Selecionar manualmente]** 
 
 ![recc-panel](../images/ui/mapping/recc-panel.png)
 
-A interface de mapeamento do esquema de destino aparece na mesma exibição que seus conjuntos de mapeamento, permitindo modificar pares de mapeamento na mesma tela. Selecione o campo de destino que se ajusta ao caso de uso ou que corrige seus erros.
+A interface de mapeamento do esquema de destino aparece na mesma exibição dos campos de mapeamento, permitindo modificar pares de mapeamento na mesma tela. Selecione o campo de destino que se ajusta ao caso de uso ou que corrige seus erros.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 

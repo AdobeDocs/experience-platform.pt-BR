@@ -2,13 +2,13 @@
 keywords: Experience Platform, home, tópicos populares
 title: Processamento de solicitação de privacidade no Serviço de identidade
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Serviço de identidade.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
-
 
 # Processamento de solicitação de privacidade em [!DNL Identity Service]
 
@@ -50,6 +50,10 @@ Além disso, a variável `include` a matriz da carga da solicitação deve inclu
 
 A solicitação a seguir cria um novo trabalho de privacidade sob o GDPR para os dados de um único cliente na [!DNL Identity] armazenar. Dois valores de identidade são fornecidos para o cliente na variável `userIDs` Array; uma usando a norma `Email` namespace de identidade e outro usando um `ECID` namespace, Também inclui o valor do produto para [!DNL Identity] (`Identity`) na `include` array:
 
+>[!TIP]
+>
+>Ao excluir um namespace personalizado usando a API, você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### Uso da interface do usuário
+
+>[!TIP]
+>
+>Ao excluir um namespace personalizado usando a interface do usuário, você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição. Além disso, não é possível excluir namespaces personalizados na interface do usuário para sandboxes de não produção.
 
 Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL Identidade]** under **[!UICONTROL Produtos]** para processar tarefas para dados armazenados em [!DNL Identity Service].
 

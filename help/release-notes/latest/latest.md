@@ -1,9 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: 7a0a9d61f5f51ba548b342a24e4fd9869c4abf18
+exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
+source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 4%
 
 ---
@@ -43,8 +44,8 @@ O Adobe Experience Platform fornece vários painéis através dos quais você po
 | Recurso | Descrição |
 | --- | --- |
 | Legendas inteligentes | Um algoritmo de aprendizado de máquina fornece automaticamente insights sobre seu perfil e dados de público-alvo e ilustra padrões e tendências em um período de 30 a 90 dias ou 12 meses. As legendas incluem informações sobre <ul><li>Forma e estatísticas gerais</li><li>Tendências e alterações abruptas</li><li>Padrões sazonais</li><li>Anomalias inesperadas</li></ul> Mais informações podem ser encontradas no [painéis de perfis](../../dashboards/guides/profiles.md#profiles-count-trend) e [painéis de segmentos](../../dashboards/guides/segments.md#audience-size-trend) documentação. |
-| Inventário de painéis | Acesse os relatórios pré-configurados de painéis de perfil, segmentos e destinos, incluindo quaisquer integrações instaladas, como Power BI, em um local centralizado. Para obter mais informações, consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md). |
-| Modelos de relatório do Power BI | Crie, personalize ou estenda métricas do perfil, segmentos e modelos de dados de relatório de destino usando novos gráficos do Power BI. O fluxo de trabalho de instalação automatizada permite compartilhar seus insights de marketing em sua organização a partir do ambiente Power BI. Para obter mais informações, consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md). |
+| Inventário de painéis | Acesse os relatórios pré-configurados de painéis de perfil, segmentos e destinos, incluindo quaisquer integrações instaladas, como Power BI, em um local centralizado. Para obter mais informações, consulte o [[!DNL Dashboards] documentação do inventário](../../dashboards/inventory.md). |
+| Modelos de relatório do Power BI | Crie, personalize ou estenda métricas do perfil, segmentos e modelos de dados de relatório de destino usando novos gráficos do Power BI. O fluxo de trabalho de instalação automatizada permite compartilhar seus insights de marketing em sua organização a partir do ambiente Power BI. Para obter mais informações, consulte o [Documentação do modelo de relatório do Power BI](../../dashboards/integrations/power-bi.md). |
 
 Para obter mais informações sobre [!DNL Dashboards]consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
@@ -90,8 +91,8 @@ Para obter informações mais gerais sobre destinos, consulte [visão geral dos 
 
 | Recurso | Descrição |
 | --- | --- |
-| Bloco Anônimo | A construção SQL de bloco anônimo permite dividir tarefas de preparação de dados em grande escala no Serviço de Consulta em tarefas menores, reutilizá-las e executá-las em sequência para carregamento de dados incrementais. Para obter mais informações, consulte o [Visão geral do Serviço de query](../../query-service/home.md). |
-| Organização do conjunto de dados | Fornece uma estrutura de dados lógica e coerente para organizar seus ativos de dados para uso com o Serviço de query, à medida que a quantidade de ativos de dados na sandbox cresce. Para obter mais informações, consulte o [Visão geral do Serviço de query](../../query-service/home.md). |
+| Bloco Anônimo | A construção SQL de bloco anônimo permite dividir tarefas de preparação de dados em grande escala no Serviço de Consulta em tarefas menores, reutilizá-las e executá-las em sequência para carregamento de dados incrementais. Para obter mais informações, consulte o [consultas de exemplo para documentação de blocos anônimos](../../query-service/best-practices/anonymous-block.md). |
+| Organização do conjunto de dados | Fornece uma estrutura de dados lógica e coerente para organizar seus ativos de dados para uso com o Serviço de query, à medida que a quantidade de ativos de dados na sandbox cresce. Para obter mais informações, consulte o [documentação dos ativos da organização](../../query-service/best-practices/organize-data-assets.md). |
 
 Para obter mais informações sobre [!DNL Query Service]consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).
 

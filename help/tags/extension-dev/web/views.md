@@ -2,10 +2,10 @@
 title: Exibições em extensões da Web
 description: 'Saiba como definir visualizações para módulos de biblioteca em extensões da Web do Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 99%
+source-wordcount: '2083'
+ht-degree: 97%
 
 ---
 
@@ -169,6 +169,10 @@ No tempo de execução, antes de passar o objeto de configurações para o módu
 Para indicar onde pode ser útil para os usuários usar elementos de dados e facilitar a inserção de um elemento de dados, é altamente recomendável adicionar um botão de ícone ao lado desses campos, como mostrado aqui:
 
 ![campo de elemento de dados](../images/data-element-field.png)
+
+>[!NOTE]
+>
+>Para baixar o ícone apropriado, navegue até o [página de ícones no Adobe Spectrum](https://spectrum.adobe.com/page/icons/) e pesquisar por &quot;[!DNL Data]&quot;.
 
 Quando um usuário clicar no botão ao lado do campo de texto, chamar `window.extensionBridge.openDataElementSelector` como [descrito acima](#open-data-element). Isso exibirá uma lista dos elementos de dados do usuário que ele pode escolher, em vez de forçá-lo a lembrar o nome e digitar os sinais de porcentagem. Depois que o usuário selecionar um elemento de dados, você receberá o nome do elemento de dados selecionado encapsulado em sinais de porcentagem (a menos que a opção `tokenize` esteja definida como `false`). Recomendamos que você preencha o campo de texto com o resultado.
 

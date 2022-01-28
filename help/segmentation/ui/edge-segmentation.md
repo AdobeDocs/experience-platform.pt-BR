@@ -5,9 +5,9 @@ title: Guia da interface do usuário de segmentação de borda
 topic-legacy: ui guide
 description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experienc
 >[!IMPORTANT]
 >
 > Os dados de borda serão armazenados em um local de servidor de borda mais próximo de onde foram coletados e podem ser armazenados em um local diferente daquele designado como o data center (ou principal) da Adobe Experience Platform.
+>
+> Além disso, o mecanismo de segmentação de borda só atenderá às solicitações na borda em que houver **one** identidade primária marcada, que é consistente com identidades primárias não baseadas em borda.
 
 ## Tipos de query de segmentação de borda
 

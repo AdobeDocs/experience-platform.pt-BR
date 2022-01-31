@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
+source-git-commit: 51f0cfc1423f8a3bd2ffbceb65de4a09c39d474b
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1341'
 ht-degree: 4%
 
 ---
@@ -70,7 +70,7 @@ Para obter mais informações sobre [!DNL Data Prep]consulte o [[!DNL Data Prep]
 | Recurso | Descrição |
 | ----------- | ----------- |
 | Personalização de mesma página e próxima página | O [recurso de personalização de mesma página e próxima página](../../destinations/ui/configure-personalization-destinations.md) O fornece uma visualização compartilhada e direcionável dos usuários para aplicativos no Experience Edge, para fins de consistência entre o marketing e os canais do cliente. Essa personalização é possível por meio da variável [Conexão Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para configurar suas campanhas de personalização de mesma página ou da próxima página, consulte o [tutorial dedicado](../../destinations/ui/configure-personalization-destinations.md). |
-| Monitoramento de destino em lote e métricas no nível do segmento | A funcionalidade de monitoramento de destino agora é expandida de destinos de streaming para incluir também destinos em lote e métricas no nível do segmento para seus fluxos de dados de ativação. Para obter mais informações, leia [painel de monitoramento de destinos](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) e [exibição em nível de segmento](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
+| Monitoramento de destino em lote e métricas no nível do segmento | A funcionalidade de monitoramento de destino agora é expandida de destinos de streaming para incluir também destinos em lote e métricas no nível do segmento para seus fluxos de dados de ativação. Para obter mais informações, leia [painel de monitoramento de destinos](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [painel de monitoramento de trabalhos de segmento](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)e [exibição em nível de segmento](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Agendar edição na interface do usuário para fluxos de dados de ativação em lote existentes | Esta versão apresenta a opção de editar o agendamento de seus fluxos de dados de ativação existentes para destinos em lote. Para obter mais informações, leia [ativar dados de perfil para destinos de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Aprimoramentos de destino do Marketo | Os clientes do Experience Platform que usam o Marketo Engage podem maximizar o banco de dados do Marketo com a nova capacidade de enviar registros de pessoas novos para o Marketo Engage a partir do Experience Platform [Conector de destino do Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Ao enviar segmentos de público-alvo do Experience Platform para o Marketo Engage, pessoas no segmento que ainda não existe no banco de dados do Marketo Engage podem ser automaticamente adicionadas a ele. Para obter mais informações, leia [Encaminhar um segmento do Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (a etapa 9 do tutorial indica como enviar registros de pessoas novas para o Marketo). |
 

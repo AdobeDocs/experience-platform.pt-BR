@@ -2,9 +2,9 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem fez quais ações no Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ Os seguintes filtros estão disponíveis para eventos de auditoria na interface 
 | --- | --- |
 | [!UICONTROL Categoria] | Use o menu suspenso para filtrar os resultados exibidos por [categoria](#category). |
 | [!UICONTROL Ação] | Filtrar por ação. Somente no momento [!UICONTROL Criar] e [!UICONTROL Excluir] as ações podem ser filtradas. |
-| [!UICONTROL Status do Controle de Acesso] | Filtrar se a ação foi permitida (concluída) ou negada devido à falta de [controle de acesso](../../../access-control/home.md) permissões. |
+| [!UICONTROL Status] | Filtrar se a ação foi permitida (concluída) ou negada devido à falta de [controle de acesso](../../../access-control/home.md) permissões. |
 | [!UICONTROL Data] | Selecione uma data inicial e/ou uma data final para definir um intervalo de datas para filtrar os resultados. |
 
 Para remover um filtro, selecione o &quot;X&quot; no ícone de comprimido do filtro em questão ou selecione **[!UICONTROL Limpar tudo]** para remover todos os filtros.

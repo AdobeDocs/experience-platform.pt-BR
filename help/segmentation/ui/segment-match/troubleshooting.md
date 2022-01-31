@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform, página inicial, tópicos populares, segmentação, Segmentação, Correspondência de segmentos, correspondência de segmentos
 solution: Experience Platform
-title: Perguntas frequentes sobre a correspondência de segmentos (Beta)
+title: Perguntas frequentes sobre correspondência de segmentos
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 823eb549e5514a3201ba68ed395c69e202cb747f
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] perguntas frequentes (Beta)
+# [!DNL Segment Match] perguntas frequentes
 
 Este guia fornece respostas à privacidade e a perguntas legais frequentemente feitas sobre a Correspondência de segmentos do Adobe Experience Platform.
 

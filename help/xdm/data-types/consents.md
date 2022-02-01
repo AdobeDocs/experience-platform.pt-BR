@@ -4,9 +4,9 @@ title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consent for Privacy, Personalization and Marketing Preferences tem como objetivo oferecer suporte à coleta de permissões e preferências do cliente geradas pelas CMPs (Consent Management Platforms) e outras fontes de suas operações de dados.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2058'
 ht-degree: 2%
 
 ---
@@ -53,10 +53,11 @@ O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL C
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -99,10 +100,11 @@ O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL C
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -144,16 +146,18 @@ O JSON a seguir mostra um exemplo do tipo de dados que a variável [!UICONTROL C
 
 ### `adID`
 
-`adID` representa o consentimento do cliente para que uma ID do anunciante (IDFA ou GAID) possa ser usada para vincular o cliente entre aplicativos neste dispositivo.
+`adID` representa o consentimento do cliente para se uma ID do anunciante pode ser usada para vincular o cliente entre aplicativos neste dispositivo.
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
+| `idType` | O tipo de ID do anúncio, `IDFA` para Apple ID para anunciantes ou `GAID` para a ID de anunciante da Google, também conhecida como ID de anunciante do Android (AAID). |
 | `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte a [apêndice](#choice-values) para os valores e definições aceites. |
 
 {style=&quot;table-layout:auto&quot;}

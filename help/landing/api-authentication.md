@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 10%
+source-wordcount: '1272'
+ht-degree: 9%
 
 ---
 
@@ -97,6 +97,12 @@ Além das credenciais acima, você também precisa do **[!UICONTROL Segredo do c
 ## Gerar um JSON Web Token (JWT) {#jwt}
 
 A próxima etapa é gerar um JSON Web Token (JWT) com base em suas credenciais de conta. Esse valor é usado para gerar `{ACCESS_TOKEN}` credencial para uso em chamadas da API da plataforma, que devem ser geradas novamente a cada 24 horas.
+
+>[!IMPORTANT]
+>
+>Para os fins deste tutorial, as etapas abaixo descrevem como gerar uma JWT no Console do desenvolvedor. No entanto, este método de geração só deve ser utilizado para fins de ensaio e avaliação.
+>
+>Para uso regular, o JWT deve ser gerado automaticamente. Para obter mais informações sobre como gerar JWTs programaticamente, consulte o [guia de autenticação da conta de serviço](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) no Adobe Developer.
 
 Selecionar **[!UICONTROL Conta de serviço (JWT)]** na navegação à esquerda, selecione **[!UICONTROL Gerar JWT]**.
 

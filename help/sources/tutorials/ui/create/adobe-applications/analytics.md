@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,16 @@ O **[!UICONTROL Adicionar dados de origem do Analytics]** será exibida. Selecio
 >[!IMPORTANT]
 >
 >O recurso de suporte à Preparação de dados para a variável [!DNL Analytics] A fonte está em beta.
+
+Antes de mapear a [!DNL Analytics] para direcionar o esquema XDM, primeiro você deve selecionar se está usando um esquema padrão ou um esquema personalizado.
+
+Um schema padrão cria um novo schema em seu nome, contendo a variável [!DNL Analytics] grupo de campos. Para usar um schema padrão, selecione **[!UICONTROL Esquema padrão]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+Com um esquema personalizado, você pode escolher qualquer esquema disponível para [!DNL Analytics] dados, desde que esse schema tenha [!DNL Analytics] grupo de campos. Para usar um esquema personalizado, selecione **[!UICONTROL Esquema personalizado]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 O [!UICONTROL Mapeamento] fornece uma interface para mapear campos de origem para seus campos de esquema de destino apropriados. A partir daqui, você pode mapear variáveis personalizadas para novos grupos de campos do esquema e aplicar cálculos, conforme suportado pela Preparação de dados. Selecione um schema de target para iniciar o processo de mapeamento.
 

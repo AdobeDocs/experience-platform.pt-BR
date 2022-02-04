@@ -4,9 +4,9 @@ title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em quatro seções: Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -64,11 +64,30 @@ Para obter mais informações sobre categorias de destino e informações sobre 
 
 ## [!UICONTROL Contas] {#accounts}
 
-O **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões estabelecidas com vários destinos e permite atualizar os detalhes da conexão existente. Consulte [Atualizar contas](update-accounts.md) para obter instruções detalhadas.
+O **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões estabelecidas com vários destinos e permite atualizar ou excluir detalhes da conta existente. Consulte a tabela abaixo para obter todas as informações que você pode obter em cada conta de destino.
+
+>[!TIP]
+>
+> * Selecione os três pontos no [!UICONTROL Plataforma] e use a ![Botão Ativar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar segmentos ]**para enviar segmentos para esse destino.
+> * Selecione os três pontos no [!UICONTROL Plataforma] e use a ![Botão Editar detalhes](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalhes ]**botão para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione os três pontos no [!UICONTROL Plataforma] e use a ![Botão Excluir](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**botão para [excluir](delete-destination-account.md) uma conta de destino existente.
+
+
+![Guia Contas](../assets/ui/workspace/destination-account-options.png)
+
+| Elemento | Descrição |
+|---|---|
+| [!UICONTROL Plataforma] | O destino para o qual você configurou a conexão. |
+| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão da conta para o seu bucket ou destino de armazenamento. Dependendo do destino, as opções de autenticação são: <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou Azure Blob.</li><li>Para destinos de anúncios em tempo real: Servidor para servidor</li><li>Para destinos de armazenamento em nuvem Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li><li>Autenticação OAuth 1 ou OAuth 2</li><li>Autenticação de token portador</li></ul> |
+| [!UICONTROL Nome do usuário] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Destinos] | Representa o número de fluxos de dados de destino exclusivos bem-sucedidos conectados às informações básicas criadas para um destino. |
+| [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Procurar] {#browse}
 
-O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Destinos com o **[!UICONTROL Ativado/Desativado]** Ativar ou ativar definir o destino como ativo ou inativo, respectivamente. Também é possível visualizar os destinos nos quais você tem dados fluindo selecionando **[!UICONTROL Segmentos]** > **[!UICONTROL Procurar]** e selecionar um segmento para inspecionar. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia Procurar:
+O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Destinos com o **[!UICONTROL Ativado/Desativado]** Ativar ou ativar definir o destino como ativo ou inativo, respectivamente. Também é possível visualizar os destinos nos quais você tem dados fluindo selecionando **[!UICONTROL Segmentos]** > **[!UICONTROL Procurar]** e selecionar um segmento para inspecionar. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino no [!UICONTROL Procurar] guia :
 
 >[!TIP]
 >

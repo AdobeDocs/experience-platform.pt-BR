@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como excluir fluxos de dados de lote e fluxo usando a API do Serviço de fluxo.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 2%
@@ -15,34 +15,34 @@ ht-degree: 2%
 
 # Excluir um fluxo de dados usando a API do Serviço de fluxo
 
-Você pode excluir fluxos de dados em lote e de fluxo que contenham erros ou que se tornaram obsoletos usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Você pode excluir fluxos de dados de lote e fluxo que contenham erros ou que se tornaram obsoletos usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Este tutorial aborda as etapas para excluir fluxos de dados feitos com fontes em lote e de transmissão usando [!DNL Flow Service].
+Este tutorial aborda as etapas para excluir fluxos de dados feitos com fontes de lote e fluxo contínuo usando [!DNL Flow Service].
 
 ## Introdução
 
-Este tutorial requer uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione o conector de escolha na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione o conector escolhido na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
 Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito um fluxo de dados usando a API [!DNL Flow Service].
+As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito um fluxo de dados usando o [!DNL Flow Service] API.
 
 ### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -52,7 +52,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 ## Excluir um fluxo de dados
 
-Com uma ID de fluxo existente, é possível excluir um fluxo de dados executando uma solicitação de DELETE para a API [!DNL Flow Service].
+Com uma ID de fluxo existente, é possível excluir um fluxo de dados executando uma solicitação de DELETE para a [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -62,13 +62,13 @@ DELETE /flows/{FLOW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FLOW_ID}` | O valor exclusivo `id` para o fluxo de dados que você deseja excluir. |
+| `{FLOW_ID}` | O único `id` para o fluxo de dados que deseja excluir. |
 
 **Solicitação**
 
 ```shell
 curl -X DELETE \
-    'https://platform-int.adobe.io/data/foundation/flowservice/flows/20c115bc-46e3-40f3-bfe9-fb25abe4ba76' \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/20c115bc-46e3-40f3-bfe9-fb25abe4ba76' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -81,6 +81,6 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo e
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com sucesso a API [!DNL Flow Service] para excluir um fluxo de dados existente.
+Ao seguir este tutorial, você usou com sucesso a variável [!DNL Flow Service] API para excluir um fluxo de dados existente.
 
-Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [excluir fluxos de dados na interface do usuário](../../tutorials/ui/delete.md)
+Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface do usuário](../../tutorials/ui/delete.md)

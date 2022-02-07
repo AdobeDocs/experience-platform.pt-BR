@@ -5,18 +5,18 @@ solution: Experience Platform
 title: Notificações de Execução de Fluxo
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
 
 # Notificações de execução de fluxo
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[[!DNL Flow Service] A APIs do ](https://www.adobe.io/experience-platform-apis/references/flow-service/) é usada para coletar e centralizar dados do cliente de várias fontes diferentes no  [!DNL Platform]. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) é usada para coletar e centralizar dados do cliente de várias fontes diferentes no [!DNL Platform]. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
 Com Adobe I/O Events, você pode assinar eventos e usar webhooks para receber notificações sobre o status de suas execuções de fluxo. Essas notificações contêm informações sobre o sucesso de sua execução de fluxo ou erros que contribuíram para uma falha de execução.
 
@@ -24,19 +24,19 @@ Este documento fornece etapas sobre como se inscrever em eventos, registrar webh
 
 ## Introdução
 
-Este tutorial pressupõe que você já criou pelo menos uma conexão de origem cujo fluxo é executado e deseja monitorar. Se você ainda não tiver configurado uma conexão de origem, comece visitando a [visão geral das fontes](./home.md) para configurar a fonte de sua escolha antes de retornar a este guia.
+Este tutorial pressupõe que você já criou pelo menos uma conexão de origem cujo fluxo é executado e deseja monitorar. Se ainda não tiver configurado uma conexão de origem, comece visitando a [visão geral das fontes](./home.md) para configurar a fonte de sua escolha antes de retornar a este guia.
 
-Este documento também requer uma compreensão funcional de webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [[!DNL I/O Events] documentação](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obter uma introdução aos webhooks.
+Este documento também requer uma compreensão funcional de webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [[!DNL I/O Events] documentação](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para uma introdução aos webhooks.
 
 ## Registrar um webhook para notificações de execução de fluxo
 
-Para receber notificações de execução de fluxo, você deve usar o Console do desenvolvedor do Adobe para registrar um webhook em sua integração [!DNL Experience Platform].
+Para receber notificações de execução de fluxo, você deve usar o Console do desenvolvedor do Adobe para registrar um webhook em seu [!DNL Experience Platform] integração.
 
-Siga o tutorial em [assinar [!DNL I/O Event] notificações](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
+Siga o tutorial em [assinando notificações do [!DNL I/O Event]](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
->Durante o processo de assinatura, selecione **[!UICONTROL Platform notifications]** como o provedor de eventos e selecione as seguintes assinaturas de eventos:
+>Durante o processo de assinatura, certifique-se de selecionar **[!UICONTROL Notificações da plataforma]** como provedor de eventos e selecione as seguintes assinaturas de eventos:
 >
 >* **[!UICONTROL Êxito na Execução do Fluxo da Fonte de Experience Platform]**
 >* **[!UICONTROL Falha na Execução de Fluxo da Fonte Experience Platform]**
@@ -50,11 +50,11 @@ Uma notificação retorna informações como o número de trabalhos de assimila�
 
 >[!IMPORTANT]
 >
->Se a assimilação parcial estiver ativada durante o processo de criação do fluxo, um fluxo que contém assimilações bem-sucedidas e com falha será marcado como `sources_flow_run_success` somente se o número de erros estiver abaixo da porcentagem de limite de erro definida durante o processo de criação do fluxo. Se uma execução de fluxo bem-sucedida contiver erros, esses erros ainda serão incluídos como parte da carga útil de retorno.
+>Se a assimilação parcial estiver ativada durante o processo de criação do fluxo, um fluxo que contenha assimilações bem-sucedidas e com falha será marcado como `sources_flow_run_success` somente se o número de erros estiver abaixo da porcentagem do limite de erro definida durante o processo de criação de fluxo. Se uma execução de fluxo bem-sucedida contiver erros, esses erros ainda serão incluídos como parte da carga útil de retorno.
 
 ### Sucesso
 
-Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem as características de uma execução de fluxo específica e `activities` que descrevem como os dados são transformados.
+Uma resposta bem-sucedida retorna um conjunto de `metrics` que definam características de um fluxo específico e `activities` que descrevem como os dados são transformados.
 
 ```json
 {
@@ -147,7 +147,7 @@ Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem as caract
           "outputFileCount": 10,
           "extensions": {
             "manifest": {
-              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
+              "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
             }
           }
         },
@@ -313,11 +313,11 @@ A resposta a seguir é um exemplo de falha na execução do fluxo, com um erro o
 
 >[!NOTE]
 >
->Consulte o [apêndice](#errors) para obter mais informações sobre mensagens de erro.
+>Consulte a [apêndice](#errors) para obter mais informações sobre mensagens de erro.
 
 ## Próximas etapas
 
-Agora é possível assinar eventos que permitem receber notificações em tempo real nos status de execução de fluxo. Para obter mais informações sobre execuções e fontes de fluxo, consulte a [visão geral das fontes](./home.md).
+Agora é possível assinar eventos que permitem receber notificações em tempo real nos status de execução de fluxo. Para obter mais informações sobre execuções e fontes de fluxo, consulte o [visão geral das fontes](./home.md).
 
 ## Apêndice
 
@@ -325,9 +325,9 @@ As seções a seguir fornecem informações adicionais para trabalhar com notifi
 
 ### Noções básicas sobre mensagens de erro {#errors}
 
-Erros de assimilação podem ocorrer quando os dados estão sendo copiados da fonte ou quando os dados copiados estão sendo processados para [!DNL Platform]. Consulte a tabela abaixo para obter mais informações sobre erros específicos.
+Erros de assimilação podem ocorrer quando os dados estão sendo copiados da fonte ou quando os dados copiados estão sendo processados para o [!DNL Platform]. Consulte a tabela abaixo para obter mais informações sobre erros específicos.
 
 | Erro | Descrição |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Ocorreu um erro ao copiar dados de uma origem. |
-| `CONNECTOR-2001-500` | Ocorreu um erro ao processar dados copiados para [!DNL Platform]. Esse erro pode ser relacionado à análise, validação ou transformação. |
+| `CONNECTOR-2001-500` | Ocorreu um erro ao processar os dados copiados para o [!DNL Platform]. Esse erro pode ser relacionado à análise, validação ou transformação. |

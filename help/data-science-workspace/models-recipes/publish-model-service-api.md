@@ -6,11 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda o processo de publicação de um modelo como um serviço usando a API de aprendizado de máquina do Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-translation-type: tm+mt
-source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '1516'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -20,11 +19,11 @@ Este tutorial aborda o processo de publicação de um modelo como um serviço us
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional do Adobe Experience Platform Data Science Workspace. Antes de iniciar este tutorial, revise a [Visão geral do Data Science Workspace](../home.md) para obter uma introdução de alto nível ao serviço.
+Este tutorial requer uma compreensão funcional do Adobe Experience Platform Data Science Workspace. Antes de iniciar este tutorial, reveja o [Visão geral do Data Science Workspace](../home.md) para uma introdução de alto nível ao serviço.
 
-Para acompanhar este tutorial, você deve ter um Mecanismo ML, Instância ML e Experimento existentes. Para obter etapas sobre como criá-las na API, consulte o tutorial em [importar uma receita empacotada](./import-packaged-recipe-api.md).
+Para acompanhar este tutorial, você deve ter um Mecanismo ML, Instância ML e Experimento existentes. Para obter etapas sobre como criá-las na API, consulte o tutorial em [importação de uma receita empacotada](./import-packaged-recipe-api.md).
 
-Finalmente, antes de iniciar este tutorial, reveja a seção [introdução](../api/getting-started.md) do guia do desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Sensei Machine Learning], incluindo os cabeçalhos necessários usados neste tutorial:
+Por fim, antes de iniciar este tutorial, reveja o [introdução](../api/getting-started.md) seção do guia do desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas para o [!DNL Sensei Machine Learning] API, incluindo os cabeçalhos necessários usados neste tutorial:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -40,7 +39,7 @@ A tabela a seguir descreve alguns termos comuns usados neste tutorial:
 
 | Termo | Definição |
 | --- | --- |
-| **Instância de Aprendizagem de Máquina (Instância ML)** | Uma instância de um mecanismo [!DNL Sensei] para um locatário específico, contendo dados, parâmetros e código [!DNL Sensei] específicos. |
+| **Instância de Aprendizagem de Máquina (Instância ML)** | Uma instância de um [!DNL Sensei] Mecanismo para um determinado locatário, contendo dados, parâmetros específicos e [!DNL Sensei] código. |
 | **Experimento** | Uma entidade-guarda-chuva para realizar treinamentos Execuções de Experimento, pontuação de Execuções de Experimento, ou ambos. |
 | **Experimento agendado** | Um termo para descrever a automação de treinamentos ou pontuação de Execuções de Experimento, regido por um agendamento definido pelo usuário. |
 | **Execução do experimento** | Um exemplo específico de treinamento ou experiência de pontuação. Execuções de vários experimentos de um determinado experimento podem diferir nos valores do conjunto de dados usados para treinamento ou pontuação. |
@@ -84,11 +83,11 @@ curl -X POST
 
 | Propriedade | Descrição |
 | --- | --- |
-| `mlInstanceId` | Identificação de Instância ML existente, a Execução de Experiência de Treinamento usada para criar o Serviço ML deve corresponder a esta Instância ML específica. |
+| `mlInstanceId` | Identificação de Instância ML existente, a Experiência de Treinamento usada para criar o Serviço ML deve corresponder a essa Instância ML específica. |
 | `trainingExperimentId` | Identificação de experimento correspondente à identificação da Instância ML. |
 | `trainingExperimentRunId` | Um Experimento de Treinamento específico a ser usado para publicar o Serviço ML. |
 | `scoringDataSetId` | Identificação que se refere ao conjunto de dados específico a ser usado para execuções de experimento de pontuação programadas. |
-| `scoringTimeframe` | Um valor Integer representando minutos para filtrar dados a serem usados para pontuar Execuções de Experimento. Por exemplo, um valor `10080` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para cada execução de experimento de pontuação agendada. Observe que um valor `0` não filtrará dados, todos os dados no conjunto de dados são usados para pontuação. |
+| `scoringTimeframe` | Um valor Integer representando minutos para filtrar dados a serem usados para pontuar Execuções de Experimento. Por exemplo, um valor de `10080` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para cada execução de experiência de pontuação programada. Observe que um valor de `0` não filtrará dados, todos os dados no conjunto de dados serão usados para pontuação. |
 | `scoringSchedule` | Contém detalhes sobre a pontuação programada de Execuções de Experimento. |
 | `scoringSchedule.startTime` | Data e hora que indica quando iniciar a pontuação. |
 | `scoringSchedule.endTime` | Data e hora que indica quando iniciar a pontuação. |
@@ -96,7 +95,7 @@ curl -X POST
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado, incluindo seu `id` exclusivo e `scoringExperimentId` para seu Experimento de pontuação correspondente.
+Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado, incluindo seu `id` e `scoringExperimentId` para seu Experimento de pontuação correspondente.
 
 
 ```JSON
@@ -131,7 +130,7 @@ Observe que um Serviço ML pode ser criado usando uma Instância ML sem agendar 
 
 ### Serviço ML com Experimento agendado para pontuação {#ml-service-with-scheduled-experiment-for-scoring}
 
-Você pode criar um Serviço ML publicando uma Instância ML com Execuções de Experimento Agendadas para pontuação, o que criará uma entidade de Experimento comum para treinamento. Uma Execução de Experimento de Treinamento é gerada e será usada para todas as Execuções de Experimento de Pontuação programadas. Certifique-se de que você tenha os `mlInstanceId`, `trainingDataSetId` e `scoringDataSetId` necessários para a criação do Serviço ML, e que eles existam e sejam valores válidos.
+Você pode criar um Serviço ML publicando uma Instância ML com Execuções de Experimento Agendadas para pontuação, o que criará uma entidade de Experimento comum para treinamento. Uma Execução de Experimento de Treinamento é gerada e será usada para todas as Execuções de Experimento de Pontuação programadas. Certifique-se de ter a variável `mlInstanceId`, `trainingDataSetId`e `scoringDataSetId` são necessários para a criação do Serviço ML e existem e são valores válidos.
 
 **Formato da API**
 
@@ -168,9 +167,9 @@ curl -X POST
 | --- | --- |
 | `mlInstanceId` | Identificação de Instância ML Existente, representando a Instância ML usada para criar o Serviço ML. |
 | `trainingDataSetId` | Identificação relativa ao conjunto de dados específico a utilizar para o Experimento de Formação. |
-| `trainingTimeframe` | Um valor Integer que representa minutos para filtrar dados a serem usados para treinamento de Experimento. Por exemplo, um valor `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para a Execução do Experimento de treinamento. Observe que um valor `"0"` não filtrará dados, todos os dados no conjunto de dados são usados para treinamento. |
+| `trainingTimeframe` | Um valor Integer que representa minutos para filtrar dados a serem usados para treinamento de Experimento. Por exemplo, um valor de `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão utilizados para a Execução do Experimento de Treinamento. Observe que um valor de `"0"` não filtrará dados, todos os dados no conjunto de dados serão usados para treinamento. |
 | `scoringDataSetId` | Identificação que se refere ao conjunto de dados específico a ser usado para execuções de experimento de pontuação programadas. |
-| `scoringTimeframe` | Um valor Integer representando minutos para filtrar dados a serem usados para pontuar Execuções de Experimento. Por exemplo, um valor `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para cada execução de experimento de pontuação agendada. Observe que um valor `"0"` não filtrará dados, todos os dados no conjunto de dados são usados para pontuação. |
+| `scoringTimeframe` | Um valor Integer representando minutos para filtrar dados a serem usados para pontuar Execuções de Experimento. Por exemplo, um valor de `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para cada execução de experiência de pontuação programada. Observe que um valor de `"0"` não filtrará dados, todos os dados no conjunto de dados serão usados para pontuação. |
 | `scoringSchedule` | Contém detalhes sobre a pontuação programada de Execuções de Experimento. |
 | `scoringSchedule.startTime` | Data e hora que indica quando iniciar a pontuação. |
 | `scoringSchedule.endTime` | Data e hora que indica quando iniciar a pontuação. |
@@ -178,7 +177,7 @@ curl -X POST
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado. Isso inclui o `id` exclusivo do serviço, bem como `trainingExperimentId` e `scoringExperimentId` para seus Experimentos de treinamento e pontuação correspondentes, respectivamente.
+Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado. Isso inclui a `id`, bem como a `trainingExperimentId` e `scoringExperimentId` para seus Experimentos de treinamento e pontuação correspondentes, respectivamente.
 
 ```JSON
 {
@@ -215,7 +214,7 @@ POST /mlServices
 **Solicitação**
 
 ```SHELL
-curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices' 
+curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
   -H 'x-gw-ims-org-id: {IMS_ORG}' 
@@ -245,9 +244,9 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 | --- | --- |
 | `mlInstanceId` | Identificação de Instância ML Existente, representando a Instância ML usada para criar o Serviço ML. |
 | `trainingDataSetId` | Identificação relativa ao conjunto de dados específico a utilizar para o Experimento de Formação. |
-| `trainingTimeframe` | Um valor Integer que representa minutos para filtrar dados a serem usados para treinamento de Experimento. Por exemplo, um valor `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para a Execução do Experimento de treinamento. Observe que um valor `"0"` não filtrará dados, todos os dados no conjunto de dados são usados para treinamento. |
+| `trainingTimeframe` | Um valor Integer que representa minutos para filtrar dados a serem usados para treinamento de Experimento. Por exemplo, um valor de `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão utilizados para a Execução do Experimento de Treinamento. Observe que um valor de `"0"` não filtrará dados, todos os dados no conjunto de dados serão usados para treinamento. |
 | `scoringDataSetId` | Identificação que se refere ao conjunto de dados específico a ser usado para execuções de experimento de pontuação programadas. |
-| `scoringTimeframe` | Um valor Integer representando minutos para filtrar dados a serem usados para pontuar Execuções de Experimento. Por exemplo, um valor `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para cada execução de experimento de pontuação agendada. Observe que um valor `"0"` não filtrará dados, todos os dados no conjunto de dados são usados para pontuação. |
+| `scoringTimeframe` | Um valor Integer representando minutos para filtrar dados a serem usados para pontuar Execuções de Experimento. Por exemplo, um valor de `"10080"` significa que os dados dos últimos 10080 minutos ou 168 horas serão usados para cada execução de experiência de pontuação programada. Observe que um valor de `"0"` não filtrará dados, todos os dados no conjunto de dados serão usados para pontuação. |
 | `trainingSchedule` | Contém detalhes sobre execuções de experiência de treinamento programadas. |
 | `scoringSchedule` | Contém detalhes sobre a pontuação programada de Execuções de Experimento. |
 | `scoringSchedule.startTime` | Data e hora que indica quando iniciar a pontuação. |
@@ -256,7 +255,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado. Isso inclui o `id` exclusivo do serviço, bem como os `trainingExperimentId` e `scoringExperimentId` de seus Experimentos de treinamento e pontuação correspondentes, respectivamente. No exemplo de resposta abaixo, a presença de `trainingSchedule` e `scoringSchedule` sugere que as entidades de Experimento para treinamento e pontuação são Experimentos programados.
+Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado. Isso inclui a `id`, bem como a `trainingExperimentId` e `scoringExperimentId` dos Experimentos de treinamento e pontuação correspondentes, respectivamente. Na resposta de exemplo abaixo, a presença de `trainingSchedule` e `scoringSchedule` sugere que as entidades de Experimento para treinamento e pontuação são Experimentos programados.
 
 ```JSON
 {
@@ -287,7 +286,7 @@ Uma resposta bem-sucedida retorna os detalhes do Serviço ML recém-criado. Isso
 
 ## Procurar um Serviço ML {#retrieving-ml-services}
 
-Você pode procurar um Serviço ML existente fazendo uma solicitação `GET` para `/mlServices` e fornecendo o `id` exclusivo do Serviço ML no caminho.
+Você pode procurar um Serviço ML existente fazendo uma `GET` solicitar `/mlServices` e fornecendo `id` do Serviço ML no caminho.
 
 **Formato da API**
 
@@ -297,7 +296,7 @@ GET /mlServices/{SERVICE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SERVICE_ID}` | O `id` exclusivo do Serviço ML que está a procurar. |
+| `{SERVICE_ID}` | O único `id` do Serviço ML que está a procurar. |
 
 **Solicitação**
 
@@ -342,12 +341,12 @@ Uma resposta bem-sucedida retorna os detalhes do Serviço ML.
 
 >[!NOTE]
 >
->A recuperação de diferentes serviços ML pode retornar uma resposta com mais ou menos pares de valores chave. A resposta acima é uma representação de um [ML Service com treinamento agendado e pontuação de Execuções de Experimento](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>A recuperação de diferentes serviços ML pode retornar uma resposta com mais ou menos pares de valores chave. A resposta acima é uma representação de um [Serviço ML com treinamento agendado e execução de experiência de pontuação](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Agendar treinamento ou pontuação
 
-Se quiser agendar pontuação e treinamento em um Serviço ML já publicado, atualize o Serviço ML existente com uma solicitação `PUT` em `/mlServices`.
+Se quiser agendar a pontuação e o treinamento em um Serviço ML já publicado, poderá fazer isso atualizando o Serviço ML existente com um `PUT` solicitação em `/mlServices`.
 
 **Formato da API**
 
@@ -357,11 +356,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SERVICE_ID}` | O `id` exclusivo do Serviço ML que está a atualizar. |
+| `{SERVICE_ID}` | O único `id` do Serviço ML que está a atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir agenda o treinamento e a pontuação de um Serviço ML existente, adicionando as chaves `trainingSchedule` e `scoringSchedule` com suas respectivas chaves `startTime`, `endTime` e `cron`.
+A solicitação a seguir agendará o treinamento e a pontuação de um Serviço ML existente, adicionando o `trainingSchedule` e `scoringSchedule` chaves com suas respectivas `startTime`, `endTime`e `cron` chaves.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -394,7 +393,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Não tente modificar o `startTime` em treinamentos programados e tarefas de pontuação existentes. Se `startTime` precisar ser modificado, considere publicar o mesmo Modelo e reagendar o treinamento e as tarefas de pontuação.
+>Não tente modificar o `startTime` sobre os atuais trabalhos de treinamento e pontuação programados. Se a variável `startTime` deve ser modificado, considere publicar o mesmo Modelo e reagendar o treinamento e as tarefas de pontuação.
 
 **Resposta**
 

@@ -2,9 +2,9 @@
 title: Configuração de segredos no encaminhamento de eventos
 description: Saiba como configurar segredos na interface do usuário da coleção de dados para autenticar em endpoints usados em propriedades de encaminhamento de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Você pode tentar novamente ou atualizar uma troca secreta na tela de edição. 
 | Tipo de segredo | Repetir protocolo |
 | --- | --- |
 | [!UICONTROL Token] | Selecionar **[!UICONTROL Exchange Secret]** para tentar novamente a troca secreta. Esse controle só está disponível quando há um ambiente anexado ao segredo. |
-| [!UICONTROL HTTP] | Se não houver nenhum ambiente anexado ao segredo, selecione **[!UICONTROL Exchange Secret]** para trocar a credencial para base64. Se um ambiente estiver anexado, selecione Selecionar **[!UICONTROL Trocar e Implantar Segredo]** para trocar para base64 e implantar o segredo para Cloudfare. |
+| [!UICONTROL HTTP] | Se não houver nenhum ambiente anexado ao segredo, selecione **[!UICONTROL Exchange Secret]** para trocar a credencial para base64. Se um ambiente estiver anexado, selecione Selecionar **[!UICONTROL Trocar e Implantar Segredo]** para trocar para base64 e implantar o segredo. |
 | [!UICONTROL OAuth2] | Selecionar **[!UICONTROL Gerar token]** para trocar as credenciais e retornar um token de acesso do provedor de autenticação. |
 
 ## Excluir um segredo

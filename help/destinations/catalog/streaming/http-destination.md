@@ -3,9 +3,9 @@ keywords: transmissão contínua;
 title: Conexão da API HTTP
 description: O destino da API HTTP no Adobe Experience Platform permite enviar dados do perfil para pontos de extremidade HTTP de terceiros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
+source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '1274'
 ht-degree: 1%
 
 ---
@@ -87,21 +87,51 @@ Consulte [Ativar dados do público-alvo para destinos de exportação de perfil 
 
 No [[!UICONTROL Selecionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes) , o Adobe recomenda selecionar um identificador exclusivo de [schema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que deseja exportar para o destino.
 
+## Considerações sobre o produto {#product-considerations}
+
+O Experience Platform não faz o stream de dados para pontos de extremidade HTTP por meio de um conjunto fixo de IPs estáticos. Portanto, o Adobe não pode fornecer uma lista de IPs estáticos que você pode lista de permissões para o destino da API HTTP.
+
 ## Comportamento de exportação de perfil {#profile-export-behavior}
 
 O Experience Platform otimiza o comportamento de exportação do perfil para o destino da API HTTP, a fim de exportar apenas dados para o ponto de extremidade da API quando ocorrerem atualizações relevantes para um perfil após a qualificação de segmento ou outros eventos significativos. Os perfis são exportados para o seu destino nas seguintes situações:
 
-* A atualização de perfil foi acionada por uma alteração na associação de segmento para pelo menos um dos segmentos mapeados para o destino. Por exemplo, o perfil se qualificou para um dos segmentos mapeados para o destino ou saiu de um dos segmentos mapeados para o destino.
-* A atualização do perfil foi acionada por uma alteração no [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md). Por exemplo, um perfil que já se qualificou para um dos segmentos mapeados para o destino foi adicionado a uma nova identidade no atributo do mapa de identidade.
-* A atualização do perfil foi acionada por uma alteração em atributos para pelo menos um dos atributos mapeados para o destino. Por exemplo, um dos atributos mapeados para o destino na etapa de mapeamento é adicionado a um perfil.
+* A atualização de perfil foi determinada por uma alteração na associação de segmento para pelo menos um dos segmentos mapeados para o destino. Por exemplo, o perfil se qualificou para um dos segmentos mapeados para o destino ou saiu de um dos segmentos mapeados para o destino.
+* A atualização do perfil foi determinada por uma alteração no [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md). Por exemplo, um perfil que já se qualificou para um dos segmentos mapeados para o destino foi adicionado a uma nova identidade no atributo do mapa de identidade.
+* A atualização do perfil foi determinada por uma alteração nos atributos para pelo menos um dos atributos mapeados para o destino. Por exemplo, um dos atributos mapeados para o destino na etapa de mapeamento é adicionado a um perfil.
 
 Em todos os casos descritos acima, somente os perfis onde as atualizações relevantes ocorreram são exportados para o seu destino. Por exemplo, se um segmento mapeado para o fluxo de destino tiver cem membros e cinco novos perfis se qualificarem para o segmento, a exportação para o seu destino será incremental e incluirá apenas os cinco novos perfis.
 
 Observe que todos os atributos mapeados são exportados para um perfil, independentemente de onde as alterações se encontrem. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
 
+### O que determina uma atualização e o que é incluído na exportação {#what-determines-export-what-is-included}
+
+Com relação aos dados exportados para um determinado perfil, é importante entender os dois conceitos diferentes de *o que determina uma exportação de dados para o destino da API HTTP* e *que dados estão incluídos na exportação*.
+
+| O que determina uma exportação de destino | O que está incluído na exportação de destino |
+|---------|----------|
+| <ul><li>Atributos e segmentos mapeados servem como dica para uma atualização de destino. Isso significa que, se qualquer segmento mapeado alterar estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas no momento para destinos da API HTTP, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>Todos os segmentos (com o status de associação mais recente), independentemente de estarem ou não mapeados no fluxo de dados, são incluídos na variável `segmentMembership` objeto.</li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade no destino da API HTTP).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;}
+
+Por exemplo, considere esse fluxo de dados como um destino HTTP, onde três segmentos são selecionados no fluxo de dados e quatro atributos são mapeados para o destino.
+
+![Fluxo de dados de destino da API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+<!--
+
+![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
+
+![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
+
+-->
+
+Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles. Se um perfil se qualificar para o segmento Cliente com Carros coreanos, mas também for membro do filme &quot;Voltar ao futuro&quot; assistido e dos segmentos de fãs de ficção científica, esses dois outros segmentos também estarão presentes `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados.
+
+Do ponto de vista dos atributos do perfil, qualquer alteração nos quatro atributos mapeados acima determinará uma exportação de destino e qualquer um dos quatro atributos mapeados presentes no perfil estará presente na exportação de dados.
+
 ## Dados exportados {#exported-data}
 
-Seu exportado [!DNL Experience Platform] os dados chegam ao seu [!DNL HTTP] destino no formato JSON. Por exemplo, a exportação abaixo contém um perfil que se qualificou para um determinado segmento e saiu de outro segmento, e inclui o nome do atributo de perfil, o sobrenome, a data de nascimento e o endereço de email pessoal. As identidades desse perfil são ECID e email.
+Seu exportado [!DNL Experience Platform] os dados chegam ao seu [!DNL HTTP] destino no formato JSON. Por exemplo, a exportação abaixo contém um perfil que se qualificou para um determinado segmento, é um membro de outros dois segmentos e saiu de outro segmento. A exportação também inclui o atributo de perfil nome, sobrenome, data de nascimento e endereço de email pessoal. As identidades desse perfil são ECID e email.
 
 ```json
 {
@@ -116,17 +146,25 @@ Seu exportado [!DNL Experience Platform] os dados chegam ao seu [!DNL HTTP] dest
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {

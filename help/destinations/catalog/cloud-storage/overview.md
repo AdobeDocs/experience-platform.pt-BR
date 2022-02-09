@@ -3,7 +3,7 @@ keywords: destino de armazenamento na nuvem; armazenamento na nuvem
 title: Visão geral dos destinos de armazenamento na nuvem
 description: A Adobe Experience Platform pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamento em nuvem Amazon S3, AWS Kinesis, Hubs de eventos do Azure ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -33,7 +33,7 @@ O Adobe Experience Platform é compatível com os seguintes destinos de armazena
 Para enviar segmentos para destinos de armazenamento em nuvem para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
 
 
-## Usar macros para criar uma pasta no local de armazenamento {#use-macros}
+## Use macros para criar uma pasta no seu local de armazenamento {#use-macros}
 
 >[!NOTE]
 >

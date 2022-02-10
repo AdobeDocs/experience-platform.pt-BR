@@ -5,7 +5,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Snowflake usando a interface do usuário do Adobe Experience Platform.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Para acessar a conta do Snowflake em [!DNL Platform], você deve fornecer o segu
 | Senha | A senha do [!DNL Snowflake] conta do usuário. |
 | Cadeia de conexão | A cadeia de conexão usada para se conectar ao seu [!DNL Snowflake] instância. O padrão da string de conexão para [!DNL Snowflake] é `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
-Para obter mais informações sobre esses valores, consulte [este documento de Snowflake](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+Para obter mais informações sobre esses valores, consulte [este documento de Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Conecte sua conta do Snowflake
 

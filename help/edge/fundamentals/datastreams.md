@@ -3,9 +3,9 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os fluxos de dados. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: d3f1a6a5f3f10b8ccbe73ebc744dc60bbbf1bb07
+source-git-commit: 012ebbadc7149747df1414360eca6451836d6bbc
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ As configurações listadas aqui permitem enviar dados para o Adobe Experience P
 
 | Campo | Descrição |
 | --- | --- |
-| [!UICONTROL Sandbox] | **(Obrigatório)** Selecione a sandbox da Platform para a qual deseja enviar dados. As sandboxes são partições virtuais no Adobe Experience Platform que permitem isolar seus dados e implementações de outras pessoas na organização. Para obter mais detalhes sobre como elas funcionam, consulte a [documentação das sandboxes](../../sandboxes/home.md). |
+| [!UICONTROL Sandbox] | **(Obrigatório)** Selecione a sandbox da Platform para a qual deseja enviar dados. As sandboxes são partições virtuais no Adobe Experience Platform que permitem isolar seus dados e implementações de outras pessoas na organização.<br><br>Depois que um conjunto de dados é criado, sua sandbox não pode ser alterada. O [!UICONTROL Sandbox] portanto, o campo de seleção não está disponível ao editar um armazenamento de dados existente.<br><br>Para obter mais detalhes sobre a função das sandboxes no Experience Platform, consulte o [documentação das sandboxes](../../sandboxes/home.md). |
 | [!UICONTROL Conjunto de dados do evento] | **(Obrigatório)** Selecione o conjunto de dados da plataforma para o qual os dados do evento do cliente serão transmitidos. Esse schema deve usar o [Classe XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Conjunto de dados de perfil] | Selecione o conjunto de dados da plataforma para o qual os dados do atributo do cliente serão enviados. Esse schema deve usar o [Classe de perfil individual XDM](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Marque essa caixa de seleção para ativar o Offer Decisioning para uma implementação do SDK da Web da plataforma. Consulte o guia sobre [uso do Offer Decisioning com o SDK da Web da plataforma](../personalization/offer-decisioning/offer-decisioning-overview.md) para obter mais detalhes sobre a implementação. Para obter mais informações sobre recursos do Offer Decisioning, consulte [Documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=pt-BR). |

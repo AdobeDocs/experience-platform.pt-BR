@@ -1,26 +1,25 @@
 ---
 keywords: Experience Platform; Pontuar um modelo; Data Science Workspace; tópicos populares; api de aprendizado de máquina do sensei
 solution: Experience Platform
-title: Pontuação de um modelo usando a API de aprendizado de máquina do Sensei
+title: Pontuar um modelo usando a API de aprendizado de máquina do Sensei
 topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial mostrará como aproveitar as APIs de aprendizado de máquina do Sensei para criar um experimento e uma execução de experimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
 
-# Pontuar um modelo usando o [!DNL Sensei Machine Learning API]
+# Pontuação de um modelo usando a [!DNL Sensei Machine Learning API]
 
-Este tutorial mostrará como aproveitar as APIs para criar um Experimento e uma Execução de Experimento. Para obter uma lista detalhada da documentação da API, consulte [este documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Este tutorial mostrará como aproveitar as APIs para criar um Experimento e uma Execução de Experimento. Para obter uma lista de todos os endpoints na API do Sensei Machine Learning, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Criar um Experimento agendado para pontuação
 
-Semelhante aos Experimentos agendados para treinamento, a criação de um Experimento agendado para pontuação também é feita ao incluir uma seção `template` no parâmetro body . Além disso, o campo `name` em `tasks` no corpo é definido como `score`.
+Semelhante aos Experimentos programados para treinamento, a criação de um Experimento programado para pontuação também é feita ao incluir um `template` para o parâmetro body . Além disso, a variável `name` campo sob `tasks` no corpo é definido como `score`.
 
 Este é um exemplo de criação de um Experimento que será executado a cada 20 minutos a partir de `startTime` e será executado até `endTime`.
 
@@ -110,7 +109,7 @@ A resposta a seguir é após criar o Experimento agendado.
 
 ### Criar uma execução de experimento para pontuação
 
-Agora, com o modelo treinado, podemos criar uma Execução de experiência para pontuação. O valor do parâmetro `modelId` é o parâmetro `id` retornado na solicitação de Modelo do GET acima.
+Agora, com o modelo treinado, podemos criar uma Execução de experiência para pontuação. O valor da variável `modelId` é o parâmetro `id` parâmetro retornado na solicitação do GET Model acima.
 
 **Solicitação**
 
@@ -219,7 +218,7 @@ Como há várias execuções de experimento para um experimento específico, a r
 
 ### Parar e excluir um experimento programado
 
-Se você quiser interromper a execução de um Experimento agendado antes de seu `endTime`, isso pode ser feito consultando uma solicitação de DELETE para o `{EXPERIMENT_ID}`
+Se você deseja interromper a execução de um Experimento programado antes de seu `endTime`, isso pode ser feito consultando uma solicitação DELETE para a variável `{EXPERIMENT_ID}`
 
 **Solicitação**
 

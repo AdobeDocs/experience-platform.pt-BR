@@ -3,10 +3,10 @@ keywords: personalização, personalização
 title: Visão geral dos destinos de personalização
 description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os profissionais de marketing a navegar em dados anônimos, veiculando ofertas ou anúncios em prospetos com base em atividades anteriores ou como parte de segmentos de público-alvo com hábitos semelhantes.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 10%
+source-wordcount: '143'
+ht-degree: 11%
 
 ---
 
@@ -22,8 +22,8 @@ Atualmente, a Platform oferece suporte aos destinos de personalização listados
 
 **Conexões**
 
-* [(Beta) Adobe Target](adobe-target-connection.md)
-* [(Beta) Conexão de personalização personalizada](custom-personalization.md)
+* [Adobe Target](adobe-target-connection.md)
+* [Conexão de personalização personalizada](custom-personalization.md)
 
 **Extensões**
 

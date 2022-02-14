@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe XDM ExperienceEvent e práticas recomendadas para modelagem de dados de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -118,6 +118,10 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com a
 | `directMarketing.emailDelivered` | Um email foi entregue com êxito ao serviço de email da pessoa |
 | `directMarketing.emailOpened` | Uma pessoa abriu um email de marketing. |
 | `directMarketing.emailUnsubscribed` | Uma pessoa cancelou a assinatura de um email de marketing. |
+| `inappmessageTracking.dismiss` | Uma mensagem no aplicativo foi ignorada. |
+| `inappmessageTracking.display` | Uma mensagem no aplicativo foi exibida. |
+| `inappmessageTracking.interact` | Uma mensagem no aplicativo foi interagida com o . |
+| `leadOperation.callWebhook` | Um webhook foi chamado em resposta a um cliente potencial. |
 | `leadOperation.convertLead` | Um lead foi convertido. |
 | `leadOperation.interestingMoment` | Um momento interessante foi gravado para uma pessoa. |
 | `leadOperation.newLead` | Um lead foi criado. |

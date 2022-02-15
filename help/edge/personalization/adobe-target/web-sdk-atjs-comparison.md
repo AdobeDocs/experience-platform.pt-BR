@@ -1,10 +1,10 @@
 ---
-title: Comparação da at.js com o SDK da Web da plataforma
-description: Saiba como os recursos da at.js se comparam aos SDKs da Web
+title: Comparação da at.js com o SDK da Web do Experience Platform
+description: Saiba como os recursos da at.js se comparam ao SDK da Web do Experience Platform
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema; diagrama do sistema; diagrama
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 6%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-O SDK da WEB da AEP envia automaticamente uma notificação com as ofertas que foram executadas pelo SDK da WEB. Este é um exemplo de como a carga da solicitação de notificação se parece com:
+O SDK da Web do Experience Platform envia automaticamente uma notificação com as ofertas que foram executadas pelo SDK da WEB. Este é um exemplo de como a carga da solicitação de notificação se parece com:
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Uso do SDK da Web
 
-Para acionar ou sinalizar uma alteração de exibição de aplicativo de página única, defina a variável `web.webPageDetails.viewName` propriedade sob o `xdm` da `sendEvent` comando. O SDK da WEB da AEP verificará o cache de exibição, se houver ofertas para o `viewName` especificado em `sendEvent` ele os executará e enviará um evento de notificação de exibição.
+Para acionar ou sinalizar uma alteração de exibição de aplicativo de página única, defina a variável `web.webPageDetails.viewName` propriedade sob o `xdm` da `sendEvent` comando. O SDK da Web verificará o cache de exibição, se houver ofertas para o `viewName` especificado em `sendEvent` ele os executará e enviará um evento de notificação de exibição.
 
 **Exemplo**
 

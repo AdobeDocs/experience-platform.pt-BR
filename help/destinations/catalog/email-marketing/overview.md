@@ -4,7 +4,7 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como para enviar campanhas de email promocionais.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como enviar campanhas de email promocionais. O Adobe Experience Platform integra-se com ESPs permitindo ativar segmentos para destinos de marketing por email.
 
-A Platform exporta seus segmentos como arquivos `.csv` e os entrega no local desejado. Programe sua importação de dados na sua plataforma de marketing por email a partir do local de armazenamento habilitado em [!DNL Platform]. O processo para importar dados varia de acordo com cada parceiro. Leia os artigos de destinos individuais para obter mais informações.
+A plataforma exporta seus segmentos como `.csv` Os arquivos e os entrega no local desejado. Programe sua importação de dados na sua plataforma de marketing por email a partir do local de armazenamento habilitado em [!DNL Platform]. O processo para importar dados varia de acordo com cada parceiro. Leia os artigos de destinos individuais para obter mais informações.
 
 ## Destinos de marketing por email suportados {#supported-destinations}
 
@@ -30,13 +30,13 @@ O Adobe Experience Platform oferece suporte para os seguintes destinos de market
 
 ## Conectar-se a um novo destino de marketing por email {#connect-destination}
 
-Para enviar segmentos para destinos de marketing por email para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar segmentos para destinos de marketing por email para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
 
 ## Práticas recomendadas ao ativar públicos-alvo para destinos de marketing por email {#best-practices}
 
 ### Seleção de identidade {#identity}
 
-O Adobe recomenda selecionar um identificador exclusivo do [schema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Geralmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no schema.
+O Adobe recomenda selecionar um identificador exclusivo de [schema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Geralmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no schema.
 
 | Identificador exclusivo | Campo XDM no esquema unificado |
 |----------------- | ---------------------------|
@@ -75,4 +75,4 @@ Para obter instruções sobre como ativar segmentos para destinos de marketing p
 ## Recursos adicionais
 
 * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md)
-* [Criar destinos de marketing por email e ativar dados usando a API do Serviço de fluxo](../../api/email-marketing.md)
+* [Criar destinos de marketing por email e ativar dados usando a API do Serviço de fluxo](../../api/connect-activate-batch-destinations.md)

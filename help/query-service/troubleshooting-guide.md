@@ -5,10 +5,10 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
+source-git-commit: 03cd013e35872bcc30c68508d9418cb888d9e260
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 4%
+source-wordcount: '1106'
+ht-degree: 3%
 
 ---
 
@@ -54,6 +54,53 @@ FROM actual_dataset a
 WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
 AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
+```
+
+### Como faço para alterar o fuso horário de e para um carimbo de data e hora UTC?
+
+A Adobe Experience Platform mantém dados no formato de carimbo de data e hora UTC (Hora Universal Coordenada). Um exemplo do formato UTC é `2021-12-22T19:52:05Z`
+
+O Serviço de Consulta suporta funções SQL incorporadas para converter um determinado carimbo de data e hora para e a partir do formato UTC. Ambos os `to_utc_timestamp()` e `from_utc_timestamp()` os métodos utilizam dois parâmetros: carimbo de data e hora e fuso horário.
+
+| Parâmetro | Descrição |
+|---|---|
+| Carimbo de data e hora | O carimbo de data e hora pode ser gravado no formato UTC ou em formato simples `{year-month-day}` formato. Se nenhuma hora for fornecida, o valor padrão será meia-noite na manhã do dia em questão. |
+| Fuso horário | O fuso horário é gravado em um `{continent/city})` formato. Ele deve ser um dos códigos de fuso horário reconhecidos, conforme encontrado no [banco de dados TZ de domínio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
+#### Converter para o carimbo de data e hora UTC
+
+O `to_utc_timestamp()` O método interpreta os parâmetros fornecidos e os converte **para o carimbo de data e hora do fuso horário local** no formato UTC. Por exemplo, o fuso horário em Seul, Coreia do Sul é UTC/GMT +9 horas. Ao fornecer um carimbo de data e hora somente, o método usa um valor padrão de meia-noite de manhã. O carimbo de data e hora e o fuso horário são convertidos no formato UTC do momento dessa região para um carimbo de data e hora UTC da região local.
+
+```SQL
+SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
+```
+
+O query retorna um carimbo de data e hora no horário local do usuário. Nesse caso, 15:00 PM no dia anterior como Seul está nove horas à frente.
+
+```
+2021-08-30 15:00:00
+```
+
+Como outro exemplo, se o carimbo de data e hora especificado foi `2021-07-14 12:40:00.0` para `Asia/Seoul` fuso horário, o carimbo de data e hora UTC retornado seria `2021-07-14 03:40:00.0`
+
+A saída do console fornecida na interface do usuário do Serviço de query é um formato mais legível:
+
+```
+8/30/2021, 3:00 PM
+```
+
+### Converter a partir do carimbo de data e hora UTC
+
+O `from_utc_timestamp()` O método interpreta os parâmetros fornecidos **no carimbo de data e hora do fuso horário local** e fornece o carimbo de data e hora equivalente da região desejada no formato UTC. No exemplo abaixo, a hora é 2:40 PM no fuso horário local do usuário. O fuso horário de Seul passado como uma variável está nove horas antes do fuso horário local.
+
+```SQL
+SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
+```
+
+O query retorna um carimbo de data e hora em formato UTC para o fuso horário passado como parâmetro. O resultado é nove horas antes do fuso horário que executou o query.
+
+```
+8/31/2021, 11:40 PM
 ```
 
 ### Como devo filtrar os dados das séries de tempo?

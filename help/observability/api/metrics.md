@@ -5,7 +5,7 @@ title: Endpoint da API de métricas
 topic-legacy: developer guide
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API do Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 6%
@@ -282,7 +282,7 @@ A tabela a seguir descreve as métricas para [!DNL Real-time Customer Profile].
 | timeseries.profiles.dataset.batchsuccess.count | Número de [!DNL Profile] lotes assimilados para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.profiles.dataset.batchfailed.count | Número de [!DNL Profile] falha em lotes para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | platform.ups.ingest.streaming.request.m1_rate | Taxa de Solicitação de Entrada. | Org. IMS (**Obrigatório**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Taxa de sucesso da assimilação. | Org. IMS (**Obrigatório**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Taxa de sucesso da assimilação. | Org. IMS (**Obrigatório**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Taxa de novos registros assimilados para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Taxa de registros com carimbo de data e hora fora de ordem para criar solicitação para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Carimbo de data e hora da última solicitação de registro de criação para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |

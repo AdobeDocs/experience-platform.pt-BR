@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para fontes na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Assimilação de origem"
->abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>abstract="A exibição de assimilação de origem contém informações sobre o status e as métricas da atividade de dados no serviço de lago de dados, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -54,11 +54,11 @@ No [Interface do usuário da plataforma](https://platform.adobe.com), selecione 
 
 No centro do painel há [!UICONTROL Assimilação de origem] , que contém métricas e gráficos que exibem dados em registros assimilados e que falharam.
 
-![painel de monitoramento](../assets/ui/monitor-sources/monitoring-dashboard.png)
+![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
 Por padrão, os dados exibidos contêm taxas de ingestão das últimas 24 horas. Selecionar **[!UICONTROL Últimas 24 horas]** para ajustar o período de tempo dos registros exibidos.
 
-![data de alteração](../assets/ui/monitor-sources/change-date.png)
+![change-date](../assets/ui/monitor-sources/change-date.png)
 
 Uma janela pop-up do calendário é exibida, fornecendo opções para intervalos de tempo de ingestão alternativos. Selecionar **[!UICONTROL Últimos 30 dias]** e depois selecione **[!UICONTROL Aplicar]**
 
@@ -90,7 +90,7 @@ Como alternativa, você pode inserir uma fonte na barra de pesquisa para isolar 
 
 ![pesquisa](../assets/ui/monitor-sources/search.png)
 
-Uma lista de fluxos de dados é exibida. Para restringir a lista e se concentrar nos fluxos de dados com erros, selecione **[!UICONTROL Mostrar somente falhas]**.
+Uma lista de fluxos de dados é exibida. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
 
 ![show-failed-only](../assets/ui/monitor-sources/show-failures-only.png)
 
@@ -140,23 +140,23 @@ Na página de fluxos de dados, localize um fluxo de dados bem-sucedido e selecio
 
 ![sucesso do fluxo de dados](../assets/ui/monitor-sources/dataflow-success.png)
 
-O [!UICONTROL Assimilação de origem] contém informações que confirmam a assimilação bem-sucedida do seu fluxo de dados. A partir daqui, você pode começar a monitorar a jornada do seu fluxo de dados do nível de origem para [!DNL Identity Service]e depois para [!DNL Profile].
+The [!UICONTROL Source ingestion] page contains information that confirms the successful ingestion of your dataflow. A partir daqui, você pode começar a monitorar a jornada do seu fluxo de dados do nível de origem para [!DNL Identity Service]e depois para [!DNL Profile].
 
 Selecionar **[!UICONTROL Identidades]** para ver a assimilação no [!UICONTROL Identidades] palco.
 
-![fontes](../assets/ui/monitor-sources/sources.png)
+![sources](../assets/ui/monitor-sources/sources.png)
 
 ### [!DNL Identity] métricas {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Processamento de identidade"
->abstract="O processamento de identidade contém informações sobre registros assimilados ao serviço de identidade, incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
->title="Detalhes da execução do fluxo de dados"
+>title="Dataflow run details"
 >abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados de identidade, incluindo a ID de organização IMS e a ID de execução do fluxo de dados."
 
 O [!UICONTROL Processamento de identidade] contém informações sobre registros assimilados a [!DNL Identity Service], incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados.
@@ -168,11 +168,11 @@ Selecione o ícone de filtro ![filter](../assets/ui/monitor-sources/filter.png) 
 | Métricas de identidade | Descrição |
 | ---------------- | ----------- |
 | [!UICONTROL Registros recebidos] | O número de registros recebidos de [!DNL Data Lake]. |
-| [!UICONTROL Falha nos registros] | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| [!UICONTROL Records failed] | The number of records that were not ingested into Platform due to errors in the data. |
 | [!UICONTROL Registros ignorados] | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | [!UICONTROL Registros assimilados] | O número de registros assimilados em [!DNL Identity Service]. |
-| [!UICONTROL Total de registros] | A contagem total de todos os registros, incluindo registros com falha, registros ignorados, [!DNL Identities] registros adicionados e duplicados. |
-| [!UICONTROL Identidades adicionadas] | O número de novos identificadores líquidos adicionados a [!DNL Identity Service]. |
+| [!UICONTROL Total records] | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records. |
+| [!UICONTROL Identidades adicionadas] | The number of net new identifiers added to [!DNL Identity Service]. |
 | [!UICONTROL Gráficos criados] | O número de novos gráficos de identidade líquidos criados em [!DNL Identity Service]. |
 | [!UICONTROL Gráficos atualizados] | O número de gráficos de identidade existentes atualizados com novas bordas. |
 | [!UICONTROL Falha na execução do fluxo de dados] | O número de execuções de fluxo de dados que falharam. |
@@ -194,7 +194,7 @@ No [!UICONTROL Processamento de identidade] página, selecione **[!UICONTROL Per
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Processamento de perfil"
->abstract="O processamento de perfil contém informações sobre registros assimilados ao serviço de Perfil, incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil."
+>abstract="A visualização Processamento de perfil contém informações sobre registros assimilados ao serviço de perfil, incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -213,7 +213,7 @@ Selecione o ícone de filtro ![filter](../assets/ui/monitor-sources/filter.png) 
 | [!UICONTROL Registros recebidos] | O número de registros recebidos de [!DNL Data Lake]. |
 | [!UICONTROL Falha nos registros ] | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
 | [!UICONTROL Fragmentos de perfil adicionados] | O número líquido de [!DNL Profile] fragmentos adicionados. |
-| [!UICONTROL Fragmentos de perfil atualizados] | O número de [!DNL Profile] fragmentos atualizados |
+| [!UICONTROL Profile fragments updated] | The number of existing [!DNL Profile] fragments updated |
 | [!UICONTROL Total de fragmentos de perfil] | O número total de registros gravados em [!DNL Profile], incluindo todos os [!DNL Profile] fragmentos atualizados e novos [!DNL Profile] fragmentos criados. |
 | [!UICONTROL Falha na execução do fluxo de dados] | O número de execuções de fluxo de dados que falharam. |
 | [!UICONTROL Tempo de processamento] | O carimbo de data e hora desde o início da assimilação até a conclusão. |

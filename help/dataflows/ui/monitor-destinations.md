@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3205'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ O painel de monitoramento fornece uma representação visual da jornada de um fl
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Fluxos de dados](../home.md): Os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile]e para [!DNL Destinations].
+- [Fluxos de dados](../home.md): Os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
    - [Execuções do fluxo de dados](../../sources/notifications.md): As execuções de fluxo de dados são trabalhos agendados recorrentes com base na configuração de frequência de fluxos de dados selecionados.
-- [Destinos](../../destinations/home.md): Os destinos são integrações pré-criadas com aplicativos comumente usados que permitem a ativação simplificada de dados da Platform para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitorar fluxos de dados no espaço de trabalho Destinos {#monitor-dataflows-in-the-destinations-workspace}
 
@@ -34,9 +34,9 @@ No **[!UICONTROL Destinos]** na interface do usuário da plataforma, navegue at�
 
 ![Selecionar exibição de destino](../assets/ui/monitor-destinations/select-destination.png)
 
-Uma lista de fluxos de dados existentes é exibida. Nesta página, há uma lista de fluxos de dados visualizáveis, incluindo informações sobre seu destino, nome de usuário, número de fluxos de dados e status.
+Uma lista de fluxos de dados existentes é exibida. On this page is a list of viewable dataflows, including information about their destination, username, number of dataflows, and status.
 
-Consulte a tabela a seguir para obter mais informações sobre status:
+See the following table for more information on statuses:
 
 | Status | Descrição |
 | ------ | ----------- |
@@ -98,7 +98,7 @@ Para destinos de transmissão, a variável [!UICONTROL Execuções do fluxo de d
 
 As identidades representam as diferentes facetas de um perfil. Por exemplo, se um perfil contiver um número de telefone e um endereço de email, esse perfil terá duas identidades.
 
-Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais para identidades:
+A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
 - **[!UICONTROL Identidades ativadas]**: A contagem total de identidades de perfil que foram criadas ou atualizadas para ativação.
 - **[!UICONTROL Identidades excluídas]**: O número total de identidades de perfil que são ignoradas para ativação com base em atributos ausentes e violação de consentimento.
@@ -124,7 +124,7 @@ A página de detalhes de uma execução do fluxo de dados contém informações 
 
 ![Detalhes do fluxo de dados para destinos de transmissão](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-A página de detalhes também exibe uma lista de identidades que falharam e identidades que foram excluídas. As informações das identidades com falha e excluída são exibidas, incluindo código de erro, contagem de identidades e descrição. Por padrão, a lista exibe as identidades com falha. Para mostrar identidades ignoradas, selecione o **[!UICONTROL Identidades excluídas]** alternar.
+A página de detalhes também exibe uma lista de identidades que falharam e identidades que foram excluídas. As informações das identidades com falha e excluída são exibidas, incluindo código de erro, contagem de identidades e descrição. Por padrão, a lista exibe as identidades com falha. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
 
 ![Registros de fluxo de dados para destinos de fluxo](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
@@ -175,16 +175,16 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 
 - **[!UICONTROL Início da execução do fluxo de dados]**: A hora em que a execução do fluxo de dados começou.
 - **[!UICONTROL Tempo de processamento]**: O tempo que levou para a execução do fluxo de dados ser processada.
-- **[!UICONTROL Perfis recebidos]**: O número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos.
-- **[!UICONTROL Identidades ativadas]**: O número total de identidades de perfil que foram ativadas com êxito para o destino selecionado.
-- **[!UICONTROL Identidades excluídas]**: O número total de identidades de perfil que são excluídas da ativação com base em atributos ausentes e violação de consentimento.
-- **[!UICONTROL Status]**: Representa o estado em que o fluxo de dados está. Pode ser um dos três estados: [!UICONTROL Sucesso], [!UICONTROL Falha]e [!UICONTROL Processamento]. [!UICONTROL Sucesso] significa que o fluxo de dados está ativo e exporta dados de acordo com o agendamento fornecido. [!UICONTROL Falha] significa que a ativação dos dados foi suspensa devido a erros. [!UICONTROL Processamento] significa que o fluxo de dados ainda não está ativo e geralmente é encontrado quando um novo fluxo de dados é criado.
+- **[!UICONTROL Perfis recebidos]**: O número total de perfis recebidos no fluxo de dados. This value is updated every 60 minutes.
+- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
+- **[!UICONTROL Status]**: Representa o estado em que o fluxo de dados está. Pode ser um dos três estados: [!UICONTROL Sucesso], [!UICONTROL Falha]e [!UICONTROL Processamento]. [!UICONTROL Success] means that the dataflow is active and is exporting data according to its provided schedule. [!UICONTROL Falha] significa que a ativação dos dados foi suspensa devido a erros. [!UICONTROL Processamento] significa que o fluxo de dados ainda não está ativo e geralmente é encontrado quando um novo fluxo de dados é criado.
 
 Para exibir detalhes de uma execução específica do fluxo de dados, selecione a hora de início da execução na lista.
 
 >[!NOTE]
 >
->As execuções de fluxo de dados são geradas com base na frequência de agendamento do fluxo de dados de destino. É feita uma execução separada do fluxo de dados para cada [política de mesclagem](../../profile/merge-policies/overview.md) aplicada a um segmento.
+>As execuções de fluxo de dados são geradas com base na frequência de agendamento do fluxo de dados de destino. A separate dataflow run is made for each [merge policy](../../profile/merge-policies/overview.md) applied to a segment.
 
 A página de detalhes de um fluxo de dados, além dos detalhes mostrados na lista de fluxos de dados, exibe informações mais específicas sobre o fluxo de dados:
 
@@ -203,7 +203,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Trabalhos de segmento"
->abstract="O painel de tarefas do segmento contém informações sobre os trabalhos de avaliação e exportação para todos os seus segmentos."
+>abstract="A exibição de trabalhos de segmento contém informações sobre os trabalhos de avaliação e exportação para todos os seus segmentos."
 
 Para acessar o [!UICONTROL Trabalhos de segmento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Trabalhos de segmento]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre a avaliação de segmentos e as tarefas de exportação.
 
@@ -226,7 +226,7 @@ As seguintes métricas estão disponíveis para tarefas de segmento:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="A ativação de destino contém informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
+>abstract="A exibição de ativação de destino contém informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
 
 Para acessar o [!UICONTROL Monitoramento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Destinos]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre as tarefas de execução de destino.
 
@@ -254,14 +254,14 @@ Use o ícone de seta (![ícone de seta](/help/dataflows/assets/ui/monitor-destin
 
 O **[!UICONTROL Ativation]** O gráfico é exibido por padrão e você pode desativá-lo para expandir a lista de destinos abaixo. Selecione o **[!UICONTROL Métricas e gráficos]** para desativar os gráficos.
 
-O **[!UICONTROL Ativation]** O painel exibe uma lista de destinos que contêm pelo menos uma conta existente. Esta lista também inclui informações sobre perfis recebidos, identidades ativadas, falha de identidades, identidades excluídas, taxa de ativação, total de fluxos de dados com falha e a última data atualizada para esses destinos. Nem todas as métricas estão disponíveis para todos os tipos de destino. A tabela abaixo descreve quais métricas estão disponíveis por tipo de destino, transmissão ou lote.
+O **[!UICONTROL Ativation]** O painel exibe uma lista de destinos que contêm pelo menos uma conta existente. Esta lista também inclui informações sobre perfis recebidos, identidades ativadas, falha de identidades, identidades excluídas, taxa de ativação, total de fluxos de dados com falha e a última data atualizada para esses destinos. Nem todas as métricas estão disponíveis para todos os tipos de destino. The table below outlines which metrics are available per destination type, streaming or batch.
 
 | Métrica | Tipo de destino |
 ---------|----------|
-| **[!UICONTROL Perfis recebidos]** | Streaming e lote |
+| **[!UICONTROL Profiles received]** | Streaming and batch |
 | **[!UICONTROL Identidades ativadas]** | Streaming e lote |
 | **[!UICONTROL Falha de identidades]** | Streaming |
-| **[!UICONTROL Identidades excluídas]** | Streaming e lote |
+| **[!UICONTROL Identities excluded]** | Streaming e lote |
 | **[!UICONTROL Taxa de ativação]** | Streaming |
 | **[!UICONTROL Total de fluxos de dados com falha]** | Em lote |
 | **[!UICONTROL Última atualização]** | Streaming e lote |
@@ -276,9 +276,9 @@ Além disso, você pode inserir um destino na barra de pesquisa para isolá-lo e
 
 ![Filtrar destinos usando a barra de pesquisa](../assets/ui/monitor-destinations/filtered-destinations.png)
 
-Se quiser exibir todos os fluxos de dados existentes em todos os destinos, selecione **[!UICONTROL Fluxos de dados]**.
+If you want to view all existing dataflows across all destinations, select **[!UICONTROL Dataflows]**.
 
-Uma lista de fluxos de dados é exibida, classificada pela última execução do fluxo de dados. Você pode ver detalhes adicionais de um fluxo de dados específico localizando o destino que deseja monitorar, selecionando o filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) ao seu lado e, em seguida, selecionando o filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) ao lado do fluxo de dados, você deseja obter mais informações.
+A list of dataflows appears, sorted by the last dataflow run. Você pode ver detalhes adicionais de um fluxo de dados específico localizando o destino que deseja monitorar, selecionando o filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) ao seu lado e, em seguida, selecionando o filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) ao lado do fluxo de dados, você deseja obter mais informações.
 
 ![Todos os fluxos de dados destacados no painel de monitoramento](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -296,15 +296,15 @@ When **[!UICONTROL Execuções do fluxo de dados]** for selecionado, você poder
 
 ![Painel de execução de fluxo](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
-Use o **[!UICONTROL Mostrar somente falhas]** alternar para exibir somente as execuções com falha de um fluxo de dados.
+Use the **[!UICONTROL Show failures only]** toggle to display only the failed runs for a dataflow.
 
 ![O fluxo de dados é executado - mostrar apenas falhas é alternado](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
 ### Visualização no nível do segmento {#segment-level-view}
 
-When **[!UICONTROL Segmentos]** for selecionado, você verá uma lista dos segmentos que foram ativados para o fluxo de dados selecionado, dentro do intervalo de tempo selecionado. Essa tela inclui informações a nível de segmento sobre as identidades ativadas, as identidades excluídas, bem como o status e a hora da última execução do fluxo de dados. Ao revisar as métricas de identidades excluídas e ativadas, é possível verificar se um segmento foi ativado ou não com êxito.
+When **[!UICONTROL Segments]** is selected, you see a list of the segments which were activated to the selected dataflow, within the selected time range. Essa tela inclui informações a nível de segmento sobre as identidades ativadas, as identidades excluídas, bem como o status e a hora da última execução do fluxo de dados. Ao revisar as métricas de identidades excluídas e ativadas, é possível verificar se um segmento foi ativado ou não com êxito.
 
-Por exemplo, você está ativando um segmento chamado &quot;Membros de fidelidade na Califórnia&quot; para um destino do Amazon S3 &quot;Membros de fidelidade da Califórnia em dezembro&quot;. Vamos supor que haja 100 perfis no segmento selecionado, mas apenas 80 em 100 perfis contêm atributos de ID de fidelidade e você definiu as regras de mapeamento de exportação como `loyalty.id` é obrigatório. Nesse caso, em um nível de segmento, você verá 80 identidades ativadas e 20 identidades excluídas.
+Por exemplo, você está ativando um segmento chamado &quot;Membros de fidelidade na Califórnia&quot; para um destino do Amazon S3 &quot;Membros de fidelidade da Califórnia em dezembro&quot;. Let&#39;s assume that there are 100 profiles in the selected segment but only 80 out of 100 profiles contain Loyalty ID attributes and you have defined the export mapping rules as `loyalty.id` is required. Nesse caso, em um nível de segmento, você verá 80 identidades ativadas e 20 identidades excluídas.
 
 >[!IMPORTANT]
 >
@@ -339,16 +339,16 @@ Para ver mais detalhes sobre uma execução específica do fluxo de dados, selec
 A página de detalhes de execução do fluxo de dados, além dos detalhes mostrados na lista de execuções do fluxo de dados, exibe informações mais específicas sobre o fluxo de dados:
 
 - **[!UICONTROL ID de execução do fluxo de dados]**: A ID do fluxo de dados.
-- **[!UICONTROL ID da organização IMS]**: A organização IMS à qual o fluxo de dados pertence.
+- **[!UICONTROL IMS org ID]**: The IMS organization the dataflow belongs to.
 - **[!UICONTROL Última atualização]**: A hora em que a execução do fluxo de dados foi atualizada pela última vez.
 
-A página de detalhes também tem um botão para alternar entre erros e segmentos de execução de fluxo de dados. Essa opção só está disponível para execuções de fluxo de dados em destinos em lote.
+A página de detalhes também tem um botão para alternar entre erros e segmentos de execução de fluxo de dados. This option is only available for dataflow runs in batch destinations.
 
 A visualização de erros de execução do fluxo de dados exibe uma lista de identidades que falharam e identidades que foram excluídas. As informações das identidades com falha e excluída são exibidas, incluindo código de erro, contagem de identidades e descrição. Por padrão, a lista exibe as identidades com falha. Para mostrar identidades ignoradas, selecione o **[!UICONTROL Identidades excluídas]** alternar.
 
 ![Alternância de identidades excluídas](../assets/ui/monitor-destinations/identities-excluded.png)
 
-When **[!UICONTROL Segmentos]** for selecionado, você verá uma lista dos segmentos que foram ativados na execução do fluxo de dados selecionado. Essa tela inclui informações a nível de segmento sobre as identidades ativadas, as identidades excluídas, bem como o status e a hora da última execução do fluxo de dados.
+When **[!UICONTROL Segments]** is selected, you see a list of the segments which were activated in the selected dataflow run. Essa tela inclui informações a nível de segmento sobre as identidades ativadas, as identidades excluídas, bem como o status e a hora da última execução do fluxo de dados.
 
 ![Execução do fluxo de dados - exibição de segmentos](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 

@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
 source-wordcount: '2188'
 ht-degree: 1%
@@ -51,14 +51,14 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Agendar"
->abstract="Defina o tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e a frequência de exportação."
+>abstract="Set the file export type (full files or incremental files) and the export frequency."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Saiba mais na documentação"
 
 [!DNL Adobe Experience Platform] exporta dados para marketing por email e destinos de armazenamento em nuvem na forma de [!DNL CSV] arquivos. No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada segmento que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
 
 >[!IMPORTANT]
 > 
->[!DNL Adobe Experience Platform] divide automaticamente os arquivos de exportação em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil.
+>[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Cada linha representa um perfil.
 >
 >Nomes de arquivos divididos são anexados com um número que indica que o arquivo faz parte de uma exportação maior, desta forma: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
@@ -71,7 +71,7 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao segmen
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opções de exportação de arquivo"
->abstract="Selecione Exportar arquivos completos para exportar um instantâneo completo de todos os perfis qualificados para o segmento. Selecione Exportar arquivos incrementais para exportar apenas os perfis que se qualificaram para o segmento desde a última exportação. A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o segmento, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os perfis que se qualificaram para o segmento desde a primeira exportação de arquivos incrementais."
+>abstract="Selecionar **Exportar arquivos completos** para exportar um instantâneo completo de todos os perfis qualificados para o segmento. Selecionar **Exportar arquivos incrementais** para exportar apenas os perfis que se qualificaram para o segmento desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o segmento, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os perfis que se qualificaram para o segmento desde a primeira exportação de arquivos incrementais."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Exportar arquivos incrementais"
 
 Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportação de um arquivo contendo um instantâneo completo de todas as qualificações de perfil para o segmento selecionado.
@@ -157,7 +157,7 @@ Selecionar **[!UICONTROL Aplicar alterações]** para confirmar a seleção.
 > 
 >Se você não selecionar a variável **[!UICONTROL Data e hora]** , os nomes de arquivo serão estáticos e o novo arquivo exportado substituirá o arquivo anterior no local de armazenamento com cada exportação. Ao executar um trabalho de importação recorrente de um local de armazenamento em uma plataforma de marketing por email, essa é a opção recomendada.
 
-Após concluir a configuração de todos os segmentos, selecione **[!UICONTROL Próximo]** para continuar.
+Once you have finished configuring all your segments, select **[!UICONTROL Next]** to continue.
 
 ## Selecionar atributos de perfil {#select-attributes}
 
@@ -316,7 +316,7 @@ Sem desduplicação, o arquivo de exportação conteria as seguintes entradas.
 
 Considerando a desduplicação pelo [!DNL Email] namespace, o arquivo de exportação conteria as seguintes entradas. O Perfil B é o mais recente que se qualificou para o segmento, por isso é o único que está sendo exportado.
 
-| Email* | emailpessoal | firstName | lastName |
+| Email* | personalEmail | firstName | lastName |
 |---|---|---|---|
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
@@ -348,7 +348,6 @@ O Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 >
 >* Os campos são usados na definição do segmento.
 >* Os campos são configurados como atributos projetados para o destino.
-
 >
 > Por exemplo, se o campo `person.name.firstName` Se tiver determinados rótulos de uso de dados que entram em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 

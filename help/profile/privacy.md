@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
+source-git-commit: 6cb30dc9e7e76ff9ca060f83405196fa09ed0ebb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 >
 >O Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Se estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como [!UICONTROL Compilação de ID] tipo . Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Compilação de ID] está definida como &quot;[!UICONTROL Gráfico privado]&quot;.
 >
->![](./images/privacy/no-id-stitch.png)
+>![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
 >
 >Também é importante observar que o tempo que uma solicitação de privacidade pode levar para ser concluída não pode ser garantido. Se ocorrerem alterações no [!DNL Profile] dados enquanto uma solicitação ainda está sendo processada, não é possível garantir se esses registros são processados ou não.
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** under **[!UICONTROL Produtos]** para processar tarefas para dados armazenados no [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Uma solicitação de trabalho de acesso que está sendo criada na interface do usuário, com a opção Perfil selecionada em Produtos](./images/privacy/product-value.png)
 
 ## Fragmentos de perfil em solicitações de privacidade {#fragments}
 
@@ -138,6 +138,10 @@ When [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL P
 >Embora uma solicitação de exclusão bem-sucedida remova os dados de atributo coletados para um cliente (ou conjunto de clientes), a solicitação não remove as associações estabelecidas no gráfico de identidade.
 >
 >Por exemplo, uma solicitação de exclusão que usa um `email_id` e `customer_id` remove todos os dados do atributo armazenados nessas IDs. Contudo, quaisquer dados que sejam posteriormente assimilados ao abrigo do mesmo `customer_id` ainda estará associada ao `email_id`, já que a associação ainda existe.
+>
+>Além disso, o Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Se estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como [!UICONTROL Compilação de ID] tipo . Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Compilação de ID] está definida como &quot;[!UICONTROL Gráfico privado]&quot;.
+>
+>![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
 
 Em versões futuras, [!DNL Platform] enviará confirmação para [!DNL Privacy Service] após os dados terem sido fisicamente excluídos.
 

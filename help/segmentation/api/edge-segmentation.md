@@ -5,9 +5,9 @@ title: 'Segmentação de borda usando a API '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
+source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Para que um segmento seja avaliado usando a segmentação de borda, a query deve
 | Evento único que se refere a um perfil | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um único evento de entrada sem restrição de tempo. | Pessoas que vivem nos EUA que visitaram a página inicial. |
 | Evento único negado com um atributo de perfil | Qualquer definição de segmento que se refere a um evento de entrada único negado e um ou mais atributos de perfil | Pessoas que vivem nos EUA e têm **not** visitou a página inicial. |
 | Evento único em uma janela de 24 horas | Qualquer definição de segmento que se refere a um único evento de entrada em 24 horas. | Pessoas que visitaram a página inicial nas últimas 24 horas. |
-| Evento único com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento de entrada único negado em 24 horas. | Pessoas que vivem nos EUA que visitaram a página inicial nas últimas 24 horas. |
+| Evento único com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um único evento de entrada em 24 horas. | Pessoas que vivem nos EUA que visitaram a página inicial nas últimas 24 horas. |
 | Evento único negado com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento de entrada único negado em 24 horas. | Pessoas que vivem nos EUA e têm **not** visitou a página inicial nas últimas 24 horas. |
 | Evento de frequência dentro de um período de 24 horas | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. |
 | Evento de frequência com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. |

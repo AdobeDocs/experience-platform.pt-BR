@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
+source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 - [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
 - [Crie um [!DNL Marketo Engage] conexão de origem na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising 
+### Advertising
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
@@ -117,9 +117,8 @@ O Experience Platform oferece suporte para assimilar dados do sistema local. Con
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [[!DNL HubSpot] conector](connectors/marketing-automation/hubspot.md)
-- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
-- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Pagamentos

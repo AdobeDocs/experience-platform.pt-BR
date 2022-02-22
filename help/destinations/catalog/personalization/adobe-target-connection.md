@@ -3,7 +3,7 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 61a3a05466eca30ba08fcaf32a3f00e0ca49f325
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
@@ -34,15 +34,15 @@ Uma empresa de aluguel e vendas da casa deseja personalizar sua página inicial 
 
 ## Conecte-se ao destino {#connect}
 
->[!IMPORTANT]
->
->Antes de criar uma [!DNL Adobe Target] recomendamos que você leia nosso guia sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](../../ui/configure-personalization-destinations.md). Este guia o orienta pelas etapas de configuração necessárias para casos de uso de personalização de página mesma e próxima, em vários componentes de Experience Platform.
-
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Sobre IDs de fluxo de dados"
 >abstract="Essa opção determina em qual conjunto de dados de coleta os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Você deve configurar um armazenamento de dados antes de configurar seu destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Saiba como configurar um armazenamento de dados."
+
+>[!IMPORTANT]
+>
+>Antes de criar uma [!DNL Adobe Target] recomendamos que você leia nosso guia sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](../../ui/configure-personalization-destinations.md). Este guia o orienta pelas etapas de configuração necessárias para casos de uso de personalização de página mesma e próxima, em vários componentes de Experience Platform.
 
 Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 

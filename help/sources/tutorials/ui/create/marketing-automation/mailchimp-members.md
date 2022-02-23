@@ -4,13 +4,15 @@ solution: Experience Platform
 title: Criar uma conexão de origem de membros do MailChimp usando a interface do usuário da plataforma
 topic-legacy: tutorial
 description: Saiba como conectar o Adobe Experience Platform aos membros do MailChimp usando a interface do usuário da plataforma.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
-
 
 # Crie um [!DNL Mailchimp Members] conexão de origem usando a interface do usuário da plataforma
 

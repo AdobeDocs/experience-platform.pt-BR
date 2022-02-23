@@ -4,10 +4,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
+source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 15%
+source-wordcount: '412'
+ht-degree: 14%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 15%
       * [Componentes de Pessoa Comercial XDM](./field-groups/profile/business-person-components.md)
       * [Detalhes da Pessoa Comercial XDM](./field-groups/profile/business-person-details.md)
    * Grupos de campos de evento {#event}
+      * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Detalhes de marketing da campanha](./field-groups/event/campaign-marketing-details.md)
       * [Detalhes do canal](./field-groups/event/channel-details.md)
       * [Detalhes de comércio](./field-groups/event/commerce-details.md)
@@ -71,7 +72,7 @@ ht-degree: 15%
       * [Detalhes da Web](./field-groups/event/web-details.md)
    * [Atualizações do nome do grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
-   * [Aplicação](./data-types/application.md)
+   * [Aplicativo](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Origem B2B](./data-types/b2b-source.md)
@@ -95,6 +96,7 @@ ht-degree: 15%
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Identidade](./data-types/identity.md)
    * [Impressões](./data-types/impressions.md)
+   * [Par. Valor Chave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Medição](./data-types/measure.md)
    * [Ordem](./data-types/order.md)

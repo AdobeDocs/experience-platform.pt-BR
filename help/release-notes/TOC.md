@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Notas de versão da Adobe Experience Platform
 breadcrumb-title: Notas de versão da Platform
 user-guide-description: Notas de versão mensais da Adobe Experience Platform.
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+source-git-commit: c49526c52bdf7732e84e94965db474b64db15552
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '58'
 ht-degree: 93%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 93%
 
 * [Notas de versão da plataforma atual](latest/latest.md)
 * 2022 {#2022}
-   * [Fevereiro de 2022](2022/february-2022.md)
    * [Janeiro de 2022](2022/january-2022.md)
 * 2021 {#2021}
    * [Novembro de 2021](2021/november-2021.md)

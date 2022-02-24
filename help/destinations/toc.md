@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
+source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '724'
 ht-degree: 9%
 
 ---
@@ -157,9 +157,9 @@ ht-degree: 9%
    * funcionalidade Destination SDK {#functionality}
       * [Opções de configuração](./destination-sdk/configuration-options.md)
       * [Configuração de destino de transmissão](./destination-sdk/destination-configuration.md)
-      * [Configuração de destino baseada em arquivo](./destination-sdk/file-based-destination-configuration.md)
+      * [(Beta) Configuração de destino baseada em arquivo](./destination-sdk/file-based-destination-configuration.md)
       * [Especificações do servidor e do modelo de destinos de transmissão](./destination-sdk/server-and-template-configuration.md)
-      * [Destinos baseados em arquivo e especificações de arquivo](./destination-sdk/server-and-file-configuration.md)
+      * [(Beta) Destinos baseados em arquivo especificações do servidor e arquivo](./destination-sdk/server-and-file-configuration.md)
       * [Formato de mensagem](./destination-sdk/message-format.md)
       * [Gerenciamento de metadados do público-alvo](./destination-sdk/audience-metadata-management.md)
       * Autenticação {#authentication}

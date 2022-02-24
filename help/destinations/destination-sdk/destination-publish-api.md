@@ -2,7 +2,7 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination/publish`.
 title: Publicar operações de endpoint da API de destinos
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 5%
@@ -20,6 +20,7 @@ Esta página lista e descreve todas as operações de API que você pode executa
 Após configurar e testar seu destino, você pode enviá-lo ao Adobe para análise e publicação.
 
 Use o endpoint da API de destinos de publicação para enviar uma solicitação de publicação quando:
+
 * Como parceiro de Destination SDK, você deseja disponibilizar o destino produzido em todas as organizações de Experience Platform para que todos os clientes de Experience Platform possam usá-lo;
 * Você deseja disponibilizar o destino personalizado em sua própria organização do Experience Platform, em todas as sandboxes.
 
@@ -32,7 +33,6 @@ Antes de continuar, reveja o [guia de introdução](./getting-started.md) para o
 Você pode enviar uma configuração de destino para publicação fazendo uma solicitação de POST para a `/authoring/destinations/publish` endpoint .
 
 **Formato da API**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -78,7 +78,6 @@ Você pode recuperar uma lista de todos os destinos enviados para publicação d
 
 **Formato da API**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -114,7 +113,6 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de destinos enviados
       }
    ]
 }
-    
 ```
 
 | Parâmetro | Tipo | Descrição |
@@ -132,7 +130,6 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de destinos enviados
 Você pode atualizar as organizações permitidas em uma solicitação de publicação de destino existente, fazendo uma solicitação de PUT para a `/authoring/destinations/publish` endpoint e fornecendo a ID do destino para o qual deseja atualizar as organizações permitidas. No corpo da chamada , forneça as organizações permitidas atualizadas.
 
 **Formato da API**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -169,7 +166,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 Você pode recuperar informações detalhadas sobre uma solicitação de publicação de destino específica fazendo uma solicitação de GET para a `/authoring/destinations/publish` e fornecer a ID do destino para o qual você deseja recuperar o status de publicação.
 
 **Formato da API**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}

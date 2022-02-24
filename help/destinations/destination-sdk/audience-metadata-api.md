@@ -2,7 +2,7 @@
 description: Esta página descreve todas as operações da API que podem ser executadas usando o endpoint da API `/authoring/audience-templates`.
 title: Operações da API de ponto de extremidade de metadados de público-alvo
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 5%
@@ -26,7 +26,6 @@ Antes de continuar, reveja o [guia de introdução](./getting-started.md) para o
 Você pode criar um novo modelo de público-alvo fazendo uma solicitação de POST para o `/authoring/audience-templates` endpoint .
 
 **Formato da API**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de p�
 Você pode atualizar um modelo de público-alvo existente fazendo uma solicitação de PUT para a variável `/authoring/audience-templates` endpoint e fornecer a ID da instância do modelo de público-alvo que deseja atualizar. No corpo da chamada , forneça o template atualizado.
 
 **Formato da API**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## Recuperar uma lista de modelos de público-alvo {#retrieve-list}
 
@@ -430,7 +452,6 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de modelos de metada
 Você pode recuperar informações detalhadas sobre um modelo de público-alvo específico fazendo uma solicitação do GET para a `/authoring/audience-templates` endpoint e fornecer a ID da instância do modelo de público-alvo que deseja recuperar.
 
 **Formato da API**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

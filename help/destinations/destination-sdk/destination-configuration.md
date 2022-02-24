@@ -1,27 +1,27 @@
 ---
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
-title: Opções de configuração de destino para o SDK de destino
+title: Opções de configuração de destino de fluxo para o Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1756'
 ht-degree: 5%
 
 ---
 
-# Configuração de destino {#destination-configuration}
+# Configuração de destino de transmissão {#destination-configuration}
 
 ## Visão geral {#overview}
 
-Essa configuração permite indicar informações essenciais, como nome de destino, categoria, descrição e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
+Essa configuração permite indicar informações essenciais para seu destino de streaming, como nome do destino, categoria, descrição e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 
 Essa configuração também conecta as outras configurações necessárias para que o destino funcione - servidor de destino e metadados de público-alvo - a essa configuração. Leia como você pode fazer referência às duas configurações em uma [seção mais abaixo](./destination-configuration.md#connecting-all-configurations).
 
 Você pode configurar a funcionalidade descrita neste documento usando o `/authoring/destinations` Ponto de extremidade da API. Ler [Operações de endpoint da API de destinos](./destination-configuration-api.md) para obter uma lista completa de operações que podem ser realizadas no ponto de extremidade.
 
-## Exemplo de configuração {#example-configuration}
+## Exemplo de configuração de transmissão {#example-configuration}
 
-Abaixo está um exemplo de configuração de um destino ficcional, Moviestar, que tem endpoints em quatro locais no mundo. O destino pertence à categoria destinos móveis . As seções a seguir detalham como essa configuração é construída.
+Este é um exemplo de configuração de um destino ficcional de transmissão, Moviestar, que tem endpoints em quatro locais no mundo. O destino pertence à categoria destinos móveis .
 
 ```json
 {
@@ -137,29 +137,28 @@ Abaixo está um exemplo de configuração de um destino ficcional, Moviestar, qu
 
 Essa seção na configuração de destinos gera a variável [Configurar novo destino](/help/destinations/ui/connect-destination.md) na interface do usuário do Experience Platform, onde os usuários conectam o Experience Platform às contas que têm com seu destino. Dependendo da opção de autenticação que você indicar na `authType` , a Experience Platform é gerada para os usuários da seguinte maneira:
 
-**Autenticação do portador**
+### Autenticação do portador
 
 Ao configurar o tipo de autenticação do portador, os usuários são solicitados a inserir o token do portador que obtêm do seu destino.
 
-![Renderização da interface do usuário com autenticação do portador](./assets/bearer-authentication-ui.png)
+![Renderização da interface do usuário com autenticação do portador](assets/bearer-authentication-ui.png)
 
-**Autenticação OAuth 2**
+### Autenticação OAuth 2
 
-Usuários selecionados **[!UICONTROL Ligar ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, como mostrado no exemplo abaixo para o destino de Públicos personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o terminal de destino, leia o [Página de autenticação OAuth 2 do SDK de destino](./oauth2-authentication.md).
+Usuários selecionados **[!UICONTROL Ligar ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, conforme mostrado no exemplo abaixo para o destino Públicos personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o terminal de destino, leia o [Página de autenticação do Destination SDK OAuth 2](./oauth2-authentication.md).
 
-![Renderização da interface do usuário com autenticação OAuth 2](./assets/oauth2-authentication-ui.png)
-
+![Renderização da interface do usuário com autenticação OAuth 2](assets/oauth2-authentication-ui.png)
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para valores aceitos. |
-| `authType` | String | Os valores aceitos são `OAUTH2, BEARER`. <br><ul><li> Se o destino oferecer suporte à autenticação OAuth 2, selecione a `OAUTH2` e adicione os campos obrigatórios para o OAuth 2, como mostrado no [Página de autenticação OAuth 2 do SDK de destino](./oauth2-authentication.md). Além disso, você deve selecionar `authenticationRule=CUSTOMER_AUTHENTICATION` no [seção delivery de destino](./destination-configuration.md). </li><li>Para autenticação do portador, selecione `BEARER` e selecione `authenticationRule=CUSTOMER_AUTHENTICATION` no [seção delivery de destino](./destination-configuration.md).</li></ul> |
+| `authType` | String | Os valores aceitos para destinos de transmissão são:<ul><li>`BEARER`. Se o destino oferecer suporte à autenticação do portador, defina `"authType":"Bearer"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li><li>`OAUTH2`. Se o destino oferecer suporte à autenticação OAuth 2, defina `"authType":"OAUTH2"` e adicione os campos obrigatórios para o OAuth 2, conforme mostrado no [Página de autenticação do Destination SDK OAuth 2](./oauth2-authentication.md). Além disso, defina `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Campos de dados do cliente {#customer-data-fields}
 
-Esta seção permite que os parceiros introduzam campos personalizados. Na configuração de exemplo acima, `customerDataFields` O exige que os usuários selecionem um terminal no fluxo de autenticação e indiquem a ID do cliente com o destino. A configuração é refletida no fluxo de autenticação, como mostrado abaixo:
+Use esta seção para solicitar que os usuários preencham campos personalizados, específicos para seu destino, ao se conectar ao destino na interface do usuário do Experience Platform. A configuração é refletida no fluxo de autenticação, como mostrado abaixo:
 
 ![Fluxo de autenticação de campo personalizado](./assets/custom-field-authentication-flow.png)
 
@@ -184,7 +183,7 @@ Esta seção se refere aos elementos da interface do usuário na configuração 
 | `documentationLink` | String | Refere-se à página de documentação na [Catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) para o seu destino. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `http://www.adobe.com/go/destinations-moviestar-en` |
 | `category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de Destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | String | `Server-to-server` no momento, é a única opção disponível. |
-| `frequency` | String | `Streaming` no momento, é a única opção disponível. |
+| `frequency` | String | Refere-se ao tipo de exportação de dados suportado pelo destino. Valores compatíveis: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,6 +201,7 @@ Use os parâmetros em `schemaConfig` para habilitar a etapa de mapeamento do wor
 | `identityRequired` | Booleano | Use `true` se os usuários forem capazes de mapear os namespaces de identidade do Experience Platform para o esquema desejado. |
 
 {style=&quot;table-layout:auto&quot;}
+
 
 ## Identidades e atributos {#identities-and-attributes}
 

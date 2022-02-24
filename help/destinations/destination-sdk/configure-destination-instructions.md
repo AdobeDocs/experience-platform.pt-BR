@@ -1,23 +1,19 @@
 ---
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
-title: Usar o Destination SDK para configurar um destino de transmissão
+title: Use o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Usar o Destination SDK para configurar um destino de transmissão
+# Use o Destination SDK para configurar um destino de transmissão
 
 ## Visão geral {#overview}
 
-Esta página descreve como usar as informações em [Opções de configuração no SDK de destinos](./configuration-options.md) e em outros documentos de referência da API e funcionalidade do Destination SDK para configurar um [destino de transmissão](/help/destinations/destination-types.md#streaming-destinations). As etapas são apresentadas na ordem sequencial abaixo.
-
->[!NOTE]
->
->No momento, não há suporte para configurar um destino em lote por meio do Destination SDK.
+Esta página descreve como usar as informações em [Opções de configuração no SDK de destinos](./configuration-options.md) e em outros documentos de referência de API e funcionalidade do Destination SDK para configurar um [destino de transmissão](/help/destinations/destination-types.md#streaming-destinations). As etapas são apresentadas na ordem sequencial abaixo.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -25,11 +21,11 @@ Antes de avançar para as etapas ilustradas abaixo, leia o [Introdução ao Dest
 
 ## Etapas para usar as opções de configuração no Destination SDK para configurar o destino {#steps}
 
-![Etapas ilustradas do uso de pontos de extremidade do Destination SDK](./assets/destination-sdk-steps.png)
+![Etapas ilustradas do uso de pontos de extremidade de Destination SDK](./assets/destination-sdk-steps.png)
 
 ## Etapa 1: Criar um servidor e uma configuração de modelo {#create-server-template-configuration}
 
-Comece criando uma configuração de servidor e modelo usando o `/destinations-server` endpoint (lido) [Referência da API](./destination-server-api.md)). Para obter mais informações sobre o servidor e a configuração do modelo, consulte [Especificações do servidor e do modelo](./configuration-options.md#server-and-template) na seção de referência.
+Comece criando uma configuração de servidor e modelo usando o `/destinations-server` endpoint (lido) [Referência da API](destination-server-api.md)). Para obter mais informações sobre o servidor e a configuração do modelo, consulte [Especificações do servidor e do modelo](server-and-template-configuration.md) na seção de referência.
 
 Veja abaixo um exemplo de configuração. Observe que o modelo de transformação de mensagem no `requestBody.value` é abordado na etapa 3, [Criar modelo de transformação](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Etapa 2: Criar configuração de destino {#create-destination-configuration}
 
-Veja abaixo um exemplo de configuração para um modelo de destino, criado usando o `/destinations` Ponto de extremidade da API. Para obter mais informações sobre esse template, consulte [Configuração de destino](./destination-configuration.md).
+Veja abaixo um exemplo de configuração para um modelo de destino, criado usando o `/destinations` Ponto de extremidade da API. Para obter mais informações sobre essa configuração, consulte [Configuração de destino](./destination-configuration.md).
 
 Para conectar o servidor e a configuração do modelo na etapa 1 a essa configuração de destino, adicione a ID da instância da configuração do servidor e do modelo como `destinationServerId` aqui.
 
@@ -156,11 +152,11 @@ Depois de criar um template de transformação de mensagem que funcione para voc
 
 ## Etapa 4: Criar configuração de metadados de público-alvo {#create-audience-metadata-configuration}
 
-Para alguns destinos, o Destination SDK exige que você configure uma configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no seu destino. Consulte [Gerenciamento de metadados do público-alvo](./audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
+Para alguns destinos, o Destination SDK requer a configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no destino. Consulte [Gerenciamento de metadados do público-alvo](./audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
 
 Se você usar uma configuração de metadados de público-alvo, é necessário conectá-los à configuração de destino criada na etapa 2. Adicione a ID da instância da configuração de metadados do público-alvo à configuração de destino como `audienceTemplateId`.
 
-## Etapa 5: Criar configuração de credenciais / Configurar autenticação {#set-up-authentication}
+## Etapa 5: Configurar autenticação {#set-up-authentication}
 
 Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` na configuração de destino acima, você pode configurar a autenticação para seu destino usando o `/destination` ou `/credentials` endpoint .
 

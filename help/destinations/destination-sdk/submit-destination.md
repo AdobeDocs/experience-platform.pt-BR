@@ -1,8 +1,8 @@
 ---
-description: Esta página fornece todas as informações que você precisa enviar para revisar um destino criado usando o Destination SDK.
+description: Esta página fornece todas as informações que você precisa enviar para revisar um destino criado com o Destination SDK.
 title: Enviar para revisão de um destino criado no Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Antes que seu destino possa ser publicado na [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md), você deve fornecer ao Adobe determinadas informações sobre o destino e os testes que você realizou, para garantir que os usuários aproveitem a melhor experiência possível ao ativar dados na sua plataforma.
 
-Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino que você criou usando o Adobe Experience Platform Destination SDK. Para enviar um destino com êxito no Adobe Experience Platform, envie um email para <aepdestsdk@adobe.com> que inclui:
+Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino criado pelo Adobe Experience Platform Destination SDK. Para enviar um destino com êxito no Adobe Experience Platform, envie um email para <aepdestsdk@adobe.com> que inclui:
 
 * Uma descrição dos casos de uso que seu destino resolve. Isso não é necessário se você estiver atualizando uma configuração de destino existente.
 * Teste os resultados após usar o ponto de extremidade da API de destino de teste para executar uma chamada HTTP para o seu destino. Compartilhe com o Adobe:
@@ -37,6 +37,7 @@ Forneça uma descrição dos casos de uso que seu destino resolve para os client
 ## Resultados dos testes após usar a API de destino de teste
 
 Forneça os resultados do teste depois de usar a variável [testar API de destino](./test-destination.md) endpoint para executar uma chamada HTTP para o destino. Isso inclui:
+
 * A solicitação completa da API (cabeçalhos e corpo) feita para o endpoint de destino, usando a API de teste.
 * A resposta da API recebida do terminal de destino.
 

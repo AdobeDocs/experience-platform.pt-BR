@@ -1,14 +1,14 @@
 ---
 keywords: personalização; target; destino; destinos de personalização; configurar destinos de personalização; mesma página; página seguinte;
-title: Configurar destinos de personalização para a personalização da mesma página e da próxima página
+title: Configure personalization destinations for same-page and next-page personalization
 type: Tutorial
 seo-title: Configure personalization destinations for same-page and next-page personalization.
-description: Saiba como configurar destinos de personalização para a personalização de mesma página e próxima página.
+description: Learn how to configure personalization destinations for same-page and next-page personalization.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -21,23 +21,27 @@ Esse recurso ajuda a configurar casos de uso de personalização de página da m
 
 Este artigo fornece instruções passo a passo sobre como configurar o Experience Platform e seus destinos de personalização para esses casos de uso.
 
-Além disso, assista ao vídeo abaixo para obter uma visão geral do processo de configuração completo.
+Additionally, watch the video below for an overview of the end-to-end configuration process.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
-## Etapa 1: Configurar um armazenamento de dados na interface do usuário da coleta de dados {#configure-datastream}
+>[!NOTE]
+>
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. For the most up-to-date information, refer to the configuration steps described in the sections below.
 
-A primeira etapa na configuração do destino de personalização é configurar um conjunto de dados para o SDK da Web do Experience Platform. Isso é feito na interface do usuário da coleta de dados.
+## Step 1: Configure a datastream in the Data Collection UI {#configure-datastream}
+
+A primeira etapa na configuração do destino de personalização é configurar um conjunto de dados para o SDK da Web do Experience Platform. This is done in the Data Collection UI.
 
 Ao configurar o armazenamento de dados, em **[!UICONTROL Adobe Experience Platform]** certifique-se de que **[!UICONTROL Segmentação de borda]** e **[!UICONTROL Destinos de personalização]** são selecionadas.
 
-![Configuração do fluxo de dados](../assets/ui/configure-personalization-destinations/datastream-config.png)
+![Datastream configuration](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-Para obter mais detalhes sobre como configurar um conjunto de dados, siga as instruções descritas em [Documentação do SDK da Web da plataforma](../../edge/fundamentals/datastreams.md).
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/fundamentals/datastreams.md).
 
 ## Etapa 2: Configurar o destino de personalização {#configure-destination}
 
-Após configurar o armazenamento de dados, você pode começar a configurar o destino de personalização.
+After you have configured your datastream, you can start configuring your personalization destination.
 
 Siga as [tutorial de criação de conexão de destino](../ui/connect-destination.md) para obter instruções detalhadas sobre como criar uma nova conexão de destino.
 
@@ -56,7 +60,7 @@ Siga as instruções em [criação de uma política de mesclagem](../../profile/
 
 Depois de criar o [!DNL Active-On-Edge] política de mesclagem, você deve criar um novo segmento na Platform.
 
-Siga as [construtor de segmentos](../../segmentation/ui/segment-builder.md) para criar seu novo segmento e [atribuí-la](../../segmentation/ui/segment-builder.md#merge-policies) o [!DNL Active-On-Edge] política de mesclagem criada na etapa 3.
+Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to create your new segment, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in step 3.
 
 ## Etapa 5: Ativar o segmento para o seu destino
 

@@ -4,10 +4,10 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: ab76292f569fa8c21dab736d6291891b717d026d
+source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
 workflow-type: tm+mt
-source-wordcount: '2324'
-ht-degree: 1%
+source-wordcount: '1618'
+ht-degree: 0%
 
 ---
 
@@ -43,26 +43,6 @@ Você pode modificar a aparência da variável [!UICONTROL Perfis] painel seleci
 
 Consulte a [modificação de painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
-## (Beta) Insights de eficiência do perfil {#profile-efficiency-insights}
-
->[!IMPORTANT]
->
->A funcionalidade de insight de eficiência de perfil está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
-
-O [!UICONTROL Eficácia] O guia fornece métricas sobre a qualidade e integridade dos dados do seu perfil, utilizando os widgets de eficácia do perfil. Esses widgets ilustram rapidamente a composição de seus perfis, as tendências de integridade ao longo do tempo e as avaliações sobre a qualidade dos dados de seu perfil.
-
-[O painel de eficácia do perfil.](../images/profiles/attributes-quality-assessment.png)
-
-Consulte a [seção de widgets de eficácia do perfil](#profile-efficacy-widgets) para obter mais informações sobre os widgets atualmente disponíveis.
-
-O layout deste painel também pode ser personalizado ao selecionar [**[!UICONTROL Modificar painel]**](../customize/modify.md) do [!UICONTROL Visão geral] guia .
-
-## Procurar perfis {#browse-profiles}
-
-O [!UICONTROL Procurar] permite pesquisar e exibir os perfis somente leitura assimilados na organização IMS. Desse ponto, você pode ver informações importantes pertencentes ao perfil, relacionadas às preferências, aos eventos passados, às interações e aos segmentos
-
-Para saber mais sobre os recursos de visualização de perfil fornecidos na interface do usuário da plataforma, consulte a documentação em [navegar pelos perfis no Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
-
 ## Mesclar políticas {#merge-policies}
 
 As métricas exibidas no [!UICONTROL Perfis] Os painéis são baseados nas políticas de mesclagem aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são reunidos de várias fontes para criar o perfil do cliente, é possível que os dados contenham valores conflitantes (por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listá-lo como &quot;casado&quot;). É tarefa da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
@@ -76,14 +56,6 @@ O painel selecionará automaticamente uma política de mesclagem a ser exibida, 
 >O menu suspenso mostra apenas as políticas de mesclagem relacionadas à Classe de Perfil Individual XDM. No entanto, se sua organização tiver criado várias políticas de mesclagem, pode significar que você precisará rolar para exibir a lista completa das políticas de mesclagem disponíveis.
 
 ![](../images/profiles/select-merge-policy.png)
-
-## Schemas da União
-
-O [!UICONTROL Esquema de união] O painel exibe o esquema de união para uma classe XDM específica. Ao selecionar a variável [!UICONTROL **Classe**] na lista suspensa, é possível exibir os esquemas de união para diferentes classes XDM.
-
-Os esquemas de união são compostos de vários esquemas que compartilham a mesma classe e foram habilitados para o Perfil. Eles permitem que você veja em uma única visualização, uma combinação de cada campo contido em cada schema que compartilha a mesma classe.
-
-Consulte o guia da interface do usuário do schema de união para saber mais sobre [visualizar esquemas de união na interface do usuário da plataforma](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widgets e métricas
 
@@ -162,59 +134,6 @@ Para obter mais informações sobre fragmentos de perfil, comece lendo a seção
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
-
-## (Beta) Widgets de eficácia do perfil {#profile-efficacy-widgets}
-
->[!IMPORTANT]
->
->Os widgets de eficiência de perfil estão atualmente em versão beta e não estão disponíveis para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
-
-O Adobe fornece vários widgets para avaliar a integridade dos perfis assimilados disponíveis para a análise de dados. Cada um dos widgets de eficácia do perfil pode ser filtrado pela política de mesclagem. Para alterar o filtro de política de mesclagem, selecione o[!UICONTROL Perfis usando política de mesclagem] e escolha a política apropriada na lista disponível.
-
-Para saber mais sobre cada um dos widgets de eficácia de perfil, selecione o nome de um widget na seguinte lista:
-
-* [[!UICONTROL Avaliação da qualidade dos atributos]](#attribute-quality-assessment)
-* [[!UICONTROL Integridade do perfil]](#profile-completeness)
-* [[!UICONTROL Tendência de integridade do perfil]](#profile-completeness-trend)
-
-### (Beta) [!UICONTROL Avaliação da qualidade dos atributos] {#attribute-quality-assessment}
-
-Este widget mostra a integridade e cardinalidade de cada atributo de perfil desde a última data de processamento. Essas informações são apresentadas como uma tabela com quatro colunas, onde cada linha na tabela representa um único atributo.
-
-| Coluna | Descrição |
-|---|---|
-| Atributo | O nome do atributo. |
-| Perfis | O número de perfis que têm esse atributo e são preenchidos com valores não nulos. |
-| Integridade | Essa porcentagem é determinada pelo número total de perfis que têm esse atributo e são preenchidos com valores não nulos. O número é calculado dividindo o número total de perfis pelo número total de valores que não estão vazios nos perfis desse atributo. |
-| Cardinalidade | O número total de **único** valores não nulos deste atributo. Ele é medido em todos os perfis. |
-
-![O widget de avaliação da qualidade dos atributos](../images/profiles/attributes-quality-assessment.png)
-
-### (Beta) [!UICONTROL Perfis por integridade] {#profile-completeness}
-
-Esse widget cria um gráfico de círculo de integridade de perfil desde a última data de processamento. A integridade de um perfil é medida pela porcentagem de atributos preenchidos com valores não nulos entre todos os atributos observados.
-
-Este widget mostra a proporção de perfis que são de alta, média ou baixa integridade. Por padrão, há três níveis de integridade configurados:
-
-* Alta integridade: Perfis têm mais de 70% de atributos preenchidos.
-* Integridade média: Os perfis têm menos de 70% e mais de 30% de atributos preenchidos.
-* Baixa integridade: Os perfis têm menos de 30% de atributos preenchidos.
-
-![Os perfis por widget de integridade](../images/profiles/profiles-by-completeness.png)
-
-### (Beta) [!UICONTROL Tendência de integridade do perfil] {#profile-completeness-trend}
-
-Este widget cria um gráfico de coluna empilhado para descrever a tendência da integridade do perfil ao longo do tempo. A integralidade é medida pela porcentagem de atributos preenchidos com valores não nulos entre todos os atributos observados. Ele classifica a integridade do perfil como alta, média ou baixa desde a última data de processamento.
-
-O eixo x representa o tempo, o eixo y representa o número de perfis e as cores representam os três níveis de integridade do perfil.
-
-Os três níveis de integridade são:
-
-* Alta integridade: Perfis têm mais de 70% de atributos preenchidos.
-* Integridade média: Os perfis têm menos de 70% e mais de 30% de atributos preenchidos.
-* Baixa integridade: Os perfis têm menos de 30% de atributos preenchidos.
-
-![O widget de tendência de integridade de perfis](../images/profiles/profiles-completeness-trend.png)
 
 ## Próximas etapas
 

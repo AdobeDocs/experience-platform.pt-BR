@@ -4,10 +4,10 @@ title: Criar uma conexão de origem do Adobe Campaign Managed Services usando a 
 description: Saiba como conectar o Adobe Experience Platform ao Adobe Campaign Managed Services usando a interface do usuário da plataforma.
 hide: true
 hidefromtoc: true
-source-git-commit: 24d7a549e83245fc363bd76f26ba58130e980c6c
+source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 0%
+source-wordcount: '300'
+ht-degree: 1%
 
 ---
 
@@ -31,30 +31,24 @@ Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da te
 
 Em **[!UICONTROL Aplicativos Adobe]** categoria , selecione **[!UICONTROL Adobe Campaign Managed Services]** e depois selecione **[!UICONTROL Adicionar dados]**.
 
-### Selecionar dados
+### Selecionar dados {#select-data}
 
 O [!UICONTROL Selecionar dados] será exibida, fornecendo uma interface para configurar os valores para o [!UICONTROL Instância do Adobe Campaign], [!UICONTROL Target mapping]e [!UICONTROL Nome do esquema].
 
-#### Selecionar instância da campanha {#select-campaign-instance}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Selecionar instância da campanha"
+>title="Instância ACC"
 >abstract="O nome do ambiente Adobe Campaign Classic que você deseja usar."
 >text="Learn more in documentation"
 
-#### Selecionar mapeamento de campanha {#select-campaign-mapping}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Selecionar o target mapping da campanha"
+>title="Target mapping"
 >abstract="Os target mappings são objetos técnicos usados pelo Campaign para entregar mensagens e contêm todas as configurações técnicas necessárias para enviar deliveries (endereços, números de telefone, indicadores de aceitação, identificadores adicionais...)."
 >text="Learn more in documentation"
 
-#### Selecionar schema de campanha {#select-campaign-schema}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="Selecionar o nome do esquema da campanha"
+>title="Nome do esquema"
 >abstract="O nome da entidade definida no banco de dados do Adobe Campaign."
 >text="Learn more in documentation"

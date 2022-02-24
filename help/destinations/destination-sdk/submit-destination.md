@@ -2,9 +2,9 @@
 description: Esta página fornece todas as informações que você precisa enviar para revisar um destino criado com o Destination SDK.
 title: Enviar para revisão de um destino criado no Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
+source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,10 @@ Esta página lista todas as informações que você precisa fornecer ao enviar o
 * Prova de que você enviou uma solicitação de publicação de destino para seu destino usando o [API de publicação de destino](./destination-publish-api.md).
 * (Somente para integrações produzidas) uma PR de documentação (solicitação de pull), seguindo as instruções descritas na [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md).
 * Um arquivo de imagem que será exibido como um logotipo para seu cartão de destino no catálogo de destinos do Experience Platform.
+
+>[!NOTE]
+>
+>O tempo de resposta da publicação do Adobe é de 5 dias úteis.
 
 Você pode encontrar informações detalhadas sobre cada item nas seções abaixo:
 

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conta usando a API do Serviço de Fluxo.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 2%
+source-wordcount: '523'
+ht-degree: 3%
 
 ---
 
@@ -17,42 +17,24 @@ ht-degree: 2%
 
 Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. [!DNL Flow Service] O fornece a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de transmissão existente, incluindo o nome, descrição e credenciais.
 
-Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este tutorial requer uma conexão existente e uma ID de conexão válida. Se você não tiver uma conexão existente, selecione sua fonte de escolha na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer uma conexão existente e uma ID de conexão válida. Se você não tiver uma conexão existente, selecione sua fonte escolhida no [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
 Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Fontes](../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para atualizar com êxito uma conexão usando a API [!DNL Flow Service].
+### Uso de APIs da plataforma
 
-### Lendo exemplos de chamadas de API
-
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
-
-### Coletar valores para cabeçalhos necessários
-
-Para fazer chamadas para APIs da plataforma, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos os recursos no Experience Platform, incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para APIs da plataforma exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
-
-* `Content-Type: application/json`
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
 
 ## Procurar detalhes da ligação
 
-A primeira etapa da atualização da conexão é recuperar os detalhes usando a ID da conexão. Para recuperar os detalhes atuais da conexão, faça uma solicitação GET para a API [!DNL Flow Service] enquanto fornece a ID da conexão, da conexão que deseja atualizar.
+A primeira etapa da atualização da conexão é recuperar os detalhes usando a ID da conexão. Para recuperar os detalhes atuais da sua conexão, faça uma solicitação GET para o [!DNL Flow Service] API ao fornecer a ID de conexão, da conexão que deseja atualizar.
 
 **Formato da API**
 
@@ -62,7 +44,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja recuperar. |
+| `{CONNECTION_ID}` | O único `id` para a conexão que deseja recuperar. |
 
 **Solicitação**
 
@@ -79,7 +61,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes atuais da conexão, incluindo suas credenciais, o identificador exclusivo (`id`) e a versão. O valor da versão é necessário para atualizar a conexão.
+Uma resposta bem-sucedida retorna os detalhes atuais da conexão, incluindo suas credenciais, identificador exclusivo (`id`) e versão. O valor da versão é necessário para atualizar a conexão.
 
 ```json
 {
@@ -117,11 +99,11 @@ Uma resposta bem-sucedida retorna os detalhes atuais da conexão, incluindo suas
 
 ## Atualizar conexão
 
-Para atualizar o nome, a descrição e as credenciais da conexão, execute uma solicitação de PATCH para a API [!DNL Flow Service], fornecendo a ID da conexão, a versão e as novas informações que deseja usar.
+Para atualizar o nome, a descrição e as credenciais da conexão, execute uma solicitação de PATCH para a [!DNL Flow Service] API enquanto fornece a ID da conexão, a versão e as novas informações que deseja usar.
 
 >[!IMPORTANT]
 >
->O cabeçalho `If-Match` é necessário ao fazer uma solicitação de PATCH. O valor desse cabeçalho é a versão exclusiva da conexão que você deseja atualizar.
+>O `If-Match` é necessário usar o cabeçalho ao fazer uma solicitação de PATCH. O valor desse cabeçalho é a versão exclusiva da conexão que você deseja atualizar.
 
 **Formato da API**
 
@@ -131,7 +113,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja atualizar. |
+| `{CONNECTION_ID}` | O único `id` para a conexão que deseja atualizar. |
 
 **Solicitação**
 
@@ -170,13 +152,13 @@ curl -X PATCH \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a conexão. As operações incluem: `add`, `replace` e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a conexão. As operações incluem: `add`, `replace`e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID da conexão e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service], fornecendo a ID da conexão.
+Uma resposta bem-sucedida retorna a ID da conexão e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação do GET para o [!DNL Flow Service] API, enquanto fornece a ID de conexão.
 
 ```json
 {
@@ -187,4 +169,4 @@ Uma resposta bem-sucedida retorna a ID da conexão e uma tag atualizada. Você p
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você atualizou as credenciais e as informações associadas à conexão usando a API [!DNL Flow Service]. Para obter mais informações sobre como usar conectores de origem, consulte a [visão geral das fontes](../../home.md).
+Ao seguir este tutorial, você atualizou as credenciais e as informações associadas à conexão usando o [!DNL Flow Service] API. Para obter mais informações sobre o uso de conectores de origem, consulte o [visão geral das fontes](../../home.md).

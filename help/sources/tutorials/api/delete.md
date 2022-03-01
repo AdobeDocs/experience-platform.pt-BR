@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como excluir uma conta usando a API do Serviço de fluxo.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Este tutorial também requer uma compreensão funcional dos seguintes componente
 * [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 * [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Uso de APIs da plataforma
+### Uso de APIs da plataforma
 
 Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
 

@@ -5,26 +5,22 @@ title: Visão geral do conector Google PubSub Source
 topic-legacy: overview
 description: Saiba como conectar o Google PubSub ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL Google PubSub]
+# [!DNL Google PubSub] conector
 
->[!NOTE]
->
->O conector [!DNL Google PubSub] está em beta. Consulte a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você insira dados desses sistemas na Platform para uso em serviços e destinos de downstream.
 
-A Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], permitindo que você traga dados desses sistemas para a Plataforma para uso em serviços e destinos de downstream.
+As fontes de armazenamento em nuvem podem trazer seus dados para a plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de fontes. A Platform permite trazer dados do [!DNL Azure Event Hubs] em tempo real.
 
-As fontes de armazenamento em nuvem podem trazer seus dados para a plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de fontes. A Platform permite trazer dados de [!DNL Azure Event Hubs] em tempo real.
+## Connect [!DNL Google PubSub] para a plataforma
 
-## Conectar [!DNL Google PubSub] à plataforma
-
-A documentação abaixo fornece informações sobre como se conectar [!DNL Google PubSub] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Google PubSub] para Plataforma usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 

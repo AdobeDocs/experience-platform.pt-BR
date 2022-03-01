@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
+source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1578'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ O **[!UICONTROL Adicionar dados de origem do Analytics]** será exibida. Selecio
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mapeamento
+
+>[!IMPORTANT]
+>
+>Suporte à Preparação de dados para o [!DNL Analytics] no momento, a fonte está em beta. O recurso e a documentação estão sujeitos a alterações.
 
 Antes de mapear a [!DNL Analytics] para direcionar o esquema XDM, primeiro você deve selecionar se está usando um esquema padrão ou um esquema personalizado.
 

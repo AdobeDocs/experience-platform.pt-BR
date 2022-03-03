@@ -2,10 +2,10 @@
 title: Configurar a extensão Adobe Experience Platform Web SDK
 description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 7%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ O [!UICONTROL IMS Organization ID] é a organização para a qual você deseja q
 
 ### **[!UICONTROL Domínio de borda]**
 
-O [!UICONTROL Domínio de borda] é o domínio do qual a extensão Adobe Experience Platform envia e recebe dados. A extensão requer o uso de um CNAME próprio para o tráfego de produção. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
+O [!UICONTROL Domínio de borda] é o domínio do qual a extensão Adobe Experience Platform envia e recebe dados. O Adobe recomenda usar um domínio próprio (CNAME) para essa extensão. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
 
 ## [!UICONTROL Datastreams]
 

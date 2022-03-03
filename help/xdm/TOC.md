@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
-user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
+user-guide-description: Use as classes e os grupos de campos de esquema do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 14%
+source-wordcount: '435'
+ht-degree: 17%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 14%
 * Classes {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [ExperiênciaEvento XDM](./classes/experienceevent.md)
+   * [Política](./classes/policy.md)
+   * [Produto](./classes/product.md)
    * [Definição de segmento](./classes/segment-definition.md)
    * Classes B2B {#b2b}
       * [Conta Comercial XDM](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 14%
       * [Lista de marketing comercial XDM](./classes/b2b/business-marketing-list.md)
       * [Membros da Lista de Marketing Comercial XDM](./classes/b2b/business-marketing-list-members.md)
 * Grupos de campos {#field-groups}
-   * Grupos de campos de perfil {#profile}
+   * Perfil individual XDM {#profile}
       * [Detalhes demográficos](./field-groups/profile/demographic-details.md)
       * [Consentimento do IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 14%
       * [Detalhes do Contato do Trabalho](./field-groups/profile/work-contact-details.md)
       * [Componentes de Pessoa Comercial XDM](./field-groups/profile/business-person-components.md)
       * [Detalhes da Pessoa Comercial XDM](./field-groups/profile/business-person-details.md)
-   * Grupos de campos de evento {#event}
+   * ExperiênciaEvento XDM {#event}
       * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Transferências de Saldo](./field-groups/event/balance-transfers.md)
       * [Detalhes de marketing da campanha](./field-groups/event/campaign-marketing-details.md)
+      * [Ações do cartão](./field-groups/event/card-actions.md)
       * [Detalhes do canal](./field-groups/event/channel-details.md)
       * [Detalhes de comércio](./field-groups/event/commerce-details.md)
+      * [Detalhes do Depósito](./field-groups/event/deposit-details.md)
       * [Detalhes de troca de dispositivo](./field-groups/event/device-trade-in-details.md)
       * [Reserva de Jantar](./field-groups/event/dining-reservation.md)
       * [Detalhes da ID de usuário final](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 14%
       * [Reserva de Voo](./field-groups/event/flight-reservation.md)
       * [Consentimento do IAB TCF 2.0](./field-groups/event/iab.md)
       * [Reserva de Loja](./field-groups/event/lodging-reservation.md)
+      * [Detalhes da solicitação de cotação](./field-groups/event/quote-request-details.md)
       * [Detalhes da Reserva](./field-groups/event/reservation-details.md)
+      * [Pesquisa de site de suporte](./field-groups/event/support-site-search.md)
       * [Detalhes da atualização](./field-groups/event/upgrade-details.md)
       * [Detalhes da venda adicional](./field-groups/event/upsell-details.md)
       * [Detalhes da Web](./field-groups/event/web-details.md)
+   * Produto {#product}
+      * [Catálogo de produtos](./field-groups/product/product-catalog.md)
+      * [Categoria do produto](./field-groups/product/product-category.md)
    * [Atualizações do nome do grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
    * [Aplicativo](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 14%
    * [Ambiente](./data-types/environment.md)
    * [Canal de experiência](./data-types/experience-channel.md)
    * [Atributos de Auditoria do Sistema de Origem Externa](./data-types/external-source-system-audit-attributes.md)
+   * [Conta financeira](./data-types/financial-account.md)
    * [Campo de consentimento genérico](./data-types/consent-field.md)
    * [Campo de Preferência de Marketing Genérico](./data-types/marketing-field.md)
    * [Campo de preferência de marketing genérico com assinaturas](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 14%
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Identidade](./data-types/identity.md)
    * [Impressões](./data-types/impressions.md)
+   * [Pesquisa interna do site](./data-types/internal-site-search.md)
    * [Par. Valor Chave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Medição](./data-types/measure.md)

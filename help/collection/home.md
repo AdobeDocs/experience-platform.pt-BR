@@ -5,9 +5,9 @@ title: Visão geral da coleção de dados
 topic-legacy: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '478'
 ht-degree: 6%
 
 ---
@@ -59,6 +59,10 @@ A Platform Edge Network é uma rede distribuída globalmente, rápida e confiáv
 [Encaminhamento de evento](../tags/ui/event-forwarding/overview.md) O pode tocar em qualquer datastreamento do Experience Platform, permitindo transformar, enriquecer e enviar dados para qualquer destino que não seja o Adobe com latência extrema baixa e sem adicionar nenhum código de terceiros ao dispositivo cliente.
 
 ![Encaminhamento de evento](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>O encaminhamento de eventos é um recurso pago incluído apenas como parte da oferta do Real-time Customer Data Platform Connections.
 
 ## Próximas etapas
 

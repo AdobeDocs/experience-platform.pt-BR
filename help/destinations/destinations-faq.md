@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: Respostas às perguntas mais frequentes sobre os destinos do Adobe Experience Platform
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
+source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '864'
 ht-degree: 4%
 
 ---
@@ -78,6 +78,12 @@ Para obter explicações detalhadas sobre os requisitos de correspondência de I
 **Posso criar vários destinos do Facebook na interface do usuário da plataforma para contas Facebook separadas?**
 
 Sim. Um destino Facebook no Experience Platform é 1:1 para uma conta de anúncio no Facebook. Você pode criar um destino Facebook separado para cada conta de anúncio do Facebook em sua empresa. Siga as [tutorial de conexão de destino](/help/destinations/ui/connect-destination.md) e conecte-se a uma conta Facebook separada para cada novo destino do Facebook na interface do usuário da plataforma. Não há limite para o número de contas de anúncio do Facebook às quais você pode se conectar.
+
+## Correspondência de cliente do Google {#google-customer-match}
+
+**Ao exportar segmentos para a Correspondência de clientes do Google, por que vejo números extras anexados ao final dos nomes de segmentos na interface do Google?**
+
+O Google requer que os nomes de segmentos sejam exclusivos. Os números que você está vendo são [Carimbos de data e hora UNIX](https://www.unixtimestamp.com/) e são anexadas para manter os nomes de segmento exclusivos, caso você tenha mapeado o mesmo segmento para vários destinos do Google.
 
 ## Públicos-alvo correspondentes ao linkedIn {#linkedin}
 

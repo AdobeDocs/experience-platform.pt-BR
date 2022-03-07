@@ -3,7 +3,7 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os Datastreams. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0141f0a83ca7b444015d98d8ce11199b400f77a5
+source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 2%
@@ -70,7 +70,7 @@ As subseções abaixo abordam as etapas básicas para o mapeamento de seus dados
 
 Selecionar **[!UICONTROL Salvar e adicionar mapeamento]** depois de concluir o [etapa de configuração básica](#configure)e o **[!UICONTROL Selecionar dados]** será exibida. A partir daqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para a Plataforma. Você pode selecionar a opção de carregar o objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >O objeto JSON deve ter um único nó raiz `data` para passar na validação.
 

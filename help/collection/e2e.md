@@ -2,7 +2,7 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando as tecnologias de coleta de dados fornecidas pela Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
+source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Na interface do usuário da coleta de dados, selecione **[!UICONTROL Datastreams
 
 Os requisitos de configuração de um armazenamento de dados dependem dos produtos e recursos para os quais você está enviando dados. Para obter informações detalhadas sobre as opções de configuração de cada produto, consulte [visão geral dos datastreams](../edge/fundamentals/datastreams.md).
 
-## Instalar e configurar o SDK da Web
+## Instalar e configurar o SDK da Web {#install}
 
 Depois de criar um esquema e um conjunto de dados, a próxima etapa é instalar e configurar o SDK da Web da plataforma para iniciar o envio de dados para a Edge Network.
 

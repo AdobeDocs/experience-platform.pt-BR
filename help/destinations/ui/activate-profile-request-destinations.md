@@ -6,9 +6,9 @@ seo-title: Activate audience data to profile request destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, mapeando segmentos para destinos de solicitação de perfil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Para ativar dados em destinos, você deve ter [conectado a um destino](./connect
 
 ### Política de mesclagem de segmentos {#merge-policy}
 
-Atualmente, os destinos de solicitação de perfil suportam apenas a ativação de segmentos que usam o [política de mesclagem padrão](../../segmentation/ui/segment-builder.md#merge-policies).
+Atualmente, os destinos de solicitação de perfil suportam apenas a ativação de segmentos que usam o [Política de Mesclagem Ativa na Borda](../../segmentation/ui/segment-builder.md#merge-policies) definido como padrão.
 
 ## Selecione o destino {#select-destination}
 

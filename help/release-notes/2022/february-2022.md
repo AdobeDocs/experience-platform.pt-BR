@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
+source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 7%
+source-wordcount: '720'
+ht-degree: 5%
 
 ---
 
@@ -15,9 +15,22 @@ ht-degree: 7%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Coleta de dados](#data-collection)
 - [[!DNL Identity Service]](#identity)
 - [Fontes](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+O Adobe Experience Platform fornece vários [!DNL dashboards] através da qual você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante os instantâneos diários.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Novos widgets de destinos padrão | Os widgets padrão a seguir permitem visualizar métricas diferentes relacionadas aos destinos.<ul><li>Segmentos ativados recentemente por destino. Esse widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido.</li><li>Tendência do tamanho do público-alvo. Este widget descreve o relacionamento da contagem de perfis durante um período de tempo para um segmento que foi mapeado para essa conta de destino.</li><li>Segmentos não mapeados por identidade. Este widget lista os cinco principais segmentos não mapeados classificados por contagem de identidade decrescente para um determinado destino e identidade.</li><li>Segmentos mapeados por identidade. Esse widget lista os cinco principais segmentos mapeados. Os segmentos são ordenados de alto a baixo de acordo com suas respectivas contagens de IDs de origem que correspondem à ID de destino selecionada no menu suspenso do widget.</li><li>Públicos-alvo comuns. Este widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget.</li></ul> Para obter mais informações sobre os widgets padrão disponíveis, consulte o [documentação do painel de destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+
+Para obter mais informações sobre [!DNL Dashboards]consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
 ## Coleta de dados {#data-collection}
 

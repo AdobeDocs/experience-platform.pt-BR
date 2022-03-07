@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Criar uma conexão de origem de campanhas MailChimp usando a interface do usuário da plataforma
 topic-legacy: tutorial
 description: Saiba como conectar o Adobe Experience Platform às campanhas do MailChimp usando a interface do usuário da plataforma.
-hide: true
-hidefromtoc: true
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
+source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%

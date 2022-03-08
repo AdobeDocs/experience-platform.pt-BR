@@ -4,7 +4,7 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Consulte a [modificação de painéis](../customize/modify.md) e [visão geral d
 
 O [!UICONTROL Eficácia] O guia fornece métricas sobre a qualidade e integridade dos dados do seu perfil, utilizando os widgets de eficácia do perfil. Esses widgets ilustram rapidamente a composição de seus perfis, as tendências de integridade ao longo do tempo e as avaliações sobre a qualidade dos dados de seu perfil.
 
-[O painel de eficácia do perfil.](../images/profiles/attributes-quality-assessment.png)
+![O painel de eficácia do perfil.](../images/profiles/attributes-quality-assessment.png)
 
 Consulte a [seção de widgets de eficácia do perfil](#profile-efficacy-widgets) para obter mais informações sobre os widgets atualmente disponíveis.
 

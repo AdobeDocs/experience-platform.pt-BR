@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2178'
 ht-degree: 1%
 
 ---
@@ -51,14 +51,14 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Agendar"
->abstract="Set the file export type (full files or incremental files) and the export frequency."
+>abstract="Use o ícone de lápis para definir o tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e a frequência de exportação."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Saiba mais na documentação"
 
 [!DNL Adobe Experience Platform] exporta dados para marketing por email e destinos de armazenamento em nuvem na forma de [!DNL CSV] arquivos. No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada segmento que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
 
 >[!IMPORTANT]
 > 
->[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Cada linha representa um perfil.
+>[!DNL Adobe Experience Platform] divide automaticamente os arquivos de exportação em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil.
 >
 >Nomes de arquivos divididos são anexados com um número que indica que o arquivo faz parte de uma exportação maior, desta forma: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
@@ -133,7 +133,6 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
 >id="platform_destinations_activate_filename"
 >title="Configurar nome de arquivo"
 >abstract="Para destinos com base em arquivo, um nome de arquivo exclusivo é gerado por segmento. Use o editor de nome de arquivo para criar e editar um nome de arquivo exclusivo ou manter o nome padrão."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="Saiba mais na documentação"
 
 Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para ter o tempo de exportação de dados anexado aos arquivos.
 
@@ -157,7 +156,7 @@ Selecionar **[!UICONTROL Aplicar alterações]** para confirmar a seleção.
 > 
 >Se você não selecionar a variável **[!UICONTROL Data e hora]** , os nomes de arquivo serão estáticos e o novo arquivo exportado substituirá o arquivo anterior no local de armazenamento com cada exportação. Ao executar um trabalho de importação recorrente de um local de armazenamento em uma plataforma de marketing por email, essa é a opção recomendada.
 
-Once you have finished configuring all your segments, select **[!UICONTROL Next]** to continue.
+Após concluir a configuração de todos os segmentos, selecione **[!UICONTROL Próximo]** para continuar.
 
 ## Selecionar atributos de perfil {#select-attributes}
 
@@ -316,7 +315,7 @@ Sem desduplicação, o arquivo de exportação conteria as seguintes entradas.
 
 Considerando a desduplicação pelo [!DNL Email] namespace, o arquivo de exportação conteria as seguintes entradas. O Perfil B é o mais recente que se qualificou para o segmento, por isso é o único que está sendo exportado.
 
-| Email* | personalEmail | firstName | lastName |
+| Email* | emailpessoal | firstName | lastName |
 |---|---|---|---|
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |

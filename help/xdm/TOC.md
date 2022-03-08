@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e os grupos de campos de esquema do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
+source-git-commit: 2144c75eb83a5806fa2cd9c75edc8cb0e85695fd
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 17%
 
 ---
@@ -166,6 +166,7 @@ ht-degree: 17%
 * Tutoriais {#tutorials}
    * [Criar um esquema na interface do usuário](tutorials/create-schema-ui.md)
    * [Criar um esquema na API](tutorials/create-schema-api.md)
+   * [Definir campos personalizados na API](./tutorials/custom-fields-api.md)
    * [Definir um relacionamento de esquema na interface do usuário](tutorials/relationship-ui.md)
    * [Definir uma relação de esquema na API](tutorials/relationship-api.md)
    * [Definir um relacionamento de esquema na Real-time CDP B2B Edition](tutorials/relationship-b2b.md)

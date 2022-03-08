@@ -1,9 +1,10 @@
 ---
 title: Estender um campo Enum suave
 description: Saiba como estender um campo soft enum na API do Registro de Schema.
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -197,4 +198,4 @@ Depois de aplicar a alteração, o Registro de Esquema responde com o seguinte a
 
 ## Próximas etapas
 
-Este guia aborda como estender enumerações temporárias na API do Registro de Schema. Para obter mais informações sobre como definir tipos de campos diferentes na API, consulte o guia sobre [Restrições do tipo de campo XDM](../schema/field-constraints.md#define-fields).
+Este guia aborda como estender enumerações temporárias na API do Registro de Schema. Consulte o guia sobre [definição de campos personalizados na API](./custom-fields-api.md) para obter mais informações sobre como criar tipos de campos diferentes.

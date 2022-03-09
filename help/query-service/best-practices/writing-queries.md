@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Este documento detalha detalhes importantes a saber ao gravar consultas no Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: c36ef1d5f5e5f7875da2b7a878c86b449d46c3c5
+source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 3%
@@ -318,4 +318,4 @@ O Serviço de query padroniza dados persistentes no Adobe Experience Platform us
 
 Ao ler este documento, você foi apresentado a algumas considerações importantes ao gravar consultas usando [!DNL Query Service]. Para obter mais informações sobre como usar a sintaxe SQL para gravar suas próprias consultas, leia o [Documentação da sintaxe SQL](../sql/syntax.md).
 
-Para obter mais exemplos de consultas que podem ser usadas no Serviço de Consultas, leia os guias em [Exemplos de consultas do Adobe Analytics](./adobe-analytics.md), [Exemplos de consultas do Adobe Target](./adobe-target.md)ou [Consultas de amostra do ExperienceEvent](./experience-event-queries.md).
+Para obter mais exemplos de consultas que podem ser usadas no Serviço de Consultas, leia os guias em [Exemplos de consultas do Adobe Analytics](../sample-queries/adobe-analytics.md), [Exemplos de consultas do Adobe Target](../sample-queries/adobe-target.md)ou [Consultas de amostra do ExperienceEvent](../sample-queries/experience-event.md).

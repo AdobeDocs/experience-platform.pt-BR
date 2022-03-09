@@ -1,15 +1,15 @@
 ---
-title: Exemplos de consultas de carga incremental
+title: Carga incremental no serviço de query
 description: O recurso de carregamento incremental usa recursos anônimos de bloco e instantâneo para fornecer uma solução quase em tempo real para mover dados do lago de dados para o data warehouse, ignorando os dados correspondentes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Exemplos de consultas incrementais de carregamento de dados
+# Carga incremental no Serviço de Consulta
 
 O padrão de design de carga incremental é uma solução para gerenciar dados. O padrão processa apenas as informações no conjunto de dados que foram criadas ou modificadas desde a última execução do carregamento.
 

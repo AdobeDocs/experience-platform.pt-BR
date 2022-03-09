@@ -1,15 +1,15 @@
 ---
-title: Amostra de consultas de bloco anônimas
+title: Bloqueio Anônimo no Serviço de Consulta
 description: O bloco anônimo é uma sintaxe SQL compatível com o Adobe Experience Platform Query Service, que permite executar com eficiência uma sequência de consultas
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-# Exemplos de consultas para bloco anônimo
+# Bloco anônimo no Serviço de Consulta
 
 O Adobe Experience Platform Query Service oferece suporte a blocos anônimos. O recurso de bloco anônimo permite encadear uma ou mais instruções SQL que são executadas em sequência. Permitem também a opção de tratamento de exceções.
 
@@ -60,4 +60,4 @@ $$;
 
 Ao ler este documento, agora você tem uma compreensão clara de blocos anônimos e como eles são estruturados. [Para obter mais informações sobre a execução da consulta](./writing-queries.md), leia o guia sobre a execução do query no Serviço de query.
 
-Para obter mais exemplos de consultas que podem ser usadas no Serviço de Consultas, leia os guias em [Exemplos de consultas do Adobe Analytics](./adobe-analytics.md), [Exemplos de consultas do Adobe Target](./adobe-target.md)ou [Consultas de amostra do ExperienceEvent](./experience-event-queries.md).
+Você também deve ler sobre [como o bloco anônimo é usado com o padrão de design de carga incremental](./incremental-load.md) para aumentar a eficiência do query.

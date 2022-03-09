@@ -4,7 +4,7 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -43,11 +43,11 @@ Você pode modificar a aparência da variável [!UICONTROL Perfis] painel seleci
 
 Consulte a [modificação de painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
-## (Beta) Insights de eficiência do perfil {#profile-efficiency-insights}
+## (Beta) Informações sobre a eficácia do perfil {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->A funcionalidade de insight de eficiência de perfil está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+>A funcionalidade de insight da eficácia do perfil encontra-se atualmente em beta e não está disponível para todos os utilizadores. A documentação e a funcionalidade estão sujeitas a alterações.
 
 O [!UICONTROL Eficácia] O guia fornece métricas sobre a qualidade e integridade dos dados do seu perfil, utilizando os widgets de eficácia do perfil. Esses widgets ilustram rapidamente a composição de seus perfis, as tendências de integridade ao longo do tempo e as avaliações sobre a qualidade dos dados de seu perfil.
 
@@ -167,7 +167,7 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 
 >[!IMPORTANT]
 >
->Os widgets de eficiência de perfil estão atualmente em versão beta e não estão disponíveis para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+>Os widgets de eficácia do perfil estão atualmente em Beta e não estão disponíveis para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 O Adobe fornece vários widgets para avaliar a integridade dos perfis assimilados disponíveis para a análise de dados. Cada um dos widgets de eficácia do perfil pode ser filtrado pela política de mesclagem. Para alterar o filtro de política de mesclagem, selecione o[!UICONTROL Perfis usando política de mesclagem] e escolha a política apropriada na lista disponível.
 

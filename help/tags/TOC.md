@@ -4,9 +4,9 @@ user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '386'
 ht-degree: 87%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 87%
    * [Bibliotecas](./ui/publishing/libraries.md)
    * [Bibliotecas de auto-hospedagem](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Republicar uma biblioteca](./ui/publishing/republish.md)
+   * [Suporte Premium CDN (Beta)](./ui/publishing/premium-cdn.md)
 * Informações do lado do cliente {#client-side}
    * [Visão geral](./ui/client-side/overview.md)
    * [Implantação assíncrona](./ui/client-side/asynchronous-deployment.md)

@@ -1,10 +1,11 @@
 ---
 title: Ambientes
-description: Saiba mais sobre o conceito de ambientes de tags e como eles funcionam no Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+description: Saiba mais sobre o conceito de ambientes de tag e como eles funcionam na Adobe Experience Platform.
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
 source-wordcount: '1468'
-ht-degree: 79%
+ht-degree: 98%
 
 ---
 
@@ -14,21 +15,21 @@ ht-degree: 79%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Os ambientes de tags definem vários aspectos principais das builds de biblioteca que você implantou no seu site ou aplicativo:
+Os ambientes de tag definem vários aspectos principais das criações da biblioteca que são implantadas em seu site ou aplicativo:
 
 * O nome do arquivo da build.
 * O domínio e o caminho da build, dependendo do host atribuído pelo ambiente.
 * O formato de arquivo da build, dependendo da opção de arquivamento escolhida.
 
-Ao criar uma build de biblioteca, você deve atribuí-la a um ambiente. As extensões, regras e elementos de dados da build são compilados e colocados no ambiente atribuído. Cada ambiente fornece um código integrado exclusivo que permite integrar a build atribuída ao site.
+Ao criar um build de biblioteca, você deve atribuí-lo a um ambiente. As extensões, regras e elementos de dados da build são compilados e colocados no ambiente atribuído. Cada ambiente fornece um código integrado exclusivo que permite integrar a build atribuída ao site.
 
-Diferentes artefatos do podem existir em cada Ambiente. Esses artefatos permitem testar diferentes bibliotecas em ambientes diferentes, conforme você as envia por meio do fluxo de trabalho.
+Diferentes artefatos do podem existir em cada ambiente. Esses artefatos permitem testar diferentes bibliotecas em ambientes diferentes, conforme você as envia por meio do fluxo de trabalho.
 
-Este documento fornece etapas sobre como instalar, configurar e criar ambientes diferentes na interface do usuário da Coleta de dados.
+Este documento fornece etapas sobre como instalar, configurar e criar diferentes ambientes na interface do usuário da Coleção de dados.
 
 ## Tipos de ambientes
 
-As tags são compatíveis com três tipos de ambientes diferentes, cada um correspondente a um estado diferente no [fluxo de trabalho de publicação](./publishing-flow.md):
+As tags aceitam três tipos de ambientes diferentes, cada um correspondente a um estado diferente no [fluxo de trabalho de publicação](./publishing-flow.md):
 
 | Tipo de ambiente | Descrição |
 | --- | --- |
@@ -36,13 +37,13 @@ As tags são compatíveis com três tipos de ambientes diferentes, cada um corre
 | Armazenamento temporário | Esse ambiente corresponde às colunas **Enviado** e **Aprovado** no fluxo de trabalho de publicação. |
 | Produção | Esse ambiente corresponde à coluna **Publicado** no fluxo de trabalho de publicação. |
 
-Diferentes artefatos do  podem existir em cada ambiente. Dessa forma, você pode testar diferentes bibliotecas em ambientes diferentes, conforme você as envia por meio do fluxo de trabalho.
+Diferentes artefatos do podem existir em cada ambiente. Dessa forma, você pode testar diferentes bibliotecas em ambientes diferentes, conforme você as envia por meio do fluxo de trabalho.
 
 >[!NOTE]
 >
 >Cada ambiente só pode receber uma build de biblioteca por vez. No entanto, espera-se que um único ambiente contenha muitas builds diferentes ao longo do tempo, conforme você as move pelo fluxo de trabalho de publicação, reatribuindo as builds entre ambientes, conforme necessário.
 
-## Instalação
+## Instalação {#installation}
 
 Cada ambiente tem um conjunto de instruções usadas para conectá-lo ao seu aplicativo. Para propriedades da Web, essas instruções fornecem códigos integrados. Para propriedades móveis, essas instruções fornecem o código necessário para instanciar as bibliotecas que você está usando e recuperar a configuração no tempo de execução.
 
@@ -90,7 +91,7 @@ Selecione **[!UICONTROL Host]** para escolher um host pré-configurado para o am
 
 ![](./images/environments/select-host.png)
 
-Quando uma build é criada, essa build é entregue ao local especificado para o host atribuído. Para obter informações sobre como criar e configurar hosts na interface do usuário da Coleta de dados, consulte a [visão geral de hosts](./hosts/hosts-overview.md).
+Quando um build é concluído, é enviado ao local especificado para o host atribuído. Para obter informações sobre como criar e configurar hosts na interface da Coleção de dados, consulte a [visão geral de hosts](./hosts/hosts-overview.md).
 
 ### Configuração de arquivamento {#archive}
 
@@ -112,9 +113,9 @@ Se você usar a opção de arquivamento, todos os arquivos de build serão entre
 
 ### Integrar código {#embed-code}
 
-Um código incorporado é uma tag `<script>` que deve ser colocada nas seções `<head>` das páginas do site para carregar e executar o código que você criou. Cada configuração de ambiente gera automaticamente seu próprio código incorporado, de modo que você só precisa copiá-lo e colá-lo em seu site nas páginas em que deseja que as tags sejam executadas.
+Um código integrado é uma tag `<script>` que deve ser colocada nas seções `<head>` das páginas do site para carregar e executar o código que foi criado. Cada configuração de ambiente gera automaticamente seu próprio código integrado. Basta copiá-lo e colá-lo nas páginas do site nas quais você deseja executar as tags.
 
-Ao visualizar as instruções de instalação, é possível optar por fazer com que o script carregue os arquivos da biblioteca de forma síncrona ou assíncrona. Essa configuração não é persistente e não reflete como você implementou tags no site. Em vez disso, apenas mostra a maneira apropriada de instalar o ambiente.
+Ao visualizar as instruções de instalação, é possível optar por fazer com que o script carregue os arquivos da biblioteca de forma síncrona ou assíncrona. Essa configuração não é persistente e não reflete a forma como as tags foram implementadas no site. Em vez disso, apenas mostra a maneira apropriada de instalar o ambiente.
 
 >[!WARNING]
 >
@@ -128,7 +129,7 @@ Para obter mais informações sobre essa configuração, consulte o guia sobre [
 
 #### Implantação síncrona
 
-Quando o navegador lê um código de inserção usando implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página.
+Quando o navegador lê um código integrado usando a implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página.
 
 Os códigos integrados síncronos consistem em duas tags `<script>` que devem ser colocadas dentro do HTML do seu site. Uma tag `<script>` deve ser colocada no documento `<head>`, enquanto a outra deve ser colocada antes da tag `</body>` de fechamento.
 
@@ -142,7 +143,7 @@ Como os códigos integrados são gerados com base nas configurações do ambient
 
 >[!WARNING]
 >
->Quando um código incorporado de um ambiente de tags é alterado, é necessário atualizar manualmente os códigos incorporados em seu HTML. Para evitar uma manutenção dispendiosa, atualize os códigos integrados quando for absolutamente necessário.
+>Quando um código integrado de um ambiente de tags é alterado, é necessário atualizar manualmente os códigos integrados no HTML. Para evitar uma manutenção dispendiosa, atualize os códigos integrados quando for absolutamente necessário.
 
 ## Criar um ambiente
 

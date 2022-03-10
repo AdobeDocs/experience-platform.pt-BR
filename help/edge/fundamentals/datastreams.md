@@ -3,9 +3,9 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os Datastreams. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '1940'
 ht-degree: 2%
 
 ---
@@ -107,14 +107,6 @@ Quando a contagem dos campos necessários atingir zero e você estiver satisfeit
 Após configurar um novo armazenamento de dados ou selecionar um existente para exibir, a página de detalhes desse armazenamento de dados será exibida. Aqui você pode encontrar mais informações sobre o armazenamento de dados, incluindo sua ID.
 
 ![Página de detalhes de um armazenamento de dados criado](../images/datastreams/view-details.png)
-
-Quando um conjunto de dados é criado, três ambientes associados são criados automaticamente com configurações idênticas. Esses três ambientes são `dev`, `stage`e `prod`, que correspondem à variável [ambientes padrão para tags](../../tags/ui/publishing/environments.md). Ao criar uma biblioteca de tags em um `dev` , a biblioteca usa automaticamente a variável `dev` do armazenamento de dados. É possível editar livremente as configurações em ambientes individuais, de acordo com suas necessidades.
-
-Em implementações do SDK, um `edgeConfigId` é uma ID composta que especifica o conjunto de dados e o ambiente específico nesse conjunto de dados. Por exemplo, para especificar a variável `stage` ambiente para um armazenamento de dados com ID `1c86778b-cdba-4684-9903-750e52912ad1`, use o `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->Se nenhum ambiente estiver presente na ID composta, o ambiente de produção (`prod`) é usada.
 
 Na tela de detalhes do armazenamento de dados, é possível [adicionar serviços](#add-services) para ativar os recursos dos produtos da Adobe Experience Cloud aos quais você tem acesso.
 

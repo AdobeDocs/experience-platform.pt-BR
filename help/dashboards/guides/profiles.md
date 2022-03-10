@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2329'
 ht-degree: 1%
 
 ---
@@ -196,9 +196,9 @@ Esse widget cria um gráfico de círculo de integridade de perfil desde a últim
 
 Este widget mostra a proporção de perfis que são de alta, média ou baixa integridade. Por padrão, há três níveis de integridade configurados:
 
-* Alta integridade: Perfis têm mais de 70% de atributos preenchidos.
-* Integridade média: Os perfis têm menos de 70% e mais de 30% de atributos preenchidos.
-* Baixa integridade: Os perfis têm menos de 30% de atributos preenchidos.
+* Alta integridade: Os perfis têm mais de 70% dos atributos preenchidos.
+* Integridade média: Os perfis têm menos de 70% e mais de 30% dos atributos preenchidos.
+* Baixa integridade: Os perfis têm menos de 30% dos atributos preenchidos.
 
 ![Os perfis por widget de integridade](../images/profiles/profiles-by-completeness.png)
 
@@ -210,9 +210,9 @@ O eixo x representa o tempo, o eixo y representa o número de perfis e as cores 
 
 Os três níveis de integridade são:
 
-* Alta integridade: Perfis têm mais de 70% de atributos preenchidos.
-* Integridade média: Os perfis têm menos de 70% e mais de 30% de atributos preenchidos.
-* Baixa integridade: Os perfis têm menos de 30% de atributos preenchidos.
+* Alta integridade: Os perfis têm mais de 70% dos atributos preenchidos.
+* Integridade média: Os perfis têm menos de 70% e mais de 30% dos atributos preenchidos.
+* Baixa integridade: Os perfis têm menos de 30% dos atributos preenchidos.
 
 ![O widget de tendência de integridade de perfis](../images/profiles/profiles-completeness-trend.png)
 

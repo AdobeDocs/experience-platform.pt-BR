@@ -6,9 +6,9 @@ seo-title: Edit activation dataflows
 description: Siga as etapas neste artigo para editar um fluxo de dados de ativação existente no Adobe Experience Platform.
 seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 # Editar fluxos de dados de ativação {#edit-activation-flows}
 
 No Adobe Experience Platform, você pode editar vários componentes de fluxos de dados de ativação existentes para destinos, como os segmentos exportados e atributos de perfil, a frequência de exportação, se o fluxo de dados de ativação estiver ativado ou desativado e muito mais.
+
+## Editar fluxos de dados {#edit-dataflows}
 
 Siga as etapas abaixo para editar os fluxos de dados de ativação existentes:
 
@@ -42,4 +44,8 @@ Siga as etapas abaixo para editar os fluxos de dados de ativação existentes:
 
    ![Detalhes do destino](../assets/ui/edit-activation/destination-details.png)
 
-5. Consulte [Visão geral de Ativation](activation-overview.md) para obter detalhes sobre como ativar novos segmentos para seus destinos.
+## Próximas etapas {#next-steps}
+
+Ao seguir este tutorial, você usou com sucesso a variável **[!UICONTROL destinos]** espaço de trabalho para atualizar fluxos de dados de destino existentes.
+
+Para obter mais informações sobre destinos, consulte [visão geral dos destinos](../catalog/overview.md).

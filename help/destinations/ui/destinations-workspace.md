@@ -4,9 +4,9 @@ title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em quatro seções: Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
@@ -107,8 +107,8 @@ O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma
 | [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: Servidor para servidor.</li><li>Para destinos de transmissão: Pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nome do usuário] | As credenciais de conta que você selecionou para o fluxo de destino. |
 | [!UICONTROL Dados de ativação] | Indica o número de segmentos que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os segmentos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os segmentos ativados. |
-| [!UICONTROL Criado] | A data e a hora UTC em que o fluxo de ativação para o destino foi criado. |
-| [!UICONTROL Status] | `Active` ou `Inactive`. Indica se os dados estão sendo ativados para esse destino. |
+| [!UICONTROL Criado] | A data e a hora UTC em que o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação primeiro ou mais antigos. |
+| [!UICONTROL Status] | `Enabled` ou `Disabled`. Indica se os dados estão sendo ativados para esse destino. |
 
 Clique em uma linha de destino para exibir mais informações sobre o destino no painel direito.
 

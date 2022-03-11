@@ -1,9 +1,10 @@
 ---
 title: Suporte Premium CDN para tags
 description: Saiba mais sobre o recurso premium de CDN para tags e como ele pode ser usado para fornecer seu conteúdo em várias regiões geográficas.
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ Para levar isso em conta, as tags no Experience Platform fornecem um recurso pre
 
 O suporte à CDN Premium é um recurso pago e deve ser adquirido pela organização para habilitá-lo e usá-lo. Este guia aborda como configurar e usar esse recurso na interface do usuário da coleta de dados depois de comprá-la.
 
-## Habilitar CDN premium para uma empresa
+## Habilitar CDN premium para sua organização
 
-O CDN Premium é ativado no nível da empresa, o que significa que você deve ter permissões de edição da empresa para ativar o recurso.
-
-Na interface do usuário da coleta de dados, navegue até **[!UICONTROL Tags]** > **[!UICONTROL Empresas]**. Aqui, selecione a empresa para a qual deseja ativar o recurso e selecione **[!UICONTROL Configurar]** .
-
-![Selecione uma empresa para configurar](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-Na caixa de diálogo de configuração exibida, selecione a opção para **[!UICONTROL CDN Premium Ativado]** antes de selecionar **[!UICONTROL Salvar]** para confirmar as alterações.
-
-![Habilite a opção premium CDN](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+A CDN Premium é ativada no nível da empresa. Depois que sua organização comprar o recurso premium CDN, um administrador do Adobe será habilitado para sua empresa na interface do usuário para coleta de dados.
 
 ## Recriar e instalar bibliotecas de tags com códigos incorporados atualizados
 
-Habilitar o recurso premium CDN não significa que os ativos de tag sejam replicados imediatamente e prontos para uso nas novas regiões. Isso significa apenas que agora você pode escolher quando aceitar essa funcionalidade.
+Quando a CDN premium estiver ativada, isso não significa que seus ativos de tag sejam replicados imediatamente e prontos para uso nas novas regiões. Isso significa apenas que agora você pode escolher quando aceitar essa funcionalidade.
 
 >[!IMPORTANT]
 >

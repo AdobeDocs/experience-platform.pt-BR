@@ -5,7 +5,7 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Com o Experience Platform, você pode centralizar dados coletados de fontes dife
 
 As fontes no Experience Platform são agrupadas nas seguintes categorias:
 
-### Aplicativos Adobe
+### Aplicativos Adobe {#adobe-applications}
 
 O Experience Platform permite que os dados sejam assimilados de outros aplicativos do Adobe, incluindo Adobe Analytics e Adobe Audience Manager. Consulte os seguintes documentos relacionados para obter mais informações:
 
@@ -38,13 +38,13 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 - [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
 - [Crie um [!DNL Marketo Engage] conexão de origem na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising {#advertising}
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) conector
 
-### Armazenamento na nuvem
+### Armazenamento na nuvem {#cloud-storage}
 
 As fontes de armazenamento em nuvem podem trazer seus próprios dados para a plataforma sem precisar baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes por meio da interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
@@ -62,7 +62,7 @@ As fontes de armazenamento em nuvem podem trazer seus próprios dados para a pla
 - [[!DNL Oracle Object Storage] conector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] conector](connectors/cloud-storage/sftp.md)
 
-### Gerenciamento de Relacionamento com o Cliente (CRM)
+### Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
 
 Os sistemas CRM fornecem dados que podem ajudar a criar relações com o cliente, o que, por sua vez, cria fidelidade e impulsiona a retenção do cliente. O Experience Platform fornece suporte para assimilar dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
 
@@ -71,14 +71,14 @@ Os sistemas CRM fornecem dados que podem ajudar a criar relações com o cliente
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Sucesso do cliente
+### Sucesso do cliente {#customer-success}
 
 O Experience Platform oferece suporte para assimilar dados de um aplicativo de terceiros com sucesso do cliente. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Salesforce Service Cloud] conector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] conector](connectors/customer-success/servicenow.md)
 
-### Banco de dados
+### Banco de dados {#database}
 
 O Experience Platform oferece suporte para assimilar dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
@@ -101,19 +101,19 @@ O Experience Platform oferece suporte para assimilar dados de um banco de dados 
 - [[!DNL PostgreSQL] conector](connectors/databases/postgres.md)
 - [[!DNL Snowflake] conector](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de comércio eletrônico de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Sistema local
+### Sistema local {#local-system}
 
 O Experience Platform oferece suporte para assimilar dados do sistema local. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [Upload de arquivo local](connectors/local-system/local-file-upload.md)
 
-### Automação de marketing
+### Automação de marketing {#marketing-automation}
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
@@ -121,19 +121,19 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de auto
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Pagamentos
+### Pagamentos {#payments}
 
 O Experience Platform fornece suporte para assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL PayPal] conector](connectors/payments/paypal.md)
 
-### Streaming
+### Streaming {#streaming}
 
 O Experience Platform oferece suporte para assimilar dados de fontes de transmissão. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protocolos
+### Protocolos {#protocols}
 
 O Experience Platform oferece suporte para assimilação de dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 

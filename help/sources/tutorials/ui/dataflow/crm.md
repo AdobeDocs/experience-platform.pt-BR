@@ -1,157 +1,137 @@
 ---
 keywords: Experience Platform, home, tópicos populares, esquema de crm, crm, CRM, fluxo de dados, fluxo de dados
 solution: Experience Platform
-title: Configurar um fluxo de dados para uma conexão de origem do CRM na interface do usuário
+title: Criar um fluxo de dados usando uma fonte de CRM na interface do usuário
 topic-legacy: overview
 type: Tutorial
-description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
+description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de CRM usando a interface do usuário da plataforma.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
 
-# Configurar um fluxo de dados para uma conexão CRM na interface do usuário
+# Criar um fluxo de dados usando uma fonte de CRM na interface do usuário
 
-Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
-
-## Introdução
-
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
-
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do schema](../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial do Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
-
-Além disso, este tutorial requer que você já tenha criado uma conta CRM. Uma lista de tutoriais para criar diferentes conectores de CRM na interface do usuário pode ser encontrada no [visão geral dos conectores de origem](../../../home.md).
-
-## Selecionar dados
-
-Depois de criar sua conta CRM, a variável [!UICONTROL Selecionar dados] será exibida, fornecendo uma interface para explorar sua hierarquia de arquivos.
-
-* A metade esquerda da interface é um navegador de diretório, que exibe os arquivos e diretórios do CRM.
-* A metade direita da interface permite visualizar até 100 linhas de dados de um arquivo compatível.
-
-Você pode usar o **[!UICONTROL Pesquisar]** na parte superior da página para identificar rapidamente os dados de origem que você pretende usar.
+Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma fonte para um conjunto de dados no Adobe Experience Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de CRM (Gerenciamento de relacionamento com o cliente) usando a interface do usuário da plataforma.
 
 >[!NOTE]
 >
->A opção de dados de origem da pesquisa está disponível para todos os conectores de origem baseados em tabelas, excluindo os conectores Analytics, Classificações, Hubs de eventos e Kinesis.
+>Para criar um fluxo de dados, você já deve ter uma conta autenticada em uma fonte de CRM. Uma lista de tutoriais para criar diferentes contas de origem do CRM na interface do usuário pode ser encontrada no [visão geral das fontes](../../../home.md#crm).
 
-Depois de encontrar os dados de origem, selecione o diretório e selecione **[!UICONTROL Próximo]**.
+## Introdução
 
-![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
 
-## Mapear campos de dados para um esquema XDM
+* [Fontes](../../../home.md): A Platform permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+   * [Noções básicas da composição do schema](../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Tutorial do Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
-O **[!UICONTROL Mapeamento]** é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da plataforma.
+## Adicionar dados
 
-Escolha um conjunto de dados para os dados de entrada que serão assimilados. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
+Depois de criar sua conta de origem do CRM, a variável **[!UICONTROL Adicionar dados]** for exibida, fornecendo uma interface para explorar a hierarquia de tabela da conta do CRM.
 
-### Usar um conjunto de dados existente
+* A metade esquerda da interface é um navegador que exibe uma lista de tabelas de dados contidas em sua conta. A interface também inclui uma opção de pesquisa que permite identificar rapidamente os dados de origem que você pretende usar.
+* A metade direita da interface é um painel de visualização, que permite visualizar até 100 linhas de dados.
 
-Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**, em seguida, selecione o ícone de dados ![dados](../../../images/tutorials/dataflow/crm/data.png) ao lado da barra de entrada.
-
-![conjunto de dados existente](../../../images/tutorials/dataflow/crm/existing-dataset.png)
-
-O **[!UICONTROL Selecionar conjunto de dados]** será exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **[!UICONTROL Continuar]**.
-
-![select-dataset](../../../images/tutorials/dataflow/crm/select-dataset.png)
-
-### Usar um novo conjunto de dados
-
-Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
-
-Você pode anexar um campo de esquema ao inserir um nome de esquema na variável **[!UICONTROL Selecionar esquema]** barra de pesquisa. Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar **[!UICONTROL Pesquisa avançada]** para acessar a tela de esquemas existentes, incluindo seus respectivos detalhes.
-
-Durante essa etapa, é possível ativar o conjunto de dados para [!DNL Real-time Customer Profile] e criar uma visualização holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados ativados serão incluídos em [!DNL Profile] As alterações e são aplicadas quando você salva o fluxo de dados.
-
-Ative o **[!UICONTROL Conjunto de dados de perfil]** para ativar seu conjunto de dados de destino para [!DNL Profile].
-
-![create-new-dataset](../../../images/tutorials/dataflow/crm/new-dataset.png)
-
-O **[!UICONTROL Selecionar esquema]** será exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
-
-![select-schema](../../../images/tutorials/dataflow/crm/select-schema.png)
-
-Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e dos campos calculados, consulte o [Guia da interface do usuário de preparação de dados](../../../../data-prep/ui/mapping.md)
-
->[!TIP]
+>[!NOTE]
 >
->Se estiver usando o [!DNL Salesforce] fonte como parte da CDP B2B, consulte [[!DNL Salesforce] tabelas de mapeamento de campo](../../../connectors/adobe-applications/mapping/salesforce.md) para obter um guia sobre os conjuntos de mapeamento adequados entre [!DNL Salesforce] campos de origem e campos de destino XDM.
+>A opção pesquisar dados da fonte de dados está disponível para todas as fontes baseadas em tabela, exceto o Adobe Analytics, [!DNL Amazon Kinesis]e [!DNL Azure Event Hubs].
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. Você pode ajustar manualmente as regras de mapeamento de acordo com seus casos de uso.
+Depois de encontrar os dados de origem, selecione a tabela e selecione **[!UICONTROL Próximo]**.
 
-Selecionar **[!UICONTROL Visualizar dados]** para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
-
-![](../../../images/tutorials/dataflow/crm/preview-data.png)
-
-Durante a visualização, a coluna de identidade é priorizada como o primeiro campo, pois são as informações principais necessárias ao validar resultados de mapeamento.
-
-Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Fechar]**.
-
-![](../../../images/tutorials/dataflow/crm/preview.png)
-
-Em seguida, da [!UICONTROL Mapeamento] , selecione **[!UICONTROL Próximo]** para continuar.
-
-![](../../../images/tutorials/dataflow/crm/mapping.png)
-
-## Agendar execução de ingestão
-
-O **[!UICONTROL Agendamento]** é exibida, permitindo configurar um agendamento de assimilação para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. A tabela a seguir descreve os diferentes campos configuráveis para programação:
-
-| Campo | Descrição |
-| --- | --- |
-| Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
-| Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| Hora de início | Um carimbo de data e hora UTC indicando quando a primeira assimilação está definida para ocorrer. |
-| Preenchimento retroativo | Um valor booleano que determina quais dados são assimilados inicialmente. If **[!UICONTROL Preenchimento retroativo]** estiver habilitado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. If **[!UICONTROL Preenchimento retroativo]** estiver desativado, somente os arquivos carregados entre a primeira execução de assimilação e a variável **[!UICONTROL Hora de início]** serão assimilados. Arquivos carregados antes de **[!UICONTROL Hora de início]** não será assimilado. |
-| Coluna Delta | Uma opção com um conjunto filtrado de campos do schema de origem do tipo, data ou hora. Esse campo é usado para diferenciar dados novos e existentes. Os dados incrementais serão assimilados com base no carimbo de data e hora da coluna selecionada. |
-
-Os fluxos de dados são projetados para assimilar dados automaticamente de forma programada. Comece selecionando a frequência de assimilação. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
-
-Para definir a hora de início da assimilação, ajuste a data e a hora exibidas na caixa de hora de início. Como alternativa, você pode selecionar o ícone de calendário para editar o valor de hora de início. A hora de início deve ser maior ou igual à hora UTC atual.
-
-Selecionar **[!UICONTROL Carregar dados incrementais por]** para atribuir a coluna delta. Este campo estabelece uma distinção entre dados novos e dados existentes.
-
-![](../../../images/tutorials/dataflow/crm/scheduling.png)
-
-### Configurar um fluxo de dados de ingestão único
-
-Para configurar a assimilação única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**.
-
->[!TIP]
->
->**[!UICONTROL Intervalo]** e **[!UICONTROL Preenchimento retroativo]** não são visíveis durante uma ingestão única.
-
-Depois de fornecer os valores apropriados ao agendamento, selecione **[!UICONTROL Próximo]**.
-
-![agendar uma vez](../../../images/tutorials/dataflow/crm/one-time-ingestion.png)
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Fornecer detalhes do fluxo de dados
 
-O **[!UICONTROL Detalhes do fluxo de dados]** será exibida, permitindo nomear e fornecer uma breve descrição sobre o novo fluxo de dados.
+O [!UICONTROL Detalhes do fluxo de dados] permite selecionar se deseja usar um conjunto de dados existente ou um novo conjunto de dados. Durante esse processo, também é possível definir as configurações para [!UICONTROL Conjunto de dados de perfil], [!UICONTROL Diagnóstico de erros], [!UICONTROL Ingestão parcial]e [!UICONTROL Alertas].
 
-Durante esse processo, também é possível ativar **[!UICONTROL Ingestão parcial]** e **[!UICONTROL Diagnóstico de erros]**. Habilitar **[!UICONTROL Ingestão parcial]** O oferece a capacidade de assimilar dados que contenham erros até um determinado limite. Uma vez **[!UICONTROL Ingestão parcial]** estiver ativado, arraste a **[!UICONTROL Limite de erros %]** disque para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte o [visão geral da ingestão parcial de lote](../../../../ingestion/batch-ingestion/partial.md).
+![detalhe do fluxo de dados](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
-Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
+### Usar um conjunto de dados existente
 
-![detalhes do fluxo de dados](../../../images/tutorials/dataflow/crm/dataflow-detail.png)
+Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. Você pode recuperar um conjunto de dados existente usando o [!UICONTROL Pesquisa avançada] ou percorrendo a lista de conjuntos de dados existentes no menu suspenso. Depois de selecionar um conjunto de dados, forneça um nome e uma descrição para o seu fluxo de dados.
+
+![conjunto de dados existente](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
+
+### Usar um novo conjunto de dados
+
+Para assimilar em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e, em seguida, forneça um nome de conjunto de dados de saída e uma descrição opcional. Em seguida, selecione um esquema para mapear usando o [!UICONTROL Pesquisa avançada] ou rolando pela lista de schemas existentes no menu suspenso. Depois de selecionar um esquema, forneça um nome e uma descrição para o seu fluxo de dados.
+
+![novo conjunto de dados](../../../images/tutorials/dataflow/table-based/new-dataset.png)
+
+### Habilitar [!DNL Profile] e diagnóstico de erros
+
+Em seguida, selecione o **[!UICONTROL Conjunto de dados de perfil]** alternar para ativar o conjunto de dados para [!DNL Profile]. Isso permite criar uma visualização holística dos atributos e comportamentos de uma entidade. Dados de todos [!DNL Profile]-conjuntos de dados habilitados serão incluídos em [!DNL Profile] As alterações e são aplicadas quando você salva o fluxo de dados.
+
+[!UICONTROL Diagnóstico de erros] permite a geração detalhada de mensagens de erro para qualquer registro incorreto que ocorra no seu fluxo de dados, enquanto [!UICONTROL Ingestão parcial] O permite assimilar dados contendo erros, até um determinado limite definido manualmente. Consulte a [visão geral da ingestão parcial de lote](../../../../ingestion/batch-ingestion/partial.md) para obter mais informações.
+
+![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
+
+### Ativar alertas
+
+Você pode habilitar alertas para receber notificações sobre o status do seu fluxo de dados. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de origens usando a interface do usuário](../alerts.md).
+
+Quando terminar de fornecer detalhes do fluxo de dados, selecione **[!UICONTROL Próximo]**.
+
+![alertas](../../../images/tutorials/dataflow/table-based/alerts.png)
+
+## Mapear campos de dados para um esquema XDM
+
+O [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
+
+A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. Você pode ajustar manualmente as regras de mapeamento de acordo com seus casos de uso. Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e dos campos calculados, consulte o [Guia da interface do usuário de preparação de dados](../../../../data-prep/ui/mapping.md).
+
+>[!NOTE]
+>
+>Se estiver usando [!DNL Salesforce] como parte do Real-time Customer Data Platform B2B Edition, consulte [[!DNL Salesforce] documento de mapeamento de campo](../../../connectors/adobe-applications/mapping/salesforce.md) para orientação sobre mapeamento [!DNL Salesforce] campos de origem para seus campos de destino XDM apropriados.
+
+Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
+
+![mapeamento](../../../images/tutorials/dataflow/table-based/mapping.png)
+
+## Agendar execução de ingestão
+
+O [!UICONTROL Agendamento] é exibida, permitindo configurar um agendamento de assimilação para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. Por padrão, a programação está definida como `Once`. Para ajustar a frequência de ingestão, selecione **[!UICONTROL Frequência]** e selecione uma opção no menu suspenso.
+
+>[!TIP]
+>
+>O intervalo e o preenchimento retroativo não são visíveis durante uma ingestão única.
+
+![programação](../../../images/tutorials/dataflow/table-based/scheduling.png)
+
+Se você definir sua frequência de ingestão como `Minute`, `Hour`, `Day`ou `Week`, é necessário definir um intervalo para estabelecer um intervalo de tempo definido entre cada ingestão. Por exemplo, uma frequência de assimilação definida como `Day` e um intervalo definido como `15` significa que o fluxo de dados está agendado para assimilar dados a cada 15 dias.
+
+Durante essa etapa, também é possível ativar **preenchimento retroativo** e defina uma coluna para a assimilação incremental de dados. O preenchimento retroativo é usado para assimilar dados históricos, enquanto a coluna definida para assimilação incremental permite que novos dados sejam diferenciados dos dados existentes.
+
+Consulte a tabela abaixo para obter mais informações sobre configurações de agendamento.
+
+| Campo | Descrição |
+| --- | --- |
+| Frequência | A frequência em que ocorre uma ingestão. As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
+| Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15. |
+| Hora de início | Um carimbo de data e hora UTC indicando quando a primeira assimilação está definida para ocorrer. A hora de início deve ser maior ou igual à hora UTC atual. |
+| Preenchimento retroativo | Um valor booleano que determina quais dados são assimilados inicialmente. Se o preenchimento retroativo estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação programada. Se o preenchimento retroativo estiver desativado, somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
+| Carregar dados incrementais por | Uma opção com um conjunto filtrado de campos do schema de origem do tipo, data ou hora. Esse campo é usado para diferenciar dados novos e existentes. Os dados incrementais serão assimilados com base no carimbo de data e hora da coluna selecionada. |
+
+![preenchimento retroativo](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Revisar o fluxo de dados
 
-O *Revisão* é exibida, permitindo que você revise o novo fluxo de dados antes de criá-lo. Os detalhes são agrupados nas seguintes categorias:
+O **[!UICONTROL Revisão]** é exibida, permitindo que você revise o novo fluxo de dados antes de criá-lo. Os detalhes são agrupados nas seguintes categorias:
 
-* **[!UICONTROL Conexão]**: Exibe o nome da conta de origem, a plataforma de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas dentro desse arquivo de origem.
-* **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Exibe o conjunto de dados de destino no qual os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
-* **[!UICONTROL Agendamento]**: Exibe a hora de início do fluxo de dados e a taxa de frequência.
+* **[!UICONTROL Conexão]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas dentro desse arquivo de origem.
+* **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
+* **[!UICONTROL Agendamento]**: Mostra o período ativo, a frequência e o intervalo do agendamento de ingestão.
 
-Depois de revisar o fluxo de dados, clique em **[!UICONTROL Concluir]** e permitir que o fluxo de dados seja criado.
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e permitir que o fluxo de dados seja criado.
 
-![revisão](../../../images/tutorials/dataflow/crm/review.png)
+![revisão](../../../images/tutorials/dataflow/table-based/review.png)
 
 ## Monitorar o fluxo de dados
 
@@ -163,10 +143,11 @@ Depois que o fluxo de dados for criado, você poderá monitorar os dados que est
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados de um CRM e ganhou informações sobre como monitorar conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados da origem do CRM para a plataforma. Os dados recebidos agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Visão geral do perfil do cliente em tempo real](../../../../profile/home.md)
-* [Visão geral do Data Science Workspace](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] visão geral](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] visão geral](../../../../data-science-workspace/home.md)
+
 
 >[!WARNING]
 >

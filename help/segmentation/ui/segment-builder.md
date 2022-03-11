@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic-legacy: ui guide
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2457'
 ht-degree: 1%
 
 ---
@@ -114,6 +114,14 @@ Para adicionar uma nova regra à definição do segmento, arraste um bloco do **
 >
 >As alterações mais recentes no Adobe Experience Platform atualizaram o uso da variável `OR` e `AND` operadores lógicos entre eventos. Essas atualizações não afetarão os segmentos existentes. No entanto, todas as atualizações subsequentes de segmentos existentes e novas criações de segmentos serão afetadas por essas alterações. Leia o [atualização das constantes de tempo](./segment-refactoring.md) para obter mais informações.
 
+Ao selecionar um valor para o atributo, você verá uma lista de valores de enum que o atributo pode ser.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+Se selecionar um valor nessa lista de enumerações, o valor será contornado com uma borda sólida. No entanto, para campos que usam `meta:enum` (soft) enumerações, você também pode selecionar um valor que é **not** na lista de enumerações. Se você criar seu próprio valor, ele será contornado com uma borda pontilhada, juntamente com um aviso de que esse valor não está na lista de enumeração.
+
+![](../images/ui/segment-builder/enum-warning.png)
+
 ### Adição de públicos-alvo
 
 Você pode arrastar e soltar um público-alvo da variável **[!UICONTROL Público]** na tela do construtor de regras para fazer referência à associação do público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação do público-alvo como um atributo na nova regra de segmento.
@@ -178,7 +186,7 @@ Depois de ter adicionado pelo menos um bloco à tela do construtor de regras, vo
 
 ![](../images/ui/segment-builder/add-container.png)
 
-Um novo contêiner é exibido como filho do primeiro contêiner, mas você pode ajustar a hierarquia arrastando e movendo os contêineres. O comportamento padrão de um contêiner é &quot;[!UICONTROL Incluir]&quot; o atributo, evento ou público-alvo fornecido. É possível definir a regra como &quot;[!UICONTROL Excluir]&quot; perfis que correspondem aos critérios do contêiner ao selecionar **[!UICONTROL Incluir]** no canto superior esquerdo do bloco e selecionando &quot;[!UICONTROL Excluir]&quot;.
+Um novo contêiner é exibido como filho do primeiro contêiner, mas você pode ajustar a hierarquia arrastando e movendo os contêineres. O comportamento padrão de um contêiner é &quot;[!UICONTROL Incluir]&quot; o atributo, evento ou público-alvo fornecido. Você pode definir a regra como &quot;[!UICONTROL Excluir]&quot; perfis que correspondem aos critérios do contêiner ao selecionar **[!UICONTROL Incluir]** no canto superior esquerdo do bloco e selecionando &quot;[!UICONTROL Excluir]&quot;.
 
 Um contêiner filho também pode ser extraído e adicionado em linha ao contêiner pai ao selecionar &quot;cancelar o contêiner&quot; no contêiner filho. Selecione as reticências (...) no canto superior direito do contêiner filho para acessar essa opção.
 

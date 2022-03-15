@@ -4,9 +4,9 @@ title: Exibir detalhes do destino
 description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,10 @@ Você pode usar o **[!UICONTROL Ativado]/[!UICONTROL Desabilitado]** para inicia
 ## [!UICONTROL Execuções do fluxo de dados] {#dataflow-runs}
 
 O [!UICONTROL Execuções do fluxo de dados] A guia fornece dados de métrica em suas execuções de fluxo de dados para destinos de lote e fluxo. Consulte [Monitorar fluxos de dados](monitor-dataflows.md) para obter detalhes e definições de métricas.
+
+>[!NOTE]
+>
+>A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)e [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
 
 ![Exibição de execuções do fluxo de dados](../assets/ui/details-page/dataflow-runs.png)
 

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -153,7 +153,7 @@ As etapas a seguir são necessárias para exportar seu público-alvo:
 - [Monitorar progresso da exportação](#monitor-export-progress) - Verifique o progresso atual do processo de exportação.
 - [Ler dados do público-alvo](#next-steps) - Recupere os perfis individuais XDM resultantes que representam os membros do seu público-alvo.
 
-### Criar um conjunto de dados de destino
+### Criar um conjunto de dados de destino {#create-dataset}
 
 Ao exportar um público-alvo, um conjunto de dados de destino deve ser criado primeiro. É importante que o conjunto de dados seja configurado corretamente para garantir que a exportação seja bem-sucedida.
 

@@ -2,9 +2,9 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1290'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 48%
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
 Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte o [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versão 2.10.0 - 10 de março de 2022
+
+* Atualize o trecho pré-ocultação que está disponível para cópia na página de configuração para funcionar com o editor de VEC do Adobe Target atualizado.
+
+Contém a versão 2.9.0 da biblioteca de SDK da Web da Adobe Experience Platform.
 
 ## Versão 2.9.0 - 19 de janeiro de 2022
 

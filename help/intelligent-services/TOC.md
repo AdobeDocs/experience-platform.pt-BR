@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 23%
+source-wordcount: '123'
+ht-degree: 22%
 
 ---
 
@@ -24,10 +24,11 @@ ht-degree: 23%
    - [Informações do Discover](attribution-ai/discover-insights.md)
    - [Fazer download das pontuações](attribution-ai/download-scores.md)
    - [Analisar pontuações usando o Serviço de query](attribution-ai/aai-query-service.md)
-- Content and Commerce AI (beta) {#content-commerce-ai}
+   - [Solução de problemas de erros](attribution-ai/troubleshooting.md)
+- Content e Commerce AI (beta) {#content-commerce-ai}
    - [Visão geral](content-commerce-ai/overview.md)
    - [Introdução](content-commerce-ai/getting-started.md)
-   - API da API do Content and Commerce AI{#api}
+   - API Content and Commerce AI{#api}
       - [Extração de cores](content-commerce-ai/api/color-extraction.md)
       - [Extração de palavra-chave](content-commerce-ai/api/keyword-extraction.md)
       - [Classificação de texto](content-commerce-ai/api/text-classification.md)

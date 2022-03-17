@@ -4,20 +4,20 @@ description: Saiba como configurar o SDK da Web da Adobe Experience Platform.
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configurar; configuração; SDK; borda; SDK da Web; configurar; edgeConfigId; contexto; Web; dispositivo; ambiente; placeContext; debugEnabled; edgeDomain; orgId; clickCollectionEnabled; onBeforeEventSend; defaultConsent; configurações de sdk da web; prehideStyle; opacity; cookieDestinationsEnabled; urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '860'
 ht-degree: 15%
 
 ---
 
 # Configurar o SDK da Web da plataforma
 
-A configuração do SDK é feita com o comando `configure`.
+A configuração do SDK é feita com a variável `configure` comando.
 
 >[!IMPORTANT]
 >
->`configure` é  ** sempre o primeiro comando chamado.
+>`configure` é *always* o primeiro comando chamado.
 
 ```javascript
 alloy("configure", {
@@ -34,7 +34,7 @@ Há muitas opções que podem ser definidas durante a configuração. Todas as o
 
 >[!NOTE]
 >
->**As configurações de borda foram remarcadas para Datastreams. Uma ID de conjunto de dados é igual a uma ID de configuração.**
+>**As configurações de borda foram remarcadas para Datastreams. Uma ID de armazenamento de dados é a mesma ID de configuração.**
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
@@ -42,7 +42,7 @@ Há muitas opções que podem ser definidas durante a configuração. Todas as o
 
 {style=&quot;table-layout:auto&quot;}
 
-Sua ID de configuração atribuída, que vincula o SDK às contas e configurações apropriadas. Ao configurar várias instâncias em uma única página, você deve configurar um `edgeConfigId` diferente para cada instância.
+Sua ID de configuração atribuída, que vincula o SDK às contas e configurações apropriadas. Ao configurar várias instâncias em uma única página, você deve configurar um `edgeConfigId` para cada instância.
 
 ### `context`
 
@@ -52,7 +52,7 @@ Sua ID de configuração atribuída, que vincula o SDK às contas e configuraç�
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica quais categorias de contexto coletar automaticamente, conforme descrito em [Informações Automáticas](../data-collection/automatic-information.md). Se essa configuração não for especificada, todas as categorias serão usadas por padrão.
+Indica quais categorias de contexto coletar automaticamente, conforme descrito em [Informações automáticas](../data-collection/automatic-information.md). Se essa configuração não for especificada, todas as categorias serão usadas por padrão.
 
 ### `debugEnabled`
 
@@ -62,7 +62,7 @@ Indica quais categorias de contexto coletar automaticamente, conforme descrito e
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica se a depuração está ativada. Configurar essa configuração como `true` ativa os seguintes recursos:
+Indica se a depuração está ativada. Configurar essa configuração como `true` habilita os seguintes recursos:
 
 | **Recurso** | **Função** |
 | ---------------------- | ------------------ |
@@ -76,6 +76,16 @@ Preencha este campo com seu domínio primário. Para obter mais detalhes, consul
 
 O domínio é semelhante a `data.{customerdomain.com}` para um site em www.{customerdomain.com}.
 
+### `edgeBasePath` {#edge-base-path}
+
+Caminho após o edgeDomain usado para se comunicar e interagir com os serviços da Adobe.  Geralmente, isso só seria alterado quando não fosse usado o ambiente de produção padrão.
+
+| **Tipo** | **Obrigatório** | **Valor padrão** |
+| -------- | ------------ | ----------------- |
+| String | Não | ee |
+
+{style=&quot;table-layout:auto&quot;}
+
 ### `orgId`
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
@@ -84,7 +94,7 @@ O domínio é semelhante a `data.{customerdomain.com}` para um site em www.{cust
 
 {style=&quot;table-layout:auto&quot;}
 
-Sua ID de organização [!DNL Experience Cloud] atribuída. Ao configurar várias instâncias em uma página, você deve configurar um `orgId` diferente para cada instância.
+Atribuído [!DNL Experience Cloud] ID da organização. Ao configurar várias instâncias em uma página, você deve configurar um `orgId` para cada instância.
 
 ## Coleta de dados
 
@@ -96,7 +106,7 @@ Sua ID de organização [!DNL Experience Cloud] atribuída. Ao configurar vária
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica se os dados associados aos cliques em links são coletados automaticamente. Consulte [Rastreamento automático de link](../data-collection/track-links.md#automaticLinkTracking) para obter mais informações. Os links também são rotulados como links de download se incluírem um atributo de download ou se o link terminar com uma extensão de arquivo. Os qualificadores de link de download podem ser configurados com uma expressão regular. O valor padrão é `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+Indica se os dados associados aos cliques em links são coletados automaticamente. Consulte [Rastreamento automático de links](../data-collection/track-links.md#automaticLinkTracking) para obter mais informações. Os links também são rotulados como links de download se incluírem um atributo de download ou se o link terminar com uma extensão de arquivo. Os qualificadores de link de download podem ser configurados com uma expressão regular. O valor padrão é `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -106,7 +116,7 @@ Indica se os dados associados aos cliques em links são coletados automaticament
 
 {style=&quot;table-layout:auto&quot;}
 
-Configure um retorno de chamada que seja chamado para cada evento antes de ele ser enviado. Um objeto com o campo `xdm` é enviado para o retorno de chamada. Para alterar o que é enviado, modifique o objeto `xdm`. Dentro do retorno de chamada, o objeto `xdm` já tem os dados transmitidos no comando de evento e as informações coletadas automaticamente. Para obter mais informações sobre o tempo desse retorno de chamada e um exemplo, consulte [Modificando Eventos Globalmente](tracking-events.md#modifying-events-globally).
+Configure um retorno de chamada que seja chamado para cada evento antes de ele ser enviado. Um objeto com o campo `xdm` é enviado para o retorno de chamada. Para alterar o que é enviado, modifique o `xdm` objeto. Dentro do retorno de chamada, a variável `xdm` O objeto já tem os dados passados no comando event e as informações coletadas automaticamente. Para obter mais informações sobre o tempo desse retorno de chamada e um exemplo, consulte [Modificar eventos globalmente](tracking-events.md#modifying-events-globally).
 
 ## Opções de privacidade
 
@@ -136,7 +146,7 @@ Depois que as preferências do usuário forem fornecidas, o trabalho continuará
 
 Usado para criar uma definição de estilo CSS que oculta as áreas de conteúdo da página da Web, enquanto o conteúdo personalizado é carregado do servidor. Se essa opção não for fornecida, o SDK não tentará ocultar nenhuma área de conteúdo enquanto o conteúdo personalizado for carregado, resultando potencialmente em &quot;oscilação&quot;.
 
-Por exemplo, se um elemento em sua página da Web tiver uma ID `container`, cujo conteúdo padrão você deseja ocultar enquanto o conteúdo personalizado é carregado do servidor, use o seguinte estilo de pré-ocultação:
+Por exemplo, se um elemento em sua página da Web tiver uma ID de `container`, cujo conteúdo padrão você deseja ocultar enquanto o conteúdo personalizado é carregado do servidor, use o seguinte estilo de pré-ocultação:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -152,7 +162,7 @@ Por exemplo, se um elemento em sua página da Web tiver uma ID `container`, cujo
 
 {style=&quot;table-layout:auto&quot;}
 
-Ativa [!DNL Audience Manager] destinos de cookies, o que permite a configuração de cookies com base na qualificação de segmentos.
+Habilitar [!DNL Audience Manager] destinos de cookies, que permitem a configuração de cookies com base na qualificação de segmentos.
 
 ### `urlDestinationsEnabled`
 
@@ -162,7 +172,7 @@ Ativa [!DNL Audience Manager] destinos de cookies, o que permite a configuraçã
 
 {style=&quot;table-layout:auto&quot;}
 
-Habilita [!DNL Audience Manager] destinos de URL, o que permite o acionamento de URLs com base na qualificação de segmento.
+Habilitar [!DNL Audience Manager] Destinos de URL, que permitem o acionamento de URLs com base na qualificação de segmento.
 
 ## Opções de identidade
 

@@ -3,39 +3,39 @@ title: Visão geral do SDK da Web da Adobe Experience Platform
 description: Saiba como usar o SDK da Web da Adobe Experience Platform para integrar os recursos da plataforma ao seu site.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; edge; Visitor.js; AppMeasurement.js; AT.js; DIL.js; Web sdk; SDK; Web SDK; Launch; launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
 
 # Visão geral do SDK da Web da Adobe Experience Platform
 
-O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes do Adobe Experience Cloud interajam com os vários serviços na [!DNL Experience Cloud] pela rede de borda Adobe Experience Platform. Além da biblioteca do JavaScript, há uma [extensão de tag](./extension/web-sdk-extension-configuration.md) para ajudar nas configurações do SDK da Web.
+O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes do Adobe Experience Cloud interajam com os vários serviços na [!DNL Experience Cloud] pela rede de borda Adobe Experience Platform. In addition to the JavaScript library, there is a [tag extension](./extension/web-sdk-extension-configuration.md) to help with your Web SDK configurations.
 
 **Para obter um guia passo a passo sobre como configurar o SDK da Web com tags e enviar dados para as soluções, consulte nosso [Implementar o Adobe Experience Cloud com o tutorial do SDK da Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
 
 ## Experience Edge
 
-[!DNL Adobe Experience Platform Web SDK] é parte da coleção que compõe o Experience Edge. O Experience Edge consiste em três tecnologias:
+[!DNL Adobe Experience Platform Web SDK] é parte da coleção que compõe o Experience Edge. Experience Edge consists of three technologies:
 
 * **[!DNL Adobe Experience Platform Web SDK]:** Um SDK JavaScript e uma extensão de tag para simplificar consideravelmente a implantação [!DNL Adobe] tecnologias
 * **Adobe Experience Platform Mobile SDK:** Uma extensão para o SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
-* **[!DNL Adobe Experience Platform Edge Network]:** Uma rede global distribuída de servidores que habilita uma nova metodologia de implantação [!DNL Adobe] products
+* **[!DNL Adobe Experience Platform Edge Network]:** A global distributed network of servers that enable a new methodology of deploying [!DNL Adobe] products
 
-O [!DNL Adobe Experience Edge] é uma nova estrutura para coleta de dados de baixa latência, computação de plug-in e rápida ativação de dados em todos os canais endereçáveis.
+The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
 
-[!DNL Adobe Experience Edge] O fornece um único SDK consolidado para cada canal (JavaScript, Mobile, lado do servidor), que envia dados para um domínio Adobe comum (`adobedc.net`) e recebe uma única carga para entrega de dados e experiência.
+[!DNL Adobe Experience Edge] provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
 
-No lado do servidor, um gateway de borda unificada e uma estrutura comum de serviços de plataforma facilitam o plug-in e a implantação de novos recursos neste ambiente de computação em tempo real.  Essa arquitetura:
+On the server-side, a unified edge gateway and a common platform services framework makes it easy to plug-in and deploy new capabilities into this real-time computing environment.  Essa arquitetura:
 
-* Diminui o tempo de implantação do cliente
+* Decreases customer time to value
 * Encerra a necessidade de integrações &quot;point&quot;
-* Melhora o desempenho em comparação às bibliotecas antigas
+* Improves performance compared to the old libraries
 * Diminui custos
-* Aumenta a velocidade da inovação
-* Cria vantagens competitivas sustentadas para clientes Adobe
+* Increases the speed of innovation
+* Creates sustained competitive advantages for Adobe customers
 
 Um único sistema de borda consolidado permite que os clientes gerenciem suas campanhas de publicidade, marketing ou personalização em todos os canais como uma experiência integrada.  Permite [!DNL Adobe] fornecer serviços com um custo total de propriedade mais baixo para os clientes.  Também ajuda a aumentar a velocidade da inovação do produto ao tornar a borda em tempo real disponível e permitir [!DNL Adobe] e seus clientes para adicionar mais rapidamente novos recursos e lógica definida pelo cliente a esse sistema em tempo real.
 
@@ -54,17 +54,12 @@ O Adobe Experience Platform Web SDK substitui os seguintes SDKs:
 * AT.js
 * DIL.js
 
-Isto não é apenas um wrapper em torno das bibliotecas existentes. É uma reescrita completa. Seu objetivo é acabar com os desafios com tags que precisam ser acionadas na ordem correta, inconsistência com os desafios do controle de versão da biblioteca e melhor gerenciamento de dependência. É uma nova forma de implementar a variável [!DNL Experience Cloud] e é [código aberto](https://github.com/adobe/alloy).
+This is not just a wrapper around existing libraries. É uma reescrita completa. Seu objetivo é acabar com os desafios com tags que precisam ser acionadas na ordem correta, inconsistência com os desafios do controle de versão da biblioteca e melhor gerenciamento de dependência. É uma nova forma de implementar a variável [!DNL Experience Cloud] e é [código aberto](https://github.com/adobe/alloy).
 
-Além de uma nova biblioteca, há um novo terminal que simplifica as solicitações HTTP para as soluções do Adobe. Antes, o Visitor.js enviava uma chamada de bloqueio para o serviço de ID de visitante, depois a AT.js enviava uma chamada para a Adobe Target, a DIL.js enviava uma chamada para a Adobe Audience Manager e, por fim, a AppMeasurement.js enviava uma chamada para a Adobe Analytics. Essa nova biblioteca e endpoint podem recuperar uma ID, buscar um [!DNL Target] experiência, enviar dados para [!DNL Audience Manager]e transmita os dados para o Adobe Experience Platform em uma única chamada.
+In addition to a new library, there is a new endpoint that streamlines the HTTP requests to Adobe solutions. Antes, o Visitor.js enviava uma chamada de bloqueio para o serviço de ID de visitante, depois a AT.js enviava uma chamada para a Adobe Target, a DIL.js enviava uma chamada para a Adobe Audience Manager e, por fim, a AppMeasurement.js enviava uma chamada para a Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to Adobe Experience Platform in a single call.
 
 O vídeo a seguir demonstra o Adobe Experience Platform [!DNL Web SDK] e Adobe Experience Platform [!DNL Edge Network] em ação. O exemplo de vídeo usa uma única chamada para o Adobe, que envia dados para o [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Este produto está em constante evolução e crescimento para suportar cada vez mais casos de uso. Para manter-se atualizado, consulte o [página casos de uso suportados](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Esta página lista os casos de uso que atualmente oferecemos suporte, com links para mais informações quando disponíveis.
-
-* **Casos de uso ainda não suportados:** Esses são casos de uso que estão em nosso roteiro para serem suportados no futuro.
-* **Casos De Uso Em Andamento:** Esses são os casos de uso que a equipe está trabalhando atualmente na conclusão do para lançamento.
-* **Casos de uso suportados:** Esses são os casos de uso suportados e que funcionam hoje.
-* **Casos de uso que não oferecemos suporte:** Foram estes os casos de utilização que tomámos a decisão de não apoiar.
+Este produto está em constante evolução e crescimento para suportar cada vez mais casos de uso. To keep up with the latest and see what we currently support, see the [supported use cases page](https://github.com/orgs/adobe/projects/18/views/1).

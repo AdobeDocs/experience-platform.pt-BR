@@ -3,10 +3,10 @@ keywords: email; Email; email; destinos de email; adobe campaign; campanha
 title: Conexão Adobe Campaign
 description: O Adobe Campaign é um conjunto de soluções que ajudam você a personalizar e entregar campanhas em todos os seus canais online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 2%
+source-wordcount: '764'
+ht-degree: 3%
 
 ---
 
@@ -18,9 +18,16 @@ O Adobe Campaign é um conjunto de soluções que ajudam você a personalizar e 
 
 Para enviar dados de segmento ao Adobe Campaign, primeiro você deve [conectar o destino](#connect-destination) no Adobe Experience Platform e, em seguida, [configurar uma importação de dados](#import-data-into-campaign) do local de armazenamento para o Adobe Campaign.
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Baseado em perfil** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na **[!UICONTROL Selecionar atributos]** da [fluxo de trabalho de ativação do público](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTA DE PERMISSÕES de endereço IP {#allow-list}
 

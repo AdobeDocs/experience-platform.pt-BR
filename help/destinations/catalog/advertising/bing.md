@@ -3,10 +3,10 @@ keywords: 'publicidade; bing; '
 title: Conexão Microsoft Bing
 description: Com o destino de conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas ao público-alvo através do Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 1%
+source-wordcount: '464'
+ht-degree: 3%
 
 ---
 
@@ -30,9 +30,20 @@ Como profissional de marketing, desejo poder usar segmentos criados [!DNL Micros
 |---|---|
 | MAID | Microsoft Advertising ID |
 
-## Tipo de exportação {#export-type}
+{style=&quot;table-layout:auto&quot;}
+
+## Tipo e frequência de exportação {#export-type-frequency}
 
 **[!DNL Segment Export]** - você está exportando todos os membros de um segmento (público-alvo) para a [!DNL Microsoft Bing] destino.
+
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) para a [!DNL Microsoft Bing] destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Pré-requisitos {#prerequisites}
 

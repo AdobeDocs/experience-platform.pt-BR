@@ -3,10 +3,10 @@ keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '554'
+ht-degree: 1%
 
 ---
 
@@ -16,9 +16,16 @@ ht-degree: 0%
 
 Crie uma conexão de saída ao vivo para o [!DNL Amazon Web Services] (AWS) Armazenamento S3 para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform para seus próprios buckets do S3.
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Baseado em perfil** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do [fluxo de trabalho de ativação de destino](../../ui/activate-segment-streaming-destinations.md#mapping).
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ![Tipo de exportação com base em perfil do Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 

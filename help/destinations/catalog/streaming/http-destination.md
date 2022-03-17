@@ -3,9 +3,9 @@ keywords: transmissão contínua;
 title: Conexão da API HTTP
 description: O destino da API HTTP no Adobe Experience Platform permite enviar dados do perfil para pontos de extremidade HTTP de terceiros.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1376'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,17 @@ Para enviar dados de perfil para pontos de extremidade HTTP, primeiro é necess�
 O destino HTTP é direcionado para clientes que precisam exportar dados de perfil XDM e segmentos de público-alvo para pontos de extremidade HTTP genéricos.
 
 Os endpoints HTTP podem ser sistemas próprios do cliente ou soluções de terceiros.
+
+## Tipo e frequência de exportação {#export-type-frequency}
+
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Pré-requisitos {#prerequisites}
 

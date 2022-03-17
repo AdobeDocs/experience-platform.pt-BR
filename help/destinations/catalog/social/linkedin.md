@@ -3,10 +3,10 @@ keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; link
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 2%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Ative perfis para suas campanhas [!DNL LinkedIn] para segmentação, personalização e supressão de público-alvo, com base em emails com hash e IDs móveis.
+Ativar perfis para seu [!DNL LinkedIn] campanhas para direcionamento, personalização e supressão de público-alvo, com base em emails com hash e IDs móveis.
 
 ![Destino do linkedIn na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Casos de uso
 
-Para ajudá-lo a entender melhor como e quando usar o destino [!DNL LinkedIn Matched Audiences], aqui está um caso de uso que os clientes do Adobe Experience Platform podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando usar a variável [!DNL LinkedIn Matched Audiences] , este é um caso de uso que os clientes do Adobe Experience Platform podem resolver usando esse recurso.
 
-Uma empresa de software organiza uma conferência e deseja manter contato com os participantes e mostrar a eles ofertas personalizadas com base em seu status de presença em conferência. A empresa pode assimilar endereços de email ou IDs de dispositivo móvel de seu próprio [!DNL CRM] para o Adobe Experience Platform. Em seguida, eles podem criar segmentos a partir de seus próprios dados offline e enviar esses segmentos para a [!DNL LinkedIn] plataforma social, otimizando seus gastos com publicidade.
+Uma empresa de software organiza uma conferência e deseja manter contato com os participantes e mostrar a eles ofertas personalizadas com base em seu status de presença em conferência. A empresa pode assimilar endereços de email ou IDs de dispositivo móvel por conta própria [!DNL CRM] no Adobe Experience Platform. Em seguida, eles podem criar segmentos a partir de seus próprios dados offline e enviar esses segmentos para a [!DNL LinkedIn] plataforma social, otimizando seus gastos com publicidade.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -30,32 +30,40 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 | Identidade do Target | Descrição | Considerações |
 |---|---|---|
-| GAID | ID de publicidade do Google | Selecione essa identidade de destino quando sua identidade de origem for um namespace GAID. |
+| GAID | Google Advertising ID | Selecione essa identidade de destino quando sua identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e emails com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções em [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e emails com hash, respectivamente. Quando o campo de origem contém atributos com hash, verifique a **[!UICONTROL Aplicar transformação]** , para ter [!DNL Platform] fazer o hash automático dos dados na ativação. |
 
+{style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone e outros) usados no  [!DNL LinkedIn Matched Audiences] destino.
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone e outros) usados na [!DNL LinkedIn Matched Audiences] destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Pré-requisitos da conta do linkedIn {#LinkedIn-account-prerequisites}
 
-Antes de usar o destino [!UICONTROL LinkedIn Matched Audience], verifique se a conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
+Antes de usar a variável [!UICONTROL Público-alvo correspondente do linkedIn] de destino, verifique se [!DNL LinkedIn Campaign Manager] tem a [!DNL Creative Manager] nível de permissão ou superior.
 
-Para saber como editar suas permissões de usuário [!DNL LinkedIn Campaign Manager], consulte [Adicionar, editar e remover permissões de usuário em contas publicitárias](https://www.linkedin.com/help/lms/answer/5753) na documentação do LinkedIn.
+Para saber como editar seu [!DNL LinkedIn Campaign Manager] permissões do usuário, consulte [Adicionar, editar e remover permissões de usuário em contas publicitárias](https://www.linkedin.com/help/lms/answer/5753) na documentação do LinkedIn.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audiences] exige que nenhuma informação pessoal identificável (PII) seja enviada de forma clara. Portanto, os públicos-alvo ativados para [!DNL LinkedIn Matched Audiences] podem ser desmarcados com identificadores *com hash*, como endereços de email ou IDs de dispositivo móvel.
+[!DNL LinkedIn Matched Audiences] exige que nenhuma informação pessoal identificável (PII) seja enviada de forma clara. Portanto, os públicos-alvo ativados para [!DNL LinkedIn Matched Audiences] pode ser desligado *hash* identificadores, como endereços de email ou IDs de dispositivo móvel.
 
 Dependendo do tipo de IDs assimiladas no Adobe Experience Platform, é necessário seguir os requisitos correspondentes.
 
 ## Requisitos de hash de email {#email-hashing-requirements}
 
-Você pode fazer hash de endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email limpos no Experience Platform e fazer com que [!DNL Platform] faça hash na ativação.
+Você pode fazer hash nos endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email limpos no Experience Platform e ter [!DNL Platform] coloque hash na ativação.
 
-Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte a [visão geral de assimilação de lote](/help/ingestion/batch-ingestion/overview.md) e a [visão geral de assimilação de streaming](/help/ingestion/streaming-ingestion/overview.md).
+Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte o [visão geral da ingestão em lote](/help/ingestion/batch-ingestion/overview.md) e [visão geral da assimilação de streaming](/help/ingestion/streaming-ingestion/overview.md).
 
 Se você optar por hash nos endereços de email, certifique-se de estar em conformidade com os seguintes requisitos:
 
@@ -71,17 +79,17 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 >Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DNL Platform] após a ativação.
 > Os dados da fonte de atributo não são automaticamente transformados em hash.
 > 
-> Durante a etapa [Mapeamento de identidade](../../ui/activate-segment-streaming-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para ter [!DNL Platform] automaticamente hash os dados na ativação.
+> Durante os [Mapeamento de identidade](../../ui/activate-segment-streaming-destinations.md#mapping) , quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** , para ter [!DNL Platform] fazer o hash automático dos dados na ativação.
 > 
-> A opção **[!UICONTROL Apply transformation]** só é exibida quando você seleciona atributos como campos de origem. Ele não é exibido quando você escolhe namespaces.
+> O **[!UICONTROL Aplicar transformação]** A opção é exibida somente quando você seleciona atributos como campos de origem. Ele não é exibido quando você escolhe namespaces.
 
 ![Transformação de mapeamento de identidade](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Conecte-se ao destino {#connect}
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-O vídeo abaixo também demonstra as etapas para configurar um destino [!DNL LinkedIn Matched Audiences] e ativar segmentos.
+O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Matched Audiences] e ativar segmentos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -91,20 +99,20 @@ O vídeo abaixo também demonstra as etapas para configurar um destino [!DNL Lin
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
+Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID]** da conta: seu  [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID na sua conta [!DNL LinkedIn Campaign Manager].
+* **[!UICONTROL ID da conta]**: your [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID em seu [!DNL LinkedIn Campaign Manager] conta.
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
 ## Dados exportados {#exported-data}
 
-Uma ativação bem-sucedida significa que um público-alvo personalizado [!DNL LinkedIn] seria criado programaticamente em [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). A associação de segmento no público-alvo seria adicionada e removida, pois os usuários eram qualificados ou desqualificados para os segmentos ativados.
+Uma ativação bem-sucedida significa que uma [!DNL LinkedIn] o público-alvo personalizado seria criado programaticamente em [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). A associação de segmento no público-alvo seria adicionada e removida, pois os usuários eram qualificados ou desqualificados para os segmentos ativados.
 
 >[!TIP]
 >
->A integração entre o Adobe Experience Platform e [!DNL LinkedIn Matched Audiences] oferece suporte a preenchimentos retroativos de público-alvo históricos. Todas as qualificações de segmento histórico são enviadas para [!DNL LinkedIn] quando você ativa os segmentos para o destino.
+>A integração entre o Adobe Experience Platform e o [!DNL LinkedIn Matched Audiences] O suporta preenchimentos retroativos de público-alvo históricos. Todas as qualificações de segmento histórico são enviadas para [!DNL LinkedIn] ao ativar os segmentos para o destino.

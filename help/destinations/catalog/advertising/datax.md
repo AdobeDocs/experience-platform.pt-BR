@@ -2,10 +2,10 @@
 title: Conexão Verizon MediaYahoo DataX
 description: O DataX é uma infraestrutura agregada da Verizon Media/Yahoo que hospeda vários componentes que permitem que o Verizon Media/Yahoo troque dados com seus parceiros externos de forma segura, automatizada e escalável.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 2%
+source-wordcount: '651'
+ht-degree: 3%
 
 ---
 
@@ -73,9 +73,16 @@ O Verizon Media oferece suporte à ativação de identidades descritas na tabela
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Exportar segmento** - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (Email) usados no destino Mídia Verizon.
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (Email, GAID, IDFA) usados no destino de Mídia Verizon. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casos de uso {#use-cases}
 

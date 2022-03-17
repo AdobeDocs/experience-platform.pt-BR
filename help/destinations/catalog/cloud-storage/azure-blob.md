@@ -3,10 +3,10 @@ keywords: Azure Blob; destino Blob; s3; destino de blob do azure
 title: Conexão Blob do Azure
 description: Crie uma conexão de saída em tempo real com o armazenamento do Azure Blob para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 1%
+source-wordcount: '474'
+ht-degree: 2%
 
 ---
 
@@ -27,11 +27,22 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 Se você já tiver um [!DNL Blob] no destino, você pode ignorar o restante deste documento e prosseguir para o tutorial em [como ativar segmentos no seu destino](../../ui/activate-batch-profile-destinations.md).
 
-## Formatos de arquivo não suportados {#file-formats}
+## Tipo e frequência de exportação {#export-type-frequency}
+
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Formatos de arquivo compatíveis {#file-formats}
 
 [!DNL Experience Platform] O suporta o seguinte formato de arquivo a ser exportado para [!DNL Blob]:
 
-* Valores separados por delimitador (DSV): No momento, o suporte para arquivos de dados formatados em DSV está limitado a valores separados por vírgula. O suporte para arquivos DSV gerais será fornecido no futuro.
+* Valores separados por vírgula (CSV): No momento, o suporte para arquivos de dados exportados está limitado a valores separados por vírgula.
 
 ## Conecte-se ao destino {#connect}
 

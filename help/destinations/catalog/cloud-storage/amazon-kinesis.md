@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino cinesis;cinesis
 title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para fazer o stream de dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1297'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,16 @@ Ao usar destinos de transmissão, como [!DNL Amazon Kinesis], você pode aliment
 
 Por exemplo, um prospecto baixou um white-paper que os qualifica em um segmento de &quot;alta propensão à conversão&quot;. Mapeando o segmento em que o prospecto entra na [!DNL Amazon Kinesis] , você receberia esse evento em [!DNL Amazon Kinesis]. Lá, você pode empregar uma abordagem faça você mesmo e descrever a lógica de negócios sobre o evento, pois acha que funcionaria melhor com os sistemas de TI de sua empresa.
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Baseado em perfil** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do [fluxo de trabalho de ativação do público](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Obrigatório [!DNL Amazon Kinesis] permissões {#required-kinesis-permission}
 

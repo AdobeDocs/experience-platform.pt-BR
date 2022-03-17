@@ -3,10 +3,10 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 1%
+source-wordcount: '1652'
+ht-degree: 2%
 
 ---
 
@@ -48,9 +48,16 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções em [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e usar os namespaces apropriados para endereços de email de texto simples e com hash, respectivamente. Quando o campo de origem contém atributos com hash, verifique a **[!UICONTROL Aplicar transformação]** , para ter [!DNL Platform] fazer o hash automático dos dados na ativação. |
 | external_id | IDs de usuário personalizadas | Selecione essa identidade de destino quando sua identidade de origem for um namespace personalizado. |
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Exportar segmento** - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook.
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Pré-requisitos da conta do facebook {#facebook-account-prerequisites}
 

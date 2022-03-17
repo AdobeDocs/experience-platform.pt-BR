@@ -2,10 +2,10 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 1%
+source-wordcount: '445'
+ht-degree: 3%
 
 ---
 
@@ -24,13 +24,22 @@ O destino permite que os profissionais de marketing enviem segmentos criados no 
 | ECID | Um namespace que representa ECID. Esse namespace também pode ser mencionado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](/help/identity-service/ecid.md) para obter mais informações. |
 | Email | Um namespace que representa um endereço de email. Esse tipo de namespace geralmente é associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
 
+{style=&quot;table-layout:auto&quot;}
+
 >[!NOTE]
 >
 >No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow ativar destino, ele é *mandatory* para mapear identidades e *opcional* para mapear atributos. Mapear o email e/ou a ECID na guia Namespace de identidade é a coisa mais importante a se fazer para garantir que a pessoa corresponda no Marketo. Mapear email garante a maior taxa de correspondência.
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-Exportar segmento - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (email, ECID) usados no destino do Marketo Engage.
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (email, ECID) usados no destino do Marketo Engage. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Configurar destinos e ativar segmentos {#set-up}
 

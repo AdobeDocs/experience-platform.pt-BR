@@ -2,10 +2,10 @@
 title: Conexão da Lista de clientes do pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 2%
+source-wordcount: '578'
+ht-degree: 3%
 
 ---
 
@@ -39,9 +39,16 @@ No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destin
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Exportar segmento** - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest.
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casos de uso {#use-cases}
 

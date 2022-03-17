@@ -3,10 +3,10 @@ keywords: publicidade; o serviço de comércio; suporte comercial de anúncios
 title: A conexão com o Trade Desk
 description: O Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar redirecionamento e campanhas digitais direcionadas ao público-alvo em fontes de exibição, vídeo e inventário móvel.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 2%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
@@ -34,9 +34,18 @@ Como profissional de marketing, desejo poder usar segmentos criados [!DNL Trade 
 | IDFA | [!DNL Apple ID for Advertisers] |
 | A ID do Trade Desk | ID do anunciante na plataforma do Trade Desk |
 
-## Tipo de exportação {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** - você está exportando todos os membros de um segmento (público-alvo) para o destino.
+## Tipo e frequência de exportação {#export-type-frequency}
+
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) para o destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Pré-requisitos {#prerequisites}
 

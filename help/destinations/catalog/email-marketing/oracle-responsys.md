@@ -3,10 +3,10 @@ keywords: email; Email; email; destinos de email; destino da responsys do oracle
 title: Conexão Oracle Responsys
 description: O Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecidas pelo Oracle para personalizar interações em email, dispositivos móveis, exibição e redes sociais.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,16 @@ ht-degree: 1%
 
 Para enviar dados de segmento para [!DNL Oracle Responsys], você deve primeiro [conectar-se ao destino](#connect-destination) no Adobe Experience Platform e, em seguida, [configurar uma importação de dados](#import-data-into-responsys) do local de armazenamento para [!DNL Oracle Responsys].
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Baseado em perfil** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do [fluxo de trabalho de ativação do público](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTA DE PERMISSÕES de endereço IP {#allow-list}
 
@@ -43,12 +50,12 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 * Para **[!UICONTROL SFTP com senha]** , você deve fornecer:
    * [!UICONTROL Domínio]
-   * [!UICONTROL Port]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome do usuário]
    * [!UICONTROL Senha]
 * Para **[!UICONTROL SFTP com chave SSH]** , você deve fornecer:
    * [!UICONTROL Domínio]
-   * [!UICONTROL Port]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome do usuário]
    * [!UICONTROL Chave SSH]
 * Como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia com PGP/GPG aos arquivos exportados sob a variável **[!UICONTROL Chave]** seção. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.

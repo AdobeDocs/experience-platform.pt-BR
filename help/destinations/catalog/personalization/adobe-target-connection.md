@@ -3,10 +3,10 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 1%
+source-wordcount: '530'
+ht-degree: 2%
 
 ---
 
@@ -26,9 +26,16 @@ Essa integração é alimentada pela variável [Adobe Experience Platform Web SD
 >
 >Antes de criar uma [!DNL Adobe Target] leia o guia sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](../../ui/configure-personalization-destinations.md). Este guia o orienta pelas etapas de configuração necessárias para casos de uso de personalização de página mesma e próxima, em vários componentes de Experience Platform.
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Solicitação de perfil** - você está solicitando todos os segmentos que estão mapeados no destino Adobe Target para um único perfil.
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os segmentos que estão mapeados no destino Adobe Target para um único perfil. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casos de uso {#use-cases}
 

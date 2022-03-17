@@ -2,10 +2,10 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do seu destino
 description: Use este modelo para criar documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substitua pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 1%
+source-wordcount: '1066'
+ht-degree: 2%
 
 ---
 
@@ -51,11 +51,22 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Exportar segmento** - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados na *SEU DESTINO* destino.
+*Na tabela , mantenha somente as linhas que correspondem ao seu destino. Você deve ter uma linha para o tipo Export e uma linha para a frequência Export . Exclua os valores que não se aplicam ao seu destino.*
 
-## Casos de uso
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados na *SEU DESTINO* destino. |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando você deve usar a variável *SEU DESTINO* destino, aqui estão casos de uso de exemplo que os clientes do Adobe Experience Platform podem resolver usando esse destino.
 
@@ -79,7 +90,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 
 Ao [configuração](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) nesse destino, você deve fornecer as seguintes informações:
 
-*Adicione os campos que os clientes devem preencher ao configurar um novo destino. Esses campos são específicos do destino e dependem da sua configuração no SDK de destino. Os campos do seu destino podem não ser os mesmos listados abaixo.*
+*Adicione os campos que os clientes devem preencher ao configurar um novo destino. Esses campos são específicos do destino e dependem da sua configuração no Destination SDK. Os campos do seu destino podem não ser os mesmos listados abaixo.*
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.

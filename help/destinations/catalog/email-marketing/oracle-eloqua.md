@@ -3,10 +3,10 @@ keywords: email; Email; email; destinos de email; oracle eloqua; oracle
 title: Conexão Eloqua do Oracle
 description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pelo Oracle, que tem como objetivo ajudar profissionais de marketing B2B e organizações a gerenciar campanhas de marketing e geração de líderes de vendas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 1%
+source-wordcount: '538'
+ht-degree: 2%
 
 ---
 
@@ -16,9 +16,16 @@ ht-degree: 1%
 
 Para enviar dados de segmento para [!DNL Oracle Eloqua], você deve primeiro [conectar o destino](#connect-destination) no Adobe Experience Platform e, em seguida, [configurar uma importação de dados](#import-data-into-eloqua) do local de armazenamento para [!DNL Oracle Eloqua].
 
-## Tipo de exportação {#export-type}
+## Tipo e frequência de exportação {#export-type-frequency}
 
-**Baseado em perfil** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do [fluxo de trabalho de ativação do público](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
+
+| Item | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTA DE PERMISSÕES de endereço IP {#allow-list}
 
@@ -41,12 +48,12 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 * Para **[!UICONTROL SFTP com senha]** , você deve fornecer:
    * [!UICONTROL Domínio]
-   * [!UICONTROL Port]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome do usuário]
    * [!UICONTROL Senha]
 * Para **[!UICONTROL SFTP com chave SSH]** , você deve fornecer:
    * [!UICONTROL Domínio]
-   * [!UICONTROL Port]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome do usuário]
    * [!UICONTROL Chave SSH]
 

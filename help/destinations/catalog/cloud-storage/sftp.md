@@ -3,9 +3,9 @@ keywords: SFTP; sftp
 title: Conexão SFTP
 description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: fa393b2bd8085a17653962b5a8b112a5db10df83
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '517'
 ht-degree: 1%
 
 ---
@@ -44,16 +44,44 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 >title="Chave pública RSA"
 >abstract="Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma sequência de caracteres codificada em Base64."
 
-Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_ssh"
+>title="Chave SSH"
+>abstract="A chave SSH requer uma string Base64."
 
-* **Host**: O endereço do local de armazenamento SFTP
-* **Nome do usuário**: O nome de usuário para fazer logon no local de armazenamento SFTP
-* **Senha**: A senha para fazer logon no local de armazenamento SFTP
-* **[!UICONTROL Nome]**: insira um nome que ajudará a identificar esse destino.
-* **[!UICONTROL Descrição]**: insira uma descrição deste destino.
-* **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+When [conexão](../../ui/connect-destination.md) para esse destino, você deve fornecer as seguintes informações:
 
-Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
+#### Informações de autenticação {#authentication-information}
+
+Se você selecionar a variável **[!UICONTROL Autenticação básica]** digite para se conectar ao local do SFTP:
+
+![Autenticação básica de destino SFTP](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+
+* **[!UICONTROL Host]**: O endereço do local de armazenamento SFTP;
+* **[!UICONTROL Nome do usuário]**: O nome de usuário para fazer logon no local de armazenamento SFTP;
+* **[!UICONTROL Senha]**: A senha para fazer logon no local de armazenamento SFTP.
+* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
+
+
+Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de autenticação para se conectar ao local SFTP:
+
+![Autenticação de chave SSH de destino SFTP](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+
+* **[!UICONTROL Domínio]**: Preencha o endereço IP ou o nome de domínio de sua conta SFTP
+* **[!UICONTROL Port]**: A porta usada pelo local de armazenamento SFTP;
+* **[!UICONTROL Nome do usuário]**: O nome de usuário para fazer logon no local de armazenamento SFTP;
+* **[!UICONTROL Chave SSH]**: A chave SSH para fazer logon no local de armazenamento SFTP.
+* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
+
+#### Detalhes do destino {#destination-details}
+
+Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as seguintes informações para o destino:
+
+![Detalhes de destino disponíveis para destino SFTP](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+
+* **[!UICONTROL Nome]**: insira um nome que o ajudará a identificar esse destino na interface do usuário do Experience Platform;
+* **[!UICONTROL Descrição]**: indicar uma descrição para este destino;
+* **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta no local SFTP onde os arquivos serão exportados.
 
 ## Dados exportados {#exported-data}
 

@@ -6,9 +6,10 @@ topic-legacy: tutorial
 description: Este documento fornece etapas sobre como usar a interface da Web do GitHub para criar a documentação e enviar uma solicitação de pull (PR).
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -35,7 +36,11 @@ Depois que a bifurcação estiver concluída, selecione **principal** e insira u
 
 ![create-branch](../assets/create-branch.png)
 
-Na estrutura de pastas do GitHub do seu repositório bifurcado, navegue até `experience-platform.en/help/sources/tutorials/api/create/` e selecione a categoria apropriada para sua origem na lista. Por exemplo, se você estiver criando documentação para uma nova fonte de armazenamento na nuvem, selecione **armazenamento na nuvem**.
+Na estrutura de pastas do GitHub do seu repositório bifurcado, navegue até [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) e selecione a categoria apropriada para sua origem na lista. Por exemplo, se você estiver criando documentação para uma nova fonte de armazenamento na nuvem, selecione **armazenamento na nuvem**.
+
+>[!TIP]
+>
+>Se você estiver criando documentação para a interface do usuário, navegue para [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) e selecione a categoria apropriada para sua fonte. Para adicionar suas imagens, navegue até [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) em seguida, adicione suas capturas de tela ao `sdk` pasta.
 
 ![armazenamento na nuvem](../assets/cloud-storage.png)
 

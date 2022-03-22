@@ -4,10 +4,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 15%
+source-wordcount: '750'
+ht-degree: 14%
 
 ---
 
@@ -277,7 +277,8 @@ ht-degree: 15%
    - [Documente sua fonte no Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
    - [Usar a interface da Web do GitHub para criar uma página de documentação de fontes](sources-sdk/documentation/github.md)
    - [Usar um editor de texto no ambiente local para criar uma página de documentação de fontes](sources-sdk/documentation/text-editor.md)
-   - [Modelo de autoatendimento da documentação](sources-sdk/documentation/template.md)
+   - [Modelo de API de autoatendimento da documentação](sources-sdk/documentation/template.md)
+   - [Modelo de interface de usuário de autoatendimento da documentação](sources-sdk/documentation/ui-template.md)
 - [Notificações de execução de fluxo](notifications.md)
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)

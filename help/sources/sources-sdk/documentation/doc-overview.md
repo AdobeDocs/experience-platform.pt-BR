@@ -6,9 +6,10 @@ topic-legacy: overview
 description: A etapa final antes que sua nova fonte possa ser ativada no Adobe Experience Platform é documentar sua nova fonte.
 hide: true
 hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
+source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,10 @@ Em um alto nível, para criar a documentação para a sua origem, é necessário
 
 Pode utilizar uma caneta pré-cheia. [modelo de documentação](./template.md) para ajudar a criar documentação para sua fonte. Mais abaixo, você pode encontrar instruções sobre como editar o modelo e abrir uma solicitação de pull. A documentação enviada para a nova fonte será revisada e publicada pela equipe de documentação do Adobe.
 
-Também é possível baixar a variável [modelo de documentação aqui](../assets/template.zip).
+Você também pode baixar os modelos de documentação abaixo:
+
+* [Modelo de documentação da API](../assets/template.zip)
+* [Modelo de documentação da interface do usuário](../assets/ui-template.zip)
 
 ## Criar a nova página de origem
 

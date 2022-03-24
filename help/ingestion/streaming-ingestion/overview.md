@@ -5,20 +5,20 @@ title: Visão geral da assimilação de fluxo
 topic-legacy: overview
 description: A assimilação de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 57555011ce5cf8b3f80b1d1d849cb179f4801f02
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '348'
 ht-degree: 3%
 
 ---
 
 # Visão geral da assimilação de streaming
 
-A assimilação de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para [!DNL Experience Platform] em tempo real.
+A assimilação de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o [!DNL Experience Platform] em tempo real.
 
 ## O que você pode fazer com a ingestão de streaming?
 
-O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes, gerando um [!DNL Real-time Customer Profile] para cada um dos clientes individuais. A assimilação de streaming desempenha um papel importante na criação desses perfis, permitindo que você forneça [!DNL Profile] dados no [!DNL Data Lake] com o mínimo de latência possível.
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes, gerando uma [!DNL Real-time Customer Profile] para cada um dos clientes individuais. A assimilação de streaming tem um papel importante na criação desses perfis, permitindo que você forneça [!DNL Profile] dados no [!DNL Data Lake] com o mínimo de latência possível.
 
 O vídeo a seguir foi criado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
@@ -26,7 +26,7 @@ O vídeo a seguir foi criado para ajudar a entender a assimilação de streaming
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 
-Com a assimilação de streaming, os usuários podem transmitir registros de perfil e [!DNL ExperienceEvents] para [!DNL Platform] em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para APIs de assimilação de streaming são automaticamente mantidos no [!DNL Data Lake].
+Com a assimilação de streaming, os usuários podem transmitir registros de perfil e [!DNL ExperienceEvents] para [!DNL Platform] em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para as APIs de assimilação de streaming são automaticamente mantidos na variável [!DNL Data Lake].
 
 Leia o [criar um guia de conexão de transmissão](../tutorials/create-streaming-connection.md) para obter mais informações.
 
@@ -34,15 +34,28 @@ Leia o [criar um guia de conexão de transmissão](../tutorials/create-streaming
 
 Depois de ter certeza de que os dados estão limpos, é possível ativar os conjuntos de dados para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 
-Para obter mais informações sobre como ativar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o [configurar um guia de conjunto de dados](../../profile/tutorials/dataset-configuration.md).
+Para obter mais informações sobre como ativar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service]Por favor leia o [configurar um guia de conjunto de dados](../../profile/tutorials/dataset-configuration.md).
 
 ## Qual é a latência esperada para a assimilação de streaming em [!DNL Platform]?
 
 | Destino | Latência esperada |
 | --------- | ---------------- |
-| Perfil do cliente em tempo real | &lt; 1=&quot;&quot; minute=&quot;&quot;> |
+| Perfil do cliente em tempo real | &lt; 1 minuto |
 | Data Lake | &lt; 60 minutos |
+
+## Orientação de solicitação por segundos (RPS) sobre assimilação de streaming
+
+A tabela abaixo exibe orientações sobre os limites de solicitação por segundos para a assimilação de streaming.
+
+| Limite de RPS | Notas |
+| --- | --- |
+| 1000 solicitações por segundo | Eles podem conter várias mensagens ao usar `/collection/batch` endpoint . |
+| 10000 mensagens individuais por segundo | As mensagens podem ser agrupadas em menos solicitações reais ao usar a variável `/collection/batch` endpoint . |
+
+>[!IMPORTANT]
+>
+>O limite imposto se torna **60 pedidos por minuto** ao usar a validação síncrona como se destina a fins de depuração.
 
 ## Extensão da Adobe Experience Platform
 
-Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. A extensão [!DNL Experience Platform] fornece ações para enviar beacons formatados em [!DNL Experience Data Model] (XDM) para assimilação em tempo real em [!DNL Experience Platform]. Visite a documentação da [Extensão do Experience Platform](../../tags/extensions/web/sdk/overview.md) para obter mais informações.
+Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. O [!DNL Experience Platform] fornece ações para enviar beacons formatados em [!DNL Experience Data Model] (XDM) para ingestão em tempo real para [!DNL Experience Platform]. Visite o [Extensão Experience Platform](../../tags/extensions/web/sdk/overview.md) documentação para obter mais informações.

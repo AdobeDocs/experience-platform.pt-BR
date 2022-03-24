@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3413'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,8 @@ A lista de respostas a perguntas frequentes a seguir está dividida nas seguinte
 - [Geral](#general)
 - [Exportar dados](#exporting-data)
 - [Ferramentas de terceiros](#third-party-tools)
+- [Erros da API PostgreSQL](#postgresql-api-errors)
+- [Erros da API REST](#rest-api-errors)
 
 ## Perguntas gerais sobre o Serviço de query {#general}
 
@@ -434,38 +436,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## Erros da API REST
-
-| Código do status HTTP | Descrição | Possíveis causas |
-|------------------|-----------------------|----------------------------|
-| 400 | Solicitação inválida | Consulta malformada ou ilegal |
-| 401° | Falha na autenticação | Token de autenticação inválido |
-| 500 | Erro interno do servidor | Falha do sistema interno |
-
-## Erros da API PostgreSQL
-
-| Código de erro | Estado da conexão | Descrição | Causa possível |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | N/D | Tipo de mensagem não suportado | Tipo de mensagem não suportado |
-| **28P01** | Iniciar - autenticação | Senha inválida | Token de autenticação inválido |
-| **28000** | Iniciar - autenticação | Tipo de autorização inválido | Tipo de autorização inválido. Deve ser `AuthenticationCleartextPassword`. |
-| **42P12** | Iniciar - autenticação | Nenhuma tabela encontrada | Nenhuma tabela encontrada para uso |
-| **42601** | Consulta | Erro de sintaxe | Comando ou erro de sintaxe inválido |
-| **42P01** | Consulta | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
-| **42P07** | Consulta | Tabela existe | Já existe uma tabela com o mesmo nome (CRIAR TABELA) |
-| **53400** | Consulta | LIMITE excede o valor máximo | O usuário especificou uma cláusula LIMIT superior a 100.000 |
-| **53400** | Consulta | Tempo limite do demonstrativo | A declaração ao vivo enviada demorou mais de 10 minutos |
-| **58000** | Consulta | Erro do sistema | Falha do sistema interno |
-| **0A000** | Query/Comando | Não suportado | Não há suporte para o recurso/funcionalidade no query/comando |
-| **42501** | Consulta DROP TABLE | Eliminar tabela não criada pelo Serviço de Consulta | A tabela que está sendo solta não foi criada pelo Serviço de Consulta usando o `CREATE TABLE` declaração |
-| **42501** | Consulta DROP TABLE | Tabela não criada pelo usuário autenticado | A tabela que está sendo solta não foi criada pelo usuário conectado no momento |
-| **42P01** | Consulta DROP TABLE | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
-| **42P12** | Consulta DROP TABLE | Nenhuma tabela encontrada para `dbName`: verifique o `dbName` | Nenhuma tabela foi encontrada no banco de dados atual |
-
 ## Exportar dados {#exporting-data}
 
 Esta seção fornece informações sobre exportação de dados e limites.
-
 
 ### Existe uma maneira de extrair dados do Serviço de query após o processamento de query e salvar os resultados em um arquivo CSV?
 
@@ -524,3 +497,51 @@ A finalidade de adicionar a camada do servidor de cache é armazenar os dados em
 
 +++Nº da resposta, a conectividade pgAdmin não é suportada. A [lista de clientes de terceiros disponíveis e instruções sobre como conectá-los ao Serviço de query](./clients/overview.md) pode ser encontrada na documentação do .
 +++
+
+## Erros da API PostgreSQL {#postgresql-api-errors}
+
+A tabela a seguir fornece códigos de erro PSQL e suas possíveis causas.
+
+| Código de erro | Estado da conexão | Descrição | Causa possível |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | N/D | Tipo de mensagem não suportado | Tipo de mensagem não suportado |
+| **28P01** | Iniciar - autenticação | Senha inválida | Token de autenticação inválido |
+| **28000** | Iniciar - autenticação | Tipo de autorização inválido | Tipo de autorização inválido. Deve ser `AuthenticationCleartextPassword`. |
+| **42P12** | Iniciar - autenticação | Nenhuma tabela encontrada | Nenhuma tabela encontrada para uso |
+| **42601** | Consulta | Erro de sintaxe | Comando ou erro de sintaxe inválido |
+| **42P01** | Consulta | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
+| **42P07** | Consulta | Tabela existe | Já existe uma tabela com o mesmo nome (CRIAR TABELA) |
+| **53400** | Consulta | LIMITE excede o valor máximo | O usuário especificou uma cláusula LIMIT superior a 100.000 |
+| **53400** | Consulta | Tempo limite do demonstrativo | A declaração ao vivo enviada demorou mais de 10 minutos |
+| **58000** | Consulta | Erro do sistema | Falha do sistema interno |
+| **0A000** | Query/Comando | Não suportado | Não há suporte para o recurso/funcionalidade no query/comando |
+| **42501** | Consulta DROP TABLE | Eliminar tabela não criada pelo Serviço de Consulta | A tabela que está sendo solta não foi criada pelo Serviço de Consulta usando o `CREATE TABLE` declaração |
+| **42501** | Consulta DROP TABLE | Tabela não criada pelo usuário autenticado | A tabela que está sendo solta não foi criada pelo usuário conectado no momento |
+| **42P01** | Consulta DROP TABLE | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
+| **42P12** | Consulta DROP TABLE | Nenhuma tabela encontrada para `dbName`: verifique o `dbName` | Nenhuma tabela foi encontrada no banco de dados atual |
+
+### Por que recebi um código de erro 58000 ao usar o método history_meta() na minha tabela?
+
++++Responda O `history_meta()` é usado para acessar um instantâneo de um conjunto de dados. Anteriormente, se você executasse uma consulta em um conjunto de dados vazio no Armazenamento Azure Data Lake (ADLS), você receberia um código de erro 58000 informando que o conjunto de dados não existe. Um exemplo do erro de sistema antigo é exibido abaixo.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+Este erro ocorreu porque não havia um valor de retorno para a consulta. Esse comportamento foi corrigido para retornar a seguinte mensagem:
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## Erros da API REST {#rest-api-errors}
+
+A tabela a seguir fornece códigos de erro HTTP e suas possíveis causas.
+
+| Código do status HTTP | Descrição | Possíveis causas |
+|------------------|-----------------------|----------------------------|
+| 400 | Solicitação inválida | Consulta malformada ou ilegal |
+| 401° | Falha na autenticação | Token de autenticação inválido |
+| 500 | Erro interno do servidor | Falha do sistema interno |

@@ -3,11 +3,11 @@ keywords: Experience Platform, home, tópicos populares, serviço de consulta, s
 solution: Experience Platform
 title: Exemplos de consultas para dados do Adobe Analytics
 topic-legacy: queries
-description: Os dados dos conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e assimilados no Adobe Experience Platform como conjuntos de dados para você. Este documento descreve uma série de casos de uso em que o Adobe Experience Platform Query Service usa esses dados e as consultas de amostra incluídas devem funcionar com seus conjuntos de dados do Adobe Analytics.
+description: Os dados dos conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e assimilados no Adobe Experience Platform como conjuntos de dados. Este documento descreve uma série de casos de uso em que o Serviço de query usa esses dados e inclui consultas de amostra projetadas para funcionar com seus conjuntos de dados do Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: bb5ece5e48ca5e3bb97aa1367515f510ab03deee
+source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1066'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Os dados dos conjuntos de relatórios selecionados do Adobe Analytics são transformados em dados conformes ao [!DNL XDM ExperienceEvent] e assimiladas no Adobe Experience Platform como conjuntos de dados.
 
-Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] O usa esses dados, incluindo consultas de exemplo, que devem funcionar com seus conjuntos de dados do Adobe Analytics. Consulte a documentação em [Mapeamento de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre mapeamento para [!DNL Experience Events].
+Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] O usa esses dados, incluindo consultas de amostra projetadas para funcionar com seus conjuntos de dados do Adobe Analytics. Consulte a documentação em [Mapeamento de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre mapeamento para [!DNL Experience Events].
 
 ## Introdução
 
@@ -24,7 +24,7 @@ Os exemplos de SQL em todo este documento exigem que você edite o SQL e preench
 
 ## Exemplos de SQL comumente usados
 
-Os exemplos a seguir mostram queries SQL comumente usados para analisar seus dados do Adobe Analytics.
+Os exemplos a seguir mostram consultas SQL para casos de uso comuns para analisar seus dados do Adobe Analytics.
 
 ### Contagem de visitantes por hora para um determinado dia
 
@@ -120,14 +120,15 @@ ORDER BY Hour;
 
 ## Desduplicação
 
-O Adobe Experience Platform Query Service oferece suporte à desduplicação de dados. Consulte a [Desduplicação de dados na documentação do Serviço de query](../best-practices/deduplication.md) para obter informações sobre como gerar novos valores no momento do query [!DNL Experience Event] conjuntos de dados.
+[!DNL Query Service] O suporta desduplicação de dados. Consulte a [Desduplicação de dados em [!DNL Query Service] documentação](../best-practices/deduplication.md) para obter informações sobre como gerar novos valores no momento do query [!DNL Experience Event] conjuntos de dados.
 
 ## Variáveis de merchandising (sintaxe do produto)
 
+As seções a seguir fornecem campos XDM e consultas de amostra que você pode usar para acessar as variáveis de merchandising em seu [!DNL Analytics] conjunto de dados.
 
 ### Sintaxe do produto
 
-No Adobe Analytics, os dados personalizados a nível de produto podem ser coletados por meio de variáveis configuradas especialmente chamadas variáveis de merchandising. Elas se baseiam em um eVar ou em eventos personalizados. A diferença entre essas variáveis e seu uso padrão é que elas representam um valor separado para cada produto encontrado na ocorrência, em vez de apenas um valor único para a ocorrência.
+No Adobe Analytics, os dados personalizados a nível de produto podem ser coletados por meio de variáveis configuradas especialmente chamadas variáveis de merchandising. Elas se baseiam em um eVar ou em eventos personalizados. A diferença entre essas variáveis e seu uso típico é que elas representam um valor separado para cada produto encontrado na ocorrência, em vez de apenas um valor único para a ocorrência.
 
 Essas variáveis são chamadas de variáveis de merchandising de sintaxe de produto. Isso permite a coleta de informações, como um &quot;valor de desconto&quot; por produto ou informações sobre o &quot;local na página&quot; do produto nos resultados de pesquisa do cliente.
 
@@ -205,7 +206,7 @@ Outro tipo de variável de merchandising encontrada no Adobe Analytics é a sint
 1. Um usuário realiza uma pesquisa interna por &quot;chapéu de inverno&quot;, que define o eVar 6 da Sintaxe de conversão habilitada para Merchandising como &quot;pesquisa interna:chapéu de inverno&quot;
 2. O usuário clica em &quot;waffle beanie&quot; e chega à página de detalhes do produto.\
    a. Aterrissando aqui dispara uma `Product View` evento para &quot;waffle beanie&quot; por US$ 12,99.\
-   b. Porque `Product View` está configurado como um evento compulsório, o produto &quot;waffle beanie&quot; agora está vinculado ao valor de eVar6 de &quot;pesquisa interna:chapéu de inverno&quot;. Sempre que o produto &quot;waffle beanie&quot; for coletado, ele será associado a &quot;pesquisa interna:chapéu de inverno&quot; até que (1) a configuração de expiração seja alcançada ou (2) um novo valor de eVar6 seja definido e o evento de vinculação ocorra novamente com esse produto.
+   b. Since `Product View` for configurado como um evento compulsório, o produto &quot;waffle beanie&quot; agora é vinculado ao valor de eVar6 de &quot;pesquisa interna:chapéu de inverno&quot;. Sempre que o produto &quot;waffle beanie&quot; for coletado, ele será associado a &quot;pesquisa interna:chapéu de inverno&quot; até que (1) a configuração de expiração seja alcançada ou (2) um novo valor de eVar6 seja definido e o evento de vinculação ocorra novamente com esse produto.
 3. O usuário adiciona o produto ao carrinho, acionando o `Cart Add` evento.
 4. O usuário realiza outra pesquisa interna por &quot;camisa de verão&quot;, que define o eVar 6 da Sintaxe de conversão habilitada para Merchandising como &quot;pesquisa interna:camisa de verão&quot;
 5. O usuário clica em &quot;t-shirt do esporte&quot; e chega à página de detalhes do produto.\

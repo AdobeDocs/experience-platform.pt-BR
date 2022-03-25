@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform, introdução, atendimento ao cliente, tópicos populares, entrada de atendimento ao cliente, saída de atendimento ao cliente, solução de problemas de atendimento ao cliente, erros de atendimento ao cliente
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Solução de problemas de erro de AI do cliente
 topic-legacy: Getting started
 description: Encontre respostas para erros comuns no Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%

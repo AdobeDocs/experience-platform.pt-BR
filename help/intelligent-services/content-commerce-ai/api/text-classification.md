@@ -1,12 +1,11 @@
 ---
 keywords: classificação de texto;Classificação de texto
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Classificação de texto na API da API do Content and Commerce AI
 topic-legacy: Developer guide
 description: O serviço de classificação de texto, ao receber um fragmento de texto, pode classificá-lo em um ou mais rótulos. A classificação pode ser de rótulo único, multirótulo ou hierárquico.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 4%
@@ -33,7 +32,7 @@ A solicitação a seguir classifica o texto de um fragmento com base nos parâme
 
 >[!CAUTION]
 >
->`analyzer_id` determina qual  [!DNL Sensei Content Framework] é usada. Verifique se você tem o `analyzer_id` correto antes de fazer sua solicitação. Entre em contato com a equipe beta do Content and Commerce AI para receber seu `analyzer_id` para este serviço.
+>`analyzer_id` determina qual [!DNL Sensei Content Framework] é usada. Verifique se você tem a `analyzer_id` antes de fazer sua solicitação. Entre em contato com a equipe beta do Content and Commerce AI para receber seu `analyzer_id` para este serviço.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -62,14 +61,14 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriedade | Descrição | Obrigatório |
 | --- | --- | --- |
-| `analyzer_id` | A ID do serviço [!DNL Sensei] em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] é usada. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
+| `analyzer_id` | O [!DNL Sensei] ID de serviço em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] são usadas. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa um documento. Qualquer parâmetro passado como parte dessa matriz substitui os parâmetros globais especificados fora da matriz `data`. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída de dentro de `data`. | Sim |
+| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa um documento. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
 | `language` | Idioma do texto de entrada. O valor padrão é `en`. | Não |
 | `content-type` | Usado para indicar se a entrada é parte do corpo da solicitação ou um url assinado para um bucket S3. O padrão para essa propriedade é `inline`. | Não |
 | `encoding` | O formato de codificação do texto de entrada. Pode ser `utf-8` ou `utf-16`. O padrão para essa propriedade é `utf-8`. | Não |
 | `threshold` | O limite de pontuação (0 a 1) acima do qual os resultados precisam ser retornados. Use o valor `0` para retornar todos os resultados. O padrão para essa propriedade é `0`. | Não |
-| `top-N` | O número de resultados a serem retornados (não pode ser um número inteiro negativo). Use o valor `0` para retornar todos os resultados. Quando usado em conjunto com `threshold`, o número de resultados retornados é o menor de qualquer um dos limites definidos. O padrão para essa propriedade é `0`. | Não |
+| `top-N` | O número de resultados a serem retornados (não pode ser um número inteiro negativo). Use o valor `0` para retornar todos os resultados. Quando usado em conjunto com `threshold`, o número de resultados devolvidos é o menor de qualquer um dos limites definidos. O padrão para essa propriedade é `0`. | Não |
 | `custom` | Quaisquer parâmetros personalizados a serem transmitidos. Essa propriedade requer um objeto JSON válido para funcionar. | Não |
 | `content-id` | A ID exclusiva para o elemento de dados retornado na resposta. Se isso não for passado, uma ID gerada automaticamente será atribuída. | Não |
 | `content` | O conteúdo usado pelo serviço de classificação de texto. O conteúdo pode ser texto bruto (tipo de conteúdo &quot;em linha&quot;). <br> Se o conteúdo for um arquivo no tipo de conteúdo S3 (s3-bucket&#39;), passe o url assinado. | Sim |

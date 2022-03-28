@@ -3,9 +3,9 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os Datastreams. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
+source-wordcount: '2004'
 ht-degree: 2%
 
 ---
@@ -49,6 +49,16 @@ O fluxo de trabalho de criação do armazenamento de dados é exibido, começand
 Se você estiver configurando esse armazenamento de dados para uso no Experience Platform e estiver usando o SDK da Web da plataforma, também deverá selecionar um [esquema do Experience Data Model (XDM) baseado em eventos](../../xdm/classes/experienceevent.md) para representar os dados que você planeja assimilar.
 
 ![Configuração básica para um armazenamento de dados](../images/datastreams/configure.png)
+
+Selecionar **[!UICONTROL Opções avançadas]** para revelar controles adicionais para configurar o conjunto de dados.
+
+![Opções de configuração avançadas](../images/datastreams/advanced-options.png)
+
+| Configuração | Descrição |
+| --- | --- |
+| [!UICONTROL Localização geográfica] | Determina se as pesquisas de GPS ocorrem com base no endereço IP do usuário. A configuração padrão **[!UICONTROL Nenhum]** desativa qualquer pesquisa de GPS, enquanto a variável **[!UICONTROL Cidade]** A configuração fornece coordenadas GPS com duas casas decimais. |
+| [!UICONTROL Cookie da ID própria] | Quando habilitada, essa configuração informa à Edge Network para fazer referência a um cookie especificado ao pesquisar um [ID de dispositivo próprio](../identity/first-party-device-ids.md), em vez de pesquisar esse valor no Mapa de identidade.<br><br>Ao ativar essa configuração, você deve fornecer o nome do cookie no qual a ID deve ser armazenada. |
+| [!UICONTROL Sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em contêineres para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Quando ativada, essa configuração permite especificar qual contêiner de sincronizações de ID é executado para esse armazenamento de dados. |
 
 O restante desta seção foca nas etapas para mapear dados para um esquema de evento da plataforma selecionado. Se você estiver usando o SDK móvel ou não estiver configurando seu conjunto de dados para a Plataforma, selecione **[!UICONTROL Salvar]** antes de prosseguir para a próxima seção sobre [adicionar serviços ao armazenamento de dados](#add-services).
 
@@ -199,16 +209,6 @@ Esse serviço controla se e como os dados são enviados para [encaminhamento de 
 >[!NOTE]
 >
 >Você pode selecionar **[!UICONTROL Inserir IDs manualmente]** para digitar os nomes da propriedade e do ambiente em vez de usar os menus suspensos.
-
-### [!UICONTROL Sincronização de ID de terceiros] configurações
-
-A seção ID de terceiros é a única seção que está sempre ativa. Ele tem duas configurações disponíveis: &quot;[!UICONTROL Sincronização de ID de terceiros ativada]&quot; e &quot;[!UICONTROL ID do contêiner de sincronização de ID de terceiros]&quot;.
-
-![Seção Sincronização de ID de terceiros da interface do usuário de configuração](../images/datastreams/third-party-id-sync-config.png)
-
-| Configuração | Descrição |
-| --- | --- |
-| [!UICONTROL ID do contêiner de sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em contêineres para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Isso controla qual contêiner de sincronizações de ID é executado para esse armazenamento de dados. |
 
 ## Próximas etapas
 

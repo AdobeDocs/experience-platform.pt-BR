@@ -5,9 +5,9 @@ title: Criar um conjunto de dados usando APIs
 topic-legacy: datasets
 description: Este documento fornece etapas gerais para criar um conjunto de dados usando APIs do Adobe Experience Platform e preencher o conjunto de dados usando um arquivo.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1304'
 ht-degree: 2%
 
 ---
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Este tutorial usa o [Apache Parquet](https://parquet.apache.org/documentation/latest/) formato de arquivo para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](../../ingestion/batch-ingestion/api-overview.md)
+>Este tutorial usa o [Apache Parquet](https://parquet.apache.org/docs/) formato de arquivo para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](../../ingestion/batch-ingestion/api-overview.md)
 
 **Resposta**
 

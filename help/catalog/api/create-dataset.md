@@ -5,17 +5,16 @@ title: Criar um conjunto de dados na API
 topic-legacy: developer guide
 description: Este documento aborda como criar um objeto de conjunto de dados na API do Serviço de catálogo.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 2%
 
 ---
 
 # Criar um conjunto de dados na API
 
-Para criar um conjunto de dados usando a API [!DNL Catalog], você deve saber o valor `$id` do schema [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do esquema, é possível criar um conjunto de dados, fazendo uma solicitação de POST para o endpoint `/datasets` na API [!DNL Catalog].
+Para criar um conjunto de dados usando o [!DNL Catalog] Você deve conhecer a API do `$id` do [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do esquema, você pode criar um conjunto de dados, fazendo uma solicitação de POST para a `/datasets` endpoint no [!DNL Catalog] API.
 
 >[!NOTE]
 >
@@ -51,12 +50,12 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome do conjunto de dados a ser criado. |
-| `schemaRef.id` | O valor de URI `$id` para o esquema XDM no qual o conjunto de dados será baseado. |
-| `schemaRef.contentType` | Indica o formato e a versão do esquema. Consulte a seção sobre [controle de versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
+| `schemaRef.id` | O URI `$id` para o esquema XDM, o conjunto de dados será baseado. |
+| `schemaRef.contentType` | Indica o formato e a versão do esquema. Consulte a seção sobre [versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
 
 >[!NOTE]
 >
->Este exemplo usa o formato de arquivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para sua propriedade `containerFormat`. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md).
+>Esse exemplo usa a variável [Apache Parquet](https://parquet.apache.org/docs/) formato de arquivo para `containerFormat` propriedade. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](../../ingestion/batch-ingestion/api-overview.md).
 
 **Resposta**
 

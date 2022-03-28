@@ -5,9 +5,9 @@ title: Visão geral da API de assimilação em lote
 topic-legacy: overview
 description: A API de assimilação de dados do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estão em conformidade com um esquema conhecido no registro do Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -61,7 +61,7 @@ Por exemplo, nem JSON nem CSV têm um `date` ou `date-time` tipo . Como resultad
 
 A tabela abaixo mostra as conversões suportadas ao assimilar dados.
 
-| Entrada (linha) vs Destino (col) | String | Byte | Curto | Número inteiro | Longo | Duplo | Data  | Data e hora | Objeto | Mapa |
+| Entrada (linha) vs Destino (col) | String | Byte | Curto | Número inteiro | Longo | Duplo | Data | Data e hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | String | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -69,7 +69,7 @@ A tabela abaixo mostra as conversões suportadas ao assimilar dados.
 | Número inteiro | X | X | X | X | X | X |  |  |  |  |
 | Longo | X | X | X | X | X | X | X | X |  |  |
 | Duplo | X | X | X | X | X | X |  |  |  |  |
-| Data  |  |  |  |  |  |  | X |  |  |  |
+| Data |  |  |  |  |  |  | X |  |  |  |
 | Data e hora |  |  |  |  |  |  |  | X |  |  |
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |
@@ -151,7 +151,7 @@ Você pode fazer upload de arquivos usando a API de upload de arquivo pequeno. N
 
 >[!INFO]
 >
->Os exemplos abaixo usam a variável [Apache Parquet](https://parquet.apache.org/documentation/latest/) formato de arquivo. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](api-overview.md).
+>Os exemplos abaixo usam a variável [Apache Parquet](https://parquet.apache.org/docs/) formato de arquivo. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](api-overview.md).
 
 ### Upload de arquivo pequeno
 

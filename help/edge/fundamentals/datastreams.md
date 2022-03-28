@@ -3,22 +3,22 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os Datastreams. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1995'
 ht-degree: 2%
 
 ---
 
 # Configurar um conjunto de dados
 
-Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web do Adobe Experience Platform. Enquanto a variável [comando configurar](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
+Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs da Web e do Mobile do Adobe Experience Platform. Enquanto a variável [comando configurar](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
 Este documento aborda as etapas para configurar um armazenamento de dados na interface do usuário da coleta de dados.
 
 >[!NOTE]
 >
->Sua organização deve ser provisionada para esse recurso para acessá-lo na interface do usuário do . Se você não tiver acesso, preencha o seguinte [formulário](http://adobe.ly/websdkaccess) e lhe concederemos o acesso necessário.
+>Sua organização deve ser provisionada para esse recurso para acessá-lo na interface do usuário do . Preencha o seguinte [formulário](https://adobe.ly/websdkaccess) para solicitar o acesso necessário.
 
 ## Acesse o [!UICONTROL Datastreams] espaço de trabalho
 
@@ -60,7 +60,7 @@ Selecionar **[!UICONTROL Opções avançadas]** para revelar controles adicionai
 | [!UICONTROL Cookie da ID própria] | Quando habilitada, essa configuração informa à Edge Network para fazer referência a um cookie especificado ao pesquisar um [ID de dispositivo próprio](../identity/first-party-device-ids.md), em vez de pesquisar esse valor no Mapa de identidade.<br><br>Ao ativar essa configuração, você deve fornecer o nome do cookie no qual a ID deve ser armazenada. |
 | [!UICONTROL Sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em contêineres para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Quando ativada, essa configuração permite especificar qual contêiner de sincronizações de ID é executado para esse armazenamento de dados. |
 
-O restante desta seção foca nas etapas para mapear dados para um esquema de evento da plataforma selecionado. Se você estiver usando o SDK móvel ou não estiver configurando seu conjunto de dados para a Plataforma, selecione **[!UICONTROL Salvar]** antes de prosseguir para a próxima seção sobre [adicionar serviços ao armazenamento de dados](#add-services).
+O restante desta seção foca nas etapas para mapear dados para um esquema de evento da plataforma selecionado. Se você estiver usando o SDK do Mobile ou não estiver configurando seu conjunto de dados para a Plataforma, selecione **[!UICONTROL Salvar]** antes de prosseguir para a próxima seção sobre [adicionar serviços ao armazenamento de dados](#add-services).
 
 ### Preparação de dados para coleta de dados {#data-prep}
 

@@ -2,9 +2,9 @@
 title: Fontes no Real-time Customer Data Platform B2B Edition
 description: Uma visão geral da função das fontes no Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,6 @@ ht-degree: 0%
 >Se você não estiver usando o Real-time Customer Data Platform B2B Edition, consulte [visão geral das fontes](./sources-overview.md) em vez disso.
 
 O Real-time Customer Data Platform B2B Edition permite trazer seus dados B2B por meio de várias fontes, incluindo a [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) conector de origem, Salesforce, Amazon S3 e ADLS, entre outros. Essa variedade de fontes oferece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços.
-
->[!TIP]
->
->Embora o Real-time Customer Data Platform B2B Edition ofereça uma ampla variedade de fontes externas a partir das quais assimilar dados, ele não tem tantos quanto os disponíveis para o Real-time Customer Data Platform. Para saber quais conectores de origem estão disponíveis para sua organização, você pode exibir o catálogo de fontes na interface do usuário da plataforma. Para acessar o catálogo, selecione **Fontes** na navegação à esquerda, selecione **Catálogo**.
 
 Para entender como as fontes se encaixam no fluxo de trabalho B2B, consulte [tutorial completo](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

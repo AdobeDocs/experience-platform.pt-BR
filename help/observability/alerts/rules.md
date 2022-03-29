@@ -4,9 +4,9 @@ title: Regras padrão de alerta
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
+source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '785'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,8 @@ As seguintes regras de alerta são específicas para [Assimilação de dados](..
 | Informações de Execução do Fluxo de Origem | Êxito na Execução do Fluxo de Fontes | Esse alerta dispara quando os dados são assimilados com êxito de uma conexão de origem. |
 | Atrasos, falhas e erros de execução do fluxo de origem | Falha na Execução do Fluxo de Fontes | Esse alerta dispara quando ocorre um erro ao assimilar dados de uma conexão de origem. |
 | Atrasos, falhas e erros de execução do fluxo de origem | Atraso de assimilação | Esse alerta é disparado quando a execução de um fluxo de ingestão em lote demora mais de 150 minutos para ser processada. |
+| Atrasos, falhas e erros de execução do fluxo de origem | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
+| Atrasos, falhas e erros de execução do fluxo de origem | Falha de Assimilação | Esse alerta dispara quando a proporção de registros com falha para todos os registros excede um limite de 0,5% |
 
 {style=&quot;table-layout:auto&quot;}
 

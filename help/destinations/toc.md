@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '733'
 ht-degree: 9%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 9%
       * [Conexão Blob do Azure](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Conexão de Hubs de Eventos do Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
-      * [LISTA DE PERMISSÕES de endereço IP](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [Endereço IP lista de permissões para destinos de armazenamento em nuvem](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [Extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
@@ -114,7 +114,7 @@ ht-degree: 9%
    * Extensões de tag {#launch-extensions}
       * [Visão geral da extensão de tag](./catalog/launch-extensions/overview.md)
    * Destinos de envolvimento móvel {#mobile-engagement}
-      * [Visão geral dos destinos de envolvimento móvel](./catalog/mobile-engagement/overview.md)
+      * [Visão geral dos destinos de envolvimento do Mobile](./catalog/mobile-engagement/overview.md)
       * [Conexão de atributos de aeróstato](./catalog/mobile-engagement/airship-attributes.md)
       * [Ligação de Etiquetas de Avião](./catalog/mobile-engagement/airship-tags.md)
       * [Ligação de brasa](./catalog/mobile-engagement/braze.md)
@@ -138,6 +138,7 @@ ht-degree: 9%
       * [[!DNL Twitter Custom Audiences] conexão](./catalog/social/twitter.md)
    * Destinos de transmissão {#streaming}
       * [ Conexão da API HTTP (Beta)](./catalog/streaming/http-destination.md)
+      * [Endereço IP lista de permissões para destinos de transmissão](./catalog/streaming/ip-address-allow-list.md)
    * Destinos da pesquisa {#survey}
       * [Visão geral dos destinos da pesquisa](./catalog/survey/overview.md)
       * [Destino da extensão da Foresee](./catalog/survey/foresee.md)

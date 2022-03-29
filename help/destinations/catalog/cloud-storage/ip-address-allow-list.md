@@ -4,15 +4,14 @@ title: 'LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em n
 type: Documentation
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar com segurança os dados do Experience Platform para o servidor SFTP, o Amazon S3 ou o armazenamento do Azure Blob.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-translation-type: tm+mt
-source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
-# LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em nuvem {#ip-address-allow-list}
+# Endereço IP lista de permissões para destinos de armazenamento em nuvem {#ip-address-allow-list}
 
 >[!IMPORTANT]
 >
@@ -22,11 +21,11 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar com segurança os dados do Experience Platform para o seu [servidor SFTP](./sftp.md).
+Esta página fornece intervalos IP que podem ser adicionados à sua  de lista de permissões para exportar com segurança dados do Experience Platform para a sua [Servidor SFTP](./sftp.md).
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, é possível permitir o tráfego para o serviço de transferência de dados.
 
-O Adobe recomenda adicionar os seguintes intervalos IP a uma lista de permissões antes de trabalhar com conexões de destino de armazenamento em nuvem. A não adição do intervalo IP específico da região à lista de permissões pode causar erros ou não desempenho ao usar as conexões de destino de armazenamento na nuvem.
+O Adobe recomenda adicionar os seguintes intervalos IP a uma  de lista de permissões antes de trabalhar com conexões de destino de armazenamento em nuvem. A não adição do intervalo IP específico da região à sua lista de permissões pode causar erros ou não desempenho ao usar as conexões de destino de armazenamento na nuvem.
 
 ## Obrigatório para todos os clientes
 

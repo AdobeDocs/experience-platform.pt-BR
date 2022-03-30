@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
+source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 6%
+source-wordcount: '882'
+ht-degree: 7%
 
 ---
 
@@ -20,9 +20,9 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Alertas](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Experience Data Model (XDM)](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [Fontes](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Logs de auditoria {#audit-logs}
 
@@ -70,6 +70,8 @@ O painel Perfis exibe um instantâneo dos dados de atributo (registro) que sua o
 | Perfis não segmentados por dispositivo de identidade | Esse widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras. Consulte a [documentação de perfis de widgets padrão](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
 | Dispositivo de perfis de identidade únicos | Esse widget fornece uma contagem dos perfis de sua organização que têm apenas um tipo de ID que cria sua identidade, seja um email ou uma ECID. Consulte a [documentação de perfis de widgets padrão](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obter mais informações sobre painéis de Perfis, consulte o [Visão geral dos painéis de perfis](../../dashboards/guides/profiles.md).
 
 ### Painéis de destinos
@@ -82,19 +84,21 @@ O painel Destinos exibe um instantâneo dos destinos que sua organização habil
 | --- | --- |
 | Widget de contagem de destinos | O widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos. Consulte a [documentação do widget padrão de destinos](../../dashboards/guides/destinations.md#standard-widgets) para obter mais informações. |
 
-Para obter mais informações sobre painéis de Destinos na Platform, consulte o [Visão geral dos painéis de destinos](../../dashboards/guides/destinations.md).
-
-## Experience Data Model (XDM) {#xdm}
-
-O Experience Data Model (XDM) é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
-
-| Recurso | Descrição |
-| --- | --- |
-| Adicionar ou remover campos padrão individuais de um esquema | A interface do Editor de esquemas agora permite adicionar partes de grupos de campos padrão aos seus esquemas, fornecendo mais flexibilidade para os campos que você escolher incluir sem precisar criar recursos personalizados do zero.<br><br>Agora, também é possível definir campos personalizados ad-hoc diretamente na estrutura do schema e atribuí-los a um grupo de campos personalizado novo ou existente, sem precisar criar ou editar o grupo de campos antecipadamente.<br><br>Consulte o guia sobre [criar e editar esquemas na interface do usuário](../../xdm/ui/resources/schemas.md) para obter mais informações sobre esses novos workflows. |
-
 {style=&quot;table-layout:auto&quot;}
 
-Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
+Para obter mais informações sobre painéis de Destinos na Platform, consulte o [Visão geral dos painéis de destinos](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Serviço de query {#query-service}
 
@@ -105,6 +109,8 @@ Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral 
 | Recurso | Descrição |
 | --- | --- |
 | `table_exists` | O novo comando feature é usado para confirmar se uma tabela existe ou não no sistema. O comando retorna um valor booleano: `true` se a tabela **does** existir e `false` se a tabela **not** existe. Consulte a [Documentação da sintaxe SQL](../../query-service/sql/syntax.md) para obter mais informações. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre recursos disponíveis, consulte [Visão geral do Serviço de query](../../query-service/home.md).
 

@@ -4,10 +4,10 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
+source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 1%
+source-wordcount: '2572'
+ht-degree: 0%
 
 ---
 
@@ -102,6 +102,10 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Tendência da contagem de perfis]](#profiles-count-trend)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
+* [[!UICONTROL Perfis de identidade única]](#single-identity-profiles)
+* [[!UICONTROL Perfis não segmentados]](#unsegmented-profiles)
+* [[!UICONTROL Perfis não segmentados] Tendência](#unsegmented-profiles-trend)
+* [[!UICONTROL Perfis não segmentados por identidade]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL Contagem de perfis] {#profile-count}
 
@@ -135,7 +139,7 @@ Consulte a [seção sobre políticas de mesclagem no início deste documento](#m
 
 O **[!UICONTROL Tendência da contagem de perfis]** o widget exibe um botão &quot;legendas&quot; na parte superior direita do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
 
-![Guia Visão geral do perfil exibindo o widget de tendência de contagem de perfis com o botão de legendas realçado.](../images/profiles/profile-count-trend-captions.png)
+![A guia Visão geral do perfil que exibe o widget de tendência de contagem de perfis com o botão de legendas realçado.](../images/profiles/profile-count-trend-captions.png)
 
 Um modelo de aprendizado de máquina gera automaticamente legendas para descrever as tendências principais e eventos importantes ao analisar o gráfico e os dados.
 
@@ -162,6 +166,30 @@ Para obter mais informações sobre fragmentos de perfil, comece lendo a seção
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL Perfis de identidade única] {#single-identity-profiles}
+
+O [!UICONTROL Perfis de identidade única] O widget fornece uma contagem dos perfis de sua organização que têm apenas um tipo de ID que cria sua identidade. Esse tipo de ID pode ser um email ou uma ECID. A contagem de perfis é gerada a partir dos dados contidos no instantâneo mais recente.
+
+![Dispositivo Perfis de identidade única.](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL Perfis não segmentados] {#unsegmented-profiles}
+
+O [!UICONTROL Perfis não segmentados] O widget fornece o número total de perfis não anexados a nenhum segmento. O número gerado é preciso a partir do último instantâneo e representa a oportunidade para a ativação do perfil em toda a organização. Também indica a oportunidade de explorar perfis que não fornecem ROI adequado.
+
+![O widget Perfis não segmentados.](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL Tendência de perfis não segmentados] {#unsegmented-profiles-trend}
+
+O [!UICONTROL Tendência de perfis não segmentados] O widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência dos perfis não anexados a nenhum segmento pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. A contagem de perfis é refletida no eixo y e no tempo no eixo x.
+
+![O widget Tendência de perfis não segmentados.](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL Perfis não segmentados por identidade] (#unsegmentation-profiles-by-identity)
+
+O [!UICONTROL Perfis não segmentados por identidade] O widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras para facilitar a comparação.
+
+![O widget Perfis não segmentados por identidade.](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## (Beta) Widgets de eficácia do perfil {#profile-efficacy-widgets}
 

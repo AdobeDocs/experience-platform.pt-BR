@@ -5,9 +5,9 @@ title: Criar e editar esquemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar esquemas na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 933f2537b686b019251dd178a7f06876d7ee28c5
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '2846'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Para editar um esquema existente, selecione o **[!UICONTROL Procurar]** e seleci
 >
 >Você pode usar os recursos de pesquisa e filtragem do espaço de trabalho para ajudar a encontrar o esquema mais fácil. Consulte o guia sobre [exploração de recursos XDM](../explore.md) para obter mais informações.
 
-Depois de selecionar um schema, a variável [!DNL Schema Editor] é exibido com a estrutura do esquema mostrada na tela. Agora você pode [adicionar grupos de campos](#add-field-groups) ao schema (ou [adicionar campos individuais](#add-individual-fields) desses grupos), [editar nomes de exibição de campo](#display-names)ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o schema empregar algum.
+Depois de selecionar um schema, a variável [!DNL Schema Editor] é exibido com a estrutura do esquema mostrada na tela. Agora você pode [adicionar grupos de campos](#add-field-groups) para o schema , [editar nomes de exibição de campo](#display-names)ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o schema empregar algum.
 
 ## Adicionar grupos de campos a um schema {#add-field-groups}
 
@@ -95,130 +95,6 @@ Depois de escolher os grupos de campos, selecione **[!UICONTROL Adicionar grupos
 O [!DNL Schema Editor] reaparece com os campos fornecidos pelo grupo de campos representados na tela.
 
 ![](../../images/ui/resources/schemas/field-groups-added.png)
-
-Após adicionar um grupo de campos a um schema, você pode optar por [remover campos existentes](#remove-fields) ou [adicionar novos campos personalizados](#add-fields) para esses grupos, dependendo de suas necessidades.
-
-### Remover campos adicionados de grupos de campos {#remove-fields}
-
-Após adicionar um grupo de campos a um schema, é possível remover os campos que não são necessários.
-
->[!NOTE]
->
->A remoção de campos de um grupo de campos afeta apenas o schema que está sendo trabalhado e não afeta o próprio grupo de campos. Se você remover campos em um schema, esses campos ainda estarão disponíveis em todos os outros esquemas que empregam o mesmo grupo de campos.
-
-No exemplo a seguir, o grupo de campos padrão **[!UICONTROL Detalhes demográficos]** foi adicionado a um schema. Para remover um único campo, como `taxId`, selecione o campo na tela e selecione **[!UICONTROL Remover]** no painel direito.
-
-![Remover campo único](../../images/ui/resources/schemas/remove-single-field.png)
-
-Se houver vários campos que você deseja remover, será possível gerenciar o grupo de campos como um todo. Selecione um campo pertencente ao grupo na tela e selecione **[!UICONTROL Gerenciar campos relacionados]** no painel direito.
-
-![Gerenciar campos relacionados](../../images/ui/resources/schemas/manage-related-fields.png)
-
-Uma caixa de diálogo é exibida mostrando a estrutura do grupo de campos em questão. Aqui, você pode usar as caixas de seleção fornecidas para selecionar ou desmarcar os campos necessários. Quando estiver satisfeito, selecione **[!UICONTROL Confirmar]**.
-
-![Selecionar campos do grupo de campos](../../images/ui/resources/schemas/select-fields.png)
-
-A tela reaparece somente com os campos selecionados presentes na estrutura do schema.
-
-![Campos adicionados](../../images/ui/resources/schemas/fields-added.png)
-
-### Adicionar campos personalizados a grupos de campos {#add-fields}
-
-Após adicionar um grupo de campos a um schema, é possível definir campos adicionais para esse grupo. No entanto, quaisquer campos adicionados a um grupo de campos em um schema também aparecerão em todos os outros esquemas que empregam esse mesmo grupo de campos.
-
-Além disso, se um campo personalizado for adicionado a um grupo de campos padrão, esse grupo de campos será convertido em um grupo de campos personalizado e o grupo de campos padrão original não estará mais disponível.
-
-Se quiser adicionar um campo personalizado a um grupo de campos padrão, consulte [seção abaixo](#custom-fields-for-standard-groups) para obter instruções específicas. Se estiver adicionando campos a um grupo de campos personalizado, consulte a seção em [edição de grupos de campos personalizados](./field-groups.md) no guia da interface do usuário de grupos de campo .
-
-Se você não quiser alterar nenhum grupo de campos existente, poderá [criar um novo grupo de campos personalizado](./field-groups.md#create) para definir campos adicionais.
-
-## Adicionar campos individuais a um schema {#add-individual-fields}
-
-O Editor de esquema permite adicionar campos individuais diretamente a um esquema se você não quiser adicionar um grupo de campos inteiro para um caso de uso específico. Você pode [adicionar campos individuais de grupos de campos padrão](#add-standard-fields) ou [adicionar seus próprios campos personalizados](#add-custom-fields) em vez disso.
-
->[!IMPORTANT]
->
->Embora o Editor de esquema permita, funcionalmente, adicionar campos individuais diretamente a um esquema, isso não altera o fato de que todos os campos em um esquema XDM devem ser fornecidos por sua classe ou por um grupo de campos compatível com essa classe. Como as seções abaixo explicam, todos os campos individuais ainda são associados a um grupo de campos como uma etapa principal quando são adicionados a um esquema.
-
-### Adicionar campos padrão {#add-standard-fields}
-
-Você pode adicionar campos de grupos de campos padrão diretamente a um schema sem precisar conhecer previamente o grupo de campos correspondente. Para adicionar um campo padrão a um schema, selecione o sinal de mais (**+**) ícone ao lado do nome do esquema na tela. Um **[!UICONTROL Campo sem título]** o espaço reservado aparece na estrutura do schema e o painel direito é atualizado para revelar controles para configurar o campo.
-
-![Espaço reservado do campo](../../images/ui/resources/schemas/root-custom-field.png)
-
-Em **[!UICONTROL Nome do campo]**, comece digitando o nome do campo que deseja adicionar. O sistema pesquisa automaticamente campos padrão que correspondem à consulta e os lista em **[!UICONTROL Campos padrão recomendados]**, incluindo os grupos de campos aos quais eles pertencem.
-
-![Campos padrão recomendados](../../images/ui/resources/schemas/standard-field-search.png)
-
-Embora alguns campos padrão compartilhem o mesmo nome, sua estrutura pode variar dependendo do grupo de campos de onde vêm. Se um campo padrão estiver aninhado em um objeto pai na estrutura do grupo de campos, o campo pai também será incluído no esquema se o campo filho for adicionado.
-
-Selecione o ícone de visualização (![Ícone Visualizar](../../images/ui/resources/schemas/preview-icon.png)) ao lado de um campo padrão para visualizar a estrutura de seu grupo de campos e entender melhor como ele pode ser aninhado. Para adicionar o campo padrão ao schema, selecione o ícone de adição (![Ícone Plus](../../images/ui/resources/schemas/add-icon.png)).
-
-![Adicionar campo padrão](../../images/ui/resources/schemas/add-standard-field.png)
-
-A tela é atualizada para mostrar o campo padrão adicionado ao esquema, incluindo quaisquer campos pai nos quais ele está aninhado dentro da estrutura do grupo de campos. O nome do grupo de campos também é listado em **[!UICONTROL Grupos de campos]** no painel esquerdo. Para adicionar mais campos do mesmo grupo de campos, selecione **[!UICONTROL Gerenciar campos relacionados]** no painel direito.
-
-![Campo padrão adicionado](../../images/ui/resources/schemas/standard-field-added.png)
-
-### Adicionar campos personalizados {#add-custom-fields}
-
-Semelhante ao fluxo de trabalho para campos padrão, também é possível adicionar seus próprios campos personalizados diretamente a um esquema.
-
-Para adicionar campos ao nível raiz de um schema, selecione o sinal de mais (**+**) ícone ao lado do nome do esquema na tela. Um **[!UICONTROL Campo sem título]** o espaço reservado aparece na estrutura do schema e o painel direito é atualizado para revelar controles para configurar o campo.
-
-![Campo personalizado raiz](../../images/ui/resources/schemas/root-custom-field.png)
-
-Comece digitando o nome do campo que deseja adicionar e o sistema inicia automaticamente a pesquisa por campos padrão correspondentes. Para criar um novo campo personalizado, selecione a opção superior anexada com **([!UICONTROL Novo campo])**.
-
-![Novo campo](../../images/ui/resources/schemas/custom-field-search.png)
-
-A partir daqui, forneça um nome de exibição e um tipo de dados para o campo. Em **[!UICONTROL Atribuir grupo de campos]**, é necessário selecionar um grupo de campos para o novo campo ser associado. Comece a digitar o nome do grupo de campos e, se você tiver digitado anteriormente [grupos de campos personalizados criados](./field-groups.md#create) eles aparecerão na lista suspensa. Como alternativa, você pode digitar um nome exclusivo no campo para criar um novo grupo de campos.
-
-![Selecionar grupo de campos](../../images/ui/resources/schemas/select-field-group.png)
-
->[!WARNING]
->
->Se você selecionar um grupo de campos personalizado existente, qualquer outro esquema que use esse grupo de campos também herdará o campo recém-adicionado depois de salvar as alterações. Por isso, selecione somente um grupo de campos existente se desejar esse tipo de propagação. Caso contrário, você deve optar por criar um novo grupo de campos personalizado.
-
-Quando terminar, selecione **[!UICONTROL Aplicar]**.
-
-![Campo Aplicar](../../images/ui/resources/schemas/apply-field.png)
-
-O novo campo é adicionado à tela de desenho e é namespacado sob seu [ID do locatário](../../api/getting-started.md#know-your-tenant_id) para evitar conflitos com campos XDM padrão. O grupo de campos ao qual você associou o novo campo também aparece em **[!UICONTROL Grupos de campos]** no painel esquerdo.
-
-![ID do locatário](../../images/ui/resources/schemas/tenantId.png)
-
->[!NOTE]
->
->O restante dos campos fornecidos pelo grupo de campos personalizado selecionado são removidos do schema por padrão. Para adicionar alguns desses campos ao schema, selecione um campo pertencente ao grupo e selecione **[!UICONTROL Gerenciar campos relacionados]** no painel direito.
-
-#### Adicionar campos personalizados à estrutura de grupos de campos padrão {#custom-fields-for-standard-groups}
-
-Se o esquema em que você está trabalhando tiver um campo tipo objeto fornecido por um grupo de campos padrão, você poderá adicionar seus próprios campos personalizados a esse objeto padrão.
-
->[!WARNING]
->
->Todos os campos adicionados a um grupo de campos em um schema também aparecerão em todos os outros esquemas que empregam esse mesmo grupo de campos. Além disso, se um campo personalizado for adicionado a um grupo de campos padrão, esse grupo de campos será convertido em um grupo de campos personalizado e o grupo de campos padrão original não estará mais disponível.
->
->Se tiver participado do beta para esse recurso, você receberá uma caixa de diálogo informando sobre os grupos de campos padrão que você personalizou anteriormente. Depois de selecionar **[!UICONTROL Conhecimento]**, os recursos listados são convertidos em grupos de campos personalizados.
->
->![Caixa de diálogo de confirmação para converter grupos de campos padrão](../../images/ui/resources/schemas/beta-extension-confirmation.png)
-
-Para iniciar, selecione o sinal de mais (**+**) ícone ao lado da raiz do objeto fornecido pelo grupo de campos padrão.
-
-![Adicionar campo ao objeto padrão](../../images/ui/resources/schemas/add-field-to-standard-object.png)
-
-Uma mensagem de aviso é exibida, solicitando que você confirme se deseja converter o grupo de campos padrão. Selecionar **[!UICONTROL Continuar criando grupo de campos]** para continuar.
-
-![Confirmar conversão de grupo de campos](../../images/ui/resources/schemas/confirm-field-group-conversion.png)
-
-A tela é exibida novamente com um espaço reservado sem título para o novo campo. Observe que o nome do grupo de campos padrão foi anexado com &quot;([!UICONTROL Estendido])&quot; para indicar que foi modificado a partir da versão original. A partir daqui, use os controles no painel direito para definir as propriedades do campo.
-
-![Campo adicionado ao objeto padrão](../../images/ui/resources/schemas/standard-field-group-converted.png)
-
-Depois de aplicar as alterações, o novo campo aparece sob o namespace da ID do locatário no objeto padrão. Esse namespace aninhado impede conflitos de nome de campo no próprio grupo de campos para evitar a quebra de alterações em outros esquemas que usam o mesmo grupo de campos.
-
-![Campo adicionado ao objeto padrão](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## Ativar um esquema para o Perfil do cliente em tempo real {#profile}
 

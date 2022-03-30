@@ -5,9 +5,9 @@ title: Criar e editar grupos de campos de esquema na interface do usuário
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,7 @@ Depois de abrir o schema no editor, você pode iniciar [adição de campos ao gr
 
 ## Adicionar campos a um grupo de campos {#add-fields}
 
->[!NOTE]
->
->Esta seção foca na adição de campos a grupos de campos personalizados. Para obter informações sobre como adicionar campos personalizados a grupos de campos padrão, consulte [guia da interface do usuário do schemas](./schemas.md#custom-fields-for-standard-groups).
-
-Para adicionar campos a um grupo de campos personalizado na [!DNL Schema Editor], comece selecionando o nome do grupo de campos no painel à esquerda e selecione o **mais (+)** ícone ao lado do nome do esquema na tela.
+Para adicionar campos a um grupo de campos na [!DNL Schema Editor], comece selecionando o nome do grupo de campos no painel à esquerda e selecione o **mais (+)** ícone ao lado do nome do esquema na tela.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 

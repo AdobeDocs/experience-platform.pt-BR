@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Segmentos não mapeados por identidade]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
 * [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
+* [[!UICONTROL Contagem de destinos]](#destinations-count)
 
 ### [!UICONTROL Destinos mais usados] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ Se a contagem de perfil mapeada do segmento estiver fora de um desvio padrão do
 Se um segmento na [!UICONTROL Estado de funcionamento do público-alvo mapeado] Se o widget estiver se desviando por uma grande margem, você deve consultar o gráfico de tendência do tamanho do público-alvo e localizar o segmento anômalo. A tendência pode fornecer mais informações sobre a integridade do seu segmento.
 
 ![O widget de integridade do público-alvo mapeado.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Contagem de destinos] (#destination-count)
+
+O [!UICONTROL Contagem de destinos] O widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos.
+
+Abaixo da contagem total, selecione **[!UICONTROL Destinos]** para navegar até a guia destinos browse . Esta página lista todos os destinos com os quais você estabeleceu uma conexão até o momento.
+
+![O widget Destinos conta.](../images/destinations/destinations-count.png)
 
 ## Próximas etapas
 

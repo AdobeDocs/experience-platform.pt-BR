@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform, introdução, ai do conteúdo, ai do comércio, ai do conteúdo e comércio, extração de palavra-chave, extração de palavra-chave
-solution: Intelligent Services
+solution: Experience Platform
 title: Extração de palavra-chave na API do Content and Commerce AI
 topic-legacy: Developer guide
 description: O serviço de extração de palavras-chave, ao receber um documento de texto, extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, é usada uma combinação de reconhecimento de entidade nomeado (NER) e algoritmos de extração de palavra-chave não supervisionados.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%

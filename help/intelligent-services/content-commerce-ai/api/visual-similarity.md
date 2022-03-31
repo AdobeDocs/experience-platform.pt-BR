@@ -1,11 +1,11 @@
 ---
 keywords: Similaridade visual, similaridade visual, api ccai
-solution: Intelligent Services
+solution: Experience Platform
 title: Similaridade visual na API Content and Commerce AI
 topic-legacy: Developer guide
 description: O serviço de similaridade visual, ao receber uma imagem, encontra automaticamente imagens visualmente semelhantes de um catálogo.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%

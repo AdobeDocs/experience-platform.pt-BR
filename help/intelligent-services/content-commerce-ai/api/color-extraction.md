@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform, introdução, ai do conteúdo, ai do comércio, ai do conteúdo e comércio, extração de cores, extração de cores
-solution: Intelligent Services
+solution: Experience Platform
 title: Extração de cores na API do Content and Commerce AI
 topic-legacy: Developer guide
 description: O serviço de extração de cores, quando recebe uma imagem, pode computar o histograma de cores de pixels e classificá-las por cores dominantes em compartimentos.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%

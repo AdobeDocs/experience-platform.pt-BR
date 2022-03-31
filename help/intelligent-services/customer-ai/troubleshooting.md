@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform, introdução, atendimento ao cliente, tópicos populares, entrada de atendimento ao cliente, saída de atendimento ao cliente, solução de problemas de atendimento ao cliente, erros de atendimento ao cliente
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
-title: Solução de problemas de erro de AI do cliente
+title: Customer AI error troubleshooting
 topic-legacy: Getting started
 description: Encontre respostas para erros comuns no Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -16,44 +16,44 @@ ht-degree: 0%
 
 # Solução de problemas de erro de AI do cliente
 
-O Customer AI exibe erros quando o treinamento, a pontuação e a configuração do modelo falham. No **[!UICONTROL Instâncias do serviço]** , uma coluna para **[!UICONTROL STATUS DA ÚLTIMA EXECUÇÃO]** exibe uma das seguintes mensagens: **[!UICONTROL Sucesso]**, **[!UICONTROL Problema de treinamento]** e **[!UICONTROL Falha]**.
+O Customer AI exibe erros quando o treinamento, a pontuação e a configuração do modelo falham. In the **[!UICONTROL Service instances]** section, a column for **[!UICONTROL LAST RUN STATUS]** displays one of the following messages: **[!UICONTROL Success]**, **[!UICONTROL Training issue]**, and **[!UICONTROL Failed]**.
 
-![status da última execução](./images/errors/last-run-status.png)
+![last run status](./images/errors/last-run-status.png)
 
-No caso de **[!UICONTROL Falha]** ou **[!UICONTROL Problema de treinamento]** for exibido, você poderá selecionar o status de execução para abrir um painel lateral. O painel lateral contém o **[!UICONTROL Status da última execução]** e **[!UICONTROL Detalhes da última execução]**. **[!UICONTROL Detalhes da última execução]** contém informações sobre por que a execução falhou. Caso o Customer AI não possa fornecer detalhes sobre o erro, entre em contato com o suporte com o código de erro fornecido.
+No caso de **[!UICONTROL Falha]** ou **[!UICONTROL Problema de treinamento]** for exibido, você poderá selecionar o status de execução para abrir um painel lateral. The side panel  contains your **[!UICONTROL Last run status]** and **[!UICONTROL Last run details]**. **[!UICONTROL Detalhes da última execução]** contém informações sobre por que a execução falhou. Caso o Customer AI não possa fornecer detalhes sobre o erro, entre em contato com o suporte com o código de erro fornecido.
 
 <img src="./images/errors/last-run-details.png" width="300" /><br />
 
-## Não é possível acessar a AI do cliente no Chrome incógnito
+## Unable to access Customer AI in Chrome incognito
 
 Os erros de carregamento no modo incógnito do Google Chrome estão presentes devido às atualizações nas configurações de segurança do modo incógnito do Google Chrome. O problema está sendo trabalhado ativamente com o Chrome para tornar o experience.adobe.com um domínio confiável.
 
 <img src="./images/errors/error.PNG" width="500" /><br />
 
-### Correção recomendada
+### Recommended fix
 
-Para contornar esse problema, você precisa adicionar experience.adobe.com como um site que sempre pode usar cookies. Comece navegando até **chrome://settings/cookies**. Em seguida, role para baixo até o **Comportamentos personalizados** seção seguida por selecionar a variável **Adicionar** ao lado de &quot;sites que sempre podem usar cookies&quot;. No recipiente que aparece, copie e cole `[*.]experience.adobe.com` em seguida, selecione o **Inclusão de cookies de terceiros** nesta caixa de seleção de site. Depois de concluir, selecione **Adicionar** e recarregue a API do cliente em incógnito.
+Para contornar esse problema, você precisa adicionar experience.adobe.com como um site que sempre pode usar cookies. Start by navigating to **chrome://settings/cookies**. Next, scroll down to the **Customized behaviors** section followed by selecting the **Add** button next to &quot;sites that can always use cookies&quot;. In the popover that appears, copy and paste `[*.]experience.adobe.com` then select the **Including third-party cookies** on this site checkbox. Once complete, select **Add** and reload Customer AI in incognito.
 
-![correção recomendada](./images/errors/cookies2.gif)
+![recommended fix](./images/errors/cookies2.gif)
 
 ## A qualidade do modelo é ruim
 
-Se receber o erro &quot;[!UICONTROL A Qualidade do Modelo é ruim. Recomendamos criar um novo aplicativo com a configuração modificada]&quot;. Siga as etapas recomendadas abaixo para ajudar a solucionar o problema.
+Se receber o erro &quot;[!UICONTROL A Qualidade do Modelo é ruim. Recomendamos criar um novo aplicativo com a configuração modificada]&quot;. Follow the recommended steps below to help troubleshoot.
 
 <img src="./images/errors/model-quality.png" width="300" /><br />
 
 ### Correção recomendada
 
-&quot;A qualidade do modelo é pobre&quot; significa que a precisão do modelo não se encontra dentro de um intervalo aceitável. O Customer AI não pôde criar um modelo confiável e o AUC (Área sob a curva ROC) &lt; 0,65 após o treinamento. Para corrigir o erro, é recomendável alterar um dos parâmetros de configuração e executar o treinamento novamente.
+&quot;A qualidade do modelo é pobre&quot; significa que a precisão do modelo não se encontra dentro de um intervalo aceitável. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) &lt; 0.65 after training. Para corrigir o erro, é recomendável alterar um dos parâmetros de configuração e executar o treinamento novamente.
 
-Comece verificando a precisão dos seus dados. É importante que seus dados contenham os campos necessários para seu resultado preditivo.
+Comece verificando a precisão dos seus dados. It is important that your data contains the necessary fields needed for your predictive outcome.
 
-- Verifique se o conjunto de dados tem as datas mais recentes. O Customer AI sempre assume que os dados estão atualizados quando o modelo é acionado.
+- Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
 - Verifique se há dados ausentes em sua previsão e janela de qualificação definidas. Seus dados precisam ser completos sem lacunas. Além disso, verifique se o conjunto de dados atende ao [Requisitos de dados históricos do Customer AI](./input-output.md#data-requirements).
 - Verifique se há dados ausentes no comércio, aplicativo, web e pesquisa, nas propriedades do campo de esquema.
 
 Se os dados não parecerem ser o problema, tente alterar a condição de população de qualificação para restringir o modelo a determinados perfis (por exemplo, `_experience.analytics.customDimensions.eVars.eVar142` existe nos últimos 56 dias). Isso restringe a população e o tamanho dos dados usados na janela de treinamento.
 
-Se a restrição da população de qualificação não funcionou ou não for possível, altere sua janela de previsão.
+If restricting the eligibility population did not work or is not possible, change your prediction window.
 
-- Tente alterar a janela de previsão para 7 dias e veja se o erro continua ocorrendo. Se o erro não ocorrer mais, isso indica que talvez você não tenha dados suficientes para a janela de previsão definida.
+- Try changing your prediction window to 7 days and see if the error continues to occur. Se o erro não ocorrer mais, isso indica que talvez você não tenha dados suficientes para a janela de previsão definida.

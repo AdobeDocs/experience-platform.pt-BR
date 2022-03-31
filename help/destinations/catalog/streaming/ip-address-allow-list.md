@@ -1,11 +1,12 @@
 ---
 keywords: Endereço IP, intervalo de IP, destinos de lista de permissões,  lista de permissões, lista de permissões destinos de transmissão
-title: 'LISTA DE PERMISSÕES de endereço IP para destinos de transmissão '
+title: Endereço IP lista de permissões para destinos de transmissão
 type: Documentation
-description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar com segurança dados do Experience Platform para o terminal HTTP REST API.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: Esta página fornece intervalos IP que você pode adicionar à sua lista de permissões, para exportar com segurança dados do Experience Platform para o terminal de API REST HTTP, Amazon Kinesis ou instância do Hubs de Eventos do Azure.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---

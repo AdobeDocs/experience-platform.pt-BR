@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1156'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,18 @@ O painel Perfis exibe um instantâneo dos dados de atributo (registro) que sua o
 {style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre painéis de Perfis, consulte o [Visão geral dos painéis de perfis](../../dashboards/guides/profiles.md).
+
+## Coleta de dados {#data-collection}
+
+A Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não-Adobe.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| Configurações globais de armazenamento de dados | Agora você pode definir várias novas configurações globais ao definir um conjunto de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configuração de um armazenamento de dados](../../edge/fundamentals/datastreams.md#configure) no guia da interface do usuário do Datastreams para obter mais informações. |
+
+Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
 
 ### Painéis de destinos
 

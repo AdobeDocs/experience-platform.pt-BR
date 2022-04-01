@@ -5,10 +5,10 @@ user-guide-title: Coleção de dados da Adobe Experience Platform
 breadcrumb-title: Manual de coleção de dados
 user-guide-description: Habilite a coleção de dados do lado do cliente para a Rede de borda da Adobe Experience Platform.
 feature: Data Collection
-source-git-commit: 602617f857800bdc39869f5597bc88ba3ed7f66f
+source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
 workflow-type: tm+mt
-source-wordcount: '38'
-ht-degree: 68%
+source-wordcount: '74'
+ht-degree: 44%
 
 ---
 
@@ -21,3 +21,15 @@ ht-degree: 68%
 - Identificação do visitante {#visitor-identification}
    - [Visão geral](visitor-identification.md)
    - [Identificação do visitante via FPID](visitor-identification-fpid.md)
+- API do Servidor de Rede de Borda {#edge-network-server-api}
+   - [Visão geral](overview.md)
+   - [Autenticação](authentication.md)
+   - Coleta de dados {#server-api-data-collection}
+      - [Coleta de dados de evento único](interactive-data-collection.md)
+      - [Coleta de dados do evento em lote](non-interactive-data-collection.md)
+   - Interação com outras soluções do Adobe {#interacting-other-adobe-solutions}
+      - [Interação com a Adobe Analytics](interacting-adobe-analytics.md)
+      - [Interação com a Adobe Experience Platform](interacting-experience-platform.md)
+   - [Interação com soluções de terceiros](interacting-third-party-solutions.md)
+   - [Tratamento de erros](error-handling.md)
+   - [Solução de problemas](troubleshooting.md)

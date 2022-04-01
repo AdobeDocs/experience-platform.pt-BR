@@ -1,11 +1,11 @@
 ---
 audience: user
-solution: Data Collection, Tags
+solution: Data Collection, Experience Platform
 user-guide-title: Coleção de dados da Adobe Experience Platform
 breadcrumb-title: Manual de coleção de dados
 user-guide-description: Habilite a coleção de dados do lado do cliente para a Rede de borda da Adobe Experience Platform.
 feature: Data Collection
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: f1d0f20c66f2513519e6f2da9cd3ae2ece0bc455
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 44%

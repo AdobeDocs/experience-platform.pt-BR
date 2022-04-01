@@ -5,9 +5,9 @@ title: Visão geral da governança de dados
 topic-legacy: overview
 description: A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial no Experience Platform em vários níveis, incluindo catálogos, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -76,15 +76,18 @@ Consulte a visão geral em [rótulos de uso de dados](./labels/overview.md) para
 
 Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro de [!DNL Experience Platform].
 
-Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor informando que tipos específicos de dados, como Informações pessoais identificáveis (PII), não podem ser exportados e um rótulo &quot;I&quot; (Dados de identidade) tiver sido aplicado ao conjunto de dados, você receberá uma resposta do [!DNL Policy Service] informando que uma política de uso de dados foi violada.
+Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor informando que as Informações pessoais identificáveis (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) tiver sido aplicado ao conjunto de dados, [!DNL Policy Service] impede qualquer ação que exportaria esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas de ação ocorrer, o Serviço de Política enviará uma mensagem informando que uma política de uso de dados foi violada.
 
-Depois que os rótulos de uso de dados forem aplicados, os assistentes de dados poderão criar políticas usando o [!DNL Policy Service] API ou [!DNL Experience Platform] interface do usuário.
+Há dois tipos de políticas disponíveis:
+
+* **[!UICONTROL Política de gestão de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
+* **[!UICONTROL Política de consentimento] (Beta)**: Filtre os perfis que podem ser ativados para [destinos](../destinations/home.md) com base no consentimento ou nas preferências dos clientes.
+
+Depois que os rótulos de uso de dados forem aplicados, os assistentes de dados poderão criar políticas usando o [!DNL Policy Service] API ou [!DNL Experience Platform] interface do usuário. Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte o [visão geral das políticas](./policies/overview.md).
 
 >[!IMPORTANT]
 >
 >Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para imposição, é necessário habilitar manualmente essa política.
-
-Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte o [visão geral das políticas](./policies/overview.md).
 
 ## Próximas etapas
 

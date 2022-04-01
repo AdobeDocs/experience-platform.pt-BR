@@ -5,9 +5,9 @@ title: Aplicação Automática de Política
 topic-legacy: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -31,10 +31,11 @@ O diagrama a seguir ilustra como a aplicação de política é integrada ao flux
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica violações de políticas com base nos seguintes fatores:
+Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] Controlos das políticas aplicáveis com base nos seguintes fatores:
 
 * Os rótulos de uso de dados aplicados aos campos e conjuntos de dados no segmento a ser ativado.
 * O objetivo de marketing do destino.
+<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
 
 >[!NOTE]
 >
@@ -62,9 +63,10 @@ Cada estágio na linha do tempo acima representa uma entidade que pode contribui
 | Estágio da linhagem de dados | Papel na aplicação da política |
 | --- | --- |
 | Conjunto de dados | Os conjuntos de dados contêm rótulos de uso de dados (aplicados no conjunto de dados ou no nível do campo) que definem para quais casos de uso o conjunto de dados inteiro ou campos específicos podem ser usados. Violações de política ocorrerão se um conjunto de dados ou campo contendo determinados rótulos for usado para uma finalidade restrita por uma política. |
-| Política de mesclagem | As políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados ao mesclar fragmentos de vários conjuntos de dados. Violações de política ocorrerão se suas políticas de mesclagem estiverem configuradas para que os conjuntos de dados com rótulos restritos sejam ativados em um destino. Consulte a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md) para obter mais informações. |
-| Segmento | As regras de segmento definem quais atributos devem ser incluídos nos perfis do cliente. Dependendo dos campos incluídos em uma definição de segmento, o segmento herdará quaisquer rótulos de uso aplicados a esses campos. Violações de política ocorrerão se você ativar um segmento cujos rótulos herdados são restritos pelas políticas aplicáveis do destino, com base em seu caso de uso de marketing. |
-| Destino | Ao configurar um destino, uma ação de marketing (às vezes chamada de caso de uso de marketing) pode ser definida. Esse caso de uso correlaciona-se a uma ação de marketing, conforme definido em uma política de uso de dados. Em outras palavras, o caso de uso de marketing definido para um destino determina quais políticas de uso de dados se aplicam a esse destino. Violações de política ocorrerão se você ativar um segmento cujos rótulos de uso são restritos pelas políticas aplicáveis do destino. |
+<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
+| Política de fusão | As políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados ao mesclar fragmentos de vários conjuntos de dados. Violações de política ocorrerão se suas políticas de mesclagem estiverem configuradas para que os conjuntos de dados com rótulos restritos sejam ativados em um destino. Consulte a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md) para obter mais informações. | | Segmento | As regras do segmento definem quais atributos devem ser incluídos dos perfis do cliente. Dependendo dos campos incluídos em uma definição de segmento, o segmento herdará quaisquer rótulos de uso aplicados a esses campos. Violações de política ocorrerão se você ativar um segmento cujos rótulos herdados são restritos pelas políticas aplicáveis do destino, com base em seu caso de uso de marketing. |
+<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Destino | Ao configurar um destino, uma ação de marketing (às vezes chamada de caso de uso de marketing) pode ser definida. Esse caso de uso correlaciona-se a uma ação de marketing, conforme definido em uma política. Em outras palavras, o caso de uso de marketing definido para um destino determina quais políticas de uso de dados e políticas de consentimento se aplicam a esse destino. Violações de política ocorrerão se você ativar um segmento cujos rótulos de uso são restritos pelas políticas aplicáveis do destino. |
 
 >[!IMPORTANT]
 >
@@ -75,6 +77,14 @@ Cada estágio na linha do tempo acima representa uma entidade que pode contribui
 Quando ocorrem violações de política, as mensagens resultantes que aparecem na interface do usuário fornecem ferramentas úteis para explorar a linhagem de dados de contribuição da violação para ajudar a resolver o problema. Mais detalhes são fornecidos na próxima seção.
 
 ## Mensagens de violação de política {#enforcement}
+
+<!-- (TO INCLUDE FOR PHASE 2)
+The sections below outline the different policy enforcement messages that appear in the Platform UI:
+
+* [Data usage policy violation](#data-usage-violation)
+* [Consent policy evaluation](#consent-policy-evaluation)
+
+### Data usage policy violation {#data-usage-violation} -->
 
 Se ocorrer uma violação de política ao tentar ativar um segmento (ou [fazer edições em um segmento já ativado](#policy-enforcement-for-activated-segments)) a ação é impedida e aparece uma portadora indicando que uma ou mais políticas foram violadas. Depois que uma violação é acionada, a variável **[!UICONTROL Salvar]** estiver desabilitado para a entidade que você está modificando até que os componentes apropriados sejam atualizados para estar em conformidade com as políticas de uso de dados.
 
@@ -97,6 +107,20 @@ Também é possível usar a variável **[!UICONTROL Filtro]** ícone (![](../ima
 Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados como uma lista. Para voltar ao gráfico visual, selecione **[!UICONTROL Exibição do caminho]**.
 
 ![](../images/enforcement/list-view.png)
+
+<!-- (TO INCLUDE FOR PHASE 2)
+### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+
+>[!IMPORTANT]
+>
+>Consent policies are currently in beta and your organization may not have access to them yet.
+
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+
+Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+
+A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
+ -->
 
 ## Aplicação de políticas para segmentos ativados {#policy-enforcement-for-activated-segments}
 

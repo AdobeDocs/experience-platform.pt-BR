@@ -1,11 +1,11 @@
 ---
-title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
-description: 'Saiba como configurar os Datastreams. '
-keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
+title: Configurar um conjunto de dados
+description: Conecte sua integração do Experience Platform SDK do lado do cliente aos produtos Adobe e destinos de terceiros.
+keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de configurações do Analytics; Predefinição de dados para dados Coleção; Preparação de dados; Mapeador; Mapeador XDM; Mapeador no Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ O restante desta seção foca nas etapas para mapear dados para um esquema de ev
 
 >[!IMPORTANT]
 >
->No momento, a Preparação de dados para a coleta de dados não é compatível com implementações do SDK móvel.
+>No momento, a Preparação de dados para a coleta de dados não é compatível com as implementações do SDK do Mobile.
 
 A Preparação de dados é um serviço do Experience Platform que permite mapear, transformar e validar dados de e para o Experience Data Model (XDM). Ao configurar um conjunto de dados habilitado para a plataforma, você pode usar os recursos de Preparação de dados para mapear seus dados de origem para o XDM ao enviá-los para a Rede de borda da plataforma.
 
@@ -78,13 +78,78 @@ As subseções abaixo abordam as etapas básicas para o mapeamento de seus dados
 
 #### [!UICONTROL Selecionar dados]
 
-Selecionar **[!UICONTROL Salvar e adicionar mapeamento]** depois de concluir o [etapa de configuração básica](#configure)e o **[!UICONTROL Selecionar dados]** será exibida. A partir daqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para a Plataforma. Você pode selecionar a opção de carregar o objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida.
+Selecionar **[!UICONTROL Salvar e adicionar mapeamento]** depois de concluir o [etapa de configuração básica](#configure)e o **[!UICONTROL Selecionar dados]** será exibida. A partir daqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para a Plataforma.
+
+Você deve construir esse objeto JSON para mapeá-lo com as propriedades na camada de dados que deseja capturar. Selecione a seção abaixo para exibir um exemplo de um objeto JSON formatado corretamente.
+
++++Exemplo de arquivo JSON
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >O objeto JSON deve ter um único nó raiz `data` para passar na validação.
 
-Se o JSON for válido, um esquema de visualização será exibido no painel direito. Clique em **[!UICONTROL Avançar]** para continuar.
+Você pode selecionar a opção de carregar o objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida. Se o JSON for válido, um esquema de visualização será exibido no painel direito. Clique em **[!UICONTROL Avançar]** para continuar.
 
 ![Amostra JSON de dados de entrada esperados](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ Em seguida, selecione o ícone de esquema (![Ícone Esquema](../images/datastrea
 A página de mapeamento é exibida novamente com o mapeamento de campo concluído mostrado. O **[!UICONTROL Andamento do mapeamento]** atualizações de seção para refletir o número total de campos que foram mapeados com êxito.
 
 ![Campo mapeado com êxito com progresso refletido](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>Para mapear uma matriz de objetos (no campo de origem) para uma matriz de objetos diferentes (no campo de destino), adicione `[*]` após o nome da matriz nos caminhos de campo de origem e de destino, conforme mostrado abaixo.
+>
+>![Mapeamento de objetos de matriz](../images/datastreams/array-object-mapping.png)
 
 Continue seguindo as etapas acima para mapear o restante dos campos para o schema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no schema de destino definidos conforme necessário devem ser mapeados para concluir esta etapa. O **[!UICONTROL Campos obrigatórios]** O contador indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
 

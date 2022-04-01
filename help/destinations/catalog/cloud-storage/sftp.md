@@ -3,9 +3,9 @@ keywords: SFTP; sftp
 title: Conexão SFTP
 description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 9805b984a0b19ad7e942e82f3ad927523102e772
+source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '523'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,8 @@ Se você selecionar a variável **[!UICONTROL Autenticação básica]** digite p
 * **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
    * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
+      ![Chave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+
 
 Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de autenticação para se conectar ao local SFTP:
 
@@ -74,6 +76,8 @@ Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de aute
 * **[!UICONTROL Chave SSH]**: A chave SSH para fazer logon no local de armazenamento SFTP.
 * **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
    * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+
+      ![Chave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### Detalhes do destino {#destination-details}
 

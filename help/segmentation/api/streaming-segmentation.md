@@ -5,9 +5,9 @@ title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
+source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1896'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,9 @@ Transmitir a segmentação em [!DNL Adobe Experience Platform] O permite que os 
 
 >[!NOTE]
 >
->A segmentação de fluxo só pode ser usada para avaliar dados transmitidos para a Plataforma. Em outras palavras, os dados assimilados por meio da assimilação em lote não serão avaliados por meio da segmentação de fluxo e serão avaliados junto com o trabalho segmentado agendado à noite.
+>A segmentação de transmissão funciona em todos os dados assimilados por meio de uma fonte de transmissão. Os segmentos assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para a segmentação de transmissão.
+>
+>Além disso, os segmentos avaliados com a segmentação de fluxo podem oscilar entre a associação ideal e real se o segmento for baseado em outro segmento avaliado por meio da segmentação em lote. Por exemplo, se o Segmento A for baseado no Segmento B e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B só é atualizado a cada 24 horas, o Segmento A se afastará dos dados reais até que seja ressincronizado com a atualização do Segmento B.
 
 ## Introdução
 

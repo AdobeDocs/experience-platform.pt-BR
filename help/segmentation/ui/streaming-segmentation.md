@@ -5,9 +5,9 @@ title: Guia da interface do usuário de segmentação de fluxo
 topic-legacy: ui guide
 description: A segmentação por streaming no Adobe Experience Platform permite fazer a segmentação quase em tempo real, ao mesmo tempo em que se concentra na riqueza de dados. Com a segmentação de fluxo, a qualificação de segmento agora acontece à medida que os dados chegam ao Platform, o que diminui a necessidade de agendar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
+source-git-commit: 0e08b034eb9193dda72693cf842e3cd78cf44694
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1276'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,9 @@ Transmitir a segmentação em [!DNL Adobe Experience Platform] O permite que os 
 
 >[!NOTE]
 >
+>A segmentação de transmissão funciona em todos os dados assimilados por meio de uma fonte de transmissão. Os segmentos assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para a segmentação de transmissão.
 >
->Os segmentos avaliados com a segmentação de transmissão podem oscilar entre a associação ideal e real se o segmento for baseado em outro segmento avaliado por meio da segmentação em lote. Por exemplo, se o Segmento A for baseado no Segmento B e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B só é atualizado a cada 24 horas, o Segmento A se afastará dos dados reais até que seja ressincronizado com a atualização do Segmento B.
+>Além disso, os segmentos avaliados com a segmentação de fluxo podem oscilar entre a associação ideal e real se o segmento for baseado em outro segmento avaliado por meio da segmentação em lote. Por exemplo, se o Segmento A for baseado no Segmento B e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B só é atualizado a cada 24 horas, o Segmento A se afastará dos dados reais até que seja ressincronizado com a atualização do Segmento B.
 
 ## Tipos de consulta de segmentação de fluxo {#query-types}
 

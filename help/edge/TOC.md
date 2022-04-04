@@ -1,11 +1,11 @@
 ---
-solution: Data Collection, Experience Platform
+solution: Data Collection
 audience: user
 user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 5902e85e7dacdc2bd0797368136a52dd30fc0813
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 31%

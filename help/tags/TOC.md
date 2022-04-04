@@ -4,8 +4,8 @@ user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
-solution: Data Collection, Experience Platform
-source-git-commit: 5902e85e7dacdc2bd0797368136a52dd30fc0813
+solution: Data Collection
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 87%

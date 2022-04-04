@@ -1,12 +1,11 @@
 ---
 keywords: Experience Cloud, introdução, conteúdo e comércio, tópicos populares, Serviços inteligentes, ccai
-solution: Experience Cloud, Intelligent Services, Experience Platform
+solution: Experience Platform
 title: Visão geral do Content e Commerce AI
 topic-legacy: Content and Commerce AI
 description: O Content and Commerce AI é um conjunto de serviços de IA que permite extrair recursos inteligentes de seu conteúdo, organizar, simplificar o fluxo de conteúdo e fornecer experiências personalizadas mais impactantes para seus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
@@ -29,7 +28,7 @@ O conteúdo é um componente essencial dessas experiências. Para responder melh
 
 | Tipo de conteúdo | Recursos | Visão geral da funcionalidade |
 | --- | --- | --- |
-| Texto | - Extração de palavra-chave e entidade <br> - Classificadores personalizados | - Extraia automaticamente palavras-chave e tags de documentos corporativos e páginas da Web usando um serviço de IA pronto para uso. <br> - Rotular automaticamente os documentos ou páginas da Web de uma empresa por taxonomia corporativa usando um serviço criado em modelos de IA personalizados. |
+| Texto | - Extração de palavra-chave e entidade <br>- Classificadores personalizados | - Extraia automaticamente palavras-chave e tags de documentos corporativos e páginas da Web usando um serviço de IA pronto para uso. <br> - Rotular automaticamente os documentos ou páginas da Web de uma empresa por taxonomia corporativa usando um serviço criado em modelos de IA personalizados. |
 | Imagens | - Recomendações visuais <br> - Extração de cores | - Fornecer aos consumidores recomendações de produto visualmente semelhantes, viabilizadas por um modelo de IA desenvolvido com recursos intuitivos do produto (design, cor, forma). <br> - Extrair com precisão as cores dominantes (rótulos e valores hexadecimais) e o seu peso a partir de uma imagem de produto. |
 
 ## Noções básicas sobre conteúdo e Commerce AI

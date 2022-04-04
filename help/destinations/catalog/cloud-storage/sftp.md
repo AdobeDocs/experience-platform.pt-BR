@@ -3,9 +3,9 @@ keywords: SFTP; sftp
 title: Conexão SFTP
 description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
+source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '557'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Se você selecionar a variável **[!UICONTROL Autenticação básica]** digite p
 * **[!UICONTROL Nome do usuário]**: O nome de usuário para fazer logon no local de armazenamento SFTP;
 * **[!UICONTROL Senha]**: A senha para fazer logon no local de armazenamento SFTP.
 * **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
-   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Veja abaixo um exemplo de uma chave PGP formatada corretamente, com a parte intermediária encurtada para brevidade.
 
       ![Chave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -75,7 +75,7 @@ Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de aute
 * **[!UICONTROL Nome do usuário]**: O nome de usuário para fazer logon no local de armazenamento SFTP;
 * **[!UICONTROL Chave SSH]**: A chave SSH para fazer logon no local de armazenamento SFTP.
 * **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
-   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Veja abaixo um exemplo de uma chave PGP formatada corretamente, com a parte intermediária encurtada para brevidade.
 
       ![Chave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 

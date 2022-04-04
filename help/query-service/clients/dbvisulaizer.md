@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Conectar o DbVisualizer ao Serviço de query
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o DbVisualizer ao Serviço de query do Adobe Experience Platform.
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 # Connect [!DNL DbVisualizer] para [!DNL Query Service] {#connect-dbvisualizer}
 
-Este documento aborda as etapas para conexão [!DNL DbVisualizer] Desktop com Adobe Experience Platform [!DNL Query Service].
+Este documento aborda as etapas para conectar o [!DNL DbVisualizer] ferramenta de banco de dados com Adobe Experience Platform [!DNL Query Service].
 
 ## Introdução
 
-Este guia requer que você já tenha acesso ao [!DNL DbVisualizer] aplicativos de desktop e estão familiarizados com como navegar em sua interface. Para baixar o [!DNL DbVisualizer] Para obter mais informações, consulte o [funcionário [!DNL DbVisualizer] documentação](https://www.dbvis.com/download/).
+Este guia requer que você já tenha acesso ao [!DNL DbVisualizer] aplicativos de desktop e estão familiarizados com como navegar em sua interface. Para baixar o [!DNL DbVisualizer] para aplicativos de desktop ou para obter mais informações, consulte o [funcionário [!DNL DbVisualizer] documentação](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Digite sua ID de usuário e senha e selecione **[!DNL Connect]**. Uma mensagem �
 
 ## Próximas etapas
 
-Agora que você se conectou [!DNL DbVisualizer] com [!DNL Query Service], você pode usar [!DNL DbVisualizer] para gravar queries. Para obter mais informações sobre como gravar e executar queries, leia o guia sobre a execução do query.
+Agora que você se conectou [!DNL DbVisualizer] com [!DNL Query Service], você pode usar [!DNL DbVisualizer] para gravar queries. Para obter mais informações sobre como gravar e executar consultas, leia o [guia sobre execução de query](../best-practices/writing-queries.md).

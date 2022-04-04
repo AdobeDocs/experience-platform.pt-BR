@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
+source-git-commit: 7b4761e42b18b0aa8a54c4d72960b870d5655508
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 20%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 20%
 - Conectar clientes ao Serviço de query {#clients}
    - [Visão geral das conexões do cliente](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
+   - [Visualizador Db](./clients/dbvisulaizer.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)
    - [Power BI](clients/power-bi.md)

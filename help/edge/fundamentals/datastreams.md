@@ -3,16 +3,16 @@ title: Configurar um conjunto de dados
 description: Conecte sua integração do Experience Platform SDK do lado do cliente aos produtos Adobe e destinos de terceiros.
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de configurações do Analytics; Predefinição de dados para dados Coleção; Preparação de dados; Mapeador; Mapeador XDM; Mapeador no Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 2%
 
 ---
 
 # Configurar um conjunto de dados
 
-Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs da Web e do Mobile do Adobe Experience Platform. Enquanto a variável [comando configurar](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
+Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web do Adobe Experience Platform. Enquanto a variável [comando configurar](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
 Este documento aborda as etapas para configurar um armazenamento de dados na interface do usuário da coleta de dados.
 
@@ -60,7 +60,7 @@ Selecionar **[!UICONTROL Opções avançadas]** para revelar controles adicionai
 | [!UICONTROL Cookie da ID própria] | Quando habilitada, essa configuração informa à Edge Network para fazer referência a um cookie especificado ao pesquisar um [ID de dispositivo próprio](../identity/first-party-device-ids.md), em vez de pesquisar esse valor no Mapa de identidade.<br><br>Ao ativar essa configuração, você deve fornecer o nome do cookie no qual a ID deve ser armazenada. |
 | [!UICONTROL Sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em contêineres para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Quando ativada, essa configuração permite especificar qual contêiner de sincronizações de ID é executado para esse armazenamento de dados. |
 
-O restante desta seção foca nas etapas para mapear dados para um esquema de evento da plataforma selecionado. Se você estiver usando o SDK do Mobile ou não estiver configurando seu conjunto de dados para a Plataforma, selecione **[!UICONTROL Salvar]** antes de prosseguir para a próxima seção sobre [adicionar serviços ao armazenamento de dados](#add-services).
+O restante desta seção foca nas etapas para mapear dados para um esquema de evento da plataforma selecionado. Se você estiver usando o SDK móvel ou não estiver configurando seu conjunto de dados para a Plataforma, selecione **[!UICONTROL Salvar]** antes de prosseguir para a próxima seção sobre [adicionar serviços ao armazenamento de dados](#add-services).
 
 ### Preparação de dados para coleta de dados {#data-prep}
 
@@ -70,11 +70,18 @@ O restante desta seção foca nas etapas para mapear dados para um esquema de ev
 
 A Preparação de dados é um serviço do Experience Platform que permite mapear, transformar e validar dados de e para o Experience Data Model (XDM). Ao configurar um conjunto de dados habilitado para a plataforma, você pode usar os recursos de Preparação de dados para mapear seus dados de origem para o XDM ao enviá-los para a Rede de borda da plataforma.
 
-As subseções abaixo abordam as etapas básicas para o mapeamento de seus dados na interface do usuário da coleta de dados. Para obter uma orientação abrangente sobre todos os recursos de Preparação de dados, incluindo funções de transformação para campos calculados, consulte a seguinte documentação:
+>[!NOTE]
+>
+>Para obter uma orientação abrangente sobre todos os recursos de Preparação de dados, incluindo funções de transformação para campos calculados, consulte a seguinte documentação:
+>
+>* [Visão geral da preparação de dados](../../data-prep/home.md)
+>* [Funções de mapeamento da preparação de dados](../../data-prep/functions.md)
+>* [Manuseio de formatos de dados com Preparação de dados](../../data-prep/data-handling.md)
 
-* [Visão geral da preparação de dados](../../data-prep/home.md)
-* [Funções de mapeamento da preparação de dados](../../data-prep/functions.md)
-* [Manuseio de formatos de dados com Preparação de dados](../../data-prep/data-handling.md)
+
+As subseções abaixo abordam as etapas básicas para o mapeamento de seus dados na interface do usuário da coleta de dados. Para uma rápida demonstração dessas etapas, consulte o seguinte vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Selecionar dados]
 

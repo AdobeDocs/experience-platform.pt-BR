@@ -2,14 +2,14 @@
 keywords: perfil, perfil do cliente em tempo real, solução de problemas, medidas de proteção, diretrizes, limite, entidade, entidade primária, entidade de dimensão, RTCDP, CDP, B2B Edition, Real-time Customer Data Platform, plataforma de dados do cliente em tempo real, cdp em tempo real, b2b, cdp;
 title: Grades de proteção padrão para Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: 'O Adobe Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacionais tradicional. Este documento fornece limites de uso e taxa padrão para ajudá-lo a modelar seus dados para obter o melhor desempenho do sistema usando o Real-time Customer Data Platform B2B Edition. '
-source-git-commit: 7b9b01657ab2a682b900a8c55a201f9864e4428b
+description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudá-lo a modelar seus dados para obter o melhor desempenho do sistema usando o Real-time Customer Data Platform B2B Edition.
+exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '1601'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Grades de proteção padrão para Real-time Customer Data Platform B2B Edition
 

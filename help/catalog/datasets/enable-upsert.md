@@ -4,9 +4,9 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "atualização" para fazer atualizações nos dados de Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '991'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 2%
 
 Este tutorial aborda o processo de ativação de um conjunto de dados com recursos de &quot;atualização&quot; para fazer atualizações nos dados de Perfil do cliente em tempo real. Isso inclui etapas para criar um novo conjunto de dados e configurar um conjunto de dados existente.
 
+>[!NOTE]
+>
+>O fluxo de trabalho de atualização só funciona para a assimilação em lote. A assimilação de streaming é **not** suportado.
+
 ## Introdução
 
 Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfil. Antes de iniciar este tutorial, revise a documentação referente a esses [!DNL Platform] serviços:
@@ -22,7 +26,7 @@ Este tutorial requer uma compreensão funcional de vários serviços da Adobe Ex
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Catalog Service]](../../catalog/home.md): Uma RESTful API que permite criar conjuntos de dados e configurá-los para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
-- [Assimilação em lote](../../ingestion/batch-ingestion/overview.md)
+- [Ingestão em lote](../../ingestion/batch-ingestion/overview.md): A API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da plataforma.
 
@@ -102,11 +106,11 @@ Uma resposta bem-sucedida mostra uma matriz contendo a ID do conjunto de dados r
 
 ## Configurar um conjunto de dados existente {#configure-an-existing-dataset}
 
-As etapas a seguir abordam como configurar um conjunto de dados existente habilitado para perfil para a funcionalidade de atualização (&quot;upsert&quot;).
+As etapas a seguir abordam como configurar um conjunto de dados existente habilitado para perfil para a funcionalidade de atualização (upsert).
 
 >[!NOTE]
 >
->Para configurar um conjunto de dados habilitado para perfil para &quot;upsert&quot;, primeiro desative o conjunto de dados para Perfil e depois reative-o junto com o `isUpsert` . Se o conjunto de dados existente não estiver ativado para o Perfil, você pode prosseguir diretamente para as etapas para [habilitar o conjunto de dados para Perfil e Redefinir](#enable-the-dataset). Se não tiver certeza, as etapas a seguir mostram como verificar se o conjunto de dados já está ativado.
+>Para configurar um conjunto de dados existente habilitado para perfil para atualização, primeiro você deve desativar o conjunto de dados para Perfil e depois reativá-lo junto com o `isUpsert` . Se o conjunto de dados existente não estiver ativado para o Perfil, você pode prosseguir diretamente para as etapas para [habilitar o conjunto de dados para Perfil e Redefinir](#enable-the-dataset). Se não tiver certeza, as etapas a seguir mostram como verificar se o conjunto de dados já está ativado.
 
 ### Verifique se o conjunto de dados está ativado para o Perfil
 
@@ -220,6 +224,7 @@ curl -X PATCH \
 ```
 
 **Resposta**
+
 Uma solicitação bem-sucedida do PATCH retorna o Status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. O `unifiedProfile` agora foi desativada.
 
 ```json
@@ -270,4 +275,4 @@ Uma solicitação bem-sucedida do PATCH retorna o Status HTTP 200 (OK) e uma mat
 
 ## Próximas etapas
 
-Seu perfil e conjunto de dados habilitado para atualização agora podem ser usados por fluxos de trabalho de assimilação em lote e streaming para fazer atualizações nos dados do perfil. Para saber mais sobre como assimilar dados no Adobe Experience Platform, comece lendo o [visão geral da assimilação de dados](../../ingestion/home.md).
+Seu perfil e conjunto de dados habilitado para atualização agora podem ser usados por fluxos de trabalho de assimilação em lote para fazer atualizações nos dados do perfil. Para saber mais sobre como assimilar dados no Adobe Experience Platform, comece lendo o [visão geral da assimilação de dados](../../ingestion/home.md).

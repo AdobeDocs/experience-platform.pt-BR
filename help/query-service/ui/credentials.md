@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
+source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1168'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ O Adobe Experience Platform Query Service permite conectar-se com clientes exter
 
 Você pode usar as credenciais que estão expirando para configurar rapidamente uma conexão com um cliente externo.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![A guia Query dashboard Credentials com a seção Expiring credentials realçada.](../images/ui/credentials/expiring-credentials.png)
 
 O **[!UICONTROL Credenciais de expiração]** fornece as seguintes informações:
 
@@ -55,7 +55,7 @@ Todas as permissões necessárias agora estão configuradas no Console do desenv
 
 Para criar um conjunto de credenciais que não estão expirando, retorne à interface do usuário da plataforma e selecione **[!UICONTROL Queries]** na navegação à esquerda para acessar o [!UICONTROL Queries] espaço de trabalho. Em seguida, selecione o **[!UICONTROL Credenciais]** guia seguida por **[!UICONTROL Gerar credenciais]**.
 
-![](../images/ui/credentials/generate-credentials.png)
+![O painel Consultas com a guia Credenciais e Gerar credenciais são realçados.](../images/ui/credentials/generate-credentials.png)
 
 Uma caixa de diálogo é exibida e permite gerar credenciais. Para criar credenciais que não estão expirando, você deve fornecer os seguintes detalhes:
 
@@ -66,11 +66,11 @@ Uma caixa de diálogo é exibida e permite gerar credenciais. Para criar credenc
 
 Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Gerar credenciais]** para gerar suas credenciais.
 
-![](../images/ui/credentials/create-account.png)
+![A caixa de diálogo Gerar credenciais é realçada.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Uma vez **[!UICONTROL Gerar credenciais]** for selecionado, um arquivo JSON de configuração será baixado no computador local. Como o Adobe faz **not** registre as credenciais geradas, armazene com segurança o arquivo baixado e mantenha um registro da credencial.
+>When **[!UICONTROL Gerar credenciais]** for selecionado, um arquivo JSON de configuração será baixado no computador local. Como o Adobe faz **not** registre as credenciais geradas, armazene com segurança o arquivo baixado e mantenha um registro da credencial.
 >
 >Além disso, se as credenciais não forem usadas por 90 dias, elas serão expurgadas.
 
@@ -82,7 +82,7 @@ O arquivo JSON de configuração contém informações como nome técnico da con
 
 Depois de salvar suas credenciais geradas, selecione **[!UICONTROL Fechar]**. Agora você pode ver uma lista de todas as suas credenciais que não estão expirando.
 
-![](../images/ui/credentials/list-credentials.png)
+![A guia Query dashboard Credentials com a seção Non-expiring Credentials foi expandida.](../images/ui/credentials/list-credentials.png)
 
 Você pode editar ou excluir suas credenciais que não expiram. Para editar uma credencial que não esteja expirando, selecione o ícone de lápis (![](../images/ui/credentials/edit-icon.png)). Para excluir uma credencial que não esteja expirando, selecione o ícone excluir (![](../images/ui/credentials/delete-icon.png)).
 
@@ -92,7 +92,7 @@ Ao editar uma credencial que não esteja expirando, um modal é exibido. Você p
 - **[!UICONTROL Descrição]**: (Opcional) Uma descrição das credenciais que você está gerando.
 - **[!UICONTROL Atribuído a]**: O usuário ao qual as credenciais serão atribuídas. Esse valor deve ser o endereço de email do usuário que está criando as credenciais.
 
-![](../images/ui/credentials/update-credentials.png)
+![A caixa de diálogo Atualizar conta .](../images/ui/credentials/update-credentials.png)
 
 Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Atualizar conta]** para concluir a atualização de suas credenciais.
 
@@ -112,11 +112,11 @@ A tabela abaixo descreve os parâmetros normalmente necessários para se conecta
 
 | Parâmetro | Descrição |
 |---|---|
-| Servidor/Host | O nome do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e assume a forma de `server.adobe.io`. O valor é encontrado em **[!UICONTROL Host]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</ul></li> |
-| Porta  | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e é encontrado em **[!UICONTROL Port]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. Um exemplo de valor para a porta seria `80`.</ul></li> |
-| Banco de dados | O banco de dados ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando e foi encontrado em **[!UICONTROL Banco de dados]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. Um exemplo de valor para o banco de dados seria `prod:all`.</ul></li> |
-| Nome do usuário | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando. Ele assume o formato de uma sequência alfanumérica antes de `@AdobeOrg`. Esse valor é encontrado em **[!UICONTROL Nome do usuário]**.</li></ul> |
-| Senha | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais que estão expirando, isso poderá ser encontrado em **[!UICONTROL Senha]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</li><li>Se você estiver usando credenciais que não estão expirando, esse valor será o argumento concatenado de technicalAccountID e a credencial obtida do arquivo JSON de configuração. O valor da senha assume o formulário: `{technicalAccountId}:{credential}`.</li></ul> |
+| **Servidor/Host** | O nome do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e assume a forma de `server.adobe.io`. O valor é encontrado em **[!UICONTROL Host]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</ul></li> |
+| **Porta** | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e é encontrado em **[!UICONTROL Port]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. Um exemplo de valor para a porta seria `80`.</ul></li> |
+| **Banco de dados** | O banco de dados ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando e foi encontrado em **[!UICONTROL Banco de dados]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. Um exemplo de valor para o banco de dados seria `prod:all`.</ul></li> |
+| **Nome do usuário** | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando. Ele assume o formato de uma sequência alfanumérica antes de `@AdobeOrg`. Esse valor é encontrado em **[!UICONTROL Nome do usuário]**.</li></ul> |
+| **Senha** | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais que estão expirando, isso poderá ser encontrado em **[!UICONTROL Senha]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</li><li>Se você estiver usando credenciais que não estão expirando, esse valor será o argumento concatenado de technicalAccountID e a credencial obtida do arquivo JSON de configuração. O valor da senha assume o formulário: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Próximas etapas
 

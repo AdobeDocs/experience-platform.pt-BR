@@ -2,10 +2,10 @@
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino de fluxo para o Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 5%
+source-wordcount: '1787'
+ht-degree: 4%
 
 ---
 
@@ -98,8 +98,8 @@ Este é um exemplo de configuração de um destino ficcional de transmissão, Mo
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ Essa opção permite:
    * ID do segmento;
    * Status do segmento;
    * Identidade ou grupos de identidades.
+
+>[!NOTE]
+>
+>Ao usar a opção de agregação configurável para o seu destino, tenha em mente os valores mínimo e máximo que você pode usar para os dois parâmetros `maxBatchAgeInSecs` (mínimo 1,800 e máximo 3,600) e `maxNumEventsInBatch` (mínimo 1.000, máximo 10.000).
 
 Para obter explicações detalhadas dos parâmetros de agregação, consulte [Operações de endpoint da API de destinos](./destination-configuration-api.md) página de referência, onde cada parâmetro é descrito.
 

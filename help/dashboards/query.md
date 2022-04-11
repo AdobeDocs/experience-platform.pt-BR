@@ -1,62 +1,76 @@
 ---
 solution: Experience Platform
-title: Explore e processe conjuntos de dados brutos alimentando painéis da plataforma
+title: Explorar, verificar e processar conjuntos de dados do painel usando o serviço de query
 type: Documentation
 description: Saiba como usar o Serviço de query para explorar e processar conjuntos de dados brutos que alimentam perfis, segmentos e painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 1%
+source-wordcount: '848'
+ht-degree: 0%
 
 ---
 
-# Explorar, verificar e processar conjuntos de dados de painéis usando o Serviço de query
+# Explorar, verificar e processar conjuntos de dados de painel usando [!DNL Query Service]
 
-A Adobe Experience Platform fornece informações importantes sobre o perfil, o segmento e os dados de destinos de sua organização por meio de painéis disponíveis na interface do usuário do Experience Platform. Em seguida, você pode usar o Serviço de query da Adobe Experience Platform para explorar, verificar e processar os conjuntos de dados brutos que alimentam esses painéis no lago de dados.
+A Adobe Experience Platform fornece informações importantes sobre o perfil, o segmento e os dados de destinos de sua organização por meio de painéis disponíveis na interface do usuário do Experience Platform. Em seguida, você pode usar o Adobe Experience Platform [!DNL Query Service] para explorar, verificar e processar os conjuntos de dados brutos que alimentam esses painéis no lago de dados.
 
-## Introdução ao Serviço de query
+## Introdução ao [!DNL Query Service]
 
-O Adobe Experience Platform Query Service oferece suporte aos profissionais de marketing para obter insights de seus dados, permitindo o uso do SQL padrão para consultar dados no lago de dados. O Serviço de query oferece uma interface de usuário e uma API que pode ser usada para unir qualquer conjunto de dados no lago de dados e capturar os resultados da query como novos conjuntos de dados para uso em relatórios, aprendizado de máquina ou para assimilação no Perfil do cliente em tempo real.
+Adobe Experience Platform [!DNL Query Service] O oferece suporte a profissionais de marketing para obter insights de seus dados, permitindo o uso de SQL padrão para consultar dados no lago de dados. [!DNL Query Service] O oferece uma interface de usuário e uma API que pode ser usada para unir qualquer conjunto de dados no lago de dados e capturar os resultados da consulta como novos conjuntos de dados para uso em relatórios, aprendizado de máquina ou para assimilação no Perfil do cliente em tempo real.
 
-Para saber mais sobre o Serviço de query e sua função no Experience Platform, comece lendo a [Visão geral do Serviço de query](../query-service/home.md).
+Para saber mais sobre [!DNL Query Service] e o seu papel no Experience Platform, por favor comece por ler [[!DNL Query Service] visão geral](../query-service/home.md).
 
-## Conjuntos de dados disponíveis
+## Acesso aos conjuntos de dados disponíveis
 
-Você pode usar o Serviço de query para consultar conjuntos de dados brutos para painéis de perfil, segmento e destinos. As seções a seguir descrevem os conjuntos de dados brutos que podem ser encontrados no lago de dados.
+Você pode usar [!DNL Query Service] para consultar conjuntos de dados brutos para painéis de perfil, segmento e destinos. Para exibir seus conjuntos de dados disponíveis, na interface do usuário do Experience Platform, selecione **Conjuntos de dados** na navegação à esquerda para abrir o painel Conjuntos de dados . O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de assimilação mais recente.
+
+![O painel Navegação do conjunto de dados com a guia Conjuntos de dados realçada na navegação à esquerda.](./images/query/browse-datasets.png)
+
+### Conjuntos de dados gerados pelo sistema
+
+>[!IMPORTANT]
+>
+>Os conjuntos de dados gerados pelo sistema ficam ocultos por padrão. Por padrão, a variável [!UICONTROL Procurar] A guia mostra somente os conjuntos de dados nos quais você assimilou dados.
+
+Para exibir conjuntos de dados gerados pelo sistema, selecione o ícone de filtro (![Um ícone de filtro.](./images/query/filter.png)) localizado à esquerda da barra de pesquisa.
+
+![A guia Navegação dos conjuntos de dados com o ícone de filtro realçado.](./images/query/filter-datasets.png)
+
+Uma barra lateral aparece contendo dois botões, [!UICONTROL Incluído em Perfil] e [!UICONTROL Mostrar conjuntos de dados do sistema]. Selecione a opção de alternância para [!UICONTROL Mostrar conjuntos de dados do sistema] para incluir conjuntos de dados gerados pelo sistema na lista de conjuntos de dados navegáveis.
+
+![A guia Navegação dos conjuntos de dados com o botão Mostrar conjuntos de dados do sistema é realçada.](./images/query/show-system-datasets.png)
 
 ### Conjuntos de dados do atributo de perfil
 
 Os insights do painel de perfis são vinculados às políticas de mesclagem que foram definidas pela sua organização. Para cada política de mesclagem ativa, há um conjunto de dados de atributo de perfil disponível no lago de dados.
 
-A convenção de nomenclatura desses conjuntos de dados é **Profile-Snapshot-Export** seguida de um valor alfanumérico aleatório gerado pelo sistema. Por exemplo: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+A convenção de nomenclatura desses conjuntos de dados é **Exportação de Instantâneo do Perfil** seguido por um valor alfanumérico aleatório gerado pelo sistema. Por exemplo: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Para entender o esquema completo de cada conjunto de dados de exportação de instantâneo de perfil, você pode visualizar e explorar os conjuntos de dados [usando o visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
+Para entender o esquema completo de cada conjunto de dados de exportação de instantâneo de perfil, você pode visualizar e explorar os conjuntos de dados [uso do visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
 
 ![](images/query/profile-attribute.png)
 
 #### Mapeamento de conjuntos de dados de atributos de perfil para mesclar IDs de política
 
-Cada conjunto de dados de atributo de perfil é intitulado **Exportação de Instantâneo de Perfil** seguido por um valor alfanumérico aleatório gerado pelo sistema. Por exemplo: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+O valor alfanumérico atribuído a cada conjunto de dados de atributo de perfil gerado pelo sistema é uma sequência de caracteres aleatória que mapeia para uma ID de política de mesclagem de uma das políticas de mesclagem criadas pela organização. O mapeamento de cada ID de política de mesclagem para sua string de conjunto de dados de atributo de perfil relacionada é mantido na variável `adwh_dim_merge_policies` conjunto de dados.
 
-Esse valor alfanumérico é uma sequência de caracteres aleatória gerada pelo sistema que mapeia para uma ID de política de mesclagem de uma das políticas de mesclagem criadas pela organização. O mapeamento de cada ID de política de mesclagem para sua string de conjunto de dados de atributo de perfil relacionada é mantido no conjunto de dados `adwh_dim_merge_policies`.
-
-O conjunto de dados `adwh_dim_merge_policies` contém os seguintes campos:
+O `adwh_dim_merge_policies` o conjunto de dados contém os seguintes campos:
 
 * `merge_policy_name`
 * `merge_policy_id`
 * `merge_policy`
 * `dataset_id`
 
-Esse conjunto de dados pode ser explorado usando a interface do Editor de consultas no Experience Platform. Para saber mais sobre como usar o Editor de consultas, consulte o [Guia da interface do usuário do Editor de consultas](../query-service/ui/user-guide.md).
+Esse conjunto de dados pode ser explorado usando a interface do Editor de consultas no Experience Platform. Para saber mais sobre como usar o Editor de consultas, consulte [Guia da interface do usuário do Editor de consultas](../query-service/ui/user-guide.md).
 
 ### Conjunto de dados de metadados do segmento
 
 Há um conjunto de dados de metadados de segmento disponível no lago de dados que contém metadados para cada um dos segmentos da organização.
 
-A convenção de nomenclatura desse conjunto de dados é **Segmentdefinition-Snapshot-Export** seguida de um valor alfanumérico. Por exemplo: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+A convenção de nomenclatura desse conjunto de dados é **Segmentdefinition-Snapshot-Export** seguido por um valor alfanumérico. Por exemplo: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Para entender o esquema completo de cada conjunto de dados de exportação de instantâneo de definição de segmento, você pode visualizar e explorar os conjuntos de dados [usando o visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
+Para entender o esquema completo de cada conjunto de dados de exportação de instantâneo de definição de segmento, você pode visualizar e explorar os conjuntos de dados [uso do visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
@@ -66,13 +80,13 @@ Os metadados para todos os destinos ativados de sua organização estão dispon�
 
 A convenção de nomenclatura desse conjunto de dados é **DIM_Destination**.
 
-Para entender o esquema completo do conjunto de dados de destino DIM, você pode visualizar e explorar o conjunto de dados [usando o visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
+Para entender o esquema completo do conjunto de dados de destino DIM, você pode visualizar e explorar o conjunto de dados [uso do visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
 ## Exemplo de consultas
 
-As consultas de exemplo a seguir incluem amostras de SQL que podem ser usadas no Serviço de query para explorar, verificar e processar os conjuntos de dados brutos que alimentam seus painéis.
+Os exemplos de consultas a seguir incluem amostras de SQL que podem ser usadas em [!DNL Query Service] para explorar, verificar e processar os conjuntos de dados brutos que alimentam seus painéis.
 
 ### Contagem de perfis por identidade
 
@@ -126,6 +140,6 @@ Select
 
 ## Próximas etapas
 
-Ao ler este guia, agora você pode usar o Serviço de query para realizar várias consultas para explorar e processar os conjuntos de dados brutos que alimentam seus painéis de perfil, segmento e destinos.
+Ao ler este guia, agora você pode usar [!DNL Query Service] para realizar várias consultas para explorar e processar os conjuntos de dados brutos que alimentam seu perfil, segmento e painéis de destinos.
 
 Para saber mais sobre cada painel e suas métricas, selecione um painel na lista de painéis disponíveis na navegação da documentação.

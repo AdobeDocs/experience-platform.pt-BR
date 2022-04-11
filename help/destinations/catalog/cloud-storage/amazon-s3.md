@@ -3,9 +3,9 @@ keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '552'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 >id="platform_destinations_connect_s3_folderpath"
 >title="Caminho da pasta"
 >abstract="Deve conter somente caracteres A-Z, a-z, 0-9 e pode incluir os seguintes caracteres especiais: `/!-_.'()"^[]+$%.*"`. Para criar uma pasta por arquivo de segmento, insira a macro /%SEGMENT_NAME% ou /%SEGMENT_ID% ou /%SEGMENT_NAME%/%SEGMENT_ID% no campo de texto. Macros só podem ser inseridas no final do caminho da pasta. Visualize exemplos de macro na documentação."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Use macros para criar uma pasta no seu local de armazenamento"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Use macros para criar uma pasta no seu local de armazenamento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"

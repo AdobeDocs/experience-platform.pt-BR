@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 98e2076832bee8e11df8834063cc0b11c1ae3164
+source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2237'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,7 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao segmen
 >id="platform_destinations_activate_exportoptions"
 >title="Opções de exportação de arquivo"
 >abstract="Selecionar **Exportar arquivos completos** para exportar um instantâneo completo de todos os perfis qualificados para o segmento. Selecionar **Exportar arquivos incrementais** para exportar apenas os perfis que se qualificaram para o segmento desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o segmento, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os perfis que se qualificaram para o segmento desde a primeira exportação de arquivos incrementais."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Exportar arquivos incrementais"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Exportar arquivos incrementais"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"

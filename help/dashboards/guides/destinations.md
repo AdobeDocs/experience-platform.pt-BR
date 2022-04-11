@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
+source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ Se um segmento na [!UICONTROL Estado de funcionamento do público-alvo mapeado] 
 
 ![O widget de integridade do público-alvo mapeado.](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL Contagem de destinos] (#destination-count)
+### [!UICONTROL Contagem de destinos] {#destinations-count}
 
 O [!UICONTROL Contagem de destinos] O widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos.
 

@@ -5,9 +5,9 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
+source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -80,13 +80,13 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-and `with_query` is:
+e `with_query` é:
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
 
-The following sub-sections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
+As subseções a seguir fornecem detalhes sobre cláusulas adicionais que podem ser usadas em queries, desde que sigam o formato descrito acima.
 
 ### Cláusula SNAPSHOT
 
@@ -281,9 +281,9 @@ DROP DATABASE [IF EXISTS] db_name
 | ------ | ------ |
 | `IF EXISTS` | Se isso for especificado, nenhuma exceção será lançada se o banco de dados fizer **not** existe. |
 
-## DROP SCHEMA
+## ESQUEMA DE SOLTAR
 
-The `DROP SCHEMA` command drops an existing schema.
+O `DROP SCHEMA` solta um esquema existente.
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -292,7 +292,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | Parâmetros | Descrição |
 | ------ | ------ |
 | `IF EXISTS` | Se isso for especificado, nenhuma exceção será lançada se o schema fizer **not** existe. |
-| `RESTRICT` | Valor padrão para o modo . If this is specified, the schema will only be dropped if it **doesn&#39;t** contain any tables. |
+| `RESTRICT` | Valor padrão para o modo . Se isso for especificado, o schema só será descartado se ele for especificado **does not** contém qualquer tabela. |
 | `CASCADE` | Se isso for especificado, o schema será descartado junto com todas as tabelas presentes no schema. |
 
 ## CRIAR EXIBIÇÃO
@@ -422,6 +422,27 @@ WHEN other THEN SELECT 'ERROR';
 END $$; 
 ```
 
+## Inline {#inline}
+
+A função em linha separa os elementos de uma matriz de estruturas e gera os valores em uma tabela. Ela só pode ser colocada no `SELECT` ou uma `LATERAL VIEW`.
+
+A função em linha **cannot** ser colocada numa lista selecionada, onde existam outras funções de gerador.
+
+Por padrão, as colunas produzidas são nomeadas como &quot;col1&quot;, &quot;col2&quot; e assim por diante. Se a expressão for `NULL` em seguida, nenhuma linha é produzida.
+
+**Exemplo**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+O exemplo retorna o seguinte:
+
+```text
+1  a Spark SQL
+2  b Spark SQL
+```
+
 ## [!DNL Spark] Comandos SQL
 
 A subseção abaixo cobre os comandos SQL Spark suportados pelo Serviço de Consulta.
@@ -455,7 +476,7 @@ BEGIN WORK
 BEGIN TRANSACTION
 ```
 
-### CLOSE
+### FECHAR
 
 O `CLOSE` libera os recursos associados a um cursor aberto. Depois que o cursor é fechado, nenhuma operação subsequente é permitida nele. Um cursor deve ser fechado quando não for mais necessário.
 
@@ -475,11 +496,11 @@ DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-If `DEALLOCATE name` is used, `name` represents the name of the prepared statement that needs to be deallocated. If `DEALLOCATE ALL` for usada, todas as instruções preparadas serão desalocadas.
+If `DEALLOCATE name` é utilizada, `name` representa o nome da declaração preparada que precisa ser desalocada. If `DEALLOCATE ALL` for usada, todas as instruções preparadas serão desalocadas.
 
 ### DECLARAR
 
-The `DECLARE` command allows a user to create a cursor, which can be used to retrieve a small number of rows out of a larger query. Após a criação do cursor, as linhas são buscadas com ele `FETCH`.
+O `DECLARE` permite que um usuário crie um cursor, que pode ser usado para recuperar um pequeno número de linhas de uma consulta maior. Após a criação do cursor, as linhas são buscadas com ele `FETCH`.
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -487,12 +508,12 @@ DECLARE name CURSOR FOR query
 
 | Parâmetros | Descrição |
 | ------ | ------ |
-| `name` | The name of the cursor to be created. |
+| `name` | O nome do cursor a ser criado. |
 | `query` | A `SELECT` ou `VALUES` comando que fornece as linhas a serem retornadas pelo cursor. |
 
 ### EXECUTAR
 
-O `EXECUTE` é usado para executar uma instrução preparada anteriormente. Since prepared statements only exist for the duration of a session, the prepared statement must have been created by a `PREPARE` statement executed earlier in the current session. Mais informações sobre o uso de instruções preparadas podem ser encontradas no [`PREPARE` comando](#prepare) seção.
+O `EXECUTE` é usado para executar uma instrução preparada anteriormente. Como as instruções preparadas existem apenas para a duração de uma sessão, a instrução preparada deve ter sido criada por um `PREPARE` executada anteriormente na sessão atual. Mais informações sobre o uso de instruções preparadas podem ser encontradas no [`PREPARE` comando](#prepare) seção.
 
 Se a variável `PREPARE` uma instrução que criou a instrução especificou alguns parâmetros, um conjunto de parâmetros compatível deve ser transmitido para a `EXECUTE` instrução. Se esses parâmetros não forem enviados, um erro será gerado.
 
@@ -528,7 +549,7 @@ FORMAT { TEXT | JSON }
 
 >[!IMPORTANT]
 >
->Lembre-se de que a instrução é executada quando a variável `ANALYZE` é usada. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual.
+>Lembre-se de que a instrução é executada quando a variável `ANALYZE` é usada. Embora `EXPLAIN` descarta qualquer saída que uma `SELECT` retorna, outros efeitos colaterais da declaração ocorrem como de costume.
 
 **Exemplo**
 
@@ -555,7 +576,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 | Parâmetros | Descrição |
 | ------ | ------ |
-| `num_of_rows` | The number of rows to fetch. |
+| `num_of_rows` | O número de linhas a serem buscadas. |
 | `cursor_name` | O nome do cursor do qual você está recuperando informações. |
 
 ### PREPARAR {#prepare}
@@ -606,13 +627,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Mais informações sobre os parâmetros de consulta SELECT padrão podem ser encontradas no [Seção SELECIONAR query](#select-queries). This section will only list parameters that are exclusive to the `SELECT INTO` command.
+Mais informações sobre os parâmetros de consulta SELECT padrão podem ser encontradas no [Seção SELECIONAR query](#select-queries). Esta seção listará apenas os parâmetros exclusivos ao `SELECT INTO` comando.
 
 | Parâmetros | Descrição |
 | ------ | ------ |
 | `TEMPORARY` ou `TEMP` | Um parâmetro opcional. Se especificado, a tabela criada será uma tabela temporária. |
 | `UNLOGGED` | Um parâmetro opcional. Se especificado, a tabela criada como será uma tabela desconectada. Mais informações sobre tabelas desconectadas podem ser encontradas no [Documentação PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
-| `new_table` | The name of the table to be created. |
+| `new_table` | O nome da tabela a ser criada. |
 
 **Exemplo**
 
@@ -622,9 +643,9 @@ A consulta a seguir cria uma nova tabela `films_recent` que consiste apenas em e
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
-### SHOW
+### MOSTRAR
 
-The `SHOW` command displays the current setting of runtime parameters. Essas variáveis podem ser definidas usando a variável `SET` , editando o `postgresql.conf` arquivo de configuração, por meio do `PGOPTIONS` variável ambiental (ao usar libpq ou um aplicativo baseado em libpq) ou por meio de sinalizadores de linha de comando ao iniciar o servidor Postgres.
+O `SHOW` exibe a configuração atual dos parâmetros de tempo de execução. Essas variáveis podem ser definidas usando a variável `SET` , editando o `postgresql.conf` arquivo de configuração, por meio do `PGOPTIONS` variável ambiental (ao usar libpq ou um aplicativo baseado em libpq) ou por meio de sinalizadores de linha de comando ao iniciar o servidor Postgres.
 
 ```sql
 SHOW name
@@ -693,7 +714,7 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 
 | Parâmetros | Descrição |
 | ------ | ------ |
-| `table_name` | The name of the table which you are editing. |
+| `table_name` | O nome da tabela que você está editando. |
 | `constraint_name` | O nome da restrição que você deseja adicionar ou excluir. |
 | `column_name` | O nome da coluna à qual você está adicionando uma restrição. |
 | `referenced_table_name` | O nome da tabela referenciada pela chave externa. |
@@ -701,7 +722,7 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 
 >[!NOTE]
 >
->O schema da tabela deve ser exclusivo e não compartilhado entre várias tabelas. Additionally, the namespace is mandatory for primary key constraints.
+>O schema da tabela deve ser exclusivo e não compartilhado entre várias tabelas. Além disso, o namespace é obrigatório para restrições de chave primária.
 
 #### ADICIONAR COLUNA
 
@@ -713,9 +734,9 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-#### ADD SCHEMA
+#### ADICIONAR ESQUEMA
 
-The following SQL query shows an example of adding a table to a database / schema.
+A consulta SQL a seguir mostra um exemplo de adição de uma tabela a um banco de dados/schema.
 
 ```sql
 ALTER TABLE table_name ADD SCHEMA database_name.schema_name
@@ -778,7 +799,7 @@ SHOW FOREIGN KEYS
 ```
 
 
-### SHOW DATAGROUPS
+### MOSTRAR DATAGROUPS
 
 O `SHOW DATAGROUPS` retorna uma tabela de todos os bancos de dados associados. Para cada banco de dados, a tabela inclui esquema, tipo de grupo, tipo filho, nome filho e ID filho.
 

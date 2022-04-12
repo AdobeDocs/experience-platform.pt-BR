@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,13 @@ As fontes de armazenamento em nuvem podem trazer seus próprios dados para a pla
 - [[!DNL Google PubSub] conector](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL Oracle Object Storage] conector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] conector](connectors/cloud-storage/sftp.md)
+
+### Consentimento e preferências {#consent}
+
+O Experience Platform oferece suporte para assimilar dados de uma plataforma de gerenciamento de consentimento e preferências de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
 

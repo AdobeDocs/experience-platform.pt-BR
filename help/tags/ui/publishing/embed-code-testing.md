@@ -1,10 +1,11 @@
 ---
 title: Testar códigos incorporados usando o Adobe Experience Platform Debugger
 description: Saiba como usar o Platform Debugger para testar localmente diferentes códigos incorporados para o Adobe Experience Platform em seu site.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 82%
+source-wordcount: '510'
+ht-degree: 96%
 
 ---
 
@@ -14,11 +15,11 @@ ht-degree: 82%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-À medida que você faz alterações nas builds da biblioteca de tags no Adobe Experience Platform, deve testar essas alterações antes de implantar a build no ambiente de produção. Se não tiver um ambiente dedicado de preparo ou desenvolvimento para seu site, você poderá usar o Adobe Experience Platform Debugger para testar localmente diferentes códigos incorporados dentro do site.
+Quando você faz alterações em builds da biblioteca de tags na Adobe Experience Platform, elas devem ser testadas antes da implantação do build no ambiente de produção. Se não tiver um ambiente dedicado de preparo ou desenvolvimento para seu site, você poderá usar o Adobe Experience Platform Debugger para testar localmente diferentes códigos incorporados dentro do site.
 
 ## Pré-requisitos
 
-Este tutorial requer uma compreensão funcional do uso de ambientes e códigos incorporados na interface do usuário da coleta de dados. Consulte a [visão geral de ambientes](./environments.md) para obter mais informações.
+Este tutorial requer entendimento prático do uso de ambientes e códigos integrados na interface da Coleção de dados. Consulte a [visão geral de ambientes](./environments.md) para obter mais informações.
 
 Este tutorial também requer que a extensão do navegador do Platform Debugger esteja instalada. O Platform Debugger só está disponível para os navegadores Chrome e Firefox. Use um dos links a seguir para instalar a extensão antes de iniciar o tutorial:
 
@@ -27,7 +28,7 @@ Este tutorial também requer que a extensão do navegador do Platform Debugger e
 
 ## Abrir o Platform Debugger no seu site
 
-Usando seu navegador preferido, navegue até seu site e abra a extensão do Platform Debugger. O site ao qual o Platform Debugger está conectado no momento é exibido na parte inferior da janela. Se as tags estiverem em execução no site, elas serão listadas na guia [!UICONTROL Resumo].
+Usando seu navegador preferido, navegue até seu site e abra a extensão do Platform Debugger. O site ao qual o Platform Debugger está conectado no momento é exibido na parte inferior da janela. Se as tags estiverem em execução no site, ele será listado na guia [!UICONTROL Resumo].
 
 ![](./images/embed-code-testing/summary.png)
 
@@ -57,4 +58,4 @@ A guia **[!UICONTROL Configuração]** será exibida novamente, mostrando que o 
 
 ## Próximas etapas
 
-Este tutorial abordou como alternar localmente códigos incorporados para fins de teste usando o Platform Debugger. Consulte a [documentação do Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=pt-BR) para obter mais informações sobre seus vários recursos.
+Este tutorial abordou como alternar localmente códigos incorporados para fins de teste usando o Platform Debugger. Consulte a [documentação do Platform Debugger](../../../debugger/home.md) para obter mais informações sobre seus vários recursos.

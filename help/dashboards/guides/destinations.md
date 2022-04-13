@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,10 @@ Um período para a tendência do público-alvo nos últimos 30 dias, 90 dias ou 
 O segundo menu suspenso lista todos os segmentos disponíveis que podem ser enviados para a conta de destino escolhida na parte superior do painel.
 
 ![O widget de tendência do tamanho do público-alvo.](../images/destinations/audience-size-trend.png)
+
+O **[!UICONTROL Tendência do tamanho do público-alvo]** o widget fornece um [!UICONTROL Legendas] na parte superior direita do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas. Um modelo de aprendizado de máquina gera automaticamente legendas para descrever as principais tendências e eventos importantes ao analisar o gráfico e os dados do segmento.
+
+![A caixa de diálogo de legendas automáticas do widget de tendência do tamanho do público-alvo.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Segmentos não mapeados por identidade] {#unmapped-segments-by-identity}
 

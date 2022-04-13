@@ -4,7 +4,7 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '2572'
 ht-degree: 0%
@@ -232,7 +232,7 @@ Este widget mostra a proporção de perfis que são de alta, média ou baixa int
 
 ### (Beta) [!UICONTROL Tendência de integridade do perfil] {#profile-completeness-trend}
 
-Este widget cria um gráfico de coluna empilhado para descrever a tendência da integridade do perfil ao longo do tempo. A integralidade é medida pela porcentagem de atributos preenchidos com valores não nulos entre todos os atributos observados. Ele classifica a integridade do perfil como alta, média ou baixa desde a última data de processamento.
+Este widget cria um gráfico de área empilhada para descrever a tendência da integridade do perfil ao longo do tempo. A integralidade é medida pela porcentagem de atributos preenchidos com valores não nulos entre todos os atributos observados. Ele classifica a integridade do perfil como alta, média ou baixa desde a última data de processamento.
 
 O eixo x representa o tempo, o eixo y representa o número de perfis e as cores representam os três níveis de integridade do perfil.
 

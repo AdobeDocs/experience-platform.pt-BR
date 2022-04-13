@@ -4,7 +4,7 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Destinos criados recentemente]](#recently-created-destinations)
 * [[!UICONTROL Segmentos ativados recentemente]](#recently-activated-segments)
 * [[!UICONTROL Segmentos ativados recentemente por destino]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trends)
+* [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)
 * [[!UICONTROL Segmentos não mapeados por identidade]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
 * [[!UICONTROL Públicos-alvo comuns]](#common-audiences)

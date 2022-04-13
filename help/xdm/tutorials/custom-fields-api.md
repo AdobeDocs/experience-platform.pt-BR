@@ -1,9 +1,10 @@
 ---
 title: Definir campos XDM na API do Registro de esquema
 description: Saiba como definir campos diferentes ao criar recursos personalizados do Experience Data Model (XDM) na API do Registro de Schema.
-source-git-commit: af4c345819d3e293af4e888c9cabba6bd874583b
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
+source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -165,16 +166,18 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
 
 ## Criação de tipos de mapa personalizado {#maps}
 
-Para oferecer suporte a dados &quot;semelhantes ao mapa&quot; com eficiência no XDM, os objetos podem receber anotações com um `meta:xdmType` defina como `map` para deixar claro que um objeto deve ser gerenciado como se o conjunto de chaves não estivesse restrito. O XDM coloca as seguintes restrições sobre o uso dessa dica de armazenamento:
+Para oferecer suporte a dados &quot;semelhantes ao mapa&quot; com eficiência no XDM, os objetos podem receber anotações com um `meta:xdmType` defina como `map` para deixar claro que um objeto deve ser gerenciado como se o conjunto de chaves não estivesse restrito. Os dados assimilados em campos de mapa devem usar chaves de string e somente valores de string ou inteiros (como determinado por `additionalProperties.type`).
 
-* Os tipos de mapa DEVEM ser do tipo `object`
-* Os tipos de mapa NÃO DEVEM ter propriedades definidas (em outras palavras, elas definem objetos &quot;vazios&quot;)
-* Os tipos de mapa DEVEM incluir um único `additionalProperties` esquema que descreve os valores que podem ser colocados no mapa
+O XDM coloca as seguintes restrições sobre o uso dessa dica de armazenamento:
+
+* Os tipos de mapa DEVEM ser do tipo `object`.
+* Os tipos de mapa NÃO DEVEM ter propriedades definidas (em outras palavras, eles definem objetos &quot;vazios&quot;).
+* Os tipos de mapa DEVEM incluir uma `additionalProperties.type` que descreve os valores que podem ser colocados no mapa, `string` ou `integer`.
 
 Certifique-se de que você esteja usando apenas campos do tipo mapa quando for absolutamente necessário, pois eles apresentam as seguintes desvantagens de desempenho:
 
-* O tempo de resposta do Serviço de query da Adobe Experience Platform diminui de três segundos para dez segundos para 100 milhões de registros
-* Os mapas devem ter menos de 16 chaves ou, caso contrário, arriscar degradação adicional
+* O tempo de resposta do Serviço de query da Adobe Experience Platform diminui de três segundos para dez segundos para 100 milhões de registros.
+* Os mapas devem ter menos de 16 chaves ou, caso contrário, arriscam mais degradação.
 
 A interface do usuário da Platform também tem limitações em como extrair as chaves dos campos do tipo mapa. Embora os campos do tipo de objeto possam ser expandidos, os mapas são exibidos como um único campo.
 

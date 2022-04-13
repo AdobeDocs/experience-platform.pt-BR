@@ -3,9 +3,9 @@ keywords: personalização personalizada; destino; destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em seu site para recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação de segmentos de perfis de usuários.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
+source-git-commit: c83c7e2a74a6bf4a7a4c9c04ccebfd0296c89bce
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '912'
 ht-degree: 1%
 
 ---
@@ -30,17 +30,27 @@ Essa integração é alimentada pela variável [Adobe Experience Platform Web SD
 
 ## Casos de uso {#use-cases}
 
-Esse destino compartilha públicos com servidores de anúncios e aplicativos de personalização que não sejam Adobe, a serem usados em tempo real, para decidir quais usuários de anúncios devem ver em um site.
+O [!DNL Custom personalization connection] permite usar suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), além de aproveitar os recursos de coleta e segmentação de dados da rede Experience Platform Edge para potencializar uma experiência mais profunda de personalização do cliente.
 
-### Caso de uso nº 1
+Os casos de uso descritos abaixo incluem personalização de site e publicidade direcionada no site.
 
-**Personalização de uma página inicial**
+Para ativar esses casos de uso, os clientes precisam de uma maneira rápida e simplificada de recuperar informações de segmento do Experience Platform e enviar essas informações para seus sistemas designados, configurados como conexões de personalização personalizadas na interface do usuário do Experience Platform.
 
-Um site de aluguel doméstico e vendas deseja personalizar sua página inicial com base nas qualificações de segmento no Adobe Experience Platform. A empresa pode selecionar quais públicos-alvo devem obter uma experiência personalizada e mapeá-los para o destino de personalização personalizado que foi configurado para seu aplicativo de personalização que não é Adobe como critério de direcionamento.
+Esses sistemas podem ser plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos em execução nas propriedades móveis e da Web dos clientes.
 
-**Anúncios no site direcionados**
+### Personalização de mesma página {#same-page}
 
-Usando um destino de personalização personalizado separado para o servidor de publicidade, o mesmo site pode direcionar a publicidade no site usando um conjunto diferente de segmentos do Adobe Experience Platform como critérios de definição de metas.
+Um usuário visita uma página de seu site. O cliente pode usar as informações de visita da página atual (por exemplo, URL de referência, idioma do navegador, informações de produto incorporadas) para selecionar a próxima ação/decisão (por exemplo, personalização), usando a conexão de personalização personalizada para plataformas que não sejam Adobe (por exemplo, [!DNL Pega], [!DNL Optimizely], etc.).
+
+### Personalização de próxima página {#next-page}
+
+Um usuário visita a Página A em seu site. Com base nessa interação, o usuário se qualificou para um conjunto de segmentos. O usuário então clica em um link que os leva da Página A para a Página B. Os segmentos para os quais o usuário se qualificou durante a interação anterior na Página A, juntamente com as atualizações de perfil determinadas pela visita atual ao site, serão usados para potencializar a próxima ação/decisão (por exemplo, que banner de anúncio exibir para o visitante ou, no caso de testes A/B, qual versão da página será exibida).
+
+### Personalização da próxima sessão {#next-session}
+
+Um usuário visita várias páginas em seu site. Com base nessas interações, o usuário se qualificou para um conjunto de segmentos. O usuário finaliza a sessão de navegação atual.
+
+No dia seguinte, o usuário retorna ao mesmo site do cliente. Os segmentos para os quais eles se qualificaram durante a interação anterior com todas as páginas do site visitadas, juntamente com as atualizações de perfil determinadas pela visita atual ao site, serão usados para selecionar a próxima ação/decisão (por exemplo, que banner de anúncio exibir para o visitante ou, no caso de testes A/B, qual versão da página exibir).
 
 ## Conecte-se ao destino {#connect}
 

@@ -2,7 +2,7 @@
 title: Definir campos XDM na API do Registro de esquema
 description: Saiba como definir campos diferentes ao criar recursos personalizados do Experience Data Model (XDM) na API do Registro de Schema.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     <td>Os valores de enum restritos são fornecidos sob a variável <code>enum</code> , enquanto etiquetas opcionais voltadas para o cliente para cada valor podem ser fornecidas em <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
 "sampleField": { "type": "string", "enum": [ "value1", "value2", "value3" ], "meta:enum": { "value1": "Valor 1", "valor 2": "Value 2", "value3": "Value 3" }, "default": "value1" }</pre>
-    <br>Observe que a variável <code>meta:enum</code> valor faz <strong>not</strong> declare uma enumeração ou direcione qualquer validação de dados sozinha. Na maioria dos casos, as cadeias de caracteres fornecidas em <code>meta:enum</code> são igualmente fornecidas nos termos do <code>enum</code> para garantir que os dados sejam restritos. No entanto, existem alguns casos de uso em que <code>meta:enum</code> é fornecido sem um <code>enum</code> matriz. Veja o tutorial em <a href="../tutorials/extend-soft-enum.md">extensão de enumerações suaves</a> para obter mais informações.
+    <br>Observe que a variável <code>meta:enum</code> valor faz <strong>not</strong> declare uma enumeração ou direcione qualquer validação de dados sozinha. Na maioria dos casos, as cadeias de caracteres fornecidas em <code>meta:enum</code> são igualmente fornecidas nos termos do <code>enum</code> para garantir que os dados sejam restritos. No entanto, existem alguns casos de uso em que <code>meta:enum</code> é fornecido sem um <code>enum</code> matriz. Veja o tutorial em <a href="../tutorials/suggested-values.md">definição de valores sugeridos</a> para obter mais informações.
     </td>
   </tr>
   <tr>

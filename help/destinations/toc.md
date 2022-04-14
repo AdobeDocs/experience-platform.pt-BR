@@ -4,10 +4,10 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6257e06369060d7f71e837059977817cd495f62e
+source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 8%
+source-wordcount: '742'
+ht-degree: 9%
 
 ---
 
@@ -187,6 +187,8 @@ ht-degree: 8%
       * [Use o Destination SDK para configurar um destino de transmissão](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use o Destination SDK para configurar um destino baseado em arquivo](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Enviar para revisão de um destino criado no Destination SDK](./destination-sdk/submit-destination.md)
+   * Referência {#reference}
+      * [Funções de transformação suportadas](./destination-sdk/supported-functions.md)
    * Documente seu destino {#document-destination}
       * [Documente seu destino no Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Usar a interface da Web do GitHub para criar uma página de documentação de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

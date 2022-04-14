@@ -2,9 +2,9 @@
 description: Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como criar e testar um template de transformação de mensagem.
 title: Criar e testar um modelo de transformação de mensagem
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para
 
 Para **criar e testar um template de transformação de mensagem** entre o schema de target no Adobe Experience Platform e o formato de mensagem compatível com seu destino, use o *Ferramenta de criação de modelo* mais adiante.  Leia mais sobre a transformação de dados entre o schema de origem e de destino no [documento de formato de mensagem](./message-format.md#using-templating).
 
-A ilustração abaixo mostra como a criação e o teste de um modelo de transformação de mensagem se encaixa no [fluxo de trabalho de configuração de destino](./configure-destination-instructions.md) no Destination SDK:
+A ilustração abaixo mostra como a criação e o teste de um modelo de transformação de mensagem se encaixa no [fluxo de trabalho de configuração de destino](./configure-destination-instructions.md) No Destination SDK:
 
 ![Gráfico de onde a etapa criar modelo se encaixa no fluxo de trabalho de configuração de destino](./assets/create-template-step.png)
 
@@ -40,6 +40,7 @@ Antes de estar pronto para criar o template, complete as etapas abaixo:
    * Use `maxUsersPerRequest` com um valor maior que um se você quiser que uma chamada de API para seu destino inclua vários perfis, juntamente com suas qualificações de segmento, identidades e atributos de perfil.
 2. [Criar uma configuração de destino](./destination-configuration-api.md#create) e adicione a ID da configuração do servidor de destino em `destinationDelivery.destinationServerId`.
 3. [Obter a ID da configuração de destino](./destination-configuration-api.md#retrieve-list) que você acabou de criar, para que possa usá-lo na ferramenta de criação de modelo.
+4. Entender [quais funções e filtros você pode usar](./supported-functions.md) no template de transformação de mensagem.
 
 ## Como usar a API de modelo de amostra e a API de modelo de renderização para criar um modelo para o seu destino {#iterative-process}
 

@@ -4,9 +4,9 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como para enviar campanhas de email promocionais.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '388'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ O Adobe Experience Platform oferece suporte para os seguintes destinos de market
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [Marketing Cloud Salesforce](salesforce-marketing-cloud.md)
+* [SendGrid](sendgrid.md)
 
 ## Conectar-se a um novo destino de marketing por email {#connect-destination}
 

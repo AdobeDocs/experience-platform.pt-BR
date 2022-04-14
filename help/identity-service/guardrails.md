@@ -2,9 +2,10 @@
 keywords: Experience Platform, identidade, serviço de identidade, solução de problemas, medidas de proteção, diretrizes, limite;
 title: Garantias do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e de taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 3%
 
 ---
@@ -30,7 +31,7 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 
 | Grade de Proteção | Limite | Notas |
 | --- | --- | --- |
-| Número de identidades em um gráfico | 150 | O gráfico de identidade não será atualizado assim que o limite for atingido. |
+| Número de identidades em um gráfico | 150 | O limite é aplicado no nível da sandbox. O gráfico de identidade não será atualizado assim que o limite for atingido. |
 | Número de identidades em um registro XDM | 20 | O número mínimo de registros XDM necessários é dois. |
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que podem ser criados. |
 | Número de gráficos | Nenhum | Não há limites para o número de gráficos de identidade que você pode criar. |

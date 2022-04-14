@@ -4,10 +4,10 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 9%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -52,6 +52,7 @@ ht-degree: 9%
       * [Extensão Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extensão Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extensão de ramificação](./catalog/advertising/branch.md)
+      * [(Beta) Conexão de critério](./catalog/advertising/criteo.md)
       * [Extensão DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extensão facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Extensão Flashtalk OneTag](./catalog/advertising/flashtalking.md)
@@ -114,7 +115,7 @@ ht-degree: 9%
    * Extensões de tag {#launch-extensions}
       * [Visão geral da extensão de tag](./catalog/launch-extensions/overview.md)
    * Destinos de envolvimento móvel {#mobile-engagement}
-      * [Visão geral dos destinos de envolvimento do Mobile](./catalog/mobile-engagement/overview.md)
+      * [Visão geral dos destinos de envolvimento móvel](./catalog/mobile-engagement/overview.md)
       * [Conexão de atributos de aeróstato](./catalog/mobile-engagement/airship-attributes.md)
       * [Ligação de Etiquetas de Avião](./catalog/mobile-engagement/airship-tags.md)
       * [Ligação de brasa](./catalog/mobile-engagement/braze.md)

@@ -5,9 +5,9 @@ seo-title: Advertising destinations overview
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe públicos-alvo pseudônimos nessas plataformas.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,12 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 ### Conexões
 
+* [(Beta) Conexão de critério](criteo.md)
 * [Conexão Google Display &amp; Video 360](google-dv360.md)
-* [Conexão com o Google Ads](google-ads-destination.md)
+* [Conexão Google Ads](google-ads-destination.md)
 * [Conexão com o Google Ad Manager](google-ad-manager.md)
-* [Conexão de correspondência do cliente do Google](google-customer-match.md)
-* [Conexão do Microsoft Bing](bing.md)
+* [Conexão Google Customer Match](google-customer-match.md)
+* [Conexão Microsoft Bing](bing.md)
 * [Conexão da Lista de clientes do pinterest](pinterest.md)
 * [A conexão com o Trade Desk](tradedesk.md)
 * [Dados do Yahoo/VerizonX](datax.md)
@@ -48,11 +49,11 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 * [Extensão facebook Pixel](facebook-pixel.md)
 * [Extensão Flashtalk OneTag](flashtalking.md)
 * [Extensão do Google Ads](google-ads-extension.md)
-* [Extensão gtag do Google](gtag-advertising.md)
+* [Extensão de tag do Google](gtag-advertising.md)
 * [Extensão de tag do linkedIn Insight](linkedin.md)
 * [Extensão de rastreamento de conversão do pinterest](pinterest-extension.md)
 * [Extensão de tag do site universal do twitter](twitter-uwt.md)
 
 ## Conectar-se a um novo destino de publicidade {#connect-destination}
 
-Para enviar segmentos para destinos de publicidade de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar segmentos para destinos de publicidade de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.

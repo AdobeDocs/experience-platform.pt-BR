@@ -5,9 +5,9 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2392'
 ht-degree: 3%
 
 ---
@@ -21,10 +21,14 @@ O documento a seguir descreve as diferentes entradas e saídas utilizadas em [!D
 O Attribution AI funciona analisando os seguintes conjuntos de dados para calcular pontuações algorítmicas:
 
 - Conjuntos de dados do Adobe Analytics usando o [Conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Conjunto de dados Evento de experiência (EE)
-- Conjunto de dados CEE (Evento de experiência do consumidor)
+- Conjuntos de dados do Evento de experiência (EE) em geral do esquema Adobe Experience Platform
+- Conjuntos de dados CEE (Consumer Experience Event)
 
-É possível adicionar vários conjuntos de dados de fontes diferentes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Para saber mais sobre como adicionar vários conjuntos de dados, visite o [Guia do usuário do Attribution AI](./user-guide.md#identity).
+Agora é possível adicionar vários conjuntos de dados de diferentes fontes com base na variável **mapa de identidade** (campo) se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Após selecionar uma identidade e um namespace, as métricas de integridade da coluna de ID são exibidas, indicando o volume de dados que estão sendo compilados. Para saber mais sobre como adicionar vários conjuntos de dados, visite o [Guia do usuário do Attribution AI](./user-guide.md#identity).
+
+As informações do canal nem sempre são mapeadas por padrão. Em alguns casos, se mediaChannel (campo) estiver em branco, você não poderá &quot;continuar&quot; até mapear um campo para mediaChannel, pois é uma coluna obrigatória. Se o canal for detectado no conjunto de dados, ele será mapeado para mediaChannel por padrão. As outras colunas, como **tipo de mídia** e **ação de mídia** ainda são opcionais.
+
+Depois de mapear o campo de canal, continue para a etapa &quot;Definir eventos&quot;, onde é possível selecionar eventos de conversão, eventos de ponto de contato e escolher campos específicos em conjuntos de dados individuais.
 
 >[!IMPORTANT]
 >
@@ -34,11 +38,9 @@ Para obter mais detalhes sobre a configuração da variável [!DNL Consumer Expe
 
 Nem todas as colunas na [!DNL Consumer Experience Event] (CEE) são obrigatórios para o Attribution AI.
 
->[!NOTE]
->
-> As 9 colunas a seguir são obrigatórias, as colunas adicionais são opcionais, mas recomendadas/necessárias, se você quiser usar os mesmos dados para outras soluções de Adobe, como [!DNL Customer AI] e [!DNL Journey AI].
+Você pode configurar os pontos de contato usando qualquer campo recomendado abaixo no esquema ou no conjunto de dados selecionado.
 
-| Colunas obrigatórias | Necessário para |
+| Colunas recomendadas | Necessário para |
 | --- | --- |
 | Campo de identidade primária | Ponto de contato / Conversão |
 | Carimbo de data e hora | Ponto de contato / Conversão |
@@ -52,17 +54,11 @@ Nem todas as colunas na [!DNL Consumer Experience Event] (CEE) são obrigatório
 
 Normalmente, a atribuição é executada em colunas de conversão, como pedido, compras e check-outs em &quot;comércio&quot;. As colunas para &quot;canal&quot; e &quot;marketing&quot; são usadas para definir pontos de contato para o Attribution AI (por exemplo, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Para obter resultados e insights ideais, é altamente recomendável incluir o máximo possível de colunas de conversão e ponto de contato. Além disso, você não está limitado apenas às colunas acima. Você pode incluir qualquer outra coluna recomendada ou personalizada como conversão ou definição de ponto de contato.
 
+Os conjuntos de dados de eventos de experiência (EE) não precisam ter combinações de canal e marketing explicitamente, desde que as informações de canal ou campanha relevantes para configurar um ponto de contato estejam presentes em um dos campos mixin ou pass through .
+
 >[!TIP]
 >
 >Se você estiver usando dados do Adobe Analytics no esquema CEE, as informações do ponto de contato do Analytics normalmente serão armazenadas em `channel.typeAtSource` (por exemplo, `channel.typeAtSource = 'email'`).
-
-As colunas abaixo não são necessárias, mas é recomendável incluí-las no esquema CEE se você tiver as informações disponíveis.
-
-**Colunas recomendadas adicionais:**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Dados históricos {#data-requirements}
 
@@ -158,7 +154,6 @@ Você pode visualizar o caminho para suas pontuações brutas na interface do us
 Em seguida, selecione um campo dentro da variável **[!UICONTROL Estrutura]** da interface do usuário, a **[!UICONTROL Propriedades do campo]** será aberta. Within **[!UICONTROL Propriedades do campo]** é o campo de caminho que mapeia suas pontuações brutas.
 
 ![Escolha um esquema](./images/input-output/field_properties.png)
-
 
 ### Pontuações de atribuição agregadas {#aggregated-attribution-scores}
 

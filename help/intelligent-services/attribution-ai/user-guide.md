@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2331'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ No [!DNL Adobe Experience Platform] UI, selecione **[!UICONTROL Serviços]** no 
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
-A página Attribution AI service é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência com que a instância é executada e o status da última atualização.
+The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update.
 
-Você pode encontrar a variável **[!UICONTROL Total de eventos de conversão classificados]** localizada no lado inferior direito da **[!UICONTROL Criar instância]** contêiner. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI no ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
+You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI no ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
 
 ![total de conversões](./images/user-guide/total_conversions.png)
 
@@ -84,19 +84,19 @@ Na visualização do conjunto de dados, há um valor percentual de integridade d
 
 ### Selecionar uma identidade {#identity}
 
-Para que vários conjuntos de dados se associem, você deve selecionar um tipo de identidade (também conhecido como &quot;namespace de identidade&quot;) e um valor de identidade dentro desse namespace. Se você atribuiu mais de um campo como uma identidade dentro do esquema sob o mesmo namespace, todos os valores de identidade atribuídos serão exibidos na lista suspensa de identidade anexada pelo namespace, como `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+Agora é possível unir vários conjuntos de dados uns aos outros com base no mapa de identidade (campo ). Você deve selecionar um tipo de identidade (também conhecido como &quot;namespace de identidade&quot;) e um valor de identidade dentro desse namespace. Se você atribuiu mais de um campo como uma identidade dentro do esquema sob o mesmo namespace, todos os valores de identidade atribuídos serão exibidos na lista suspensa de identidade anexada pelo namespace, como `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
->O mesmo tipo de identidade (namespace) deve ser usado para cada conjunto de dados selecionado. Uma marca de seleção verde aparece ao lado do tipo de identidade na coluna de identidade, indicando que os conjuntos de dados são compatíveis. Por exemplo, ao usar o namespace de Telefone e `mobilePhone.number` como o identificador, todos os identificadores dos conjuntos de dados restantes devem conter e usar o namespace Phone .
+>The same identity type (namespace) must be used for every dataset you select. Uma marca de seleção verde aparece ao lado do tipo de identidade na coluna de identidade, indicando que os conjuntos de dados são compatíveis. For example, when using the Phone namespace and `mobilePhone.number` as the identifier, all identifiers for the remaining datasets must contain and use the Phone namespace.
 
-Para selecionar uma identidade, selecione o valor sublinhado localizado na coluna de identidade. A opção selecionar um provedor de identidade é exibida.
+To select an identity, select the underlined value located in the identity column. A opção selecionar um provedor de identidade é exibida.
 
-![selecionar o mesmo namespace](./images/user-guide/identity-type.png)
+![select same namespace](./images/user-guide/aai-identity-map.png)
 
-Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. Isso significa que você selecionaria `EMAIL (personalEmail.address)` como sua identidade.
+Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. This means you would select `EMAIL (personalEmail.address)` as your identity.
 
-![Chave do conjunto de dados não selecionada](./images/user-guide/select-identity.png)
+![Chave do conjunto de dados não selecionada](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -122,17 +122,19 @@ Há três tipos diferentes de dados de entrada usados para definir eventos:
 
 ### Definir eventos de conversão {#define-conversion-events}
 
-Para definir um evento de conversão, é necessário dar um nome ao evento e selecionar o tipo de evento selecionando a variável **Inserir Nome do Campo** menu suspenso.
+In order to define a conversion event, you need to give the event a name and select the event type by selecting the dataset and field from the **Select a dataset and field** dropdown menu.
 
-![lista suspensa sim](./images/user-guide/conversion_event_2.png)
+![lista suspensa sim](./images/user-guide/define-conversion-events.png)
 
-Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. A segunda lista suspensa é usada para fornecer mais contexto ao evento por meio do uso de operações . Para este evento de conversão, a operação padrão *existe* é usada.
+Once an event is selected, a new dropdown appears to its right. A segunda lista suspensa é usada para fornecer mais contexto ao evento por meio do uso de operações . Para este evento de conversão, a operação padrão *existe* é usada.
 
 >[!NOTE]
 >
 >Uma string abaixo de sua *nome da conversão* é atualizada à medida que você define seu evento.
 
 ![sem lista suspensa](./images/user-guide/conversion_event_1.png)
+
+Em seguida, é possível selecionar um conjunto de dados combinado que é gerado ao combinar todos os conjuntos de dados de entrada na etapa anterior. Como alternativa, você pode selecionar uma coluna com base em conjuntos de dados individuais na **Selecionar um conjunto de dados e um campo** menu suspenso.
 
 O **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar a variável **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** botões para fornecer mais contexto.
 
@@ -166,23 +168,23 @@ Para o objetivo deste ponto de contato, selecione **igual**.
 
 ![etapa 1](./images/user-guide/touchpoint_step1.png)
 
-Depois que um operador para um ponto de contato é selecionado, *Inserir Valor do Campo* é disponibilizada. Os valores suspensos para *Inserir Valor do Campo* preencha com base no operador e no valor do ponto de contato selecionado anteriormente. Se um valor não for preenchido na lista suspensa, é possível digitar esse valor manualmente. Selecione a lista suspensa e selecione **CLIQUE EM**.
+Depois que um operador para um ponto de contato é selecionado, *Inserir Valor do Campo* é disponibilizada. Os valores suspensos para *Inserir Valor do Campo* preencha com base no operador e no valor do ponto de contato selecionado anteriormente. If a value does not populate in the dropdown, you can type that value in manually. Select the dropdown and select **CLICK**.
 
 >[!NOTE]
 >
->Os operadores &quot;exists&quot; e &quot;not exists&quot; não têm valores de campo associados a eles.
+>The operators &quot;exists&quot; and &quot;not exists&quot; do not have field values associated with them.
 
 ![lista suspensa de pontos de contato](./images/user-guide/touchpoint_dropdown.png)
 
-O **Adicionar evento** e **Adicionar grupo** botões são usados para definir ainda mais o ponto de contato. Devido à natureza complexa dos pontos de contato, não é incomum ter vários eventos e grupos para um único ponto de contato.
+O **Adicionar evento** e **Adicionar grupo** botões são usados para definir ainda mais o ponto de contato. Due to the complex nature surrounding touchpoints, it is not uncommon to have multiple events and groups for a single touchpoint.
 
-Quando selecionado, **Adicionar evento** permite a adição de campos adicionais. selecione o **x** para remover um evento que foi adicionado.
+Quando selecionado, **Adicionar evento** permite a adição de campos adicionais. select the **x** to remove an event that has been added.
 
 ![adicionar evento](./images/user-guide/touchpoint_add_event.png)
 
-Selecionar **Adicionar grupo** oferece a opção de criar campos adicionais separados do original. Com a adição de grupos, um azul *E* é exibido. Selecionar **E** para alterar o parâmetro , o novo parâmetro &quot;Ou&quot; é usado para definir vários caminhos bem-sucedidos. Este ponto de contato específico tem apenas um caminho bem-sucedido, portanto, &quot;Ou&quot; não é necessário.
+Selecting **Add group** gives you the option to create additional fields separate from the original. Com a adição de grupos, um azul *E* é exibido. Select **And** to change the parameter, the new parameter &quot;Or&quot; is used to define multiple successful paths. Este ponto de contato específico tem apenas um caminho bem-sucedido, portanto, &quot;Ou&quot; não é necessário.
 
-![visão geral do ponto de contato](./images/user-guide/add_group_touchpoint.png)
+![touchpoint overview](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
@@ -190,11 +192,11 @@ Selecionar **Adicionar grupo** oferece a opção de criar campos adicionais sepa
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Você pode adicionar pontos de contato adicionais selecionando **Adicionar ponto de contato** e repetir o processo acima.
+You can add additional touchpoints by selecting **Add touchpoint** and repeating the process above.
 
 ![adicionar ponto de contato](./images/user-guide/add_touchpoint.png)
 
-Quando terminar de definir todos os pontos de contato necessários, role para cima e selecione **Próximo** no canto superior direito para prosseguir para a etapa final.
+Once you have finished defining all necessary touchpoints, scroll up and select **Next** in the top-right corner to proceed to the final step.
 
 ![definição concluída](./images/user-guide/define_event_next.png)
 
@@ -222,11 +224,11 @@ Para alterar a hora do dia em que deseja que a pontuação ocorra, selecione o �
 
 ### Colunas adicionais do conjunto de dados de pontuação (opcional)
 
-Por padrão, um conjunto de dados de pontuação é criado para cada instância de serviço em um esquema padrão. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e Pontos de contato à saída do conjunto de dados de pontuação. Comece selecionando colunas do seu conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo o botão esquerdo do mouse pressionado sobre o ícone do hambúrguer.
+By default, a score dataset is created for each service instance in a standard schema. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e Pontos de contato à saída do conjunto de dados de pontuação. Comece selecionando colunas do seu conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo o botão esquerdo do mouse pressionado sobre o ícone do hambúrguer.
 
-![pontuar adição da coluna do conjunto de dados](./images/user-guide/Add-score-dataset.png)
+![score dataset column addition](./images/user-guide/Add-score-dataset.png)
 
-### Modelagem com base na região (opcional) {#region-based-modeling-optional}
+### Region-based modeling (optional) {#region-based-modeling-optional}
 
 Os comportamentos dos seus clientes podem diferir significativamente por país e região geográfica. Para empresas globais, usar modelos baseados em país ou em região pode aumentar a precisão da atribuição. Cada região adicionada cria um novo modelo com os dados dessa região.
 
@@ -266,6 +268,6 @@ Ao seguir este tutorial, você criou com êxito uma instância de serviço no At
 
 ## Recursos adicionais
 
-O vídeo a seguir descreve um fluxo de trabalho completo para criar uma nova instância no Attribution AI.
+The following video outlines an end-to-end workflow for creating a new instance in Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

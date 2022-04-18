@@ -2,9 +2,9 @@
 description: O Adobe Experience Platform Destination SDK é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para o Experience Platform para fornecer dados de público-alvo e de perfil ao seu terminal, com base em dados e formatos de autenticação de sua escolha. As configurações são armazenadas no Experience Platform e podem ser recuperadas por meio da API para obter atualizações adicionais.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '703'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ O processo para configurar seu destino no Experience Platform é descrito abaixo
 2. [Solicitação para provisionar uma sandbox de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e ative a permissão de criação de destino.
 3. [Crie sua integração](./configure-destination-instructions.md) seguindo a documentação do produto.
 4. [Testar sua integração](./test-destination.md) seguindo a documentação do produto.
-5. [Enviar sua integração](./submit-destination.md) para análise do Adobe (o tempo de resposta padrão é de 5 dias úteis).
+5. [Enviar sua integração](./submit-destination.md) para análise do Adobe (o tempo de resposta padrão é de cinco dias úteis).
 6. Se você for um ISV ou SI, crie uma [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto no Experience League para o seu destino.
 7. Depois de aprovada pelo Adobe, sua integração será exibida na [Catálogo de Experience Platform](/help/destinations/catalog/overview.md).
 8. Se quiser atualizar sua integração, siga o mesmo processo.

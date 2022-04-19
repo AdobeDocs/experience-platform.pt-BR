@@ -1,14 +1,14 @@
 ---
-keywords: 'publicidade; critérios; '
+keywords: publicidade; critérios;
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais avançadas para todos os consumidores através da Internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) Conexão de critério
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada por Criteo. No momento, esse é um produto beta. Para quaisquer consultas ou pedidos de atualização, contacte diretamente o Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Esta página de documentação foi criada por Criteo. No momento, esse é um produto beta e a funcionalidade está sujeita a alterações. Para quaisquer consultas ou pedidos de atualização, contacte diretamente o Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 O Criteo capacita a publicidade confiável e impactante para trazer experiências mais avançadas para todos os consumidores através da Internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 
@@ -24,7 +24,11 @@ O Criteo capacita a publicidade confiável e impactante para trazer experiência
 
 * Você precisa ter uma conta de usuário de administrador em [Centro de gerenciamento de critérios](https://marketing.criteo.com).
 * Você precisará da ID do anunciante do Criteo (entre em contato com o Criteo se não tiver essa ID).
-* O critério aceita apenas o SHA-256 e emails de texto sem formatação (a ser transformado em SHA-256 antes de enviar). Não envie PII (Informações pessoais identificáveis, como nomes ou números de telefone).
+
+## Limitações {#limitations}
+
+* No momento, o Critério não oferece suporte à remoção de usuários de públicos-alvo.
+* Apenas aceita o critério [!DNL SHA-256]Emails com hash e texto sem formatação (a ser transformado em [!DNL SHA-256] antes de enviar). Não envie PII (Informações pessoais identificáveis, como nomes ou números de telefone).
 
 ![Pré-requisitos](../../assets/catalog/advertising/criteo/prerequisites.png)
 

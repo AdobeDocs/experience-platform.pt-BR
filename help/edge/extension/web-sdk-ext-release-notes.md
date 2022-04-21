@@ -2,16 +2,23 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '1290'
-ht-degree: 48%
+source-wordcount: '1313'
+ht-degree: 47%
 
 ---
 
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
 Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte o [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versão 2.11.0 - 22 de abril de 2022
+
+* Desempenho aprimorado da interface do usuário de tags.
+* Adicione seletores de sandbox à configuração de extensão de datastreams.
+
+Contém a versão 2.10.0 da Biblioteca do SDK da Web da Adobe Experience Platform.
 
 ## Versão 2.10.0 - 10 de março de 2022
 

@@ -5,7 +5,7 @@ title: Visão geral da interface do usuário do Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 8236806efae6a4f570c3dd2ef78e80184e189b84
+source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 2%
@@ -164,7 +164,7 @@ O Offer Decisioning é um serviço de aplicativos integrado à Adobe Experience 
 
 ### [!UICONTROL Administração]
 
-A interface do usuário da Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre o uso de licenças da organização, conforme capturado durante um instantâneo diário. Acesse este painel selecionando **[!UICONTROL Uso da licença]** na navegação. Para saber mais sobre o painel de uso da licença, visite o [guia do painel de uso de licenças](license-usage-dashboard.md).
+A interface do usuário da Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre o uso de licenças da organização, conforme capturado durante um instantâneo diário. Acesse este painel selecionando **[!UICONTROL Uso da licença]** na navegação. Para saber mais sobre o painel de uso da licença, visite o [guia do painel de uso de licenças](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >

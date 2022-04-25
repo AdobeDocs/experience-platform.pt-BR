@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
+source-git-commit: 4cc1c164ca7caa0b64859cf67a4cc206bc6404d7
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1304'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de pagamentos e
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter um [!DNL PayPal] ID de conexão básica. Caso não tenha essa ID, consulte as etapas sobre como [crie um [!DNL PayPal] ligação base](../create/payments/paypal.md) antes de tentar executar este tutorial.
+>Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com qualquer uma das seguintes fontes de pagamento na Plataforma:<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
 
 ## Introdução
 

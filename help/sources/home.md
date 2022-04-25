@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,8 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de auto
 
 O Experience Platform fornece suporte para assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [[!DNL PayPal] conector](connectors/payments/paypal.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md)
+- [[!DNL Square]](connectors/payments/square.md)
 
 ### Streaming {#streaming}
 

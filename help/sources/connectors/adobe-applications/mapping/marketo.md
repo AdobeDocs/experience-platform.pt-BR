@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform, home, tópicos populares, Marketo Engage, marketing, engajamento, Marketo, mapeamento
 solution: Experience Platform
-title: Mapeamento de campos para a fonte de Marketo Engage
+title: Mapping Fields for the Marketo Engage Source
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 8%
@@ -14,21 +14,21 @@ ht-degree: 8%
 
 # [!DNL Marketo Engage] mapeamentos de campo
 
-As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conjuntos de dados e seus campos correspondentes do Experience Data Model (XDM).
+The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 
 >[!TIP]
 >
->Todos [!DNL Marketo] conjuntos de dados, exceto `Activities` suporte agora `isDeleted`. Os seus fluxos de dados existentes incluirão automaticamente `isDeleted`, mas somente assimilará o sinalizador para dados assimilados recentemente. Se quiser aplicar o sinalizador a todos os seus dados históricos, pare os fluxos de dados existentes e recrie-os com o novo mapeamento. Observe que, se você remover `isDeleted`, você não terá mais acesso à funcionalidade. É importante que o mapeamento seja mantido depois de ser preenchido automaticamente.
+>Todos [!DNL Marketo] conjuntos de dados, exceto `Activities` suporte agora `isDeleted`. Your existing dataflows will automatically include `isDeleted`, but will only ingest the flag for newly ingested data. Se quiser aplicar o sinalizador a todos os seus dados históricos, pare os fluxos de dados existentes e recrie-os com o novo mapeamento. Observe que, se você remover `isDeleted`, você não terá mais acesso à funcionalidade. É importante que o mapeamento seja mantido depois de ser preenchido automaticamente.
 
 ## Atividades {#activities}
 
-| Conjunto de dados de origem | Campo de destino XDM | Notas |
+| Source dataset | XDM target field | Notas |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Primary identity. The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
@@ -99,13 +99,13 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 ## Programas {#programs}
 
-| Conjunto de dados de origem | Campo de destino XDM | Notas |
+| Conjunto de dados de origem | XDM target field | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Primary identity. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. The values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be automatically replaced. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -126,14 +126,14 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 {style=&quot;table-layout:auto&quot;}
 
-## Associações do programa {#program-memberships}
+## Program memberships {#program-memberships}
 
-| Conjunto de dados de origem | Campo de destino XDM | Notas |
+| Conjunto de dados de origem | XDM target field | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Primary identity. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relação |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relação |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -159,7 +159,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 ## Empresas {#companies}
 
-| Conjunto de dados de origem | Campo de destino XDM | Notas |
+| Source dataset | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
@@ -192,7 +192,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` será substituído como parte da API Explorar. |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
 | `id` | `marketingListKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `name` | `marketingListName` |
@@ -203,16 +203,16 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 {style=&quot;table-layout:auto&quot;}
 
-## Associações da lista estática {#static-list-memberships}
+## Static list memberships {#static-list-memberships}
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
 | `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relação |
-| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relação |
+| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relation |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
@@ -222,14 +222,14 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 >[!IMPORTANT]
 >
->O conjunto de dados de contas nomeadas é necessário somente com o recurso de ABM (Account-Based Marketing, marketing baseado em conta) da Marketo. Se você não estiver usando o ABM, não precisará configurar mapeamentos para contas nomeadas.
+>O conjunto de dados de contas nomeadas é necessário somente com o recurso de ABM (Account-Based Marketing, marketing baseado em conta) da Marketo. If you are not using ABM, then you do not need to set up mappings for named accounts.
 
-| Conjunto de dados de origem | Campo de destino XDM | Notas |
+| Source dataset | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidade primária. The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -248,7 +248,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 {style=&quot;table-layout:auto&quot;}
 
-## Oportunidades {#opportunities}
+## Opportunities {#opportunities}
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -287,9 +287,9 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído como parte da API Explorar. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Identidade primária. The value for `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
 | `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relação |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relação |
@@ -303,7 +303,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 ## Pessoas {#persons}
 
-| Conjunto de dados de origem | Campo de destino XDM | Notas |
+| Conjunto de dados de origem | XDM target field | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
@@ -360,4 +360,4 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 
 ## Próximas etapas
 
-Ao ler este documento, você tem insight sobre a relação de mapeamento entre seus [!DNL Marketo] conjuntos de dados e seus campos XDM correspondentes. Veja o tutorial em [criar um [!DNL Marketo] conexão de origem](../../../tutorials/ui/create/adobe-applications/marketo.md) para concluir o [!DNL Marketo] fluxo de dados.
+Ao ler este documento, você tem insight sobre a relação de mapeamento entre seus [!DNL Marketo] conjuntos de dados e seus campos XDM correspondentes. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] dataflow.

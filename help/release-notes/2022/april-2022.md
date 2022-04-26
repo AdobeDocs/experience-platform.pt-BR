@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
-source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
+source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 4%
+source-wordcount: '1473'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 4%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Fluxos de dados](#dataflows)
+- [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
+- [Real-time Customer Data Platform Edição B2B](#B2B)
+- [Fontes](#sources)
 
 ## Fluxos de dados {#dataflows}
 
@@ -30,6 +33,19 @@ Os fluxos de dados são uma representação de tarefas que movem dados pela plat
 | Painel de segmentos | Agora você pode usar o painel de monitoramento para monitorar os fluxos de dados para segmentos. Para saber mais, leia o guia em [monitoramento de segmentos na interface do usuário](../../dataflows/ui/monitor-segments.md) |
 
 Para obter informações mais gerais sobre fluxos de dados, consulte [visão geral dos fluxos de dados](../../dataflows/home.md). Para saber mais sobre a segmentação, consulte [visão geral da segmentação](../../segmentation/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] O permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Suporte para fonte Adobe Analytics | A fonte Adobe Analytics agora é compatível com os recursos de Preparação de dados, permitindo mapear os dados do conjunto de relatórios do Analytics para um esquema XDM de destino ao criar um fluxo de dados. Veja o tutorial em [criação de uma conexão de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obter mais informações. |
+| Suporte para importar regras de mapeamento existentes | Agora é possível importar regras de mapeamento de um fluxo de dados existente para acelerar suas configurações de fluxo de dados e limitar erros. Veja o tutorial em [importação de regras de mapeamento existentes](../../data-prep/ui/mapping.md) para obter mais informações. |
+
+Para obter mais informações sobre [!DNL Data Prep]consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -86,3 +102,30 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
 
+### Real-time Customer Data Platform Edição B2B {#B2B}
+
+Baseada na Real-time Customer Data Platform (CDP em tempo real), a CDP B2B Edition em tempo real é projetada especificamente para profissionais de marketing que operam em um modelo de serviço de negócios para empresas. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Suporte para `isDeleted` funcionalidade | Todos [!DNL Marketo] conjuntos de dados, exceto `Activities` agora oferecem suporte para `isDeleted` mapeamento. O novo mapeamento é adicionado automaticamente aos seus fluxos de dados B2B existentes. Você pode usar o `isDeleted` mapeamento para filtrar registros que foram excluídos para que seus dados no [!DNL Data Lake] O é consistente com os dados de origem. Consulte a [[!DNL Marketo] guia de campos de mapeamento](../../sources/connectors/adobe-applications/mapping/marketo.md) para obter mais informações sobre `isDeleted`. |
+
+Para saber mais sobre o Real-time Customer Data Platform B2B Edition, consulte o [Visão geral do B2B](../../rtcdp/b2b-overview.md).
+
+## Fontes {#sources}
+
+A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+
+O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Suporte para [!DNL OneTrust Integration] | Agora você pode usar o [!DNL OneTrust Integration] fonte para assimilar dados de consentimento e preferências da [!DNL OneTrust] para a Platform. Consulte a documentação em [criar um [!DNL OneTrust Integration] conexão de origem](../../sources/connectors/consent-and-preferences/onetrust.md) para obter mais informações. |
+| Suporte para [!DNL Square] | Agora você pode usar o [!DNL Square] origem para assimilar dados de pagamentos do seu [!DNL Square] para a Platform. |
+| Suporte para excluir fluxos de dados de atributos do cliente | Agora é possível excluir os fluxos de dados criados com o conector de origem dos Atributos do cliente. |
+
+Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).

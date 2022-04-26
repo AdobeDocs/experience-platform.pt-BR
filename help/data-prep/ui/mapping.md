@@ -3,9 +3,9 @@ keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arqu
 title: Guia da interface do usuário de preparação de dados
 description: Este documento fornece instruções sobre como usar funções de preparação de dados na interface do usuário da plataforma para mapear arquivos CSV para um esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
@@ -168,6 +168,34 @@ O **[!UICONTROL Criar campo calculado]** será exibido. A caixa de diálogo à e
 É possível adicionar campos, funções e operadores manualmente usando o editor de expressão no centro. Selecione o editor para começar a criar uma expressão. Depois de concluir, selecione **[!UICONTROL Salvar]** para continuar.
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+
+### Importar mapeamento {#import}
+
+Você pode reutilizar o mapeamento de um fluxo de dados existente para reduzir o tempo de configuração manual da assimilação de dados e limitar os erros. Selecionar **[!UICONTROL Importar mapeamento]** para reutilizar um mapeamento existente.
+
+![import-mapping](../images/ui/mapping/import-mapping.png)
+
+O [!UICONTROL Importar mapeamento] for exibida, fornecendo uma lista de fluxos de dados para escolha.
+
+Selecione o ícone de visualização para visualizar o mapeamento do fluxo de dados selecionado.
+
+![mapeamento de lista](../images/ui/mapping/list-mapping.png)
+
+A janela de pré-visualização permite inspecionar o mapeamento existente antes de importar para o fluxo de dados. Depois de verificar o mapeamento, você pode selecionar **[!UICONTROL Voltar]** para retornar à lista de fluxos de dados e inspecionar outro conjunto de mapeamento, ou você pode selecionar **[!UICONTROL Selecionar]** para continuar.
+
+![mapeamento de visualização](../images/ui/mapping/preview-mapping.png)
+
+Como alternativa, você pode selecionar o mapeamento que deseja importar da janela de lista de fluxos de dados. Selecione o fluxo de dados que contém o mapeamento que deseja importar e selecione **[!UICONTROL Selecionar]** para continuar.
+
+![select-mapping](../images/ui/mapping/select-mapping.png)
+
+A interface é atualizada com o mapeamento importado.
+
+>[!NOTE]
+>
+>Qualquer conjunto de mapeamento existente que você estabeleça ou para as recomendações de mapeamento do ML será substituído pelo mapeamento importado de um fluxo de dados existente.
+
+![mapeamento importado](../images/ui/mapping/mapping-imported.png)
 
 Selecionar **[!UICONTROL Visualizar dados]** para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
@@ -46,11 +46,17 @@ Em **[!UICONTROL Aplicativos Adobe]** categoria , selecione **[!UICONTROL Adobe 
 
 ### Selecionar dados
 
-O **[!UICONTROL Adicionar dados de origem do Analytics]** será exibida. Selecionar **[!UICONTROL Conjunto de relatórios]** para começar a criar uma conexão de origem para os dados do Conjunto de relatórios do Analytics e, em seguida, selecione o Conjunto de relatórios que deseja assimilar. Os Conjuntos de relatórios que não podem ser selecionados já foram assimilados nessa sandbox ou em uma sandbox diferente. Selecionar **[!UICONTROL Próximo]** para continuar.
+O **[!UICONTROL Adicionar dados de origem do Analytics]** fornece uma lista de [!DNL Analytics] dados do conjunto de relatórios para criar uma conexão de origem com o .
+
+Um conjunto de relatórios pode ser assimilado usando apenas um único fluxo de dados ativo. Ele não pode ser usado em vários fluxos de dados. Além disso, um conjunto de relatórios deve pertencer à mesma região da sandbox da Platform na qual a conexão de origem está sendo criada. Um conjunto de relatórios que não é selecionável já foi assimilado nessa sandbox ou em uma sandbox diferente.
+
+Várias conexões vinculadas podem ser feitas para trazer vários conjuntos de relatórios para a mesma sandbox. Se os conjuntos de relatórios tiverem esquemas diferentes para variáveis (como eVars ou eventos), eles deverão ser mapeados para campos específicos nos grupos de campos personalizados e evitar conflitos de dados usando [Preparação de dados](../../../../../data-prep/ui/mapping.md). Os conjuntos de relatórios só podem ser adicionados a uma única sandbox.
 
 >[!NOTE]
 >
->Várias conexões de entrada podem ser feitas para trazer vários Conjuntos de relatórios, no entanto, apenas um Conjunto de relatórios pode ser usado com o Real-time Customer Data Platform de cada vez.
+>Os dados de vários conjuntos de relatórios podem ser ativados para o Perfil de dados do cliente em tempo real somente se não houver conflitos de dados, como duas propriedades personalizadas (eVars, listas e props) que tenham um significado diferente, não podem ser mapeadas para o mesmo atributo no XDM.
+
+Para criar um [!DNL Analytics] conexão de origem, selecione um conjunto de relatórios e depois selecione **[!UICONTROL Próximo]** para continuar.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ O **[!UICONTROL Adicionar dados de origem do Analytics]** será exibida. Selecio
 
 >[!IMPORTANT]
 >
->Suporte à Preparação de dados para o [!DNL Analytics] no momento, a fonte está em beta. O recurso e a documentação estão sujeitos a alterações.
+>As transformações da Preparação de dados podem adicionar latência ao fluxo de dados geral. A latência adicional adicionada varia com base na complexidade da lógica de transformação.
 
 Antes de mapear a [!DNL Analytics] para direcionar o esquema XDM, primeiro você deve selecionar se está usando um esquema padrão ou um esquema personalizado.
 

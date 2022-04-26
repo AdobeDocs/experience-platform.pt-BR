@@ -5,9 +5,9 @@ title: Definir campos XDM na interface do usuário
 description: Saiba como definir campos XDM na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1374'
 ht-degree: 4%
 
 ---
@@ -26,25 +26,30 @@ Embora não seja necessário para este guia, é recomendável seguir também o t
 
 Para definir novos campos XDM na interface do usuário, primeiro você deve abrir um schema no [!DNL Schema Editor]. Dependendo dos esquemas que estão disponíveis no momento no [!DNL Schema Library], você pode optar por [criar um novo schema](../resources/schemas.md#create) ou [selecionar um esquema existente para editar](../resources/schemas.md#edit).
 
-Assim que tiver o [!DNL Schema Editor] abra o painel à esquerda para selecionar a classe ou grupo de campos para a qual deseja definir campos. Se o recurso for um recurso personalizado definido pela organização, os controles para adicionar ou editar campos serão exibidos na tela. Esses controles são exibidos ao lado do nome do schema, bem como quaisquer campos do tipo de objeto que foram definidos na classe ou grupo de campos selecionado.
+Assim que tiver o [!DNL Schema Editor] abrir, os controles para adicionar ou editar campos serão exibidos na tela. Esses controles são exibidos ao lado do nome do schema, bem como quaisquer campos do tipo de objeto que foram definidos na classe ou grupo de campos selecionado.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Se a classe ou o grupo de campos selecionado for um recurso principal fornecido pelo Adobe, ele não poderá ser editado e, portanto, os controles mostrados acima não aparecerão. Se o esquema ao qual você deseja adicionar campos for baseado em uma classe XDM principal e não contiver grupos de campos personalizados, você poderá [criar um novo grupo de campos](../resources/field-groups.md#create) para adicionar ao schema em vez disso.
+>Se você tentar adicionar um campo a um objeto fornecido por um grupo de campos padrão, esse grupo de campos será convertido em um grupo de campos personalizado e o grupo de campos original não estará mais disponível. Consulte a seção sobre [adição de campos a grupos de campos padrão](../resources/schemas.md#custom-fields-for-standard-groups) no guia da interface do usuário do schemas para obter mais informações.
 
 Para adicionar um novo campo ao recurso, selecione o **mais (+)** ícone ao lado do nome do esquema na tela ou ao lado do campo do tipo de objeto em que você deseja definir o campo.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-## Definir um campo para um recurso {#define}
+Dependendo de você estar adicionando um campo diretamente a um schema ou sua classe constitutiva e grupos de campos, as etapas necessárias para adicionar o campo irão variar. O restante deste documento foca em como configurar as propriedades de um campo, independentemente de onde esse campo apareça no esquema. Para obter mais informações sobre as diferentes maneiras de adicionar campos a um schema, consulte as seguintes seções no guia da interface do usuário do schemas:
 
-Depois de selecionar o **mais (+)** ícone, um **[!UICONTROL Novo campo]** aparece na tela, localizada em um objeto de nível raiz que é namespacado para sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos adicionados a um schema por meio de classes personalizadas e grupos de campos são colocados automaticamente dentro desse namespace para evitar conflitos com outros campos a partir de classes fornecidas por Adobe e grupos de campos.
+* [Adicionar campos a grupos de campos](../resources/schemas.md#add-fields)
+* [Adicionar campos diretamente a um schema](../resources/schemas.md#add-individual-fields)
+
+## Definição das propriedades de um campo {#define}
+
+Depois de selecionar o **mais (+)** ícone, um **[!UICONTROL Novo campo]** aparece na tela, localizada em um objeto com o namespace da sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos personalizados adicionados a um schema são colocados automaticamente nesse namespace para evitar conflitos com outros campos a partir de classes fornecidas por Adobe e grupos de campos.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-No painel direito em **[!UICONTROL Propriedades do campo]**, é possível configurar os detalhes dos novos campos. As seguintes informações são necessárias para cada campo:
+No painel direito em **[!UICONTROL Propriedades do campo]**, é possível configurar os detalhes do novo campo. As seguintes informações são necessárias para cada campo:
 
 | Propriedade do campo | Descrição |
 | --- | --- |

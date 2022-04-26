@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 0%
 
 ---
@@ -164,29 +164,6 @@ A página de detalhes de um fluxo de dados, além dos detalhes mostrados na list
 A página de detalhes também exibe uma lista de identidades que falharam e identidades que foram excluídas. As informações das identidades com falha e excluída são exibidas, incluindo o código de erro e a descrição. Por padrão, a lista exibe as identidades com falha. Para mostrar identidades excluídas, selecione a variável **[!UICONTROL Identidades excluídas]** alternar.
 
 ![Registros de fluxo de dados para destinos em lote](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## Painel de monitoramento de trabalhos de segmento {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Trabalhos de segmento"
->abstract="A exibição de trabalhos de segmento contém informações sobre os trabalhos de avaliação e exportação para todos os seus segmentos."
-
-Para acessar o [!UICONTROL Trabalhos de segmento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Trabalhos de segmento]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre a avaliação de segmentos e as tarefas de exportação.
-
-![Painel de monitoramento de trabalhos do segmento](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Use o [!UICONTROL Trabalhos de segmento] painel para entender se a avaliação e exportação de perfis ocorrem a tempo e sem exceções, de modo que os serviços downstream para ativação de destino podem ter os dados de perfil avaliados mais recentes.
-
-As seguintes métricas estão disponíveis para tarefas de segmento:
-
-| Métrica | Descrição |
----------|----------|
-| **[!UICONTROL Tarefa de segmento]** | Indica o nome do trabalho do segmento. |
-| **[!UICONTROL Tipo]** | Indica o tipo de trabalho do segmento - exportação ou avaliação. Observe que, em ambos os casos, o trabalho do segmento avalia ou exporta *all* segmentos pertencentes a uma organização. |
-| **[!UICONTROL Início da tarefa]** | A data e a hora em que o trabalho do segmento começou. |
-| **[!UICONTROL Fim da tarefa]** | A data e a hora em que o trabalho do segmento foi concluído. |
-| **[!UICONTROL Status]** | O status do trabalho concluído - sucesso ou falha. |
 
 ## Painel de monitoramento de destinos {#monitoring-destinations-dashboard}
 

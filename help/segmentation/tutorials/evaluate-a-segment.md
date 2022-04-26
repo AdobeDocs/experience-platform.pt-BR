@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
+source-git-commit: 9d82065fdf1be087023284f153f1abedb7fdb67b
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
-## Avaliar um segmento
+## Avaliar um segmento {#evaluate-a-segment}
 
 Depois de desenvolver, testar e salvar a definição de segmento, você pode avaliar o segmento por meio de avaliação programada ou sob demanda.
 

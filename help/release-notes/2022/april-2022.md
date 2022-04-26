@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
-source-git-commit: 4bbf7642a456f36ea0fe7fc1c8d68ad37351ff4c
+source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '1045'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,22 @@ ht-degree: 4%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Fluxos de dados](#dataflows)
 - [Experience Data Model (XDM)](#xdm)
+
+## Fluxos de dados {#dataflows}
+
+Na Platform, os dados são assimilados de várias fontes diferentes, analisados no sistema e ativados para uma grande variedade de destinos. A Platform facilita o processo de rastreamento desse fluxo de dados potencialmente não linear ao fornecer transparência com fluxos de dados.
+
+Os fluxos de dados são uma representação de tarefas que movem dados pela plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, onde são utilizados pelo Serviço de identidade e pelo Perfil do cliente em tempo real antes de serem ativados para destinos.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Painel de segmentos | Agora você pode usar o painel de monitoramento para monitorar os fluxos de dados para segmentos. Para saber mais, leia o guia em [monitoramento de segmentos na interface do usuário](../../dataflows/ui/monitor-segments.md) |
+
+Para obter informações mais gerais sobre fluxos de dados, consulte [visão geral dos fluxos de dados](../../dataflows/home.md). Para saber mais sobre a segmentação, consulte [visão geral da segmentação](../../segmentation/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -70,3 +85,4 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 {style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
+

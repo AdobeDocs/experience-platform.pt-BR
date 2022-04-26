@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
-source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
+source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 5%
+source-wordcount: '1999'
+ht-degree: 4%
 
 ---
 
@@ -14,11 +14,37 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Fluxos de dados](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform Edição B2B](#B2B)
 - [Fontes](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+A Platform fornece vários painéis através dos quais você pode visualizar informações importantes sobre os dados de sua organização, conforme capturado durante os instantâneos diários.
+
+Os painéis fornecem opções de relatório pré-configuradas para os dados de sua organização e são incorporados diretamente no fluxo de trabalho do profissional de marketing na Platform. Esses painéis estão disponíveis sem a necessidade de suporte adicional de TI ou o tempo e esforço necessários para exportar e processar dados com o projeto e a implementação adicionais do data warehouse.
+
+Os seguintes widgets estão disponíveis por meio da biblioteca de widgets em seus respectivos painéis. Consulte a documentação para obter mais informações sobre [como adicionar widgets através da biblioteca de widgets](../../dashboards/customize/widget-library.md).
+
+| Recurso | Painel | Descrição |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL Tendência de adição de perfis] | Perfis | Esse widget usa um gráfico de linhas para ilustrar o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. |
+| [!UICONTROL Públicos-alvo mapeados para o status de destino] | Perfis | Esse widget exibe o número total de públicos-alvo mapeados e não mapeados em uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre seus totais. |
+| [!UICONTROL Tamanho dos públicos-alvo] | Perfis | Este widget fornece uma tabela de duas colunas que lista até 20 segmentos e o número total de públicos-alvo contidos em cada segmento. A lista depende da política de mesclagem aplicada e ordenada de cima para baixo de acordo com o número total de públicos-alvo. |
+| [!UICONTROL Tendência da contagem de perfis] | Perfis | Este widget usa um gráfico de linhas para ilustrar a tendência no número total de perfis contidos no sistema ao longo do tempo. Os dados podem ser visualizados por períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Perfis de identidade únicos por identidade] | Perfis | Esse widget usa um gráfico de barras para ilustrar o número total de perfis identificados com apenas um único identificador exclusivo. O widget suporta até cinco das identidades mais comuns. |
+| [!UICONTROL Status do destino] | Destinos | Esse widget exibe o número total de destinos ativados como uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre destinos ativados e desativados. |
+| [!UICONTROL Destinos ativos por plataforma de destino] | Destinos | Esse widget usa uma tabela de duas colunas para mostrar uma lista de plataformas de destino ativas e o número total de destinos ativos para cada plataforma de destino. |
+| [!UICONTROL Públicos-alvo ativados em todos os destinos] | Destinos | Este widget fornece o número total de públicos-alvo ativados em todos os destinos em uma única métrica. |
+| [!UICONTROL Ordem de ativação do público-alvo] | Segmentos | Este widget fornece uma tabela de três colunas que lista o nome do destino, a plataforma e a data de ativação do público-alvo. |
+| [!UICONTROL Tendência do tamanho do público-alvo] | Segmentos | Este widget fornece uma ilustração de gráfico de linha para o número total de perfis que atendem aos critérios de qualquer definição de segmento ao longo de períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Tendência de alteração do tamanho do público-alvo] | Segmentos | Este widget fornece um gráfico de linhas que ilustra a diferença no número total de perfis que se qualificaram para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Tendência do tamanho do público-alvo por identidade] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
+
+Consulte a documentação para obter mais informações sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)e [[!DNL Segments]](../../dashboards/guides/segments.md) painéis.
 
 ## Fluxos de dados {#dataflows}
 

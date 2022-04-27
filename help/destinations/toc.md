@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 8%
 
 ---
@@ -93,10 +93,10 @@ ht-degree: 8%
       * [Extensão de rastreamento de conversão de texto](./catalog/analytics/yext.md)
    * Destinos de armazenamento na nuvem {#cloud-storage}
       * [Visão geral dos destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
-      * [(Beta) Conexão Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Conexão Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexão Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexão Blob do Azure](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Conexão de Hubs de Eventos do Azure](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Conexão de Hubs de Eventos do Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
       * [Endereço IP lista de permissões para destinos de armazenamento em nuvem](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 8%
       * [Conexão de públicos-alvo correspondentes ao linkedIn](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] conexão](./catalog/social/twitter.md)
    * Destinos de transmissão {#streaming}
-      * [ Conexão da API HTTP (Beta)](./catalog/streaming/http-destination.md)
+      * [Conexão da API HTTP](./catalog/streaming/http-destination.md)
       * [Endereço IP lista de permissões para destinos de transmissão](./catalog/streaming/ip-address-allow-list.md)
    * Destinos da pesquisa {#survey}
       * [Visão geral dos destinos da pesquisa](./catalog/survey/overview.md)

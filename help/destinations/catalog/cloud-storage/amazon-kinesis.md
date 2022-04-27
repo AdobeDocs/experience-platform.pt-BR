@@ -1,22 +1,22 @@
 ---
 keywords: Amazon Kinesis;destino cinesis;cinesis
-title: (Beta) Conexão Amazon Kinesis
+title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para fazer o stream de dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 1%
+source-wordcount: '1809'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Amazon Kinesis] conexão
+# [!DNL Amazon Kinesis] conexão
 
 ## Visão geral {#overview}
 
 >[!IMPORTANT]
 >
->O [!DNL Amazon Kinesis] no Platform está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+> Este destino só está disponível para [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
 
 O [!DNL Kinesis Data Streams] serviço por [!DNL Amazon Web Services] O permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
@@ -90,9 +90,13 @@ Para obter mais informações sobre como controlar o acesso para [!DNL Kinesis] 
 
 ## Conecte-se ao destino {#connect}
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-### Parâmetros de conexão {#parameters}
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). Ao se conectar a esse destino, você deve fornecer as seguintes informações:
+
+### Informações de autenticação {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -104,13 +108,24 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 >title="Incluir carimbos de data e hora do segmento"
 >abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
 
-Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+Insira os campos abaixo e selecione **[!UICONTROL Ligar ao destino]**:
+
+![Imagem da tela da interface do usuário mostrando campos preenchidos para os detalhes de autenticação da Kinesis do Amazon](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]chave de acesso e chave secreta**: Em [!DNL Amazon Web Services]gerar um `access key - secret access key` par para conceder acesso à plataforma [!DNL Amazon Kinesis] conta. Saiba mais na [Documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **região**: Indicar qual [!DNL Amazon Web Services] região para a qual transmitir dados.
-* **Nome**: Forneça um nome para a conexão com o [!DNL Amazon Kinesis]
-* **Descrição**: Forneça uma descrição para a conexão com o [!DNL Amazon Kinesis].
-* **fluxo**: Forneça o nome de um fluxo de dados existente em seu [!DNL Amazon Kinesis] conta. A Platform exportará dados para esse fluxo.
+* **[!UICONTROL Região]**: Indicar qual [!DNL Amazon Web Services] região para a qual transmitir dados.
+
+### Detalhes do destino {#destination-details}
+
+Depois de estabelecer a conexão de autenticação com o destino Amazon Kinesis, forneça as seguintes informações para o destino:
+
+![Imagem da tela da interface do usuário mostrando campos preenchidos para os detalhes de destino do Kinesis do Amazon](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+
+* **[!UICONTROL Nome]**: Forneça um nome para a conexão com o [!DNL Amazon Kinesis]
+* **[!UICONTROL Descrição]**: Forneça uma descrição para a conexão com o [!DNL Amazon Kinesis].
+* **[!UICONTROL fluxo]**: Forneça o nome de um fluxo de dados existente em seu [!DNL Amazon Kinesis] conta. A Platform exportará dados para esse fluxo.
+* **[!UICONTROL Incluir nomes de segmentos]**: Alterne se deseja que a exportação de dados inclua os nomes dos segmentos que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte [Dados exportados](#exported-data) mais abaixo.
+* **[!UICONTROL Incluir carimbos de data e hora do segmento]**: Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte [Dados exportados](#exported-data) mais abaixo.
 
 <!--
 
@@ -121,6 +136,10 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 -->
 
 ## Ativar segmentos para este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil de fluxo](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
@@ -153,6 +172,10 @@ Por exemplo, considere esse fluxo de dados como um [!DNL Amazon Kinesis] destino
 Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles. Se um perfil se qualificar para o segmento Cliente com Carros coreanos, mas também for membro do filme &quot;Voltar ao futuro&quot; assistido e dos segmentos de fãs de ficção científica, esses dois outros segmentos também estarão presentes `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados.
 
 Do ponto de vista dos atributos do perfil, qualquer alteração nos quatro atributos mapeados acima determinará uma exportação de destino e qualquer um dos quatro atributos mapeados presentes no perfil estará presente na exportação de dados.
+
+## Preenchimento retroativo de dados históricos {#historical-data-backfill}
+
+Ao adicionar um novo segmento a um destino existente ou ao criar um novo destino e mapear segmentos a ele, o Experience Platform exporta os dados de qualificação de segmento históricos para o destino. Perfis que se qualificaram para o segmento *before* o segmento adicionado ao destino é exportado para o destino dentro de aproximadamente uma hora.
 
 ## Dados exportados {#exported-data}
 
@@ -210,6 +233,53 @@ Seu exportado [!DNL Experience Platform] os dados chegam ao seu [!DNL Amazon Kin
   }
 }
 ```
+
+Abaixo estão outros exemplos de dados exportados, dependendo das configurações da interface do usuário selecionadas no fluxo de destino de conexão para a variável **[!UICONTROL Incluir nomes de segmentos]** e **[!UICONTROL Incluir carimbos de data e hora do segmento]** opções:
+
++++ A amostra de exportação de dados abaixo inclui nomes de segmentos na `segmentMembership` seção
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ A amostra de exportação de dados abaixo inclui carimbos de data e hora do segmento na `segmentMembership` seção
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Limites e política de repetição {#limits-retry-policy}
+
+Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência inferior a 10 minutos para mensagens enviadas com êxito com uma taxa inferior a 10.000 solicitações por segundo para cada fluxo de dados para um destino HTTP.
+
+No caso de solicitações com falha no destino da API HTTP, o Experience Platform armazena as solicitações com falha e tenta novamente duas vezes para enviar as solicitações para o terminal.
 
 >[!MORELIKETHIS]
 >

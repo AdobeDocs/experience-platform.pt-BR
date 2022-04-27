@@ -6,9 +6,9 @@ title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
 description: Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2608'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Forneça os valores necessários e selecione **[!UICONTROL Próximo]** para cont
 
 ## Selecionar dados {#select-data}
 
-Por design, o Customer AI usa os dados Adobe Analytics, Adobe Audience Manager, Experience Event e Consumer Experience Event para calcular as pontuações de propensão. Ao selecionar um conjunto de dados, somente os que são compatíveis com a API do cliente serão listados. Para selecionar um conjunto de dados, selecione o (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados ao mesmo tempo. Use a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que você está interessado.
+Por design, o Customer AI usa os dados Adobe Analytics, Adobe Audience Manager, Experience Events em geral e Consumer Experience Event para calcular as pontuações de propensão. Ao selecionar um conjunto de dados, somente os que são compatíveis com a API do cliente serão listados. Para selecionar um conjunto de dados, selecione o (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados ao mesmo tempo. Use a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que você está interessado.
 
 ![Selecionar e pesquisar por conjunto de dados](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ Há um valor percentual de integridade do conjunto de dados na visualização do
 
 ### Selecionar uma identidade {#identity}
 
-Para que vários conjuntos de dados se associem entre si, você deve selecionar um tipo de identidade (também conhecido como &quot;namespace de identidade&quot;) e um valor de identidade dentro desse namespace. Se você atribuiu mais de um campo como uma identidade dentro do esquema sob o mesmo namespace, todos os valores de identidade atribuídos serão exibidos na lista suspensa de identidade anexada pelo namespace, como `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+Agora é possível unir vários conjuntos de dados uns aos outros com base no mapa de identidade (campo ). Você deve selecionar um tipo de identidade (também conhecido como &quot;namespace de identidade&quot;) e um valor de identidade dentro desse namespace. Se você atribuiu mais de um campo como uma identidade dentro do esquema sob o mesmo namespace, todos os valores de identidade atribuídos serão exibidos na lista suspensa de identidade anexada pelo namespace, como `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+
+[selecionar o mesmo namespace](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ Para que vários conjuntos de dados se associem entre si, você deve selecionar 
 
 Para selecionar uma identidade, selecione o valor sublinhado localizado na coluna de identidade. A opção selecionar um provedor de identidade é exibida.
 
-![selecionar o mesmo namespace](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[selecionar o mesmo namespace](../images/user-guide/cai-identity-namespace.png)
 
 Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. Isso significa que `EMAIL (personalEmail.address)` seria selecionada como a identidade.
 
@@ -116,7 +119,8 @@ O **[!UICONTROL Definir meta]** é exibida e fornece um ambiente interativo para
 
 Para criar uma meta, selecione **[!UICONTROL Inserir Nome do Campo]** e seguido por um campo da lista suspensa. Selecione a segunda entrada, uma cláusula para a condição do evento e, opcionalmente, forneça o valor do target para concluir o evento. Eventos adicionais podem ser configurados selecionando **[!UICONTROL Adicionar evento]**. Por fim, complete a meta aplicando um período de previsão em número de dias e selecione **[!UICONTROL Próximo]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Ocorrerá e não ocorrerá
 
@@ -124,7 +128,8 @@ Ao definir sua meta, você tem a opção de selecionar **[!UICONTROL Ocorrerá]*
 
 Por exemplo, se você deseja configurar um aplicativo para prever se um cliente fará uma compra, você pode selecionar **[!UICONTROL Ocorrerá]** seguida de **[!UICONTROL Todos os]** e então insira **commerce.purchase.id** (ou um campo semelhante) e **[!UICONTROL existe]** como operador.
 
-![ocorrerá](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![ocorrerá](../images/user-guide/cai-will-occur.png)
 
 No entanto, pode haver casos em que você esteja interessado em prever se algum evento não acontecerá em um determinado período. Para configurar uma meta com essa opção, selecione **[!UICONTROL Não ocorrerá]** na lista suspensa de nível superior.
 

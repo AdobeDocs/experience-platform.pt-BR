@@ -6,9 +6,9 @@ title: Insights do Discover com o Customer AI
 topic-legacy: Discovering insights
 description: Este documento é um guia para interagir com insights da instância de serviço na interface do usuário da API do cliente de Serviços inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '2079'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ Para exibir seu novo segmento na interface do usuário da plataforma, selecione 
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 
-## Métricas de resumo de desempenho {#performance-metrics}
+## Desempenho histórico {#historical-performance}
 
 O **[!UICONTROL Resumo de desempenho]** mostra as taxas de churn ou conversão reais, separadas em cada um dos buckets de propensão classificados pelo Customer AI.
 
@@ -192,6 +192,37 @@ A metade inferior do **[!UICONTROL Resumo de desempenho]** exibe os resultados d
 Dependendo de se você estiver prevendo churn ou conversão, a variável [!UICONTROL Distribuição de pontuações] O gráfico exibe a distribuição de perfis encurtados/convertidos e não encurtados/não convertidos em cada incremento.
 
 ![pontuação individual](../images/insights/scoring_tab.png)
+
+## Avaliação do modelo {#model-evaluation}
+
+Além de rastrear os resultados previstos e reais ao longo do tempo na guia Desempenho histórico , os profissionais de marketing têm ainda mais transparência sobre a qualidade do modelo com a guia Avaliação do modelo . Você pode usar os gráficos de Aumento e Ganho para determinar as diferenças no uso de um modelo preditivo versus direcionamento aleatório. Além disso, é possível determinar quantos resultados positivos seriam capturados em cada corte de pontuação. Isso é útil para segmentação e alinhamento do retorno do investimento às ações de marketing.
+
+### Gráfico de aumento
+
+![gráfico de elevação](../images/user-guide/lift-chart.png)
+
+O gráfico de aumento mede a melhoria do uso de um modelo preditivo em vez de direcionamento aleatório.
+
+Os indicadores de modelo de alta qualidade incluem:
+
+- Valores de elevação altos nos primeiros decils. Isso significa que o modelo é bom para identificar os usuários com maior propensão a tomar a ação de interesse.
+- Valores de aumento decrescentes. Isso significa que os clientes com pontuações mais altas têm mais probabilidade de realizar a ação de interesse do que as pessoas com pontuações mais baixas.
+
+### Gráfico de ganhos
+
+![gráfico de ganhos](../images/user-guide/gains-chart.png)
+
+O gráfico de ganhos cumulativos mede a porcentagem de resultados positivos capturados pelo direcionamento de pontuações acima de um determinado limite. Após classificar os clientes por pontuação de propensão de alto para baixo, a população é dividida em decis - 10 grupos de tamanho igual. Um modelo perfeito capturaria todos os resultados positivos nos decis de pontuação mais alta. Um método de definição de metas aleatórias de base captura resultados positivos proporcionalmente à dimensão do objetivo de grupo 30% dos utilizadores obteria 30% dos resultados.
+
+Os indicadores de modelo de alta qualidade incluem:
+
+- Os ganhos acumulados se aproximam 100% rapidamente.
+- A curva de ganhos cumulativos para o modelo está mais próxima do canto superior esquerdo do gráfico.
+- O gráfico de ganhos cumulativos pode ser usado para determinar os limites de pontuação para segmentação e direcionamento. Por exemplo, se o modelo capturar 70% dos resultados positivos nos primeiros 2 decis de pontuação, é esperado que o direcionamento de usuários com PercentileScore > 80 capture aproximadamente 70% dos resultados positivos.
+
+### AUC (Área sob a curva)
+
+A AUC reflete a força da relação entre a classificação por pontuação e a ocorrência do objetivo previsto. Um **AUC** de 0,5 significa que o modelo não é melhor do que um adivinhamento aleatório. Um **AUC** de 1 significa que o modelo pode perfeitamente prever quem tomará as medidas relevantes.
 
 ## Próximas etapas
 

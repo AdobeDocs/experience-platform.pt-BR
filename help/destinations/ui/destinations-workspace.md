@@ -4,9 +4,9 @@ title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em quatro seções: Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1156'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ O **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões estabelecida
 
 {style=&quot;table-layout:auto&quot;}
 
-## [!UICONTROL Procurar] {#browse}
+## [!UICONTROL Navegar] {#browse}
 
 O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Destinos com o **[!UICONTROL Ativado/Desativado]** Ativar ou ativar definir o destino como ativo ou inativo, respectivamente. Também é possível visualizar os destinos nos quais você tem dados fluindo selecionando **[!UICONTROL Segmentos]** > **[!UICONTROL Procurar]** e selecionar um segmento para inspecionar. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino no [!UICONTROL Procurar] guia :
 
@@ -94,6 +94,7 @@ O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma
 > * Selecione os três pontos no [!UICONTROL Nome] e use a ![Botão Ativar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar segmentos ]**para enviar segmentos para esse destino.
 > * Selecione os três pontos no [!UICONTROL Nome] e use a ![Botão Excluir](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**botão para [remove](delete-destinations.md) uma conexão existente com um destino.
 > * Selecione os três pontos no [!UICONTROL Nome] e use a ![Exibir no botão monitoramento](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Exibir no monitoramento ]**botão para exibir as informações de ativação para esse destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Selecione os três pontos no [!UICONTROL Nome] e use a ![Inscrever-se em alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Inscrever-se em alertas ]**para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens relacionadas ao status, sucesso ou falha da execução do fluxo. Consulte [Assinar alertas de destino no contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
 
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)

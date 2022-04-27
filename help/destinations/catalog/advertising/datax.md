@@ -2,9 +2,9 @@
 title: Conexão Verizon MediaYahoo DataX
 description: O DataX é uma infraestrutura agregada da Verizon Media/Yahoo que hospeda vários componentes que permitem que o Verizon Media/Yahoo troque dados com seus parceiros externos de forma segura, automatizada e escalável.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '712'
 ht-degree: 3%
 
 ---
@@ -90,6 +90,10 @@ As APIs DataX estão disponíveis para anunciantes que desejam direcionar um gru
 
 ## Ligar ao destino {#connect}
 
+>[!IMPORTANT]
+> 
+>Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+
 ![Cartão de destino do Yahoo DataX na interface do usuário da plataforma](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
@@ -103,6 +107,10 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL ID MDM]**: Esse é um identificador exclusivo no Yahoo DataX e é um campo obrigatório para configurar exportações de dados para esse destino. Se você não souber essa ID, entre em contato com o gerente de conta do Yahoo Data X.  Com as IDs MDM, os dados podem ser restritos para uso somente com um determinado conjunto de usuários exclusivos (como dados primários para anunciantes).
 
 ## Ativar segmentos para este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Ler [Ativar perfis e segmentos para um destino](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 

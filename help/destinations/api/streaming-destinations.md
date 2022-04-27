@@ -6,10 +6,10 @@ description: Este documento aborda a criação de destinos de transmissão usand
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '2021'
-ht-degree: 3%
+source-wordcount: '2067'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,14 @@ ht-degree: 3%
 >[!NOTE]
 >
 >O [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] os destinos no Platform estão atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+
+>[!IMPORTANT]
+> 
+>Para se conectar a um destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions).
+>
+>Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>
+>Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Este tutorial demonstra como usar chamadas de API para se conectar aos dados do Adobe Experience Platform, criar uma conexão com um destino de armazenamento da nuvem de streaming ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Hubs de Eventos do Azure](../catalog/cloud-storage/azure-event-hubs.md)), crie um fluxo de dados para o novo destino criado e ative os dados para o novo destino criado.
 
@@ -593,7 +601,7 @@ A resposta retornada deve incluir no `transformations` os segmentos e os atribut
 }
 ```
 
-## Uso de coleções Postman para se conectar a destinos de transmissão  {#collections}
+## Uso de coleções do Postman para se conectar a destinos de transmissão  {#collections}
 
 Para se conectar aos destinos de transmissão descritos neste tutorial de forma mais simplificada, você pode usar [[!DNL Postman]](https://www.postman.com/).
 
@@ -608,7 +616,7 @@ Clique em [here](../assets/api/streaming-destination/DestinationPostmanCollectio
 
 Cada coleção inclui as solicitações necessárias e as variáveis de ambiente, para [!DNL AWS Kinesis]e [!DNL Azure Event Hub], respectivamente.
 
-### Como usar as coleções de Postman
+### Como usar as coleções do Postman
 
 Para se conectar com sucesso aos destinos usando o [!DNL Postman] coleções, siga estas etapas:
 

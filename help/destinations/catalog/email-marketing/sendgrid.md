@@ -2,13 +2,13 @@
 keywords: email; Email; email; destinos de email; sendgrid; destino sendgrid
 title: Conexão SendGrid
 description: O destino SendGrid permite exportar seus dados primários e ativá-los em SendGrid para suas necessidades comerciais.
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL SendGrid] conexão
 
@@ -74,6 +74,11 @@ As equipes de marketing que usam SendGrid podem criar uma lista de endereçament
 
 ## Ligar ao destino {#connect}
 
+>[!IMPORTANT]
+> 
+>Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+
+
 Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). As etapas específicas para esse destino são ilustradas detalhadamente abaixo.
 
 1. No [!DNL Adobe Experience Platform] , navegue até **Destinos**.
@@ -101,6 +106,10 @@ Ao [configuração](https://experienceleague.adobe.com/docs/experience-platform/
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## Ativar segmentos para este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Ler [Ativar perfis e segmentos para destinos de exportação de segmentos de fluxo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 

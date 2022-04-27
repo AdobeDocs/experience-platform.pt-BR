@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e os grupos de campos de esquema do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
+source-git-commit: fab182dc868990ddd5fbc45f0f50dc87258f98bc
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '458'
 ht-degree: 17%
 
 ---
@@ -77,6 +77,10 @@ ht-degree: 17%
       * [Detalhes da atualização](./field-groups/event/upgrade-details.md)
       * [Detalhes da venda adicional](./field-groups/event/upsell-details.md)
       * [Detalhes da Web](./field-groups/event/web-details.md)
+   * Campanha comercial XDM {#b2b-campaign}
+      * [Detalhes da campanha comercial XDM](./field-groups/b2b-campaign/details.md)
+   * Membros da Campanha Comercial XDM {#b2b-campaign-members}
+      * [Detalhes dos membros da campanha comercial XDM](./field-groups/b2b-campaign-members/details.md)
    * Produto {#product}
       * [Catálogo de produtos](./field-groups/product/product-catalog.md)
       * [Categoria do produto](./field-groups/product/product-category.md)

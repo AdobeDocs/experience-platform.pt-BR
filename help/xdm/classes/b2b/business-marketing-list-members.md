@@ -2,10 +2,10 @@
 title: Classe de Membros da Lista de Marketing Corporativo XDM
 description: Este documento fornece uma visão geral da classe de membros da lista de negócios XDM no Experience Data Model (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 3%
+source-wordcount: '338'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL Membros da Lista de Marketing Comercial XDM] é uma classe padrão do Experience Data Model (XDM) que descreve membros, pessoas ou contatos associados a uma lista de marketing.
 
-![](../../images/classes/b2b/business-marketing-list-members.png)
+![A estrutura da classe Membros da lista de negócios XDM como ela aparece na interface do usuário](../../images/classes/b2b/business-marketing-list-members.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 3%
 | `marketingListMemberKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de associação da lista de marketing. |
 | `personKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa que é membro da lista de marketing. |
 | `_id` | String | Um identificador exclusivo para o registro. Esse é um valor gerado pelo sistema separado da variável `marketingListMemberID`. |
+| `isDeleted` | Booleano | Indica se esta entidade de membro da lista de marketing foi excluída no Marketo Engage.<br><br>Ao usar a variável [Conector de origem Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo são refletidos automaticamente no Perfil do cliente em tempo real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` para `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
 | `marketingListID` | String | Uma ID exclusiva para a lista de marketing. |
 | `marketingListMemberID` | String | Uma ID exclusiva para a entidade de associação da lista de marketing. |
 | `personId` | String | Uma ID exclusiva para a pessoa. |

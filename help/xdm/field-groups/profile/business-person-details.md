@@ -2,9 +2,9 @@
 title: Grupo de Campos de Esquema Detalhes da Pessoa Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da pessoa de negócios XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '601'
 ht-degree: 6%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 6%
 | `workEmail` | [Endereço de email](../../data-types/email-address.md) | O endereço de email da pessoa. |
 | `workPhone` | [Número de telefone](../../data-types/phone-number.md) | O número de telefone do trabalho da pessoa. |
 | `identityMap` | Mapa | Campo de mapa que contém um conjunto de identidades namespacadas para a pessoa. Este campo é atualizado automaticamente pelo sistema conforme os dados de identidade são assimilados. Para utilizar adequadamente esse campo para [Perfil do cliente em tempo real](../../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade na [noções básicas da composição do schema](../../schema/composition.md#identityMap) para obter mais informações sobre o caso de uso. |
+| `isDeleted` | Booleano | Indica se esta pessoa foi excluída no Marketo Engage.<br><br>Ao usar a variável [Conector de origem Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo são refletidos automaticamente no Perfil do cliente em tempo real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` para `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
 | `organizations` | Matriz de cadeias de caracteres | Uma lista de nomes de organizações onde a pessoa trabalha. |
 
 {style=&quot;table-layout:auto&quot;}

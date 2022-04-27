@@ -2,9 +2,9 @@
 title: Classe de Relação de Pessoa da Oportunidade Comercial XDM
 description: Este documento fornece uma visão geral da classe de relação de pessoa da oportunidade de negócios XDM no Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '367'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL Relação de Pessoa da Oportunidade de Negócios XDM] é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma pessoa associada a uma oportunidade de negócios.
 
-![](../../images/classes/b2b/business-opportunity-person-relation.png)
+![A estrutura da classe Pessoa de Oportunidade de Negócios XDM como ela aparece na interface do usuário](../../images/classes/b2b/business-opportunity-person-relation.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
@@ -26,9 +26,10 @@ ht-degree: 3%
 | `opportunityPersonKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de relação oportunidade-pessoa. |
 | `personKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa na relação oportunidade-pessoa. |
 | `_id` | String | Um identificador exclusivo para o registro. Esse é um valor gerado pelo sistema separado dos outros campos de ID capturados pela classe. |
+| `isDeleted` | Booleano | Indica se esta entidade da lista de marketing foi excluída no Marketo Engage.<br><br>Ao usar a variável [Conector de origem Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo são refletidos automaticamente no Perfil do cliente em tempo real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` para `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
+| `isPrimary` | Booleano | Indica se a pessoa é o contato principal para esta oportunidade. |
 | `opportunityID` | String | Um identificador exclusivo para a oportunidade no relacionamento oportunidade-pessoa. |
 | `opportunityPersonID` | String | Um identificador exclusivo para a entidade de relação oportunidade-pessoa |
-| `isPrimary` | Booleano | Indica se a pessoa é o contato principal para esta oportunidade. |
 | `personID` | String | Um identificador exclusivo para a pessoa na relação oportunidade-pessoa. |
 | `personRole` | String | A função da pessoa na relação oportunidade-pessoa. |
 

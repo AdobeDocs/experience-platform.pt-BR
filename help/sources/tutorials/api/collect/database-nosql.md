@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los no Platform usando conectores de origem e APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 43e7ee264cd436c8c430760e50d5067c8c9ef535
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 2%
@@ -582,7 +582,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "0b090130b58b4819afc78b6dc98b484d",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

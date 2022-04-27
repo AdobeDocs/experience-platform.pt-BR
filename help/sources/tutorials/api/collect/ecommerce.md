@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1260'
 ht-degree: 2%
@@ -546,7 +546,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "22922102bffd4369b6209c102a604062",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform, interface do usuário, interface do usuário, personalização, painel de uso de licença, painel, uso de licença, direito, consumo
-title: Painel de uso de licença
+title: Guia do painel de uso de licença
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -85,7 +85,7 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, serviços de aplicativos e serviços inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>PLATAFORMA DE DADOS DO CLIENTE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 50 M</li></ul> | [Plataforma de dados do cliente em tempo real](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>PLATAFORMA DE DADOS DO CLIENTE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 50 M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:ATIVAÇÃO DE OD</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL DE ATÉ 50 M</li></ul> | [Adobe Experience Platform Ativation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELIGÊNCIA DE OD</li></ul> | [Inteligência Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 

@@ -1,15 +1,15 @@
 ---
-title: Notas de versão
+title: Notas de versão para Tags
 description: As notas de versão mais recentes de tags na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 60%
+source-wordcount: '666'
+ht-degree: 58%
 
 ---
 
-# Notas de versão
+# Notas de versão para tags no Adobe Experience Platform
 
 >[!NOTE]
 >

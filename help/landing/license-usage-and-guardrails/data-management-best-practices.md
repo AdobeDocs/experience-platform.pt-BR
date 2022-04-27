@@ -2,9 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, gerenciamento de dados, direito de licença, licenciamento, práticas recomendadas
 title: Práticas recomendadas de direito à licença de gerenciamento de dados
 description: Este documento descreve as práticas recomendadas para seguir e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença com o Adobe Experience Platform.
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -193,7 +194,7 @@ A tabela a seguir descreve a lista de recursos disponíveis no momento à sua di
 | [Filtros de preparação de dados do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar [!DNL Kafka] filtros para excluir dados desnecessários da assimilação |
 | [Filtros do conector de origem do Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplique filtros de conexão de origem de Audience Manager para excluir dados desnecessários da assimilação |
 | [Ativar filtros de dados do SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Aplicar filtros de Alloy para excluir dados desnecessários da assimilação |
-| [Filtros de dados do lado do servidor](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | Aplicar [!DNL Kafka] filtros para excluir dados desnecessários da assimilação.  Consulte a documentação em [eventos e condições](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) para obter mais informações. |
+| [Filtros de dados do encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) | Aplicar servidor [!DNL Kafka] filtros para excluir dados desnecessários da assimilação.  Consulte a documentação em [regras de tags](../../tags/ui/managing-resources/rules.md) para obter mais informações. |
 | [Interface do usuário do painel de uso de licença](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Visualizar um instantâneo dos dados relacionados à licença de sua organização para o Experience Platform |
 | [API de relatório de sobreposição de conjunto de dados](../../profile/tutorials/dataset-overlap-report.md) | Gera os conjuntos de dados que mais contribuem para o seu público-alvo endereçável |
 | [API de relatório de perfis desconhecidos](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Gera o impacto do TTL pseudônimo aplicado para diferentes limites de tempo |

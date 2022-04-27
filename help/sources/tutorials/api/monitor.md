@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform, home, tópicos populares, monitorar fluxos de dados, api de serviço de fluxo, Serviço de fluxo
 solution: Experience Platform
-title: Monitorar fluxos de dados usando a API do serviço de fluxo
+title: Monitorar fluxos de dados de fontes usando a API do serviço de fluxo
 topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para fins de integridade, erros e métricas usando a API do Serviço de fluxo.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '412'
 ht-degree: 2%
 
 ---
 
-# Monitorar fluxos de dados usando a API do Serviço de fluxo
+# Monitorar fluxos de dados de fontes usando a API do Serviço de fluxo
 
 Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para fins de integridade, erros e métricas usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

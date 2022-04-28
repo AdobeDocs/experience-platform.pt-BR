@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
 workflow-type: tm+mt
-source-wordcount: '3183'
+source-wordcount: '3200'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,9 @@ Para acessar o [!UICONTROL Monitoramento] painel, selecione **[!UICONTROL Monito
 
 >[!NOTE]
 >
->A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
+>- A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
+>- Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas não são exibidas no momento.
+
 
 Use o [!UICONTROL Destinos] painel para obter uma ideia geral da integridade dos fluxos de ativação. Comece obtendo insights em um nível agregado para todos os destinos de lote e fluxo e detalhe as exibições detalhadas para fluxos de dados, execuções de fluxo de dados e segmentos ativados para obter uma análise detalhada dos dados de ativação. As telas no [!UICONTROL Monitoramento] O painel fornece insights acionáveis por meio de métricas e descrições de erros para ajudar você a solucionar problemas que possam surgir em seus cenários de ativação.
 

@@ -3,7 +3,7 @@ title: Conexão da API HTTP
 keywords: transmissão contínua;
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil ao endpoint HTTP de terceiros para executar sua própria análise ou executar quaisquer outras operações necessárias nos dados de perfil exportados do Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 0%
@@ -92,6 +92,11 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 
 ### Informações de autenticação {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Tipo de credenciais do cliente"
+>abstract="Selecionar **Formulário de corpo codificado** para incluir a ID do cliente e o segredo do cliente no corpo da solicitação ou **Autorização básica** para incluir a ID do cliente e o segredo do cliente em um cabeçalho de autorização. Veja exemplos na documentação."
+
 #### Autenticação de token portador {#bearer-token-authentication}
 
 Se você selecionar a variável **[!UICONTROL Token de portador]** tipo de autenticação para se conectar ao terminal HTTP, insira os campos abaixo e selecione **[!UICONTROL Ligar ao destino]**:
@@ -121,11 +126,6 @@ Se você selecionar a variável **[!UICONTROL Senha do OAuth 2]** tipo de autent
 * **[!UICONTROL Senha]**: A senha para acessar o terminal HTTP.
 
 #### Autenticação de credenciais de cliente OAuth 2 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Tipo de credenciais do cliente"
->abstract="Selecionar **Formulário de corpo codificado** para incluir a ID do cliente e o segredo do cliente no corpo da solicitação ou **Autorização básica** para incluir a ID do cliente e o segredo do cliente em um cabeçalho de autorização. Veja exemplos na documentação."
 
 Se você selecionar a variável **[!UICONTROL Credenciais do Cliente OAuth 2]** tipo de autenticação para se conectar ao terminal HTTP, insira os campos abaixo e selecione **[!UICONTROL Ligar ao destino]**:
 

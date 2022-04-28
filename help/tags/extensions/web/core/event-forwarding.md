@@ -3,7 +3,7 @@ title: Visão geral da extensão de encaminhamento de eventos principais
 description: Saiba mais sobre a extensão de encaminhamento de eventos principais na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: d41779c5897b748130b88d3886472c7908347389
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 98%
@@ -47,7 +47,7 @@ arc.ruleStash: Object<string, *>`
 ```
 
 ```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` é um objeto que coleta todos os resultados dos módulos de ação.

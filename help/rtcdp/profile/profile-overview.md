@@ -3,7 +3,7 @@ keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem
 title: Noções básicas sobre o perfil do cliente em tempo real na CDP em tempo real
 description: Saiba como a Real-time Customer Data Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes usando o Perfil do cliente em tempo real.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%

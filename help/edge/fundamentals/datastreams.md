@@ -1,34 +1,30 @@
 ---
 title: Configurar um conjunto de dados
-description: Conecte sua integração do Experience Platform SDK do lado do cliente aos produtos Adobe e destinos de terceiros.
+description: Conecte sua integração do SDK da Experience Platform do lado do cliente aos produtos da Adobe e destinos de terceiros.
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de configurações do Analytics; Predefinição de dados para dados Coleção; Preparação de dados; Mapeador; Mapeador XDM; Mapeador no Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2081'
 ht-degree: 2%
 
 ---
 
 # Configurar um conjunto de dados
 
-Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web do Adobe Experience Platform. Enquanto a variável [comando configurar](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
+Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs da Web e do Mobile do Adobe Experience Platform. Enquanto a variável [comando configurar](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
 Este documento aborda as etapas para configurar um armazenamento de dados na interface do usuário da coleta de dados.
 
 >[!NOTE]
 >
->Sua organização deve ser provisionada para esse recurso para acessá-lo na interface do usuário do . Preencha o seguinte [formulário](https://adobe.ly/websdkaccess) para solicitar o acesso necessário.
+>Sua organização deve ser provisionada para esse recurso para acessá-lo na interface do usuário do . Preencha o seguinte [formulário](https://adobe.ly/websdkaccess) para solicitar o acesso necessário. Para gerenciar conjuntos de dados, sua conta de usuário deve ser adicionada a um perfil de produto para tags em [!DNL Adobe Experience Platform].
 
 ## Acesse o [!UICONTROL Datastreams] espaço de trabalho
 
 Você pode criar e gerenciar conjuntos de dados na interface do usuário da Coleta de dados selecionando **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
 
 ![Guia Datastreams na interface do usuário da coleta de dados](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->Ao acessar o [!UICONTROL Datastreams] independentemente de usar os recursos de gerenciamento de tags da Platform, você deve ter permissões de desenvolvedor para gerenciar os próprios conjuntos de dados. Consulte a [permissões do usuário](../../tags/ui/administration/user-permissions.md) na documentação das tags para obter mais detalhes.
 
 O [!UICONTROL Datastreams] A guia exibe uma lista de conjuntos de dados existentes, incluindo o nome amigável, a ID e a data da última modificação. Selecione o nome de um armazenamento de dados para [exibir seus detalhes e configurar serviços](#view-details).
 

@@ -3,9 +3,9 @@ title: Dados de identidade no SDK da Web da plataforma
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o Adobe Experience Platform Web SDK.
 keywords: Identidade, Identidade Primária, Serviço de Identidade, Identidade de Terceiros, Migração de ID, ID de Visitante, identidade de terceiros, thirdPartyCookiesEnabled, idMigrationEnabled, getIdentity, Identidades de Sincronização, syncIdentity, sendEvent, identityMap, primário, ecid, Namespace de Identidade, id de namespace, authenticationState, hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1334'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ Este documento fornece uma visão geral de como gerenciar ECIDs usando o SDK da 
 
 O SDK da Web da plataforma atribui e rastreia ECIDs por meio do uso de cookies, com vários métodos disponíveis para configurar como esses cookies são gerados.
 
-Quando um novo usuário chega ao seu site, o Adobe Experience Cloud Identity Service tenta definir um cookie de identificação do dispositivo para esse usuário. Para visitantes pela primeira vez, uma ECID é gerada e retornada na primeira resposta da rede de borda da Adobe Experience Platform. Para visitantes repetidos, a ECID é recuperada do `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e adicionado à carga.
+Quando um novo usuário chega ao seu site, o Adobe Experience Cloud Identity Service tenta definir um cookie de identificação do dispositivo para esse usuário. Para visitantes pela primeira vez, uma ECID é gerada e retornada na primeira resposta da rede de borda da Adobe Experience Platform. Para visitantes repetidos, a ECID é recuperada do `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e adicionado ao payload pela Edge Network.
 
-Depois que o cookie contendo a ECID for definido, cada solicitação subsequente gerada pelo SDK da Web da plataforma incluirá a ECID.
+Depois que o cookie contendo a ECID for definido, cada solicitação subsequente gerada pelo SDK da Web incluirá uma ECID codificada no `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
 Ao usar cookies para identificação do dispositivo, você tem duas opções para interagir com a Edge Network:
 

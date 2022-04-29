@@ -2,7 +2,7 @@
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino de fluxo para o Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -220,7 +220,7 @@ Leia mais na [Visão geral do Namespace de identidade](https://experienceleague.
 |---------|----------|------|
 | `acceptsAttributes` | Booleano | Indica se o destino aceita atributos de perfil padrão. Normalmente, esses atributos são destacados na documentação dos parceiros. |
 | `acceptsCustomNamespaces` | Booleano | Indica se os clientes podem configurar namespaces personalizados no seu destino. |
-| `allowedAttributesTransformation` | String | *Não mostrado na configuração de exemplo*. Usado, por exemplo, quando a variável [!DNL Platform] o cliente tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. Nesse objeto, é possível aplicar a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). Para ver um exemplo, consulte `requiredTransformation` no [referência da API de configuração de destino](./destination-configuration-api.md#update). |
+| `transformation` | String | *Não mostrado na configuração de exemplo*. Usado, por exemplo, quando a variável [!DNL Platform] o cliente tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. Nesse objeto, é possível aplicar a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e, em seguida, em hash). Para ver um exemplo, consulte `requiredTransformation` no [referência da API de configuração de destino](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Usado para casos em que a plataforma aceita [namespaces de identidade padrão](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (por exemplo, IDFA), para que seja possível restringir usuários da plataforma a selecionar somente esses namespaces de identidade. |
 
 {style=&quot;table-layout:auto&quot;}

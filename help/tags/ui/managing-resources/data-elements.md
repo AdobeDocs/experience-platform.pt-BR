@@ -1,10 +1,11 @@
 ---
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 78%
+ht-degree: 98%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 78%
 
 Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 
-Um único elemento de dados é uma variável cujo valor pode ser mapeado para consultar strings, URLs, valores de cookie, variáveis JavaScript e assim por diante. Você pode fazer referência a esse valor pelo nome da variável em todo o Adobe Experience Platform. Esta coleção de elementos de dados se torna o dicionário de dados definidos que você pode usar para criar suas regras (eventos, condições e ações). Esse dicionário de dados é compartilhado entre tags para uso com qualquer extensão adicionada à propriedade.
+Um único elemento de dados é uma variável cujo valor pode ser mapeado para consultar strings, URLs, valores de cookie, variáveis JavaScript e assim por diante. Você pode fazer referência a esse valor pelo nome da variável em toda a Adobe Experience Platform. Esta coleção de elementos de dados se torna o dicionário de dados definidos que você pode usar para criar suas regras (eventos, condições e ações). Esse dicionário de dados é compartilhado em todas as tags para uso com qualquer extensão adicionada à propriedade.
 
 >[!IMPORTANT]
 >
@@ -26,9 +27,9 @@ Use elementos de dados o mais amplamente possível em todo o processo de criaç�
 
 O conceito de elementos de dados reutilizáveis é muito eficaz, e você deve usá-lo como prática recomendada.
 
-Por exemplo, se houver um modo específico pelo qual você faz referência a nomes de páginas, IDs de produtos ou captura informações de parâmetros de cadeias de caracteres de consulta de um link de marketing afiliado ou de [!DNL AdWords], e assim por diante, é possível criar um dicionário de dados (elementos de dados) obtendo informações da fonte e usando esses dados em várias regras de tags.
+Por exemplo, se houver um modo específico pelo qual você faz referência a nomes de páginas ou IDs de produtos ou captura informações de parâmetros de sequência de consulta de um link de marketing de afiliado ou do [!DNL AdWords] e assim por diante, será possível criar um dicionário de dados (elementos de dados) obtendo informações da origem e usando esses dados em várias regras de tags.
 
-Usando o nome de página como exemplo, suponhamos que você use um esquema de nome de página específico referenciando uma camada de dados, elemento `document.title`, ou uma tag de título dentro do site. Tags no Adobe Experience Platform permitem criar um elemento de dados como um único ponto de referência para esse ponto de dados específico. Pode-se, então, usar esse elemento de dados em qualquer regra que precise fazer referência ao nome da página. Se futuramente, por algum motivo, você decidir mudar o modo como faz referência ao nome da página (por exemplo, se estiver fazendo referência a `document.title` e, a partir de determinado momento quiser referir uma camada de dados específica), não precisará editar muitas e diferentes regras para alterar essa referência. Bastará alterá-la uma vez no elemento de dados, e todas as regras que fizeram referência a esse elemento serão automaticamente atualizadas.
+Usando o nome de página como exemplo, suponhamos que você use um esquema de nome de página específico referenciando uma camada de dados, elemento `document.title`, ou uma tag de título dentro do site. As tags na Adobe Experience Platform permitem criar um elemento de dados como um único ponto de referência para esse ponto de dados específico. Pode-se, então, usar esse elemento de dados em qualquer regra que precise fazer referência ao nome da página. Se futuramente, por algum motivo, você decidir mudar o modo como faz referência ao nome da página (por exemplo, se estiver fazendo referência a `document.title` e, a partir de determinado momento quiser referir uma camada de dados específica), não precisará editar muitas e diferentes regras para alterar essa referência. Bastará alterá-la uma vez no elemento de dados, e todas as regras que fizeram referência a esse elemento serão automaticamente atualizadas.
 
 >[!NOTE]
 >
@@ -59,7 +60,7 @@ Os elementos de dados são os blocos de construção das regras. Os elementos de
 1. Nomeie o elemento de dados.
 1. Selecione uma extensão e um tipo.
 
-   Os tipos de elementos de dados disponíveis são determinados pela extensão. Para obter informações sobre os tipos disponíveis com a extensão da tag principal, consulte [Tipos de elementos de dados](data-elements.md#types-of-data-elements).
+   Os tipos de elementos de dados disponíveis são determinados pela extensão. Para obter informações sobre os tipos disponíveis com a extensão de tag principal, consulte [Tipos de elementos de dados](data-elements.md#types-of-data-elements).
 
 1. Forneça quaisquer informações solicitadas sobre o tipo escolhido nos campos fornecidos.
 1. (Opcional) Insira um valor padrão.
@@ -86,7 +87,7 @@ Os elementos de dados são os blocos de construção das regras. Os elementos de
 
 1. Selecione **[!UICONTROL Salvar]**.
 
-Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativa](../publishing/libraries.md#active-library). Isso salva imediatamente sua alteração na biblioteca e executa uma build. O status da build será exibido. Você também pode criar uma nova biblioteca na lista suspensa [!UICONTROL Biblioteca ativa].
+Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativa](../publishing/libraries.md#active-library). Isso salva imediatamente sua alteração na biblioteca e executa uma build. O status da build será exibido. Também é possível criar uma nova biblioteca por meio do menu suspenso [!UICONTROL Biblioteca principal].
 
 ## Tipos de elementos de dados {#types-of-data-elements}
 
@@ -119,7 +120,7 @@ if (window.location.pathname == '/') {
 }
 ```
 
-O código personalizado pode aceitar o `event` objeto da regra de chamada como argumento. Isso permite que o código leia o valor lá.
+O código personalizado pode aceitar o `event` objeto da regra de chamada como argumento. Isso permite que o código leia o valor desse local.
 
 **Exemplo:**
 
@@ -131,11 +132,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 Você pode usá-los nos scripts personalizados usando a `_satellite` sintaxe do objeto:
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-Ao usar a notação `%..%`, você só precisa especificar o nome do elemento de dados. Você não precisa especificar `event`.
+Ao usar porcentagem (`%`), é necessário especificar apenas o nome do elemento de dados. Você não precisa especificar `event`.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### Atributo DOM
 
@@ -155,7 +161,7 @@ Obtenha o valor de:
 
 Todo objeto ou variável disponíveis do JavaScript pode ser referido usando o campo de caminho.
 
-Se você quiser coletar variáveis do JavaScript ou propriedades de objeto na marcação e usá-las com qualquer uma das extensões ou regras, os elementos de dados poderão ser usados para capturar esses valores. Dessa forma, você pode consultar o elemento de dados em suas regras. Além disso, se a fonte de dados mudar, será necessário alterar apenas sua referência à fonte (o elemento de dados) em um local da interface do usuário da coleta de dados.
+Se você quiser coletar variáveis do JavaScript ou propriedades de objeto na marcação e usá-las com qualquer uma das extensões ou regras, os elementos de dados poderão ser usados para capturar esses valores. Assim, você pode consultar o elemento de dados em suas regras. Além disso, se a origem dos dados mudar, será necessário alterar apenas sua referência à fonte (o elemento de dados) em um local na interface da Coleção de dados.
 
 Por exemplo, considere que a marcação contém uma variável de JavaScript chamada `Page_Name`, assim:
 
@@ -166,7 +172,7 @@ Por exemplo, considere que a marcação contém uma variável de JavaScript cham
 </script>
 ```
 
-Você deve fornecer o caminho para essa variável ao criar o elemento de dados.
+Você deve fornecer o caminho dessa variável ao criar o elemento de dados.
 
 Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no Caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName` etc.
 
@@ -178,7 +184,7 @@ Se você utilizar um objeto coletor de dados como parte da camada de dados, util
 
 Forneça o nome do item de armazenamento local no campo [!UICONTROL Nome do item de armazenamento local].
 
-O armazenamento local fornece aos navegadores uma maneira de armazenar informações de página a página ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). O armazenamento local funciona muito como cookies, mas é muito maior e mais flexível.
+O armazenamento local fornece aos navegadores uma maneira de armazenar informações de página a página ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). O armazenamento local funciona de forma bem semelhante aos cookies, mas é muito maior e mais flexível.
 
 Use o campo fornecido para especificar o valor criado para um item de armazenamento local, como `lastProductViewed.`
 
@@ -230,7 +236,7 @@ O armazenamento de sessão é semelhante ao armazenamento local, a diferença é
 
 ### Visitor behavior
 
-Semelhante às Informações da página, esse elemento de dados usa tipos de comportamento comuns para enriquecer a lógica dentro de regras ou outras soluções da plataforma.
+De forma semelhante às Informações da página, esse elemento de dados usa tipos de comportamento comuns para aprimorar a lógica nas regras ou nas soluções da Platform.
 
 Selecione um dos seguintes atributos de comportamento do visitante:
 
@@ -247,11 +253,11 @@ Alguns casos de uso comuns incluem:
 * Mostrar uma pesquisa depois que um visitante estiver no site por cinco minutos
 * Se esta for a página de aterrissagem da visita, preencha uma métrica [!DNL Analytics]
 * Mostrar uma nova oferta ao visitante depois do número X de Contagens de sessão
-* Exibir um cadastro de informativo se for um visitante novo
+* Exibir um cadastro de informativo se for a primeira visita
 
 ## Elementos de dados incorporados
 
-Você deve criar um elemento de dados personalizado na interface do usuário da coleta de dados se tiver usado anteriormente um dos seguintes elementos de dados:
+Você deverá criar um elemento de dados personalizado na interface da Coleção de dados se tiver usado anteriormente um dos seguintes elementos de dados:
 
 * URI
 * Protocolo

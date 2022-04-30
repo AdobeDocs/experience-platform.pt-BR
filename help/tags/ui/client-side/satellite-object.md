@@ -2,10 +2,10 @@
 title: Referência a Objeto Satélite
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 83%
+source-wordcount: '1291'
+ht-degree: 79%
 
 ---
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 No exemplo fornecido, se um elemento de dados existir com um nome correspondente, o valor do elemento de dados será retornado. Se não houver nenhum elemento de dados correspondente, ele verificará se uma variável personalizada com um nome correspondente foi definida anteriormente usando o `_satellite.setVar()`. Se uma variável personalizada correspondente for encontrada, seu valor será retornado.
 
-Observe que, em muitos campos de formulário na interface da Coleção de dados, é possível usar a sintaxe `%%` para fazer referência a variáveis, reduzindo a necessidade de chamadas a `_satellite.getVar()`. Por exemplo, usar %product% acessará o valor do elemento de dados do produto ou a variável personalizada.
+>[!NOTE]
+>
+>Você pode usar a porcentagem (`%`) para fazer referência às variáveis de muitos campos de formulário na interface do usuário da coleta de dados, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usando `%product%` O acessará o valor do elemento de dados do produto ou da variável personalizada.
+
+Quando um evento aciona uma regra, você pode transmitir a regra correspondente `event` objeto em `_satellite.getVar()` assim:
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
@@ -147,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->No método antigo [`setCookie`](#setCookie) de configuração de cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o TTL (time-to-live) do cookie em dias. Nesse novo método, um objeto &quot;attributes&quot; é aceito como um terceiro argumento. Para definir um TTL para um cookie usando o novo método, você deve fornecer uma propriedade `expires` no objeto attributes e defini-la com o valor desejado. Isso é demonstrado no exemplo abaixo.
+>Nos velhos [`setCookie`](#setCookie) método para definir cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o TTL (time-to-live) do cookie em dias. Nesse novo método, um objeto &quot;attributes&quot; é aceito como um terceiro argumento. Para definir um TTL para um cookie usando o novo método, você deve fornecer um `expires` no objeto attributes e defina-o para o valor desejado. Isso é demonstrado no exemplo abaixo.
 
 **Exemplo**
 
@@ -247,7 +256,7 @@ O objeto contém as seguintes propriedades:
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID do ambiente. |
-| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging` e `production`. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`e `production`. |
 
 ## `notify`
 

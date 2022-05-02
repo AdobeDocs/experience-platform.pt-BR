@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3516'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Esta seção inclui informações sobre desempenho, limites e processos.
 
 ### Posso usar o Postman para a API do serviço de consulta?
 
-+++Responda Sim, você pode visualizar e interagir com todos os serviços de API do Adobe usando o Postman (um aplicativo gratuito de terceiros). Observe a [Guia de configuração do Postman](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Console do desenvolvedor do Adobe e adquirir todas as credenciais necessárias para uso com o Postman. Veja a documentação oficial para [orientação sobre como iniciar, executar e compartilhar coleções de Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Responda Sim, você pode visualizar e interagir com todos os serviços de API do Adobe usando o Postman (um aplicativo gratuito de terceiros). Observe a [Guia de configuração do Postman](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Console do desenvolvedor do Adobe e adquirir todas as credenciais necessárias para uso com o Postman. Veja a documentação oficial para [orientação sobre como iniciar, executar e compartilhar coleções do Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe um limite para o número máximo de linhas retornadas de um query por meio da interface do usuário?
@@ -257,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++Responda primeiro, marque os logs para descobrir os detalhes do erro. A seção de perguntas frequentes sobre [detecção de erros nos logs](#error-logs) O fornece mais informações sobre como fazer isso.
 
 Você também deve verificar a documentação para obter orientação sobre como executar o [consultas agendadas na interface do usuário](./ui/user-guide.md#scheduled-queries) e [a API](./api/scheduled-queries.md).
+
+Esta é uma lista de considerações para consultas agendadas ao usar o [!DNL Query Editor]. Não se aplicam à [!DNL Query Service] API:<br/>Você só pode adicionar um agendamento a um query que já tenha sido criado, salvo e executado.<br/>Você **cannot** adicione um agendamento a um query parametrizado.<br/>Consultas agendadas **cannot** contém um bloco anônimo.<br/>Você só pode agendar **one** modelo de consulta usando a interface do usuário do . Se quiser adicionar agendamentos adicionais a um template de query, será necessário usar a API . Se um agendamento já tiver sido adicionado usando a API, você não poderá adicionar agendamentos adicionais usando a interface do usuário.
 +++
 
 ### O que significa o erro &quot;Limite de sessão atingido&quot;?

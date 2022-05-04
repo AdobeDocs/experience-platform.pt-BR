@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Para navegar até o painel de destinos na interface do usuário da plataforma, s
 
 Você pode modificar a aparência do painel de destinos selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
-Consulte a [modificação de painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
+Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
 ## Widgets padrão
 
-O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos destinos e avaliar a integridade dos segmentos disponíveis para a análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [visão geral da biblioteca de widgets](../customize/widget-library.md).
+O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos destinos e avaliar a integridade dos segmentos disponíveis para a análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
@@ -56,6 +56,9 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
 * [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
 * [[!UICONTROL Contagem de destinos]](#destinations-count)
+* [[!UICONTROL Status do destino]](#destination-status)
+* [[!UICONTROL Destinos ativos por plataforma de destino]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Públicos-alvo ativados em todos os destinos]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinos mais usados] {#most-used-destinations}
 
@@ -129,7 +132,7 @@ A coluna identidades conta o número de IDs de origem no segmento que podem ser 
 
 ### [!UICONTROL Segmentos mapeados por identidade] {#mapped-segments-by-identity}
 
-Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso no widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
+Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis na lista suspensa no widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
 
 ![Os segmentos mapeados por widget de identidade.](../images/destinations/mapped-segments-by-identity.png)
 
@@ -164,6 +167,28 @@ O [!UICONTROL Contagem de destinos] O widget fornece o número total de endpoint
 Abaixo da contagem total, selecione **[!UICONTROL Destinos]** para navegar até a guia destinos browse . Esta página lista todos os destinos com os quais você estabeleceu uma conexão até o momento.
 
 ![O widget Destinos conta.](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Status do destino] {#destination-status}
+
+O [!UICONTROL Status do destino] O widget exibe o número total de destinos ativados como uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre destinos ativados e desativados.
+
+As contagens individuais para destinos ativados ou desativados são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+
+![O widget Status do Destino.](../images/destinations/destination-status.png)
+
+### [!UICONTROL Destinos ativos por plataforma de destino] {#active-destinations-by-destination-platform}
+
+O widget fornece uma tabela de duas colunas para mostrar uma lista de plataformas de destino ativas e o número total de destinos ativos para cada plataforma de destino. A lista de plataformas de destino é ordenada de cima para baixo.
+
+![O widget Destinos ativos por plataforma de destino.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Públicos-alvo ativados em todos os destinos] {#activated-audiences-across-all-destinations}
+
+O [!UICONTROL Públicos-alvo ativados em todos os destinos] O widget fornece o número total de públicos-alvo ativados em todos os destinos em uma única métrica. Esse número é preciso para o instantâneo mais recente.
+
+![O widget Públicos-alvo ativados em todos os destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Selecionar **[!UICONTROL Públicos-alvo]** para navegar até os destinos [!UICONTROL Procurar] guia . Esta página fornece uma lista de todos os destinos ativados e uma variedade de métricas relevantes. Consulte a documentação para [mais informações sobre o [!UICONTROL Procurar] guia](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Próximas etapas
 

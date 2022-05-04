@@ -4,9 +4,9 @@ title: Painel de segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -41,13 +41,13 @@ Para navegar até o [!UICONTROL Segmentos] no painel da interface do usuário da
 
 Você pode modificar a aparência da variável [!UICONTROL Segmentos] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
-Consulte a [modificação de painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
+Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
 ## Selecionar um segmento
 
 O painel seleciona automaticamente um segmento para exibição, no entanto, você pode alterar o segmento usando o menu suspenso ou o seletor de segmentos.
 
-Para escolher um segmento diferente, selecione o menu suspenso ao lado do nome do segmento ou use o seletor de segmentos para abrir a caixa de diálogo de seleção de segmentos.
+Para escolher um segmento diferente, selecione a lista suspensa ao lado do nome do segmento ou use o seletor de segmentos para abrir a caixa de diálogo de seleção de segmentos.
 
 ![](../images/segments/change-segment.png)
 
@@ -63,14 +63,17 @@ A data e a hora da &quot;última atualização&quot; em um widget mostram quando
 
 ## Widgets padrão
 
-O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos seus segmentos. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [visão geral da biblioteca de widgets](../customize/widget-library.md).
+O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos seus segmentos. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
 * [[!UICONTROL Tamanho do público-alvo]](#audience-size)
-* [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
+* [[!UICONTROL Ordem de ativação do público-alvo]](#audience-activation-order)
+* [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)
+* [[!UICONTROL Tendência de alteração do tamanho do público-alvo]](#audience-size-change-trend)
+* [[!UICONTROL Tendência do tamanho do público-alvo por identidade]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL Tamanho do público-alvo] {#audience-size}
 
@@ -79,18 +82,6 @@ O **[!UICONTROL Tamanho do público-alvo]** O widget exibe o número total de pe
 Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a variável [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
-
-### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
-
-O **[!UICONTROL Tendência do tamanho do público-alvo]** O widget fornece informações sobre o número total de perfis no segmento conforme capturados durante o instantâneo diário, nos últimos 30 dias, 90 dias ou 12 meses. Este widget exibe como o tamanho do segmento pode ter mudado ao longo do tempo, à medida que novos perfis se qualificam para ou saem do segmento.
-
-Para saber mais sobre a avaliação de segmentos e como os perfis se qualificam e saem dos segmentos, consulte [Documentação do Serviço de segmentação](../../segmentation/home.md).
-
-![A visão geral dos segmentos exibe o widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend-captions.png)
-
-O **[!UICONTROL Tendência do tamanho do público-alvo]** o widget fornece um [!UICONTROL Legendas] na parte superior direita do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas. Um modelo de aprendizado de máquina gera automaticamente legendas para descrever as principais tendências e eventos importantes ao analisar o gráfico e os dados do segmento.
-
-![A caixa de diálogo de legendas automáticas do widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL Sobreposição de identidade] {#identity-overlap}
 
@@ -108,9 +99,37 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 
 O **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em todos os perfis mesclados no segmento selecionado. O número total de perfis por identidade pode ser maior que o número total de perfis no segmento, pois um perfil pode ter várias identidades associadas a ele. Em outras palavras, adicionar os valores mostrados para cada identidade pode totalizar mais do que o tamanho total do público no segmento, pois se um cliente interagir com sua marca em mais de um canal, várias identidades podem ser associadas a esse cliente individual.
 
+Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
+
+![A caixa de diálogo perfis por legendas de identidade.](../images/segments/profiles-by-identity.png)
+
+Um modelo de aprendizado de máquina gera automaticamente insights de dados ao analisar a distribuição geral e as principais dimensões dos dados.
+
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/segments/profiles-by-identity.png)
+### [!UICONTROL Ordem de ativação do público-alvo] {#audience-activation-order}
+
+O [!UICONTROL Ordem de ativação do público-alvo] o widget fornece uma tabela de três colunas que lista a variável [!UICONTROL nome do destino], o [!UICONTROL plataforma]e a ativação [!UICONTROL data] do público-alvo. A lista é solicitada de alta para baixa de acordo com a recenticidade e pode acomodar até 10 linhas.
+
+![O widget Ordem de ativação do público-alvo.](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
+
+O [!UICONTROL Tendência do tamanho do público-alvo] O widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de **any** definição de segmento ao longo de um determinado período. A tendência do tamanho do público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. O tamanho do público-alvo é refletido no eixo y e no tempo no eixo x.
+
+![O widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend.png)
+
+### [!UICONTROL Tendência de alteração do tamanho do público-alvo] {#audience-size-change-trend}
+
+Este widget fornece um gráfico de linhas que ilustra a diferença no número total de perfis que se qualificaram para um determinado segmento entre os instantâneos diários mais recentes. O segmento escolhido para análise é selecionado na lista suspensa de visão geral. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. O tamanho do público-alvo é refletido no eixo y e no tempo no eixo x.
+
+![O widget de tendência de alteração de tamanho de público-alvo.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Tendência do tamanho do público-alvo por identidade] {#audience-size-trend-by-identity}
+
+Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base no tipo de identidade escolhido no menu suspenso do widget. O segmento usado para análise é selecionado na lista suspensa de visão geral. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget.
+
+![A tendência do tamanho do público-alvo por widget de identidade.](../images/segments/audience-size-trend-by-identity.png)
 
 ## Próximas etapas
 

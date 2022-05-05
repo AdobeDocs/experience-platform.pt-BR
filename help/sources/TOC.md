@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '780'
 ht-degree: 14%
 
 ---
@@ -167,6 +167,7 @@ ht-degree: 14%
       - [Explorar dados de automação de marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorar dados de pagamento](tutorials/api/explore/payments.md)
       - [Explorar dados de protocolo](tutorials/api/explore/protocols.md)
+      - [Explorar tabelas de dados](tutorials/api/explore/tabular.md)
    - Coletar dados {#collect}
       - [Coletar dados de publicidade](tutorials/api/collect/advertising.md)
       - [Coletar dados de armazenamento em nuvem](tutorials/api/collect/cloud-storage.md)

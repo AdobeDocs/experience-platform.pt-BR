@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Salesforce Marketing Cloud usando a API de Serviço de Fluxo.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 531d5619e0643b6195abaa53d1708e0368d45871
+source-git-commit: c0d750ef61ad2e295568cccabca5c52a758997c2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 1%
+source-wordcount: '520'
+ht-degree: 2%
 
 ---
 
@@ -108,4 +108,9 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identi
 }
 ```
 
-Ao seguir este tutorial, você criou um [!DNL Salesforce Marketing Cloud] conexão usando o [!DNL Flow Service] e obtiveram o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar sistemas de automação de marketing usando a API do Serviço de fluxo](../../explore/marketing-automation.md).
+## Próximas etapas
+
+Ao seguir este tutorial, você criou um [!DNL Salesforce Marketing Cloud] conexão básica usando o [!DNL Flow Service] API. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
+
+* [Explore a estrutura e o conteúdo das tabelas de dados usando o [!DNL Flow Service] API](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados de automação de marketing para a Platform usando o [!DNL Flow Service] API](../../collect/marketing-automation.md)

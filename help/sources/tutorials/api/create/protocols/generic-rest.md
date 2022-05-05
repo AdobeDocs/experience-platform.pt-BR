@@ -5,9 +5,10 @@ title: Criar uma conexão básica da API REST genérica usando a API do Serviço
 topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar a API REST genérica ao Adobe Experience Platform usando a API do Serviço de fluxo.
-source-git-commit: 1a9c4d5ba3ba9201378e78c0e92dea5101668a24
+exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '945'
 ht-degree: 1%
 
 ---
@@ -187,4 +188,7 @@ Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu i
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um [!DNL Generic REST API] conexão usando o [!DNL Flow Service] API e obtiveram o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial enquanto aprende a usar [explore aplicativos de protocolos usando a API do Serviço de Fluxo](../../explore/protocols.md).
+Ao seguir este tutorial, você criou um [!DNL Generic REST API] conexão básica usando o [!DNL Flow Service] API. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
+
+* [Explore a estrutura e o conteúdo das tabelas de dados usando o [!DNL Flow Service] API](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados de protocolos para a plataforma usando o [!DNL Flow Service] API](../../collect/protocols.md)

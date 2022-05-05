@@ -5,36 +5,36 @@ title: Visão geral do conector de origem OData genérico
 topic-legacy: overview
 description: Saiba como conectar OData genérico ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL Generic OData]
+# (Beta) [!DNL Generic OData] conector
 
 >[!NOTE]
 >
->O conector [!DNL Generic OData] está em beta. Consulte a [Visão geral das Fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
+>O [!DNL Generic OData] O conector está em beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com rótulo beta.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 [!DNL Experience Platform] O oferece suporte para assimilar dados de um aplicativo de protocolos de terceiros. O suporte para provedores de protocolos inclui [!DNL Generic OData].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Generic OData] a [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Generic OData] para [!DNL Platform] usando APIs ou a interface do usuário:
 
-## Conecte [!DNL Generic OData] a [!DNL Platform] usando APIs
+## Connect [!DNL Generic OData] para [!DNL Platform] uso de APIs
 
 - [Criar uma conexão básica OData genérica usando a API do Serviço de fluxo](../../tutorials/api/create/protocols/odata.md)
-- [Explore a estrutura de dados e o conteúdo de uma fonte de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/explore/protocols.md)
+- [Explorar tabelas de dados usando a API do Serviço de fluxo](../../tutorials/api/explore/tabular.md)
 - [Criar um fluxo de dados para uma fonte de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/collect/protocols.md)
 
-## Conecte [!DNL Generic OData] a [!DNL Platform] usando a interface do usuário
+## Connect [!DNL Generic OData] para [!DNL Platform] uso da interface do usuário
 
 - [Criar uma conexão de origem OData genérica na interface do usuário](../../tutorials/ui/create/protocols/odata.md)
 - [Criar um fluxo de dados para uma conexão de origem de protocolos na interface do usuário](../../tutorials/ui/dataflow/protocols.md)

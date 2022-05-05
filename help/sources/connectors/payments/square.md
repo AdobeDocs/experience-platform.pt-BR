@@ -3,9 +3,10 @@ keywords: Experience Platform, home, tópicos populares, quadrado
 solution: Experience Platform
 title: Visão geral do conector de origem quadrada
 description: Saiba como conectar o Quadrado ao Adobe Experience Platform usando APIs ou a interface do usuário.
-source-git-commit: cb2902455f965aced8d40859c36824710b9e695f
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Squar
 ## Connect [!DNL Square] para Plataforma usando APIs
 
 * [Criar uma conexão básica ao quadrado usando a API do Serviço de fluxo](../../tutorials/api/create/payments/square.md)
-* [Explore a estrutura de dados e o conteúdo de uma fonte de pagamentos usando a API do Serviço de Fluxo](../../tutorials/api/explore/payments.md)
+* [Explorar tabelas de dados usando a API do Serviço de fluxo](../../tutorials/api/explore/tabular.md)
 * [Criar um fluxo de dados para uma fonte de pagamentos usando a API de Serviço de Fluxo](../../tutorials/api/collect/payments.md)
 
 ## Connect [!DNL Square] para Plataforma usando a interface do usuário

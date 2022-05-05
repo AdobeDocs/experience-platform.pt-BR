@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de protocolos e
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com qualquer uma das fontes de protocolos a seguir na Plataforma:<ul><li>[OData genérico](../create/protocols/odata.md)</li><li>[REST genérico](../create/protocols/generic-rest.md)</li></ul>
+>Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de protocolos. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#protocols) para obter uma lista de origens de protocolos com as quais você pode criar uma ligação base.
 
 ## Introdução
 

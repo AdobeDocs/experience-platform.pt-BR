@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1327'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de sucesso do c
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com qualquer uma das seguintes fontes de sucesso do cliente na Plataforma:<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de sucesso do cliente. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#customer-success) para obter uma lista de fontes de sucesso do cliente com as quais você pode criar uma conexão básica.
 
 ## Introdução
 

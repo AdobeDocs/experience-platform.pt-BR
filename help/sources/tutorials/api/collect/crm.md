@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de CRM de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1329'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de CRM e trazê
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com qualquer uma das seguintes fontes de CRM na Plataforma:<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte CRM. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#customer-relationship-management) para obter uma lista de fontes CRM com as quais você pode criar uma conexão básica.
 
 ## Introdução
 

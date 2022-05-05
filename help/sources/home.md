@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
+source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -48,19 +48,19 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de publ
 
 As fontes de armazenamento em nuvem podem trazer seus próprios dados para a plataforma sem precisar baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes por meio da interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [[!DNL Azure Data Lake Storage Gen2] conector](connectors/cloud-storage/adls-gen2.md)
-- [[!DNL Azure Blob] conector](connectors/cloud-storage/blob.md)
-- [[!DNL Amazon Kinesis] conector](connectors/cloud-storage/kinesis.md)
-- [[!DNL Amazon S3] conector](connectors/cloud-storage/s3.md)
-- [[!DNL Apache HDFS] conector](connectors/cloud-storage/hdfs.md)
-- [[!DNL Azure Event Hubs] conector](connectors/cloud-storage/eventhub.md)
-- [[!DNL Azure File Storage] conector](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md)
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
-- [[!DNL FTP] conector](connectors/cloud-storage/ftp.md)
-- [[!DNL Google Cloud Storage] conector](connectors/cloud-storage/google-cloud-storage.md)
-- [[!DNL Google PubSub] conector](connectors/cloud-storage/google-pubsub.md)
-- [[!DNL Oracle Object Storage] conector](connectors/cloud-storage/oracle-object-storage.md)
-- [[!DNL SFTP] conector](connectors/cloud-storage/sftp.md)
+- [[!DNL FTP]](connectors/cloud-storage/ftp.md)
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md)
+- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
+- [[!DNL SFTP]](connectors/cloud-storage/sftp.md)
 
 ### Consentimento e preferências {#consent}
 
@@ -69,12 +69,12 @@ O Experience Platform oferece suporte para assimilar dados de uma plataforma de 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 
 
-### Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
+### Gerenciamento de Relacionamento com o Cliente (CRM) {#customer-relationship-management}
 
 Os sistemas CRM fornecem dados que podem ajudar a criar relações com o cliente, o que, por sua vez, cria fidelidade e impulsiona a retenção do cliente. O Experience Platform fornece suporte para assimilar dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [[!DNL Microsoft Dynamics] conector](connectors/crm/ms-dynamics.md)
-- [[!DNL Salesforce] conector](connectors/crm/salesforce.md)
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
+- [[!DNL Salesforce]](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
@@ -82,31 +82,31 @@ Os sistemas CRM fornecem dados que podem ajudar a criar relações com o cliente
 
 O Experience Platform oferece suporte para assimilar dados de um aplicativo de terceiros com sucesso do cliente. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [[!DNL Salesforce Service Cloud] conector](connectors/customer-success/salesforce-service-cloud.md)
-- [[!DNL ServiceNow] conector](connectors/customer-success/servicenow.md)
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 
 ### Banco de dados {#database}
 
 O Experience Platform oferece suporte para assimilar dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [[!DNL Amazon Redshift] conector](connectors/databases/redshift.md)
-- [[!DNL Apache Hive on Azure HDInsights] conector](connectors/databases/hive.md)
-- [[!DNL Apache Spark on Azure HDInsights] conector](connectors/databases/spark.md)
-- [[!DNL Azure Data Explorer] conector](connectors/databases/data-explorer.md)
-- [[!DNL Azure Synapse Analytics] conector](connectors/databases/synapse-analytics.md)
-- [[!DNL Azure Table Storage] conector](connectors/databases/ats.md)
-- [[!DNL Couchbase] conector](connectors/databases/couchbase.md)
-- [[!DNL Google BigQuery] conector](connectors/databases/bigquery.md)
-- [[!DNL GreenPlum] conector](connectors/databases/greenplum.md)
-- [[!DNL HP Vertica] conector](connectors/databases/hp-vertica.md)
-- [[!DNL IBM DB2] conector](connectors/databases/ibm-db2.md)
-- [[!DNL MariaDB] conector](connectors/databases/mariadb.md)
-- [[!DNL Microsoft SQL Server] conector](connectors/databases/sql-server.md)
-- [[!DNL MySQL] conector](connectors/databases/mysql.md)
-- [[!DNL Oracle] conector](connectors/databases/oracle.md)
-- [[!DNL Phoenix] conector](connectors/databases/phoenix.md)
-- [[!DNL PostgreSQL] conector](connectors/databases/postgres.md)
-- [[!DNL Snowflake] conector](connectors/databases/snowflake.md)
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
+- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md)
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md)
+- [[!DNL Couchbase]](connectors/databases/couchbase.md)
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md)
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md)
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md)
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB]](connectors/databases/mariadb.md)
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
+- [[!DNL MySQL]](connectors/databases/mysql.md)
+- [[!DNL Oracle]](connectors/databases/oracle.md)
+- [[!DNL Phoenix]](connectors/databases/phoenix.md)
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md)
+- [[!DNL Snowflake]](connectors/databases/snowflake.md)
 
 ### eCommerce {#ecommerce}
 

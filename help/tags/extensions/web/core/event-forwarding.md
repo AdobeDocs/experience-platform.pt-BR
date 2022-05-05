@@ -3,7 +3,7 @@ title: Visão geral da extensão de encaminhamento de eventos principais
 description: Saiba mais sobre a extensão de encaminhamento de eventos principais na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 98%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 Em seu código personalizado, você também pode usar o objeto `ruleStash`.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` é um objeto que coleta todos os resultados dos módulos de ação.
 
 Cada extensão tem seu próprio namespace. Por exemplo, se sua extensão tiver o nome `send-beacon`, todos os resultados das ações `send-beacon` serão armazenados no namespace `ruleStash['send-beacon']`.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 O namespace é exclusivo para cada extensão e tem o valor `undefined` no início.
 

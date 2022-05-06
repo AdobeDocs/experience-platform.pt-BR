@@ -3,7 +3,7 @@ title: Uso do Adobe Target com o SDK da Web da plataforma
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform usando o Adobe Target
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema; diagrama do sistema; diagrama
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 5%
@@ -88,7 +88,7 @@ Para obter mais informações, consulte [Categorias para públicos](https://expe
 
 Os tokens de resposta são usados principalmente para enviar metadados a terceiros, como Google, Facebook etc. Os tokens de resposta são retornados no `meta` no campo `propositions` -> `items`. Esta é uma amostra:
 
-```
+```json
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -112,7 +112,7 @@ Os tokens de resposta são usados principalmente para enviar metadados a terceir
 Para coletar os tokens de resposta, é necessário assinar `alloy.sendEvent` promessa, repita `propositions`
 e extrair os detalhes de `items` -> `meta`. Cada `proposition` tem um `renderAttempted` campo booleano indicando se a variável `proposition` foi renderizado ou não. Consulte a amostra abaixo:
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -183,7 +183,7 @@ Típica [!DNL Platform Web SDK] o código que usa esse comando é semelhante ao 
 
 **`sendEvent`com dados de perfil**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -193,7 +193,7 @@ alloy("sendEvent", {
 
 **Como enviar atributos de perfil para o Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -232,7 +232,7 @@ A tabela a seguir lista [!DNL Recommendations] e se cada um é compatível com o
 
 **Como enviar atributos do Recommendations para o Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {

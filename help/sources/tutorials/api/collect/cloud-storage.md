@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1549'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,9 @@ Para obter informações sobre como fazer chamadas para APIs da plataforma com �
 
 ## Criar uma conexão de origem {#source}
 
-Você pode criar uma conexão de origem fazendo uma solicitação de POST para o [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
+Você pode criar uma conexão de origem fazendo uma solicitação de POST para o `sourceConnections` ponto final de [!DNL Flow Service] API ao fornecer a ID de conexão básica, o caminho para o arquivo de origem que você deseja assimilar e a ID de especificação de conexão correspondente da fonte.
 
-Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
+Ao criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
 
 Use os seguintes valores enum para fontes baseadas em arquivo:
 
@@ -52,42 +52,37 @@ Use os seguintes valores enum para fontes baseadas em arquivo:
 
 Para todas as fontes baseadas em tabela, defina o valor como `tabular`.
 
-- [Criar uma conexão de origem usando arquivos personalizados delimitados](#using-custom-delimited-files)
-- [Criar uma conexão de origem usando arquivos compactados](#using-compressed-files)
-
 **Formato da API**
 
 ```http
 POST /sourceConnections
 ```
 
-### Criar uma conexão de origem usando arquivos personalizados delimitados {#using-custom-delimited-files}
-
 **Solicitação**
-
-É possível assimilar um arquivo delimitado com um delimitador personalizado especificando um `columnDelimiter` como uma propriedade. Qualquer valor de caractere único é um delimitador de coluna permitido. Se não for fornecida, uma vírgula `(,)` é usada como o valor padrão.
-
-A solicitação de exemplo a seguir cria uma conexão de origem para um tipo de arquivo delimitado usando valores separados por tabulação.
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `baseConnectionId` | A ID de conexão exclusiva do sistema de armazenamento em nuvem de terceiros que você está acessando. |
-| `data.format` | Um valor enum que define o atributo de formato de dados. |
-| `data.columnDelimiter` | Você pode usar qualquer delimitador de coluna de caractere único para coletar arquivos simples. Essa propriedade só é necessária ao assimilar arquivos CSV ou TSV. |
+| `baseConnectionId` | A ID de conexão básica da fonte de armazenamento em nuvem. |
+| `data.format` | O formato dos dados que você deseja trazer para a plataforma. Os valores compatíveis são: `delimited`, `JSON`e `parquet`. |
+| `data.properties` | (Opcional) Um conjunto de propriedades que você pode aplicar aos seus dados ao criar uma conexão de origem. |
+| `data.properties.columnDelimiter` | (Opcional) Um delimitador de coluna de caractere único que pode ser especificado ao coletar arquivos simples. Qualquer valor de caractere único é um delimitador de coluna permitido. Se não for fornecida, uma vírgula (`,`) é usada como o valor padrão. **Observação**: O `columnDelimiter` só pode ser usada ao assimilar arquivos delimitados. |
+| `data.properties.encoding` | (Opcional) Uma propriedade que define o tipo de codificação a ser usado ao assimilar seus dados na Platform. Os tipos de codificação compatíveis são: `UTF-8` e `ISO-8859-1`. **Observação**: O `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
+| `data.properties.compressionType` | (Opcional) Uma propriedade que define o tipo de arquivo compactado para assimilação. Os tipos de arquivos compactados compatíveis são: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`e `tar`. **Observação**: O `compressionType` A propriedade só pode ser usada ao assimilar arquivos delimitados ou JSON. |
 | `params.path` | O caminho do arquivo de origem que você está acessando. |
-| `connectionSpec.id` | A ID de especificação de conexão associada ao sistema de armazenamento em nuvem de terceiros específico. Consulte a [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão de origem recém-criada. Essa ID é necessária em uma etapa posterior para criar um fluxo de dados.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### Criar uma conexão de origem usando arquivos compactados {#using-compressed-files}
-
-**Solicitação**
-
-Também é possível assimilar arquivos compactados JSON ou delimitados especificando seus `compressionType` como uma propriedade. A lista de tipos de arquivos compactados suportados é:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-A seguinte solicitação de exemplo cria uma conexão de origem para um arquivo delimitado compactado usando um `gzip` tipo de arquivo.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `data.properties.compressionType` | Determina o tipo de arquivo compactado para assimilação. Essa propriedade só é necessária ao assimilar arquivos compactados JSON ou delimitados. |
+| `connectionSpec.id` | A ID da especificação de conexão associada à fonte de armazenamento em nuvem específica. Consulte a [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
 
 **Resposta**
 
@@ -206,7 +146,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -269,7 +209,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -341,7 +281,7 @@ GET /flowSpecs?property=name=="CloudStorageToAEP"
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name==%22CloudStorageToAEP%22' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -507,7 +447,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

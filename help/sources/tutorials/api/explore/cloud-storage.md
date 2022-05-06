@@ -3,10 +3,10 @@ keywords: Experience Platform, home, tópicos populares, armazenamento na nuvem,
 title: Explorar as pastas de armazenamento da nuvem usando a API do serviço de fluxo
 description: Este tutorial usa a API do Serviço de fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 1333eac5e022ef32f051120496154a88e2f9324e
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 3%
+source-wordcount: '699'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +60,7 @@ curl -X GET \
   'http://platform.adobe.io/data/foundation/flowservice/connections/dc3c0646-5e30-47be-a1ce-d162cb8f1f07/explore?objectType=folder&object=root' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -106,6 +106,7 @@ Você pode inspecionar a estrutura de um arquivo de dados da sua fonte de armaze
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parâmetro | Descrição |
@@ -119,10 +120,10 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -163,6 +164,7 @@ O [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refere
 | --------- | ----------- |
 | `columnDelimiter` | O valor de caractere único especificado como delimitador de coluna para inspecionar arquivos CSV ou TSV. Se o parâmetro não for fornecido, o valor assumirá como padrão uma vírgula `(,)`. |
 | `compressionType` | Um parâmetro de consulta obrigatório para a visualização de um arquivo compactado delimitado ou JSON. Os arquivos compactados compatíveis são: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `encoding` | Define qual tipo de codificação usar ao renderizar a visualização. Os tipos de codificação compatíveis são: `UTF-8` e `ISO-8859-1`. **Observação**: O `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
 
 ## Próximas etapas
 

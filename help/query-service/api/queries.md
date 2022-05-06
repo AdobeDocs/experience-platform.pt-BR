@@ -5,10 +5,10 @@ title: Ponto de Extremidade da API de Consultas
 topic-legacy: queries
 description: As seções a seguir abordam as chamadas que você pode fazer usando o endpoint /queries na API do Serviço de query.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## Exemplos de chamadas à API
 
-As seções a seguir percorrem as chamadas que você pode fazer usando o terminal `/queries` na API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir abordam as chamadas que você pode fazer usando o `/queries` endpoint no [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de consultas
 
-Você pode recuperar uma lista de todas as consultas da Organização IMS fazendo uma solicitação GET para o endpoint `/queries`.
+Você pode recuperar uma lista de todas as consultas da Organização IMS fazendo uma solicitação do GET para a `/queries` endpoint .
 
 **Formato da API**
 
@@ -37,12 +37,12 @@ Veja a seguir uma lista de parâmetros de query disponíveis para listar queries
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criado (`orderby=-created`) classificará os itens por criado em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20º*) |
 | `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
-| `property` | Filtre os resultados com base nos campos. Os filtros **devem** ter escape de HTML. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `updated`, `state` e `id`. A lista de operadores suportados é `>` (maior que), `<` (menor que), `>=` (maior que ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (não igual a) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
-| `excludeSoftDeleted` | Indica se uma consulta que foi excluída de forma flexível deve ser incluída. Por exemplo, `excludeSoftDeleted=false` incluirá **consultas excluídas por software.** (*Booliano, valor padrão: true*) |
-| `excludeHidden` | Indica se consultas não orientadas por usuários devem ser exibidas. Ter esse valor definido como falso incluirá **consultas não orientadas por usuário, como definições CURSOR, FETCH ou consultas de metadados.** (*Booliano, valor padrão: true*) |
+| `property` | Filtre os resultados com base nos campos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `updated`, `state`e `id`. A lista de operadores compatíveis é `>` (maior que), `<` (inferior a), `>=` (maior ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (não igual a), e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
+| `excludeSoftDeleted` | Indica se uma consulta que foi excluída de forma flexível deve ser incluída. Por exemplo, `excludeSoftDeleted=false` will **incluir** consultas excluídas por software. (*Booleano, valor padrão: true*) |
+| `excludeHidden` | Indica se consultas não orientadas por usuários devem ser exibidas. Ter este valor definido como false **incluir** consultas não orientadas por usuários, como definições CURSOR, FETCH ou consultas de metadados. (*Booleano, valor padrão: true*) |
 
 **Solicitação**
 
@@ -51,7 +51,7 @@ A solicitação a seguir recupera a consulta mais recente criada para a organiza
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -117,9 +117,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas p
 }
 ```
 
-### Criar um query
+### Criar uma consulta
 
-Você pode criar um novo query fazendo uma solicitação POST ao endpoint `/queries`.
+Você pode criar um novo query fazendo uma solicitação POST para a variável `/queries` endpoint .
 
 **Formato da API**
 
@@ -135,7 +135,7 @@ A solicitação a seguir cria um novo query, configurado pelos valores fornecido
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes da sua query recém-criada. Quando o query terminar de ativar e for executado com êxito, o `state` será alterado de `SUBMITTED` para `SUCCESS`.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes da sua query recém-criada. Quando o query terminar de ativar e for executado com êxito, a variável `state` mudará de `SUBMITTED` para `SUCCESS`.
 
 ```json
 {
@@ -202,7 +202,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes da s
 
 ### Recuperar uma consulta por ID
 
-Você pode recuperar informações detalhadas sobre uma consulta específica fazendo uma solicitação do GET para o endpoint `/queries` e fornecendo o valor `id` da consulta no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um query específico fazendo uma solicitação do GET para o `/queries` e fornecer o `id` no caminho da solicitação.
 
 **Formato da API**
 
@@ -212,14 +212,14 @@ GET /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | O valor `id` da consulta que você deseja recuperar. |
+| `{QUERY_ID}` | O `id` do query que deseja recuperar. |
 
 **Solicitação**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -273,7 +273,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ### Cancelar uma consulta
 
-Você pode solicitar a exclusão de uma consulta especificada, fazendo uma solicitação de PATCH ao endpoint `/queries` e fornecendo o valor `id` da consulta no caminho da solicitação.
+Você pode solicitar a exclusão de uma consulta especificada fazendo uma solicitação de PATCH para a variável `/queries` e fornecer o `id` no caminho da solicitação.
 
 **Formato da API**
 
@@ -283,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | O valor `id` da consulta que você deseja cancelar. |
+| `{QUERY_ID}` | O `id` valor da consulta que deseja cancelar. |
 
 
 **Solicitação**
@@ -294,7 +294,7 @@ Essa solicitação de API usa a sintaxe do Patch JSON para sua carga útil. Para
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{

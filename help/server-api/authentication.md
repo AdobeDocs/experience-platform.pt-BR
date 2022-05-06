@@ -4,7 +4,7 @@ description: Saiba como configurar a autenticação para a API do servidor de re
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: recolha de dados; autenticação; api da rede de borda Adobe Experience Platform; autorização
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 2%
@@ -44,7 +44,7 @@ Para fazer chamadas para APIs da plataforma, primeiro conclua o [tutorial de aut
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Os recursos no Experience Platform podem ser isolados para sandboxes virtuais específicas. Em solicitações para APIs da plataforma, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses são parâmetros opcionais.
 

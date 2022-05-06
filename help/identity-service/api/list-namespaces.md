@@ -5,11 +5,10 @@ title: Listar namespaces de identidade disponíveis
 topic-legacy: API guide
 description: Liste todos os namespaces disponíveis.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '79'
-ht-degree: 5%
+source-wordcount: '83'
+ht-degree: 7%
 
 ---
 
@@ -28,13 +27,13 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/idnamespace/identities' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-A resposta inclui uma matriz de objetos, com cada objeto representando um namespace disponível. Os namespaces com um valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; são namespaces padrão, enquanto aqueles com um valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; são namespaces criados por sua organização.
+A resposta inclui uma matriz de objetos, com cada objeto representando um namespace disponível. Namespaces com um &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL false]&quot; são namespaces padrão, enquanto aqueles com um &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL true]&quot; são namespaces criados por sua organização.
 
 >[!NOTE]
 >
@@ -80,4 +79,4 @@ A resposta inclui uma matriz de objetos, com cada objeto representando um namesp
 
 ## Próximas etapas
 
-Prossiga para o próximo tutorial para [criar um namespace personalizado](./create-custom-namespace.md)
+Acesse o próximo tutorial para [criar um namespace personalizado](./create-custom-namespace.md)

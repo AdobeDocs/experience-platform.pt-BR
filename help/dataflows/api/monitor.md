@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para fins de integridade, erros e métricas usando a API do Serviço de fluxo.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 1%
@@ -15,37 +15,37 @@ ht-degree: 1%
 
 # Monitorar fluxos de dados usando a API do Serviço de fluxo
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras. Além disso, o Experience Platform permite que os dados sejam ativados para parceiros externos.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras. Além disso, o Experience Platform permite que os dados sejam ativados para parceiros externos.
 
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes e destinos compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para obter integridade, erros e métricas usando o [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para fins de integridade, erros e métricas usando o [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este tutorial exige que você tenha o valor da ID de um fluxo de dados válido. Se você não tiver uma ID de fluxo de dados válida, selecione o conector de escolha na [visão geral das fontes](../../sources/home.md) ou [visão geral de destinos](../../destinations/catalog/overview.md) e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial exige que você tenha o valor da ID de um fluxo de dados válido. Se você não tiver uma ID de fluxo de dados válida, selecione o conector escolhido na [visão geral das fontes](../../sources/home.md) ou [visão geral dos destinos](../../destinations/catalog/overview.md) e siga as etapas descritas antes de tentar este tutorial.
 
 Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [Destinos](../../destinations/home.md): Os destinos são integrações pré-criadas com aplicativos comumente usados que permitem a ativação simplificada de dados da Platform para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
-- [Fontes](../../sources/home.md):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
-- [Sandboxes](../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Fontes](../../sources/home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para monitorar com êxito as execuções de fluxo usando a API [!DNL Flow Service].
+As seções a seguir fornecem informações adicionais que você precisará saber para monitorar com sucesso as execuções de fluxo usando o [!DNL Flow Service] API.
 
 ### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 ## O fluxo do monitor é executado
 
-Depois de fazer um fluxo de dados, execute uma solicitação GET para a API [!DNL Flow Service].
+Depois de fazer um fluxo de dados, execute uma solicitação do GET para [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -65,7 +65,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FLOW_ID}` | O valor exclusivo `id` para o fluxo de dados que você deseja monitorar. |
+| `{FLOW_ID}` | O único `id` para o fluxo de dados que você deseja monitorar. |
 
 **Solicitação**
 
@@ -76,7 +76,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==c9cef9cb-c934-4467-8ef9-cbc934546741' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -97,7 +97,7 @@ Uma resposta bem-sucedida retorna detalhes sobre a execução do fluxo, incluind
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "prod",
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "flowId": "f00c8762-df2f-432b-a7d7-38999fef5e8e",
             "etag": "\"560266dc-0000-0200-0000-5fd0d0140000\"",
             "metrics": {
@@ -196,9 +196,9 @@ Uma resposta bem-sucedida retorna detalhes sobre a execução do fluxo, incluind
 | `sizeSummary` | O volume dos dados em bytes. |
 | `recordSummary` | A contagem de registros dos dados. |
 | `fileSummary` | O arquivo conta os dados. |
-| `fileSummary.extensions` | Contém informações específicas para a atividade. Por exemplo, `manifest` é apenas parte da &quot;Atividade de promoção&quot; e, portanto, está incluído com o objeto `extensions`. |
+| `fileSummary.extensions` | Contém informações específicas para a atividade. Por exemplo, `manifest` é apenas parte da &quot;Atividade de promoção&quot; e, portanto, está incluída no relatório `extensions` objeto. |
 | `statusSummary` | Mostra se a execução do fluxo é bem-sucedida ou uma falha. |
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você recuperou métricas e informações de erro no fluxo de dados usando a API [!DNL Flow Service]. Agora é possível continuar monitorando o fluxo de dados, dependendo do cronograma de assimilação, para rastrear o status e as taxas de ingestão. Para obter informações sobre como monitorar fluxos de dados para fontes, leia o tutorial [fluxos de dados de monitoramento para fontes usando a interface do usuário](../ui/monitor-sources.md) . Para obter mais informações sobre como monitorar fluxos de dados para destinos, leia o tutorial [monitoramento de fluxos de dados para destinos usando a interface do usuário](../ui/monitor-destinations.md) .
+Ao seguir este tutorial, você recuperou métricas e informações de erro no seu fluxo de dados usando o [!DNL Flow Service] API. Agora é possível continuar monitorando o fluxo de dados, dependendo do cronograma de assimilação, para rastrear o status e as taxas de ingestão. Para obter informações sobre como monitorar fluxos de dados para fontes, leia o [monitorando fluxos de dados de fontes usando a interface do usuário](../ui/monitor-sources.md) tutorial. Para obter mais informações sobre como monitorar fluxos de dados para destinos, leia a [monitoramento de fluxos de dados para destinos usando a interface do usuário](../ui/monitor-destinations.md) tutorial.

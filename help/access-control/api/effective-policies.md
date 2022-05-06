@@ -5,17 +5,16 @@ title: Endpoint da API de políticas efetivas
 topic-legacy: developer guide
 description: O controle de acesso no Adobe Experience Platform permite gerenciar funções e permissões para vários recursos da plataforma usando a Adobe Admin Console. Este documento serve como um guia para visualizar políticas eficazes usando a API de controle de acesso para Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 1%
+source-wordcount: '320'
+ht-degree: 2%
 
 ---
 
 # Ponto final de políticas efetivas
 
-Para exibir políticas eficazes para o usuário atual, faça uma solicitação de POST ao endpoint `/acl/effective-policies` na API [!DNL Access Control]. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação no formato de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
+Para visualizar políticas eficazes para o usuário atual, faça uma solicitação de POST para a `/acl/effective-policies` endpoint no [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação no formato de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
 
 **Formato da API**
 
@@ -25,14 +24,14 @@ POST /acl/effective-policies
 
 **Solicitação**
 
-As solicitações a seguir recuperam informações sobre a permissão &quot;[!UICONTROL Manage Datasets]&quot; e o acesso ao tipo de recurso &quot;[!UICONTROL schemas]&quot; para o usuário atual.
+As solicitações a seguir recuperam informações sobre o &quot;[!UICONTROL Gerenciar conjuntos de dados]&quot; e acesso ao &quot;[!UICONTROL esquemas]&quot; tipo de recurso para o usuário atual.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/access-control/acl/effective-policies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -66,15 +65,15 @@ Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos 
 
 ## Próximas etapas
 
-Este documento cobriu como fazer chamadas para a API [!DNL Access Control] para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para [!DNL Experience Platform], consulte a [visão geral do controle de acesso](../home.md).
+Este documento cobriu como fazer chamadas para o [!DNL Access Control] API para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para [!DNL Experience Platform], consulte o [visão geral do controle de acesso](../home.md).
 
 ## Apêndice
 
-Esta seção fornece informações complementares para usar a API [!DNL Access Control].
+Esta seção fornece informações complementares para usar a variável [!DNL Access Control] API.
 
 ### Permissões aceitas e tipos de recursos
 
-Esta é uma lista de permissões e tipos de recursos que você pode incluir na carga de uma solicitação do POST para o endpoint `/acl/active-permissions`.
+Esta é uma lista de permissões e tipos de recursos que você pode incluir na carga de uma solicitação do POST para o `/acl/active-permissions` endpoint .
 
 **Permissões**
 

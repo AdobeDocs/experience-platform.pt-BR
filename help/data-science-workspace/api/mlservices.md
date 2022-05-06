@@ -5,8 +5,7 @@ title: Ponto de Extremidade da API do MLServices
 topic-legacy: Developer guide
 description: Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso essencial do MLServices é a capacidade de automatizar o treinamento e a pontuação de acordo com a programação. As execuções de treinamento programado podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 2%
@@ -17,7 +16,7 @@ ht-degree: 2%
 
 Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso essencial do MLServices é a capacidade de automatizar o treinamento e a pontuação de acordo com a programação. As execuções de treinamento programado podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 
-Os agendamentos automatizados de treinamento e pontuação são definidos com um carimbo de data e hora inicial, data e hora final e uma frequência representada como uma [cron expression](https://en.wikipedia.org/wiki/Cron). Os agendamentos podem ser definidos ao [criar um MLService](#create-an-mlservice) ou aplicados ao [atualizar um MLService](#update-an-mlservice) existente.
+Os agendamentos automatizados de treinamento e pontuação são definidos com um carimbo de data e hora inicial, data e hora final e uma frequência representada como uma [expressão cron](https://en.wikipedia.org/wiki/Cron). Os agendamentos podem ser definidos quando [criação de um serviço MLS](#create-an-mlservice) ou aplicada por [atualização de um MLService existente](#update-an-mlservice).
 
 ## Criar um serviço MLS {#create-an-mlservice}
 
@@ -36,7 +35,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/mlServices \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json; profile=mlService.v1.json' \
     -d '{
@@ -78,7 +77,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService recém-criado, incluindo seu identificador exclusivo (`id`), ID do Experimento para treinamento (`trainingExperimentId`), ID do Experimento para pontuação (`scoringExperimentId`) e a ID do conjunto de dados de treinamento de entrada (`trainingDataSetId`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do serviço MLS recém-criado, incluindo seu identificador exclusivo (`id`), ID do experimento para treinamento (`trainingExperimentId`), ID do experimento para pontuação (`scoringExperimentId`) e a ID do conjunto de dados de treinamento de entrada (`trainingDataSetId`).
 
 ```json
 {
@@ -121,25 +120,25 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usados para filtrar resultados. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usado para filtrar resultados. |
 | `{VALUE}` | O valor do parâmetro de consulta anterior. |
 
 **Solicitação**
 
-A solicitação a seguir contém uma consulta e recupera uma lista de MLServices que compartilham a mesma ID de instância MLI (`{MLINSTANCE_ID}`).
+A solicitação a seguir contém um query e recupera uma lista de MLServices que compartilham a mesma ID de instância MLI (`{MLINSTANCE_ID}`).
 
 ```shell
 curl -X GET \
     'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, incluindo a ID do MLService (`{MLSERVICE_ID}`), a ID do Experimento para treinamento (`{TRAINING_ID}`), a ID do Experimento para pontuação (`{SCORING_ID}`) e a ID do conjunto de dados de treinamento de entrada (`{DATASET_ID}`).
+Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, incluindo a ID do serviço MLS (`{MLSERVICE_ID}`), ID do experimento para treinamento (`{TRAINING_ID}`), ID do experimento para pontuação (`{SCORING_ID}`) e a ID do conjunto de dados de treinamento de entrada (`{DATASET_ID}`).
 
 ```json
 {
@@ -185,7 +184,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -210,7 +209,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do serviço MLS
 }
 ```
 
-## Atualizar um MLService {#update-an-mlservice}
+## Atualizar um serviço MLS {#update-an-mlservice}
 
 Você pode atualizar um MLService existente, sobrescrevendo suas propriedades por meio de uma solicitação do PUT que inclua a ID do MLService de destino no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
@@ -233,7 +232,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json; profile=mlService.v1.json' \
     -d '{
@@ -308,7 +307,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -343,7 +342,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlServices?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

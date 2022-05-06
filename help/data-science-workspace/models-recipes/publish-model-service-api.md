@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda o processo de publicação de um modelo como um serviço usando a API de aprendizado de máquina do Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Para acompanhar este tutorial, você deve ter um Mecanismo ML, Instância ML e E
 Por fim, antes de iniciar este tutorial, reveja o [introdução](../api/getting-started.md) seção do guia do desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas para o [!DNL Sensei Machine Learning] API, incluindo os cabeçalhos necessários usados neste tutorial:
 
 - `{ACCESS_TOKEN}`
-- `{IMS_ORG}`
+- `{ORG_ID}`
 - `{API_KEY}`
 
 Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
@@ -64,7 +64,7 @@ curl -X POST
   https://platform.adobe.io/data/sensei/mlServices
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'Content-Type: application/json'
   -d '{
         "name": "Service name",
@@ -145,7 +145,7 @@ curl -X POST
   https://platform.adobe.io/data/sensei/mlServices
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "Service name",
@@ -217,7 +217,7 @@ POST /mlServices
 curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "string",
@@ -304,7 +304,7 @@ GET /mlServices/{SERVICE_ID}
 curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -366,7 +366,7 @@ A solicitação a seguir agendará o treinamento e a pontuação de um Serviço 
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "string",

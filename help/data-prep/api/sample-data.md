@@ -4,26 +4,25 @@ solution: Experience Platform
 title: Endpoint da API de dados de exemplo
 topic-legacy: sample data
 description: 'Você pode usar o terminal `/samples na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os dados de amostra do mapeamento. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
 
 # Ponto de extremidade de dados de amostra
 
-Dados de amostra podem ser usados ao criar um esquema para seu conjunto de mapeamento. Você pode usar o terminal `/samples` na API de Preparação de dados para recuperar, criar e atualizar programaticamente os dados de amostra.
+Dados de amostra podem ser usados ao criar um esquema para seu conjunto de mapeamento. Você pode usar o `/samples` endpoint na API de preparação de dados para recuperar, criar e atualizar programaticamente os dados de amostra.
 
 ## Listar dados de amostra
 
-Você pode recuperar uma lista de todos os dados de amostra do mapeamento para sua Organização IMS fazendo uma solicitação de GET para o endpoint `/samples`.
+Você pode recuperar uma lista de todos os dados de amostra de mapeamento para sua Organização IMS fazendo uma solicitação de GET para a `/samples` endpoint .
 
 **Formato da API**
 
-O ponto de extremidade `/samples` oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Atualmente, você deve incluir os parâmetros `start` e `limit` como parte de sua solicitação.
+O `/samples` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Atualmente, você deve incluir a variável `start` e `limit` parâmetros como parte da solicitação.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -42,7 +41,7 @@ A solicitação a seguir recuperará os dois últimos dados de amostra de mapeam
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -88,7 +87,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 ## Criar dados de amostra
 
-Você pode criar dados de amostra fazendo uma solicitação POST para o endpoint `/samples`.
+É possível criar dados de amostra fazendo uma solicitação de POST para a variável `/samples` endpoint .
 
 ```http
 POST /samples
@@ -101,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -129,7 +128,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre seus
 
 ## Criar dados de amostra fazendo upload de um arquivo
 
-Você pode criar dados de amostra usando um arquivo, fazendo uma solicitação de POST ao endpoint `/samples/upload`.
+É possível criar dados de amostra usando um arquivo, fazendo uma solicitação de POST para a `/samples/upload` endpoint .
 
 **Formato da API**
 
@@ -144,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
@@ -168,7 +167,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre seus
 
 ## Pesquisar um objeto de dados de amostra específico
 
-Você pode pesquisar um objeto específico de dados de amostra fornecendo a ID no caminho de uma solicitação do GET para o endpoint `/samples`.
+Você pode pesquisar um objeto específico de dados de amostra fornecendo a ID no caminho de uma solicitação do GET para a variável `/samples` endpoint .
 
 **Formato da API**
 
@@ -186,7 +185,7 @@ GET /samples/{SAMPLE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,7 +208,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações do objeto 
 
 ## Atualizar dados de amostra
 
-É possível atualizar um objeto de dados de amostra específico fornecendo a ID no caminho de uma solicitação PUT para o endpoint `/samples`.
+É possível atualizar um objeto de dados de amostra específico fornecendo a ID no caminho de uma solicitação de PUT para a variável `/samples` endpoint .
 
 **Formato da API**
 
@@ -229,7 +228,7 @@ A solicitação a seguir atualiza os dados de amostra especificados. Especificam
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do Adobe Experience Platform Data Science Workspace. Após a conclusão, o esquema de Vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros de sua Organização IMS no Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 - Autorização de [!DNL Experience Platform] Chamadas de API. Complete o [Autenticar e acessar APIs do Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) tutorial para obter os seguintes valores para concluir com sucesso este tutorial:
    - Autorização: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - Segredo do cliente: `{CLIENT_SECRET}`
    - Certificado do cliente: `{PRIVATE_KEY}`
 - Dados de amostra e arquivos de origem do [Receita de Vendas de Varejo](../pre-built-recipes/retail-sales.md). Baixe os ativos necessários para este e outros [!DNL Data Science Workspace] tutoriais da [Repositório Git Adobe public](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ O esquema Vendas de varejo e os conjuntos de dados são criados automaticamente 
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

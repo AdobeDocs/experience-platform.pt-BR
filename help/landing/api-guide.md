@@ -5,7 +5,7 @@ title: Introdução às APIs do Adobe Experience Platform
 topic-legacy: api guide
 description: A Adobe Experience Platform fornece serviços de API que estão intimamente vinculados uns aos outros. Este guia contém informações sobre os serviços disponíveis, cabeçalhos necessários para operações CRUD, mensagens de erro, coleções de Postman e chamadas de API de exemplo.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: e62e4e3a12ad2a85de5b10c60fde3618cde84c4b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Para fazer chamadas com êxito para endpoints do Platform, é necessário conclu
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ### Cabeçalho de sandbox
 
@@ -44,9 +44,9 @@ As APIs da Adobe Experience Platform empregam várias tecnologias e sintaxes sub
 
 Para saber mais sobre as tecnologias de API subjacentes que a plataforma utiliza, incluindo objetos de esquema JSON de exemplo, visite o [Fundamentos da API do Experience Platform](api-fundamentals.md) guia.
 
-## Coleções de postman para APIs do Experience Platform
+## Coleções do Postman para APIs do Experience Platform
 
-O Postman é uma plataforma de colaboração para desenvolvimento de API que permite configurar ambientes com variáveis predefinidas, compartilhar coleções de API, simplificar solicitações de CRUD e muito mais. A maioria dos serviços de API da Platform tem coleções Postman que podem ser usadas para ajudar a fazer chamadas de API.
+O Postman é uma plataforma de colaboração para desenvolvimento de API que permite configurar ambientes com variáveis predefinidas, compartilhar coleções de API, simplificar solicitações de CRUD e muito mais. A maioria dos serviços de API da Platform tem coleções do Postman que podem ser usadas para ajudar a fazer chamadas de API.
 
 Para saber mais sobre o Postman, incluindo como configurar um ambiente, uma lista de coleções disponíveis e como importar coleções, visite o [Documentação do Platform Postman](postman.md).
 
@@ -80,7 +80,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -144,4 +144,4 @@ Este documento introduziu os cabeçalhos necessários, os guias disponíveis e f
 
 Para obter respostas para perguntas frequentes, consulte o [Guia de solução de problemas da plataforma](troubleshooting.md).
 
-Para configurar um ambiente Postman e explorar as coleções Postman disponíveis, consulte [Guia do Platform Postman](postman.md).
+Para configurar um ambiente Postman e explorar as coleções disponíveis do Postman, consulte [Guia do Platform Postman](postman.md).

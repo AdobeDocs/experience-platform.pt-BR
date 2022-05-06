@@ -6,55 +6,55 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 
 # Transmitir dados de registro usando APIs de assimilação de fluxo
 
-Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs [!DNL Data Ingestion Service] do Adobe Experience Platform.
+Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte da Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
 ## Introdução
 
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual  [!DNL Platform] organiza os dados de experiência.
-   - [Guia](../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Um guia abrangente que abrange cada um dos endpoints disponíveis da  [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece nas chamadas em todo este tutorial, bem como saber como criar esquemas, que são usados na criação de um conjunto de dados para assimilação.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados da experiência.
+   - [Guia do desenvolvedor do Registro de Schema](../../xdm/api/getting-started.md): Um guia abrangente que abrange cada um dos endpoints disponíveis do [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas em todo este tutorial, bem como saber como criar esquemas, que são usados na criação de um conjunto de dados para assimilação.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de assimilação de streaming.
 
 ### Lendo exemplos de chamadas de API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
-## Compor um schema baseado na classe [!DNL XDM Individual Profile]
+## Compor um schema com base em [!DNL XDM Individual Profile] classe
 
-Para criar um conjunto de dados, primeiro será necessário criar um novo esquema que implemente a classe [!DNL XDM Individual Profile] . Para obter mais informações sobre como criar schemas, leia o [Guia do desenvolvedor da API do Registro de Schema](../../xdm/api/getting-started.md).
+Para criar um conjunto de dados, primeiro será necessário criar um novo esquema que implemente o [!DNL XDM Individual Profile] classe . Para obter mais informações sobre como criar schemas, leia o [Guia do desenvolvedor da API da API do Registro de Schema](../../xdm/api/getting-started.md).
 
 **Formato da API**
 
@@ -69,7 +69,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | O nome que deseja usar para o esquema. Este nome deve ser exclusivo. |
 | `description` | Uma descrição significativa para o esquema que você está criando. |
-| `meta:immutableTags` | Neste exemplo, a tag `union` é usada para persistir seus dados em [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | Neste exemplo, a variável `union` é usada para persistir seus dados em [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Resposta**
 
@@ -138,7 +138,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do esquema rec�
         "union"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createDate": 1551376506996,
@@ -151,9 +151,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do esquema rec�
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TENANT_ID}` | Essa ID é usada para garantir que os recursos criados sejam namespacados corretamente e estejam contidos na Organização IMS. Para obter mais informações sobre a ID do locatário, leia o [guia do Registro do esquema](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | Essa ID é usada para garantir que os recursos criados sejam namespacados corretamente e estejam contidos na Organização IMS. Para obter mais informações sobre o ID do locatário, leia a [guia do Registro de esquema](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-Anote os atributos `$id` e `version`, pois ambos serão usados ao criar seu conjunto de dados.
+Por favor, tome nota da `$id` bem como `version` , já que ambos serão usados ao criar seu conjunto de dados.
 
 ## Definir um descritor de identidade primário para o esquema
 
@@ -170,7 +170,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -185,15 +185,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | O `$id` que você recebeu anteriormente ao compor o esquema. Deve ser algo como isto: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | O `$id` que você recebeu anteriormente ao compor o schema. Deve ser algo como isto: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
->&#x200B; &#x200B;**Códigos de Namespace de Identidade**
+>&#x200B; &#x200B;**Códigos de namespace de identidade**
 >
-> Certifique-se de que os códigos sejam válidos - o exemplo acima usa &quot;email&quot; que é um namespace de identidade padrão. Outros namespaces de identidade padrão comumente usados podem ser encontrados nas [Perguntas frequentes do serviço de identidade](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
+> Certifique-se de que os códigos sejam válidos - o exemplo acima usa &quot;email&quot; que é um namespace de identidade padrão. Outros namespaces de identidade padrão comumente usados podem ser encontrados no [Perguntas frequentes sobre o serviço de identidade](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> Se quiser criar um namespace personalizado, siga as etapas descritas em [visão geral do namespace de identidade](../../identity-service/home.md).
+> Se quiser criar um namespace personalizado, siga as etapas descritas na [visão geral do namespace de identidade](../../identity-service/home.md).
 
 **Resposta**
 
@@ -211,7 +211,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com informações sobre o de
     "@id": "17aaebfa382ce8fc0a40d3e43870b6470aab894e1c368d16",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -236,7 +236,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' {
     "name": "Dataset name",
@@ -266,11 +266,11 @@ Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz contendo a ID d
 
 Depois de criar o esquema e o conjunto de dados, você pode criar uma conexão de transmissão
 
-Para obter mais informações sobre como criar uma conexão de transmissão, leia o [tutorial de conexão de transmissão](./create-streaming-connection.md).
+Para obter mais informações sobre como criar uma conexão de transmissão, leia o [tutorial criar uma conexão de transmissão](./create-streaming-connection.md).
 
 ## Assimilar dados de registro à conexão de transmissão {#ingest-data}
 
-Com o conjunto de dados e a conexão de transmissão no lugar, é possível assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Platform].
+Com o conjunto de dados e a conexão de transmissão no lugar, você pode assimilar registros JSON formatados em XDM para assimilar dados de registro no [!DNL Platform].
 
 **Formato da API**
 
@@ -280,8 +280,8 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O valor `inletId` da conexão de transmissão criada anteriormente. |
-| `syncValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se definido como `true`, ele poderá ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor é definido como `false`. Observe que, se você definir este parâmetro de consulta como `true`, a taxa de solicitação será limitada a 60 vezes por minuto por `CONNECTION_ID`. |
+| `{CONNECTION_ID}` | O `inletId` valor da conexão de transmissão criada anteriormente. |
+| `syncValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se estiver definido como `true`, ele pode ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor é definido como `false`. Observe que, se você definir este parâmetro de consulta como `true` que a taxa de solicitação será limitada a 60 vezes por minuto `CONNECTION_ID`. |
 
 **Solicitação**
 
@@ -291,7 +291,7 @@ A solicitação de exemplo abaixo assimila um registro com um nome de origem aus
 
 >[!NOTE]
 >
->A chamada de API a seguir **not** requer cabeçalhos de autenticação.
+>A chamada de API a seguir faz **not** exigir cabeçalhos de autenticação.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -342,7 +342,7 @@ Se você quiser incluir um nome de origem, o exemplo a seguir mostra como inclu�
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -352,7 +352,7 @@ Se você quiser incluir um nome de origem, o exemplo a seguir mostra como inclu�
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do recém-transmitido [!DNL Profile].
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da nova transmissão [!DNL Profile].
 
 ```json
 {
@@ -370,7 +370,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do recém-trans
 | `{CONNECTION_ID}` | A ID da conexão de transmissão criada anteriormente. |
 | `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
-| `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
+| `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` for adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
 
 ## Recuperar os dados de registro recém-assimilados
 
@@ -378,7 +378,7 @@ Para validar os registros assimilados anteriormente, você pode usar o [[!DNL Pr
 
 >[!NOTE]
 >
->Se a ID da política de mesclagem não estiver definida e o `schema.name` ou `relatedSchema.name` for `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** identidades relacionadas.
+>Se a ID da política de mesclagem não estiver definida e a variável `schema.name` ou `relatedSchema.name` é `_xdm.context.profile`, [!DNL Profile Access] buscará **all** identidades relacionadas.
 
 **Formato da API**
 
@@ -402,7 +402,7 @@ Você pode revisar os dados de registro assimilados anteriormente com a seguinte
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -457,6 +457,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Ao ler este documento, agora você entende como assimilar dados de registro em [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar seus dados assimilados por meio da interface do usuário [!DNL Platform]. Para obter mais informações, leia o guia [de monitoramento da assimilação de dados](../quality/monitor-data-ingestion.md).
+Ao ler este documento, agora você entende como assimilar dados de registro no [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio de [!DNL Platform] IU. Para obter mais informações, leia o [monitoramento da ingestão de dados](../quality/monitor-data-ingestion.md) guia.
 
-Para obter mais informações sobre a assimilação de streaming em geral, leia a [visão geral da assimilação de streaming](../streaming-ingestion/overview.md).
+Para obter mais informações sobre a assimilação de streaming em geral, leia o [visão geral da assimilação de streaming](../streaming-ingestion/overview.md).

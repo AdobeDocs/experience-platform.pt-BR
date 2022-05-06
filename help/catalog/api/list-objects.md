@@ -5,11 +5,10 @@ title: Listar objetos do catálogo
 topic-legacy: developer guide
 description: Você pode recuperar uma lista de todos os objetos disponíveis de um tipo específico por meio de uma única chamada de API, com a prática recomendada de incluir filtros que limitam o tamanho da resposta.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '242'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -26,29 +25,29 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser listado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Um parâmetro de consulta usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por &quot;E&quot; comercial (`&`). Consulte o guia em [filtrar dados do catálogo](filter-data.md) para obter mais informações. |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser listado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Um parâmetro de consulta usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por &quot;E&quot; comercial (`&`). Consulte o guia sobre [filtrar dados do catálogo](filter-data.md) para obter mais informações. |
 
 **Solicitação**
 
-A solicitação de amostra abaixo recupera uma lista de conjuntos de dados, com um filtro `limit` reduzindo a resposta a cinco resultados, e um filtro `properties` que limita as propriedades exibidas para cada conjunto de dados.
+A solicitação de exemplo abaixo recupera uma lista de conjuntos de dados, com um `limit` filtrar reduzindo a resposta a cinco resultados e um `properties` que limita as propriedades exibidas para cada conjunto de dados.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=5&properties=name,description,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de objetos [!DNL Catalog] na forma de pares de valores-chave, filtrados pelos parâmetros de consulta fornecidos na solicitação. Para cada par de valor-chave, a chave representa um identificador exclusivo para o objeto [!DNL Catalog] em questão, que pode ser usado em outra chamada para [exibir esse objeto específico](look-up-object.md) para obter mais detalhes.
+Uma resposta bem-sucedida retorna uma lista de [!DNL Catalog] objetos na forma de pares de valores chave, filtrados pelos parâmetros de consulta fornecidos na solicitação. Para cada par de valor-chave, a chave representa um identificador exclusivo para a variável [!DNL Catalog] objeto em questão, que pode ser usado em outra chamada para [exibir esse objeto específico](look-up-object.md) para obter mais detalhes.
 
 >[!NOTE]
 >
->Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pela query `properties`, a resposta retornará apenas as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
+>Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pela variável `properties` , a resposta retorna somente as propriedades solicitadas que não incluem, como mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
 
 ```json
 {

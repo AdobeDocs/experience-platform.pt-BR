@@ -5,10 +5,10 @@ title: Comportamento do ponto de extremidade da API
 description: O endpoint /comporors na API do Registro de Schema permite recuperar todos os comportamentos disponíveis no contêiner global.
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -17,23 +17,23 @@ ht-degree: 3%
 No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve referenciar um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso na Platform, há dois comportamentos disponíveis:
 
 * **[!UICONTROL Registro]**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
-* **[!UICONTROL Série]** cronológica: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
+* **[!UICONTROL Série cronológica]**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
 
 >[!NOTE]
 >
->Há alguns casos de uso na Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Nesses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Consulte o tutorial em [criar um schema ad-hoc](../tutorials/ad-hoc.md) para obter mais informações.
+>Há alguns casos de uso na Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Nesses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Veja o tutorial em [criação de um schema ad hoc](../tutorials/ad-hoc.md) para obter mais informações.
 >
->Para obter informações mais gerais sobre comportamentos de dados em termos de como eles afetam a composição do schema, consulte o guia sobre as [noções básicas da composição do schema](../schema/composition.md).
+>Para obter informações mais gerais sobre comportamentos de dados em termos de como eles afetam a composição do schema, consulte o guia no [noções básicas da composição do schema](../schema/composition.md).
 
-O endpoint `/behaviors` na API [!DNL Schema Registry] permite visualizar os comportamentos disponíveis no contêiner `global`.
+O `/behaviors` endpoint no [!DNL Schema Registry] A API permite exibir os comportamentos disponíveis na variável `global` contêiner.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de comportamentos {#list}
 
-Você pode recuperar uma lista de todos os comportamentos disponíveis fazendo uma solicitação de GET para o endpoint `/behaviors`.
+Você pode recuperar uma lista de todos os comportamentos disponíveis, fazendo uma solicitação do GET para o `/behaviors` endpoint .
 
 **Formato da API**
 
@@ -48,7 +48,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/global/behaviors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
@@ -90,7 +90,7 @@ curl -X GET \
 
 ## Pesquisar um comportamento {#lookup}
 
-Você pode pesquisar um comportamento específico fornecendo a ID no caminho de uma solicitação do GET para o endpoint `/behaviors`.
+Você pode pesquisar um comportamento específico fornecendo a ID no caminho de uma solicitação do GET para o `/behaviors` endpoint .
 
 **Formato da API**
 
@@ -100,20 +100,20 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BEHAVIOR_ID}` | O `meta:altId` ou `$id` codificado por URL do comportamento que você deseja pesquisar. |
+| `{BEHAVIOR_ID}` | O `meta:altId` ou codificado por URL `$id` do comportamento que você deseja procurar. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
-A solicitação a seguir recupera os detalhes do comportamento do registro fornecendo seu `meta:altId` no caminho da solicitação.
+A solicitação a seguir recupera os detalhes do comportamento do registro fornecendo `meta:altId` no caminho da solicitação.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/global/behaviors/_xdm.data.record \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed+json;version=1'
 ```
@@ -173,4 +173,4 @@ Uma resposta bem-sucedida retorna os detalhes do comportamento, incluindo sua ve
 
 ## Próximas etapas
 
-Este guia cobriu o uso do terminal `/behaviors` na API [!DNL Schema Registry]. Para saber como atribuir um comportamento a uma classe usando a API, consulte o [guia de ponto de extremidade de classes](./classes.md).
+Este guia cobriu o uso do `/behaviors` endpoint no [!DNL Schema Registry] API. Para saber como atribuir um comportamento a uma classe usando a API, consulte [guia de endpoint de classes](./classes.md).

@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite que você exclua um conjunto de dados ou lote do armazenamento de Perfil para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou foram adicionados com erro. Isso requer o uso da API de perfil para criar um trabalho do sistema de perfil ou excluir uma solicitação.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: ba8b62c67cdd6fa011166cc851ffc1c970108835
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 3%
@@ -51,7 +51,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -68,7 +68,7 @@ A resposta inclui uma matriz &quot;filho&quot; com um objeto para cada solicita�
   "children": [
     {
       "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "batchId": "8d075b5a178e48389126b9289dcfd0ac",
       "jobType": "DELETE",
       "status": "COMPLETED",
@@ -78,7 +78,7 @@ A resposta inclui uma matriz &quot;filho&quot; com um objeto para cada solicita�
     },
     {
       "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "dataSetId": "5c802d3cd83fc114b741c4b5",
       "jobType": "DELETE",
       "status": "PROCESSING",
@@ -120,7 +120,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "dataSetId": "5c802d3cd83fc114b741c4b5"
@@ -138,7 +138,7 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 ```json
 {
     "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "dataSetId": "5c802d3cd83fc114b741c4b5",
     "jobType": "DELETE",
     "status": "NEW",
@@ -176,7 +176,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
@@ -194,7 +194,7 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 ```json
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "NEW",
@@ -245,7 +245,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -256,7 +256,7 @@ A resposta fornece os detalhes da solicitação de exclusão, incluindo seu stat
 ```json
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "COMPLETED",
@@ -295,7 +295,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 

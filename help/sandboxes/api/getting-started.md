@@ -5,7 +5,7 @@ title: Introdução à API do Sandbox
 topic-legacy: developer guide
 description: A API de sandbox permite que os desenvolvedores gerenciem programaticamente as sandboxes no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 5%
@@ -32,7 +32,7 @@ Este guia requer que você tenha completado o [tutorial de autenticação](https
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Além dos cabeçalhos de autenticação, todas as solicitações exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 

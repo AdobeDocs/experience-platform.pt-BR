@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, disponibilizando os dados corretos prontamente e atualizando-os continuamente à medida que as mudanças acontecem. Isso é feito com o uso de bordas, um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis para os aplicativos.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 2%
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Endpoints de configurações e destinos de projeção de borda
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente conforme as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e a torna acessível para os aplicativos. Por exemplo, aplicativos Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo as informações específicas que serão disponibilizadas na borda. Este guia fornece instruções detalhadas para usar a API [!DNL Real-time Customer Profile] para trabalhar com projeções de borda, incluindo destinos e configurações.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente conforme as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e a torna acessível para os aplicativos. Por exemplo, aplicativos Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo as informações específicas que serão disponibilizadas na borda. Este guia fornece instruções detalhadas para usar o [!DNL Real-time Customer Profile] API para trabalhar com projeções de borda, incluindo destinos e configurações.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
+O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 >[!NOTE]
 >
->As solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho `Content-Type`. Mais de um `Content-Type` é usado neste documento. Preste especial atenção aos cabeçalhos nas chamadas de amostra para garantir que você esteja usando o `Content-Type` correto para cada solicitação.
+>As solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem uma `Content-Type` cabeçalho. Mais de um `Content-Type` é usada neste documento. Preste especial atenção aos cabeçalhos nas chamadas de amostra para garantir que você esteja usando o método correto `Content-Type` para cada solicitação.
 
 ## Destinos de projeção
 
@@ -30,7 +30,7 @@ Uma projeção pode ser roteada para uma ou mais bordas especificando os locais 
 
 ### Listar todos os destinos
 
-Você pode listar os destinos de borda que já foram criados para sua organização, fazendo uma solicitação GET para o endpoint `/config/destinations`.
+Você pode listar os destinos de borda que já foram criados para sua organização, fazendo uma solicitação do GET para a `/config/destinations` endpoint .
 
 **Formato da API**
 
@@ -45,13 +45,13 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-A resposta inclui uma matriz `projectionDestinations` com os detalhes de cada destino mostrados como um objeto individual dentro da matriz. Se nenhuma projeção tiver sido configurada, a matriz `projectionDestinations` retornará vazia.
+A resposta inclui um `projectionDestinations` matriz com os detalhes de cada destino mostrados como um objeto individual dentro da matriz. Se nenhuma projeção tiver sido configurada, a variável `projectionDestinations` matriz retorna vazia.
 
 >[!NOTE]
 >
@@ -105,13 +105,13 @@ A resposta inclui uma matriz `projectionDestinations` com os detalhes de cada de
 | Propriedade | Descrição |
 |---|---|
 | `_links.self.href` | No nível superior, corresponde ao caminho usado para fazer a solicitação do GET. Em cada objeto de destino individual, esse caminho pode ser usado em uma solicitação GET para pesquisar diretamente os detalhes de um destino específico. |
-| `id` | Em cada objeto de destino, o `"id"` mostra a ID exclusiva gerada pelo sistema somente leitura para o destino. Essa ID é usada ao fazer referência a um destino específico e ao criar configurações de projeção. |
+| `id` | Em cada objeto de destino, a variável `"id"` mostra a ID exclusiva gerada pelo sistema somente leitura para o destino. Essa ID é usada ao fazer referência a um destino específico e ao criar configurações de projeção. |
 
-Para obter mais informações sobre os atributos de um destino individual, consulte a seção [criar um destino](#create-a-destination) que se segue.
+Para obter mais informações sobre atributos de um destino individual, consulte a seção sobre [criação de um destino](#create-a-destination) o que se segue.
 
 ### Criar um destino {#create-a-destination}
 
-Se o destino necessário ainda não existir, é possível criar um novo destino de projeção fazendo uma solicitação de POST para o endpoint `/config/destinations`.
+Se o destino necessário ainda não existir, você poderá criar um novo destino de projeção fazendo uma solicitação de POST para a `/config/destinations` endpoint .
 
 **Formato da API**
 
@@ -125,14 +125,14 @@ A solicitação a seguir cria um novo destino de borda.
 
 >[!NOTE]
 >
->A solicitação de POST para criar um destino requer um cabeçalho `Content-Type` específico, conforme mostrado abaixo. Usar um cabeçalho `Content-Type` incorreto resulta em um erro HTTP Status 415 (Unsupported Media Type).
+>A solicitação de POST para criar um destino requer um `Content-Type` conforme mostrado abaixo. Uso de um `Content-Type` resulta em um erro HTTP Status 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json; version=1' \
   -d '{
@@ -180,7 +180,7 @@ Uma resposta bem-sucedida retorna os detalhes do destino de borda recém-criado,
 
 ### Exibir um destino
 
-Se você souber a ID exclusiva de um destino de projeção, poderá executar uma solicitação de pesquisa para exibir seus detalhes. Isso é feito fazendo uma solicitação GET para o endpoint `/config/destinations` e incluindo a ID do destino no caminho da solicitação.
+Se você souber a ID exclusiva de um destino de projeção, poderá executar uma solicitação de pesquisa para exibir seus detalhes. Isso é feito fazendo uma solicitação GET para o `/config/destinations` endpoint e incluindo a ID do destino no caminho da solicitação.
 
 **Formato da API**
 
@@ -201,13 +201,13 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations/9d66c06e-c745-480c-b64c-1d5234d25f4b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-O objeto de resposta mostra os detalhes do destino de projeção. O atributo `id` deve corresponder à ID do destino de projeção que foi fornecida na solicitação.
+O objeto de resposta mostra os detalhes do destino de projeção. O `id` deve corresponder à ID do destino de projeção que foi fornecida na solicitação.
 
 ```json
 {
@@ -227,7 +227,7 @@ O objeto de resposta mostra os detalhes do destino de projeção. O atributo `id
 
 ### Atualizar um destino
 
-Um destino existente pode ser atualizado fazendo uma solicitação PUT para o endpoint `/config/destinations` e incluindo a ID do destino a ser atualizado no caminho da solicitação. Essa operação basicamente está reescrevendo o destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação como são fornecidos ao criar um novo destino.
+Um destino existente pode ser atualizado fazendo uma solicitação de PUT para a `/config/destinations` endpoint e incluindo a ID do destino a ser atualizada no caminho da solicitação. Essa operação basicamente está reescrevendo o destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação como são fornecidos ao criar um novo destino.
 
 >[!CAUTION]
 >
@@ -249,14 +249,14 @@ A solicitação a seguir atualiza o destino existente para incluir um segundo lo
 
 >[!IMPORTANT]
 >
->A solicitação de PUT requer um cabeçalho `Content-Type` específico, conforme mostrado abaixo. Usar um cabeçalho `Content-Type` incorreto resulta em um erro HTTP Status 415 (Unsupported Media Type).
+>A solicitação de PUT requer um `Content-Type` conforme mostrado abaixo. Uso de um `Content-Type` resulta em um erro HTTP Status 415 (Unsupported Media Type).
 
 ```shell
 curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json' \
   -d '{
@@ -272,7 +272,7 @@ curl -X PUT \
 
 | Propriedade | Descrição |
 |---|---|
-| `currentVersion` | A versão atual do destino existente. O valor do atributo `version` ao executar uma solicitação de pesquisa para o destino. |
+| `currentVersion` | A versão atual do destino existente. O valor da variável `version` ao executar uma solicitação de pesquisa para o destino. |
 
 **Resposta**
 
@@ -297,11 +297,11 @@ A resposta inclui os detalhes atualizados para o destino, incluindo sua ID e o n
 
 ### Excluir um destino
 
-Se sua organização não exigir mais um destino de projeção, ele poderá ser excluído fazendo uma solicitação DELETE ao endpoint `/config/destinations` e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
+Se sua organização não exigir mais um destino de projeção, ele poderá ser excluído fazendo uma solicitação de DELETE para a `/config/destinations` endpoint e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
 
 >[!CAUTION]
 >
->A resposta da API à solicitação de exclusão é imediata, no entanto, as alterações reais nos dados nas bordas ocorrem de forma assíncrona. Em outras palavras, os dados do perfil serão removidos de todas as bordas (o `dataCenters` especificado no destino de projeção), mas o processo levará tempo para ser concluído.
+>A resposta da API à solicitação de exclusão é imediata, no entanto, as alterações reais nos dados nas bordas ocorrem de forma assíncrona. Em outras palavras, os dados do perfil serão removidos de todas as bordas (a variável `dataCenters` especificado no destino da projeção), mas o processo levará tempo para ser concluído.
 
 **Formato da API**
 
@@ -321,7 +321,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -331,11 +331,11 @@ A solicitação de exclusão retorna o status HTTP 204 (Sem conteúdo) e um corp
 
 ## Configurações de projeção
 
-As configurações de projeção fornecem informações sobre quais dados devem estar disponíveis em cada borda. Em vez de projetar um esquema [!DNL Experience Data Model] (XDM) completo na borda, uma projeção fornece apenas dados específicos ou campos do esquema. Sua organização pode definir mais de uma configuração de projeção para cada esquema XDM.
+As configurações de projeção fornecem informações sobre quais dados devem estar disponíveis em cada borda. Em vez de projetar uma conclusão [!DNL Experience Data Model] (XDM) para a borda, uma projeção fornece apenas dados específicos, ou campos, do esquema. Sua organização pode definir mais de uma configuração de projeção para cada esquema XDM.
 
 ### Listar todas as configurações de projeção
 
-Você pode listar todas as configurações de projeção que foram criadas para sua organização, fazendo uma solicitação de GET para o endpoint `/config/projections`. Você também pode adicionar parâmetros opcionais ao caminho da solicitação para acessar configurações de projeção para um esquema específico ou pesquisar uma projeção individual pelo nome.
+Você pode listar todas as configurações de projeção que foram criadas para sua organização, fazendo uma solicitação de GET para a `/config/projections` endpoint . Você também pode adicionar parâmetros opcionais ao caminho da solicitação para acessar configurações de projeção para um esquema específico ou pesquisar uma projeção individual pelo nome.
 
 **Formato da API**
 
@@ -352,24 +352,24 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 >[!NOTE]
 >
->`schemaName` é necessário ao usar o  `name` parâmetro , pois um nome de configuração de projeção é exclusivo somente no contexto de uma classe de schema.
+>`schemaName` é necessário ao usar a variável `name` , como um nome de configuração de projeção é exclusivo somente no contexto de uma classe de esquema.
 
 **Solicitação**
 
-A solicitação a seguir lista todas as configurações de projeção associadas à classe de esquema [!DNL Experience Data Model], [!DNL XDM Individual Profile]. Para obter mais informações sobre o XDM e sua função em [!DNL Platform], comece lendo a [Visão geral do sistema XDM](../../xdm/home.md).
+A solicitação a seguir lista todas as configurações de projeção associadas ao [!DNL Experience Data Model] classe schema, [!DNL XDM Individual Profile]. Para obter mais informações sobre o XDM e sua função no [!DNL Platform]Por favor, comece lendo o [Visão geral do sistema XDM](../../xdm/home.md).
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de configurações de projeção dentro do atributo `_embedded` raiz, contido na matriz `projectionConfigs`. Se nenhuma configuração de projeção tiver sido feita para sua organização, a matriz `projectionConfigs` estará vazia.
+Uma resposta bem-sucedida retorna uma lista de configurações de projeção dentro da raiz `_embedded` , contido no `projectionConfigs` matriz. Se nenhuma configuração de projeção tiver sido feita para sua organização, a variável `projectionConfigs` A matriz ficará vazia.
 
 ```json
 {
@@ -437,14 +437,14 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->A solicitação de POST para criar uma configuração requer um cabeçalho `Content-Type` específico, conforme mostrado abaixo. Usar um cabeçalho `Content-Type` incorreto resulta em um erro HTTP Status 415 (Unsupported Media Type).
+>A solicitação do POST para criar uma configuração requer um `Content-Type` conforme mostrado abaixo. Uso de um `Content-Type` resulta em um erro HTTP Status 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
@@ -456,7 +456,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 |---|---|
-| `selector` | Uma string contendo uma lista de propriedades no schema que devem ser replicadas nas bordas. As práticas recomendadas para trabalhar com seletores estão disponíveis na seção [Seletores](#selectors) deste documento. |
+| `selector` | Uma string contendo uma lista de propriedades no schema que devem ser replicadas nas bordas. As práticas recomendadas para trabalhar com seletores estão disponíveis na seção [Seletores](#selectors) seção deste documento. |
 | `name` | Um nome descritivo para a nova configuração de projeção. |
 | `destinationId` | O identificador para o destino da borda para o qual os dados serão projetados. |
 
@@ -502,15 +502,15 @@ Uma resposta bem-sucedida retorna os detalhes da configuração de projeção re
 
 ## Seletores {#selectors}
 
-Um seletor é uma lista separada por vírgulas de nomes de campos XDM. Em uma configuração de projeção, o seletor designa as propriedades a serem incluídas nas projeções. O formato do valor do parâmetro `selector` é baseado vagamente na sintaxe XPath. A sintaxe suportada é resumida abaixo, com exemplos adicionais fornecidos para referência.
+Um seletor é uma lista separada por vírgulas de nomes de campos XDM. Em uma configuração de projeção, o seletor designa as propriedades a serem incluídas nas projeções. O formato do `selector` o valor do parâmetro é baseado livremente na sintaxe XPath. A sintaxe suportada é resumida abaixo, com exemplos adicionais fornecidos para referência.
 
 ### Sintaxe suportada
 
 * Use vírgulas para selecionar vários campos. Não use espaços.
 * Use a notação de pontos para selecionar campos aninhados.
-   * Por exemplo, para selecionar um campo chamado `field` que está aninhado em um campo chamado `foo`, use o seletor `foo.field`.
+   * Por exemplo, para selecionar um campo chamado `field` aninhado dentro de um campo chamado `foo`, use o seletor `foo.field`.
 * Ao incluir um campo que contenha subcampos, todos os subcampos também são projetados por padrão. No entanto, é possível filtrar os subcampos retornados usando parênteses `"( )"`.
-   * Por exemplo, `addresses(type,city.country)` retorna somente o tipo de endereço e o país em que a cidade do endereço está localizada para cada elemento de matriz `addresses`.
+   * Por exemplo, `addresses(type,city.country)` retorna somente o tipo de endereço e o país em que a cidade do endereço está localizada para cada `addresses` elemento de matriz.
    * O exemplo acima é equivalente a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
@@ -524,11 +524,11 @@ Um seletor é uma lista separada por vírgulas de nomes de campos XDM. Em uma co
 
 ### Exemplos do parâmetro do seletor
 
-Os exemplos a seguir mostram os parâmetros de amostra `selector`, seguidos pelos valores estruturados que representam.
+Os exemplos a seguir mostram exemplos `selector` parâmetros, seguidos pelos valores estruturados que representam.
 
 **person.lastName**
 
-Retorna o subcampo `lastName` do objeto `person` no recurso solicitado.
+Retorna o `lastName` subcampo do `person` no recurso solicitado.
 
 ```json
 {
@@ -540,7 +540,7 @@ Retorna o subcampo `lastName` do objeto `person` no recurso solicitado.
 
 **addresses**
 
-Retorna todos os elementos na matriz `addresses`, incluindo todos os campos em cada elemento, mas nenhum outro campo.
+Retorna todos os elementos no `addresses` , incluindo todos os campos em cada elemento, mas nenhum outro campo.
 
 ```json
 {
@@ -567,7 +567,7 @@ Retorna todos os elementos na matriz `addresses`, incluindo todos os campos em c
 
 **person.lastName,addresses**
 
-Retorna o campo `person.lastName` e todos os elementos na matriz `addresses`.
+Retorna o `person.lastName` e todos os elementos no `addresses` matriz.
 
 ```json
 {
@@ -624,7 +624,7 @@ Retorna somente o campo cidade para todos os elementos na matriz de endereços.
 
 **addresses(tipo, cidade)**
 
-Retorna apenas os valores dos campos `type` e `city` para cada elemento na matriz `addresses`. Todos os outros subcampos contidos em cada elemento `addresses` são filtrados.
+Retorna somente os valores da variável `type` e `city` campos para cada elemento na `addresses` matriz. Todos os outros subcampos contidos em cada `addresses` são filtrados.
 
 ```json
 {
@@ -649,4 +649,4 @@ Retorna apenas os valores dos campos `type` e `city` para cada elemento na matri
 
 ## Próximas etapas
 
-Este guia mostrou as etapas envolvidas para configurar projeções e destinos, incluindo como formatar corretamente o parâmetro `selector`. Agora você pode criar novos destinos de projeção e configurações específicas às necessidades da sua organização.
+Este guia mostrou as etapas envolvidas para configurar as projeções e os destinos, incluindo como formatar corretamente a variável `selector` parâmetro. Agora você pode criar novos destinos de projeção e configurações específicas às necessidades da sua organização.

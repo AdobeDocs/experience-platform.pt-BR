@@ -5,11 +5,10 @@ title: Listar todas as identidades em um cluster
 topic-legacy: API guide
 description: As identidades relacionadas em um gráfico de identidade, independentemente do namespace, são consideradas parte do mesmo "cluster" nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '359'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -21,10 +20,10 @@ As identidades relacionadas em um gráfico de identidade, independentemente do n
 
 Recupere todos os membros do cluster para obter uma única identidade.
 
-Você pode usar o parâmetro opcional `graph-type` para indicar o gráfico de identidade do qual obter o cluster. As opções são:
+Você pode usar o `graph-type` para indicar o gráfico de identidade para obter o cluster. As opções são:
 
 - Nenhum - Não execute nenhum agrupamento de identidade.
-- Gráfico privado - Execute a compilação de identidade com base no seu gráfico de identidade privado. Se nenhum `graph-type` for fornecido, esse será o padrão.
+- Gráfico privado - Execute a compilação de identidade com base no seu gráfico de identidade privado. Se não `graph-type` for fornecido, esse será o padrão.
 
 **Formato da API**
 
@@ -34,42 +33,42 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Solicitação**
 
-Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
+Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor da ID (`id`).
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/members?nsId=411&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 2: Forneça a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
+Opção 2: Forneça a identidade como namespace (`ns`, por nome) e o valor da ID (`id`).
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/members?ns=AMO&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento cobrindo [obter o XID para uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda [obter o XID para uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/members?xid=CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ## Obter identidades associadas para várias identidades
 
-Use `POST` como um equivalente em lote do método `GET` descrito acima para retornar as identidades nos clusters de várias identidades.
+Use `POST` como equivalente em lote do `GET` método descrito acima para retornar as identidades nos clusters de várias identidades.
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ A solicitação a seguir demonstra o fornecimento de uma lista de XIDs para os q
 
 **Solicitação de Stub**
 
-O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta sobreposta. Trata-se de uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão a ser concluídos. Isso será substituído quando não for mais necessário.
+Utilização de `x-uis-cst-ctx: stub` o cabeçalho retornará uma resposta com bloqueio. Trata-se de uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão a ser concluídos. Isso será substituído quando não for mais necessário.
 
 ```shell
 curl -X POST \
@@ -96,7 +95,7 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-uis-cst-ctx: stub' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"]
@@ -111,7 +110,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"],
@@ -127,7 +126,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "compositeXids": [{
@@ -243,4 +242,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Prossiga para o próximo tutorial para [listar o histórico do cluster de uma identidade](./list-cluster-history.md)
+Acesse o próximo tutorial para [listar o histórico do cluster de uma identidade](./list-cluster-history.md)

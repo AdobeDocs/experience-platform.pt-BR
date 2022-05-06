@@ -5,17 +5,16 @@ title: Atualizar um objeto de catálogo
 topic-legacy: developer guide
 description: Você pode atualizar parte de um objeto de Catálogo incluindo sua ID no caminho de uma solicitação de PATCH. Este documento aborda o uso de campos e a notação de Patch JSON para executar operações de PATCH em objetos do catálogo.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '361'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 # Atualizar um objeto de catálogo
 
-Você pode atualizar parte de um objeto [!DNL Catalog] ao incluir sua ID no caminho de uma solicitação PATCH. Este documento aborda os dois métodos para executar operações de PATCH em objetos do catálogo:
+Você pode atualizar parte de um [!DNL Catalog] ao incluir sua ID no caminho de uma solicitação de PATCH. Este documento aborda os dois métodos para executar operações de PATCH em objetos do catálogo:
 
 * Uso de campos
 * Uso da notação de patch JSON
@@ -36,12 +35,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser atualizado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser atualizado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza os campos `name` e `description` de um conjunto de dados para os valores fornecidos no payload. Os campos de objeto que não devem ser atualizados podem ser excluídos da carga útil.
+A solicitação a seguir atualiza o `name` e `description` campos de um conjunto de dados para os valores fornecidos no payload. Os campos de objeto que não devem ser atualizados podem ser excluídos da carga útil.
 
 ```shell
 curl -X PATCH \
@@ -49,7 +48,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
        "name":"Updated Dataset Name",
@@ -59,7 +58,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação de GET para esse conjunto de dados agora mostra que apenas `name` e `description` foram atualizadas, enquanto todos os outros valores permanecem inalterados.
+Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação do GET para esse conjunto de dados agora mostra que somente a variável `name` e `description` foram atualizados enquanto todos os outros valores permaneciam inalterados.
 
 ```json
 [
@@ -85,19 +84,19 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser atualizado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser atualizado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza os campos `name` e `description` de um conjunto de dados para os valores fornecidos em cada objeto de Patch JSON. Ao usar o Patch JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
+A solicitação a seguir atualiza o `name` e `description` campos de um conjunto de dados para os valores fornecidos em cada objeto de patch JSON. Ao usar o Patch JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json-patch+json' \
   -d '[
@@ -108,7 +107,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz contendo a ID do objeto atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação de GET para esse objeto agora mostra que apenas `name` e `description` foram atualizadas enquanto todos os outros valores permanecem inalterados.
+Uma resposta bem-sucedida retorna uma matriz contendo a ID do objeto atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação de GET para esse objeto agora mostra que somente a variável `name` e `description` foram atualizados enquanto todos os outros valores permaneciam inalterados.
 
 ```json
 [

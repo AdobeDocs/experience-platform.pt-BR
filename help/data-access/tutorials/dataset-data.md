@@ -6,42 +6,42 @@ topic-legacy: tutorial
 type: Tutorial
 description: Saiba como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API de acesso a dados no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da API de acesso a dados, como paginação e downloads parciais.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 4%
 
 ---
 
-# Visualizar dados do conjunto de dados usando a API [!DNL Data Access]
+# Exibir dados do conjunto de dados usando [!DNL Data Access] API
 
-Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API [!DNL Data Access] no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da API [!DNL Data Access], como paginação e downloads parciais.
+Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando o [!DNL Data Access] API no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos do [!DNL Data Access] API, como paginação e downloads parciais.
 
 ## Introdução
 
-Este tutorial requer um entendimento prático sobre como criar e preencher um conjunto de dados. Consulte o [tutorial de criação de conjunto de dados](../../catalog/datasets/create.md) para obter mais informações.
+Este tutorial requer um entendimento prático sobre como criar e preencher um conjunto de dados. Consulte a [tutorial de criação de conjunto de dados](../../catalog/datasets/create.md) para obter mais informações.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da plataforma.
 
 ### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -49,23 +49,23 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 ## Diagrama de sequência
 
-Este tutorial segue as etapas descritas no diagrama de sequência abaixo, destacando a funcionalidade principal da API [!DNL Data Access].</br>
+Este tutorial segue as etapas descritas no diagrama de sequência abaixo, destacando a funcionalidade principal do [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-A API [!DNL Catalog] permite recuperar informações relacionadas a lotes e arquivos. A API [!DNL Data Access] permite acessar e baixar esses arquivos via HTTP como downloads completos ou parciais, dependendo do tamanho do arquivo.
+O [!DNL Catalog] A API permite recuperar informações relacionadas a lotes e arquivos. O [!DNL Data Access] A API permite acessar e baixar esses arquivos via HTTP como downloads completos ou parciais, dependendo do tamanho do arquivo.
 
 ## Localizar os dados
 
-Antes de começar a usar a API [!DNL Data Access], é necessário identificar o local dos dados que deseja acessar. Na API [!DNL Catalog], há dois endpoints que você pode usar para navegar pelos metadados de uma organização e recuperar a ID de um lote ou arquivo que você deseja acessar:
+Antes de começar a usar a variável [!DNL Data Access] , é necessário identificar o local dos dados que deseja acessar. No [!DNL Catalog] Na API, há dois endpoints que você pode usar para navegar pelos metadados de uma organização e recuperar a ID de um lote ou arquivo que você deseja acessar:
 
 - `GET /batches`: Retorna uma lista de lotes em sua organização
 - `GET /dataSetFiles`: Retorna uma lista de arquivos em sua organização
 
-Para obter uma lista abrangente de endpoints na API [!DNL Catalog], consulte a [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Para obter uma lista abrangente de endpoints no [!DNL Catalog] Consulte a API [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Recupere uma lista de lotes na organização IMS
 
-Usando a API [!DNL Catalog], você pode retornar uma lista de lotes em sua organização:
+Usar o [!DNL Catalog] Você pode retornar uma lista de lotes em sua organização:
 
 **Formato da API**
 
@@ -79,7 +79,7 @@ GET /batches
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -90,7 +90,7 @@ A resposta inclui um objeto que lista todos os lotes relacionados à Organizaç�
 ```json
 {
     "{BATCH_ID_1}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "created": 1516640135526,
         "createdClient": "{CREATED_CLIENT}",
         "createdUser": "{CREATED_BY}",
@@ -108,7 +108,7 @@ A resposta inclui um objeto que lista todos os lotes relacionados à Organizaç�
 
 ### Filtrar a lista de lotes
 
-Geralmente, os filtros são solicitados a localizar um determinado lote para recuperar dados relevantes para um caso de uso específico. Os parâmetros podem ser adicionados a uma solicitação `GET /batches` para filtrar a resposta retornada. A solicitação abaixo retornará todos os lotes criados após um tempo especificado, em um conjunto de dados específico, classificados por quando foram criados.
+Geralmente, os filtros são solicitados a localizar um determinado lote para recuperar dados relevantes para um caso de uso específico. Os parâmetros podem ser adicionados a um `GET /batches` para filtrar a resposta retornada. A solicitação abaixo retornará todos os lotes criados após um tempo especificado, em um conjunto de dados específico, classificados por quando foram criados.
 
 **Formato da API**
 
@@ -128,7 +128,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1521053542579&dataSet=5cd9146b21dae914b71f654f&orderBy=desc:created' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -136,7 +136,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ```json
 {   "{BATCH_ID_3}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "relatedObjects": [
             {
                 "id": "5c01a91863540f14cd3d0439",
@@ -163,7 +163,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
         "version": "1.0.116"
     },
     "{BATCH_ID_4}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "status": "success",
         "relatedObjects": [
             {
@@ -196,7 +196,7 @@ Uma lista completa de parâmetros e filtros pode ser encontrada no [Referência 
 
 ## Recuperar uma lista de todos os arquivos pertencentes a um determinado lote
 
-Agora que você tem a ID do lote que deseja acessar, é possível usar a API [!DNL Data Access] para obter uma lista de arquivos pertencentes a esse lote.
+Agora que você tem a ID do lote que deseja acessar, é possível usar a variável [!DNL Data Access] API para obter uma lista de arquivos pertencentes a esse lote.
 
 **Formato da API**
 
@@ -214,7 +214,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168966814cd81d3d3/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -249,11 +249,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 | -------- | ----------- |
 | `data._links.self.href` | O URL para acessar esse arquivo. |
 
-A resposta contém uma matriz de dados que lista todos os arquivos dentro do lote especificado. Os arquivos são referenciados pela ID do arquivo, que é encontrada no campo `dataSetFileId`.
+A resposta contém uma matriz de dados que lista todos os arquivos dentro do lote especificado. Os arquivos são referenciados pela ID do arquivo, que é encontrada na variável `dataSetFileId` campo.
 
 ## Acessar um arquivo usando uma ID de arquivo
 
-Depois de ter uma ID de arquivo exclusiva, você pode usar a API [!DNL Data Access] para acessar os detalhes específicos sobre o arquivo, incluindo o nome, o tamanho em bytes e um link para baixá-lo.
+Depois de ter uma ID de arquivo exclusiva, você pode usar a variável [!DNL Data Access] API para acessar os detalhes específicos sobre o arquivo, incluindo seu nome, tamanho em bytes e um link para baixá-lo.
 
 **Formato da API**
 
@@ -271,7 +271,7 @@ GET /files/{FILE_ID}
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -374,7 +374,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -386,7 +386,7 @@ Os cabeçalhos de resposta contêm os metadados do arquivo consultado, incluindo
 
 ## Acessar o conteúdo de um arquivo
 
-Você também pode acessar o conteúdo de um arquivo usando a API [!DNL Data Access].
+Você também pode acessar o conteúdo de um arquivo usando a variável [!DNL Data Access] API.
 
 **Formato da API**
 
@@ -405,7 +405,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -415,9 +415,9 @@ Uma resposta bem-sucedida retorna o conteúdo do arquivo.
 
 ## Baixar conteúdo parcial de um arquivo
 
-A API [!DNL Data Access] permite baixar arquivos em partes. Um cabeçalho de intervalo pode ser especificado durante uma solicitação `GET /files/{FILE_ID}` para baixar um intervalo específico de bytes de um arquivo. Se o intervalo não for especificado, a API baixará o arquivo inteiro por padrão.
+O [!DNL Data Access] A API permite baixar arquivos em partes. É possível especificar um cabeçalho de intervalo durante uma `GET /files/{FILE_ID}` solicitação para baixar um intervalo específico de bytes de um arquivo. Se o intervalo não for especificado, a API baixará o arquivo inteiro por padrão.
 
-O exemplo de HEAD na seção [anterior](#retrieve-the-metadata-of-a-file) fornece o tamanho de um arquivo específico em bytes.
+O exemplo de HEAD no [seção anterior](#retrieve-the-metadata-of-a-file) O fornece o tamanho de um arquivo específico em bytes.
 
 **Formato da API**
 
@@ -436,7 +436,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Range: bytes=0-99'
 ```
@@ -450,12 +450,12 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 O corpo da resposta inclui os primeiros 100 bytes do arquivo (conforme especificado pelo cabeçalho &quot;Intervalo&quot; na solicitação) junto com o Status HTTP 206 (Conteúdo Parcial). A resposta também inclui os seguintes cabeçalhos:
 
 - Duração do conteúdo: 100 (o número de bytes retornados)
-- Tipo de conteúdo: application/parquet (um arquivo Parquet foi solicitado, portanto, o tipo de conteúdo de resposta é `parquet`)
+- Tipo de conteúdo: application/parquet (um arquivo Parquet foi solicitado, portanto, o tipo de conteúdo da resposta é `parquet`)
 - Intervalo de conteúdo: bytes 0-99/249058 (o intervalo solicitado (0-99) do número total de bytes (249058))
 
 ## Configurar a paginação de resposta da API
 
-As respostas na API [!DNL Data Access] são paginadas. Por padrão, o número máximo de entradas por página é 100. Parâmetros de paginação podem ser usados para modificar o comportamento padrão.
+Respostas no [!DNL Data Access] As APIs são paginadas. Por padrão, o número máximo de entradas por página é 100. Parâmetros de paginação podem ser usados para modificar o comportamento padrão.
 
 - `limit`: Você pode especificar o número de entradas por página de acordo com seus requisitos usando o parâmetro &quot;limit&quot;.
 - `start`: O deslocamento pode ser definido pelo parâmetro de consulta &quot;start&quot;.
@@ -481,15 +481,15 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c7ebc14cd6b098e/files?start=0&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**:
 
-A resposta contém uma matriz `"data"` com um único elemento, conforme especificado pelo parâmetro de solicitação `limit=1`. Esse elemento é um objeto que contém os detalhes do primeiro arquivo disponível, conforme especificado pelo parâmetro `start=0` na solicitação (lembre-se de que, na numeração com base em zero, o primeiro elemento é &quot;0&quot;).
+A resposta contém um `"data"` matriz com um único elemento, conforme especificado pelo parâmetro de solicitação `limit=1`. Esse elemento é um objeto que contém os detalhes do primeiro arquivo disponível, conforme especificado pela variável `start=0` na solicitação (lembre-se de que na numeração baseada em zero, o primeiro elemento é &quot;0&quot;).
 
-O valor `_links.next.href` contém o link para a próxima página de respostas, onde você pode ver que o parâmetro `start` foi avançado para `start=1`.
+O `_links.next.href` contém o link para a próxima página de respostas, onde você pode ver que a variável `start` O parâmetro foi avançado para `start=1`.
 
 ```json
 {

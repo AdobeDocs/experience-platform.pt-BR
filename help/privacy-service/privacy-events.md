@@ -5,9 +5,9 @@ title: Inscrever-se em eventos do Privacy Service
 topic-legacy: privacy events
 description: Saiba como assinar eventos do Privacy Service usando um webhook pré-configurado.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -36,13 +36,13 @@ Revise a seguinte documentação do Privacy Service antes de iniciar este tutori
 
 ## Registre um webhook para [!DNL Privacy Service Events]
 
-Para receber [!DNL Privacy Service Events], você deve usar o Console do desenvolvedor do Adobe para registrar um webhook em seu [!DNL Privacy Service] integração.
+Para receber [!DNL Privacy Service Events], você deve usar o Console do Adobe Developer para registrar um webhook em seu [!DNL Privacy Service] integração.
 
-Siga o tutorial em [assinando com [!DNL I/O Event] notificações](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso. Certifique-se de escolher **[!UICONTROL Privacy Service Events]** como seu provedor de eventos para acessar os eventos listados acima.
+Siga o tutorial em [assinando notificações do [!DNL I/O Event]](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso. Certifique-se de escolher **[!UICONTROL Privacy Service Events]** como seu provedor de eventos para acessar os eventos listados acima.
 
 ## Receber [!DNL Privacy Service Event] notificações
 
-Depois de registrar com êxito seu webhook e os trabalhos de privacidade tiverem sido executados, você poderá começar a receber notificações de eventos. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando o **[!UICONTROL Rastreamento de depuração]** na visão geral de registro de eventos do seu projeto no Console do desenvolvedor do Adobe.
+Depois de registrar com êxito seu webhook e os trabalhos de privacidade tiverem sido executados, você poderá começar a receber notificações de eventos. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando o **[!UICONTROL Rastreamento de depuração]** na visão geral do registro de eventos do seu projeto no Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
@@ -57,7 +57,7 @@ O JSON a seguir é um exemplo de um [!DNL Privacy Service Event] carga de notifi
   "source":"https://ns.adobe.com/platform/gdpr",
   "time":"Wed Oct 23 18:52:32 GMT 2019",
   "data":{
-    "imsOrg":"{IMS_ORG}",
+    "imsOrg":"{ORG_ID}",
     "value":{
       "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
       "message":"analytics.access.complete"

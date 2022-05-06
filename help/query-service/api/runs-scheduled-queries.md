@@ -5,11 +5,10 @@ title: Consulta agendada executa Ponto de Extremidade da API
 topic-legacy: runs for scheduled queries
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para a execução de consultas agendadas com a API do serviço de consulta.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -17,11 +16,11 @@ ht-degree: 2%
 
 ## Exemplos de chamadas de API
 
-Agora que você sabe quais cabeçalhos usar, está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que você pode fazer usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de todas as execuções de uma consulta agendada especificada
 
-Você pode recuperar uma lista de todas as execuções de uma consulta agendada específica, independentemente de elas estarem em execução ou já terem sido concluídas. Isso é feito fazendo uma solicitação GET para o endpoint `/schedules/{SCHEDULE_ID}/runs`, onde `{SCHEDULE_ID}` é o valor `id` da query agendada cujas execuções você deseja recuperar.
+Você pode recuperar uma lista de todas as execuções de uma consulta agendada específica, independentemente de elas estarem em execução ou já terem sido concluídas. Isso é feito fazendo uma solicitação GET para o `/schedules/{SCHEDULE_ID}/runs` endpoint, em que `{SCHEDULE_ID}` é `id` valor da query agendada cujas execuções você deseja recuperar.
 
 **Formato da API**
 
@@ -32,7 +31,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` da consulta agendada que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O `id` valor da consulta agendada que deseja recuperar. |
 | `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
 **Parâmetros de consulta**
@@ -41,10 +40,10 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para listar exec
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criado (`orderby=-created`) classificará os itens por criado em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20º*) |
 | `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
-| `property` | Filtre os resultados com base nos campos. Os filtros **devem** ter escape de HTML. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `state` e `externalTrigger`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que) e `==` (igual a) e `!=` (não igual a). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas manualmente, bem-sucedidas e criadas após 20 de abril de 2019. |
+| `property` | Filtre os resultados com base nos campos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `state`e `externalTrigger`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que), e  `==` (igual a), e `!=` (não igual a). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas, bem-sucedidas e criadas manualmente após 20 de abril de 2019. |
 
 **Solicitação**
 
@@ -53,7 +52,7 @@ A solicitação a seguir recupera as quatro últimas execuções da consulta age
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -150,11 +149,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 
 >[!NOTE]
 >
->Você pode usar o valor `_links.cancel` para [parar uma execução para uma consulta agendada especificada](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Você pode usar o valor de `_links.cancel` para [interromper uma execução para uma consulta agendada especificada](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Acionar imediatamente uma execução para uma consulta agendada específica
 
-Você pode acionar imediatamente uma execução para uma consulta agendada específica fazendo uma solicitação POST para o endpoint `/schedules/{SCHEDULE_ID}/runs`, onde `{SCHEDULE_ID}` é o valor `id` da consulta agendada cuja execução você deseja acionar.
+Você pode acionar imediatamente uma execução para uma consulta agendada específica fazendo uma solicitação de POST para a `/schedules/{SCHEDULE_ID}/runs` endpoint, em que `{SCHEDULE_ID}` é `id` valor da query agendada cuja execução você deseja acionar.
 
 **Formato da API**
 
@@ -167,7 +166,7 @@ POST /schedules/{SCHEDULE_ID}/runs
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -185,7 +184,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte me
 
 ### Recuperar detalhes de uma execução para uma consulta agendada específica
 
-Você pode recuperar detalhes sobre uma execução de uma consulta agendada específica fazendo uma solicitação de GET para o endpoint `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
+Você pode recuperar detalhes sobre uma execução de uma consulta agendada específica fazendo uma solicitação de GET para a `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -195,15 +194,15 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` da consulta agendada cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | O valor `id` da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O `id` valor da query agendada cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | O `id` valor da execução que você deseja recuperar. |
 
 **Solicitação**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -246,7 +245,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da execução e
 
 ### Interromper imediatamente uma execução para uma consulta agendada específica
 
-Você pode interromper imediatamente uma execução de uma consulta agendada específica fazendo uma solicitação PATCH para o endpoint `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
+Você pode interromper imediatamente uma execução de uma consulta agendada específica fazendo uma solicitação de PATCH para a `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -256,8 +255,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` da consulta agendada cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | O valor `id` da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O `id` valor da query agendada cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | O `id` valor da execução que você deseja recuperar. |
 
 **Solicitação**
 
@@ -266,7 +265,7 @@ Essa solicitação de API usa a sintaxe do Patch JSON para sua carga útil. Para
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{

@@ -5,8 +5,7 @@ title: Endpoint da API do Insights
 topic-legacy: Developer guide
 description: Os insights contêm métricas que são usadas para capacitar um cientista de dados a avaliar e escolher modelos de ML ideais ao exibir métricas de avaliação relevantes.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -34,13 +33,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e cada insight tem um identificador exclusivo ( `id` ). Além disso, você receberá `context` que contém os identificadores exclusivos associados a esse insight específico, seguindo os eventos de Insights e os dados de métricas.
+Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e cada insight tem um identificador exclusivo ( `id` ). Além disso, você receberá `context` que contém os identificadores exclusivos associados a esse insight específico, após os eventos e os dados de métricas do Insights.
 
 ```json
 {
@@ -109,7 +108,7 @@ Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e c
 
 ## Recuperar um Insight específico
 
-Para procurar um insight específico faça uma solicitação do GET e forneça um `{INSIGHT_ID}` válido no caminho da solicitação. Para ajudar a filtrar resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de queries disponíveis, consulte a seção Apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
+Para pesquisar um insight específico faça uma solicitação do GET e forneça um `{INSIGHT_ID}` no caminho da solicitação. Para ajudar a filtrar resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de queries disponíveis, consulte a seção Apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -128,13 +127,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights/08b8d174-6b0d-4d7e-acd8-1c4c908e14b2 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo de insights (`id`). Além disso, você receberá `context` que contém os identificadores exclusivos que estão associados ao insight específico após os eventos de Insights e os dados de métricas.
+Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo de insights (`id`). Além disso, você receberá `context` que contém os identificadores exclusivos associados ao insight específico após os eventos e dados de métricas do Insights.
 
 ```json
 {
@@ -200,7 +199,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H `Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json`
     -d {
@@ -230,7 +229,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retornará uma carga que tem `{INSIGHT_ID}` e quaisquer parâmetros fornecidos na solicitação inicial.
+Uma resposta bem-sucedida retornará uma carga com um `{INSIGHT_ID}` e quaisquer parâmetros fornecidos na solicitação inicial.
 
 ```json
 {
@@ -265,7 +264,7 @@ Uma resposta bem-sucedida retornará uma carga que tem `{INSIGHT_ID}` e quaisque
 
 ## Recuperar uma lista de métricas padrão para algoritmos
 
-Você pode recuperar uma lista de todas as métricas padrão e do algoritmo executando uma única solicitação do GET para o terminal de métricas. Para consultar uma métrica específica, faça uma solicitação GET e forneça um `{ALGORITHM}` válido no caminho da solicitação.
+Você pode recuperar uma lista de todas as métricas padrão e do algoritmo executando uma única solicitação do GET para o terminal de métricas. Para consultar uma métrica específica faça uma solicitação GET e forneça um valor de `{ALGORITHM}` no caminho da solicitação.
 
 **Formato da API**
 
@@ -280,20 +279,20 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Solicitação**
 
-A solicitação a seguir contém uma consulta e recupera uma métrica específica usando o identificador de algoritmo `{ALGORITHM}`
+A solicitação a seguir contém uma consulta e recupera uma métrica específica usando o identificador do algoritmo `{ALGORITHM}`
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/sensei/insights/metrics?algorithm={ALGORITHM}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo `algorithm` e uma matriz de métricas padrão.
+Uma resposta bem-sucedida retorna uma carga que inclui a variável `algorithm` identificador exclusivo e uma matriz de métricas padrão.
 
 ```json
 {

@@ -2,7 +2,7 @@
 description: Esta página descreve como autenticar e começar a usar o Adobe Experience Platform Destination SDK. Ele inclui instruções sobre como obter credenciais de autenticação do Adobe I/O, um nome de sandbox e a permissão de controle de acesso de criação de destino.
 title: Introdução ao Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: d5ce6c8ccdd29b9bcf90a1c2d08085f3be4cf33f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 2%
@@ -26,7 +26,7 @@ O Destination SDK usa a variável [Adobe I/O](https://www.adobe.io/) gateway par
 Para fazer chamadas com êxito para endpoints da API do Destination SDK, siga as [Tutorial de autenticação de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie o tutorial a partir do &quot;[Gerar uma chave de API, ID de organização IMS e segredo do cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. A equipe do Adobe Exchange lidará com as etapas anteriores para você. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em chamadas de API do Destination SDK, conforme mostrado abaixo:
 
 * `x-api-key: {API_KEY}`também chamada de ID do cliente
-* `x-gw-ims-org-id: {IMS_ORG}`também conhecida como ID da organização
+* `x-gw-ims-org-id: {ORG_ID}`também conhecida como ID da organização
 * `Authorization: Bearer {ACCESS_TOKEN}`. O token de acesso tem um tempo de expiração de 24 horas, expresso em milissegundos, portanto, será necessário atualizá-lo. Para atualizar o token de acesso, repita as etapas descritas no tutorial de autenticação.
 
 <!--
@@ -38,7 +38,7 @@ To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it fo
 1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
 2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
 
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {IMS_ORG}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
+You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
 
 >[!NOTE]
 >
@@ -81,4 +81,4 @@ Seguindo as etapas deste artigo, você obteve credenciais de autenticação para
    * [(Beta) Use o Destination SDK para configurar um destino baseado em arquivo](./configure-file-based-destination-instructions.md)
 
 * Para todas as operações, consulte a [Documentação da API de criação de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* Use o [Coleção de postman da API de criação de destino](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar seu destino usando os endpoints da API do Destination SDK. Para começar a usar o Postman, consulte o [etapas para importar ambientes e coleções](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) e [guia de vídeo para criar o ambiente Postman](https://video.tv.adobe.com/v/28832).
+* Use o [Coleção Postman da API de criação de destino](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar seu destino usando os endpoints da API do Destination SDK. Para começar a usar o Postman, consulte o [etapas para importar ambientes e coleções](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) e [guia de vídeo para criar o ambiente Postman](https://video.tv.adobe.com/v/28832).

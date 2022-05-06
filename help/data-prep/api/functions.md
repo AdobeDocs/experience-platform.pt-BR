@@ -5,21 +5,20 @@ title: Ponto de Extremidade da API de Esquemas
 topic-legacy: schemas
 description: Você pode usar o endpoint `/functions` na API do Adobe Experience Platform para validar as expressões de mapeamento e listar as funções do conjunto de mapeamentos disponíveis.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 # Pontos de extremidade de funções
 
-As funções do conjunto de mapeamento permitem transformar seus dados entre os esquemas de origem e de destino. Você pode usar o endpoint `/languages/el` para validar suas expressões, bem como obter uma lista de todas as funções disponíveis do conjunto de mapeamentos.
+As funções do conjunto de mapeamento permitem transformar seus dados entre os esquemas de origem e de destino. Você pode usar o `/languages/el` endpoint para validar suas expressões e obter uma lista de todas as funções disponíveis do conjunto de mapeamentos.
 
 ## Validar expressões
 
-Você pode validar se a expressão atual é válida fazendo uma solicitação POST para o endpoint `/languages/el/validate`.
+Você pode validar se a expressão atual é válida fazendo uma solicitação POST para a variável `/languages/el/validate` endpoint .
 
 **Formato da API**
 
@@ -34,7 +33,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -55,7 +54,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o status de validação 
 
 ## Listar funções do conjunto de mapeamento
 
-Você pode recuperar uma lista de todas as funções do conjunto de mapeamentos disponíveis para você, fazendo uma solicitação de GET para o endpoint `/languages/el/functions`.
+Você pode recuperar uma lista de todas as funções do conjunto de mapeamento disponíveis para você, fazendo uma solicitação de GET para a `/languages/el/functions` endpoint .
 
 **Formato da API**
 
@@ -69,7 +68,7 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -120,7 +119,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as fu
 
 ## Listar operadores de conjunto de mapeamento
 
-Você pode recuperar uma lista de todos os operadores do conjunto de mapeamentos disponíveis para você, fazendo uma solicitação de GET para o endpoint `/languages/el/operators`.
+É possível recuperar uma lista de todos os operadores do conjunto de mapeamentos disponíveis para você, fazendo uma solicitação de GET para a `/languages/el/operators` endpoint .
 
 **Formato da API**
 
@@ -134,7 +133,7 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

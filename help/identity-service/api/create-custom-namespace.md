@@ -5,19 +5,18 @@ title: Criar um namespace personalizado na API do serviço de identidade
 topic-legacy: API guide
 description: Usando a API de Namespace de identidade, você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Criar um namespace personalizado na API do serviço de identidade
 
-Usando a API [!DNL Identity Namespace], você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
+Usar o [!DNL Identity Namespace] Você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
 
-Para obter recomendações sobre como criar namespaces personalizados, consulte [a documentação de Perguntas frequentes do serviço de identidade](../troubleshooting-guide.md).
+Para obter recomendações sobre como criar namespaces personalizados, consulte [a documentação de perguntas frequentes do Serviço de identidade](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -38,7 +37,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "Loyalty Member",
         "code": "Loyalty",
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Prossiga para o próximo tutorial para [listar a ID nativa de uma identidade](./list-native-id.md)
+Acesse o próximo tutorial para [listar a ID nativa de uma identidade](./list-native-id.md)

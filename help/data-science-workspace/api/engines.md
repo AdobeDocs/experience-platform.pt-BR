@@ -5,8 +5,7 @@ title: Endpoint da API de mecanismos
 topic-legacy: Developer guide
 description: Os mecanismos são a base dos Modelos de aprendizado de máquina no Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos ou ambos.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
@@ -21,7 +20,7 @@ Os mecanismos são a base dos Modelos de aprendizado de máquina no Data Science
 
 >[!TIP]
 >
->Se você não tiver um URL Docker, visite o [Tutorial Package source em uma fórmula](../models-recipes/package-source-files-recipe.md) para obter uma apresentação passo a passo sobre como criar um URL de host Docker.
+>Se você não tiver um URL do Docker, visite o [Compactar arquivos de origem em uma receita](../models-recipes/package-source-files-recipe.md) tutorial para obter uma apresentação passo a passo sobre como criar um URL de host Docker.
 
 Suas credenciais do Registro do Docker são necessárias para fazer upload de um arquivo de Receita empacotado, incluindo o URL do host do Docker, nome de usuário e senha. Você pode pesquisar essas informações executando a seguinte solicitação do GET:
 
@@ -37,17 +36,17 @@ GET /engines/dockerRegistry
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do seu Registro Docker, incluindo o URL Docker (`host`), o nome de usuário (`username`) e a senha (`password`).
+Uma resposta bem-sucedida retorna um payload contendo os detalhes do registro do Docker, incluindo o URL do Docker (`host`), nome de usuário (`username`) e a senha (`password`).
 
 >[!NOTE]
 >
->Sua senha do Docker muda sempre que seu `{ACCESS_TOKEN}` é atualizado.
+>Sua senha do Docker muda sempre que sua `{ACCESS_TOKEN}` é atualizado.
 
 ```json
 {
@@ -57,7 +56,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do seu Registro
 }
 ```
 
-## Criar um mecanismo usando URLs do Docker {#docker-image}
+## Criar um mecanismo usando URLs Docker {#docker-image}
 
 Você pode criar um mecanismo executando uma solicitação POST e, ao mesmo tempo, fornecendo seus metadados e um URL Docker que faz referência a uma imagem Docker em formulários de várias partes.
 
@@ -74,7 +73,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -105,14 +104,14 @@ curl -X POST \
 
 **Solicitar PySpark/Scala**
 
-Ao fazer uma solicitação para fórmulas do PySpark, `executionType` e `type` são &quot;PySpark&quot;. Ao fazer uma solicitação para fórmulas Scala, `executionType` e `type` são &quot;Spark&quot;. O exemplo de fórmula do Scala a seguir usa Spark:
+Ao fazer uma solicitação de receitas do PySpark, a variável `executionType` e `type` é &quot;PySpark&quot;. Ao solicitar receitas do Scala, a variável `executionType` e `type` é &quot;Spark&quot;. O exemplo de fórmula do Scala a seguir usa Spark:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -171,7 +170,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo re
 }
 ```
 
-## Crie um mecanismo de pipeline de recurso usando URLs do Docker {#feature-pipeline-docker}
+## Criar um mecanismo de pipeline de recursos usando URLs Docker {#feature-pipeline-docker}
 
 Você pode criar um mecanismo de pipeline de recursos executando uma solicitação POST e fornecendo seus metadados e um URL Docker que faz referência a uma imagem Docker.
 
@@ -222,7 +221,7 @@ curl -X POST \
 | `artifacts.default.image.location` | O local da imagem Docker. Somente o Azure ACR ou o Dockerhub Público (não autenticado) são suportados. |
 | `artifacts.default.image.executionType` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | O tipo de embalagem do motor. Esse valor deve ser definido como `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Seus parâmetros do arquivo de configuração `pipeline.json`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Seu `pipeline.json` parâmetros do arquivo de configuração. |
 
 **Resposta**
 
@@ -272,7 +271,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -349,7 +348,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -388,7 +387,7 @@ Você pode modificar e atualizar um Mecanismo existente, sobrescrevendo suas pro
 
 >[!NOTE]
 >
->Para garantir o sucesso dessa solicitação do PUT, sugerimos que primeiro você execute uma solicitação do GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga para a solicitação PUT.
+>Para garantir o sucesso dessa solicitação do PUT, sugerimos que primeiro você execute uma solicitação do GET para [recuperar o mecanismo pela ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga para a solicitação PUT.
 
 O exemplo de chamada de API a seguir atualizará o nome e a descrição de um Mecanismo enquanto tiver essas propriedades inicialmente:
 
@@ -426,7 +425,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
     -d '{
@@ -494,7 +493,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

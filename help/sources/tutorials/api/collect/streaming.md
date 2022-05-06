@@ -6,31 +6,31 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 3%
 
 ---
 
-# Crie um fluxo de dados para dados brutos usando a API [!DNL Flow Service]
+# Crie um fluxo de dados para dados brutos usando o [!DNL Flow Service] API
 
-Este tutorial aborda as etapas para recuperar dados brutos de um conector de fonte de transmissão e trazê-los para o Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para recuperar dados brutos de um conector de fonte de transmissão e trazê-los para o Experience Platform usando a variável [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   - [Noções básicas da composição](../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Guia](../../../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Inclui informações importantes que você precisa saber para executar com sucesso chamadas para a API do Registro de Esquema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
+   - [Noções básicas da composição do schema](../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   - [Guia do desenvolvedor do Registro de Schema](../../../../xdm/api/getting-started.md): Inclui informações importantes que você precisa saber para executar com sucesso chamadas para a API do Registro de Esquema. Isso inclui as `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no Experience Platform.
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): A assimilação de streaming para Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 - [Sandboxes](../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia sobre como [começar a usar APIs da plataforma](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../landing/api-guide.md).
 
 ### Criar uma conexão de origem {#source}
 
@@ -42,9 +42,9 @@ Este tutorial também exige que você tenha uma ID de conexão de origem válida
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de destino é usado para criar um conjunto de dados da plataforma no qual os dados de origem estão contidos. Esse esquema XDM de destino também estende a classe XDM [!DNL Individual Profile].
+Para que os dados de origem sejam usados na Platform, um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de destino é usado para criar um conjunto de dados da plataforma no qual os dados de origem estão contidos. Esse esquema XDM de destino também estende o XDM [!DNL Individual Profile] classe .
 
-Para criar um esquema XDM de destino, faça uma solicitação de POST ao terminal `/schemas` da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Para criar um esquema XDM de destino, faça uma solicitação de POST para a variável `/schemas` endpoint da variável [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Formato da API**
 
@@ -54,14 +54,14 @@ POST /tenant/schemas
 
 **Solicitação**
 
-A solicitação de exemplo a seguir cria um esquema XDM que estende a classe XDM [!DNL Individual Profile].
+A seguinte solicitação de exemplo cria um esquema XDM que estende o XDM [!DNL Individual Profile] classe .
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -121,7 +121,7 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -152,7 +152,7 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ## Criar um conjunto de dados de destino
 
-Com um esquema XDM de destino criado e seu `$id` exclusivo, agora é possível criar um conjunto de dados de destino para conter seus dados de origem. Para criar um conjunto de dados de destino, faça uma solicitação POST ao endpoint `dataSets` da [API do Serviço de Catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino dentro da carga útil.
+Com um esquema XDM de destino criado e seu exclusivo `$id` agora é possível criar um conjunto de dados de destino para conter seus dados de origem. Para criar um conjunto de dados de destino, faça uma solicitação de POST para a `dataSets` endpoint da variável [API do Serviço de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), enquanto fornece a ID do schema do target no payload.
 
 **Formato da API**
 
@@ -167,7 +167,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -190,8 +190,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome do conjunto de dados a ser criado. |
-| `schemaRef.id` | O URI `$id` para o esquema XDM no qual o conjunto de dados será baseado. |
-| `schemaRef.contentType` | A versão do schema. Esse valor deve ser definido como `application/vnd.adobe.xed-full-notext+json;version=1`, que retorna a versão secundária mais recente do schema. Consulte a seção sobre [controle de versão do schema](../../../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
+| `schemaRef.id` | O URI `$id` para o esquema XDM, o conjunto de dados será baseado em. |
+| `schemaRef.contentType` | A versão do schema. Esse valor deve ser definido como `application/vnd.adobe.xed-full-notext+json;version=1`, que retorna a versão secundária mais recente do esquema. Consulte a seção sobre [versão do schema](../../../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
 
 **Resposta**
 
@@ -207,7 +207,7 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados 
 
 As conexões do Target criam e gerenciam uma conexão de destino com a Platform ou qualquer local onde os dados transferidos chegarão. As conexões do Target contêm informações sobre o destino de dados, o formato de dados e a ID de conexão do Target necessárias para criar um fluxo de dados. As instâncias de conexão do Target são específicas de um locatário e da Organização IMS.
 
-Para criar uma conexão de destino, faça uma solicitação de POST ao endpoint `/targetConnections` da API [!DNL Flow Service]. Como parte da solicitação, você deve fornecer o formato de dados, o `dataSetId` recuperado na etapa anterior e a ID de especificação de conexão fixa vinculada a [!DNL Data Lake]. Essa ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Para criar uma conexão do target, faça uma solicitação de POST para o `/targetConnections` endpoint da variável [!DNL Flow Service] API. Como parte da solicitação, você deve fornecer o formato de dados, a variável `dataSetId` recuperada na etapa anterior e a ID de especificação de conexão fixa vinculada ao [!DNL Data Lake]. Esta ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato da API**
 
@@ -222,7 +222,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -248,7 +248,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `connectionSpec.id` | A ID de especificação de conexão usada para se conectar ao [!DNL Data Lake]. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | O formato especificado dos dados que você está trazendo para [!DNL Data Lake]. |
+| `data.format` | O formato especificado dos dados que você está trazendo para o [!DNL Data Lake]. |
 | `params.dataSetId` | A ID do conjunto de dados de destino recuperado na etapa anterior. |
 
 **Resposta**
@@ -266,7 +266,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 
 Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o schema de destino ao qual o conjunto de dados de destino adere.
 
-Para criar um conjunto de mapeamento, faça uma solicitação de POST para o endpoint `mappingSets` da [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml), fornecendo o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
+Para criar um conjunto de mapeamento, faça uma solicitação de POST para a função `mappingSets` endpoint da variável [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) ao fornecer seu esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 **Formato da API**
 
@@ -281,7 +281,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -326,7 +326,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Recuperar uma lista de especificações do fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a plataforma. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação do GET para a API [!DNL Flow Service].
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a plataforma. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação do GET para a [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -340,13 +340,13 @@ GET /flowSpecs
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de especificações de fluxo de dados. A ID de especificação do fluxo de dados que você precisa recuperar para criar um fluxo de dados usando qualquer um dos [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] ou [!DNL Google PubSub], é `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+Uma resposta bem-sucedida retorna uma lista de especificações de fluxo de dados. A ID de especificação do fluxo de dados que você precisa recuperar para criar um fluxo de dados usando qualquer um dos [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]ou  [!DNL Google PubSub], é `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -437,7 +437,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -467,10 +467,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `flowSpec.id` | O [ID de especificação do fluxo](#specs) recuperado na etapa anterior. |
-| `sourceConnectionIds` | A [ID da conexão de origem](#source) recuperada em uma etapa anterior. |
-| `targetConnectionIds` | A [ID da conexão de destino](#target-connection) recuperada em uma etapa anterior. |
-| `transformations.params.mappingId` | O [ID de mapeamento](#mapping) recuperado em uma etapa anterior. |
+| `flowSpec.id` | O [ID de especificação de fluxo](#specs) recuperada na etapa anterior. |
+| `sourceConnectionIds` | O [ID de conexão de origem](#source) recuperada em uma etapa anterior. |
+| `targetConnectionIds` | O [target connection ID](#target-connection) recuperada em uma etapa anterior. |
+| `transformations.params.mappingId` | O [ID de mapeamento](#mapping) recuperada em uma etapa anterior. |
 
 **Resposta**
 

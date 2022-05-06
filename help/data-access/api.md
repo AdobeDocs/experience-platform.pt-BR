@@ -5,7 +5,7 @@ title: Guia da API de acesso a dados
 topic-legacy: developer guide
 description: A API de acesso a dados oferece suporte ao Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na capacidade de descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 6%
@@ -14,13 +14,13 @@ ht-degree: 6%
 
 # Guia da API de acesso a dados
 
-A API de acesso a dados oferece suporte ao Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na capacidade de descoberta e acessibilidade de conjuntos de dados assimilados em [!DNL Experience Platform].
+A API de acesso a dados oferece suporte ao Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na capacidade de descoberta e acessibilidade de conjuntos de dados assimilados no [!DNL Experience Platform].
 
 ![Acesso aos dados no Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Referência da especificação da API
 
-A documentação de referência da API do Swagger pode ser encontrada [aqui](https://www.adobe.io/experience-platform-apis/references/data-access/).
+A documentação de referência da API do Swagger pode ser encontrada [here](https://www.adobe.io/experience-platform-apis/references/data-access/).
 
 ## Terminologia
 
@@ -51,7 +51,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -94,7 +94,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-A matriz `"data"` contém uma lista de todos os arquivos dentro do lote especificado. Cada arquivo retornado tem sua própria ID exclusiva (`{FILE_ID}`) contida no campo `"dataSetFileId"`. Essa ID exclusiva pode ser usada para acessar ou baixar o arquivo.
+O `"data"` A matriz contém uma lista de todos os arquivos dentro do lote especificado. Cada arquivo retornado tem sua própria ID exclusiva (`{FILE_ID}`) contido na variável `"dataSetFileId"` campo. Essa ID exclusiva pode ser usada para acessar ou baixar o arquivo.
 
 | Propriedade | Descrição |
 | -------- | ----------- |
@@ -103,7 +103,7 @@ A matriz `"data"` contém uma lista de todos os arquivos dentro do lote especifi
 
 ## Acessar e baixar arquivos em um lote
 
-Ao usar um identificador de arquivo (`{FILE_ID}`), a API de Acesso a Dados pode ser usada para acessar detalhes específicos de um arquivo, incluindo seu nome, tamanho em bytes e um link para download.
+Ao usar um identificador de arquivo (`{FILE_ID}`), a API de acesso a dados pode ser usada para acessar detalhes específicos de um arquivo, incluindo seu nome, tamanho em bytes e um link para download.
 
 A resposta conterá uma matriz de dados. Dependendo de o arquivo apontado pela ID ser um arquivo individual ou um diretório, a matriz de dados retornada pode conter uma única entrada ou uma lista de arquivos pertencentes a esse diretório. Cada elemento de arquivo incluirá os detalhes do arquivo.
 
@@ -123,7 +123,7 @@ GET /files/{FILE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -203,7 +203,7 @@ Quando um diretório é retornado, ele contém uma matriz de todos os arquivos d
 
 ## Acessar o conteúdo de um arquivo
 
-A API [!DNL Data Access] também pode ser usada para acessar o conteúdo de um arquivo. Isso pode ser usado para baixar o conteúdo para uma fonte externa.
+O [!DNL Data Access] A API também pode ser usada para acessar o conteúdo de um arquivo. Isso pode ser usado para baixar o conteúdo para uma fonte externa.
 
 **Formato da API**
 
@@ -221,7 +221,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -240,4 +240,4 @@ Para amostras adicionais, consulte o [tutorial de acesso a dados](tutorials/data
 
 ## Assinar eventos de assimilação de dados
 
-[!DNL Platform] O disponibiliza eventos específicos de alto valor para assinatura por meio do  [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial em [assinando notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio do [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Veja o tutorial em [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.

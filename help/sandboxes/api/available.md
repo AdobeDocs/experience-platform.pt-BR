@@ -5,10 +5,10 @@ title: Ponto de extremidade da API de sandboxes disponível
 topic-legacy: developer guide
 description: Você pode listar as sandboxes disponíveis para o usuário atual fazendo uma solicitação do GET para o endpoint de sandboxes disponível.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte o [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
+| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte a [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 **Solicitação**
 
@@ -37,12 +37,12 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usuário atual, incluindo detalhes como `name`, `title`, `state` e `type`.
+Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usuário atual, incluindo detalhes como `name`, `title`, `state`e `type`.
 
 ```json
 {

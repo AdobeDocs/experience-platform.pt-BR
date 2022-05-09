@@ -4,9 +4,9 @@ title: Regras padrão de alerta
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '811'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,8 @@ As seguintes regras de alerta são específicas para [Assimilação de dados](..
 | Atrasos, falhas e erros de execução do fluxo de origem | Falha na Execução do Fluxo de Fontes | Esse alerta dispara quando ocorre um erro ao assimilar dados de uma conexão de origem. |
 | Atrasos, falhas e erros de execução do fluxo de origem | Atraso de assimilação | Esse alerta é disparado quando a execução de um fluxo de ingestão em lote demora mais de 150 minutos para ser processada. |
 | Atrasos, falhas e erros de execução do fluxo de origem | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
-| Atrasos, falhas e erros de execução do fluxo de origem | Falha de Assimilação | Esse alerta dispara quando a proporção de registros com falha para todos os registros excede um limite de 0,5% |
+| Atrasos, falhas e erros de execução do fluxo de origem | Falha de Assimilação | Esse alerta dispara quando a proporção de registros com falha para todos os registros excede um limite de 0,5%. |
+| Atrasos, falhas e erros de execução do fluxo de origem | A taxa de página ignorada excede o limite | Esse alerta é disparado quando a proporção de ids ignoradas em relação ao total de ids excede um limite. |
 
 {style=&quot;table-layout:auto&quot;}
 

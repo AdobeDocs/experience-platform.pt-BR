@@ -3,11 +3,11 @@ keywords: Experience Platform, home, tópicos populares, serviço de consulta, s
 solution: Experience Platform
 title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
-description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
+description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de query. Os tópicos incluem, exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '3516'
+source-wordcount: '3522'
 ht-degree: 1%
 
 ---

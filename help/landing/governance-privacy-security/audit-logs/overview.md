@@ -1,11 +1,11 @@
 ---
 title: Visão geral dos logs de auditoria
-description: Saiba como os logs de auditoria permitem ver quem fez quais ações no Adobe Experience Platform.
+description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 7%
+source-wordcount: '767'
+ht-degree: 10%
 
 ---
 
@@ -35,6 +35,8 @@ A tabela a seguir descreve quais ações em que os recursos são registrados pel
 | [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Perfil de produto](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Conta (Adobe)](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Modelo de consulta](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Consulta agendada](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 
 ## Acesso a logs de auditoria
 

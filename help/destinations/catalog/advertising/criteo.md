@@ -3,9 +3,9 @@ keywords: publicidade; critérios;
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais avançadas para todos os consumidores através da Internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '820'
 ht-degree: 3%
 
 ---
@@ -138,4 +138,4 @@ Todos os destinos do Adobe Experience Platform são compatíveis com as polític
 ## Recursos adicionais
 
 * [Central de ajuda de critérios](https://help.criteo.com/kb/en)
-* [Portal do desenvolvedor de critérios](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Portal do desenvolvedor de critérios](https://developers.criteo.com)

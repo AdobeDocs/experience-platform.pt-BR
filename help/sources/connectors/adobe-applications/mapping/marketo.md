@@ -5,9 +5,9 @@ title: Mapeamento de campos para a fonte de Marketo Engage
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 52162fa1bbb3ab4c8ccb81b95e90c515f931c6fa
+source-git-commit: b68e69314af819daa93e1e6a777f1edeca359164
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '624'
 ht-degree: 8%
 
 ---
@@ -94,6 +94,36 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` |
 | `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` |
 | `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` |
+| `iif(${leadOperation\\.callWebhook\\.webhookKey\\.sourceID} != null && ${leadOperation\\.callWebhook\\.webhookKey\\.sourceID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", ${leadOperation\\.callWebhook\\.webhookKey\\.sourceID}, \"sourceKey\", concat(${leadOperation\\.callWebhook\\.webhookKey\\.sourceInstanceID},\"@${MUNCHKIN_ID}.Marketo\")), null)"` | `leadOperation.callWebhook.webhookKey` |
+| `leadOperation.callWebhook.webhookName` | `leadOperation.callWebhook.webhookName` |
+| `leadOperation.callWebhook.responseCode` | `leadOperation.callWebhook.responseCode` |
+| `iif(${leadOperation\\.changeCampaignCadence\\.campaignKey\\.sourceID} != null && ${leadOperation\\.changeCampaignCadence\\.campaignKey\\.sourceID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", ${leadOperation\\.changeCampaignCadence\\.campaignKey\\.sourceID}, \"sourceKey\", concat(${leadOperation\\.changeCampaignCadence\\.campaignKey\\.sourceInstanceID},\"@${MUNCHKIN_ID}.Marketo\")), null)"` | `leadOperation.changeCampaignCadence.campaignKey` |
+| `leadOperation.changeCampaignCadence.newCadence` | `leadOperation.changeCampaignCadence.newCadence` |
+| `leadOperation.changeCampaignCadence.previousCadence` | `leadOperation.changeCampaignCadence.previousCadence` |
+| `iif(${leadOperation\.addToCampaign\.campaignID} != null && ${leadOperation\.addToCampaign\.campaignID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.addToCampaign\.campaignID}, "sourceKey", concat(${leadOperation\.addToCampaign\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.addToCampaign.campaignKey` |
+| `iif(${leadOperation\.addToCampaign\.streamID} != null && ${leadOperation\.addToCampaign\.streamID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.addToCampaign\.streamID}, "sourceKey", concat(${leadOperation\.addToCampaign\.streamID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.addToCampaign.streamKey` |
+| `leadOperation.addToCampaign.streamName` | `leadOperation.addToCampaign.streamName` |
+| `iif(${leadOperation\.changeCampaignStream\.campaignID} != null && ${leadOperation\.changeCampaignStream\.campaignID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeCampaignStream\.campaignID}, "sourceKey", concat(${leadOperation\.changeCampaignStream\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeCampaignStream.campaignKey` |
+| `iif(${leadOperation\.changeCampaignStream\.newStreamID} != null && ${leadOperation\.changeCampaignStream\.newStreamID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeCampaignStream\.newStreamID}, "sourceKey", concat(${leadOperation\.changeCampaignStream\.newStreamID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeCampaignStream.newStreamKey` |
+| `leadOperation.changeCampaignStream.newStreamName` | `leadOperation.changeCampaignStream.newStreamName` |
+| `iif(${leadOperation\.changeCampaignStream\.previousStreamID} != null && ${leadOperation\.changeCampaignStream\.previousStreamID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeCampaignStream\.previousStreamID}, "sourceKey", concat(${leadOperation\.changeCampaignStream\.previousStreamID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeCampaignStream.previousStreamKey` |
+| `leadOperation.changeCampaignStream.previousStreamName` | `leadOperation.changeCampaignStream.previousStreamName` |
+| `iif(${leadOperation\.changeRevenueStage\.modelID} != null && ${leadOperation\.changeRevenueStage\.modelID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeRevenueStage\.modelID}, "sourceKey", concat(${leadOperation\.changeRevenueStage\.modelID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeRevenueStage.modelKey` |
+| `leadOperation.changeRevenueStage.modelName` | `leadOperation.changeRevenueStage.modelName` |
+| `iif(${leadOperation\.changeRevenueStage\.newStageID} != null && ${leadOperation\.changeRevenueStage\.newStageID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeRevenueStage\.newStageID}, "sourceKey", concat(${leadOperation\.changeRevenueStage\.newStageID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeRevenueStage.newStageKey` |
+| `leadOperation.changeRevenueStage.newStageName` | `leadOperation.changeRevenueStage.newStageName` |
+| `iif(${leadOperation\\.changeRevenueStage\\.previousStageID} != null && ${leadOperation\\.changeRevenueStage\\.previousStageID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${leadOperation\\.changeRevenueStage\\.previousStageID}, \"sourceKey\", concat(${leadOperation\\.changeRevenueStage\\.previousStageID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `leadOperation.changeRevenueStage.previousStageKey` |
+| `leadOperation.changeRevenueStage.previousStageName` | `leadOperation.changeRevenueStage.previousStageName` |
+| `leadOperation.changeRevenueStage.reason` | `leadOperation.changeRevenueStage.reason` |
+| `iif(${leadOperation\.mergeLeads\.sourceIDs} != null && ${leadOperation\.mergeLeads\.sourceIDs} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.mergeLeads\.sourceIDs}, "sourceKey", concat(${leadOperation\.mergeLeads\.sourceIDs},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.mergeLeads.sourceKeys` |
+| `leadOperation.mergeLeads.targetUpdated` | `leadOperation.mergeLeads.targetUpdated` |
+| `leadOperation.mergeLeads.mergedInCRM` | `leadOperation.mergeLeads.mergedInCRM` |
+| `leadOperation.mergeLeads.mergeSource` | `leadOperation.mergeLeads.mergeSource` |
+| `iif(${directMarketing\\.emailSent\\.mailingID} != null && ${directMarketing\\.emailSent\\.mailingID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${directMarketing\\.emailSent\\.mailingID}, \"sourceKey\", concat(${directMarketing\\.emailSent\\.mailingID},\"@${MUNCHKIN_ID}.Marketo\")), null)"` | `directMarketing.emailSent.mailingKey` |
+| `directMarketing.emailSent.mailingName` | `directMarketing.emailSent.mailingName` |
+| `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
+| `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
+| `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -105,7 +135,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `id` | `campaignKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | O  `extSourceSystemAudit.externalKey` é a identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -147,7 +177,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | O `extSourceSystemAudit.externalKey` é a identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -165,7 +195,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | O `extSourceSystemAudit.externalKey` é a identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -230,7 +260,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | O `extSourceSystemAudit.externalKey` é a identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -275,7 +305,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Esse conjunto de dados de origem só está disponível para usuários com a variável [!DNL Salesforce] integração. |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Esse conjunto de dados de origem só está disponível para usuários com a variável [!DNL Salesforce] integração. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -290,8 +320,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído como parte da API Explorar. |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído como parte da API Explorar. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | O `extSourceSystemAudit.externalKey` é a identidade secundária. Os valores para `{CRM_ORG_ID}` e `{CRM_TYPE}` será substituído automaticamente. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relação |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relação |
 | `role` | `personRole` |
@@ -311,7 +341,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `id` | `b2b.personKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identidade primária. O valor de `"${MUNCHKIN_ID}"` será substituído automaticamente. |
 | `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Se a assinatura for cancelada `true` (por exemplo, valor = `1`) e, em seguida, defina `consents.marketing.email.val` como (`n`). Se a assinatura for cancelada `false` (por exemplo, valor = `0`) e, em seguida, defina `consents.marketing.email.val` as `null`. |
-| `unsubscribedReason` | `consents.marketing.email.reason` |
+| `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -322,7 +352,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | O `extSourceSystemAudit.externalKey.sourceKey` é a identidade secundária. |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | O `extSourceSystemAudit.externalKey` é a identidade secundária. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -339,7 +369,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 | `state` | `workAddress.state` |
 | `address` | `workAddress.street1` |
 | `phone` | `workPhone.number` |
-| `company` | `organizations` / `b2b.companyName` |
+| `company` | `b2b.companyName` |
+| `website` | `b2b.companyWebsite` |
 | `leadScore` | `personComponents.personScore` |
 | `leadSource` | `personComponents.personSource` |
 | `leadStatus` | `personComponents.personStatus` |

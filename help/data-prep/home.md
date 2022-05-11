@@ -5,9 +5,9 @@ title: Visão geral da preparação de dados
 topic-legacy: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
+source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ A Preparação de dados também aplica várias validações de dados intrínseca
 
 >[!NOTE]
 >
->A menos que a mensagem resultante seja um XDM inválido, qualquer erro de transformação na Preparação de dados resultará na definição desses atributos como `null`, enquanto o restante da linha será assimilado. Se a linha resolver para XDM inválido, a linha **not** será assimilada. Em ambos os casos, o erro será documentado.
+>A menos que a mensagem resultante seja um XDM inválido, qualquer erro de transformação na Preparação de dados resultará na definição desses atributos como `null`, enquanto o restante da linha será assimilado. Se a linha resolver para XDM inválido, a linha **not** ser assimilado. Em ambos os casos, o erro será documentado.
 
 ## Mapeamento
 
@@ -39,7 +39,7 @@ Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de fun
 
 Os campos calculados permitem que os valores sejam criados com base nos atributos no schema de entrada. Esses valores podem ser atribuídos aos atributos no schema de destino e receber um nome e uma descrição para permitir uma referência mais fácil.
 
-Para saber mais sobre campos calculados, leia o [guia de campos calculados](./functions.md#calculated-fields).
+Para saber mais sobre campos calculados, leia a [guia de campos calculados](./functions.md#calculated-fields).
 
 ## Conjunto de mapeamentos
 
@@ -49,8 +49,12 @@ Para saber mais sobre conjuntos de mapeamento, incluindo como usar os campos em 
 
 ## Tratamento do formato de dados
 
-A Preparação de dados pode lidar de forma robusta com diferentes formatos de dados assimilados na Plataforma. Para saber mais sobre como a Preparação de dados lê os diferentes tipos de dados, leia a [visão geral do manuseio do formato de dados](./data-handling.md).
+A Preparação de dados pode lidar de forma robusta com diferentes formatos de dados assimilados na Plataforma. Para saber mais sobre como a Preparação de dados lê os diferentes tipos de dados, [visão geral do manuseio do formato de dados](./data-handling.md).
+
+## Enviar atualizações de linha parciais usando o [!DNL Data Prep]
+
+Streaming de upserts em [!DNL Data Prep] permite enviar atualizações de linha parciais para o [!DNL Profile Service] dados, além de criar e estabelecer novos links de identidade com uma única solicitação de API. Para saber mais sobre como fazer streaming de upserts em [!DNL Data Prep], consulte o documento em [envio de atualizações de linha parcial](./upserts.md).
 
 ## Próximas etapas
 
-Este documento cobriu as noções básicas sobre Preparação de dados no Adobe Experience Platform. Para saber mais sobre diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md). Para saber mais sobre como a Preparação de dados lê os diferentes tipos de dados, leia o [guia de manipulação do formato de dados](./data-handling.md#dates). Para saber como usar a API de preparação de dados, leia o [Guia do desenvolvedor de preparação de dados](api/overview.md).
+Este documento cobriu as noções básicas sobre Preparação de dados no Adobe Experience Platform. Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md). Para saber mais sobre como a Preparação de dados lê os diferentes tipos de dados, [guia de manipulação do formato de dados](./data-handling.md#dates). Para saber como usar a API de preparação de dados, leia o [Guia do desenvolvedor de Preparação de dados](api/overview.md).

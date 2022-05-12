@@ -5,9 +5,9 @@ title: Gerenciar políticas de uso de dados na interface do usuário
 topic-legacy: policies
 description: A Governança de dados do Adobe Experience Platform fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que podem ser executadas no espaço de trabalho Políticas na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,10 @@ Você pode continuar adicionando e ajustando condições e atributos de consenti
 A política de consentimento foi criada e seu status está definido como [!UICONTROL Desabilitado] por padrão. Para ativar a política imediatamente, selecione o **[!UICONTROL Status]** alternar no painel direito.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### Verificar a aplicação da política
+
+Depois de criar e ativar uma política de consentimento, você pode visualizar como ela afeta seus públicos consentidos ao ativar segmentos para destinos. Consulte a seção sobre [avaliação da política de consentimento](../enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 
 ## Ativar ou desativar uma política {#enable}
 

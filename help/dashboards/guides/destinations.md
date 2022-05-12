@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2538'
 ht-degree: 0%
 
 ---
@@ -55,12 +55,19 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Segmentos não mapeados por identidade]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
 * [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
+* [[!UICONTROL Estado de funcionamento do público-alvo mapeado]](#mapped-audience-health)
 * [[!UICONTROL Contagem de destinos]](#destinations-count)
 * [[!UICONTROL Status do destino]](#destination-status)
 * [[!UICONTROL Destinos ativos por plataforma de destino]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Públicos-alvo ativados em todos os destinos]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinos mais usados] {#most-used-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mostuseddestinations"
+>title="Destinos mais usados"
+>abstract="Esse widget exibe os destinos mais ativos de sua organização pelo número de segmentos mapeados. Esses números são precisos no momento do último instantâneo. Essa classificação fornece informações sobre quais destinos são mais usados atualmente, destacando os que podem ser subutilizados."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Destinos mais usados]** O widget exibe os principais destinos de sua organização pelo número de segmentos mapeados a partir do último instantâneo. Essa classificação fornece informações sobre quais destinos estão sendo utilizados, além de mostrar potencialmente aqueles que podem ser subutilizados.
 
@@ -74,6 +81,12 @@ Selecionar o nome de um destino na lista mostrada no widget levará você aos de
 
 ### [!UICONTROL Destinos criados recentemente] {#recently-created-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlycreateddestinations"
+>title="Destinos criados recentemente"
+>abstract="Este widget exibe uma lista dos destinos configurados mais recentemente em sua organização."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="Saiba mais pela documentação"
+
 O **[!UICONTROL Destinos criados recentemente]** O widget permite que você veja uma lista dos destinos configurados mais recentemente de sua organização.
 
 A data criada mostrada é precisa do último instantâneo diário. Em outras palavras, se você criar um novo destino, ele não aparecerá na lista até que o próximo instantâneo seja tirado.
@@ -86,7 +99,13 @@ Para saber mais sobre como configurar tipos específicos de destinos, visite o [
 
 ### [!UICONTROL Segmentos ativados recentemente] {#recently-activated-segments}
 
-O **[!UICONTROL Segmentos ativados recentemente]** fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo de quais segmentos e destinos estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegments"
+>title="Segmentos ativados recentemente"
+>abstract="Este widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="Saiba mais pela documentação"
+
+O **[!UICONTROL Segmentos ativados recentemente]** fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos.
 
 A data atualizada mostrada exibe a última vez que o segmento foi ativado para o destino e é precisa do último instantâneo diário. Em outras palavras, se você ativar um segmento para o destino, a data atualizada não será alterada até que o próximo instantâneo seja tirado.
 
@@ -98,6 +117,12 @@ Para obter mais informações sobre como trabalhar com segmentos no Experience P
 
 ### [!UICONTROL Segmentos ativados recentemente por destino] {#recently-activated-segments-by-destination}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
+>title="Segmentos ativados recentemente por destino"
+>abstract="Esse widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido na lista suspensa de visão geral."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Saiba mais pela documentação"
+
 O **[!UICONTROL Segmentos ativados recentemente por destino]** O widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido na lista suspensa de visão geral. É semelhante ao [!UICONTROL Segmentos ativados recentemente] widget, mas os dados são exibidos **only** se aplica ao destino selecionado.
 
 Este widget contém duas métricas: o nome do segmento e a data em que ele foi ativado pela última vez no destino. Os dados exibidos estão corretos a partir do último instantâneo diário.
@@ -107,6 +132,12 @@ Você pode visualizar os detalhes de um segmento selecionando o nome de um segme
 ![Segmentos ativados recentemente pelo widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_audiencesizetrend"
+>title="Tendência do tamanho do público-alvo"
+>abstract="Este widget ilustra o número de perfis contidos no segmento, que está sendo enviado para a conta de destino diariamente. O primeiro menu suspenso ajusta o período de tempo da tendência do público-alvo. O segundo menu suspenso do widget seleciona o segmento para análise. O destino é escolhido na lista suspensa de visão geral."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Tendência do tamanho do público-alvo]** O widget descreve o relacionamento da contagem de perfis ao longo de um período de tempo para um segmento que foi mapeado para essa conta de destino. O widget usa um gráfico de linhas para ilustrar o número de perfis contidos no segmento, que estão sendo enviados para a conta de destino diariamente.
 
@@ -122,6 +153,12 @@ O **[!UICONTROL Tendência do tamanho do público-alvo]** o widget fornece um [!
 
 ### [!UICONTROL Segmentos não mapeados por identidade] {#unmapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
+>title="Segmentos não mapeados por identidade"
+>abstract="Este widget lista as cinco principais **não mapeado** segmentos classificados por contagem de identidade decrescente para um determinado destino e identidade. As IDs de filtro listadas na lista suspensa do widget mudam, dependendo da conta de destino selecionada na parte superior da página de visão geral."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="Saiba mais pela documentação"
+
 O **[!UICONTROL Segmentos não mapeados por identidade]** o widget lista os cinco principais **não mapeado** segmentos classificados por contagem de identidade decrescente para um determinado destino e identidade. Ele destaca os segmentos que são os mais benéficos para mapear para a conta de destino escolhida com base na ID escolhida.
 
 A lista suspensa da ID de destino filtra os segmentos disponíveis. As IDs de filtro listadas na lista suspensa mudam, dependendo da conta de destino selecionada na parte superior da página de visão geral.
@@ -132,13 +169,25 @@ A coluna identidades conta o número de IDs de origem no segmento que podem ser 
 
 ### [!UICONTROL Segmentos mapeados por identidade] {#mapped-segments-by-identity}
 
-Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis na lista suspensa no widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedsegmentsbyidentity"
+>title="Segmentos mapeados por identidade"
+>abstract="Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget dependem do destino escolhido na parte superior do painel de visão geral."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Saiba mais pela documentação"
+
+Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso no widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
 
 ![Os segmentos mapeados por widget de identidade.](../images/destinations/mapped-segments-by-identity.png)
 
 O **[!UICONTROL Segmentos mapeados por identidade]** O widget destaca rapidamente a probabilidade de direcionar oportunidades de perfil com êxito para uma campanha dentro do destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas com as IDs de destino para fornecer dados úteis e acionáveis.
 
-### Públicos-alvo comuns
+### Públicos-alvo comuns {#common-audiences}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_commonaudiences"
+>title="Públicos-alvo comuns"
+>abstract="Este widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a recentemente com que foram ativados. O segmento ativado mais recentemente é exibido na parte superior."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Públicos-alvo comuns]** O widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a recentemente com que foram ativados. O segmento ativado mais recentemente é exibido na parte superior.
 
@@ -146,7 +195,13 @@ O [!UICONTROL TAMANHO DO PÚBLICO-ALVO] fornece a contagem total de perfis de ca
 
 ![O widget Públicos-alvo comuns .](../images/destinations/common-audiences.png)
 
-### Estado de funcionamento do público-alvo mapeado
+### Estado de funcionamento do público-alvo mapeado {#mapped-audience-health}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedaudiencehealth"
+>title="Estado de funcionamento do público-alvo mapeado"
+>abstract="Este widget fornece uma lista de até 20 segmentos mapeados cujas contagens totais de perfil se desviam por um fator de pelo menos um desvio padrão do tamanho médio de público-alvo de 30 dias mapeado para esse destino. Ela fornece uma métrica calculada para a dispersão dos tamanhos do público-alvo da média nos últimos 30 dias. Os tamanhos do público são classificados de alto para baixo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="Saiba mais pela documentação"
 
 O widget fornece uma lista de até 20 segmentos mapeados cujo perfil total, a partir do último instantâneo diário, varia por um fator de pelo menos um desvio padrão do tamanho médio de público-alvo de 30 dias mapeado para esse destino.
 
@@ -161,6 +216,12 @@ Se um segmento na [!UICONTROL Estado de funcionamento do público-alvo mapeado] 
 ![O widget de integridade do público-alvo mapeado.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Contagem de destinos] {#destinations-count}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_destinationscount"
+>title="Contagem de destinos"
+>abstract="Este widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="Saiba mais pela documentação"
 
 O [!UICONTROL Contagem de destinos] O widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos.
 

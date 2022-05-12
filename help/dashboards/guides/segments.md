@@ -4,9 +4,9 @@ title: Painel de segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,12 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 
 ### [!UICONTROL Tamanho do público-alvo] {#audience-size}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesize"
+>title="Tamanho do público-alvo"
+>abstract="Este widget exibe o número total de perfis mesclados no segmento selecionado. Esse número depende da política de mesclagem aplicada aos seus dados e está correto no momento do instantâneo mais recente."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Saiba mais pela documentação"
+
 O **[!UICONTROL Tamanho do público-alvo]** O widget exibe o número total de perfis mesclados no segmento selecionado no momento em que o instantâneo foi tirado. Esse número é o resultado da aplicação da política de mesclagem de segmentos aos seus dados de Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo no segmento.
 
 Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a variável [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
@@ -85,9 +91,15 @@ Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo 
 
 ### [!UICONTROL Sobreposição de identidade] {#identity-overlap}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_identityoverlap"
+>title="Sobreposição de identidade"
+>abstract="Este widget mostra a sobreposição de perfis em seu segmento que contém ambas as identidades escolhidas. Os círculos exibem o tamanho relativo de cada identidade. O número de perfis que contém ambos os namespaces é representado pela sobreposição entre os círculos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Saiba mais pela documentação"
+
 O **[!UICONTROL Sobreposição de identidade]** O widget exibe um diagrama Venn ou diagrama de conjunto, mostrando a sobreposição de perfis em seu segmento que contém várias identidades.
 
-Depois de usar os menus suspensos no widget para selecionar as identidades que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada identidade, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos.
+Use os menus suspensos do widget para selecionar as identidades que deseja comparar. Os círculos exibem o tamanho relativo de cada identidade escolhida, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos.
 
 Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
 
@@ -97,7 +109,13 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 
 ### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
 
-O **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em todos os perfis mesclados no segmento selecionado. O número total de perfis por identidade pode ser maior que o número total de perfis no segmento, pois um perfil pode ter várias identidades associadas a ele. Em outras palavras, adicionar os valores mostrados para cada identidade pode totalizar mais do que o tamanho total do público no segmento, pois se um cliente interagir com sua marca em mais de um canal, várias identidades podem ser associadas a esse cliente individual.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_profilesbyidentity"
+>title="Perfis por identidade"
+>abstract="Este widget exibe o detalhamento das identidades em cada perfil mesclado no segmento selecionado."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Saiba mais pela documentação"
+
+O **[!UICONTROL Perfis por identidade]** o widget exibe o detalhamento das identidades em cada perfil mesclado no segmento selecionado. O número total de perfis por identidade pode ser maior que o número total de perfis no segmento, pois um perfil pode ter várias identidades associadas a ele. Em outras palavras, adicionar os valores mostrados para cada identidade pode totalizar mais do que o tamanho total do público no segmento, pois se um cliente interagir com sua marca em mais de um canal, várias identidades podem ser associadas a esse cliente individual.
 
 Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
 
@@ -115,9 +133,23 @@ O [!UICONTROL Ordem de ativação do público-alvo] o widget fornece uma tabela 
 
 ### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
 
-O [!UICONTROL Tendência do tamanho do público-alvo] O widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de **any** definição de segmento ao longo de um determinado período. A tendência do tamanho do público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. O tamanho do público-alvo é refletido no eixo y e no tempo no eixo x.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Tendência do tamanho do público-alvo"
+>abstract="Este widget fornece informações sobre o número total de perfis que atendem aos critérios de **any** definição de segmento, conforme capturado durante o instantâneo diário, nos últimos 30 dias, 90 dias ou 12 meses."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Saiba mais pela documentação"
 
-![O widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend.png)
+O **[!UICONTROL Tendência do tamanho do público-alvo]** O widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de **any** definição de segmento ao longo de um determinado período. A tendência do tamanho do público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. O tamanho do público-alvo é refletido no eixo y e no tempo no eixo x.
+
+Este widget também inclui o [!UICONTROL Legendas] recurso em que um modelo de aprendizado de máquina analisa o gráfico e os dados do segmento e gera automaticamente legendas para descrever as principais tendências e eventos importantes. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
+
+![A visão geral dos segmentos exibe o widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend-captions.png)
+
+A caixa de diálogo de legendas automáticas é aberta, fornecendo insights sobre seus dados.
+
+![A caixa de diálogo de legendas automáticas do widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Para saber mais sobre a avaliação de segmentos e como os perfis se qualificam e saem dos segmentos, consulte [Documentação do Serviço de segmentação](../../segmentation/home.md).
 
 ### [!UICONTROL Tendência de alteração do tamanho do público-alvo] {#audience-size-change-trend}
 

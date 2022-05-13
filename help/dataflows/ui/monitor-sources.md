@@ -6,9 +6,9 @@ title: Monitorar fluxos de dados para fontes na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,11 @@ No [Interface do usuário da plataforma](https://platform.adobe.com), selecione 
 
 No centro do painel há [!UICONTROL Assimilação de origem] , que contém métricas e gráficos que exibem dados em registros assimilados e que falharam.
 
-![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+![painel de monitoramento](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
 Por padrão, os dados exibidos contêm taxas de ingestão das últimas 24 horas. Selecionar **[!UICONTROL Últimas 24 horas]** para ajustar o período de tempo dos registros exibidos.
 
-![change-date](../assets/ui/monitor-sources/change-date.png)
+![data de alteração](../assets/ui/monitor-sources/change-date.png)
 
 Uma janela pop-up do calendário é exibida, fornecendo opções para intervalos de tempo de ingestão alternativos. Selecionar **[!UICONTROL Últimos 30 dias]** e depois selecione **[!UICONTROL Aplicar]**
 
@@ -90,7 +90,7 @@ Como alternativa, você pode inserir uma fonte na barra de pesquisa para isolar 
 
 ![pesquisa](../assets/ui/monitor-sources/search.png)
 
-Uma lista de fluxos de dados é exibida. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
+Uma lista de fluxos de dados é exibida. Para restringir a lista e se concentrar nos fluxos de dados com erros, selecione **[!UICONTROL Mostrar somente falhas]**.
 
 ![show-failed-only](../assets/ui/monitor-sources/show-failures-only.png)
 
@@ -130,102 +130,9 @@ Você pode usar o sistema de navegação estrutural no cabeçalho superior para 
 
 ![navegação estrutural](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## Monitoramento entre serviços {#cross-service-monitoring}
-
-A parte superior do painel contém uma representação do fluxo de assimilação do nível de origem para [!DNL Identity Service]e para [!DNL Profile]. Cada célula inclui um marcador de ponto que indica a presença de erros que ocorreram nesse estágio de assimilação. Um ponto verde significa uma ingestão sem erros, enquanto um ponto vermelho significa que ocorreu um erro nessa determinada etapa de ingestão.
-
-![monitoramento entre serviços](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-Na página de fluxos de dados, localize um fluxo de dados bem-sucedido e selecione o ícone de filtro ![filter](../assets/ui/monitor-sources/filter.png) ao lado dele, para ver as informações de execução do fluxo de dados.
-
-![sucesso do fluxo de dados](../assets/ui/monitor-sources/dataflow-success.png)
-
-The [!UICONTROL Source ingestion] page contains information that confirms the successful ingestion of your dataflow. A partir daqui, você pode começar a monitorar a jornada do seu fluxo de dados do nível de origem para [!DNL Identity Service]e depois para [!DNL Profile].
-
-Selecionar **[!UICONTROL Identidades]** para ver a assimilação no [!UICONTROL Identidades] palco.
-
-![sources](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] métricas {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="Processamento de identidade"
->abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="Dataflow run details"
->abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados de identidade, incluindo a ID de organização IMS e a ID de execução do fluxo de dados."
-
-O [!UICONTROL Processamento de identidade] contém informações sobre registros assimilados a [!DNL Identity Service], incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados.
-
-Selecione o ícone de filtro ![filter](../assets/ui/monitor-sources/filter.png) além do tempo de início da execução do fluxo de dados para ver mais informações sobre o [!DNL Identity] execução do fluxo de dados.
-
-![identidades](../assets/ui/monitor-sources/identities.png)
-
-| Métricas de identidade | Descrição |
-| ---------------- | ----------- |
-| [!UICONTROL Registros recebidos] | O número de registros recebidos de [!DNL Data Lake]. |
-| [!UICONTROL Records failed] | The number of records that were not ingested into Platform due to errors in the data. |
-| [!UICONTROL Registros ignorados] | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
-| [!UICONTROL Registros assimilados] | O número de registros assimilados em [!DNL Identity Service]. |
-| [!UICONTROL Total records] | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records. |
-| [!UICONTROL Identidades adicionadas] | The number of net new identifiers added to [!DNL Identity Service]. |
-| [!UICONTROL Gráficos criados] | O número de novos gráficos de identidade líquidos criados em [!DNL Identity Service]. |
-| [!UICONTROL Gráficos atualizados] | O número de gráficos de identidade existentes atualizados com novas bordas. |
-| [!UICONTROL Falha na execução do fluxo de dados] | O número de execuções de fluxo de dados que falharam. |
-| [!UICONTROL Tempo de processamento] | O carimbo de data e hora desde o início da assimilação até a conclusão. |
-| [!UICONTROL Status] | Define o status geral de um fluxo de dados. Os valores de status possíveis são: <ul><li>`Success`: Indica que um fluxo de dados está ativo e está assimilando dados de acordo com o cronograma que foi fornecido.</li><li>`Failed`: Indica que o processo de ativação de um fluxo de dados foi interrompido devido a erros. </li><li>`Processing`: Indica que o fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados.</li></ul> |
-
-O [!UICONTROL Detalhes da execução do fluxo de dados] página exibe mais informações sobre sua [!DNL Identity] execução do fluxo de dados, incluindo a ID organizacional IMS e a ID de execução do fluxo de dados. Esta página também exibe o código de erro e a mensagem de erro correspondentes fornecidos pelo [!DNL Identity Service], caso ocorra algum erro no processo de ingestão.
-
-Selecionar **[!UICONTROL Executar início: 14/2/2021, 21:47]** para retornar à página anterior.
-
-![identities-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-No [!UICONTROL Processamento de identidade] página, selecione **[!UICONTROL Perfis]** para ver o status da assimilação de registros no [!UICONTROL Perfis] palco.
-
-![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] métricas {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="Processamento de perfil"
->abstract="A visualização Processamento de perfil contém informações sobre registros assimilados ao serviço de perfil, incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="Detalhes da execução do fluxo de dados"
->abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados do Perfil, incluindo a ID de organização IMS e a ID de execução do fluxo de dados."
-
-O [!UICONTROL Processamento de perfil] contém informações sobre registros assimilados a [!DNL Profile], incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil.
-
-Selecione o ícone de filtro ![filter](../assets/ui/monitor-sources/filter.png) além do tempo de início da execução do fluxo de dados para ver mais informações sobre o [!DNL Profile] execução do fluxo de dados.
-
-![perfis](../assets/ui/monitor-sources/profiles.png)
-
-| Métricas de perfil | Descrição |
-| --------------- | ----------- |
-| [!UICONTROL Registros recebidos] | O número de registros recebidos de [!DNL Data Lake]. |
-| [!UICONTROL Falha nos registros ] | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
-| [!UICONTROL Fragmentos de perfil adicionados] | O número líquido de [!DNL Profile] fragmentos adicionados. |
-| [!UICONTROL Profile fragments updated] | The number of existing [!DNL Profile] fragments updated |
-| [!UICONTROL Total de fragmentos de perfil] | O número total de registros gravados em [!DNL Profile], incluindo todos os [!DNL Profile] fragmentos atualizados e novos [!DNL Profile] fragmentos criados. |
-| [!UICONTROL Falha na execução do fluxo de dados] | O número de execuções de fluxo de dados que falharam. |
-| [!UICONTROL Tempo de processamento] | O carimbo de data e hora desde o início da assimilação até a conclusão. |
-| [!UICONTROL Status] | Define o status geral de um fluxo de dados. Os valores de status possíveis são: <ul><li>`Success`: Indica que um fluxo de dados está ativo e está assimilando dados de acordo com o cronograma que foi fornecido.</li><li>`Failed`: Indica que o processo de ativação de um fluxo de dados foi interrompido devido a erros. </li><li>`Processing`: Indica que o fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados.</li></ul> |
-
-O [!UICONTROL Detalhes da execução do fluxo de dados] página exibe mais informações sobre sua [!DNL Profile] execução do fluxo de dados, incluindo a ID organizacional IMS e a ID de execução do fluxo de dados. Esta página também exibe o código de erro e a mensagem de erro correspondentes fornecidos pelo [!DNL Profile], caso ocorra algum erro no processo de ingestão.
-
-![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você monitorou com sucesso o fluxo de dados de assimilação do nível de origem para [!DNL Identity Service]e para [!DNL Profile], usando o **[!UICONTROL Monitoramento]** painel. Você também identificou com sucesso erros que contribuíram para a falha dos fluxos de dados durante o processo de assimilação. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você monitorou com sucesso o fluxo de dados de assimilação do nível de origem usando o **[!UICONTROL Monitoramento]** painel. Você também identificou com sucesso erros que contribuíram para a falha dos fluxos de dados durante o processo de assimilação. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Visão geral do perfil do cliente em tempo real](../../profile/home.md)
-* [Visão geral do Data Science Workspace](../../data-science-workspace/home.md)
+* [Monitoramento de identidades em fluxos de dados](./monitor-identities.md)
+* [Monitoramento de perfis em fluxos de dados](./monitor-profiles.md)

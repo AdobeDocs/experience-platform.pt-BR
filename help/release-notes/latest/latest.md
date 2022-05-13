@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2804'
 ht-degree: 4%
 
 ---
@@ -32,8 +32,10 @@ Os painéis fornecem opções de relatório pré-configuradas para os dados de s
 
 Os seguintes widgets estão disponíveis por meio da biblioteca de widgets em seus respectivos painéis. Consulte a documentação para obter mais informações sobre [como adicionar widgets através da biblioteca de widgets](../../dashboards/customize/widget-library.md).
 
-| Recurso | Painel | Descrição |
-| --------------------------------------------------------- | ------------- | ----------- |
+**Novos widgets**
+
+| Widget | Painel | Descrição |
+| ------ | --------- | ----------- |
 | [!UICONTROL Tendência de adição de perfis] | Perfis | Esse widget usa um gráfico de linhas para ilustrar o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. |
 | [!UICONTROL Públicos-alvo mapeados para o status de destino] | Perfis | Esse widget exibe o número total de públicos-alvo mapeados e não mapeados em uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre seus totais. |
 | [!UICONTROL Tamanho dos públicos-alvo] | Perfis | Este widget fornece uma tabela de duas colunas que lista até 20 segmentos e o número total de públicos-alvo contidos em cada segmento. A lista depende da política de mesclagem aplicada e ordenada de cima para baixo de acordo com o número total de públicos-alvo. |
@@ -46,6 +48,14 @@ Os seguintes widgets estão disponíveis por meio da biblioteca de widgets em se
 | [!UICONTROL Tendência do tamanho do público-alvo] | Segmentos | Este widget fornece uma ilustração de gráfico de linha para o número total de perfis que atendem aos critérios de qualquer definição de segmento ao longo de períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência de alteração do tamanho do público-alvo] | Segmentos | Este widget fornece um gráfico de linhas que ilustra a diferença no número total de perfis que se qualificaram para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência do tamanho do público-alvo por identidade] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
+
+**Novos recursos**
+
+| Recurso | Painel | Descrição |
+| ------- | --------- | ----------- |
+| Limpeza de associação de segmento de perfil órfão | Perfis e uso de licença | O Serviço de perfil agora remove membros do segmento que restam diariamente para fornecer uma representação mais precisa dos perfis em seu sistema. Essa limpeza ocorre depois que todos os fragmentos de perfil de um determinado perfil são excluídos. Isso pode mostrar uma queda na métrica &quot;Público-alvo endereçável&quot; no painel de uso da licença e pode mostrar uma queda na métrica &quot;Contagem de perfis&quot; no painel Perfil, já que essas métricas incluíam fragmentos de segmento restantes antes desta versão. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte a documentação para obter mais informações sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)e [[!DNL Segments]](../../dashboards/guides/segments.md) painéis.
 

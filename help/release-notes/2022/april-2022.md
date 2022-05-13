@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 3%
 
 ---
@@ -49,11 +49,13 @@ Os seguintes widgets estão disponíveis por meio da biblioteca de widgets em se
 | [!UICONTROL Tendência de alteração do tamanho do público-alvo] | Segmentos | Este widget fornece um gráfico de linhas que ilustra a diferença no número total de perfis que se qualificaram para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência do tamanho do público-alvo por identidade] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 
-**Novos recursos**
+**Novos recursos** {#new-features}
 
 | Recurso | Painel | Descrição |
 | ------- | --------- | ----------- |
 | Limpeza de associação de segmento de perfil órfão | Perfis e uso de licença | O Serviço de perfil agora remove membros do segmento que restam diariamente para fornecer uma representação mais precisa dos perfis em seu sistema. Essa limpeza ocorre depois que todos os fragmentos de perfil de um determinado perfil são excluídos. Isso pode mostrar uma queda na métrica &quot;Público-alvo endereçável&quot; no painel de uso da licença e pode mostrar uma queda na métrica &quot;Contagem de perfis&quot; no painel Perfil, já que essas métricas incluíam fragmentos de segmento restantes antes desta versão. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consulte a documentação para obter mais informações sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)e [[!DNL Segments]](../../dashboards/guides/segments.md) painéis.
 

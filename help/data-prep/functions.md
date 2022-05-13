@@ -5,9 +5,9 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
+source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
 workflow-type: tm+mt
-source-wordcount: '4164'
+source-wordcount: '4175'
 ht-degree: 4%
 
 ---
@@ -100,7 +100,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | get_url_host | Retorna o host do URL especificado. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** O URL do qual o host precisa ser extraído.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Retorna a porta do URL especificado. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** O URL do qual a porta precisa ser extraída.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | Retorna o caminho de determinada URL. Por padrão, o caminho completo é retornado. | <ul><li>URL: **Obrigatório** O URL do qual o caminho precisa ser extraído.</li><li>FULL_PATH: *Opcional* Um valor booleano que determina se o caminho completo é retornado. Se definido como false, somente o final do caminho será retornado.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
-| get_url_query_str | Retorna a string de consulta de um determinado URL. | <ul><li>URL: **Obrigatório** O URL do qual você está tentando obter a string de consulta.</li><li>ÂNCORA: **Obrigatório** Determina o que será feito com a âncora na string de consulta. Pode ser um dos três valores: &quot;manter&quot;, &quot;remover&quot; ou &quot;anexar&quot;.<br><br>Se o valor for &quot;reter&quot;, a âncora será anexada ao valor retornado.<br>Se o valor for &quot;remove&quot;, a âncora será removida do valor retornado.<br>Se o valor for &quot;append&quot;, a âncora será retornada como um valor separado.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/third?name= &#x200B; ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/third?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com &#x200B;:8042/over/lá &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Retorna a string de consulta de um determinado URL como um mapa do nome da string de consulta e do valor da string de consulta. | <ul><li>URL: **Obrigatório** O URL do qual você está tentando obter a string de consulta.</li><li>ÂNCORA: **Obrigatório** Determina o que será feito com a âncora na string de consulta. Pode ser um dos três valores: &quot;manter&quot;, &quot;remover&quot; ou &quot;anexar&quot;.<br><br>Se o valor for &quot;reter&quot;, a âncora será anexada ao valor retornado.<br>Se o valor for &quot;remove&quot;, a âncora será removida do valor retornado.<br>Se o valor for &quot;append&quot;, a âncora será retornada como um valor separado.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/third?name= &#x200B; ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/third?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com &#x200B;:8042/over/lá &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style=&quot;table-layout:auto&quot;}
 

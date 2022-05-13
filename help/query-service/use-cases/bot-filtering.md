@@ -1,9 +1,10 @@
 ---
 title: Filtragem de bot no Serviço de query com aprendizado de máquina
 description: Este documento fornece uma visão geral de como usar o Serviço de query e o aprendizado de máquina para determinar a atividade de bot e filtrar suas ações do tráfego online de visitantes genuíno.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
@@ -164,6 +165,6 @@ O modelo de exemplo determinado com alto grau de precisão que qualquer visitant
 
 ## Próximas etapas
 
-Ao ler este documento, você tem uma melhor compreensão de como usar o Serviço de query e o aprendizado de máquina para determinar e filtrar a atividade de bot.
+Ao ler este documento, você tem uma melhor compreensão de como usar [!DNL Query Service] e aprendizado de máquina para determinar e filtrar a atividade de bot.
 
-Outros documentos que demonstram os benefícios de [!DNL Query Service] os insights de negócios estratégicos de sua organização são o exemplo de caso de uso de navegação abandonado.
+Outros documentos que demonstram os benefícios de [!DNL Query Service] os insights de negócios estratégicos de sua organização são a [caso de uso de navegação abandonada](./abandoned-browse.md) exemplo.

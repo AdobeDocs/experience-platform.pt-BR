@@ -2,9 +2,9 @@
 title: Integração de Log de Auditoria do Serviço de Query
 description: Os registros de auditoria do Serviço de Consulta mantêm registros de várias ações do usuário para formar uma trilha de auditoria para solucionar problemas ou seguir políticas corporativas de gerenciamento de dados e requisitos normativos. Este tutorial fornece uma visão geral dos recursos de log de auditoria específicos do Serviço de query.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ As categorias de log de auditoria fornecidas por [!DNL Query Service] são como 
 |---|---|
 | [!UICONTROL Consulta agendada] | Esta categoria permite que você faça auditoria das programações que foram criadas, atualizadas ou excluídas em [!DNL Query Service]. |
 | [!UICONTROL Modelo de consulta] | Esta categoria permite auditar as várias ações (criar, atualizar e excluir) realizadas em um template de query. |
-| [!UICONTROL Query] | Esta categoria permite auditar execuções de query. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Executar um [!DNL Query Service] registro de auditoria {#perform-an-audit-log}
 

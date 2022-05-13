@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
+source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
 workflow-type: tm+mt
-source-wordcount: '2805'
-ht-degree: 3%
+source-wordcount: '2917'
+ht-degree: 5%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 3%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Fluxos de dados](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [Real-time Customer Data Platform Edição B2B](#B2B)
 - [Fontes](#sources)
 
@@ -171,17 +171,31 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de experiência em ciência de dados.
+Os serviços de IA/ML capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de experiência em ciência de dados.
 
-O Attribution AI e o Customer AI permitem que os clientes configurem modelos avançados de AI/ML para atribuição de marketing e propensão do cliente. O recurso Conjunto de dados múltiplo ajuda os clientes a trazer vários conjuntos de dados no momento da configuração do modelo, sem a necessidade de compilar e preparar os dados antecipadamente.
+### Attribution AI
+
+O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte para vários conjuntos de dados | O recurso Conjunto de vários dados agora é compatível com todos os conjuntos de dados de eventos de experiência, bem como com a seleção do Mapa de identidade como uma identidade. Os clientes podem selecionar o Mapa de identidade e quaisquer IDs associadas, desde que haja um namespace de identidade comum em todos os conjuntos de dados. O Attribution AI é compatível com os seguintes esquemas: Adobe Analytics, Evento de experiência, Evento de experiência do consumidor. O Customer AI é compatível com todos esses esquemas e com o esquema Adobe Audience Manager. Para obter mais informações sobre o suporte a vários conjuntos de dados no Attribution AI e no Customer AI, consulte [Guia do usuário do Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) e [Guia do usuário de IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Suporte para vários conjuntos de dados | O recurso Conjunto de vários dados agora é compatível com todos os conjuntos de dados de eventos de experiência, bem como com a seleção do Mapa de identidade como uma identidade. Os clientes podem selecionar o Mapa de identidade e quaisquer IDs associadas, desde que haja um namespace de identidade comum em todos os conjuntos de dados. O Attribution AI é compatível com os seguintes esquemas: Adobe Analytics, Evento de experiência, Evento de experiência do consumidor. Para obter mais informações sobre o suporte a vários conjuntos de dados no Attribution AI, consulte o [Guia do usuário do Attribution AI](../../intelligent-services/attribution-ai/user-guide.md). |
+
+Para obter mais informações sobre [!DNL Intelligent Services]consulte o [[!DNL Intelligent Services] visão geral](../../intelligent-services/home.md).
+
+### Customer AI
+
+O Customer AI disponível no Real-time Customer Data Platform é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Suporte para vários conjuntos de dados | O recurso Conjunto de vários dados agora é compatível com todos os conjuntos de dados de eventos de experiência, bem como com a seleção do Mapa de identidade como uma identidade. Os clientes podem selecionar o Mapa de identidade e quaisquer IDs associadas, desde que haja um namespace de identidade comum em todos os conjuntos de dados. O Customer AI oferece suporte aos seguintes esquemas: Adobe Analytics, Evento de experiência, Evento de experiência do consumidor e o esquema Adobe Audience Manager. Para obter mais informações sobre o suporte a vários conjuntos de dados no Customer AI, consulte [Guia do usuário de IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Novas métricas de avaliação de modelo no Customer AI | Os novos gráficos de Ganhos no Customer AI permitem que os profissionais de marketing determinem o tamanho do grupo para direcionar com base em seus objetivos de orçamento e ROI. Os novos gráficos de incentivo medem a qualidade do modelo, fornecendo melhor visibilidade sobre o aumento que obteriam sobre o direcionamento aleatório. Para obter mais informações, consulte o [descubra insights com a Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) documento. |
 
 Para obter mais informações sobre [!DNL Intelligent Services]consulte o [[!DNL Intelligent Services] visão geral](../../intelligent-services/home.md).

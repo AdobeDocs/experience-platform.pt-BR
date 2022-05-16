@@ -5,10 +5,10 @@ title: Endpoint da API de métricas
 topic-legacy: developer guide
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API do Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 6%
+source-wordcount: '1409'
+ht-degree: 4%
 
 ---
 
@@ -201,23 +201,12 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Data 
 
 | Métrica de insights | Descrição | Parâmetro de consulta de ID |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | Número total de conjuntos de dados criados. | N/D |
 | timeseries.ingestion.dataset.size | Tamanho cumulativo de todos os dados assimilados para um conjunto de dados para ou todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.ingestion.dataset.dailysize | Tamanho dos dados assimilados em uma base de uso diário para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.ingestion.dataset.batchfailed.count | Número de lotes com falha para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.ingestion.dataset.batchsuccess.count | Número de lotes assimilados para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.ingestion.dataset.recordsuccess.count | Número de registros assimilados para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.total.messages.rate** | Número total de mensagens para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **timesries.data.collection.validation.valid.messages.rate** | Número total de mensagens válidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **timesries.data.collection.validation.invalid.messages.rate** | Número total de mensagens inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.type.count** | Número total de mensagens de &quot;tipo&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.range.count** | Número total de mensagens de &quot;intervalo&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.format.count** | Número total de mensagens de &quot;formato&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.pattern.count** | Número total de mensagens de &quot;padrão&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **time.data.collection.validation.category.presence.count** | Número total de mensagens de &quot;presença&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.enum.count** | Número total de mensagens &quot;enum&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.unclassification.count** | Número total de mensagens &quot;não classificadas&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| **time.data.collection.validation.category.unknown.count** | Número total de mensagens &quot;desconhecidas&quot; inválidas para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | **timesries.data.collection.inlet.total.messages.receive** | Número total de mensagens recebidas para uma entrada de dados ou para todas as entradas de dados. | ID de entrada |
 | **timesries.data.collection.inlet.total.messages.size.receive** | Tamanho total dos dados recebidos para uma entrada de dados ou para todas as entradas de dados. | ID de entrada |
 | **timesries.data.collection.inlet.success** | Número total de chamadas HTTP bem-sucedidas para uma entrada de dados ou para todas as entradas de dados. | ID de entrada |
@@ -233,40 +222,11 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Ident
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Número de registros gravados em sua fonte de dados por [!DNL Identity Service], para um conjunto de dados ou todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.identity.dataset.recordfailed.count | Número de registros falhados por [!DNL Identity Service], para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | Número de registros de identidade assimilados com êxito para um namespace. | ID de namespace (**Obrigatório**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Número de registros de identidade falhados por um namespace. | ID de namespace (**Obrigatório**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Número de registros de identidade ignorados por um namespace. | ID de namespace (**Obrigatório**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Número de identidades exclusivas armazenadas no gráfico de identidade da organização IMS. | N/D |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Número de identidades exclusivas armazenadas no gráfico de identidade de um namespace. | ID de namespace (**Obrigatório**) |
-| timeseries.identity.graph.imsorg.numidgraphs.count | Número de identidades de gráfico exclusivas armazenadas no gráfico de identidade da organização IMS. | N/D |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Número de identidades exclusivas armazenadas no gráfico de identidade da sua Organização IMS para uma determinada intensidade de gráfico (&quot;desconhecido&quot;, &quot;fraco&quot; ou &quot;forte&quot;). | Intensidade do gráfico (**Obrigatório**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Privacy Service] {#privacy}
-
-A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Privacy Service].
-
-| Métrica de insights | Descrição | Parâmetro de consulta de ID |
-| ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | Número total de tarefas criadas pelo GDPR. | ENV (**Obrigatório**) |
-| timeseries.gdpr.jobs.completedjobs.count | Número total de tarefas concluídas do GDPR. | ENV (**Obrigatório**) |
-| timeseries.gdpr.jobs.errorjobs.count | Número total de tarefas com erro do GDPR. | ENV (**Obrigatório**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Query Service] {#query}
-
-A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Query Service].
-
-| Métrica de insights | Descrição | Parâmetro de consulta de ID |
-| ---- | ---- | ---- |
-| timeseries.queryservice.query.scheduleonce.count | Número total de consultas agendadas não recorrentes. | N/D |
-| timeseries.queryservice.query.scheduledrecurring.count | Número total de consultas programadas recorrentes. | N/D |
-| timeseries.queryservice.query.batchquery.count | Número total de consultas em lote executadas. | N/D |
-| timeseries.queryservice.query.scheduledquery.count | Número total de consultas programadas executadas. | N/D |
-| timeseries.queryservice.query.interactivequery.count | Número total de consultas interativas executadas. | N/D |
-| timeseries.queryservice.query.batchfrompsqlquery.count | Número total de consultas em lote executadas do PSQL. | N/D |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -278,18 +238,7 @@ A tabela a seguir descreve as métricas para [!DNL Real-time Customer Profile].
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Número de registros lidos pelo [!DNL Data Lake] por [!DNL Profile], para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.profiles.dataset.recordsuccess.count | Número de registros gravados em sua fonte de dados por [!DNL Profile], para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| timeseries.profiles.dataset.recordfailed.count | Número de registros falhados por [!DNL Profile], para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.profiles.dataset.batchsuccess.count | Número de [!DNL Profile] lotes assimilados para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| timeseries.profiles.dataset.batchfailed.count | Número de [!DNL Profile] falha em lotes para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| platform.ups.ingest.streaming.request.m1_rate | Taxa de Solicitação de Entrada. | Org. IMS (**Obrigatório**) |
-| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Taxa de sucesso da assimilação. | Org. IMS (**Obrigatório**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | Taxa de novos registros assimilados para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Taxa de registros com carimbo de data e hora fora de ordem para criar solicitação para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Carimbo de data e hora da última solicitação de registro de criação para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Taxa de registros com carimbo de data e hora fora de ordem para a solicitação de atualização de um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Carimbo de data e hora da última solicitação de registro de atualização para um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | Tamanho médio do registro. | Org. IMS (**Obrigatório**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | Taxa de solicitações de atualização para registros assimilados de um conjunto de dados. | ID do conjunto de dados (**Obrigatório**) |
 
 {style=&quot;table-layout:auto&quot;}
 

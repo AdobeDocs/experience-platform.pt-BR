@@ -4,9 +4,9 @@ title: Visão geral do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos relacionados à série de tempo. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '2046'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,24 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 
 A relação entre o Perfil do cliente em tempo real e outros serviços no Experience Platform é destacada no diagrama a seguir:
 
-![](images/profile-overview/profile-in-platform.png)
+![A relação entre o Perfil do cliente em tempo real e outros serviços na Adobe Experience Platform. Este diagrama mostra que o Perfil é um dos componentes principais do Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ## Como entender perfis
 
 [!DNL Real-time Customer Profile] mescla dados de vários sistemas corporativos e fornece acesso a esses dados na forma de perfis de clientes com eventos de séries cronológicas relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais. As seções a seguir destacam alguns dos conceitos principais que você deve entender para criar e manter perfis com eficácia no Platform.
+
+### Composição da entidade de perfil
+
+Um Perfil do cliente em tempo real é composto por uma entidade principal, chamada de **entidade primária** e várias entidades de suporte. A entidade primária é composta de características, comportamentos e associações de segmentos de um perfil. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade primária do perfil e incluem o seguinte:
+
+- **Entidade dimensional**: A entidade usada para simplificar o processo de modelagem de dados para informações compartilhadas em eventos ou registros de perfil. Isso também é conhecido como entidade de pesquisa ou entidade de classificação.
+- **Entidade B2B**: Entidades que descrevem a relação do perfil com contas e oportunidades entre empresas.
+
+![Um diagrama que explica a composição da entidade de perfil.](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>Como as entidades dimensionais e B2B só existem fora da entidade primária, elas são usadas apenas para segmentação de lote.
 
 ### Armazenamento de dados do perfil
 
@@ -115,9 +128,9 @@ Governança de dados é uma série de estratégias e tecnologias usadas para ger
 
 Como está relacionado ao acesso aos dados, o controle de dados desempenha um papel fundamental no [!DNL Experience Platform] em vários níveis:
 
-* Rotulação de uso de dados
-* Políticas de acesso a dados
-* Controle de acesso em dados para ações de marketing
+- Rotulação de uso de dados
+- Políticas de acesso a dados
+- Controle de acesso em dados para ações de marketing
 
 A Governança de dados é gerenciada em vários pontos. Isso inclui decidir em quais dados serão assimilados [!DNL Platform] e quais dados são acessíveis após a ingestão para uma determinada ação de marketing. Para obter mais informações, comece lendo a variável [visão geral de governança de dados](../data-governance/home.md).
 

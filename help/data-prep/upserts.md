@@ -2,9 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, preparação de dados, Preparação de dados, transmissão, upsert, atualização de fluxo
 title: Enviar Atualizações Parciais De Linha Para O Serviço De Perfil Usando A Preparação De Dados
 description: Este documento fornece informações sobre como enviar atualizações de linha parciais ao Serviço de perfil usando a Preparação de dados.
-source-git-commit: 26059af9f899b4ccf5701899c9ac8111d56488e8
+exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
+source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -241,6 +242,14 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
   }
  }'
 ```
+
+## Limitações conhecidas e considerações-chave
+
+A seguir, uma lista de limitações conhecidas a serem consideradas ao fazer o streaming de atualizações com [!DNL Data Prep]:
+
+* O método de atualização de fluxo só deve ser usado ao enviar atualizações de linha parciais para o [!DNL Profile Service]. Atualizações parciais de linha são **not** consumido pelo lago de dados.
+* O método streaming upserts não oferece suporte à atualização, substituição e remoção de identidades. As identidades só podem ser adicionadas usando o `identity: create` operação.
+* Atualmente, o método de atualização de fluxo suporta apenas atributos primitivos de valor único (como números inteiros, datas, carimbos de data e hora e strings) e objetos. O método de atualização de fluxo não oferece suporte à substituição, anexação ou substituição de atributos de matriz e índices específicos de matriz.
 
 ## Próximas etapas
 

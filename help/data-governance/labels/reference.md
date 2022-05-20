@@ -5,9 +5,9 @@ title: Glossário de rótulos de uso de dados
 topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '2053'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,8 @@ Um tipo de dados que você pode considerar sensíveis pode ser diferentes tipos 
 | --- | --- |
 | **S1** | Dados que especificam latitude e longitude que podem ser usados para determinar a localização precisa de um dispositivo. |
 | **S2** | Dados que podem ser usados para determinar uma área de geofence amplamente definida. |
+| **PSPD** | Dados pessoais confidenciais permitidos (PSPD) refere-se a dados que você tem permissão contratual de fazer upload por Adobe que são considerados &quot;confidenciais&quot;, &quot;categoria especial de dados&quot; ou um termo semelhante usado pelas leis aplicáveis. Isso exclui especificamente a informação de saúde protegida (PHI) e outros dados de saúde regulamentados. |
+| **RHD** | Dados que se referem a Informações de Saúde Protegidas (PHI) ou informações sobre um paciente que você tem permissão contratual de fazer upload por Adobe. |
 
 ## Apêndice
 
@@ -82,7 +84,7 @@ C4 é o rótulo mais restritivo - engloba rótulos [C5](#c5), [C6](#c6)e [C7](#c
 
 #### C5 {#c5}
 
-O direcionamento baseado em interesses ou a personalização ocorre se as três condições a seguir forem atendidas: Os dados coletados no site são (1) usados para fazer inferências sobre os interesses de um usuário, (2) são usados em outro contexto, como em outro site ou aplicativo (fora do site) e (3) são usados para selecionar qual conteúdo ou anúncios são veiculados com base nessas inferências.
+O direcionamento baseado em interesses ou a personalização ocorrem se as três condições a seguir forem atendidas: Os dados coletados no site são (1) usados para fazer inferências sobre os interesses de um usuário, (2) são usados em outro contexto, como em outro site ou aplicativo (fora do site) e (3) são usados para selecionar qual conteúdo ou anúncios são veiculados com base nessas inferências.
 
 A combinação de dados de vários sites, incluindo uma combinação de dados no local e dados fora do site ou uma combinação de dados de várias fontes fora do site, é chamada de dados entre sites. Sites diferentes representam contextos diferentes, de modo que o uso de dados entre sites em qualquer contexto é diferente do original. Os dados entre sites geralmente são coletados e processados para fazer inferências sobre os interesses dos usuários. Como resultado, o uso de dados entre sites para o direcionamento de anúncios ou conteúdo normalmente se qualifica como direcionamento baseado em interesses, independentemente do anúncio ou conteúdo aparecer no site ou fora dele. Por exemplo, se os dados no site fossem usados em combinação com dados externos para selecionar qual anúncio mostrar um usuário no próprio site de uma organização, esse uso seria qualificado como direcionamento baseado em interesses. Como outro exemplo, o redirecionamento de anúncios para usuários fora do site também provavelmente se qualificaria como direcionamento baseado em juros.
 
@@ -108,7 +110,7 @@ DAA: A Publicidade comportamental online não inclui as atividades de Primárias
 
 #### C7 {#c7}
 
-O conteúdo no site é um texto e imagens projetadas para informar, educar ou entreter e que não são criadas para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se ele se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos por um rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em conteúdo selecionado, dados de processamento sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de conteúdo no site não seria qualificado como direcionamento com base em juros (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
+O conteúdo no site é um texto e imagens projetadas para informar, educar ou entreter e que não são criadas para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se ele se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos por um rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em conteúdo selecionado, dados de processamento sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de conteúdo no site não seria qualificado como direcionamento com base em interesses (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado é da sua responsabilidade. Para referência, as estruturas IAB e DAA são fornecidas abaixo:
 

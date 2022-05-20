@@ -1,14 +1,13 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: Notas de versão do Experience Platform de outubro de 2020
+title: Notas de versão da Adobe Experience Platform de outubro de 2020
+description: As notas de versão de outubro de 2020 para o Adobe Experience Platform.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1016'
 ht-degree: 4%
 
 ---
@@ -31,10 +30,10 @@ A Preparação de dados permite que os engenheiros de dados mapeiem, transformem
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Função `is_set`  | A função `is_set` permite verificar a presença de um atributo nos dados de origem. `is_set` pode ser usado em combinação com  `is_empty` para verificar a presença do atributo e a presença do valor no atributo. |
-| Função `get_values`  | A função `get_values` permite obter os valores do mapa de entrada para qualquer chave específica. |
+| Função `is_set`  | O `is_set` permite verificar a presença de um atributo nos dados de origem. `is_set` pode ser usada em combinação com `is_empty` para verificar a presença do atributo e a presença do valor dentro do atributo. |
+| Função `get_values`  | O `get_values` permite obter os valores do mapa de entrada para qualquer chave específica. |
 
-Para obter mais informações, leia a [Visão geral da preparação de dados](../../data-prep/home.md).
+Para obter mais informações, leia o [Visão geral da preparação de dados](../../data-prep/home.md).
 
 ## Perfil do cliente em tempo real {#profile}
 
@@ -42,14 +41,14 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Adições à API de visualização do perfil | A API de visualização de perfil (`/previewsamplestatus`) agora inclui a capacidade de exibir um detalhamento do total de fragmentos de perfil na organização IMS, bem como exibir a distribuição de fragmentos de perfil nos namespaces de identidade. |
+| Adições à API de visualização do perfil | A API de visualização do perfil (`/previewsamplestatus`) agora inclui a capacidade de exibir um detalhamento do total de fragmentos de perfil na organização IMS, bem como exibir a distribuição de fragmentos de perfil nos namespaces de identidade. |
 | Atualizações da exibição de esquema de união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações sobre todos os esquemas e conjuntos de dados que contribuem para o esquema de união, bem como atributos principais de superfície, como campos de identidade e relação. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, as identidades são compiladas corretamente e os dados foram assimilados com êxito. |
 
-Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com dados [!DNL Profile], leia a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com o [!DNL Profile] leia os [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir dos dados [!DNL Real-time Customer Profile]. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-os acessíveis a qualquer aplicativo do Adobe.
+O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -59,11 +58,11 @@ O Serviço de segmentação do Adobe Experience Platform fornece uma interface d
 | ------- | ----------- |
 | Remoção do limite de segmentação de fluxo | O limite de sete dias para o período de pesquisa foi removido. |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a [Visão geral da segmentação](../../segmentation/home.md)
+Para obter mais informações sobre [!DNL Segmentation Service]consulte o [Visão geral da segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permite estruturar, rotular e aprimorar esses dados usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] O fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -72,9 +71,9 @@ O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Suporte à autenticação SSH para SFTP | Você pode conectar sua conta SFTP a [!DNL Platform] usando chaves SSH RSA/DSA Open. Consulte a [Visão geral do SFTP](../../sources/connectors/cloud-storage/sftp.md) para obter mais informações. |
-| Melhorias no UX | Você pode ativar seu conjunto de dados para [!DNL Profile] durante o processo de assimilação de dados. Consulte o tutorial [cloud storage data aflow workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
+| Melhorias no UX | Você pode ativar seu conjunto de dados para [!DNL Profile] durante o processo de ingestão de dados. Consulte a [fluxo de trabalho de fluxo de dados de armazenamento em nuvem](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
 
-Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).
+Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).
 
 ## Tempo para Valor {#time-to-value}
 

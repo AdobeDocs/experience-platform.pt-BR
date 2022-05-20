@@ -1,14 +1,14 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: Notas de versão do Experience Platform de 25 de agosto de 2021.
+title: Notas de versão da Adobe Experience Platform de agosto de 2021
+description: As notas de versão de agosto de 2021 para o Adobe Experience Platform.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 7%
+source-wordcount: '712'
+ht-degree: 8%
 
 ---
 
@@ -42,10 +42,10 @@ Os destinos são integrações pré-criadas com plataformas de destino que permi
 
 | Recurso | Descrição |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | O Adobe Experience Platform Destination SDK é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para o Experience Platform para fornecer dados de público-alvo e perfil ao seu terminal, com base em dados e formatos de autenticação de sua escolha. As configurações são armazenadas no Experience Platform e podem ser recuperadas por meio da API para obter atualizações adicionais. |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | O Adobe Experience Platform Destination SDK é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para o Experience Platform para fornecer dados de público-alvo e de perfil ao seu terminal, com base em dados e formatos de autenticação de sua escolha. As configurações são armazenadas no Experience Platform e podem ser recuperadas por meio da API para obter atualizações adicionais. |
 | [Aprimoramentos de usabilidade para destinos](../../destinations/ui/activation-overview.md) | As melhorias de usabilidade para destinos permitem que os profissionais de marketing ativem segmentos com facilidade para destinos existentes. |
 
-Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Insights de capacidade de observação {#observability}
 
@@ -55,9 +55,9 @@ Os Insights de capacidade de observação permitem monitorar as atividades da pl
 
 | Recurso | Descrição |
 | --- | --- |
-| Alertas | Agora você pode assinar alertas importantes relacionados a fluxos de trabalho em execução na plataforma. Após assinar regras de alerta específicas, você receberá notificações e emails na interface do usuário quando um evento importante do ciclo de vida ocorrer (como assimilação de dados bem-sucedida) ou se houver problemas que precisem de sua atenção (como uma falha no fluxo de assimilação ou uma tarefa de segmento que leva mais tempo do que o esperado). Para obter mais informações, consulte a [visão geral de alertas](../../observability/alerts/overview.md). |
+| Alertas | agora é possível assinar alertas importantes relacionados a fluxos de trabalho em execução na Platform. Após assinar regras de alerta específicas, você receberá notificações e emails na interface do usuário quando um evento importante do ciclo de vida ocorrer (como assimilação de dados bem-sucedida) ou se houver problemas que precisem de sua atenção (como uma falha no fluxo de assimilação ou uma tarefa de segmento que leva mais tempo do que o esperado). Para obter mais informações, consulte o [visão geral dos alertas](../../observability/alerts/overview.md). |
 
-Consulte a [Visão geral dos Insights de capacidade de observação](../../observability/home.md) para obter mais informações sobre o serviço.
+Consulte a [Visão geral dos insights de capacidade de observação](../../observability/home.md) para obter mais informações sobre o serviço.
 
 ## Perfil do cliente em tempo real {#profile}
 
@@ -67,7 +67,7 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 | ------- | ----------- |
 | Procurar perfis por política de mesclagem ou identidade | Ao navegar pelos perfis no Experience Platform, agora é possível navegar pela política de mesclagem para visualizar 20 perfis de amostra com base na política de mesclagem selecionada. Você também pode navegar por identidade para procurar por um perfil específico usando um namespace de identidade e valor de identidade relacionado. Para obter mais informações, consulte o [Guia da interface do usuário do perfil do cliente em tempo real](../../profile/ui/user-guide.md). |
 
-Para saber mais sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados de perfil, comece lendo a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Para saber mais sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados de perfil, comece lendo o [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ## Fontes {#sources}
 
@@ -79,4 +79,4 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 | ------- | ----------- |
 | Conector de origem de carregamento de arquivo local | A categoria de assimilação de arquivo foi renomeada para sistema local, permitindo trazer arquivos locais diretamente para a Platform usando o conector de upload de arquivo local. Os dados assimilados por meio desse conector podem ser monitorados pelo Painel de monitoramento. Consulte a [visão geral da fonte de upload de arquivo local](../../sources/connectors/local-system/local-file-upload.md) para obter mais informações. |
 
-Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).
+Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).

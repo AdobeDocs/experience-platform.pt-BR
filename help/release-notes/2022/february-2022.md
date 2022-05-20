@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: As notas de versão mais recentes do Adobe Experience Platform.
+title: Notas de versão da Adobe Experience Platform fevereiro de 2022
+description: As notas de versão de fevereiro de 2022 para o Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 5f6b46245781051da01a8051f023df11ff4c7d51
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ A Platform fornece um conjunto de tecnologias que permitem coletar dados de expe
 | Recurso | Descrição |
 | --- | --- |
 | Fluxo de trabalho de interface do usuário aprimorado para configuração de armazenamento de dados | O fluxo de trabalho para criar um novo armazenamento de dados na interface do usuário da coleta de dados foi atualizado. Ao adicionar serviços a um armazenamento de dados, somente os serviços aos quais você tem acesso serão incluídos na lista de opções. Consulte o guia sobre [configuração de um armazenamento de dados](../../edge/fundamentals/datastreams.md) para obter mais informações. |
-| Preparação de dados para coleta de dados | Se você estiver usando o SDK da Web da Adobe Experience Platform, agora poderá aproveitar os recursos de Preparação de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleta de dados](../../edge/fundamentals/datastreams.md#data-prep) no guia datastreams para obter mais informações. |
+| Preparação de dados para coleção de dados | Se você estiver usando o SDK da Web da Adobe Experience Platform, agora poderá aproveitar os recursos de Preparação de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleta de dados](../../edge/fundamentals/datastreams.md#data-prep) no guia datastreams para obter mais informações. |
 | IDs de dispositivo próprio | Agora é possível enviar suas próprias IDs de dispositivo para a Adobe Experience Platform Edge Network ao coletar dados do cliente usando o SDK da Web da plataforma, fornecendo uma solução alternativa para as restrições recentes do navegador em relação à duração do cookie de terceiros. Consulte o guia sobre [IDs de dispositivo primário](../../edge/identity/first-party-device-ids.md) para obter mais informações. |
 
 Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).

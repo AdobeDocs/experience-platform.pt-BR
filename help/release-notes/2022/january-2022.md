@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: As notas de versão mais recentes do Adobe Experience Platform.
+title: Notas de versão da Adobe Experience Platform em janeiro de 2022
+description: As notas de versão de janeiro de 2022 para o Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

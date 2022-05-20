@@ -1,15 +1,15 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: Notas de versão do Experience Platform 8 de abril de 2020
+title: Notas de versão da Adobe Experience Platform, abril de 2020
+description: As notas de versão de abril de 2020 para o Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: notas de versão;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

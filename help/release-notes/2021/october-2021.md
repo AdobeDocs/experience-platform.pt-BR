@@ -1,10 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: da9204f1581832d6885acd64387cf7e83c4b012a
+title: Notas de versão da Adobe Experience Platform de outubro de 2021
+description: As notas de versão de outubro de 2021 para o Adobe Experience Platform.
+exl-id: 8f8bcb24-6478-4281-9362-9559158384af
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 9%
+source-wordcount: '455'
+ht-degree: 8%
 
 ---
 
@@ -56,7 +57,7 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| [!DNL Amazon S3] melhorias na fonte | Agora você pode usar o `s3SessionToken` para conectar seu [!DNL Amazon S3] conta para a Platform usando credenciais de segurança temporárias. Esse token permite que você forneça acesso temporário e de curto prazo ao seu [!DNL Amazon S3] recursos para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
+| [!DNL Amazon S3] melhorias na fonte | Agora você pode usar o `s3SessionToken` para conectar seu [!DNL Amazon S3] conta para a Platform usando credenciais de segurança temporárias. Esse token permite que você forneça acesso temporário e de curto prazo ao seu [!DNL Amazon S3] recursos para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação da ](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
 | [!DNL Generic REST API] (Beta) | Agora você pode criar um [!DNL Generic REST API] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a plataforma. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
 | [!DNL Zoho CRM] (Beta) | Agora você pode criar um [!DNL Zoho CRM] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou [interface do usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados do [!DNL Zoho CRM] para a Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
 

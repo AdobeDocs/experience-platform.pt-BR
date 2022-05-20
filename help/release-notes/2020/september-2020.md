@@ -1,14 +1,14 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: Notas de versão do Experience Platform 9 de setembro de 2020
+title: Notas de versão da Adobe Experience Platform de setembro de 2020
+description: As notas de versão de setembro de 2020 para o Adobe Experience Platform.
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

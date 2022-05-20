@@ -1,17 +1,16 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: Notas de versão do Experience Platform para 31 de março de 2021.
+title: Notas de versão da Adobe Experience Platform de março de 2021
+description: As notas de versão de março de 2021 para o Adobe Experience Platform.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+exl-id: 027cd7b1-1651-4939-bc97-968a41824117
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 7%
+source-wordcount: '425'
+ht-degree: 6%
 
 ---
-
 
 # Notas de versão da Adobe Experience Platform
 
@@ -32,11 +31,11 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 | Função `add_to_array`  | Atualização da funcionalidade para oferecer suporte a arrays como um parâmetro. |
 | Função `to_array`  | Atualização da funcionalidade para oferecer suporte a objetos como parâmetro. |
 
-Para obter mais informações, consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+Para obter mais informações, consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir dos dados [!DNL Real-time Customer Profile]. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-os acessíveis a qualquer aplicativo do Adobe.
+O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -44,10 +43,10 @@ O Serviço de segmentação do Adobe Experience Platform fornece uma interface d
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| (Beta) Segmentação de borda | A segmentação de borda avalia segmentos em tempo real, o que permite casos de uso de personalização de página e próxima. Mais informações sobre a segmentação de borda podem ser encontradas na [Visão geral da interface do usuário de segmentação](../../segmentation/ui/overview.md). |
+| (Beta) Segmentação de borda | A segmentação de borda avalia segmentos em tempo real, o que permite casos de uso de personalização de página e próxima. Mais informações sobre a segmentação de borda podem ser encontradas na seção [Visão geral da interface do usuário de segmentação](../../segmentation/ui/overview.md). |
 | (Beta) Segmentação incremental | Aumenta a atualização das definições de segmento existentes avaliadas na segmentação de lote para até uma hora. |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a [Visão geral da segmentação](../../segmentation/home.md).
+Para obter mais informações sobre [!DNL Segmentation Service]consulte o [Visão geral da segmentação](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -58,7 +57,7 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 | Recurso | Descrição |
 | ------- | ----------- |
 | Fontes beta movendo-se para GA | As seguintes fontes foram promovidas de beta para GA: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| Suporte a API para assimilação de arquivo compactado | Agora você pode visualizar e assimilar arquivos compactados JSON ou delimitados usando fontes de armazenamento em nuvem. Para obter mais informações, consulte o tutorial em [coletar dados de armazenamento em nuvem usando APIs](../../sources/tutorials/api/collect/cloud-storage.md). |
-| Suporte à interface do usuário para upload de arquivo recursivo | Agora é possível assimilar pastas inteiras recursivamente ao usar uma fonte de armazenamento em nuvem. Ao assimilar uma pasta inteira, você deve garantir que seu conteúdo compartilhe o mesmo schema. Para obter mais informações, consulte o tutorial em [configurar um fluxo de dados para conectores de armazenamento em nuvem na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Suporte a API para assimilação de arquivo compactado | Agora você pode visualizar e assimilar arquivos compactados JSON ou delimitados usando fontes de armazenamento em nuvem. Para obter mais informações, consulte o tutorial em [coleta de dados de armazenamento em nuvem usando APIs](../../sources/tutorials/api/collect/cloud-storage.md). |
+| Suporte à interface do usuário para upload de arquivo recursivo | Agora é possível assimilar pastas inteiras recursivamente ao usar uma fonte de armazenamento em nuvem. Ao assimilar uma pasta inteira, você deve garantir que seu conteúdo compartilhe o mesmo schema. Para obter mais informações, consulte o tutorial em [configuração de um fluxo de dados para conectores de armazenamento em nuvem na interface do usuário do](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
-Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).
+Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).

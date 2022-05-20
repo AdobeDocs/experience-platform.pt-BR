@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de identidade
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,7 @@ As identidades são referenciadas em chamadas de API por sua identidade composta
 
 ## Como o Serviço de identidade lida com informações de identificação pessoal (PII)?
 
-O Serviço de identidade cria um hash criptográfico de PII forte e unidirecional antes dos valores persistentes. Os dados de identidade nos namespaces &quot;Telefone&quot; e &quot;Email&quot; são automaticamente atribuídos a hash usando SHA-256, com valores de &quot;Email&quot; convertidos automaticamente em minúsculas antes do hash.
-
-## Devo criptografar todas as PII antes de enviar para a Plataforma?
-
-Não é necessário criptografar manualmente os dados de PII antes de assimilá-los na plataforma. Ao aplicar a variável `I1` rótulo de uso de dados para todos os campos de dados aplicáveis, a Platform converte automaticamente esses campos em valores de ID com hash após a assimilação.
-
-Para obter etapas sobre como aplicar e gerenciar rótulos de uso de dados, consulte [tutorial de rótulos de uso de dados](../data-governance/labels/user-guide.md).
+O Serviço de identidade tem namespaces padrão para suportar a assimilação de valores de identidade com hash para números de telefone e e-mails. No entanto, você é responsável pelo hash dos valores. Para saber mais sobre dados de hash assimilados na Platform, consulte o [[!DNL Data Prep] guia de funções de mapeamento](../data-prep/functions.md#hashing).
 
 ## Existem considerações ao fazer o hash de identidades baseadas em PII?
 

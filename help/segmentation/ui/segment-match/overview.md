@@ -5,9 +5,9 @@ title: Visão geral da correspondência de segmentos
 topic-legacy: overview
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1994'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,13 @@ Para conectar um parceiro usando seus [!UICONTROL conectar ID], digite o valor d
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Criar feed
+### Criar feed {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Casos de uso de marketing restritos"
+>abstract="Casos de uso restritos de marketing ajudam a fornecer orientação aos parceiros para garantir que os segmentos compartilhados sejam usados adequadamente de acordo com as restrições de governança de dados."
+>text="Learn more in documentation"
 
 A **feed** é um agrupamento de dados (segmentos), as regras de como esses dados podem ser expostos ou usados e as configurações que determinam como seus dados são comparados com os dados dos seus parceiros. Um feed pode ser gerenciado de forma independente e trocado com outros usuários da plataforma por meio de [!DNL Segment Match].
 

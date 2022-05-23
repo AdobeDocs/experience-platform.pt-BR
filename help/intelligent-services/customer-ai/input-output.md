@@ -6,9 +6,9 @@ title: Entrada e saída no Customer AI
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela API do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
 workflow-type: tm+mt
-source-wordcount: '3054'
+source-wordcount: '3096'
 ht-degree: 1%
 
 ---
@@ -264,6 +264,10 @@ Ao configurar uma nova instância do Customer AI, `audienceName` e `audienceID` 
 ## Dados de saída do Customer AI
 
 O Customer AI gera vários atributos para perfis individuais considerados elegíveis. Há duas maneiras de consumir a pontuação (saída) com base no que você provisionou. Se você tiver um conjunto de dados habilitado para o Perfil do cliente em tempo real, poderá consumir insights do Perfil do cliente em tempo real na [Construtor de segmentos](../../segmentation/ui/segment-builder.md). Se você não tiver um conjunto de dados habilitado para perfil, poderá [faça o download da saída do Customer AI](./user-guide/download-scores.md) conjunto de dados disponível no lago de dados.
+
+Você pode encontrar o conjunto de dados de saída em **Conjuntos de dados** no Platform. Todos os conjuntos de dados de saída do Customer AI começam com o nome **Pontuações do Customer AI - Nome_do_aplicativo** enquanto todos os esquemas de saída do Customer AI começam com o nome **Esquema do Customer AI - Nome_do_aplicativo**.
+
+![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
 >[!NOTE]
 >

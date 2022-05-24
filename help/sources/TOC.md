@@ -4,23 +4,24 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '777'
 ht-degree: 14%
 
 ---
 
 
-# Conectores de origem {#sources}
+# Fontes {#sources}
 
-- [Visão geral dos conectores de origem](home.md)
+- [Visão geral das fontes](home.md)
 - Conectores de origem disponíveis {#connectors}
    - Aplicativos Adobe {#adobe-applications}
-      - [Conector de origem das Classificações do Analytics](connectors/adobe-applications/classifications.md)
-      - [Conector de origem do Analytics](connectors/adobe-applications/analytics.md)
-      - [Conector de fonte Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Conector de origem dos atributos do cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Fonte de classificações do Analytics](connectors/adobe-applications/classifications.md)
+      - [Fonte do Analytics](connectors/adobe-applications/analytics.md)
+      - [Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Fonte de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Fonte da coleção de dados](connectors/adobe-applications/data-collection.md)
       - Mapeamentos de campos {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)

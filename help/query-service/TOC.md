@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: 1d49e7d1adcccc012f4d189f8cfba8bbdc895894
+source-git-commit: 36202327f0885309fa6790d2eb0ec6cfa9bb8780
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '171'
 ht-degree: 21%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 21%
    - [Exemplos de consultas do Adobe Target](sample-queries/adobe-target.md)
 - Governança de dados {#data-governance}
    - [Guia de log de auditoria](data-governance/audit-log-guide.md)
+   - [Identidades em conjuntos de dados de esquema ad hoc](data-governance/ad-hoc-schema-identities.md)
 - Referência SQL {#sql}
    - [Visão geral do SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)

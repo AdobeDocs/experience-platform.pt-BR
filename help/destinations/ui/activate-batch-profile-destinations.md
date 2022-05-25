@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2242'
-ht-degree: 1%
+source-wordcount: '2411'
+ht-degree: 0%
 
 ---
 
@@ -97,7 +97,20 @@ Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç
    * **[!UICONTROL Uma vez]**: agendar uma exportação de arquivo completo sob demanda única.
    * **[!UICONTROL Diariamente]**: agendar exportações completas de arquivos uma vez por dia, todos os dias, no momento especificado.
 
-1. Use o **[!UICONTROL Hora]** seletor para escolher a hora do dia, em [!DNL UTC] , quando a exportação deve ocorrer.
+1. Use o **[!UICONTROL Hora]** alterne para selecionar se a exportação deve ocorrer imediatamente após a avaliação do segmento ou de acordo com uma programação, em um horário especificado. Ao selecionar o **[!UICONTROL Programado]** , você pode usar o seletor para escolher a hora do dia, em [!DNL UTC] , quando a exportação deve ocorrer.
+
+   >[!NOTE]
+   >
+   >O **[!UICONTROL Após a avaliação do segmento]** A opção descrita abaixo está disponível somente para selecionar clientes Beta.
+
+   Use o **[!UICONTROL Após a avaliação do segmento]** para que o trabalho de ativação seja executado imediatamente após a conclusão do trabalho diário de segmentação em lote da Platform. Isso garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.
+
+   <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
+
+   ![Imagem destacando a opção Após avaliação do segmento no fluxo de ativação para destinos em lote.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+Use o **[!UICONTROL Programado]** para que o trabalho de ativação seja executado em um horário fixo. Isso garante que os dados do perfil do Experience Platform sejam exportados ao mesmo tempo a cada dia, mas os perfis que você exporta podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação.
+
+   ![Imagem destacando a opção Scheduled no fluxo de ativação para destinos em lote e mostrando o seletor de tempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
    >[!IMPORTANT]
    >
@@ -110,7 +123,6 @@ Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç
    > Ao selecionar um intervalo de exportação, o último dia do intervalo não é incluído nas exportações. Por exemplo, se você selecionar um intervalo de 4 a 11 de janeiro, a última exportação de arquivo ocorrerá em 10 de janeiro.
 
 1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
-
 
 ### Exportar arquivos incrementais {#export-incremental-files}
 

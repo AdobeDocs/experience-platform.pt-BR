@@ -2,16 +2,16 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 5%
+source-wordcount: '2613'
+ht-degree: 6%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 27 de abril de 2022**
+**Data de lançamento: 25 de maio de 2022**
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
@@ -19,7 +19,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Fluxos de dados](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Destinos](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform Edição B2B](#B2B)
 - [Fontes](#sources)
@@ -94,27 +94,9 @@ Para obter mais informações sobre [!DNL Data Prep]consulte o [[!DNL Data Prep]
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| Conectores avançados de destino empresarial | Três conectores de destino empresarial estão disponíveis: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> A disponibilidade geral dos conectores de destino da empresa inclui todos os recursos oferecidos anteriormente na fase Beta e muito mais: <ul><li>Novos recursos de autenticação, incluindo [Assinatura de Acesso Compartilhado nos Hubs de Eventos do Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e mais [tipos de autenticação](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens do portador, OAuth 2) no destino da API HTTP;</li><li>[Preenchimento retroativo de dados de perfil históricos](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (envio de perfis históricos qualificados para o segmento quando ativados pela primeira vez);</li><li>Agora, as métricas de execução do fluxo de dados são compatíveis com esses destinos;</li><li>[Metadados de segmento adicionais](../../destinations/catalog/streaming/http-destination.md#destination-details) incluídos na carga de dados, incluindo nomes de segmentos e carimbos de data e hora do segmento;</li><li>Suporte para [endereços IP estáticos](/help/destinations/catalog/streaming/ip-address-allow-list.md) para clientes que precisam lista de permissões o Experience Platform.</li></ul> |
-| Alertas no contexto para fluxos de dados de destino | Agora você pode [inscrever-se em alertas](../../destinations/ui/alerts.md) ao criar um fluxo de dados de destino, para receber mensagens de alerta relacionadas ao status, sucesso ou falha da execução do fluxo de dados. Você pode optar por receber alertas na interface do usuário do Experience Platform ou por email. |
+| Exportar as qualificações de perfil mais recentes [após a avaliação diária do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Agora é possível agendar uma exportação de arquivo completa, uma vez ou diariamente, com as últimas qualificações de perfil, após a conclusão da avaliação diária do segmento. |
+| ID de conjunto de dados opcional para [Destinos do Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Para permitir a personalização do Adobe Target para usuários que não podem implementar o SDK da Web do Experience Platform, a seleção da ID do datastream agora é opcional ao configurar destinos do Adobe Target. Quando não estiver usando um armazenamento de dados, os segmentos exportados do Experience Platform para o Target oferecerão suporte somente à personalização da próxima sessão, enquanto a segmentação de borda está desativada, juntamente com todos os [casos de uso](../../destinations/ui/configure-personalization-destinations.md) que dependem da segmentação de borda. |
 
-### Processo de lançamento para conectores de destino empresarial avançados {#release-process-enterprise-destinations}
-
-Para o Amazon Kinesis, Hubs de eventos do Azure e destinos da API HTTP, durante o processo de lançamento (a partir de 27 de abril), você verá a antiga placa de destino Beta, bem como a nova placa de destino geralmente disponível (GA) no catálogo de destinos. Qualquer fluxo de dados configurado por clientes que usam os destinos beta será migrado nos próximos dias para a versão GA do mesmo destino. Essa migração deve ser concluída até o final do dia, sexta-feira, 29 de abril. Os destinos Beta continuarão visíveis durante esse curto período e serão rotulados como **Obsoleto**.
-
-Se você tiver utilizado esses destinos na fase Beta, observe o seguinte:
-
-- Se tiver estado anteriormente em Beta com qualquer um dos 3 destinos, nenhuma ação será necessária. Todos os fluxos de dados configurados como parte do Beta continuarão funcionando e serão migrados para a versão do GA.
-- Se você quiser configurar esses destinos a partir de 27 de abril, faça isso com a nova versão GA dos destinos.
-- As placas beta marcadas como obsoletas serão removidas assim que a operação de lançamento for concluída, estimado até o fim do dia Sexta-feira, 29 de abril. A equipe de engenharia do Experience Platform está monitorando de perto para obter uma operação de lançamento bem-sucedida.
-
-**Novos destinos**
-
-| Destino | Descrição |
-| ----------- | ----------- |
-| [!DNL Criteo] | Conecte e ative dados no [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) plataforma de publicidade. |
-| [!DNL Sendgrid] | Conecte e ative dados no [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) plataforma para emails transacionais e de marketing. |
-
-Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

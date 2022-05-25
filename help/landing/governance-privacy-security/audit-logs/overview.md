@@ -4,8 +4,8 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a√
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '847'
+ht-degree: 12%
 
 ---
 

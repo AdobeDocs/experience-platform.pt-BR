@@ -3,10 +3,10 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 2%
+source-wordcount: '752'
+ht-degree: 1%
 
 ---
 
@@ -20,11 +20,13 @@ Adobe Target é uma conexão de personalização no Adobe Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 
-Essa integração é alimentada pela variável [Adobe Experience Platform Web SDK](../../../edge/home.md). Você deve usar esse SDK para usar esse destino.
+Ao configurar a conexão do Adobe Target com o [usar uma ID do datastream](#parameters), você deve ter o [Adobe Experience Platform Web SDK](../../../edge/home.md) implementado.
+
+Configurar a conexão do Adobe Target sem usar uma ID de armazenamento de dados não requer a implementação do SDK da Web.
 
 >[!IMPORTANT]
 >
->Antes de criar uma [!DNL Adobe Target] leia o guia sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](../../ui/configure-personalization-destinations.md). Este guia o orienta pelas etapas de configuração necessárias para casos de uso de personalização de página mesma e próxima, em vários componentes de Experience Platform.
+>Antes de criar uma [!DNL Adobe Target] leia o guia sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](../../ui/configure-personalization-destinations.md). Este guia o orienta pelas etapas de configuração necessárias para casos de uso de personalização de página mesma e próxima, em vários componentes de Experience Platform. A personalização de mesma página e próxima requer o uso de uma ID de armazenamento de dados ao configurar a conexão do Adobe Target.
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -48,8 +50,8 @@ Uma empresa de aluguel e vendas da casa deseja personalizar sua página inicial 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Sobre IDs de fluxo de dados"
->abstract="Essa opção determina em qual conjunto de dados de coleta os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Você deve configurar um armazenamento de dados antes de configurar seu destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Saiba como configurar um armazenamento de dados"
+>abstract="Essa opção determina em qual conjunto de dados de coleta os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de armazenamento de dados. Selecionar Nenhum desativa todos os casos de uso que usam segmentação de borda."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de conjuntos de dados."
 
 >[!IMPORTANT]
 > 
@@ -65,7 +67,12 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 * **Nome**: Preencha o nome preferencial para esse destino.
 * **Descrição**: Insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **ID do fluxo de dados**: Isso determina em qual conjunto de dados da Coleta de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Consulte [Configurar um conjunto de dados](../../../edge/datastreams/overview.md) para obter mais detalhes.
+* **ID do fluxo de dados**: Isso determina em qual armazenamento de dados da Coleta de dados os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm o destino do Target ativado. Consulte [configuração de um armazenamento de dados](../../../edge/datastreams/overview.md#target) para obter informações detalhadas sobre como configurar um conjunto de dados para o Adobe Target.
+   * **[!UICONTROL Nenhum]**: Selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os segmentos exportados do Experience Platform para o Target são compatíveis apenas com a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela abaixo para obter mais informações.
+
+| Nenhum armazenamento de dados selecionado | Datastream selecionado |
+|---|---|
+| <ul><li>[Segmentação de borda](../../../segmentation/ui/edge-segmentation.md) não é suportado.</li><li>[Personalização de mesma página e próxima página](../../ui/configure-personalization-destinations.md) não são compatíveis.</li><li>É possível compartilhar segmentos na conexão do Adobe Target somente para a sandbox de produção.</li><li>Para configurar a personalização da próxima sessão sem usar uma ID de armazenamento de dados, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>A segmentação de borda funciona conforme o esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/configure-personalization-destinations.md) são compatíveis.</li><li>O compartilhamento de segmentos é compatível com outras sandboxes.</li></ul> |
 
 ## Ativar segmentos para este destino {#activate}
 

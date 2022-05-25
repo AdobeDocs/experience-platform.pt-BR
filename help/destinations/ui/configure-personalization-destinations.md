@@ -6,14 +6,20 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Saiba como configurar destinos de personalização para a personalização de mesma página e próxima página.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
 # Configurar destinos de personalização para a personalização da mesma página e da próxima página
+
+## Visão geral {#overview}
+
+>[!NOTE]
+>
+>When [configuração da conexão Adobe Target](../catalog/personalization/adobe-target-connection.md) sem usar uma ID de armazenamento de dados, os casos de uso descritos neste artigo não são compatíveis.
 
 O Adobe Experience Platform usa [segmentação de borda](../../segmentation/ui/edge-segmentation.md) para permitir que os clientes criem e direcionem segmentos de público-alvo em alta escala, em tempo real.
 

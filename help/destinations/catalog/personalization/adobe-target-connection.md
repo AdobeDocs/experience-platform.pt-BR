@@ -67,7 +67,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 * **Nome**: Preencha o nome preferencial para esse destino.
 * **Descrição**: Insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **ID do fluxo de dados**: Isso determina em qual armazenamento de dados da Coleta de dados os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm o destino do Target ativado. Consulte [configuração de um armazenamento de dados](../../../edge/datastreams/overview.md#target) para obter informações detalhadas sobre como configurar um conjunto de dados para o Adobe Target.
+* **ID do fluxo de dados**: Isso determina em qual armazenamento de dados da Coleta de dados os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm o destino do Target ativado. Consulte [configuração de um armazenamento de dados](../../../edge/fundamentals/datastreams.md#target) para obter informações detalhadas sobre como configurar um conjunto de dados para o Adobe Target.
    * **[!UICONTROL Nenhum]**: Selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os segmentos exportados do Experience Platform para o Target são compatíveis apenas com a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela abaixo para obter mais informações.
 
 | Nenhum armazenamento de dados selecionado | Datastream selecionado |

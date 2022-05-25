@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
+source-wordcount: '3761'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Para navegar até o [!UICONTROL Perfis] no painel da interface do usuário da pl
 
 ### Modificação do [!UICONTROL Perfis] painel
 
-Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
@@ -110,6 +110,8 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Tamanho dos públicos-alvo]](#audiences-size)
 * [[!UICONTROL Tendência da contagem de perfis]](#profile-count-trend)
 * [[!UICONTROL Perfis de identidade únicos por identidade]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Sobreposição de público-alvo por política de mesclagem]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Tendência de alteração de contagem de perfis por identidade]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Contagem de perfis] {#profile-count}
 
@@ -290,6 +292,25 @@ Esse widget usa um gráfico de barras para ilustrar o número total de perfis id
 Passe o mouse sobre barras individuais para ver uma caixa de diálogo que detalha a contagem total de perfis de uma identidade.
 
 ![Os perfis de identidade única por widget de identidade.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL Sobreposição de público-alvo por política de mesclagem] {#audience-overlap-by-merge-policy}
+
+Esse widget usa um diagrama Venn para exibir a sobreposição de dois segmentos selecionados. A política de mesclagem é escolhida na lista suspensa de visão geral na parte superior da página e os segmentos para análise são selecionados em dois menus suspensos no widget. O número total de perfis contidos na definição de segmento relevante pode ser visualizado ao passar o mouse sobre um círculo ou a interseção.
+
+À medida que o widget exibe a cruz visual das definições de segmento, você pode otimizar sua estratégia de segmentação estudando semelhanças entre as definições de segmento.
+
+![O painel Perfis da interface do usuário da plataforma com a lista suspensa de política de mesclagem e os menus suspensos do segmento de widget são realçados.](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL Tendência de alteração de contagem de perfis por identidade] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Esse widget filtra a contagem de perfis com base na identidade de origem selecionada e na política de mesclagem, e ilustra a alteração no número para uma variedade de períodos usando um gráfico de linhas. A política de mesclagem é selecionada na lista suspensa visão geral na parte superior da página, a identidade de origem e o período de tempo são selecionados nos menus suspensos do widget. A tendência pode ser visualizada por períodos de 30 dias, 90 dias e 12 meses.
+
+Este widget ajuda você a gerenciar suas necessidades de ativação de destino demonstrando o padrão de crescimento de perfis filtrados por uma identidade necessária.
+
+![Os Perfis contam a tendência de alteração por widget de identidade.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (Beta) Widgets de eficácia do perfil {#profile-efficacy-widgets}
 

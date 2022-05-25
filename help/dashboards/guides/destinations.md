@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Status do destino]](#destination-status)
 * [[!UICONTROL Destinos ativos por plataforma de destino]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Públicos-alvo ativados em todos os destinos]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Públicos-alvo ativados]](#activated-audiences)
 
 ### [!UICONTROL Destinos mais usados] {#most-used-destinations}
 
@@ -250,6 +251,18 @@ O [!UICONTROL Públicos-alvo ativados em todos os destinos] O widget fornece o n
 ![O widget Públicos-alvo ativados em todos os destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Selecionar **[!UICONTROL Públicos-alvo]** para navegar até os destinos [!UICONTROL Procurar] guia . Esta página fornece uma lista de todos os destinos ativados e uma variedade de métricas relevantes. Consulte a documentação para [mais informações sobre o [!UICONTROL Procurar] guia](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Públicos-alvo ativados] {#activated-audiences}
+
+Este widget fornece uma única métrica para o número total de públicos-alvo ativados em um destino.
+
+![O widget Públicos-alvo ativados .](../images/destinations/activated-audiences.png)
+
+Selecionar **[!UICONTROL Públicos-alvo]** para navegar até a página de detalhes do painel de destinos. O [!UICONTROL Dados de ativação] exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data de início e a data de término (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um segmento específico, selecione o nome na lista.
+
+![A página de detalhes do painel de destinos com a guia Ativation data realçada.](../images/destinations/activation-data-tab.png)
+
+Este widget ajuda você a entender o valor dos destinos com base no número de públicos-alvo ativados imediatamente. Também fornece acesso fácil a informações mais detalhadas para análises mais detalhadas.
 
 ## Próximas etapas
 

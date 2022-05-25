@@ -4,9 +4,9 @@ title: Painel de segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)
 * [[!UICONTROL Tendência de alteração do tamanho do público-alvo]](#audience-size-change-trend)
 * [[!UICONTROL Tendência do tamanho do público-alvo por identidade]](#audience-size-trend-by-identity)
+* [[!UICONTROL Sobreposição de público]](#audience-overlap)
 
 ### [!UICONTROL Tamanho do público-alvo] {#audience-size}
 
@@ -162,6 +163,14 @@ Este widget fornece um gráfico de linhas que ilustra a diferença no número to
 Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base no tipo de identidade escolhido no menu suspenso do widget. O segmento usado para análise é selecionado na lista suspensa de visão geral. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget.
 
 ![A tendência do tamanho do público-alvo por widget de identidade.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Sobreposição de público] {#audience-overlap}
+
+Este widget representa o número de perfis de dois segmentos que atendem aos critérios de ambas as definições de segmento. Os segmentos usados para comparação são selecionados nos menus suspensos do widget. O número total de perfis contidos na definição de segmento relevante pode ser visualizado ao passar o cursor do mouse sobre um círculo ou na interseção do diagrama Venn.
+
+Esse widget permite otimizar sua estratégia de segmentação ao visualizar as semelhanças nos resultados das definições de segmento.
+
+![O widget de sobreposição de público-alvo.](../images/segments/audience-overlap.png)
 
 ## Próximas etapas
 

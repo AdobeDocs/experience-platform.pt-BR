@@ -4,13 +4,13 @@ description: Saiba como controlar a coleta de dados do Adobe Analytics for Targe
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t; registro; analytics; sdk; web sdk;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 2%
 
 ---
-
 
 # Logon do Adobe Analytics for Target (A4T) no SDK da Web da plataforma
 
@@ -29,7 +29,7 @@ O SDK da Web da Adobe Experience Platform oferece suporte a dois tipos de regist
 | Registro do Analytics no lado do servidor | Todas as ocorrências do Analytics enviadas pela Edge Network são aumentadas com detalhes do Target no lado do servidor, sem precisar passar pelo processo de identificação de ocorrências. |
 | Registro de análises do cliente | Os dados do Target são retornados no lado do cliente, permitindo aumentar e enviar dados manualmente para o Analytics usando o [API de inserção de dados](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-O método de registro é determinado pela ativação do Adobe Analytics em seu [datastream](../../../fundamentals/datastreams.md):
+O método de registro é determinado pela ativação do Adobe Analytics em seu [datastream](../../../datastreams/overview.md):
 
 ![Fluxo de decisão do método de log](../assets/analytics-logging.png)
 

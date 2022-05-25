@@ -4,7 +4,7 @@ description: Saiba como usar a API do Edge Network Server para interagir com o A
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: recolha de dados; Saída; análises; api de rede de borda da Adobe Experience Platform; analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 2%
@@ -19,7 +19,7 @@ A coleta de dados do Adobe Analytics funciona ao traduzir dados XDM em um format
 
 Você também pode [mapear manualmente valores XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) para variáveis herdadas do Analytics.
 
-Para permitir que o Adobe Analytics receba dados da API do servidor, é necessário [configurar seu conjunto de dados](../edge/fundamentals/datastreams.md#adobe-analytics-settings) para encaminhar eventos para o Adobe Analytics, inserindo a ID do conjunto de relatórios na página de configuração do conjunto de dados.
+Para permitir que o Adobe Analytics receba dados da API do servidor, é necessário [configurar seu conjunto de dados](../edge/datastreams/overview.md#adobe-analytics-settings) para encaminhar eventos para o Adobe Analytics, inserindo a ID do conjunto de relatórios na página de configuração do conjunto de dados.
 
 ![Configuração de fluxo de dados do Adobe Analytics](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Solicitação {#request}
 
-A amostra abaixo inclui vários valores mapeados automaticamente do `_experience.analytics` grupo de campos. Também inclui camadas de dados baseadas em JSON. Embora essas camadas de dados não possam ser mapeadas automaticamente, é possível usar [Preparação de dados para coleta de dados](../edge/fundamentals/datastreams.md#data-prep) para mapear esses valores para um schema que contenha grupos de campos referenciados acima.
+A amostra abaixo inclui vários valores mapeados automaticamente do `_experience.analytics` grupo de campos. Também inclui camadas de dados baseadas em JSON. Embora essas camadas de dados não possam ser mapeadas automaticamente, é possível usar [Preparação de dados para coleta de dados](../edge/datastreams/data-prep.md) para mapear esses valores para um schema que contenha grupos de campos referenciados acima.
 
 Todos os valores que os usuários mapeiam para esses campos serão mapeados automaticamente para os valores adequados do Analytics, como se fossem incluídos na solicitação da API.
 

@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de março de 2022
 description: As notas de versão de março de 2022 para o Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -114,7 +114,7 @@ A Platform fornece um conjunto de tecnologias que permitem coletar dados de expe
 
 | Recurso | Descrição |
 | --- | --- |
-| Configurações globais de armazenamento de dados | Agora você pode definir várias novas configurações globais ao definir um conjunto de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configuração de um armazenamento de dados](../../edge/fundamentals/datastreams.md#configure) no guia da interface do usuário do Datastreams para obter mais informações. |
+| Configurações globais de armazenamento de dados | Agora você pode definir várias novas configurações globais ao definir um conjunto de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configuração de um armazenamento de dados](../../edge/datastreams/overview.md#create) no guia da interface do usuário do Datastreams para obter mais informações. |
 | [API do servidor da rede de borda](../../server-api/overview.md) | A API do servidor permite que os clientes interajam com a rede de borda do Experience Platform usando um terminal novo e autenticado para potencializar uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. |
 
 Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).

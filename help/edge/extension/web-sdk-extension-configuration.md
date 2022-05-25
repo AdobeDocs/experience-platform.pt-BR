@@ -2,7 +2,7 @@
 title: Configurar a extensão Adobe Experience Platform Web SDK
 description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 6%
@@ -51,7 +51,7 @@ O [!UICONTROL Domínio de borda] é o domínio do qual a extensão Adobe Experie
 
 Quando uma solicitação é enviada para a Rede de borda da Adobe Experience Platform, uma ID de armazenamento de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código em seu site.
 
-Consulte o guia sobre [datastreams](../fundamentals/datastreams.md) para obter mais informações.
+Consulte o guia sobre [datastreams](../datastreams/overview.md) para obter mais informações.
 
 
 ## [!UICONTROL Privacidade]

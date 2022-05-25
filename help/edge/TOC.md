@@ -5,10 +5,10 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
+source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 31%
+source-wordcount: '178'
+ht-degree: 34%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 31%
 * [Visão geral do SDK da Web da plataforma](home.md)
 * Fundamentos {#fundamentals}
    * [Pré-requisitos](fundamentals/prerequisite.md)
-   * [Configurar um conjunto de dados](fundamentals/datastreams.md)
    * [Instalar o SDK](fundamentals/installing-the-sdk.md)
    * [Configurar o SDK](fundamentals/configuring-the-sdk.md)
    * [Executar comandos](fundamentals/executing-commands.md)
@@ -27,6 +26,9 @@ ht-degree: 31%
    * [Configurar uma CSP](fundamentals/configuring-a-csp.md)
    * [Interagir com várias propriedades](fundamentals/interacting-with-multiple-properties.md)
    * [Casos de uso suportados](fundamentals/supported-use-cases.md)
+* Datastreams {#datastreams}
+   * [Visão geral](./datastreams/overview.md)
+   * [Preparação de dados para coleção de dados](./datastreams/data-prep.md)
 * Identidade {#identity}
    * [Visão geral](identity/overview.md)
    * [IDs de dispositivo próprio](identity/first-party-device-ids.md)

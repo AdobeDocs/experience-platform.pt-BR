@@ -3,7 +3,7 @@ title: Uso do Adobe Target com o SDK da Web da plataforma
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform usando o Adobe Target
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema; diagrama do sistema; diagrama
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 5%
@@ -25,7 +25,7 @@ Os seguintes recursos foram testados e atualmente são compatíveis com o [!DNL 
 * [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Atividades de Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Atividades do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* Atividades do [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Relatório de impressão e conversão do Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Suporte ao VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -49,7 +49,7 @@ O diagrama a seguir ajuda você a entender o fluxo de trabalho do [!DNL Target] 
 
 Para ativar [!DNL Target], faça o seguinte:
 
-1. Habilitar [!DNL Target] em seu [datastream](../../fundamentals/datastreams.md) com o código de cliente apropriado.
+1. Habilitar [!DNL Target] em seu [datastream](../../datastreams/overview.md) com o código de cliente apropriado.
 1. Adicione o `renderDecisions` aos seus eventos.
 
 Em seguida, opcionalmente, também é possível adicionar as seguintes opções:

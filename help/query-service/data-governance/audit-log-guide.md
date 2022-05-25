@@ -2,9 +2,9 @@
 title: Integração de Log de Auditoria do Serviço de Query
 description: Os registros de auditoria do Serviço de Consulta mantêm registros de várias ações do usuário para formar uma trilha de auditoria para solucionar problemas ou seguir políticas corporativas de gerenciamento de dados e requisitos normativos. Este tutorial fornece uma visão geral dos recursos de log de auditoria específicos do Serviço de query.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
+source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '935'
 ht-degree: 2%
 
 ---
@@ -25,9 +25,9 @@ As categorias de log de auditoria fornecidas por [!DNL Query Service] são como 
 
 | Categoria | Descrição |
 |---|---|
-| [!UICONTROL Consulta agendada] | Esta categoria permite que você faça auditoria das programações que foram criadas, atualizadas ou excluídas em [!DNL Query Service]. |
+| [!UICONTROL Query] | Esta categoria permite auditar execuções de query. |
 | [!UICONTROL Modelo de consulta] | Esta categoria permite auditar as várias ações (criar, atualizar e excluir) realizadas em um template de query. |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL Consulta agendada] | Esta categoria permite que você faça auditoria das programações que foram criadas, atualizadas ou excluídas em [!DNL Query Service]. |
 
 ## Executar um [!DNL Query Service] registro de auditoria {#perform-an-audit-log}
 
@@ -42,7 +42,7 @@ Os dados de log de auditoria retornados contêm as seguintes informações em to
 | Nome da coluna | Descrição |
 |---|---|
 | [!UICONTROL Carimbo de data e hora] | A data e hora exatas da ação executada em um `month/day/year hour:minute AM/PM` formato. |
-| [!UICONTROL Nome do ativo] | O valor da variável [!UICONTROL Nome do ativo] depende da categoria escolhida como filtro. Ao usar a variável [!UICONTROL Consulta agendada] categoria essa é a variável **nome da programação**. Ao usar a variável [!UICONTROL Modelo de consulta] categoria , este é o **nome do modelo**. |
+| [!UICONTROL Nome do ativo] | O valor da variável [!UICONTROL Nome do ativo] depende da categoria escolhida como filtro. Ao usar a variável [!UICONTROL Consulta agendada] categoria essa é a variável **nome da programação**. Ao usar a variável [!UICONTROL Modelo de consulta] categoria , este é o **nome do modelo**. Ao usar a variável [!UICONTROL Query] categoria , este é o **session ID** |
 | [!UICONTROL Categoria] | Esse campo corresponde à categoria selecionada por você na lista suspensa de filtros. |
 | [!UICONTROL Ação] | Isso pode ser criado, excluído, atualizado ou executado. As ações disponíveis dependem da categoria escolhida como filtro. |
 | [!UICONTROL Usuário] | Este campo fornece a ID do usuário que executou a consulta. |
@@ -53,13 +53,25 @@ Os dados de log de auditoria retornados contêm as seguintes informações em to
 >
 >Mais detalhes da consulta são fornecidos pelo download dos resultados do log em formatos de arquivo CSV ou JSON, que são exibidos por padrão no painel de log de auditoria.
 
+## Painel Detalhes
+
 Selecione qualquer linha de resultados de log de auditoria para abrir um painel de detalhes à direita da tela.
 
 ![Guia Audits do painel Log de atividades com o painel de detalhes realçado.](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->O painel de detalhes pode ser usado para localizar o [!UICONTROL ID do ativo]. O valor da variável [!UICONTROL ID do ativo] alterações, dependendo da categoria usada na auditoria. Ao usar a variável [!UICONTROL Modelo de consulta] categoria , a variável [!UICONTROL ID do ativo] é **ID do modelo**. Ao usar a variável [!UICONTROL Consulta agendada] categoria , a variável [!UICONTROL ID do ativo] é  **ID de programação**.
+O painel de detalhes pode ser usado para localizar o [!UICONTROL ID do ativo] e [!UICONTROL Status do evento].
+
+O valor da variável [!UICONTROL ID do ativo] alterações, dependendo da categoria usada na auditoria.
+
+* Ao usar a variável [!UICONTROL Query] categoria , a variável [!UICONTROL ID do ativo] é  **session ID**.
+* Ao usar a variável [!UICONTROL Modelo de consulta] categoria , a variável [!UICONTROL ID do ativo] é **ID do modelo** e com o prefixo `[!UICONTROL templateID:]`.
+* Ao usar a variável [!UICONTROL Consulta agendada] categoria , a variável [!UICONTROL ID do ativo] é  **ID de programação** e com o prefixo `[!UICONTROL scheduleID:]`.
+
+O valor da variável [!UICONTROL Status do evento] alterações, dependendo da categoria usada na auditoria.
+
+* Ao usar a variável [!UICONTROL Query] categoria , a variável [!UICONTROL Status do evento] fornece uma lista de todos **IDs de consulta** executado pelo usuário nessa sessão.
+* Ao usar a variável [!UICONTROL Modelo de consulta] categoria , a variável [!UICONTROL Status do evento] O campo fornece a variável **nome do modelo** como um prefixo para o status do evento.
+* Ao usar a variável [!UICONTROL Agendamento do query] categoria , a variável [!UICONTROL Status do evento] O campo fornece a variável **nome da programação** como um prefixo para o status do evento.
 
 ## Filtros disponíveis para [!DNL Query Service] categorias de log de auditoria {#available-filters}
 
@@ -68,9 +80,9 @@ Os filtros disponíveis variam dependendo da categoria selecionada na lista susp
 | Filtro | Descrição |
 |---|---|
 | Categoria | Consulte a [[!DNL Query Service] categorias de log de auditoria](#audit-log-categories) para obter uma lista completa das categorias disponíveis. |
-| Ação | Ao se referir a [!DNL Query Service] categorias de auditoria, atualização é um **modificação do formulário existente**, excluir é o **remoção do calendário ou do modelo**, criar é **criação de um novo agendamento ou template** e execute está executando uma consulta. |
+| Ação | Ao se referir a [!DNL Query Service] categorias de auditoria, atualização é um **modificação do formulário existente**, excluir é o **remoção do calendário ou do modelo**, criar é **criação de um novo agendamento ou template** e executar é **execução de um query**. |
 | Usuário | Insira a ID completa do usuário (por exemplo, johndoe@acme.com) para filtrar por usuário. |
-| Status | Esse filtro não se aplica à variável [!DNL Query Service] logs de auditoria. O [!UICONTROL Permitir], [!UICONTROL Sucesso]e [!UICONTROL Falha] as opções não filtrarão os resultados, enquanto a variável [!UICONTROL Negar] a opção filtrará **all** logs. |
+| Status | O [!UICONTROL Permitir], [!UICONTROL Sucesso]e [!UICONTROL Falha] as opções filtram os logs com base no &quot;Status&quot; ou no &quot;Status do Evento&quot;, enquanto as [!UICONTROL Negar] a opção filtrará **all** logs. |
 | Data | Selecione uma data inicial e/ou uma data final para definir um intervalo de datas para filtrar os resultados. |
 
 ## Próximas etapas

@@ -5,9 +5,9 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 2%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >O caminho de saída completo será `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTERAR TABELA
+### ALTERAR TABELA {#alter-table}
 
 O `ALTER TABLE` permite adicionar ou soltar restrições de chave primária ou estrangeira, bem como adicionar colunas à tabela.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >O schema da tabela deve ser exclusivo e não compartilhado entre várias tabelas. Além disso, o namespace é obrigatório para restrições de chave primária.
 
+#### Adicionar ou remover identidades primárias e secundárias
+
+O `ALTER TABLE` permite adicionar ou excluir restrições para colunas da tabela de identidade primária e secundária diretamente por meio do SQL.
+
+Os exemplos a seguir adicionam uma identidade primária e uma identidade secundária ao adicionar restrições.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+As identidades também podem ser removidas soltando restrições, como mostrado no exemplo abaixo.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+Consulte o documento sobre como configurar identidades em conjuntos de dados ad hoc para obter informações mais detalhadas.
+
 #### ADICIONAR COLUNA
 
 As seguintes consultas SQL mostram exemplos de adição de colunas a uma tabela.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Tipos de dados compatíveis
+
+A tabela a seguir lista os tipos de dados aceitos para adicionar colunas a uma tabela com [!DNL Postgres SQL], XDM e o [!DNL Accelerated Database Recovery] (ADR) no Azure SQL.
+
+| — | Cliente PSQL | XDM | RAL | Descrição |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | Um tipo de dados numéricos usado para armazenar grandes números inteiros entre -9.223.372.036.854.775.807 e 9.223.372.036.854.775.807 em 8 bytes. |
+| 2 | `integer` | `int4` | `integer` | Um tipo de dados numéricos usado para armazenar números inteiros entre -2.147.483.648 e 2.147.483.647 em 4 bytes. |
+| 3 | `smallint` | `int2` | `smallint` | Um tipo de dados numéricos usado para armazenar números inteiros entre -32.768 e 215-1 32.767 em 2 bytes. |
+| 4 | `tinyint` | `int1` | `tinyint` | Um tipo de dados numéricos usado para armazenar números inteiros entre 0 e 255 em 1 byte. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Um tipo de dados de caractere de tamanho variável. `varchar` é melhor usado quando os tamanhos das entradas de dados da coluna variam consideravelmente. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` e `FLOAT` são sinônimos válidos para `DOUBLE PRECISION`. `double precision` é um tipo de dados de ponto flutuante. Os valores de ponto flutuante são armazenados em 8 bytes. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` é um sinônimo válido para `double precision`.`double precision` é um tipo de dados de ponto flutuante. Os valores de ponto flutuante são armazenados em 8 bytes. |
+| 8 | `date` | `date` | `date` | O `date` os tipos de dados são valores de datas de calendário armazenados de 4 bytes sem informações de carimbo de data e hora. O intervalo de datas válidas é de 01-01-0001 a 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Um tipo de dados usado para armazenar um instante no tempo, expresso como uma data e hora do calendário. `datetime` inclui os qualificadores de: ano, mês, dia, hora, segundo e fração. A `datetime` A declaração pode incluir qualquer subconjunto dessas unidades de tempo que são unidas nessa sequência ou até mesmo incluir apenas uma única unidade de tempo. |
+| 10 | `char(len)` | `string` | `char(len)` | O `char(len)` palavra-chave é usada para indicar que o item é um caractere de comprimento fixo. |
 
 #### ADICIONAR ESQUEMA
 

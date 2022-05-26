@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -71,9 +71,11 @@ O Experience Platform permite auditar a atividade do usuário para vários servi
 
 **Recursos atualizados**
 
-| Recurso | Nome | Descrição | | — | — | — | | Recursos adicionados | <ul><li> Política de controle de acesso </li><li> Função </li><li> Logs de auditoria </li><li> Ordem de serviço </li><li> Namespace de identidade </li><li> Gráfico de identidade </li><li> Consulta </li><li> Conjunto de dados </li><li> Fluxo de dados de origem </li></ul> | Os recursos do log de auditoria são registrados automaticamente à medida que a atividade ocorre. Se o recurso estiver ativado, não é necessário ativar manualmente a coleta de log. |
+| Recurso | Nome | Descrição |
+| --- | --- | --- |
+| Recursos adicionados | <ul><li> Política de controle de acesso </li><li> Função </li><li> Logs de auditoria </li><li> Ordem de serviço </li><li> Namespace de identidade </li><li> Gráfico de identidade </li><li> Consulta </li><li> Conjunto de dados </li><li> Fluxo de dados de origem </li></ul> | Os recursos do log de auditoria são registrados automaticamente conforme a atividade ocorre. Se o recurso estiver ativado, não é necessário ativar manualmente a coleta de log. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre logs de auditoria na Platform, consulte [visão geral dos logs de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md).
 

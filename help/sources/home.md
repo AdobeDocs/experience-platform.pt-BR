@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
+source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -28,22 +28,22 @@ As fontes no Experience Platform são agrupadas nas seguintes categorias:
 
 O Experience Platform permite que os dados sejam assimilados de outros aplicativos do Adobe, incluindo Adobe Analytics e Adobe Audience Manager. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Visão geral da fonte do Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Criar uma conexão de origem do Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Visão geral da conexão da fonte de dados Classificações Adobe Analytics](connectors/adobe-applications/classifications.md)
 - [Criar uma conexão de fonte de dados de classificações do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Visão geral da conexão da fonte de dados do conjunto de relatórios do Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Criar uma conexão de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Coleta de dados do Adobe](connectors/adobe-applications/data-collection.md)
+- [Visão geral da fonte de coleta de dados do Adobe](connectors/adobe-applications/data-collection.md)
 - [Criar uma conexão de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] visão geral da fonte](connectors/adobe-applications/marketo/marketo.md)
 - [Crie um [!DNL Marketo Engage] conexão de origem na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising {#advertising}
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) conector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Armazenamento na nuvem {#cloud-storage}
 

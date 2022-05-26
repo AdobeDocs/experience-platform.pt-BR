@@ -5,7 +5,7 @@ title: Criar um fluxo de dados para o Zendesk usando a API do Serviço de fluxo
 topic-legacy: tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Zendesk usando a API do Serviço de Fluxo.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 43367156962ee58ef615cf61c02a36360292f19b
 workflow-type: tm+mt
 source-wordcount: '2314'
 ht-degree: 3%
@@ -290,7 +290,7 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado. No exemplo 
         {
             "result": {
                 "id": 6106699702801,
-                "url": "https://d3v-dxinfosys.zendesk.com/api/v2/users/6106699702801.json",
+                "url": "https://{YOURSUBDOMAIN}.zendesk.com/api/v2/users/6106699702801.json",
                 "name": "test",
                 "email": "test@org.com",
                 "created_at": "2022-05-13T08:04:22Z",

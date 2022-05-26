@@ -4,9 +4,9 @@ description: Saiba como visualizar e gerenciar pedidos de higiene de dados exist
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '562'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="IDs de ordem de trabalho"
->abstract="Quando uma solicitação de higiene de dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de trabalho representa um processo específico de higiene de dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="Quando uma solicitação de higiene de dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de trabalho representa um processo específico de higiene de dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="Consulte o guia da interface do usuário de higiene de dados para saber mais."
 
 >[!IMPORTANT]
 >

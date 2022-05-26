@@ -3,7 +3,7 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Uma empresa de aluguel e vendas da casa deseja personalizar sua página inicial 
 >id="platform_destinations_target_datastream"
 >title="Sobre IDs de fluxo de dados"
 >abstract="Essa opção determina em qual conjunto de dados de coleta os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de armazenamento de dados. Selecionar Nenhum desativa todos os casos de uso que usam segmentação de borda."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de conjuntos de dados."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de conjuntos de dados"
 
 >[!IMPORTANT]
 > 

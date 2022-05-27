@@ -5,10 +5,10 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
+source-git-commit: ddc1750502281bfd7432336e707a35b8139ff069
 workflow-type: tm+mt
-source-wordcount: '4175'
-ht-degree: 4%
+source-wordcount: '4298'
+ht-degree: 3%
 
 ---
 
@@ -164,6 +164,8 @@ Para obter informações sobre o recurso de cópia de objetos, consulte a seçã
 | join_arrays | Combina os arrays uns com os outros. | <ul><li>MATRIZ: **Obrigatório** A matriz à qual você está adicionando elementos.</li><li>VALORES: As matrizes que você deseja anexar à matriz principal.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&quot;a&quot;, &quot;b&quot;], [&quot;c&quot;], [&quot;d&quot;, &quot;e&quot;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Obtém uma lista de entradas e a converte em uma matriz. | <ul><li>INCLUDE_NULLS: **Obrigatório** Um valor booleano para indicar se deve ou não incluir valores nulos na matriz de resposta.</li><li>VALORES: **Obrigatório** Os elementos que devem ser convertidos em uma matriz.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Retorna o tamanho da entrada. | <ul><li>ENTRADA: **Obrigatório** O objeto do qual você está tentando encontrar o tamanho.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| upsert_array_append | Essa função é usada para anexar todos os elementos na matriz de entrada inteira ao final da matriz no Perfil. Esta função é **only** aplicável durante as atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>MATRIZ: **Obrigatório** A matriz para anexar a matriz no Perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | Essa função é usada para substituir elementos em uma matriz. Esta função é **only** aplicável durante as atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>MATRIZ: **Obrigatório** A matriz para substituir a matriz no Perfil.</li><li>ÍNDICE: **Opcional** A posição de onde a substituição precisa acontecer.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style=&quot;table-layout:auto&quot;}
 

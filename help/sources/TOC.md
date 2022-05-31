@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
+source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '785'
 ht-degree: 14%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 14%
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de destino](connectors/adobe-applications/mapping/target.md)
          - [Mapeamentos de campo Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+         - [Mapeamentos de campo do Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Mapeamentos de campo do Salesforce](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [conector Marketo Engage](connectors/adobe-applications/marketo/marketo.md)

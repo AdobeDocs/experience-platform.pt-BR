@@ -5,10 +5,10 @@ title: Visão geral do Microsoft Dynamics Source Connector
 topic-legacy: overview
 description: Saiba como conectar o Microsoft Dynamics ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 4fbf1b9a55c755d0bac9e15efbf6bdb25fa24deb
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 1%
+source-wordcount: '282'
+ht-degree: 2%
 
 ---
 
@@ -21,6 +21,21 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 ## LISTA DE PERMISSÕES de endereço IP
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+
+## Mapeamento de campo de [!DNL Microsoft Dynamics] para XDM
+
+Para estabelecer uma conexão de origem entre [!DNL Microsoft Dynamics] e a Platform, [!DNL Microsoft Dynamics] Os campos de dados de origem devem ser mapeados para os campos XDM de destino apropriados antes de serem assimilados na Platform.
+
+Consulte o seguinte para obter informações detalhadas sobre as regras de mapeamento de campo entre [!DNL Microsoft Dynamics] conjuntos de dados e plataforma:
+
+- [Contatos](../adobe-applications/mapping/dynamics.md#contacts)
+- [Clientes potenciais](../adobe-applications/mapping/dynamics.md#leads)
+- [Contas](../adobe-applications/mapping/dynamics.md#accounts)
+- [Oportunidades](../adobe-applications/mapping/dynamics.md#opportunities)
+- [Funções de contato da oportunidade](../adobe-applications/mapping/dynamics.md#opportunity-contact-roles)
+- [Campanhas](../adobe-applications/mapping/dynamics.md#campaigns)
+- [Marketing ista](../adobe-applications/mapping/dynamics.md#marketing-list)
+- [Membros da lista de marketing](../adobe-applications/mapping/dynamics.md#marketing-list-members)
 
 A documentação abaixo fornece informações sobre como se conectar [!DNL Microsoft Dynamics] para [!DNL Platform] usando APIs ou a interface do usuário:
 

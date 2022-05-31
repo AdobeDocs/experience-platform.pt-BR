@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
+source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 7%
+source-wordcount: '1719'
+ht-degree: 6%
 
 ---
 
@@ -252,7 +252,8 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Versão beta de [!DNL Zendesk] source | Use o [!DNL Zendesk] origem para assimilar dados de usuários, agentes e organizações de sua [!DNL Zendesk] instância para [!DNL Profile] enriquecimento. Consulte a [[!DNL Zendesk] visão geral da fonte](../../sources/connectors/customer-success/zendesk.md) para obter mais informações. |
-| Suporte para coleta de dados do Adobe | Use o catálogo de fontes no Platform para acessar seus dados na Rede de borda da plataforma, incluindo Preparação de dados para coleta de dados e suporte aprimorado para avisos de Preparação de dados. Consulte a [Visão geral da fonte de coleta de dados do Adobe](../../sources/connectors/adobe-applications/data-collection.md) para obter mais informações. |
+| Disponibilidade geral de B2B [!DNL Microsoft Dynamics] source | Agora você pode usar o [!DNL Microsoft Dynamics] origem para assimilar objetos B2B como contas, oportunidades, campanhas, lista de marketing e membros da lista de marketing. Consulte a [[!DNL Microsoft Dynamics] visão geral da fonte](../../sources/connectors/crm/ms-dynamics.md) para obter mais informações. |
+| Suporte para coleta de dados do Adobe | Use o catálogo de fontes para acessar os dados da Coleta de dados da Borda da experiência, incluindo Preparação de dados para coleta de dados e suporte aprimorado a avisos de dados da Preparação de dados. Consulte a [Visão geral da fonte de coleta de dados do Adobe](../../sources/connectors/adobe-applications/data-collection.md) para obter mais informações. |
 | Suporte para assimilar arquivos com `ISO-8859-1` codificação | Use o `encoding` parâmetro para assimilar `ISO-8859-1` arquivos codificados com uma fonte de armazenamento em nuvem para a Platform usando o [!DNL Flow Service] API. Consulte o guia sobre [criação de uma conexão de origem de armazenamento em nuvem](../../sources/tutorials/api/collect/cloud-storage.md) para obter mais informações. |
 
 {style=&quot;table-layout:auto&quot;}

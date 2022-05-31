@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform, home, tópicos populares, controle de acesso, controle de acesso baseado em atributos, ABAC
 title: Controle de acesso baseado em atributo Criar uma política
-description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Este documento fornece informações sobre como gerenciar políticas por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---

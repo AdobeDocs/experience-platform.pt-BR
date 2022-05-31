@@ -3,10 +3,8 @@ keywords: Experience Platform, home, tópicos populares, api, controle de acesso
 solution: Experience Platform
 title: Guia da API de controle de acesso com base em atributos
 description: A API de controle de acesso baseada em atributos permite gerenciar programaticamente funções e políticas no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
-hide: true
-hidefromtoc: true
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 5%

@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform, home, tópicos populares, controle de acesso, controle de acesso baseado em atributos, ABAC
 title: Rótulos de gerenciamento de controle de acesso com base em atributos
-description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Este documento fornece informações sobre o gerenciamento de rótulos por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---

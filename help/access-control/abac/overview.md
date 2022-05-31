@@ -2,10 +2,8 @@
 keywords: Experience Platform; home; tópicos populares; controle de acesso; controle de acesso baseado em atributos;
 title: Visão geral do controle de acesso baseado em atributos
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 70c0ba81c682fd512c24265f12d1fef6ca14b34e
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '1575'
 ht-degree: 1%

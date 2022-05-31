@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform, home, tópicos populares, controle de acesso, controle de acesso baseado em atributos, ABAC
 title: Sandboxes de controle de acesso com base em atributo
-description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Este documento fornece informações sobre o gerenciamento de sandboxes pela interface de Permissões no Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---

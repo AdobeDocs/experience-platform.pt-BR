@@ -5,9 +5,9 @@ title: Manuseio de formatos de dados com Preparação de dados
 topic-legacy: overview
 description: Este documento fornece uma visão geral de como diferentes tipos de dados são tratados na Preparação de dados.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '575'
 ht-degree: 13%
 
 ---
@@ -106,3 +106,7 @@ A tabela a seguir mostra quais letras de padrão são definidas para cadeias de 
 | V | ID de fuso horário | Texto | América/Los_Angeles |
 | O | Deslocamento do fuso horário | Texto | GMT+8 |
 | Q/q | Trimestre do ano | Número/Texto | 3; 03; Q3; 3º trimestre |
+
+## Mapas {#maps}
+
+No momento, não há suporte para mapas no [!DNL Data Prep].

@@ -2,11 +2,9 @@
 title: Guia da interface do usuário da análise de big data
 description: Saiba como gerenciar tarefas de higiene de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -25,8 +23,7 @@ Para acessar o espaço de trabalho, selecione **[!UICONTROL Higiene de dados]** 
 
 ![Imagem que mostra o [!UICONTROL Higiene de dados] espaço de trabalho na interface do usuário da plataforma](../images/ui/overview/home.png)
 
-A partir daqui, você pode navegar pelos pedidos de trabalho existentes e criar novas solicitações de higiene de dados. Consulte as seguintes seções deste guia para saber mais:
+A partir daqui, você pode navegar pelos pedidos de trabalho existentes e configurar novas operações de higiene de dados. Consulte as seguintes seções deste guia para saber mais:
 
 * [Procurar ordens de trabalho existentes](./browse.md)
-* [Excluir dados do consumidor](./delete-consumer.md)
 * [Gerenciar o TTL (time to live) dos conjuntos de dados](./ttl.md)

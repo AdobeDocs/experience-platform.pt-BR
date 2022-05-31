@@ -5,10 +5,10 @@ description: Este documento fornece informações sobre o controle de acesso bas
 hide: true
 hidefromtoc: true
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 1%
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >O controle de acesso baseado em atributos está disponível em uma versão limitada para clientes de assistência médica com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
+
+As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox. Para obter mais informações sobre sandboxes, consulte o [Visão geral das sandboxes](../../../sandboxes/home.md).
+
+## Configurar sandboxes
 
 Para exibir detalhes e funções aos quais uma sandbox está atribuída/com, selecione a variável **[!UICONTROL Sandboxes]** guia .
 

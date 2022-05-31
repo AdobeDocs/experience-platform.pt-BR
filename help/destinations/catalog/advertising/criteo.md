@@ -3,10 +3,10 @@ keywords: publicidade; critérios;
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais avançadas para todos os consumidores através da Internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
+source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 3%
+source-wordcount: '942'
+ht-degree: 2%
 
 ---
 
@@ -24,11 +24,13 @@ O Criteo capacita a publicidade confiável e impactante para trazer experiência
 
 * Você precisa ter uma conta de usuário de administrador em [Centro de gerenciamento de critérios](https://marketing.criteo.com).
 * Você precisará da ID do anunciante do Criteo (entre em contato com o Criteo se não tiver essa ID).
+* Você precisará fornecer [!DNL GUM caller ID], caso queira usar [!DNL GUM ID] como identificador.
 
 ## Limitações {#limitations}
 
 * No momento, o Critério não oferece suporte à remoção de usuários de públicos-alvo.
 * Apenas aceita o critério [!DNL SHA-256]Emails com hash e texto sem formatação (a ser transformado em [!DNL SHA-256] antes de enviar). Não envie PII (Informações pessoais identificáveis, como nomes ou números de telefone).
+* O critério precisa de pelo menos um identificador para ser fornecido pelo cliente. Ele prioriza [!DNL GUM ID] como identificador por email com hash, pois contribui para uma melhor taxa de correspondência.
 
 ![Pré-requisitos](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -39,6 +41,7 @@ O critério suporta a ativação das identidades descritas na tabela abaixo. Sai
 | Identidade do Target | Descrição | Considerações |
 | --- | --- | --- |
 | `email_sha256` | Endereços de email com hash com o algoritmo SHA-256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA-256. Quando o campo de origem contém atributos com hash, verifique a [!UICONTROL Aplicar transformação] , para que a Platform faça o hash automático dos dados na ativação. |
+| `gum_id` | Critério [!DNL GUM] identificador de cookie | [!DNL GUM IDs] permitir que os clientes mantenham uma correspondência entre o seu sistema de identificação de utilizador e a identificação de utilizador de Criteo ([!DNL UID]). Se o tipo de identificador for `GUM`, um parâmetro adicional, a variável [!DNL GUM Caller ID], deve também ser incluído. Entre em contato com a equipe de conta do Criteo para obter as informações apropriadas [!DNL GUM Caller ID] ou para obter mais informações sobre isso `GUM` sincronizar, se necessário. |
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -98,6 +101,7 @@ Depois de autenticar para o destino, preencha os seguintes parâmetros de conex�
 | Descrição | Uma descrição para ajudar a identificar esse destino no futuro. | Não |
 | Versão da API | Versão da API de critério. Selecione Visualizar. | Sim |
 | ID do anunciante | ID de anunciante de critério da sua organização. Entre em contato com o gerente de conta do Criteo para obter essas informações. | Sim |
+| Critério [!DNL GUM caller ID] | [!DNL GUM Caller ID] da sua organização. Entre em contato com a equipe de conta do Criteo para obter as informações apropriadas [!DNL GUM Caller ID] ou para obter mais informações sobre isso [!DNL GUM] sincronizar, se necessário. | Sim, sempre [!DNL GUM ID] é fornecido como um identificador |
 
 ## Ativar segmentos para este destino {#activate-segments}
 
@@ -114,21 +118,29 @@ Você pode ver os segmentos exportados na variável [Centro de gestão de crité
 O organismo de pedido recebido pela [!DNL Criteo] a conexão é semelhante a esta:
 
 ```json
-{ 
-  "data": { 
-    "type": "ContactlistWithUserAttributesAmendment", 
-    "attributes": { 
-      "operation": "add", 
-      "identifierType": "sha256email", 
-      "identifiers": [ 
-        { 
-          "identifier": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d", 
-          "attributes": [{ "key": "customValue", "value": "1" }] 
-        } 
-      ] 
-    } 
-  } 
-} 
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Uso e governança de dados {#data-usage}

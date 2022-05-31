@@ -3,7 +3,7 @@ title: Recuperar conteúdo de personalização de outras soluções do Adobe
 description: Saiba como usar a API do servidor de rede de borda do Adobe Experience Platform para recuperar conteúdo personalizado das soluções de personalização do Adobe
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: personalização; api do servidor; Rede de borda Adobe Experience Platform; recuperar personalização
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 3c9dff35cf1645b31207719ec73a68da37e8d685
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 10%
@@ -138,7 +138,7 @@ POST /ee/v2/interact
 ### Solicitação {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
 -H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
@@ -253,13 +253,13 @@ Notificações com o direito `id` para que os escopos correspondentes sejam acio
 ### Formato da API
 
 ```http
-POST /v2/collect
+POST /ee/v2/collect
 ```
 
 ### Solicitação
 
 ```shell
-url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
+url -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"

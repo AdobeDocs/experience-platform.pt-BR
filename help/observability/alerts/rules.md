@@ -4,7 +4,7 @@ title: Regras padrão de alerta
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
+source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 3%
@@ -29,7 +29,6 @@ As seguintes regras de alerta são específicas para [Assimilação de dados](..
 | Atrasos, falhas e erros de execução do fluxo de origem | Atraso de assimilação | Esse alerta é disparado quando a execução de um fluxo de ingestão em lote demora mais de 150 minutos para ser processada. |
 | Atrasos, falhas e erros de execução do fluxo de origem | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
 | Atrasos, falhas e erros de execução do fluxo de origem | Falha de Assimilação | Esse alerta dispara quando a proporção de registros com falha para todos os registros excede um limite de 0,5%. |
-| Atrasos, falhas e erros de execução do fluxo de origem | A taxa de página ignorada excede o limite | Esse alerta é disparado quando a proporção de ids ignoradas em relação ao total de ids excede um limite. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,6 +82,7 @@ As seguintes regras de alerta são específicas para [destinos](../../destinatio
 | Informações de execução do fluxo de destino | Êxito na Execução do Fluxo de Destino | Esse alerta é disparado quando um segmento é ativado com êxito para um destino. |
 | Atrasos de execução, falhas e erros do fluxo de destino | Atraso de execução do fluxo de destino | Esse alerta é disparado quando uma execução de fluxo de destino demora mais de 150 minutos para ativar um segmento. |
 | Atrasos de execução, falhas e erros do fluxo de destino | Falha na Execução do Fluxo de Destino | Esse alerta dispara quando ocorre um erro ao ativar um segmento para um destino. |
+| Atrasos de execução, falhas e erros do fluxo de destino | A taxa de página ignorada excede o limite | Esse alerta é disparado quando a relação entre IDs ignoradas e IDs totais excede um limite. |
 
 {style=&quot;table-layout:auto&quot;}
 

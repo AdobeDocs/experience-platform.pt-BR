@@ -5,10 +5,9 @@ title: Visão geral de governança, privacidade e segurança
 topic-legacy: overview
 description: A Adobe Experience Platform fornece vários serviços e ferramentas que permitem controlar com segurança seus dados de experiência coletados para cumprir suas práticas comerciais, obrigações legais e processo de desenvolvimento.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -41,7 +40,7 @@ O Serviço de Catálogo é o sistema de registro para localização e linhagem d
 
 O Catálogo organiza os dados assimilados em conjuntos de dados, com cada conjunto de dados contendo metadados que podem ser usados para rotular e categorizar os dados que ele contém.
 
-Consulte a [Visão geral do serviço de catálogo](../../catalog/home.md) para obter mais informações sobre o serviço. Para saber como gerenciar conjuntos de dados no Experience Platform, consulte a [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).
+Consulte a [Visão geral do serviço de catálogo](../../catalog/home.md) para obter mais informações sobre o serviço. Para saber como gerenciar conjuntos de dados no Experience Platform, consulte o [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).
 
 ## Privacidade {#privacy}
 
@@ -59,13 +58,17 @@ Consulte a [Visão geral do Privacy Service](../../privacy-service/home.md) para
 
 Muitas regulamentações legais de privacidade introduziram requisitos de consentimento ativo e específico quando se trata de coleta de dados, personalização e outros casos de uso de marketing. Para atender a esses requisitos, o Experience Platform permite capturar informações de consentimento em perfis de clientes individuais e usar essas preferências como um fator determinante de como os dados de cada cliente são usados em workflows da plataforma downstream.
 
-Para saber como processar os dados de consentimento e preferência do cliente usando o padrão do Adobe, consulte a visão geral sobre [processamento de consentimento em Experience Platform](./consent/adobe/overview.md).
+Para saber como processar os dados de consentimento e preferência do cliente usando o Adobe standard, consulte a visão geral em [processamento de consentimento no Experience Platform](./consent/adobe/overview.md).
 
-Para obter informações sobre como processar os dados de consentimento do cliente de acordo com a Estrutura de transparência e consentimento (TCF) 2.0 do IAB, consulte a visão geral sobre o suporte do [IAB TCF 2.0 no Platform](./consent/iab/overview.md).
+Para obter informações sobre como processar os dados de consentimento do cliente de acordo com a Estrutura de transparência e consentimento (TCF) 2.0 do IAB, consulte a visão geral em [Suporte ao IAB TCF 2.0 na plataforma](./consent/iab/overview.md).
 
 ## Segurança {#security}
 
 A integridade e a segurança de seus dados são indispensáveis para sua empresa e esse risco requer recursos de segurança líderes do setor. Para enfrentar esse desafio, a Platform fornece várias ferramentas para ajudar a proteger suas operações de dados.
+
+### Criptografia de dados
+
+Todos os dados da plataforma são criptografados em trânsito e em repouso. Consulte o documento em [criptografia de dados no Platform](./encryption.md) para obter mais informações.
 
 ### Controle de acesso {#access-control}
 

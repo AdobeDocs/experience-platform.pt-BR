@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real.
-source-git-commit: ba2df1ca905bfe2d0f8868ef658b369b28eb9af3
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 24%
+source-wordcount: '247'
+ht-degree: 27%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 * [Visão geral da plataforma](home.md)
 * [Visão geral da plataforma (vídeo)](video/platform-overview.md)
-* [Tutoriais da Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Tutoriais da Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=pt-BR)
 * [Uma experiência do cliente disponibilizada pela plataforma (Vídeo)](video/customer-experience.md)
 * [Em segundo plano de uma experiência do cliente com plataforma (Vídeo)](video/customer-experience-bts.md)
 * Introdução {#getting-started}
@@ -58,6 +58,7 @@ ht-degree: 24%
       * [Integre o SDK da Web da plataforma para processar dados de consentimento e preferência](./governance-privacy-security/consent/sdk.md)
    * Logs de auditoria {#audit-logs}
       * [Visão geral](./governance-privacy-security/audit-logs/overview.md)
+   * [Criptografia de dados](./governance-privacy-security/encryption.md)
 * Utilização da licença e medidas de proteção {#license}
    * [Práticas recomendadas de direito à licença de gestão de dados](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Painel de uso da licença](./license-usage-and-guardrails/license-usage-dashboard.md)

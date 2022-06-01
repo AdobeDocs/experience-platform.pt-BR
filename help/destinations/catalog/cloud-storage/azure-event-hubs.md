@@ -3,7 +3,7 @@ keywords: Destino do hub de eventos do Azure; hub de eventos do azure; azure eve
 title: Conexão de Hubs de Eventos do Azure
 description: Crie uma conexão de saída em tempo real com o [!DNL Azure Event Hubs] armazenamento de dados para fluxo de dados do Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 0%
@@ -71,16 +71,6 @@ Se você selecionar a variável **[!UICONTROL Autenticação padrão]** digite p
 
 #### Autenticação SAS (Shared Access Signature) {#sas-authentication}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="Incluir nomes de segmentos"
->abstract="Alterne se deseja que a exportação de dados inclua os nomes dos segmentos que você está exportando. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Incluir carimbos de data e hora do segmento"
->abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
-
 ![Imagem da tela da interface do usuário que mostra os campos preenchidos para os detalhes de autenticação padrão do Hubs de Eventos do Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 Se você selecionar a variável **[!UICONTROL Autenticação padrão]** digite para se conectar ao terminal HTTP, insira os campos abaixo e selecione **[!UICONTROL Ligar ao destino]**:
@@ -91,6 +81,16 @@ Se você selecionar a variável **[!UICONTROL Autenticação padrão]** digite p
 * **[!UICONTROL Namespace]**: Preencha o [!DNL Azure Event Hubs] namespace. Saiba mais sobre [!DNL Azure Event Hubs] namespaces no [Documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ### Detalhes do destino {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Incluir nomes de segmentos"
+>abstract="Alterne se deseja que a exportação de dados inclua os nomes dos segmentos que você está exportando. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Incluir carimbos de data e hora do segmento"
+>abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
 
 Após estabelecer a conexão de autenticação com o destino do Hubs de Eventos do Azure, forneça as seguintes informações para o destino:
 

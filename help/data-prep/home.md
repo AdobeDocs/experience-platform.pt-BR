@@ -5,9 +5,9 @@ title: Visão geral da preparação de dados
 topic-legacy: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ A Preparação de dados pode lidar de forma robusta com diferentes formatos de d
 ## Enviar atualizações de linha parciais usando o [!DNL Data Prep]
 
 Streaming de upserts em [!DNL Data Prep] permite enviar atualizações de linha parciais para o [!DNL Profile Service] dados, além de criar e estabelecer novos links de identidade com uma única solicitação de API. Para saber mais sobre como fazer streaming de upserts em [!DNL Data Prep], consulte o documento em [envio de atualizações de linha parcial](./upserts.md).
+
+## Controle de acesso com base em atributos no [!DNL Data Prep]
+
+O controle de acesso baseado em atributos no Adobe Experience Platform permite que os administradores controlem o acesso a objetos e/ou recursos específicos com base em atributos.
+
+O controle de acesso baseado em atributos garante que você possa mapear apenas os atributos aos quais tem acesso. Os atributos aos quais você não tem acesso não podem ser usados em mapeamentos de passagem e campos calculados. Dessa forma, se você não tiver acesso a um campo obrigatório, não poderá salvar um mapeamento com êxito. Além disso, não é possível mapear objetos ou arrays de objetos se você não tiver acesso a nenhum dos atributos secundários. No entanto, é possível mapear outros elementos no objeto ou na matriz de objetos individualmente.
+
+Consulte a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md) para obter mais informações.
 
 ## Próximas etapas
 

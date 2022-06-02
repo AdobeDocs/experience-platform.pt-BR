@@ -4,10 +4,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e os grupos de campos de esquema do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: fab182dc868990ddd5fbc45f0f50dc87258f98bc
+source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 17%
+source-wordcount: '465'
+ht-degree: 16%
 
 ---
 
@@ -104,7 +104,7 @@ ht-degree: 17%
    * [Campo de Preferência de Marketing Genérico](./data-types/marketing-field.md)
    * [Campo de preferência de marketing genérico com assinaturas](./data-types/marketing-field-subscriptions.md)
    * [Campo de preferência Personalização genérica](./data-types/personalization-field.md)
-   * [Geografia](./data-types/geo.md)
+   * [Geografia  ](./data-types/geo.md)
    * [Círculo geográfico](./data-types/geo-circle.md)
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Detalhes da interação geográfica](./data-types/geo-interaction-details.md)
@@ -174,6 +174,7 @@ ht-degree: 17%
    * [Definir um relacionamento de esquema na interface do usuário](tutorials/relationship-ui.md)
    * [Definir uma relação de esquema na API](tutorials/relationship-api.md)
    * [Definir um relacionamento de esquema na Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Gerenciar rótulos de uso de dados para um esquema](tutorials/labels.md)
    * [Criar um esquema ad-hoc (API)](tutorials/ad-hoc.md)
    * [Adicionar valores sugeridos a um campo (API)](tutorials/suggested-values.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)

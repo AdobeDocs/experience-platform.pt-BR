@@ -5,9 +5,9 @@ title: Gerenciar rótulos de uso de dados na interface do usuário
 topic-legacy: labels
 description: Este guia aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ O **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, o que pe
 
 ![Ocultar rótulos herdados](../images/labels/inherited-labels.png)
 
-## Gerenciar rótulos no nível do campo
+## Gerenciar rótulos no nível do campo do conjunto de dados
 
 Continuar o workflow para [adicionar e editar rótulos de uso de dados no nível do conjunto de dados](#add-labels), também é possível gerenciar rótulos em nível de campo no **[!UICONTROL Governança de dados]** espaço de trabalho para esse conjunto de dados.
 
@@ -99,6 +99,12 @@ O **[!UICONTROL Governança de dados]** o espaço de trabalho será exibido nova
 ![Selecione vários campos para aplicar rótulos de nível de campo simultaneamente.](../images/labels/multiple-fields.png)
 
 É importante lembrar que a herança se move somente do nível superior para baixo (campos do conjunto de dados → ), o que significa que os rótulos aplicados no nível do campo não são propagados para outros campos ou conjuntos de dados.
+
+## Gerenciar rótulos no nível do esquema
+
+Você pode adicionar rótulos diretamente a um esquema ou campos dentro dele. Todos os campos aplicados no nível do schema serão propagados para todos os conjuntos de dados com base nesse esquema.
+
+Veja o tutorial em [gerenciamento de rótulos de nível de esquema](../../xdm/tutorials/labels.md) para obter mais informações.
 
 ## Gerenciar rótulos personalizados
 

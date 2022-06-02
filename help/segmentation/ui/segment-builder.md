@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic-legacy: ui guide
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2612'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,14 @@ ht-degree: 1%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Elementos básicos da definição de segmentos
+## Elementos básicos da definição de segmentos {#building-blocks}
 
-Os elementos básicos das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes também podem ser usados como componentes para novas definições.
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Campos"
+>abstract="Os três tipos de campo que compõem um segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos-alvo permitem usar públicos importados de fontes externas."
+
+Os elementos básicos das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes podem ser usados como componentes para novas definições.
 
 Você pode ver esses elementos fundamentais no **[!UICONTROL Campos]** no lado esquerdo do [!DNL Segment Builder] espaço de trabalho. **[!UICONTROL Campos]** contém uma guia para cada um dos blocos fundamentais: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot;, e &quot;[!UICONTROL Públicos-alvo]&quot;.
 
@@ -210,7 +215,19 @@ Para selecionar uma política de mesclagem para a definição do seu segmento, s
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriedades do segmento
+## Propriedades do segmento {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Propriedades do segmento"
+>abstract="A seção de propriedades do segmento exibe uma estimativa do tamanho do segmento resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o próprio público-alvo."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Atualizar estimativas"
+>abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma pré-visualização de quantos perfis se qualificariam para o segmento proposto. As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Saiba mais pela documentação"
+
 
 Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** A seção no lado direito do espaço de trabalho exibe uma estimativa do tamanho do segmento resultante, permitindo ajustar a definição do segmento, conforme necessário, antes de criar o próprio público-alvo.
 

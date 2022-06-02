@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1746'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,17 @@ Para saber mais, visite o [guia do painel de segmentos](../../dashboards/guides/
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## Procurar {#browse}
+## Navegar {#browse}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Churn"
+>abstract="O churn representa a porcentagem de perfis que estão mudando em uma definição de segmento em comparação à última vez que o trabalho do segmento foi executado."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Método de avaliação"
+>abstract="Os métodos de avaliação para segmentos incluem lote, streaming e borda."
 
 Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definições de segmento para sua Organização IMS.
 
@@ -65,7 +75,7 @@ O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis
 
 O churn representa a porcentagem de perfis que estão mudando em uma definição de segmento em comparação à última vez que o trabalho do segmento foi executado, enquanto a contagem de perfis representa o número total de perfis qualificados para o segmento.
 
-O método de avaliação pode ser streaming ou batch. Segmentos de fluxo são constantemente avaliados à medida que os dados entram no sistema. Segmentos em lote são avaliados de acordo com uma programação definida.
+O método de avaliação pode ser streaming, lote ou borda. Segmentos de fluxo são constantemente avaliados à medida que os dados entram no sistema. Segmentos em lote são avaliados de acordo com uma programação definida. Segmentos de borda são avaliados em tempo real, o que permite casos de uso de personalização de página e próxima.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 

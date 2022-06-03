@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 87%
+source-wordcount: '392'
+ht-degree: 86%
 
 ---
 
@@ -119,6 +119,9 @@ ht-degree: 87%
       * [!DNL BrightCove] rastreamento de vídeo {#brightcove}
          * [Visão geral](./extensions/web/brightcove/overview.md)
          * [Notas de versão](./extensions/web/brightcove/release-notes.md)
+      * Camada de dados da Google {#google-data-layer}
+         * [Visão geral](./extensions/web/google-data-layer/overview.md)
+         * [Notas de versão](./extensions/web/google-data-layer/release-notes.md)
       * Extensão de rastreamento de vídeo do [!DNL YouTube] {#youtube}
          * [Visão geral](./extensions/web/youtube/overview.md)
          * [Notas de versão](./extensions/web/youtube/release-notes.md)

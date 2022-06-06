@@ -3,9 +3,9 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
+source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 1%
 
 O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 
-Adobe Target é uma conexão de personalização no Adobe Experience Platform.
+Adobe Target é uma conexão de personalização no catálogo de destinos do Adobe Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
+
+### ID do fluxo de dados {#datastream-id}
 
 Ao configurar a conexão do Adobe Target com o [usar uma ID do datastream](#parameters), você deve ter o [Adobe Experience Platform Web SDK](../../../edge/home.md) implementado.
 
@@ -27,6 +29,15 @@ Configurar a conexão do Adobe Target sem usar uma ID de armazenamento de dados 
 >[!IMPORTANT]
 >
 >Antes de criar uma [!DNL Adobe Target] leia o guia sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](../../ui/configure-personalization-destinations.md). Este guia o orienta pelas etapas de configuração necessárias para casos de uso de personalização de página mesma e próxima, em vários componentes de Experience Platform. A personalização de mesma página e próxima requer o uso de uma ID de armazenamento de dados ao configurar a conexão do Adobe Target.
+
+### Pré-requisitos no Adobe Target {#prerequisites-in-adobe-target}
+
+No Adobe Target, verifique se o usuário tem:
+
+* Acesso ao [espaço de trabalho padrão](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* O **Aprovador** [função](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+
+Leia mais sobre a concessão de permissões para [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) e [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 

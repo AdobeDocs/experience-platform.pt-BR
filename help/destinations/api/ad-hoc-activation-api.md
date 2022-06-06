@@ -6,9 +6,9 @@ description: Este artigo ilustra o fluxo de trabalho completo para ativar segmen
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1102'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ Antes de poder fazer chamadas para as APIs do Adobe Experience Platform, verifiq
 
 * Você tem uma conta da Organização IMS com acesso à Adobe Experience Platform.
 * Sua conta do Experience Platform tem a variável `developer` e `user` funções ativadas para o perfil de produto da API do Adobe Experience Platform. Entre em contato com seu [Admin Console](../../access-control/home.md) para ativar essas funções em sua conta.
-* Você tem uma Adobe ID. Caso não tenha uma Adobe ID, acesse [Console do desenvolvedor do Adobe](https://developer.adobe.com/console) e criar uma nova conta.
+* Você tem uma Adobe ID. Caso não tenha uma Adobe ID, acesse [Console do Adobe Developer](https://developer.adobe.com/console) e criar uma nova conta.
 
 ## Etapa 2: Obter credenciais {#credentials}
 
@@ -91,9 +91,10 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 Antes de ativar segmentos por meio da API de ativação ad-hoc, você deve primeiro ter um fluxo de ativação configurado na interface do usuário da plataforma, para o destino escolhido.
 
-Isso inclui acessar o fluxo de trabalho de ativação, selecionar seus segmentos, configurar um agendamento e ativá-los.
+Isso inclui acessar o fluxo de trabalho de ativação, selecionar seus segmentos, configurar um agendamento e ativá-los. Você pode usar a interface do usuário ou a API para criar um fluxo de ativação:
 
-Consulte o tutorial a seguir para obter instruções detalhadas sobre como configurar um fluxo de ativação para seus destinos em lote: [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../ui/activate-batch-profile-destinations.md).
+* [Use a interface do usuário da plataforma para criar um fluxo de ativação para destinos de exportação de perfil em lote](../ui/activate-batch-profile-destinations.md)
+* [Use a API do Serviço de Fluxo para se conectar aos destinos de exportação de perfis em lote e ativar dados](../api/connect-activate-batch-destinations.md)
 
 ## Etapa 4: Obter a ID de trabalho de exportação de segmento mais recente {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino nas quais você deseja ativar segmentos. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino nas quais você deseja ativar segmentos. Você pode obter essas IDs na interface do usuário da plataforma, navegando até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clicando na linha de destino desejada para exibir a ID de destino no painel direito. Para obter mais informações, leia a [documentação do espaço de trabalho de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | As IDs dos segmentos que você deseja ativar para o destino selecionado. |
 | <ul><li>`exportId1`</li></ul> | A ID retornada na resposta da variável [exportação de segmento](../../segmentation/api/export-jobs.md#retrieve-list) trabalho. Consulte [Etapa 4: Obter a ID de trabalho de exportação de segmento mais recente](#segment-export-id) para obter instruções sobre como encontrar essa ID. |
 

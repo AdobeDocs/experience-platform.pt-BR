@@ -5,10 +5,10 @@ user-guide-title: Documentação da API do servidor de rede de borda
 breadcrumb-title: Documentação da API do servidor de rede de borda
 user-guide-description: Saiba o que é a API do servidor de rede de borda e como usá-la.
 feature: Data Collection
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+source-git-commit: 6fb2b4ab47e9964e64fd94c49623f4c60689094c
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 56%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 56%
    * [Interação com a Adobe Analytics](interacting-adobe-analytics.md)
 * Personalização {#personalization}
    * [Visão geral da personalização](personalization-overview.md)
-   * [Personalização via Offer Decisioning](personalization-offer-decisioning.md)
    * [Personalização via Adobe Target](personalization-target.md)
+   * [Personalização via Offer Decisioning](personalization-offer-decisioning.md)
 * [Tratamento de erros](error-handling.md)
 * [Solução de problemas](troubleshooting.md)

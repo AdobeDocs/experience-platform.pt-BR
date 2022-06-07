@@ -5,10 +5,10 @@ user-guide-title: Documentação da API do servidor de rede de borda
 breadcrumb-title: Documentação da API do servidor de rede de borda
 user-guide-description: Saiba o que é a API do servidor de rede de borda e como usá-la.
 feature: Data Collection
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 58%
+source-wordcount: '65'
+ht-degree: 56%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 58%
 
 
 * [Visão geral](overview.md)
+* [Medidas de proteção de desempenho](guardrails.md)
 * [Autenticação](authentication.md)
 * Coleta de dados {#data-collection}
    * [Coleta de dados de evento único](interactive-data-collection.md)

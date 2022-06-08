@@ -4,9 +4,9 @@ description: Saiba como excluir registros do consumidor na interface do usuário
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -144,4 +144,10 @@ Depois que a solicitação é enviada, uma ordem de serviço é criada e exibida
 
 Este documento cobriu como excluir registros do consumidor na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de higiene de dados na interface do usuário, consulte [visão geral da interface do usuário da higiene de dados](./overview.md).
 
-Para saber como excluir registros do consumidor usando a API de Higiene de Dados, consulte o [guia do endpoint de ordem de trabalho](../api/workorder.md).
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
+source-git-commit: 313d80603f54b7e79316b01790fb4f258851858e
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1613'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,7 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (Opcional) Um delimitador de coluna de caractere único que pode ser especificado ao coletar arquivos simples. Qualquer valor de caractere único é um delimitador de coluna permitido. Se não for fornecida, uma vírgula (`,`) é usada como o valor padrão. **Observação**: O `columnDelimiter` só pode ser usada ao assimilar arquivos delimitados. |
 | `data.properties.encoding` | (Opcional) Uma propriedade que define o tipo de codificação a ser usado ao assimilar seus dados na Platform. Os tipos de codificação compatíveis são: `UTF-8` e `ISO-8859-1`. **Observação**: O `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
 | `data.properties.compressionType` | (Opcional) Uma propriedade que define o tipo de arquivo compactado para assimilação. Os tipos de arquivos compactados compatíveis são: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`e `tar`. **Observação**: O `compressionType` A propriedade só pode ser usada ao assimilar arquivos delimitados ou JSON. |
-| `params.path` | O caminho do arquivo de origem que você está acessando. Esse parâmetro indica um arquivo individual ou uma pasta inteira. |
+| `params.path` | O caminho do arquivo de origem que você está acessando. Esse parâmetro indica um arquivo individual ou uma pasta inteira.  **Observação**: Você pode usar um asterisco no lugar do nome do arquivo para especificar a assimilação de uma pasta inteira. Por exemplo: `/acme/summerCampaign/*.csv` ingerirá todo o `/acme/summerCampaign/` pasta. |
 | `params.type` | O tipo de arquivo do arquivo de dados de origem que você está assimilando. Tipo de uso `file` para assimilar um arquivo individual e usar o tipo `folder` para assimilar uma pasta inteira. |
 | `connectionSpec.id` | A ID da especificação de conexão associada à fonte de armazenamento em nuvem específica. Consulte a [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
 

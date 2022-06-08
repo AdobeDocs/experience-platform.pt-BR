@@ -4,9 +4,9 @@ description: Saiba como excluir registros do consumidor na interface do usuário
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ Se desejar excluir dados do consumidor de todos os conjuntos de dados, selecione
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identidade primária"
->abstract="Uma identidade primária é um atributo que vincula um registro ao perfil do consumidor no Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nesta coluna, você deve fornecer o tipo (ou namespace) da identidade primária do consumidor, como &quot;email&quot; para endereços de email e &quot;ecid&quot; para IDs de Experience Cloud. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="Uma identidade primária é um atributo que vincula um registro ao perfil do consumidor no Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nesta coluna, você deve fornecer o tipo (ou namespace) para a identidade primária do consumidor, como `email` para endereços de email e `ecid` para Experience Cloud IDs. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidade"
->abstract="Nesta coluna, você deve fornecer o valor da identidade primária do consumidor, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for &quot;email&quot;, o valor deve ser o endereço de email do consumidor. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="Nesta coluna, você deve fornecer o valor da identidade primária do consumidor, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do consumidor. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
 
 Ao excluir dados do consumidor, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Platform, os registros são excluídos com base na variável **identidade primária** que é definido pelo esquema do conjunto de dados.
 

@@ -4,7 +4,7 @@ description: Saiba como excluir registros do consumidor na interface do usuário
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Se desejar excluir dados do consumidor de todos os conjuntos de dados, selecione
 >
 >Selecionar o **[!UICONTROL Todos os conjuntos de dados]** A opção pode fazer com que a operação de exclusão demore mais e pode não resultar em uma exclusão de registro precisa.
 
-## Fornecer identidades do consumidor {#identities}
+## Fornecer identidades do consumidor {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"

@@ -5,10 +5,10 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
+source-git-commit: 2b9edb258e647dc04faadbbaeab429cf8ac3e0ec
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 34%
+source-wordcount: '183'
+ht-degree: 33%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 34%
 * Identidade {#identity}
    * [Visão geral](identity/overview.md)
    * [IDs de dispositivo próprio](identity/first-party-device-ids.md)
+   * [Compartilhamento de IDs entre dispositivos móveis e domínios](identity/id-sharing.md)
 * Coleta de dados {#data-collection}
    * [Informações coletadas automaticamente](data-collection/automatic-information.md)
    * [Rastrear links](data-collection/track-links.md)

@@ -2,13 +2,13 @@
 title: Medidas de proteção de desempenho
 description: Saiba como usar a API do servidor em medidas de proteção de desempenho ideais
 keywords: coleta de dados, coleta, rede de borda, api, sla, slt, níveis de serviço
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # Medidas de proteção de desempenho
 
@@ -20,12 +20,12 @@ O Adobe não é responsável pela degradação do desempenho causada por limites
 
 ## Definições
 
-* **Disponibilidade** é calculada para cada intervalo de cinco minutos como a porcentagem de solicitações processadas pela rede de borda da Experience Adobe Experience Platform que não falham com erros e estão relacionadas apenas às APIs de rede de borda da Adobe Experience Platform provisionadas. Se um locatário não fez solicitações em um intervalo de cinco minutos específico, esse intervalo é considerado como 100% disponível.
+* **Disponibilidade** é calculada para cada intervalo de cinco minutos como a porcentagem de solicitações processadas pela rede de borda do Experience Platform que não falham com erros e estão relacionadas apenas às APIs de rede de borda provisionadas. Se um locatário não fez solicitações em um intervalo de cinco minutos específico, esse intervalo é considerado como 100% disponível.
 * **Porcentagem de tempo de atividade mensal** para uma determinada região é calculada como a média da disponibilidade para todos os intervalos de cinco minutos em um mês.
-* Um **upstream** é um serviço por trás da Rede Adobe Edge, habilitado para um armazenamento de dados específico, como o Adobe Server Side Forwarding, Adobe Edge Segmentation ou Adobe Target.
+* Um **upstream** é um serviço atrás da Edge Network, habilitado para um armazenamento de dados específico, como o Adobe Server Side Forwarding, Adobe Edge Segmentation ou Adobe Target.
 * A **unidade de solicitação** corresponde a um fragmento de 8 KB de uma solicitação e um upstream configurado para um armazenamento de dados.
 * A **solicitação** é uma única mensagem enviada por um aplicativo de propriedade do cliente para o [!DNL Server API]. Uma solicitação pode conter uma ou mais unidades de solicitação.
-* Um **erro** é qualquer solicitação que falha devido a uma rede de borda Adobe Experience Platform [erro de serviço interno](error-handling.md).
+* Um **erro** é qualquer solicitação que falha devido a uma rede de borda [erro de serviço interno](error-handling.md).
 
 ## Limites de serviço
 

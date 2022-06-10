@@ -2,13 +2,13 @@
 title: Compartilhamento de IDs entre dispositivos móveis e domínios
 description: Saiba como persistir as IDs de visitante de dispositivos móveis para propriedades da Web e entre domínios
 keywords: Identidade, móvel, id, compartilhamento, domínio, entre domínios, sdk, plataforma;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
-
 
 # Compartilhamento de IDs entre dispositivos móveis e domínios
 
@@ -32,9 +32,11 @@ Um varejista de tecnologia deseja melhorar o relatório de atividade do visitant
 
 ## Pré-requisitos {#prerequisites}
 
-Para usar o compartilhamento de IDs entre domínios e entre dispositivos móveis, é necessário atualizar para [!DNL Web SDK] versão 2.11.0 ou posterior.
+Para usar o compartilhamento de IDs entre domínios e entre dispositivos móveis para a Web, você deve usar [!DNL Web SDK] versão 2.11.0 ou posterior.
 
 Para implementações móveis de rede de borda, esse recurso é compatível com o [Identidade da rede Edge](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extensão a partir da versão 1.1.0 (iOS e Android).
+
+Este recurso também é compatível com [!DNL VisitorAPI.js] versão 1.7.0 ou posterior.
 
 ## Compartilhamento de IDs da Web para dispositivos móveis {#mobile-to-web}
 

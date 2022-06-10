@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: b9f8f75571ed66558caaf058a90e7263da6d7b95
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,11 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao segmen
 >id="platform_destinations_activationchaining_scheduled"
 >title="Ativação agendada"
 >abstract="A ativação é executada em um horário fixo do dia."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_activatenow"
+>title="Ativar sob demanda"
+>abstract="Selecione esse controle para fornecer uma exportação de arquivo completa sobre qualquer exportação agendada anteriormente. A exportação de arquivo é acionada imediatamente."
 
 Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportação de um arquivo contendo um instantâneo completo de todas as qualificações de perfil para o segmento selecionado.
 

@@ -5,9 +5,9 @@ title: Exemplos de consultas para dados do Adobe Analytics
 topic-legacy: queries
 description: Os dados dos conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e assimilados no Adobe Experience Platform como conjuntos de dados. Este documento descreve uma série de casos de uso em que o Serviço de query usa esses dados e inclui consultas de amostra projetadas para funcionar com seus conjuntos de dados do Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
+source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -16,107 +16,9 @@ ht-degree: 1%
 
 Os dados dos conjuntos de relatórios selecionados do Adobe Analytics são transformados em dados conformes ao [!DNL XDM ExperienceEvent] e assimiladas no Adobe Experience Platform como conjuntos de dados.
 
-Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] O usa esses dados, incluindo consultas de amostra projetadas para funcionar com seus conjuntos de dados do Adobe Analytics. Consulte a documentação em [Mapeamento de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre mapeamento para [!DNL Experience Events].
+Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] usam esses dados. Consulte a documentação em [Mapeamento de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre mapeamento para [!DNL Experience Events].
 
-## Introdução
-
-Os exemplos de SQL em todo este documento exigem que você edite o SQL e preencha os parâmetros esperados para suas consultas com base no conjunto de dados, eVar, evento ou período que você está interessado em avaliar. Forneça parâmetros onde você visualizar `{ }` nos exemplos de SQL a seguir.
-
-## Exemplos de SQL comumente usados
-
-Os exemplos a seguir mostram consultas SQL para casos de uso comuns para analisar seus dados do Adobe Analytics.
-
-### Contagem de visitantes por hora para um determinado dia
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
-
-### As 10 principais páginas visualizadas de um determinado dia
-
-```sql
-SELECT web.webpagedetails.name AS Page_Name, 
-       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY web.webpagedetails.name 
-ORDER BY page_views DESC 
-LIMIT  10;
-```
-
-### Os 10 usuários mais ativos
-
-```sql
-SELECT enduserids._experience.aaid.id AS aaid, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY enduserids._experience.aaid.id
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### As 10 principais cidades por atividade do usuário
-
-```sql
-SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY state_city
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### Os 10 principais produtos visualizados
-
-```sql
-SELECT Product_SKU,
-       Sum(Product_Views) AS Total_Product_Views
-FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
-              commerce.productviews.value   AS Product_Views 
-       FROM   {TARGET_TABLE}
-            WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-              AND commerce.productviews.value IS NOT NULL) 
-GROUP BY Product_SKU 
-ORDER BY Total_Product_Views DESC
-LIMIT  10;
-```
-
-### Os 10 principais totais de receita de pedidos
-
-```sql
-SELECT Purchase_ID, 
-       Round(Sum(Product_Items.priceTotal * Product_Items.quantity), 2) AS Total_Order_Revenue 
-FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID, 
-               Explode(productlistitems)   AS Product_Items 
-        FROM   {TARGET_TABLE} 
-        WHERE  commerce.`order`.purchaseid IS NOT NULL 
-                AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-
-GROUP BY Purchase_ID 
-ORDER BY total_order_revenue DESC 
-LIMIT  10;
-```
-
-### Contagens de evento por dia
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Sum(_experience.analytics.event1to100.{TARGET_EVENT}.value) AS Event_Count
-FROM   {TARGET_TABLE}
-WHERE  _experience.analytics.event1to100.{TARGET_EVENT}.value IS NOT NULL 
-        AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
+Consulte a [documentação do caso de uso do analytics](../use-cases/analytics-insights.md) para saber como usar o Serviço de query para criar insights acionáveis a partir de dados assimilados do Adobe Analytics.
 
 ## Desduplicação
 

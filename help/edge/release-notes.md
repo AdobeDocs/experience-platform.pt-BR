@@ -3,14 +3,32 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
 
+
 # Notas de versão
+
+Este documento aborda as notas de versão do SDK da Web da Adobe Experience Platform.
+Para obter as notas de versão mais recentes sobre a extensão de tag do SDK da Web, consulte o [Notas de versão da extensão de tag do SDK da Web](extension/web-sdk-ext-release-notes.md).
+
+## Versão 2.11.0 - 13 de junho de 2022
+
+**Novos recursos**
+
+* Agora é possível fornecer experiências personalizadas com mais precisão, compartilhando IDs de visitantes entre aplicativos móveis e conteúdo da Web móvel e entre domínios. Consulte a [documentação dedicada](identity/id-sharing.md) para saber mais.
+* Agora é possível renderizar ou executar uma matriz de propostas a partir de [!DNL Adobe Target] em aplicativos de página única, sem aumentar as métricas de análise. Isso reduz erros de relatório e aumenta a precisão da análise. Consulte a [documentação dedicada](personalization/rendering-personalization-content.md#applypropositions) para saber mais.
+* Adição de mais informações à `getLibraryInfo` , incluindo comandos disponíveis e a configuração final da instância.
+
+**Correções e melhorias**
+
+* Atualização das configurações de cookie para usar `sameSite="none"` e `secure` sinalizar em [!DNL HTTPS] páginas.
+* Correção de um problema em que o conteúdo personalizado não era aplicado corretamente ao usar o `eq` pseudo seletor.
+* Correção de um problema em que `localTimezoneOffset` pode falhar na validação de Experience Platform.
 
 ## Versão 2.10.1 - 3 de maio de 2022
 

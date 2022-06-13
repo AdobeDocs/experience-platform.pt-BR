@@ -3,10 +3,10 @@ keywords: Experience Platform, home, tópicos populares, preparação de dados, 
 title: Enviar Atualizações Parciais De Linha Para O Serviço De Perfil Usando A Preparação De Dados
 description: Este documento fornece informações sobre como enviar atualizações de linha parciais ao Serviço de perfil usando a Preparação de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 93c95fce45dc034c0b9c53d9893a8e38e752ec0f
+source-git-commit: 0f1b9cdde3452afdf8cf045cf0a6660ee0ce56cf
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 0%
+source-wordcount: '1205'
+ht-degree: 1%
 
 ---
 
@@ -250,6 +250,7 @@ A seguir, uma lista de limitações conhecidas a serem consideradas ao fazer o s
 * O método de atualização de fluxo só deve ser usado ao enviar atualizações de linha parciais para o [!DNL Profile Service]. Atualizações parciais de linha são **not** consumido pelo lago de dados.
 * O método streaming upserts não oferece suporte à atualização, substituição e remoção de identidades. Novas identidades são criadas se elas não existirem. Daí o `identity` deve ser sempre definida para criar. Se uma identidade já existir, a operação será inoperante.
 * Atualmente, o método de atualização de fluxo suporta apenas atributos primitivos de valor único (como números inteiros, datas, carimbos de data e hora e strings) e objetos. O método de atualização de fluxo não oferece suporte à substituição, anexação ou substituição de atributos de matriz e índices específicos de matriz.
+* O método de atualização de fluxo atualmente não é compatível [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=pt-BR) e [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## Próximas etapas
 

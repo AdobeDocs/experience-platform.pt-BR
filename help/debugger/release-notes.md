@@ -4,14 +4,26 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: depurador, extensão do Experience Platform Debugger, chrome, extensão, notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '351'
+ht-degree: 2%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
+
+## Versão 1.3.2 - 9 de junho de 2022
+
+* Adição de um avatar padrão quando o usuário está conectado.
+* Adicionado o realce da sintaxe aos objetos JSON em logs.
+
+## Versão 1.3.1 - 24 de maio de 2022
+
+* Dependências atualizadas.
+* Correção de um problema do Analytics em que as ocorrências pós-processo não podiam ser ativadas.
+* Correção de um problema em que o depurador era anexado à janela de logon do Adobe.
+* Correção de um problema da AT.js em que as mensagens de log não eram exibidas no Debugger.
 
 ## Versão 1.3.0 - 28 de janeiro de 2022
 

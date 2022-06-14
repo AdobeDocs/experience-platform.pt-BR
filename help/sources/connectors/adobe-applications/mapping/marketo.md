@@ -5,9 +5,9 @@ title: Mapeamento de campos para a fonte de Marketo Engage
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '713'
 ht-degree: 7%
 
 ---
@@ -21,6 +21,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 >Todos [!DNL Marketo] conjuntos de dados, exceto `Activities` suporte agora `isDeleted`. Os seus fluxos de dados existentes incluirão automaticamente `isDeleted`, mas assimilará somente o sinalizador de dados assimilados recentemente. Se quiser aplicar o sinalizador a todos os seus dados históricos, pare os fluxos de dados existentes e recrie-os com o novo mapeamento. Observe que, se você remover `isDeleted`, você não terá mais acesso à funcionalidade. É importante que o mapeamento seja mantido depois de ser preenchido automaticamente.
 
 ## Atividades {#activities}
+
+O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais. Para usar as atividades padrão, você deve atualizar o esquema usando o [utilitário de geração automática de esquema](../marketo/marketo-namespaces.md) porque se você criar um novo `activities` fluxo de dados sem atualizar o esquema, os modelos de mapeamento falharão, pois os novos campos de destino não estarão presentes no esquema. Se optar por não atualizar o esquema, ainda poderá criar um novo fluxo de dados e descartar quaisquer erros. No entanto, quaisquer campos novos ou atualizados não serão assimilados na Platform.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |

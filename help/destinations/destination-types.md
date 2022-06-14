@@ -4,9 +4,9 @@ title: Tipos e categorias de destino
 seo-title: Destination types and categories
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ No Adobe Experience Platform, distinguimos entre dois tipos de destino: conexõe
 
 ## Conexões {#connections}
 
-**[!UICONTROL Exportação de perfil]** e **[!UICONTROL Exportação de segmento de transmissão]** destinos no Adobe Experience Platform capturam dados de evento, combinam-nos com outras fontes de dados para formar a variável [Perfil do cliente em tempo real](../profile/home.md), aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportação de perfil]**, **[!UICONTROL Exportação de segmento de transmissão]** e **[!DNL Edge Personalization]** destinos no Adobe Experience Platform capturam dados de evento, combinam-nos com outras fontes de dados para formar a variável [Perfil do cliente em tempo real](../profile/home.md), aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
 
 ## Destinos de exportação de perfil {#profile-export}
 
@@ -55,6 +55,12 @@ Destinos baseados em arquivo recebem `.csv` arquivos contendo perfis e/ou atribu
 ## Destinos de exportação de segmento de fluxo {#streaming-destinations}
 
 Os destinos de exportação de segmento recebem dados de Experience Platform segment. Esses destinos usam IDs de segmento ou IDs de usuário. Publicidade e destinos sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
+
+## Destinos de personalização de borda {#edge-personalization-destinations}
+
+Destinos de personalização de borda no Experience Platform include [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destino de personalização personalizado](/help/destinations/catalog/personalization/custom-personalization.md). Ao usar esses destinos, você pode ativar casos de uso de personalização de página e próxima para seus clientes.
+
+Leia mais sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## Exportar perfis e exportar segmentos - visão geral do vídeo {#video}
 

@@ -2,10 +2,10 @@
 title: Endpoint de configurações de aplicativo
 description: Saiba como fazer chamadas para o endpoint /app_configurations na API do Reactor.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 99%
+ht-degree: 96%
 
 ---
 
@@ -189,6 +189,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -257,12 +258,12 @@ Uma resposta bem-sucedida retorna os detalhes da configuração do aplicativo re
 
 ## Atualizar uma configuração de aplicativo
 
-É possível atualizar uma configuração de aplicativo incluindo a respectiva ID no caminho de uma solicitação PUT.
+Você pode atualizar uma configuração de aplicativo incluindo sua ID no caminho de uma solicitação de PATCH.
 
 **Formato da API**
 
 ```http
-PUT /app_configurations/{APP_CONFIGURATION_ID}
+PATCH /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
 | Parâmetro | Descrição |
@@ -276,12 +277,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 A solicitação a seguir atualiza o `app_id` de uma configuração de aplicativo existente.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -361,7 +363,9 @@ curl -X DELETE \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Resposta**

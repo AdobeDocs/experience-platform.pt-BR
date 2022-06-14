@@ -3,9 +3,9 @@ title: Renderizar conteúdo personalizado usando o SDK da Web da Adobe Experienc
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web da Adobe Experience Platform.
 keywords: personalização; renderDecisões; sendEvent; decisionScopes; propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### Gerenciar cintilação
 
 O SDK fornece recursos para [gerenciar cintilação](../personalization/manage-flicker.md) durante o processo de personalização.
+
+## Renderizar apresentações em aplicativos de página única sem incrementar métricas {#applypropositions}
+
+O `applyPropositions` permite renderizar ou executar uma matriz de propostas a partir de [!DNL Target] em aplicativos de página única, sem aumentar o [!DNL Analytics] e [!DNL Target] métricas. Isso aumenta a precisão dos relatórios.
+
+>[!IMPORTANT]
+>
+>Se as apresentações para a variável `__view__` o escopo foi renderizado no carregamento da página, seus `renderAttempted` sinalizador será definido como `true`. O `applyPropositions` não renderizará novamente o `__view__` propostas de escopo com `renderAttempted: true` sinalizador.
+
+### Caso de uso 1: Renderizar novamente propostas de visualização de aplicativo de página única
+
+O caso de uso descrito na amostra abaixo renderiza novamente as apresentações de visualização do carrinho buscadas e renderizadas anteriormente sem enviar notificações de exibição.
+
+No exemplo abaixo, a variável `sendEvent` é acionado após uma alteração de exibição e salva o objeto resultante em uma constante.
+
+Em seguida, quando a exibição ou um componente é atualizado, a variável `applyPropositions` é chamado, com as apresentações do anterior `sendEvent` , para renderizar novamente as apresentações de exibição.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Caso de uso 2: Renderizar apresentações que não têm um seletor
+
+Esse caso de uso se aplica às ofertas de atividade criadas com o uso da variável [!DNL Target Form-based Experience Composer].
+
+Você deve fornecer o seletor, a ação e o escopo na `applyPropositions` chame.
+
+Suportado `actionTypes` são:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+Se você não fornecer metadados para um escopo de decisão, as apresentações associadas não serão renderizadas.

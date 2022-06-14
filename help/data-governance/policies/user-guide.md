@@ -5,9 +5,9 @@ title: Gerenciar políticas de uso de dados na interface do usuário
 topic-legacy: policies
 description: A Governança de dados do Adobe Experience Platform fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que podem ser executadas no espaço de trabalho Políticas na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ No [!DNL Experience Platform] UI, selecione **[!UICONTROL Políticas]** para abr
 
 ![](../images/policies/browse-policies.png)
 
-Se você tiver acesso às políticas de consentimento (atualmente em beta), selecione a variável **[!UICONTROL Políticas de consentimento]** alterne para exibi-los na [!UICONTROL Procurar] guia .
+Se você tiver acesso às políticas de consentimento, selecione a variável **[!UICONTROL Políticas de consentimento]** alterne para exibi-los na [!UICONTROL Procurar] guia .
 
 ![](../images/policies/consent-policy-toggle.png)
 

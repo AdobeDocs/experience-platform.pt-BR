@@ -5,9 +5,9 @@ title: Visão geral da governança de dados
 topic-legacy: overview
 description: A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial no Experience Platform em vários níveis, incluindo catálogos, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto 
 Há dois tipos de políticas disponíveis:
 
 * **[!UICONTROL Política de gestão de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
-* **[!UICONTROL Política de consentimento] (Beta)**: Filtre os perfis que podem ser ativados para [destinos](../destinations/home.md) com base no consentimento ou nas preferências dos clientes.
+* **[!UICONTROL Política de consentimento]**: Filtre os perfis que podem ser ativados para [destinos](../destinations/home.md) com base no consentimento ou nas preferências dos clientes.
 
 Depois que os rótulos de uso de dados forem aplicados, os assistentes de dados poderão criar políticas usando o [!DNL Policy Service] API ou [!DNL Experience Platform] interface do usuário. Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte o [visão geral das políticas](./policies/overview.md).
 

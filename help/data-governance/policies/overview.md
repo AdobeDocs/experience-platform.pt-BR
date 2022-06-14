@@ -5,9 +5,9 @@ title: Visão geral das políticas de uso de dados
 topic-legacy: policies
 description: Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro do Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos d
 Há dois tipos de políticas disponíveis:
 
 * **[!UICONTROL Política de gestão de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
-* **[!UICONTROL Política de consentimento] (Beta)**: Filtre os perfis que podem ser ativados para [destinos](../../destinations/home.md) com base no consentimento ou nas preferências dos clientes
+* **[!UICONTROL Política de consentimento]**: Filtre os perfis que podem ser ativados para [destinos](../../destinations/home.md) com base no consentimento ou nas preferências dos clientes
 
 Este documento fornece uma visão geral de alto nível das políticas de uso de dados e fornece links para documentação adicional sobre como trabalhar com políticas na interface do usuário ou na API.
 
@@ -89,6 +89,6 @@ A tabela abaixo descreve as principais ações de marketing fornecidas prontas p
 | Direcionamento de email | Uma ação que usa dados em campanhas de segmentação de email. |
 | Exportar para Terceiros | Uma ação que exporta dados para processadores e entidades que não têm relacionamento direto com os clientes. Muitos provedores de dados têm termos nos contratos que proíbem a exportação de dados de onde eles foram coletados originalmente. Por exemplo, os contratos de rede social geralmente restringem a transferência de dados que você recebe deles. |
 | Publicidade no site | Uma ação que usa dados para anúncios no site, incluindo a seleção e a entrega de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tais anúncios. |
-| Personalization no site | Uma ação que usa dados para personalização de conteúdo no site. A personalização no site é qualquer dado usado para fazer inferências sobre os interesses dos usuários e é usado para selecionar qual conteúdo ou anúncios são exibidos com base nessas inferências. |
+| Personalização no site | Uma ação que usa dados para personalização de conteúdo no site. A personalização no site é qualquer dado usado para fazer inferências sobre os interesses dos usuários e é usado para selecionar qual conteúdo ou anúncios são exibidos com base nessas inferências. |
 | Correspondência de segmentos | Uma ação que usa dados para a Correspondência de segmentos do Adobe Experience Platform, que permite que dois ou mais usuários da Plataforma troquem dados de segmentos. Ao ativar as políticas que fazem referência a essa ação, é possível restringir quais dados são usados para a Correspondência de segmentos. Por exemplo, se a política principal &quot;Restringir o compartilhamento de dados&quot; estiver ativada, quaisquer dados com uma [Rótulo C11](../labels/reference.md#c11) não pode ser usado para Correspondência de segmentos. |
-| Personalization de identidade única | Uma ação que requer que uma única identidade seja usada para fins de personalização, em vez de compilar identidades de várias fontes. |
+| Personalização de identidade única | Uma ação que requer que uma única identidade seja usada para fins de personalização, em vez de compilar identidades de várias fontes. |

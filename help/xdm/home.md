@@ -5,9 +5,9 @@ title: Visão geral do sistema XDM
 topic-legacy: overview
 description: A padronização e a interoperabilidade são conceitos-chave por trás do Adobe Experience Platform. O Experience Data Model (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2015'
+source-wordcount: '2076'
 ht-degree: 2%
 
 ---
@@ -50,6 +50,12 @@ Para obter mais informações sobre como gerenciar e interagir com schemas no Pl
 * [Guia da API do Registro de Schema](./api/overview.md)
 
 ## Comportamentos de dados no sistema XDM {#data-behaviors}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_behavior"
+>title="Comportamentos de dados"
+>abstract="Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento: registro, série de tempo e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de séries de tempo capturam um instantâneo do sistema no momento em que uma ação foi tomada. Os esquemas ad hoc capturam campos que são namespaces para uso somente por um único conjunto de dados."
+>text="See the documentation for more information on data behaviors in Platform."
 
 Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento:
 

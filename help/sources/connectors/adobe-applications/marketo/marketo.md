@@ -5,9 +5,9 @@ title: conector Marketo Engage
 topic-legacy: overview
 description: Este documento fornece uma visão geral do conector de fonte Marketo Engage, incluindo informações sobre autenticação, mapeamento e latência de dados.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,10 @@ Veja as etapas descritas na seção [Autentique seu conector de origem do Market
 ## Configurar mapeamento de organização do Adobe
 
 Antes de estabelecer conjuntos de mapeamento para [!DNL Marketo], primeiro você deve configurar o Mapeamento de organização do Adobe. Para obter etapas detalhadas sobre como concluir isso, consulte o guia em [configurar o Mapeamento da Organização do Adobe para [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Configurar namespaces B2B e utilitário de geração automática de esquema
+
+Em seguida, use o namespace B2B e o utilitário de geração automática de schema para configurar o console do desenvolvedor do Platform e o ambiente do Postman. Isso permite que você preencha automaticamente seus namespaces e esquemas B2B. Para obter instruções detalhadas, consulte o guia em [configuração dos namespaces B2B e do utilitário de geração automática de esquema](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 

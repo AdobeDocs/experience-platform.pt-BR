@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de fonte Marketo Engage na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
+source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,7 @@ Este tutorial fornece etapas para criar um [!DNL Marketo Engage] (a seguir desig
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
+* [Namespaces B2B e utilitário de geração automática de esquema](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Os namespaces B2B e o utilitário de geração automática de schema permitem usar [!DNL Postman] para gerar valores automaticamente para seus namespaces e esquemas B2B. Você deve concluir seus namespaces e esquemas B2B primeiro, antes de criar um [!DNL Marketo] conexão de origem e fluxo de dados.
 * [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Criar e editar esquemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md): Saiba como criar e editar esquemas na interface do usuário.

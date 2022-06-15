@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Veeva CRM usando a interface do usuário do Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 8b4e3b9e95dd4c2ff8f3b5a1399eb7d114024bb6
+source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '429'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Se você já tiver um [!DNL Veeva CRM] , você pode ignorar o restante deste doc
 | `password` | A senha do [!DNL Veeva CRM] conta do usuário. |
 | `securityToken` | O token de segurança do [!DNL Veeva CRM] conta do usuário. |
 
-Para obter mais informações sobre a introdução, consulte esta seção [[!DNL Veeva CRM] documento](https://developer.veevacrm.com/api/#order-management-rest-api).
+Para obter mais informações sobre a introdução, consulte esta seção [[!DNL Veeva CRM] documento](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Conecte seu [!DNL Veeva CRM] account
 

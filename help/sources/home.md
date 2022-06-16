@@ -5,7 +5,7 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
+source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 0%
@@ -45,6 +45,12 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de publ
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
+<!-- ### Analytics {#analytics}
+
+Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
+
 ### Armazenamento na nuvem {#cloud-storage}
 
 As fontes de armazenamento em nuvem podem trazer seus próprios dados para a plataforma sem precisar baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes por meio da interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
@@ -68,7 +74,6 @@ As fontes de armazenamento em nuvem podem trazer seus próprios dados para a pla
 O Experience Platform oferece suporte para assimilar dados de uma plataforma de gerenciamento de consentimento e preferências de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
-
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM) {#customer-relationship-management}
 

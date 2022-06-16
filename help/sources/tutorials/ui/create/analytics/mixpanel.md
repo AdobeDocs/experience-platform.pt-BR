@@ -4,9 +4,9 @@ title: (Beta) Crie uma conexão de origem do Mixpanel na interface do usuário
 description: Saiba como criar uma conexão de origem do Mixpanel usando a interface do usuário do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e, em s
 >id="platform_sources_mixpanel_timezone"
 >title="Definir um fuso horário para a assimilação do Mixpanel"
 >abstract="O fuso horário deve ser o mesmo que a configuração de fuso horário do perfil do Mixpanel, pois o Platform usa o fuso horário designado do projeto para assimilar dados relevantes do Mixpanel. O Mixpanel ajustará o fuso horário para coordenar com o fuso horário do projeto antes de gravar o evento em um armazenamento de dados do Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Saiba mais na documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Saiba mais na documentação"
 
 Depois que a fonte for autenticada, forneça a ID do projeto e o fuso horário e selecione **[!UICONTROL Selecionar]**.
 

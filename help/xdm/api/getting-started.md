@@ -5,9 +5,9 @@ title: Introdução à API do Registro de Schema
 description: Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do Registro de Schema.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -211,6 +211,7 @@ A tabela a seguir lista os compatíveis `Accept` valores de cabeçalho, incluind
 | `application/vnd.adobe.xed-notext+json; version=1` | XDM bruto com `$ref` e `allOf`. Sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` atributos e `allOf` resolvido. Sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` atributos e `allOf` resolvido. Os descritores são incluídos. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` e `allOf` resolvido, tem títulos e descrições. Os campos obsoletos são indicados com um `meta:status` atributo de `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

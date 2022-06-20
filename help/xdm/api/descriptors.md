@@ -5,9 +5,9 @@ title: Endpoint da API de descritores
 description: O endpoint /descriptors na API do Registro de Schema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -311,7 +311,7 @@ Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; 
 
 | Propriedade | Descrição |
 | --- | --- |
-| `@type` | O tipo de descritor que está sendo definido. |
+| `@type` | O tipo de descritor que está sendo definido. Para um descritor de identidade, esse valor deve ser definido como `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/pessoalEmail/address&quot; em vez de &quot;/properties/pessoalEmail/properties/address&quot;) |
@@ -347,7 +347,7 @@ Descritores de nome amigáveis permitem que um usuário modifique o `title`, `de
 
 | Propriedade | Descrição |
 | --- | --- |
-| `@type` | O tipo de descritor que está sendo definido. |
+| `@type` | O tipo de descritor que está sendo definido. Para um descritor de nome amigável, esse valor deve ser definido como `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/pessoalEmail/address&quot; em vez de &quot;/properties/pessoalEmail/properties/address&quot;) |
@@ -377,7 +377,7 @@ Descritores de relacionamento descrevem uma relação entre dois esquemas difere
 
 | Propriedade | Descrição |
 | --- | --- |
-| `@type` | O tipo de descritor que está sendo definido. |
+| `@type` | O tipo de descritor que está sendo definido. Para um descritor de relacionamento, esse valor deve ser definido como `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | Caminho para o campo no schema de origem onde o relacionamento está sendo definido. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, &quot;/pessoalEmail/address&quot; em vez de &quot;/properties/pessoalEmail/properties/address&quot;). |
@@ -386,7 +386,6 @@ Descritores de relacionamento descrevem uma relação entre dois esquemas difere
 | `xdm:destinationProperty` | Caminho opcional para um campo de destino dentro do esquema de destino. Se essa propriedade for omitida, o campo de destino será inferido por qualquer campo que contenha um descritor de identidade de referência correspondente (veja abaixo). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### Descritor de identidade de referência
 
@@ -404,8 +403,32 @@ Os descritores de identidade de referência fornecem um contexto de referência 
 
 | Propriedade | Descrição |
 | --- | --- |
-| `@type` | O tipo de descritor que está sendo definido. |
+| `@type` | O tipo de descritor que está sendo definido. Para um descritor de identidade de referência, esse valor deve ser definido como `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | Caminho para o campo no schema de origem onde o descritor está sendo definido. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, &quot;/pessoalEmail/address&quot; em vez de &quot;/properties/pessoalEmail/properties/address&quot;). |
 | `xdm:identityNamespace` | O código do namespace de identidade para a propriedade de origem. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### Descritor de campo obsoleto
+
+Você pode [descontinuar um campo em um recurso XDM personalizado](../tutorials/field-deprecation.md#custom) adicionando uma `meta:status` conjunto de atributos para `deprecated` para o campo em questão. No entanto, se você quiser descontinuar os campos fornecidos pelos recursos padrão do XDM em seus esquemas, poderá atribuir um descritor de campo obsoleto ao schema em questão para obter o mesmo efeito. Usar o [correto `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), é possível exibir quais campos padrão estão obsoletos para um esquema ao pesquisá-lo na API.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `@type` | O tipo de descritor. Para um descritor de descontinuação de campo, esse valor deve ser definido como `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | O URI `$id` do esquema ao qual você está aplicando o descritor. |
+| `xdm:sourceVersion` | A versão do esquema à qual você está aplicando o descritor. Deve ser definido como `1`. |
+| `xdm:sourceProperty` | O caminho para a propriedade no esquema ao qual você está aplicando o descritor. Se quiser aplicar o descritor a várias propriedades, é possível fornecer uma lista de caminhos na forma de uma matriz (por exemplo, `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}

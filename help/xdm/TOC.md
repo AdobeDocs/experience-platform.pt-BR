@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e os grupos de campos de esquema do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '469'
 ht-degree: 16%
 
 ---
@@ -171,12 +171,13 @@ ht-degree: 16%
    * [Criar um esquema na interface do usuário](tutorials/create-schema-ui.md)
    * [Criar um esquema na API](tutorials/create-schema-api.md)
    * [Definir campos personalizados na API](./tutorials/custom-fields-api.md)
+   * [Adicionar valores sugeridos a um campo (API)](tutorials/suggested-values.md)
+   * [Descontinuar um campo XDM](tutorials/field-deprecation.md)
    * [Definir um relacionamento de esquema na interface do usuário](tutorials/relationship-ui.md)
    * [Definir uma relação de esquema na API](tutorials/relationship-api.md)
    * [Definir um relacionamento de esquema na Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Gerenciar rótulos de uso de dados para um esquema](tutorials/labels.md)
-   * [Criar um esquema ad-hoc (API)](tutorials/ad-hoc.md)
-   * [Adicionar valores sugeridos a um campo (API)](tutorials/suggested-values.md)
+   * [Criar um esquema ad hoc](tutorials/ad-hoc.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

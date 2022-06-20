@@ -2,10 +2,11 @@
 title: Monitorar atividades no encaminhamento de eventos
 description: Saiba como monitorar o uso, os erros e o tempo de computação nas propriedades de encaminhamento do evento.
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +23,12 @@ O **[!UICONTROL Monitoramento]** na interface do usuário da Coleta de dados, é
 ## Pré-requisitos
 
 Este guia presume que você tenha comprado o encaminhamento de eventos e que você tem uma compreensão funcional de como o encaminhamento de eventos funciona. Consulte a [visão geral do encaminhamento de eventos](./overview.md) para obter mais informações.
+
+## Vídeo de visão geral
+
+Assista ao vídeo a seguir para obter uma visão geral de alto nível do recurso de monitoramento:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## Seleção de propriedades e ambientes
 

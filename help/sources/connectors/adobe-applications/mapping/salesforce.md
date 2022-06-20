@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, Salesforce, salesforce,
 title: Campos de mapeamento do Salesforce
 description: As tabelas abaixo contêm os mapeamentos entre os campos de origem do Salesforce e seus campos XDM correspondentes.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 5a8c5c4f6d569ea1c587b12e5d72cd471b111921
+source-git-commit: d77bee173791843997985cfdae15959350fd9ab2
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '291'
 ht-degree: 9%
 
 ---
@@ -295,6 +295,29 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
 | `Type` | `b2b.personType` |
+
+## Relação de contato da conta {#account-contact-relation}
+
+| Campo de origem | Caminho do campo XDM do Target | Notas |
+| --- | --- | --- |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
+| `ContactId` | `personKey.sourceID` |
+| `iif(ContactId != null && ContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personKey` |
+| `CreatedById` | `extSourceSystemAudit.createdBy` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `EndDate` | `relationEndDate` |
+| `IsDeleted` | `isDeleted` |
+| `Id` | `accountPersonKey.sourceID` |
+| `"Salesforce"` | `accountPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountPersonKey.sourceInstanceID` |
+| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | Identidade primária. |
+| `IsActive` | `IsActive` |
+| `IsDirect` | `IsDirect` |
+| `LastModifiedById` | `extSourceSystemAudit.lastUpdatedBy` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `explode(Roles,";")` | `personRoles[]` |
+| `StartDate` | `relationStartDate` |
 
 ## Próximas etapas
 

@@ -1,16 +1,18 @@
 ---
 title: Descontinuar um campo XDM
 description: Saiba como descontinuar os campos do Experience Data Model (XDM) na API do Registro de Schema.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '554'
 ht-degree: 6%
 
 ---
 
 # Descontinuar um campo XDM
 
-No Experience Data Model (XDM), é possível descontinuar um campo em um esquema ou recurso personalizado usando o [API do Registro de Schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Este documento aborda como descontinuar campos para diferentes recursos XDM.
+No Experience Data Model (XDM), é possível descontinuar um campo em um esquema ou recurso personalizado usando o [API do Registro de Schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). A desaprovação de um campo faz com que ele fique oculto das interfaces do usuário downstream, como o [!UICONTROL Perfis] espaço de trabalho e Customer Journey Analytics, mas é uma alteração sem quebra e não afeta negativamente os fluxos de dados existentes.
+
+Este documento aborda como descontinuar campos para diferentes recursos XDM.
 
 ## Introdução
 

@@ -1,9 +1,10 @@
 ---
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do usuário do Adobe Experience Platform.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,8 @@ Um rótulo aplicado a um campo de esquema indica as políticas de uso que se apl
 
 Embora os rótulos possam ser aplicados a conjuntos de dados individuais (e campos nesses conjuntos de dados), você também pode aplicar rótulos no nível do esquema. Quando os rótulos são aplicados diretamente a um esquema, eles são propagados para todos os conjuntos de dados existentes e futuros que são baseados nesse esquema.
 
+Além disso, qualquer rótulo de campo adicionado em um schema se propaga para todos os outros esquemas que empregam o mesmo campo de uma classe compartilhada ou grupo de campos. Isso ajuda a garantir que as regras de uso para campos semelhantes sejam consistentes em todo o modelo de dados.
+
 Este tutorial aborda as etapas para adicionar rótulos a um esquema usando o Editor de esquemas na interface do usuário da plataforma.
 
 ## Introdução
@@ -32,7 +35,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 
 ## Selecione um esquema ou campo para adicionar rótulos a
 
-Rótulos só podem ser aplicados a esquemas e não podem ser adicionados aos componentes que compõem esses esquemas (classes, grupos de campos e tipos de dados). Para começar a adicionar rótulos, primeiro [selecionar um esquema existente para editar](../ui/resources/schemas.md#edit) ou [criar um novo schema](../ui/resources/schemas.md#create) para exibir sua estrutura no Editor de esquemas.
+Para começar a adicionar rótulos, primeiro [selecionar um esquema existente para editar](../ui/resources/schemas.md#edit) ou [criar um novo schema](../ui/resources/schemas.md#create) para exibir sua estrutura no Editor de esquemas.
 
 Para editar os rótulos de um campo individual, você pode selecionar o campo na tela e depois selecionar **[!UICONTROL Gerenciar acesso]** no painel direito.
 

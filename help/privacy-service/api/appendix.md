@@ -5,7 +5,7 @@ title: Apêndice do guia da API do Privacy Service
 topic-legacy: developer guide
 description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 532c9c9d07c112944ff26b1e48545d2b4777b06c
+source-git-commit: 1a84ebfa0ad7801e14896dffd28302f057ae171d
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 7%
@@ -73,7 +73,7 @@ A tabela a seguir descreve os valores aceitos para especificar um produto de Ado
 | Autenticação Adobe Primetime | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Atributos do cliente (CRS) | `CRS` |
-| Identity Service | `Identity` |
+| Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}

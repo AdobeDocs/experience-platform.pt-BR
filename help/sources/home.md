@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,11 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de publ
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
-<!-- ### Analytics {#analytics}
+### Analytics {#analytics}
 
-Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+O Experience Platform oferece suporte para assimilar dados de uma plataforma de análise de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 
 ### Armazenamento na nuvem {#cloud-storage}
 

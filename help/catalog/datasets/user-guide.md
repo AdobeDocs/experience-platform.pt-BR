@@ -5,9 +5,9 @@ title: Guia da interface do usuário de conjuntos de dados
 topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,13 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Assegure a conformidade com regulamentos, restrições e políticas relacionadas ao uso de dados do cliente.
 
-## Exibir conjuntos de dados
+## Exibir conjuntos de dados {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Números negativos na atividade do conjunto de dados"
+>abstract="Números negativos em registros assimilados significam que um usuário excluiu determinados lotes em um intervalo de tempo selecionado."
+>text="Learn more in documentation"
 
 No [!DNL Experience Platform] UI, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para abrir o **[!UICONTROL Conjuntos de dados]** painel. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de assimilação mais recente.
 

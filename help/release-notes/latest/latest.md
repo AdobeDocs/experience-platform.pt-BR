@@ -1,11 +1,10 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: As notas de versão mais recentes do Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 56d43d93be7aca059a38e9428ad5680dd52ad6f9
+title: Notas de versão da Adobe Experience Platform de junho de 2022
+description: As notas de versão de junho de 2022 para o Adobe Experience Platform.
+source-git-commit: 98b9e79fadecc6e0d5ee8e86b785fd905643f725
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 8%
+source-wordcount: '639'
+ht-degree: 6%
 
 ---
 
@@ -16,6 +15,7 @@ ht-degree: 8%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
 - [Serviço de query](#query-service)
 - [Fontes](#sources)
 
@@ -33,6 +33,20 @@ O Data Science Workspace usa aprendizagem de máquina e inteligência artificial
 {style=&quot;table-layout:auto&quot;}
 
 Para obter informações mais gerais sobre o Data Science Workspace, consulte o [documentação de visão geral](../../data-science-workspace/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos destinos**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Ative perfis para pesquisas direcionadas da Medallia e coleta de feedback para entender melhor as necessidades e expectativas do cliente. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Serviço de query {#query-service}
 

@@ -3,9 +3,9 @@ title: Rastrear eventos usando o SDK da Web da Adobe Experience Platform
 description: Saiba como rastrear eventos do SDK da Web da Adobe Experience Platform.
 keywords: sendEvent; xdm; eventType; datasetId; sendBeacon; send Beacon; documentUnloading; document Unloading; onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -218,14 +218,6 @@ O `sendEvent` retorna uma promessa resolvida com um `result` objeto. O `result` 
 >[!WARNING]
 >
 >`destinations` está atualmente em Beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-**inferências**: Insights de aprendizado de máquina em tempo real. [Saiba mais sobre o Aprendizado de máquina em tempo real.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
-
->[!WARNING]
->
->`inferences` está atualmente em Beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-
 
 ## Modificação global de eventos {#modifying-events-globally}
 

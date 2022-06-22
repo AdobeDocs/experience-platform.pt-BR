@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial o orienta pelas etapas necessárias para criar uma receita usando o modelo do construtor de receitas de notebooks JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -38,7 +38,7 @@ O [!UICONTROL Criador de receita] o notebook permite executar execuções de tre
 >
 >O [!UICONTROL Criador de receita] o notebook suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade criar receita só suporta [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 Ao selecionar a variável [!UICONTROL Criador de receita] do lançador, o notebook é aberto em uma nova guia.
 

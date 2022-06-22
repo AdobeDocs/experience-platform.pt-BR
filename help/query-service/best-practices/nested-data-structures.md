@@ -1,9 +1,11 @@
 ---
+keywords: Experience Platform, serviço de consulta, serviço de consulta, estruturas de dados aninhadas, dados aninhados;
 title: Trabalhar com estruturas de dados aninhadas no Serviço de query
 description: Este documento fornece um exemplo de trabalho para processar e transformar campos de dados aninhados usando instruções CTAS e INSERT INTO.
-source-git-commit: 838ee939a8438c2f09ff64044c129e20c37ea01a
+exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
+source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 1%
 
 ---

@@ -1,7 +1,9 @@
 ---
 title: Atributos derivados
 description: Atributos derivados permitem calcular atributos em uma cadência regular e, como opção, publicar esses atributos derivados no Perfil do cliente em tempo real como atributos de perfil. Este documento fornece uma visão geral de como usar o Serviço de query para criar atributos derivados para usar com os dados do perfil.
-source-git-commit: 72e157e0a6310ebf2f55205b03b60600a56e3cf6
+hide: true
+hidefromtoc: true
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 1%

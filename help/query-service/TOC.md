@@ -4,7 +4,7 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 18%
@@ -47,10 +47,6 @@ ht-degree: 18%
 - Consultas de exemplo {#sample-queries}
    - [Exemplos de consultas de eventos de experiência](sample-queries/experience-event.md)
    - [Exemplos de consultas do Adobe Analytics](sample-queries/adobe-analytics.md)
-- Governança de dados {#data-governance}
-   - [Guia de log de auditoria](data-governance/audit-log-guide.md)
-   - [Identidades em conjuntos de dados de esquema ad hoc](data-governance/ad-hoc-schema-identities.md)
-   - [Suporte ao controle de acesso baseado em atributos para esquemas ad hoc](./data-governance/ad-hoc-schema-labels.md)
 - Referência SQL {#sql}
    - [Visão geral do SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)
@@ -69,6 +65,10 @@ ht-degree: 18%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- Governança de dados {#data-governance}
+   - [Guia de log de auditoria](data-governance/audit-log-guide.md)
+   - [Identidades em conjuntos de dados de esquema ad hoc](data-governance/ad-hoc-schema-identities.md)
+   - [Suporte ao controle de acesso baseado em atributos para esquemas ad hoc](./data-governance/ad-hoc-schema-labels.md)
 - [Guia de solução de problemas](troubleshooting-guide.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

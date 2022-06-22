@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 8%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 8%
       * [Visão geral da voz dos destinos do cliente](./catalog/voice/overview.md)
       * [Confirmar extensão de Feedback digital](./catalog/voice/confirmit-digital-feedback.md)
       * [Extensão de Tags Invoca](./catalog/voice/invoca.md)
+      * [Ligação Medallia](./catalog/voice/medallia-connector.md)
       * [Extensão Medallia](./catalog/voice/medallia.md)
       * [Extensão da Caixa de entrada do URL de conversa](./catalog/voice/talkurl.md)
 * SDK de destino {#destination-sdk}

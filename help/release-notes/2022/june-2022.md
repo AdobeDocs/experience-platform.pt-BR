@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de junho de 2022
 description: As notas de versão de junho de 2022 para o Adobe Experience Platform.
-source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
+source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '860'
 ht-degree: 6%
 
 ---
@@ -58,6 +58,7 @@ Para obter informações mais gerais sobre o Data Science Workspace, consulte o 
 | Recurso | Descrição |
 | ----------- | ----------- |
 | Suporte ao Destination SDK (Beta) para [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinos com base em arquivo e [nomes de arquivo configuráveis](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Agora você pode usar o Destination SDK para criar destinos de armazenamento da Google Cloud e definir nomes de arquivo personalizados para arquivos exportados, por meio de macros de nome de arquivo. <br><br> No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações. |
+| A coluna Segmento no fluxo de dados é executada para destinos em lote | Para que o fluxo de dados seja executado para destinos em lote, a interface do usuário agora exibe o nome do segmento associado a cada execução do fluxo de dados. Leia mais sobre [o fluxo de dados é executado para destinos em lote](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 

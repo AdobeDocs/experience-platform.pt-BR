@@ -1,9 +1,10 @@
 ---
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: (Beta) Use o Destination SDK para configurar um destino baseado em arquivo
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---
@@ -259,8 +260,9 @@ Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"
 * Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino, consulte as seguintes seções para os tipos de autenticação suportados pelo Destination SDK para destinos baseados em arquivos:
 
    * [Autenticação Amazon S3](authentication-configuration.md#s3)
-   * [Cadeia de conexão do Azure](authentication-configuration.md#blob)
-   * [Principal do Serviço Azure](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Armazenamento Azure Data Lake](authentication-configuration.md#adls)
+   * [Armazenamento em nuvem Google](authentication-configuration.md#gcs)
    * [Autenticação SFTP com chave SSH](authentication-configuration.md#sftp-ssh)
    * [Autenticação SFTP com senha](authentication-configuration.md#sftp-password)
 

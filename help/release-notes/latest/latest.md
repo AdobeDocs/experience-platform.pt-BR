@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de junho de 2022
 description: As notas de versão de junho de 2022 para o Adobe Experience Platform.
-source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
+source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '801'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,6 @@ Para obter informações mais gerais sobre o Data Science Workspace, consulte o 
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| [(Beta) Conexão com o Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | O [!DNL Google Ad Manager 360] a conexão habilita o upload em lote para [!DNL publisher provided identifiers] (PPID) em [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>No momento, esse destino está na versão Beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Google Ad Manager 360] entre em contato com o representante do Adobe e forneça [!DNL IMS Organization ID]. |
 | Suporte ao Destination SDK (Beta) para [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinos com base em arquivo e [nomes de arquivo configuráveis](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Agora você pode usar o Destination SDK para criar destinos de armazenamento da Google Cloud e definir nomes de arquivo personalizados para arquivos exportados, por meio de macros de nome de arquivo. <br><br> No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -66,6 +65,7 @@ Para obter informações mais gerais sobre o Data Science Workspace, consulte o 
 
 | Destino | Descrição |
 | ----------- | ----------- |
+| [(Beta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | O [!DNL Google Ad Manager 360] a conexão habilita o upload em lote para [!DNL publisher provided identifiers] (PPID) em [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>No momento, esse destino está na versão Beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Google Ad Manager 360] entre em contato com o representante do Adobe e forneça [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Ative perfis para pesquisas direcionadas da Medallia e coleta de feedback para entender melhor as necessidades e expectativas do cliente. |
 
 {style=&quot;table-layout:auto&quot;}

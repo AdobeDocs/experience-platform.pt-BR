@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 8c2ce6936eea5c90319a03e35f697ebcdb89e1e5
+source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 8%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 8%
       * [Conexão Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensão do Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Conexão com o Google Ad Manager](./catalog/advertising/google-ad-manager.md)
+      * [Conexão com o Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Conexão Google Customer Match](./catalog/advertising/google-customer-match.md)
       * [Conexão Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extensão de tag do Google](./catalog/advertising/gtag-advertising.md)

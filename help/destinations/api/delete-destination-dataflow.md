@@ -5,9 +5,9 @@ title: Excluir um fluxo de dados de destino usando a API de Serviço de Fluxo
 type: Tutorial
 description: Saiba como excluir fluxos de dados para destinos de lote e fluxo por meio da API de Serviço de Fluxo.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Sem conteúdo) e um corpo e
 
 ## Tratamento de erros da API {#api-error-handling}
 
-Os endpoints de API neste tutorial seguem os princípios gerais da mensagem de erro da API de Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
+Os endpoints de API neste tutorial seguem os princípios gerais da mensagem de erro da API de Experience Platform. Consulte [Códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma para obter mais informações sobre a interpretação das respostas dos erros.
 
 ## Próximas etapas {#next-steps}
 

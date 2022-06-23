@@ -6,9 +6,9 @@ description: Este documento aborda a criação de destinos de transmissão usand
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2049'
+source-wordcount: '2241'
 ht-degree: 2%
 
 ---
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`: Use o fluxo de dados obtido na etapa anterior.
-* `{ETAG}`: Use a tag obtida na etapa anterior.
-* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar as IDs de segmento dos segmentos que deseja ativar, acesse **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecione **[!UICONTROL API do serviço de segmentação]** no menu de navegação esquerdo e procure a variável `GET /segment/definitions` operação em **[!UICONTROL Definições de segmento]**.
-* `{PROFILE_ATTRIBUTE}`: Por exemplo, `personalEmail.address` ou `person.lastName`
+| Propriedade | Descrição |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | No URL, use a ID do fluxo de dados criado na etapa anterior. |
+| `{ETAG}` | Obtenha o `{ETAG}` na resposta da etapa anterior, [Criar um fluxo de dados](#create-dataflow). O formato de resposta na etapa anterior escapou das aspas. Você deve usar os valores sem escape no cabeçalho da solicitação. Veja o exemplo abaixo: <br> <ul><li>Exemplo de resposta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valor a ser usado em sua solicitação: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> O valor da tag é atualizado com cada atualização bem-sucedida de um fluxo de dados. |
+| `{SEGMENT_ID}` | Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento para os segmentos que você deseja ativar, consulte [recuperar uma definição de segmento](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) na referência da API do Experience Platform. |
+| `{PROFILE_ATTRIBUTE}` | Por exemplo, `"person.lastName"` |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`e `remove`. Para adicionar um segmento a um fluxo de dados, use o `add` operação. |
+| `path` | Define a parte do fluxo que deve ser atualizada. Ao adicionar um segmento a um fluxo de dados, use o caminho especificado no exemplo. |
+| `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
+| `id` | Especifique a ID do segmento que você está adicionando ao fluxo de dados de destino. |
+| `name` | *Opcional*. Especifique o nome do segmento que você está adicionando ao fluxo de dados de destino. Observe que este campo não é obrigatório e você pode adicionar um segmento com êxito ao fluxo de dados de destino sem fornecer seu nome. |
 
 **Resposta**
 
@@ -597,7 +604,7 @@ A resposta retornada deve incluir no `transformations` os segmentos e os atribut
 }
 ```
 
-## Uso de coleções do Postman para se conectar a destinos de transmissão  {#collections}
+## Usando [!DNL Postman] coleções para se conectar aos destinos de transmissão  {#collections}
 
 Para se conectar aos destinos de transmissão descritos neste tutorial de forma mais simplificada, você pode usar [[!DNL Postman]](https://www.postman.com/).
 
@@ -612,17 +619,21 @@ Clique em [here](../assets/api/streaming-destination/DestinationPostmanCollectio
 
 Cada coleção inclui as solicitações necessárias e as variáveis de ambiente, para [!DNL AWS Kinesis]e [!DNL Azure Event Hub], respectivamente.
 
-### Como usar as coleções do Postman
+### Como usar o [!DNL Postman] coleções {#how-to-use-postman-collections}
 
 Para se conectar com sucesso aos destinos usando o [!DNL Postman] coleções, siga estas etapas:
 
 * Baixe e instale [!DNL Postman];
 * [Baixar](../assets/api/streaming-destination/DestinationPostmanCollection.zip) e descompacte as coleções anexadas;
-* Importar as coleções de suas pastas correspondentes para o Postman;
+* Importe as coleções de suas pastas correspondentes em [!DNL Postman];
 * Preencha as variáveis ambientais de acordo com as instruções deste artigo;
-* Execute o [!DNL API] solicitações do Postman, com base nas instruções deste artigo.
+* Execute o [!DNL API] solicitações de [!DNL Postman], com base nas instruções deste artigo.
 
-## Próximas etapas
+## Tratamento de erros da API {#api-error-handling}
+
+Os endpoints de API neste tutorial seguem os princípios gerais da mensagem de erro da API de Experience Platform. Consulte [Códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma para obter mais informações sobre a interpretação das respostas dos erros.
+
+## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você conectou com sucesso a Plataforma a um de seus destinos de transmissão preferidos e configurou um fluxo de dados para o respectivo destino. Os dados de saída agora podem ser usados no destino para análises de clientes ou quaisquer outras operações de dados que você desejar executar. Consulte as seguintes páginas para obter mais detalhes:
 

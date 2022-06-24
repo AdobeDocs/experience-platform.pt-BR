@@ -3,11 +3,11 @@ keywords: Experience Platform, home, tópicos populares, serviço de consulta, m
 solution: Experience Platform
 title: Ponto de extremidade da API de modelos de consulta
 topic-legacy: query templates
-description: A documentação a seguir aborda as várias chamadas de API que você pode fazer usando modelos de consulta para a API do serviço de consulta.
+description: Este guia detalha as várias chamadas de API de modelo de consulta que podem ser feitas usando a API do serviço de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 ## Exemplos de chamadas de API
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que você pode fazer usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir descrevem as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+
+Consulte a [Documentação dos modelos de consulta da interface do usuário](../ui/query-templates.md) para obter informações sobre como criar modelos por meio da interface do usuário do Experience Platform.
 
 ### Recuperar uma lista de templates de query
 

@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Use o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -174,8 +174,16 @@ Como parte do processo para testar seu destino, você deve usar a interface do u
 
 ## Etapa 7: Publicar o destino {#publish-destination}
 
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
 Após configurar e testar seu destino, use o [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
 
 ## Etapa 8: Documente seu destino {#document-destination}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
 
 Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md).

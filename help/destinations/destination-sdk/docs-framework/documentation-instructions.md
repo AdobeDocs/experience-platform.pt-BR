@@ -2,14 +2,18 @@
 title: Documente seu destino no Adobe Experience Platform
 description: Instruções detalhadas sobre você para criar uma página de documentação para seu destino no Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 3c871471802e905b58acf8cd25db6788f49b9e43
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
 
 # Documente seu destino no Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>O processo documentado aqui é necessário apenas para parceiros que enviam destinos (públicos) produzidos. Se estiver criando um destino privado para uso próprio, não será necessário criar e publicar a documentação para o destino.
 
 ## Visão geral {#overview}
 

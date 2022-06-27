@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: (Beta) Use o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -280,8 +280,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Etapa 5: Publicar o destino {#publish-destination}
 
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
 Após configurar e testar seu destino, use o [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
 
 ## Etapa 6: Documente seu destino {#document-destination}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
 
 Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md).

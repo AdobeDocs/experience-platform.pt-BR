@@ -1,11 +1,9 @@
 ---
 keywords: governança de dados rtcdp; governança de dados rtcdp; governança de dados de perfil de cliente em tempo real; privacidade rtcdp; privacidade rtcdp
 title: Privacidade no Real-time Customer Data Platform
-seo-title: Privacy in Real-time Customer Data Platform
 description: O Real-time Customer Data Platform permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
-seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: e3519817559dca372e228ed19bba4f9adf279768
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
@@ -24,7 +22,7 @@ Regulamentos legais de privacidade, como o [!DNL General Data Protection Regulat
 
 >[!IMPORTANT]
 >
-> As solicitações de privacidade enviadas pelo Adobe Experience Platform Privacy Service para o Adobe Marketo Engage aplicam-se somente aos clientes da CDP B2B em tempo real.
+> As solicitações de privacidade enviadas por meio do Adobe Experience Platform Privacy Service para Adobe Marketo Engage aplicam-se somente aos clientes da CDP B2B em tempo real.
 
 ## Recursos de rejeição
 

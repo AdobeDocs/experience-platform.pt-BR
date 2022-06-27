@@ -1,11 +1,9 @@
 ---
 keywords: Destinos; perguntas; perguntas frequentes; perguntas frequentes; perguntas frequentes sobre destinos
 title: Perguntas frequentes
-seo-title: Frequently asked questions
 description: Respostas às perguntas mais frequentes sobre os destinos do Adobe Experience Platform
-seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

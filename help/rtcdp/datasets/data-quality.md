@@ -1,22 +1,19 @@
 ---
-keywords: qualidade de dados;qualidade de dados rtcdp
-title: Qualidade dos dados na plataforma de dados do cliente em tempo real
-seo-title: Qualidade dos dados na plataforma de dados do cliente em tempo real
-description: Um documento sobre a qualidade dos dados na plataforma de dados do cliente em tempo real
-seo-description: Um documento que descreve como a qualidade dos dados funciona por meio da ingestão em lote e de dados na Plataforma de dados do cliente em tempo real
-translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+keywords: qualidade dos dados, qualidade dos dados rtcdp
+title: Qualidade dos dados no Real-time Customer Data Platform
+description: Um documento sobre a qualidade dos dados no Real-time Customer Data Platform
+exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
+# Qualidade dos dados no Real-time Customer Data Platform
 
-# Qualidade dos dados na plataforma de dados do cliente em tempo real
+O Real-time Customer Data Platform (Real-time CDP) permite que você reúna dados de várias fontes para fornecer uma experiência consistente e coordenada para seus clientes. Como resultado, garantir que seus dados sejam completos, precisos e concisos é da maior importância.
 
-A Plataforma de dados do cliente em tempo real (CDP em tempo real) permite que você reúna dados de várias fontes e os conecte para proporcionar uma experiência consistente e coordenada aos seus clientes. Como resultado, garantir que seus dados sejam completos, precisos e concisos é da maior importância.
+A CDP em tempo real foi criada sobre a Adobe Experience Platform e utiliza muitos dos serviços e funcionalidades do Experience Platform. Dessa forma, você pode ter certeza de que seus dados serão verificados e validados à medida que forem assimilados.
 
-A CDP em tempo real foi desenvolvida sobre a Adobe Experience Platform e utiliza muitos dos serviços e funcionalidades do Experience Platform. Portanto, você pode estar confiante de que seus dados serão verificados e validados à medida que forem sendo ingeridos.
-
-Para obter informações mais detalhadas sobre a qualidade dos dados, leia a documentação de [qualidade dos dados no Adobe I/O](../../ingestion/quality/overview.md).
+Para obter informações mais detalhadas sobre a qualidade dos dados, leia o [documentação sobre qualidade de dados no Adobe I/O](../../ingestion/quality/overview.md).

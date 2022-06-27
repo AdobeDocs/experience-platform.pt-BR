@@ -2,11 +2,9 @@
 keywords: ativar destinos; ativar dados
 title: Visão geral de Activation
 type: Tutorial
-seo-title: Activation overview
 description: Saiba como ativar os dados do público-alvo que você tem no Adobe Experience Platform para vários tipos de destinos.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 1%

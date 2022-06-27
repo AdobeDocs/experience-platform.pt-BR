@@ -2,11 +2,9 @@
 keywords: ativar destinos de transmissão de segmento, ativar destinos de transmissão de segmento, ativar dados
 title: Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
 type: Tutorial
-seo-title: Activate audience data to streaming segment export destinations
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%

@@ -1,12 +1,10 @@
 ---
 title: Interação com a Adobe Analytics
-description: Saiba como usar a API do Edge Network Server para interagir com o Adobe Analytics
-seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
-keywords: recolha de dados; Saída; análises; api de rede de borda da Adobe Experience Platform; analytics
+description: Saiba como usar a API do Edge Network Server para interagir com o Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---

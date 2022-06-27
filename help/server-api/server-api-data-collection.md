@@ -1,11 +1,9 @@
 ---
 title: Coleta de dados
-description: Saiba como a API do servidor de rede de borda do Adobe Experience Platform estrutura os dados coletados
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: coleta de dados, coleta, Adobe Experience Platform Edge Network, api, estrutura
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+description: Saiba como a API do Servidor de rede de borda da Adobe Experience Platform estrutura os dados coletados.
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '131'
 ht-degree: 4%
 
 ---

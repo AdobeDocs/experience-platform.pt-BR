@@ -1,16 +1,16 @@
 ---
-title: Medidas de proteção de desempenho
-description: Saiba como usar a API do servidor em medidas de proteção de desempenho ideais
+title: Medidas de proteção de desempenho para a API do Servidor de Rede de Borda
+description: Saiba como usar a API do servidor em medidas de proteção de desempenho ideais.
 keywords: coleta de dados, coleta, rede de borda, api, sla, slt, níveis de serviço
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
 
-# Medidas de proteção de desempenho
+# Medidas de proteção de desempenho para a API do Servidor de Rede de Borda
 
 ## Visão geral {#overview}
 

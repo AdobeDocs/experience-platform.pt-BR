@@ -1,12 +1,10 @@
 ---
 title: Tratamento de erros
 description: Saiba mais sobre os possíveis erros que você pode encontrar ao executar solicitações de API para a API do servidor de rede de borda do Adobe Experience Platform.
-seo-description: Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
-keywords: erro; código; manuseio; borda; rede; gateway; api
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '765'
 ht-degree: 3%
 
 ---

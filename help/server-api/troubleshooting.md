@@ -1,13 +1,11 @@
 ---
 title: Solução de problemas
-description: Saiba como solucionar erros ao usar a API do servidor de rede de borda do Adobe Experience Platform
-seo-description: Learn how to troubleshoot errors when using the Adobe Experience Platform Edge Network Server API
-keywords: rede de borda, gateway, api, solução de problemas, erros, griffon
+description: Saiba como solucionar erros ao usar a API do Edge Network Server.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 1%
+source-wordcount: '96'
+ht-degree: 2%
 
 ---
 

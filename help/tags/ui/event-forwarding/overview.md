@@ -3,7 +3,7 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 9%
@@ -67,7 +67,7 @@ Os tipos de elementos de dados que estão disponíveis no encaminhamento de even
 
 Embora os elementos de dados em si sejam criados e configurados da mesma maneira no encaminhamento do evento que são para as tags, há algumas diferenças importantes na sintaxe quando se trata de como eles fazem referência aos dados da Rede de borda da plataforma.
 
-#### Referência de dados da rede de borda da plataforma {#edge}
+#### Referência de dados da rede de borda da plataforma {#data-element-path}
 
 Para fazer referência aos dados da Rede de Borda da Plataforma, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Núcleo]** para a extensão e **[!UICONTROL Caminho]** para o tipo .
 

@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
+source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 86%
 
 ---
@@ -107,6 +107,9 @@ ht-degree: 86%
       * Adobe Target v2 {#target-v2}
          * [Visão geral](./extensions/web/target-v2/overview.md)
          * [Notas de versão](./extensions/web/target-v2/release-notes.md)
+      * [!DNL BrightCove] rastreamento de vídeo {#brightcove}
+         * [Visão geral](./extensions/web/brightcove/overview.md)
+         * [Notas de versão](./extensions/web/brightcove/release-notes.md)
       * Plug-ins comuns do Analytics {#plugins}
          * [Visão geral](./extensions/web/plugins/overview.md)
          * [Notas de versão](./extensions/web/plugins/release-notes.md)
@@ -114,12 +117,11 @@ ht-degree: 86%
          * [Visão geral](./extensions/web/core/overview.md)
          * [Encaminhamento de evento](./extensions/web/core/event-forwarding.md)
          * [Notas de versão](./extensions/web/core/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [Visão geral](./extensions/web/mailchimp/overview.md)
       * [!DNL Marketo Munchkin] {#marketo}
          * [Visão geral](./extensions/web/marketo/overview.md)
          * [Notas de versão](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] rastreamento de vídeo {#brightcove}
-         * [Visão geral](./extensions/web/brightcove/overview.md)
-         * [Notas de versão](./extensions/web/brightcove/release-notes.md)
       * Camada de dados da Google {#google-data-layer}
          * [Visão geral](./extensions/web/google-data-layer/overview.md)
          * [Notas de versão](./extensions/web/google-data-layer/release-notes.md)

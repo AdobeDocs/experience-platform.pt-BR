@@ -2,10 +2,10 @@
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino de fluxo para o Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '1787'
-ht-degree: 4%
+source-wordcount: '1790'
+ht-degree: 5%
 
 ---
 
@@ -291,6 +291,8 @@ Você pode usar o `backfillHistoricalProfileData` na configuração de destinos 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`: [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`: [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Como essa configuração conecta todas as informações necessárias ao seu destino {#connecting-all-configurations}
 

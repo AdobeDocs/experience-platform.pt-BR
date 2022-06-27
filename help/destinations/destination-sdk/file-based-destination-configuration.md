@@ -2,10 +2,10 @@
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: (Beta) Opções de configuração de destino baseadas em arquivo para o Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2304'
-ht-degree: 5%
+source-wordcount: '2313'
+ht-degree: 6%
 
 ---
 
@@ -788,6 +788,7 @@ Esta seção se refere às configurações de exportação de arquivos na config
 | `filenameConfig.defaultFilenameAppendOptions` | String | *Obrigatório*. Macros de nome de arquivo padrão pré-selecionadas que os usuários podem desmarcar.<br><br> As macros nesta lista são um subconjunto das definidas em `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | String | *Opcional*. Define as macros de nome de arquivo padrão para os arquivos exportados. Eles não podem ser substituídos pelos usuários. <br><br>Qualquer macro definida por `allowedFilenameAppendOptions` será anexada após a variável `defaultFilename` macros. <br><br>If `defaultFilename` estiver vazia, você deve definir pelo menos uma macro em `allowedFilenameAppendOptions`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ### Configuração do nome do arquivo {#file-name-configuration}
 
@@ -808,6 +809,7 @@ Como prática recomendada, você sempre deve incluir a variável `SEGMENT_ID` em
 | `CUSTOM_TEXT` | [!UICONTROL Texto personalizado] | Texto personalizado definido pelo usuário a ser incluído no nome do arquivo. Não pode ser usado em `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Data e hora] | Carimbo de data e hora de 10 dígitos da hora em que o arquivo foi gerado, no formato Unix. | 1652131584 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ![Imagem da interface do usuário que mostra a tela de configuração do nome do arquivo com macros pré-selecionadas](assets/file-name-configuration.png)
 
@@ -840,6 +842,8 @@ Você pode usar o `backfillHistoricalProfileData` na configuração de destinos 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os segmentos são ativados para o destino. <br> <ul><li> `true`: [!DNL Platform] envia os perfis de usuário históricos que se qualificaram para o segmento antes que ele seja ativado. </li><li> `false`: [!DNL Platform] inclui somente perfis de usuário qualificados para o segmento após ele ser ativado. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Como essa configuração conecta todas as informações necessárias ao seu destino {#connecting-all-configurations}
 

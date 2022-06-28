@@ -2,14 +2,18 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination/publish`.
 title: Publicar operações de endpoint da API de destinos
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '779'
 ht-degree: 5%
 
 ---
 
 # Publicar operações da API de ponto de extremidade de Destinos {#publish-destination}
+
+>[!IMPORTANT]
+>
+>Você só precisará usar esse endpoint da API se estiver enviando um destino (público) produzido para ser usado por outros clientes do Experience Platform. Se estiver criando um destino privado para uso próprio, não será necessário enviar formalmente o destino usando a API de publicação.
 
 >[!IMPORTANT]
 >
@@ -22,8 +26,9 @@ Após configurar e testar seu destino, você pode enviá-lo ao Adobe para análi
 Use o endpoint da API de destinos de publicação para enviar uma solicitação de publicação quando:
 
 * Como parceiro de Destination SDK, você deseja disponibilizar o destino produzido em todas as organizações de Experience Platform para que todos os clientes de Experience Platform possam usá-lo;
-* Você deseja disponibilizar o destino personalizado em sua própria organização do Experience Platform, em todas as sandboxes.
 * Você faz *qualquer atualização* nas suas configurações. As atualizações de configuração são refletidas no destino somente após enviar uma nova solicitação de publicação, que é aprovada pela equipe do Experience Platform.
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## Introdução às operações da API de publicação de destino {#get-started}
 

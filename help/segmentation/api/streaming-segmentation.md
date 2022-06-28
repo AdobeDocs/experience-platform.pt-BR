@@ -5,9 +5,9 @@ title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -424,7 +424,7 @@ Para a maioria das instâncias, a inqualificação da segmentação de streaming
 
 ### Em quais dados a segmentação de fluxo funciona?
 
-A segmentação de transmissão funciona em todos os dados assimilados por meio de uma fonte de transmissão. Os segmentos assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para a segmentação de transmissão.
+A segmentação de transmissão funciona em todos os dados assimilados por meio de uma fonte de transmissão. Os segmentos assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para a segmentação de transmissão. Os eventos transmitidos para o sistema com um carimbo de data e hora com mais de 24 horas serão processados no trabalho em lote subsequente.
 
 ### Como os segmentos são definidos como segmentação em lote ou streaming?
 

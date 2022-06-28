@@ -5,9 +5,9 @@ title: Guia de solução de problemas de controle de acesso
 topic-legacy: troubleshooting guide
 description: Este documento fornece respostas a perguntas frequentes sobre o controle de acesso no Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,7 @@ Se você não tiver permissões de acesso para um [!DNL Platform] , esse recurso
 As permissões são agrupadas e categorizadas pela variável [!DNL Platform] recursos aos quais elas se aplicam (como [!DNL Data Management] e [!DNL Profile Management]). Para obter uma lista completa das permissões disponíveis e os grupos aos quais pertencem, consulte o [seção de permissões](home.md#permissions) na visão geral do controle de acesso.
 
 Consulte a [visão geral do controle de acesso](home.md) para obter mais informações sobre como fornecer controle de acesso com base em funções.
+
+## O que acontece com as permissões após a migração do Adobe IO para a ID de negócios?
+
+O controle de acesso usa a ID de usuário (uma id exclusiva interna atribuída a um usuário) para conceder permissões. Quando uma organização é migrada do Adobe ID para a ID de negócios, todas as permissões definidas para seus usuários são perdidas, pois a ID do usuário é alterada e o controle de acesso usa a ID do usuário recém-gerada. Se sua organização estiver migrada para a ID de negócios, entre em contato com o representante do Adobe para migrar a ID de usuário do Adobe ID para a ID de negócios.

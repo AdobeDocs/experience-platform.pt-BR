@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: A assimilação de streaming permite carregar seus dados no Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '917'
 ht-degree: 4%
 
 ---
@@ -59,6 +59,10 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 - Formato
 
 ## Validação síncrona
+
+>[!WARNING]
+>
+>O `syncValidation` O parâmetro de consulta só está disponível para o endpoint de mensagem única e não pode ser usado para o endpoint de lote.
 
 A validação síncrona é um método de validação que fornece feedback imediato sobre por que uma assimilação falhou. No entanto, após uma falha, os registros que falham na validação são descartados e impedidos de serem enviados downstream. Como resultado, a validação síncrona só deve ser usada durante o processo de desenvolvimento. Ao fazer a validação síncrona, os chamadores são informados do resultado da validação XDM e, se ele falhar, do motivo da falha.
 

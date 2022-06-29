@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 Este documento aborda as notas de versão do SDK da Web da Adobe Experience Platform.
 Para obter as notas de versão mais recentes sobre a extensão de tag do SDK da Web, consulte o [Notas de versão da extensão de tag do SDK da Web](extension/web-sdk-ext-release-notes.md).
+
+## Versão 2.12.0 - 29 de junho de 2022
+
+* Altere as solicitações para Edge Network para usar o `cluster` dica de localização do cookie como parte do URL. Isso garante que os usuários que alterarem sua localização (por exemplo, por meio de uma VPN ou dirigindo com dispositivos móveis etc.) na meia sessão acessem a mesma borda e tenham o mesmo perfil de personalização.
+* Stringifique as funções configuradas na resposta do comando getLibraryInfo.
 
 ## Versão 2.11.0 - 13 de junho de 2022
 

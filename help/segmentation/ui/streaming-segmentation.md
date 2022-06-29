@@ -5,9 +5,9 @@ title: Guia da interface do usuário de segmentação de fluxo
 topic-legacy: ui guide
 description: A segmentação por streaming no Adobe Experience Platform permite fazer a segmentação quase em tempo real, ao mesmo tempo em que se concentra na riqueza de dados. Com a segmentação de fluxo, a qualificação de segmento agora acontece à medida que os dados chegam ao Platform, o que diminui a necessidade de agendar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Após criar um segmento habilitado para transmissão, você pode visualizar os d
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Especificamente, detalhes sobre o **[!UICONTROL tamanho total do público qualificado]** são mostradas. O **[!UICONTROL Tamanho total do público-alvo qualificado]** mostra o número total de públicos-alvo qualificados da última execução de tarefa de segmento concluída. Se um trabalho de segmento não tiver sido concluído nas últimas 24 horas, o número de públicos-alvo será obtido de uma estimativa.
+Especificamente, a variável **[!UICONTROL Total qualificado]** será exibida, mostrando o número total de públicos qualificados, com base em avaliações em lote e em fluxo para este segmento.
 
-Embaixo está um gráfico de linhas que mostra o número de segmentos que foram qualificados e desqualificados nas últimas 24 horas. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, semana passada ou últimos 30 dias.
+Embaixo está um gráfico de linhas que mostra o número de novos públicos-alvo que foram atualizados nas últimas 24 horas usando o método de avaliação de streaming. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, semana passada ou últimos 30 dias. O **[!UICONTROL Novo público-alvo atualizado]** é baseada na mudança no tamanho do público-alvo durante o intervalo de tempo selecionado, conforme avaliado pela segmentação de transmissão. Essa métrica não inclui o público-alvo total qualificado da avaliação diária de lote de segmentos.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Embaixo está um gráfico de linhas que mostra o número de segmentos que foram 
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Informações adicionais sobre a última avaliação de segmento podem ser encontradas selecionando a bolha de informações.
+Informações adicionais sobre a última avaliação de segmento podem ser encontradas ao selecionar a bolha de informações ao lado de **[!UICONTROL Total qualificado]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 

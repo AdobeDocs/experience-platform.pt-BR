@@ -3,7 +3,7 @@ title: Criptografia de dados no Adobe Experience Platform
 topic-legacy: data protection
 description: Saiba como os dados são criptografados em trânsito e em repouso no Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: ed897f512648797a31c20ba6d4f77aeaea62f200
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 5%
@@ -24,7 +24,7 @@ Todos os dados em trânsito entre a Platform e qualquer componente externo são 
 
 Em geral, os dados são trazidos para a Platform de três maneiras:
 
-* [Coleta de dados](../../collection/home.md) Os recursos do permitem que sites e aplicativos móveis enviem dados para a Rede de borda da plataforma para preparo e preparação para assimilação.
+* [Coleta de dados](../../rtcdp-connections/home.md) Os recursos do permitem que sites e aplicativos móveis enviem dados para a Rede de borda da plataforma para preparo e preparação para assimilação.
 * [Conectores de origem](../../sources/home.md) Transmita dados diretamente para a plataforma a partir de aplicativos Adobe Experience Cloud e outras fontes de dados corporativas.
 * Ferramentas não Adobe ETL (extrair, transformar, carregar) enviam dados para a [API de assimilação em lote](../../ingestion/batch-ingestion/overview.md) para consumo.
 

@@ -3,7 +3,7 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 9%
@@ -20,11 +20,11 @@ O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de
 
 Este documento fornece uma visão geral de alto nível do encaminhamento de eventos no Platform.
 
-![Encaminhamento de eventos no ecossistema de coleta de dados](../../../collection/images/home/event-forwarding.png)
+![Encaminhamento de eventos no ecossistema de coleta de dados](../../../rtcdp-connections/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../../collection/home.md).
+>Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../../rtcdp-connections/home.md).
 
 Encaminhamento de eventos combinado à Adobe Experience Platform [Web SDK](../../../edge/home.md) e [SDK móvel](https://aep-sdks.gitbook.io/docs/) oferece os seguintes benefícios:
 

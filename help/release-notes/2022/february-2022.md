@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform fevereiro de 2022
 description: As notas de versão de fevereiro de 2022 para o Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 3%
@@ -49,7 +49,7 @@ A Platform fornece um conjunto de tecnologias que permitem coletar dados de expe
 | Preparação de dados para coleção de dados | Se você estiver usando o SDK da Web da Adobe Experience Platform, agora poderá aproveitar os recursos de Preparação de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleta de dados](../../edge/datastreams/data-prep.md) no guia datastreams para obter mais informações. |
 | IDs de dispositivo próprio | Agora é possível enviar suas próprias IDs de dispositivo para a Adobe Experience Platform Edge Network ao coletar dados do cliente usando o SDK da Web da plataforma, fornecendo uma solução alternativa para as restrições recentes do navegador em relação à duração do cookie de terceiros. Consulte o guia sobre [IDs de dispositivo primário](../../edge/identity/first-party-device-ids.md) para obter mais informações. |
 
-Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
+Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../rtcdp-connections/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

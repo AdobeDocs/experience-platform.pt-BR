@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform de junho de 2022
-description: As notas de versão de junho de 2022 para o Adobe Experience Platform.
+title: Notas de versão da Adobe Experience Platform
+description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
+source-git-commit: def32d9667c4630de760d228c88676eb9d5a6de4
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 5%
+source-wordcount: '1786'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Serviço de query](#query-service)
 - [Fontes](#sources)
 
@@ -74,6 +75,46 @@ Para obter informações mais gerais sobre o Data Science Workspace, consulte o 
 {style=&quot;table-layout:auto&quot;}
 
 Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+
+**Novos componentes XDM**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Classe | [[!UICONTROL Medicação]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Uma classe da indústria de saúde que capta detalhes sobre uma substância usada para tratamento médico, especialmente um medicamento ou medicamento. |
+| Classe | [[!UICONTROL Plano]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Uma classe de indústria de saúde que captura detalhes sobre um plano médico, como um plano de saúde ou plano de seguro. |
+| Classe | [[!UICONTROL Provedor]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Uma classe do setor de saúde que captura detalhes sobre um provedor de saúde. |
+| Classe | [[!UICONTROL Pagador]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Uma classe do setor de saúde que captura detalhes sobre uma seguradora. |
+| Classe | [[!UICONTROL Programação de Evento ao Vivo]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Uma classe do setor de esportes e entretenimento que captura detalhes sobre uma programação de eventos ao vivo, como uma programação de concertos itinerantes ou uma programação de uma equipe esportiva. |
+| Classe | [[!UICONTROL Localização ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Uma classe da indústria de esportes e entretenimento que captura a localização de um evento ao vivo, como uma sala de concertos ou arena esportiva. |
+| Grupo de campos | [[!UICONTROL Medicamentos para a saúde]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Um grupo de campos para a variável [!UICONTROL Medicação] classe que captura detalhes sobre a medicação, como nome da marca, número do lote e quantidade. |
+| Grupo de campos | [[!UICONTROL Detalhes do Plano de Saúde]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Um grupo de campos para a variável [!UICONTROL Plano] classe que captura detalhes como rede, tipo e status ativo. |
+| Grupo de campos | [[!UICONTROL Provedor de saúde]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Um grupo de campos para a variável [!UICONTROL Provedor] classe que capta dados de um profissional de saúde individual ou de uma organização de cuidados de saúde licenciada para prestar serviços de diagnóstico e tratamento de saúde. |
+| Grupo de campos | [[!UICONTROL Detalhes do Membro da Saúde]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Um grupo de campos para a variável [!UICONTROL Perfil individual XDM] classe que captura detalhes de uma pessoa que tem ou receberá um serviço ou assistência, como informações de contato, médico de assistência primária e informações de plano. |
+| Grupo de campos | [[!UICONTROL Detalhes da Sitecool]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Um grupo de campos para a variável [!UICONTROL ExperiênciaEvento XDM] classe que captura informações coletadas por ferramentas, como chatbot, pesquisa e assim por diante. |
+| Grupo de campos | [[!UICONTROL Compra de Tíquete do Evento em Tempo Real]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Um grupo de campos para a variável [!UICONTROL ExperiênciaEvento XDM] classe que captura o histórico de compras de ingressos para um evento ao vivo, como um concerto ou um jogo esportivo. |
+| Grupo de campos | [[!UICONTROL Programação de eventos desportivos e de entretenimento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Um grupo de campos para a variável [!UICONTROL Programação de Evento ao Vivo] classe que captura mais detalhes sobre a programação, como o nome da atração, os horários de abertura de portas e muito mais. |
+| Grupo de campos | [[!UICONTROL Local de evento de entretenimento de esportes]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Um grupo de campos para a variável [!UICONTROL Localização] classe que captura mais detalhes sobre o local do evento, como capacidade de assentos e Áreas de Mercado Designadas (DMAs). |
+| Schema global | (Vários) | Novos esquemas globais estão disponíveis para métricas de destinos para insights RTCDP. Veja o seguinte [solicitação pull](https://github.com/adobe/xdm/pull/1560) para obter mais detalhes. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Componentes XDM atualizados**
+
+| Tipo de componente | Nome | Atualizar descrição |
+| --- | --- | --- |
+| Comportamento | [[!UICONTROL Esquema da série cronológica]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Adição de um tipo de evento de atualização de estados de mídia. |
+| Grupo de campos | [[!UICONTROL Reserva de Loja]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Adição de uma propriedade de check-out de alojamento. |
+| Tipo de dados | [[!UICONTROL Informações da mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Adição de campos state-start e states-end . |
+| Extensão | [[!UICONTROL Evento Workfront Change]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Adicionados dois campos usados para armazenar atributos para ajudar a identificar o usuário e a hora de um evento de criação. |
+| Extensão | [[!UICONTROL Adobe CJM ExperienceEvent - Detalhes de interação da mensagem]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Adição de assinatura, consentimento, email personalizado e informações de dados adicionais no objeto da landing page. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
 
 ## Serviço de query {#query-service}
 

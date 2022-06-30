@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform de junho de 2022
 description: As notas de versão de junho de 2022 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6eadd71984814548522da32ae6d88a49c3ba704f
+source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '1036'
 ht-degree: 5%
 
 ---
@@ -15,10 +15,25 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Serviço de query](#query-service)
 - [Fontes](#sources)
+
+## Coleta de dados {#data-collection}
+
+A Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não-Adobe.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| [Configuração de tipo de acesso para datastreams](../../edge/datastreams/overview.md#create) | Ao criar um novo armazenamento de dados, você pode selecionar o tipo de solicitações que deseja que a Rede de Borda aceite: <ul><li>**[!UICONTROL Autenticação mista]**: Quando essa opção é selecionada, a Edge Network aceita solicitações autenticadas e não autenticadas. Selecione essa opção quando planeja usar o SDK da Web ou [SDK móvel](https://aep-sdks.gitbook.io/docs/), juntamente com o [API do servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Apenas Autenticado]**: Quando essa opção é selecionada, a Rede de Borda aceita apenas solicitações autenticadas. Selecione essa opção quando planeja usar somente a API do servidor e deseja impedir que qualquer solicitação não autenticada seja processada pela variável [!DNL Edge Network]. </li></ul> |
+| [Renderizar apresentações](../../edge/personalization/rendering-personalization-content.md#applypropositions) em aplicativos de página única sem aumentar métricas. | O recém-adicionado `applyPropositions` permite renderizar ou executar uma matriz de propostas a partir de [!DNL Target] em aplicativos de página única, sem aumentar o [!DNL Analytics] e [!DNL Target] métricas. Isso aumenta a precisão dos relatórios. |
+| [Compartilhamento de IDs entre dispositivos móveis e domínios](../../edge/identity/id-sharing.md) | O SDK da Web da Adobe Experience Platform agora é compatível com recursos de compartilhamento de ID de visitante que permitem fornecer experiências personalizadas com mais precisão, entre aplicativos móveis e conteúdo da Web móvel e entre domínios. |
+
+Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 

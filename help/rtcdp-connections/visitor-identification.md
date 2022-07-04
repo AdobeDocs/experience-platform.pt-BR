@@ -4,18 +4,16 @@ description: Saiba como a API do servidor de rede de borda do Adobe Experience P
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: rede de borda, gateway, api, visitante, identificação
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 4%
 
 ---
 
 # Identificação do visitante
 
-## Visão geral {#overview}
-
-A API do Servidor de Rede de Borda é compatível com [identificação do visitante por meio da ID primária ([!DNL FPID])](visitor-identification-fpid.md)
+A API do Servidor de Rede de Borda é compatível com [identificação do visitante por meio da ID primária ([!DNL FPID])](visitor-identification-fpid.md).
 
 Todas as identidades de usuário devem ser fornecidas no `identityMap` grupo de campos. Esse grupo de campos está incluído no SDK da Web da AEP `ExperienceEvent` mistura.
 

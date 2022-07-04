@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '2917'
-ht-degree: 5%
+source-wordcount: '2916'
+ht-degree: 6%
 
 ---
 
@@ -135,7 +135,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Schema global | [[!UICONTROL Solicitação de Operação de Higiene de Dados]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Captura os detalhes de uma solicitação de limpeza de dados para excluir ou modificar registros em um conjunto de dados ou sandbox especificado. |
 | Descritor | [[!UICONTROL Descritor de granularidade da série de tempo]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indica a granularidade das séries de tempo e dos dados de resumo. Quando aplicado a um schema, o schema `timestamp` é o primeiro carimbo de data e hora em um período dessa granularidade. |
 | Classe | [[!UICONTROL Métricas de resumo XDM]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fornece métricas pré-resumidas com dimensões de agrupamento, como os resultados de um SQL SELECT com um GROUP BY. |
-| Grupo de campos | [[!UICONTROL Mapa de resultados da avaliação das políticas de consentimento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura o resultado da avaliação da política de consentimento para um indivíduo. |
+| Grupo de campos | [[!UICONTROL Mapa de resultados da avaliação das políticas de consentimento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Captura o resultado da avaliação da política de consentimento para um indivíduo. |
 | Grupo de campos | [[!UICONTROL Pesquisa do site]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura informações relacionadas à pesquisa do site, como consulta de pesquisa, filtragem e pedido. |
 | Grupo de campos | [[!UICONTROL Mesclar leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Captura os detalhes de um evento em que dois ou mais leads são mesclados. |
 | Grupo de campos | [[!UICONTROL Email enviado]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Captura os detalhes de um evento em que um email é enviado a um recipient. |
@@ -145,7 +145,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Grupo de campos | [[!UICONTROL Detalhes da Pessoa da Conta]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Captura detalhes relacionados a um relacionamento conta-pessoa. |
 | Tipo de dados | [[!UICONTROL Carrinho]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Captura informações sobre um carrinho de compras de comércio eletrônico. |
 | Tipo de dados | [[!UICONTROL Envio]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Captura informações de envio para um ou mais produtos. |
-| Tipo de dados | [[!UICONTROL Pesquisa do site]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura informações da atividade de pesquisa do site. |
+| Tipo de dados | [[!UICONTROL Pesquisa do site]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Captura informações da atividade de pesquisa do site. |
 | Extensão (Workfront) | [[!UICONTROL Atributos da Tarefa Operacional]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Captura detalhes relacionados a uma tarefa operacional. |
 | Extensão (Workfront) | [[!UICONTROL Atributos do Portfolio de trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Captura detalhes relacionados a um portfólio de trabalho. |
 | Extensão (Workfront) | [[!UICONTROL Atributos do programa de trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Captura detalhes relacionados a um programa de trabalho. |
@@ -175,7 +175,7 @@ Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral 
 
 Os serviços de IA/ML capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de experiência em ciência de dados.
 
-### Attribution AI
+### IA de atribuição
 
 O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 

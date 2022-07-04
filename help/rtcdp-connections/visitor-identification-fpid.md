@@ -4,16 +4,14 @@ description: Saiba como identificar de forma consistente visitantes por meio da 
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: rede de borda, gateway, api, visitante, identificação, fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # Identificação do visitante via FPID
-
-## Visão geral
 
 [!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas por clientes. Isso dá aos clientes controle sobre a identificação de dispositivos do usuário. Ao enviar `FPIDs`, a Edge Network não gera uma novidade `ECID` para uma solicitação que não contém uma.
 
@@ -35,7 +33,7 @@ O `ECID` obtido dessa forma pode ser recuperado por meio de um `identity.fetch` 
 }
 ```
 
-Para solicitações que contêm um `FPID` e um `ECID`, o `ECID` já presente na solicitação terá precedência sobre a que pode ser gerada pelo `FPID`. Portanto, a Edge Network usará a variável `ECID` já fornecido e não calculará um de `FPID`.
+Para solicitações que contêm um `FPID` e um `ECID`, o `ECID` já presente na solicitação terá precedência sobre a que pode ser gerada pelo `FPID`. Em outras palavras, a Rede de borda usa o `ECID` já fornecidos e `FPID` é ignorada. Um novo `ECID` é gerada somente quando um `FPID` é fornecida isoladamente.
 
 Em termos de IDs de dispositivo, a variável `server` os datastreams devem usar `FPID` como ID do dispositivo. Outras identidades (ou seja `EMAIL`) também pode ser fornecida no corpo da solicitação, mas a Rede de borda requer que uma identidade primária seja explicitamente fornecida. A identidade primária é a identidade base na qual os dados de perfil serão armazenados.
 

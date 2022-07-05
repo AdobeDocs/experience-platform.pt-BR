@@ -2,9 +2,9 @@
 title: Fontes no Real-time Customer Data Platform B2B Edition
 description: Uma visão geral da função das fontes no Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ O Real-time Customer Data Platform B2B Edition permite trazer seus dados B2B por
 Para entender como as fontes se encaixam no fluxo de trabalho B2B, consulte [tutorial completo](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Consulte a [visão geral dos conectores de origem](../../sources/home.md) para obter mais informações sobre os tipos de fontes disponíveis no Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+>Você deve ter acesso ao [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) para que os esquemas B2B participem em [Perfil do cliente em tempo real](../proile/../../profile/home.md).
 
 Os seguintes documentos fornecem mais informações sobre como usar [!DNL Marketo] para trazer dados B2B para a plataforma:
 

@@ -5,9 +5,9 @@ title: Endpoint da API de descritores
 description: O endpoint /descriptors na API do Registro de Schema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1839'
 ht-degree: 4%
 
 ---
@@ -389,7 +389,7 @@ Descritores de relacionamento descrevem uma relação entre dois esquemas difere
 
 #### Descritor de identidade de referência
 
-Os descritores de identidade de referência fornecem um contexto de referência para a identidade primária de um campo de esquema, permitindo que ele seja referenciado por campos em outros schemas. Os campos já devem ser rotulados com um descritor de identidade antes que um descritor de referência possa ser aplicado a eles.
+Os descritores de identidade de referência fornecem um contexto de referência para a identidade primária de um campo de esquema, permitindo que ele seja referenciado por campos em outros schemas. O schema de destino já deve ter um campo de identidade primário definido antes que possa ser referenciado por outros schemas por meio deste descritor.
 
 ```json
 {
@@ -406,7 +406,7 @@ Os descritores de identidade de referência fornecem um contexto de referência 
 | `@type` | O tipo de descritor que está sendo definido. Para um descritor de identidade de referência, esse valor deve ser definido como `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
-| `xdm:sourceProperty` | Caminho para o campo no schema de origem onde o descritor está sendo definido. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, &quot;/pessoalEmail/address&quot; em vez de &quot;/properties/pessoalEmail/properties/address&quot;). |
+| `xdm:sourceProperty` | Caminho para o campo no schema de origem que será usado para fazer referência ao schema de destino. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, `/personalEmail/address` em vez de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | O código do namespace de identidade para a propriedade de origem. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -1,10 +1,11 @@
 ---
 title: Suporte de Controle de Acesso Baseado em Atributo para Esquemas Ad Hoc
 description: Um guia para restringir o acesso aos campos de dados em esquemas ad hoc gerados pelo Serviço de query do Adobe Experience Platform.
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +42,7 @@ Para adicionar um rótulo de dados, navegue até [!UICONTROL Esquemas] guia de n
 
 ## Descubra esquemas ad hoc no inventário de esquema da interface do usuário da plataforma
 
-Para ativar a exibição de esquemas ad hoc na interface do usuário da plataforma, selecione o ícone de filtro (../images/data-governance/filter.png) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
+Para ativar a exibição de esquemas ad hoc na interface do usuário da plataforma, selecione o ícone de filtro (![Um ícone de filtro.](../images/data-governance/filter.png)) à esquerda do campo de pesquisa e, em seguida, selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
 
 ![O painel esquerdo das opções de filtro do Painel de esquema com a opção &quot;Mostrar esquema adhoc&quot; ativada.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -93,4 +94,4 @@ Se uma identidade ou identidade primária for definida no esquema ad hoc, o sist
 Após a leitura deste documento, você tem uma melhor compreensão de como adicionar rótulos de uso de dados a esquemas ad hoc criados por meio de consultas CTAS do Serviço de query. Se ainda não tiver feito isso, os seguintes documentos serão úteis para melhorar sua compreensão do controle de dados no Serviço de query:
 
 * [Identidades de esquema ad hoc](./ad-hoc-schema-identities.md)
-* [Governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [Governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR)

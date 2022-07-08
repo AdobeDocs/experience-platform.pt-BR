@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '3881'
+source-wordcount: '3992'
 ht-degree: 0%
 
 ---
@@ -133,13 +133,21 @@ A tabela a seguir detalha quais alterações são compatíveis ao editar esquema
 | --- | --- |
 | <ul><li>Adicionar novos campos ao recurso</li><li>Como tornar um campo obrigatório opcional</li><li>Introdução de novos campos obrigatórios*</li><li>Alteração do nome de exibição e da descrição do recurso</li><li>Ativar o esquema para participar do perfil</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Renomeação ou redefinição de campos existentes</li><li>Remoção ou restrição de valores de campo anteriormente suportados</li><li>Mover campos existentes para um local diferente na árvore</li><li>Exclusão do schema</li><li>Desabilitação do esquema de participar do Perfil</li></ul> |
 
-\**Consulte a [subseção abaixo](#post-ingestion-required-fields) para considerações importantes sobre a configuração de novos campos obrigatórios.*
+\**Consulte a seção abaixo para obter considerações importantes sobre [definição de novos campos obrigatórios](#post-ingestion-required-fields).*
 
-#### Definir campos como obrigatórios após a assimilação {#post-ingestion-required-fields}
+### Campos obrigatórios
+
+Campos de esquema individuais podem ser [marcado conforme necessário](../ui/fields/required.md), o que significa que todos os registros assimilados devem conter dados nesses campos para passarem na validação. Por exemplo, definir o campo de identidade principal de um esquema, conforme necessário, pode ajudar a garantir que todos os registros assimilados participarão do Perfil do cliente em tempo real, enquanto define um campo de carimbo de data e hora, conforme necessário, garante que todos os eventos de séries de tempo sejam cronologicamente preservados.
+
+>[!IMPORTANT]
+>
+>Independentemente de um campo de esquema ser obrigatório ou não, a Platform não aceita `null` ou valores vazios para qualquer campo assimilado. Se não houver valor para um campo específico em um registro ou evento, a chave desse campo deverá ser excluída do payload de assimilação.
+
+#### Definição de campos conforme necessário após a assimilação {#post-ingestion-required-fields}
 
 Se um campo tiver sido usado para assimilar dados e não tiver sido originalmente definido conforme necessário, esse campo poderá ter um valor nulo para alguns registros. Se esse campo for definido como obrigatório após a assimilação, todos os registros futuros deverão conter um valor para esse campo, mesmo que os registros históricos possam ser nulos.
 
-Ao definir um campo opcional anteriormente como obrigatório, lembre-se do seguinte:
+Ao definir um campo opcional anteriormente, conforme necessário, lembre-se do seguinte:
 
 1. Se você consultar dados históricos e gravar os resultados em um novo conjunto de dados, algumas linhas falharão porque contêm valores nulos para o campo necessário.
 1. Se o campo participar de [Perfil do cliente em tempo real](../../profile/home.md) e se exportar dados antes de configurá-los conforme necessário, eles poderão ser nulos para alguns perfis.

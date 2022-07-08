@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '814'
 ht-degree: 8%
 
 ---
@@ -184,10 +184,17 @@ ht-degree: 8%
       * [Operações da API do endpoint de credenciais](./destination-sdk/credentials-configuration-api.md)
       * [Publicar operações da API de ponto de extremidade](./destination-sdk/destination-publish-api.md)
       * Referência de ferramentas do desenvolvedor {#developer-tools-reference}
-         * [Obter exemplos de operações da API de modelo](./destination-sdk/sample-template-api.md)
-         * [Renderizar operações da API do modelo](./destination-sdk/render-template-api.md)
-         * [Operações da API de teste de destino](./destination-sdk/destination-testing-api.md)
-         * [Exemplos de operações da API de geração de perfil](./destination-sdk/sample-profile-generation-api.md)
+         * API de teste de destino de transmissão {#streaming-destination-testing-api}
+            * [Obter exemplos de operações da API de modelo](./destination-sdk/sample-template-api.md)
+            * [Renderizar operações da API do modelo](./destination-sdk/render-template-api.md)
+            * [Operações da API de teste de destino](./destination-sdk/destination-testing-api.md)
+            * [Exemplos de operações da API de geração de perfil](./destination-sdk/sample-profile-generation-api.md)
+         * API de teste de destino baseada em arquivo {#file-based-destination-testing-api}
+            * [Visão geral da API de teste de destino baseada em arquivo](./destination-sdk/file-based-destination-testing-overview.md)
+            * [Gerar perfis de amostra com base em um schema de origem](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Teste seu destino baseado em arquivo com perfis de amostra](./destination-sdk/file-based-destination-testing-api.md)
+            * [Exibir resultados detalhados da ativação](./destination-sdk/file-based-destination-results-api.md)
+            * [Validar campos de clientes modelos](./destination-sdk/file-based-render-template-api.md)
    * Guias {#guides}
       * [Use o Destination SDK para configurar um destino de transmissão](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use o Destination SDK para configurar um destino baseado em arquivo](./destination-sdk/configure-file-based-destination-instructions.md)

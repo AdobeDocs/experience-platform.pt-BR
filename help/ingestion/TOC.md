@@ -4,9 +4,9 @@ user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
 breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para o Platform por meio de uma assimilação em lote ou streaming.
 feature: Data Ingestion
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '128'
 ht-degree: 25%
 
 ---
@@ -34,13 +34,14 @@ ht-degree: 25%
    - [Transmissão de dados de registro](tutorials/streaming-record-data.md)
    - [Transmissão de dados da série de tempo](tutorials/streaming-time-series-data.md)
    - [Transmissão de várias mensagens](tutorials/streaming-multiple-messages.md)
-- Qualidade e monitoramento de dados{#quality}
+- Qualidade e monitoramento dos dados{#quality}
    - [Visão geral](quality/overview.md)
    - [Monitorar assimilação de dados](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de erro](quality/error-diagnostics.md)
    - [Recuperar lotes com falha](quality/retrieve-failed-batches.md)
    - [Validação da assimilação de fluxo](quality/streaming-validation.md)
    - [Notificações de assimilação de dados](quality/subscribe-events.md)
+- [Medidas de proteção para a assimilação de dados](guardrails.md)
 - [Conectores de origem](source-connectors.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

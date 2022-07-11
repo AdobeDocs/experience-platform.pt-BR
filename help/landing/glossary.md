@@ -5,10 +5,10 @@ title: Glossário do Adobe Experience Platform
 topic-legacy: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
-ht-degree: 1%
+source-wordcount: '7428'
+ht-degree: 0%
 
 ---
 
@@ -257,6 +257,8 @@ ht-degree: 1%
 **Geofence**: Uma geofence é um limite geográfico virtual, definido pela tecnologia GPS ou RFID, que permite que o software acione uma resposta quando um dispositivo móvel entra ou sai de uma área específica.
 
 **GDPR (Regulamento Geral sobre a Proteção de Dados)**: O Regulamento Geral sobre a Proteção de Dados (GDPR) é um quadro jurídico que estabelece diretrizes para a coleta e o processamento de informações pessoais de indivíduos dentro da União Europeia (UE). O GDPR estabelece os princípios para a gestão de dados e os direitos do indivíduo e abrange todas as empresas que lidam com os dados de cidadãos da UE.
+
+**Medidas de proteção**: As garantias são limites que fornecem orientação para o uso de dados e do sistema, otimização de desempenho e prevenção de erros ou resultados inesperados no Adobe Experience Platform. As garantias podem se referir à utilização ou ao consumo de dados e ao processamento em relação aos direitos de licenciamento.
 
 ## H
 

@@ -1,9 +1,9 @@
 ---
 description: Esta página explica como usar o endpoint /authoring/testing/template/render para visualizar como seriam os campos de dados do cliente modelos definidos na configuração de destino.
 title: Validar campos de clientes modelos
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 Uma resposta bem-sucedida retorna um `HTTP 200 OK` e o corpo inclui valores gerados aleatoriamente para seus campos modelos.
 
-Essa resposta tem como objetivo ajudar você a validar a estrutura correta dos campos de dados do cliente, como nomes de bucket ou caminhos de pasta.
+Essa resposta pode ajudar a validar a estrutura correta dos campos de dados do cliente, como nomes de bucket ou caminhos de pasta.
 
 
 ```json

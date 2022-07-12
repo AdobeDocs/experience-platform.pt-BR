@@ -3,9 +3,9 @@ keywords: email; Email; email; destinos de email; adobe campaign; campanha
 title: Conexão Adobe Campaign
 description: O Adobe Campaign é um conjunto de soluções que ajudam você a personalizar e entregar campanhas em todos os seus canais online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '888'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,12 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL Caminho da pasta]**: Forneça o caminho no local de armazenamento onde [!DNL Platform] O depositará seus dados de exportação como arquivos CSV.
 * **[!UICONTROL Contêiner]**: *Para conexões Blob*. O contêiner que contém o Blob em que seu caminho de pasta está.
 * **[!UICONTROL Formato de arquivo]**: Selecionar **CSV** para exportar arquivos CSV para o local de armazenamento.
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

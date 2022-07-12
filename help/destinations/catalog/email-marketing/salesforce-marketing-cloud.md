@@ -3,9 +3,9 @@ keywords: email; Email; email; destinos de email; salesforce; destino do salesfo
 title: Conexão do Marketing Cloud Salesforce
 description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '658'
 ht-degree: 2%
 
 ---
@@ -55,12 +55,12 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * Para **[!UICONTROL SFTP com senha]** , você deve fornecer:
    * [!UICONTROL Domínio]
    * [!UICONTROL Porta ]
-   * [!UICONTROL Nome do usuário]
+   * [!UICONTROL Nome de usuário]
    * [!UICONTROL Senha]
 * Para **[!UICONTROL SFTP com chave SSH]** , você deve fornecer:
    * [!UICONTROL Domínio]
    * [!UICONTROL Porta ]
-   * [!UICONTROL Nome do usuário]
+   * [!UICONTROL Nome de usuário]
    * [!UICONTROL Chave SSH]
 
 * Como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia com PGP/GPG aos arquivos exportados sob a variável **[!UICONTROL Chave]** seção. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
@@ -76,6 +76,12 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 - **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

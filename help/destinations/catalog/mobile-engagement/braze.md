@@ -3,10 +3,10 @@ keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 2%
+source-wordcount: '1001'
+ht-degree: 1%
 
 ---
 
@@ -61,16 +61,27 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 > 
 >Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow para configurar destino , preencha os campos listados nas duas seções abaixo.
 
-### Parâmetros de conexão {#parameters}
+### Autenticar para destino {#authenticate}
 
-Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
 
 * **[!UICONTROL Token de conta do Brasil]**: Este é o seu [!DNL Braze] [!DNL API] chave. Você pode encontrar instruções detalhadas sobre como obter seu [!DNL API] Chave aqui: [Visão geral da chave de API REST](https://www.braze.com/docs/api/api_key/).
+
+### Preencha os detalhes do destino {#destination-details}
+
+Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
+
 * **[!UICONTROL Nome]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
 * **[!UICONTROL Instância do ponto de extremidade]**: pergunte ao seu [!DNL Braze] representante de qual instância de ponto de extremidade você deve usar.
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 
@@ -90,7 +101,7 @@ Para mapear corretamente os campos XDM para a variável [!DNL Braze] campos de d
 
 No [!UICONTROL Mapeamento] etapa , clique em **[!UICONTROL Adicionar novo mapeamento]**.
 
-![Mapeamento de adição de destino de site](../../assets/catalog/mobile-engagement/braze/mapping.png)
+![Mapeamento de adição de destino](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
 No [!UICONTROL Campo de origem] , clique no botão de seta ao lado do campo vazio.
 

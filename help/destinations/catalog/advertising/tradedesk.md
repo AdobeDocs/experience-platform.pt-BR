@@ -3,9 +3,9 @@ keywords: publicidade; o serviço de comércio; suporte comercial de anúncios
 title: A conexão com o Trade Desk
 description: O Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar redirecionamento e campanhas digitais direcionadas ao público-alvo em fontes de exibição, vídeo e inventário móvel.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '676'
 ht-degree: 3%
 
 ---
@@ -75,6 +75,12 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
    * **[!UICONTROL América do Norte - Leste]**
    * **[!UICONTROL América do Norte - Oeste]**
    * **[!UICONTROL América Latina]**
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

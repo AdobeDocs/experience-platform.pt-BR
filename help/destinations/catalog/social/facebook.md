@@ -3,10 +3,10 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1713'
-ht-degree: 2%
+source-wordcount: '1867'
+ht-degree: 1%
 
 ---
 
@@ -90,7 +90,6 @@ Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 >
 >Números de telefone assimilados no `Phone` o namespace não pode ser ativado em [!DNL Facebook].
 
-
 ## Requisitos de hash de email {#email-hashing-requirements}
 
 Você pode fazer hash nos endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email limpos no Experience Platform e ter [!DNL Platform] coloque hash na ativação.
@@ -124,7 +123,7 @@ Antes de usar a variável `Extern_ID` namespace para enviar dados para [!DNL Fac
 > 
 >Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow para configurar destino , preencha os campos listados nas duas seções abaixo.
 
 O vídeo abaixo também demonstra as etapas para configurar um [!DNL Facebook] e ativar segmentos.
 
@@ -134,13 +133,31 @@ O vídeo abaixo também demonstra as etapas para configurar um [!DNL Facebook] e
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Parâmetros de conexão {#parameters}
+### Autenticar para destino {#authenticate}
 
-Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+1. Encontre o destino Facebook no catálogo de destino e selecione **[!UICONTROL Configurar]**.
+2. Selecionar **[!UICONTROL Ligar ao destino]**.
+   ![Autenticar para o Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Insira suas credenciais do Facebook e selecione **Fazer logon**.
+
+### Preencha os detalhes do destino {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="ID da Conta"
+>abstract="Sua ID de conta do anúncio do Facebook. Você pode encontrar essa ID na conta do Facebook Ads Manager. Ao inserir essa ID, sempre coloque o prefixo nela com `act_`."
+
+Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID da conta]**: your [!DNL Facebook Ad Account ID]. Você pode encontrar essa ID em seu [!DNL Facebook Ads Manager] conta. Ao inserir essa ID, sempre coloque o prefixo nela com `act_`.
+* **[!UICONTROL ID da conta]**: Seu [!DNL Facebook Ad Account ID]. Você pode encontrar essa ID em seu [!DNL Facebook Ads Manager] conta. Ao inserir essa ID, sempre coloque o prefixo nela com `act_`.
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

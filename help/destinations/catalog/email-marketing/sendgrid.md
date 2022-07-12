@@ -3,9 +3,9 @@ keywords: email; Email; email; destinos de email; sendgrid; destino sendgrid
 title: Conexão SendGrid
 description: O destino SendGrid permite exportar seus dados primários e ativá-los em SendGrid para suas necessidades comerciais.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -78,8 +78,9 @@ As equipes de marketing que usam SendGrid podem criar uma lista de endereçament
 > 
 >Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow para configurar destino , preencha os campos listados nas duas seções abaixo.
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). As etapas específicas para esse destino são ilustradas detalhadamente abaixo.
+### Autenticar para destino {#authenticate}
 
 1. No [!DNL Adobe Experience Platform] , navegue até **Destinos**.
 
@@ -96,7 +97,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Parâmetros de conexão {#parameters}
+### Preencha os detalhes do destino {#destination-details}
 
 Ao [configuração](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) nesse destino, você deve fornecer as seguintes informações:
 
@@ -104,6 +105,12 @@ Ao [configuração](https://experienceleague.adobe.com/docs/experience-platform/
 * **[!UICONTROL Descrição]**: Uma descrição opcional que ajudará a identificar esse destino no futuro.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

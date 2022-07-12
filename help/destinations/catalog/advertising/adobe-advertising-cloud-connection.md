@@ -2,10 +2,10 @@
 title: Conexão Adobe Advertising Cloud DSP
 description: O Adobe Advertising Cloud DSP é um destino integrado para a variável [!DNL Adobe Real-time Customer Data Profile], permitindo compartilhar segmentos originais autenticados com anunciantes e usuários aprovados para ativação da campanha.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1026'
+ht-degree: 1%
 
 ---
 
@@ -78,12 +78,18 @@ Para se conectar ao destino, forneça o seguinte parâmetro na função [!UICONT
 
 ### Preencha os detalhes do destino {#destination-details}
 
-Para configurar detalhes para o destino, preencha os campos obrigatórios na guia [!UICONTROL Detalhes do destino] e selecione **[!UICONTROL Próximo]**.
+Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
 
 ![Campos de detalhes do destino](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

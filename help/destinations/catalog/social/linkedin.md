@@ -3,10 +3,10 @@ keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; link
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 2%
+source-wordcount: '1041'
+ht-degree: 1%
 
 ---
 
@@ -91,7 +91,7 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 > 
 >Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow para configurar destino , preencha os campos listados nas duas seções abaixo.
 
 O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Matched Audiences] e ativar segmentos.
 
@@ -101,13 +101,31 @@ O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Ma
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Parâmetros de conexão {#parameters}
+### Autenticar para destino {#authenticate}
 
-Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+1. Encontre a [!DNL LinkedIn Matched Audiences] no catálogo de destino e selecione **[!UICONTROL Configurar]**.
+2. Selecionar **[!UICONTROL Ligar ao destino]**.
+   ![Autenticar para o LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. Insira suas credenciais do LinkedIn e selecione **Fazer logon**.
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID da conta]**: your [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID em seu [!DNL LinkedIn Campaign Manager] conta.
+### Preencha os detalhes do destino {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_linkedin_accountid"
+>title="ID da Conta"
+>abstract="Sua ID de conta do LinkedIn Campaign Manager. Você pode encontrar essa ID na conta do LinkedIn Campaign Manager."
+
+Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
+
+* **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
+* **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
+* **[!UICONTROL ID da conta]**: Seu [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID em seu [!DNL LinkedIn Campaign Manager] conta.
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

@@ -6,14 +6,14 @@ description: Este documento fornece um tutorial para definir uma relação entre
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
 
-# Definir uma relação entre dois schemas usando o [!DNL Schema Editor]
+# Defina uma relação um para um entre dois schemas usando o [!DNL Schema Editor]
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
@@ -21,9 +21,21 @@ ht-degree: 0%
 >abstract="Os esquemas pertencentes a classes diferentes podem ser vinculados contextualmente por meio de campos de relação, permitindo a criação de regras de segmentação mais complexas."
 >text="See the documentation for more information on schema relationships."
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="Esquema de referência"
+>abstract="Selecione o schema com o qual deseja estabelecer uma relação. Esse schema pode ser uma classe diferente do schema atual."
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="Namespace da identidade de referência"
+>abstract="O namespace (tipo) do campo de identidade principal do esquema de referência. O schema de referência deve ter um campo de identidade primário estabelecido para participar de um relacionamento."
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
->Se estiver usando o Real-time Customer Data Platform B2B Edition, consulte o guia em [criação de relações B2B](./relationship-b2b.md) em vez disso.
+>Para obter etapas sobre como criar uma relação muitos para um no Real-time Customer Data Platform B2B Edition, consulte o guia sobre [criação de relações B2B](./relationship-b2b.md).
 
 A capacidade de entender os relacionamentos entre seus clientes e suas interações com a marca em vários canais é uma parte importante do Adobe Experience Platform. Definir esses relacionamentos dentro da estrutura de [!DNL Experience Data Model] Os esquemas (XDM) permitem que você obtenha insights complexos sobre os dados do cliente.
 
@@ -110,6 +122,10 @@ O arquivo `favoriteHotel` é exibido na tela. Selecionar **[!UICONTROL Salvar]**
 ## Definir um campo de relacionamento para o schema de origem {#relationship-field}
 
 Depois que o schema de origem tiver um campo de referência dedicado definido, você poderá designá-lo como um campo de relacionamento.
+
+>[!NOTE]
+>
+>As etapas abaixo abordam como definir um campo de relação usando os controles do painel direito na tela. Se você tiver acesso ao Real-Time CDP B2B Edition, também poderá definir uma relação um para um usando o [mesma caixa de diálogo](./relationship-b2b.md#relationship-field) como ao criar relacionamentos muitos para um.
 
 Selecione o `favoriteHotel` na tela, role para baixo **[!UICONTROL Propriedades do campo]** até que o **[!UICONTROL Relação]** será exibida. Marque a caixa de seleção para revelar os parâmetros necessários para configurar um campo de relacionamento.
 

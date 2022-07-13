@@ -1,10 +1,11 @@
 ---
 title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que oferece aos editores meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
-source-git-commit: 60ae86ed6e741bd7739086105bfe70952841d454
+exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
+source-git-commit: 4f57574bc17f43406df800358c7320372eb197d0
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 2%
+source-wordcount: '888'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +45,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema aplicáveis (por exemplo, seu PPID), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
@@ -57,12 +58,14 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >
 >A lista de permissões é obrigatória antes de configurar a primeira [!DNL Google Ad Manager] no Platform. Verifique se o processo de lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
 
-Antes de criar a [!DNL Google Ad Manager 360] no Platform, você deve entrar em contato com [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Contato [!DNL Google] e fornecer as seguintes informações:
+>[!IMPORTANT]
+>
+>A Google simplificou o processo para conectar plataformas externas de gerenciamento de público-alvo ao Google Ad Manager 360. Agora você pode passar pelo processo de vinculação ao Google Ad Manager 360 de maneira automatizada. Ler [Segmentos de plataformas de gerenciamento de dados](https://support.google.com/admanager/answer/3289669?hl=en) na documentação do Google. Você deve ter as IDs listadas abaixo à mão.
 
 * **ID da conta**: ID da conta do Adobe com Google. ID da conta: 87933855.
 * **Customer ID**: ID da conta do cliente do Adobe com Google. ID do cliente: 89690775.
-* **ID de rede**: esta é a sua conta com [!DNL Google Ad Manager]
-* **ID do link de público-alvo**: esta é a sua conta com [!DNL Google Ad Manager]
+* **Código de rede**: Este é o seu [!DNL Google Ad Manager] identificador de rede, encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google, bem como no URL.
+* **ID do link de público-alvo**: Esse é um identificador específico associado ao [!DNL Google Ad Manager] rede (não sua [!DNL Network code]), também encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google.
 * Seu tipo de conta. DFP por Google ou comprador AdX.
 
 ## Conecte-se ao destino {#connect}
@@ -71,16 +74,31 @@ Antes de criar a [!DNL Google Ad Manager 360] no Platform, você deve entrar em 
 > 
 >Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Parâmetros de conexão {#parameters}
+### Autenticar para destino {#authenticate}
 
-Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
+
+* **[!UICONTROL ID da chave de acesso]**: Uma sequência de 61 caracteres alfanuméricos usada para autenticar o [!DNL Google Cloud Storage] para a Platform.
+* **[!UICONTROL Chave de acesso secreta]**: Uma string codificada em 40 caracteres, base e 64, usada para autenticar seu [!DNL Google Cloud Storage] para a Platform.
+
+Para obter mais informações sobre esses valores, consulte o [Chaves HMAC do Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guia. Para obter etapas sobre como gerar sua própria ID de chave de acesso e chave de acesso secreta, consulte [[!DNL Google Cloud Storage] visão geral da fonte](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+
+### Preencha os detalhes do destino {#destination-details}
+
+Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL Nome do bucket]**: digite o nome do [!DNL Google Cloud Storage] bucket a ser usado por este destino.
-* **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+* **[!UICONTROL Nome do bucket]**: Insira o nome do [!DNL Google Cloud Storage] bucket a ser usado por este destino.
+* **[!UICONTROL Caminho da pasta]**: Insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+
+### Ativar alertas {#enable-alerts}
+
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 

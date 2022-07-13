@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
+source-git-commit: 0103f1af37dc202087d3c81d495de88d3de7c377
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 86%
+source-wordcount: '402'
+ht-degree: 84%
 
 ---
 
@@ -197,6 +197,7 @@ ht-degree: 86%
       * [Segredos](./api/guides/secrets.md)
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
+* [Desativação do suporte para Internet Explorer 10 e 11](./ie-deprecation.md)
 * Notas de versão {#release-notes}
    * [Mais recentes](./release-notes/current.md)
    * [Notas de versão de 2020](./release-notes/2020.md)

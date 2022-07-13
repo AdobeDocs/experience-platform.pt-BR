@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4103'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ Os esquemas de registro e de série de tempo contêm um mapa de identidades (`xd
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identidades em schemas"
->abstract="Identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade de cada indivíduo e criar perfis de cliente."
->text="See the documentation for more information on identities in schemas."
+>abstract="Identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade de cada indivíduo e criar perfis de cliente. Consulte a documentação para obter mais informações sobre identidades em schemas."
 
 Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma única visualização unificada de uma entidade individual. Portanto, é importante pensar em schemas pensar nas identidades do cliente e quais campos podem ser usados para identificar um assunto, independentemente de onde os dados possam vir.
 
@@ -169,6 +168,11 @@ Os esquemas são compostos usando a seguinte fórmula:
 
 ### Classe {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Classe"
+>abstract="Cada schema é baseado em uma única classe. A classe define o comportamento do schema e as propriedades comuns que todos os schemas baseados nessa classe devem conter. Consulte a documentação para saber mais sobre como as classes estão envolvidas na composição do schema."
+
 A composição de um schema começa pela atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o schema conterá (registro ou série de tempo). Além disso, as classes descrevem o menor número de propriedades comuns que todos os esquemas baseados nessa classe precisariam incluir e fornecer uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 
 A classe de um esquema determina quais grupos de campos serão qualificados para uso nesse esquema. Isso é discutido com mais detalhes na seção [próxima seção](#field-group).
@@ -182,6 +186,11 @@ A captura de tela a seguir demonstra como as classes são representadas na inter
 Para obter a lista mais atualizada das classes XDM padrão disponíveis, consulte [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/classes). Como alternativa, consulte o guia em [exploração de componentes XDM](../ui/explore.md) se preferir exibir recursos na interface do usuário.
 
 ### Grupo de campos {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Grupo de campos"
+>abstract="Os grupos de campos são componentes reutilizáveis que permitem estender esquemas com atributos adicionais. A maioria dos grupos de campos é compatível somente com determinadas classes. Você pode usar grupos de campos padrão definidos pelo Adobe ou pode definir manualmente seus próprios grupos de campos personalizados. Consulte a documentação para saber mais sobre como os grupos de campos estão envolvidos na composição do schema."
 
 Um grupo de campos é um componente reutilizável que define um ou mais campos que implementam determinadas funções, como detalhes pessoais, preferências de hotel ou endereço. Os grupos de campos devem ser incluídos como parte de um schema que implementa uma classe compatível.
 

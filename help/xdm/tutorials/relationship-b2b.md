@@ -2,9 +2,9 @@
 title: Definir uma relação entre dois esquemas no Real-time Customer Data Platform B2B Edition
 description: Saiba como definir uma relação muitos para um entre dois schemas no Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Esquema de referência"
->abstract="Selecione o schema com o qual deseja estabelecer uma relação. Dependendo da classe do schema, ele também pode ter relacionamentos existentes com outras entidades no contexto B2B."
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->Se você não estiver usando o Real-time Customer Data Platform B2B Edition ou quiser criar um relacionamento um para um, consulte o guia sobre [criação de uma relação um para um](./relationship-ui.md) em vez disso.
+>abstract="Selecione o schema com o qual deseja estabelecer uma relação. Dependendo da classe do schema, ele também pode ter relacionamentos existentes com outras entidades no contexto B2B. Consulte a documentação para saber como as classes de esquema B2B se relacionam umas às outras."
 
 A Real-time Customer Data Platform B2B Edition fornece várias classes de Modelo de Dados de Experiência (XDM) que capturam entidades de dados B2B fundamentais, incluindo [contas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campanhas](../classes/b2b/business-campaign.md)e muito mais. Ao criar schemas com base nessas classes e habilitá-las para uso no [Perfil do cliente em tempo real](../../profile/home.md), é possível mesclar dados de fontes diferentes em uma representação unificada chamada de schema de união.
 
@@ -32,6 +27,8 @@ O diagrama a seguir fornece um exemplo de como as diferentes classes B2B podem s
 Este tutorial aborda as etapas para definir uma relação muitos para um entre dois schemas na CDP B2B Edition em tempo real.
 
 >[!NOTE]
+>
+>Se você não estiver usando o Real-time Customer Data Platform B2B Edition ou quiser criar um relacionamento um para um, consulte o guia sobre [criação de uma relação um para um](./relationship-ui.md) em vez disso.
 >
 >Este tutorial foca em como estabelecer relações manualmente entre esquemas B2B na interface do usuário da plataforma. Se estiver trazendo dados de uma conexão de origem B2B, você pode usar um utilitário de geração automática para criar os esquemas, identidades e relacionamentos necessários. Consulte a documentação de fontes em namespaces e esquemas B2B para obter mais informações sobre [uso do utilitário de geração automática](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -54,8 +51,7 @@ Os relacionamentos de schema são representados por um campo dedicado em um **es
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Namespace da identidade de referência"
->abstract="O namespace (tipo) do campo de identidade principal do esquema de referência. O schema de referência deve ter um campo de identidade primário estabelecido para participar de um relacionamento."
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="O namespace (tipo) do campo de identidade principal do esquema de referência. O schema de referência deve ter um campo de identidade primário estabelecido para participar de um relacionamento. Consulte a documentação para saber mais sobre identidades em relacionamentos B2B."
 
 Para estabelecer uma relação, o schema de destino deve ter uma identidade primária definida. Ao definir uma identidade primária para uma entidade B2B, lembre-se de que as IDs de entidade com base em sequência podem se sobrepor se você estiver coletando em diferentes sistemas ou locais, o que pode levar a conflitos de dados na Platform.
 
@@ -88,14 +84,12 @@ O schema de destino &quot;[!DNL Accounts]&quot; se baseia no [!UICONTROL Conta X
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="Nome do relacionamento do esquema atual"
->abstract="Um rótulo que descreve a relação do schema atual com o schema de referência (por exemplo, &quot;Conta relacionada&quot;). Esse rótulo é usado em Perfil e segmentação para dar contexto aos dados de entidades B2B relacionadas."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="Um rótulo que descreve a relação do schema atual com o schema de referência (por exemplo, &quot;Conta relacionada&quot;). Esse rótulo é usado em Perfil e segmentação para dar contexto aos dados de entidades B2B relacionadas. Consulte a documentação para saber mais sobre a criação de relações de esquema B2B."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="Nome do relacionamento do schema de referência"
->abstract="Um rótulo que descreve a relação do schema de referência com o schema atual (por exemplo, &quot;Oportunidades Relacionadas&quot;). Esse rótulo é usado em Perfil e segmentação para dar contexto aos dados de entidades B2B relacionadas."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="Um rótulo que descreve a relação do schema de referência com o schema atual (por exemplo, &quot;Oportunidades Relacionadas&quot;). Esse rótulo é usado em Perfil e segmentação para dar contexto aos dados de entidades B2B relacionadas. Consulte a documentação para saber mais sobre a criação de relações de esquema B2B."
 
 Para definir uma relação entre dois schemas, o schema de origem deve ter um campo dedicado que faça referência à identidade primária do schema de destino. As classes B2B padrão incluem campos de chave de origem dedicados para entidades de negócios comumente relacionadas. Por exemplo, a variável [!UICONTROL Oportunidade de negócios XDM] classe contém campos de chave de origem para uma conta relacionada (`accountKey`) e uma campanha relacionada (`campaignKey`). No entanto, também é possível adicionar outros [!UICONTROL Origem B2B] campos para o esquema usando grupos de campos personalizados, se você precisar de mais do que os componentes padrão.
 

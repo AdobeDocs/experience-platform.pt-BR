@@ -1,9 +1,9 @@
 ---
 description: Esta página explica como usar o endpoint da API /sample-profiles do Destination SDK para gerar perfis de amostra com base em um schema de origem. Você pode usar essas amostras de perfis para testar sua configuração de destino baseada em arquivo.
 title: Gerar perfis de amostra com base em um schema de origem
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 3%
 
 ---
@@ -108,7 +108,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 | -------- | ----------- |
 | `segmentMembership` | Um objeto de mapa que descreve as associações de segmento de cada indivíduo. Para obter mais informações sobre `segmentMembership`, ler [Detalhes da associação ao segmento](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Um carimbo de data e hora da última vez que esse perfil se qualificou para o segmento. |
-| `status` | Indica se a associação de segmento foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
+| `status` | Campo de string que indica se a associação de segmentos foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
 | `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, consulte [base da composição do schema](../../xdm/schema/composition.md#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}

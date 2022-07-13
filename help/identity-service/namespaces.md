@@ -5,10 +5,10 @@ title: Visão geral do Namespace de identidade
 topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
-ht-degree: 2%
+source-wordcount: '1627'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,13 @@ Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, m
 
 ![](images/identity-service-stitching.png)
 
-### Tipos de identidade
+### Tipos de identidade {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="Especificar tipo de identidade"
+>abstract="O tipo de identidade controla se os dados são armazenados ou não no gráfico de identidade. Identificadores que não sejam de pessoas não serão armazenados, e todos os outros tipos de identidade serão armazenados."
+>text="Learn more in documentation"
 
 Os dados podem ser identificados por vários tipos de identidade diferentes. O tipo de identidade é especificado no momento em que o namespace de identidade é criado e controla se os dados persistem ou não no gráfico de identidade e quaisquer instruções especiais para como esses dados devem ser tratados. Todos os tipos de identidade exceto **Identificador de não pessoas** siga o mesmo comportamento de compilação de um namespace e seu valor de ID correspondente a um cluster de gráficos de identidade. Os dados não são compilados ao usar **Identificador de não pessoas**.
 
@@ -70,7 +76,7 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | Telefone (E.164) | Um namespace que representa números brutos de telefone que precisam ser atribuídos a hash no formato E.164. O formato E.164 inclui um sinal de mais (`+`), um código internacional de chamada, um código de área local e um número de telefone. Por exemplo: `(+)(country code)(area code)(phone number)`. |
 | Telefone (SHA256) | Um namespace que representa números de telefone que precisam ser atribuídos a hash usando SHA256. Você deve remover símbolos, letras e quaisquer zeros à esquerda. Você também deve adicionar o código de chamada do país como um prefixo. |
 | Telefone (SHA256_E.164) | Um namespace que representa números brutos de telefone que precisam ser atribuídos a hash usando os formatos SHA256 e E.164. |
-| TNTID | Um namespace que representa Adobe Target. Consulte o seguinte documento em [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) forçar mais informações. |
+| TNTID | Um namespace que representa Adobe Target. Consulte o seguinte documento em [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=pt-BR) forçar mais informações. |
 | Windows AID | Um namespace que representa uma ID de publicidade do Windows. Consulte o seguinte documento em [ID de publicidade do Windows](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obter mais informações. |
 
 ### Exibir namespaces de identidade

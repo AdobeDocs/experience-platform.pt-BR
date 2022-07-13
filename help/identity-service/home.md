@@ -5,9 +5,9 @@ title: Visão geral do serviço de identidade
 topic-legacy: overview
 description: O serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visão de seu cliente e de seu comportamento ao unir identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -63,14 +63,25 @@ Exemplos de [!DNL Identity Service] as implementações incluem:
 - Um banco pode preferir &quot;número de conta&quot; em conjuntos de dados offline, como transações de ramificação. Eles podem depender da &quot;ID de logon&quot; em conjuntos de dados online, pois a maioria dos visitantes seria autenticada durante a visita.
 - Seus clientes também podem ter IDs proprietárias exclusivas, como GUID ou outros identificadores universalmente exclusivos.
 
-## Namespaces de identidade
+## Namespace de identidade {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Namespaces de identidade"
+>abstract="Um namespace de identidade serve para distinguir o contexto ou o tipo de uma identidade. Por exemplo, uma identidade distingue &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Valores de identidade"
+>abstract="Um valor de identidade é um identificador que representa um indivíduo, uma organização ou um ativo exclusivo. O contexto ou tipo de identidade que o valor representa é definido por um namespace de identidade correspondente. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder."
+>text="Learn more in documentation"
 
 Se você perguntou a uma pessoa &quot;Qual é sua ID?&quot; sem qualquer outro contexto, seria difícil para eles dar uma resposta útil. Pela mesma lógica, um valor de string que representa um valor de identidade, seja um ID gerado pelo sistema ou um endereço de email, só é concluído quando fornecido com um qualificador que fornece o contexto do valor da string: o namespace de identidade.
 
-
 Seus clientes podem interagir com sua marca por meio de uma combinação de canais online e offline, resultando no desafio de como reconciliar essas interações fragmentadas em uma única identidade de cliente.
 
-Entender seu cliente em vários dispositivos e canais começa reconhecendo-os em cada canal. A Platform faz isso usando namespaces de identidade. Um namespace de identidade é um identificador como Email ou Telefone, usado para fornecer contexto adicional às identidades do cliente. Os namespaces de identidade são usados para buscar ou vincular identidades individuais e fornecer contexto para valores de identidade. Consulte a [visão geral do namespace de identidade](./namespaces.md) para obter mais informações.
+Entender o cliente em vários dispositivos e canais começa reconhecendo-o em cada canal. A Platform faz isso usando namespaces de identidade. Um namespace de identidade é um identificador como Email ou Telefone, usado para fornecer contexto adicional às identidades do cliente. Os namespaces de identidade são usados para buscar ou vincular identidades individuais e fornecer contexto para valores de identidade. Consulte a [visão geral do namespace de identidade](./namespaces.md) para obter mais informações.
 
 ## Gráficos de identidade
 

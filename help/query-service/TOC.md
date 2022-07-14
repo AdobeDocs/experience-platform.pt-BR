@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: b35581387a8b75f365db433b6138fdd8a7f96db0
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 18%
+source-wordcount: '200'
+ht-degree: 19%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 18%
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
 - Governança de dados {#data-governance}
+   - [Visão geral](data-governance/overview.md)
    - [Guia de log de auditoria](data-governance/audit-log-guide.md)
    - [Identidades em conjuntos de dados de esquema ad hoc](data-governance/ad-hoc-schema-identities.md)
    - [Suporte ao controle de acesso baseado em atributos para esquemas ad hoc](./data-governance/ad-hoc-schema-labels.md)

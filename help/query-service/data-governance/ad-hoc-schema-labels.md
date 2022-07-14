@@ -2,7 +2,7 @@
 title: Suporte de Controle de Acesso Baseado em Atributo para Esquemas Ad Hoc
 description: Um guia para restringir o acesso aos campos de dados em esquemas ad hoc gerados pelo Serviço de query do Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Para adicionar um rótulo de dados, navegue até [!UICONTROL Esquemas] guia de n
 >
 >Os esquemas ad hoc não são exibidos por padrão no inventário de esquemas.
 
-## Descubra esquemas ad hoc no inventário de esquema da interface do usuário da plataforma
+## Descubra esquemas ad hoc no inventário de esquema da interface do usuário da plataforma {#discover-ad-hoc-schemas}
 
 Para ativar a exibição de esquemas ad hoc na interface do usuário da plataforma, selecione o ícone de filtro (![Um ícone de filtro.](../images/data-governance/filter.png)) à esquerda do campo de pesquisa e, em seguida, selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
 

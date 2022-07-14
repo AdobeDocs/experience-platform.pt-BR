@@ -3,19 +3,18 @@ keywords: Experience Platform, home, tópicos populares, campos de mapeamento do
 solution: Experience Platform
 title: Mapeamento de campos para o conector de origem do Adobe Analytics
 topic-legacy: overview
-description: O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio do ADC (Conector de dados do Analytics). Alguns dos dados assimilados por meio do ADC podem ser mapeados diretamente dos campos do Analytics para campos do Experience Data Model (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
+description: O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio da fonte do Analytics. Alguns dos dados assimilados por meio do ADC podem ser mapeados diretamente dos campos do Analytics para campos do Experience Data Model (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
 workflow-type: tm+mt
-source-wordcount: '3405'
+source-wordcount: '3401'
 ht-degree: 13%
 
 ---
 
 # Mapeamentos de campo do Analytics
 
-O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio do ADC (Conector de dados do Analytics). Alguns dos dados assimilados por meio do ADC podem ser mapeados diretamente dos campos do Analytics para campos do Experience Data Model (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
+O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio da fonte do Analytics. Alguns dos dados assimilados por meio do ADC podem ser mapeados diretamente dos campos do Analytics para campos do Experience Data Model (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -23,7 +22,7 @@ O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio 
 
 Os campos selecionados são mapeados diretamente do Adobe Analytics para o Experience Data Model (XDM).
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*campo do Analytics*), o campo XDM correspondente (*campo XDM*) e seu tipo (*XDM type*), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo Analytics (*Campo do Analytics*), o campo XDM correspondente (*Campo XDM*) e seu tipo (*Tipo XDM*), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
@@ -57,7 +56,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*camp
 | ipv6 | environment.ipV6 | string |
 | j_jscript | environment.browserDetails.javaScriptVersion | string | A versão do JavaScript suportada pelo navegador. |
 | user_agent | environment.browserDetails.userAgent | string | A sequência de agente do usuário enviada no cabeçalho HTTP. |
-| mobileappid | application.</span>name | string | A ID do aplicativo móvel, armazenada no seguinte formato: `[AppName][BundleVersion]`. |
+| mobileappid | aplicativo.</span>name | string | A ID do aplicativo móvel, armazenada no seguinte formato: `[AppName][BundleVersion]`. |
 | mobiledevice | device.model | string | O nome do dispositivo móvel. No iOS, ele é armazenado como uma sequência de 2 dígitos separada por vírgulas. O primeiro número representa a geração do dispositivo e o segundo representa a família do dispositivo. |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | string | Usada pelos serviços móveis. Representa o ponto de interesse. |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | número | Usada pelos serviços móveis. Representa a distância do ponto de interesse. |
@@ -128,7 +127,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*camp
 
 ## Dividir campos de mapeamento
 
-Esses campos têm uma única fonte, mas mapeiam para **vários** locais XDM.
+Esses campos têm uma única fonte, mas mapeiam para **multiple** Locais XDM.
 
 | Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
@@ -142,7 +141,7 @@ Esses campos têm uma única fonte, mas mapeiam para **vários** locais XDM.
 
 Selecionar campos provenientes do ADC precisam ser transformados, exigindo lógica além de uma cópia direta do Adobe Analytics para serem gerados no XDM.
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*campo do Analytics*), o campo XDM correspondente (*campo XDM*) e seu tipo (*XDM type*), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo Analytics (*Campo do Analytics*), o campo XDM correspondente (*Campo XDM*) e seu tipo (*Tipo XDM*), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
@@ -152,7 +151,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*camp
 | --------------- | --------- | -------- | ----------- |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variáveis de tráfego personalizadas, variando de 1 a 75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hieries.hier1 - _experience.analytics.customDimensions.hierarquias.hier5 | Objeto | Usado por variáveis de hierarquia. Ele contém um | lista de valores delimitada. | {values (matriz), delimitador (cadeia de caracteres)} |
-| m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.list3.list[] | array | Lista de valores de variável. Contém uma lista delimitada de valores personalizados, dependendo da implementação | {value (cadeia de caracteres), key (cadeia de caracteres)} |
+| m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | array | Lista de valores de variável. Contém uma lista delimitada de valores personalizados, dependendo da implementação | {value (cadeia de caracteres), key (cadeia de caracteres)} |
 | m_color | device.colorDepth | integer | A ID da profundidade de cor, que se baseia no valor da coluna c_color. |
 | m_cookies | environment.browserDetails.cookiesEnabled | booleano | Uma variável usada na dimensão Suporte a cookies. |
 | m_event_list | commerce.compras, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemoments, commerce.productListViews, commerce.productListViews | Objeto | Eventos de comércio padrão acionados na ocorrência. | {id (cadeia de caracteres), valor (número)} |
@@ -202,9 +201,9 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*camp
 
 Selecione os campos (conhecidos como &quot;postvalues&quot;) que exigem transformações mais avançadas antes de serem mapeados com êxito dos campos do Adobe Analytics para o Experience Data Model (XDM). A execução dessas transformações avançadas envolve o uso do Serviço de query da Adobe Experience Platform e funções pré-criadas (chamadas de funções definidas pelo Adobe) para sessão, atribuição e desduplicação.
 
-Para saber mais sobre como executar essas transformações usando o Serviço de query, visite a documentação [Adobe-defined functions](../../../../query-service/sql/adobe-defined-functions.md).
+Para saber mais sobre como executar essas transformações usando o Serviço de query, visite o [Funções definidas por Adobe](../../../../query-service/sql/adobe-defined-functions.md) documentação.
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*campo do Analytics*), o campo XDM correspondente (*campo XDM*) e seu tipo (*XDM type*), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo Analytics (*Campo do Analytics*), o campo XDM correspondente (*Campo XDM*) e seu tipo (*Tipo XDM*), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
@@ -245,7 +244,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*camp
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | integer | Nome da primeira página da visita. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variáveis de tráfego personalizadas 1 - 75. |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hieries.hier1 - _experience.analytics.customDimensions.hierarquias.hier5 | Objeto | Usado por variáveis de hierarquia e contém uma lista delimitada de valores. | {values (matriz), delimitador (cadeia de caracteres)} |
-| post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.list3.list[] | array | Uma lista de valores de variável. Contém uma lista delimitada de valores personalizados, dependendo da implementação. | {value (cadeia de caracteres), key (cadeia de caracteres)} |
+| post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | array | Uma lista de valores de variável. Contém uma lista delimitada de valores personalizados, dependendo da implementação. | {value (cadeia de caracteres), key (cadeia de caracteres)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | booleano | Variável usada na dimensão Suporte a cookies. |
 | post_event_list | commerce.compras, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemoments, commerce.productListViews, commerce.productListViews | Objeto | Eventos de comércio padrão acionados na ocorrência. | {id (cadeia de caracteres), valor (número)} |
 | post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event20 _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event30 1to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event5 01 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event7 01to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event 900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | Objeto | Eventos personalizados acionados na ocorrência. | {id (Objeto), valor (Objeto)} |

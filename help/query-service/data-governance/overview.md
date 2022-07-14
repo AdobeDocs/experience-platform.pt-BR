@@ -1,7 +1,8 @@
 ---
 title: Governança de dados no serviço de query
 description: Esta visão geral aborda os principais elementos do controle de dados no Experience Platform Query Service.
-source-git-commit: d81ef9b9b6fdf7612d2afead13e925c8a9daf902
+feature: Data Governance
+source-git-commit: ec063a0f5600729d3575f98898ade04443f29f2a
 workflow-type: tm+mt
 source-wordcount: '2667'
 ht-degree: 0%

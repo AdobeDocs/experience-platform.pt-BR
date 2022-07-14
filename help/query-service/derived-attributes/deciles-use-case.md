@@ -1,9 +1,7 @@
 ---
 title: 'Caso de uso de atributos derivados baseados em decilo '
 description: Este guia demonstra as etapas necessárias para usar o Serviço de query para criar atributos derivados com base em decil para usar com os dados do perfil.
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%

@@ -9,7 +9,7 @@ exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -35,11 +35,11 @@ O vídeo a seguir foi criado para oferecer suporte à compreensão do Attributio
 
 O Attribution AI pode ser usado para auxiliar nos seguintes casos de uso de exemplo:
 
-- **Comunicação** executiva: Permita que os executivos entendam o verdadeiro impacto incremental do marketing, tanto por canal, região, SKU etc.
-- **Dotação** orçamental: Informe as decisões de alocação de orçamento no canal de marketing.
-- **Otimização** de campanha: Em cada canal, entenda quais campanhas, criações e palavras-chave estão funcionando melhor para quais SKUs ou regiões. Isso permite que você veja cada canal para que a equipe de marketing possa otimizar suas táticas.
-- **Atribuição** de funil completo: Entenda o impacto do marketing em toda a jornada do cliente. Por exemplo, assinatura de conta gratuita para conversão paga e além dela.
-- **Avaliações** do parceiro: Avalie a eficácia de agências e parceiros, com base nos resultados da atribuição.
+- **Relatórios executivos**: Permita que os executivos entendam o verdadeiro impacto incremental do marketing, tanto por canal, região, SKU etc.
+- **Dotação orçamental**: Informe as decisões de alocação de orçamento no canal de marketing.
+- **Otimização de campanha**: Em cada canal, entenda quais campanhas, criações e palavras-chave estão funcionando melhor para quais SKUs ou regiões. Isso permite que você veja cada canal para que a equipe de marketing possa otimizar suas táticas.
+- **Atribuição de funil completo**: Entenda o impacto do marketing em toda a jornada do cliente. Por exemplo, assinatura de conta gratuita para conversão paga e além dela.
+- **Avaliações dos parceiros**: Avalie a eficácia de agências e parceiros, com base nos resultados da atribuição.
 
 ### Recursos adicionais
 
@@ -47,4 +47,4 @@ O Attribution AI também oferece integração com outras soluções do Adobe, co
 
 ## Próximas etapas
 
-Você pode começar seguindo o guia [introdução](./getting-started.md). Este guia aborda a configuração de todas as pré-solicitações necessárias para o Attribution AI. Se você já tiver suas credenciais e dados prontos, visite o [guia do usuário do Attribution AI](./user-guide.md). Este guia o orienta a criar uma instância e enviá-la para treinamento e pontuação.
+Você pode começar seguindo a [introdução](./getting-started.md) guia. Este guia aborda a configuração de todas as pré-solicitações necessárias para o Attribution AI. Se você já tiver suas credenciais e dados prontos, visite a [Guia do usuário do Attribution AI](./user-guide.md). Este guia o orienta a criar uma instância e enviá-la para treinamento e pontuação.

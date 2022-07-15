@@ -7,7 +7,7 @@ user-guide-description: Utilize os serviços inteligentes de IA para gerar pontu
 source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 - [Visão geral dos Serviços inteligentes](home.md)
 - [Preparar dados para uso nos Serviços inteligentes](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- IA de atribuição {#attribution-ai}
    - [Visão geral](attribution-ai/overview.md)
    - [Introdução ao Attribution AI](attribution-ai/getting-started.md)
    - [Entrada e saída](attribution-ai/input-output.md)

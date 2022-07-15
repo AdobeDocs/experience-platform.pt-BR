@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 18%
+ht-degree: 23%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 18%
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Projeções de borda](api/edge-projections.md)
-   * [Entidades ([!DNL Profile] acesso)](api/entities.md)
-   * [Exportar tarefas ([!DNL Profile] exportar)](api/export-jobs.md)
-   * [Visualizar o status da amostra ([!DNL Profile] pré-visualização)](api/preview-sample-status.md)
+   * [Entidades ([!DNL Profile] access)](api/entities.md)
+   * [Exportar trabalhos ([!DNL Profile] exportar)](api/export-jobs.md)
+   * [Visualizar status da amostra ([!DNL Profile] preview)](api/preview-sample-status.md)
    * [[!DNL Profile] tarefas do sistema (Excluir solicitações)](api/profile-system-jobs.md)
 * Interface do usuário do perfil {#ui}
    * [[!DNL Profile] Guia da interface do usuário](ui/user-guide.md)
@@ -39,14 +39,14 @@ ht-degree: 18%
    * [API de políticas de mesclagem](api/merge-policies.md)
    * [Guia da interface do usuário de políticas de mesclagem](merge-policies/ui-guide.md)
    * [Criar políticas de mesclagem (Vídeo)](video/create-merge-policies.md)
-* Esquemas de união {#union-schemas}
+* Schemas da União {#union-schemas}
    * [Guia da interface do usuário do schema de união](ui/union-schema.md)
    * [Visão geral do esquema de união (Vídeo)](video/union-schemas-overview.md)
 * Tutoriais {#tutorials}
    * [Adicionar dados ao perfil do cliente em tempo real](tutorials/add-profile-data.md)
    * [Configurar um conjunto de dados para o Perfil](tutorials/dataset-configuration.md)
    * [Gerar o relatório de sobreposição de conjunto de dados](tutorials/dataset-overlap-report.md)
-   * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+   * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=pt-BR)
 * [Processamento de solicitação de privacidade](privacy.md)
 * [[!DNL Profile] guia de solução de problemas](troubleshooting.md)
 * [Referência da API do perfil](https://www.adobe.com/go/profile-apis-en)

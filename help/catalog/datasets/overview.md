@@ -3,12 +3,12 @@ keywords: Experience Platform, página inicial, tópicos populares, local dos da
 solution: Experience Platform
 title: Visão geral dos conjuntos de dados
 topic-legacy: datasets
-description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados no Experience Platform.
+description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
 source-wordcount: '711'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Todos os dados assimilados com êxito no Adobe Experience Platform são mantidos no [!DNL Data Lake] como conjuntos de dados. Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os conjuntos de dados também contêm metadados que descrevem vários aspectos dos dados armazenados.
 
-Este documento fornece uma visão geral de alto nível dos conjuntos de dados em [!DNL Experience Platform].
+Este documento fornece uma visão geral de alto nível dos conjuntos de dados na [!DNL Experience Platform].
 
 ## Criar conjuntos de dados e rastrear metadados
 

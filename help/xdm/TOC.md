@@ -15,7 +15,7 @@ ht-degree: 16%
 # Sistema do Experience Data Model (XDM) {#xdm}
 
 * [Visão geral do sistema XDM](home.md)
-* Esquemas {#schema}
+* Schemas {#schema}
    * [Noções básicas da composição do schema](schema/composition.md)
    * [Práticas recomendadas para modelagem de dados](schema/best-practices.md)
    * [Dados confidenciais e pessoais](./schema/sensitive-and-personal-data.md)
@@ -136,7 +136,7 @@ ht-degree: 16%
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}
-      * [Esquemas](./ui/resources/schemas.md)
+      * [Schemas](./ui/resources/schemas.md)
       * [Classes](./ui/resources/classes.md)
       * [Grupos de campos](./ui/resources/field-groups.md)
       * [Tipos de dados](./ui/resources/data-types.md)

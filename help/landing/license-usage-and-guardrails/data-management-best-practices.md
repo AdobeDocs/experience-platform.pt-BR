@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform, home, tópicos populares, gerenciamento de dados, direito de licença, licenciamento, práticas recomendadas
 title: Práticas recomendadas de direito à licença de gerenciamento de dados
-description: Este documento descreve as práticas recomendadas para seguir e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença com o Adobe Experience Platform.
+description: Este documento descreve as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
 source-wordcount: '2531'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ O Adobe Experience Platform é um sistema aberto que transforma seus dados em pe
 
 A Platform oferece licenças que estabelecem o número de perfis que você pode criar e a quantidade de dados que você pode trazer. Dada a capacidade de trazer qualquer fonte, volume ou histórico de dados, é possível exceder seus direitos de licenciamento à medida que seus volumes de dados crescem.
 
-Este documento descreve as práticas recomendadas para seguir e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença com o Adobe Experience Platform.
+Este documento descreve as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 
 ## Como entender o armazenamento de dados do Adobe Experience Platform
 

@@ -4,12 +4,12 @@ title: Grades de proteção padrão para dados de perfil do cliente em tempo rea
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'O Adobe Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacionais tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema. '
+description: 'A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -53,7 +53,7 @@ As seguintes medidas de proteção fornecem limites recomendados ao modelar dado
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Conjuntos de dados de classe de Perfil individual XDM | 20 | Suave | Recomenda-se um máximo de 20 conjuntos de dados que aproveitam a classe de Perfil individual XDM. |
-| Conjuntos de dados da classe XDM ExperienceEvent | 20º | Suave | Recomenda-se um máximo de 20 conjuntos de dados que aproveitam a classe XDM ExperienceEvent . |
+| Conjuntos de dados da classe XDM ExperienceEvent | 20º | Suave | Recomenda-se um máximo de 20 conjuntos de dados que aproveitam a classe XDM ExperienceEvent. |
 | Conjuntos de dados do conjunto de relatórios do Adobe Analytics habilitados para o Perfil | 1 | Suave | No máximo um (1) conjunto de dados do conjunto de relatórios do Analytics deve ser ativado para o Perfil. A tentativa de ativar vários conjuntos de dados do conjunto de relatórios do Analytics para o Perfil pode ter consequências não intencionais para a qualidade dos dados. Para obter mais informações, consulte a seção em [Conjuntos de dados do Adobe Analytics](#aa-datasets) no apêndice. |
 | Relacionamentos de várias entidades | 5 | Suave | Recomenda-se um máximo de 5 relacionamentos multientidades definidos entre entidades primárias e entidades de dimensão. Os mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desabilitado. |
 | Profundidade JSON para campo de ID usado em relacionamento de várias entidades | 4 | Suave | A profundidade máxima JSON recomendada para um campo de ID usado em relacionamentos de várias entidades é 4. Isso significa que, em um schema altamente aninhado, os campos aninhados com mais de 4 níveis de profundidade não devem ser usados como um campo de ID em um relacionamento. |

@@ -7,7 +7,7 @@ feature: Data Governance
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 35%
+ht-degree: 38%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 35%
    * [Visão geral](policies/overview.md)
    * [Gerenciar políticas na interface do usuário](policies/user-guide.md)
    * [Criar uma política na API](policies/create.md)
-* Aplicação de política {#enforcement}
+* Aplicação da política {#enforcement}
    * [Visão geral](enforcement/overview.md)
    * [Aplicação automática](enforcement/auto-enforcement.md)
    * [Aplicação baseada em API](enforcement/api-enforcement.md)
-* API do Serviço de Política {#api}
+* API do serviço de política {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Rótulos](api/labels.md)

@@ -10,7 +10,7 @@ exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 19%
+ht-degree: 26%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 19%
 
 O Customer AI , como parte dos Serviços inteligentes , fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações.
 
-Com a ajuda de fatores influentes, a AI do cliente pode informar o que um cliente deve fazer e por quê. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights do Customer AI para personalizar as experiências do cliente, disponibilizando as ofertas e mensagens mais apropriadas.
+Com a ajuda de fatores influentes, a IA do cliente pode informar o que um cliente deve fazer e por quê. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights da IA do cliente para personalizar as experiências do cliente, disponibilizando as ofertas e mensagens mais apropriadas.
 
 ## Noções básicas sobre o Customer AI
 

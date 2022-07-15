@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP; CDP; Real-time Customer Data Platform; plataforma de dados do cliente em tempo real; cdp em tempo real; cdp; rtcdp
 title: Exemplo de caso de uso para Real-time Customer Data Platform B2B Edition
-description: Este cenário de exemplo fornece um exemplo para a configuração de sua implementação do Real-time Customer Data Platform B2B Edition.
+description: Este modelo de cenário fornece um exemplo para a configuração da sua implementação do Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -78,7 +78,7 @@ Por uma questão de simplicidade e com a finalidade deste exemplo, as pessoas es
 - Crie segmentos exclusivos usando esses dados agregados para iniciativas de marketing variadas. Neste exemplo, o segmento encontra todas as pessoas que:
 
    - Ter oportunidades associadas (em todas as contas) acima de US$ 1 milhão em valor
-   - E
+   - AND
    - Visitaram a página do produto no último mês
 
 - Crie um público-alvo que seja o recipient mais eficiente da nova campanha de marketing do Bodea. Neste exemplo, RT-CDP, B2B Edition ajudará o profissional de marketing a identificar `p2@townsend.com` como o público-alvo correto para esta campanha de marketing.

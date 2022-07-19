@@ -1,7 +1,8 @@
 ---
-title: 'Caso de uso de atributos derivados baseados em decilo '
+title: Caso de uso de atributos derivados baseados em decilo
 description: Este guia demonstra as etapas necessárias para usar o Serviço de query para criar atributos derivados com base em decil para usar com os dados do perfil.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -59,7 +60,7 @@ A tabela a seguir exibe os dados de amostra contidos na variável `_profilefound
 
 >[!NOTE]
 >
->Para brevidade, a ID do predefinição `_profilefoundationreportingstg` foi omitido do início do namespace nos títulos da coluna e menções subsequentes em todo o documento.
+>Para brevidade, a ID do locatário `_profilefoundationreportingstg` foi omitido do início do namespace nos títulos da coluna e menções subsequentes em todo o documento.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ Execute a query para preencher o conjunto de dados do decile. Você também pode
 ## Próximas etapas
 
 O exemplo de uso fornecido acima destaca as etapas para disponibilizar os atributos do decile no Perfil do cliente em tempo real. Isso permite que o Serviço de segmentação, por meio de uma interface de usuário ou API RESTful, gere públicos com base nesses buckets de decil. Consulte a [Visão geral do serviço de segmentação](../../segmentation/home.md) para obter informações sobre como criar, avaliar e acessar segmentos.
-

@@ -1,12 +1,12 @@
 ---
 title: Uso do Adobe Analytics com o SDK da Web da plataforma
 description: Saiba como enviar dados para o Adobe Analytics com o SDK da Web da Adobe Experience Platform.
-keywords: adobe analytics;analytics;mapped data;mapped vars;
+keywords: adobe analytics; analytics; dados mapeados; vars mapeadas;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,21 +16,21 @@ A Adobe Experience Platform [!DNL Web SDK] O pode enviar dados para o Adobe Anal
 
 ## Configuração
 
-Adobe Analytics automatically picks up the data you are sending if you have a report suite mapped in the Customer Config UI. Here you can map one or more reportings to a given config. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
+A Adobe Analytics coleta automaticamente os dados que você está enviando se você tem um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
 
 ## Grupo de campos XDM
 
-To make it easier to capture the most common Adobe Analytics metrics, we provide an Analytics field group that you can use. For more details on this schema, see the documenation for the [Adobe Analytics ExperienceEvent Full Extension schema field group](../../../xdm/field-groups/event/analytics-full-extension.md)
+Para facilitar a captura das métricas mais comuns do Adobe Analytics, fornecemos um grupo de campos do Analytics que pode ser usado. Para obter mais detalhes sobre esse schema, consulte a documentação do [Grupo de campos do esquema Extensão completa do Adobe Analytics ExperienceEvent](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Dados mapeados automaticamente
 
-The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables. A lista completa dessas variáveis está listada [here](automatically-mapped-vars.md).
+A Adobe Experience Platform [!DNL Edge Network] O mapeia automaticamente muitas variáveis XDM. A lista completa dessas variáveis está listada [here](automatically-mapped-vars.md).
 
-## Manually mapped data
+## Dados mapeados manualmente
 
-Todos os dados coletados pela rede de borda podem ser acessados pelas regras de processamento. The data is flattened using dot notation and available as contextData.
+Todos os dados não mapeados automaticamente pela rede de borda podem ser acessados por meio de regras de processamento. Os dados são nivelados usando a notação de pontos e estão disponíveis como contextData.
 
-If you had a schema that looked like this.
+Se você tivesse um esquema que se parecesse com este.
 
 ```javascript
 {

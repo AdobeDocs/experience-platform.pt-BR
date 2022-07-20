@@ -5,9 +5,9 @@ title: Postman no Adobe Experience Platform
 topic-legacy: api guide
 description: Este documento contém etapas que descrevem como configurar um ambiente do Postman, importar coleções do Postman e uma lista de coleções disponíveis para cada serviço da plataforma.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ O guia de vídeo a seguir descreve a criação e a configuração do ambiente Po
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Coleções de carteiro {#collections}
+## Coleções do Postman {#collections}
 
 Uma pasta contendo todas as coleções disponíveis do Postman pode ser encontrada ao acessar o [Repositório GitHub de amostras do Experience Platform Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Como alternativa, um link de coleção do Postman pode ser encontrado em cada arquivo de swagger individual na variável [Documentação de referência da API](https://www.adobe.com/go/platform-api-reference-en) na Adobe I/O.
 
@@ -52,9 +52,9 @@ Para saber mais sobre a interface do usuário do Postman e seus recursos dispon�
 
 >[!WARNING]
 >
->Conforme observado na coleção Postman da geração de token de acesso ao Adobe I/O, os métodos de geração indicados são adequados para **uso não relacionado à produção**. A assinatura local carrega uma biblioteca do JavaScript de um host de terceiros e a assinatura remota envia a chave privada para um serviço da Web que é de propriedade e operado pelo Adobe. Embora o Adobe não armazene essa chave privada, as chaves de produção nunca devem ser compartilhadas com ninguém.
+>Conforme observado na coleção Postman do Identity Management Service (IMS), os métodos de geração indicados são adequados para **uso não relacionado à produção**. A assinatura local carrega uma biblioteca do JavaScript de um host de terceiros e a assinatura remota envia a chave privada para um serviço da Web que é de propriedade e operado pelo Adobe. Embora o Adobe não armazene essa chave privada, as chaves de produção nunca devem ser compartilhadas com ninguém.
 
-O vídeo abaixo usa a variável [Coleção de geração de token de acesso ao Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) que podem ser baixadas do repositório público do GitHub.
+O vídeo abaixo usa a variável [Coleção Postman do Identity Management Service (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) que podem ser baixadas do repositório público do GitHub.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 

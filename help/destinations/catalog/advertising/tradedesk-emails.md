@@ -1,9 +1,9 @@
 ---
 title: (Beta) A conexão do Trade Desk - CRM
 description: Ative perfis para sua conta do Trade Desk para direcionamento e supressão de público-alvo com base em dados de CRM.
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1041'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Este documento foi projetado para ajudar você a ativar perfis para sua [!DNL Tr
 
 Antes de poder ativar segmentos para [!DNL The Trade Desk], você deve entrar em contato com seu [!DNL The Trade Desk] gerente de conta para assinar o contrato de integração do CRM. [!DNL The Trade Desk] O concederá permissão e compartilhará sua ID do anunciante para configurar seu destino.
 
-## Requisitos de correspondência de ID (#id-match-requirements)
+## Requisitos de correspondência de ID {#id-matching-requirements}
 
 Dependendo do tipo de IDs assimiladas no Adobe Experience Platform, é necessário seguir os requisitos correspondentes. Leia o [Visão geral do Namespace de identidade](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR) para obter mais informações.
 
@@ -50,7 +50,7 @@ O Adobe Experience Platform oferece suporte para texto sem formatação e endere
 
 {style=&quot;table-layout:auto&quot;}
 
-## Requisitos de hash de email (#hash-requirements)
+## Requisitos de hash de email {#hashing-requirements}
 
 Você pode fazer hash de endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email brutos.
 
@@ -77,11 +77,11 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## Conecte-se ao destino {#connect}
 
-### Autenticar para destino (#autenticar)
+### Autenticar para destino {#authenticate}
 
 [!DNL The Trade Desk] O Destino do CRM é um upload diário de arquivos em lote e não requer autenticação do usuário.
 
-### Preencha os detalhes do destino (#fill-in-details)
+### Preencha os detalhes do destino {#fill-in-details}
 
 Antes de enviar ou ativar os dados do público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configuração](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) nesse destino, você deve fornecer as seguintes informações:
 
@@ -120,7 +120,7 @@ Seleção de campos de destino:
 * Selecione o `Email` namespace como identidade de destino quando o namespace ou atributo de origem for `Email`.
 * Selecione o `Email_LC_SHA256` namespace como identidade de destino quando o namespace ou atributo de origem for `Email_LC_SHA256`.
 
-## Validar exportação de dados (#validate)
+## Validar exportação de dados {#validate}
 
 Para validar se os dados são exportados corretamente do Experience Platform e para [!DNL The Trade Desk], encontre os segmentos no bloco de dados Adobe 1PD dentro [!DNL The Trade Desk] Plataforma de gerenciamento de dados (DMP). Estas são as etapas para encontrar a ID correspondente na variável [!DNL Trade Desk] IU:
 

@@ -3,9 +3,9 @@ keywords: destinos de publicidade, destinos, destinos de plataforma
 title: Visão geral de destinos de publicidade
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe públicos-alvo pseudônimos nessas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
+source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '253'
 ht-degree: 1%
 
 ---
@@ -37,6 +37,7 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 * [Conexão da Lista de clientes do pinterest](pinterest.md)
 * [(Beta) Conexão de Anúncios em Snapchat](snap-inc.md)
 * [A conexão com o Trade Desk](tradedesk.md)
+* [A conexão CRM do Trade Desk](tradedesk-emails.md)
 * [Dados do Yahoo/VerizonX](datax.md)
 
 ### Extensões

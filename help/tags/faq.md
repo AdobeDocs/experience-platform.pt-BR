@@ -2,7 +2,7 @@
 title: Guia de solução de problemas de tags
 description: Obtenha respostas a perguntas frequentes sobre tags na Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 80%
@@ -96,13 +96,13 @@ Sim! Agora as tags oferecem suporte a propriedades e configuração para disposi
 
 ## Por que a interface do usuário está dizendo que houve um erro ao carregar minha conta?
 
-Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que sua conta não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](./ui/administration/manage-permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso à interface do usuário da coleta de dados.
+Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que sua conta não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](../rtcdp-connections/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso à interface do usuário da coleta de dados.
 
 ## Por que não posso adicionar nenhuma propriedade na interface do usuário do ?
 
 Se não for possível criar novas propriedades quando conectado à interface do usuário da coleta de dados, significa que a conta não pertence a um perfil de produto com o direito de Gerenciar propriedades.
 
-Consulte o guia sobre [gerenciamento de permissões](./ui/administration/manage-permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder o direito de Gerenciar propriedades. Para obter mais informações sobre os diferentes direitos das tags, consulte a visão geral em [permissões do usuário para tags](./ui/administration/user-permissions.md).
+Consulte o guia sobre [gerenciamento de permissões](../rtcdp-connections/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder o direito de Gerenciar propriedades. Para obter mais informações sobre os diferentes direitos das tags, consulte a visão geral em [permissões do usuário para tags](./ui/administration/user-permissions.md).
 
 ## E se eu tiver outras dúvidas?
 

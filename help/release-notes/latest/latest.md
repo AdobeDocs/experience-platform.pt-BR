@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 4addf64a819cd302b514334ce9cd949e96d0e698
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 5%
@@ -17,7 +17,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[Coleta de dados]](#data-collection)
+- [Coleta de dados](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de query](#query-service)
 - [Fontes](#sources)

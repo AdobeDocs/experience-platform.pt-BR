@@ -1,7 +1,8 @@
 ---
 title: Painel de perfis da conta
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os perfis da conta B2B de sua organização.
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -42,7 +43,7 @@ O [!UICONTROL Procurar] permite pesquisar e exibir os perfis de conta somente le
 
 Selecione o [!UICONTROL ID do perfil] dos resultados exibidos na [!UICONTROL Procurar] para abrir o [!UICONTROL Detalhes] para o perfil da conta.
 
-![Os Perfis de conta navegam na guia com os resultados exibidos e a ID de perfil é realçada.](../images/account-profiles/account-profiles-browse-tab.png) —>
+![Os Perfis de conta navegam na guia com os resultados exibidos e a ID de perfil é realçada.](../images/account-profiles/account-profiles-browse-tab.png)
 
 As informações do perfil da conta exibidas no [!UICONTROL Detalhes] A guia foi unida de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação em [navegar pelos perfis da conta no Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização do perfil da conta na interface do usuário da plataforma.
 

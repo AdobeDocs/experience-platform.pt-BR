@@ -2,7 +2,8 @@
 keywords: Experience Platform, serviço de consulta, serviço de consulta, estruturas de dados aninhadas, dados aninhados, achatado, dados aninhados nivelados,
 title: Nivelar estruturas de dados aninhadas para uso com ferramentas de BI
 description: Este documento explica como nivelar esquemas XDM para todas as tabelas e visualizações durante uma sessão ao usar ferramentas de BI de terceiros com Serviço de Consulta.
-source-git-commit: 3c9a1f552760b34bfb2c4246382fcb2d66e563d0
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
+source-git-commit: a7f273383293359cf6adbcc0a508fb19d2789339
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 1%
@@ -55,7 +56,7 @@ prod:all?FLATTEN
 
 O schema de exemplo usado neste guia emprega o grupo de campos padrão [!UICONTROL Detalhes de comércio], que utiliza o `commerce` estrutura do objeto e `productListItems` matriz. Consulte a documentação do XDM para [mais informações sobre o [!UICONTROL Detalhes de comércio] grupo de campos](../../xdm/field-groups/event/commerce-details.md). Uma representação da estrutura do schema pode ser vista na imagem abaixo.
 
-![Um diagrama de esquema do grupo de campos Detalhes de Comércio , incluindo o `commerce` e `productListItems` estruturas.](../images/best-practices/final-subscription-schema.png)
+![Um diagrama de esquema do grupo de campos Detalhes de Comércio , incluindo o `commerce` e `productListItems` estruturas.](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 Se a ferramenta BI não oferecer suporte a estruturas de dados aninhadas, pode ser difícil fazer referência a campos aninhados caso eles contenham valores serializados (como `commerce` e `productListItems` no schema de exemplo). Esses valores podem aparecer como partes de um único `commerce` e não são realisticamente inutilizáveis.
 

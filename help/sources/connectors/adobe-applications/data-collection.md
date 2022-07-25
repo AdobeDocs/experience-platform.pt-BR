@@ -3,7 +3,7 @@ keywords: Experience Platform, home, tópicos populares, fontes, fonte, coleta d
 title: Coleta de dados do Adobe
 description: Este documento fornece uma visão geral da fonte de coleta de dados do Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Um armazenamento de dados é uma configuração que informa à Rede de borda ond
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Para obter etapas abrangentes sobre como usar a interface do usuário da coleta de dados, consulte [visão geral completa da coleta de dados](../../../rtcdp-connections/e2e.md).
+Para obter etapas abrangentes sobre como usar a interface do usuário da coleta de dados, consulte [visão geral completa da coleta de dados](../../../collection/e2e.md).
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a acessar a interface do usuário da coleta de dados usando o espaço de trabalho de fontes. Para obter mais informações sobre Coleção de dados, consulte [Visão geral da coleção de dados](../../../rtcdp-connections/e2e.md).
+Ao ler este documento, você aprendeu a acessar a interface do usuário da coleta de dados usando o espaço de trabalho de fontes. Para obter mais informações sobre Coleção de dados, consulte [Visão geral da coleção de dados](../../../collection/e2e.md).

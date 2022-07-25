@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 5%
@@ -77,7 +77,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | [Extensão de encaminhamento de eventos de Conversões aprimoradas do Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | A extensão Conversões aprimoradas do Google Ads permite aprimorar as conversões do Google Ads em tempo real. |
 | [Extensão de encaminhamento de evento de mailchimp](../../tags/extensions/web/mailchimp/overview.md) | A extensão de encaminhamento de evento Mailchimp envia eventos para a API de Marketing Mailchimp que pode acionar emails para campanhas de marketing, jornadas ou transações de Mailchimp. |
 
-Para obter mais informações, consulte o [visão geral da coleta de dados](../../rtcdp-connections/home.md).
+Para obter mais informações, consulte o [visão geral da coleta de dados](../../collection/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

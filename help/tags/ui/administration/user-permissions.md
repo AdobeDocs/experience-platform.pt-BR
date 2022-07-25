@@ -2,7 +2,7 @@
 title: Permissões de usuário para tags
 description: Saiba mais sobre os diferentes tipos de permissões disponíveis para tags e algumas estratégias básicas de implementação para diferentes casos de uso comercial.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 23%
@@ -21,7 +21,7 @@ Este guia fornece uma visão geral dos diferentes tipos de permissões disponív
 
 >[!NOTE]
 >
->Para obter etapas sobre como configurar permissões para usuários que usam o Admin Console, consulte o tutorial em [gerenciamento de permissões para coleta de dados](../../../rtcdp-connections/permissions.md).
+>Para obter etapas sobre como configurar permissões para usuários que usam o Admin Console, consulte o tutorial em [gerenciamento de permissões para coleta de dados](../../../collection/permissions.md).
 
 ## Tipos de permissão
 
@@ -121,4 +121,4 @@ A tabela a seguir fornece alguns exemplos dos tipos de funções que você pode 
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral das permissões disponíveis para tags no Experience Platform. Para obter as etapas sobre como configurar perfis de produto para tags no Adobe Admin Console, consulte o guia em [gerenciamento de permissões de usuário para coleta de dados](../../../rtcdp-connections/permissions.md).
+Este documento forneceu uma visão geral das permissões disponíveis para tags no Experience Platform. Para obter as etapas sobre como configurar perfis de produto para tags no Adobe Admin Console, consulte o guia em [gerenciamento de permissões de usuário para coleta de dados](../../../collection/permissions.md).

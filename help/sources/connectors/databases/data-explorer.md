@@ -1,22 +1,18 @@
 ---
 keywords: Experience Platform, home, tópicos populares, Data Explorer do Azure, explorador de dados do azure
 solution: Experience Platform
-title: Visão Geral do Conector de Origem do Azure Data Explorer
+title: Visão geral da origem de Data Explorer do Azure
 topic-legacy: overview
 description: Saiba como conectar o Azure Data Explorer ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Azure Data Explorer] conector
-
->[!NOTE]
->
->O [!DNL Azure Data Explorer] O conector está em beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com rótulo beta.
+# [!DNL Azure Data Explorer] source
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como [!DNL Microsoft], MySQL e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 

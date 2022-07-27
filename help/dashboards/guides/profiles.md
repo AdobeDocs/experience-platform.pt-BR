@@ -4,10 +4,10 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
 workflow-type: tm+mt
-source-wordcount: '3761'
-ht-degree: 0%
+source-wordcount: '3816'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ Para navegar até o [!UICONTROL Perfis] no painel da interface do usuário da pl
 
 ### Modificação do [!UICONTROL Perfis] painel
 
-Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
@@ -106,6 +106,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Perfis não segmentados]](#unsegmented-profiles)
 * [[!UICONTROL Tendência de perfis não segmentados]](#unsegmented-profiles-trend)
 * [[!UICONTROL Perfis não segmentados por identidade]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Públicos-alvo]](#audiences)
 * [[!UICONTROL Públicos-alvo mapeados para o status de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamanho dos públicos-alvo]](#audiences-size)
 * [[!UICONTROL Tendência da contagem de perfis]](#profile-count-trend)
@@ -258,6 +259,32 @@ O [!UICONTROL Tendência de perfis não segmentados] O widget fornece uma ilustr
 O [!UICONTROL Perfis não segmentados por identidade] O widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras para facilitar a comparação.
 
 ![O widget Perfis não segmentados por identidade.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL Públicos-alvo] {#audiences}
+
+Este widget fornece o número total de segmentos prontos para serem ativados, de acordo com a política de mesclagem escolhida aplicada aos dados do seu perfil.
+
+Selecionar **[!UICONTROL Públicos-alvo]** para navegar até o [!UICONTROL Segmentos] painel [!UICONTROL Procurar] guia . A partir daí, você pode ver uma lista de todas as definições de segmentos para sua organização.
+
+![O widget Públicos-alvo .](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL Públicos-alvo mapeados para o status de destino] {#audiences-mapped-to-destination-status}
 

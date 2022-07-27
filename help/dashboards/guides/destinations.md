@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Segmentos não mapeados por identidade]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
 * [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
+* [[!UICONTROL Públicos-alvo mapeados]](#mapped-audiences)
 * [[!UICONTROL Estado de funcionamento do público-alvo mapeado]](#mapped-audience-health)
 * [[!UICONTROL Contagem de destinos]](#destinations-count)
 * [[!UICONTROL Status do destino]](#destination-status)
@@ -195,6 +196,14 @@ O **[!UICONTROL Públicos-alvo comuns]** O widget fornece uma lista dos cinco pr
 O [!UICONTROL TAMANHO DO PÚBLICO-ALVO] fornece a contagem total de perfis de cada segmento listado.
 
 ![O widget Públicos-alvo comuns .](../images/destinations/common-audiences.png)
+
+### Públicos-alvo mapeados {#mapped-audiences}
+
+O [!UICONTROL Públicos-alvo mapeados] O widget exibe o número total de públicos-alvo mapeados que podem ser ativados no destino selecionado na parte superior da página.
+
+Selecionar **[!UICONTROL Segmentos]** para navegar até o painel Segmentos [!UICONTROL Procurar] guia . Este espaço de trabalho exibe uma lista de todas as definições de segmentos para sua organização.
+
+![O widget Mapped audiences .](../images/destinations/mapped-audiences.png)
 
 ### Estado de funcionamento do público-alvo mapeado {#mapped-audience-health}
 

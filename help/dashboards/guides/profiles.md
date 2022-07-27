@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3814'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ O layout deste painel também pode ser personalizado ao selecionar [**[!UICONTRO
 
 ## Procurar perfis {#browse-profiles}
 
-O [!UICONTROL Procurar] permite pesquisar e exibir os perfis somente leitura assimilados na organização IMS. Desse ponto, você pode ver informações importantes pertencentes ao perfil, relacionadas às preferências, aos eventos passados, às interações e aos segmentos
+O [!UICONTROL Procurar] permite pesquisar e exibir os perfis somente leitura assimilados em sua organização. Desse ponto, você pode ver informações importantes pertencentes ao perfil, relacionadas às preferências, aos eventos passados, às interações e aos segmentos
 
 Para saber mais sobre os recursos de visualização de perfil fornecidos na interface do usuário da plataforma, consulte a documentação em [navegar pelos perfis no Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -89,9 +89,9 @@ Consulte o guia da interface do usuário do schema de união para saber mais sob
 
 O painel é composto de widgets, que são métricas somente leitura, fornecendo informações importantes sobre os dados do perfil.
 
-A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado. A data e a hora do instantâneo são fornecidas em UTC; não está no fuso horário do usuário individual ou da Organização IMS.
+A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado. A data e a hora do instantâneo são fornecidas em UTC; não está no fuso horário do usuário ou da organização individual.
 
-## Widgets padrão
+## Widgets padrão {#standard-widgets}
 
 O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos dados do seu perfil. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
 

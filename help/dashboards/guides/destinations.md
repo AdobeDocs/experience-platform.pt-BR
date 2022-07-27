@@ -4,7 +4,7 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
 source-wordcount: '2726'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Você pode modificar a aparência do painel de destinos selecionando **[!UICONTR
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
-## Widgets padrão
+## Widgets padrão {#standard-widgets}
 
 O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos destinos e avaliar a integridade dos segmentos disponíveis para a análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
 

@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
 workflow-type: tm+mt
-source-wordcount: '3814'
+source-wordcount: '3875'
 ht-degree: 1%
 
 ---
@@ -98,8 +98,10 @@ O Adobe fornece vários widgets padrão que podem ser usados para visualizar mé
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
 * [[!UICONTROL Contagem de perfis]](#profile-count)
-* [[!UICONTROL Perfis adicionados]](#profiles-added)
-* [[!UICONTROL Tendência de adição de perfis]](#profiles-added-trend)
+* [[!UICONTROL Tendência da contagem de perfis]](#profile-count-trend)
+* [[!UICONTROL Alteração na contagem de perfis]](#profile-count-change)
+* [[!UICONTROL Tendência da alteração da contagem de perfis]](#profiles-count-change-trend)
+* [[!UICONTROL Tendência de alteração de contagem de perfis por identidade]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 * [[!UICONTROL Perfis de identidade única]](#single-identity-profiles)
@@ -109,10 +111,8 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Públicos-alvo]](#audiences)
 * [[!UICONTROL Públicos-alvo mapeados para o status de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamanho dos públicos-alvo]](#audiences-size)
-* [[!UICONTROL Tendência da contagem de perfis]](#profile-count-trend)
 * [[!UICONTROL Perfis de identidade únicos por identidade]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Sobreposição de público-alvo por política de mesclagem]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL Tendência de alteração de contagem de perfis por identidade]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Contagem de perfis] {#profile-count}
 
@@ -120,7 +120,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >id="platform_dashboards_profiles_profilecount"
 >title="Contagem de perfis"
 >abstract="Este widget exibe o número total de perfis mesclados na Loja de perfis no momento em que o instantâneo foi tirado. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados do perfil."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Contagem de perfis]** O widget exibe o número total de perfis mesclados na Loja de perfis no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
@@ -134,43 +134,57 @@ Consulte a [seção sobre políticas de mesclagem no início deste documento](#m
 
 ![](../images/profiles/profile-count.png)
 
-### [!UICONTROL Perfis adicionados] {#profiles-added}
+### [!UICONTROL Tendência da contagem de perfis] {#profile-count-trend}
 
-<!-- This CONTEXTUALHELP was commented out because this widget name will change. Details in https://jira.corp.adobe.com/browse/PLAT-120313  -->
+O [!UICONTROL Tendência da contagem de perfis] O widget usa um gráfico de linhas para ilustrar a tendência no número total de perfis contidos no sistema ao longo do tempo. Esse número total inclui todos os perfis importados para o sistema desde o último instantâneo diário. Os dados podem ser visualizados por períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget.
 
-<!-- >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profilesadded"
->title="Profiles added"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation" -->
+![O widget de tendência de contagem de perfis.](../images/profiles/profile-count-trend.png)
 
-O **[!UICONTROL Perfis adicionados]** O widget exibe o número total de perfis mesclados adicionados à Loja de perfis no momento do último instantâneo. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir os perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
+### [!UICONTROL Alteração na contagem de perfis] {#profile-count-change}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilescountchange"
+>title="Alteração na contagem de perfis"
+>abstract="Este widget exibe o número total de perfis mesclados **adicionado** para a Loja de perfis no momento do último instantâneo. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados do perfil."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
+
+O **[!UICONTROL Alteração na contagem de perfis]** O widget exibe o número de perfis mesclados adicionados à Loja de perfis desde o instantâneo anterior. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir o número de perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
 
 >[!NOTE]
 >
->O [!UICONTROL Perfis adicionados] O widget reflete o número de perfis adicionados **after** a assimilação de perfil inicial e a configuração da Loja de perfis. Em outras palavras, se sua organização configurar a Loja de perfis e assimilar 4.000.000 no Dia 1, em 24 horas o painel estará disponível, no entanto, a variável [!UICONTROL Perfis adicionados] o widget seria definido como 0. Isso é feito para evitar um pico associado à assimilação inicial de perfis no sistema. Nos próximos 30 dias, sua organização assimilará mais 1.000.000 perfis na Loja de perfis. Depois que o próximo instantâneo for tirado, o [!UICONTROL Perfis adicionados] o widget mostraria um total de 1.000.000 perfis adicionados, enquanto o [!UICONTROL Contagem de perfis] O widget exibiria 5.000.000 perfis totais.
+>O [!UICONTROL Alteração na contagem de perfis] O widget reflete o número de perfis adicionados **after** a assimilação de perfil inicial e a configuração da Loja de perfis. Em outras palavras, se sua organização configurar a Loja de perfis e assimilar 4.000.000 no Dia 1, em 24 horas o painel estará disponível, no entanto, a variável [!UICONTROL Alteração na contagem de perfis] o widget seria definido como 0. Isso é feito para evitar um pico associado à assimilação inicial de perfis no sistema. Nos próximos 30 dias, sua organização assimilará mais 1.000.000 perfis na Loja de perfis. Depois que o próximo instantâneo for tirado, o [!UICONTROL Alteração na contagem de perfis] o widget mostraria um total de 1.000.000 perfis adicionados, enquanto o [!UICONTROL Contagem de perfis] O widget exibiria 5.000.000 perfis totais.
 
-![](../images/profiles/profiles-added.png)
+![O painel Perfis da interface do usuário da plataforma com o widget Alteração da contagem de perfis é realçado.](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL Tendência de adição de perfis] {#profiles-added-trend}
+### [!UICONTROL Tendência da alteração da contagem de perfis] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Tendência de adição de perfis"
->abstract="Este widget exibe o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada ser aplicada aos dados do perfil."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Saiba mais pela documentação"
+>title="Tendência da alteração da contagem de perfis"
+>abstract="Este widget exibe o número de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada ser aplicada aos dados do perfil."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
-O **[!UICONTROL Tendência de adição de perfis]** O widget exibe o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+O **[!UICONTROL Tendência da alteração da contagem de perfis]** O widget exibe o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Consulte a [seção sobre políticas de mesclagem no início deste documento](#merge-policies) para saber mais.
 
-O **[!UICONTROL Tendência de adição de perfis]** o widget exibe um botão &quot;legendas&quot; na parte superior direita do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
+O **[!UICONTROL Tendência da alteração da contagem de perfis]** o widget exibe um botão &quot;legendas&quot; na parte superior direita do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
 
-![A guia Visão geral do perfil que exibe o widget de tendência Perfis adicionada com o botão de legendas realçado.](../images/profiles/profiles-added-trend-captions.png)
+![A guia Visão geral do perfil que exibe o widget de tendência de alteração de contagem de perfis com o botão de legendas realçado.](../images/profiles/profiles-count-change-trend-captions.png)
 
 Um modelo de aprendizado de máquina gera automaticamente legendas para descrever as tendências principais e eventos importantes ao analisar o gráfico e os dados.
 
-![A caixa de diálogo de legendas automáticas do widget de tendência Perfis adicionada.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![A caixa de diálogo de legendas automáticas do widget de tendência de alteração de contagem de perfis.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+
+### [!UICONTROL Tendência de alteração de contagem de perfis por identidade] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Esse widget filtra a contagem de perfis com base na identidade de origem selecionada e na política de mesclagem, e ilustra a alteração no número para uma variedade de períodos usando um gráfico de linhas. A política de mesclagem é selecionada na lista suspensa visão geral na parte superior da página, a identidade de origem e o período de tempo são selecionados nos menus suspensos do widget. A tendência pode ser visualizada por períodos de 30 dias, 90 dias e 12 meses.
+
+Este widget ajuda você a gerenciar suas necessidades de ativação de destino demonstrando o padrão de crescimento de perfis filtrados por uma identidade necessária.
+
+![Os Perfis contam a tendência de alteração por widget de identidade.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
 
@@ -178,7 +192,7 @@ Um modelo de aprendizado de máquina gera automaticamente legendas para descreve
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Perfis por identidade"
 >abstract="Este widget exibe o detalhamento de todos os perfis mesclados na Loja de perfis por identidades."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em todos os perfis mesclados na Loja de perfis. O número total de perfis por identidade (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
@@ -200,7 +214,7 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Sobreposição de identidade"
 >abstract="Esse widget usa um diagrama Venn para exibir a sobreposição de perfis na Loja de perfis que contém as duas identidades selecionadas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Sobreposição de identidade]** O widget usa um diagrama Venn ou um diagrama de conjunto para exibir a sobreposição de perfis na Loja de perfis que contém as duas identidades selecionadas.
 
@@ -218,7 +232,7 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Perfis de identidade única"
 >abstract="Esse widget fornece uma contagem dos perfis de sua organização que têm apenas um tipo de ID que cria sua identidade. Esse tipo de ID pode ser um email ou uma ECID."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O [!UICONTROL Perfis de identidade única] O widget fornece uma contagem dos perfis de sua organização que têm apenas um tipo de ID que cria sua identidade. Esse tipo de ID pode ser um email ou uma ECID. A contagem de perfis é gerada a partir dos dados contidos no instantâneo mais recente.
 
@@ -230,7 +244,7 @@ O [!UICONTROL Perfis de identidade única] O widget fornece uma contagem dos per
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfis não segmentados"
 >abstract="Este widget fornece o número total de perfis não anexados a nenhum segmento e representa a oportunidade para a ativação de perfil em sua organização."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O [!UICONTROL Perfis não segmentados] O widget fornece o número total de perfis não anexados a nenhum segmento. O número gerado é preciso a partir do último instantâneo e representa a oportunidade para a ativação do perfil em toda a organização. Também indica a oportunidade de explorar perfis que não fornecem ROI adequado.
 
@@ -254,7 +268,7 @@ O [!UICONTROL Tendência de perfis não segmentados] O widget fornece uma ilustr
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Perfis não segmentados por identidade"
 >abstract="Esse widget categoriza o número total de perfis não segmentados por seu identificador exclusivo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O [!UICONTROL Perfis não segmentados por identidade] O widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras para facilitar a comparação.
 
@@ -306,12 +320,6 @@ Para ver informações abrangentes sobre um segmento, selecione um nome de segme
 
 Consulte a documentação para obter mais informações sobre o [[!UICONTROL Segmentos] [!UICONTROL  Procurar] guia](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
-### [!UICONTROL Tendência da contagem de perfis] {#profile-count-trend}
-
-O [!UICONTROL Tendência da contagem de perfis] O widget usa um gráfico de linhas para ilustrar a tendência no número total de perfis contidos no sistema ao longo do tempo. Esse número total inclui todos os perfis importados para o sistema desde o último instantâneo diário. Os dados podem ser visualizados por períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget.
-
-![O widget de tendência de contagem de perfis.](../images/profiles/profile-count-trend.png)
-
 ### [!UICONTROL Perfis de identidade únicos por identidade] {#single-identity-profiles-by-identity}
 
 Esse widget usa um gráfico de barras para ilustrar o número total de perfis identificados com apenas um único identificador exclusivo. O widget suporta até cinco das identidades mais comuns.
@@ -327,16 +335,6 @@ Esse widget usa um diagrama Venn para exibir a sobreposição de dois segmentos 
 À medida que o widget exibe a cruz visual das definições de segmento, você pode otimizar sua estratégia de segmentação estudando semelhanças entre as definições de segmento.
 
 ![O painel Perfis da interface do usuário da plataforma com a lista suspensa de política de mesclagem e os menus suspensos do segmento de widget são realçados.](../images/profiles/audience-overlap-by-merge-policy.png)
-
-### [!UICONTROL Tendência de alteração de contagem de perfis por identidade] {#profiles-count-change-trend-by-identity}
-
-<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
-
-Esse widget filtra a contagem de perfis com base na identidade de origem selecionada e na política de mesclagem, e ilustra a alteração no número para uma variedade de períodos usando um gráfico de linhas. A política de mesclagem é selecionada na lista suspensa visão geral na parte superior da página, a identidade de origem e o período de tempo são selecionados nos menus suspensos do widget. A tendência pode ser visualizada por períodos de 30 dias, 90 dias e 12 meses.
-
-Este widget ajuda você a gerenciar suas necessidades de ativação de destino demonstrando o padrão de crescimento de perfis filtrados por uma identidade necessária.
-
-![Os Perfis contam a tendência de alteração por widget de identidade.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 
 ## (Beta) Widgets de eficácia do perfil {#profile-efficacy-widgets}
@@ -359,7 +357,7 @@ Para saber mais sobre cada um dos widgets de eficácia de perfil, selecione o no
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="Atributos da avaliação da qualidade"
 >abstract="Este widget mostra a integridade e cardinalidade de todos os perfis de acordo com seus atributos. Cada linha descreve um atributo. O **Perfis** fornece o número de perfis que têm esse atributo e são preenchidos com valores não nulos. O **Integridade** a porcentagem é determinada pelo número total de perfis que têm esse atributo e são preenchidos com valores não nulos dividido pelo número total de valores não vazios nos perfis desse atributo. **Cardinalidade** O fornece o número total de valores não nulos exclusivos desse atributo em todos os atributos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O [!UICONTROL Avaliação da qualidade dos atributos] O widget mostra a integridade e cardinalidade de todos os perfis de acordo com seus atributos. Os dados são precisos para a data do último processamento. Essas informações são apresentadas como uma tabela com quatro colunas, onde cada linha na tabela representa um único atributo.
 
@@ -378,7 +376,7 @@ O [!UICONTROL Avaliação da qualidade dos atributos] O widget mostra a integrid
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Perfis por integridade"
 >abstract="O gráfico de rosca exibe a porcentagem de atributos de perfil preenchidos com valores não nulos entre todos os atributos observados. Ele ilustra a proporção de perfis que são de alta, média ou baixa integridade. Perfis de alta integridade têm mais de 70% de seus atributos preenchidos. Os perfis de integridade média têm entre 30% e 70% de seus atributos preenchidos. Os perfis de baixa integridade têm menos de 30% dos atributos preenchidos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 O [!UICONTROL Perfis por integridade] o widget cria um gráfico de rosca de integridade de perfil desde a última data de processamento. A integridade de um perfil é medida pela porcentagem de atributos preenchidos com valores não nulos entre todos os atributos observados.
 
@@ -396,7 +394,7 @@ Este widget mostra a proporção de perfis que são de alta, média ou baixa int
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="Tendência de integridade de perfis"
 >abstract="Este widget cria um gráfico de área empilhada para descrever a tendência da integridade do perfil ao longo do tempo. A integridade é medida pela porcentagem de atributos que são preenchidos com valores não nulos entre todos os atributos observados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Saiba mais pela documentação"
 
 Este widget cria um gráfico de área empilhada para descrever a tendência da integridade do perfil ao longo do tempo. A integralidade é medida pela porcentagem de atributos preenchidos com valores não nulos entre todos os atributos observados. Ele classifica a integridade do perfil como alta, média ou baixa desde a última data de processamento.
 

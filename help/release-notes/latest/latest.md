@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
+source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1884'
 ht-degree: 6%
 
 ---
@@ -95,11 +95,14 @@ Para obter mais informações, consulte o [visão geral da coleta de dados](../.
 | Recurso | Descrição |
 | --- | --- |
 | Melhorias a [!DNL Data Prep] Recommendations | [!DNL Data Prep] O Recommendations agora é mais inteligente e rápido. As novas verificações de validação reduzem significativamente os erros de mapeamento mais comuns, reduzindo ainda mais o tempo para o valor. |
-| Suporte hierárquico para upsets de transmissão | Agora você pode usar funções `upsert_array_append` e `upsert_array_replace` para atualizar arrays e objetos ao fazer o streaming de atualizações no Perfil. Consulte a [[!DNL Data Prep] guia de funções de mapeamento](../../data-prep/functions.md) para obter mais informações. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+
+<!--
+| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
+-->
 
 ## [!DNL Destinations] {#destinations}
 

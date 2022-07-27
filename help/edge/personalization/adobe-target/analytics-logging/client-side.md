@@ -5,9 +5,9 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target; a4t; registro; web sdk; experiência; plataforma;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1155'
 ht-degree: 4%
 
 ---
@@ -136,7 +136,7 @@ Este é um exemplo de um `interact` resposta quando o registro do lado do client
 }
 ```
 
-As propostas de atividades do Experience Composer baseadas em formulário podem conter itens de métrica de conteúdo e clique na mesma proposta. Assim, em vez de ter um único token de análise para a exibição de conteúdo em `scopeDetails.characteristics.analyticsToken` podem ter um token de análise de exibição e de clique especificado em `scopeDetails.characteristics.analyticsTokens` objeto, em `display` e `click` propriedades, de forma correspondente.
+As propostas de atividades do Experience Composer baseadas em formulário podem conter itens de métrica de conteúdo e clique na mesma proposta. Assim, em vez de ter um único token de análise para a exibição de conteúdo em `scopeDetails.characteristics.analyticsToken` podem ter um token de análise de exibição e de clique especificado em `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` propriedades, de forma correspondente.
 
 ```json
 {
@@ -162,14 +162,10 @@ As propostas de atividades do Experience Composer baseadas em formulário podem 
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -208,11 +204,11 @@ As propostas de atividades do Experience Composer baseadas em formulário podem 
 }
 ```
 
-Todos os valores de `scopeDetails.characteristics.analyticsToken`, bem como `scopeDetails.characteristics.analyticsTokens.display` (para conteúdo exibido) e `scopeDetails.characteristics.analyticsTokens.click` (para métricas de cliques) são as cargas A4T que precisam ser coletadas e incluídas como `tnta` na [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) chame.
+Todos os valores de `scopeDetails.characteristics.analyticsToken`, bem como `scopeDetails.characteristics.analyticsDisplayToken` (para conteúdo exibido) e `scopeDetails.characteristics.analyticsClickToken` (para métricas de cliques) são as cargas A4T que precisam ser coletadas e incluídas como `tnta` na [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) chame.
 
 >[!IMPORTANT]
 >
->Observe que alguns `analyticsToken`/`analyticsTokens` As propriedades podem conter vários tokens, concatenados como uma única string delimitada por vírgulas.
+>O `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` As propriedades podem conter vários tokens, concatenados como uma única string delimitada por vírgulas.
 >
 >Nos exemplos de implementação fornecidos na próxima seção, vários tokens do Analytics estão sendo coletados iterativamente. Para concatenar uma matriz de tokens do Analytics, use uma função semelhante a esta:
 >
@@ -344,13 +340,10 @@ A partir daqui, você deve implementar o código para executar as propostas e co
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -392,8 +385,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -420,8 +413,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }

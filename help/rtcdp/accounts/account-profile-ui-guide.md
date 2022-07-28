@@ -3,9 +3,9 @@ keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Real-time Customer Data Platform B2B Edition permite unificar as informações da conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9963c78bff8d48816982bc79af9239f1a7b5e90a
+source-git-commit: e94753236623343dcd739ff65c18248c1112f361
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Para saber mais sobre como os perfis de conta são criados como parte do fluxo d
 
 ## Visão geral dos perfis da conta {#account-profiles-overview}
 
-Para obter uma visão geral do perfil da conta, comece selecionando **[!UICONTROL Perfis]** under [!UICONTROL Contas] na navegação à esquerda. Em [!UICONTROL Visão geral] , o painel mostra um gráfico ou gráfico exibindo widgets em um único ponto de entrada.
+Selecionar **[!UICONTROL Perfis]** under [!UICONTROL Contas] no menu de navegação esquerdo para exibir a visão geral dos perfis da conta. Em [!UICONTROL Visão geral] , o painel mostra um gráfico ou gráfico exibindo widgets em um único ponto de entrada.
 
-![Guia Visão geral](images/b2b-account-profile-overview.png)
+![Guia Visão geral exibindo widgets](images/b2b-account-profile-overview.png)
 
-Para saber mais sobre o painel de perfis de conta, consulte [Painel de perfis da conta](../../dashboards/guides/account-profiles.md) documentação.
+Consulte a documentação na [[!UICONTROL Perfis de conta]] ((../../dashboards/guides/account-profiles.md) painel para saber mais.
 
 ## Procurar perfis de conta {#browse-account-profiles}
 

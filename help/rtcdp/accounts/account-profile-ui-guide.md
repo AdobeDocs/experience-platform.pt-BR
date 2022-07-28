@@ -3,9 +3,9 @@ keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Real-time Customer Data Platform B2B Edition permite unificar as informações da conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: e94753236623343dcd739ff65c18248c1112f361
+source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Selecionar **[!UICONTROL Perfis]** under [!UICONTROL Contas] no menu de navegaç
 
 ![Guia Visão geral exibindo widgets](images/b2b-account-profile-overview.png)
 
-Consulte a documentação na [[!UICONTROL Perfis de conta]] ((../../dashboards/guides/account-profiles.md) painel para saber mais.
+Consulte a documentação no [[!UICONTROL Perfis de conta]](../../dashboards/guides/account-profiles.md) painel para saber mais.
 
 ## Procurar perfis de conta {#browse-account-profiles}
 

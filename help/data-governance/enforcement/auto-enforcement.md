@@ -5,9 +5,9 @@ title: Aplicação Automática de Política
 topic-legacy: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados 
 
 >[!IMPORTANT]
 >
->Atualmente, as políticas de consentimento estão disponíveis apenas para organizações que compraram o Adobe Shield for Healthcare.
+>Atualmente, as políticas de consentimento estão disponíveis apenas para organizações que compraram o Healthcare Shield.
 
 Se tiver [políticas de consentimento criadas](../policies/user-guide.md#consent-policy) e estiverem ativando um segmento para um destino, você pode ver como suas políticas de consentimento afetam a porcentagem de perfis incluídos na ativação.
 

@@ -2,9 +2,9 @@
 title: Ponto de extremidade da API Time-to-Live (TTL) do conjunto de dados
 description: O endpoint /ttl na API da Higiene de Dados permite agendar programaticamente os TTLs do conjunto de dados no Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1313'
 ht-degree: 7%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Shield for Healthcare.
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
 
 O `/ttl` O endpoint na API da Higiene de dados permite agendar protocolos de TTL (time-to-live) para conjuntos de dados no Adobe Experience Platform.
 

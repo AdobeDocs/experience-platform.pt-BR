@@ -2,9 +2,9 @@
 title: Guia da interface do usuário da análise de big data
 description: Saiba como gerenciar tarefas de higiene de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Shield for Healthcare.
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
 
 O **[!UICONTROL Higiene de dados]** A área de trabalho na interface do usuário do Adobe Experience Platform permite criar e monitorar várias tarefas de higiene de dados, incluindo a exclusão de identidades de consumidores e a programação de protocolos TTL (time-to-live) para conjuntos de dados.
 

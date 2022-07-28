@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: a8faa3a146669e206b9aa129f5541a7511c1854a
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '843'
 ht-degree: 7%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 7%
       * [Conexão da Lista de clientes do pinterest](./catalog/advertising/pinterest.md)
       * [(Beta) Conexão de Anúncios em Snapchat](./catalog/advertising/snap-inc.md)
       * [A conexão com o Trade Desk](./catalog/advertising/tradedesk.md)
-      * [A conexão CRM do Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) A conexão de CRM do Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extensão de tag do site universal do twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexão de dados do Yahoo/Verizon](./catalog/advertising/datax.md)
    * Destinos do Analytics {#analytics}
@@ -104,7 +104,7 @@ ht-degree: 7%
       * [Conexão de Hubs de Eventos do Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
       * [Endereço IP lista de permissões para destinos de armazenamento em nuvem](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm-destinations}
+   * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
       * [Conexão Salesforce CRM](./catalog/crm/salesforce.md)
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)

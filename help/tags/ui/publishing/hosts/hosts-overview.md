@@ -1,10 +1,11 @@
 ---
 title: Visão geral de hosts
 description: Saiba mais sobre as diferentes opções de hospedagem disponíveis no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
+source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 81%
+ht-degree: 75%
 
 ---
 
@@ -25,4 +26,4 @@ Para obter informações detalhadas sobre cada tipo de host, use os links acima.
 
 O mesmo host pode ser usado para vários ambientes de uma propriedade.
 
-Para obter mais informações para ajudá-lo a decidir entre a auto hospedagem e o gerenciamento de hospedagem pela Adobe, leia o [Guia de auto hospedagem](./self-hosting-libraries.md).
+Para obter mais informações para ajudá-lo a decidir entre a auto hospedagem e o gerenciamento de hospedagem pela Adobe, leia o [guia de auto-hospedagem](./self-hosting-libraries.md).

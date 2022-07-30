@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2791'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,17 @@ O [!UICONTROL Destinos] O painel exibe um instantâneo dos destinos que sua orga
 
 Para navegar até o painel de destinos na interface do usuário da plataforma, selecione **[!UICONTROL Destinos]** no painel à esquerda, selecione o **[!UICONTROL Visão geral]** para exibir o painel.
 
+A data e a hora do instantâneo mais recente são exibidas na parte superior do [!UICONTROL Visão geral] ao lado da lista suspensa de destino. Todos os dados do widget são precisos a partir dessa data e hora. O carimbo de data e hora do instantâneo é fornecido em UTC; não está no fuso horário do usuário ou da organização individual.
+
 >[!NOTE]
 >
 >Se sua organização for nova no Experience Platform e ainda não tiver destinos ativos, a variável [!UICONTROL Destinos] painel e [!UICONTROL Visão geral] não estão visíveis. Em vez disso, selecione [!UICONTROL Destinos] no menu de navegação esquerdo, o [!UICONTROL Catálogo] guia . Para saber mais sobre o [!UICONTROL Catálogo] consulte a guia [[!UICONTROL Destinos] guia do workspace](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![A Visão geral dos destinos da interface do usuário da plataforma com o instantâneo mais recente destacado.](../images/destinations/snapshot-timestamp.png)
 
 ### Modificação do painel de destinos
 
-Você pode modificar a aparência do painel de destinos selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência do painel de destinos selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 

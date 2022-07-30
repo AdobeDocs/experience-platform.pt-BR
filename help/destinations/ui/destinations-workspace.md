@@ -3,9 +3,9 @@ keywords: plataforma; destinos; espaço de trabalho de destinos; espaço de trab
 title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ O **[!UICONTROL Visão geral]** exibe a guia [!UICONTROL Destinos] , fornecendo 
 >
 >Se sua organização for nova no Experience Platform e ainda não tiver destinos ativos, a variável [!UICONTROL Destinos] painel e [!UICONTROL Visão geral] não estão visíveis. Em vez disso, selecione [!UICONTROL Destinos] no menu de navegação esquerdo, o [[!UICONTROL Catálogo] guia](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![A guia Visão geral do painel Destinos .](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catálogo] {#catalog}
 
@@ -78,7 +78,7 @@ O **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões estabelecida
 |---|---|
 | [!UICONTROL Plataforma] | O destino para o qual você configurou a conexão. |
 | [!UICONTROL Tipo de conexão] | Representa o tipo de conexão da conta para o seu bucket ou destino de armazenamento. Dependendo do destino, as opções de autenticação são: <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou Azure Blob.</li><li>Para destinos de anúncios em tempo real: Servidor para servidor</li><li>Para destinos de armazenamento em nuvem Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li><li>Autenticação OAuth 1 ou OAuth 2</li><li>Autenticação de token portador</li></ul> |
-| [!UICONTROL Nome do usuário] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Nome de usuário] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinos] | Representa o número de fluxos de dados de destino exclusivos bem-sucedidos conectados às informações básicas criadas para um destino. |
 | [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
 
@@ -105,7 +105,7 @@ O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma
 | [!UICONTROL Data de Execução do Último Fluxo] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Destino] | A plataforma de destino selecionada para o fluxo de ativação. |
 | [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: Servidor para servidor.</li><li>Para destinos de transmissão: Pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
-| [!UICONTROL Nome do usuário] | As credenciais de conta que você selecionou para o fluxo de destino. |
+| [!UICONTROL Nome de usuário] | As credenciais de conta que você selecionou para o fluxo de destino. |
 | [!UICONTROL Dados de ativação] | Indica o número de segmentos que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os segmentos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os segmentos ativados. |
 | [!UICONTROL Criado] | A data e a hora UTC em que o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação primeiro ou mais antigos. |
 | [!UICONTROL Status] | `Enabled` ou `Disabled`. Indica se os dados estão sendo ativados para esse destino. |

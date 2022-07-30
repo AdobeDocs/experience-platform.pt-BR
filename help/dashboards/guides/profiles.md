@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3875'
+source-wordcount: '3901'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,9 @@ Consulte o guia da interface do usuário do schema de união para saber mais sob
 
 O painel é composto de widgets, que são métricas somente leitura, fornecendo informações importantes sobre os dados do perfil.
 
-A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado. A data e a hora do instantâneo são fornecidas em UTC; não está no fuso horário do usuário ou da organização individual.
+A data e a hora do instantâneo mais recente são exibidas na parte superior do [!UICONTROL Visão geral] ao lado da lista suspensa política de mesclagem . Todos os dados do widget são precisos a partir dessa data e hora. O carimbo de data e hora do instantâneo é fornecido em UTC; não está no fuso horário do usuário ou da organização individual.
+
+![A guia Visão geral do painel Perfis com o carimbo de data e hora do instantâneo mais recente é realçada.](../images/profiles/snapshot-timestamp.png)
 
 ## Widgets padrão {#standard-widgets}
 
@@ -105,13 +107,13 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 * [[!UICONTROL Perfis de identidade única]](#single-identity-profiles)
+* [[!UICONTROL Perfis de identidade únicos por identidade]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Perfis não segmentados]](#unsegmented-profiles)
 * [[!UICONTROL Tendência de perfis não segmentados]](#unsegmented-profiles-trend)
 * [[!UICONTROL Perfis não segmentados por identidade]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Públicos-alvo]](#audiences)
 * [[!UICONTROL Públicos-alvo mapeados para o status de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamanho dos públicos-alvo]](#audiences-size)
-* [[!UICONTROL Perfis de identidade únicos por identidade]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Sobreposição de público-alvo por política de mesclagem]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL Contagem de perfis] {#profile-count}
@@ -238,6 +240,14 @@ O [!UICONTROL Perfis de identidade única] O widget fornece uma contagem dos per
 
 ![Dispositivo Perfis de identidade única.](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL Perfis de identidade únicos por identidade] {#single-identity-profiles-by-identity}
+
+Esse widget usa um gráfico de barras para ilustrar o número total de perfis identificados com apenas um único identificador exclusivo. O widget suporta até cinco das identidades mais comuns.
+
+Passe o mouse sobre barras individuais para ver uma caixa de diálogo que detalha a contagem total de perfis de uma identidade.
+
+![Os perfis de identidade única por widget de identidade.](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL Perfis não segmentados] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ Para ver informações abrangentes sobre um segmento, selecione um nome de segme
 ![O widget de tamanho de Públicos-alvo com um nome de segmento e o texto de todos os segmentos destacado.](../images/profiles/audiences-size-view-all-segments.png)
 
 Consulte a documentação para obter mais informações sobre o [[!UICONTROL Segmentos] [!UICONTROL  Procurar] guia](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL Perfis de identidade únicos por identidade] {#single-identity-profiles-by-identity}
-
-Esse widget usa um gráfico de barras para ilustrar o número total de perfis identificados com apenas um único identificador exclusivo. O widget suporta até cinco das identidades mais comuns.
-
-Passe o mouse sobre barras individuais para ver uma caixa de diálogo que detalha a contagem total de perfis de uma identidade.
-
-![Os perfis de identidade única por widget de identidade.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL Sobreposição de público-alvo por política de mesclagem] {#audience-overlap-by-merge-policy}
 

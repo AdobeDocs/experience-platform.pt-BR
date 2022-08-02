@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,7 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 
 >[!IMPORTANT]
 >
->O Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Se estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como [!UICONTROL Compilação de ID] tipo . Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Compilação de ID] está definida como &quot;[!UICONTROL Gráfico privado]&quot;.
->
->![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
+>O Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Consulte a seção sobre [limitações da política de mesclagem](#merge-policy-limitations) para obter mais informações.
 >
 >Também é importante observar que o tempo que uma solicitação de privacidade pode levar para ser concluída não pode ser garantido. Se ocorrerem alterações no [!DNL Profile] dados enquanto uma solicitação ainda está sendo processada, não é possível garantir se esses registros são processados ou não.
 
@@ -60,7 +58,11 @@ Ao criar solicitações de trabalho na API, qualquer ID fornecida em `userIDs` d
 >
 >Talvez seja necessário fornecer mais de uma ID para cada cliente, dependendo do gráfico de identidade e de como os fragmentos de perfil são distribuídos nos conjuntos de dados da plataforma. Consulte a próxima seção [fragmentos de perfil](#fragments) para obter mais informações.
 
-Além disso, a variável `include` a matriz da carga da solicitação deve incluir os valores do produto para os diferentes armazenamentos de dados em que a solicitação está sendo feita. Ao fazer solicitações à [!DNL Data Lake], a matriz deve incluir o valor &quot;ProfileService&quot;.
+Além disso, a variável `include` a matriz da carga da solicitação deve incluir os valores do produto para os diferentes armazenamentos de dados em que a solicitação está sendo feita. Para excluir os dados de perfil associados a uma identidade, a matriz deve incluir o valor `ProfileService`. Para excluir as associações de gráficos de identidade do cliente, a matriz deve incluir o valor `identity`.
+
+>[!NOTE]
+>
+>Consulte a seção sobre [solicitações de perfil e solicitações de identidade](#profile-v-identity) mais adiante neste documento para obter informações mais detalhadas sobre os efeitos da utilização de `ProfileService` e `identity` no `include` matriz.
 
 A solicitação a seguir cria um novo trabalho de privacidade para os dados de um único cliente na [!DNL Profile] armazenar. Dois valores de identidade são fornecidos para o cliente na variável `userIDs` Array; uma usando a norma `Email` namespace de identidade e outro usando um `Customer_ID` namespace. Também inclui o valor do produto para [!DNL Profile] (`ProfileService`) na `include` array:
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ Um dos conjuntos de dados usa `customer_id` como seu identificador principal, en
 
 Para garantir que suas solicitações de privacidade processem todos os atributos relevantes do cliente, você deve fornecer os principais valores de identidade para todos os conjuntos de dados aplicáveis, onde esses atributos podem ser armazenados (até no máximo nove IDs por cliente). Consulte a seção sobre campos de identidade na seção [noções básicas da composição do schema](../xdm/schema/composition.md#identity) para obter mais informações sobre campos comumente marcados como identidades.
 
-## Excluir processamento de solicitação
+## Excluir processamento de solicitação {#delete}
 
 When [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Platform] envia confirmação para [!DNL Privacy Service] que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são então removidos do [!DNL Data Lake] ou [!DNL Profile] armazenar após a conclusão do trabalho de privacidade. Enquanto o trabalho de exclusão ainda estiver sendo processado, os dados serão excluídos automaticamente e, portanto, não poderão ser acessados por nenhum [!DNL Platform] serviço. Consulte a [[!DNL Privacy Service] documentação](../privacy-service/home.md#monitor) para obter mais informações sobre o rastreamento de status de trabalho.
 
->[!IMPORTANT]
->
->Se uma solicitação de exclusão for feita para o Perfil (`ProfileService`), mas não Serviço de identidade (`identity`), o trabalho resultante remove os dados do atributo coletados para um cliente (ou conjunto de clientes), mas não remove as associações estabelecidas no gráfico de identidade.
->
->Por exemplo, uma solicitação de exclusão que usa um `email_id` e `customer_id` remove todos os dados do atributo armazenados nessas IDs. Contudo, quaisquer dados que sejam posteriormente assimilados ao abrigo do mesmo `customer_id` ainda estará associada ao `email_id`, já que a associação ainda existe.
->
->Além disso, o Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Se estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como [!UICONTROL Compilação de ID] tipo . Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Compilação de ID] está definida como &quot;[!UICONTROL Gráfico privado]&quot;.
->
->![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
-
 Em versões futuras, [!DNL Platform] enviará confirmação para [!DNL Privacy Service] após os dados terem sido fisicamente excluídos.
 
+### Solicitações de perfil versus solicitações de identidade {#profile-v-identity}
+
+Se uma solicitação de exclusão for feita para o Perfil (`ProfileService`), mas não Serviço de identidade (`identity`), o trabalho resultante remove os dados do atributo coletados para um cliente (ou conjunto de clientes), mas não remove as associações estabelecidas no gráfico de identidade.
+
+Por exemplo, uma solicitação de exclusão que usa um `email_id` e `customer_id` remove todos os dados do atributo armazenados nessas IDs. Contudo, quaisquer dados que sejam posteriormente assimilados ao abrigo do mesmo `customer_id` ainda estará associada ao `email_id`, já que a associação ainda existe.
+
+Para remover o perfil e todas as associações de identidade de um determinado cliente, inclua o Perfil e o Serviço de identidade como produtos de destino nas solicitações de exclusão.
+
+### Limitações da política de mesclagem {#merge-policy-limitations}
+
+O Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Se você estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como [!UICONTROL Compilação de ID] tipo . Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Compilação de ID] está definida como [!UICONTROL Gráfico privado].
+>![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
+>
 ## Próximas etapas
 
 Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Experience Platform]. É recomendável continuar lendo a documentação fornecida neste guia para aprofundar sua compreensão de como gerenciar dados de identidade e criar tarefas de privacidade.

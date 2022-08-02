@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no Data Lake
 topic-legacy: overview
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade de dados do cliente armazenados no Data Lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -148,9 +148,9 @@ A seção a seguir descreve como fazer solicitações de privacidade para o [!DN
 
 ### Uso da interface do usuário
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** under **[!UICONTROL Produtos]** para processar tarefas para dados armazenados no [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Produtos]** para processar tarefas para dados armazenados no [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Imagem que mostra o produto Data Lake selecionado na caixa de diálogo de criação da solicitação de privacidade](./images/privacy/product-value.png)
 
 ### Uso da API
 

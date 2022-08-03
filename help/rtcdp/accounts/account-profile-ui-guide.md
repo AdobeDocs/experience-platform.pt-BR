@@ -3,7 +3,7 @@ keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Real-time Customer Data Platform B2B Edition permite unificar as informações da conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -27,6 +27,26 @@ Selecionar **[!UICONTROL Perfis]** under [!UICONTROL Contas] no menu de navegaç
 ![Guia Visão geral exibindo widgets](images/b2b-account-profile-overview.png)
 
 Consulte a documentação no [[!UICONTROL Perfis de conta]](../../dashboards/guides/account-profiles.md) painel para saber mais.
+
+## Configurar lead para correspondência da conta {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Somente administradores de IA B2B podem habilitar, desabilitar e configurar o lead para o serviço de correspondência de contas. Ao desabilitar o serviço, os resultados correspondentes serão excluídos em 24 horas.
+
+Para configurar o lead para a correspondência da conta, selecione **[!UICONTROL Perfis]** under [!UICONTROL Contas] no painel de navegação esquerdo. No **[!UICONTROL Visão geral]** guia , selecione **[!UICONTROL Configurações]** no canto superior direito.
+
+![Selecionar configurações](images/b2b-configuring-accounts-profile.png)
+
+O **[!UICONTROL Configurações da conta]** será aberta. Aqui, selecione o **[!UICONTROL Habilitar correspondência de cliente potencial para conta]** alterne para ativar o recurso. Use o menu suspenso para selecionar **[!UICONTROL Diariamente]** para **[!UICONTROL Correspondência de cadência]** configuração. Finalmente, selecione o **[!UICONTROL Critérios de correspondência]** opções seguidas por **[!UICONTROL Salvar]** para confirmar suas configurações e retornar ao **[!UICONTROL Perfis de conta]** tela.
+
+>[!NOTE]
+>
+> O Endereço não pode ser usado como o único critério correspondente. Um ou mais dos outros critérios correspondentes devem ser selecionados.
+
+![Definir configurações da conta](images/b2b-configuring-account-settings.png)
+
+Para saber mais sobre lead para correspondência de contas, consulte o [Lead para a correspondência de contas na visão geral B2B da CDP em tempo real](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Procurar perfis de conta {#browse-account-profiles}
 

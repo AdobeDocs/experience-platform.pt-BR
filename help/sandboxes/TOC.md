@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Ajuda do Sandoboxes na Adobe Experience Platform
+user-guide-title: Ajuda do Sandboxes na Adobe Experience Platform
 breadcrumb-title: Guia de Sandoxes
 user-guide-description: Particionamento de uma instância do Platform em ambientes virtuais para desenvolvimento, teste e implantação de aplicativos.
 feature: Sandboxes

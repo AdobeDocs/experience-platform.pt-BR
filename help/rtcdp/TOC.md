@@ -47,7 +47,7 @@ ht-degree: 30%
    * [Navegação do perfil](profile/profile-browse.md)
 * Serviços de AI/ML da CDP B2B Edition em tempo real {#b2b-cdp-ai-ml}
    * [Contas relacionadas](b2b-ai-ml-services/related-accounts.md)
-* Schemas {#schemas}
+* Esquemas {#schemas}
    * [Visão geral dos esquemas](schemas/overview.md)
    * [Esquemas na CDP B2B em tempo real](schemas/b2b.md)
 * Segmentos {#segmentation}

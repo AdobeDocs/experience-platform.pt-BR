@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
+source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2325'
 ht-degree: 5%
 
 ---
@@ -15,15 +15,14 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [Notas de versão da Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Painéis](#dashboards)
-   - [Coleta de dados](#data-collection)
-   - [[!DNL Data Prep]](#data-prep)
-   - [[!DNL Destinations]](#destinations)
-   - [Experience Data Model (XDM)](#xdm)
-   - [Real-time Customer Data Platform Edição B2B](#b2b)
-   - [Perfil do cliente em tempo real](#profile)
-   - [Fontes](#sources)
+- [Painéis](#dashboards)
+- [Coleta de dados](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Real-time Customer Data Platform Edição B2B](#b2b)
+- [Perfil do cliente em tempo real](#profile)
+- [Fontes](#sources)
 
 ## Painéis {#dashboards}
 

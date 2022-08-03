@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar trabalhos de enriquecimento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Use o [!UICONTROL Enriquecimento de perfil] painel para entender se os trabalhos
 
 No [Interface do usuário da plataforma](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** na navegação à esquerda para acessar o [!UICONTROL Monitoramento] painel. No seletor de exibições, selecione **Fluxo B2B** para visualizar os elementos do painel específicos para [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  O [!UICONTROL Monitoramento] o painel inclui as métricas básicas da última execução bem-sucedida e o status diário da tarefa em até 90 dias no passado.
 
-## Enriquecimento de perfil de contas relacionadas (#related-accounts)
+## Enriquecimento de perfil de contas relacionadas {#related-accounts}
 
 O [!UICONTROL Contas relacionadas] o painel mostra as métricas básicas e o status da tarefa diária específica do [Contas Relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enriquecimento do perfil.
 

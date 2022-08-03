@@ -1,13 +1,13 @@
 ---
 title: Conexão do Hub de decisão do cliente Pega
 description: Use o destino do Hub de decisão do cliente Pega no Adobe Experience Platform para enviar atributos de perfil e dados de associação de segmento para o Hub de decisão do cliente Pega para a próxima melhor decisão.
-source-git-commit: 475b3b6dceefe968ffb451193cee4d7ed6387c86
+exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
+source-git-commit: f06afec31b7fa550a612280b8ad665b8393ee2e3
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 1%
 
 ---
-
 
 # Conexão do Hub de decisão do cliente Pega
 
@@ -39,7 +39,7 @@ Antes de usar esse destino para exportar dados do Adobe Experience Platform, cer
 
 * Configure o componente de associação de segmento do Adobe em seu [!DNL Pega Customer Decision Hub] instância.
 * Configurar o OAuth 2.0 [Registro do cliente usando credenciais do cliente](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) tipo de concessão em seu [!DNL Pega Customer Decision Hub] instância.
-* Configurar [fluxo de dados de execução em tempo real](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow)  para Fluxo de dados de associação de segmento de Adobe em seu [!DNL Pega Customer Decision Hub] instância.
+* Configurar [fluxo de dados de execução em tempo real](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) para Fluxo de dados de associação de segmento de Adobe em seu [!DNL Pega Customer Decision Hub] instância.
 
 ## Identidades suportadas {#supported-identities}
 

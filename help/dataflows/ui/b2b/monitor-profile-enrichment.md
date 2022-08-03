@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Monitorar trabalhos de enriquecimento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 1%
 
 ---
 
-# Monitore trabalhos de enriquecimento de perfil na interface do usuário (#monitor-profile-enriquecimento)
+# Monitorar trabalhos de enriquecimento de perfil na interface do usuário {#monitor-profile-enrichment}
 
 Use o [!UICONTROL Enriquecimento de perfil] painel para entender se os trabalhos de enriquecimento de perfil foram executados e concluídos com êxito, e para visualizar as métricas básicas para medir a eficácia dos enriquecimentos.
 
@@ -38,7 +38,7 @@ As métricas a seguir estão disponíveis para contas relacionadas e trabalhos d
 | **[!UICONTROL Status]** | Indica o status (bem-sucedido, com falha ou em processamento) da ordem de produção das contas relacionadas. |
 | **[!UICONTROL Mensagem]** | Indica uma mensagem de erro ou de aviso para uma execução de tarefa específica. |
 
-## Levar ao enriquecimento do perfil de correspondência da conta (#lead-to-account-match)
+## Lead para o enriquecimento do perfil de correspondência da conta {#lead-to-account-matching}
 
 O [!UICONTROL Lead para correspondência da conta] o painel mostra as métricas básicas e o status diário de execução da tarefa específico da [Lead para correspondência da conta](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enriquecimento do perfil.
 

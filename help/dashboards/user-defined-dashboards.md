@@ -2,9 +2,9 @@
 title: Painéis definidos pelo usuário
 description: Saiba como criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de contexto para visualizar métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Os painéis do Adobe Experience Platform ajudam a agilizar insights e personalizar a visualização por meio do recurso de painéis definidos pelo usuário. Esse recurso permite criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de sobreposição para visualizar métricas principais relevantes para a sua organização.
 
-## Introdução
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Para visualizar painéis no Adobe Experience Platform, você deve ter as permissões apropriadas ativadas. Leia o [documentação de permissões de painéis](./permissions.md#available-permissions) para saber como conceder aos usuários a capacidade de exibir, editar e atualizar painéis do Experience Platform usando o Adobe Admin Console. Se você não tiver privilégios de administrador para sua organização, entre em contato com o administrador do produto para obter as permissões necessárias.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Criar painéis personalizados
 
 Para criar um painel personalizado, primeiro navegue até o inventário do painel. Selecionar **[!UICONTROL Painéis]** na navegação à esquerda da interface do usuário da plataforma, seguida por **[!UICONTROL Criar painel]**.
 
-Para saber mais sobre os painéis pré-configurados disponíveis, consulte o [visão geral do inventário do painel](./inventory.md).
+![O inventário do painel com Painéis na navegação à esquerda e &quot;Criar painel&quot; realçado.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->Ao adicionar um painel personalizado, a lista de painéis pré-configurados é removida do inventário do painel. Em vez disso, o inventário do painel consiste apenas em painéis definidos pelo usuário.
-
-![O inventário do painel com &quot;Criar painel&quot; foi realçado.](./images/user-defined-dashboards/create-dashboard.png)
+Antes de adicionar um painel personalizado, o inventário de painéis fica vazio e exibe &quot;Nenhum painel encontrado&quot;. mensagem. Depois de criados, todos os painéis definidos pelo usuário são listados no inventário do painel.
 
 O [!UICONTROL Criar painel] será exibida. Insira um nome descritivo e amigável para a coleção de widgets que você pretende criar e selecione **[!UICONTROL Salvar]**.
 
@@ -85,9 +83,9 @@ O modelo de dados e a tabela selecionada no momento são exibidos na parte super
 >
 >Você pode alterar o modelo de dados escolhido selecionando o ícone de lápis (![Ícone Lápis .](./images/user-defined-dashboards/edit-icon.png)) no painel esquerdo.
 
-Selecione as reticências (`...`) ao lado de um nome de atributo para adicionar um atributo ao eixo X ou Y.
+Selecione o ícone adicionar (./images/user-defined-dashboards/add-icon.png) ao lado de um nome de atributo para adicionar um atributo ao eixo X ou Y.
 
-![O compositor de widget com a lista suspensa de elipses destacado para adicionar atributos ao eixo do widget.](./images/user-defined-dashboards/attributes-dropdown.png)
+![O compositor de widget com a lista suspensa adicionar ícone , destacado para adicionar atributos ao eixo do widget.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 Em seguida, selecione o tipo de gráfico ou tabela no [!UICONTROL Marcas] lista suspensa para gerar uma visualização das configurações atuais do widget. No [!UICONTROL Propriedades] no painel à direita da tela, digite um nome para o widget no [!UICONTROL Título do widget] campo de texto.
 

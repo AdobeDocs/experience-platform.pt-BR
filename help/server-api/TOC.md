@@ -5,10 +5,10 @@ user-guide-title: Documentação da API do servidor de rede de borda
 breadcrumb-title: Documentação da API do servidor de rede de borda
 user-guide-description: A API do servidor da rede de borda da Adobe Experience Platform fornece uma maneira otimizada para os clientes interagirem com quaisquer serviços de borda da Adobe Experience Cloud ou Adobe Experience Platform. Saiba como usar a API do servidor para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing.
 feature: Data Collection
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 64%
+source-wordcount: '108'
+ht-degree: 62%
 
 ---
 
@@ -28,5 +28,6 @@ ht-degree: 64%
    * [Visão geral da personalização](personalization-overview.md)
    * [Personalização via Adobe Target](personalization-target.md)
    * [Personalização via Offer Decisioning](personalization-offer-decisioning.md)
+* [Dicas de localização](location-hints.md)
 * [Tratamento de erros](error-handling.md)
 * [Solução de problemas](troubleshooting.md)

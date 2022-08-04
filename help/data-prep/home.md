@@ -5,9 +5,9 @@ title: Visão geral da preparação de dados
 topic-legacy: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,10 @@ Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de fun
 Os campos calculados permitem que os valores sejam criados com base nos atributos no schema de entrada. Esses valores podem ser atribuídos aos atributos no schema de destino e receber um nome e uma descrição para permitir uma referência mais fácil.
 
 Para saber mais sobre campos calculados, leia a [guia de campos calculados](./functions.md#calculated-fields).
+
+### Evitar caracteres especiais
+
+É possível evitar caracteres especiais em um campo usando `${...}`. No entanto, os arquivos JSON que contêm campos com um ponto final (`.`) não são compatíveis com esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para escapar caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, pode então ser referido como `address.street\.name` em vez de `address.street.name`.
 
 ## Conjunto de mapeamentos
 

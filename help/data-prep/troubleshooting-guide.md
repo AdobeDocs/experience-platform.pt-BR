@@ -3,9 +3,10 @@ keywords: Experience Platform; home; tópicos populares;
 title: Guia de solução de problemas da preparação de dados
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre a Preparação de dados do Adobe Experience Platform.
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -25,3 +26,7 @@ Veja a seguir uma lista de perguntas frequentes sobre [!DNL Data Prep] e suas re
 Se as colunas forem marcadas como **Obrigatório** são anuladas devido a problemas de transformação, então a linha não será assimilada. Quando a assimilação de dados parciais estiver ativada, você pode definir o limite dessas rejeições antes que todo o fluxo falhe. Se o atributo anulado não afetou nenhuma validação de nível de esquema, a linha continuará a ser assimilada.
 
 Todas as linhas que são inválidas mesmo sem erros de transformação também serão rejeitadas. Por exemplo, um fluxo de assimilação de dados pode ter um mapeamento de passagem (nenhuma lógica de transformação) para um campo obrigatório e não há valor de entrada para esse atributo. Esta linha será rejeitada.
+
+### Como posso evitar caracteres especiais em um campo?
+
+É possível evitar caracteres especiais em um campo usando `${...}`. No entanto, os arquivos JSON que contêm campos com um ponto final (`.`) não são compatíveis com esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para escapar caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, pode então ser referido como `address.street\.name` em vez de `address.street.name`.

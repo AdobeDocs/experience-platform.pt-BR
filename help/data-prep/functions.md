@@ -5,7 +5,7 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -25,7 +25,7 @@ Se um nome de campo não seguir esta convenção, o nome do campo deve ser envol
 Além disso, se um nome de campo for **any** das seguintes palavras-chave reservadas, elas devem estar vinculadas a `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 Os dados nos subcampos podem ser acessados usando a notação de pontos. Por exemplo, se houver um `name` para acessar o `firstName` campo , use `name.firstName`.

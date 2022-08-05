@@ -2,10 +2,10 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível de como gerenciar permissões e controlar o acesso aos recursos de coleta de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 7%
+source-wordcount: '1311'
+ht-degree: 6%
 
 ---
 
@@ -70,19 +70,36 @@ As permissões no Adobe Experience Platform Data Collection controlam o acesso a
 >
 >Para obter mais informações sobre como essas permissões afetam os recursos nas tags, incluindo estratégias de administração para cenários comuns, consulte a documentação das tags em [permissões do usuário](../tags/ui/administration/user-permissions.md).
 
-## Gerenciar permissões para a coleta de dados do Adobe Experience Platform {#manage}
+## Gerenciar permissões {#manage}
 
->[!IMPORTANT]
->
->Esta seção só aborda como gerenciar permissões para o produto Adobe Experience Platform Data Collection no Admin Console. No entanto, as etapas para gerenciar permissões no produto Adobe Experience Platform são semelhantes.
->
->Consulte a [guia da interface do usuário de controle de acesso](../access-control/ui/overview.md) para obter instruções detalhadas sobre como gerenciar permissões da plataforma. Dependendo dos SKUs de produtos aos quais sua organização tem acesso, talvez você não tenha todas as permissões disponíveis.
+Conforme descrito na seção anterior, as permissões para coleta de dados são gerenciadas por meio de duas designações de produto no Admin Console: **Adobe Experience Platform** e **Coleta de dados do Adobe Experience Platform**.
 
-Para gerenciar permissões para a Coleta de dados, faça logon no [Admin Console](https://adminconsole.adobe.com/) e selecione **[!UICONTROL Produtos]** no início da navegação. Aqui, selecione o cartão para **[!UICONTROL Coleta de dados do Adobe Experience Platform]**.
+Para gerenciar essas permissões, faça logon no [Admin Console](https://adminconsole.adobe.com/) e selecione **[!UICONTROL Produtos]** no início da navegação. Aqui, selecione o cartão de produto das permissões que deseja configurar. Consulte as subseções abaixo para obter as etapas sobre como gerenciar as permissões relevantes em cada produto no Admin Console:
+
+* [Permissões do Adobe Experience Platform](#manage-platform)
+* [Permissões para Coleta de dados do Adobe Experience Platform](#manage-collection)
+
+### Gerenciar permissões no Adobe Experience Platform {#manage-platform}
+
+No **[!UICONTROL Produtos]** exibir no Admin Console, selecione **[!UICONTROL Coleta de dados do Adobe Experience Platform]**. Selecione o perfil de produto para o qual você deseja editar permissões e navegue até o **[!UICONTROL Permissões]** guia .
+
+Para acessar os recursos de coleta de dados, você deve ativar todas as permissões no **[!UICONTROL Sandboxes]**, **[!UICONTROL Modelagem de dados]**, **[!UICONTROL Identity Management]** e **[!UICONTROL Coleta de dados]** categorias.
+
+![Imagem que mostra o cartão de produto Coleta de dados no Admin Console](./images/permissions/platform-permission-card.png)
+
+Consulte a [guia da interface do usuário de controle de acesso](../access-control/ui/overview.md) para obter instruções detalhadas sobre como gerenciar permissões da plataforma.
+
+>[!NOTE]
+>
+>Dependendo dos SKUs de produtos aos quais sua organização tem acesso, talvez você não tenha todas as permissões de plataforma disponíveis para você.
+
+### Gerenciar permissões na Coleta de dados do Adobe Experience Platform {#manage-collection}
+
+No **[!UICONTROL Produtos]** exibir no Admin Console, selecione **[!UICONTROL Coleta de dados do Adobe Experience Platform]**.
 
 ![Imagem que mostra o cartão de produto Coleta de dados no Admin Console](./images/permissions/data-collection-card.png)
 
-### Selecionar ou criar um perfil de produto
+#### Selecionar ou criar um perfil de produto
 
 A próxima tela mostra uma lista de perfis de produto disponíveis para a Coleta de dados em sua organização, com o perfil padrão sendo **[!DNL Default Data Collection All Access]**. Você pode optar por editar o perfil de produto padrão, se desejar, ou pode selecionar **[!UICONTROL Novo perfil]** para criar um. Se você tiver várias funções ou grupos de usuários em sua organização que exigem diferentes níveis de acesso, deverá criar um perfil de produto separado para cada um deles.
 
@@ -92,7 +109,7 @@ Após selecionar ou criar um perfil de produto, você pode usar a variável **[!
 
 ![Imagem que mostra a guia de permissões para um Admin Console de perfil de produto](./images/permissions/edit-permission-categories.png)
 
-### Editar permissões para o perfil de produto {#edit-permissions}
+#### Editar permissões para o perfil de produto {#edit-permissions}
 
 Ao editar permissões para um perfil, as permissões disponíveis são listadas na coluna da esquerda, enquanto as permissões incluídas no perfil são listadas na coluna da direita. Selecione as permissões listadas para movê-las entre qualquer uma das colunas.
 
@@ -110,7 +127,7 @@ A exibição do perfil do produto é exibida novamente com as permissões adicio
 
 ![Imagem que mostra as permissões adicionadas para o perfil do produto](./images/permissions/permissions-added.png)
 
-### Atribuir usuários ao perfil de produto {#assign-users}
+#### Atribuir usuários ao perfil de produto {#assign-users}
 
 Para atribuir usuários ao perfil do produto (e conceder a eles as permissões configuradas do perfil), selecione o **[!UICONTROL Usuários]** , seguido por **[!UICONTROL Adicionar usuário]**.
 

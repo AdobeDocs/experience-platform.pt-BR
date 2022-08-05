@@ -1,9 +1,10 @@
 ---
 title: Práticas recomendadas de criação
 description: Saiba quais regras e dicas você deve seguir ao criar a página de documentação de destino, para garantir que ela atenda aos padrões de qualidade da documentação do Adobe Experience Platform.
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,15 @@ Esta página descreve as regras que devem ser seguidas quando [criação da docu
 * Não inclua observações e estimativas na documentação do produto.
 * Na documentação do Experience Platform, os Adobe-escritores usam **formatação em negrito** para se referir aos controles da interface do usuário, desta forma:
    * Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione o **[!UICONTROL Catálogo]** guia . Veja um exemplo de como os controles da interface do usuário são documentados em um [tutorial de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+
+## Estilo de escrita
+
+>[!IMPORTANT]
+>
+>Ler [Orientação de escrita para a documentação do Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) antes de começar a criar a página de documentação de destino.
+
+* Mantenha suas frases curtas e chegue rápido ao ponto. Se sua frase tiver mais de 20 palavras ou usar várias vírgulas, considere separá-la em frases separadas. Sentenças com mais de 20 palavras podem ser especialmente desafiadoras para os leitores.
+* Não seja muito educado. Evite usar &quot;por favor&quot; ou &quot;por favor faça ...&quot; na documentação técnica.
 
 ## Vinculação {#linking}
 

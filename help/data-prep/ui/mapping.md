@@ -3,9 +3,9 @@ keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arqu
 title: Guia da interface do usuário de preparação de dados
 description: Este documento fornece instruções sobre como usar funções de preparação de dados na interface do usuário da plataforma para mapear arquivos CSV para um esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ Quando terminar, selecione o ícone de schema para fechar a interface do schema 
 
 #### Campos calculados {#calculated-fields}
 
-Os campos calculados permitem que os valores sejam criados com base nos atributos no schema de entrada. Esses valores podem ser atribuídos aos atributos no schema de destino e receber um nome e uma descrição para permitir uma referência mais fácil.
+Os campos calculados permitem que os valores sejam criados com base nos atributos no schema de entrada. Esses valores podem ser atribuídos aos atributos no schema de destino e receber um nome e uma descrição para permitir uma referência mais fácil. Os campos calculados têm um comprimento máximo de 4096 caracteres.
 
 Para criar um campo calculado, selecione **[!UICONTROL Novo tipo de campo]** e depois selecione **[!UICONTROL Adicionar campo calculado]**
 

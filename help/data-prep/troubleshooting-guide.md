@@ -4,9 +4,9 @@ title: Guia de solução de problemas da preparação de dados
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre a Preparação de dados do Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ Todas as linhas que são inválidas mesmo sem erros de transformação também s
 ### Como posso evitar caracteres especiais em um campo?
 
 É possível evitar caracteres especiais em um campo usando `${...}`. No entanto, os arquivos JSON que contêm campos com um ponto final (`.`) não são compatíveis com esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para escapar caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, pode então ser referido como `address.street\.name` em vez de `address.street.name`.
+
+### Qual é o comprimento máximo dos campos calculados?
+
+Os campos calculados têm um comprimento máximo de 4096 caracteres.

@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
+source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2327'
 ht-degree: 5%
 
 ---
@@ -177,7 +177,7 @@ Baseada na Real-time Customer Data Platform (CDP em tempo real), a CDP B2B Editi
 
 | Recurso | Descrição |
 | --- | --- |
-| Lead para correspondência da conta | A correspondência cliente a destinatário permite que você participe de perfis de pessoa conhecidos para perfis de conta. Você pode segmentar e direcionar dados em um contexto B2B, como contas ou oportunidades. Os trabalhos executados diariamente usam fatores determinísticos e probabilísticos para corresponder perfis de pessoas que ainda não estão associados a nenhuma conta a uma conta correspondente. Você pode decidir incluir essas correspondências nas definições de segmento |
+| Lead para correspondência da conta | O lead para a correspondência de contas permite que você participe de perfis de pessoas conhecidas para perfis de contas. Você pode segmentar e direcionar dados em um contexto B2B, como contas ou oportunidades. Os trabalhos executados diariamente usam fatores determinísticos e probabilísticos para corresponder perfis de pessoas que ainda não estão associados a nenhuma conta a uma conta correspondente. Você pode decidir incluir essas correspondências nas definições de segmento |
 
 Para obter mais informações, consulte o documento em [levar à correspondência da conta](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 

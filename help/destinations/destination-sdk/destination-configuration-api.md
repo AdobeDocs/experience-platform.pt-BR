@@ -2,10 +2,10 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Número inteiro | O Experience Platform pode agregar vários perfis exportados em uma única chamada HTTP. Especifique o número máximo de perfis que seu terminal deve receber em uma única chamada HTTP. Observe que esta é a melhor agregação de esforço. Por exemplo, se você especificar o valor 100, a Platform poderá enviar qualquer número de perfis menor que 100 em uma chamada. <br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina este sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
 | `aggregation.configurableAggregation.splitUserById` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Use esse sinalizador se a chamada para o destino deve ser dividida por identidade. Defina este sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada, para um determinado namespace. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Número inteiro | <ul><li>*Valor mínimo: 1800*</li><li>*Valor máximo: 3600*</li><li>Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Configure um valor entre os valores mínimo e máximo aceito. Junto com `maxNumEventsInBatch`, esse parâmetro determina por quanto tempo o Experience Platform deve aguardar até enviar uma chamada de API para o terminal. <br> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada da API, o que ocorrer primeiro. </li></ul> |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Número inteiro | <ul><li>*Valor mínimo: 1800*</li><li>*Valor máximo: 3600*</li><li>Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Configure um valor entre os valores mínimo e máximo aceito. Junto com `maxNumEventsInBatch`, esse parâmetro determina por quanto tempo o Experience Platform deve aguardar até enviar uma chamada de API para o terminal. <br> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3600 segundos OU até que haja 10 mil perfis qualificados antes de fazer a chamada da API, o que ocorrer primeiro. </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | Número inteiro | <ul><li>*Valor mínimo: 1000*</li><li>*Valor máximo: 10000*</li><li>Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Configure um valor entre os valores mínimo e máximo aceito. Para obter uma descrição desse parâmetro, consulte `maxBatchAgeInSecs` logo acima.</li></ul> |
 | `aggregation.configurableAggregation.aggregationKey` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros abaixo: <br> <ul><li>ID do segmento</li><li> status do segmento </li><li> namespace de identidade </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Consulte parâmetro na configuração de exemplo [here](./destination-configuration.md#example-configuration). Defina como `true` se desejar agrupar perfis exportados para seu destino por ID de segmento. |

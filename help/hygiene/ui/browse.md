@@ -2,10 +2,10 @@
 title: Procurar Ordens de Serviço de Higiene de Dados
 description: Saiba como visualizar e gerenciar pedidos de higiene de dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 1%
+source-wordcount: '484'
+ht-degree: 2%
 
 ---
 
@@ -41,10 +41,10 @@ Selecione o ícone de funil (![Imagem do ícone de funil](../images/ui/browse/fu
 
 | Filtro | Descrição |
 | --- | --- |
-| [!UICONTROL Status] | Filtrar com base no status atual da ordem de trabalho. |
-| [!UICONTROL Data de criação] | Filtre com base em quando a solicitação TTL do conjunto de dados foi feita. |
-| [!UICONTROL Data de exclusão] | Filtro com base na data de exclusão agendada pelo TTL. |
-| [!UICONTROL Data de atualização] | Filtrar com base em quando o TTL do conjunto de dados foi atualizado pela última vez. As criações e as consultas TTL são contadas como atualizações. |
+| [!UICONTROL Status] | Filtro com base no status atual da ordem de serviço:<ul><li>**[!UICONTROL Concluído]**: O trabalho foi concluído.</li><li>**[!UICONTROL Pending]**: O trabalho foi criado, mas ainda não foi executado. A [solicitação de TTL (time-to-live) do conjunto de dados](./ttl.md) O assume esse status antes da data de exclusão agendada. Quando a data de exclusão chegar, o status será atualizado para [!UICONTROL Em execução] a menos que a tarefa seja cancelada antecipadamente.</li><li>**[!UICONTROL Em execução]**: A tarefa foi iniciada e está em processamento no momento.</li><li>**[!UICONTROL Cancelado]**: A tarefa foi cancelada como parte de uma solicitação manual do usuário.</li></ul> |
+| [!UICONTROL Data de criação] | Filtrar com base no momento em que a ordem de trabalho foi feita. |
+| [!UICONTROL Data de validade] | Filtrar solicitações TTL com base na data de exclusão agendada para o conjunto de dados em questão. |
+| [!UICONTROL Data de atualização] | Filtrar solicitações TTL com base em quando a ordem de trabalho foi atualizada pela última vez. As criações e as consultas TTL são contadas como atualizações. |
 
 {style=&quot;table-layout:auto&quot;}
 

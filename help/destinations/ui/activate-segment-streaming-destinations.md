@@ -4,9 +4,9 @@ title: Ativar os dados do público-alvo para os destinos de exportação do segm
 type: Tutorial
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,6 @@ Alguns destinos de transmissão de segmento exigem que você selecione atributos
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformação"
 >abstract="Marque essa opção ao usar campos de origem sem hash para que o Adobe Experience Platform os faça automaticamente com hash na ativação."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Saiba mais na documentação"
 
 Quando você está mapeando atributos de origem sem hash para atributos de destino que o destino espera ter hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform faça o hash automático dos atributos de origem na ativação.
 
@@ -95,7 +94,6 @@ Quando você está mapeando atributos de origem sem hash para atributos de desti
 >id="platform_destinations_activate_enddate"
 >title="Data de término"
 >abstract="A adição de uma data de término para a programação de segmentos não está disponível."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Saiba mais na documentação"
 
 Por padrão, a variável [!UICONTROL Agendamento do segmento] mostra somente os segmentos recém-selecionados que você escolheu no fluxo de ativação atual.
 

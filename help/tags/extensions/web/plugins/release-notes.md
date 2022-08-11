@@ -2,7 +2,7 @@
 title: Notas de versão da Extensão de plug-ins comuns do Analytics
 description: As notas de versão mais recentes da extensão de tag de plug-ins comuns do Analytics na Adobe Experience Platform.
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
+source-git-commit: c0aa12e9d50e3d1a05a8692a153242f2e6c044ca
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 93%
@@ -17,7 +17,7 @@ ht-degree: 93%
 
 #### Recursos
 
-Plug-ins que definem cookies agora usam o sinalizador seguro
+* Plug-ins que definem cookies agora usam o sinalizador seguro
 
 ## 23 de junho de 2021
 

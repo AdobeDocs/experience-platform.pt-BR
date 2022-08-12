@@ -3,9 +3,9 @@ title: Pré-requisitos para usar o SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre os pré-requisitos para usar o Adobe Experience Platform Web SDK.
 keywords: Domínio próprio; CNAME; esquema; criar esquema; iniciar; extensão do sdk da aep web; extensão; id de configuração; ferramenta de configuração; elemento de dados; criar elemento de dados; objeto XDM; enviar evento; enviar evento;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
+source-git-commit: 853c0a662592939c280c7e7ede8235d1b6155b2f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,4 @@ Para usar o SDK da Web da Adobe Experience Platform, primeiro você deve:
 
 ## Gerenciamento de permissões para o Adobe Experience Platform Web SDK
 
-Para começar a usar o Adobe Experience Platform, você precisa ter o direito de [permissões](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=br) para criar seus esquemas e gerenciar identidades. As permissões mínimas necessárias podem ser encontradas na categoria Modelagem de dados e identidades .
-
-![](../images/AEP-permission-categories.png)
-
-Na categoria Modelagem de dados, conceda aos usuários as permissões Gerenciar esquemas e Visualizar esquemas .
-
-![](../images/data-modeling-permissions.png)
-
-Na categoria Identity Management , conceda aos usuários as permissões Gerenciar namespaces de identidade e Exibir namespaces de identidade .
-
-![](../images/identity-management-permissions.png)
+Para começar a usar o Adobe Experience Platform Web SDK, você precisará ter as permissões certas configuradas. Para ler mais sobre como configurar sua configuração, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).

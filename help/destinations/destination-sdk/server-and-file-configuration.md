@@ -2,10 +2,10 @@
 description: As especificações de configuração do servidor e do arquivo para destinos com base em arquivo podem ser configuradas no Adobe Experience Platform Destination SDK por meio do endpoint /destination-servers.
 title: (Beta) Opções de configuração para especificações do servidor de destino baseado em arquivo
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 12%
+source-wordcount: '899'
+ht-degree: 13%
 
 ---
 
@@ -284,10 +284,6 @@ Esta seção descreve as configurações de formatação de arquivo para o arqui
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ Esta seção descreve as configurações de formatação de arquivo para o arqui
 | `csvOptions.timestampFormat.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define a string que indica um formato de carimbo de data e hora. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um único caractere usado para escapar do escape para o caractere de aspas. | `\` quando os caracteres de escape e aspas são diferentes. `\0` quando o caractere escape e aspas são iguais. |
 | `csvOptions.emptyValue.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define a representação da string de um valor vazio. | `""` |
-| `csvOptions.lineSep.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define o separador de linha que deve ser usado para gravação. O comprimento máximo é de 1 caractere. | `\n` |
 | `maxFileRowCount` | Opcional | Número máximo de linhas que o arquivo exportado pode conter. Configure isso com base nos requisitos de tamanho do arquivo da plataforma de destino. | N/D |
 
 {style=&quot;table-layout:auto&quot;}

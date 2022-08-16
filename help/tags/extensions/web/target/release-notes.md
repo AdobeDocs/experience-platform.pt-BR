@@ -1,10 +1,11 @@
 ---
 title: Notas de versão da extensão do Adobe Target
-description: As notas de versão mais recentes para a extensão de tag do Adobe Target no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: As notas de versão mais recentes da extensão de tag do Adobe Target na Adobe Experience Platform.
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 74%
+source-wordcount: '520'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +14,13 @@ ht-degree: 74%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 16 de setembro de 2021
+
+### Extensão do Adobe Target 0.11.4
+
+* Atualizado para at.js v1.8.3
+* Adicionado `SameSite=None` e `Secure` atributos ao definir cookies
 
 ## 24 de julho de 2020
 
@@ -42,13 +50,13 @@ ht-degree: 74%
 * Anteriormente, a biblioteca ECID fez duas chamadas de bloqueio antes que o at.js pudesse buscar experiências. Isso foi reduzido a uma única chamada, o que melhora significativamente o desempenho.
 
 >[!NOTE]
->Atualize sua extensão de tag da ECID para Adobe Experience Platform para v4.4.1 para aproveitar esse aprimoramento de desempenho.
+>Atualize sua extensão de tag ECID para Adobe Experience Platform para a versão 4.4.1 a fim de aproveitar essa melhoria de desempenho.
 
 ## 31 de julho de 2019
 
 ### Extensão do Adobe Target 0.10.1
 
-* Hotfix de parâmetros que manipulam a extensão de tag para Adobe Target
+* Hotfix de parâmetros que controlam a extensão de tag do Adobe Target
 
 ## 4 de maio de 2019
 
@@ -74,7 +82,7 @@ ht-degree: 74%
 
 #### **Recursos**
 
-* Extensão atualizada para usar a at.js 1.7.0, que tem funcionalidade de privacidade de Opt-in compatível por meio de tags para controlar como e quando a tag do Target é acionada. Verifique a documentação das tags sobre como configurar a implementação do Opt-in. Adicionada a possibilidade de personalizar se um parâmetro de mBox com valor vazio deve ser enviado para o Target ou não.
+* Extensão atualizada para usar o at.js 1.7.0, que tem funcionalidade de privacidade de aceitação compatível com tags para controlar como e quando a tag do Target é acionada. Consulte a documentação das tags sobre como configurar sua implementação de aceitação. Adicionada a possibilidade de personalizar se um parâmetro de mBox com valor vazio deve ser enviado para o Target ou não.
 
 ## 23 de janeiro de 2019
 
@@ -140,7 +148,7 @@ ht-degree: 74%
 
 #### **Correções de erros**
 
-* Correção de um erro na extensão Adobe Target que impedia o Visual Experience Composer de mostrar a página quando implantada por meio de tags.
+* Correção de um erro na extensão do Adobe Target que impedia que o Visual Experience Composer reexibisse a página quando implantada por meio de tags.
 
 ## 8 de fevereiro de 2018
 

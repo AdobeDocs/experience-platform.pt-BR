@@ -3,9 +3,9 @@ title: Processar dados de consentimento do cliente usando o SDK da Web da Adobe 
 topic-legacy: getting started
 description: Saiba como integrar o SDK da Web da Adobe Experience Platform para processar os dados de consentimento do cliente no Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1375'
 ht-degree: 1%
 
 ---
@@ -98,14 +98,19 @@ Quando terminar de configurar a extensão, ela poderá ser integrada ao seu site
 
 Depois de integrar a extensão SDK ao seu site, você pode começar a usar o SDK da Web da plataforma `setConsent` para enviar dados de consentimento à Platform.
 
->[!IMPORTANT]
->
->O `setConsent` O comando atualiza somente dados diretamente no armazenamento de Perfil e não envia dados para o Data Lake.
+O `setConsent` O comando executa duas ações:
+
+1. Atualiza os atributos de perfil do usuário diretamente na Loja de perfis. Isso não envia dados para o lago de dados.
+1. Cria um [Evento de experiência](../../../xdm/classes/experienceevent.md) que registra uma conta com carimbo de data e hora do evento de alteração de consentimento. Esses dados são enviados diretamente para o lago de dados e podem ser usados para acompanhar as alterações de preferência de consentimento ao longo do tempo.
+
+### Quando chamar `setConsent`
 
 Há dois cenários em que `setConsent` deve ser chamado no seu site:
 
 1. Quando o consentimento é carregado na página (em outras palavras, em cada carregamento de página)
 1. Como parte de um gancho ou ouvinte de evento da CMP que detecta alterações nas configurações de consentimento
+
+### `setConsent` sintaxe
 
 >[!NOTE]
 >

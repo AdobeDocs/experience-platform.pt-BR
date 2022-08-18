@@ -2,9 +2,9 @@
 description: O Adobe Experience Platform Destination SDK é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para o Experience Platform para fornecer dados de público-alvo e de perfil ao seu terminal, com base em dados e formatos de autenticação de sua escolha. As configurações são armazenadas no Experience Platform e podem ser recuperadas por meio da API para obter atualizações adicionais.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
@@ -74,11 +74,11 @@ O processo para configurar seu destino no Experience Platform é descrito abaixo
 
 1. Se você for um ISV ou SI, consulte as informações de acesso na seção acima. [Adobe Experience Platform Ativation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) Os clientes do podem ignorar esta etapa.
 2. [Solicitação para provisionar uma sandbox de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e ative a permissão de criação de destino.
-3. [Crie sua integração](./configure-destination-instructions.md) seguindo a documentação do produto.
-4. [Testar sua integração](./test-destination.md) seguindo a documentação do produto.
-5. [Enviar sua integração](./submit-destination.md) para análise do Adobe (o tempo de resposta padrão é de cinco dias úteis).
-6. Se você for um ISV ou SI, crie uma [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto no Experience League para o seu destino.
-7. Depois de aprovada pelo Adobe, sua integração será exibida na [Catálogo de Experience Platform](/help/destinations/catalog/overview.md).
+3. Crie sua integração. Siga as instruções na documentação do produto para configurar [destinos de transmissão](./configure-destination-instructions.md) ou [destinos com base em arquivo (beta)](./configure-file-based-destination-instructions.md).
+4. Teste sua integração. Siga as instruções na documentação do produto para testar [destinos de transmissão](./test-destination.md) ou [destinos com base em arquivo (beta)](./file-based-destination-testing-overview.md).
+5. Se você for um ISV ou SI, crie uma [integração produzida](./overview.md#productized-custom-integrations), [enviar sua integração](./submit-destination.md) para análise do Adobe (o tempo de resposta padrão é de cinco dias úteis).
+6. Se você for um ISV ou SI criando uma integração produzida, use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto no Experience League para o seu destino.
+7. Para integrações produzidas, uma vez aprovadas pelo Adobe, sua integração será exibida no [Catálogo de Experience Platform](/help/destinations/catalog/overview.md).
 8. Se quiser atualizar sua integração, siga o mesmo processo.
 
 ## Referência {#reference}

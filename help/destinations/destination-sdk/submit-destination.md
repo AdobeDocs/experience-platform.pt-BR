@@ -2,7 +2,7 @@
 description: Esta página fornece todas as informações que você precisa enviar para revisar um destino produzido criado usando o Destination SDK.
 title: Enviar para revisão de um destino produzido criado no Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -15,7 +15,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->O processo documentado aqui é necessário apenas para parceiros que enviam destinos (públicos) produzidos. Se estiver criando um destino privado para uso próprio, não será necessário produzir e compartilhar esses materiais com o Adobe.
+>* O processo documentado aqui é necessário apenas para parceiros que enviam destinos (públicos) produzidos. Se estiver criando um destino privado para uso próprio, não será necessário produzir e compartilhar esses materiais com o Adobe.
+>
+>* O tempo de resposta da publicação do Adobe é de cinco dias úteis.
+>
+>* Se a equipe do Adobe solicitar que você faça atualizações em suas configurações após o envio inicial, é necessário enviar outra solicitação de publicação de destino depois de fazer as atualizações.
+>
+>* Mesmo depois que seu destino estiver no catálogo de Experience Platform, se precisar fazer atualizações em suas configurações, envie uma nova solicitação de publicação de destino para que as atualizações sejam refletidas nas configurações.
+
 
 Antes que seu destino possa ser publicado na [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md), você deve fornecer ao Adobe determinadas informações sobre o destino e os testes que você realizou, para garantir que os usuários aproveitem a melhor experiência possível ao ativar dados na sua plataforma.
 
@@ -28,15 +35,6 @@ Esta página lista todas as informações que você precisa fornecer ao enviar o
 * Prova de que você enviou uma solicitação de publicação de destino para seu destino usando o [API de publicação de destino](./destination-publish-api.md).
 * Uma PR da documentação (solicitação de pull), seguindo as instruções descritas na seção [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md).
 * Um arquivo de imagem que será exibido como um logotipo para seu cartão de destino no catálogo de destinos do Experience Platform.
-
->[!IMPORTANT]
->
->* O tempo de resposta da publicação do Adobe é de cinco dias úteis.
->
->* Se a equipe do Adobe solicitar que você faça atualizações em suas configurações após o envio inicial, é necessário enviar outra solicitação de publicação de destino depois de fazer as atualizações.
->
->* Mesmo depois que seu destino estiver no catálogo de Experience Platform, se precisar fazer atualizações em suas configurações, envie uma nova solicitação de publicação de destino para que as atualizações sejam refletidas nas configurações.
-
 
 Você pode encontrar informações detalhadas sobre cada item nas seções abaixo:
 

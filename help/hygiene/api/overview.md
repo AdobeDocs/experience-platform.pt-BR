@@ -2,9 +2,9 @@
 title: Guia da API da Higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
 
-A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform, bem como agendar protocolos TTL (time-to-live) para conjuntos de dados. Este guia aborda as etapas de pré-requisito para usar a API e fornece links para uma documentação mais específica do ponto de extremidade.
+A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform, bem como programar datas de expiração para os conjuntos de dados. Este guia aborda as etapas de pré-requisito para usar a API e fornece links para uma documentação mais específica do ponto de extremidade.
 
 ## Introdução
 
@@ -43,9 +43,9 @@ Este documento fornece um exemplo de chamada à API para demonstrar como formata
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## Tempo de vida (TTL) para conjuntos de dados
+## Expirações do conjunto de dados
 
-Um TTL de conjunto de dados é uma ação atrasada &quot;excluir um conjunto de dados&quot;. Ao criar um TTL, você está especificando um horário futuro no qual esse conjunto de dados deve ser excluído. Consulte a [guia do endpoint TTL do conjunto de dados](./ttl.md) para obter detalhes sobre como agendar TTLs de conjuntos de dados na API.
+A expiração de um conjunto de dados é uma ação &quot;excluir um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando uma hora futura na qual esse conjunto de dados deve ser excluído. Consulte a [guia do endpoint de expiração de conjunto de dados](./dataset-expiration.md) para obter detalhes sobre como agendar expirações do conjunto de dados na API.
 
 ## Próximas etapas
 

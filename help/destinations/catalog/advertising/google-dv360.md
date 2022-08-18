@@ -3,9 +3,9 @@ keywords: Gerenciador de lances DoubleClick, Gerenciador de lances DoubleClick, 
 title: Conexão Google Display & Video 360
 description: Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas para o público-alvo em fontes de inventário de Exibição, Vídeo e Dispositivo móvel.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!NOTE]
 >
->A lista de permissões é obrigatória antes da configuração da primeira [!DNL Google Display & Video 360] no Platform. Certifique-se de que o processo de inclusão na lista de permissões descrito abaixo foi concluído pela Google antes de criar um destino.
+>A lista de permissões é obrigatória antes da configuração da primeira [!DNL Google Display & Video 360] no Platform. Certifique-se de que o processo de inclusão na lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
+>A exceção a esta regra é para [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) clientes. Se você já criou uma conexão com esse destino Google no Audience Manager, não é necessário passar pelo processo de lista de permissões novamente e prosseguir para as próximas etapas.
 
 Antes de criar a [!DNL Google Display & Video 360] no Platform, você deve entrar em contato com a Google solicitando que o Adobe seja incluído na lista de provedores de dados permitidos e que sua conta seja adicionada à lista de permissões. Entre em contato com a Google e forneça as seguintes informações:
 

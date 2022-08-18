@@ -3,9 +3,9 @@ keywords: google ad manager, google ad, doubleclick, DoubleClick AdX, DoubleClic
 title: Conexão com o Google Ad Manager
 description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '903'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,8 @@ Se você deseja criar seu primeiro destino com [!DNL Google Ad Manager] e não a
 
 >[!NOTE]
 >
->A lista de permissões é obrigatória antes de configurar a primeira [!DNL Google Ad Manager] no Platform. Verifique se o processo de lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
+>A lista de permissões é obrigatória antes da configuração da primeira [!DNL Google Ad Manager] no Platform. Certifique-se de que o processo de inclusão na lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
+>A exceção a esta regra é para [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) clientes. Se você já criou uma conexão com esse destino Google no Audience Manager, não é necessário passar pelo processo de lista de permissões novamente e prosseguir para as próximas etapas.
 
 Antes de criar a [!DNL Google Ad Manager] no Platform, você deve entrar em contato com [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Contato [!DNL Google] e fornecer as seguintes informações:
 

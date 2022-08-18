@@ -3,9 +3,9 @@ keywords: Google ads, google ads, google adwords, Google AdWords, Google Adwords
 title: Conexão Google Ads
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de anúncios online que permite que as empresas paguem anúncios por clique em pesquisas baseadas em texto, exibições gráficas, vídeos YouTube e exibições móveis no aplicativo.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '945'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!NOTE]
 >
->A lista de permissões é obrigatória antes de configurar a primeira [!DNL Google Ads] no Platform. Verifique se o processo de lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
+>A lista de permissões é obrigatória antes da configuração da primeira [!DNL Google Ads] no Platform. Certifique-se de que o processo de inclusão na lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
+>A exceção a esta regra é para [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) clientes. Se você já criou uma conexão com esse destino Google no Audience Manager, não é necessário passar pelo processo de lista de permissões novamente e prosseguir para as próximas etapas.
 
 Antes de criar a [!DNL Google Ads] no Platform, você deve entrar em contato com [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Contato [!DNL Google] e fornecer as seguintes informações:
 

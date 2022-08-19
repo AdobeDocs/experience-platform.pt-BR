@@ -5,7 +5,7 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
+source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -126,7 +126,6 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | zone_date_to_zone | Converte uma data de um fuso horário em outro. | <ul><li>DATA: **Obrigatório** A data em que você está tentando converter.</li><li>ZONA: **Obrigatório** O fuso horário para o qual você está tentando converter a data.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style=&quot;table-layout:auto&quot;}
-&#x200B;
 
 ### Hierarquias - Objetos {#objects}
 

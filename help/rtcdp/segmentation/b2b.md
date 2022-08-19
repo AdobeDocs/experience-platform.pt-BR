@@ -2,9 +2,9 @@
 title: Casos de uso de segmentação para a CDP B2B em tempo real
 description: Uma visão geral dos vários casos de uso da CDP B2B em tempo real disponíveis.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,12 @@ Encontre todas as pessoas que são &quot;Decisores&quot; de qualquer oportunidad
 Encontre todas as pessoas que trabalham em um departamento de Recursos Humanos (HR) e estão relacionadas a qualquer conta *ou qualquer uma das contas relacionadas da conta* que tenha pelo menos uma oportunidade aberta com valor igual ou superior a ($1 milhão). Esse segmento requer um link entre as [!UICONTROL Perfil individual XDM] classe, [!UICONTROL Conta Comercial XDM] classe e [!UICONTROL Oportunidade de negócios XDM] classe .
 
 ![Interface do usuário que exibe a segmentação para contas relacionadas](../assets/segmentation/segmentation-related-accounts.png)
+
+### Exemplo 9: Usar pontuações de lead e/ou pontuações da conta para qualificar o perfil {#account-scoring}
+
+Encontre todos os perfis com pontuação de lead acima de 80.
+
+![Interface do usuário que exibe a segmentação para lead preditivo e pontuação de conta](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## Próximas etapas {#next-steps}
 

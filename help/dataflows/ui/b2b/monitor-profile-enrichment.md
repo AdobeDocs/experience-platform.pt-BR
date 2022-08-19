@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorar trabalhos de enriquecimento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '768'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,23 @@ As seguintes métricas estão disponíveis para lead para os trabalhos de enriqu
 | **[!UICONTROL Última execução bem-sucedida]** | Indica a data e a hora do último lead bem-sucedido para a execução do trabalho de correspondência da conta. |
 | **[!UICONTROL Status]** | Indica o status (bem-sucedido, com falha ou processamento) do lead para o trabalho de correspondência da conta. |
 
+## Potencial preditivo e enriquecimento do perfil de pontuação de conta {#predictive-lead-to-account-scoring}
+
+O [!UICONTROL Lead preditivo e pontuação de conta] o painel mostra as métricas básicas e o status diário de execução da tarefa específico da [Lead preditivo e pontuação de conta](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enriquecimento do perfil.
+
+![Potencial preditivo e enriquecimento do perfil de pontuação de conta](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+As métricas a seguir estão disponíveis para trabalhos preditivos de enriquecimento de perfil de lead e pontuação de conta:
+
+| Métrica | Descrição |
+| --------- | ---------- |
+| **[!UICONTROL Início da tarefa]** | Indica a data e a hora de início da execução preditiva do trabalho de pontuação de conta e lead. |
+| **[!UICONTROL Tempo de processamento]** | O tempo total necessário para a conclusão do trabalho. |
+| **[!UICONTROL Nome da pontuação]** | O nome da pontuação do trabalho. |
+| **[!UICONTROL Tipo de perfil]** | O tipo da pontuação: <ul><li>Pessoa</li><li>Conta</li></ul>. |
+| **[!UICONTROL Tipo de tarefa]** | O tipo da tarefa:<ul><li>Pontuação</li><li>Treinamento</li>. |
+| **[!UICONTROL Status]** | Indica o status (sucesso, falha ou processamento) do lead preditivo e do trabalho de pontuação da conta. |
+
 ## Controles da interface do usuário {#ui-controls}
 
 Esta seção descreve várias opções da interface do usuário na interface de monitoramento, que permitem filtrar as métricas exibidas na página.
@@ -79,3 +96,4 @@ Ao seguir este tutorial, você pode agora monitorar e entender com êxito as mé
 * [Contas relacionadas na CDP em tempo real B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Guia contas relacionadas no guia da interface do usuário do perfil da conta](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Lead para a correspondência de contas na CDP em tempo real B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Lead preditivo e pontuação de conta na CDP em tempo real B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

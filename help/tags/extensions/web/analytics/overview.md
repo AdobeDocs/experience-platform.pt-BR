@@ -2,7 +2,7 @@
 title: Visão geral da extensão do Adobe Analytics
 description: Saiba mais sobre a extensão de tags do Adobe Analytics na Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
+source-git-commit: 9fe94af349e1d9c979c78dce69c5180086df3adb
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 95%
@@ -222,7 +222,7 @@ Configurar descrições de campo para as configurações globais de cookies usad
 
 Valor único que representa um cliente tanto no sistema online como no offline.
 
-Consulte [visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=pt-BR).
+Consulte [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=pt-BR).
 
 ### Namespace do visitante
 

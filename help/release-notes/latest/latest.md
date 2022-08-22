@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
+source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2436'
 ht-degree: 5%
 
 ---
@@ -177,15 +177,10 @@ Baseada na Real-time Customer Data Platform (CDP em tempo real), a CDP B2B Editi
 
 | Recurso | Descrição |
 | --- | --- |
-| Lead para correspondência da conta | O lead para a correspondência de contas permite que você participe de perfis de pessoas conhecidas para perfis de contas. Você pode segmentar e direcionar dados em um contexto B2B, como contas ou oportunidades. Os trabalhos executados diariamente usam fatores determinísticos e probabilísticos para corresponder perfis de pessoas que ainda não estão associados a nenhuma conta a uma conta correspondente. Você pode decidir incluir essas correspondências nas definições de segmento |
+| Lead para correspondência da conta | O lead para a correspondência de contas permite que você participe de perfis de pessoas conhecidas para perfis de contas. Você pode segmentar e direcionar dados em um contexto B2B, como contas ou oportunidades. Os trabalhos executados diariamente usam fatores determinísticos e probabilísticos para corresponder perfis de pessoas que ainda não estão associados a nenhuma conta a uma conta correspondente. Você pode decidir incluir essas correspondências nas definições de segmento. <br><br>Para obter mais informações, consulte o documento em [levar à correspondência da conta](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). Para obter instruções sobre como configurar o lead para a correspondência da conta, consulte o [Guia da interface do usuário do perfil da conta](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).</li> |
+| Lead preditivo e pontuação de conta | O Lead preditivo e a Pontuação de Conta usam um método de aprendizado de máquina baseado em árvore (aumento aleatório de floresta/gradiente) que envolve aprender e prever os eventos de conversão do estágio de oportunidade e agregar atividades pessoais no nível da conta para produzir as pontuações da conta. Os principais fatores influentes também estão disponíveis no nível agregado e unitário para ajudar os profissionais de marketing B2B a entender melhor quais elementos levaram as pontuações. <br><br>Para obter mais informações, consulte o documento em [lead preditivo e pontuação de conta](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). Para obter informações sobre como gerenciar suas pontuações, consulte o guia em [gerenciamento de lead preditivo e pontuação de conta no Real-time Customer Data Platform, B2B Edition.](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
 
-Para obter mais informações, consulte o documento em [levar à correspondência da conta](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
-
-Para obter um guia sobre como monitorar o enriquecimento do perfil, consulte o documento em [monitorar o enriquecimento do perfil na interface do usuário](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
-
-Para obter instruções sobre como configurar o lead para a correspondência da conta, consulte o [Guia da interface do usuário do perfil da conta](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
-
-Para saber mais sobre a Real-time CDP B2B Edition, consulte o [Visão geral da CDP B2B em tempo real](../../rtcdp/overview.md).
+Para obter um guia sobre como monitorar o enriquecimento do perfil, consulte o documento em [monitorar o enriquecimento do perfil na interface do usuário](../../dataflows/ui/b2b/monitor-profile-enrichment.md). Para saber mais sobre a Real-time CDP B2B Edition, consulte o [Visão geral da CDP B2B em tempo real](../../rtcdp/overview.md).
 
 ## Perfil do cliente em tempo real {#profile}
 

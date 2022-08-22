@@ -1,6 +1,6 @@
 ---
-title: Visão geral do Perfil do cliente em tempo real
-description: Este vídeo fornece uma compreensão básica do Perfil do cliente em tempo real na Adobe Experience Platform e descreve como navegar pelos perfis na interface do usuário da plataforma.
+title: Visão geral de vídeo do perfil do cliente em tempo real
+description: Este vídeo fornece uma compreensão básica do Perfil do cliente em tempo real no Adobe Experience Platform e descreve como navegar pelos perfis na interface do usuário da plataforma.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -8,21 +8,20 @@ kt: 2701
 audience: all
 doc-type: video
 activity: understand
-translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+exl-id: cdc91194-771f-4026-808f-97d70db436d9
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
+# Visão geral do perfil do cliente em tempo real
 
-# Visão geral do Perfil do cliente em tempo real
-
-Este vídeo fornece uma compreensão básica do Perfil do cliente em tempo real na Adobe Experience Platform e descreve como os dados de várias fontes são reunidos para formar um perfil centralizado para cada um de seus clientes individuais. Para saber mais sobre os recursos e a funcionalidade do Perfil do cliente em tempo real, comece lendo a [Visão geral do Perfil do cliente em tempo real](../home.md).
+Este vídeo fornece uma compreensão básica do Perfil do cliente em tempo real no Adobe Experience Platform e descreve como os dados de várias fontes são reunidos para formar um perfil centralizado para cada um dos clientes individuais. Para saber mais sobre os recursos e funcionalidades do Perfil do cliente em tempo real, comece lendo o [Visão geral do perfil do cliente em tempo real](../home.md).
 
 >[!NOTE]
 >
->A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia da interface do Perfil](../ui/user-guide.md).
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [Guia da interface do usuário do perfil](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

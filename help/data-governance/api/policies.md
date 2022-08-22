@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform, home, tópicos populares, imposição de políticas, aplicação baseada em API, controle de dados
 solution: Experience Platform
-title: Endpoint da API de políticas
+title: Endpoint da API de políticas de uso de dados
 topic-legacy: developer guide
 description: As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito, executando em dados no Experience Platform. O endpoint /Policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão das políticas de uso de dados.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 3%
+source-wordcount: '1840'
+ht-degree: 4%
 
 ---
 
-# Ponto de extremidade de políticas
+# Ponto final das políticas de uso de dados
 
-As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro de [!DNL Experience Platform]. O `/policies` endpoint no [!DNL Policy Service API] O permite gerenciar programaticamente as políticas de uso de dados da sua organização.
+As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro da [!DNL Experience Platform]. O `/policies` endpoint no [!DNL Policy Service API] O permite gerenciar programaticamente as políticas de uso de dados da sua organização.
+
+>[!IMPORTANT]
+>
+>Esse endpoint não deve ser confundido com a variável `/policies` endpoint no [API de controle de acesso](../../access-control/abac/api/policies.md), que é usada para gerenciar políticas de controle de acesso.
 
 ## Introdução
 

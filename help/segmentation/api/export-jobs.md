@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; exportar trabalhos; api;
 solution: Experience Platform
-title: Exporte o Ponto de Extremidade da API de Tarefas
+title: Ponto de extremidade da API de tarefas de exportação de segmentos
 topic-legacy: developer guide
 description: Os trabalhos de exportação são processos assíncronos usados para manter os membros do segmento do público-alvo em conjuntos de dados. Você pode usar o endpoint /export/jobs na API do Serviço de Segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1682'
 ht-degree: 2%
 
 ---
 
-# Ponto de extremidade de tarefas de exportação
+# Ponto final de trabalhos de exportação de segmentos
 
 Os trabalhos de exportação são processos assíncronos usados para manter os membros do segmento do público-alvo em conjuntos de dados. Você pode usar o `/export/jobs` endpoint na API de segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente tarefas de exportação.
 

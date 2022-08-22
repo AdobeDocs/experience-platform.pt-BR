@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, esquemas;
-solution: Experience Platform
-title: Ponto de Extremidade da API de Esquemas
-topic-legacy: schemas
-description: Você pode usar o endpoint `/functions` na API do Adobe Experience Platform para validar as expressões de mapeamento e listar as funções do conjunto de mapeamentos disponíveis.
+title: Endpoint da API de funções
+description: Você pode usar o endpoint `/functions` na API da Preparação de dados para validar as expressões de mapeamento e listar as funções de conjunto de mapeamento disponíveis.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '209'
 ht-degree: 5%
 
 ---

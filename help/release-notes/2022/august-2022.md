@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2022
 description: As notas de versão de agosto de 2022 para o Adobe Experience Platform.
-source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
+source-git-commit: b8513fa214ea74eec6809796cc194466e05cbb21
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 10%
+source-wordcount: '497'
+ht-degree: 6%
 
 ---
 
@@ -41,7 +41,11 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte entre regiões para origem do Adobe Analytics | Agora é possível assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura). Os conjuntos de relatórios devem ser mapeados para a mesma organização da instância Sandbox do Experience Platform na qual a conexão de origem está sendo criada. Para obter mais informações, consulte o guia sobre [criação de uma conexão de origem do Adobe Analytics na interface do usuário](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Disponibilidade geral de fontes de autoatendimento (SDK em lote) | Desenvolva, teste e integre sua fonte de dados baseada em REST API para assimilar dados em lote no Experience Platform usando as especificações de origem fáceis de configurar. Com o SDK de fontes, é possível: <ul><li>Configure uma nova fonte para o catálogo de Experience Platform.</li><li>Defina as especificações para a sua fonte, incluindo informações relacionadas aos tipos de autenticação suportados, programação e como os dados de recursos são buscados.</li><li>Crie uma documentação voltada para o usuário para sua nova fonte.</li></ul> Para obter mais informações, leia a documentação em [Fontes de autoatendimento (SDK em lote)](../../sources/sources-sdk/overview.md). |
+| Disponibilidade geral [!DNL Google BigQuery] source | Use o [!DNL Google BigQuery] fonte para assimilar dados da sua [!DNL Google BigQuery] data warehouse para Experience Platform. Para obter mais informações, leia a documentação sobre o [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] fonte (Beta) | Use o [!DNL Teradata Vantage] origem para assimilar dados de ambientes híbridos de várias nuvens para o Experience Platform. Para obter mais informações, leia a documentação sobre o [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
+| Suporte entre regiões para origem do Adobe Analytics | Agora é possível assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura). Os conjuntos de relatórios devem ser mapeados para a mesma organização da instância Sandbox do Experience Platform na qual a conexão de origem está sendo criada. Para obter mais informações, leia o guia sobre [criação de uma conexão de origem do Adobe Analytics na interface do usuário](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Suporte a API para assimilação sob demanda | Use a assimilação sob demanda para criar execuções de fluxo ad hoc para um determinado fluxo de dados com o [!DNL Flow Service] API. As execuções de fluxo criadas devem ser definidas para assimilação única. Para obter mais informações, leia o guia sobre [criação de uma execução de fluxo para assimilação sob demanda usando a API](../../sources/tutorials/api/on-demand-ingestion.md) para obter mais informações. |
 
 {style=&quot;table-layout:auto&quot;}
 

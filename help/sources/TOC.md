@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '802'
 ht-degree: 14%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 14%
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
       - [conector Snowflake](connectors/databases/snowflake.md)
+      - [Conector Teradata Vantage](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
       - [Conector Shopify](connectors/ecommerce/shopify.md)
    - Sistema local {#local-system}
@@ -148,6 +149,7 @@ ht-degree: 14%
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
+         - [Vantagem do teradata](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - comércio eletrônico {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -250,6 +252,7 @@ ht-degree: 14%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Vantagem do teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - comércio eletrônico {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Sistema local {#local-system}

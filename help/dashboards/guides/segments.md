@@ -4,9 +4,9 @@ title: Guia do painel Segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,6 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >id="platform_dashboards_segments_audiencesize"
 >title="Tamanho do público-alvo"
 >abstract="Este widget exibe o número total de perfis mesclados no segmento selecionado. Esse número depende da política de mesclagem aplicada aos seus dados e está correto no momento do instantâneo mais recente."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Tamanho do público-alvo]** O widget exibe o número total de perfis mesclados no segmento selecionado no momento em que o instantâneo foi tirado. Esse número é o resultado da aplicação da política de mesclagem de segmentos aos seus dados de Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo no segmento.
 
@@ -96,7 +95,6 @@ Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo 
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Tendência do tamanho do público-alvo"
 >abstract="Este widget fornece informações sobre o número total de perfis que atendem aos critérios de **any** definição de segmento, conforme capturado durante o instantâneo diário, nos últimos 30 dias, 90 dias ou 12 meses."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Tendência do tamanho do público-alvo]** O widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de **any** definição de segmento ao longo de um determinado período. A tendência do tamanho do público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. O tamanho do público-alvo é refletido no eixo y e no tempo no eixo x.
 
@@ -151,7 +149,6 @@ Esse widget permite otimizar sua estratégia de segmentação ao visualizar as s
 >id="platform_dashboards_segments_identityoverlap"
 >title="Sobreposição de identidade"
 >abstract="Este widget mostra a sobreposição de perfis em seu segmento que contém ambas as identidades escolhidas. Os círculos exibem o tamanho relativo de cada identidade. O número de perfis que contém ambos os namespaces é representado pela sobreposição entre os círculos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Sobreposição de identidade]** O widget exibe um diagrama Venn ou diagrama de conjunto, mostrando a sobreposição de perfis em seu segmento que contém várias identidades.
 
@@ -169,7 +166,6 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Perfis por identidade"
 >abstract="Este widget exibe o detalhamento das identidades em cada perfil mesclado no segmento selecionado."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Saiba mais pela documentação"
 
 O **[!UICONTROL Perfis por identidade]** o widget exibe o detalhamento das identidades em cada perfil mesclado no segmento selecionado. O número total de perfis por identidade pode ser maior que o número total de perfis no segmento, pois um perfil pode ter várias identidades associadas a ele. Em outras palavras, adicionar os valores mostrados para cada identidade pode totalizar mais do que o tamanho total do público no segmento, pois se um cliente interagir com sua marca em mais de um canal, várias identidades podem ser associadas a esse cliente individual.
 

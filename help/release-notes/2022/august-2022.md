@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2022
 description: As notas de versão de agosto de 2022 para o Adobe Experience Platform.
-source-git-commit: 5e7ceda9ed126a2c003fb51302393631e0425cd2
+source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 12%
+source-wordcount: '317'
+ht-degree: 10%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 12%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Preparação de dados](#data-prep)
 - [Fontes](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] O permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Suporte para assimilar registros com avisos | A Preparação de dados agora localiza avisos (erros não críticos) nos campos e permitirá que o restante da linha seja assimilado. Todos os erros de transformação do mapeador agora são relatados como avisos e linhas que são parcialmente assimiladas são consideradas bem-sucedidas, com um aviso.  Também há suporte para monitoramento em registros com avisos e detalhes de diagnóstico. A assimilação parcial de registros com avisos está atualmente disponível apenas para dados de transmissão. Revise a documentação em [assimilação de registros com avisos](../../sources/tutorials/ui/monitor-streaming.md) para obter mais informações. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
 ## Fontes {#sources}
 

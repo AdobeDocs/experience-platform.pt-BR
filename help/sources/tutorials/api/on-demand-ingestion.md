@@ -2,7 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; serviço de fluxo;
 title: (Beta) Criar uma Execução de Fluxo para Assimilação sob Demanda Usando a API do Serviço de Fluxo
 description: Este tutorial aborda as etapas para criar uma execução de fluxo para assimilação sob demanda usando a API do Serviço de Fluxo
-source-git-commit: ab496c7a32c20487f47850c2c571976dff57704f
+hide: true
+hidefromtoc: true
+exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
+source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 1%

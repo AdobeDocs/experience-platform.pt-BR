@@ -5,9 +5,9 @@ title: Agendamentos do Ponto de Extremidade da API
 topic-legacy: developer guide
 description: Os agendamentos são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2011'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Se
 
 ## Recuperar uma lista de programações {#retrieve-list}
 
-Você pode recuperar uma lista de todas as programações para sua Organização IMS fazendo uma solicitação de GET para a `/config/schedules` endpoint .
+Você pode recuperar uma lista de todos os agendamentos de sua organização, fazendo uma solicitação de GET para a `/config/schedules` endpoint .
 
 **Formato da API**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Solicitação**
 
-A solicitação a seguir recuperará as últimas dez programações publicadas na organização IMS.
+A solicitação a seguir recuperará os dez últimos agendamentos publicados em sua organização.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \

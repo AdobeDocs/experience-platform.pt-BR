@@ -4,8 +4,8 @@ description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 70bc3d8743dfa6c14e8a5c467775faa0c3c5a767
 workflow-type: tm+mt
-source-wordcount: '1962'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -150,7 +150,6 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Limite rígido das políticas de mesclagem | A plataforma agora imporá um limite rígido de **cinco** mesclar políticas por sandbox. Se a sandbox tiver mais de cinco políticas de mesclagem, você **not** poder criar novas políticas de mesclagem até que a sandbox tenha menos de cinco políticas de mesclagem. |
 | Limpeza de atributo de borda de perfil órfão | Para todas as organizações, o Serviço de perfil agora remove os atributos de borda esquerda da região da atividade do usuário diariamente para fornecer uma representação mais precisa dos perfis em seu sistema. Essa limpeza ocorre depois que todos os fragmentos de perfil de um determinado perfil são excluídos e deve afetar os perfis que estão sendo mesclados de conjuntos de dados em que `com_adobe_aep_profile_region_dataset` está marcado como `true`. Isso pode mostrar uma queda na métrica &quot;Público-alvo endereçável&quot; no painel de uso da licença e pode mostrar uma queda na métrica &quot;Contagem de perfil&quot; no painel Perfil, já que essas métricas incluíam fragmentos de atributo de borda esquerda antes desta versão. |
 
 {style=&quot;table-layout:auto&quot;}

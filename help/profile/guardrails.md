@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 'A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
+source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 6%
@@ -109,9 +109,9 @@ As grades de proteção descritas nesta seção se referem ao número e à natur
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Segmentos por sandbox | 10.000 | Suave | Uma organização pode ter mais de 10.000 segmentos no total, desde que haja menos de 10.000 segmentos em cada sandbox individual. Tentar criar segmentos adicionais pode afetar o desempenho do sistema. |
+| Segmentos por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 segmentos no total, desde que haja menos de 4000 segmentos em cada sandbox individual. Tentar criar segmentos adicionais pode afetar o desempenho do sistema. |
 | Segmentos de fluxo por sandbox | 500 | Suave | Uma organização pode ter mais de 500 segmentos de transmissão no total, desde que haja menos de 500 segmentos de transmissão em cada sandbox individual. Tentar criar segmentos de transmissão adicionais pode afetar o desempenho do sistema. |
-| Segmentos em lote por sandbox | 10.000 | Suave | Uma organização pode ter mais de 10.000 segmentos de lote no total, desde que haja menos de 10.000 segmentos de lote em cada sandbox individual. A tentativa de criar segmentos de lote adicionais pode afetar o desempenho do sistema. |
+| Segmentos em lote por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 segmentos de lote no total, desde que haja menos de 4000 segmentos de lote em cada sandbox individual. A tentativa de criar segmentos de lote adicionais pode afetar o desempenho do sistema. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -4,9 +4,9 @@ title: Guia do painel Segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Para navegar até o [!UICONTROL Segmentos] no painel da interface do usuário da
 
 ### Modificação do [!UICONTROL Segmentos] painel
 
-Você pode modificar a aparência da variável [!UICONTROL Segmentos] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência da variável [!UICONTROL Segmentos] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
@@ -75,6 +75,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Sobreposição de público]](#audience-overlap)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
+* [[!UICONTROL Ativações programadas]](#scheduled-activations)
 
 ### [!UICONTROL Tamanho do público-alvo] {#audience-size}
 
@@ -176,6 +177,14 @@ Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas 
 Um modelo de aprendizado de máquina gera automaticamente insights de dados ao analisar a distribuição geral e as principais dimensões dos dados.
 
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+### Ativações programadas {#scheduled-activations}
+
+O [!UICONTROL Ativações programadas] O widget fornece uma exibição em tabela dos destinos ativados mais recentemente. A tabela inclui a plataforma de destino, o nome do fluxo de ativação para esse destino e a data de início e de término da ativação para o segmento selecionado. Se não houver uma data final fornecida para a ativação, ela será exibida como [!UICONTROL Em curso]. O segmento para análise é selecionado na lista suspensa na parte superior da página.
+
+O widget permite descobrir rapidamente onde e quando o público-alvo está sendo ativado e torna as ativações duplicadas ou desnecessárias mais transparentes. Essas informações acumuladas também destacam onde quaisquer ativações foram deixadas de fora.
+
+![O widget de Ativações programadas.](../images/segments/scheduled-activations.png)
 
 ## Próximas etapas
 

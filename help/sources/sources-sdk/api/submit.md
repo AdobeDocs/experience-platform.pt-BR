@@ -1,24 +1,19 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Envie sua fonte (Beta)
+title: Enviar sua fonte
 topic-legacy: overview
-description: O documento a seguir fornece etapas sobre como testar e verificar uma nova fonte usando a API do Serviço de Fluxo e integrar uma nova fonte por meio do SDK de Fontes.
-hide: true
-hidefromtoc: true
-source-git-commit: 274784a5b82d12497f7437fdeaf665dd64224c2d
+description: O documento a seguir fornece etapas sobre como testar e verificar uma nova fonte usando a API do Serviço de Fluxo e integrar uma nova fonte por meio de Fontes de Autoatendimento (SDK em lote).
+exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
 
-# Envie sua fonte (Beta)
+# Enviar sua fonte
 
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
-
-A etapa final para integrar sua nova fonte ao Adobe Experience Platform usando [!DNL Sources SDK] O é o para testar sua fonte para verificação. Após obter o sucesso, envie sua nova fonte entrando em contato com o representante do Adobe.
+A etapa final para integrar sua nova fonte à Adobe Experience Platform usando Fontes de autoatendimento (SDK em lote) é testar sua fonte para verificação. Após obter o sucesso, envie sua nova fonte entrando em contato com o representante do Adobe.
 
 O documento a seguir fornece etapas sobre como testar e depurar sua fonte usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -27,13 +22,13 @@ O documento a seguir fornece etapas sobre como testar e depurar sua fonte usando
 * Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
 * Para obter informações sobre como gerar suas credenciais para APIs da plataforma, consulte o tutorial em [autenticação e acesso às APIs do Experience Platform](../../../landing/api-authentication.md).
 * Para obter informações sobre como configurar [!DNL Postman] para APIs da plataforma, consulte o tutorial em [configurar o console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md).
-* Para ajudar no processo de teste e depuração, baixe a variável [[!DNL Sources SDK] coleta de verificação e ambiente aqui](../assets/sdk-verification.zip) e siga as etapas descritas abaixo.
+* Para ajudar no processo de teste e depuração, baixe a variável [Coleta e ambiente de verificação de Fontes de Autoatendimento aqui](../assets/sdk-verification.zip) e siga as etapas descritas abaixo.
 
 ## Testar sua fonte
 
-Para testar sua fonte, você deve executar o [[!DNL Sources SDK] coleta e ambiente de verificação](../assets/sdk-verification.zip) on [!DNL Postman] ao mesmo tempo em que fornece as variáveis de ambiente apropriadas que pertencem à sua fonte.
+Para testar sua fonte, você deve executar o [Coleta e ambiente de verificação de Fontes de Autoatendimento](../assets/sdk-verification.zip) on [!DNL Postman] ao mesmo tempo em que fornece as variáveis de ambiente apropriadas que pertencem à sua fonte.
 
-Para iniciar os testes, primeiro configure a coleção e o ambiente em [!DNL Postman]. Em seguida, especifique a ID da especificação de conexão que deseja testar. Essa ID deve ser a mesma que você gerou usando [!DNL Sources SDK].
+Para iniciar os testes, primeiro configure a coleção e o ambiente em [!DNL Postman]. Em seguida, especifique a ID da especificação de conexão que deseja testar.
 
 ### Especificar `authSpecName`
 

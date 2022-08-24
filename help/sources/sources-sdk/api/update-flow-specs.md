@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Atualizar especificações de fluxo usando a API do Serviço de Fluxo (Beta)
+title: Atualizar especificações de fluxo usando a API do Serviço de Fluxo
 topic-legacy: developer guide
-description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de Serviço de Fluxo para SDK de Fontes.
-hide: true
-hidefromtoc: true
+description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de Serviço de Fluxo para Fontes de Autoatendimento (SDK em lote).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
 
-# Atualize as especificações de fluxo usando o [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
+# Atualize as especificações de fluxo usando o [!DNL Flow Service] API
 
 Depois de gerar uma nova ID de especificação de conexão, você deve adicionar essa ID a uma especificação de fluxo para criar um fluxo de dados.
 
 As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de agendamento necessários para gerar um fluxo. É possível editar as especificações de fluxo usando o `/flowSpecs` endpoint .
 
-O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando o [!DNL Flow Service] API para SDK de fontes.
+O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando o [!DNL Flow Service] API para fontes de autoatendimento (SDK em lote).
 
 ## Introdução
 

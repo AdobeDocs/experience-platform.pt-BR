@@ -4,21 +4,15 @@ solution: Experience Platform
 title: Documente sua origem
 topic-legacy: overview
 description: A etapa final antes que sua nova fonte possa ser ativada no Adobe Experience Platform é documentar sua nova fonte.
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # Documente sua origem
-
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
 
 A etapa final antes que sua nova fonte possa ser definida no Adobe Experience Platform é documentar sua nova fonte.
 

@@ -1,28 +1,22 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
 solution: Experience Platform
-title: Crie uma nova especificação de conexão usando a API do Serviço de Fluxo (Beta)
+title: Criar uma nova especificação de conexão usando a API do Serviço de fluxo
 topic-legacy: tutorial
-description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API do Serviço de Fluxo e integrar uma nova fonte por meio do SDK de Fontes.
-hide: true
-hidefromtoc: true
+description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API do Serviço de Fluxo e integrar uma nova fonte por meio de Fontes de Autoatendimento.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 3%
+source-wordcount: '800'
+ht-degree: 2%
 
 ---
 
-# Crie uma nova especificação de conexão usando o [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
+# Crie uma nova especificação de conexão usando o [!DNL Flow Service] API
 
 Uma especificação de conexão representa a estrutura de uma fonte. Ele contém informações sobre os requisitos de autenticação de uma fonte, define como os dados da fonte podem ser explorados e inspecionados e fornece informações sobre os atributos de uma fonte específica. O `/connectionSpecs` endpoint no [!DNL Flow Service] A API permite gerenciar programaticamente as especificações de conexão em sua organização.
 
-O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando o [!DNL Flow Service] API e integre uma nova fonte por meio do SDK de Fontes.
+O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando o [!DNL Flow Service] API e integre uma nova fonte por meio de Fontes de autoatendimento (SDK em lote).
 
 ## Introdução
 
@@ -30,16 +24,37 @@ Antes de continuar, reveja o [guia de introdução](./getting-started.md) para l
 
 ## Coletar artefatos
 
-A primeira etapa na criação de uma nova fonte pelo [!DNL Sources SDK] é coordenar com seu representante de Adobe e identificar os valores para a fonte correspondente **ícone**, **descrição**, **label** e **categoria**.
+Para criar uma nova fonte de lote usando Fontes de Autoatendimento, você deve primeiro coordenar com o Adobe, solicitar um repositório Git privado e alinhar com o Adobe nos detalhes sobre o rótulo, descrição, categoria e ícone da sua fonte.
 
-| Artefatos | Descrição | Exemplo |
+Depois de fornecido, você deve estruturar seu repositório Git privado da seguinte maneira:
+
+* Fontes
+   * {your_source}
+      * Artefatos
+         * {your_source}-category.txt
+         * {your_source}-description.txt
+         * {your_source}-icon.svg
+         * {your_source}-label.txt
+         * {your_source}-connectionSpec.json
+
+| Artefatos (nomes de arquivo) | Descrição | Exemplo |
 | --- | --- | --- |
-| Rótulo | O nome da sua fonte. | [!DNL MailChimp Members] |
-| Descrição | Uma breve descrição da sua fonte. | Crie uma conexão de entrada ao vivo com seu [!DNL Mailchimp Members] para assimilar dados históricos e programados no Experience Platform. |
-| Ícone | A imagem ou o logotipo que representa sua fonte. O ícone é exibido na renderização da interface do usuário da plataforma da sua origem. | `mailchimp-members-icon.svg` |
-| Categoria | A categoria da fonte. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | O nome da sua fonte. Essa pasta deve conter todos os artefatos relacionados à sua origem, dentro do repositório Git privado. | `mailchimp-members` |
+| {your_source}-category.txt | A categoria à qual a fonte pertence, formatada como um arquivo de texto. A lista de categorias de origem disponíveis suportadas pelas Fontes de Autoatendimento (SDK em lote) inclui: <ul><li>Advertising</li><li>Analytics</li><li>Consentimento e preferências</li><li>CRM</li><li>Sucesso do cliente</li><li>Banco de dados</li><li>comércio eletrônico</li><li>Automação de marketing</li><li>Pagamentos</li><li>Protocolos</li></ul> **Observação**: Se você achar que sua fonte não se encaixa em nenhuma das categorias acima, entre em contato com o representante do Adobe para discutir. | `mailchimp-members-category.txt` Dentro do arquivo, especifique a categoria da fonte, como: `marketingAutomation`. |
+| {your_source}-description.txt | Uma breve descrição da sua fonte. | [!DNL Mailchimp Members] é a fonte de automação de marketing que você pode usar para trazer [!DNL Mailchimp Members] dados para o Experience Platform. |
+| {your_source}-icon.svg | A imagem a ser usada para representar sua fonte no catálogo de fontes do Experience Platform. Este ícone deve ser um SVG file. |
+| {your_source}-label.txt | O nome da origem como deve aparecer no catálogo de fontes do Experience Platform. | Membros do Mailchimp |
+| {your_source}-connectionSpec.json | Um arquivo JSON que contém a especificação de conexão de sua fonte. Inicialmente, esse arquivo não é necessário, pois você preencherá a especificação da conexão ao concluir este guia. | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Durante o período de teste da especificação da conexão, em vez de valores-chave, você pode usar `text` na especificação da conexão.
+
+Depois de ter adicionado os arquivos necessários ao repositório Git privado, você deve criar uma solicitação de pull (PR) para o Adobe ser revisado. Quando a PR for aprovada e mesclada, você receberá uma ID que poderá ser usada para a especificação da conexão se referir ao rótulo, descrição e ícone da fonte.
+
+Em seguida, siga as etapas descritas abaixo para configurar sua especificação de conexão. Para obter orientação adicional sobre as diferentes funcionalidades que você pode adicionar à sua origem, como agendamento avançado, esquema personalizado ou tipos de paginação diferentes, consulte o guia em [configuração de especificações de origem](../config/sourcespec.md).
 
 ## Copiar modelo de especificação de conexão
 
@@ -68,10 +83,6 @@ Depois de coletar os artefatos necessários, copie e cole o modelo de especifica
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -206,6 +217,10 @@ Depois de coletar os artefatos necessários, copie e cole o modelo de especifica
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -480,9 +495,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -495,7 +510,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -508,9 +523,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -523,7 +538,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -547,10 +562,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",

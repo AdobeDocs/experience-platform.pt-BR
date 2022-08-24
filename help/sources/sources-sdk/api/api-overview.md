@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Guia da API do SDK de fontes (Beta)
+title: Guia da API de Fontes de autoatendimento (SDK em lote)
 topic-legacy: overview
 description: Este documento fornece uma visão geral do processo de criação de uma nova fonte, incluindo etapas sobre como recuperar, gravar e enviar uma nova especificação de conexão usando a API do Serviço de Fluxo.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
-# Guia da API do SDK de fontes (Beta)
-
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
+# Guia da API de Fontes de autoatendimento (SDK em lote)
 
 Este documento fornece uma visão geral do processo de criação de uma nova fonte, incluindo etapas sobre como escrever e enviar uma nova especificação de conexão usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Platform. O serviço fornece uma interface de usuário e uma RESTful API que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
-O [!DNL Flow Service] A API fornece vários endpoints que permitem gerenciar programaticamente as especificações de conexão e fluxo para uma nova fonte que você está integrando por meio do SDK de Fontes.
+O [!DNL Flow Service] A API fornece vários endpoints que permitem gerenciar programaticamente as especificações de conexão e fluxo para uma nova fonte que você está integrando por meio de Fontes de autoatendimento (SDK em lote).
 
 ## Criar uma nova especificação de conexão
 
@@ -50,4 +45,4 @@ Para enviar sua fonte para integração ao Experience Platform, primeiro complet
 
 ## Próximas etapas
 
-Para começar a usar o [!DNL Flow Service] API e crie uma nova fonte por meio do SDK de fontes, leia a [guia de introdução](./getting-started.md) em seguida, selecione um dos guias de endpoint para saber como usar endpoints específicos.
+Para começar a usar o [!DNL Flow Service] API e crie uma nova fonte por meio de Fontes de autoatendimento (SDK em lote), leia a [guia de introdução](./getting-started.md) em seguida, selecione um dos guias de endpoint para saber como usar endpoints específicos.

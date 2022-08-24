@@ -1,30 +1,24 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
 solution: Experience Platform
-title: Introdução ao SDK de fontes (Beta)
+title: Introdução às fontes de autoatendimento (SDK em lote)
 topic-legacy: developer guide
-description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova fonte usando o SDK de fontes.
-hide: true
-hidefromtoc: true
+description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova fonte usando Fontes de autoatendimento (SDK em lote).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# Introdução ao SDK de fontes (Beta)
+# Introdução às fontes de autoatendimento (SDK em lote)
 
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
-
-O SDK de Fontes permite integrar sua própria fonte baseada em REST para trazer dados para o Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para o [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Fontes de autoatendimento (SDK em lote) permitem integrar sua própria fonte baseada em REST para trazer dados em lote para o Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para o [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Pré-requisitos
 
-Para usar o SDK das Fontes, você deve garantir que tenha acesso a uma sandbox da Organização IMS provisionada com as Fontes do Adobe Experience Platform.
+Para usar as Fontes de autoatendimento (SDK em lote), você deve garantir que tenha acesso a uma Caixa de proteção da Organização IMS provisionada com as Fontes da Adobe Experience Platform.
 
 Este guia também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
@@ -33,7 +27,7 @@ Este guia também requer uma compreensão funcional dos seguintes componentes do
 
 ## Lendo exemplos de chamadas de API
 
-O SDK de fontes e [!DNL Flow Service] A documentação da API fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
+As fontes de autoatendimento (SDK em lote) e [!DNL Flow Service] A documentação da API fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
 ## Coletar valores para cabeçalhos necessários
 
@@ -57,4 +51,4 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 ## Próximas etapas
 
-Para começar a criar uma nova fonte com o SDK de fontes, consulte o tutorial em [criação de uma nova fonte](./create.md).
+Para começar a criar uma nova fonte com Fontes de autoatendimento (SDK em lote), consulte o tutorial em [criação de uma nova fonte](./create.md).

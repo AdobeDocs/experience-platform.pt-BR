@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Opções de configuração no SDK do Forms
+title: Opções de configuração em Fontes de autoatendimento (SDK em lote)
 topic-legacy: overview
-description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar o SDK das Fontes.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '297'
 ht-degree: 1%
 
 ---
 
-# Opções de configuração no SDK do Forms
+# Opções de configuração em Fontes de autoatendimento (SDK em lote)
 
->[!IMPORTANT]
->
->O SDK das Fontes está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade descrita nesta documentação está sujeita a alterações.
-
-Este documento fornece uma visão geral das configurações que você precisa preparar para usar o SDK das Fontes.
+Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
 
 ## Especificação de conexão
 
-As especificações de conexão retornam as propriedades do conector de origem. Eles incluem especificações de autenticação relacionadas à criação das conexões base e de origem e uma ID de especificação de conexão fixa que é atribuída a uma fonte específica. As especificações de conexão são independente do locatário e da IMS Organization. Uma especificação de conexão típica contém informações básicas sobre uma determinada fonte, bem como três seções distintas: `authSpec`, `sourceSpec`e `exploreSpec`.
+As especificações de conexão retornam as propriedades do conector de origem. Eles incluem especificações de autenticação relacionadas à criação das conexões base e de origem e uma ID de especificação de conexão fixa que é atribuída a uma fonte específica. As especificações de conexão são independentes de locatários e organizações. Uma especificação de conexão típica contém informações básicas sobre uma determinada fonte, bem como três seções distintas: `authSpec`, `sourceSpec`e `exploreSpec`.
 
 | Especificações | Descrição |
 | --- | --- |
@@ -41,5 +36,3 @@ Consulte os seguintes documentos para obter instruções sobre como preencher os
 * [Configurar a especificação de autenticação](./authspec.md)
 * [Configurar a especificação de origem](./sourcespec.md)
 * [Configurar a especificação do explorador](./explorespec.md)
-
-

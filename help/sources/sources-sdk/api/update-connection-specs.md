@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Atualizar uma especificação de conexão usando a API do Serviço de Fluxo (Beta)
+title: Atualizar uma especificação de conexão usando a API do Serviço de Fluxo
 topic-legacy: developer guide
 description: Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
 
-# Atualizar uma especificação de conexão usando a API do Serviço de Fluxo (Beta)
+# Atualizar uma especificação de conexão usando a API do Serviço de Fluxo
 
 Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT. Ao atualizar uma especificação de conexão por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de conexão em uma solicitação de POST.
 

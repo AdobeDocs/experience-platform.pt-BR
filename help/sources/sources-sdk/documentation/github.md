@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Usar a interface da Web do GitHub para criar uma página de documentação de fontes
 topic-legacy: tutorial
 description: Este documento fornece etapas sobre como usar a interface da Web do GitHub para criar a documentação e enviar uma solicitação de pull (PR).
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -36,19 +34,19 @@ Depois que a bifurcação estiver concluída, selecione **principal** e insira u
 
 ![create-branch](../assets/create-branch.png)
 
-Na estrutura de pastas do GitHub do seu repositório bifurcado, navegue até [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) e selecione a categoria apropriada para sua origem na lista. Por exemplo, se você estiver criando documentação para uma nova fonte de armazenamento na nuvem, selecione **armazenamento na nuvem**.
+Na estrutura de pastas do GitHub do seu repositório bifurcado, navegue até [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) e selecione a categoria apropriada para sua origem na lista. Por exemplo, se você estiver criando documentação para uma nova fonte de CRM, selecione **crm**.
 
 >[!TIP]
 >
 >Se você estiver criando documentação para a interface do usuário, navegue para [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) e selecione a categoria apropriada para sua fonte. Para adicionar suas imagens, navegue até [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) em seguida, adicione suas capturas de tela ao `sdk` pasta.
 
-![armazenamento na nuvem](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-Uma pasta de fontes de armazenamento em nuvem existentes é exibida. Para adicionar documentação para uma nova fonte, selecione **Adicionar arquivo** e depois selecione **Criar novo arquivo** no menu suspenso exibido.
+Uma pasta de fontes de CRM existentes é exibida. Para adicionar documentação para uma nova fonte, selecione **Adicionar arquivo** e depois selecione **Criar novo arquivo** no menu suspenso exibido.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Dê um nome ao arquivo de origem `YOURSOURCE.md` onde YOURSOURCE é o nome da sua fonte na Platform. Por exemplo, se sua empresa for [!DNL Mailchimp], seu nome de arquivo deve ser `mailchimp.md`.
+Dê um nome ao arquivo de origem `YOURSOURCE.md` onde YOURSOURCE é o nome da sua fonte na Platform. Por exemplo, se sua empresa for ACME CRM, o nome do arquivo deve ser `acme-crm.md`.
 
 ![interface git](../assets/git-interface.png)
 

@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Configurar especificações de exploração para SDK de fontes
+title: Configurar especificações de exploração para fontes de autoatendimento (SDK em lote)
 topic-legacy: overview
-description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar o SDK das Fontes.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '258'
 ht-degree: 2%
 
 ---
 
-
-# Configurar especificações de exploração para SDK de fontes
+# Configurar especificações de exploração para fontes de autoatendimento (SDK em lote)
 
 Explorar especificações define os parâmetros necessários para explorar e inspecionar objetos contidos em sua origem. As especificações Explore também definem o formato de resposta retornado quando os objetos são explorados e inspecionados.
 
@@ -87,4 +85,4 @@ Explorar especificações define os parâmetros necessários para explorar e ins
 
 ## Próximas etapas
 
-Com suas especificações de exploração preenchidas, você pode continuar a criar uma especificação de conexão completa usando o [!DNL Flow Service] API. Consulte a [[!DNL Sources SDK] Guia da API](../api/api-overview.md) para obter mais informações.
+Com suas especificações de exploração preenchidas, você pode continuar a criar uma especificação de conexão completa usando o [!DNL Flow Service] API. Consulte a [Guia da API de Fontes de autoatendimento (SDK em lote)](../api/api-overview.md) para obter mais informações.

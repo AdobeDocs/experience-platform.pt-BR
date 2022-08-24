@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2211'
 ht-degree: 2%
 
 ---
 
 # Criar uma conexão de origem do Adobe Analytics na interface do usuário
 
-Este tutorial fornece etapas para criar uma conexão de origem Adobe Analytics na interface do usuário para trazer [!DNL Analytics] Dados do Conjunto de relatórios no Adobe Experience Platform.
+Este tutorial fornece etapas para criar uma conexão de origem Adobe Analytics na interface do usuário para trazer os dados do conjunto de relatórios do Adobe Analytics para o Adobe Experience Platform.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [Sistema do Experience Data Model (XDM)](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [Perfil do cliente em tempo real](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
@@ -30,7 +30,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 É importante entender os seguintes termos principais usados em todo este documento:
 
 * **Atributo padrão**: Atributos padrão são qualquer atributo predefinido pelo Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis no [!DNL Analytics] dados de origem e [!DNL Analytics] grupos de campos de esquema.
-* **Atributo personalizado**: Atributos personalizados são qualquer atributo na hierarquia de variável personalizada em [!DNL Analytics]. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um Conjunto de relatórios e podem diferir em seu uso, de Conjunto de relatórios a Conjunto de relatórios. Os atributos personalizados incluem eVars, props e listas. Veja o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre eVars.
+* **Atributo personalizado**: Atributos personalizados são qualquer atributo na hierarquia de variável personalizada em [!DNL Analytics]. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir em seu uso, de conjunto de relatórios a conjunto de relatórios. Os atributos personalizados incluem eVars, props e listas. Veja o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre eVars.
 * **Qualquer atributo em grupos de campos personalizados**: Os atributos originados de grupos de campos criados por clientes são definidos pelo usuário e não são considerados atributos padrão ou personalizados.
 * **Nomes amigáveis**: Nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em um [!DNL Analytics] implementação. Veja o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre nomes amigáveis.
 
@@ -48,13 +48,17 @@ Em **[!UICONTROL Aplicativos Adobe]** categoria , selecione **[!UICONTROL Adobe 
 
 O **[!UICONTROL Adicionar dados de origem do Analytics]** fornece uma lista de [!DNL Analytics] dados do conjunto de relatórios para criar uma conexão de origem com o .
 
-Um conjunto de relatórios pode ser assimilado usando apenas um único fluxo de dados ativo. Ele não pode ser usado em vários fluxos de dados. Além disso, um conjunto de relatórios deve pertencer à mesma região da sandbox da Platform na qual a conexão de origem está sendo criada. Um conjunto de relatórios que não é selecionável já foi assimilado nessa sandbox ou em uma sandbox diferente.
+Um conjunto de relatórios é um contêiner de dados que forma a base de [!DNL Analytics] relatórios. Uma organização pode ter vários conjuntos de relatórios, cada um contendo diferentes conjuntos de dados.
+
+É possível assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura), desde que eles sejam mapeados para a mesma organização da instância Experience Platform sandbox em que a conexão de origem está sendo criada. Um conjunto de relatórios pode ser assimilado usando apenas um único fluxo de dados ativo. Um conjunto de relatórios que não pode ser selecionado já foi assimilado na sandbox que você está usando ou em uma sandbox diferente.
 
 Várias conexões vinculadas podem ser feitas para trazer vários conjuntos de relatórios para a mesma sandbox. Se os conjuntos de relatórios tiverem esquemas diferentes para variáveis (como eVars ou eventos), eles deverão ser mapeados para campos específicos nos grupos de campos personalizados e evitar conflitos de dados usando [Preparação de dados](../../../../../data-prep/ui/mapping.md). Os conjuntos de relatórios só podem ser adicionados a uma única sandbox.
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->Os dados de vários conjuntos de relatórios podem ser ativados para o Perfil de dados do cliente em tempo real somente se não houver conflitos de dados, como duas propriedades personalizadas (eVars, listas e props) que tenham um significado diferente, não podem ser mapeadas para o mesmo atributo no XDM.
+>Os dados de vários conjuntos de relatórios podem ser ativados para o Perfil de dados do cliente em tempo real somente se não houver conflitos de dados, como duas propriedades personalizadas (eVars, listas e props) que tenham um significado diferente.
 
 Para criar um [!DNL Analytics] conexão de origem, selecione um conjunto de relatórios e depois selecione **[!UICONTROL Próximo]** para continuar.
 

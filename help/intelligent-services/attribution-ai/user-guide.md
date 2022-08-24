@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2716'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ No [!DNL Adobe Experience Platform] UI, selecione **[!UICONTROL Serviços]** no 
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
-The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update.
+A página Attribution AI service é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência com que a instância é executada e o status da última atualização.
 
-You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI no ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
+Você pode encontrar a variável **[!UICONTROL Total de eventos de conversão classificados]** localizada no lado inferior direito da **[!UICONTROL Criar instância]** contêiner. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI no ano civil atual, incluindo todos os ambientes sandbox e quaisquer instâncias de serviço excluídas.
 
 ![total de conversões](./images/user-guide/total_conversions.png)
 
@@ -88,13 +88,13 @@ Agora é possível unir vários conjuntos de dados uns aos outros com base no ma
 
 >[!IMPORTANT]
 >
->The same identity type (namespace) must be used for every dataset you select. Uma marca de seleção verde aparece ao lado do tipo de identidade na coluna de identidade, indicando que os conjuntos de dados são compatíveis. For example, when using the Phone namespace and `mobilePhone.number` as the identifier, all identifiers for the remaining datasets must contain and use the Phone namespace.
+>O mesmo tipo de identidade (namespace) deve ser usado para cada conjunto de dados selecionado. Uma marca de seleção verde aparece ao lado do tipo de identidade na coluna de identidade, indicando que os conjuntos de dados são compatíveis. Por exemplo, ao usar o namespace de Telefone e `mobilePhone.number` como o identificador, todos os identificadores dos conjuntos de dados restantes devem conter e usar o namespace Phone .
 
-To select an identity, select the underlined value located in the identity column. A opção selecionar um provedor de identidade é exibida.
+Para selecionar uma identidade, selecione o valor sublinhado localizado na coluna de identidade. A opção selecionar um provedor de identidade é exibida.
 
-![select same namespace](./images/user-guide/aai-identity-map.png)
+![selecionar o mesmo namespace](./images/user-guide/aai-identity-map.png)
 
-Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. This means you would select `EMAIL (personalEmail.address)` as your identity.
+Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. Isso significa que você selecionaria `EMAIL (personalEmail.address)` como sua identidade.
 
 ![Chave do conjunto de dados não selecionada](./images/user-guide/aai-identity-namespace.png)
 
@@ -122,11 +122,11 @@ Há três tipos diferentes de dados de entrada usados para definir eventos:
 
 ### Definir eventos de conversão {#define-conversion-events}
 
-In order to define a conversion event, you need to give the event a name and select the event type by selecting the dataset and field from the **Select a dataset and field** dropdown menu.
+Para definir um evento de conversão, é necessário dar um nome ao evento e selecionar o tipo de evento selecionando o conjunto de dados e o campo na variável **Selecionar um conjunto de dados e um campo** menu suspenso.
 
 ![lista suspensa sim](./images/user-guide/define-conversion-events.png)
 
-Once an event is selected, a new dropdown appears to its right. A segunda lista suspensa é usada para fornecer mais contexto ao evento por meio do uso de operações . Para este evento de conversão, a operação padrão *existe* é usada.
+Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. A segunda lista suspensa é usada para fornecer mais contexto ao evento por meio do uso de operações . Para este evento de conversão, a operação padrão *existe* é usada.
 
 >[!NOTE]
 >
@@ -168,23 +168,23 @@ Para o objetivo deste ponto de contato, selecione **igual**.
 
 ![etapa 1](./images/user-guide/touchpoint_step1.png)
 
-Depois que um operador para um ponto de contato é selecionado, *Inserir Valor do Campo* é disponibilizada. Os valores suspensos para *Inserir Valor do Campo* preencha com base no operador e no valor do ponto de contato selecionado anteriormente. If a value does not populate in the dropdown, you can type that value in manually. Select the dropdown and select **CLICK**.
+Depois que um operador para um ponto de contato é selecionado, *Inserir Valor do Campo* é disponibilizada. Os valores suspensos para *Inserir Valor do Campo* preencha com base no operador e no valor do ponto de contato selecionado anteriormente. Se um valor não for preenchido na lista suspensa, é possível digitar esse valor manualmente. Selecione a lista suspensa e selecione **CLIQUE EM**.
 
 >[!NOTE]
 >
->The operators &quot;exists&quot; and &quot;not exists&quot; do not have field values associated with them.
+>Os operadores &quot;exists&quot; e &quot;not exists&quot; não têm valores de campo associados a eles.
 
 ![lista suspensa de pontos de contato](./images/user-guide/touchpoint_dropdown.png)
 
-O **Adicionar evento** e **Adicionar grupo** botões são usados para definir ainda mais o ponto de contato. Due to the complex nature surrounding touchpoints, it is not uncommon to have multiple events and groups for a single touchpoint.
+O **Adicionar evento** e **Adicionar grupo** botões são usados para definir ainda mais o ponto de contato. Devido à natureza complexa dos pontos de contato, não é incomum ter vários eventos e grupos para um único ponto de contato.
 
-Quando selecionado, **Adicionar evento** permite a adição de campos adicionais. select the **x** to remove an event that has been added.
+Quando selecionado, **Adicionar evento** permite a adição de campos adicionais. selecione o **x** para remover um evento que foi adicionado.
 
 ![adicionar evento](./images/user-guide/touchpoint_add_event.png)
 
-Selecting **Add group** gives you the option to create additional fields separate from the original. Com a adição de grupos, um azul *E* é exibido. Select **And** to change the parameter, the new parameter &quot;Or&quot; is used to define multiple successful paths. Este ponto de contato específico tem apenas um caminho bem-sucedido, portanto, &quot;Ou&quot; não é necessário.
+Selecionar **Adicionar grupo** oferece a opção de criar campos adicionais separados do original. Com a adição de grupos, um azul *E* é exibido. Selecionar **E** para alterar o parâmetro , o novo parâmetro &quot;Ou&quot; é usado para definir vários caminhos bem-sucedidos. Este ponto de contato específico tem apenas um caminho bem-sucedido, portanto, &quot;Ou&quot; não é necessário.
 
-![touchpoint overview](./images/user-guide/add_group_touchpoint.png)
+![visão geral do ponto de contato](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
@@ -192,11 +192,11 @@ Selecting **Add group** gives you the option to create additional fields separat
 
 ![](./images/user-guide/touchpoint_string.png)
 
-You can add additional touchpoints by selecting **Add touchpoint** and repeating the process above.
+Você pode adicionar pontos de contato adicionais selecionando **Adicionar ponto de contato** e repetir o processo acima.
 
 ![adicionar ponto de contato](./images/user-guide/add_touchpoint.png)
 
-Once you have finished defining all necessary touchpoints, scroll up and select **Next** in the top-right corner to proceed to the final step.
+Quando terminar de definir todos os pontos de contato necessários, role para cima e selecione **Próximo** no canto superior direito para prosseguir para a etapa final.
 
 ![definição concluída](./images/user-guide/define_event_next.png)
 
@@ -224,11 +224,11 @@ Para alterar a hora do dia em que deseja que a pontuação ocorra, selecione o �
 
 ### Colunas adicionais do conjunto de dados de pontuação (opcional)
 
-By default, a score dataset is created for each service instance in a standard schema. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e Pontos de contato à saída do conjunto de dados de pontuação. Comece selecionando colunas do seu conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo o botão esquerdo do mouse pressionado sobre o ícone do hambúrguer.
+Por padrão, um conjunto de dados de pontuação é criado para cada instância de serviço em um esquema padrão. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e Pontos de contato à saída do conjunto de dados de pontuação. Comece selecionando colunas do seu conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo o botão esquerdo do mouse pressionado sobre o ícone do hambúrguer.
 
-![score dataset column addition](./images/user-guide/Add-score-dataset.png)
+![pontuar adição da coluna do conjunto de dados](./images/user-guide/Add-score-dataset.png)
 
-### Region-based modeling (optional) {#region-based-modeling-optional}
+### Modelagem com base na região (opcional) {#region-based-modeling-optional}
 
 Os comportamentos dos seus clientes podem diferir significativamente por país e região geográfica. Para empresas globais, usar modelos baseados em país ou em região pode aumentar a precisão da atribuição. Cada região adicionada cria um novo modelo com os dados dessa região.
 
@@ -262,12 +262,42 @@ Depois de selecionar sua janela de treinamento, selecione **[!UICONTROL Concluir
 
 ![configuração concluída](./images/user-guide/instance_setup_complete.png)
 
+### Controle de acesso baseado em atributos
+
+>[!IMPORTANT]
+>
+>O controle de acesso baseado em atributos está disponível apenas em uma versão limitada.
+
+[Controle de acesso baseado em atributos](../../../help/access-control/abac/overview.md) é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
+
+Essa funcionalidade permite rotular campos de esquema do Experience Data Model (XDM) com rótulos que definem escopos organizacionais ou de uso de dados. Em paralelo, os administradores podem usar a interface de administração de usuário e função para definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor o acesso dado aos usuários ou grupos de usuários (usuários internos, externos ou de terceiros). Além disso, o controle de acesso baseado em atributos permite que os administradores gerenciem o acesso a segmentos específicos.
+
+Por meio do controle de acesso baseado em atributos, os administradores podem controlar o acesso dos usuários aos dados pessoais confidenciais (SPD) e às informações de identificação pessoal (PII) em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que têm acesso apenas a campos e dados específicos que correspondem a esses campos.
+
+Devido ao controle de acesso baseado em atributos, alguns campos e funcionalidades podem ter acesso restrito e estar indisponíveis para determinadas instâncias do serviço Attribution AI. Os exemplos incluem, &quot;Identidade&quot;, &quot;Definição de pontuação&quot; e &quot;Clonar&quot;.
+
+Na parte superior do espaço de trabalho do Attribution AI **página de insights**, os detalhes exibidos na barra lateral têm acesso restrito.
+
+![O espaço de trabalho do Attribution AI com os campos restritos do schema realçado.](./images/user-guide/access-restricted.png)
+
+Se você selecionar conjuntos de dados com esquemas restritos na **[!UICONTROL Criar fluxo de trabalho da instância]** , um sinal de aviso é exibido ao lado do nome do conjunto de dados com a mensagem : [!UICONTROL As informações restritas são excluídas].
+
+![A área de trabalho do Attribution AI com os campos restritos dos conjuntos de dados selecionados com resultados de schemas restritos é realçada.](./images/user-guide/restricted-info-excluded.png)
+
+Ao visualizar conjuntos de dados com esquema restrito na **[!UICONTROL Criar fluxo de trabalho da instância]** , um aviso será exibido para informá-lo que [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na visualização do conjunto de dados.]
+
+![A área de trabalho do Attribution AI com os campos restritos dos resultados do schema visualizados foi realçada.](./images/user-guide/restricted-dataset-preview.png)
+
+Depois de criar uma instância com informações restritas e prosseguir para o **[!UICONTROL Definir meta]** , um aviso é exibido na parte superior: [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na configuração.]
+
+![O espaço de trabalho do Attribution AI com os campos restritos da instância resulta realçado.](./images/user-guide/information-not-displayed.png)
+
 ## Próximas etapas
 
 Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de pontuar (aguarde até 24 horas), você estará pronto para [insights do discover Attribution AI](./discover-insights.md). Além disso, se desejar baixar os resultados da pontuação, visite a [download de pontuações](./download-scores.md) documentação.
 
 ## Recursos adicionais
 
-The following video outlines an end-to-end workflow for creating a new instance in Attribution AI.
+O vídeo a seguir descreve um fluxo de trabalho completo para criar uma nova instância no Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

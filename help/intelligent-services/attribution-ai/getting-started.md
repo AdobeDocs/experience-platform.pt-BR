@@ -5,9 +5,9 @@ title: Introdução ao Attribution AI
 topic-legacy: Getting started
 description: Os guias a seguir exigem uma compreensão dos vários serviços da Adobe Experience Platform envolvidos com o uso do Attribution AI. Antes de iniciar os tutoriais, revise os seguintes documentos.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '618'
 ht-degree: 1%
 
 ---
@@ -51,6 +51,12 @@ Todos os recursos no Experience Platform são isolados para sandboxes virtuais e
 ### Lendo exemplos de chamadas de API
 
 Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md) no guia de solução de problemas do Experience Platform.
+
+## Permissões {#permissions}
+
+Ao usar o controle de acesso com base em funções, a variável **Exibir Attribution AI** e **Gerenciar Attribution AI** Os privilégios concedem acesso a diferentes funcionalidades do Attribution AI. O **Gerenciar Attribution AI** permite **criar**, **clone**, **editar**, **excluir**, **habilitar** ou **disable** uma instância ao **Exibir Attribution AI** permite **read** ou **exibir** sim. O **criar**, **editar** e **excluir** ações são registradas por logs de auditoria.
+
+Consulte a documentação para saber mais [atribuição de permissões para controle de acesso](../../../help/access-control/home.md) ou como [usar logs de auditoria para monitorar o acesso e a atividade](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Próximas etapas {#next-steps}
 

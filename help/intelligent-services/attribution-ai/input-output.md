@@ -5,9 +5,9 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2476'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ Você pode configurar os pontos de contato usando qualquer campo recomendado aba
 | --- | --- |
 | Campo de identidade primária | Ponto de contato / Conversão |
 | Carimbo de data e hora | Ponto de contato / Conversão |
-| Canal._type | Ponto de contato |
+| Canal._Tipo | Ponto de contato |
 | Channel.mediaAction | Ponto de contato |
 | Channel.mediaType | Ponto de contato |
 | Marketing.trackingCode | Ponto de contato |
@@ -230,10 +230,16 @@ A tabela abaixo mapeia as pontuações agregadas para as pontuações brutas. Se
 | geografia | _tenantID.your_schema_name.conversion.geo |
 | event_type | eventType |
 | media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
-| canal | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
 | ação | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+
+>[!IMPORTANT]
+>
+> - O Attribution AI usa apenas dados atualizados para treinamento e pontuação adicionais. Da mesma forma, quando você solicita excluir dados, o Attribution AI se abstém de usar os dados excluídos.
+> - Para ajudar a facilitar a conformidade com o GDPR no Attribution AI, você pode usar o Adobe Experience Platform Privacy Service para configurar protocolos para atender às solicitações do cliente para acessar e excluir seus dados no lago de dados, no Serviço de identidade e no Perfil do cliente em tempo real.
+> - Todos os dados são criptografados em trânsito e em repouso. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Próximas etapas {#next-steps}

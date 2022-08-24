@@ -4,20 +4,21 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
-description: Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
+description: Os Serviços de IA/ML oferecem ao Customer AI como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2618'
+source-wordcount: '3088'
 ht-degree: 0%
 
 ---
 
+
 # Configurar uma instância do Customer AI
 
-O Customer AI, como parte dos Serviços inteligentes, permite gerar pontuações de propensão personalizadas sem se preocupar com o aprendizado de máquina.
+O Customer AI, como parte dos Serviços de IA/ML, permite gerar pontuações de propensão personalizadas sem se preocupar com o aprendizado de máquina.
 
-Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
+Os Serviços de IA/ML oferecem ao Customer AI como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 
 ## Criar uma instância {#set-up-your-instance}
 
@@ -191,6 +192,18 @@ Você pode definir campos importantes do conjunto de dados do Perfil (com carimb
 
 ![adicionar um atributo de perfil personalizado](../images/user-guide/profile-attributes.png)
 
+#### Selecione atributos de perfil na exportação de instantâneo do Perfil
+
+Você também pode optar por incluir atributos de perfil na exportação diária do instantâneo do Perfil. Esses atributos são sincronizados com a exportação do instantâneo do Perfil e exibem o valor disponível mais recentemente.
+
+>[!WARNING]
+>
+> Tenha cuidado para não selecionar um atributo de perfil que seja atualizado como resultado do objetivo da previsão ou altamente correlacionado ao objetivo da previsão. Isso causa vazamento de dados e excesso de instalação do modelo. Um exemplo de tal atributo é `total_purchases_in_the_last_3_months` que prevê a conversão de compra.
+
+>[!NOTE]
+>
+>O suporte para usar atributos de perfil da exportação de instantâneos do UPS está disponível na interface do usuário, mediante solicitação.
+
 ### Adicionar um exemplo de evento personalizado {#custom-event}
 
 No exemplo a seguir, um evento personalizado e um atributo de perfil são adicionados a uma instância do Customer AI. O objetivo da instância da API do cliente é prever a probabilidade de um cliente comprar outro produto Luma nos próximos 60 dias. Normalmente, os dados do produto são vinculados a um SKU de produto. Nesse caso, o SKU é `prd1013`. Depois que o modelo do Customer AI é treinado/pontuado, esse SKU pode ser vinculado a um evento e exibido como um fator influente para um bucket de propensão.
@@ -234,6 +247,38 @@ Se a instância for criada com êxito, uma execução de previsão será imediat
 >Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
 
 Ao seguir esta seção, você configurou uma instância do Customer AI e executou uma execução de previsão. Após a conclusão bem-sucedida da execução, os insights pontuados preenchem automaticamente os perfis com pontuações previstas se a alternância de perfil estiver ativada. Aguarde até 24 horas antes de continuar para a próxima seção deste tutorial.
+
+### Controle de acesso baseado em atributos
+
+>[!IMPORTANT]
+>
+>O controle de acesso baseado em atributos está disponível apenas em uma versão limitada.
+
+[Controle de acesso baseado em atributos](../../../access-control/abac/overview.md) é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
+
+Essa funcionalidade permite rotular campos de esquema do Experience Data Model (XDM) com rótulos que definem escopos organizacionais ou de uso de dados. Em paralelo, os administradores podem usar a interface de administração de usuário e função para definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor o acesso dado aos usuários ou grupos de usuários (usuários internos, externos ou de terceiros). Além disso, o controle de acesso baseado em atributos permite que os administradores gerenciem o acesso a segmentos específicos.
+
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários aos dados pessoais confidenciais (SPD) e às informações de identificação pessoal (PII) em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que têm acesso apenas a campos e dados específicos que correspondem a esses campos.
+
+Devido ao controle de acesso baseado em atributos, alguns campos e funcionalidades teriam acesso restrito e não estariam disponíveis para determinadas instâncias do serviço de API do cliente. Os exemplos incluem, &quot;Identidade&quot;, &quot;Definição de pontuação&quot; e &quot;Clonar&quot;.
+
+![A área de trabalho do Customer AI com os campos restritos da instância de serviço é realçada.](../images/user-guide/unavailable-functionalities.png)
+
+Na parte superior da área de trabalho do Customer AI **página de insights**, observe que os detalhes na barra lateral, definição de pontuação, identidade e atributos de perfil mostram &quot;Acesso restrito&quot;.
+
+![A área de trabalho do Customer AI com os campos restritos do schema realçado.](../images/user-guide/access-restricted.png)
+
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
+
+Ao visualizar conjuntos de dados com esquema restrito na **[!UICONTROL Criar fluxo de trabalho da instância]** , um aviso será exibido para informá-lo que [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na visualização do conjunto de dados.]
+
+![A área de trabalho do Customer AI com os campos restritos dos conjuntos de dados de visualização com resultados restritos do schema são realçados.](../images/user-guide/restricted-dataset-preview.png)
+
+Depois de criar uma instância com informações restritas e prosseguir para o **[!UICONTROL Definir meta]** , um aviso é exibido na parte superior: [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na configuração.]
+
+![A área de trabalho do Customer AI com os campos restritos da instância de serviço é realçada.](../images/user-guide/information-not-displayed.png)
 
 ## Próximas etapas {#next-steps}
 

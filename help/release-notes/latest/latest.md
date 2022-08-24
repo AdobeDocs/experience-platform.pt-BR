@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 70bc3d8743dfa6c14e8a5c467775faa0c3c5a767
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 7%
+source-wordcount: '1962'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,8 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Preparação de dados](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
@@ -85,6 +86,32 @@ Para obter mais informações sobre [!DNL Dashboards]consulte o [[!DNL Dashboard
 
 Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**Novos destinos**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) é uma Sales Execution Platform com os dados de interação mais vendidos pelo comprador B2B no mundo e investimentos significativos em tecnologias de IA proprietárias para traduzir dados de vendas em inteligência. [!DNL Outreach] ajuda as organizações a automatizarem o envolvimento de vendas e agirem com a inteligência de receita para melhorar sua eficiência, previsibilidade e crescimento. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
+
 ## Experience Data Model (XDM) {#xdm}
 
 O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
@@ -123,6 +150,7 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 
 | Recurso | Descrição |
 | ------- | ----------- |
+| Limite rígido das políticas de mesclagem | A plataforma agora imporá um limite rígido de **cinco** mesclar políticas por sandbox. Se a sandbox tiver mais de cinco políticas de mesclagem, você **not** poder criar novas políticas de mesclagem até que a sandbox tenha menos de cinco políticas de mesclagem. |
 | Limpeza de atributo de borda de perfil órfão | Para todas as organizações, o Serviço de perfil agora remove os atributos de borda esquerda da região da atividade do usuário diariamente para fornecer uma representação mais precisa dos perfis em seu sistema. Essa limpeza ocorre depois que todos os fragmentos de perfil de um determinado perfil são excluídos e deve afetar os perfis que estão sendo mesclados de conjuntos de dados em que `com_adobe_aep_profile_region_dataset` está marcado como `true`. Isso pode mostrar uma queda na métrica &quot;Público-alvo endereçável&quot; no painel de uso da licença e pode mostrar uma queda na métrica &quot;Contagem de perfil&quot; no painel Perfil, já que essas métricas incluíam fragmentos de atributo de borda esquerda antes desta versão. |
 
 {style=&quot;table-layout:auto&quot;}

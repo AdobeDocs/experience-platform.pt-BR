@@ -6,7 +6,7 @@ title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
 description: Os Serviços de IA/ML oferecem ao Customer AI como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
 workflow-type: tm+mt
 source-wordcount: '3088'
 ht-degree: 0%
@@ -248,7 +248,7 @@ Se a instância for criada com êxito, uma execução de previsão será imediat
 
 Ao seguir esta seção, você configurou uma instância do Customer AI e executou uma execução de previsão. Após a conclusão bem-sucedida da execução, os insights pontuados preenchem automaticamente os perfis com pontuações previstas se a alternância de perfil estiver ativada. Aguarde até 24 horas antes de continuar para a próxima seção deste tutorial.
 
-### Controle de acesso baseado em atributos
+## Controle de acesso baseado em atributos
 
 >[!IMPORTANT]
 >

@@ -6,9 +6,9 @@ title: Entrada e saída no Customer AI
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela API do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '3180'
+source-wordcount: '3154'
 ht-degree: 1%
 
 ---
@@ -286,7 +286,6 @@ A tabela abaixo descreve os vários atributos encontrados na saída do Customer 
 
 >[!NOTE]
 >
-> - O Customer AI usa apenas dados atualizados para treinamento e pontuação adicionais. Da mesma forma, quando você solicita a exclusão de dados, o Customer AI se abstém de usar os dados excluídos.
 > - Para ajudar a facilitar a conformidade com o GDPR no Customer AI, você pode usar o Adobe Experience Platform Privacy Service para configurar protocolos para atender às solicitações do cliente para acessar e excluir seus dados no lago de dados, no Serviço de identidade e no Perfil do cliente em tempo real.
 > - Todos os dados são criptografados em trânsito e em repouso. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md)
 

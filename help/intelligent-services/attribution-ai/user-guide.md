@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2705'
 ht-degree: 1%
 
 ---
@@ -262,7 +262,7 @@ Depois de selecionar sua janela de treinamento, selecione **[!UICONTROL Concluir
 
 ![configuração concluída](./images/user-guide/instance_setup_complete.png)
 
-### Controle de acesso baseado em atributos
+## Controle de acesso baseado em atributos
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ Devido ao controle de acesso baseado em atributos, alguns campos e funcionalidad
 
 Na parte superior do espaço de trabalho do Attribution AI **página de insights**, os detalhes exibidos na barra lateral têm acesso restrito.
 
-![O espaço de trabalho do Attribution AI com os campos restritos do schema realçado.](./images/user-guide/access-restricted.png)
+![O espaço de trabalho Attribution AI com os campos de esquema restritos realçados.](./images/user-guide/access-restricted.png)
 
 Se você selecionar conjuntos de dados com esquemas restritos na **[!UICONTROL Criar fluxo de trabalho da instância]** , um sinal de aviso é exibido ao lado do nome do conjunto de dados com a mensagem : [!UICONTROL As informações restritas são excluídas].
 
-![A área de trabalho do Attribution AI com os campos restritos dos conjuntos de dados selecionados com resultados de schemas restritos é realçada.](./images/user-guide/restricted-info-excluded.png)
+![O espaço de trabalho do Attribution AI com os campos de conjunto de dados restritos destacados.](./images/user-guide/restricted-info-excluded.png)
 
 Ao visualizar conjuntos de dados com esquema restrito na **[!UICONTROL Criar fluxo de trabalho da instância]** , um aviso será exibido para informá-lo que [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na visualização do conjunto de dados.]
 
-![A área de trabalho do Attribution AI com os campos restritos dos resultados do schema visualizados foi realçada.](./images/user-guide/restricted-dataset-preview.png)
+![A espaço de trabalho do Attribution AI com os campos de esquema visualizados restritos é realçada.](./images/user-guide/restricted-dataset-preview.png)
 
 Depois de criar uma instância com informações restritas e prosseguir para o **[!UICONTROL Definir meta]** , um aviso é exibido na parte superior: [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na configuração.]
 

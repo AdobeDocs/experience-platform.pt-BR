@@ -6,9 +6,9 @@ title: Introdução ao Customer AI
 topic-legacy: Getting started
 description: Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Todos os recursos no Experience Platform são isolados para sandboxes virtuais e
 
 Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md) no guia de solução de problemas do Experience Platform.
 
-## Permissões
+## GDPR e criptografia {#gdpr-and-encryption}
 
 Ao usar o controle de acesso, a variável **Exibir AI do cliente** e **Gerenciar o Customer AI** concede acesso a diferentes funcionalidades da API do cliente. O **Gerenciar o Customer AI** permissão permite **criar**,**atualizar**, **excluir**, **habilitar** ou **disable** uma instância ao **Exibir AI do cliente** permite que você leia ou visualize. O **criar**, **atualizar** e **excluir** ações são registradas por logs de auditoria.
 

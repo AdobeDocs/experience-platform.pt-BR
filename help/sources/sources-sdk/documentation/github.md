@@ -5,7 +5,7 @@ title: Usar a interface da Web do GitHub para criar uma página de documentaçã
 topic-legacy: tutorial
 description: Este documento fornece etapas sobre como usar a interface da Web do GitHub para criar a documentação e enviar uma solicitação de pull (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -52,7 +52,7 @@ Dê um nome ao arquivo de origem `YOURSOURCE.md` onde YOURSOURCE é o nome da su
 
 ## Crie a página de documentação da sua origem
 
-Para começar a documentar sua nova fonte, cole o conteúdo do [modelo de documentação das fontes](./template.md) no editor da Web do GitHub. Também é possível baixar o modelo [here](../assets/template.zip).
+Para começar a documentar sua nova fonte, cole o conteúdo do [modelo de documentação das fontes](./template.md) no editor da Web do GitHub. Também é possível baixar o modelo [here](../assets/api-template.zip).
 
 Com o modelo copiado para a interface do editor da Web do GitHub, siga as instruções descritas no modelo e edite os valores que contêm informações relevantes para a sua fonte.
 

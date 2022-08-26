@@ -5,7 +5,7 @@ title: Documente sua origem
 topic-legacy: overview
 description: A etapa final antes que sua nova fonte possa ser ativada no Adobe Experience Platform é documentar sua nova fonte.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Pode utilizar uma caneta pré-cheia. [modelo de documentação](./template.md) p
 
 Você também pode baixar os modelos de documentação abaixo:
 
-* [Modelo de documentação da API](../assets/template.zip)
+* [Modelo de documentação da API](../assets/api-template.zip)
 * [Modelo de documentação da interface do usuário](../assets/ui-template.zip)
 
 ## Criar a nova página de origem

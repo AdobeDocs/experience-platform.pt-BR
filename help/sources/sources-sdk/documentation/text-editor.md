@@ -5,7 +5,7 @@ title: Usar um editor de texto no ambiente local para criar uma página de docum
 topic-legacy: tutorial
 description: Este documento fornece etapas sobre como usar o ambiente local para criar a documentação para a sua fonte e enviar uma solicitação de pull (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 3%
@@ -70,7 +70,7 @@ Em seguida, digite `Adobe Markdown Authoring` na barra de pesquisa e selecione *
 
 ![instalar](../assets/install.png)
 
-Com o computador local pronto, baixe o [modelo de documentação das fontes](../assets/template.zip) e extraia o arquivo para `experience-platform.en/help/sources/tutorials/api/create/...` com [`...`] representando a categoria de sua escolha. Por exemplo, se estiver criando uma fonte de banco de dados, selecione a pasta do banco de dados.
+Com o computador local pronto, baixe o [modelo de documentação das fontes](../assets/api-template.zip) e extraia o arquivo para `experience-platform.en/help/sources/tutorials/api/create/...` com [`...`] representando a categoria de sua escolha. Por exemplo, se estiver criando uma fonte de banco de dados, selecione a pasta do banco de dados.
 
 Finalmente, siga as instruções descritas no modelo e edite o modelo com as informações relevantes relacionadas à sua fonte.
 

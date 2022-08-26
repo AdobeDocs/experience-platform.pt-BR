@@ -3,9 +3,9 @@ title: Uso do Adobe Analytics com o SDK da Web da plataforma
 description: Saiba como enviar dados para o Adobe Analytics com o SDK da Web da Adobe Experience Platform.
 keywords: adobe analytics; analytics; dados mapeados; vars mapeadas;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ A Adobe Experience Platform [!DNL Edge Network] O mapeia automaticamente muitas 
 
 ## Dados mapeados manualmente
 
-Todos os dados não mapeados automaticamente pela rede de borda podem ser acessados por meio de regras de processamento. Os dados são nivelados usando a notação de pontos e estão disponíveis como contextData.
+Qualquer dado que não seja mapeado automaticamente pela variável [!DNL Edge Network] pode ser acessado por meio de regras de processamento. Os dados são nivelados usando a notação de pontos e estão disponíveis como contextData.
 
 Se você tivesse um esquema que se parecesse com este.
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 Este é um exemplo de regra de processamento que usaria esses dados.
 
 ![Interface das regras de processamento](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Com a coleção Experience Edge, todos os eventos são enviados para o Analytics, bem como para quaisquer outros serviços que você tenha configurado para o armazenamento de dados. Por exemplo, se você tiver o Analytics e o Target configurados como serviços e fizer chamadas separadas para personalização e para Analytics, ambos os eventos serão enviados para o Analytics e para o Target. Esses eventos serão gravados nos relatórios do Analytics e podem afetar métricas como a taxa de rejeição.

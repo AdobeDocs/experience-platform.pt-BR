@@ -3,14 +3,23 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 2%
+source-wordcount: '1005'
+ht-degree: 1%
 
 ---
 
 # Conexão Adobe Target {#adobe-target-connection}
+
+## Log de alterações de destino {#changelog}
+
+>[!IMPORTANT]
+>
+>Com a versão beta do conector de destino avançado Adobe Target V2, você pode estar vendo duas placas Adobe Target no catálogo de destinos.
+>O conector de destino Adobe Target V2 está atualmente em beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pela placa Adobe V1, o conector Target V2 adiciona uma [etapa de mapeamento](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) para o fluxo de trabalho de ativação, que permite mapear atributos de perfil para o Adobe Target, permitindo a personalização da mesma página e da próxima página com base em atributos.
+
+![Imagem dos dois cartões de destino do Adobe Target em uma exibição lado a lado.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
 ## Visão geral {#overview}
 

@@ -3,14 +3,33 @@ keywords: personalização personalizada; destino; destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados em seu site para recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação de segmentos de perfis de usuários.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 1%
+source-wordcount: '1305'
+ht-degree: 0%
 
 ---
 
 # Conexão de personalização personalizada {#custom-personalization-connection}
+
+## Log de alterações de destino {#changelog}
+
+Com a versão beta do **[!UICONTROL Personalização personalizada]** conector de destino, você pode estar vendo dois **[!UICONTROL Personalização personalizada]** cartões no catálogo de destinos.
+
+O **[!UICONTROL Personalização Personalizada Com Atributos]** no momento, o conector está em beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pelo **[!UICONTROL Personalização personalizada]**, o **[!UICONTROL Personalização Personalizada Com Atributos]** adiciona um conector opcional [etapa de mapeamento](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) para o fluxo de trabalho de ativação, que permite mapear atributos de perfil para o destino de personalização personalizado, permitindo a personalização de mesma página e próxima página com base em atributos.
+
+>[!IMPORTANT]
+>
+>Os atributos de perfil podem conter dados confidenciais. Para proteger esses dados, o **[!UICONTROL Personalização Personalizada Com Atributos]** O destino exige que você use a variável [API do Servidor de Rede de Borda](/help/server-api/overview.md) para coleta de dados. Além disso, todas as chamadas da API do servidor devem ser feitas em um [contexto autenticado](../../../server-api/authentication.md).
+>
+>Se você já estiver usando o SDK da Web ou o SDK móvel para sua integração, poderá recuperar atributos por meio da API do servidor de duas formas:
+>
+> * Adicione uma integração do lado do servidor que recupera atributos por meio da API do servidor.
+> * Atualize sua configuração do lado do cliente com um código Javascript personalizado para recuperar atributos por meio da API do servidor.
+>
+> Se você não seguir os requisitos acima, a personalização será baseada somente na associação de segmentos, idêntica à experiência oferecida pela **[!UICONTROL Personalização personalizada]** conector.
+
+![Imagem dos dois cartões de destino de personalização personalizados em uma exibição lado a lado.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Visão geral {#overview}
 
@@ -30,7 +49,7 @@ Essa integração é alimentada pela variável [Adobe Experience Platform Web SD
 
 ## Casos de uso {#use-cases}
 
-O [!DNL Custom personalization connection] permite usar suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), além de aproveitar os recursos de coleta e segmentação de dados da rede Experience Platform Edge para potencializar uma experiência mais profunda de personalização do cliente.
+O [!DNL Custom Personalization Connection] permite usar suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), bem como sistemas proprietários (por exemplo, CMS interno), além de aproveitar os recursos de coleta e segmentação de dados da rede Experience Platform Edge para potencializar uma experiência mais profunda de personalização do cliente.
 
 Os casos de uso descritos abaixo incluem personalização de site e publicidade direcionada no site.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Exemplo de resposta para [!UICONTROL Personalização Personalizada Com Atributos]
+
+Ao usar **[!UICONTROL Personalização Personalizada Com Atributos]**, a resposta da API será semelhante ao exemplo abaixo.
+
+A diferença entre **[!UICONTROL Personalização Personalizada Com Atributos]** e **[!UICONTROL Personalização personalizada]** é a inclusão do `attributes` na resposta da API.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Uso e governança de dados {#data-usage-governance}
 

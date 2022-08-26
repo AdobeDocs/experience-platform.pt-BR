@@ -5,9 +5,9 @@ title: conector Marketo Engage
 topic-legacy: overview
 description: Este documento fornece uma visão geral do conector de fonte Marketo Engage, incluindo informações sobre autenticação, mapeamento e latência de dados.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: efa6891024cacd383f4cd958162a7a4f8ead0624
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Com o [!DNL Marketo] conector de origem, você pode trazer dados B2B de [!DNL Ma
 
 >[!IMPORTANT]
 >
->Você deve ter acesso ao [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para que a Marketo Engage possa participar [Perfil do cliente em tempo real](../../../../profile/home.md).
+>Você deve ter acesso ao [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para usar todos os conjuntos de dados do Marketo para segmentação com o [Perfil do cliente em tempo real](../../../../profile/home.md). Sem a CDP B2B Edition em tempo real, você ainda pode usar a fonte do Marketo para trazer dados de pessoas e atividades para o Perfil do cliente em tempo real para segmentação.
 
 Este documento fornece uma visão geral do [!DNL Marketo] conector de origem, incluindo informações sobre como autenticar o conector, como mapear [!DNL Marketo] campos para o Experience Data Model (XDM) e a latência de dados do conector.
 

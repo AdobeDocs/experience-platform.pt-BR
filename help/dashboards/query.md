@@ -4,9 +4,9 @@ title: Explorar, verificar e processar conjuntos de dados do painel usando o ser
 type: Documentation
 description: Saiba como usar o Serviço de query para explorar e processar conjuntos de dados brutos que alimentam perfis, segmentos e painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,16 @@ A convenção de nomenclatura desse conjunto de dados é **DIM_Destination**.
 Para entender o esquema completo do conjunto de dados de destino DIM, você pode visualizar e explorar o conjunto de dados [uso do visualizador de conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do Experience Platform.
 
 ![](images/query/destinations-metadata.png)
+
+## (Beta) Relatórios de insights da Plataforma de dados do cliente (CDP)
+
+>[!IMPORTANT]
+>
+>O recurso Modelos de dados do CDP Insights está em beta. Seus recursos e documentação estão sujeitos a alterações.
+
+O recurso Modelos de dados de insights da CDP expõe o SQL que alimenta os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQl para criar relatórios de CDP para seus casos de uso de marketing e KPI.
+
+Os relatórios da CDP fornecem informações sobre os dados do seu perfil e seu relacionamento com segmentos e destinos. Consulte a documentação do Modelo de dados de insights do CDP para obter informações detalhadas sobre como [aplique os Modelos de dados de insights da CDP a seus casos de uso de KPI específicos](./cdp-insights-data-model.md).
 
 ## Exemplo de consultas
 

@@ -5,9 +5,9 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2491'
 ht-degree: 3%
 
 ---
@@ -237,8 +237,9 @@ A tabela abaixo mapeia as pontuações agregadas para as pontuações brutas. Se
 
 >[!IMPORTANT]
 >
-> - Para ajudar a facilitar a conformidade com o GDPR no Attribution AI, você pode usar o Adobe Experience Platform Privacy Service para configurar protocolos para atender às solicitações do cliente para acessar e excluir seus dados no lago de dados, no Serviço de identidade e no Perfil do cliente em tempo real.
-> - Todos os dados são criptografados em trânsito e em repouso. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md)
+> - O Attribution AI usa apenas dados atualizados para treinamento e pontuação adicionais. Da mesma forma, quando você solicita a exclusão de dados, o Customer AI se abstém de usar os dados excluídos.
+> - O Attribution AI usa conjuntos de dados da plataforma. Para dar suporte às solicitações de direitos do consumidor que uma marca pode receber, as marcas devem usar o Platform Privacy Service para enviar solicitações de acesso e exclusão do consumidor, a fim de remover seus dados no lago de dados, no Serviço de identidade e no Perfil do cliente em tempo real.
+> - Todos os conjuntos de dados que usamos para entrada/saída de modelos seguirão as diretrizes da plataforma. A Criptografia de dados da plataforma se aplica aos dados em repouso e em trânsito. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Próximas etapas {#next-steps}

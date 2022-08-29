@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API, visualização, amostra
 title: Visualizar ponto de extremidade da API de status de amostra (Visualização de perfil)
-description: Usando o ponto de extremidade de status de amostra de visualização, parte da API do Perfil do cliente em tempo real, é possível visualizar a amostra mais bem-sucedida dos dados do Perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios que mostram a sobreposição do conjunto de dados, a sobreposição de identidades e perfis desconhecidos.
+description: O endpoint de status de amostra de visualização da API do Perfil do cliente em tempo real permite visualizar a amostra mais recente e bem-sucedida de seus dados de Perfil, listar a distribuição de perfis por conjunto de dados e por identidade e gerar relatórios que mostram a sobreposição de conjuntos de dados, a sobreposição de identidades e perfis não corrigidos.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 1%
 
 ---
@@ -465,25 +465,25 @@ Este relatório fornece as seguintes informações:
 * Há 24 perfis compostos de `AAID` e `ECID` namespaces de identidade.
 * Há 6.565 perfis que incluem apenas um `ECID` identidade.
 
-## Gerar o relatório de perfis desconhecidos
+## Gerar o relatório de perfis não corrigidos
 
-Você pode obter mais visibilidade sobre a composição da Loja de perfis de sua organização por meio do relatório de perfis desconhecidos. Um &quot;perfil desconhecido&quot; refere-se a qualquer perfil que não tenha sido corrigido e esteja inativo por um determinado período de tempo. Um perfil &quot;não corrigido&quot; é um perfil que contém apenas um fragmento de perfil, enquanto um perfil &quot;inativo&quot; é qualquer perfil que não tenha adicionado novos eventos para o período de tempo especificado. O relatório de perfis desconhecidos fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
+Você pode obter mais visibilidade sobre a composição da Loja de perfis de sua organização por meio do relatório de perfis não corrigidos. Um perfil &quot;não corrigido&quot; é um perfil que contém apenas um fragmento de perfil. Um perfil &quot;desconhecido&quot; é um perfil associado a namespaces de identidade pseudônimos, como `ECID` e `AAID`. Os perfis desconhecidos estão inativos, o que significa que não adicionaram novos eventos para o período de tempo especificado. O relatório de perfis não corrigidos fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
 
-Você pode gerar o relatório de perfis desconhecidos executando uma solicitação GET para a variável `/previewsamplestatus/report/unknownProfiles` endpoint .
+Você pode gerar o relatório de perfis não corrigidos executando uma solicitação de GET para a `/previewsamplestatus/report/unstitchedProfiles` endpoint .
 
 **Formato da API**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Solicitação**
 
-A solicitação a seguir retorna o relatório de perfis desconhecidos.
+A solicitação a seguir retorna o relatório de perfis não corrigidos.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de perfis desconhecidos.
+Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de perfis não corrigidos.
 
 >[!NOTE]
 >
->Para os fins deste guia, o relatório foi truncado para incluir somente `"120days"` e &quot;`7days`&quot; períodos de tempo. O relatório de perfis totalmente desconhecidos fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
+>Para os fins deste guia, o relatório foi truncado para incluir somente `"120days"` e &quot;`7days`&quot; períodos de tempo. O relatório de perfis não corrigidos fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 
 | Propriedade | Descrição |
 |---|---|
-| `data` | O `data` contém as informações retornadas para o relatório de perfis desconhecidos. |
-| `totalNumberOfProfiles` | A contagem total de perfis únicos na Loja de perfis. Isso equivale à contagem de público-alvo endereçável. Inclui perfis conhecidos e desconhecidos. |
+| `data` | O `data` contém as informações retornadas para o relatório de perfis não corrigidos. |
+| `totalNumberOfProfiles` | A contagem total de perfis únicos na Loja de perfis. Isso equivale à contagem de público-alvo endereçável. Ele inclui perfis conhecidos e não corrigidos. |
 | `totalNumberOfEvents` | O número total de ExperienceEvents na Loja de perfis. |
-| `unknownProfiles` | Um objeto que contém um detalhamento de perfis desconhecidos (não corrigidos e inativos) por período de tempo. O relatório de perfis desconhecidos fornece um detalhamento de perfis para períodos de 7, 30, 60, 90 e 120 dias. |
-| `countOfProfiles` | A contagem de perfis desconhecidos para o período ou a contagem de perfis desconhecidos para o namespace. |
+| `unstitchedProfiles` | Um objeto que contém um detalhamento de perfis não corrigidos por período de tempo. O relatório de perfis não corrigidos fornece um detalhamento de perfis para períodos de 7, 30, 60, 90 e 120 dias. |
+| `countOfProfiles` | A contagem de perfis não corrigidos para o período ou a contagem de perfis não corrigidos para o namespace. |
 | `eventsAssociated` | O número de ExperienceEvents para o intervalo de tempo ou o número de eventos para o namespace. |
-| `nsDistribution` | Um objeto que contém namespaces de identidade individuais com a distribuição de perfis e eventos desconhecidos para cada namespace. Observação: Somando o total `countOfProfiles` para cada namespace de identidade no `nsDistribution` é igual a `countOfProfiles` para o período de tempo. O mesmo se aplica a `eventsAssociated` por namespace e o total `eventsAssociated` por período de tempo. |
+| `nsDistribution` | Um objeto que contém namespaces de identidade individuais com a distribuição de perfis e eventos não corrigidos para cada namespace. Observação: Somando o total `countOfProfiles` para cada namespace de identidade no `nsDistribution` é igual a `countOfProfiles` para o período de tempo. O mesmo se aplica a `eventsAssociated` por namespace e o total `eventsAssociated` por período de tempo. |
 | `reportTimestamp` | O carimbo de data e hora do relatório. |
 
-### Interpretação do relatório de perfis desconhecidos
+### Interpretação do relatório de perfis não corrigidos
 
 Os resultados do relatório podem fornecer informações sobre quantos perfis não corrigidos e inativos sua organização tem em sua Loja de perfis.
 
@@ -586,9 +586,9 @@ Considere o seguinte trecho do `data` objeto:
 Este relatório fornece as seguintes informações:
 
 * Há 1.782 perfis que contêm apenas um fragmento de perfil e não têm novos eventos nos últimos sete dias.
-* Há 29.151 ExperienceEvents associados aos 1.782 perfis desconhecidos.
-* Há 1.734 perfis desconhecidos contendo um único fragmento de perfil do namespace de identidade do ECID.
-* Há 28.591 eventos associados aos 1.734 perfis desconhecidos que contêm um único fragmento de perfil do namespace de identidade da ECID.
+* Há 29.151 ExperienceEvents associados aos 1.782 perfis não corrigidos.
+* Há 1.734 perfis não corrigidos contendo um único fragmento de perfil do namespace de identidade do ECID.
+* Há 28.591 eventos associados aos 1.734 perfis não corrigidos que contêm um único fragmento de perfil do namespace de identidade da ECID.
 
 ## Próximas etapas
 

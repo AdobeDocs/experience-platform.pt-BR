@@ -2,10 +2,10 @@
 title: Procurar Ordens de Serviço de Higiene de Dados
 description: Saiba como visualizar e gerenciar pedidos de higiene de dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 2%
+source-wordcount: '517'
+ht-degree: 1%
 
 ---
 
@@ -49,6 +49,11 @@ Selecione o ícone de funil (![Imagem do ícone de funil](../images/ui/browse/fu
 {style=&quot;table-layout:auto&quot;}
 
 ## Exibir os detalhes de uma ordem de serviço
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_statusbyservice"
+>title="Status por serviço"
+>abstract="As solicitações de higiene de dados são processadas de maneira independente por vários serviços de Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
 
 Selecione a ID de um pedido de trabalho listado para exibir seus detalhes.
 

@@ -4,7 +4,7 @@ title: Configurar especificações de origem para fontes de autoatendimento (SDK
 topic-legacy: overview
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 1%
@@ -48,7 +48,8 @@ Consulte a [apêndice](#source-spec) para obter um exemplo de especificação de
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -69,6 +70,7 @@ Consulte a [apêndice](#source-spec) para obter um exemplo de especificação de
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -336,6 +338,7 @@ Veja a seguir uma especificação de fonte concluída usando [!DNL MailChimp Mem
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },

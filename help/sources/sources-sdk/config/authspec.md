@@ -4,9 +4,9 @@ title: Configurar especificações de autenticação para Fontes de Autoatendime
 topic-legacy: overview
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '525'
 ht-degree: 2%
 
 ---
@@ -105,7 +105,6 @@ Um código de atualização OAuth 2 permite acesso seguro a um aplicativo gerand
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ Um código de atualização OAuth 2 permite acesso seguro a um aplicativo gerand
 
 ### Autenticação básica
 
-Autenticação básica é um tipo de autenticação que permite acessar seu aplicativo usando uma combinação do URL de host do aplicativo, do nome de usuário da conta e da senha da conta.
+Autenticação básica é um tipo de autenticação que permite acessar seu aplicativo usando uma combinação do nome de usuário da conta e senha da conta.
 
 ```json
 {
@@ -148,10 +147,6 @@ Autenticação básica é um tipo de autenticação que permite acessar seu apli
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ Autenticação básica é um tipo de autenticação que permite acessar seu apli
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ Autenticação básica é um tipo de autenticação que permite acessar seu apli
 | `authSpec.spec.type` | Define o tipo de dados do esquema. | `object` |
 | `authSpec.spec.description` | Exibe mais informações específicas para o tipo de autenticação. |
 | `authSpec.spec.properties` | Contém informações sobre as credenciais usadas para a autenticação. |
-| `authSpec.spec.properties.host` | O URL de host do seu aplicativo. |
 | `authSpec.spec.properties.username` | O nome de usuário da conta associado ao seu aplicativo. |
 | `authSpec.spec.properties.password` | A senha da conta associada ao seu aplicativo. |
-| `authSpec.spec.required` | Especifica os campos obrigatórios como valores obrigatórios a serem inseridos na Plataforma. | `host` |
+| `authSpec.spec.required` | Especifica os campos obrigatórios como valores obrigatórios a serem inseridos na Plataforma. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ Este é um exemplo de uma especificação de autenticação concluída usando um
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ Este é um exemplo de uma especificação de autenticação concluída usando um
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ Este é um exemplo de uma especificação de autenticação concluída usando um
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ Este é um exemplo de uma especificação de autenticação concluída usando um
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]

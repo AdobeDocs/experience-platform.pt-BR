@@ -4,9 +4,9 @@ title: Guia do painel Segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,10 @@ Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral d
 O painel seleciona automaticamente um segmento para exibição, no entanto, você pode alterar o segmento usando o menu suspenso ou o seletor de segmentos.
 
 Para escolher um segmento diferente, selecione a lista suspensa ao lado do nome do segmento ou use o seletor de segmentos para abrir a caixa de diálogo de seleção de segmentos.
+
+>[!IMPORTANT]
+>
+>Somente os segmentos com uma contagem de perfil acima de zero são exibidos na lista de segmentos selecionáveis.
 
 ![](../images/segments/change-segment.png)
 

@@ -4,9 +4,9 @@ title: Guia do painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,10 @@ Todos os tamanhos de público-alvo no sistema são classificados de tamanho de p
 Se a contagem de perfil mapeada do segmento estiver fora de um desvio padrão do tamanho médio do perfil mapeado nos últimos 30 dias, isso indica uma anomalia no sistema e deve ser investigado.
 
 Se um segmento na [!UICONTROL Estado de funcionamento do público-alvo mapeado] Se o widget estiver se desviando por uma grande margem, você deve consultar o gráfico de tendência do tamanho do público-alvo e localizar o segmento anômalo. A tendência pode fornecer mais informações sobre a integridade do seu segmento.
+
+>[!NOTE]
+>
+>O tamanho padrão do widget de integridade do público-alvo mapeado pode obstruir as informações da tabela. Modifique o tamanho do widget para melhorar a legibilidade dos nomes de segmento e títulos de coluna mapeados. Consulte a documentação de modificação de painéis para obter orientação sobre [como redimensionar um widget](../customize/modify.md).
 
 ![O widget de integridade do público-alvo mapeado.](../images/destinations/mapped-audience-health.png)
 

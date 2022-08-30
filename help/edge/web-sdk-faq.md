@@ -2,9 +2,9 @@
 title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Obtenha respostas para perguntas frequentes sobre o SDK da Web da Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
+source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1935'
 ht-degree: 2%
 
 ---
@@ -82,9 +82,9 @@ Alloy é o nome do código do SDK da Web da Adobe Experience Platform. Ele é us
 
 ## Os clientes precisam comprar o Adobe Experience Platform para usar o [!DNL Web SDK]?
 
-Não. Qualquer cliente da Adobe Digital Experience pode usar o SDK da Web da Adobe Experience Platform gratuitamente. Para usar o SDK da Web, você deve ter sua organização provisionada para esse recurso. Se você deseja obter acesso, preencha o seguinte [formulário](https://adobe.ly/websdkaccess) e o Adobe fornecerá acesso ao [Interface do usuário de datastreams](datastreams/overview.md) e a interface do usuário do Adobe Experience Platform (se necessário).
+Não. Qualquer cliente da Adobe Digital Experience pode usar o SDK da Web da Adobe Experience Platform gratuitamente. Clientes que desejam usar o [!DNL Web SDK] O precisará configurar as permissões certas para criar esquemas, conjuntos de dados, namespaces de identidade e conjuntos de dados na interface do usuário da Coleta de dados do Adobe Experience Platform.
 
-Clientes que desejam usar o [!DNL Web SDK] receberá acesso para criar esquemas, conjuntos de dados e namespaces de identidade na interface do usuário do Adobe Experience Platform.
+Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
 ## Quem deve usar o SDK da Web?
 

@@ -3,10 +3,10 @@ title: Visão geral dos conjuntos de dados
 description: Conecte sua integração do SDK da Experience Platform do lado do cliente aos produtos da Adobe e destinos de terceiros.
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de configurações do Analytics; Predefinição de dados para dados Coleção; Preparação de dados; Mapeador; Mapeador XDM; Mapeador no Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 2%
+source-wordcount: '1728'
+ht-degree: 3%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 2%
 Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web do Adobe Experience Platform. Enquanto a variável [comando configurar](../fundamentals/configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
 Este documento aborda as etapas para configurar um armazenamento de dados na interface do usuário da coleta de dados.
-
->[!NOTE]
->
->Sua organização deve ser provisionada para esse recurso para acessá-lo na interface do usuário do . Preencha o seguinte [formulário](https://adobe.ly/websdkaccess) para solicitar o acesso necessário. Para gerenciar conjuntos de dados, sua conta de usuário deve ser adicionada a um perfil de produto para tags em [!DNL Adobe Experience Platform].
 
 ## Acesse o [!UICONTROL Datastreams] espaço de trabalho
 

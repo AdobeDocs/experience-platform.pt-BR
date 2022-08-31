@@ -5,9 +5,9 @@ title: Gerenciar rótulos de uso de dados na interface do usuário
 topic-legacy: labels
 description: Este guia aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,12 @@ Você pode adicionar rótulos diretamente a um esquema ou campos dentro dele. To
 
 Veja o tutorial em [gerenciamento de rótulos de nível de esquema](../../xdm/tutorials/labels.md) para obter mais informações.
 
-## Gerenciar rótulos personalizados
+## Gerenciar rótulos personalizados {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Criar rótulos"
+>abstract="Rótulos permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece um conjunto padrão de rótulos para você usar, mas também é possível criar rótulos personalizados específicos à sua organização."
 
 Você pode criar seus próprios rótulos de uso personalizados na **[!UICONTROL Políticas]** na área de trabalho do [!DNL Experience Platform] IU. Selecionar **[!UICONTROL Políticas]** na navegação à esquerda, selecione **[!UICONTROL Rótulos]** para exibir uma lista de rótulos existentes. Aqui, selecione **[!UICONTROL Criar rótulo]**.
 

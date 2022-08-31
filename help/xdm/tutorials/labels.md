@@ -2,9 +2,9 @@
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do usuário do Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,12 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
    * [Editor de esquema](../ui/overview.md): Saiba como criar e gerenciar esquemas e outros recursos na interface do usuário da plataforma.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Fornece a infraestrutura para impor restrições de uso de dados em operações da plataforma, usando políticas que definem quais ações de marketing podem (ou não) ser executadas em dados rotulados.
 
-## Selecione um esquema ou campo para adicionar rótulos a
+## Selecione um esquema ou campo para adicionar rótulos a {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Editar rótulos de governança"
+>abstract="Aplique um rótulo a um campo de esquema para indicar as políticas de uso que se aplicam aos dados contidos nesse campo específico."
 
 Para começar a adicionar rótulos, primeiro [selecionar um esquema existente para editar](../ui/resources/schemas.md#edit) ou [criar um novo schema](../ui/resources/schemas.md#create) para exibir sua estrutura no Editor de esquemas.
 

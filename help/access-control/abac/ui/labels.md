@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, controle de acesso, con
 title: Rótulos de gerenciamento de controle de acesso com base em atributos
 description: Este documento fornece informações sobre o gerenciamento de rótulos por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 3d7b3471c363c036c41171789b7dcbed5489f2ee
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,12 @@ ht-degree: 0%
 
 Rótulos permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Rótulos podem ser aplicados a qualquer momento, fornecendo flexibilidade na maneira como você decide controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles são assimilados na plataforma ou assim que os dados forem disponibilizados para uso na plataforma.
 
-## Criar um novo rótulo
+## Criar um novo rótulo {#create-new-label}
+
+>[!CONTEXTUALHELP]
+>id="platform_abac_labelusage"
+>title="Uso de etiqueta"
+>abstract="Você pode usar rótulos personalizados para aplicar configurações de controle de acesso e de acesso a seus dados."
 
 >[!NOTE]
 >

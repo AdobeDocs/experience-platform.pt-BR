@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real.
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 27%
+source-wordcount: '248'
+ht-degree: 29%
 
 ---
 
@@ -40,11 +40,11 @@ ht-degree: 27%
    * [Suporte de idiomas](documentation/language-support.md)
 * Serviços de aplicativos criados na plataforma {#ecosystem}
    * [Visão geral](application-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
    * [Real-time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Aplicativos e serviços inteligentes (Vídeo)](video/application-intelligent-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Integrações da plataforma com o Experience Cloud (Vídeo)](video/experience-cloud-integrations.md)
 * Governança, privacidade e segurança {#governance-privacy-security}
    * [Visão geral](./governance-privacy-security/overview.md)

@@ -5,10 +5,10 @@ title: Visão geral da interface do usuário do Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 2%
+source-wordcount: '1812'
+ht-degree: 1%
 
 ---
 
@@ -160,7 +160,7 @@ O **[!UICONTROL Monitoramento]** permite monitorar a assimilação de lote e str
 
 ### [!UICONTROL Decisão]
 
-O Offer Decisioning é um serviço de aplicativos integrado à Adobe Experience Platform. Ele permite usar o Experience Platform para oferecer a melhor oferta e experiência aos clientes em todos os pontos de contato na hora certa. Para saber mais sobre o Offer Decisioning, incluindo trabalhar com [!UICONTROL Ofertas] e [!UICONTROL Atividades] visite o [Documentação do offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+O Adobe Journey Optimizer é um serviço de aplicativos criado no Experience Platform. Ele permite usar tecnologias de decisão eficientes para oferecer a melhor oferta e experiência aos clientes em todos os pontos de contato, na hora certa. Para saber mais sobre o Journey Optimizer, incluindo trabalhar com a [!UICONTROL Ofertas] e [!UICONTROL Atividades] visite o [Documentação do Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR).
 
 ### [!UICONTROL Administração]
 

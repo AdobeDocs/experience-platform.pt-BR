@@ -5,10 +5,10 @@ title: Visão geral da Adobe Experience Platform
 topic-legacy: getting started
 description: O Adobe Experience Platform permite que as organizações centralizem e padronizem dados de clientes antes de aplicar a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
 source-wordcount: '437'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -28,15 +28,15 @@ Para começar a aprender mais sobre um [!DNL Platform] , retornar ao [página de
 
 O Adobe criou vários serviços de aplicativos além do Experience Platform. Você pode encontrar documentação para esses serviços em seus próprios guias, vinculados abaixo:
 
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 
 ## [!DNL Experience Platform] tutoriais
 
-Você pode começar com [!DNL Platform] de maneira rápida e fácil, seguindo os tutoriais passo a passo que abrangem tudo, desde a preparação dos dados para assimilação até algoritmos avançados de aprendizado automatizado. Esses tutoriais foram projetados para complementar as informações encontradas no [!DNL Experience Platform] para obter melhores resultados, mantenha a documentação em mãos ao concluir os tutoriais.
+Você pode começar com [!DNL Platform] de forma rápida e fácil, seguindo os tutoriais passo a passo que abrangem tudo, desde a preparação dos dados para assimilação até algoritmos avançados de aprendizado automatizado. Esses tutoriais foram projetados para complementar as informações encontradas no [!DNL Experience Platform] para obter melhores resultados, mantenha a documentação em mãos ao concluir os tutoriais.
 
 Visite o [Tutoriais do Experience Platform](https://www.adobe.com/go/platform-tutorials-home-en) página de aterrissagem para começar.
 
@@ -51,7 +51,7 @@ Visite o [Tutoriais do Experience Platform](https://www.adobe.com/go/platform-tu
 * [**Glossário**](glossary.md)\
    Revise a terminologia do Adobe Experience Platform.
 
-* [**Notas de versão**](https://www.adobe.com/go/platform-release-notes-en)\
+* [**Notas de versão de**](https://www.adobe.com/go/platform-release-notes-en)\
    Encontre informações sobre o mais recente [!DNL Experience Platform] lançamento e revisão de versões anteriores.
 
 * [**Guia de solução de problemas**](troubleshooting.md)\

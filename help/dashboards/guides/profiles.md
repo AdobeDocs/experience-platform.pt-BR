@@ -4,9 +4,9 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 1%
 
 ---
@@ -171,9 +171,9 @@ O **[!UICONTROL Tendência da alteração da contagem de perfis]** o widget exib
 
 ![A guia Visão geral do perfil que exibe o widget de tendência de alteração de contagem de perfis com o botão de legendas realçado.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Um modelo de aprendizado de máquina gera automaticamente legendas para descrever as tendências principais e eventos importantes ao analisar o gráfico e os dados.
+Um modelo de aprendizado de máquina gera automaticamente legendas para descrever as tendências principais e eventos importantes ao analisar o gráfico e os dados. As anotações são adicionadas ao gráfico com base nas legendas. Selecione uma legenda para focalizar em sua anotação correspondente.
 
-![A caixa de diálogo de legendas automáticas do widget de tendência de alteração de contagem de perfis.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![A caixa de diálogo de legendas automáticas do widget de tendência de alteração de contagem de perfis.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Tendência de alteração de contagem de perfis por identidade] {#profiles-count-change-trend-by-identity}
 

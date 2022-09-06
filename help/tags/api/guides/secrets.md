@@ -1,9 +1,10 @@
 ---
 title: Segredos na API do reator
 description: Saiba mais sobre os fundamentos de como configurar segredos na API de reator para uso no encaminhamento de eventos.
-source-git-commit: 6822199c3ecf4414893a8b8dfc650e3da40a6470
+exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1241'
 ht-degree: 2%
 
 ---
@@ -18,7 +19,7 @@ No momento, há três tipos secretos compatíveis indicados na variável `type_o
 | --- | --- |
 | `token` | Uma única string de caracteres representando um valor de token de autenticação conhecido e compreendido por ambos os sistemas. |
 | `simple-http` | Contém dois atributos de string para um nome de usuário e senha, respectivamente. |
-| `oauth2` | Contém vários atributos para suportar a variável [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) especificação de autenticação. O encaminhamento de eventos solicita as informações necessárias e, em seguida, lida com a renovação desses tokens para você em um intervalo especificado. |
+| `oauth2-client_credentials` | Contém vários atributos para suportar a variável [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) especificação de autenticação. O encaminhamento de eventos solicita as informações necessárias e, em seguida, lida com a renovação desses tokens para você em um intervalo especificado. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -26,9 +27,14 @@ Este guia fornece uma visão geral de alto nível de como configurar segredos pa
 
 ## Credenciais
 
-Cada segredo contém um `credentials` que mantém seus respectivos valores de credencial. Cada tipo de segredo tem atributos obrigatórios diferentes, conforme mostrado nas seções abaixo.
+Cada segredo contém um `credentials` que mantém seus respectivos valores de credencial. When [criação de um segredo na API](../endpoints/secrets.md#create), cada tipo de segredo tem atributos obrigatórios diferentes, conforme mostrado nas seções abaixo:
 
-### `token`
+* [`token`](#token)
+* [simple-http`](#simple-http)
+* [`oauth2-client_credentials`](#oauth2-client_credentials)
+* [&quot;oauth2-google&quot;](#oauth2-google)
+
+### `token` {#token}
 
 Segredos com uma `type_of` valor de `token` requer apenas um único atributo em `credentials`:
 
@@ -40,7 +46,7 @@ Segredos com uma `type_of` valor de `token` requer apenas um único atributo em 
 
 O token é armazenado como um valor estático e, portanto, o `expires_at` e `refresh_at` são definidas como `null` quando o segredo for criado.
 
-### `simple-http`
+### `simple-http` {#simple-http}
 
 Segredos com uma `type_of` valor de `simple-http` requerem os seguintes atributos em `credentials`:
 
@@ -53,23 +59,19 @@ Segredos com uma `type_of` valor de `simple-http` requerem os seguintes atributo
 
 Quando o segredo é criado, os dois atributos são trocados com uma codificação BASE64 de `username:password`. Após a troca, o segredo `expires_at` e `refresh_at` são definidas como `null`.
 
-### `oauth2`
+### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->Atualmente, somente o [Tipo de concessão de Credenciais do Cliente](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) é compatível com segredos OAuth.
-
-Segredos com uma `type_of` valor de `oauth2` requerem os seguintes atributos em `credentials`:
+Segredos com uma `type_of` valor de `oauth2-client_credentials` requerem os seguintes atributos em `credentials`:
 
 | Atributo de credencial | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `client_id` | String | A ID do cliente para a integração OAuth. |
 | `client_secret` | String | O segredo do cliente para a integração OAuth. Esse valor não está incluído na resposta da API. |
-| `authorization_url` | String | O URL de autorização da integração OAuth. |
+| `token_url` | String | O URL de autorização da integração OAuth. |
 | `refresh_offset` | Número inteiro | *(Opcional)* O valor, em segundos, para deslocar a operação de atualização. Se este atributo for omitido ao criar o segredo, o valor será definido como `14400` (quatro horas) por padrão. |
 | `options` | Objeto | *(Opcional)* Especifica opções adicionais para a integração OAuth:<ul><li>`scope`: Uma string que representa a variável [Escopo do OAuth 2.0](https://oauth.net/2/scope/) para as credenciais.</li><li>`audience`: Uma string que representa uma [Token de acesso Auth0](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-Quando uma `oauth2` O segredo é criado ou atualizado, a variável `client_id` e `client_secret` e eventualmente `options`) são trocadas em uma solicitação de POST para `authorization_url`, de acordo com o fluxo de Credenciais do Cliente do protocolo OAuth.
+Quando uma `oauth2-client_credentials` O segredo é criado ou atualizado, a variável `client_id` e `client_secret` e eventualmente `options`) são trocadas em uma solicitação de POST para `token_url`, de acordo com o fluxo de Credenciais do Cliente do protocolo OAuth.
 
 >[!NOTE]
 >
@@ -89,13 +91,29 @@ Se a troca for bem-sucedida, o atributo de status do segredo será definido como
 
 Se a troca falhar por algum motivo, a variável `status_details` no `meta` atualizações de objeto com informações relevantes.
 
-### Atualizar um `oauth2` segredo
+#### Atualizar um `oauth2-client_credentials` segredo
 
-Se uma `oauth2` O segredo foi atribuído a um ambiente e seu status é `succeeded` (as credenciais foram trocadas com êxito), uma nova troca é executada automaticamente em `refresh_at`.
+Se uma `oauth2-client_credentials` O segredo foi atribuído a um ambiente e seu status é `succeeded` (as credenciais foram trocadas com êxito), uma nova troca é executada automaticamente em `refresh_at`.
 
 Se a troca for bem-sucedida, a variável `refresh_status` no `meta` objeto definido como `succeeded` while `expires_at`, `refresh_at`e `activated_at` são atualizadas adequadamente.
 
 Se a troca falhar, a operação será tentada mais três vezes com a última tentativa, não mais do que duas horas antes do token de acesso expirar. Se todas as tentativas falharem, a variável `refresh_status_details` do `meta` atualizações de objeto com detalhes relevantes.
+
+### `oauth2-google` {#oauth2-google}
+
+Segredos com uma `type_of` valor de `oauth2-google` exige o seguinte atributo em `credentials`:
+
+| Atributo de credencial | Tipo de dados | Descrição |
+| --- | --- | --- |
+| `scopes` | Matriz | Lista os escopos de produto do Google para autenticação. Os seguintes escopos são suportados:<ul><li>[Anúncios do Google](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Pub/Sub do Google](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+
+Depois de criar o `oauth2-google` secreto, a resposta inclui um `meta.token_url` propriedade. Você deve copiar e colar esse URL em um navegador para concluir o fluxo de autenticação do Google.
+
+#### Reautorizar uma `oauth2-google` segredo
+
+O URL de autorização para um `oauth2-google` o segredo expira uma hora depois que o segredo é criado (conforme indicado por `meta.token_url_expires_at`). Após esse tempo, o segredo deve ser reautorizado para renovar o processo de autenticação.
+
+Consulte a [guia do endpoint de segredos](../endpoints/secrets.md#reauthorize) para obter detalhes sobre como autorizar novamente uma `oauth2-google` secreta fazendo uma solicitação de PATCH para a API do reator.
 
 ## Relação ambiente
 
@@ -107,7 +125,7 @@ Um segredo só pode ser associado a um ambiente. Uma vez estabelecida a relaçã
 >
 >A única exceção a essa regra é se o ambiente em questão for excluído. Nesse caso, o relacionamento é limpo e o segredo pode ser atribuído a um ambiente diferente.
 
-Depois que as credenciais de um segredo tiverem sido trocadas com sucesso, para que um segredo seja associado a um ambiente, o artefato exchange (a sequência de token de `token`, a string codificada em Base64 para `simple-http`ou o token de acesso para `oauth2`) é salva com segurança no ambiente .
+Depois que as credenciais de um segredo tiverem sido trocadas com sucesso, para que um segredo seja associado a um ambiente, o artefato exchange (a sequência de token de `token`, a string codificada em Base64 para `simple-http`ou o token de acesso para `oauth2-client_credentials`) é salva com segurança no ambiente .
 
 Depois que o artefato de troca for salvo com sucesso no ambiente, o segredo `activated_at` está definido como a hora UTC atual e agora pode ser referenciado usando um elemento de dados. Consulte a [próxima seção](#referencing-secrets) para obter mais informações sobre como fazer referência a segredos.
 

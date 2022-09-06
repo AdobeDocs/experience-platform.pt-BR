@@ -2,9 +2,9 @@
 description: O Adobe Experience Platform Destination SDK é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para o Experience Platform para fornecer dados de público-alvo e de perfil ao seu terminal, com base em dados e formatos de autenticação de sua escolha. As configurações são armazenadas no Experience Platform e podem ser recuperadas por meio da API para obter atualizações adicionais.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2e2ed880650ad6823b60819e36081540a35ab727
+source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '708'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ O acesso ao Destination SDK varia com base no seu status de parceiro ou Experien
 ---------|----------|
 | Fornecedor independente de software (ISV) | Associe-se à [Programa Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud.html) e para obter uma sandbox Experience Platform para acessar o Destination SDK. |
 | Integrador de sistema (SI) | Você precisa estar no nível Gold ou Platinum na [Programa Adobe Solution Partner](https://solutionpartners.adobe.com/home.html)e você terá uma sandbox de Experience Platform e acesso ao Destination SDK. |
-| cliente Experience Platform no [Pacote de ativação](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) ou [Pacote do Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Por padrão, você obtém acesso às sandboxes e ao Destination SDK do Experience Platform, permitindo criar destinos privados para sua organização. |
+| cliente Experience Platform no [Pacote do Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Por padrão, você obtém acesso às sandboxes e ao Destination SDK do Experience Platform, permitindo criar destinos privados para sua organização. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -74,7 +74,7 @@ O processo para configurar seu destino no Experience Platform é descrito abaixo
 2. [Solicitação para provisionar uma sandbox de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e ative a permissão de criação de destino.
 3. Crie sua integração. Siga as instruções na documentação do produto para configurar [destinos de transmissão](./configure-destination-instructions.md) ou [destinos com base em arquivo (beta)](./configure-file-based-destination-instructions.md).
 4. Teste sua integração. Siga as instruções na documentação do produto para testar [destinos de transmissão](./test-destination.md) ou [destinos com base em arquivo (beta)](./file-based-destination-testing-overview.md).
-5. Se você for um ISV ou SI, crie uma [integração produzida](./overview.md#productized-custom-integrations), [enviar sua integração](./submit-destination.md) para análise do Adobe (o tempo de resposta padrão é de cinco dias úteis).
+5. Se você for um ISV ou SI, crie uma [integração produzida](./overview.md#productized-custom-integrations), [enviar sua integração](./submit-destination.md) para Adobe: tempo de resposta padrão é de cinco dias úteis.
 6. Se você for um ISV ou SI criando uma integração produzida, use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto no Experience League para o seu destino.
 7. Para integrações produzidas, uma vez aprovadas pelo Adobe, sua integração será exibida no [Catálogo de Experience Platform](/help/destinations/catalog/overview.md).
 8. Se quiser atualizar sua integração, siga o mesmo processo.

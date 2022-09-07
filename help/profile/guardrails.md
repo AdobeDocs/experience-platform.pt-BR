@@ -4,11 +4,11 @@ title: Grades de proteção padrão para dados de perfil do cliente em tempo rea
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema. '
+description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
+source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1950'
 ht-degree: 6%
 
 ---
@@ -139,7 +139,7 @@ Neste documento, há várias grades de proteção que se referem a &quot;fragmen
 
 ### Mesclar políticas {#merge-policies}
 
-Ao reunir dados de várias fontes, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa exibição unificada. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias fontes estão em conflito, a política de mesclagem determina quais informações devem ser incluídas no perfil do indivíduo. Para saber mais sobre as políticas de mesclagem, comece lendo o [visão geral das políticas de mesclagem](merge-policies/overview.md).
+Ao reunir dados de várias fontes, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa exibição unificada. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias fontes estão em conflito, a política de mesclagem determina quais informações devem ser incluídas no perfil do indivíduo. É permitido um máximo de cinco (5) políticas de mesclagem por organização. Para saber mais sobre as políticas de mesclagem, leia o [visão geral das políticas de mesclagem](merge-policies/overview.md).
 
 ### Conjuntos de dados do conjunto de relatórios do Adobe Analytics na Platform {#aa-datasets}
 

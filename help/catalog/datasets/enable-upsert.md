@@ -4,9 +4,9 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "atualização" para fazer atualizações nos dados de Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '994'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Solicitação**
 
-Ao incluir `unifiedProfile` under `tags` no corpo da solicitação, o conjunto de dados será ativado para [!DNL Profile] após a criação. No `unifiedProfile` array, adição `isUpsert:true` O adicionará a capacidade do conjunto de dados de suportar atualizações.
+Ao incluir a variável `unifiedIdentity` e `unifiedProfile` under `tags` no corpo da solicitação, o conjunto de dados será ativado para [!DNL Profile] após a criação. No `unifiedProfile` array, adição `isUpsert:true` O adicionará a capacidade do conjunto de dados de suportar atualizações.
 
 ```shell
 curl -X POST \
@@ -75,24 +75,27 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "fields":[],
+        "fields": [],
         "schemaRef": {
-          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "tags": {
-          "unifiedProfile": [
-            "enabled:true",
-            "isUpsert:true"
-          ]
+            "unifiedIdentity": [
+                "enabled: true"
+            ],
+            "unifiedProfile": [
+                "enabled: true",
+                "isUpsert: true"
+            ]
         }
       }'
 ```
 
 | Propriedade | Descrição |
-|---|---|
+| -------- | ----------- |
 | `schemaRef.id` | A ID do [!DNL Profile]-enabled schema no qual o conjunto de dados será baseado. |
-| `{TENANT_ID}` | O namespace no [!DNL Schema Registry] que contém recursos pertencentes à organização IMS. Consulte a [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) da seção [!DNL Schema Registry] guia do desenvolvedor para obter mais informações. |
+| `{TENANT_ID}` | O namespace no [!DNL Schema Registry] que contém recursos pertencentes à sua organização. Consulte a [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) da seção [!DNL Schema Registry] guia do desenvolvedor para obter mais informações. |
 
 **Resposta**
 
@@ -147,6 +150,9 @@ curl -X GET \
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"

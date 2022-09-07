@@ -4,9 +4,9 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 1%
 
 ---
@@ -39,9 +39,17 @@ Para navegar até o [!UICONTROL Perfis] no painel da interface do usuário da pl
 
 ### Modificação do [!UICONTROL Perfis] painel
 
-Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
+
+### Adicionar widgets {#add-widget}
+
+Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de widgets e ver uma lista dos widgets disponíveis para adicionar ao painel.
+
+![A visão geral do painel Perfis com a adição de widget é realçada.](../images/profiles/profiles-overview-add-widget.png)
+
+Na biblioteca de widgets, você pode navegar pela seleção de widgets de segmento padrão e personalizado.Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
 ## (Beta) Informações sobre a eficácia do perfil {#profile-efficacy-insights}
 
@@ -73,9 +81,9 @@ O painel selecionará automaticamente uma política de mesclagem para usar. A po
 
 >[!NOTE]
 >
->O menu suspenso mostra apenas as políticas de mesclagem relacionadas à Classe de Perfil Individual XDM. No entanto, se sua organização criou várias políticas de mesclagem, pode significar que será necessário rolar a página para visualizar a lista completa de políticas de mesclagem disponíveis.
+>O menu suspenso mostra apenas as políticas de mesclagem que usam o `_xdm.context.profile` esquema. No entanto, se sua organização criou várias políticas de mesclagem, pode significar que é necessário rolar a página para visualizar a lista completa de políticas de mesclagem disponíveis.
 
-![](../images/profiles/select-merge-policy.png)
+![A guia Profiles overview com a lista suspensa merge policy realçada.](../images/profiles/select-merge-policy.png)
 
 ## Schemas da União
 

@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform, perfil, segmento, segmentos, segmentação, interface do usuário, interface do usuário, personalização, painel de segmentos, painel
 title: Guia do painel Segmentos
-description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
+description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1791'
 ht-degree: 0%
 
 ---
 
-# Painel de segmentos {#segment-dashboard}
+# [!UICONTROL Segmentos] painel {#segment-dashboard}
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre seus segmentos, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de segmentos na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
 Para obter uma visão geral de todos os recursos do Serviço de segmentação da Adobe Experience Platform na interface do usuário da plataforma, visite o [Guia da interface do usuário do serviço de segmentação](../../segmentation/ui/overview.md).
 
-## Segmentar dados do painel
+## [!UICONTROL Segmentos] dados do painel
 
 O painel de segmentos exibe um instantâneo dos dados de atributo (registro) que sua organização tem no armazenamento de Perfil no Experience Platform. O instantâneo não inclui nenhum dado de evento (série de tempo).
 
@@ -27,7 +27,7 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 >
 >Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
 
-## Explorar o painel de segmentos
+## Explore o [!UICONTROL Segmentos] painel {#explore}
 
 Para navegar até o [!UICONTROL Segmentos] no painel da interface do usuário da plataforma, selecione **[!UICONTROL Segmentos]** no painel à esquerda, selecione o **[!UICONTROL Visão geral]** para exibir o painel.
 
@@ -35,13 +35,21 @@ Para navegar até o [!UICONTROL Segmentos] no painel da interface do usuário da
 >
 >Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, a variável [!UICONTROL Segmentos] o painel não está visível. Em vez disso, a variável [!UICONTROL Visão geral] A guia exibe links e documentação para ajudar você a começar a usar a segmentação.
 
-![](../images/segments/dashboard-overview.png)
+![A guia Visão geral do painel Segmentos .](../images/segments/dashboard-overview.png)
 
-### Modificação do [!UICONTROL Segmentos] painel
+### Modifique o [!UICONTROL Segmentos] painel {#modify}
 
-Você pode modificar a aparência da variável [!UICONTROL Segmentos] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência da variável [!UICONTROL Segmentos] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
+
+### Adicionar widgets {#add-widget}
+
+Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de widgets e ver uma lista dos widgets disponíveis para adicionar ao painel.
+
+![A visão geral do painel Segmentos com Adicionar widget foi realçada.](../images/segments/segments-overview-add-widget.png)
+
+Na biblioteca de widgets, você pode navegar pela seleção de widgets de segmento padrão e personalizado.Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
 ## Selecionar um segmento
 
@@ -53,9 +61,9 @@ Para escolher um segmento diferente, selecione a lista suspensa ao lado do nome 
 >
 >Somente os segmentos com uma contagem de perfil acima de zero são exibidos na lista de segmentos selecionáveis.
 
-![](../images/segments/change-segment.png)
+![A visão geral do painel Segmentos com o menu suspenso de segmentos globais foi realçada.](../images/segments/change-segment.png)
 
-![](../images/segments/select-segment-dialog.png)
+![A caixa de diálogo Selecionar segmento que exibe todos os segmentos disponíveis.](../images/segments/select-segment-dialog.png)
 
 ## Widgets e métricas
 
@@ -92,7 +100,7 @@ O **[!UICONTROL Tamanho do público-alvo]** O widget exibe o número total de pe
 
 Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a variável [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
-![](../images/segments/audience-size.png)
+![A visão geral do painel Segmentos com o widget Audience size é realçada.](../images/segments/audience-size.png)
 
 ### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
 
@@ -105,7 +113,7 @@ O **[!UICONTROL Tendência do tamanho do público-alvo]** O widget fornece uma i
 
 Este widget também inclui o [!UICONTROL Legendas] recurso em que um modelo de aprendizado de máquina analisa o gráfico e os dados do segmento e gera automaticamente legendas para descrever as principais tendências e eventos importantes. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
 
-![A visão geral dos segmentos exibe o widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend-captions.png)
+![A visão geral de Segmentos exibe o widget de tendência do tamanho do público-alvo.](../images/segments/audience-size-trend-captions.png)
 
 A caixa de diálogo de legendas automáticas é aberta, fornecendo insights sobre seus dados.
 
@@ -163,7 +171,7 @@ Se um cliente interagir com sua marca em mais de um canal, várias identidades s
 
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/segments/identity-overlap.png)
+![A visão geral do painel Segmentos com o widget Sobreposição de identidade foi realçada.](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
 
@@ -176,7 +184,7 @@ O **[!UICONTROL Perfis por identidade]** o widget exibe o detalhamento das ident
 
 Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
 
-![A caixa de diálogo perfis por legendas de identidade.](../images/segments/profiles-by-identity.png)
+![A caixa de diálogo Perfis por legendas de identidade.](../images/segments/profiles-by-identity.png)
 
 Um modelo de aprendizado de máquina gera automaticamente insights de dados ao analisar a distribuição geral e as principais dimensões dos dados.
 

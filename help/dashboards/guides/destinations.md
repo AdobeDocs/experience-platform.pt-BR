@@ -4,9 +4,9 @@ title: Guia do painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ O [!UICONTROL Destinos] O painel exibe um instantâneo dos destinos que sua orga
 >
 >Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
 
-## Explorar o painel de destinos
+## Explore o [!UICONTROL Destinos] painel {#explore}
 
 Para navegar até o painel de destinos na interface do usuário da plataforma, selecione **[!UICONTROL Destinos]** no painel à esquerda, selecione o **[!UICONTROL Visão geral]** para exibir o painel.
 
@@ -37,11 +37,19 @@ A data e a hora do instantâneo mais recente são exibidas na parte superior do 
 
 ![A Visão geral dos destinos da interface do usuário da plataforma com o instantâneo mais recente destacado.](../images/destinations/snapshot-timestamp.png)
 
-### Modificação do painel de destinos
+### Modifique o [!UICONTROL Destinos] painel {#modify}
 
-Você pode modificar a aparência do painel de destinos selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
+Selecionar **[!UICONTROL Modificar painel]** para alterar a aparência do painel de destinos. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a biblioteca de widgets. Na biblioteca de widgets, você pode explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
-Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
+Consulte a [modificação de painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
+
+### Adicionar widgets {#add-widget}
+
+Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de widgets e ver uma lista dos widgets disponíveis para adicionar ao painel.
+
+![A visão geral do painel Destinos com Adicionar widget foi realçada.](../images/destinations/destinations-overview-add-widget.png)
+
+Na biblioteca de widgets, você pode navegar pela seleção de widgets de segmento padrão e personalizado. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
 ## Widgets padrão {#standard-widgets}
 
@@ -80,7 +88,7 @@ O número de segmentos mapeados mostrados na coluna de contagem de segmentos é 
 
 Selecionar o nome de um destino na lista mostrada no widget levará você aos detalhes do destino, conforme vinculado da **[!UICONTROL Procurar]** guia . Você também pode selecionar **[!UICONTROL Exibir todos]** para navegar até o **[!UICONTROL Procurar]** e selecione o nome de um destino para exibir seus detalhes.
 
-![](../images/destinations/most-used-destinations.png)
+![A guia Visão geral do painel Destinos com o widget Destinos mais usados é realçada.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Destinos criados recentemente] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Selecionar o nome de um destino na lista mostrada no widget levará você aos de
 
 Para saber mais sobre como configurar tipos específicos de destinos, visite o [documentação de destinos](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![A guia Visão geral do painel Destinos com o widget Destinos criados recentemente é realçada.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Segmentos ativados recentemente] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Selecionar o nome de um segmento na lista mostrada no widget leva você aos deta
 
 Para obter mais informações sobre como trabalhar com segmentos no Experience Platform, comece lendo o [Visão geral do serviço de segmentação](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![A guia Visão geral do painel Destinos com o widget Segmentos ativados recentemente é realçada.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Segmentos ativados recentemente por destino] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Este widget contém duas métricas: o nome do segmento e a data em que ele foi a
 
 Você pode visualizar os detalhes de um segmento selecionando o nome de um segmento na lista exibida.
 
-![Segmentos ativados recentemente pelo widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
+![Os segmentos ativados recentemente pelo widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
 

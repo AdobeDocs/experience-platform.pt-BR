@@ -2,9 +2,9 @@
 title: Filtragem de bot no Serviço de query com aprendizado de máquina
 description: Este documento fornece uma visão geral de como usar o Serviço de query e o aprendizado de máquina para determinar a atividade de bot e filtrar suas ações do tráfego online de visitantes genuíno.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 5%
 
 ---
@@ -29,8 +29,12 @@ Esse exemplo usa [!DNL Jupyter Notebook] como ambiente de desenvolvimento. Embor
 
 Os dois atributos usados para extrair dados para detecção de bot são:
 
-* ID do Marketing Cloud (MCID): Isso fornece uma ID persistente e universal que identifica os visitantes em todas as soluções do Adobe.
+* ID de visitante do Experience Cloud (ECID, também conhecida como MCID): Isso fornece uma ID persistente e universal que identifica os visitantes em todas as soluções do Adobe.
 * Carimbo de data e hora: Isso fornece a hora e a data em formato UTC em que uma atividade ocorreu no site.
+
+>[!NOTE]
+>
+>O uso de `mcid` ainda é encontrado nas referências de namespace à ID de visitante do Experience Cloud, como mostrado no exemplo abaixo.
 
 A instrução SQL a seguir fornece um exemplo inicial para identificar a atividade de bot. A instrução parte do princípio que, se um visitante executar 50 cliques em um minuto, o usuário será um bot.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-A expressão filtra os MCIDs de todos os visitantes que alcançam o limite, mas não solucionam picos no tráfego a partir de outros intervalos.
+A expressão filtra as ECIDs (`mcid`) de todos os visitantes que atingem o limite, mas não atendem aos picos no tráfego de outros intervalos.
 
 ## Melhore a detecção de bot com o aprendizado de máquina
 
@@ -53,7 +57,7 @@ A instrução SQL inicial pode ser refinada para se tornar uma consulta de extra
 
 A instrução de exemplo é expandida de um minuto com até 60 cliques, para incluir períodos de cinco minutos e 30 minutos com contagens de cliques de 300 e 1800, respectivamente.
 
-A instrução de exemplo coleta o número máximo de cliques para cada MCID durante as várias durações. A declaração inicial foi expandida para incluir períodos de um minuto (60 segundos), 5 minutos (300 segundos) e uma hora (ou seja, 1800 segundos).
+A instrução de exemplo coleta o número máximo de cliques para cada ECID (`mcid`) pelas várias durações. A declaração inicial foi expandida para incluir períodos de um minuto (60 segundos), 5 minutos (300 segundos) e uma hora (ou seja, 1800 segundos).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 

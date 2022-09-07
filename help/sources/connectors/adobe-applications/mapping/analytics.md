@@ -5,10 +5,10 @@ title: Mapeamento de campos para o conector de origem do Adobe Analytics
 topic-legacy: overview
 description: O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio da fonte do Analytics. Alguns dos dados assimilados por meio do ADC podem ser mapeados diretamente dos campos do Analytics para campos do Experience Data Model (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '3401'
-ht-degree: 13%
+source-wordcount: '3431'
+ht-degree: 15%
 
 ---
 
@@ -186,9 +186,9 @@ A tabela a seguir inclui colunas que mostram o nome do campo Analytics (*Campo d
 | ip | environment.ipV4 | string | O Endereço IP, com base no cabeçalho HTTP da solicitação de imagem. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | booleano | A versão do JavaScript usada. |
 | mcvisid_high + mcvisid_low | identityMap | objeto | A ID de visitante do Experience Cloud. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | A ID de visitante do Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | booleano | A ID de visitante do Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | A ID de visitante do Experience Cloud. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | A Experience Cloud ID (ECID) também é conhecida como MCID e, às vezes, é usada em namespaces. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | booleano | A Experience Cloud ID (ECID) também é conhecida como MCID e, às vezes, é usada em namespaces. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | A Experience Cloud ID (ECID) também é conhecida como MCID e, às vezes, é usada em namespaces. |
 | mcvisid_low | identityMap | objeto | A ID de visitante do Experience Cloud. |
 | sdid_high + sdid_low | _experience.target.plementalDataID | string | ID de identificação de ocorrência. O campo de análise sdid_high e sdid_low é a ID de dados complementares usada para unir duas (ou mais) ocorrências recebidas. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Proximidade de beacon do Mobile Services. |

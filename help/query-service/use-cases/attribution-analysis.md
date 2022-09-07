@@ -1,9 +1,10 @@
 ---
 title: Análise de atribuição
 description: Este documento explica como você pode usar o Serviço de query para criar uma técnica de medição de eficácia de marketing com base no modelo de atribuição de marketing de primeiro e último contato.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 1%
 
 ---
@@ -68,6 +69,10 @@ Os resultados das queries de atribuição são fornecidos na variável `first_to
 A atribuição de primeiro contato atribui 100% da responsabilidade por um resultado bem-sucedido ao canal inicial que o consumidor encontrou. Este exemplo SQL é usado para destacar a interação que levou a uma série subsequente de ações do cliente.
 
 A query abaixo retorna o valor da atribuição de primeiro toque e os detalhes do canal no target [!DNL Experience Event] conjunto de dados. Também retorna um valor `struct` para o canal selecionado com o valor de primeiro toque, carimbo de data e hora e atribuição para cada linha.
+
+>[!NOTE]
+>
+>A Experience Cloud ID (ECID) também é conhecida como MCID e continua a ser usada em namespaces.
 
 **Sintaxe do query**
 

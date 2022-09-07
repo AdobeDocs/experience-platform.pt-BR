@@ -5,9 +5,9 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2504'
 ht-degree: 3%
 
 ---
@@ -138,7 +138,7 @@ A tabela a seguir descreve os campos de esquema na saída de exemplo de pontuaç
 | commerce_order_purchaseCity (String) | Verdadeiro | Coluna adicional do conjunto de dados da pontuação. <br> **Exemplo:** cidade: San Jose |
 | customerProfile (Objeto) | Falso | Detalhes de identidade do usuário usado para criar o modelo. |
 | identidade (Objeto) | Falso | Contém os detalhes do usuário usado para criar o modelo, como `id` e `namespace`. |
-| id (cadeia de caracteres) | Verdadeiro | ID de identidade do usuário, como ID de cookie ou AAID ou MCID etc. <br> **Exemplo:** 17348762725408656344688320891369597404 |
+| id (cadeia de caracteres) | Verdadeiro | ID de identidade do usuário, como ID de cookie, Adobe Analytics ID (AAID) ou Experience Cloud ID (ECID, também conhecida como MCID ou como ID de visitante) etc. <br> **Exemplo:** 17348762725408656344688320891369597404 |
 | namespace (cadeia de caracteres) | Verdadeiro | Namespace de identidade usado para criar os caminhos e, portanto, o modelo. <br> **Exemplo:** aaid |
 | touchpointsDetail (Matriz de objetos) | Verdadeiro | A lista de detalhes do ponto de contato que levam à conversão solicitada por | ocorrência de ponto de contato ou carimbo de data e hora. |
 | touchpointName (String) | Verdadeiro | Nome do ponto de contato que foi configurado durante a configuração. <br> **Exemplo:** PAID_SEARCH_CLICK |

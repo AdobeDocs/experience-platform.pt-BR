@@ -5,19 +5,18 @@ title: Mapeamento de dados de evento do Adobe Target para XDM
 topic-legacy: overview
 description: Saiba como mapear campos de evento do Adobe Target para um esquema do Experience Data Model (XDM) para uso no Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 0%
+source-wordcount: '482'
+ht-degree: 1%
 
 ---
 
 # Mapeamento de campos de target
 
-O Adobe Experience Platform permite assimilar dados do Adobe Target por meio do conector de origem do Target. Ao usar o conector, todos os dados dos campos do Target devem ser mapeados para os campos [Experience Data Model (XDM)](../../../../xdm/home.md) associados à classe XDM ExperienceEvent.
+O Adobe Experience Platform permite assimilar dados do Adobe Target por meio do conector de origem do Target. Ao usar o conector, todos os dados dos campos do Target devem ser mapeados para a variável [Experience Data Model (XDM)](../../../../xdm/home.md) campos associados à classe XDM ExperienceEvent.
 
-A tabela a seguir descreve os campos de um esquema de Evento de experiência (*campo ExperienceEvent XDM*) e os campos Target correspondentes aos quais eles devem ser mapeados (*Campo Solicitação de destino*). Também são fornecidas notas adicionais para alguns mapeamentos.
+A tabela a seguir descreve os campos de um esquema de Evento de experiência (*Campo ExperienceEvent XDM*) e os campos do Target correspondentes aos quais eles devem ser mapeados (*Campo Solicitação de direcionamento*). Também são fornecidas notas adicionais para alguns mapeamentos.
 
 >[!NOTE]
 >
@@ -34,7 +33,7 @@ A tabela a seguir descreve os campos de um esquema de Evento de experiência (*c
 | **`channel`** | `context.channel` | Funciona somente com o delivery de exibição. As opções são &quot;web&quot; e &quot;móvel&quot;, com &quot;web&quot; sendo o padrão. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | A Experience Cloud ID (ECID) também é conhecida como MCID e continua a ser usada em namespaces. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |

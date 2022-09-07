@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de query. Os tópicos incluem, exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: '3755'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Esta seção inclui informações sobre desempenho, limites e processos.
 
 ### Posso usar o Postman para a API do serviço de consulta?
 
-+++Responda Sim, você pode visualizar e interagir com todos os serviços de API do Adobe usando o Postman (um aplicativo gratuito de terceiros). Observe a [Guia de configuração do Postman](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Console do desenvolvedor do Adobe e adquirir todas as credenciais necessárias para uso com o Postman. Veja a documentação oficial para [orientação sobre como iniciar, executar e compartilhar coleções do Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Responda Sim, você pode visualizar e interagir com todos os serviços de API do Adobe usando o Postman (um aplicativo gratuito de terceiros). Observe a [Guia de configuração do Postman](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para uso com o Postman. Veja a documentação oficial para [orientação sobre como iniciar, executar e compartilhar coleções do Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe um limite para o número máximo de linhas retornadas de um query por meio da interface do usuário?
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++Answer Query Service fornece várias funções auxiliares SQL incorporadas para estender a funcionalidade SQL. Consulte o documento para obter uma lista completa dos [Funções SQL suportadas pelo Serviço de Consulta](./sql/spark-sql-functions.md).
 +++
 
+### São todos nativos [!DNL Spark SQL] funções suportadas ou usuários restritos somente ao wrapper [!DNL Spark SQL] funções fornecidas pelo Adobe?
+
++++Resposta Como ainda, nem todos de código aberto [!DNL Spark SQL] As funções foram testadas em dados de data lake. Depois de testados e confirmados, eles serão adicionados à lista suportada. Consulte a [lista de [!DNL Spark SQL] funções](./sql/spark-sql-functions.md) para verificar se há uma função específica.
++++
+
+### Os usuários podem definir suas próprias funções definidas pelo usuário (UDF), que podem ser usadas em outras consultas?
+
++++Resposta Devido a considerações de segurança de dados, a definição personalizada de UDFs não é permitida.
++++
+
 ### O que devo fazer se minha consulta agendada falhar?
 
 +++Responda primeiro, marque os logs para descobrir os detalhes do erro. A seção de perguntas frequentes sobre [detecção de erros nos logs](#error-logs) O fornece mais informações sobre como fazer isso.
@@ -263,7 +273,7 @@ Esta é uma lista de considerações para consultas agendadas ao usar o [!DNL Qu
 
 ### O que significa o erro &quot;Limite de sessão atingido&quot;?
 
-+++Responder &quot;Limite de Sessão Atingido&quot; significa que o número máximo de sessões do Serviço de Consulta permitido para sua organização foi atingido. Entre em contato com o administrador da Adobe Experience Platform de sua organização.
++++Responder &quot;Limite de Sessão Atingido&quot; significa que o número máximo de sessões do Serviço de Consulta permitido para sua organização foi atingido. Entre em contato com o administrador do Adobe Experience Platform de sua organização.
 +++
 
 ### Como o log de consultas lida com consultas relacionadas a um conjunto de dados excluído?
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Posso criar um conjunto de dados usando uma consulta CTAS com um nome de sublinhado duplo, como aqueles exibidos na interface do usuário? Por exemplo: `test_table_001`.
+
++++Nº da resposta, essa é uma limitação intencional no Experience Platform que se aplica a todos os serviços da Adobe, incluindo o Serviço de consulta. Um nome com dois sublinhados é aceitável como um esquema e um nome de conjunto de dados, mas o nome da tabela para o conjunto de dados só pode conter um único sublinhado.
++++
+
 ## Exportar dados {#exporting-data}
 
 Esta seção fornece informações sobre exportação de dados e limites.
@@ -462,6 +477,25 @@ FROM <table_name>
 +++Nº Resposta No momento, não há nenhum recurso disponível para a extração de dados assimilados.
 +++
 
+### Por que o conector de dados do Analytics não está retornando dados?
+
++++Resposta Uma causa comum para esse problema é consultar dados de séries de tempo sem um filtro de tempo. Por exemplo:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Deve ser escrito como:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Ferramentas de terceiros {#third-party-tools}
 
 Esta seção inclui informações sobre o uso de ferramentas de terceiros, como PSQL e Power BI.
@@ -473,7 +507,13 @@ Esta seção inclui informações sobre o uso de ferramentas de terceiros, como 
 
 ### Existe uma maneira de conectar o Serviço de query uma vez para uso contínuo com uma ferramenta de terceiros?
 
-+++Responda Sim, os clientes de desktop de terceiros podem ser conectados ao Serviço de query por meio de uma configuração única de credenciais que não estão expirando. As credenciais que não expiram podem ser geradas por um usuário autorizado e as receberão em um arquivo JSON baixado em sua máquina local. Total [orientação sobre como criar e baixar credenciais que não expiram](./ui/credentials.md#non-expiring-credentials) pode ser encontrada na documentação do .
++++Responda Sim, os clientes de desktop de terceiros podem ser conectados ao Serviço de query por meio de uma configuração única de credenciais que não estão expirando. As credenciais que não expiram podem ser geradas por um usuário autorizado e recebidas em um arquivo JSON que é baixado automaticamente em seu computador local. Total [orientação sobre como criar e baixar credenciais que não expiram](./ui/credentials.md#non-expiring-credentials) pode ser encontrada na documentação do .
++++
+
+### Por que minhas credenciais que não estão expirando não estão funcionando?
+
++++Resposta O valor para credenciais que não expiram são os argumentos concatenados da variável `technicalAccountID` e `credential` retirado do arquivo JSON de configuração. O valor da senha assume o formulário: `{{technicalAccountId}:{credential}}`.
+Consulte a documentação para obter mais informações sobre como [conectar-se a clientes externos com credenciais](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Que tipo de editores SQL de terceiros posso conectar ao Editor do Serviço de Consultas?

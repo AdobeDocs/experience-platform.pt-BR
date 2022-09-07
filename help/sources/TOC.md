@@ -4,10 +4,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 14%
          - [Guia de autenticação de Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaços de nomes e esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
-      - [Conector do Google AdWords](connectors/advertising/ads.md)
+      - [Conector do Google Ads](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Conector Mixpanel](connectors/analytics/mixpanel.md)
    - armazenamento na nuvem {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 14%
 - Tutoriais da API {#api-tutorials}
    - Criar uma conexão base {#create}
       - Publicidade {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Anúncios do Google](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - armazenamento na nuvem {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 14%
          - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicidade {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Anúncios do Google](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - armazenamento na nuvem {#cloud-storage}

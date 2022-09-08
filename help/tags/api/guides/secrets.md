@@ -2,7 +2,7 @@
 title: Segredos na API do reator
 description: Saiba mais sobre os fundamentos de como configurar segredos na API de reator para uso no encaminhamento de eventos.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -107,11 +107,11 @@ Segredos com uma `type_of` valor de `oauth2-google` exige o seguinte atributo em
 | --- | --- | --- |
 | `scopes` | Matriz | Lista os escopos de produto do Google para autenticação. Os seguintes escopos são suportados:<ul><li>[Anúncios do Google](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Pub/Sub do Google](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Depois de criar o `oauth2-google` secreto, a resposta inclui um `meta.token_url` propriedade. Você deve copiar e colar esse URL em um navegador para concluir o fluxo de autenticação do Google.
+Depois de criar o `oauth2-google` secreto, a resposta inclui um `meta.authorization_url` propriedade. Você deve copiar e colar esse URL em um navegador para concluir o fluxo de autenticação do Google.
 
 #### Reautorizar uma `oauth2-google` segredo
 
-O URL de autorização para um `oauth2-google` o segredo expira uma hora depois que o segredo é criado (conforme indicado por `meta.token_url_expires_at`). Após esse tempo, o segredo deve ser reautorizado para renovar o processo de autenticação.
+O URL de autorização para um `oauth2-google` o segredo expira uma hora depois que o segredo é criado (conforme indicado por `meta.authorization_url_expires_at`). Após esse tempo, o segredo deve ser reautorizado para renovar o processo de autenticação.
 
 Consulte a [guia do endpoint de segredos](../endpoints/secrets.md#reauthorize) para obter detalhes sobre como autorizar novamente uma `oauth2-google` secreta fazendo uma solicitação de PATCH para a API do reator.
 

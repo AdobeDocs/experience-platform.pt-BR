@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic-legacy: ui guide
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
+source-wordcount: '3082'
 ht-degree: 1%
 
 ---
@@ -226,7 +226,7 @@ Para selecionar uma política de mesclagem para a definição do seu segmento, s
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Atualizar estimativas"
 >abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma pré-visualização de quantos perfis se qualificariam para o segmento proposto. As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Saiba mais pela documentação"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Estimar e visualizar um público-alvo"
 
 Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** A seção no lado direito do espaço de trabalho exibe uma estimativa do tamanho do segmento resultante, permitindo ajustar a definição do segmento, conforme necessário, antes de criar o próprio público-alvo.
 

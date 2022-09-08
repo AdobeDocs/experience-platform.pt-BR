@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1775'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,11 @@ Para saber mais, visite o [guia do painel de segmentos](../../dashboards/guides/
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de avaliação"
 >abstract="Os métodos de avaliação para segmentos incluem lote, streaming e borda."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Adicionar todos os segmentos para agendar"
+>abstract="Ative para incluir todos os segmentos de avaliação de lote na atualização agendada diária às 15h30 em UTC. Desative para remover todos os segmentos da atualização agendada."
 
 Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definições de segmento para sua Organização IMS.
 

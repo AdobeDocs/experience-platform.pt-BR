@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
+source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2243'
 ht-degree: 2%
 
 ---
@@ -165,6 +165,10 @@ A documentação a seguir fornece mais recursos para entender a Preparação de 
 Depois de concluir os mapeamentos para [!DNL Analytics] dados do conjunto de relatórios, você pode aplicar regras e condições de filtragem para incluir ou excluir seletivamente os dados da assimilação para o [!DNL Profile Service]. O suporte para filtragem só está disponível para [!DNL Analytics] os dados e dados são filtrados somente antes de inserir [!DNL Profile.] Todos os dados são assimilados no lago de dados.
 
 #### Filtragem em nível de linha
+
+>[!IMPORTANT]
+>
+>Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para assimilação de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para assimilação de perfil**.
 
 Você pode filtrar dados para [!DNL Profile] assimilação no nível da linha e da coluna. A filtragem em nível de linha permite definir critérios, como a string contém, é igual a, começa ou termina com. Você também pode usar a filtragem em nível de linha para unir condições usando `AND` bem como `OR`e negar as condições usando `NOT`.
 

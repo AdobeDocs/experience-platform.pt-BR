@@ -2,9 +2,9 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do seu destino
 description: Use este modelo para criar documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substitua pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 1%
 
 ---
@@ -131,6 +131,13 @@ Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!U
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Ler [Ativar perfis e segmentos para destinos de exportação de segmentos de fluxo](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
+
+### Mapear atributos e identidades {#map}
+
+*Adicione informações sobre mapeamentos compatíveis entre campos de origem e de destino na etapa Mapeamento do fluxo de trabalho de ativação. Seu destino pode ser compatível com a exportação de atributos de perfil, namespaces de identidade ou ambos. Alguns campos podem ser obrigatórios. Os atributos do Target podem ser predefinidos ou personalizados. Chame os avisos importantes e use exemplos, de preferência com capturas de tela. Dois exemplos de páginas de destino que você pode usar como referência são:*
+
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 

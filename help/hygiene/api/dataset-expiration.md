@@ -2,10 +2,10 @@
 title: Endpoint da API de Expirações do conjunto de dados
 description: O endpoint /ttl na API da Higiene de Dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 7%
+source-wordcount: '1405'
+ht-degree: 6%
 
 ---
 
@@ -26,6 +26,10 @@ A expiração de um conjunto de dados é apenas uma operação de exclusão com 
 A qualquer momento antes de a exclusão do conjunto de dados ser realmente iniciada, você pode cancelar a expiração ou modificar o tempo de disparo. Após cancelar uma expiração de conjunto de dados, é possível reabri-la definindo uma nova expiração.
 
 Depois que a exclusão do conjunto de dados for iniciada, seu trabalho de expiração será marcado como `executing`e não pode ser alterada. O próprio conjunto de dados pode ser recuperável por até sete dias, mas somente por meio de um processo manual iniciado por meio de uma solicitação de serviço da Adobe. Conforme a solicitação é executada, o lago de dados, o Serviço de identidade e o Perfil do cliente em tempo real começam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos de todos os três serviços, a expiração será marcada como `executed`.
+
+>[!WARNING]
+>
+>Se um conjunto de dados estiver definido para expirar, você deverá alterar manualmente todos os fluxos de dados que possam estar assimilando dados nesse conjunto de dados para que seus fluxos de trabalho de downstream não sejam afetados negativamente.
 
 ## Introdução
 

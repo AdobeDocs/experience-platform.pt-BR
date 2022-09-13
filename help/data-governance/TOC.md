@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Adobe Experience Platform Data Governance
 breadcrumb-title: Guia do Data Governance
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas.
 feature: Data Governance
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: c84926fe88ab02503220ca377170521077dc517e
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 38%
+source-wordcount: '96'
+ht-degree: 37%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 38%
 # Governança de dados do Adobe Experience Platform {#data-governance}
 
 * [Visão geral da governança de dados](home.md)
+* [Guia completo](./e2e.md)
 * Rótulos de uso de dados {#labels}
    * [Visão geral](labels/overview.md)
    * [Glossário de rótulos](labels/reference.md)

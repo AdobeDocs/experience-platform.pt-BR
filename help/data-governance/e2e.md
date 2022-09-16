@@ -1,9 +1,9 @@
 ---
 title: Guia completo da governança de dados
 description: Siga o processo completo para impor restrições de uso de dados para campos e conjuntos de dados no Adobe Experience Platform.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Na próxima tela, selecione as ações de marketing para as quais essa política
 
 ![Imagem que mostra uma ação de marketing atribuída a uma política na interface do usuário](./images/e2e/select-marketing-action.png)
 
-A tela final mostra um resumo dos detalhes da política e as ações que ela restringirá para quais rótulos. Selecionar **[!UICONTROL Concluir]** para criar e ativar a política.
+A tela final mostra um resumo dos detalhes da política e as ações que ela restringirá para quais rótulos. Selecionar **[!UICONTROL Concluir]** para criar a política.
 
 ![Imagem que mostra a configuração de política sendo confirmada na interface do usuário](./images/e2e/confirm-policy.png)
 

@@ -5,7 +5,7 @@ title: Criar uma conexão de origem de campanhas MailChimp usando a interface do
 topic-legacy: tutorial
 description: Saiba como conectar o Adobe Experience Platform às campanhas do MailChimp usando a interface do usuário da plataforma.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -33,7 +33,7 @@ O [!DNL Mailchimp Campaigns] A fonte suporta o Código de atualização OAuth 2 
 
 | Credenciais | Descrição |
 | --- | --- |
-| Host | O URL raiz usado para se conectar à API MailChimp. O formato do URL raiz é `https://{DC}.api.mailchimp.com`, onde `{DC}` representa o data center que corresponde à sua conta. |
+| Domain | O URL raiz usado para se conectar à API MailChimp. O formato do URL raiz é `https://{DC}.api.mailchimp.com`, onde `{DC}` representa o data center que corresponde à sua conta. |
 | URL do teste de autorização | O URL do teste de autorização é usado para validar credenciais ao conectar [!DNL Mailchimp] para Platform. Se isso não for fornecido, as credenciais serão verificadas automaticamente durante a etapa de criação da conexão de origem. |
 | Token de acesso | O token de acesso correspondente usado para autenticar sua fonte. Isso é necessário para a autenticação baseada em OAuth. |
 
@@ -43,8 +43,8 @@ Para obter mais informações sobre como usar o OAuth 2 para autenticar seu [!DN
 
 | Credenciais | Descrição |
 | --- | --- |
-| Host | O URL raiz usado para se conectar à API MailChimp. O formato do URL raiz é `https://{DC}.api.mailchimp.com`, onde `{DC}` representa o data center que corresponde à sua conta. |
-| Nome do usuário | O nome de usuário que corresponde à sua conta MailChimp. Isso é necessário para a autenticação básica. |
+| Domínio | O URL raiz usado para se conectar à API MailChimp. O formato do URL raiz é `https://{DC}.api.mailchimp.com`, onde `{DC}` representa o data center que corresponde à sua conta. |
+| Nome de usuário | O nome de usuário que corresponde à sua conta MailChimp. Isso é necessário para a autenticação básica. |
 | Senha | A senha que corresponde à sua conta MailChimp. Isso é necessário para a autenticação básica. |
 
 ## Conecte seu [!DNL Mailchimp Campaigns] conta para a Platform
@@ -73,13 +73,13 @@ Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forne
 
 #### Autenticar usando OAuth 2
 
-Para usar o OAuth 2, selecione [!UICONTROL Código de atualização do OAuth 2], forneça valores para seu host, URL do teste de autorização e token de acesso e selecione **[!UICONTROL Conectar-se à origem]**. Aguarde alguns instantes para que suas credenciais sejam validadas e selecione **[!UICONTROL Próximo]** para continuar.
+Para usar o OAuth 2, selecione [!UICONTROL Código de atualização do OAuth 2], forneça valores para seu domínio, URL de teste de autorização e token de acesso e selecione **[!UICONTROL Conectar-se à origem]**. Aguarde alguns instantes para que suas credenciais sejam validadas e selecione **[!UICONTROL Próximo]** para continuar.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### Autenticar usando autenticação básica
 
-Para usar a autenticação básica, selecione [!UICONTROL Autenticação básica], forneça valores para seu host, nome de usuário e senha e selecione **[!UICONTROL Conectar-se à origem]**. Aguarde alguns instantes para que suas credenciais sejam validadas e selecione **[!UICONTROL Próximo]** para continuar.
+Para usar a autenticação básica, selecione [!UICONTROL Autenticação básica], forneça valores para seu domínio, nome de usuário e senha e selecione **[!UICONTROL Conectar-se à origem]**. Aguarde alguns instantes para que suas credenciais sejam validadas e selecione **[!UICONTROL Próximo]** para continuar.
 
 ![básico](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 

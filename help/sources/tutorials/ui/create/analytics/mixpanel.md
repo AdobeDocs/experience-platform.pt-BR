@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, fontes, conectores, con
 title: (Beta) Crie uma conexão de origem do Mixpanel na interface do usuário
 description: Saiba como criar uma conexão de origem do Mixpanel usando a interface do usuário do Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -33,8 +33,7 @@ Para se conectar [!DNL Mixpanel] para Plataforma, você deve fornecer valores pa
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
-| Host | O [!DNL Mixpanel] endpoint da API de exportação de dados brutos. Consulte a [!DNL Raw Data Export API] na seção [Documentação de referência da API do Mixpanel](https://developer.mixpanel.com/reference/overview) para obter mais informações. | `https://data.mixpanel.com` |
-| Nome do usuário | O nome de usuário da conta de serviço que corresponde a sua [!DNL Mixpanel] conta. Consulte a [[!DNL Mixpanel] documentação das contas de serviço](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) para obter mais informações. | `Test8.6d4ee7.mp-service-account` |
+| Nome de usuário | O nome de usuário da conta de serviço que corresponde a sua [!DNL Mixpanel] conta. Consulte a [[!DNL Mixpanel] documentação das contas de serviço](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) para obter mais informações. | `Test8.6d4ee7.mp-service-account` |
 | Senha | A senha da conta de serviço que corresponde ao seu [!DNL Mixpanel] conta. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | ID do projeto | Seu [!DNL Mixpanel] ID do projeto. Essa ID é necessária para criar uma conexão de origem. Consulte a [[!DNL Mixpanel] documentação de configurações do projeto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e [[!DNL Mixpanel] guia sobre criação e gestão de projetos](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) para obter mais informações. | `2384945` |
 | Fuso horário | O fuso horário que corresponde a [!DNL Mixpanel] projeto. O fuso horário é necessário para criar uma conexão de origem. Consulte a [Documentação de configurações do projeto Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) para obter mais informações. | `Pacific Standard Time` |

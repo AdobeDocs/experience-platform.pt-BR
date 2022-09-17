@@ -4,9 +4,9 @@ title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2218'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,35 @@ Depois de ter privilégios de administrador, acesse [Adobe Experience Cloud](htt
 O espaço de trabalho Permissões da interface do usuário da plataforma é exibido, abrindo no **[!UICONTROL Funções]** página.
 
 ## Aplicar rótulos a uma função {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="O que são rótulos?"
+>abstract="Rótulos permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece vários rótulos de uso de dados &quot;principais&quot; definidos por Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos &quot;S&quot; sensíveis, como RHD (Dados Regulamentados de Integridade) permitem categorizar dados que se referem a Informações de Integridade Protegidas (PHI). Você também pode definir seus próprios rótulos personalizados que atendem às necessidades de sua organização."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Criar novo rótulo"
+>abstract="Você pode criar seus próprios rótulos personalizados para atender às necessidades de sua organização. Os rótulos personalizados podem ser usados para aplicar as configurações de controle de dados e de controle de acesso aos seus dados."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Gerenciar rótulos personalizados"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Quais são as funções?"
+>abstract="As funções são formas de categorizar os tipos de usuários que interagem com sua instância da plataforma e são blocos fundamentais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de exibição ou gravação necessário."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Gerenciar funções"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Criar nova função"
+>abstract="Você pode criar uma nova função para categorizar melhor os usuários que estão acessando sua instância da plataforma. Por exemplo, você pode criar uma função para uma Equipe de marketing interno e aplicar o rótulo de RHD a essa função, o que permitirá que sua Equipe de marketing interno acesse Informações de integridade protegida (PHI). Como alternativa, você também pode criar uma função para uma Agência Externa e negar esse acesso de função aos dados de PHI ao não aplicar o rótulo de RHD a essa função."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Criar uma nova função"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Visão geral da função"
+>abstract="A caixa de diálogo Visão geral da função exibe os recursos e as sandboxes que uma determinada função tem permissão para acessar."
 
 As funções são formas de categorizar os tipos de usuários que interagem com sua instância da plataforma e são blocos fundamentais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso necessário.
 
@@ -117,6 +146,34 @@ O **[!UICONTROL Editar rótulos]** for exibida, permitindo escolher os rótulos 
 Repita as etapas acima com **[!UICONTROL Insulina &lt;50]**.
 
 ## Criar uma política de controle de acesso {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Quais são as políticas?"
+>abstract="Políticas são declarações que reúnem atributos para estabelecer ações admissíveis e não permissíveis. Cada organização vem com uma política padrão que você deve ativar para definir regras para recursos como segmentos e campos de esquema. As políticas padrão não podem ser editadas nem excluídas. No entanto, as políticas padrão podem ser ativadas ou desativadas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Gerenciar políticas"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Criar uma política"
+>abstract="Crie uma política para definir as ações que seus usuários podem ou não realizar em relação aos seus segmentos e campos de esquema."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Criar uma política"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Configurar as ações permitidas e não permitidas para uma política"
+>abstract="Selecione Permitir acesso a, para configurar as ações permitidas que seus usuários podem realizar em relação aos recursos. Selecione negar acesso a, para configurar ações não permitidas que seus usuários não possam realizar em relação aos recursos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Editar uma política"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Configurar permissões para um recurso"
+>abstract="Um recurso é o ativo ou objeto que um usuário pode ou não acessar. Os recursos podem ser segmentos ou esquemas. Você pode configurar permissões de gravação, leitura ou exclusão para segmentos e campos de esquema."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Editar condições"
+>abstract="Aplique declarações condicionais à sua política para configurar o acesso do usuário a determinados recursos. Selecione corresponder tudo para exigir que os usuários tenham funções com exatamente os mesmos rótulos de um recurso para ter acesso permitido. Selecione qualquer correspondência para exigir apenas que os usuários tenham uma função com apenas um rótulo que corresponda a um recurso. Os rótulos podem ser definidos como rótulos principais ou personalizados, com rótulos principais representando rótulos criados e fornecidos por rótulos Adobe e personalizados representando rótulos criados para sua organização."
 
 As políticas de controle de acesso usam rótulos para definir quais funções de usuário têm acesso a recursos específicos da plataforma. As políticas podem ser locais ou globais e podem substituir outras políticas. Neste exemplo, o acesso aos campos e segmentos do schema será negado em todas as sandboxes para usuários que não tenham os rótulos correspondentes no campo schema .
 

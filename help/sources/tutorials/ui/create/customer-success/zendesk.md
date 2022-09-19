@@ -3,7 +3,7 @@ keywords: Experience Platform, Zendesk, fontes, conectores, conectores de origem
 title: Criar uma conexão de origem do Zendesk na interface do usuário
 description: Saiba como criar uma conexão de origem do Zendesk usando a interface do usuário do Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -33,7 +33,7 @@ Para acessar o [!DNL Zendesk] na Platform, você deve fornecer valores para as s
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
-| Subdomain | O domínio exclusivo específico da sua conta criado durante o processo de registro. | `https://yoursubdomain.zendesk.com` |
+| Subdomain | O domínio exclusivo específico da sua conta criado durante o processo de registro. | `yoursubdomain` |
 | Token de acesso | Token da API do Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Para obter mais informações sobre como autenticar seu [!DNL Zendesk] na fonte, consulte o [[!DNL Zendesk] visão geral da fonte](../../../../connectors/customer-success/zendesk.md).

@@ -2,14 +2,24 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
+source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 14%
+source-wordcount: '920'
+ht-degree: 13%
 
 ---
 
-# Logs de auditoria
+# Logs de auditoria {#audit-logs}
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_actions"
+>title="Principais ações"
+>abstract="Este widget mostra os principais tipos de ações que foram realizadas no Experience Platform dentro do período de tempo selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_users"
+>title="Principais usuários"
+>abstract="Este widget mostra os usuários que executaram mais ações no Experience Platform dentro do período de tempo selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
 
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário para vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas na plataforma e ajudar sua empresa a cumprir com eficácia as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 

@@ -2,9 +2,9 @@
 title: Painéis definidos pelo usuário
 description: Saiba como criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de contexto para visualizar métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,18 @@ O [!UICONTROL Criar painel] será exibida. Insira um nome descritivo e amigável
 
 O painel em branco recém-criado é exibido com o nome escolhido no canto superior esquerdo da exibição.
 
-## Criar um widget
+## Criar um widget {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Número máximo de widgets"
+>abstract="Painéis definidos pelo usuário suportam até dez widgets. Depois de adicionar dez widgets ao painel, a [!UICONTROL Adicionar novo widget] está desativada e é exibida em cinza."
 
 Na nova exibição do painel, selecione **[!UICONTROL Adicionar novo widget]** para iniciar o processo de criação de widgets.
+
+>[!IMPORTANT]
+>
+>Painéis definidos pelo usuário suportam até dez widgets. Depois de adicionar dez widgets ao painel, a [!UICONTROL Adicionar novo widget] está desativada e é exibida em cinza.
 
 ![O novo painel vazio com Adicionar novo widget destacado.](./images/user-defined-dashboards/add-new-widget.png)
 

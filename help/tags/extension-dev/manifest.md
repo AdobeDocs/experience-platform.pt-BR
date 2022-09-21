@@ -2,9 +2,9 @@
 title: Manifesto de extensão
 description: Saiba como configurar um arquivo de manifesto JSON que informa ao Adobe Experience Platform como consumir corretamente sua extensão.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2645'
 ht-degree: 98%
 
 ---
@@ -120,7 +120,7 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Opcional)</em></td>
-      <td>Quando fornecido, o <code>displayName</code> será listado em <code>categoryName</code> na interface da Coleção de dados. Todos os tipos com o mesmo <code>categoryName</code> serão listados na mesma categoria. Por exemplo, se sua extensão fornecesse um tipo de evento <code>keyUp</code> e um tipo de evento <code>keyDown</code> e ambos tivessem um <code>categoryName</code> de <code>Keyboard</code>, ambos os tipos de evento seriam listados na categoria Teclado enquanto o usuário selecionava na lista de tipos de evento disponíveis ao criar uma regra. O valor de <code>categoryName</code> deve ser legível.</td>
+      <td>Quando fornecido, o <code>displayName</code> será listado em <code>categoryName</code> na interface do Todos os tipos com o mesmo <code>categoryName</code> serão listados na mesma categoria. Por exemplo, se sua extensão fornecesse um tipo de evento <code>keyUp</code> e um tipo de evento <code>keyDown</code> e ambos tivessem um <code>categoryName</code> de <code>Keyboard</code>, ambos os tipos de evento seriam listados na categoria Teclado enquanto o usuário selecionava na lista de tipos de evento disponíveis ao criar uma regra. O valor de <code>categoryName</code> deve ser legível.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

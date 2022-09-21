@@ -1,9 +1,10 @@
 ---
 title: Extensão de camada de dados da Google
 description: Saiba mais sobre a extensão de tag da Camada de dados do cliente da Google no Adobe Experience Platform.
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '823'
 ht-degree: 6%
 
 ---
@@ -24,7 +25,7 @@ A versão 1.0.x da extensão é um beta. Esta extensão não foi totalmente test
 
 ## Instalação
 
-Para instalar a extensão, navegue até o catálogo de extensões na interface do usuário da Coleta de dados e selecione **Camada de dados da Google**.
+Para instalar a extensão, navegue até o catálogo de extensões na interface do usuário do Experience Platform ou na interface do usuário da coleção de dados e selecione **Camada de dados da Google**.
 
 Depois de instalada, a extensão cria ou acessa uma camada de dados sempre que a biblioteca de tags for carregada no site.
 

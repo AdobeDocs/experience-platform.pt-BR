@@ -1,10 +1,11 @@
 ---
 title: Fluxo de publicação
 description: Saiba mais sobre o processo de criação de bibliotecas, o teste de builds e a aprovação deles para produção no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 91%
+source-wordcount: '1490'
+ht-degree: 96%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 91%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-O fluxo de publicação de tags no Adobe Experience Platform refere-se ao processo de criação de bibliotecas, teste builds e aprovação para produção.
+O fluxo de publicação de tags na Adobe Experience Platform se refere ao processo de criação de bibliotecas, ao teste de builds e à aprovação deles para produção.
 
 As ações disponíveis que você pode realizar em uma biblioteca dependem do estado da biblioteca e do nível de permissão que você possui. Além disso, o estado de uma biblioteca também afeta os recursos que ela contém (regras, elementos de dados e extensões) dependendo do que está upstream no fluxo de publicação.
 
@@ -30,7 +31,7 @@ Existem diferentes níveis de permissões de usuário que são importantes para 
 
 Os direitos não são inclusivos. Para uma única pessoa executar o fluxo de trabalho desde o início até o fim, essa pessoa deve receber os três direitos em uma propriedade específica.
 
-Consulte o [guia de permissões do usuário](../administration/user-permissions.md) para obter mais informações sobre o gerenciamento de permissões para tags.
+Consulte o [manual de permissões do usuário](../administration/user-permissions.md) para obter mais informações sobre o gerenciamento de permissões para tags.
 
 ## Estado da biblioteca {#state}
 
@@ -41,7 +42,7 @@ Quando se trata do fluxo de publicação, uma biblioteca pode estar em quatro es
 * [[!UICONTROL Aprovada]](#approved)
 * [[!UICONTROL Publicada]](#published)
 
-Esses quatro estados são representados como colunas na guia **[!UICONTROL Fluxo de publicação]** na interface do usuário da coleta de dados.
+Esses quatro estados são representados como colunas na variável **[!UICONTROL Fluxo de publicação]** guia .
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -111,7 +112,7 @@ O que está incluído no upstream depende do estágio atual da biblioteca. Por e
 
 ![](./images/approval-workflow/upstream.png)
 
-Ao editar uma biblioteca na interface do usuário da coleta de dados, todos os recursos herdados do upstream são representados na seção **[!UICONTROL Recursos upstream]**. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
+Ao editar uma biblioteca na interface do usuário, todos os recursos herdados do upstream são representados no **[!UICONTROL Recursos upstream]** seção. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
@@ -121,4 +122,4 @@ A seção é expandida para mostrar os recursos individuais herdados do upstream
 
 ## Próximas etapas
 
-Este guia forneceu uma visão geral de alto nível do fluxo de publicação para bibliotecas no Adobe Experience Platform. Para saber mais sobre como publicar suas bibliotecas, consulte a [visão geral de publicação](./overview.md).
+Este manual fornece uma visão geral de alto nível do fluxo de publicação de bibliotecas na Adobe Experience Platform. Para saber mais sobre como publicar suas bibliotecas, consulte a [visão geral de publicação](./overview.md).

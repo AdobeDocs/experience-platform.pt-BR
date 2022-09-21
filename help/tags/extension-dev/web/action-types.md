@@ -1,10 +1,11 @@
 ---
 title: Tipos de ação para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo ação para uma extensão de tag em uma propriedade da Web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 49%
+source-wordcount: '412'
+ht-degree: 70%
 
 ---
 
@@ -28,7 +29,7 @@ Este documento aborda como definir tipos de ação para uma extensão da Web no 
 
 Os tipos de ação normalmente consistem no seguinte:
 
-1. Uma [view](./views.md) mostrada na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
+1. A [exibir](./views.md) mostrado na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e executar uma ação.
 
 ```js
@@ -37,7 +38,7 @@ module.exports = function(settings) {
 };
 ```
 
-Por exemplo, para tornar a mensagem configurável pelo usuário do Adobe Experience Platform, é possível permitir que o usuário insira e salve uma mensagem no objeto de configurações. O objeto com esta aparência:
+Por exemplo, para tornar a mensagem configurável pelo usuário da Adobe Experience Platform, é possível permitir que o usuário insira e salve uma mensagem no objeto de configurações. O objeto tem esta aparência:
 
 ```json
 {

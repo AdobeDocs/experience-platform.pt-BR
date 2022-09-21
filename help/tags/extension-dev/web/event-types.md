@@ -1,10 +1,11 @@
 ---
 title: Tipos de evento para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo evento para uma extensão da Web no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 31%
+source-wordcount: '1052'
+ht-degree: 71%
 
 ---
 
@@ -26,10 +27,10 @@ Este documento aborda como definir tipos de evento para uma extensão da Web no 
 
 Os tipos de evento são definidos por extensões e geralmente consistem no seguinte:
 
-1. Uma [view](./views.md) mostrada na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do evento.
+1. A [exibir](./views.md) mostrado na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do evento.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e observar a ocorrência de determinada atividade.
 
-`module.exports` aceite os  `settings` parâmetros  `trigger` e . Isso permite a personalização do tipo de evento.
+`module.exports` aceite tanto o `settings` quanto os parâmetros `trigger`. Isso permite a personalização do tipo de evento.
 
 ```js
 module.exports = function(settings, trigger) { … };
@@ -38,13 +39,13 @@ module.exports = function(settings, trigger) { … };
 | Parâmetro | Descrição |
 | --- | --- |
 | `settings` | Um objeto que contém quaisquer configurações que o usuário definiu na visualização do tipo de evento. Você tem controle total sobre o que vai para esse objeto. |
-| `trigger` | Uma função que o módulo deve chamar sempre que a regra deve ser acionada. Há uma relação um para um entre um objeto `settings`, uma função `trigger` e uma regra. Isso significa que a função de acionador que você recebeu para uma regra não pode ser usada para acionar uma regra diferente. |
+| `trigger` | Uma função que o módulo deve chamar sempre que a regra deve ser acionada. Há uma relação individualizada entre um objeto `settings`, uma função `trigger` e uma regra. Significa que a função de acionamento recebida para uma regra não pode ser usada para acionar uma regra diferente. |
 
 >[!NOTE]
 >
 >A função exportada será chamada uma vez para cada regra configurada para usar seu tipo de evento.
 
-Usando a atividade de cinco segundos que passam como exemplo, após cinco segundos, a atividade ocorre e a regra é acionada. O módulo será semelhante ao deste exemplo.
+Usando a atividade de cinco segundos decorridos como exemplo, após cinco segundos, a atividade ocorre e a regra é acionada. O módulo será semelhante ao deste exemplo.
 
 ```js
 module.exports = function(settings, trigger) {
@@ -52,7 +53,7 @@ module.exports = function(settings, trigger) {
 };
 ```
 
-Se você quiser que a duração seja configurável pelo usuário do Adobe Experience Platform, é necessária a opção para inserir e salvar uma duração no objeto de configurações. O objeto pode ser semelhante a:
+Se você quiser que a duração seja configurável pelo usuário do Adobe Experience Platform, será necessária a opção para inserir e salvar uma duração no objeto de configurações. O objeto pode ser semelhante a:
 
 ```js
 {
@@ -60,7 +61,7 @@ Se você quiser que a duração seja configurável pelo usuário do Adobe Experi
 }
 ```
 
-Para operar na duração definida pelo usuário, o módulo precisaria ser atualizado para incluir isso.
+Para operar com a duração definida pelo usuário, o módulo precisaria ser atualizado para incluir tal recurso.
 
 ```js
 module.exports = function(settings, trigger) {
@@ -68,9 +69,9 @@ module.exports = function(settings, trigger) {
 };
 ```
 
-## Passar dados de evento contextual
+## Transmissão de dados do evento contextuais
 
-Quando uma regra é acionada, geralmente é útil fornecer detalhes adicionais sobre o evento que ocorreu. Os usuários que criam regras podem considerar essas informações úteis para alcançar determinado comportamento. Por exemplo, se um profissional de marketing quiser criar uma regra na qual um sinal de análise seja enviado sempre que o usuário deslizar a tela. A extensão teria que fornecer um tipo de evento `swipe` para que o profissional de marketing pudesse usar esse tipo de evento para acionar a regra apropriada. Supondo que o comerciante gostaria de incluir o ângulo no qual o deslizamento ocorreu no sinal, isso seria difícil de fazer sem fornecer informações adicionais. Para fornecer mais informações sobre o evento que ocorreu, passe um objeto ao chamar a função `trigger`. Por exemplo:
+Quando uma regra é acionada, geralmente é útil fornecer detalhes adicionais sobre o evento que ocorreu. Os usuários que criam regras podem considerar essas informações úteis para alcançar determinado comportamento. Por exemplo, vamos supor que um profissional de marketing deseje criar uma regra na qual um beacon de análise é enviado sempre que o usuário desliza o dedo pela tela. A extensão teria que fornecer um tipo de evento `swipe` para que o profissional de marketing pudesse usar esse tipo de evento para acionar a regra apropriada. Supondo que o profissional de marketing pretendesse incluir o ângulo no qual o deslizamento ocorreu no beacon, isso seria difícil de fazer sem fornecer informações adicionais. Para fornecer mais informações sobre o evento que ocorreu, passe um objeto ao chamar a função `trigger`. Por exemplo:
 
 ```js
 trigger({
@@ -78,11 +79,11 @@ trigger({
 });
 ```
 
-Assim, o profissional de marketing poderia usar esse valor em um beacon de análise especificando o valor `%event.swipeAngle%` em um campo de texto. Ele também pode acessar `event.swipeAngle` em outros contextos (como uma ação de código personalizada). É possível incluir outros tipos de informações opcionais do evento que podem ser úteis para um profissional de marketing da mesma maneira.
+Assim, o profissional de marketing poderia usar esse valor em um beacon de análise especificando o valor `%event.swipeAngle%` em um campo de texto. Ele também pode acessar `event.swipeAngle` em outros contextos (como uma ação de código personalizada). É possível incluir outros tipos de informações opcionais do evento que possam ser úteis para um profissional de marketing da mesma maneira.
 
 ### [!DNL nativeEvent]
 
-Se o tipo de evento for baseado em um evento nativo (por exemplo, se a extensão forneceu um tipo de evento `click`), é recomendável definir a propriedade `nativeEvent` da seguinte maneira.
+Se o seu tipo de evento for baseado em um evento nativo (por exemplo, se a extensão tiver fornecido um tipo de evento) `click`, recomenda-se definir a propriedade `nativeEvent` conforme segue.
 
 ```js
 trigger({
@@ -94,7 +95,7 @@ Isso pode ser útil para profissionais de marketing que tentam acessar qualquer 
 
 ### [!DNL element]
 
-Se houver uma forte relação entre um elemento e o evento que ocorreu, é recomendável definir a propriedade `element` para o nó DOM do elemento. Por exemplo, se sua extensão estiver fornecendo um tipo de evento `click` e você permitir que os profissionais de marketing o configurem para que a regra seja acionada somente se um elemento com a ID `herobanner` estiver selecionado. Nesse caso, se o usuário selecionar o banner herói, é recomendável chamar `trigger` e definir `element` para o nó DOM do banner herói.
+Se houver uma forte relação entre um elemento e o evento que ocorreu, será recomendável definir a propriedade `element` para o nó DOM do elemento. Por exemplo, vamos supor que a extensão forneça um tipo de evento `click` e que você autorize os profissionais de marketing a configurá-lo de modo que só seja acionado se um elemento com a ID de `herobanner` for selecionado. Nesse caso, se o usuário selecionar o banner herói, será recomendável chamar `trigger` e definir `element` para o nó DOM do banner herói.
 
 ```js
 trigger({
@@ -106,7 +107,7 @@ trigger({
 
 As tags oferecem aos usuários a capacidade de solicitar regras. Por exemplo, um usuário pode criar duas regras que usam o tipo de evento de alteração de orientação e personalizar a ordem em que as regras são acionadas. Supondo que o usuário do Adobe Experience Platform especifique um valor de pedido de `2` para o evento de alteração de orientação na Regra A e um valor de pedido de `1` para o evento de alteração de orientação na Regra B. Isso indica que, quando a orientação mudar em um dispositivo móvel, a Regra B deverá ser acionada antes que a Regra A (regras com valores de ordem mais baixa sejam acionadas primeiro).
 
-Como mencionado anteriormente, a função exportada em nosso módulo de evento será chamada uma vez para cada regra configurada para usar nosso tipo de evento. Cada vez que a função exportada é chamada, ela recebe uma função exclusiva `trigger` vinculada a uma regra específica. No cenário descrito anteriormente, nossa função exportada será chamada uma vez com uma função `trigger` vinculada à Regra B e novamente com uma função `trigger` vinculada à Regra A. A regra B vem primeiro porque o usuário lhe deu um valor de ordem menor que a Regra A. Quando nosso módulo de biblioteca detecta uma alteração de orientação, é importante chamar as funções `trigger` na mesma ordem em que foram fornecidas ao módulo de biblioteca.
+Como mencionado anteriormente, a função exportada em nosso módulo de evento será chamada uma vez para cada regra configurada para usar nosso tipo de evento. Cada vez que a função exportada é chamada, ela recebe uma função exclusiva `trigger` vinculada a uma regra específica. No cenário descrito anteriormente, nossa função exportada será chamada uma vez com um `trigger` função vinculada à Regra B e, em seguida, novamente com uma `trigger` função vinculada à Regra A. A Regra B vem primeiro porque o usuário lhe deu um valor de ordem inferior à Regra A. Quando nosso módulo de biblioteca detecta uma alteração de orientação, é importante chamar a função `trigger` na mesma ordem em que foram fornecidas ao módulo da biblioteca.
 
 No código de exemplo abaixo, observe que quando uma alteração de orientação é detectada, as funções de acionamento são chamadas na mesma ordem em que foram fornecidas à função exportada:
 

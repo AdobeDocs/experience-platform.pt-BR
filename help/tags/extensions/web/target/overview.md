@@ -1,10 +1,11 @@
 ---
 title: Visão geral da extensão do Adobe Target
-description: Saiba mais sobre a extensão de tag para Adobe Target no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre a extensão de tag para o Adobe Target na Adobe Experience Platform.
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 79%
+source-wordcount: '1192'
+ht-degree: 93%
 
 ---
 
@@ -30,7 +31,7 @@ Para configurar a extensão, abra a guia [!UICONTROL Extensões], passe o mouse 
 
 ### Configurações do at.js
 
-Todas as configurações da at.js, com exceção do Tempo limite, são recuperadas automaticamente da configuração da at.js na interface do usuário do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário da coleta de dados se forem necessárias atualizações adicionais.
+Todas as suas configurações do at.js, com exceção do Tempo limite, são automaticamente recuperadas da configuração do at.js na interface do usuário do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário se forem necessárias atualizações adicionais.
 
 As opções de configuração disponíveis são as seguintes:
 
@@ -71,7 +72,7 @@ Para obter mais informações sobre como funciona a configuração de Tempo limi
 
 #### Outras configurações do at.js disponíveis na interface do usuário do Target
 
-Várias configurações disponíveis na página [!UICONTROL Editar configurações at.js] da interface do usuário do Target não fazem parte da extensão do Target. Aqui estão soluções alternativas:
+Várias configurações disponíveis na página [!UICONTROL Editar configurações da at.js] da interface do Target não fazem parte da extensão do Target. Aqui estão soluções alternativas:
 
 * Criar mBox global automaticamente - Esta configuração é substituída pela ação Acionar mBox global na extensão do Target.
 * Cabeçalho da biblioteca - Essa configuração não faz parte da extensão do Target. Coloque o código que precisa ser carregado antes do at.js em uma ação Extensão principal > Código personalizado antes de usar a ação Carregar Target.
@@ -85,7 +86,7 @@ A extensão do Target fornece as seguintes ações no trecho Then de uma regra:
 
 ### Carregar Target
 
-Adicione esta ação à sua regra de tags, onde fizer sentido carregar o Target no contexto de sua regra. Isso carrega a biblioteca do at.js na página. Na maioria das implementações, o Target deve ser carregado em todas as páginas do site.
+Adicione essa ação à sua regra de tag quando fizer sentido carregar o Target no contexto da regra. Isso carrega a biblioteca do at.js na página. Na maioria das implementações, o Target deve ser carregado em todas as páginas do site.
 
 Nenhuma configuração é necessária.
 
@@ -128,19 +129,19 @@ Após salvar essa regra, será necessário adicioná-la a uma Biblioteca e criar
 
 ## Extensão do Adobe Target com uma implantação assíncrona
 
-As tags podem ser implantadas de forma assíncrona. Se você estiver carregando a biblioteca de tags de forma assíncrona com o Target nela, o Target também será carregado de forma assíncrona. Esse cenário é totalmente suportado, mas há uma consideração adicional que deve ser tratada.
+As tags podem ser implantadas de forma assíncrona. Se você estiver carregando a biblioteca de tags de forma assíncrona com o Target inserido, o Target também será carregado de forma assíncrona. Esse cenário é totalmente suportado, mas há uma consideração adicional que deve ser tratada.
 
-Em implantações assíncronas, a página pode terminar de renderizar o conteúdo padrão antes que a biblioteca do Target seja totalmente carregada e tenha realizado a troca de conteúdo. Isso pode levar ao que é conhecido como &quot;oscilação&quot;, em que o conteúdo padrão é exibido brevemente antes de ser substituído pelo conteúdo personalizado especificado pelo Target. Caso deseje evitar essa oscilação, sugerimos usar um trecho de pré-ocultação e carregar o pacote de tags de forma assíncrona para evitar qualquer oscilação de conteúdo.
+Nas implantações assíncronas, a página pode concluir a renderização do conteúdo padrão antes que a biblioteca do Target seja totalmente carregada e tenha realizado a troca de conteúdo. Isso pode levar ao que é conhecido como &quot;oscilação&quot;, em que o conteúdo padrão é exibido brevemente antes de ser substituído pelo conteúdo personalizado especificado pelo Target. Para evitar essa oscilação, sugerimos usar um trecho pré-ocultado e carregar o pacote de tag assíncrono para evitar oscilação de conteúdo.
 
 Estas são algumas coisas que devem ser lembradas ao usar o trecho pré-ocultação:
 
-* O trecho deve ser adicionado antes de carregar o código incorporado do cabeçalho da tag.
-* Esse código não pode ser gerenciado por tags, portanto, deve ser adicionado diretamente à página.
+* O trecho deve ser adicionado antes do carregamento do código integrado do cabeçalho da tag.
+* Esse código não pode ser gerenciado por tags. Portanto, deve ser adicionado diretamente à página.
 * A página será exibida quando o primeiro dos seguintes eventos ocorrer:
    * Quando a resposta do mbox global for recebida
    * Quando a solicitação do mbox global expira
    * Quando o trecho atingir o tempo limite
-* A ação “Acionar mBox global” deve ser usada em todas as páginas usando o trecho pré-ocultação para minimizar a duração da pré-ocultação.
+* A ação &quot;Acionar mBox global&quot; deve ser usada em todas as páginas que usam o trecho pré-ocultação para minimizar a duração da pré-ocultação.
 
 O trecho de código de pré-ocultação é o seguinte e pode ser minimizado. As opções configuráveis estão no final:
 

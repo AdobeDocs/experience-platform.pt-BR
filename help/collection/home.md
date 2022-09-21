@@ -5,14 +5,14 @@ title: Visão geral da coleção de dados
 topic-legacy: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 6%
+source-wordcount: '469'
+ht-degree: 7%
 
 ---
 
-# Visão geral da coleta de dados
+# Visão geral da coleção de dados
 
 O Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente de fontes do lado do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe em segundos.
 
@@ -38,7 +38,7 @@ Este guia fornece uma introdução de alto nível à coleta de dados e como ela 
 
 ## Tags, SDK da Web e SDK móvel
 
-O SDK da Web da plataforma e o SDK móvel da plataforma recolhem e compactam todas as bibliotecas de produtos do Adobe em um único kit de desenvolvimento para plataformas móveis e da Web, respectivamente. Elas podem ser implementadas usando o código bruto ou o [tags](../tags/home.md) por meio da interface do usuário da coleta de dados.
+O SDK da Web da plataforma e o SDK móvel da plataforma recolhem e compactam todas as bibliotecas de produtos do Adobe em um único kit de desenvolvimento para plataformas móveis e da Web, respectivamente. Elas podem ser implementadas usando o código bruto ou o [tags](../tags/home.md) por meio da interface do usuário da coleta de dados ou da interface do usuário do Adobe Experience Platform.
 
 A compactação dessas bibliotecas acelera a coleta de dados e consolida as operações em um único fluxo de dispositivos do lado do cliente para a Rede de borda da plataforma.
 

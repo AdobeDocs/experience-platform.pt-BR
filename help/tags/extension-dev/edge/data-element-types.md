@@ -1,10 +1,11 @@
 ---
 title: Tipos de elementos de dados para extensões de borda
-description: Saiba como definir um módulo de biblioteca do tipo elemento de dados para uma extensão de tag em uma propriedade de borda.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como definir um módulo de biblioteca do tipo elemento de dados para uma extensão de tag em uma propriedade de ponta.
+exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 31%
+source-wordcount: '439'
+ht-degree: 51%
 
 ---
 
@@ -22,16 +23,16 @@ Este documento aborda como definir tipos de elementos de dados para uma extensã
 
 >[!IMPORTANT]
 >
->Se estiver desenvolvendo uma extensão da Web, consulte o guia sobre [tipos de elementos de dados para extensões da Web](../web/data-element-types.md).
+>Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [tipos de elemento de dados para extensões da Web](../web/data-element-types.md) em vez disso.
 >
 >Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões do Edge. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
 
 Os tipos de elementos de dados normalmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário da Coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
+1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e recuperar partes de dados.
 
-Caso deseje permitir que os usuários recuperem uma parte dos dados da camada de dados personalizada, o módulo poderá se parecer com este exemplo.
+Caso deseje permitir que os usuários recuperem dados da camada de dados personalizada, o módulo poderá ter a aparência deste exemplo.
 
 ```js
 module.exports = (context) => {
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Se você quiser tornar os dados retornados para a camada de dados configuráveis pelo usuário do Adobe Experience Platform, poderá permitir que o usuário insira um nome de chave e, em seguida, salve o nome no objeto `settings`. O objeto pode ser semelhante a.
+Se quiser fazer com que os dados retornados da camada de dados se tornem configuráveis para o usuário da Adobe Experience Platform, você poderá permitir que o usuário insira um nome-chave e depois salve-o no objeto `settings`. O objeto pode ser semelhante a.
 
 ```js
 {

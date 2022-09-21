@@ -2,9 +2,9 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível de como gerenciar permissões e controlar o acesso aos recursos de coleta de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1309'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Este guia mostra como gerenciar permissões para recursos de coleção de dados.
 
 ## Introdução
 
-Para configurar o controle de acesso para a coleta de dados, você deve ter privilégios de administrador para uma organização que tenha uma integração de produto com a Coleta de dados da Adobe Experience Platform. A função mínima que pode conceder ou retirar permissões é um administrador de perfil de produto. Outras funções de administrador que podem gerenciar permissões são administradores de produtos (podem gerenciar todos os perfis em um produto) e administradores de sistema (sem restrições). Veja o artigo sobre [funções administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) no guia de administração do Adobe Enterprise para obter mais informações.
+Para configurar o controle de acesso para a coleta de dados, você deve ter privilégios de administrador para uma organização que tenha uma integração de produto com a Coleta de dados da Adobe Experience Platform. A função mínima que pode conceder ou retirar permissões é uma **administrador de perfil de produto**. Outras funções de administrador que podem gerenciar permissões são **administradores de produtos** (pode gerenciar todos os perfis em um produto) e **administradores de sistema** (sem restrições). Veja o artigo sobre [funções administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) no guia de administração do Adobe Enterprise para obter mais informações.
 
 Este guia pressupõe que você esteja familiarizado com os conceitos básicos do Admin Console, como perfis de produtos e como eles concedem permissões de produto a usuários e grupos individuais. Para obter mais informações, consulte o [Guia do usuário do Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Para obter mais informações sobre como gerenciar usuários para um perfil de p
 
 ## Próximas etapas
 
-Este guia cobriu as permissões disponíveis para a interface do usuário da Coleta de dados e como gerenciá-las por meio do Admin Console. Para obter mais informações sobre gerenciamento de permissões para outros recursos do Adobe Experience Platform, consulte [documentação de controle de acesso](../access-control/home.md).
+Este guia cobriu as permissões disponíveis para a Coleta de dados e como gerenciá-las por meio do Admin Console. Para obter mais informações sobre gerenciamento de permissões para outros recursos do Adobe Experience Platform, consulte [documentação de controle de acesso](../access-control/home.md).

@@ -1,10 +1,11 @@
 ---
 title: Excluir recursos
-description: Saiba como excluir recursos de tags no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como excluir recursos de tags na Adobe Experience Platform.
+exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 81%
+source-wordcount: '558'
+ht-degree: 90%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 81%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-A exclusão de um recurso é uma remoção permanente desse recurso do Adobe Experience Platform. Se você ainda quiser que o recurso apareça na interface do usuário da coleta de dados, mas não esteja na biblioteca de tags, consulte [Remover recursos de uma biblioteca](remove-resources-from-library.md).
+A exclusão de um recurso é uma remoção permanente desse recurso da Adobe Experience Platform. Se você deseja remover um recurso de uma biblioteca de tags específica, mas ainda deseja que ele esteja disponível para uso em outras bibliotecas, consulte o guia em [remoção de recursos de uma biblioteca](remove-resources-from-library.md).
 
 É possível excluir elementos de dados, regras, extensões, hosts, ambientes e propriedades. Depois da exclusão, esses recursos não poderão ser recuperados.
 
@@ -49,7 +50,7 @@ Depois de excluído, o elemento de dados não retornará mais o valor correto no
 
 Todos os outros recursos (regras, componentes de regras e elementos de dados) são fornecidos por extensões.
 
-Os componentes de regras e os elementos de dados dependem das extensões para seu comportamento, mas também apenas para serem exibidos na interface do usuário da Coleta de dados. Se você excluir a extensão antes de resolver dependências, não será mais possível visualizar esses recursos órfãos. Esses recursos órfãos aparecem nas exibições de lista, mas você receberá um erro ao tentar abrir a visualização de detalhes.
+Os componentes de regras e os elementos de dados dependem das extensões para seu comportamento, mas também apenas para ser exibidos na interface da coleção de dados. Se você excluir a extensão antes de resolver dependências, não será mais possível visualizar esses recursos órfãos. Esses recursos órfãos aparecem nas exibições de lista, mas você receberá um erro ao tentar abrir a visualização de detalhes.
 
 Por isso, tenha muito cuidado ao excluir extensões e resolva as dependências, antes de excluí-las.
 

@@ -3,9 +3,9 @@ title: Visão geral dos conjuntos de dados
 description: Conecte sua integração do SDK da Experience Platform do lado do cliente aos produtos da Adobe e destinos de terceiros.
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de configurações do Analytics; Predefinição de dados para dados Coleção; Preparação de dados; Mapeador; Mapeador XDM; Mapeador no Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1725'
 ht-degree: 3%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 Um armazenamento de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web do Adobe Experience Platform. Enquanto a variável [comando configurar](../fundamentals/configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente (como `edgeDomain`), os conjuntos de dados lidam com todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, a variável `edgeConfigId` é usada para fazer referência ao armazenamento de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
-Este documento aborda as etapas para configurar um armazenamento de dados na interface do usuário da coleta de dados.
+Este documento aborda as etapas para configurar um armazenamento de dados na interface do usuário do .
 
 ## Acesse o [!UICONTROL Datastreams] espaço de trabalho
 
-Você pode criar e gerenciar conjuntos de dados na interface do usuário da Coleta de dados selecionando **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
+Você pode criar e gerenciar conjuntos de dados na interface do usuário da coleta de dados ou na interface do usuário do Experience Platform selecionando **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
 
-![Guia Datastreams na interface do usuário da coleta de dados](../images/datastreams/overview/datastreams-tab.png)
+![Guia Datastreams na interface do usuário](../images/datastreams/overview/datastreams-tab.png)
 
 O [!UICONTROL Datastreams] A guia exibe uma lista de conjuntos de dados existentes, incluindo o nome amigável, a ID e a data da última modificação. Selecione o nome de um armazenamento de dados para [exibir seus detalhes e configurar serviços](#view-details).
 
@@ -106,7 +106,7 @@ Esse serviço controla se e como os dados são enviados para a Adobe Audience Ma
 
 >[!IMPORTANT]
 >
->Ao ativar um conjunto de dados para a Platform, observe a sandbox da Platform que você está usando no momento, como exibido na faixa superior da interface do usuário de coleta de dados.
+>Ao ativar um armazenamento de dados para a Platform, tome nota da sandbox da Platform que você está usando no momento, conforme exibido na faixa superior da interface do usuário.
 >
 >![Sandbox selecionada](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ A página principal do [!UICONTROL Datastreams] o workspace é exibido novamente
 
 ## Próximas etapas
 
-Este guia cobriu como gerenciar conjuntos de dados na interface do usuário da Coleta de dados. Para obter mais informações sobre como instalar e configurar o SDK da Web após configurar um conjunto de dados, consulte o [Guia E2E de coleta de dados](../../collection/e2e.md#install).
+Este guia cobriu como gerenciar conjuntos de dados na interface do usuário. Para obter mais informações sobre como instalar e configurar o SDK da Web após configurar um conjunto de dados, consulte o [Guia E2E de coleta de dados](../../collection/e2e.md#install).

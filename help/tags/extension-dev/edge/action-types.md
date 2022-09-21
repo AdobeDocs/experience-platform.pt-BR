@@ -1,10 +1,11 @@
 ---
 title: Tipos de ação para extensões de borda
 description: Saiba como definir um módulo de biblioteca do tipo ação para uma extensão de tag em uma propriedade de borda.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 41%
+source-wordcount: '386'
+ht-degree: 66%
 
 ---
 
@@ -28,10 +29,10 @@ Este documento aborda como definir tipos de ação para uma extensão de borda n
 
 Os tipos de ação normalmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário da Coleta de dados que permite que os usuários modifiquem as configurações da ação.
+1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e executar uma ação.
 
-Por exemplo, um módulo para encaminhar alguns dados para um ponto de extremidade de terceiros pode ter esta aparência.
+Por exemplo, um módulo para encaminhar alguns dados a um endpoint de terceiros pode ter esta aparência.
 
 ```js
 module.exports = (context) {
@@ -48,7 +49,7 @@ module.exports = (context) {
 };
 ```
 
-Se você quiser tornar o ponto de extremidade configurável pelo usuário e permitir a entrada e a persistência de um ponto de extremidade para o objeto de configurações no módulo, o objeto será semelhante a isso.
+Se você quiser tornar o endpoint configurável pelo usuário e permitir a entrada e a persistência de um endpoint para o objeto de configurações no módulo, o objeto terá aparência semelhante a esta.
 
 ```json
 {
@@ -56,7 +57,7 @@ Se você quiser tornar o ponto de extremidade configurável pelo usuário e perm
 }
 ```
 
-Para operar no terminal definido pelo usuário, seu módulo precisaria alterar para o seguinte exemplo.
+Para operar no endpoint definido pelo usuário, o módulo precisará ser alterado para o exemplo a seguir.
 
 ```js
 module.exports = (context) {

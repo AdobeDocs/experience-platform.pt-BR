@@ -5,9 +5,9 @@ title: Suporte ao IAB TCF 2.0 no Experience Platform
 topic-legacy: privacy events
 description: Saiba como configurar operações de dados e esquemas para transmitir opções de consentimento do cliente ao ativar segmentos para destinos no Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '2563'
+source-wordcount: '2558'
 ht-degree: 1%
 
 ---
@@ -119,7 +119,7 @@ Depois de configurar o CMP para gerar cadeias de consentimento, você deve integ
 
 ### Criar um novo armazenamento de dados
 
-Para que o SDK envie dados para o Experience Platform, primeiro você deve criar um novo datastream para Platform na interface do usuário da coleta de dados. Etapas específicas para criar um novo conjunto de dados são fornecidas na seção [Documentação do SDK](../../../../edge/datastreams/overview.md).
+Para que o SDK envie dados para o Experience Platform, primeiro você deve criar um novo datastream para a Platform. Etapas específicas para criar um novo conjunto de dados são fornecidas na seção [Documentação do SDK](../../../../edge/datastreams/overview.md).
 
 Depois de fornecer um nome exclusivo para o armazenamento de dados, selecione o botão de alternância ao lado de **[!UICONTROL Adobe Experience Platform]**. Em seguida, use os seguintes valores para preencher o restante do formulário:
 

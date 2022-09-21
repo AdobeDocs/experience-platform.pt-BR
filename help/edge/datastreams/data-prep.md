@@ -2,9 +2,9 @@
 title: Preparação de dados para coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar um conjunto de dados para a Web Adobe Experience Platform e SDKs móveis.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 5a30bd502cd3950f3c74d5c39d0c7e395fcbb839
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '914'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ A Preparação de dados é um serviço da Adobe Experience Platform que permite 
 >* [Manuseio de formatos de dados com Preparação de dados](../../data-prep/data-handling.md)
 
 
-Este guia aborda como mapear seus dados na interface do usuário da coleta de dados. Para seguir com as etapas, inicie o processo de criação de um conjunto de dados até (e incluindo) a variável [etapa de configuração básica](./overview.md#create).
+Este guia aborda como mapear seus dados na interface do usuário do . Para seguir com as etapas, inicie o processo de criação de um conjunto de dados até (e incluindo) a variável [etapa de configuração básica](./overview.md#create).
 
 Para obter uma demonstração rápida do processo de Preparação de dados para coleta de dados, consulte o seguinte vídeo:
 
@@ -203,4 +203,4 @@ Quando a contagem dos campos necessários atingir zero e você estiver satisfeit
 
 ## Próximas etapas
 
-Este guia cobriu como mapear seus dados para XDM ao configurar um conjunto de dados na interface do usuário da coleta de dados. Caso esteja seguindo o tutorial de conjuntos de dados gerais, agora é possível retornar à etapa em [exibindo detalhes do datastream](./overview.md).
+Este guia cobriu como mapear seus dados para XDM ao configurar um armazenamento de dados na interface do usuário. Caso esteja seguindo o tutorial de conjuntos de dados gerais, agora é possível retornar à etapa em [exibindo detalhes do datastream](./overview.md).

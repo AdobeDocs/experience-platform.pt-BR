@@ -3,9 +3,9 @@ title: Instalar o SDK da Web da Adobe Experience Platform
 description: Saiba como instalar o SDK da Web do Experience Platform.
 keywords: instalação do sdk da web; instalação do sdk da web; internet explorer; promessa; pacote npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '924'
 ht-degree: 2%
 
 ---
@@ -14,30 +14,30 @@ ht-degree: 2%
 
 Há três maneiras compatíveis de usar o Adobe Experience Platform Web SDK:
 
-1. A maneira preferida de usar o SDK da Web da Adobe Experience Platform é por meio da interface do usuário da coleta de dados.
+1. A maneira preferida de usar o SDK da Web da Adobe Experience Platform é pela interface do usuário da coleta de dados ou pela interface do usuário do Experience Platform.
 1. O SDK da Web da Adobe Experience Platform também está disponível em uma rede de entrega de conteúdo (CDN) para você usar.
 1. Use a biblioteca NPM que exporta módulos EcmaScript 5 e EcmaScript 2015 (ES6).
 
 ## Opção 1: Instalação da extensão de tag
 
-Para obter a documentação sobre a extensão de tag, consulte a [documentação de inicialização](../../tags/extensions/web/sdk/overview.md)
+Para obter a documentação sobre a extensão de tag, consulte [documentação de lançamento](../../tags/extensions/web/sdk/overview.md)
 
 ## Opção 2: Instalação da versão independente pré-criada
 
 A versão pré-criada está disponível em um CDN. Você pode fazer referência à biblioteca no CDN diretamente na sua página ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e não minificados. A versão não minificada é útil para fins de depuração.
 
-Estrutura do URL: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OU alloy.js para a versão não minificada.
+Estrutura do URL: https://cdn1.adoberesources.net/alloy/[VERSÃO]/alloy.min.js OU alloy.js para a versão não minificada.
 
 Por exemplo:
 
 
-* Minificado: [https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js)
-* Não minificado: [https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js)
+* Minificado: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
+* Não minificado: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
 
 
 ### Adicionar o código {#adding-the-code}
 
-A versão independente pré-criada requer um &quot;código base&quot; adicionado diretamente à página. Copie e cole o seguinte &quot;código base&quot; o mais alto possível na tag `<head>` do seu HTML:
+A versão independente pré-criada requer um &quot;código base&quot; adicionado diretamente à página. Copie e cole o seguinte &quot;código base&quot; o mais alto possível no `<head>` tag do seu HTML:
 
 ```markup
 <script>
@@ -46,10 +46,10 @@ A versão independente pré-criada requer um &quot;código base&quot; adicionado
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
 ```
 
-O &quot;código base&quot; cria uma função global chamada `alloy`. Use essa função para interagir com o SDK. Se você quiser nomear a função global como outra coisa, altere o nome `alloy` da seguinte maneira:
+O &quot;código base&quot; cria uma função global chamada `alloy`. Use essa função para interagir com o SDK. Se quiser nomear a função global como outra coisa, altere a variável `alloy` nome como segue:
 
 ```markup
 <script>
@@ -58,10 +58,10 @@ O &quot;código base&quot; cria uma função global chamada `alloy`. Use essa fu
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
 ```
 
-Neste exemplo, a função global é renomeada como `mycustomname`, em vez de `alloy`.
+Neste exemplo, a função global é renomeada `mycustomname`, em vez de `alloy`.
 
 >[!IMPORTANT]
 >
@@ -71,35 +71,35 @@ Esse código base, além de criar uma função global, também carrega um códig
 
 ### Suporte ao Internet Explorer {#support-internet-explore}
 
-Esse SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promessa](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Esse SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. O [Promessa](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) A implementação usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polietileno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
-Para determinar se você já tem `window.Promise` polyfill:
+Para determinar se você já tem `window.Promise` polietileno:
 
-1. Abra o site em [!DNL Internet Explorer].
+1. Abra seu site em [!DNL Internet Explorer].
 1. Abra o console de depuração do navegador.
-1. Digite `window.Promise` no console e pressione Enter.
+1. Tipo `window.Promise` no console e pressione Enter.
 
-Se algo diferente de `undefined` for exibido, você provavelmente já terá preenchido `window.Promise` em polyfill. Outra maneira de determinar se `window.Promise` está em polyfill é carregando seu site após ter concluído as instruções de instalação acima. Se o SDK gerar um erro mencionando algo sobre uma promessa, você provavelmente não terá preenchido `window.Promise` em polyfill.
+Se algo diferente de `undefined` for exibido, provavelmente já está com polim `window.Promise`. Outra maneira de determinar se `window.Promise` for polyfill é carregando seu site após concluir as instruções de instalação acima. Se o SDK gerar um erro mencionando algo sobre uma promessa, você provavelmente não preencheu o polimerio `window.Promise`.
 
-Caso tenha determinado que você deve preencher o `window.Promise`, inclua a seguinte tag de script acima do código base fornecido anteriormente:
+Se tiver determinado que você deve preencher polyfill `window.Promise`, inclua a seguinte tag de script acima do código base fornecido anteriormente:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 ```
 
-Essa tag carrega um script que garante que `window.Promise` seja uma implementação Promessa válida.
+Essa tag carrega um script que garante que `window.Promise` é uma implementação válida do Promise.
 
 >[!NOTE]
 >
->Se optar por carregar uma implementação de Promessa diferente, certifique-se de que ela seja compatível com `Promise.prototype.finally`.
+>Se optar por carregar uma implementação de Promessa diferente, verifique se ela suporta `Promise.prototype.finally`.
 
 ### Carregamento sincronizado do arquivo JavaScript {#loading-javascript-synchronously}
 
-Conforme explicado na seção [Adicionar o código](#adding-the-code), o código base que você copiou e colou no HTML do site carrega um arquivo externo. O arquivo externo contém a funcionalidade principal do SDK. Qualquer comando que você tente executar enquanto esse arquivo é carregado está na fila e é processado depois que o arquivo é carregado. Carregar o arquivo de forma assíncrona é o método de instalação mais eficiente.
+Conforme explicado na seção [Adicionar o código](#adding-the-code), o código base que você copiou e colou no HTML de seu site carrega um arquivo externo. O arquivo externo contém a funcionalidade principal do SDK. Qualquer comando que você tente executar enquanto esse arquivo é carregado está na fila e é processado depois que o arquivo é carregado. Carregar o arquivo de forma assíncrona é o método de instalação mais eficiente.
 
-Em determinadas circunstâncias, no entanto, você pode querer carregar o arquivo de forma síncrona \(mais detalhes sobre essas circunstâncias serão documentados posteriormente\). Isso impede que o restante do documento HTML seja analisado e renderizado pelo navegador até que o arquivo externo seja carregado e executado. Normalmente, esse atraso adicional antes de exibir o conteúdo principal para os usuários é desencorajado, mas pode fazer sentido dependendo das circunstâncias.
+Em determinadas circunstâncias, no entanto, você pode querer carregar o arquivo de forma síncrona \(mais detalhes sobre essas circunstâncias serão documentados posteriormente\). Isso impede que o restante do documento do HTML seja analisado e renderizado pelo navegador até que o arquivo externo seja carregado e executado. Normalmente, esse atraso adicional antes de exibir o conteúdo principal para os usuários é desencorajado, mas pode fazer sentido dependendo das circunstâncias.
 
-Para carregar o arquivo de forma síncrona, em vez de assíncrona, remova o atributo `async` da segunda tag `script` conforme mostrado abaixo:
+Para carregar o arquivo de forma síncrona, em vez de de de forma assíncrona, remova o `async` atributo do segundo `script` conforme mostrado abaixo:
 
 ```markup
 <script>
@@ -108,18 +108,18 @@ Para carregar o arquivo de forma síncrona, em vez de assíncrona, remova o atri
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js"></script>
 ```
 
 ## Opção 3: Uso do pacote NPM
 
-O SDK da Web da Adobe Experience Platform também está disponível como um pacote NPM. [](https://www.npmjs.com) NPMé o gerenciador de pacotes do JavaScript. A instalação do pacote NPM permite ter controle do processo de build do JavaScript do SDK da Web da Adobe Experience Platform. O pacote NPM expõe módulos EcmaScript versão 5 ou módulos EcmaScript versão 2015 (ES6) destinados a serem executados no navegador.
+O SDK da Web da Adobe Experience Platform também está disponível como um pacote NPM. [NPM](https://www.npmjs.com) é o gerenciador de pacotes do JavaScript. A instalação do pacote NPM permite ter controle do processo de build do JavaScript do SDK da Web da Adobe Experience Platform. O pacote NPM expõe módulos EcmaScript versão 5 ou módulos EcmaScript versão 2015 (ES6) destinados a serem executados no navegador.
 
 ```bash
 npm install @adobe/alloy
 ```
 
-O pacote NPM do SDK da Web da Adobe Experience Platform expõe uma função `createInstance` . Essa função é usada para criar uma instância. A opção name passada para a função controla o prefixo usado no registro. Abaixo estão exemplos de uso do pacote .
+O pacote NPM do SDK da Web da Adobe Experience Platform expõe um `createInstance` . Essa função é usada para criar uma instância. A opção name passada para a função controla o prefixo usado no registro. Abaixo estão exemplos de uso do pacote .
 
 ### Uso do pacote como um módulo ECMAScript 2015 (ES6)
 
@@ -132,7 +132,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->O pacote NPM depende de módulos CommonJS; portanto, ao usar um pacote, verifique se o pacote suporta módulos CommonJS. Alguns pacotes, como [Rollup](https://rollupjs.org), exigem um [plug-in](https://www.npmjs.com/package/@rollup/plugin-commonjs) que fornece suporte a CommonJS.
+>O pacote NPM depende de módulos CommonJS; portanto, ao usar um pacote, verifique se o pacote suporta módulos CommonJS. Alguns pacotes, como [Rollup](https://rollupjs.org), requerem um [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) que fornece suporte ao CommonJS.
 
 ### Uso do pacote como um módulo ECMAScript 5
 
@@ -145,10 +145,10 @@ alloy("sendEvent", { ... });
 
 ### Suporte ao Internet Explorer
 
-O Adobe Experience Platform SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+O Adobe Experience Platform SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. O [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) A implementação usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polietileno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
-Uma biblioteca que você poderia usar para cumprir a promessa de polyfill é a promessa de polyfill. Consulte a [documentação de promessa-polyfill](https://www.npmjs.com/package/promise-polyfill) para obter mais informações sobre como instalar com o NPM.
+Uma biblioteca que você poderia usar para cumprir a promessa de polyfill é a promessa de polyfill. Consulte a [documentação de declaração de polyfill](https://www.npmjs.com/package/promise-polyfill) para obter mais informações sobre como instalar com o NPM.
 
 >[!NOTE]
 >
->Se optar por carregar uma implementação de Promessa diferente, certifique-se de que ela seja compatível com `Promise.prototype.finally`.
+>Se optar por carregar uma implementação de Promessa diferente, verifique se ela suporta `Promise.prototype.finally`.

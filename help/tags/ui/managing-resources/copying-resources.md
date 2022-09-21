@@ -1,10 +1,11 @@
 ---
 title: Copiar recursos
-description: Saiba como criar um novo recurso de tag usando as configurações de um recurso de tag existente no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como criar um novo recurso de tags usando as configurações de um recurso de tags existente na Adobe Experience Platform.
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 84%
+source-wordcount: '780'
+ht-degree: 94%
 
 ---
 
@@ -34,7 +35,7 @@ Se estiver copiando uma regra ou um elemento de dados, na caixa de diálogo de c
 
 >[!NOTE]
 >
->Na interface do usuário da coleta de dados, não é possível copiar recursos para outra propriedade, se uma propriedade estiver configurada para desenvolvimento de extensão e a outra propriedade não estiver.
+>Não é possível copiar recursos para outra propriedade se uma propriedade estiver configurada para desenvolvimento de extensão e a outra propriedade não estiver.
 
 Depois de configurar o comportamento desejado, clique em **[!UICONTROL Copiar]**.
 
@@ -59,11 +60,11 @@ Ao copiar uma extensão para outra propriedade, há algumas coisas que você pre
 
 ## Como copiar regras e elementos de dados
 
-Todas as regras e elementos de dados são fornecidos por uma extensão, portanto, ao copiar para as propriedades, a Platform deverá contabilizar essas extensões subjacentes.
+Todas as regras e elementos de dados são fornecidos por uma extensão. Portanto, quando você copiar entre propriedades, a Platform deverá levar em conta essas extensões subjacentes.
 
 ![Como copiar uma regra para minha propriedade de demonstração](../../images/copy-rules-dialog1.png)
 
-A caixa de diálogo Copiar fornece uma explicação sobre exatamente o que ocorrerá antes de você começar a copiar. A caixa de diálogo acima é para uma regra, mas o mesmo se aplica a elementos de dados.
+A caixa de diálogo Copiar fornece uma explicação sobre exatamente o que ocorre antes que você comece a copiar. A caixa de diálogo acima é para uma regra, mas o mesmo se aplica a elementos de dados.
 
 1. **As extensões necessárias para essas regras são copiadas.** Isso permite saber que as extensões necessárias irão juntamente com a regra. Essas cópias seguem as mesmas regras que uma cópia de extensão normal descrita acima.
 1. **As configurações de extensão NÃO serão copiadas se a extensão já estiver instalada.** Isso significa que, se as extensões necessárias já existirem na propriedade de destino, a extensão permanecerá como está. Se você quiser copiar as configurações de extensão também, poderá usar a opção **Substituir configurações de extensão na propriedade de destino** e a explicação será atualizada adequadamente.

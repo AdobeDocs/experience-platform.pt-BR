@@ -2,9 +2,9 @@
 title: Visão geral do desenvolvimento de extensões
 description: Saiba mais sobre os componentes principais de diferentes tipos de extensão de tag e o processo de desenvolvimento de extensão no Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 25%
 
 ---
@@ -37,11 +37,11 @@ Você pode colocar arquivos de módulo de biblioteca em qualquer lugar que desej
 
 ### Exibições
 
-Uma exibição é um arquivo HTML capaz de ser carregado em um [`iframe` elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) no aplicativo tags, especificamente por meio da interface do usuário da coleta de dados. A exibição deve incluir um script fornecido pela extensão e estar em conformidade com uma pequena API para se comunicar com o aplicativo.
+Uma exibição é um arquivo HTML capaz de ser carregado em um [`iframe` elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) no aplicativo tags, especificamente por meio da interface do usuário da plataforma e da interface do usuário da coleta de dados. A exibição deve incluir um script fornecido pela extensão e estar em conformidade com uma pequena API para se comunicar com o aplicativo.
 
 O arquivo de visualização mais importante para qualquer extensão é sua configuração. Consulte a seção sobre [configurações de extensão](#configuration) para obter mais informações.
 
-Não há restrições quanto às bibliotecas usadas nas visualizações. Em outras palavras, você pode usar jQuery, Sublinhado, Reagir, Angular, Bootstrap ou outras. No entanto, ainda é recomendável fazer com que sua extensão tenha uma aparência semelhante à interface do usuário da coleta de dados.
+Não há restrições quanto às bibliotecas usadas nas visualizações. Em outras palavras, você pode usar jQuery, Sublinhado, Reagir, Angular, Bootstrap ou outras. No entanto, ainda é recomendável fazer com que sua extensão tenha uma aparência semelhante à da interface do usuário.
 
 É recomendado colocar todos os arquivos relacionados à visualização (HTML, CSS, JavaScript) em um único subdiretório que esteja isolado dos arquivos do módulo da biblioteca. Em `extension.json`, é possível descrever onde está localizado esse subdiretório view. O Platform fornecerá esse subdiretório (e somente ele) por meio de seus servidores da Web.
 

@@ -2,9 +2,9 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando os recursos de coleta de dados da Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2606'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,6 @@ Este guia fornece um tutorial de alto nível sobre como enviar um evento pela Ed
 >[!NOTE]
 >
 >Você também pode optar por instalar e configurar o SDK manualmente se não quiser usar tags, mas as etapas subjacentes ainda devem ser concluídas conforme descrito abaixo.
->
->Todas as etapas que envolvem a interface do usuário da coleta de dados também podem ser executadas na interface do usuário do Experience Platform.
 
 ## Pré-requisitos
 
@@ -59,7 +57,7 @@ A primeira etapa na configuração das operações de coleta de dados é criar u
 >
 >Os esquemas XDM são muito personalizáveis. Em vez de serem excessivamente normativas, as etapas descritas abaixo focam especificamente nos requisitos de esquema do SDK da Web. Fora desses parâmetros, você pode definir a estrutura restante dos seus dados da maneira que desejar.
 
-Na interface do usuário, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. Aqui, você pode ver uma lista de esquemas criados anteriormente pertencentes à sua organização. Para continuar, selecione **[!UICONTROL Criar esquema]**, em seguida selecione **[!UICONTROL ExperiênciaEvento XDM]** no menu suspenso.
+Na interface do usuário da coleta de dados, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. Aqui, você pode ver uma lista de esquemas criados anteriormente pertencentes à sua organização. Para continuar, selecione **[!UICONTROL Criar esquema]**, em seguida selecione **[!UICONTROL ExperiênciaEvento XDM]** no menu suspenso.
 
 ![Área de trabalho Esquemas](./images/e2e/schemas.png)
 
@@ -99,7 +97,7 @@ Um armazenamento de dados é uma configuração que informa à Rede de borda ond
 >
 >Se quiser usar [encaminhamento de eventos](../tags/ui/event-forwarding/overview.md) (supondo que sua organização esteja licenciada para a funcionalidade), você deve habilitá-la para um armazenamento de dados da mesma forma que habilita os produtos Adobe. Os detalhes desse processo são abordados em uma [seção posterior](#event-forwarding).
 
-Selecionar **[!UICONTROL Datastreams]** no painel de navegação esquerdo. Aqui, você pode selecionar um armazenamento de dados existente na lista para editar ou criar uma nova configuração selecionando **[!UICONTROL Novo fluxo de dados]**.
+Na interface do usuário da coleta de dados, selecione **[!UICONTROL Datastreams]**. Aqui, você pode selecionar um armazenamento de dados existente na lista para editar ou criar uma nova configuração selecionando **[!UICONTROL Novo fluxo de dados]**.
 
 ![Datastreams](./images/e2e/datastreams.png)
 

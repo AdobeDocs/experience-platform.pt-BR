@@ -2,9 +2,9 @@
 title: Tipos de ação para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo ação para uma extensão de tag em uma propriedade da Web.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 70%
 
 ---
@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de ação para uma extensão da Web no 
 
 Os tipos de ação normalmente consistem no seguinte:
 
-1. A [exibir](./views.md) mostrado na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
+1. A [exibir](./views.md) mostrada na interface do usuário da coleção de dados que permite que os usuários modifiquem as configurações da ação.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e executar uma ação.
 
 ```js

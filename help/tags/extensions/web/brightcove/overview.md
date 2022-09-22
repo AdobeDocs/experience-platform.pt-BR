@@ -2,10 +2,10 @@
 title: Visão geral da extensão de rastreamento de vídeo BrightCove
 description: Saiba mais sobre a extensão de tag de rastreamento de vídeo BrightCove na Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 95%
+source-wordcount: '915'
+ht-degree: 98%
 
 ---
 
@@ -100,7 +100,7 @@ Os seguintes objetos de extensão de vídeo devem ser incluídos:
 
 >[!TIP]
 >
->Para aqueles que não desejam provisionar várias eVars ou props para cada elemento de vídeo, os valores do elemento de dados são concatenados como um método alternativo. Em seguida, são analisados nos relatórios de classificação usando a ferramenta Criador de regras de classificação. Consulte a documentação da [ferramenta Criador de regras de classificação](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=pt-BR) para obter mais informações. Por fim, elas são aplicadas como um segmento no Analysis Workspace.
+>Para aqueles que não desejam provisionar várias eVars ou props para cada elemento de vídeo, há um método alternativo. Os valores do elemento de dados podem ser concatenados na interface de usuário da coleção de dados. Em seguida, são analisados nos relatórios de classificação usando a ferramenta Criador de regras de classificação. Consulte a documentação da [ferramenta Criador de regras de classificação](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=pt-BR) para obter mais informações. Por fim, elas são aplicadas como um segmento no Analysis Workspace.
 >
 >Para fazer isso, crie um novo elemento de dados chamado &quot;Video MetaData&quot; e programe-o para reunir todos os elementos de dados de vídeo (listados acima) e concatená-los juntos.
 

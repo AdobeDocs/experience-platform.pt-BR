@@ -2,10 +2,10 @@
 title: Tipos de elementos de dados para extensões de borda
 description: Saiba como definir um módulo de biblioteca do tipo elemento de dados para uma extensão de tag em uma propriedade de ponta.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 51%
+source-wordcount: '435'
+ht-degree: 52%
 
 ---
 
@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de elementos de dados para uma extensã
 
 Os tipos de elementos de dados normalmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
+1. Uma exibição mostrada na interface do usuário da Coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e recuperar partes de dados.
 
 Caso deseje permitir que os usuários recuperem dados da camada de dados personalizada, o módulo poderá ter a aparência deste exemplo.

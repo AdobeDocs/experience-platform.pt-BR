@@ -3,9 +3,9 @@ keywords: Advertising Cloud; extensão da advertising cloud; destino da advertis
 title: Extensão do Adobe Advertising Cloud
 description: A extensão Adobe Advertising Cloud é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '440'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar tags no Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso aos recursos de Coleta de dados na interface do usuário e solicitar que ele conceda a você o **[!UICONTROL manage_properties]** para poder instalar extensões.
+Para usar essa extensão, você precisa acessar tags no Platform. Tags são oferecidas aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso à interface do usuário da coleta de dados e solicitar que ela conceda a você a **[!UICONTROL manage_properties]** para poder instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

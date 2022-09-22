@@ -3,7 +3,7 @@ title: Processar dados de consentimento do cliente usando o SDK da Web da Adobe 
 topic-legacy: getting started
 description: Saiba como integrar o SDK da Web da Adobe Experience Platform para processar os dados de consentimento do cliente no Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Este tutorial pressupõe que você já tenha determinado como gerar dados de con
 * [Criar um conjunto de dados usando o padrão Adobe](./adobe/dataset.md)
 * [Criar um conjunto de dados usando o padrão TCF 2.0](./iab/dataset.md)
 
-Este guia segue o fluxo de trabalho para configurar o SDK usando a extensão de tag na interface do usuário. Se você não quiser usar a extensão e preferir incorporar diretamente a versão independente do SDK em seu site, consulte os seguintes documentos em vez deste guia:
+Este guia segue o fluxo de trabalho para configurar o SDK usando a extensão de tag na interface do usuário da coleta de dados. Se você não quiser usar a extensão e preferir incorporar diretamente a versão independente do SDK em seu site, consulte os seguintes documentos em vez deste guia:
 
 * [Configurar um conjunto de dados](../../../edge/datastreams/overview.md)
 * [Instalar o SDK](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ As etapas de instalação neste guia exigem uma compreensão funcional das exten
 
 ## Configurar um armazenamento de dados
 
-Para que o SDK envie dados para o Experience Platform, primeiro você deve configurar um armazenamento de dados. Na interface do usuário da coleta de dados ou na interface do usuário do Experience Platform, selecione **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
+Para que o SDK envie dados para o Experience Platform, primeiro você deve configurar um armazenamento de dados. Na interface do usuário da coleta de dados, selecione **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
 
 Depois de criar um novo armazenamento de dados ou selecionar um existente para editar, selecione o botão de alternância ao lado de **[!UICONTROL Adobe Experience Platform]**. Em seguida, use os valores listados abaixo para preencher o formulário.
 
@@ -80,7 +80,7 @@ Se a região do usuário for determinada por uma CMP, você poderá usar as segu
 1. No manipulador de eventos, defina um `adobeDefaultConsent` com base na região do usuário e, em seguida, carregue o script da biblioteca de tags usando o JavaScript.
 1. Configure um elemento de dados que use a variável `adobeDefaultConsent` Variável JavaScript e use esse elemento de dados como o valor de consentimento padrão do usuário.
 
-Para criar um elemento de dados na interface do usuário, selecione **[!UICONTROL Elementos de dados]** na navegação à esquerda, selecione **[!UICONTROL Adicionar elemento de dados]** para navegar até a caixa de diálogo de criação do elemento de dados.
+Para criar um elemento de dados na interface do usuário da coleta de dados, selecione **[!UICONTROL Elementos de dados]** na navegação à esquerda, selecione **[!UICONTROL Adicionar elemento de dados]** para navegar até a caixa de diálogo de criação do elemento de dados.
 
 A partir daqui, você deve criar um [!UICONTROL Variável JavaScript] elemento de dados com base em `adobeDefaultConsent`. Selecione **[!UICONTROL Salvar]** ao concluir.
 

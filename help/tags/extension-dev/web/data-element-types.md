@@ -2,9 +2,9 @@
 title: Tipos de elementos de dados para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo elemento de dados para uma extensão de tag em uma propriedade da Web.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '596'
 ht-degree: 70%
 
 ---
@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de elementos de dados para uma extensã
 
 Os tipos de elementos de dados normalmente consistem no seguinte:
 
-1. A [exibir](./views.md) mostrado na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
+1. A [exibir](./views.md) mostrado na interface do usuário da coleção de dados que permite que os usuários modifiquem as configurações do elemento de dados.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e recuperar partes de dados.
 
 Considere uma situação em que você deseja permitir que os usuários recuperem dados de um item de armazenamento local chamado `productName`. Seu módulo pode ser semelhante a:

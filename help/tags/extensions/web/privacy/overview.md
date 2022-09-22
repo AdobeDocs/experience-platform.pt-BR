@@ -2,9 +2,9 @@
 title: Visão geral da extensão do Adobe Privacy
 description: Saiba mais sobre a extensão de tag do Adobe Privacy na Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '909'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 A extensão de tag Adobe Privacy permite coletar e remover IDs de usuário atribuídas aos usuários finais por soluções do Adobe em dispositivos do lado do cliente. As IDs coletadas podem ser enviadas para [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) para acessar ou excluir os dados pessoais do indivíduo relacionado em aplicativos Adobe Experience Cloud compatíveis.
 
-Este guia aborda como instalar e configurar a extensão da Privacidade de Adobe na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados.
+Este guia aborda como instalar e configurar a extensão da Privacidade de Adobe na interface do usuário da coleta de dados.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Este guia aborda como instalar e configurar a extensão da Privacidade de Adobe 
 
 ## Instalação e configuração da extensão do 
 
-Selecionar **[!UICONTROL Extensões]** no painel de navegação esquerdo, seguido pela variável **[!UICONTROL Catálogo]** guia . Use a barra de pesquisa para restringir a lista de extensões disponíveis até localizar a Privacidade de Adobe. Selecionar **[!UICONTROL Instalar]** para continuar.
+Na interface do usuário da coleta de dados, selecione **[!UICONTROL Extensões]** no painel de navegação esquerdo, seguido pela variável **[!UICONTROL Catálogo]** guia . Use a barra de pesquisa para restringir a lista de extensões disponíveis até localizar a Privacidade de Adobe. Selecionar **[!UICONTROL Instalar]** para continuar.
 
 ![Instalar a extensão](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Ao usar a extensão de tag Adobe Privacy, você deve fornecer a função de reto
 
 ### Definir um elemento de dados para manipular identidades
 
-Inicie o processo de criação de um novo elemento de dados selecionando **[!UICONTROL Elementos de dados]** no painel de navegação esquerdo, seguido de **[!UICONTROL Adicionar elemento de dados]**. Quando estiver na tela de configuração, selecione **[!UICONTROL Núcleo]** para a extensão e **[!UICONTROL Código personalizado]** para o tipo de elemento de dados. Aqui, selecione **[!UICONTROL Abrir editor]** no painel direito.
+Na interface do usuário da coleta de dados, inicie o processo de criação de um novo elemento de dados selecionando **[!UICONTROL Elementos de dados]** no painel de navegação esquerdo, seguido de **[!UICONTROL Adicionar elemento de dados]**. Quando estiver na tela de configuração, selecione **[!UICONTROL Núcleo]** para a extensão e **[!UICONTROL Código personalizado]** para o tipo de elemento de dados. Aqui, selecione **[!UICONTROL Abrir editor]** no painel direito.
 
 ![Selecionar tipo de elemento de dados](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Depois de instalar a extensão, você pode desativá-la ou excluí-la. Selecione
 
 ## Próximas etapas
 
-Este guia cobriu o uso da extensão de tag de Privacidade de Adobe na interface do usuário do . Para obter mais informações sobre as funcionalidades fornecidas pela extensão, incluindo exemplos de como empregá-la usando o código bruto, consulte o [Visão geral da biblioteca JavaScript de privacidade](../../../../privacy-service/js-library.md) na documentação do Privacy Service.
+Este guia cobriu o uso da extensão de tag da Privacidade de Adobe na interface do usuário da coleta de dados. Para obter mais informações sobre as funcionalidades fornecidas pela extensão, incluindo exemplos de como empregá-la usando o código bruto, consulte o [Visão geral da biblioteca JavaScript de privacidade](../../../../privacy-service/js-library.md) na documentação do Privacy Service.

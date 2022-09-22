@@ -2,9 +2,9 @@
 title: Tipos de ação para extensões de borda
 description: Saiba como definir um módulo de biblioteca do tipo ação para uma extensão de tag em uma propriedade de borda.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '382'
 ht-degree: 66%
 
 ---
@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de ação para uma extensão de borda n
 
 Os tipos de ação normalmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
+1. Uma exibição mostrada na interface do usuário da Coleta de dados que permite que os usuários modifiquem as configurações da ação.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e executar uma ação.
 
 Por exemplo, um módulo para encaminhar alguns dados a um endpoint de terceiros pode ter esta aparência.

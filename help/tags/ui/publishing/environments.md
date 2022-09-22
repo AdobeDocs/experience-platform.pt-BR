@@ -2,10 +2,10 @@
 title: Ambientes
 description: Saiba mais sobre o conceito de ambientes de tag e como eles funcionam na Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 97%
+source-wordcount: '1468'
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ Selecione **[!UICONTROL Host]** para escolher um host pré-configurado para o am
 
 ![](./images/environments/select-host.png)
 
-Quando um build é concluído, é enviado ao local especificado para o host atribuído. Para obter informações sobre como criar e configurar hosts de tags, consulte o [visão geral de hosts](./hosts/hosts-overview.md).
+Quando um build é concluído, é enviado ao local especificado para o host atribuído. Para obter informações sobre como criar e configurar hosts na interface da Coleção de dados, consulte a [visão geral de hosts](./hosts/hosts-overview.md).
 
 ### Configuração de arquivamento {#archive}
 

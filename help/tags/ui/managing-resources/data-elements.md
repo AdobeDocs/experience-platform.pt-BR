@@ -2,10 +2,10 @@
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 93%
+source-wordcount: '1631'
+ht-degree: 98%
 
 ---
 
@@ -161,7 +161,7 @@ Obtenha o valor de:
 
 Todo objeto ou variável disponíveis do JavaScript pode ser referido usando o campo de caminho.
 
-Se você quiser coletar variáveis do JavaScript ou propriedades de objeto na marcação e usá-las com qualquer uma das extensões ou regras, os elementos de dados poderão ser usados para capturar esses valores. Dessa forma, você pode consultar o elemento de dados em suas regras e, se a fonte de dados mudar, será necessário alterar apenas sua referência à fonte (o elemento de dados) em um local.
+Se você quiser coletar variáveis do JavaScript ou propriedades de objeto na marcação e usá-las com qualquer uma das extensões ou regras, os elementos de dados poderão ser usados para capturar esses valores. Assim, você pode consultar o elemento de dados em suas regras. Além disso, se a origem dos dados mudar, será necessário alterar apenas sua referência à fonte (o elemento de dados) em um local na interface da Coleção de dados.
 
 Por exemplo, considere que a marcação contém uma variável de JavaScript chamada `Page_Name`, assim:
 
@@ -213,7 +213,7 @@ Somente a seção de nome é necessária e qualquer designador especial como “
 
 ### Número aleatório
 
-Use esse elemento de dados para gerar um número aleatório. Geralmente é usado para amostras de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
+Use esse elemento de dados para gerar um número aleatório. É usado frequentemente para amostra de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
 
 * Gerar uma ID de ocorrência
 * Concatene o número para um token de usuário ou carimbo de data e hora para garantir exclusividade
@@ -257,7 +257,7 @@ Alguns casos de uso comuns incluem:
 
 ## Elementos de dados incorporados
 
-Você deve criar elementos de dados personalizados adicionais se tiver usado anteriormente um dos seguintes elementos de dados:
+Você deverá criar um elemento de dados personalizado na interface da Coleção de dados se tiver usado anteriormente um dos seguintes elementos de dados:
 
 * URI
 * Protocolo

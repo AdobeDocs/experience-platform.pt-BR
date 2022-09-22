@@ -2,7 +2,7 @@
 title: Módulos de biblioteca em extensões da Web
 description: Saiba como formatar módulos de biblioteca para extensões da Web no Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
+source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 93%
@@ -47,7 +47,7 @@ Exemplo de uso:
 module.exports = function(…) { … }
 ```
 
-## `exports`
+## `exports` {#exports-variable}
 
 Uma variável livre chamada `exports` está disponível e permite exportar a API do módulo.
 

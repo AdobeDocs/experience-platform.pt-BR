@@ -4,9 +4,9 @@ title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Para fazer isso, você deve configurar funções, recursos e políticas.
 
 Você irá:
 
-* [Rotular as funções para seus usuários]{#label-roles}: Use o exemplo de um provedor de saúde (ACME Business Group) cujo grupo de marketing trabalha com agências externas.
-* [Rotular os recursos (campos de esquema e segmentos)]{#label-resources}: Atribua o **[!UICONTROL PHI/ Dados de integridade regulamentados]** para recursos e segmentos do schema.
-* [Crie a política que os vinculará]{#policy}: Crie uma política para vincular os rótulos em seus recursos aos rótulos em sua função, negando acesso aos campos e segmentos do esquema. Isso negará o acesso ao campo de esquema e ao segmento em todas as sandboxes para usuários que não tenham rótulos correspondentes.
+* [Rotular as funções para seus usuários](#label-roles): Use o exemplo de um provedor de saúde (ACME Business Group) cujo grupo de marketing trabalha com agências externas.
+* [Rotular os recursos (campos de esquema e segmentos)](#label-resources): Atribua o **[!UICONTROL PHI/ Dados de integridade regulamentados]** para recursos e segmentos do schema.
+* [Crie a política que os vinculará](#policy): Crie uma política para vincular os rótulos em seus recursos aos rótulos em sua função, negando acesso aos campos e segmentos do esquema. Isso negará o acesso ao campo de esquema e ao segmento em todas as sandboxes para usuários que não tenham rótulos correspondentes.
 
 ## Permissões
 
@@ -162,7 +162,7 @@ Repita as etapas acima com **[!UICONTROL Insulina &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configurar as ações permitidas e não permitidas para uma política"
->abstract="Selecione Permitir acesso a, para configurar as ações permitidas que seus usuários podem realizar em relação aos recursos. Selecione negar acesso a, para configurar ações não permitidas que seus usuários não possam realizar em relação aos recursos."
+>abstract="A <b>negar acesso ao</b> a política negará aos usuários acesso quando os critérios forem atendidos. Quando combinado com <b>Sendo falso</b> - o acesso será negado a todos os usuários, a menos que eles atendam aos critérios correspondentes definidos. Esse tipo de política permite proteger um recurso sensível e permitir acesso somente a usuários que tenham rótulos correspondentes. <br>A <b>permitir o acesso a</b> a política permitirá que os usuários acessem quando os critérios forem atendidos. Quando combinado com <b>Sendo verdadeiro o seguinte</b> - os usuários receberão acesso se atenderem aos critérios correspondentes definidos. Isso não nega explicitamente o acesso aos usuários, mas adiciona um acesso de permissão. Esse tipo de política permite que você dê acesso adicional ao recurso e, além dos usuários que já podem ter acesso por meio de permissões de função.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Editar uma política"
 
 >[!CONTEXTUALHELP]

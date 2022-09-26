@@ -2,9 +2,9 @@
 title: Conexão Verizon MediaYahoo DataX
 description: O DataX é uma infraestrutura agregada da Verizon Media/Yahoo que hospeda vários componentes que permitem que o Verizon Media/Yahoo troque dados com seus parceiros externos de forma segura, automatizada e escalável.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
+source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '787'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Leia mais sobre [Metadados de taxonomia](https://developer.verizonmedia.com/data
 
 >[!IMPORTANT]
 >
->Ao ativar mais de 100 segmentos para [!DNL Verizon Media/Yahoo DataX], você pode receber erros de limite de taxa do destino. Ao ativar segmentos para a [!DNL Yahoo/DataX] no destino, é recomendável ativar menos de 100 segmentos em um fluxo de dados de ativação. Se precisar ativar mais segmentos, crie um novo destino na mesma conta.
+>Ao ativar mais de 100 segmentos para [!DNL Verizon Media/Yahoo DataX], você pode receber erros de limite de taxa do destino. Ao ativar segmentos para esse destino, tente ativar menos de 100 segmentos em um fluxo de dados de ativação. Se precisar ativar mais segmentos, crie um novo destino na mesma conta.
 
 [!DNL DataX] é limitada por taxa de acordo com os limites de cota para postagens de taxonomia e público-alvo descritas no [Documentação do DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 

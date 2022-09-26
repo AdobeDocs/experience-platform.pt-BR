@@ -5,9 +5,9 @@ title: Guia da interface do usuário de conjuntos de dados
 topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
+source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Uma caixa de confirmação é exibida. Selecionar **[!UICONTROL Excluir]** para 
 
 ## Excluir um conjunto de dados habilitado para perfil
 
-Se um conjunto de dados estiver ativado para [!DNL Profile], a exclusão desse conjunto de dados por meio da interface do usuário o excluirá do Data Lake e do armazenamento do Perfil na Platform.
+Se um conjunto de dados estiver ativado para o Perfil, a exclusão desse conjunto de dados por meio da interface do usuário o excluirá do lago de dados, do Serviço de identidade e do armazenamento de Perfil na Plataforma.
 
 É possível excluir um conjunto de dados do [!DNL Profile] armazene somente (deixando os dados no Data Lake) usando a API do Perfil do cliente em tempo real. Para obter mais informações, consulte o [guia do endpoint da API de tarefas do sistema de perfis](../../profile/api/profile-system-jobs.md).
 

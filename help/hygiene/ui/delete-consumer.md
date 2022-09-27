@@ -2,11 +2,9 @@
 title: Excluir registros do consumidor
 description: Saiba como excluir registros do consumidor na interface do usuário do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
+>As solicitações de exclusão do consumidor só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 O [[!UICONTROL Higiene de dados] espaço de trabalho](./overview.md) na interface do usuário do Adobe Experience Platform permite excluir registros do consumidor que estão participando do Serviço de identidade e do Perfil do cliente em tempo real.
 
@@ -37,7 +35,7 @@ Para iniciar o processo, selecione **[!UICONTROL Criar solicitação]** na pági
 
 ![Imagem que mostra o [!UICONTROL Criar solicitação] botão sendo selecionado](../images/ui/delete-consumer/create-request-button.png)
 
-A caixa de diálogo de criação da solicitação é exibida. Por padrão, a variável **[!UICONTROL Consumidor]** está selecionada sob a variável **[!UICONTROL Ação]** seção. Deixe essa opção selecionada.
+A caixa de diálogo de criação da solicitação é exibida. Por padrão, a variável **[!UICONTROL Consumidor]** está selecionada sob a variável **[!UICONTROL Ação solicitada]** seção. Deixe essa opção selecionada.
 
 ![Imagem mostrando a opção consumidor selecionada na caixa de diálogo de criação](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ Para adicionar mais identidades, selecione o ícone de adição (![Imagem do íc
 
 ## Enviar a solicitação (#submit)
 
-Depois de concluir a adição de identidades à solicitação, selecione **[!UICONTROL Enviar]**.
+Depois de concluir a adição de identidades à solicitação, em **[!UICONTROL Configurações da solicitação]**, forneça um nome e uma descrição opcional para a solicitação antes de selecionar **[!UICONTROL Enviar]**.
 
 ![Imagem que mostra o [!UICONTROL Enviar] botão sendo selecionado](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ Você deverá confirmar a lista de identidades cujos dados deseja excluir. Selec
 
 ![Imagem que mostra a caixa de diálogo de confirmação](../images/ui/delete-consumer/confirm-request.png)
 
-Depois que a solicitação é enviada, uma ordem de serviço é criada e exibida no [!UICONTROL Consumidor] da guia [!UICONTROL Higiene de dados] espaço de trabalho. A partir daqui, você pode monitorar o status da ordem de serviço enquanto ela processa a solicitação. A maioria dos pedidos de trabalho de exclusão do consumidor levará vários dias para serem concluídos.
+Depois que a solicitação é enviada, uma ordem de serviço é criada e exibida no [!UICONTROL Consumidor] da guia [!UICONTROL Higiene de dados] espaço de trabalho. A partir daqui, você pode monitorar o status da ordem de serviço enquanto ela processa a solicitação.
+
+>[!NOTE]
+>
+>Consulte a seção de visão geral em [prazos e transparência](../home.md#consumer-delete-transparency) para obter detalhes sobre como as exclusões do consumidor são processadas após a execução.
 
 ## Próximas etapas
 
 Este documento cobriu como excluir registros do consumidor na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de higiene de dados na interface do usuário, consulte [visão geral da interface do usuário da higiene de dados](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+Para saber como excluir registros do consumidor usando a API de Higiene de Dados, consulte o [guia do endpoint de ordem de trabalho](../api/workorder.md).

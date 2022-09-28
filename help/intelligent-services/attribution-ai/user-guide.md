@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
+source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2873'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ As instâncias de serviço podem ser editadas, clonadas e excluídas usando os c
 
 - **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição, o status e a frequência de pontuação da instância.
 - **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a instância de serviço selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
-- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
+- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas. O conjunto de dados de saída correspondente será excluído da Platform. No entanto, as pontuações que foram sincronizadas com o Perfil do cliente em tempo real não são excluídas.
 - **[!UICONTROL Fonte de dados]**: Um link para o conjunto de dados que está sendo usado. Se mais de um conjunto de dados estiver sendo usado pelo Attribution AI, &quot;Vários&quot; seguido pelo número de conjuntos de dados será exibido. Ao selecionar o hiperlink, a janela de visualização dos conjuntos de dados é exibida.
 - **[!UICONTROL Detalhes da última execução]**: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 
@@ -261,6 +261,14 @@ Para garantir que você obtenha o modelo mais preciso possível, é importante t
 Depois de selecionar sua janela de treinamento, selecione **[!UICONTROL Concluir]** no canto superior direito. Permita que os dados sejam processados por algum tempo. Uma vez concluída, uma caixa de diálogo de instância é exibida, confirmando que a configuração da instância foi concluída. Selecionar **[!UICONTROL Ok]** para ser redirecionado para o **[!UICONTROL Instâncias do serviço]** onde você pode ver a instância do serviço.
 
 ![configuração concluída](./images/user-guide/instance_setup_complete.png)
+
+## Políticas de governança
+
+Depois de passar pelo workflow para criar uma instância e enviar a configuração do modelo, a variável [aplicação da política](/help/data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibida uma janela indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing no Platform sejam compatíveis com as políticas de uso de dados.
+
+![fornecedor mostrando violação de política](./images/user-guide/policy-violation-popover-aai.png)
+
+O provedor fornece informações específicas sobre a violação. Você pode resolver essas violações por meio de configurações de política e outras medidas que não estão diretamente relacionadas ao fluxo de trabalho de configuração. Por exemplo, é possível alterar os rótulos para que determinados campos possam ser usados para fins de ciência de dados. Como alternativa, você também pode modificar a própria configuração do modelo para que ele não use nada com um rótulo nela. Consulte a documentação para saber mais sobre como configurar [políticas](/help/data-governance/policies/overview.md).
 
 ## Controle de acesso baseado em atributos
 

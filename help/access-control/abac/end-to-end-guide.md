@@ -2,20 +2,19 @@
 keywords: Experience Platform; home; tópicos populares; controle de acesso; controle de acesso baseado em atributos;
 title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
-hide: true
-hidefromtoc: true
-source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
+source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
 workflow-type: tm+mt
-source-wordcount: '2315'
+source-wordcount: '2382'
 ht-degree: 0%
 
 ---
 
 # Guia completo do controle de acesso baseado em atributos
 
-O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece às marcas conscientes da privacidade mais flexibilidade para gerenciar o acesso do usuário. Objetos individuais, como campos de esquema e segmentos, podem ser atribuídos a funções de usuário. Esse recurso permite que você conceda ou revogue o acesso a objetos individuais para usuários específicos da Plataforma em sua organização.
+O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece aos clientes com várias marcas e privacidade maior flexibilidade para gerenciar o acesso dos usuários. O acesso a objetos individuais, como campos de esquema e segmentos, pode ser concedido/negado com políticas com base nos atributos e na função do objeto. Esse recurso permite que você conceda ou revogue o acesso a objetos individuais para usuários específicos da Plataforma em sua organização.
 
-Essa funcionalidade permite categorizar campos de esquema, segmentos e assim por diante com rótulos que definem escopos organizacionais ou de uso de dados. No Adobe Journey Optimizer, você pode aplicar esses mesmos rótulos a jornadas e ofertas. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
+Essa funcionalidade permite categorizar campos de esquema, segmentos e assim por diante com rótulos que definem escopos organizacionais ou de uso de dados. É possível aplicar esses mesmos rótulos a jornadas, Ofertas e outros objetos no Adobe Journey Optimizer. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
+
 
 ## Introdução
 
@@ -28,7 +27,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes da pla
 
 ### Visão geral do caso de uso
 
-Este guia usa um exemplo de caso de uso de restrição de acesso a dados confidenciais para demonstrar o fluxo de trabalho. Você passará por um exemplo de fluxo de trabalho de controle de acesso baseado em atributos, onde criará e atribuirá funções, rótulos e políticas para configurar se os usuários podem ou não acessar determinados recursos em sua organização. Este caso de uso é descrito abaixo:
+Você passará por um exemplo de fluxo de trabalho de controle de acesso baseado em atributos, onde criará e atribuirá funções, rótulos e políticas para configurar se os usuários podem ou não acessar recursos específicos em sua organização. Este guia usa um exemplo de restrição de acesso a dados confidenciais para demonstrar o fluxo de trabalho. Este caso de uso é descrito abaixo:
 
 Você é um provedor de assistência médica e deseja configurar o acesso aos recursos em sua organização.
 
@@ -45,13 +44,13 @@ Você irá:
 
 ## Permissões
 
-[!UICONTROL Permissões] é a área do Experience Cloud, onde os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
+[!UICONTROL Permissões] é a área do Experience Cloud, onde os administradores podem definir funções de usuário e políticas para gerenciar permissões para recursos e objetos em um aplicativo de produto.
 
-Através de [!UICONTROL Permissões], é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. [!UICONTROL Permissões] também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.
+Através de [!UICONTROL Permissões], é possível criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções. [!UICONTROL Permissões] também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.
 
-Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema para obter acesso.
+Entre em contato com o administrador do sistema para obter acesso se você não tiver privilégios de administrador.
 
-Depois de ter privilégios de administrador, acesse [Adobe Experience Cloud](https://experience.adobe.com/) e faça logon usando suas credenciais do Adobe. Depois de conectado, a variável **[!UICONTROL Visão geral]** for exibida para sua organização, para a qual você tem privilégios de administrador. Esta página mostra os produtos aos quais sua organização se inscreveu, juntamente com outros controles para adicionar usuários e administradores à organização como um todo. Selecionar **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com a plataforma.
+Depois de ter privilégios de administrador, acesse [Adobe Experience Cloud](https://experience.adobe.com/) e faça logon usando suas credenciais do Adobe. Depois de conectado, a variável **[!UICONTROL Visão geral]** for exibida para sua organização, para a qual você tem privilégios de administrador. Esta página mostra os produtos aos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecionar **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com a plataforma.
 
 ![Imagem que mostra o produto Permissões sendo selecionado no Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -80,7 +79,7 @@ O espaço de trabalho Permissões da interface do usuário da plataforma é exib
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
->abstract="Você pode criar uma nova função para categorizar melhor os usuários que estão acessando sua instância da plataforma. Por exemplo, você pode criar uma função para uma Equipe de marketing interno e aplicar o rótulo de RHD a essa função, o que permitirá que sua Equipe de marketing interno acesse Informações de integridade protegida (PHI). Como alternativa, você também pode criar uma função para uma Agência Externa e negar esse acesso de função aos dados de PHI ao não aplicar o rótulo de RHD a essa função."
+>abstract="Você pode criar uma nova função para categorizar melhor os usuários que estão acessando sua instância da plataforma. Por exemplo, você pode criar uma função para uma Equipe de marketing interno e aplicar o rótulo de RHD a essa função, permitindo que sua Equipe de marketing interno acesse Informações de integridade protegida (PHI). Como alternativa, você também pode criar uma função para uma Agência Externa e negar esse acesso de função aos dados de PHI ao não aplicar o rótulo de RHD a essa função."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Criar uma nova função"
 
 >[!CONTEXTUALHELP]
@@ -102,6 +101,10 @@ Uma lista de todos os rótulos em sua organização é exibida. Selecionar **[!U
 
 ![Imagem que mostra o rótulo RHD que está sendo selecionado e salvo](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
+>[!NOTE]
+>
+>Ao adicionar um grupo de organizações a uma função, todos os usuários desse grupo serão adicionados à função . Quaisquer alterações no grupo da organização (usuários removidos ou adicionados) serão automaticamente atualizadas na função.
+
 ## Aplicar rótulos a campos de esquema {#label-resources}
 
 Agora que você configurou uma função de usuário com o [!UICONTROL RHD] , a próxima etapa é adicionar esse mesmo rótulo aos recursos que você deseja controlar para essa função.
@@ -110,9 +113,9 @@ Selecionar **[!UICONTROL Esquemas]** no menu de navegação esquerdo e selecione
 
 ![Imagem que mostra o esquema ACME Healthcare que está sendo selecionado na guia Schemas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Em seguida, selecione **[!UICONTROL Rótulos]** para ver uma lista que exibe os campos associados ao esquema. Aqui, é possível atribuir rótulos a um ou vários campos ao mesmo tempo. Selecione o **[!UICONTROL Glicose no sangue]** e **[!UICONTROL InsulinLevel]** e selecione **[!UICONTROL Editar rótulos de governança]**.
+Em seguida, selecione **[!UICONTROL Rótulos]** para ver uma lista que exibe os campos associados ao esquema. Aqui, é possível atribuir rótulos a um ou vários campos ao mesmo tempo. Selecione o **[!UICONTROL Glicose no sangue]** e **[!UICONTROL InsulinLevel]** e selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]**.
 
-![Imagem que mostra a seleção de BloodGlicose e InsulinLevel e edita rótulos de governança selecionados](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Imagem que mostra o BloodGlicose e o InsulinLevel selecionados e que aplica rótulos de acesso e de governança de dados selecionados](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 O **[!UICONTROL Editar rótulos]** for exibida, permitindo escolher os rótulos que deseja aplicar aos campos de esquema. Para esse caso de uso, selecione a variável **[!UICONTROL PHI/ Dados de integridade regulamentados]** rótulo, depois selecione **[!UICONTROL Salvar]**.
 
@@ -162,20 +165,24 @@ Repita as etapas acima com **[!UICONTROL Insulina &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configurar as ações permitidas e não permitidas para uma política"
->abstract="A <b>negar acesso ao</b> a política negará aos usuários acesso quando os critérios forem atendidos. Quando combinado com <b>Sendo falso</b> - o acesso será negado a todos os usuários, a menos que eles atendam aos critérios correspondentes definidos. Esse tipo de política permite proteger um recurso sensível e permitir acesso somente a usuários que tenham rótulos correspondentes. <br>A <b>permitir o acesso a</b> a política permitirá que os usuários acessem quando os critérios forem atendidos. Quando combinado com <b>Sendo verdadeiro o seguinte</b> - os usuários receberão acesso se atenderem aos critérios correspondentes definidos. Isso não nega explicitamente o acesso aos usuários, mas adiciona um acesso de permissão. Esse tipo de política permite que você dê acesso adicional ao recurso e, além dos usuários que já podem ter acesso por meio de permissões de função.&quot;</br>
+>abstract="A <b>negar acesso ao</b> a política negará aos usuários acesso quando os critérios forem atendidos. Combinado com <b>Sendo falso</b> - o acesso será negado a todos os usuários, a menos que eles atendam aos critérios correspondentes definidos. Esse tipo de política permite proteger um recurso sensível e permitir acesso somente a usuários com rótulos correspondentes. <br>A <b>permitir o acesso a</b> a política permitirá que os usuários acessem quando os critérios forem atendidos. Quando combinado com <b>Sendo verdadeiro o seguinte</b> - os usuários receberão acesso se atenderem aos critérios correspondentes definidos. Isso não nega explicitamente o acesso aos usuários, mas adiciona um acesso de permissão. Esse tipo de política permite que você dê acesso adicional ao recurso e, além dos usuários que já podem ter acesso por meio de permissões de função.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Editar uma política"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
 >title="Configurar permissões para um recurso"
->abstract="Um recurso é o ativo ou objeto que um usuário pode ou não acessar. Os recursos podem ser segmentos ou esquemas. Você pode configurar permissões de gravação, leitura ou exclusão para segmentos e campos de esquema."
+>abstract="Um recurso é o ativo ou objeto que um usuário pode ou não acessar. Os recursos podem ser segmentos ou campos de esquemas. Você pode configurar permissões de gravação, leitura ou exclusão para segmentos e campos de esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
 >title="Editar condições"
->abstract="Aplique declarações condicionais à sua política para configurar o acesso do usuário a determinados recursos. Selecione corresponder tudo para exigir que os usuários tenham funções com exatamente os mesmos rótulos de um recurso para ter acesso permitido. Selecione qualquer correspondência para exigir apenas que os usuários tenham uma função com apenas um rótulo que corresponda a um recurso. Os rótulos podem ser definidos como rótulos principais ou personalizados, com rótulos principais representando rótulos criados e fornecidos por rótulos Adobe e personalizados representando rótulos criados para sua organização."
+>abstract="Aplique declarações condicionais à sua política para configurar o acesso do usuário a determinados recursos. Selecione corresponder tudo para exigir que os usuários tenham funções com os mesmos rótulos de um recurso para ter acesso permitido. Selecione qualquer correspondência para exigir que os usuários tenham uma função com apenas um rótulo correspondente a um rótulo em um recurso. Os rótulos podem ser definidos como rótulos principais ou personalizados, com rótulos principais representando rótulos criados e fornecidos por rótulos Adobe e personalizados representando rótulos criados para sua organização."
 
 As políticas de controle de acesso usam rótulos para definir quais funções de usuário têm acesso a recursos específicos da plataforma. As políticas podem ser locais ou globais e podem substituir outras políticas. Neste exemplo, o acesso aos campos e segmentos do schema será negado em todas as sandboxes para usuários que não tenham os rótulos correspondentes no campo schema .
+
+>[!NOTE]
+>
+>Uma &quot;política de negação&quot; é criada para conceder acesso a recursos confidenciais porque a função concede permissão para os assuntos. A política escrita neste exemplo **nega** você acessa se não tiver os rótulos obrigatórios.
 
 Para criar uma política de controle de acesso, selecione **[!UICONTROL Permissões]** no menu de navegação esquerdo e selecione **[!UICONTROL Políticas]**. Em seguida, selecione **[!UICONTROL Criar política]**.
 
@@ -194,7 +201,7 @@ A tabela abaixo mostra as condições disponíveis ao criar uma política:
 | Condições | Descrição |
 | --- | --- |
 | Sendo falso | Quando a opção &quot;Negar acesso a&quot; estiver definida, o acesso será restrito se o usuário não atender aos critérios selecionados. |
-| Sendo verdadeiro o seguinte | Quando a opção &quot;Permitir acesso a&quot; estiver definida, o acesso será restrito se o usuário atender aos critérios selecionados. |
+| Sendo verdadeiro o seguinte | Quando a opção &quot;Permitir acesso a&quot; estiver definida, o acesso será permitido se o usuário atender aos critérios selecionados. |
 | Corresponde a qualquer | O usuário tem um rótulo que corresponde a qualquer rótulo aplicado a um recurso. |
 | Corresponde a tudo | O usuário tem todos os rótulos que correspondem a todos os rótulos aplicados a um recurso. |
 | Rótulo principal | Um rótulo principal é um rótulo definido por Adobe que está disponível em todas as instâncias da plataforma. |

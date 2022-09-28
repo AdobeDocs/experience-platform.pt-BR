@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 5%
 
 ---
@@ -22,9 +22,11 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Logs de auditoria](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [Coleta de dados](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Serviço de query](#query-service)
 - [Fontes](#sources)
 
 ## Controle de acesso baseado em atributos {#abac}
@@ -106,7 +108,17 @@ O Experience Platform permite auditar a atividade do usuário para vários servi
 
 Para obter mais informações sobre os diferentes tipos de eventos específicos de recursos rastreados por logs de auditoria na Platform, consulte o [visão geral dos logs de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Coleta de dados
+## [!DNL Dashboards] {#dashboards}
+
+O Adobe Experience Platform fornece vários painéis através dos quais você pode visualizar informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários.
+
+| Recurso | Descrição |
+| --- | --- |
+| Rótulo em uso | Quando visualizado na biblioteca de widgets, o rótulo em uso identifica facilmente a presença de widgets existentes no painel. Isso facilita evitar a duplicação, embora você ainda possa adicionar o mesmo widget mais de uma vez, se desejar. |
+
+Para obter mais informações sobre [!DNL Dashboards]consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
+
+## Coleta de dados {#data-collection}
 
 A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não-Adobe.
 
@@ -178,6 +190,19 @@ O serviço de identidade da Adobe Experience Platform ajuda você a obter uma me
 | Suporte para exclusão de conjunto de dados | O Serviço de identidade agora oferece suporte à exclusão do conjunto de dados ao solicitar por meio do [API do Serviço de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), da interface do usuário ou da higiene de dados. Leia o guia em [exclusão de conjuntos de dados na interface do usuário](../../catalog/datasets/user-guide.md#delete-a-dataset) para obter mais informações. |
 
 Para saber mais sobre o Serviço de identidade, leia a [Visão geral do Serviço de identidade](../../identity-service/home.md).
+
+## Serviço de query {#query-service}
+
+O Serviço de Consulta permite que você use o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. É possível unir qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados do query como um novo conjunto de dados para usar nos relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| API de assinatura de alerta | O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. Atualmente, os alertas de consulta só podem assinar o usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Amostras do conjunto de dados | Amostras de conjunto de dados do Serviço de query permitem realizar consultas exploratórias em grandes dados com um tempo de processamento muito reduzido ao custo da precisão da consulta. |
+
+Para obter mais informações sobre [!DNL Query Service]consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).
 
 ## Fontes {#sources}
 

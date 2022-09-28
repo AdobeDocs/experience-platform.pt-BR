@@ -1,18 +1,15 @@
 ---
 title: Modelo de dados de insights da Plataforma de dados do cliente (CDP)
 description: Saiba como usar consultas SQL de Modelos de dados de insights do CDP para personalizar seus próprios relatórios de CDP para seus casos de uso de marketing e KPI.
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
 
-# (Beta) Modelo de dados de insights da Plataforma de dados do cliente (CDP)
-
->[!IMPORTANT]
->
->O recurso Modelos de dados do CDP Insights está em beta. Seus recursos e documentação estão sujeitos a alterações.
+# Modelo de dados de insights da Plataforma de dados do cliente (CDP)
 
 O recurso Modelo de dados de insights da CDP (Plataforma de dados do cliente) expõe os modelos de dados e o SQL que alimenta os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios de CDP para seus casos de uso de indicador de desempenho principal (KPI) de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário.
 

@@ -5,10 +5,10 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 0%
+source-wordcount: '2375'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ Trabalhar com definições de segmento requer uma compreensão das várias [!DNL
 
 Também é importante saber dois termos principais que são usados por meio deste documento e entender a diferença entre eles:
 - **Definição de segmento**: O conjunto de regras usado para descrever as principais características ou comportamentos de um público-alvo.
-- **Público**: O conjunto resultante de perfis que atendem aos critérios de uma definição de segmento.
+- **Público**: O conjunto resultante de perfis que atendem aos critérios de uma definição de segmento. Isso pode ser criado por meio do Adobe Experience Platform (público-alvo gerado pela plataforma) ou de uma fonte externa (público gerado externamente).
 
 ## Visão geral
 
@@ -62,7 +62,7 @@ Para saber mais, visite o [guia do painel de segmentos](../../dashboards/guides/
 >title="Adicionar todos os segmentos para agendar"
 >abstract="Ative para incluir todos os segmentos de avaliação de lote na atualização agendada diária às 15h30 em UTC. Desative para remover todos os segmentos da atualização agendada."
 
-Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definições de segmento para sua Organização IMS.
+Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definições de segmento da sua organização.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Selecionar **[!UICONTROL Criar segmento]** levará você ao Construtor de segmen
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-A barra lateral direita contém informações sobre todos os segmentos na organização IMS, listando o número total de segmentos, a última data de avaliação, a próxima data de avaliação, bem como um detalhamento dos segmentos por método de avaliação.
+A barra lateral direita contém informações sobre todos os segmentos da organização, listando o número total de segmentos, a última data de avaliação, a próxima data de avaliação, bem como um detalhamento dos segmentos por método de avaliação.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ A página de detalhes do segmento é exibida. Na parte superior, há um resumo d
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Resumo do segmento
+### Resumo do segmento {#segment-summary}
 
 O **[!UICONTROL Resumo do segmento]** A seção fornece informações como ID, nome, descrição e detalhes dos atributos.
 
@@ -191,6 +191,80 @@ Habilitar suas definições de segmento para avaliação agendada pode ser feito
 No momento, os agendamentos só podem ser criados usando a API. Para obter etapas detalhadas sobre como criar, editar e trabalhar com agendamentos usando a API, siga o tutorial para avaliar e acessar os resultados do segmento, especificamente a seção sobre [avaliação programada usando a API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Públicos-alvo {#audiences}
+
+>[!IMPORTANT]
+>
+>A funcionalidade de públicos-alvo está atualmente em beta limitado e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+
+Selecione o **[!UICONTROL Públicos-alvo]** para ver uma lista de todos os públicos-alvo de sua organização.
+
+![Uma lista de públicos-alvo da sua organização.](../images/ui/overview/list-audiences.png)
+
+Por padrão, essa visualização lista informações sobre os públicos-alvo, incluindo nome, contagem de perfis, origem, data de criação e data da última modificação.
+
+Você pode selecionar a variável ![Personalizar tabela](../images/ui/overview/customize-table.png) ícone para alterar quais campos são exibidos.
+
+![O botão personalizar tabela é realçado. Selecionar esse botão permite personalizar os campos exibidos na página de navegação Públicos-alvo .](../images/ui/overview/select-customize-table.png)
+
+Uma amostra é exibida, listando todos os campos que podem ser exibidos na tabela.
+
+![Os atributos que podem ser exibidos para a seção Procurar públicos .](../images/ui/overview/customize-table-attributes.png)
+
+| Campo | Descrição |
+| ----- | ----------- | 
+| [!UICONTROL Nome] | O nome do público-alvo. |
+| [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
+| [!UICONTROL Origem] | A origem do público-alvo. Se esse público-alvo foi gerado pela plataforma, ele terá uma origem de Serviço de segmentação. |
+| [!UICONTROL Status do ciclo de vida] | O status do público-alvo. Os valores possíveis para esse campo incluem `Draft`, `Published`e `Archived`. |
+| [!UICONTROL Atualizar frequência] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem `On Demand`, `Scheduled`e `Continuous`. |
+| [!UICONTROL Última atualização de] | O nome da pessoa que atualizou o público pela última vez. |
+| [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
+| [!UICONTROL Última atualização] | A hora e a data em que o público-alvo foi criado pela última vez. |
+| [!UICONTROL Acessar rótulos] | Os rótulos de acesso do público-alvo. Os rótulos de acesso permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Esses rótulos podem ser aplicados a qualquer momento, fornecendo flexibilidade na maneira como você decide controlar os dados. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
+
+Você pode selecionar **[!UICONTROL Criar público-alvo]** para criar um público-alvo.
+
+![O botão criar público-alvo é realçado, mostrando onde selecionar a opção para criar um público-alvo.](../images/ui/overview/create-audience.png)
+
+Uma capacidade é exibida, permitindo escolher entre a composição de um público-alvo ou a criação de regras.
+
+![Uma oferta que exibe os dois tipos de público-alvo que você pode criar.](../images/ui/overview/create-audience-type.png)
+
+Selecionar **[!UICONTROL Compor públicos-alvo]** O direciona para o Audience Builder. Para saber mais sobre como criar públicos-alvo, leia a seção [Guia do Audience Builder](./audience-builder.md).
+
+Selecionar **[!UICONTROL Criar regra]** direciona você ao Construtor de segmentos. Para saber mais sobre como criar segmentos, leia a [Guia do Construtor de segmentos](./segment-builder.md)
+
+## Detalhes do público-alvo {#audience-details}
+
+Para ver mais detalhes sobre um público-alvo específico, selecione o nome de um público-alvo na [!UICONTROL Públicos-alvo] guia .
+
+A página de detalhes do público-alvo é exibida. Essa página difere nos detalhes, dependendo se o público-alvo foi gerado com o Adobe Experience Platform ou de uma fonte externa, como o Audience Orchestration.
+
+### Público-alvo gerado por plataforma
+
+Para obter mais informações sobre públicos-alvo gerados pela plataforma, leia o [seção de resumo do segmento](#segment-summary).
+
+### Público-alvo gerado externamente
+
+Na parte superior da página de detalhes do público-alvo, há um resumo do público-alvo e detalhes sobre o conjunto de dados em que o público-alvo é salvo.
+
+![Os detalhes fornecidos para um público-alvo gerado externamente.](../images/ui/overview/externally-generated-audience.png)
+
+O **[!UICONTROL Resumo do público]** A seção fornece informações como ID, nome, descrição e detalhes dos atributos.
+
+O **[!UICONTROL Detalhes do conjunto de dados]** seção fornece informações como nome, descrição, nome da tabela, fonte e esquema. Você pode selecionar **[!UICONTROL Exibir conjunto de dados]** para ver mais informações sobre o conjunto de dados.
+
+| Campo | Descrição |
+| ----- | ----------- |
+| [!UICONTROL Nome] | O nome do conjunto de dados. |
+| [!UICONTROL Descrição] | A descrição do conjunto de dados. |
+| [!UICONTROL Nome da tabela] | O nome da tabela do conjunto de dados. |
+| [!UICONTROL Fonte] | A fonte do conjunto de dados. Para públicos gerados externamente, esse valor será **Esquema**. |
+| [!UICONTROL Esquema] | O tipo de esquema XDM ao qual o conjunto de dados corresponde. |
+
+Para saber mais sobre conjuntos de dados, leia o [visão geral do conjunto de dados](../../catalog/datasets/overview.md).
 
 ## Segmentação de streaming {#streaming-segmentation}
 

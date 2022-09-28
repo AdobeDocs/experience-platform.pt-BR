@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 18%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 18%
    - [Funções SQL Spark](sql/spark-sql-functions.md)
    - [Comandos de metadados](sql/metadata.md)
    - [Instruções preparadas](sql/prepared-statements.md)
+   - [Amostras do conjunto de dados](sql/dataset-samples.md)
 - Conectar clientes ao Serviço de query {#clients}
    - [Visão geral das conexões do cliente](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)

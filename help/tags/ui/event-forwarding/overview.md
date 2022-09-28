@@ -3,9 +3,9 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '959'
 ht-degree: 9%
 
 ---
@@ -49,7 +49,7 @@ Enquanto as tags coletam dados de evento diretamente do seu site ou aplicativo m
 
 ### Propriedades {#properties}
 
-O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separado das tags, que podem ser exibidas na interface do usuário da coleta de dados ao selecionar **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo.
+O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separado das tags, que podem ser exibidas na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados ao selecionar **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo.
 
 ![Propriedades de encaminhamento de eventos na interface do usuário da coleção de dados](../../images/ui/event-forwarding/overview/properties.png)
 

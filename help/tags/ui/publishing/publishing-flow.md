@@ -2,10 +2,10 @@
 title: Fluxo de publicação
 description: Saiba mais sobre o processo de criação de bibliotecas, o teste de builds e a aprovação deles para produção no Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 98%
+source-wordcount: '1490'
+ht-degree: 96%
 
 ---
 
@@ -42,7 +42,7 @@ Quando se trata do fluxo de publicação, uma biblioteca pode estar em quatro es
 * [[!UICONTROL Aprovada]](#approved)
 * [[!UICONTROL Publicada]](#published)
 
-Esses quatro estados são representados como colunas na guia **[!UICONTROL Fluxo de publicação]** na interface da Coleção de dados.
+Esses quatro estados são representados como colunas na variável **[!UICONTROL Fluxo de publicação]** guia .
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ O que está incluído no upstream depende do estágio atual da biblioteca. Por e
 
 ![](./images/approval-workflow/upstream.png)
 
-Quando você está editando uma biblioteca na interface da Coleção de dados, todos os recursos herdados do upstream são representados na seção **[!UICONTROL Recursos upstream]**. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
+Ao editar uma biblioteca na interface do usuário, todos os recursos herdados do upstream são representados no **[!UICONTROL Recursos upstream]** seção. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

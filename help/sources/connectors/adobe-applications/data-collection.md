@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, fontes, fonte, coleta d
 title: Coleta de dados do Adobe
 description: Este documento fornece uma visão geral da fonte de coleta de dados do Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 O Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente de fontes do lado do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe em segundos.
 
-A integração das fontes da Coleta de dados do Adobe permite acessar os dados da Coleta de dados da Borda da experiência, incluindo Preparação de dados para coleta de dados, bem como suporte aprimorado para avisos, por meio do catálogo de fontes.
+A integração das fontes da Coleta de dados da Adobe Experience Platform permite acessar seus dados na Rede de borda, incluindo Preparação de dados para coleta de dados, bem como suporte aprimorado para avisos, por meio do catálogo de fontes.
 
-## Use o espaço de trabalho de fontes para acessar a Coleta de dados do Adobe
+## Use o espaço de trabalho de fontes para acessar a Coleta de dados
 
 Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -32,7 +32,7 @@ Um armazenamento de dados é uma configuração que informa à Rede de borda ond
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Para obter etapas abrangentes sobre como usar a interface do usuário da coleta de dados, consulte [visão geral completa da coleta de dados](../../../collection/e2e.md).
+Para obter etapas abrangentes sobre como configurar a coleta de dados na interface do usuário, consulte o [visão geral completa da coleta de dados](../../../collection/e2e.md).
 
 ## Próximas etapas
 

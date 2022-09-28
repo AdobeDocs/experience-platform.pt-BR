@@ -2,9 +2,9 @@
 title: Referência a Objeto Satélite
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1290'
 ht-degree: 79%
 
 ---
@@ -51,7 +51,7 @@ No exemplo fornecido, se um elemento de dados existir com um nome correspondente
 
 >[!NOTE]
 >
->Você pode usar a porcentagem (`%`) para fazer referência às variáveis de muitos campos de formulário na interface do usuário da coleta de dados, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usando `%product%` O acessará o valor do elemento de dados do produto ou da variável personalizada.
+>Você pode usar a porcentagem (`%`) para fazer referência às variáveis de muitos campos de formulário na implementação de tags, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usando `%product%` O acessará o valor do elemento de dados do produto ou da variável personalizada.
 
 Quando um evento aciona uma regra, você pode transmitir a regra correspondente `event` objeto em `_satellite.getVar()` assim:
 

@@ -1,10 +1,10 @@
 ---
 title: Configurar a extensão Adobe Experience Platform Web SDK
-description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário da coleta de dados.
+description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1041'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 A extensão de tag do SDK da Web da Adobe Experience Platform envia dados para a Adobe Experience Cloud a partir de propriedades da Web por meio da Rede de borda da Adobe Experience Platform. A extensão permite fazer o stream de dados para a Plataforma, sincronizar identidades, processar sinais de consentimento do cliente e coletar dados de contexto automaticamente.
 
-Este documento aborda como configurar a extensão na interface do usuário da coleta de dados.
+Este documento aborda como configurar a extensão na interface do usuário do .
 
 ## Introdução
 
-Se a extensão SDK da Web da plataforma já tiver sido instalada para uma propriedade, abra a propriedade na interface do usuário da coleta de dados e selecione a variável **[!UICONTROL Extensões]** guia . No SDK da Web da plataforma, selecione **[!UICONTROL Configurar]**.
+Se a extensão SDK da Web da plataforma já tiver sido instalada para uma propriedade, abra a propriedade na interface do usuário e selecione a variável **[!UICONTROL Extensões]** guia . No SDK da Web da plataforma, selecione **[!UICONTROL Configurar]**.
 
 ![](../images/extension/overview/configure.png)
 

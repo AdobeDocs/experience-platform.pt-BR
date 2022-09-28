@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Adobe Target v2
 description: Saiba mais sobre a extensão de tag do Adobe Target v2 na Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 98%
+source-wordcount: '1356'
+ht-degree: 92%
 
 ---
 
@@ -31,7 +31,7 @@ Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a exten
 
 ### configurações do at.js
 
-Todas as suas configurações de at.js, com exceção do tempo limite, são automaticamente recuperadas da configuração de at.js na interface do Target. A extensão recupera apenas as configurações da interface do Target quando adicionada pela primeira vez. Assim, todas as configurações deverão ser gerenciadas na interface da Coleção de dados se forem necessárias atualizações adicionais.
+Todas as suas configurações de at.js, com exceção do tempo limite, são automaticamente recuperadas da configuração de at.js na interface do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário se forem necessárias atualizações adicionais.
 
 As opções de configuração disponíveis são as seguintes:
 
@@ -133,8 +133,8 @@ Estas são algumas coisas que devem ser lembradas ao usar o trecho pré-ocultaç
    * Quando a resposta de carregamento da página for recebida
    * Quando a solicitação de carregamento de página expira
    * Quando o trecho atingir o tempo limite
-* A ação “Acionar solicitação de carregamento de página” deve ser usada em todas as páginas que usam o trecho pré-ocultação para minimizar a duração da pré-ocultação.
-* A ocultação de corpo também deve estar ativada na ação Solicitação de carregamento de página na regra de Carregamento de página que você usa para o Target na interface da Coleção de dados. Caso contrário, todos os carregamentos de página permanecerão ocultos pelo período de tempo limite.
+* A ação &quot;Acionar solicitação de carregamento de página&quot; deve ser usada em todas as páginas que usam o trecho pré-ocultação para minimizar a duração da pré-ocultação.
+* A ocultação de corpo também deve estar ativada na ação Solicitação de carregamento de página na regra de Carregamento de página que você usa para o Target; caso contrário, todos os carregamentos de página permanecerão ocultos pelo período limite.
 
 O trecho de código de pré-ocultação é o seguinte e pode ser minimizado. As opções configuráveis estão no final:
 

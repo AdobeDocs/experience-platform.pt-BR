@@ -2,9 +2,9 @@
 title: Suporte Premium CDN para tags
 description: Saiba mais sobre o recurso premium de CDN para tags e como ele pode ser usado para fornecer seu conteúdo em várias regiões geográficas.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Ao usar um [Host gerenciado pelo Adobe](./hosts/managed-by-adobe-host.md) para f
 
 Para levar isso em conta, as tags no Experience Platform fornecem um recurso premium de CDN que permite fornecer conteúdo a essas regiões especiais.
 
-O suporte à CDN Premium é um recurso pago e deve ser adquirido pela organização para habilitá-lo e usá-lo. Este guia aborda como configurar e usar esse recurso na interface do usuário da coleta de dados depois de comprá-la.
+O suporte à CDN Premium é um recurso pago e deve ser adquirido pela organização para habilitá-lo e usá-lo. Este guia aborda como configurar e usar esse recurso na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados após a compra.
 
 ## Habilitar CDN premium para sua organização
 
-A CDN Premium é ativada no nível da empresa. Depois que sua organização comprar o recurso premium CDN, um administrador do Adobe será habilitado para sua empresa na interface do usuário para coleta de dados.
+A CDN Premium é ativada no nível da empresa. Depois que sua organização comprar o recurso premium CDN, um administrador do Adobe habilitará o recurso na interface do usuário para sua empresa.
 
 ## Recriar e instalar bibliotecas de tags com códigos incorporados atualizados
 

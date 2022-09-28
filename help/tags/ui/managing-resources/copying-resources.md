@@ -2,10 +2,10 @@
 title: Copiar recursos
 description: Saiba como criar um novo recurso de tags usando as configurações de um recurso de tags existente na Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 97%
+source-wordcount: '780'
+ht-degree: 94%
 
 ---
 
@@ -35,7 +35,7 @@ Se estiver copiando uma regra ou um elemento de dados, na caixa de diálogo de c
 
 >[!NOTE]
 >
->Na interface da Coleção de dados, não será possível copiar recursos para outra propriedade se uma das propriedades estiver configurada para desenvolvimento de extensão e a outra não estiver.
+>Não é possível copiar recursos para outra propriedade se uma propriedade estiver configurada para desenvolvimento de extensão e a outra propriedade não estiver.
 
 Depois de configurar o comportamento desejado, clique em **[!UICONTROL Copiar]**.
 

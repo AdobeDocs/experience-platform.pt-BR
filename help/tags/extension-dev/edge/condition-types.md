@@ -2,10 +2,10 @@
 title: Tipos de condição para extensões de borda
 description: Saiba como definir um módulo de biblioteca do tipo condição para uma extensão de borda no Adobe Experience Platform.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 69%
+source-wordcount: '412'
+ht-degree: 68%
 
 ---
 
@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de condição para uma extensão de bor
 
 Os tipos de condição normalmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário da Coleta de dados que permite que os usuários modifiquem as configurações da condição.
+1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da condição.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e avaliar uma condição.
 
 Por exemplo, se você quiser avaliar se o usuário está no host `example.com`, o módulo deverá ter a aparência a seguir.

@@ -2,10 +2,10 @@
 title: Republicar uma biblioteca
 description: Saiba como republicar uma biblioteca de tag anterior na Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 97%
+source-wordcount: '648'
+ht-degree: 93%
 
 ---
 
@@ -45,7 +45,7 @@ Isso significa que, ao publicar novamente uma biblioteca mais antiga:
 
 * A forma como os ambientes de desenvolvimento e de preparo calculam o que está em contrafluxo não muda
 
-Leve em consideração a situação ao reverter a versão por causa de um problema com uma regra específica. A revisão de regra que está em produção pode, por exemplo, ter sido implementada há três versões atrás. Quando você exibe essa regra na interface da Coleção de dados para corrigi-la, ela ainda reflete as alterações salvas mais recentemente, em vez das que estão em produção no momento.
+Leve em consideração a situação ao reverter a versão por causa de um problema com uma regra específica. A revisão de regra que está em produção pode, por exemplo, ter sido implementada há três versões atrás. Quando você exibe essa regra na interface do usuário para corrigi-la, ela ainda reflete as alterações mais salvas recentes, em vez das que estão em produção.
 
 Por essa razão, a Platform notifica você de que uma propriedade consta como republicada, para lembrá-lo de que o que está vendo na interface da Coleção de dados está um pouco mais distante da produção do que o normal. Essa notificação é dispensável e aparece uma vez por sessão do navegador na primeira vez que você exibe a propriedade.
 

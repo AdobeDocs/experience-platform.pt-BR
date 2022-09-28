@@ -2,9 +2,9 @@
 title: Tipos de evento para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo evento para uma extensão da Web no Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1052'
 ht-degree: 71%
 
 ---
@@ -27,7 +27,7 @@ Este documento aborda como definir tipos de evento para uma extensão da Web no 
 
 Os tipos de evento são definidos por extensões e geralmente consistem no seguinte:
 
-1. A [exibir](./views.md) mostrado na interface do usuário da coleção de dados que permite que os usuários modifiquem as configurações do evento.
+1. A [exibir](./views.md) mostrado na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do evento.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e observar a ocorrência de determinada atividade.
 
 `module.exports` aceite tanto o `settings` quanto os parâmetros `trigger`. Isso permite a personalização do tipo de evento.

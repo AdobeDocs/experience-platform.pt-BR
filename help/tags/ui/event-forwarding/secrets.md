@@ -1,10 +1,10 @@
 ---
 title: Configuração de segredos no encaminhamento de eventos
-description: Saiba como configurar segredos na interface do usuário da coleção de dados para autenticar em endpoints usados em propriedades de encaminhamento de eventos.
+description: Saiba como configurar segredos na interface do usuário para autenticar em endpoints usados em propriedades de encaminhamento de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1633'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ No momento, há três tipos secretos compatíveis:
 
 {style=&quot;table-layout:auto&quot;}
 
-Este guia fornece uma visão geral de alto nível de como configurar segredos para um encaminhamento de evento ([!UICONTROL Edge]) na interface do usuário da coleta de dados.
+Este guia fornece uma visão geral de alto nível de como configurar segredos para um encaminhamento de evento ([!UICONTROL Edge]) na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados.
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ Este guia fornece uma visão geral de alto nível de como configurar segredos pa
 
 ## Pré-requisitos
 
-Este guia pressupõe que você já esteja familiarizado com o gerenciamento de recursos para tags e encaminhamento de eventos na interface do usuário da coleta de dados, incluindo como criar um elemento de dados e uma regra de encaminhamento de eventos. Consulte o guia sobre [gerenciamento de recursos](../managing-resources/overview.md) se você precisar de uma introdução.
+Este guia pressupõe que você já esteja familiarizado com o gerenciamento de recursos para tags e encaminhamento de eventos na interface do usuário, incluindo como criar um elemento de dados e uma regra de encaminhamento de eventos. Consulte o guia sobre [gerenciamento de recursos](../managing-resources/overview.md) se você precisar de uma introdução.
 
 Você também deve ter uma compreensão funcional do fluxo de publicação para tags e encaminhamento de eventos, incluindo como adicionar recursos a uma biblioteca e instalar uma build em seu site para testes. Consulte a [visão geral da publicação](../publishing/overview.md) para obter mais detalhes.
 
 ## Criar um segredo {#create}
 
-Para criar um segredo, faça logon na interface do usuário da Coleta de dados e abra a propriedade de encaminhamento de eventos em que deseja adicionar o segredo. Em seguida, selecione **[!UICONTROL Segredos]** no painel de navegação esquerdo, seguido de **[!UICONTROL Criar novo segredo]**.
+Para criar um segredo, selecione **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo, abra a propriedade de encaminhamento de eventos em que deseja adicionar o segredo. Em seguida, selecione **[!UICONTROL Segredos]** no painel de navegação esquerdo, seguido de **[!UICONTROL Criar novo segredo]**.
 
 ![Criar novo segredo](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ Para criar um segredo HTTP, selecione **[!UICONTROL HTTP simples]** do **[!UICON
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Para criar um segredo OAuth 2, selecione **[!UICONTROL OAuth 2]** do **[!UICONTROL Tipo]** lista suspensa. Nos campos que aparecem abaixo, forneça seu [[!UICONTROL ID do cliente] e [!UICONTROL Segredo do cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), bem como seu [[!UICONTROL URL do token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para sua integração com o OAuth. O [!UICONTROL URL do token] na interface do usuário da coleta de dados é uma concatenação entre o host do servidor de autorização e o caminho do token.
+Para criar um segredo OAuth 2, selecione **[!UICONTROL OAuth 2]** do **[!UICONTROL Tipo]** lista suspensa. Nos campos que aparecem abaixo, forneça seu [[!UICONTROL ID do cliente] e [!UICONTROL Segredo do cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), bem como seu [[!UICONTROL URL do token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para sua integração com o OAuth. O [!UICONTROL URL do token] na interface do usuário é uma concatenação entre o host do servidor de autorização e o caminho do token.
 
 ![Segredo OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ Ao atribuir vários segredos a um único elemento de dados e incluí-lo em uma r
 
 ## Próximas etapas
 
-Este guia cobriu como gerenciar segredos na interface do usuário da coleta de dados. Para obter informações sobre como interagir com segredos usando a API do Reator, consulte o [guia do endpoint de segredos](../../api/endpoints/secrets.md).
+Este guia cobriu como gerenciar segredos na interface do usuário. Para obter informações sobre como interagir com segredos usando a API do Reator, consulte o [guia do endpoint de segredos](../../api/endpoints/secrets.md).

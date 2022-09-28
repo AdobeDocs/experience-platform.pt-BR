@@ -2,9 +2,9 @@
 title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Obtenha respostas para perguntas frequentes sobre o SDK da Web da Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1934'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ Alloy é o nome do código do SDK da Web da Adobe Experience Platform. Ele é us
 
 ## Os clientes precisam comprar o Adobe Experience Platform para usar o [!DNL Web SDK]?
 
-Não. Qualquer cliente da Adobe Digital Experience pode usar o SDK da Web da Adobe Experience Platform gratuitamente. Clientes que desejam usar o [!DNL Web SDK] O precisará configurar as permissões certas para criar esquemas, conjuntos de dados, namespaces de identidade e conjuntos de dados na interface do usuário da Coleta de dados do Adobe Experience Platform.
+Não. Qualquer cliente da Adobe Digital Experience pode usar o SDK da Web da Adobe Experience Platform gratuitamente. Clientes que desejam usar o [!DNL Web SDK] O precisará configurar as permissões certas para criar esquemas, conjuntos de dados, namespaces de identidade e conjuntos de dados na interface do usuário da coleta de dados ou na interface do usuário do Experience Platform.
 
 Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ Não. Você pode baixar o `alloy.js` arquivo você mesmo.
 
 No entanto:
 
-* O SDK da Web da Adobe Experience Platform requer algo chamado de ID do conjunto de dados, para que a rede de borda possa identificar o fluxo e determinar o que fazer com os dados. Essa ID é criada no Experience Platform. Isso não significa que você precisa usar a interface do usuário da coleta de dados para criar propriedades ou implantar o código do JavaScript, mas sim usar tags para criar uma ID de configuração.
+* O SDK da Web da Adobe Experience Platform requer algo chamado de ID do conjunto de dados, para que a rede de borda possa identificar o fluxo e determinar o que fazer com os dados. Essa ID é criada no Experience Platform. Isso não significa que você precisa usar a interface do usuário para criar propriedades ou implantar o código JavaScript, mas sim usar tags para criar uma ID de configuração.
 
 * As tags não são apenas o melhor gerenciador de tags e SDK disponível, mas também facilitam a implantação `alloy.js` e mapear dados para esquemas XDM. Se decidir não usar tags, será necessário gerenciar a implantação `alloy.js`, eventos e mapeamento de dados no XDM antes de enviá-los. Isso é uma _many_ processo mais difícil do que usar tags.
 

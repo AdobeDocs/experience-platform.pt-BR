@@ -2,7 +2,7 @@
 title: Guia de solução de problemas de tags
 description: Obtenha respostas a perguntas frequentes sobre tags na Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 80%
@@ -96,11 +96,11 @@ Sim! Agora as tags oferecem suporte a propriedades e configuração para disposi
 
 ## Por que a interface do usuário está dizendo que houve um erro ao carregar minha conta?
 
-Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que sua conta não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso à interface do usuário da coleta de dados.
+Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que sua conta não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso aos recursos da Coleta de dados na interface do usuário do .
 
 ## Por que não posso adicionar nenhuma propriedade na interface do usuário do ?
 
-Se não for possível criar novas propriedades quando conectado à interface do usuário da coleta de dados, significa que a conta não pertence a um perfil de produto com o direito de Gerenciar propriedades.
+Se não for possível criar novas propriedades quando conectado à interface do usuário, significa que a conta não pertence a um perfil de produto com o direito de Gerenciar propriedades.
 
 Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder o direito de Gerenciar propriedades. Para obter mais informações sobre os diferentes direitos das tags, consulte a visão geral em [permissões do usuário para tags](./ui/administration/user-permissions.md).
 

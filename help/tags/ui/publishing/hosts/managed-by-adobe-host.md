@@ -2,10 +2,10 @@
 title: Visão geral dos hosts gerenciados pela Adobe
 description: Saiba mais sobre a opção de hospedagem padrão para implantar builds de biblioteca de tags na Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 98%
+source-wordcount: '1173'
+ht-degree: 96%
 
 ---
 
@@ -88,9 +88,9 @@ Como a tabela acima indica, o armazenamento em cache do navegador não é compat
 
 Os cabeçalhos de controle de cache são aplicados apenas ao build da biblioteca principal. Todos os sub-recursos abaixo da biblioteca principal são sempre considerados novos e, portanto, não há necessidade de armazená-los em cache no navegador.
 
-## Usar a hospedagem gerenciada pela Adobe na interface da Coleção de dados
+## Usar a hospedagem gerenciada pela Adobe na interface do usuário do 
 
-Quando você cria pela primeira vez uma propriedade na [interface da Coleção de dados](https://experience.adobe.com/#/data-collection/), um host gerenciado pela Adobe é criado automaticamente para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
+Ao criar uma propriedade na interface do usuário da plataforma ou na interface do usuário da coleta de dados pela primeira vez, um host gerenciado pelo Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Endpoint dos pacotes de extensão
 description: Saiba como fazer chamadas para o endpoint /extension_packages na API do Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 73%
+source-wordcount: '956'
+ht-degree: 71%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 73%
 
 Um pacote de extensão representa uma [extensão](./extensions.md) criada por um desenvolvedor de extensões. Um pacote de extensão define recursos adicionais que podem ser disponibilizados para usuários de tags. Normalmente, esses recursos vêm na forma de [componentes de regra](./rule-components.md) (eventos, condições e ações) e [elementos de dados](./data-elements.md), mas também podem incluir módulos principais e compartilhados.
 
-Os pacotes de extensão são exibidos no catálogo de extensões na interface da Coleção de dados para que os usuários os instalem. A adição de um pacote de extensão a uma propriedade é realizada por meio da criação de uma extensão com um link para o pacote de extensão.
+Os pacotes de extensão são exibidos no catálogo de extensões na interface do usuário da coleção de dados e na interface do usuário do Adobe Experience Platform para que os usuários instalem. A adição de um pacote de extensão a uma propriedade é realizada por meio da criação de uma extensão com um link para o pacote de extensão.
 
 Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor que o criou.
 

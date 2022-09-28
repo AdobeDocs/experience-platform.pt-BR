@@ -2,10 +2,10 @@
 title: Extensão de camada de dados do cliente Adobe
 description: Saiba mais sobre a extensão de tag da Camada de dados do cliente do Adobe na Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 100%
+source-wordcount: '647'
+ht-degree: 95%
 
 ---
 
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Instalação
 
-Para instalar a extensão, navegue até o catálogo de extensões na interface de usuário da Coleção de dados e selecione Camada de dados do cliente Adobe.
+Para instalar a extensão, navegue até o catálogo de extensões na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados e selecione Camada de dados do cliente do Adobe.
 
 ![Visualização da extensão ACDL no catálogo](./images/catalog.png)
 

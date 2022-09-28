@@ -2,10 +2,10 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '5492'
-ht-degree: 87%
+source-wordcount: '5482'
+ht-degree: 83%
 
 ---
 
@@ -88,7 +88,7 @@ O evento será acionado se o volume for aumentado ou diminuído. Consulte a seç
 
 #### Orientation Change
 
-O evento será acionado se a orientação do dispositivo mudar. É preciso especificar a duração da mudança de orientação para acionar o evento. Não há configurações para esse tipo de evento.
+O evento dispara se a orientação do dispositivo mudar. É preciso especificar a duração da mudança de orientação para acionar o evento. Não há configurações para esse tipo de evento.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Se o elemento for uma tag de âncora (`<a>`) para um conteúdo vinculado, você 
 
 Quando você usa o atraso de link, a Platform na verdade impede que o navegador saia da página. Em seguida, ele executa um redirecionamento do JavaScript para o destino original após o tempo limite especificado. Isso é especialmente perigoso quando sua marcação de página tem tags `<a>` em que a funcionalidade desejada não leva o usuário para fora da página. Se não for possível resolver seu problema de outra forma, você deverá ser extremamente preciso na definição do seletor, para que esse evento seja disparado exatamente onde é necessário e em nenhum outro lugar.
 
-O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre aguardarão o tempo especificado, e isso não está conectado de forma alguma à execução das ações da regra. É possível que o atraso obrigue o usuário a aguardar mais tempo do que o necessário e também que o atraso não seja suficientemente longo para que todas as ações da regra sejam concluídas com êxito. Atrasos maiores fornecem mais tempo para a execução da regra, mas também prejudicam a experiência do usuário.
+O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre esperarão pela quantidade de tempo especificada e não estarão conectadas à execução das ações da regra de forma alguma. É possível que o atraso force o usuário a esperar mais do que o necessário e também seja possível que o atraso não seja longo o suficiente para que todas as ações da regra sejam concluídas com sucesso. Atrasos maiores fornecem mais tempo para a execução da regra, mas também prejudicam a experiência do usuário.
 
 Para acionar o atraso, é necessário fornecer o elemento selecionado que aciona o evento e o período específico antes que ele seja acionado.
 
@@ -307,11 +307,11 @@ Os seguintes operadores de comparação de valores estão disponíveis:
 
 **Is True:** a condição retornará true se o valor for um booleano com o valor true. O valor fornecido não é convertido em um booleano se for qualquer outro tipo. Qualquer valor diferente de booleano com valor &quot;true&quot; resulta na condição retornar como &quot;false&quot;.
 
-**Is Truthy:** a condição retornará true se o valor for verdadeiro após ser convertido em um booleano. Consulte a [documentação do MDN sobre valores truthy](https://developer.mozilla.org/pt-BR/docs/Glossary/Truthy) para obter exemplos de valores truthy.
+**Is Truthy:** a condição retornará true se o valor for verdadeiro após ser convertido em um booleano. Consulte [a documentação do MDN sobre valores truthy](https://developer.mozilla.org/pt-BR/docs/Glossary/Truthy) para obter exemplos de valores truthy.
 
 **Is False:** a condição retornará true se o valor for um booleano com o valor false. O valor fornecido não é convertido em um booleano se for qualquer outro tipo. Qualquer valor diferente de booleano com o valor &quot;false&quot; resulta na condição retornar como &quot;false&quot;.
 
-**Is Falsy:** a condição retornará true se o valor for falso depois de ser convertido em um booleano. Consulte a [documentação do MDN sobre valores falsy](https://developer.mozilla.org/pt-BR/docs/Glossario/Falsy) para ver exemplos de valores falsy.
+**Is Falsy:** a condição retornará true se o valor for falso depois de ser convertido em um booleano. Consulte [a documentação do MDN sobre valores falsy](https://developer.mozilla.org/pt-BR/docs/Glossario/Falsy) para ver exemplos de valores falsy.
 
 #### Variable
 
@@ -588,7 +588,7 @@ O validador usado no editor de código de tags foi projetado para identificar pr
 
 #### Sequência de ação
 
-Quando a opção &quot;Run rule components in sequence&quot; das configurações de propriedade está ativada, você pode fazer com que os componentes de regra subsequentes aguardem enquanto sua ação executa uma tarefa assíncrona. Funciona de forma diferente para código personalizado JavaScript e HTML.
+Quando a opção &quot;Run rule components in sequence&quot; das configurações de propriedade está ativada, você pode fazer com que os componentes de regra subsequentes aguardem enquanto sua ação executa uma tarefa assíncrona.  Funciona de forma diferente para código personalizado JavaScript e HTML.
 
 *JavaScript*
 
@@ -708,7 +708,7 @@ Obtenha o valor de:
 
 Todo objeto ou variável disponíveis do JavaScript pode ser referido usando o campo de caminho.
 
-Elementos de dados de tag podem ser usados para capturar as variáveis de JavaScript de marcação ou as propriedades do objeto. Esses valores podem ser usados em suas extensões ou regras personalizadas, fazendo referência aos elementos de dados da tag. Se a fonte de dados for alterada, será necessário apenas atualizar a referência para a fonte na interface da coleção de dados.
+Elementos de dados de tag podem ser usados para capturar as variáveis de JavaScript de marcação ou as propriedades do objeto. Esses valores podem ser usados em suas extensões ou regras personalizadas, fazendo referência aos elementos de dados da tag. Se a fonte de dados mudar, será necessário atualizar a referência para a fonte.
 
 No exemplo abaixo, a marcação contém uma variável JavaScript chamada `Page_Name`.
 
@@ -719,9 +719,9 @@ No exemplo abaixo, a marcação contém uma variável JavaScript chamada `Page_N
 </script>
 ```
 
-Ao criar o elemento de dados na interface da coleção de dados, forneça apenas o caminho dessa variável.
+Ao criar o elemento de dados, forneça apenas o caminho para essa variável.
 
-Se você usar um objeto de coleção de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e à propriedade que deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName` e assim por diante.
+Se você usar um objeto coletor de dados como parte da camada de dados, use a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName`ou `digitalData.pageName`e assim por diante.
 
 #### Exemplo:
 
@@ -805,9 +805,9 @@ Você pode selecionar um dos atributos de página a seguir para ser usado em seu
 
 ### Query string Parameter
 
-Especifique um único parâmetro de URL no campo URL Parameter.
+Especifique um único parâmetro de URL no campo Parâmetro do URL.
 
-Somente a seção de nome é necessária e qualquer designador especial como &quot;?&quot; ou &quot;=&quot; deve ser omitido
+Somente a seção de nome é necessária e qualquer designador especial como “?” ou &quot;=&quot; deve ser omitido.
 
 #### Exemplo:
 
@@ -815,7 +815,7 @@ Somente a seção de nome é necessária e qualquer designador especial como &qu
 
 ### Número aleatório
 
-Use esse elemento de dados para gerar um número aleatório. É usado frequentemente para amostra de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
+Use esse elemento de dados para gerar um número aleatório. Geralmente é usado para amostras de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
 
 * Gerar uma ID de ocorrência
 * Concatene o número para um token de usuário ou carimbo de data e hora para garantir exclusividade

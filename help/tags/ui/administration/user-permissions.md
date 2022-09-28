@@ -2,10 +2,10 @@
 title: Permissões de usuário para tags
 description: Saiba mais sobre os diferentes tipos de permissões disponíveis para tags e algumas estratégias básicas de implementação para diferentes casos de uso comercial.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 23%
+source-wordcount: '1308'
+ht-degree: 22%
 
 ---
 
@@ -42,7 +42,7 @@ Por padrão, os perfis de produtos concedem acesso a todas as propriedades que e
 
 ### Direitos de propriedade {#property-rights}
 
-Qualquer propriedade criada na interface do usuário da coleta de dados fica disponível no Admin Console, permitindo agrupar a propriedade com direitos de propriedade específicos no mesmo perfil de produto.
+Qualquer propriedade de tag criada na interface do usuário fica disponível no Admin Console, permitindo agrupar a propriedade com direitos de propriedade específicos no mesmo perfil de produto.
 
 Por exemplo, se um determinado perfil de produto não tiver acesso à Propriedade A1, os usuários que pertencem a esse perfil não poderão ver nem modificar nenhuma configuração na Propriedade A1.
 
@@ -52,7 +52,7 @@ A tabela a seguir descreve os direitos de propriedade disponíveis e as funciona
 
 | Direito de propriedade | Descrição |
 | --- | --- |
-| **Desenvolver** | Isso permite executar as seguintes ações:<ul><li>Criar regras e elementos de dados</li><li>Crie bibliotecas e as crie em ambientes de desenvolvimento existentes</li><li>Enviar uma biblioteca para aprovação</li></ul>A maioria das tarefas diárias na interface da coleção de dados exige esse direito. |
+| **Desenvolver** | Isso permite executar as seguintes ações:<ul><li>Criar regras e elementos de dados</li><li>Crie bibliotecas e as crie em ambientes de desenvolvimento existentes</li><li>Enviar uma biblioteca para aprovação</li></ul>A maioria das tarefas diárias na interface do usuário requer esse direito. |
 | **Aprovar** | Isso permite pegar uma biblioteca enviada e criar no ambiente de preparo. Você também pode aprovar uma biblioteca para publicação depois que o teste for concluído. |
 | **Publicar** | Isso permite publicar bibliotecas aprovadas no ambiente de produção. |
 | **Gerenciar extensões** | Isso permite executar as seguintes ações: <ul><li>Instalar novas extensões em uma propriedade</li><li>Modificar a configuração de uma extensão já instalada</li><li>Excluir uma extensão</li></ul>Consulte a documentação de visão geral das extensões para obter [mais informações sobre extensões](../managing-resources/extensions/overview.md). Normalmente, essa função pertence aos setores de TI ou de Marketing, dependendo de como funciona a sua organização. |

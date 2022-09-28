@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Adobe Target
 description: Saiba mais sobre a extensão de tag para o Adobe Target na Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 98%
+source-wordcount: '1192'
+ht-degree: 93%
 
 ---
 
@@ -31,7 +31,7 @@ Para configurar a extensão, abra a guia [!UICONTROL Extensões], passe o mouse 
 
 ### Configurações do at.js
 
-Todas as suas configurações do at.js, com exceção do Tempo limite, são automaticamente recuperadas da configuração do at.js na interface do usuário do Target. A extensão só recupera as configurações da interface do usuário do Target quando adicionada pela primeira vez. Se forem necessárias atualizações adicionais, as configurações serão gerenciadas na interface da Coleção de dados.
+Todas as suas configurações do at.js, com exceção do Tempo limite, são automaticamente recuperadas da configuração do at.js na interface do usuário do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário se forem necessárias atualizações adicionais.
 
 As opções de configuração disponíveis são as seguintes:
 
@@ -141,7 +141,7 @@ Estas são algumas coisas que devem ser lembradas ao usar o trecho pré-ocultaç
    * Quando a resposta do mbox global for recebida
    * Quando a solicitação do mbox global expira
    * Quando o trecho atingir o tempo limite
-* A ação “Acionar mBox global” deve ser usada em todas as páginas usando o trecho pré-ocultação para minimizar a duração da pré-ocultação.
+* A ação &quot;Acionar mBox global&quot; deve ser usada em todas as páginas que usam o trecho pré-ocultação para minimizar a duração da pré-ocultação.
 
 O trecho de código de pré-ocultação é o seguinte e pode ser minimizado. As opções configuráveis estão no final:
 

@@ -1,11 +1,11 @@
 ---
 title: Configuração de extensão
-description: Saiba como configurar uma extensão de tag para coletar configurações globais de um usuário na interface da coleção de dados do Adobe Experience Platform.
+description: Saiba como configurar uma extensão de tag para coletar configurações globais de um usuário na interface do usuário do Adobe Experience Platform ou na interface do usuário da coleta de dados.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 93%
+source-wordcount: '274'
+ht-degree: 84%
 
 ---
 

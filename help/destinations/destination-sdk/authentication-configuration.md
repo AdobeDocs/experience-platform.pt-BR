@@ -2,9 +2,9 @@
 description: Use as configurações de autenticação compatíveis no Adobe Experience Platform Destination SDK para autenticar usuários e ativar dados no terminal de destino.
 title: Configuração de autenticação
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
+source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ A configuração de autenticação selecionada determina como o Experience Platf
 O Adobe Experience Platform Destination SDK suporta vários tipos de autenticação:
 
 * [Autenticação do portador](#bearer)
-* [(Beta) Autenticação Amazon S3](#s3)
-* [(Beta) Armazenamento Azure Blob](#blob)
-* [(Beta) Armazenamento Azure Data Lake](#adls)
-* [(Beta) Armazenamento em nuvem Google](#gcs)
-* [(Beta) SFTP com chave SSH](#sftp-ssh)
-* [(Beta) SFTP com senha](#sftp-password)
+* [[!DNL Amazon S3] autenticação](#s3)
+* [[!DNL Azure Blob] Armazenamento](#blob)
+* [[!DNL Azure Data Lake Storage]](#adls)
+* [[!DNL Google Cloud Storage]](#gcs)
+* [SFTP com chave SSH](#sftp-ssh)
+* [SFTP com senha](#sftp-password)
 * [OAuth 2 com código de autorização](#oauth2)
 * [OAUth 2 com concessão de senha](#oauth2)
 * [OAuth 2 com concessão de credenciais de cliente](#oauth2)
@@ -49,15 +49,11 @@ Para configurar a autenticação de tipo de portador para o seu destino, configu
 ]
 ```
 
-## (Beta) [!DNL Amazon S3] autenticação {#s3}
+## [!DNL Amazon S3] autenticação {#s3}
 
 [!DNL Amazon S3] a autenticação é compatível com destinos com base em arquivo no Experience Platform.
 
->[!IMPORTANT]
->
->No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-Para configurar a autenticação do Amazon S3 para o seu destino, configure a variável `customerAuthenticationConfigurations` no `/destinations` endpoint como mostrado abaixo:
+Para configurar [!DNL Amazon S3] para o seu destino, configure a variável `customerAuthenticationConfigurations` no `/destinations` endpoint como mostrado abaixo:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -67,13 +63,9 @@ Para configurar a autenticação do Amazon S3 para o seu destino, configure a va
 ]
 ```
 
-## (Beta) [!DNL Azure Blob Storage] {#blob}
+## [!DNL Azure Blob Storage] {#blob}
 
 [!DNL Azure Blob Storage] a autenticação é compatível com destinos com base em arquivo no Experience Platform.
-
->[!IMPORTANT]
->
->No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Para configurar [!DNL Azure Blob] para o seu destino, configure a variável `customerAuthenticationConfigurations` no `/destinations` endpoint como mostrado abaixo:
 
@@ -85,13 +77,9 @@ Para configurar [!DNL Azure Blob] para o seu destino, configure a variável `cus
 ]
 ```
 
-## (Beta) [!DNL Azure Data Lake Storage] {#adls}
+## [!DNL Azure Data Lake Storage] {#adls}
 
 [!DNL Azure Data Lake Storage] a autenticação é compatível com destinos com base em arquivo no Experience Platform.
-
->[!IMPORTANT]
->
->No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Para configurar [!DNL Azure Data Lake Storage] Autenticação (ADLS) para o seu destino, configure a variável `customerAuthenticationConfigurations` no `/destinations` endpoint como mostrado abaixo:
 
@@ -103,13 +91,9 @@ Para configurar [!DNL Azure Data Lake Storage] Autenticação (ADLS) para o seu 
 ]
 ```
 
-## (Beta) [!DNL Google Cloud Storage] {#gcs}
+## [!DNL Google Cloud Storage] {#gcs}
 
 [!DNL Google Cloud Storage] a autenticação é compatível com destinos com base em arquivo no Experience Platform.
-
->[!IMPORTANT]
->
->No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -120,13 +104,9 @@ Para configurar [!DNL Azure Data Lake Storage] Autenticação (ADLS) para o seu 
 ```
 
 
-## (Beta) [!DNL SFTP] autenticação com [!DNL SSH] key {#sftp-ssh}
+## [!DNL SFTP] autenticação com [!DNL SSH] key {#sftp-ssh}
 
 [!DNL SFTP] autenticação com [!DNL SSH] A chave é compatível com destinos com base em arquivo no Experience Platform.
-
->[!IMPORTANT]
->
->No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Para configurar a autenticação SFTP com chave SSH para o seu destino, configure a variável `customerAuthenticationConfigurations` no `/destinations` endpoint como mostrado abaixo:
 
@@ -138,13 +118,9 @@ Para configurar a autenticação SFTP com chave SSH para o seu destino, configur
 ]
 ```
 
-## (Beta) [!DNL SFTP] autenticação com senha {#sftp-password}
+## [!DNL SFTP] autenticação com senha {#sftp-password}
 
 [!DNL SFTP] a autenticação com senha é compatível com destinos com base em arquivo no Experience Platform.
-
->[!IMPORTANT]
->
->No momento, o suporte ao destino baseado em arquivo no Adobe Experience Platform Destination SDK está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Para configurar a autenticação SFTP com senha para seu destino, configure a variável `customerAuthenticationConfigurations` no `/destinations` endpoint como mostrado abaixo:
 
@@ -160,7 +136,7 @@ Para configurar a autenticação SFTP com senha para seu destino, configure a va
 
 [!DNL OAuth 2] a autenticação é compatível com destinos de transmissão no Experience Platform.
 
-Para obter informações sobre como configurar os vários fluxos OAuth 2 suportados, bem como para suporte OAuth 2 personalizado, leia a documentação do Destination SDK em [Autenticação OAuth 2](./oauth2-authentication.md).
+Para obter informações sobre como configurar os vários [!DNL OAuth 2] fluxos, bem como para fluxos personalizados [!DNL OAuth 2] suporte, leia a documentação do Destination SDK em [[!DNL OAuth 2] autenticação](./oauth2-authentication.md).
 
 
 ## Quando usar a variável `/credentials` Ponto de extremidade da API {#when-to-use}

@@ -1,14 +1,15 @@
 ---
 description: Saiba como usar o Destination SDK para configurar um destino Amazon S3 com opções personalizadas de nome de arquivo e formatação.
-title: (Beta) Configure um destino do Amazon S3 com opções personalizadas de nome de arquivo e formatação.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: Configure um destino Amazon S3 com opções personalizadas de nome de arquivo e formatação.
+exl-id: eed73572-5050-44fa-ba16-90729c65495e
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
 
-# (Beta) Configure um destino do Amazon S3 com opções personalizadas de nome de arquivo e formatação
+# Configurar um destino Amazon S3 com opções personalizadas de nome de arquivo e formatação
 
 ## Visão geral {#overview}
 

@@ -2,7 +2,7 @@
 description: Esta página fornece todas as informações que você precisa enviar para revisar um destino produzido criado usando o Destination SDK.
 title: Enviar para revisão de um destino produzido criado no Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -225,7 +225,7 @@ Forneça a ID da solicitação de publicação para o seu destino. Para obter in
 
 Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para o seu destino. Como parte do processo de envio, forneça a solicitação de pull (PR) para a documentação de destino.
 
-## Logotipo para o seu destino
+## Logotipo para o seu destino {#logo}
 
 O catálogo de destinos inclui um logotipo para cada cartão de destino. No email de envio, inclua uma imagem com o logotipo do destino.
 

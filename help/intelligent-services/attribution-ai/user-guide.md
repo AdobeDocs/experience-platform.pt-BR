@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Attribution AI
 topic-legacy: User guide
 description: Este documento é um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2960'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,10 @@ Seleção do ícone de informações ![ícone de informações](./images/user-gu
 
 A visualização do conjunto de dados contém dados como a hora da última atualização, o schema de origem e uma pré-visualização das dez primeiras colunas.
 
+Selecionar **[!UICONTROL Salvar]** para salvar seus rascunhos ao avançar no fluxo de trabalho. Você também pode salvar configurações de modelo de rascunho e ir para a próxima etapa do fluxo de trabalho. Use **[!UICONTROL Salvar e continuar]** para criar e salvar rascunhos durante as configurações do modelo. O recurso permite criar e salvar rascunhos da configuração do modelo e é particularmente útil quando é necessário definir muitos campos no fluxo de trabalho de configuração.
+
+![O workflow Create da guia Data Science Services Attribution AI com Save and Save e continue destacado.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### Integridade do conjunto de dados {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ Agora é possível unir vários conjuntos de dados uns aos outros com base no ma
 
 Para selecionar uma identidade, selecione o valor sublinhado localizado na coluna de identidade. A opção selecionar um provedor de identidade é exibida.
 
-![selecionar o mesmo namespace](./images/user-guide/aai-identity-map.png)
+![selecionar o mesmo namespace](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para o caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email, um email comercial e pessoal. Dependendo do caso de uso, é mais provável que um email pessoal seja preenchido e seja mais útil em previsões individuais. Isso significa que você selecionaria `EMAIL (personalEmail.address)` como sua identidade.
 
@@ -108,7 +112,7 @@ Caso haja mais de uma identidade disponível em um namespace, selecione o campo 
 
 Depois de concluir a seleção e adição de conjuntos de dados, a variável **Mapa** a etapa de configuração é exibida. O Attribution AI exige que você mapeie o campo Canal de mídia para cada conjunto de dados selecionado na etapa anterior. Isso ocorre porque, sem o mapeamento do canal de mídia entre conjuntos de dados, os insights derivados do Attribution AI podem não ser exibidos apropriadamente, dificultando a interpretação da página de insights. Embora somente o Canal de mídia seja necessário, é altamente recomendável mapear alguns dos campos opcionais, como ação de mídia, nome da campanha, grupo de campanha e tag de campanha. Isso permite que o Attribution AI forneça insights mais claros e resultados ideais.
 
-![mapeamento](./images/user-guide/mapping.png)
+![mapeamento](./images/user-guide/mapping-save-&-exit.png)
 
 ## Definição de eventos {#define-events}
 
@@ -198,13 +202,13 @@ Você pode adicionar pontos de contato adicionais selecionando **Adicionar ponto
 
 Quando terminar de definir todos os pontos de contato necessários, role para cima e selecione **Próximo** no canto superior direito para prosseguir para a etapa final.
 
-![definição concluída](./images/user-guide/define_event_next.png)
+![definição concluída](./images/user-guide/define_event_save_and_exit.png)
 
 ## Configuração avançada de treinamento e pontuação
 
 A página final no Attribution AI é a variável **[!UICONTROL Avançado]** página usada para configurar treinamento e pontuação.
 
-![nova página avançada](./images/user-guide/advanced_settings.png)
+![novas opções de conjunto de páginas](./images/user-guide/advanced_settings_set_options.png)
 
 ### Agendar treinamento
 
@@ -298,7 +302,7 @@ Ao visualizar conjuntos de dados com esquema restrito na **[!UICONTROL Criar flu
 
 Depois de criar uma instância com informações restritas e prosseguir para o **[!UICONTROL Definir meta]** , um aviso é exibido na parte superior: [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na configuração.]
 
-![O espaço de trabalho do Attribution AI com os campos restritos da instância resulta realçado.](./images/user-guide/information-not-displayed.png)
+![O espaço de trabalho do Attribution AI com os campos restritos da instância resulta realçado.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Próximas etapas
 

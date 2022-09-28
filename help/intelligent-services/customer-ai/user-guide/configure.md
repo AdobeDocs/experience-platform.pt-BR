@@ -6,9 +6,9 @@ title: Configurar uma instância do Customer AI
 topic-legacy: Instance creation
 description: Os Serviços de IA/ML oferecem ao Customer AI como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '3088'
+source-wordcount: '3342'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ As instâncias de serviço podem ser editadas, clonadas e excluídas usando os c
 
 - **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
 - **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o workflow para fazer pequenos ajustes e renomeá-lo como uma nova instância.
-- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
+- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas. O conjunto de dados de saída correspondente será excluído da Platform. No entanto, as pontuações que foram sincronizadas com o Perfil do cliente em tempo real não são excluídas.
 - **[!UICONTROL Fonte de dados]**: Um link para o conjunto de dados usado por esta instância. Se vários conjuntos de dados estiverem sendo usados, selecionar o texto do hiperlink abrirá o provedor de visualização do conjunto de dados.
 - **[!UICONTROL Detalhes da última execução]**: Isso só é exibido quando uma execução falha. Informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 - **[!UICONTROL Definição de pontuação]**: Uma visão geral rápida da meta que você configurou para esta instância.
@@ -67,7 +67,7 @@ Forneça os valores necessários e selecione **[!UICONTROL Próximo]** para cont
 
 Por design, o Customer AI usa os dados Adobe Analytics, Adobe Audience Manager, Experience Events em geral e Consumer Experience Event para calcular as pontuações de propensão. Ao selecionar um conjunto de dados, somente os que são compatíveis com a API do cliente serão listados. Para selecionar um conjunto de dados, selecione o (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados ao mesmo tempo. Use a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que você está interessado.
 
-![Selecionar e pesquisar por conjunto de dados](../images/user-guide/configure-dataset-page.png)
+![Selecionar e pesquisar por conjunto de dados](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Depois de selecionar os conjuntos de dados que deseja usar, selecione o **[!UICONTROL Adicionar]** para adicionar os conjuntos de dados ao painel de visualização do conjunto de dados.
 
@@ -78,6 +78,10 @@ Seleção do ícone de informações ![ícone de informações](../images/user-g
 ![Selecionar e pesquisar por conjunto de dados](../images/user-guide/dataset-info.png)
 
 A visualização do conjunto de dados contém dados como a hora da última atualização, o schema de origem e uma pré-visualização das dez primeiras colunas.
+
+Selecionar **[!UICONTROL Salvar]** para salvar seus rascunhos ao avançar no fluxo de trabalho. Você também pode salvar configurações de modelo de rascunho e ir para a próxima etapa do fluxo de trabalho. Use **[!UICONTROL Salvar e continuar]** para criar e salvar rascunhos durante as configurações do modelo. O recurso permite criar e salvar rascunhos da configuração do modelo e é particularmente útil quando é necessário definir muitos campos no fluxo de trabalho de configuração.
+
+![O fluxo de trabalho Create da guia Data Science Services Customer AI com Save and Save e continue destacado.](../images/user-guide/cai-save-and-exit.png)
 
 ### Integridade do conjunto de dados {#dataset-completeness}
 
@@ -236,7 +240,7 @@ A opção Profile permite que o Customer AI exporte os resultados da pontuação
 
 Ao usar o Customer AI pela primeira vez, é possível desativar esse recurso até estar satisfeito com os resultados de saída do modelo. Isso evita que você carregue vários conjuntos de dados de pontuação em seus Perfis de cliente e ajuste seu modelo. Depois de terminar de calibrar seu modelo, você pode clonar o modelo usando o [opção clone](#set-up-your-instance) do **Instâncias do serviço** página. Isso permite criar uma cópia do modelo e ativar o perfil.
 
-![Ativar/desativar perfil](../images/user-guide/advanced-workflow.png)
+![Ativar/desativar perfil](../images/user-guide/advanced-workflow-save.png)
 
 Depois de ter seu agendamento de pontuação definido, exclusões de previsão incluídas e o perfil alternar onde deseja que esteja, selecione **[!UICONTROL Concluir]** no canto superior direito para criar a instância do Customer AI.
 
@@ -247,6 +251,14 @@ Se a instância for criada com êxito, uma execução de previsão será imediat
 >Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
 
 Ao seguir esta seção, você configurou uma instância do Customer AI e executou uma execução de previsão. Após a conclusão bem-sucedida da execução, os insights pontuados preenchem automaticamente os perfis com pontuações previstas se a alternância de perfil estiver ativada. Aguarde até 24 horas antes de continuar para a próxima seção deste tutorial.
+
+## Políticas de governança
+
+Depois de passar pelo workflow para criar uma instância e enviar a configuração do modelo, a variável [aplicação da política](/help/data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibida uma janela indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing no Platform sejam compatíveis com as políticas de uso de dados.
+
+![fornecedor mostrando violação de política](../images/user-guide/policy-violation-popover-cai.png)
+
+O provedor fornece informações específicas sobre a violação. Você pode resolver essas violações por meio de configurações de política e outras medidas que não estão diretamente relacionadas ao fluxo de trabalho de configuração. Por exemplo, é possível alterar os rótulos para que determinados campos possam ser usados para fins de ciência de dados. Como alternativa, você também pode modificar a própria configuração do modelo para que ele não use nada com um rótulo nela. Consulte a documentação para saber mais sobre como configurar [políticas](/help/data-governance/policies/overview.md).
 
 ## Controle de acesso baseado em atributos
 
@@ -274,11 +286,11 @@ Na parte superior da área de trabalho do Customer AI **página de insights**, o
 
 Ao visualizar conjuntos de dados com esquema restrito na **[!UICONTROL Criar fluxo de trabalho da instância]** , um aviso será exibido para informá-lo que [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na visualização do conjunto de dados.]
 
-![A área de trabalho do Customer AI com os campos restritos dos conjuntos de dados de visualização com resultados restritos do schema são realçados.](../images/user-guide/restricted-dataset-preview.png)
+![A área de trabalho do Customer AI com os campos restritos dos conjuntos de dados de visualização com resultados restritos do schema são realçados.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 Depois de criar uma instância com informações restritas e prosseguir para o **[!UICONTROL Definir meta]** , um aviso é exibido na parte superior: [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na configuração.]
 
-![A área de trabalho do Customer AI com os campos restritos da instância de serviço é realçada.](../images/user-guide/information-not-displayed.png)
+![A área de trabalho do Customer AI com os campos restritos da instância de serviço é realçada.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Próximas etapas {#next-steps}
 

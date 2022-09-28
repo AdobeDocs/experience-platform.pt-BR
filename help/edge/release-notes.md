@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
+source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1349'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,23 @@ ht-degree: 3%
 
 Este documento aborda as notas de versão do SDK da Web da Adobe Experience Platform.
 Para obter as notas de versão mais recentes sobre a extensão de tag do SDK da Web, consulte o [Notas de versão da extensão de tag do SDK da Web](extension/web-sdk-ext-release-notes.md).
+
+## Versão 2.13.0 - 28 de setembro de 2022
+
+**Novos recursos**
+
+* Adição de suporte para Página por Migração completa de página. O perfil do Adobe Target agora será preservado conforme um visitante se move entre páginas da at.js e do SDK da Web.
+* Adição de suporte configurável para [Dicas de cliente do agente do usuário de alta entropia](fundamentals/user-agent-client-hints.md#high-entropy).
+* Adição de suporte para o novo `applyResponse` comando. Isso permite a personalização híbrida por meio da [API do Servidor de Rede de Borda](../server-api/overview.md).
+* Agora, os links do modo de controle de qualidade funcionam em várias páginas.
+
+**Correções e melhorias**
+
+* Correção de um problema em que as métricas de rastreamento de cliques de personalização não eram atualizadas quando o rastreamento de link estava desativado.
+* Os comandos foram atualizados para gerar um erro de validação quando opções desconhecidas são especificadas.
+* O `_experience.decisioning.propositionEventType` agora é preenchida ao enviar automaticamente eventos de personalização de exibição e interação.
+* Adição da validação duplicada de namespace para o `getIdentity` comando.
+* Adicionada a validação duplicada do escopo de decisão para a `sendEvent` comando.
 
 ## Versão 2.12.0 - 29 de junho de 2022
 

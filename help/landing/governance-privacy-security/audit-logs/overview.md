@@ -2,10 +2,10 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 13%
+source-wordcount: '936'
+ht-degree: 14%
 
 ---
 
@@ -35,9 +35,11 @@ A tabela a seguir descreve quais ações, em quais recursos do , são registrada
 | --- | --- |
 | [Política de controle de acesso (controle de acesso baseado em atributo)](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Conta (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Instância do Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li></ul> |
 | [Logs de auditoria](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Atributo calculado](../../../profile/computed-attributes/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Instância do Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li></ul> |
 | [Conjunto de dados](../../../catalog/datasets/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar para [Perfil do cliente em tempo real](../../../profile/home.md)</li><li>Desativar para Perfil</li><li>Adicionar dados</li><li>Excluir lote</li></ul> |
 | [Tipos de dados](../../../xdm/schema/composition.md#data-type) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li><li>Ativação do conjunto de dados</li><li>Remoção do conjunto de dados</li><li>Ativação de perfil</li><li>Remover perfil</li></ul> |

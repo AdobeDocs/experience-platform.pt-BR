@@ -7,7 +7,7 @@ topic-legacy: Customer AI Overview
 description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 landing-page-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 26%
@@ -17,7 +17,7 @@ ht-degree: 26%
 
 # Visão geral do Customer AI
 
-O Customer AI , como parte dos Serviços inteligentes , fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações.
+A Customer AI, como parte dos Serviços inteligentes, fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações.
 
 Com a ajuda de fatores influentes, a IA do cliente pode informar o que um cliente deve fazer e por quê. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights da IA do cliente para personalizar as experiências do cliente, disponibilizando as ofertas e mensagens mais apropriadas.
 
@@ -40,7 +40,7 @@ O cliente não foi criado para:
 - O Customer AI não pode determinar se a oferta aumentará a probabilidade do cliente comprar um item. Embora você possa decidir enviar ofertas de desconto com base em pontuações de propensão, não é necessariamente a melhor maneira de converter esses clientes.
 - O Customer AI não é uma ferramenta de recomendações do produto. Se você tiver milhares de SKUs, não use o Customer AI como proxy para uma solução de recomendações de produto real, como [!DNL Adobe Target].
 - O Customer AI não pode prever em qual estágio da Jornada de compra o cliente está, por exemplo, se ele estiver em estágios de &quot;consciência&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
-- Não use a Customer AI para determinar os clientes que provavelmente comprarão um lançamento de produto no futuro. Isso requer que alguns eventos de sucesso estejam presentes no passado para que a API do cliente treine com sucesso o algoritmo de aprendizado de máquina em seus dados.
+- Não use o Customer AI para determinar os clientes que provavelmente comprarão um lançamento de produto no futuro. Isso requer que alguns eventos de sucesso estejam presentes no passado para que a API do cliente treine com sucesso o algoritmo de aprendizado de máquina em seus dados.
 
 O vídeo a seguir foi criado para oferecer suporte à compreensão da API do cliente.
 

@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 6%
+source-wordcount: '2326'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 6%
 
 Novos recursos no Adobe Experience Platform:
 
+- [Controle de acesso baseado em atributos](#abac)
 - [Higiene dos dados](#data-hygiene)
 - [[!UICONTROL Console de privacidade]](#privacy-console)
 
@@ -25,6 +26,23 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Fontes](#sources)
+
+## Controle de acesso baseado em atributos {#abac}
+
+>[!IMPORTANT]
+>
+>O controle de acesso baseado em atributos será ativado a partir de outubro de 2022. Se você deseja adotar precocemente, entre em contato com o representante do Adobe.
+
+O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece às marcas conscientes da privacidade mais flexibilidade para gerenciar o acesso do usuário. Objetos individuais, como campos de esquema e segmentos, podem ser atribuídos a funções de usuário. Esse recurso permite que você conceda ou revogue o acesso a objetos individuais para usuários específicos da Plataforma em sua organização.
+
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários, os dados pessoais confidenciais (SPD), as informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que têm acesso apenas a campos e dados específicos que correspondem a esses campos.
+
+| Recurso | Descrição |
+| --- | --- |
+| Controle de acesso baseado em atributos | O controle de acesso baseado em atributos permite rotular campos de esquema do Experience Data Model (XDM) e segmentos com rótulos que definem escopos organizacionais ou de uso de dados. Em paralelo, os administradores podem usar a interface de administração de usuário e função para definir políticas de acesso que abrangem campos e segmentos de esquema XDM para gerenciar melhor o acesso dado aos usuários ou grupos de usuários (usuários internos, externos ou de terceiros). Para obter mais informações, consulte o [visão geral do controle de acesso baseado em atributos](../../access-control/abac/overview.md). |
+| Permissões | Permissões é a área do Experience Cloud, onde os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto. Por meio das Permissões, é possível criar e gerenciar funções, atribuir as permissões de recurso desejadas para essas funções e criar políticas para aproveitar rótulos e definir quais funções de usuário têm acesso a recursos específicos da Plataforma. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica. Para obter mais informações, consulte o [Guia da interface do usuário de permissões](../../access-control/abac/ui/browse.md). |
+
+Para obter mais informações sobre o controle de acesso baseado em atributos, consulte o [visão geral do controle de acesso baseado em atributos](../../access-control/abac/overview.md). Para obter um guia abrangente sobre o fluxo de trabalho de controle de acesso baseado em atributos, leia o [guia completo do controle de acesso baseado em atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## Higiene dos dados {#data-hygiene}
 
@@ -172,5 +190,9 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Impacto da população do segmento Audience Manager no Perfil do cliente em tempo real | A assimilação de populações de segmentos de Audience Manager consideráveis afeta diretamente a contagem total de perfis ao enviar um segmento de Audience Manager para a Platform pela primeira vez usando a fonte de Audience Manager. Isso significa que a seleção de todos os segmentos pode levar a uma contagem de Perfis além do seu direito de uso de licença. Para obter mais informações, leia a [Visão geral da fonte de Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Para obter informações sobre o uso da licença, leia a documentação em [uso do painel de uso da licença](../../dashboards/guides/license-usage.md). |
+| Suporte para Adobe Campaign Managed Cloud Service | Use a fonte Adobe Campaign Managed Cloud Service para trazer seus dados de delivery e logs de rastreamento do Adobe Campaign v8.4 para o Experience Platform. Leia o guia em [criação de uma conexão de origem Cloud Service gerenciada da Adobe Campaign na interface do usuário](../../sources/tutorials/ui/create/adobe-applications/campaign.md) para obter mais informações. |
+| Suporte a API para assimilação sob demanda para fontes em lote | Use a assimilação sob demanda para criar execuções de fluxo ad hoc para um determinado fluxo de dados com o [!DNL Flow Service] API. As execuções de fluxo criadas devem ser definidas para assimilação única. Para obter mais informações, leia o guia sobre [criação de uma execução de fluxo para assimilação sob demanda usando a API](../../sources/tutorials/api/on-demand-ingestion.md) para obter mais informações. |
+| Suporte à API para tentativa de repetição de execuções de fluxo de dados com falha para fontes em lote | Use o `re-trigger` para tentar novamente o fluxo de dados com falha por meio da API. Leia o guia em [tentativa de executar o fluxo de dados com falha usando a API](../../sources/tutorials/api/retry-flows.md) para obter mais informações. |
+| Suporte a API para filtrar dados em nível de linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes | Use operadores lógicos e de comparação para filtrar dados em nível de linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes. Leia o guia sobre filtragem de dados de uma fonte usando a API para obter mais informações. |
 
 Para saber mais sobre fontes, leia a [visão geral das fontes](../../sources/home.md).

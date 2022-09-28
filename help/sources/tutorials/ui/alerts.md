@@ -3,10 +3,10 @@ keywords: Experience Platform; home; tópicos populares; alertas
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas em contexto na interface do usuário
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 0%
+source-wordcount: '845'
+ht-degree: 1%
 
 ---
 
@@ -49,7 +49,7 @@ Os alertas disponíveis para fluxos de dados de fontes são:
 | Início da execução do fluxo de dados de fontes | Este alerta envia uma mensagem quando o fluxo de dados de origem foi iniciado. |
 | Êxito na Execução do Fluxo de Dados de Fontes | Esse alerta envia uma mensagem quando os dados da origem são assimilados com êxito na plataforma. |
 | Falha na Execução do Fluxo de Dados de Fontes | Esse alerta envia uma mensagem se ocorrer um erro no fluxo de dados. |
-| Fontes Fluxo de Dados Ausência de Ingestão | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
+| ~~Fontes Fluxo de Dados Ausência de Ingestão~~ | ~~Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform.~~ <br>**Observação:** Você não receberá mais alertas, pois este alerta foi substituído. |
 
 Selecione os alertas que deseja assinar e selecione **[!UICONTROL Próximo]** para revisar e finalizar o fluxo de dados.
 
@@ -117,7 +117,7 @@ Semelhante ao alerta da interface do usuário, a variável [!UICONTROL Visão ge
 
 Uma janela pop-up é exibida, fornecendo uma lista de alertas de origens. Selecione os alertas dos quais deseja assinar ou desmarcar os alertas dos quais deseja cancelar a assinatura. Quando terminar, selecione **[!UICONTROL Salvar]**.
 
-![salvar](../../images/tutorials/alerts/save.png)
+![save](../../images/tutorials/alerts/save.png)
 
 ## Próximas etapas
 

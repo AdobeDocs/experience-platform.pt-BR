@@ -4,9 +4,9 @@ title: Regras padrão de alerta
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
@@ -92,6 +92,18 @@ As seguintes regras de alerta são específicas para [destinos](../../destinatio
 | Atrasos de execução, falhas e erros do fluxo de destino | A taxa de página ignorada excede o limite | Esse alerta é disparado quando a relação entre IDs ignoradas e IDs totais excede um limite. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Serviço de query
+
+As seguintes regras de alerta são específicas para [Serviço de query](../../query-service/home.md):
+
+| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| --- | --- | --- |
+| Informações ad hoc do Serviço de query | Êxito ad hoc do Serviço de query | Esse alerta dispara quando um trabalho de esquema ad hoc é concluído com êxito. |
+| Atrasos, falhas e erros ad hoc do Serviço de query | Falha ad hoc do Serviço de query | Esse alerta dispara quando um trabalho de esquema ad hoc falha. |
+| Informações de consulta agendada do Serviço de Consulta | Início da consulta agendada do Serviço de Consulta | Esse alerta dispara quando uma consulta agendada começa a ser executada. |
+| Informações de consulta agendada do Serviço de Consulta | Êxito na consulta agendada do Serviço de Consulta | Esse alerta dispara quando um trabalho de consulta agendado é concluído com êxito. |
+| Atrasos, falhas e erros da consulta agendada do Serviço de query | falha na consulta agendada do serviço de consulta | Esse alerta dispara quando um trabalho de consulta agendado falha. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |

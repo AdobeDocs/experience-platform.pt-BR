@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2754'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [Logs de auditoria](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Coleta de dados](#data-collection)
+- [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Serviço de query](#query-service)
@@ -52,9 +53,9 @@ O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gere
 
 Os recursos de higiene dos dados da Adobe Experience Platform permitem que você limpe seus dados agendando expirações automatizadas do conjunto de dados e excluindo programaticamente os dados do consumidor por identidade.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Os recursos de exclusão do consumidor só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
+>Os recursos de higiene de dados só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 Consulte a documentação a seguir para começar a usar a higiene dos dados:
 
@@ -64,7 +65,7 @@ Consulte a documentação a seguir para começar a usar a higiene dos dados:
 
 ## [!UICONTROL Console de privacidade] {#privacy-console}
 
-O [!UICONTROL Console de privacidade] na interface do usuário do Experience Platform fornece uma visualização do painel de informações importantes de recursos relacionados à privacidade, como [solicitações do titular de dados do Privacy Service], [ordens de trabalhos de higiene dos dados]e [logs de auditoria]. O console também fornece vários guias de caso de uso do produto para ajudar você a navegar pelos fluxos de trabalho de privacidade comuns.
+O [!UICONTROL Console de privacidade] na interface do usuário do Experience Platform fornece uma visualização do painel de informações importantes de recursos relacionados à privacidade, como [solicitações do titular de dados do Privacy Service](../../privacy-service/home.md), [ordens de trabalhos de higiene dos dados](../../hygiene/home.md)e [logs de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md). O console também fornece vários guias de caso de uso do produto para ajudar você a navegar pelos fluxos de trabalho de privacidade comuns.
 
 Consulte a [Visão geral do console Privacidade](../../landing/governance-privacy-security/privacy-console.md) para obter mais informações sobre o recurso .
 
@@ -127,10 +128,39 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Recurso | Descrição |
 | --- | --- |
 | Integração de navegação à esquerda na interface do usuário da plataforma | Todos os recursos que antes eram exclusivos da interface do usuário da coleta de dados (incluindo tags, encaminhamento de eventos e datastreams) agora também estão disponíveis por meio da navegação à esquerda no Experience Platform, na categoria **[!UICONTROL Coleta de dados]**. Isso elimina a necessidade de alternar entre interfaces do usuário ao trabalhar com recursos de coleta de dados na Plataforma. |
+| Atribuição de usuário em tags e encaminhamento de evento | Quando disponível [!UICONTROL Propriedades] nas tags e no encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e qual usuário fez a atualização. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ----------- | ----------- |
+| SDK de destino | O Destination SDK agora oferece suporte total para parceiros e clientes que criam destinos em lote (ou baseados em arquivos) produzidos ou privados. Leia as seguintes páginas de documentação para obter mais informações: <ul><li>[Visão geral do Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configurar um destino com base em arquivo](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurar opções de formatação de arquivo para destinos com base em arquivo](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Teste os destinos com base em arquivo](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Destinos novos ou atualizados**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | O [!DNL Salesforce CRM] O destino foi atualizado para oferecer suporte a atualizações de contatos e leads, bem como aprimoramentos de desempenho para atualizações mais rápidas. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentação nova ou atualizada**
+
+| Documentação | Descrição |
+| ----------- | ----------- |
+| Documentação da API do Serviço de fluxo de destinos | O [Documentação de referência da API de destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/) O foi atualizado para incluir orientação sobre como executar operações em destinos com base em arquivos. As operações para destinos de transmissão serão adicionadas posteriormente. |
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -218,6 +248,6 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 | Suporte para Adobe Campaign Managed Cloud Service | Use a fonte Adobe Campaign Managed Cloud Service para trazer seus dados de delivery e logs de rastreamento do Adobe Campaign v8.4 para o Experience Platform. Leia o guia em [criação de uma conexão de origem Cloud Service gerenciada da Adobe Campaign na interface do usuário](../../sources/tutorials/ui/create/adobe-applications/campaign.md) para obter mais informações. |
 | Suporte a API para assimilação sob demanda para fontes em lote | Use a assimilação sob demanda para criar execuções de fluxo ad hoc para um determinado fluxo de dados com o [!DNL Flow Service] API. As execuções de fluxo criadas devem ser definidas para assimilação única. Para obter mais informações, leia o guia sobre [criação de uma execução de fluxo para assimilação sob demanda usando a API](../../sources/tutorials/api/on-demand-ingestion.md) para obter mais informações. |
 | Suporte à API para tentativa de repetição de execuções de fluxo de dados com falha para fontes em lote | Use o `re-trigger` para tentar novamente o fluxo de dados com falha por meio da API. Leia o guia em [tentativa de executar o fluxo de dados com falha usando a API](../../sources/tutorials/api/retry-flows.md) para obter mais informações. |
-| Suporte a API para filtrar dados em nível de linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes | Use operadores lógicos e de comparação para filtrar dados em nível de linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes. Leia o guia sobre filtragem de dados de uma fonte usando a API para obter mais informações. |
+| Suporte a API para filtrar dados em nível de linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes | Use operadores lógicos e de comparação para filtrar dados em nível de linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes. Leia o guia em [filtragem de dados de uma fonte usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
 
 Para saber mais sobre fontes, leia a [visão geral das fontes](../../sources/home.md).

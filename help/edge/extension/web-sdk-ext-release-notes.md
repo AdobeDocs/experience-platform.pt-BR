@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 4e80588777e1c5f334e15533c7c44623a0cd2b64
+source-git-commit: bfdb25e853c16ca38c69d777362681a4b3b06a2f
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 43%
+source-wordcount: '1466'
+ht-degree: 42%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 43%
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
 Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte o [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versão 2.14.0 - 28 de setembro de 2022
+
+* Adicionado um novo `targetMigrationEnabled` configuração que permite a migração de página por página inteira.
+* Adição de uma ação de resposta de aplicação para ativar implementações híbridas servidor-cliente.
+* Adicionada a opção de contexto de dicas de cliente de agente-usuário de alta entropia.
+
+Contém a versão 2.13.0 da Biblioteca do SDK da Web da Adobe Experience Platform.
 
 ## Versão 2.13.0 - 29 de junho de 2022
 

@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,15 @@ A tabela a seguir descreve como a interface do usuário se comporta com base em 
 | **[!UICONTROL Gerenciar fontes]** Ligado | Além das funções incluídas em **[!UICONTROL Exibir fontes]**, concede acesso a **[!UICONTROL Fonte do Connect]** em **[!UICONTROL Catálogo]** e **[!UICONTROL Selecionar dados]** em **[!UICONTROL Procurar]**. **[!UICONTROL Gerenciar fontes]** O também permite ativar ou desativar o **[!UICONTROL DataFlows]** e edite suas programações. |
 | **[!UICONTROL Exibir fontes]** Desligado e **[!UICONTROL Gerenciar fontes]** Desligado | Revogar todo o acesso às fontes. |
 
-Para obter mais informações sobre as permissões disponíveis concedidas por meio do Admin Console, incluindo essas quatro fontes, consulte o [visão geral do controle de acesso](../access-control/home.md).
+Para obter mais informações sobre as permissões disponíveis concedidas por meio das Permissões de Adobe, leia o [visão geral do controle de acesso](../access-control/home.md).
+
+### Controle de acesso com base em atributos para fontes
+
+O controle de acesso baseado em atributos no Adobe Experience Platform permite que os administradores controlem o acesso a objetos e/ou recursos específicos com base em atributos.
+
+Com o controle de acesso baseado em atributos, você pode aplicar configurações de mapeamento a campos aos quais tem permissões. Além disso, não será possível assimilar dados em um conjunto de dados se você não tiver acesso a todos os campos no conjunto de dados.
+
+Para obter mais informações sobre o controle de acesso baseado em atributos, leia a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md).
 
 ## Termos e condições {#terms-and-conditions}
 

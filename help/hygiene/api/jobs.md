@@ -4,9 +4,9 @@ description: Saiba como corrigir ou excluir programaticamente os dados pessoais 
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->No momento, a API da Higiene de dados está em um beta. A funcionalidade descrita neste documento está sujeita a alterações.
+>Esse terminal representa a funcionalidade beta para exclusões do consumidor. Para obter a funcionalidade mais recente, use o [`/workorder` endpoint](./workorder.md) em vez disso.
 
 A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 

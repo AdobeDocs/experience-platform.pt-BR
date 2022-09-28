@@ -2,10 +2,10 @@
 title: Guia da API da Higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 1%
+source-wordcount: '415'
+ht-degree: 0%
 
 ---
 
@@ -39,13 +39,17 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 Este documento fornece um exemplo de chamada à API para demonstrar como formatar suas solicitações. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/api-guide.md#sample-api) no guia de introdução para APIs do Experience Platform.
 
-<!-- ## Work orders
-
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
-
 ## Expirações do conjunto de dados
 
 A expiração de um conjunto de dados é uma ação &quot;excluir um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando uma hora futura na qual esse conjunto de dados deve ser excluído. Consulte a [guia do endpoint de expiração de conjunto de dados](./dataset-expiration.md) para obter detalhes sobre como agendar expirações do conjunto de dados na API.
+
+## Exclusão do consumidor
+
+>[!NOTE]
+>
+>As exclusões de clientes só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Sheild.
+
+A API de Higiene de dados permite excluir todos os registros associados a uma identidade do consumidor em um ou todos os conjuntos de dados. Todas as tarefas de higiene de dados que excluem identidades de consumidores são representadas por uma construção chamada ordem de trabalho. Consulte a [guia do endpoint de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões do consumidor na API.
 
 ## Quota
 

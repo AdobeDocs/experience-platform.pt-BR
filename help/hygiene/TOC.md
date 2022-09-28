@@ -4,9 +4,9 @@ user-guide-title: Ajuda da Higiene de Dados
 breadcrumb-title: Guia de higiene de dados
 user-guide-description: Gerencie solicitações de dados do consumidor para cumprir com as normas legais de privacidade, como o GDPR e a CCPA.
 feature: Data Hygiene
-source-git-commit: c5a09a01ed9cc180ea5623af6f2c9f176a8334dc
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '49'
+source-wordcount: '48'
 ht-degree: 4%
 
 ---
@@ -23,5 +23,5 @@ ht-degree: 4%
 * API de higiene de dados {#api}
    * [Visão geral](./api/overview.md)
    * [Expirações do conjunto de dados](./api/dataset-expiration.md)
-   * [Exclusão de trabalhos do consumidor](./api/workorder.md)
+   * [Exclusão do consumidor](./api/workorder.md)
    * [Quota](./api/quota.md)

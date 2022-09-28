@@ -2,11 +2,9 @@
 title: Endpoint da API de ordem de trabalho
 description: O endpoint /workorder na API da Higiene de Dados permite gerenciar programaticamente tarefas de exclusão para identidades de consumidores.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: fb9d226a4ea2d23ccbf61416e275a0de5025554f
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '985'
 ht-degree: 5%
 
 ---
@@ -15,15 +13,15 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
+>Atualmente, as solicitações de exclusão do consumidor estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield ou Privacy Shield.
 
-O `/workorder` O endpoint na API da Higiene de dados permite gerenciar programaticamente tarefas de exclusão para identidades de consumidores no Adobe Experience Platform.
+O `/workorder` O endpoint na API da Higiene de Dados permite gerenciar programaticamente solicitações de exclusão de clientes no Adobe Experience Platform.
 
 ## Introdução
 
 O endpoint usado neste guia faz parte da API da Higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
-## Excluir identidades {#delete-identities}
+## Criar uma solicitação de exclusão do consumidor {#delete-consumers}
 
 É possível excluir uma ou mais identidades de consumidores de um único conjunto de dados ou de todos os conjuntos de dados, fazendo uma solicitação de POST para a `/workorder` endpoint .
 
@@ -48,6 +46,8 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
+        "displayName": "Example Consumer Delete Request",
+        "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
             "namespace": {
@@ -73,132 +73,51 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `action` | A ação a ser executada. O valor deve ser definido como `delete_identity` ao excluir identidades. |
+| `action` | A ação a ser executada. O valor deve ser definido como `delete_identity` para exclusões de consumidores. |
 | `datasetId` | Se estiver excluindo de um único conjunto de dados, esse valor deve ser a ID do conjunto de dados em questão. Se estiver excluindo de todos os conjuntos de dados, defina o valor como `ALL`.<br><br>Se você estiver especificando um único conjunto de dados, o esquema do Experience Data Model (XDM) associado do conjunto de dados deverá ter uma identidade primária definida. |
+| `displayName` | O nome de exibição da solicitação de exclusão do consumidor. |
+| `description` | Uma descrição para a solicitação de exclusão do consumidor. |
 | `identities` | Uma matriz contendo as identidades de pelo menos um usuário cujas informações você gostaria de excluir. Cada identidade é composta por um [namespace de identidade](../../identity-service/namespaces.md) e um valor:<ul><li>`namespace`: Contém uma única propriedade de string, `code`, que representa o namespace de identidade. </li><li>`id`: O valor de identidade.</ul>If `datasetId` especifica um único conjunto de dados, cada entidade em `identities` deve usar o mesmo namespace de identidade que a identidade primária do esquema.<br><br>If `datasetId` está definida como `ALL`, o `identities` A matriz não está restrita a nenhum namespace único, pois cada conjunto de dados pode ser diferente. No entanto, suas solicitações ainda estão restritas aos namespaces disponíveis para sua organização, conforme relatado por [Serviço de identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da exclusão de identidade.
+Uma resposta bem-sucedida retorna os detalhes da exclusão do consumidor.
 
 ```json
 {
   "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
   "orgId": "{ORG_ID}",
-  "batchId": "fc0cf8af-a176-4107-a31a-381d6af38cbe",
-  "bundleOrdinal": 1,
-  "payloadByteSize": 362,
-  "operationCount": 3,
-  "createdAt": 1652122493242,
-  "responseMessage": "received",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
   "status": "received",
-  "createdBy": "{USER_ID}"
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName": "Example Consumer Delete Request",
+  "description": "Cleanup identities required by Jira request 12345."
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
 | `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para procurar o status da exclusão posteriormente. |
-| `orgId` | A ID da sua organização. |
-| `batchId` | A ID do lote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas em um lote para serem processadas pelos serviços de downstream. |
-| `bundleOrdinal` | A ordem em que essa ordem de exclusão foi recebida quando foi empacotada em um lote para processamento de downstream. Usado para fins de depuração. |
-| `payloadByteSize` | O tamanho, em bytes, da lista de identidades fornecidas na carga da solicitação que criou esta ordem de exclusão. |
-| `operationCount` | O número de identidades às quais essa ordem de exclusão se aplica. |
+| `orgId` | Sua ID da organização. |
+| `bundleId` | A ID do pacote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
+| `action` | A ação que está sendo executada pela ordem de trabalho. Para exclusões do consumidor, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
-| `responseMessage` | A resposta mais recente retornada pelo sistema. Se ocorrer um erro durante o processamento, esse valor será uma string JSON contendo informações detalhadas sobre o erro para ajudá-lo a entender o que pode ter dado errado. |
+| `updatedAt` | Um carimbo de data e hora de quando a ordem de exclusão foi atualizada pela última vez. |
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
+| `datasetId` | A ID do conjunto de dados que está sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Listar os status de todas as exclusões de identidade {#list}
+## Recuperar o status de uma exclusão do consumidor (#lookup)
 
-Você pode listar os status de todas as exclusões de identidade fazendo uma solicitação GET.
-
-**Formato da API**
-
-```http
-GET /workorder?{QUERY_PARAMS}
-```
-
-| Parâmetro | Descrição |
-| --- | --- |
-| `{QUERY_PARAMS}` | Uma lista de parâmetros de consulta opcionais para a chamada de listagem, com vários parâmetros separados por `&` caracteres. Os parâmetros de consulta aceitos são os seguintes:<ul><li>`data` - Um valor booleano que, quando definido como `true`, inclui todas as solicitações e dados de resposta adicionais recebidos para a ordem de exclusão. O padrão é `false`.</li><li>`start` - Um carimbo de data e hora para o início do período de pesquisa das ordens de exclusão.</li><li>`end` - Um carimbo de data e hora para o fim do período de pesquisa das ordens de exclusão.</li><li>`page` - A página de resposta específica a ser retornada.</li><li>`limit` - O número de registros a serem exibidos por página.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Solicitação**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna os detalhes de todas as operações de exclusão, incluindo seu status atual. O exemplo de resposta a seguir foi truncado por questões de espaço.
-
-```json
-{
-  "results": [
-    {
-      "workorderId": "4fe4be4f-47f3-477a-927e-f908452513f6",
-      "orgId": "{ORG_ID}",
-      "batchId": "e62cd6b6-ce3e-49e0-9221-ba1f286a851c",
-      "bundleOrdinal": 1,
-      "payloadByteSize": 164,
-      "operationCount": 1,
-      "createdAt": 1650929265295,
-      "responseMessage": "received",
-      "status": "received",
-      "createdBy": "{USER_ID}"
-    },
-    {
-      "workorderId": "e4a662e8-a5f3-497d-8d6a-d26970d8732b",
-      "orgId": "{ORG_ID}",
-      "batchId": "74fe4e38-ed42-4ca5-8bee-88bdc03ae786",
-      "bundleOrdinal": 1,
-      "payloadByteSize": 164,
-      "operationCount": 1,
-      "createdAt": 1650931057899,
-      "responseMessage": "received",
-      "status": "received",
-      "createdBy": "{USER_ID}"
-    }
-  ],
-  "total": 200,
-  "count": 50,
-  "_links": {
-    "next": {
-      "href": "https://platform.adobe.io/workorder?page=1&limit=50",
-      "templated": false
-    },
-    "page": {
-      "href": "https://platform.adobe.io/workorder?limit={limit}&page={page}",
-      "templated": true
-    }
-  }
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `results` | Contém a lista de ordens de exclusão e seus detalhes. Para obter mais informações sobre as propriedades de uma ordem de exclusão, consulte o exemplo de resposta na seção sobre [como pesquisar uma ordem de exclusão](#lookup). |
-| `total` | O número total de ordens de exclusão encontradas com base nos filtros atuais. |
-| `count` | O número total de pedidos de exclusão encontrados em cada página da resposta. |
-| `_links` | Contém informações de paginação para ajudá-lo a explorar o restante da resposta:<ul><li>`next`: Contém um URL para a próxima página na resposta.</li><li>`page`: Contém um modelo de URL para acessar outra página na resposta ou ajustar o número de itens retornados em cada página.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Recuperar o status de uma exclusão de identidade (#lookup)
-
-Depois de enviar uma solicitação para o [excluir uma identidade](#delete-identities), é possível verificar seu status usando uma solicitação do GET.
+Depois [criação de uma solicitação de exclusão do consumidor](#delete-consumers), é possível verificar seu status usando uma solicitação do GET.
 
 **Formato da API**
 
@@ -208,7 +127,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{WORK_ORDER_ID}` | O `workorderId` da exclusão de identidade que você está procurando. |
+| `{WORK_ORDER_ID}` | O `workorderId` da exclusão do consumidor que você está procurando. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -216,7 +135,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder/ID6c28e2d2d2b54079aadf7be94568f6d3 \
+  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -229,28 +148,136 @@ Uma resposta bem-sucedida retorna os detalhes da operação de exclusão, inclui
 
 ```json
 {
-  "workorderId": "4fe4be4f-47f3-477a-927e-f908452513f6",
+  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
   "orgId": "{ORG_ID}",
-  "batchId": "e62cd6b6-ce3e-49e0-9221-ba1f286a851c",
-  "bundleOrdinal": 1,
-  "payloadByteSize": 164,
-  "operationCount": 1,
-  "createdAt": 1650929265295,
-  "responseMessage": "received",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
   "status": "received",
-  "createdBy": "{USER_ID}"
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName": "Example Consumer Delete Request",
+  "description": "Cleanup identities required by Jira request 12345.",
+  "productStatusDetails": [
+    {
+        "productName": "Data Management",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:51:31.535872Z"
+    },
+    {
+        "productName": "Identity Service",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:43:46.331150Z"
+    },
+    {
+        "productName": "Profile Service",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:37:13.443481Z"
+    }
+  ]
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
 | `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para procurar o status da exclusão posteriormente. |
-| `orgId` | A ID da sua organização. |
-| `batchId` | A ID do lote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas em um lote para serem processadas pelos serviços de downstream. |
-| `bundleOrdinal` | A ordem em que essa ordem de exclusão foi recebida quando foi empacotada em um lote para processamento de downstream. Usado para fins de depuração. |
-| `payloadByteSize` | O tamanho, em bytes, da lista de identidades fornecidas na carga da solicitação que criou esta ordem de exclusão. |
-| `operationCount` | O número de identidades às quais essa ordem de exclusão se aplica. |
+| `orgId` | Sua ID da organização. |
+| `bundleId` | A ID do pacote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
+| `action` | A ação que está sendo executada pela ordem de trabalho. Para exclusões do consumidor, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
-| `responseMessage` | A resposta mais recente retornada pelo sistema. Se ocorrer um erro durante o processamento, esse valor será uma string JSON contendo informações detalhadas sobre o erro para ajudá-lo a entender o que pode ter dado errado. |
+| `updatedAt` | Um carimbo de data e hora de quando a ordem de exclusão foi atualizada pela última vez. |
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
+| `datasetId` | A ID do conjunto de dados que está sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
+| `productStatusDetails` | Uma matriz que lista o status atual de processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: O nome do serviço downstream.</li><li>`productStatus`: O status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: Um carimbo de data e hora de quando o status mais recente foi publicado pelo serviço.</li></ul> |
+
+## Atualizar uma solicitação de exclusão do consumidor
+
+Você pode atualizar o `displayName` e `description` para um consumidor, exclua fazendo uma solicitação de PUT.
+
+**Formato da API**
+
+```http
+PUT /workorder{WORK_ORDER_ID}
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{WORK_ORDER_ID}` | O `workorderId` da exclusão do consumidor que você está procurando. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Solicitação**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "displayName" : "Update - displayName",
+        "description" : "Update - description"
+      }'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `displayName` | Um nome de exibição atualizado para a solicitação de exclusão do consumidor. |
+| `description` | Uma descrição atualizada para a solicitação de exclusão do consumidor. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna os detalhes da exclusão do consumidor.
+
+```json
+{
+  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
+  "orgId": "{ORG_ID}",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "status": "received",
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName" : "Update - displayName",
+  "description" : "Update - description",
+  "productStatusDetails": [
+    {
+        "productName": "Data Management",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:51:31.535872Z"
+    },
+    {
+        "productName": "Identity Service",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:43:46.331150Z"
+    },
+    {
+        "productName": "Profile Service",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:37:13.443481Z"
+    }
+  ]
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para procurar o status da exclusão posteriormente. |
+| `orgId` | Sua ID da organização. |
+| `bundleId` | A ID do pacote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
+| `action` | A ação que está sendo executada pela ordem de trabalho. Para exclusões do consumidor, o valor é `identity-delete`. |
+| `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
+| `updatedAt` | Um carimbo de data e hora de quando a ordem de exclusão foi atualizada pela última vez. |
+| `status` | O status atual da ordem de exclusão. |
+| `createdBy` | O usuário que criou a ordem de exclusão. |
+| `datasetId` | A ID do conjunto de dados que está sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
+| `productStatusDetails` | Uma matriz que lista o status atual de processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: O nome do serviço downstream.</li><li>`productStatus`: O status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: Um carimbo de data e hora de quando o status mais recente foi publicado pelo serviço.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}

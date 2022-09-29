@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Saiba mais sobre as soluções de acessibilidade personalizadas na interface do usuário do Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ Ao usar a interface do usuário do Construtor de segmentos para criar, editar e 
 * A interface do usuário do Construtor de segmentos pode ser acessada por meio da navegação pelo teclado.
 * Os leitores de tela devem reconhecer tags de marcação para cabeçalhos e podem anunciar o cabeçalho junto com seu nível.
 * Outras tecnologias de assistência podem alterar a exibição visual de uma página, usando cabeçalhos corretamente codificados para exibir um outline ou uma exibição alternativa.
+
+Agora é possível recolher ou expandir os trilhos esquerdo e direito da tela do construtor de segmentos para obter mais espaço na tela. Esse recurso é particularmente útil, pois oferece recurso de função completa com zoom de 200%.
+
+![A tela do construtor de segmentos com os widgets de divulgação do painel esquerdo e direito destacados.](images/left-right-rail-expandables.png)
 
 ## Editor do Serviço de Consulta
 

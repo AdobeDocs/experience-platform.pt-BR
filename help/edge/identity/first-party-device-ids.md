@@ -2,7 +2,7 @@
 title: IDs de dispositivo próprio no SDK da Web da plataforma
 description: Saiba como configurar IDs de dispositivos primários (FPIDs) para o SDK da Web da Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 1%
@@ -209,7 +209,7 @@ Se você estiver migrando para FPIDs de uma implementação anterior, pode ser d
 
 Para ajudar a ilustrar esse processo, considere um cenário que envolva um cliente que já visitou seu site anteriormente e o impacto que uma migração de FPID teria na forma como esse cliente é identificado nas soluções do Adobe.
 
-![Diagrama que mostra como os valores de ID de um cliente são atualizados entre visitas após migrar para FPIDs](../images/identity/tracking/visits.png)
+![Diagrama que mostra como os valores de ID de um cliente são atualizados entre visitas após migrar para FPIDs](../assets/identity/tracking/visits.png)
 
 | Visita | Descrição |
 | --- | --- |

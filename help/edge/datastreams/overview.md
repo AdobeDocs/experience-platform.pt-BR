@@ -3,9 +3,9 @@ title: Visão geral dos conjuntos de dados
 description: Conecte sua integração do SDK da Experience Platform do lado do cliente aos produtos da Adobe e destinos de terceiros.
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de configurações do Analytics; Predefinição de dados para dados Coleção; Preparação de dados; Mapeador; Mapeador XDM; Mapeador no Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1789'
 ht-degree: 3%
 
 ---
@@ -20,29 +20,29 @@ Este documento aborda as etapas para configurar um armazenamento de dados na int
 
 Você pode criar e gerenciar conjuntos de dados na interface do usuário da coleta de dados ou na interface do usuário do Experience Platform selecionando **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
 
-![Guia Datastreams na interface do usuário](../images/datastreams/overview/datastreams-tab.png)
+![Guia Datastreams na interface do usuário](../assets/datastreams/overview/datastreams-tab.png)
 
 O [!UICONTROL Datastreams] A guia exibe uma lista de conjuntos de dados existentes, incluindo o nome amigável, a ID e a data da última modificação. Selecione o nome de um armazenamento de dados para [exibir seus detalhes e configurar serviços](#view-details).
 
 Selecione o ícone &quot;mais&quot; (**...**) para um armazenamento de dados específico revelar mais opções. Selecionar **[!UICONTROL Editar]** para atualizar o [configuração básica](#configure) para o armazenamento de dados, ou selecione **[!UICONTROL Excluir]** para remover o armazenamento de dados.
 
-![Opções para editar ou excluir o conjunto de dados existente](../images/datastreams/overview/edit-datastream.png)
+![Opções para editar ou excluir o conjunto de dados existente](../assets/datastreams/overview/edit-datastream.png)
 
 ## Criar um novo armazenamento de dados {#create}
 
 Para criar um armazenamento de dados, comece selecionando **[!UICONTROL Novo fluxo de dados]**.
 
-![Selecionar novo fluxo de dados](../images/datastreams/overview/new-datastream-button.png)
+![Selecionar novo fluxo de dados](../assets/datastreams/overview/new-datastream-button.png)
 
 O fluxo de trabalho de criação do armazenamento de dados é exibido, começando na etapa de configuração. Aqui, você deve fornecer um nome e uma descrição opcional para o armazenamento de dados.
 
 Se você estiver configurando esse armazenamento de dados para uso no Experience Platform e estiver usando o SDK da Web da plataforma, também deverá selecionar um [esquema do Experience Data Model (XDM) baseado em eventos](../../xdm/classes/experienceevent.md) para representar os dados que você planeja assimilar.
 
-![Configuração básica para um armazenamento de dados](../images/datastreams/overview/configure.png)
+![Configuração básica para um armazenamento de dados](../assets/datastreams/overview/configure.png)
 
 Selecionar **[!UICONTROL Opções avançadas]** para revelar controles adicionais para configurar o conjunto de dados.
 
-![Opções de configuração avançadas](../images/datastreams/overview/advanced-options.png)
+![Opções de configuração avançadas](../assets/datastreams/overview/advanced-options.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -57,7 +57,7 @@ A partir daqui, se você estiver configurando seu conjunto de dados para o Exper
 
 Após configurar um novo armazenamento de dados ou selecionar um existente para exibir, a página de detalhes desse armazenamento de dados será exibida. Aqui você pode encontrar mais informações sobre o armazenamento de dados, incluindo sua ID.
 
-![Página de detalhes de um armazenamento de dados criado](../images/datastreams/overview/view-details.png)
+![Página de detalhes de um armazenamento de dados criado](../assets/datastreams/overview/view-details.png)
 
 Na tela de detalhes do armazenamento de dados, é possível [adicionar serviços](#add-services) para ativar os recursos dos produtos da Adobe Experience Cloud aos quais você tem acesso. Também é possível editar o armazenamento de dados [configuração básica](#create), atualizar [regras de mapeamento](./data-prep.md), [copiar o datastream](#copy)ou exclua-a totalmente.
 
@@ -65,15 +65,15 @@ Na tela de detalhes do armazenamento de dados, é possível [adicionar serviços
 
 Na página de detalhes de um armazenamento de dados, selecione **[!UICONTROL Adicionar Serviço]** para começar a adicionar os serviços disponíveis para esse armazenamento de dados.
 
-![Selecione Adicionar serviço para continuar](../images/datastreams/overview/add-service.png)
+![Selecione Adicionar serviço para continuar](../assets/datastreams/overview/add-service.png)
 
 Na próxima tela, use o menu suspenso para selecionar um serviço a ser configurado para esse armazenamento de dados. Somente os serviços aos quais você tem acesso serão exibidos nesta lista.
 
-![Selecione um serviço na lista](../images/datastreams/overview/service-selection.png)
+![Selecione um serviço na lista](../assets/datastreams/overview/service-selection.png)
 
 Selecione o serviço desejado, preencha as opções de configuração exibidas e selecione **[!UICONTROL Salvar]** para adicionar o serviço ao armazenamento de dados. Todos os serviços adicionados aparecem na visualização de detalhes do armazenamento de dados.
 
-![Serviços adicionados a um armazenamento de dados](../images/datastreams/overview/services-added.png)
+![Serviços adicionados a um armazenamento de dados](../assets/datastreams/overview/services-added.png)
 
 As subseções abaixo descrevem as opções de configuração para cada serviço.
 
@@ -85,7 +85,7 @@ As subseções abaixo descrevem as opções de configuração para cada serviço
 
 Esse serviço controla se e como os dados são enviados para a Adobe Analytics. Podem ser encontrados detalhes adicionais no guia sobre [envio de dados para o Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloco de configurações do Adobe Analytics](../images/datastreams/overview/analytics-config.png)
+![Bloco de configurações do Adobe Analytics](../assets/datastreams/overview/analytics-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -95,7 +95,7 @@ Esse serviço controla se e como os dados são enviados para a Adobe Analytics. 
 
 Esse serviço controla se e como os dados são enviados para a Adobe Audience Manager. Tudo o que é necessário para enviar dados para o Audience Manager é habilitar esta seção. As outras configurações são opcionais, mas são incentivadas.
 
-![Bloco de configurações do Adobe Audience Manager](../images/datastreams/overview/audience-manager-config.png)
+![Bloco de configurações do Adobe Audience Manager](../assets/datastreams/overview/audience-manager-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -108,27 +108,28 @@ Esse serviço controla se e como os dados são enviados para a Adobe Audience Ma
 >
 >Ao ativar um armazenamento de dados para a Platform, tome nota da sandbox da Platform que você está usando no momento, conforme exibido na faixa superior da interface do usuário.
 >
->![Sandbox selecionada](../images/datastreams/overview/platform-sandbox.png)
+>![Sandbox selecionada](../assets/datastreams/overview/platform-sandbox.png)
 >
 >As sandboxes são partições virtuais no Adobe Experience Platform que permitem isolar seus dados e implementações de outras pessoas na organização. Depois que um conjunto de dados é criado, sua sandbox não pode ser alterada. Para obter mais detalhes sobre a função das sandboxes no Experience Platform, consulte o [documentação das sandboxes](../../sandboxes/home.md).
 
 Esse serviço controla se e como os dados são enviados para a Adobe Experience Platform.
 
-![Bloco de configurações do Adobe Experience Platform](../images/datastreams/overview/platform-config.png)
+![Bloco de configurações do Adobe Experience Platform](../assets/datastreams/overview/platform-config.png)
 
 | Configuração | Descrição |
 |---| --- |
 | [!UICONTROL Conjunto de dados do evento] | **(Obrigatório)** Selecione o conjunto de dados da plataforma para o qual os dados do evento do cliente serão transmitidos. Esse schema deve usar o [Classe XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Conjunto de dados de perfil] | Selecione o conjunto de dados da plataforma para o qual os dados do atributo do cliente serão enviados. Esse schema deve usar o [Classe de perfil individual XDM](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Marque essa caixa de seleção para ativar o Offer Decisioning para uma implementação do SDK da Web da plataforma. Consulte o guia sobre [uso do Offer Decisioning com o SDK da Web da plataforma](../personalization/offer-decisioning/offer-decisioning-overview.md) para obter mais detalhes sobre a implementação. Para obter mais informações sobre recursos do Offer Decisioning, consulte [Documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=pt-BR). |
-| [!UICONTROL Segmentação de borda] | Marque essa caixa de seleção para ativar [segmentação de borda](../../segmentation/ui/edge-segmentation.md) para esse armazenamento de dados. Quando o SDK envia dados por meio de um conjunto de dados habilitado para a segmentação de borda, qualquer associação de segmento atualizada para o perfil em questão é enviada de volta na resposta.<br><br>Essa opção pode ser usada em combinação com [!UICONTROL Destinos de personalização] para [casos de uso de personalização de próxima página](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Destinos de personalização] | Ao ativar isso depois de ativar a variável [!UICONTROL Segmentação de borda] , essa opção permite que o conjunto de dados se conecte a destinos de personalização, como [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Consulte a documentação de destinos para obter etapas específicas sobre [configuração de destinos de personalização](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Offer Decisioning] | Marque essa caixa de seleção para ativar o Offer Decisioning para uma implementação do SDK da Web da plataforma. Consulte o guia sobre [uso do Offer Decisioning com o SDK da Web da plataforma](../personalization/offer-decisioning/offer-decisioning-overview.md) para obter mais detalhes sobre a implementação. <br><br> Para obter mais informações sobre recursos do Offer Decisioning, consulte [Documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=pt-BR). |
+| [!UICONTROL Segmentação de borda] | Marque essa caixa de seleção para ativar [segmentação de borda](../../segmentation/ui/edge-segmentation.md) para esse armazenamento de dados. Quando o SDK envia dados por meio de um conjunto de dados habilitado para a segmentação de borda, qualquer associação de segmento atualizada para o perfil em questão é enviada de volta na resposta.<br><br>Essa opção pode ser usada em combinação com [!UICONTROL Destinos de personalização] para [casos de uso de personalização de próxima página](../../destinations/ui/configure-personalization-destinations.md)ou em combinação com [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Destinos de personalização] | Ao ativar isso depois de ativar a variável [!UICONTROL Segmentação de borda] , essa opção permite que o conjunto de dados se conecte a destinos de personalização, como [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). <br><br>Consulte a documentação de destinos para obter etapas específicas sobre [configuração de destinos de personalização](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | Marque essa caixa de seleção para ativar [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR) para esse armazenamento de dados. <br><br> Ativar essa opção permite que o armazenamento de dados retorne conteúdo personalizado de campanhas de entrada com base na Web e no aplicativo em [!DNL Adobe Journey Optimizer]. Esta opção requer [!UICONTROL Segmentação de borda] para estar ativo. If [!UICONTROL Segmentação de borda] estiver desmarcada, essa opção ficará esmaecida. |
 
 ### Configurações do Adobe Target {#target}
 
 Esse serviço controla se e como os dados são enviados para a Adobe Target.
 
-![Bloco de configurações do Adobe Target](../images/datastreams/overview/target-config.png)
+![Bloco de configurações do Adobe Target](../assets/datastreams/overview/target-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -140,7 +141,7 @@ Esse serviço controla se e como os dados são enviados para a Adobe Target.
 
 Esse serviço controla se e como os dados são enviados para [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md).
 
-![Seção Encaminhamento de eventos da interface do usuário de configuração](../images/datastreams/overview/event-forwarding-config.png)
+![Seção Encaminhamento de eventos da interface do usuário de configuração](../assets/datastreams/overview/event-forwarding-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -161,15 +162,15 @@ Você pode criar uma cópia de um conjunto de dados existente e alterar seus det
 
 Na página principal do [!UICONTROL Datastreams] no espaço de trabalho, selecione as reticências (**....**) para o armazenamento de dados em questão, selecione **[!UICONTROL Copiar]**.
 
-![Imagem que mostra o [!UICONTROL Copiar] opção sendo selecionada na exibição de lista do armazenamento de dados](../images/datastreams/overview/copy-datastream-list.png)
+![Imagem que mostra o [!UICONTROL Copiar] opção sendo selecionada na exibição de lista do armazenamento de dados](../assets/datastreams/overview/copy-datastream-list.png)
 
 Como alternativa, você pode selecionar **[!UICONTROL Copiar fluxo de dados]** na exibição de detalhes de um determinado conjunto de dados.
 
-![Imagem que mostra o [!UICONTROL Copiar] opção sendo selecionada na visualização de detalhes do armazenamento de dados](../images/datastreams/overview/copy-datastream-details.png)
+![Imagem que mostra o [!UICONTROL Copiar] opção sendo selecionada na visualização de detalhes do armazenamento de dados](../assets/datastreams/overview/copy-datastream-details.png)
 
 Uma caixa de diálogo de confirmação é exibida, solicitando que você forneça um nome exclusivo para o novo armazenamento de dados a ser criado, juntamente com detalhes sobre as opções de configuração que serão copiadas. Quando estiver pronto, selecione **[!UICONTROL Copiar]**.
 
-![Imagem da caixa de diálogo de confirmação para copiar um conjunto de dados](../images/datastreams/overview/copy-datastream-confirm.png)
+![Imagem da caixa de diálogo de confirmação para copiar um conjunto de dados](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 A página principal do [!UICONTROL Datastreams] o workspace é exibido novamente com o novo datastream listado.
 

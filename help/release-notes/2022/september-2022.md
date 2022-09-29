@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: ec2e57d99da7ae34f2b210fcaff00097707edb2b
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2959'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ O Attribution AI é usado para atribuir créditos a pontos de contato que levam 
 
 | Recurso | Descrição |
 | --- | --- |
-| Salvar instância de rascunho | Esse novo recurso permite que analistas de marketing salvem a configuração do modelo como uma instância de rascunho durante as configurações e continuem editando o rascunho até a conclusão antes do treinamento e da pontuação. Os cenários em que esse recurso é útil incluem, entre outros, quando os usuários têm vários campos para definir no fluxo de trabalho de configuração que não podem ser preenchidos de uma só vez ou quando uma ou mais estatísticas do conjunto de dados (como a integridade da coluna) levam tempo para serem processadas antes de ficarem disponíveis. Leia o [Guia do usuário do Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) para saber mais. |
+| Salvar instância de rascunho | Esse novo recurso permite que analistas de marketing salvem uma configuração de modelo como uma instância de rascunho e continuem a editá-la até que ela seja concluída antes do treinamento e da pontuação. Os cenários em que esse recurso é útil incluem, quando um usuário tem vários campos para definir no fluxo de trabalho, mas não pode concluí-lo devido a restrições de tempo. Outro cenário é quando uma ou mais estatísticas de conjunto de dados estão sendo processadas e ainda não estão disponíveis. Leia o [Guia do usuário do Attribution AI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) para saber mais. |
 | Políticas de governança | Depois que os usuários enviam para criar uma instância por meio do fluxo de trabalho de configuração, o novo serviço de aplicação de política verifica se há violações de política do uso de dados e exibe os detalhes em uma janela. Ela garante que as operações de dados e as ações de marketing sejam compatíveis com as políticas de uso de dados configuradas no Adobe Experience Platform. |
 
 Para obter mais informações sobre o Attribution AI, a variável [Visão geral do Attribution AI](../../intelligent-services/attribution-ai/overview.md). Para obter informações sobre políticas de governança de dados, leia a [visão geral das políticas](../../data-governance/policies/overview.md).
@@ -90,7 +90,7 @@ O Customer AI disponível no Real-time Customer Data Platform é usado para gera
 
 | Recurso | Descrição |
 | --- | --- |
-| Salvar instância de rascunho | Esse novo recurso permite que analistas de marketing salvem a configuração do modelo como uma instância de rascunho durante as configurações e continuem editando o rascunho até a conclusão antes do treinamento e da pontuação. Os cenários em que esse recurso é útil incluem, entre outros, quando os usuários têm vários campos para definir no fluxo de trabalho de configuração que não podem ser preenchidos de uma só vez ou quando uma ou mais estatísticas do conjunto de dados (como a integridade da coluna) levam tempo para serem processadas antes de ficarem disponíveis. Leia o [Guia do usuário de IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md) para saber mais. |
+| Salvar instância de rascunho | Esse novo recurso permite que analistas de marketing salvem uma configuração de modelo como uma instância de rascunho e continuem a editá-la até que ela seja concluída antes do treinamento e da pontuação. Os cenários em que esse recurso é útil incluem, quando um usuário tem vários campos para definir no fluxo de trabalho, mas não pode concluí-lo devido a restrições de tempo. Outro cenário é quando uma ou mais estatísticas de conjunto de dados estão sendo processadas e ainda não estão disponíveis. Leia o [Guia do usuário de IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) para saber mais. |
 | Políticas de governança | Depois que os usuários enviam para criar uma instância por meio do fluxo de trabalho de configuração, o novo serviço de aplicação de política verifica se há violações de política do uso de dados e exibe os detalhes em uma janela. Ela garante que as operações de dados e as ações de marketing sejam compatíveis com as políticas de uso de dados configuradas no Adobe Experience Platform. |
 
 Para obter mais informações sobre a API do cliente, leia o [Visão geral do Customer AI](../../intelligent-services/customer-ai/overview.md). Para obter informações sobre políticas de governança de dados, leia a [visão geral das políticas](../../data-governance/policies/overview.md).

@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
+source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3106'
 ht-degree: 5%
 
 ---
@@ -118,7 +118,7 @@ O Adobe Experience Platform fornece vários painéis através dos quais você po
 | Rótulo em uso | Quando visualizado na biblioteca de widgets, o rótulo em uso identifica facilmente a presença de widgets existentes no painel. Isso facilita evitar a duplicação, embora você ainda possa adicionar o mesmo widget mais de uma vez, se desejar. |
 | Painéis definidos pelo usuário | Painéis definidos pelo usuário ajudam a agilizar insights e personalizar visualizações, permitindo que você crie e gerencie painéis personalizados. Com painéis definidos pelo usuário, você pode criar, adicionar e editar widgets de sobreposição para visualizar métricas principais relevantes para sua organização. Leia o [guia de recursos](../../dashboards/user-defined-dashboards.md) para saber mais. |
 | Modelo de dados de insights da plataforma de dados do cliente | O recurso Modelo de dados de insights da CDP (Plataforma de dados do cliente) expõe os modelos de dados e o SQL que alimenta os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios de CDP para seus casos de uso de indicador de desempenho principal e de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Leia o [Guia de recursos do Modelo de dados de insights de CDP](../../dashboards/cdp-insights-data-model.md) para saber mais. |
-| Dispositivo de relatório de sobreposição de público-alvo | Este widget está disponível para ambos [!UICONTROL Perfis] e [!UICONTROL Segmentos] painéis. O relatório fornece uma lista ordenada de públicos-alvo classificados pelas porcentagens de sobreposição mais alta ou mais baixa para o segmento escolhido. No [!UICONTROL Perfis] no painel, é possível filtrar e exibir a sobreposição do público-alvo por política de mesclagem de todos os segmentos disponíveis. O [!UICONTROL Segmentos] painéis permitem filtrar a sobreposição de público-alvo por um segmento específico.<br>Use essa análise para criar segmentos novos e de alto desempenho e evitar o envio do mesmo público-alvo para destinos diferentes. O relatório também ajuda a identificar insights ocultos para melhorar a segmentação ou localizar perfis únicos a serem perseguidos. |
+| Dispositivo de relatório de sobreposição de público-alvo | Este widget está disponível para ambos [!UICONTROL Perfis] e [!UICONTROL Segmentos] painéis. O relatório fornece uma lista ordenada de públicos-alvo classificados pelas porcentagens de sobreposição mais alta ou mais baixa para o segmento escolhido. No [!UICONTROL Perfis] no painel, é possível filtrar e exibir a sobreposição do público-alvo por política de mesclagem de todos os segmentos disponíveis. O [!UICONTROL Segmentos] painéis permitem filtrar a sobreposição de público-alvo por um segmento específico.<br>Use essa análise para criar segmentos novos e de alto desempenho e evitar o envio do mesmo público-alvo para destinos diferentes. O relatório também ajuda a identificar insights ocultos para melhorar a segmentação ou localizar perfis únicos a serem perseguidos. Leia as respectivas [perfis](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmentos](../../dashboards/guides/segments.md#audience-overlap-report) guias de widget para saber mais. |
 
 Para obter mais informações sobre [!DNL Dashboards]consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ O Serviço de Consulta permite que você use o SQL padrão para consultar dados 
 
 | Recurso | Descrição |
 | --- | --- |
-| API de assinatura de alerta | O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. Atualmente, os alertas de consulta só podem assinar o usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Amostras do conjunto de dados | Amostras de conjunto de dados do Serviço de query permitem realizar consultas exploratórias em grandes dados com um tempo de processamento muito reduzido ao custo da precisão da consulta. |
+| API de assinatura de alerta | O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. Atualmente, os alertas de consulta só podem assinar o usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). Consulte a [documentação dos alertas de consulta](../../query-service/api/alert-subscriptions.md) para saber mais. |
+| Amostras do conjunto de dados | Amostras de conjunto de dados do Serviço de query permitem realizar consultas exploratórias em grandes dados com um tempo de processamento muito reduzido ao custo da precisão da consulta. Consulte a [guia de amostras do conjunto de dados](../../query-service/sql/dataset-samples.md) para saber mais. |
 
 Para obter mais informações sobre [!DNL Query Service]consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).
 

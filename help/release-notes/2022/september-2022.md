@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
+source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3080'
 ht-degree: 5%
 
 ---
@@ -158,7 +158,8 @@ Para obter mais informações sobre a coleta de dados no Platform, consulte o [v
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | O [!DNL Salesforce CRM] O destino foi atualizado para oferecer suporte a atualizações de contatos e leads, bem como aprimoramentos de desempenho para atualizações mais rápidas. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais e um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). |
+| [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | O [!DNL Salesforce CRM] O destino foi atualizado para oferecer suporte a atualizações de contatos e leads, bem como aprimoramentos de desempenho para atualizações mais rápidas. |
 
 {style=&quot;table-layout:auto&quot;}
 

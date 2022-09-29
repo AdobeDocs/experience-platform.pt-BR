@@ -4,9 +4,9 @@ title: Guia do painel Segmentos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '2094'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Tendência de alteração do tamanho do público-alvo]](#audience-size-change-trend)
 * [[!UICONTROL Tendência do tamanho do público-alvo por identidade]](#audience-size-trend-by-identity)
 * [[!UICONTROL Sobreposição de público]](#audience-overlap)
+* [[!UICONTROL Relatório de sobreposição de público-alvo]](#audience-overlap-report)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Ativações programadas]](#scheduled-activations)
@@ -147,14 +148,33 @@ Esse widget permite otimizar sua estratégia de segmentação ao visualizar as s
 
 ![O widget de sobreposição de público-alvo.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Relatório de sobreposição de público-alvo] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+Esse widget tabula os dados de sobreposição do público-alvo para um segmento específico. Uma lista de cinco públicos-alvo classificados das porcentagens de sobreposição mais alta para a mais baixa é fornecida para o segmento escolhido no menu suspenso na parte superior da tela. Para maior clareza, o segmento escolhido é listado na variável [!UICONTROL SEGMENTAR UM NOME] coluna. A análise de sobreposição de público-alvo é fornecida para o segundo segmento listado na [!UICONTROL SEGMENTO B NOME] coluna. A porcentagem de sobreposição é fornecida na terceira coluna com precisão de doze casas decimais.
 
-<!-- ![The Audience overlap report widget.]() -->
+O relatório de sobreposição de público-alvo ajuda a criar segmentos novos e de alto desempenho. Observar sobreposições de alta porcentagem permite suprimir públicos e impedir o envio do mesmo público para destinos diferentes. Eles também ajudam a identificar insights ocultos que podem ajudar com uma melhor segmentação. A baixa sobreposição de porcentagem ajuda a localizar perfis únicos a serem perseguidos.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Selecionar **[!UICONTROL Ver mais]** para abrir uma caixa de diálogo de tela cheia que contém mais dados de sobreposição de segmento.
+
+![O widget de relatório de sobreposição de público-alvo com Exibir mais destacado .](../images/segments/audience-overlap-report.png)
+
+O [!UICONTROL Relatório de sobreposição de público-alvo] será exibida. Essa caixa de diálogo pode conter até 50 linhas de análises de sobreposição de público-alvo detalhadas em seis colunas. Selecione o ícone de configurações (![O ícone de configurações.](../images/segments/settings-icon.png)) para remover ou adicionar colunas da tabela.
+
+![A caixa de diálogo Relatório de sobreposição de público-alvo .](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Selecione o **[!UICONTROL Sobreposição]** cabeçalho da coluna para alterar a classificação dos resultados entre mais alto e mais baixo ou mais baixo até o mais alto.
+
+Para baixar o relatório inteiro no formato PDF, selecione o menu de opções (**`...`**) seguida de **[!UICONTROL Baixar]**.
+
+![A caixa de diálogo Audience overlap report com as opções elipses e Download realçada.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Selecione uma linha no relatório para abrir um diagrama Venn da análise de sobreposição. Passe o mouse sobre uma seção do diagrama Venn para ver a contagem de perfis em uma caixa de diálogo.
+
+![A caixa de diálogo Relatório de sobreposição de público-alvo com um diagrama Venn e uma linha realçada.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Selecionar **[!UICONTROL Fechar]** para retornar ao [!UICONTROL Segmentos] painel.
 
 ### [!UICONTROL Sobreposição de identidade] {#identity-overlap}
 

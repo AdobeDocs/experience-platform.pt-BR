@@ -4,9 +4,9 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4154'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Para navegar até o [!UICONTROL Perfis] no painel da interface do usuário da pl
 
 ### Modificação do [!UICONTROL Perfis] painel
 
-Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
@@ -123,6 +123,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Públicos-alvo mapeados para o status de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamanho dos públicos-alvo]](#audiences-size)
 * [[!UICONTROL Sobreposição de público-alvo por política de mesclagem]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Relatório de sobreposição de público-alvo]](#audience-overlap-report)
 
 ### [!UICONTROL Contagem de perfis] {#profile-count}
 
@@ -302,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Relatório de sobreposição de público-alvo] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+Esse widget tabula os dados de sobreposição do público-alvo de todos os segmentos disponíveis filtrados pela política de mesclagem. Uma lista de cinco públicos-alvo classificados de porcentagens de sobreposição mais alta a mais baixa é fornecida para a política de mesclagem escolhida no menu suspenso na parte superior da tela. Os dois segmentos analisados estão listados na variável [!UICONTROL SEGMENTAR UM NOME] e [!UICONTROL SEGMENTO B NOME] colunas. A porcentagem de sobreposição é fornecida na terceira coluna com precisão de doze casas decimais.
+
+O relatório de sobreposição de público-alvo ajuda a criar segmentos novos e de alto desempenho. Observar sobreposições de alta porcentagem permite suprimir públicos e impedir o envio do mesmo público para destinos diferentes. Eles também ajudam a identificar insights ocultos que podem ajudar com uma melhor segmentação. A baixa sobreposição de porcentagem ajuda a localizar perfis únicos a serem perseguidos.
+
+Selecionar **[!UICONTROL Ver mais]** para abrir uma caixa de diálogo de tela cheia que contém mais dados de sobreposição de público-alvo.
+
+![O widget de relatório de sobreposição de público-alvo com Exibir mais destacado .](../images/profiles/profiles-audience-overlap-report.png)
+
+O [!UICONTROL Relatório de sobreposição de público-alvo] será exibida. Essa caixa de diálogo pode conter até 50 linhas de análises de sobreposição de público-alvo detalhadas em seis colunas. Selecione o ícone de configurações (![O ícone de configurações.](../images/profiles/settings-icon.png)) para remover ou adicionar colunas da tabela.
+
+![A caixa de diálogo Relatório de sobreposição de público-alvo .](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Selecione o **[!UICONTROL Sobreposição]** cabeçalho da coluna para alterar a classificação dos resultados entre mais alto e mais baixo ou mais baixo até o mais alto.
+
+Para baixar o relatório inteiro no formato PDF, selecione o menu de opções (**`...`**) seguida de **[!UICONTROL Baixar]**.
+
+![A caixa de diálogo Audience overlap report com as opções elipses e Download realçada.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+Selecione uma linha no relatório para abrir um diagrama Venn da análise de sobreposição. Passe o mouse sobre uma seção do diagrama Venn para ver a contagem de perfis em uma caixa de diálogo.
+
+![A caixa de diálogo Relatório de sobreposição de público-alvo com um diagrama Venn e uma linha realçada.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+Selecionar **[!UICONTROL Fechar]** para retornar ao [!UICONTROL Perfis] painel.
 
 ### [!UICONTROL Públicos-alvo mapeados para o status de destino] {#audiences-mapped-to-destination-status}
 

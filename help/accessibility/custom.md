@@ -4,13 +4,13 @@ title: Soluções de acessibilidade personalizadas para o Experience Platform
 topic-legacy: guide
 type: Documentation
 description: Saiba mais sobre as soluções de acessibilidade personalizadas na interface do usuário do Adobe Experience Platform.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
+source-git-commit: e30e04453bd814de103cceb14e3580992436923d
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
-
 
 # Soluções de acessibilidade personalizadas para o Experience Platform
 
@@ -30,19 +30,19 @@ O Experience Platform se esforça para atender aos padrões internacionais de ac
 
 A navegação à esquerda na interface do usuário do Experience Platform é acessível por teclado e fornece contraste de cores em estados normais, de flutuação e de seleção que atendam aos padrões de acessibilidade.
 
-Na tela inicial, os usuários podem acessar a navegação à esquerda. Selecionar **Shift + Tab** retorna o usuário à tela inicial.
+Na tela inicial, os usuários podem acessar a navegação à esquerda. Selecionar **Shift + Guia** retorna o usuário para a tela inicial.
 
 ![A navegação Experience Platform à esquerda.](images/left-navigation-select.png)
 
-Com a navegação à esquerda em foco, **Tab** leva os usuários para a interação expandir e recolher. A capacidade de expandir ou recolher a navegação à esquerda é ativada com **Enter (Return)**.
+Com a navegação à esquerda em foco, **Tabulação** O direciona os usuários para a interação expandir e recolher. A capacidade de expandir ou recolher a navegação à esquerda é ativada com **Enter (Retorno)**.
 
 ![A navegação Experience Platform à esquerda foi reduzida.](images/left-navigation-collapse.png)
 
-Com a navegação à esquerda em foco, as teclas de seta para cima e para baixo navegam para cada item na navegação e ciclo continuamente (em outras palavras, o foco não se afasta até que o usuário se afaste da navegação à esquerda). O foco é mostrado para itens de navegação quando selecionado. A seleção atual é mostrada com um realce e um texto em negrito. Ao selecionar um item de navegação à esquerda, **Enter (Return)** abre o item de interface de usuário selecionado no painel direito, no entanto, o foco permanece na navegação à esquerda até que o usuário saia.
+Com a navegação à esquerda em foco, as teclas de seta para cima e para baixo navegam para cada item na navegação e ciclo continuamente (em outras palavras, o foco não se afasta até que o usuário se afaste da navegação à esquerda). O foco é mostrado para itens de navegação quando selecionado. A seleção atual é mostrada com um realce e um texto em negrito. Ao selecionar um item de navegação esquerdo, **Enter (Retorno)** abre o item da interface de usuário selecionado no painel direito, no entanto, o foco permanece na navegação à esquerda até que o usuário saia.
 
 ![A Experience Platform da navegação à esquerda com Fontes selecionadas.](images/left-navigation-sources.png)
 
-Alguns recursos no Platform não estão habilitados para todos os usuários. Esses itens aparecem na navegação, mas não podem ser selecionados. Ao navegar com um teclado, esses itens são ignorados durante a navegação da seta e não podem ser selecionados usando **Enter (Return)**.
+Alguns recursos no Platform não estão habilitados para todos os usuários. Esses itens aparecem na navegação, mas não podem ser selecionados. Ao navegar com um teclado, esses itens são ignorados durante a navegação de seta e não podem ser selecionados usando **Enter (Retorno)**.
 
 ![Seções da navegação Experience Platform à esquerda que não estão habilitadas para o usuário não podem ser selecionadas.](images/left-navigation-sections-disabled.png)
 
@@ -58,14 +58,14 @@ A caixa de diálogo de vídeo incorporado também pode ser navegada usando o tec
 
 | Elemento de diálogo | Acessibilidade do teclado | Descrição |
 |---|---|---|
-| Reproduzir e pausar | Tabulação<br/>Barra de espaço | Use **Tab** para definir o foco no botão Reproduzir. **** A barra de espaço inicia a reprodução do vídeo e pausa a reprodução. |
-| Esmagador | Tabulação<br/>Seta para a esquerda<br/>Seta para a direita | Quando o vídeo estiver sendo reproduzido, use **Tab** para focalizar o depurador. Com o depurador em foco, **as teclas de seta para a esquerda e para a direita** ignoram a reprodução do vídeo com antecedência e volta em 5 segundos, respectivamente. |
-| Mudo | Tabulação<br/>Barra de espaço | Use **Tab** para focalizar o elemento de volume mudo. Use a **barra de espaço** para silenciar ou ativar o som da reprodução do vídeo. |
-| Volume | Tabulação<br/>Seta para a esquerda<br/>Seta para a direita | Use **Tab** para se concentrar no elemento de volume. **As** teclas de seta para a esquerda e para a direita movem o volume para cima e para baixo, respectivamente. |
-| [!UICONTROL Legendas ocultas]  (&quot;cc&quot;) | Tabulação<br/>Enter<br/>Seta para cima<br/>Seta para baixo | **Elemento** Tabto  [!UICONTROL Closed Captions]  (&quot;cc&quot;). Use **Enter** para abrir o menu e **teclas de seta para cima e para baixo** para selecionar um idioma para legendas. **** Enterconfirm sua seleção. |
-| [!UICONTROL Qualidade] | Tabulação<br/>Enter<br/>Seta para cima<br/>Seta para baixo | Use **Tab** para focalizar o elemento [!UICONTROL Qualidade]. Use **Enter** para abrir o menu e as **teclas de seta para cima e para baixo** para selecionar a qualidade do vídeo. **** Enterconfirm sua seleção. |
-| Tela cheia | Tabulação<br/>Barra de espaço ou Enter<br/>Evitar | Use **Tab** para focalizar o elemento de tela cheia. Use **barra de espaço ou Enter** para ativar a visualização em tela cheia. **Escape** (&quot;esc&quot;) sai do modo de tela cheia. |
-| Fechar | Tabulação<br/>Barra de espaço ou Enter | Use **Tab** para focalizar o botão fechar. Use a **barra de espaço ou a tecla Enter** para sair da caixa de diálogo do vídeo. |
+| Reproduzir e pausar | Tabulação<br/>Barra de espaço | Use **Tabulação** para definir o foco no botão Reproduzir. **Barra de espaço** inicia a reprodução do vídeo e pausa a reprodução. |
+| Esmagador | Tabulação<br/>Seta para a esquerda<br/>Seta para a direita | Quando o vídeo estiver sendo reproduzido, use **Tabulação** para focalizar o depurador. Com o depurador em foco, **teclas de seta para a esquerda e para a direita** pule a reprodução do vídeo com antecedência e retrocede 5 segundos, respectivamente. |
+| Mudo | Tabulação<br/>Barra de espaço | Use **Tabulação** para focalizar o elemento de volume mudo. Use **barra de espaço** para silenciar ou ativar o som da reprodução do vídeo. |
+| Volume | Tabulação<br/>Seta para a esquerda<br/>Seta para a direita | Use **Tabulação** para se concentrar no elemento de volume. **Teclas de seta para a esquerda e para a direita** aumente e diminua o volume, respectivamente. |
+| [!UICONTROL Legendas ocultas] (&quot;cc&quot;) | Tabulação<br/>Enter<br/>Seta para cima<br/>Seta para baixo | **Tabulação** para [!UICONTROL Legendas ocultas] elemento (&quot;cc&quot;). Use **Enter** para abrir o menu e **teclas de seta para cima e para baixo** para selecionar um idioma para legendas. **Enter** confirma sua seleção. |
+| [!UICONTROL Qualidade] | Tabulação<br/>Enter<br/>Seta para cima<br/>Seta para baixo | Use **Tabulação** para focalizar o [!UICONTROL Qualidade] elemento. Use **Enter** para abrir o menu e o **teclas de seta para cima e para baixo** para selecionar a qualidade do vídeo. **Enter** confirma sua seleção. |
+| Tela cheia | Tabulação<br/>Barra de espaço ou Enter<br/>Escape | Use **Tabulação** para focalizar o elemento de tela cheia. Use **barra de espaço ou Enter** para ativar a visualização em tela cheia. **Escape** (&quot;esc&quot;) sai do modo de tela cheia. |
+| Fechar | Tabulação<br/>Barra de espaço ou Enter | Use **Tabulação** para focalizar o botão fechar. Use **barra de espaço ou Enter** para sair da caixa de diálogo do vídeo. |
 
 >[!NOTE]
 >
@@ -75,11 +75,11 @@ A caixa de diálogo de vídeo incorporado também pode ser navegada usando o tec
 
 ## Arrastar e soltar arquivo
 
-No Experience Platform, todas as zonas de arrastar e soltar da seleção de arquivos são acessíveis ao teclado. Usar **Tab** para realçar **[!UICONTROL Escolher arquivos]** e usar **Enter ou spacebar** para selecioná-lo chama a interface de seleção de arquivo do sistema operacional.
+No Experience Platform, todas as zonas de arrastar e soltar da seleção de arquivos são acessíveis ao teclado. Usando **Tabulação** para realçar **[!UICONTROL Escolher arquivos]** e usando **Inserir ou barra de espaço** para selecioná-lo, chama a interface de seleção de arquivo do sistema operacional.
 
-Após o upload de um arquivo, um ícone de exclusão se torna navegável pelo teclado para remover o arquivo selecionado e fazer upload de um novo. Os usuários podem usar **Tab** para se concentrar no ícone de exclusão e **Enter ou spacebar** para selecioná-lo. Depois que o arquivo for removido, **[!UICONTROL Choose files]** estará automaticamente em foco e poderá ser selecionado.
+Após o upload de um arquivo, um ícone de exclusão se torna navegável pelo teclado para remover o arquivo selecionado e fazer upload de um novo. Os usuários podem usar **Tabulação** para se concentrar no ícone excluir e **Inserir ou barra de espaço** para selecioná-lo. Depois que o arquivo for removido, **[!UICONTROL Escolher arquivos]** está automaticamente em foco e pode ser selecionado.
 
-Como alternativa, se o arquivo carregado não estiver no formato correto, um ícone de erro será exibido junto com uma mensagem de erro e o botão **[!UICONTROL Choose files]** estará em foco e selecionável.
+Como alternativa, se o arquivo carregado não estiver no formato correto, um ícone de erro será exibido junto com uma mensagem de erro e a mensagem de erro **[!UICONTROL Escolher arquivos]** está em foco e é selecionável.
 
 ![Uma zona de arrastar e soltar arquivo com uma mensagem de erro e o botão Escolher arquivos em foco.](images/drag-and-drop.png)
 
@@ -91,11 +91,14 @@ Usar um mouse para selecionar a zona de arrastar e soltar também chama a interf
 
 Todas as tabelas da interface do usuário do Experience Platform são acessíveis por teclado. A navegação e interação com linhas e colunas da tabela é possível por meio de uma série de atalhos do teclado:
 
-* No cabeçalho da tabela, use a seta **para baixo** para navegar na tabela. Os cabeçalhos da tabela são selecionáveis ao navegar por **Tab**, e você pode alterar a ordem de classificação usando **spacebar**.
-* **As** teclas de seta para cima e para baixo são movidas para cima e para baixo pelas linhas da tabela.
-* Quando uma linha é selecionada ou está em foco, usar **Enter** na linha fornece detalhes no painel direito.
-* Quando uma linha estiver selecionada ou em foco, use **as teclas de seta** para percorrer cada item na linha.
+* No cabeçalho da tabela, use **seta para baixo** para navegar na tabela. Cabeçalhos de tabela são selecionáveis ao navegar através de **Tabulação** e você pode alterar a ordem de classificação usando **barra de espaço**.
+* **Teclas de seta para cima e para baixo** move para cima e para baixo nas linhas da tabela.
+* Quando uma linha é selecionada ou está em foco, usando **Enter** na linha fornece detalhes no painel direito.
+* Quando uma linha estiver selecionada ou em foco, use **teclas de seta** para percorrer cada item na linha.
 * Use **Enter** para selecionar um item na linha. Os usuários com leitores de tela são alertados se uma nova janela precisar ser aberta.
+* Ao aumentar o zoom para 200% ou mais, é possível visualizar a variável **inspetor de carril** ícone à medida que o painel direito é recolhido para fornecer mais espaço de visualização para a tabela.
+
+![O ícone do inspetor de painel em foco quando um usuário chega a 200%.](images/rail-inspector.png)
 
 ### Navegar pela acessibilidade do teclado da tabela
 
@@ -112,14 +115,14 @@ Todas as tabelas da interface do usuário do Experience Platform são acessívei
 
 A interface do Editor de esquemas é disponibilizada pela seguinte funcionalidade:
 
-* O Editor de esquema suporta a navegação pelo teclado, incluindo o uso de **Tab** para navegar pelos elementos da interface do usuário.
-* **** Tabelas insere o campo de pesquisa e, em seguida, a árvore de esquema.
+* O Editor de esquemas é compatível com a navegação por teclado, incluindo o uso de **Tabulação** para navegar pelos elementos da interface do usuário.
+* **Tabulação** insere o campo de pesquisa e, em seguida, a árvore de esquema.
 * A árvore de esquema oferece suporte ao uso de teclas de seta para navegar pela interface da árvore de esquema
-   * **As** setas para cima e para baixo devem ser usadas para atravessar a árvore.
-   * **As** setas para a esquerda e para a direita podem ser usadas para expandir e recolher nós ou mover entre ações em linha na árvore de esquema.
-* **Enter (Return)** ativa detalhes individuais do nó no painel de detalhes à direita.
-* A tecla **Home** retorna ao topo da árvore.
-* A tecla **End** navega até a parte inferior da árvore.
+   * **Setas para cima e para baixo** pode ser usada para atravessar a árvore.
+   * **Setas para a esquerda e para a direita** pode ser usada para expandir e recolher nós ou mover entre ações em linha na árvore de esquema.
+* **Enter (Retorno)** ativa detalhes de nós individuais no painel de detalhes à direita.
+* O **Início** a tecla volta ao topo da árvore.
+* O **End** chave navega até a parte inferior da árvore.
 * A árvore de esquema também inclui rótulos ARIA para leitores de tela.
 
 ## Interface do usuário do Construtor de segmentos
@@ -139,13 +142,13 @@ Os seguintes recursos de acessibilidade estão disponíveis no Editor do Serviç
 
 ## Guia Exibição do sistema em Origens e Destinos
 
-Ao navegar pela **[!UICONTROL Exibição do sistema]** em Fontes e Destinos, a seguinte funcionalidade melhora a acessibilidade:
+Ao navegar pelo **[!UICONTROL Exibição do sistema]** em Fontes e destinos, a seguinte funcionalidade melhora a acessibilidade:
 
-* **** Os tabulações se concentram na primeira placa de conexão de origem
-   * **** Tabulação novamente para focalizar o botão dentro do cartão
-   * Selecione **Enter** para ativar o botão de ação da chamada para dentro do cartão
+* **Tabulação** define o foco no primeiro cartão de conexão de origem
+   * **Tabulação** novamente para focar no botão dentro do cartão
+   * Selecionar **Enter** para ativar o botão de ação chamada para dentro do cartão
 * Selecionar **Enter** no cartão de conexão também ativa mais detalhes no painel direito
-   * Quando o painel direito for ativado, o foco é definido para essa área. **** As guias se concentram em  **** Fechar para o painel direito. Selecionar **Tab** novamente move o foco através do painel direito do painel
-   * Se houver mais de uma placa de conexão de origem, **Tab** se move pelas conexões
-   * Use **as teclas de seta (para cima, para baixo, para a esquerda e para a direita)** para percorrer a lista de origens
-   * Selecione **Tab** para definir o foco no painel direito do painel
+   * Quando o painel direito for ativado, o foco é definido para essa área. **Tabulação** foca em **Fechar** para o painel direito. Selecionar **Tabulação** move novamente o foco através do painel direito
+   * Se houver mais de uma placa de conexão de origem, **Tabulação** passa pelas conexões
+   * Use **teclas de seta (para cima, para baixo, para a esquerda e para a direita)** para percorrer a lista de fontes
+   * Selecionar **Tabulação** para definir o foco no painel direito do painel

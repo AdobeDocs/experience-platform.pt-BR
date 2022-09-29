@@ -3,9 +3,9 @@ keywords: Experience Platform, interface do usuário, interface do usuário, pai
 title: Visão geral da biblioteca de widgets do painel
 description: Este guia fornece instruções passo a passo para acessar a biblioteca de widgets no Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,12 @@ Selecionar **[!UICONTROL Biblioteca de widgets]** para abrir a biblioteca de wid
 No [!UICONTROL Biblioteca de widgets], selecione qualquer widget na lista de widgets padrão ou personalizados disponíveis. Uma marca de seleção no canto do widget indica sua seleção.
 
 ![A biblioteca de widgets com um widget selecionado e marca de seleção destacada.](../images/customization/confirm-selected-widget-to-add.png)
+
+### Rótulo em uso {#in-use-label}
+
+Os widgets já adicionados a um painel têm um [!UICONTROL Em uso] rótulo anexado a eles quando visualizado na biblioteca de widgets. Este rótulo destaca os widgets que já foram adicionados ao painel para evitar a duplicação. Embora você ainda possa adicionar o mesmo widget mais de uma vez, se desejar.
+
+![A biblioteca de widgets com o rótulo em uso destacado.](../images/customization/in-use-label.png)
 
 Depois de selecionar todos os widgets necessários, selecione **[!UICONTROL Adicionar widgets]** para confirmar sua escolha e adicionar os widgets ao painel.
 

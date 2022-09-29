@@ -2,9 +2,9 @@
 title: Excluir registros do consumidor
 description: Saiba como excluir registros do consumidor na interface do usuário do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->As solicitações de exclusão do consumidor só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 O [[!UICONTROL Higiene de dados] espaço de trabalho](./overview.md) na interface do usuário do Adobe Experience Platform permite excluir registros do consumidor que estão participando do Serviço de identidade e do Perfil do cliente em tempo real.
 

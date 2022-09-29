@@ -2,9 +2,9 @@
 title: Procurar Ordens de Serviço de Higiene de Dados
 description: Saiba como visualizar e gerenciar pedidos de higiene de dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 1%
 >title="IDs de ordem de trabalho"
 >abstract="Quando uma solicitação de higiene de dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de trabalho representa um processo específico de higiene de dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação."
 >text="See the data hygiene UI guide to learn more."
+
+>[!IMPORTANT]
+>
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 Quando uma solicitação de higiene de dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Uma ordem de trabalho representa um processo específico de higiene de dados, como uma expiração programada do conjunto de dados, que inclui seu status atual e outros detalhes relacionados.
 
@@ -30,10 +34,6 @@ Ao acessar o **[!UICONTROL Higiene de dados]** na interface do usuário, uma lis
 A lista mostra somente pedidos de trabalho para uma categoria de cada vez. Selecionar **[!UICONTROL Consumidor]** para exibir uma lista de tarefas de exclusão do consumidor, e **[!UICONTROL Conjunto de dados]** para exibir uma lista de expirações agendadas do conjunto de dados.
 
 ![Imagem que mostra o [!UICONTROL Conjunto de dados] guia](../images/ui/browse/dataset-tab.png)
-
->[!IMPORTANT]
->
->As exclusões de clientes só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 Selecione o ícone de funil (![Imagem do ícone de funil](../images/ui/browse/funnel-icon.png)) para visualizar uma lista de filtros para as ordens de serviço exibidas.
 

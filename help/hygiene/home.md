@@ -2,7 +2,7 @@
 title: Visão geral da higiene dos dados
 description: A Higiene de dados do Adobe Experience Platform permite gerenciar o ciclo de vida de seus dados ao atualizar ou limpar registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 51181dccbd37df60e438f34090ebaeb9e327c4ce
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 3%
@@ -11,16 +11,16 @@ ht-degree: 3%
 
 # Higiene de dados no Adobe Experience Platform
 
+>[!IMPORTANT]
+>
+>Atualmente, a higiene dos dados está disponível apenas para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
+
 O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas a fim de orquestrar experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme esperado, atualizados quando for necessário corrigir dados incorretos e excluídos quando as políticas organizacionais o considerarem necessário.
 
 Os recursos de higiene de dados da Platform permitem gerenciar os dados armazenados do consumidor por meio do seguinte:
 
 * Agendamento de expirações automatizadas do conjunto de dados
 * Exclusão de dados do consumidor com base em identidades assimiladas
-
->[!NOTE]
->
->As solicitações de exclusão do consumidor só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 Essas atividades podem ser executadas usando o [[!UICONTROL Higiene de dados] Espaço de trabalho da interface do usuário](#ui) ou [API de higiene de dados](#api). Quando um trabalho de higiene de dados é executado, o sistema fornece atualizações de transparência em cada etapa do processo. Consulte a seção sobre [prazos e transparência](#timelines-and-transparency) para obter mais informações sobre como cada tipo de trabalho é representado no sistema.
 

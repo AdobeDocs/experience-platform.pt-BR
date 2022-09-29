@@ -2,9 +2,9 @@
 title: Guia da API da Higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
 
 A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform, bem como programar datas de expiração para os conjuntos de dados. Este guia aborda as etapas de pré-requisito para usar a API e fornece links para uma documentação mais específica do ponto de extremidade.
 
@@ -44,10 +44,6 @@ Este documento fornece um exemplo de chamada à API para demonstrar como formata
 A expiração de um conjunto de dados é uma ação &quot;excluir um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando uma hora futura na qual esse conjunto de dados deve ser excluído. Consulte a [guia do endpoint de expiração de conjunto de dados](./dataset-expiration.md) para obter detalhes sobre como agendar expirações do conjunto de dados na API.
 
 ## Exclusão do consumidor
-
->[!NOTE]
->
->As exclusões de clientes só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Sheild.
 
 A API de Higiene de dados permite excluir todos os registros associados a uma identidade do consumidor em um ou todos os conjuntos de dados. Todas as tarefas de higiene de dados que excluem identidades de consumidores são representadas por uma construção chamada ordem de trabalho. Consulte a [guia do endpoint de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões do consumidor na API.
 

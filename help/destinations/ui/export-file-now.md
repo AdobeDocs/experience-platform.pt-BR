@@ -3,9 +3,9 @@ title: (Beta) Exportar arquivos sob demanda para destinos em lote usando a inter
 type: Tutorial
 description: Saiba como exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->O **[!UICONTROL Exportar arquivo agora]** no Adobe Experience Platform Destination SDK está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>O **[!UICONTROL Exportar arquivo agora]** no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 >Entre em contato com o representante do Adobe para obter acesso a essa funcionalidade.
 
 >[!IMPORTANT]

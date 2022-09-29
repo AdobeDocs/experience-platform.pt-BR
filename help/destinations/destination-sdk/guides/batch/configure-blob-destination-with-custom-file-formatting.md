@@ -2,9 +2,9 @@
 description: Saiba como usar o Destination SDK para configurar um destino de Armazenamento Azure Blob com opções personalizadas de formatação de arquivo e configuração personalizada de nome de arquivo.
 title: Configure um destino do Armazenamento Azure Blob com opções personalizadas de formatação de arquivos e configuração personalizada de nome de arquivo.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 1%
 # Configure um [!DNL Azure Blob Storage] destino com opções de formatação de arquivo personalizadas e configuração de nome de arquivo personalizado
 
 ## Visão geral {#overview}
-
->[!IMPORTANT]
->
->A funcionalidade para configurar destinos com base em arquivos usando o Adobe Experience Platform Destination SDK está atualmente em Beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Esta página descreve como usar o Destination SDK para configurar um [!DNL Azure Blob Storage] destino com personalizado [opções de formatação de arquivo](../../server-and-file-configuration.md#file-configuration) e um [configuração do nome do arquivo](../../file-based-destination-configuration.md#file-name-configuration).
 

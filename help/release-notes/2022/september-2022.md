@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
+source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3060'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 5%
 Novos recursos no Adobe Experience Platform:
 
 - [Controle de acesso baseado em atributos](#abac)
-- [Higiene dos dados](#data-hygiene)
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
@@ -23,6 +22,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [Logs de auditoria](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Coleta de dados](#data-collection)
+- [Higiene dos dados](#data-hygiene)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -45,22 +45,6 @@ Por meio do controle de acesso baseado em atributos, os administradores da sua o
 | Permissões | Permissões é a área do Experience Cloud, onde os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto. Por meio das Permissões, é possível criar e gerenciar funções, atribuir as permissões de recurso desejadas para essas funções e criar políticas para aproveitar rótulos e definir quais funções de usuário têm acesso a recursos específicos da Plataforma. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica. Para obter mais informações, consulte o [Guia da interface do usuário de permissões](../../access-control/abac/ui/browse.md). |
 
 Para obter mais informações sobre o controle de acesso baseado em atributos, consulte o [visão geral do controle de acesso baseado em atributos](../../access-control/abac/overview.md). Para obter um guia abrangente sobre o fluxo de trabalho de controle de acesso baseado em atributos, leia o [guia completo do controle de acesso baseado em atributos](../../access-control/abac/end-to-end-guide.md).
-
-## Higiene dos dados {#data-hygiene}
-
-O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas a fim de orquestrar experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme esperado, atualizados quando for necessário corrigir dados incorretos e excluídos quando as políticas organizacionais o considerarem necessário.
-
-Os recursos de higiene dos dados da Adobe Experience Platform permitem que você limpe seus dados agendando expirações automatizadas do conjunto de dados e excluindo programaticamente os dados do consumidor por identidade.
-
->[!IMPORTANT]
->
->Os recursos de higiene de dados só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
-
-Consulte a documentação a seguir para começar a usar a higiene dos dados:
-
-- [Visão geral da higiene de dados](../../hygiene/home.md): Saiba mais sobre as noções básicas sobre os recursos de higiene de dados da Platform.
-- [[!UICONTROL Higiene de dados] Guia da interface do usuário](../../hygiene/ui/overview.md): Saiba como agendar as expirações do conjunto de dados e as solicitações de exclusão do consumidor na interface do usuário da plataforma.
-- [Guia da API de higiene de dados](../../hygiene/api/overview.md): Todas as atividades de higiene de dados que você pode executar na interface do usuário também podem ser programáticas
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -134,6 +118,27 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 -->
 
 Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
+
+## Higiene dos dados {#data-hygiene}
+
+O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas a fim de orquestrar experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme esperado, atualizados quando for necessário corrigir dados incorretos e excluídos quando as políticas organizacionais o considerarem necessário.
+
+Os recursos de higiene dos dados da Adobe Experience Platform permitem que você limpe seus dados agendando expirações automatizadas do conjunto de dados e excluindo programaticamente os dados do consumidor por identidade.
+
+>[!IMPORTANT]
+>
+>Os recursos de higiene de dados só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Fluxos de trabalho da interface do usuário atualizados | Os workflows para [agendamento de expirações do conjunto de dados](../../hygiene/ui/dataset-expiration.md) e [exclusão de dados do consumidor](../../hygiene/ui/delete-consumer.md) foram simplificadas na interface do usuário do . |
+| Ponto de extremidade da API da cota | Agora é possível recuperar informações de cota para os processos de higiene de dados de sua organização ao chamar a função [`/quota` endpoint](../../hygiene/api/quota.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre os recursos de higiene de dados da Platform, consulte [visão geral da higiene de dados](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

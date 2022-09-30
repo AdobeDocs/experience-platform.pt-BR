@@ -3,18 +3,14 @@ keywords: Experience Platform, home, tópicos populares, controle de acesso, con
 title: Controle de acesso baseado em atributo Criar uma política
 description: Este documento fornece informações sobre como gerenciar políticas por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
 
 # Gerenciar políticas
-
->[!IMPORTANT]
->
->O controle de acesso baseado em atributos está disponível em uma versão limitada para clientes de assistência médica com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
 
 Políticas são declarações que reúnem atributos para estabelecer ações admissíveis e não permissíveis. As políticas podem ser locais ou globais e podem substituir outras políticas.
 

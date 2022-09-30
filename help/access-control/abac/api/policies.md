@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Endpoint da API de políticas de controle de acesso
 description: O endpoint /Policies na API de Controle de acesso com base em atributo permite gerenciar programaticamente as políticas no Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1412'
 ht-degree: 3%
 
 ---
 
 # Ponto de extremidade de políticas de controle de acesso
-
->[!IMPORTANT]
->
->O controle de acesso baseado em atributos está disponível em uma versão limitada para clientes de assistência médica com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
 
 As políticas de controle de acesso são instruções que unem atributos para estabelecer ações permitidas e não permitidas. Essas políticas podem ser locais ou globais e podem substituir outras políticas. O `/policies` O endpoint na API de controle de acesso baseada em atributos permite gerenciar políticas de forma programática, incluindo informações sobre as regras que as regem, bem como suas respectivas condições de assunto.
 

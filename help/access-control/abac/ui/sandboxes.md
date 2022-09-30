@@ -3,18 +3,14 @@ keywords: Experience Platform, home, tópicos populares, controle de acesso, con
 title: Sandboxes de controle de acesso com base em atributo
 description: Este documento fornece informações sobre o gerenciamento de sandboxes pela interface de Permissões no Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
 # Gerenciar sandboxes
-
->[!IMPORTANT]
->
->O controle de acesso baseado em atributos está disponível em uma versão limitada para clientes de assistência médica com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
 
 As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox. Para obter mais informações sobre sandboxes, consulte o [Visão geral das sandboxes](../../../sandboxes/home.md).
 

@@ -3,18 +3,14 @@ keywords: Experience Platform, home, tópicos populares, controle de acesso, con
 title: Controle de acesso baseado em atributos Criar uma função
 description: Este documento fornece informações sobre o gerenciamento de funções através da interface de Permissões no Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
 # Gerenciar funções
-
->[!IMPORTANT]
->
->O controle de acesso baseado em atributos está disponível em uma versão limitada para clientes de assistência médica com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
 
 As funções definem o acesso que um administrador, especialista ou usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de exibição ou gravação necessário.
 

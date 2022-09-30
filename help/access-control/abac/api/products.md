@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Ponto de extremidade da API de produtos
 description: O endpoint /products na API de controle de acesso com base em atributo permite gerenciar programaticamente os produtos no Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '492'
 ht-degree: 4%
 
 ---
 
 # Ponto de extremidade de produtos
-
->[!IMPORTANT]
->
->O controle de acesso baseado em atributos está disponível em uma versão limitada para clientes de assistência médica com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
 
 O `/products` O endpoint na API de controle de acesso baseada em atributos permite gerenciar programaticamente produtos, bem como categorias de permissão e conjuntos de permissões associados a produtos em sua organização.
 

@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '2894'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,6 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [Logs de auditoria](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Coleta de dados](#data-collection)
-- [Higiene dos dados](#data-hygiene)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -118,27 +117,6 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 -->
 
 Para obter mais informações sobre a coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
-
-## Higiene dos dados {#data-hygiene}
-
-O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas a fim de orquestrar experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme esperado, atualizados quando for necessário corrigir dados incorretos e excluídos quando as políticas organizacionais o considerarem necessário.
-
-Os recursos de higiene dos dados da Adobe Experience Platform permitem que você limpe seus dados agendando expirações automatizadas do conjunto de dados e excluindo programaticamente os dados do consumidor por identidade.
-
->[!IMPORTANT]
->
->Os recursos de higiene de dados só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
-
-**Recursos novos ou atualizados**
-
-| Recurso | Descrição |
-| --- | --- |
-| Fluxos de trabalho da interface do usuário atualizados | Os workflows para [agendamento de expirações do conjunto de dados](../../hygiene/ui/dataset-expiration.md) e [exclusão de dados do consumidor](../../hygiene/ui/delete-consumer.md) foram simplificadas na interface do usuário do . |
-| Ponto de extremidade da API da cota | Agora é possível recuperar informações de cota para os processos de higiene de dados de sua organização ao chamar a função [`/quota` endpoint](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Para obter mais informações sobre os recursos de higiene de dados da Platform, consulte [visão geral da higiene de dados](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

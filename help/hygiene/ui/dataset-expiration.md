@@ -2,14 +2,18 @@
 title: Gerenciar expirações do conjunto de dados
 description: Saiba como agendar uma expiração de conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
 # Gerenciar expirações do conjunto de dados
+
+>[!IMPORTANT]
+>
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield.
 
 O [[!UICONTROL Higiene de dados] espaço de trabalho](./overview.md) na interface do usuário do Adobe Experience Platform permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o lago de dados, o Serviço de identidade e o Perfil do cliente em tempo real começam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos de todos os três serviços, a expiração será marcada como concluída.
 

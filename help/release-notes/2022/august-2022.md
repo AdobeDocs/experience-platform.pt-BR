@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform de agosto de 2022
 description: As notas de versão de agosto de 2022 para o Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2137'
+source-wordcount: '2131'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ O Attribution AI é usado para atribuir créditos a pontos de contato que levam 
 
 {style=&quot;table-layout:auto&quot;}
 
-**Observação**: O Attribution AI não estará disponível com os clientes existentes do Healthcare Shield ou do Privacy Shield até ser informado.
+**Observação**: O Attribution AI não estará disponível com os clientes atuais do Healthcare Shield, até indicação em contrário.
 
 Para obter mais informações sobre o Attribution AI, consulte o [Attribution AI](../../intelligent-services/attribution-ai/overview.md) visão geral.
 
@@ -56,7 +56,7 @@ O Customer AI disponível no Real-time Customer Data Platform é usado para gera
 
 {style=&quot;table-layout:auto&quot;}
 
-**Observação**: O Customer AI não estará disponível com os clientes existentes do Healthcare Shield ou do Privacy Shield até indicação em contrário.
+**Observação**: O Customer AI não estará disponível com os clientes do Healthcare Shield até indicação em contrário.
 
 Para obter mais informações sobre a API do cliente, consulte o [Customer AI](../../intelligent-services/customer-ai/overview.md) visão geral.
 

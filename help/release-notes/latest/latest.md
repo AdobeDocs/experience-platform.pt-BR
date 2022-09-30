@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3064'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,6 @@ Novos recursos no Adobe Experience Platform:
 
 - [Controle de acesso baseado em atributos](#abac)
 - [Higiene dos dados](#data-hygiene)
-- [[!UICONTROL Console de privacidade]](#privacy-console)
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
@@ -55,19 +54,13 @@ Os recursos de higiene dos dados da Adobe Experience Platform permitem que você
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
+>Os recursos de higiene de dados só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
 
 Consulte a documentação a seguir para começar a usar a higiene dos dados:
 
 - [Visão geral da higiene de dados](../../hygiene/home.md): Saiba mais sobre as noções básicas sobre os recursos de higiene de dados da Platform.
 - [[!UICONTROL Higiene de dados] Guia da interface do usuário](../../hygiene/ui/overview.md): Saiba como agendar as expirações do conjunto de dados e as solicitações de exclusão do consumidor na interface do usuário da plataforma.
 - [Guia da API de higiene de dados](../../hygiene/api/overview.md): Todas as atividades de higiene de dados que você pode executar na interface do usuário também podem ser programáticas
-
-## [!UICONTROL Console de privacidade] {#privacy-console}
-
-O [!UICONTROL Console de privacidade] na interface do usuário do Experience Platform fornece uma visualização do painel de informações importantes de recursos relacionados à privacidade, como [solicitações do titular de dados do Privacy Service](../../privacy-service/home.md), [ordens de trabalhos de higiene dos dados](../../hygiene/home.md)e [logs de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md). O console também fornece vários guias de caso de uso do produto para ajudar você a navegar pelos fluxos de trabalho de privacidade comuns.
-
-Consulte a [Visão geral do console Privacidade](../../landing/governance-privacy-security/privacy-console.md) para obter mais informações sobre o recurso .
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 

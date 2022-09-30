@@ -2,9 +2,9 @@
 title: Endpoint da API de expiração do conjunto de dados
 description: O endpoint /ttl na API da Higiene de Dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1451'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield ou o Privacy Shield.
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield.
 
 O `/ttl` O endpoint na API da Higiene de dados permite agendar datas de expiração para os conjuntos de dados no Adobe Experience Platform.
 

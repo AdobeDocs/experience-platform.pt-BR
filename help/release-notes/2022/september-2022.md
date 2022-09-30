@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
+source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
 workflow-type: tm+mt
-source-wordcount: '3125'
+source-wordcount: '3128'
 ht-degree: 4%
 
 ---
@@ -158,7 +158,7 @@ Para obter mais informações sobre a coleta de dados no Platform, consulte o [v
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais e um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Observe que essa integração funciona com o Adobe Campaign versão 8.4 ou superior. A versão 8.4 está programada para ser lançada em 30 de setembro de 2022. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais e um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Observe que essa integração funciona com [Adobe Campaign versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | O [!DNL Salesforce CRM] O destino foi atualizado para oferecer suporte a atualizações de contatos e leads, bem como aprimoramentos de desempenho para atualizações mais rápidas. |
 
 {style=&quot;table-layout:auto&quot;}

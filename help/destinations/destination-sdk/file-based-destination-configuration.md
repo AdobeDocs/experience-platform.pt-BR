@@ -2,9 +2,9 @@
 description: Essa configuração permite indicar informações essenciais para seu destino baseado em arquivo, como nome de destino, categoria, descrição e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino baseadas em arquivo para o Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
+source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '2989'
 ht-degree: 5%
 
 ---
@@ -727,30 +727,33 @@ Use os parâmetros em  `dynamicSchemaConfig` para recuperar dinamicamente seu pr
 
 ### Mapeamentos necessários {#required-mappings}
 
-Na configuração do schema, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar, mas não modificar, ao configurar uma conexão com seu destino. Por exemplo, você pode impor o campo de endereço de email a ser sempre enviado para o destino nos arquivos exportados. Veja abaixo um exemplo de uma configuração de esquema com mapeamentos necessários e como ela se parece na etapa de mapeamento do [fluxo de trabalho ativar dados para destinos em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
+Na configuração do schema, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar, mas não modificar, ao configurar uma conexão com seu destino. Por exemplo, você pode impor o campo de endereço de email a ser sempre enviado para o destino nos arquivos exportados. Veja abaixo dois exemplos de uma configuração de esquema com mapeamentos necessários e como eles se parecem na etapa de mapeamento da variável [fluxo de trabalho ativar dados para destinos em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ```json
-    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
         "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
-      },
-      {
-        "sourceType": "text/x.schema-path",
-        "source": "personalEmail.address",
-        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
-      },
-      {
-        "sourceType": "text/x.aep-xl",
-        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
-        "destination": "delete"
       }
     ] 
 ```
 
-![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](/help/destinations/destination-sdk/assets/required-mappings.png)
+![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](/help/destinations/destination-sdk/assets/required-mappings-1.png)
+
+```json
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+```
+
+![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](/help/destinations/destination-sdk/assets/required-mappings-2.png)
 
 >[!NOTE]
 >
@@ -767,7 +770,7 @@ Use os parâmetros descritos na tabela abaixo se desejar adicionar os mapeamento
 | `requiredMappingsOnly` | Booleano | Indica se os usuários podem mapear outros atributos e identidades no fluxo de ativação, *exceto de* os mapeamentos necessários definidos. |
 | `requiredMappings.mandatoryRequired` | Booleano | Defina como true se esse campo precisar ser um atributo obrigatório que sempre deve estar presente nas exportações de arquivo para o destino. Leia mais sobre [atributos obrigatórios](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `requiredMappings.primaryKeyRequired` | Booleano | Defina como true se esse campo precisar ser usado como uma chave de desduplicação nas exportações de arquivo para o destino. Leia mais sobre [chaves de desduplicação](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `requiredMappings.sourceType` | String | Usado ao configurar um campo de origem conforme necessário. Indica o tipo de campo de origem. As opções disponíveis são: <ul><li>`"text/x.schema-path"` quando o campo de origem é um atributo XDM predefinido</li><li>`"text/x.aep-xl"` quando o campo de origem é uma função, por exemplo, se você precisar que uma condição seja atendida no lado do campo de origem. Para obter mais informações sobre funções compatíveis, leia a [Preparação de dados](/help/data-prep/api/functions.md) documentação.</li></ul> |
+| `requiredMappings.sourceType` | String | Usado ao configurar um campo de origem conforme necessário. Use `"text/x.schema-path"`, que indica que o campo de origem é um atributo XDM predefinido |
 | `requiredMappings.source` | String | Indica o que deve ser o campo de origem necessário. |
 | `requiredMappings.destination` | String | Indica o campo de destino necessário. |
 

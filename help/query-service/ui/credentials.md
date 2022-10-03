@@ -5,9 +5,9 @@ title: Guia de credenciais do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -109,6 +109,7 @@ A tabela abaixo descreve os parâmetros normalmente necessários para se conecta
 >[!NOTE]
 >
 >Ao se conectar a um host usando credenciais que não estão expirando, ainda é necessário usar todos os parâmetros listados na variável [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] exceto por senha e nome de usuário.
+>O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como é visto neste exemplo `username:{your_username}` e `password:{password_string}`.
 
 | Parâmetro | Descrição |
 |---|---|

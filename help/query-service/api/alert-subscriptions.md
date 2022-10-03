@@ -2,7 +2,7 @@
 keywords: Experience Platform; home; tópicos populares; serviço de consulta; serviço de consulta; alerta;
 title: Ponto de extremidade da API de assinaturas de alerta
 description: Este guia fornece exemplos de solicitações e respostas HTTP para as várias chamadas de API que podem ser feitas no endpoint de assinaturas de alerta com a API do Serviço de query.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um status de HTML de 200 e todos os alertas inscritos. Isso inclui a ID de alerta, o tipo de alerta, as IDs de email registradas do Adobe do assinante e seu canal de notificação preferencial.
+Uma resposta bem-sucedida retorna um status HTTP de 200 e todos os alertas inscritos. Isso inclui a ID de alerta, o tipo de alerta, as IDs de email registradas do Adobe do assinante e seu canal de notificação preferencial.
 
 ```json
 {

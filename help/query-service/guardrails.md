@@ -2,9 +2,10 @@
 keywords: Experience Platform; query; serviço de consulta; solução de problemas; medidas de proteção; diretrizes; limite;
 title: Medidas de proteção para o serviço de consulta
 description: Este documento fornece informações sobre limites de uso para dados do Serviço de query para ajudá-lo a otimizar o uso do query.
-source-git-commit: 8ae8efae04e299302cca42f9c92827d374883cd9
+exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '765'
 ht-degree: 4%
 
 ---
@@ -22,6 +23,10 @@ Antes de continuar com este documento, você deve ter uma boa compreensão dos d
 * **Consultas ad hoc**: Para execução `SELECT` consultas para explorar, experimentar e validar dados, onde os resultados das consultas **não são armazenadas** no lago de dados.
 
 * **Consultas em lote**: Para execução `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` consultas para limpar, moldar, manipular e enriquecer dados. Os resultados desses queries **são armazenadas** no lago de dados. A métrica para medir o consumo dessa funcionalidade são horas computacionais.
+
+>[!IMPORTANT]
+>
+>Para garantir que cada query de um painel do Real-time Customer Data Platform Insights tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso dos recursos atribuindo slots de simultaneidade a cada query. O sistema pode processar até quatro queries simultâneos e, portanto, quatro slots de query simultâneos estão disponíveis em um determinado momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que haja slots de simultaneidade suficientes disponíveis.
 
 A ilustração abaixo resume como os recursos do Serviço de query estão atualmente empacotados e licenciados:
 

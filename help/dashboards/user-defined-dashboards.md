@@ -2,9 +2,9 @@
 title: Painéis definidos pelo usuário
 description: Saiba como criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de contexto para visualizar métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,11 @@ ht-degree: 0%
 # Painéis definidos pelo usuário
 
 Os painéis do Adobe Experience Platform ajudam a agilizar insights e personalizar a visualização por meio do recurso de painéis definidos pelo usuário. Esse recurso permite criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de sobreposição para visualizar métricas principais relevantes para a sua organização.
+
+>[!IMPORTANT]
+>
+>Para garantir que cada query de um painel do Real-time Customer Data Platform Insights tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso dos recursos atribuindo slots de simultaneidade a cada query. O sistema pode processar até quatro queries simultâneos e, portanto, quatro slots de query simultâneos estão disponíveis em um determinado momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que haja slots de simultaneidade suficientes disponíveis.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 

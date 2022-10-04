@@ -5,9 +5,9 @@ title: Visão geral da correspondência de segmentos
 topic-legacy: overview
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
+source-git-commit: 2329065b938d97f48a23be5250fec535355db770
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1998'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ A lista de namespaces suportados é a seguinte:
 
 | Namespace | Descrição |
 | --------- | ----------- |
-| Emails (SHA256, em minúsculas) | Um namespace para endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Os espaços à esquerda e à direita precisam ser cortados antes que um endereço de email seja normalizado. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento em [Suporte para hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) para obter mais informações. |
+| Emails (SHA256, em minúsculas) | Um namespace para endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Os espaços à esquerda e à direita precisam ser cortados antes que um endereço de email seja normalizado. Esta configuração não pode ser alterada retroativamente. A Platform oferece dois métodos para suportar o hash na coleta de dados, por meio de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) e [preparação de dados](../../../data-prep/functions.md#hashing). |
 | Telefone (SHA256_E.164) | Um namespace que representa números brutos de telefone que precisam ser atribuídos a hash usando os formatos SHA256 e E.164. |
 | ECID | Um namespace que representa um valor de Experience Cloud ID (ECID). Esse namespace também pode ser mencionado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte a [Visão geral da ECID](../../../identity-service/ecid.md) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | Um namespace que representa Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em juros](https://support.apple.com/en-us/HT202074) para obter mais informações. |

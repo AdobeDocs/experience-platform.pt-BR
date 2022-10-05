@@ -2,9 +2,9 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -75,9 +75,15 @@ Para obter instruções detalhadas sobre como configurar o destino e ativar segm
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do Marketo e ativar segmentos.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o guia vinculado acima.
+>O vídeo não reflete totalmente a capacidade atual. Para obter as informações mais atualizadas, consulte o guia vinculado acima. As seguintes partes do vídeo estão desatualizadas:
+> 
+>* A placa de destino que você deve usar na interface do usuário do Experience Platform é **[!UICONTROL Marketo V2]**.
+>* O vídeo não mostra o novo **[!UICONTROL Criação da pessoa]** campo seletor no workflow conectar ao destino.
+>* As duas limitações chamadas no vídeo não se aplicam mais. Agora é possível mapear muitos outros campos de atributos de perfil, além das informações de associação de segmento que eram compatíveis no momento em que o vídeo foi gravado. Também é possível exportar membros do segmento para o Marketo que ainda não existem em suas listas estáticas do Marketo e eles serão adicionados às listas.
+>* No **[!UICONTROL Etapa agendar segmento]** do fluxo de trabalho de ativação, no Marketo V1, é necessário adicionar manualmente um **[!UICONTROL ID de mapeamento]** para exportar dados para o Marketo com êxito. Esta etapa manual não é mais necessária no Marketo V2.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 

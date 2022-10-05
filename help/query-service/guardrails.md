@@ -3,9 +3,9 @@ keywords: Experience Platform; query; serviço de consulta; solução de problem
 title: Medidas de proteção para o serviço de consulta
 description: Este documento fornece informações sobre limites de uso para dados do Serviço de query para ajudá-lo a otimizar o uso do query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 4%
 
 ---
@@ -67,6 +67,8 @@ As tabelas abaixo fornecem os limites de garantia e as descrições recomendadas
 | Resultados retornados por | Conjunto de dados | N/D | Isso define como os resultados são disponibilizados para os usuários. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Insights de painéis gerados com consultas {#dashboard-insights}
 
 Para garantir que cada query de um painel do Real-time Customer Data Platform Insights tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso dos recursos atribuindo slots de simultaneidade a cada query. O sistema pode processar até quatro queries simultâneos e, portanto, quatro slots de query simultâneos estão disponíveis em um determinado momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que haja slots de simultaneidade suficientes disponíveis.
 

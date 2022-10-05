@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2577'
 ht-degree: 0%
 
 ---
@@ -122,6 +122,11 @@ Use o **[!UICONTROL Programado]** para que o trabalho de ativação seja executa
 1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
 ### Exportar arquivos incrementais {#export-incremental-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Opções de exportação de arquivo para conjuntos de dados"
+>abstract="Selecionar **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação."
 
 Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma exportação em que o primeiro arquivo é um instantâneo completo de todas as qualificações de perfil para o segmento selecionado e os arquivos subsequentes são qualificações de perfil incrementais desde a exportação anterior.
 

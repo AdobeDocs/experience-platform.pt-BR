@@ -3,9 +3,9 @@ keywords: Azure Blob; destino Blob; s3; destino de blob do azure
 title: Conexão Blob do Azure
 description: Crie uma conexão de saída em tempo real com o armazenamento do Azure Blob para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '739'
 ht-degree: 1%
 
 ---
@@ -63,10 +63,9 @@ Para autenticar para o destino, preencha os campos obrigatórios e selecione **[
 
 * **[!UICONTROL Cadeia de conexão]**: a string de conexão é necessária para acessar dados no armazenamento do Blob. O [!DNL Blob] o padrão da string de conexão começa com: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
    * Para obter mais informações sobre como configurar seu [!DNL Blob] string de conexão, consulte [Configurar uma cadeia de conexão para uma conta de armazenamento do Azure](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) na documentação do Microsoft.
-* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64-encoded] string.
-   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Veja abaixo um exemplo de uma chave PGP formatada corretamente, com a parte intermediária encurtada para brevidade.
+* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64-encoded] string. Visualize um exemplo de uma chave corretamente formatada e codificada em base64 no link da documentação abaixo. A parte central é encurtada por brevidade.
 
-      ![Chave PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Imagem mostrando um exemplo de uma chave PGP corretamente formatada e criptografada em base64 na interface do usuário](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Preencha os detalhes do destino {#destination-details}
 

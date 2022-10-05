@@ -3,10 +3,10 @@ keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 1%
+source-wordcount: '771'
+ht-degree: 0%
 
 ---
 
@@ -47,10 +47,9 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
 
 * **[!DNL Amazon S3]chave de acesso** e **[!DNL Amazon S3]chave secreta**: Em [!DNL Amazon S3]gerar um `access key - secret access key` par para conceder acesso à plataforma [!DNL Amazon S3] conta. Saiba mais na [Documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64-encoded] string.
-   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Veja abaixo um exemplo de uma chave PGP formatada corretamente, com a parte intermediária encurtada para brevidade.
+* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64-encoded] string. Visualize um exemplo de uma chave corretamente formatada e codificada em base64 no link da documentação abaixo. A parte central é encurtada por brevidade.
 
-      ![Chave PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Imagem mostrando um exemplo de uma chave PGP corretamente formatada e criptografada em base64 na interface do usuário](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Preencha os detalhes do destino {#destination-details}
 

@@ -3,9 +3,9 @@ keywords: SFTP; sftp
 title: Conexão SFTP
 description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '690'
 ht-degree: 1%
 
 ---
@@ -60,10 +60,9 @@ Se você selecionar a variável **[!UICONTROL Autenticação básica]** digite p
 * **[!UICONTROL Host]**: O endereço do local de armazenamento SFTP;
 * **[!UICONTROL Nome do usuário]**: O nome de usuário para fazer logon no local de armazenamento SFTP;
 * **[!UICONTROL Senha]**: A senha para fazer logon no local de armazenamento SFTP.
-* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64] sequência de caracteres codificada.
-   * Exemplo: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Veja abaixo um exemplo de uma chave PGP formatada corretamente, com a parte intermediária encurtada para brevidade.
+* **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64-encoded] string. Visualize um exemplo de uma chave corretamente formatada e codificada em base64 no link da documentação abaixo. A parte central é encurtada por brevidade.
 
-      ![Chave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Imagem mostrando um exemplo de uma chave PGP corretamente formatada e criptografada em base64 na interface do usuário](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de autenticação para se conectar ao local SFTP:

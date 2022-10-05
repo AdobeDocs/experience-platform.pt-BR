@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
-source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '2894'
+source-wordcount: '2933'
 ht-degree: 5%
 
 ---
@@ -108,6 +108,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | --- | --- |
 | Integração de navegação à esquerda na interface do usuário da plataforma | Todos os recursos que antes eram exclusivos da interface do usuário da coleta de dados (incluindo tags, encaminhamento de eventos e datastreams) agora também estão disponíveis por meio da navegação à esquerda no Experience Platform, na categoria **[!UICONTROL Coleta de dados]**. Isso elimina a necessidade de alternar entre interfaces do usuário ao trabalhar com recursos de coleta de dados na Plataforma. |
 | Atribuição de usuário em tags e encaminhamento de evento | Quando disponível [!UICONTROL Propriedades] nas tags e no encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e qual usuário fez a atualização. |
+| [[!DNL Snap Conversions API] extensão](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos | Agora é possível enviar dados para a [!DNL Snapchat Conversions API] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Para obter mais informações sobre como autenticar e usar a API, consulte o [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] no SDK da Web](../../edge/fundamentals/user-agent-client-hints.md) | O SDK da Web agora é compatível [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente permitem que os proprietários do site acessem grande parte das mesmas informações disponíveis no [!DNL User-Agent] , mas de uma maneira mais preservada da privacidade. |
 | [Migração de página por página do SDK da Web](../../edge/home.md#migrating-to-web-sdk) | Agora é possível migrar as propriedades da Web existentes de outras bibliotecas do Experience Cloud, como [!DNL at.js], para o SDK da Web, uma página de cada vez. Isso permite uma abordagem em fases para a migração do SDK da Web, sem a necessidade de migrar todas as suas páginas de uma só vez. |
 

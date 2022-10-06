@@ -3,9 +3,9 @@ keywords: Experience Platform; solução de problemas; medidas de proteção; di
 title: Grades de proteção para assimilação de dados
 description: Este documento fornece orientação sobre medidas de proteção para a assimilação de dados no Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
+source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,7 @@ A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar
 | Assimilação de lacre de dados usando a API de assimilação de lote | <ul><li>É possível assimilar até 20 GB de dados por hora para o data lake usando a API de assimilação de lote.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho máximo do lote é de 100 GB.</li><li>O número máximo de propriedades ou campos por linha é 10000.</li><li>O número máximo de lotes por minuto, por usuário, é de 138.</li></ul> |
 | Assimilação de lacete de dados usando fontes em lote | <ul><li>Você pode assimilar até 200 GB de dados por hora para o data lake usando fontes de ingestão em lote, como [!DNL Azure Blob], [!DNL Amazon S3]e [!DNL SFTP].</li><li>Um tamanho de lote deve estar entre 256 MB e 100 GB.</li><li>O número máximo de arquivos por lote é 1500.</li></ul> | Consulte a [visão geral das fontes](../sources/home.md) para um catálogo de fontes que pode ser usado para assimilação de dados. |
 | Assimilação em lote ao perfil | <ul><li>É possível assimilar até 120 GB de dados por hora.</li><li>O tamanho máximo de uma classe de registro é de 100 KB (soft).</li><li>O tamanho máximo de uma classe ExperienceEvent é de 10 KB (soft).</li><li>O tamanho máximo de um único registro é de 1 MB.</li></ul> |
+| Número de lotes de Perfil ou ExperienceEvent assimilados por dia | **O número máximo de lotes de Perfil ou ExperienceEvent assimilados por dia é de 90.** Isso significa que o total combinado de lotes de Perfil e ExperienceEvent assimilados a cada dia não pode exceder 90. A inserção de lotes adicionais afetará o desempenho do sistema. | Este é um limite suave. É possível ir além de um limite suave, no entanto, os limites suaves fornecem uma diretriz recomendada para o desempenho do sistema. |
 
 ## Grades de proteção para assimilação de streaming
 

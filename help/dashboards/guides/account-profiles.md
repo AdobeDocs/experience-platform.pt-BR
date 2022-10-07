@@ -2,9 +2,9 @@
 title: Guia do painel Perfis da conta
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os perfis da conta B2B de sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 
 * [Total das contas por ramo de atividade](#total-accounts-by-industry)
 * [Perfis de conta adicionados](#account-profiles-added)
+* [Distribuição preditiva de pontuação](#predictive-scoring-distribution)
+* [Fatores influentes principais da pontuação preditiva](#predictive-scoring-top-influential-factors)
 
 ### Total das contas por ramo de atividade {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Esse widget usa um gráfico de barras codificadas por cores para ilustrar a cont
 
 ![Os perfis de conta adicionaram o widget.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Distribuição preditiva de pontuação {#predictive-scoring-distribution}
+
+O [!UICONTROL Distribuição preditiva de pontuação] O widget mostra a distribuição de pontuação de todos os perfis da conta para ajudá-lo a entender imediatamente a integridade do pipeline de vendas. Os dados de pontuação são transmitidos por um gráfico de rosca e um gráfico de coluna.
+
+O gráfico de rosca ilustra a proporção do total de perfis de conta em cada um dos períodos de alta, média e baixa propensão a comprar buckets. A chave fornece mais detalhes sobre as seções com códigos de cores, incluindo os intervalos de pontuação e o número de perfis de conta nesse intervalo.
+
+O gráfico de colunas fornece um detalhamento de pontuação mais granular. Cada coluna mostra o número de perfis de conta em cada um dos intervalos de incremento de cinco pontos.
+
+O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
+
+![O widget de distribuição de pontuação preditiva.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Fatores influentes principais da pontuação preditiva {#predictive-scoring-top-influential-factors}
+
+O [!UICONTROL Fatores influentes principais da pontuação preditiva] O widget ajuda você a entender os fatores mais significativos que determinam as pontuações para cada bucket de propensão.
+
+Este widget mostra os principais fatores influentes para cada um dos compartimentos de alta, média e baixa propensão. Uma barra para cada fator influente indica a porcentagem dos perfis de conta nesse bucket de propensão que contém o fator influente específico.
+
+O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
+
+![O widget de Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Próximas etapas
 
-Agora, ao seguir este documento, é possível localizar a variável [!UICONTROL Perfis de conta] painel. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte dos dados B2B na interface do usuário do Experience Platform, consulte o [visão geral dos perfis da conta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B Edition.
+Ao seguir este documento, você deve saber localizar a variável [!UICONTROL Perfis de conta] painel. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte dos dados B2B na interface do usuário do Experience Platform, consulte o [visão geral dos perfis da conta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B Edition.

@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '214'
 ht-degree: 17%
 
 ---
@@ -33,7 +33,6 @@ ht-degree: 17%
    - [Parâmetros de conexão](api/connection-parameters.md)
    - [Consultas agendadas](api/scheduled-queries.md)
    - [É executado para consultas agendadas](api/runs-scheduled-queries.md)
-   - [Alertas de query](api/alert-subscriptions.md)
    - [Templates de query](api/query-templates.md)
 - Interface do usuário do serviço de query {#ui}
    - [Visão geral da interface do usuário](ui/overview.md)

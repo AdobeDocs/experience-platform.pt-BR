@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2926'
 ht-degree: 5%
 
 ---
@@ -215,10 +215,12 @@ O Serviço de Consulta permite que você use o SQL padrão para consultar dados 
 
 | Recurso | Descrição |
 | --- | --- |
-| API de assinatura de alerta | O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. Atualmente, os alertas de consulta só podem assinar o usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). Consulte a [documentação dos alertas de consulta](../../query-service/api/alert-subscriptions.md) para saber mais. |
+| API de assinatura de alerta | O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. Atualmente, os alertas de consulta só podem assinar o usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | Amostras do conjunto de dados | Amostras de conjunto de dados do Serviço de query permitem realizar consultas exploratórias em grandes dados com um tempo de processamento muito reduzido ao custo da precisão da consulta. Consulte a [guia de amostras do conjunto de dados](../../query-service/sql/dataset-samples.md) para saber mais. |
 
 Para obter mais informações sobre [!DNL Query Service]consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## Fontes {#sources}
 

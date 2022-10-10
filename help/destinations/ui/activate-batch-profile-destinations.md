@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
+source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2626'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,12 @@ Para destinos com base em perfil, você deve selecionar os atributos de perfil q
 >[!NOTE]
 >
 > O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados e comumente usados do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+>[!IMPORTANT]
+>
+>Devido a uma limitação conhecida, não é possível usar atualmente a variável **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.status` para suas exportações de arquivo. Em vez disso, é necessário colar manualmente o valor `xdm: segmentMembership.status` no campo schema , conforme mostrado abaixo.
+>
+>![Gravação de tela mostrando a solução alternativa de associação de segmento na etapa de mapeamento do fluxo de trabalho de ativação.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 As exportações de arquivo variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionada:
 * Se a variável `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.

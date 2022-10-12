@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guia de fluxos de dados
-user-guide-description: Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma.
+user-guide-description: Saiba mais sobre fluxos de dados e como configurá-los em diferentes serviços.
 feature: Dataflows
-source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 23%
+source-wordcount: '62'
+ht-degree: 4%
 
 ---
 

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Ajuda do controle de acesso na Adobe Experience Platform
 breadcrumb-title: Guia de controle de acesso
-user-guide-description: Utilize perfis de produtos no Adobe Admin Console para vincular usuários com permissões e sandboxes.
+user-guide-description: Use perfis de produto no Adobe Admin Console para gerenciar permissões de usuário. Saiba como atribuir usuários a produtos e sandboxes.
 feature: Access Control
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '124'
+ht-degree: 30%
 
 ---
 

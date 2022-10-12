@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Documentação da API do servidor de rede de borda
 breadcrumb-title: Documentação da API do servidor de rede de borda
-user-guide-description: A API do servidor da rede de borda da Adobe Experience Platform fornece uma maneira otimizada para os clientes interagirem com quaisquer serviços de borda da Adobe Experience Cloud ou Adobe Experience Platform. Saiba como usar a API do servidor para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing.
+user-guide-description: Use a API do Edge Network Server para coleta de dados, personalização, publicidade e casos de uso de marketing com serviços Experience Cloud ou Experience Platform Edge.
 feature: Data Collection
-source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 62%
+source-wordcount: '85'
+ht-degree: 25%
 
 ---
 

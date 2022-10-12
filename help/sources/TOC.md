@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
-user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
+user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: eb78984d233c5d0dea04f235ee9e75eefff71752
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 13%
+source-wordcount: '832'
+ht-degree: 11%
 
 ---
 

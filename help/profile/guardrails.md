@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
+source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1989'
 ht-degree: 6%
 
 ---
@@ -110,6 +110,7 @@ As grades de proteção descritas nesta seção se referem ao número e à natur
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Segmentos por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 segmentos no total, desde que haja menos de 4000 segmentos em cada sandbox individual. Tentar criar segmentos adicionais pode afetar o desempenho do sistema. |
+| Segmentos de borda por sandbox | 150 | Suave | Uma organização pode ter mais de 150 segmentos de borda no total, desde que haja menos de 150 segmentos de borda em cada sandbox individual. A tentativa de criar segmentos de borda adicionais pode afetar o desempenho do sistema. |
 | Segmentos de fluxo por sandbox | 500 | Suave | Uma organização pode ter mais de 500 segmentos de transmissão no total, desde que haja menos de 500 segmentos de transmissão em cada sandbox individual. Tentar criar segmentos de transmissão adicionais pode afetar o desempenho do sistema. |
 | Segmentos em lote por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 segmentos de lote no total, desde que haja menos de 4000 segmentos de lote em cada sandbox individual. A tentativa de criar segmentos de lote adicionais pode afetar o desempenho do sistema. |
 

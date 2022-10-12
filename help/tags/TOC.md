@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 84%
+source-wordcount: '408'
+ht-degree: 83%
 
 ---
 
@@ -112,6 +112,9 @@ ht-degree: 84%
       * Plug-ins comuns do Analytics {#plugins}
          * [Visão geral](./extensions/web/plugins/overview.md)
          * [Notas de versão](./extensions/web/plugins/release-notes.md)
+      * Plug-ins comuns de SDK da Web {#web-sdk-plugins}
+         * [Visão geral](./extensions/web/web-sdk-plugins/overview.md)
+         * [Notas de versão](./extensions/web/web-sdk-plugins/release-notes.md)
       * Núcleo {#core}
          * [Visão geral](./extensions/web/core/overview.md)
          * [Encaminhamento de evento](./extensions/web/core/event-forwarding.md)

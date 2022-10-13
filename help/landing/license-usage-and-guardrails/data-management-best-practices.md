@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform, home, tópicos populares, gerenciamento de dados, direito de licença, licenciamento, práticas recomendadas
 title: Práticas recomendadas de direito à licença de gerenciamento de dados
-description: Este documento descreve as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
+description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença com o Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
+source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 2%
+source-wordcount: '2528'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 ## Painel de uso da licença
 
-A interface do usuário da Adobe Experience Platform fornece um painel pelo qual você pode visualizar um instantâneo dos dados relacionados à licença da sua organização para a Platform. Os dados no painel são exibidos exatamente como aparecem no momento específico em que o instantâneo foi tirado. O instantâneo não é uma aproximação nem uma amostra de dados, e o painel não está sendo atualizado em tempo real.
+A interface do usuário do Adobe Experience Platform fornece um painel pelo qual você pode visualizar um instantâneo dos dados relacionados à licença da sua organização para a Platform. Os dados no painel são exibidos exatamente como aparecem no momento específico em que o instantâneo foi tirado. O instantâneo não é uma aproximação nem uma amostra de dados, e o painel não está sendo atualizado em tempo real.
 
 Para obter mais informações, consulte o guia sobre [uso do painel de uso da licença na interface do usuário da plataforma](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 

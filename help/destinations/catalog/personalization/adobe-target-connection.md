@@ -3,9 +3,9 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 | Nenhum armazenamento de dados selecionado | Datastream selecionado |
 |---|---|
-| <ul><li>[Segmentação de borda](../../../segmentation/ui/edge-segmentation.md) não é suportado.</li><li>[Personalização de mesma página e próxima página](../../ui/configure-personalization-destinations.md) não são compatíveis.</li><li>É possível compartilhar segmentos na conexão do Adobe Target somente para a sandbox de produção.</li><li>Para configurar a personalização da próxima sessão sem usar uma ID de armazenamento de dados, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>A segmentação de borda funciona conforme o esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/configure-personalization-destinations.md) são compatíveis.</li><li>O compartilhamento de segmentos é compatível com outras sandboxes.</li></ul> |
+| <ul><li>[Segmentação de borda](../../../segmentation/ui/edge-segmentation.md) não é suportado.</li><li>[Personalização de mesma página e próxima página](../../ui/configure-personalization-destinations.md) não são compatíveis.</li><li>Você pode compartilhar segmentos na conexão Adobe Target somente para a variável *sandbox de produção padrão*.</li><li>Para configurar a personalização da próxima sessão sem usar uma ID de armazenamento de dados, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>A segmentação de borda funciona conforme o esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/configure-personalization-destinations.md) são compatíveis.</li><li>O compartilhamento de segmentos é compatível com outras sandboxes.</li></ul> |
 
 ### Ativar alertas {#enable-alerts}
 

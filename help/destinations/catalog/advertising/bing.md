@@ -1,11 +1,11 @@
 ---
-keywords: 'publicidade; bing; '
+keywords: publicidade; bing;
 title: Conexão Microsoft Bing
 description: Com o destino de conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas ao público-alvo através do Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 812688043a7da943832b5798de0f433928634998
+source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '622'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID da conta]**: Seu [!DNL Bing Ads CID].
+* **[!UICONTROL ID da conta]**: Seu [!DNL Bing Ads Customer ID] (CID). Sua CID é um número inteiro, encontrado no URL ao fazer logon [!DNL Microsoft Advertising].
 
 ### Ativar alertas {#enable-alerts}
 
@@ -90,11 +90,9 @@ Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!U
 
 Consulte [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
-No [Agendamento do segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) , você deve mapear manualmente seus segmentos para a ID de segmento numérico correspondente na variável [!DNL Bing] destino. Preencha a ID de segmento numérico de [!DNL Bing] no [!UICONTROL ID de mapeamento] campo.
+No [Agendamento do segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) deve mapear manualmente o nome do segmento no [!UICONTROL ID de mapeamento] campo. Isso garante que os metadados do segmento sejam passados corretamente para [!DNL Bing].
 
-![Imagem da interface do usuário que mostra a tela de mapeamento de segmento com um exemplo de ID de mapeamento do Bing](../../assets/catalog/advertising/bing/mapping-id.png)
-
-Se o [!UICONTROL ID de mapeamento] não corresponde a uma ID de segmento no destino do Bing, você não verá os dados de público-alvo esperados em sua conta do Bing.
+![Imagem da interface do usuário que mostra a tela de agendamento do segmento com um exemplo de como mapear o nome do segmento para a ID de mapeamento do Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Dados exportados {#exported-data}
 

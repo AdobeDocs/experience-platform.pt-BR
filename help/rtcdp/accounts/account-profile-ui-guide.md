@@ -3,9 +3,9 @@ keywords: perfil rtcdp, perfis rtcdp, identidades rtcdp, políticas de mesclagem
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Real-time Customer Data Platform B2B Edition permite unificar as informações da conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,6 @@ Para saber mais sobre lead para correspondência de contas, consulte o [Lead par
 
 Para navegar pelos perfis da conta, comece selecionando **[!UICONTROL Perfis]** under [!UICONTROL Contas] na navegação à esquerda.
 
-![Selecionar perfis na navegação à esquerda](images/b2b-account-browse.png)
-
 No **[!UICONTROL Procurar]** Na guia , é possível explorar perfis de conta usando uma ID de conta de uma fonte corporativa conectada ou inserindo detalhes de origem diretamente.
 
 ![Usar a ID da conta para explorar perfis](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ Isso abre o **[!UICONTROL Selecionar origem]** , onde é possível selecionar um
 
 Para saber mais sobre como conectar-se às fontes corporativas, consulte [visão geral das fontes](../sources/sources-overview.md).
 
-![Selecionar workflow de origem](images/b2b-account-select-source.png)
-
 Você pode escolher uma fonte selecionando o botão de opção ao lado do nome da conexão e usando **[!UICONTROL Selecionar]** para retornar ao [!UICONTROL Procurar] guia .
+
+![Selecionar workflow de origem](images/b2b-account-select-source.png)
 
 Com uma fonte selecionada, agora você deve inserir um **[!UICONTROL ID da conta]** relacionado à origem. Por exemplo, selecionar uma origem do Salesforce exigiria que você informasse uma ID de conta da instância do Salesforce para exibir o perfil de conta vinculado a essa ID.
 

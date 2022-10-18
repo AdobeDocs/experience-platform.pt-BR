@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 83%
 
 ---
@@ -127,6 +127,8 @@ ht-degree: 83%
       * Camada de dados da Google {#google-data-layer}
          * [Visão geral](./extensions/web/google-data-layer/overview.md)
          * [Notas de versão](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [Visão geral](./extensions/web/splunk/overview.md)
       * Extensão de rastreamento de vídeo do [!DNL YouTube] {#youtube}
          * [Visão geral](./extensions/web/youtube/overview.md)
          * [Notas de versão](./extensions/web/youtube/release-notes.md)

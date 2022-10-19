@@ -5,10 +5,10 @@ title: Visão geral da coleção de dados
 topic-legacy: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 7%
+source-wordcount: '513'
+ht-degree: 6%
 
 ---
 
@@ -47,6 +47,8 @@ A compactação dessas bibliotecas acelera a coleta de dados e consolida as oper
 ## Rede de borda da plataforma e armazenamento de dados {#edge}
 
 A Platform Edge Network é uma rede distribuída globalmente, rápida e confiável, de servidores capazes de receber e processar dados em grande escala. Usando tags, você pode configurar [datastreams](../edge/datastreams/overview.md) para produtos como Adobe Target, Adobe Audience Manager e Adobe Analytics, que permitem ativar esses produtos no lado do servidor sem alterar o código do lado do cliente.
+
+Além disso, os conjuntos de dados são integrados com vários recursos da plataforma que ajudam a garantir que todos os dados confidenciais que você está enviando sejam tratados adequadamente em relação às políticas organizacionais e regulamentos legais. Consulte a seção sobre [tratamento de dados confidenciais](../edge/datastreams/overview.md#sensitive) na documentação dos datastreams para obter mais informações.
 
 ![Fluxos de dados e soluções Adobe](./images/home/adobe-solutions.png)
 

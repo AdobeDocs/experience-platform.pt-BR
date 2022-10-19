@@ -5,7 +5,7 @@ title: Glossário de rótulos de uso de dados
 topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1a10216c01a049539b5e1d21d0c42942496b2e3e
+source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -51,7 +51,7 @@ Os rótulos de identidade &quot;I&quot; são usados para categorizar dados que p
 | **I1** | Dados diretamente identificáveis que podem identificar ou entrar em contato com uma pessoa específica, em vez de um dispositivo. |
 | **I2** | Dados indiretamente identificáveis que podem ser usados em combinação com quaisquer outros dados para identificar ou contactar uma pessoa específica. |
 
-## Rótulos sensíveis
+## Rótulos sensíveis {#sensitive}
 
 Os rótulos &quot;S&quot; confidenciais são usados para categorizar dados que você e sua organização consideram confidenciais.
 
@@ -116,7 +116,7 @@ DAA: A Publicidade comportamental online não inclui as atividades de Primárias
 
 #### C7 {#c7}
 
-O conteúdo no site é um texto e imagens projetadas para informar, educar ou entreter e que não são criadas para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se ele se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos por um rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em conteúdo selecionado, dados de processamento sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de conteúdo no site não seria qualificado como direcionamento com base em interesses (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
+O conteúdo no site é um texto e imagens projetadas para informar, educar ou entreter e que não são criadas para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se ele se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos por um rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em conteúdo selecionado, dados de processamento sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, fazer inferências sobre as preferências de um usuário com base nas atividades no site desse usuário e, em seguida, usar essas preferências no direcionamento de conteúdo no site não seria qualificado como direcionamento com base em juros (também chamado de personalização), pois não atenderia a todos os três requisitos necessários para o direcionamento com base em juros. *[Consulte o rótulo C5 para conhecer esses requisitos.](#c5)*
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado é da sua responsabilidade. Para referência, as estruturas IAB e DAA são fornecidas abaixo:
 

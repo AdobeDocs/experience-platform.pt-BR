@@ -6,9 +6,9 @@ description: Este artigo ilustra o fluxo de trabalho completo para ativar segmen
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,10 @@ A ID do trabalho de exportação do segmento está no `id` conforme mostrado aba
 ## Etapa 5: Executar o trabalho de ativação ad-hoc {#activation-job}
 
 O Adobe Experience Platform executa tarefas de segmentação agendadas uma vez a cada 24 horas. A API de ativação ad-hoc é executada com base nos resultados de segmentação mais recentes.
+
+>[!IMPORTANT]
+>
+>Observe a seguinte restrição única: Antes de executar um trabalho de ativação ad-hoc, verifique se pelo menos 20 minutos se passaram do momento em que o segmento foi ativado pela primeira vez de acordo com a programação definida em [Etapa 3 - Criar fluxo de ativação na interface do usuário da plataforma](#activation-flow).
 
 Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de segmentos agendados para seus segmentos foi concluído. Consulte [monitoramento de fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o seu fluxo de dados de ativação mostrar uma **[!UICONTROL Processamento]** , aguarde até que ele seja concluído antes de executar o trabalho de ativação ad-hoc.
 

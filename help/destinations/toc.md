@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Guia de destinos
-user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muito mais.
+user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 9bab22684005609111538037e95bad1f806ff7c4
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 5%
+source-wordcount: '948'
+ht-degree: 6%
 
 ---
 
@@ -106,6 +106,7 @@ ht-degree: 5%
       * [Endereço IP lista de permissões para destinos de armazenamento em nuvem](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
       * [Conexão Salesforce CRM](./catalog/crm/salesforce.md)
+      * [Conexão Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexão de saída](catalog/crm/outreach.md)
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)

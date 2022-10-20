@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Documentação da API do servidor de rede de borda
 breadcrumb-title: Documentação da API do servidor de rede de borda
-user-guide-description: Use a API do Edge Network Server para coleta de dados, personalização, publicidade e casos de uso de marketing com serviços Experience Cloud ou Experience Platform Edge.
+user-guide-description: Use a API do Edge Network Server para coleção de dados, personalização, publicidade e casos de uso de marketing com serviços da Experience Cloud ou do Experience Platform Edge.
 feature: Data Collection
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 25%
+ht-degree: 52%
 
 ---
 

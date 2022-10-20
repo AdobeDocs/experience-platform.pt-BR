@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Data Access
 breadcrumb-title: Guia do Data Access
-user-guide-description: Encontre e acesse conjuntos de dados assimilados no Experience Platform.
+user-guide-description: Encontre e acesse conjuntos de dados assimilados na Experience Platform.
 feature: Data Access
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 36%
+ht-degree: 57%
 
 ---
 

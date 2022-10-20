@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1902'
 ht-degree: 6%
 
 ---
@@ -144,6 +144,4 @@ Ao reunir dados de várias fontes, as políticas de mesclagem são as regras que
 
 ### Conjuntos de dados do conjunto de relatórios do Adobe Analytics na Platform {#aa-datasets}
 
-Um máximo de um (1) conjunto de dados de conjunto de relatórios do Adobe Analytics deve ser ativado para o Perfil. Esse é um limite suave, o que significa que você pode ativar mais de um conjunto de dados do Analytics para o Perfil, mas não é recomendado, pois pode ter consequências não intencionais para os dados. Isso se deve às diferenças entre os esquemas do Experience Data Model (XDM), que fornecem a estrutura semântica para dados no Experience Platform e permitem consistência na interpretação de dados, e a natureza personalizável de eVars e variáveis de conversão no Adobe Analytics.
-
-Por exemplo, no Adobe Analytics, uma única organização pode ter vários conjuntos de relatórios. Se o conjunto de relatórios A designar o eVar 4 como &quot;termo de pesquisa interno&quot; e o conjunto de relatórios B designar o eVar 4 como &quot;domínio de referência&quot;, esses valores serão assimilados no mesmo campo no Perfil, causando confusão e degradando a qualidade dos dados.
+Vários conjuntos de relatórios podem ser habilitados para o Perfil, desde que todos os conflitos de dados sejam resolvidos. Você pode usar a funcionalidade Preparação de dados para resolver conflitos de dados entre eVars, Listas e Props. Para saber mais sobre como usar a funcionalidade Preparação de dados, leia o [Guia da interface do usuário do conector Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).

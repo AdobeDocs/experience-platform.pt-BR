@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform, página inicial, tópicos populares, segmentação, Segmentação, Serviço de segmentação, segmentação por streaming, segmentação por streaming, avaliação contínua;
 solution: Experience Platform
-title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
+title: Avaliar eventos em quase tempo real com a segmentação de streaming
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -429,6 +429,8 @@ A segmentação de transmissão funciona em todos os dados assimilados por meio 
 ### Como os segmentos são definidos como segmentação em lote ou streaming?
 
 Um segmento é definido como segmentação em lote ou em fluxo com base em uma combinação de tipo de query e duração do histórico do evento. Uma lista de quais segmentos serão avaliados como um segmento de transmissão pode ser encontrada no [seção de tipos de consulta de segmentação de fluxo](#query-types).
+
+Observe que, se um segmento contiver **both** um `inSegment` e uma cadeia direta de evento único, ela não pode se qualificar para a segmentação de fluxo. Se você quiser que esse segmento se qualifique para a segmentação de transmissão, deve tornar a cadeia direta de evento único seu próprio segmento.
 
 ### Por que o número de segmentos &quot;qualificados totais&quot; continua aumentando enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes do segmento?
 

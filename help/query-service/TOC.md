@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
+source-git-commit: bbe67d03834f3da0e781bc0f86024870db612cfe
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '224'
 ht-degree: 18%
 
 ---
@@ -40,6 +40,8 @@ ht-degree: 18%
    - [Templates de query](ui/query-templates.md)
    - [Usando credenciais do Serviço de Consulta](ui/credentials.md)
    - [Geração de conjuntos de dados a partir de resultados de query](ui/create-datasets.md)
+- [Armazenamento acelerado de consulta]{#query-accelerated-store}
+   - [Modelo de dados de insights de relatórios](query-accelerated-store/reporting-insights-data-model.md)
 - Práticas recomendadas {#best-practices}
    - [Orientações gerais para a execução de consultas](best-practices/writing-queries.md)
    - [Orientação para a organização de ativos de dados](./best-practices/organize-data-assets.md)

@@ -5,9 +5,9 @@ title: Definir campos de enumeração e valores sugeridos na interface do usuár
 description: Saiba como definir enumerações e valores sugeridos para campos de sequência na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
+source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 No Experience Data Model (XDM), um campo de cadeia de caracteres pode receber um conjunto predefinido de valores aceitos ou sugeridos para controlar melhor quais valores são assimilados nesse campo ou como ele se comportará na segmentação.
 
-Um **enum** restringe os valores que podem ser assimilados para um campo de string a um conjunto predefinido. Se você tentar assimilar dados para um campo enum e o valor não corresponder a nenhum daqueles definidos em sua configuração, a assimilação será negada.
+**[!UICONTROL Enumerações]** restrinja os valores que podem ser assimilados para um campo de string a um conjunto predefinido. Se você tentar assimilar dados para um campo enum e o valor não corresponder a nenhum daqueles definidos em sua configuração, a assimilação será negada.
 
-Em contraste com enumerações, adicionar **valores sugeridos** para um campo de string não restringe os valores que ele pode assimilar. Em vez disso, os valores sugeridos afetam quais valores predefinidos estão disponíveis na variável [Interface do usuário de segmentação](../../../segmentation/ui/overview.md) ao incluir o campo de string como um atributo.
+Em contraste com os enumerações, a variável **[!UICONTROL Valores sugeridos]** permite denotar um conjunto de valores recomendados para um campo de string que não restrinja os valores que pode assimilar. Em vez disso, os valores sugeridos afetam quais valores predefinidos estão disponíveis na variável [Interface do usuário de segmentação](../../../segmentation/ui/overview.md) ao incluir o campo de string como um atributo.
 
 When [definição de um novo campo](./overview.md#define) na interface do usuário do Adobe Experience Platform e definir o tipo como [!UICONTROL String], você tem a opção de definir um [enum](#enum) ou [valores sugeridos](#suggested-values) para esse campo.
 

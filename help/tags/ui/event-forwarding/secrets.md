@@ -2,9 +2,9 @@
 title: Configuração de segredos no encaminhamento de eventos
 description: Saiba como configurar segredos na interface do usuário para autenticar em endpoints usados em propriedades de encaminhamento de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -127,6 +127,12 @@ Um artigo é exibido informando que o segredo precisa ser autorizado manualmente
 ![Fornecedor de autorização Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Uma caixa de diálogo é exibida e permite inserir as credenciais da sua conta do Google. Siga os prompts para conceder acesso de encaminhamento de evento aos dados no escopo selecionado. Quando o processo de autorização estiver concluído, o segredo será criado.
+
+>[!IMPORTANT]
+>
+>Se sua organização tiver uma política de reautenticação definida para aplicativos da Google Cloud, os segredos criados não serão atualizados com êxito após a expiração da autenticação (entre 1 e 24 horas, dependendo da configuração da política).
+>
+>Para resolver esse problema, faça logon no Admin Console do Google e navegue até o **[!DNL App access control]** para que você possa marcar o aplicativo de encaminhamento do evento (Adobe Real-Time CDP Event Forwarding) como [!DNL Trusted]. Consulte a documentação da Google em [definição das durações de sessão dos serviços da Google Cloud](https://support.google.com/a/answer/9368756) para obter mais informações.
 
 ## Editar um segredo
 

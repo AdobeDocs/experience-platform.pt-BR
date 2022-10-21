@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
+source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 83%
+source-wordcount: '411'
+ht-degree: 82%
 
 ---
 
@@ -129,10 +129,10 @@ ht-degree: 83%
          * [Notas de versão](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL Splunk] {#splunk}
          * [Visão geral](./extensions/web/splunk/overview.md)
-      * Extensão de rastreamento de vídeo do [!DNL YouTube] {#youtube}
+      * [!DNL YouTube] rastreamento de vídeo {#youtube}
          * [Visão geral](./extensions/web/youtube/overview.md)
          * [Notas de versão](./extensions/web/youtube/release-notes.md)
-      * [!DNL Zendesk] Extensão da API Eventos {#zendesk}
+      * [!DNL Zendesk] API Eventos {#zendesk}
          * [Visão geral](./extensions/web/zendesk/overview.md)
    * [Extensões de terceiros](./extensions/3rd-party-extensions.md)
 * Desenvolvimento de extensão {#extension-dev}

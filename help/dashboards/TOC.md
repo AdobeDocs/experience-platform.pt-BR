@@ -4,7 +4,7 @@ user-guide-title: Ajuda de painéis da Adobe Experience Platform
 breadcrumb-title: Manual de painéis
 user-guide-description: Saiba como visualizar dados na Experience Platform por meio de painéis personalizáveis.
 feature: Dashboards
-source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 33%
@@ -35,5 +35,5 @@ ht-degree: 33%
 * Integrações de aplicativos {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Conjuntos de dados do painel de query](query.md)
-* [Modelo de dados de insights da Plataforma de dados do cliente (CDP)](cdp-insights-data-model.md)
+* [Modelo de dados do Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

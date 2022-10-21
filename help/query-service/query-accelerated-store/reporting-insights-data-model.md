@@ -1,9 +1,9 @@
 ---
 title: Insights de relatórios da loja acelerada de query
 description: Saiba como criar um modelo de dados de insights de relatório por meio do Serviço de query para uso com dados de loja acelerados e painéis definidos pelo usuário.
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 O armazenamento acelerado de query permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Normalmente, os dados são processados em intervalos regulares (por exemplo, de hora em hora ou diariamente), onde exibições agregadas são criadas e relatadas. A análise desses relatórios gerados a partir de dados agregados deriva informações destinadas a melhorar o desempenho dos negócios. O armazenamento acelerado do query fornece um serviço de cache, simultaneidade, uma experiência interativa e uma API sem estado. No entanto, presume que os dados sejam pré-processados e otimizados para consulta agregada e não para consulta de dados brutos.
 
-O armazenamento acelerado de query permite criar um modelo de dados personalizado e/ou estender em modelos de dados existentes do Real-time Customer Data Platform. Em seguida, você pode interagir ou incorporar seus insights de relatórios em uma estrutura de relatórios/visualização de sua escolha. O modelo de dados da CDP em tempo real do Adobe Experience Platform fornece informações sobre perfis, segmentos e destinos e permite os painéis de insight da CDP em tempo real. Este documento o orienta pelo processo de criação de seu modelo de dados de insights de relatórios e também como estender modelos de dados da CDP em tempo real, conforme necessário.
+O armazenamento acelerado de query permite criar um modelo de dados personalizado e/ou estender em modelos de dados existentes do Real-time Customer Data Platform. Em seguida, você pode interagir ou incorporar seus insights de relatórios em uma estrutura de relatórios/visualização de sua escolha. Consulte a documentação do Modelo de dados do Real-time Customer Data Platform Insights para saber como [personalize seus modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de indicador de desempenho principal (KPI) de marketing](../../dashboards/cdp-insights-data-model.md).
+
+O modelo de dados do Real-Time CDP do Adobe Experience Platform fornece informações sobre perfis, segmentos e destinos e permite o uso de painéis do Real-Time CDP Insight. Este documento o orienta pelo processo de criação de seu modelo de dados de insights de relatórios e também como estender modelos de dados do Real-Time CDP, conforme necessário.
 
 ## Pré-requisitos
 
@@ -20,7 +22,7 @@ Este tutorial usa painéis definidos pelo usuário para visualizar dados do mode
 
 ## Introdução
 
-O SKU do Distiller de dados é necessário para criar um modelo de dados personalizado para seus insights de relatórios e estender os modelos de dados da CDP em tempo real que contêm dados enriquecidos da plataforma. Consulte a [embalagem](../packages.md), [medidas de proteção](../guardrails.md#query-accelerated-store)e [licenciamento](../data-distiller/licence-usage.md) documentação relacionada ao SKU do Data Distiller. Se você não tiver a SKU do Data Distiller, entre em contato com o representante de serviço ao cliente do Adobe para obter mais informações.
+O SKU do Distiller de dados é necessário para criar um modelo de dados personalizado para seus insights de relatórios e estender os modelos de dados do Real-Time CDP que contêm dados enriquecidos da plataforma. Consulte a [embalagem](../packages.md), [medidas de proteção](../guardrails.md#query-accelerated-store)e [licenciamento](../data-distiller/licence-usage.md) documentação relacionada ao SKU do Data Distiller. Se você não tiver a SKU do Data Distiller, entre em contato com o representante de serviço ao cliente do Adobe para obter mais informações.
 
 ## Criar um modelo de dados de insights de relatórios
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Estenda seu modelo de dados com o modelo de dados de insights da CDP em tempo real
+## Estender seu modelo de dados com o modelo de dados do Real-Time CDP insights
 
 Você pode estender seu modelo de público-alvo com detalhes adicionais para criar uma tabela de dimensão mais rica. Por exemplo, você pode mapear o nome do segmento e o nome do destino para o identificador de público-alvo externo. Para fazer isso, use o Serviço de query para criar ou atualizar um novo conjunto de dados e adicioná-lo ao modelo de público-alvo que combina segmentos e destinos com uma identidade externa. O diagrama abaixo ilustra o conceito dessa extensão de modelo de dados.
 
-![Um diagrama ERD que vincula o modelo de dados de insight da CDP em tempo real e o modelo de armazenamento acelerado da Query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Um diagrama ERD que vincula o modelo de dados do Real-Time CDP insight e o modelo de armazenamento acelerado do Query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Criar tabelas de dimensão para estender seu modelo de insights de relatórios
 
-Use o Serviço de query para adicionar os principais atributos descritivos dos conjuntos de dados de dimensão da CDP em tempo real enriquecidos ao `audienceinsight` modelo de dados e estabeleça uma relação entre a tabela de fatos e a nova tabela de dimensões. O SQL abaixo demonstra como integrar tabelas de dimensão existentes ao modelo de dados de insights de relatórios.
+Use o Serviço de query para adicionar os principais atributos descritivos dos conjuntos de dados de dimensão do Real-Time CDP enriquecidos ao `audienceinsight` modelo de dados e estabeleça uma relação entre a tabela de fatos e a nova tabela de dimensões. O SQL abaixo demonstra como integrar tabelas de dimensão existentes ao modelo de dados de insights de relatórios.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS

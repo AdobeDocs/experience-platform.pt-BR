@@ -1,29 +1,29 @@
 ---
-title: Modelo de dados de insights da Plataforma de dados do cliente (CDP)
-description: Saiba como usar consultas SQL de Modelos de dados de insights do CDP para personalizar seus próprios relatórios de CDP para seus casos de uso de marketing e KPI.
+title: Modelo de dados do Real-time Customer Data Platform Insights
+description: Saiba como usar consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-# Modelo de dados de insights da Plataforma de dados do cliente (CDP)
+# Modelo de dados do Real-time Customer Data Platform Insights
 
-O recurso Modelo de dados de insights da CDP (Plataforma de dados do cliente) expõe os modelos de dados e o SQL que alimenta os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios de CDP para seus casos de uso de indicador de desempenho principal (KPI) de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário.
+O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que alimenta os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de KPI (indicador de desempenho principal) e de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação de insights de relatório de loja acelerada de query para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de query para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Pré-requisitos
 
 Este guia requer um entendimento prático do [recurso de painéis definidos pelo usuário](./user-defined-dashboards.md). Leia a documentação antes de continuar com este guia.
 
-## Relatórios de informações e casos de uso da CDP
+## Relatórios e casos de uso do Real-Time CDP Insight
 
-Os relatórios da CDP fornecem informações sobre os dados do seu perfil e seu relacionamento com segmentos e destinos. Vários modelos de esquema de estrela foram desenvolvidos para responder a uma variedade de casos de uso de marketing comuns e cada modelo de dados pode suportar vários casos de uso.
+Os relatórios do Real-Time CDP fornecem informações sobre seus dados de perfil e seu relacionamento com segmentos e destinos. Vários modelos de esquema de estrela foram desenvolvidos para responder a uma variedade de casos de uso de marketing comuns e cada modelo de dados pode suportar vários casos de uso.
 
 >[!IMPORTANT]
 >
->Os dados usados para os relatórios da CDP são precisos para uma política de mesclagem escolhida e do instantâneo diário mais recente.
+>Os dados usados para os relatórios do Real-Time CDP são precisos para uma política de mesclagem escolhida e do instantâneo diário mais recente.
 
 ### Modelo de perfil {#profile-model}
 

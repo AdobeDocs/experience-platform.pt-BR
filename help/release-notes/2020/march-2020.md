@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notas de versão;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -39,8 +39,8 @@ A Governança de dados da Adobe Experience Platform é uma série de estratégia
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Aplicação automatizada de políticas de uso de dados para [!DNL Real-time Customer Data Platform] | As políticas de uso de dados agora são aplicadas no fluxo de trabalho da ativação de dados para destinos. A Governança de dados também é incorporada e aplicada ao fazer alterações que afetam as ativações existentes (como alterações nos rótulos do conjunto de dados, políticas de mesclagem, definições de segmento e outras). |
-| Linguagem de dados para aplicação | Quando uma política de uso de dados é violada na CDP em tempo real, a interface do usuário exibe uma notificação que contém informações de linhagem de dados para ajudar o usuário a entender por que as políticas foram violadas e o que ele pode fazer para resolver a violação. |
+| Aplicação automatizada de políticas de uso de dados para [!DNL Real-Time Customer Data Platform] | As políticas de uso de dados agora são aplicadas no fluxo de trabalho da ativação de dados para destinos. A Governança de dados também é incorporada e aplicada ao fazer alterações que afetam as ativações existentes (como alterações nos rótulos do conjunto de dados, políticas de mesclagem, definições de segmento e outras). |
+| Linguagem de dados para aplicação | Quando uma política de uso de dados é violada no Real-Time CDP, a interface do usuário exibe uma notificação que contém informações de linhagem de dados para ajudar o usuário a entender por que as políticas foram violadas e o que ele pode fazer para resolver a violação. |
 
 
 **Problemas conhecidos**
@@ -76,8 +76,8 @@ Novos destinos estão disponíveis, onde você pode ativar os dados do Adobe Exp
 
 | Destino | Descrição |
 |--- | ---|
-| Destinos de armazenamento na nuvem | A CDP em tempo real agora pode fornecer seus segmentos como arquivos de dados para o [!DNL Amazon S3] ou locais de armazenamento em nuvem SFTP. Isso permite enviar públicos-alvo e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
-| Destinos de publicidade | O [!DNL Google] o cartão de destino agora é dividido em três cartões de destino, para os três diferentes [!DNL Google] plataformas atualmente compatíveis com a CDP em tempo real: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Exibição e vídeo 360. |
+| Destinos de armazenamento na nuvem | Agora, a Real-Time CDP pode fornecer seus segmentos como arquivos de dados para seus [!DNL Amazon S3] ou locais de armazenamento em nuvem SFTP. Isso permite enviar públicos-alvo e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
+| Destinos de publicidade | O [!DNL Google] o cartão de destino agora é dividido em três cartões de destino, para os três diferentes [!DNL Google] plataformas atualmente compatíveis com o Real-Time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Exibição e vídeo 360. |
 
 Para saber mais, visite o [visão geral dos destinos](../../destinations/home.md)
 

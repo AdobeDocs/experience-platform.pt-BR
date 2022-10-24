@@ -5,10 +5,10 @@ title: Visão geral da coleção de dados
 topic-legacy: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 6%
+source-wordcount: '514'
+ht-degree: 8%
 
 ---
 
@@ -30,7 +30,7 @@ A coleta de dados está focada na capacidade de descoberta e acessibilidade de c
 * [Encaminhamento de evento](../tags/ui/event-forwarding/overview.md)
 * [SDK da Web da Adobe Experience Platform](../edge/home.md)
 * [SDK móvel da Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=pt-BR)
 * [Experience Data Model (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
@@ -64,7 +64,7 @@ Além disso, os conjuntos de dados são integrados com vários recursos da plata
 
 >[!NOTE]
 >
->O encaminhamento de eventos é um recurso pago incluído apenas como parte da oferta do Real-time Customer Data Platform Connections.
+>O encaminhamento de eventos é um recurso pago incluído apenas como parte da oferta do Adobe Real-time Customer Data Platform Connections.
 
 ## Próximas etapas
 

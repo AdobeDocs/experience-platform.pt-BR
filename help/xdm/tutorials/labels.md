@@ -2,9 +2,9 @@
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do usuário do Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->A rotulagem baseada em esquemas faz parte do [controle de acesso baseado em atributo](../../access-control/abac/overview.md), que está disponível em uma versão limitada para clientes de saúde com base nos EUA. Esse recurso estará disponível para todos os clientes da Real-time Customer Data Platform assim que for totalmente lançado.
+>A rotulagem baseada em esquemas faz parte do [controle de acesso baseado em atributo](../../access-control/abac/overview.md), que está disponível em uma versão limitada para clientes de saúde com base nos EUA. Esse recurso estará disponível para todos os clientes da Adobe Real-time Customer Data Platform assim que for totalmente lançado.
 
 Todos os dados trazidos para o Adobe Experience Platform são restritos pelos esquemas do Experience Data Model (XDM). Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Para levar isso em conta, a Plataforma permite que você restrinja o uso de determinados conjuntos de dados e campos por meio do uso de [rótulos de uso de dados](../../data-governance/labels/overview.md).
 

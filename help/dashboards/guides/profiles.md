@@ -4,9 +4,9 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '3387'
+source-wordcount: '3388'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 O [!UICONTROL Procurar] permite pesquisar e exibir os perfis somente leitura assimilados em sua organização. Desse ponto, você pode ver informações importantes pertencentes ao perfil, relacionadas às preferências, aos eventos passados, às interações e aos segmentos
 
-Para saber mais sobre os recursos de visualização de perfil fornecidos na interface do usuário da plataforma, consulte a documentação em [navegar pelos perfis no Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+Para saber mais sobre os recursos de visualização de perfil fornecidos na interface do usuário da plataforma, consulte a documentação em [navegar pelos perfis no Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Mesclar políticas {#merge-policies}
 

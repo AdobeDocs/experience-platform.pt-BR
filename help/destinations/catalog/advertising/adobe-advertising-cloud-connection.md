@@ -1,11 +1,11 @@
 ---
 title: Conexão Adobe Advertising Cloud DSP
-description: O Adobe Advertising Cloud DSP é um destino integrado para a variável [!DNL Adobe Real-time Customer Data Profile], permitindo compartilhar segmentos originais autenticados com anunciantes e usuários aprovados para ativação da campanha.
+description: O Adobe Advertising Cloud DSP é um destino integrado do Adobe Real-time Customer Data Platform, permitindo que você compartilhe segmentos originais autenticados com anunciantes e usuários aprovados para ativação de campanha.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1055'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Para ajudá-lo a entender melhor como e quando usar o destino do Advertising Clo
 
 ### Caso de uso de publicidade da marca
 
-Uma varejista online quer redirecionar seus clientes de alto valor por meio de uma campanha de exibição sem usar cookies para segmentação. O varejista compartilha um segmento que consiste nas IDs de email com hash de seus clientes de alto valor de sua [!DNL Real-Time CDP] à sua conta DSP. DSP então converte as IDs de email com hash para autenticado [!DNL RampIDs] através de uma parceria entre o DSP e o LiveRamp. O resultado [!DNL RampIDs] pode ser usada em uma campanha de exibição para direcionar o público.
+Uma varejista online quer redirecionar seus clientes de alto valor por meio de uma campanha de exibição sem usar cookies para segmentação. O varejista compartilha um segmento que consiste nas IDs de email com hash de seus clientes de alto valor da conta do Adobe Real-time Customer Data Platform (Real-Time CDP) para sua conta DSP. DSP então converte as IDs de email com hash para autenticado [!DNL RampIDs] através de uma parceria entre o DSP e o LiveRamp. O resultado [!DNL RampIDs] pode ser usada em uma campanha de exibição para direcionar o público.
 
 ### Caso de uso de agência
 

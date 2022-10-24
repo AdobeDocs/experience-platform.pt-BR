@@ -5,9 +5,9 @@ title: Acesso e recursos do Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: O documento a seguir descreve as permissões do Data Science Workspace e o acesso aos recursos.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ O documento a seguir descreve as permissões do Data Science Workspace e o acess
 
 ![Guias DSW](./images/access/platform-tabs.png)
 
-- **Notebooks:** oferece um ambiente de desenvolvimento interativo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analisar e modelar seus dados no Experience Platform.
-- **Modelos:** fornece ferramentas usadas para criar, publicar e armazenar fórmulas e modelos avançados de aprendizado de máquina. Para obter mais informações, visite o tutorial [criar e publicar um modelo de aprendizado de máquina](./models-recipes/create-publish-model.md).
-- **Serviços:** contém serviços fornecidos pelo Adobe, como serviços de  [AI/ML e ](../intelligent-services/home.md) quaisquer serviços personalizados criados com o Data Science Workspace.
+- **Notebooks:** Fornece um ambiente de desenvolvimento interativo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analisar e modelar seus dados no Experience Platform.
+- **Modelos:** Fornece ferramentas usadas para criar, publicar e armazenar fórmulas e modelos avançados de aprendizado de máquina. Para obter mais informações, visite o [criar e publicar um modelo de aprendizado de máquina](./models-recipes/create-publish-model.md) tutorial.
+- **Serviços:** Contém ambos os serviços fornecidos pelo Adobe, como [Serviços de IA/ML](../intelligent-services/home.md) e quaisquer serviços personalizados criados com o Data Science Workspace.
 
 Por que estou vendo apenas a guia Serviços?
 
-- Sua organização só pode ter direito à Plataforma de dados do cliente em tempo real (RTCDP), que inclui o Serviço de IA/ML do cliente.
+- Sua organização só pode ter direito ao Adobe Real-time Customer Data Platform (Real-Time CDP), que inclui o Serviço de IA/ML do Customer AI.
 
-Se não conseguir ver nenhuma das guias **Data Science** e quiser usar os recursos do Data Science Workspace, entre em contato com o administrador da empresa para verificar se você tem uma licença Adobe Experience Platform Intelligence.
+Se você não conseguir ver nenhuma das **Ciência de dados** para usar os recursos do Data Science Workspace, entre em contato com o administrador da empresa para verificar se você tem uma licença Adobe Experience Platform Intelligence.
 
 ## Embalagem da Data Science Workspace
 
@@ -53,17 +53,17 @@ A tabela a seguir descreve algumas das principais diferenças para os direitos d
 
 ## Controle de acesso
 
-O controle de acesso para Experience Platform é administrado por meio do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações.
+O controle de acesso do Experience Platform é administrado por meio do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações.
 
 Para usar o Data Science Workspace, a permissão &quot;Gerenciar Data Science Workspace&quot; deve estar habilitada. A tabela a seguir descreve os efeitos da ativação ou desativação dessa permissão:
 
 | Permissão | Ativado | Desativado |
 |---|---|---|
-| Gerenciar o Data Science Workspace | Fornece acesso a todos os serviços no Data Science Workspace. | O acesso da API e da interface do usuário a todos os serviços no Data Science Workspace está desativado. Enquanto estiver desativado, a seleção das páginas **Notebooks**, **Modelos** e **Serviços** é impedida. <li>O acesso a **Services** ainda pode estar disponível por meio da Plataforma de dados do cliente em tempo real (RTCDP).</li> |
+| Gerenciar o Data Science Workspace | Fornece acesso a todos os serviços no Data Science Workspace. | O acesso da API e da interface do usuário a todos os serviços no Data Science Workspace está desativado. Enquanto estiver desativado, selecione a variável **Notebooks**, **Modelos** e **Serviços** as páginas são impedidas. <li>Acesso ao **Serviços** pode ainda estar disponível por meio do Adobe Real-time Customer Data Platform (Real-Time CDP).</li> |
 
 ## Suporte a sandbox
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância da Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar as sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md).
+As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância da Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar as sandboxes de produção. Para obter mais informações sobre sandboxes, consulte o [visão geral das sandboxes](../sandboxes/home.md).
 
 Atualmente, o Data Science Workspace tem a seguinte limitação de sandbox:
 
@@ -73,4 +73,4 @@ Atualmente, o Data Science Workspace tem a seguinte limitação de sandbox:
 
 Este documento descrevia os diferentes tipos de acesso e recursos disponíveis no Data Science Workspace.
 
-Para saber mais sobre o Data Science Workspace, como um fluxo de trabalho diário completo, comece lendo a documentação do [Data Science Workspace](./walkthrough.md). Para obter informações mais gerais, visite a [Visão geral do Data Science Workspace](./home.md).
+Para saber mais sobre o Data Science Workspace, como um fluxo de trabalho diário completo, comece lendo o [Apresentação do Data Science Workspace](./walkthrough.md) documentação. Para obter informações mais gerais, visite o [Visão geral do Data Science Workspace](./home.md).

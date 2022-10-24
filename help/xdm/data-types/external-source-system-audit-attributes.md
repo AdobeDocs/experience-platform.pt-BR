@@ -1,20 +1,21 @@
 ---
 title: Tipo de dados de atributos de auditoria do sistema de fonte externa
 description: Este documento fornece uma visão geral do tipo de dados do Modelo de dados de experiência (XDM) de atributos de auditoria do sistema de fonte externa.
-source-git-commit: 8bf0c63f33ae9cbfb01d4db9e5220c6762575c5b
+exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '217'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Tipo de dados de ] Atributos de Auditoria de Sistema de Origem Externa
+# [!UICONTROL Atributos de Auditoria do Sistema de Origem Externa] tipo de dados
 
 >[!NOTE]
 >
->Esse tipo de dados só está disponível para organizações que têm acesso à edição B2B da Plataforma de dados do cliente em tempo real.
+>Esse tipo de dados só está disponível para organizações que têm acesso à edição B2B do Adobe Real-time Customer Data Platform.
 
-[!UICONTROL Os ] atributos de auditoria do sistema de fonte externa são um tipo de dados padrão do Experience Data Model (XDM) que captura detalhes de auditoria sobre um sistema de fonte externa.
+[!UICONTROL Atributos de Auditoria do Sistema de Origem Externa] é um tipo de dados padrão do Experience Data Model (XDM) que captura detalhes de auditoria sobre um sistema de fonte externa.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 

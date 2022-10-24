@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 6%
@@ -21,7 +21,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-time Customer Data Platform Edição B2B](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Fontes](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -200,9 +200,9 @@ O Customer AI disponível no Real-time Customer Data Platform é usado para gera
 
 Para obter mais informações sobre [!DNL Intelligent Services]consulte o [[!DNL Intelligent Services] visão geral](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform Edição B2B {#B2B}
+## Real-time Customer Data Platform B2B Edition {#B2B}
 
-Baseada na Real-time Customer Data Platform (CDP em tempo real), a CDP B2B Edition em tempo real é projetada especificamente para profissionais de marketing que operam em um modelo de serviço de negócios para empresas. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
+Baseado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido para profissionais de marketing que operam em um modelo de serviço de empresa para empresa. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
 
 **Recursos atualizados**
 

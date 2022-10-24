@@ -1,16 +1,16 @@
 ---
 title: Controle de acesso no Real-time Customer Data Platform B2B Edition
-description: Uma visão geral da função de controle de acesso no Real-time Customer Data Platform B2B Edition.
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+description: Uma visão geral da função de controle de acesso no Adobe Real-time Customer Data Platform B2B Edition.
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '153'
 ht-degree: 2%
 
 ---
 
-# Controle de acesso no Real-time Customer Data Platform B2B Edition
+# Controle de acesso no Adobe Real-time Customer Data Platform B2B Edition
 
-O controle de acesso para a CDP B2B Edition em tempo real é administrado por meio do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade utiliza perfis de produto no [!DNL Admin Console], permitindo vincular usuários com permissões e sandboxes. Com esse recurso, os administradores podem conceder ou restringir o acesso a recursos específicos da CDP em tempo real, como a interface B2B, para conjuntos definidos de usuários.
+O controle de acesso do Real-Time CDP B2B Edition é administrado por meio do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade utiliza perfis de produto no [!DNL Admin Console], permitindo vincular usuários com permissões e sandboxes. Com esse recurso, os administradores podem conceder ou restringir o acesso a recursos específicos do Real-Time CDP, como a interface B2B, para conjuntos definidos de usuários.
 
 Para saber mais sobre o controle de acesso, consulte [visão geral do controle de acesso](../../access-control/home.md) no [!DNL Experience Platform] documentação.
 

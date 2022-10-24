@@ -5,10 +5,10 @@ title: Espaços de nomes e esquemas B2B
 topic-legacy: overview
 description: Este documento fornece uma visão geral de namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 4%
+source-wordcount: '1707'
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento fornece informações sobre a configuração subjacente para os n
 
 >[!IMPORTANT]
 >
->Você deve ter acesso ao [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para que os esquemas B2B participem em [Perfil do cliente em tempo real](../../../../profile/home.md).
+>Você deve ter acesso ao [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para que os esquemas B2B participem em [Perfil do cliente em tempo real](../../../../profile/home.md).
 
 ## Configurar namespaces B2B e utilitário de geração automática de esquema
 

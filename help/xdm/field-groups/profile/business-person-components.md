@@ -2,9 +2,9 @@
 title: Grupo de Campos de Esquema Componentes da Pessoa Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Componentes de pessoa comercial do XDM.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '552'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 [!UICONTROL Componentes de Pessoa Comercial XDM] é um grupo de campos de esquema padrão para a variável [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura vários registros de origem de uma pessoa e outros atributos necessários para a segmentação de pessoa.
 
-Quando um perfil é criado para uma pessoa por meio de [Perfil do cliente em tempo real](../../../profile/home.md) na edição B2B da CDP em tempo real, as informações usadas para criar esse perfil podem vir de muitos registros de origem. Por exemplo, se uma pessoa trabalha para duas empresas diferentes, muitos sistemas de CRM criariam uma cópia intencionalmente duplicada dessa pessoa para que uma cópia estivesse vinculada à Empresa A, enquanto a outra estivesse vinculada à Empresa B. Ao trazer esses dados para o Adobe Experience Platform, esse grupo de campos é usado para unir esses diferentes registros de origem em uma única representação.
+Quando um perfil é criado para uma pessoa por meio de [Perfil do cliente em tempo real](../../../profile/home.md) na edição B2B do Real-Time CDP, as informações usadas para criar esse perfil podem vir de muitos registros de origem. Por exemplo, se uma pessoa trabalha para duas empresas diferentes, muitos sistemas de CRM criariam uma cópia intencionalmente duplicada dessa pessoa para que uma cópia estivesse vinculada à Empresa A, enquanto a outra estivesse vinculada à Empresa B. Ao trazer esses dados para o Adobe Experience Platform, esse grupo de campos é usado para unir esses diferentes registros de origem em uma única representação.
 
 O grupo de campos fornece um nível raiz `personComponents` , que é uma matriz de objetos. Cada objeto na matriz representa um registro de origem diferente.
 
@@ -22,7 +22,7 @@ O grupo de campos fornece um nível raiz `personComponents` , que é uma matriz 
 >Você deve seguir os padrões de ingestão conforme descrito no [documentação das fontes](../../../rtcdp/sources/b2b.md). Não há garantias de que outros métodos de mapeamento de campo funcionem.
 >
 >Por exemplo, cada objeto da variável `personComponents` A matriz é enviada individualmente durante os padrões de ingestão padrão e, em seguida, adicionada à matriz por plataforma. A adição manual de uma matriz de objetos ao Componente de pessoa comercial retornará um erro.
->Você deve usar o utilitário de geração automática ao criar esquemas para seus dados B2B. Consulte a documentação para obter instruções sobre como usar o [Utilitário de geração automática de esquema e namespace B2B](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Se você não estiver usando o utilitário de geração automática e pretende mapear manualmente o modelo de dados, leia a documentação em [as classes Real-time Customer Data Platform B2B Edition Experience Data Model (XDM)](../../../rtcdp/schemas/b2b.md) antes de mapear os dados.
+>Você deve usar o utilitário de geração automática ao criar esquemas para seus dados B2B. Consulte a documentação para obter instruções sobre como usar o [Utilitário de geração automática de esquema e namespace B2B](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Se você não estiver usando o utilitário de geração automática e pretende mapear manualmente o modelo de dados, leia a documentação na seção [Classes Adobe Real-time Customer Data Platform B2B Edition XDM](../../../rtcdp/schemas/b2b.md) antes de mapear os dados.
 >
 >Consulte a [tutorial completo](../../../rtcdp/b2b-tutorial.md) para obter informações sobre workflows recomendados para dados B2B.
 

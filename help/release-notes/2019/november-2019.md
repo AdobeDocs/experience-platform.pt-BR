@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 **Data de lançamento: 18 de novembro de 2019**
 
 Novos recursos no Adobe Experience Platform:
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -27,15 +27,15 @@ Atualizações dos recursos existentes:
 * [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Incorporada na Adobe Experience Platform, a Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e desconhecidos para ativar perfis do cliente com decisões inteligentes em toda a jornada do cliente. A CDP em tempo real combina várias fontes de dados corporativas para criar perfis unificados em tempo real, que podem ser usados para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
+Incorporada no Adobe Experience Platform, a Real-time Customer Data Platform (Real-Time CDP) ajuda as empresas a unir dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes em toda a jornada do cliente. O Real-Time CDP combina várias fontes de dados corporativas para criar perfis unificados em tempo real, que podem ser usados para fornecer experiências personalizadas de clientes individuais em todos os canais e dispositivos.
 
-[!DNL Real-time Customer Data Platform] O inclui ferramentas para governança de dados, gerenciamento de identidade, segmentação avançada e ciência de dados, para que você possa criar perfis e definir públicos-alvo, bem como derivar informações avançadas e, ao mesmo tempo, poder aplicar políticas rigorosas de governança de dados.
+[!DNL Real-Time Customer Data Platform] O inclui ferramentas para governança de dados, gerenciamento de identidade, segmentação avançada e ciência de dados, para que você possa criar perfis e definir públicos-alvo, bem como derivar informações avançadas e, ao mesmo tempo, poder aplicar políticas rigorosas de governança de dados.
 
 O Adobe se conecta a um grande ecossistema de parceiros, para não mencionar as integrações nativas com o Adobe Experience Cloud, para que você possa ativar esses públicos com facilidade e fornecer excelentes experiências do cliente em todos os canais, desde a personalização no site ou no aplicativo até email, mídia paga, centrais de chamadas, dispositivos conectados e muito mais.
 
-Com a CDP em tempo real, você pode:
+Com o Real-Time CDP, você pode:
 
 * Obtenha uma visão única de seu cliente com a coleta contínua de dados do cliente em toda a empresa.
 * Gerencie de maneira responsável perfis com controle confiável e controles de privacidade para identificadores conhecidos e desconhecidos.
@@ -48,17 +48,17 @@ Para obter mais informações, consulte o [Documentação do Real-time Customer 
 
 | Recurso | Descrição |
 |---|---|
-| Destinos | Integrações pré-criadas com plataformas de destino compatíveis com o Adobe [!DNL Real-time Customer Data Platform] que ativam os dados para esses parceiros de forma contínua. Consulte [Destinos](#destinations) abaixo para obter mais informações. |
-| Painel de métricas da página inicial | A página inicial da Real-time Customer Data Platform (CDP em tempo real) inclui um painel de métricas que mostra informações sobre perfis e segmentos. A página inicial também contém links para materiais de aprendizagem. Consulte a seção sobre [Métricas do Real-time Customer Data Platform](#real-time-customer-data-platform-metrics) abaixo. |
+| Destinos | Integrações pré-criadas com plataformas de destino compatíveis com o Adobe [!DNL Real-Time Customer Data Platform] que ativam os dados para esses parceiros de forma contínua. Consulte [Destinos](#destinations) abaixo para obter mais informações. |
+| Painel de métricas da página inicial | A página inicial do Real-time Customer Data Platform (Real-Time CDP) inclui um painel de métricas que mostra informações sobre perfis e segmentos. A página inicial também contém links para materiais de aprendizagem. Consulte a seção sobre [Métricas do Real-time Customer Data Platform](#real-time-customer-data-platform-metrics) abaixo. |
 | Fontes | Você pode assimilar dados de várias fontes, como Soluções Adobe, armazenamento baseado em nuvem, software de terceiros e seu CRM. Consulte a [Fontes](#sources) seção abaixo para saber mais. |
 
-**[!DNL Real-time Customer Data Platform]métricas**
+**[!DNL Real-Time Customer Data Platform]métricas**
 
-A página inicial da Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibida ao fazer logon na CDP em tempo real.
+A página inicial do Real-time Customer Data Platform (Real-Time CDP), que inclui um painel de métricas, é exibida ao fazer logon no Real-Time CDP.
 
-A página inicial é apenas um dos locais onde os cartões de métrica são exibidos. A CDP em tempo real fornece cartões de métrica em toda a sua experiência. Essas métricas informam sobre os dados, o perfil e os públicos do segmento no sistema.
+A página inicial é apenas um dos locais onde os cartões de métrica são exibidos. O Real-Time CDP fornece cartões de métrica em toda a sua experiência. Essas métricas informam sobre os dados, o perfil e os públicos do segmento no sistema.
 
-Se não houver dados no sistema quando você fizer logon na CDP em tempo real, o painel na página inicial não será exibido. Nesse caso, a página inicial fornece material de aprendizagem para uma primeira experiência do usuário. À medida que os dados são coletados, o painel é atualizado automaticamente para exibir informações sobre esses dados.
+Se não houver dados no sistema quando você fizer logon no Real-Time CDP, o painel na página inicial não será exibido. Nesse caso, a página inicial fornece material de aprendizagem para uma primeira experiência do usuário. À medida que os dados são coletados, o painel é atualizado automaticamente para exibir informações sobre esses dados.
 
 Para saber mais, consulte a [Visão geral das métricas do Real-time Customer Data Platform](../../rtcdp/home-page-dashboards.md)
 

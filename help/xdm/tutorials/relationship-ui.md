@@ -6,9 +6,9 @@ description: Este documento fornece um tutorial para definir uma relação entre
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Este documento fornece um tutorial para definir uma relação entre dois esquema
 
 >[!NOTE]
 >
->Para obter etapas sobre como criar uma relação muitos para um no Real-time Customer Data Platform B2B Edition, consulte o guia sobre [criação de relações B2B](./relationship-b2b.md).
+>Para obter etapas sobre como criar uma relação muitos para um no Adobe Real-time Customer Data Platform B2B Edition, consulte o guia sobre [criação de relações B2B](./relationship-b2b.md).
 
 ## Introdução
 

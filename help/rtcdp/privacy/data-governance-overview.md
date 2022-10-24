@@ -1,22 +1,22 @@
 ---
 keywords: controle de dados rtcdp; controle de dados rtcdp; controle de dados de perfil de dados de clientes em tempo real
 title: Visão geral da governança de dados
-description: 'A Governança de dados permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
+description: A Governança de dados permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 1%
 
 ---
 
-# Governança de dados na CDP em tempo real
+# Governança de dados no Real-Time CDP
 
-[!DNL Real-time Customer Data Platform] (CDP em tempo real) reúne dados de vários sistemas empresariais, permitindo que os profissionais de marketing identifiquem, entendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Portanto, é importante garantir que a CDP em tempo real esteja em conformidade com as políticas de uso ao manipular seus dados.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) reúne dados de vários sistemas empresariais, permitindo que os profissionais de marketing identifiquem, compreendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Portanto, é importante garantir que o Real-Time CDP esteja em conformidade com as políticas de uso ao manipular seus dados.
 
-A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial na CDP em tempo real, permitindo definir políticas de uso, categorizar seus dados com base nessas políticas e verificar violações de política ao executar determinadas ações de marketing.
+A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial no Real-Time CDP, permitindo que você defina políticas de uso, categorize seus dados com base nessas políticas e verifique se há violações de política ao executar determinadas ações de marketing.
 
-A CDP em tempo real foi criada sobre o Adobe Experience Platform e, portanto, a maioria dos recursos de Governança de dados é abordada no [!DNL Experience Platform] documentação. Este documento destina-se a complementar o [Visão geral da governança de dados](../../data-governance/home.md) para [!DNL Experience Platform]e descreve os recursos de Governança disponíveis na CDP em tempo real. Os seguintes tópicos são abordados:
+O Real-Time CDP foi criado sobre o Adobe Experience Platform e, portanto, a maioria dos recursos de Governança de dados é abordada no [!DNL Experience Platform] documentação. Este documento destina-se a complementar o [Visão geral da governança de dados](../../data-governance/home.md) para [!DNL Experience Platform]e descreve os recursos de Governança disponíveis no Real-Time CDP. Os seguintes tópicos são abordados:
 
 * [Aplicar rótulos de uso aos seus dados](#labels)
 * [Gerenciar políticas de uso de dados](#policies)
@@ -42,20 +42,20 @@ As ações de marketing só podem ser selecionadas ao configurar um destino pela
 
 ## Gerenciar políticas de uso de dados {#policies}
 
-Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, as políticas de uso de dados devem ser definidas e ativadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão para ou tem restrição de executar em dados dentro da CDP em tempo real. Consulte a seção &quot;Políticas de uso de dados&quot; em [!DNL Experience Platform] [Visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
+Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, as políticas de uso de dados devem ser definidas e ativadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados no Real-Time CDP. Consulte a seção &quot;Políticas de uso de dados&quot; em [!DNL Experience Platform] [Visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
 
 A Adobe Experience Platform fornece várias políticas principais para casos de uso comuns da experiência do cliente. Essas políticas podem ser visualizadas na interface do usuário navegando até o **[!UICONTROL Políticas]** e selecionar o **[!UICONTROL Procurar]** guia . Consulte a [guia do usuário de políticas](../../data-governance/policies/user-guide.md) no [!DNL Experience Platform] documentação para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
 
 ## Impor conformidade de uso de dados {#enforce}
 
-Depois que os dados forem rotulados e as políticas de uso forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos na CDP em tempo real, a Governança de dados aplica automaticamente as políticas de uso em caso de violação.
+Depois que os dados forem rotulados e as políticas de uso forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos no Real-Time CDP, a Governança de dados aplica automaticamente as políticas de uso em caso de violação.
 
 Consulte o documento em [aplicação automática da política](../../data-governance/enforcement/auto-enforcement.md) para obter mais informações.
 
 ## Próximas etapas
 
-Agora que você foi introduzido nos principais recursos de Governança de dados da CDP em tempo real e como [!DNL Experience Platform] habilite-os, continue para o [documentação da Governança de dados no Adobe Experience Platform](../../data-governance/home.md). A documentação fornece visões gerais dos conceitos essenciais de Governança de dados, bem como fluxos de trabalho passo a passo para gerenciar rótulos e políticas de uso de dados.
+Agora que você foi introduzido nos principais recursos de Governança de dados do Real-Time CDP e como [!DNL Experience Platform] habilite-os, continue para o [documentação da Governança de dados no Adobe Experience Platform](../../data-governance/home.md). A documentação fornece visões gerais dos conceitos essenciais de Governança de dados, bem como fluxos de trabalho passo a passo para gerenciar rótulos e políticas de uso de dados.
 
-O vídeo a seguir fornece uma visão geral da Governança de dados na CDP em tempo real, incluindo o uso de casos de uso de marketing em destinos e fluxos de trabalho de exemplo para diferentes cenários:
+O vídeo a seguir fornece uma visão geral da Governança de dados no Real-Time CDP, incluindo o uso de casos de uso de marketing em destinos e fluxos de trabalho de exemplo para diferentes cenários:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)

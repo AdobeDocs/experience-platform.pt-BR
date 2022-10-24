@@ -1,17 +1,18 @@
 ---
-title: Esquemas na Plataforma de dados do cliente em tempo real
-description: Uma visão geral da função dos esquemas do Experience Data Model (XDM) na Plataforma de dados do cliente em tempo real.
-source-git-commit: fb2dc2b7e63f41102c0c20ba106ae4571a4a1363
+title: Esquemas no Real-time Customer Data Platform
+description: Uma visão geral da função dos esquemas do Experience Data Model (XDM) no Adobe Real-time Customer Data Platform.
+exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
-# Esquemas na Plataforma de dados do cliente em tempo real
+# Esquemas no Real-time Customer Data Platform
 
-Todos os dados trazidos para a Plataforma de dados do cliente em tempo real devem estar em conformidade com uma estrutura padrão e desnormalizada para que sejam reconhecidos e utilizados pelos recursos e funcionalidades de downstream. O Experience Data Model (XDM) é a estrutura padrão que fornece essa estrutura no formato de schemas.
+Todos os dados trazidos para o Adobe Real-time Customer Data Platform devem estar em conformidade com uma estrutura padrão e desnormalizada para que sejam reconhecidos e utilizados pelos recursos e recursos de downstream. O Experience Data Model (XDM) é a estrutura padrão que fornece essa estrutura no formato de schemas.
 
 Depois de criar esquemas, você pode mapear a estrutura dos dados para XDM para que possam ser assimilados no sistema.
 
-Para obter mais informações sobre o XDM e como gerenciar schemas na interface do usuário, consulte a [documentação do XDM](../../xdm/home.md). Se você estiver usando a Plataforma do cliente em tempo real B2B Edition, consulte o documento sobre [schemas na CDP em tempo real B2B Edition](./b2b.md) para obter informações sobre aplicativos específicos B2B para XDM.
+Para obter mais informações sobre o XDM e como gerenciar schemas na interface do usuário, consulte o [Documentação XDM](../../xdm/home.md). Se você estiver usando a Real-time Customer Platform B2B Edition, consulte o documento em [esquemas no Real-Time CDP B2B Edition](./b2b.md) para informações sobre aplicações específicas para B2B para XDM.

@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: notas de versão;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '983'
+ht-degree: 10%
 
 ---
 
@@ -93,12 +93,12 @@ Em [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são
 
 **Novos destinos**
 
-A CDP em tempo real agora oferece suporte à ativação de dados para mais de cinquenta [!DNL Experience Cloud Launch] extensões, habilitando análises, personalização e outros casos de uso. Veja os detalhes abaixo:
+O Real-Time CDP agora oferece suporte à ativação de dados para mais de cinquenta [!DNL Experience Cloud Launch] extensões, habilitando análises, personalização e outros casos de uso. Veja os detalhes abaixo:
 
 | Documentação | Descrição |
 |--- | ---|
-| [Tipos e categorias de destino](../../destinations/destination-types.md) | Este artigo explica a diferença entre conexões e extensões na interface da CDP em tempo real e recomenda quando usar cada um desses destinos. |
-| [Extensões do Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica o que [!DNL Launch] extensões são, listas de casos de uso para usá-las e links para a documentação de cada [!DNL Launch] na CDP em tempo real. |
+| [Tipos e categorias de destino](../../destinations/destination-types.md) | Este artigo explica a diferença entre conexões e extensões na interface do Real-Time CDP e recomenda quando usar cada um desses destinos. |
+| [Extensões do Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica o que [!DNL Launch] extensões são, listas de casos de uso para usá-las e links para a documentação de cada [!DNL Launch] no Real-Time CDP. |
 
 Para obter mais informações, consulte o [Visão geral dos destinos](../../destinations/home.md).
 

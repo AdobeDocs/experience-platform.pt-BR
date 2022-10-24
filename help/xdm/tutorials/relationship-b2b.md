@@ -1,10 +1,10 @@
 ---
 title: Definir uma relação entre dois esquemas no Real-time Customer Data Platform B2B Edition
-description: Saiba como definir uma relação muitos para um entre dois schemas no Real-time Customer Data Platform B2B Edition.
+description: Saiba como definir uma relação muitos para um entre dois schemas no Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >title="Esquema de referência"
 >abstract="Selecione o schema com o qual deseja estabelecer uma relação. Dependendo da classe do schema, ele também pode ter relacionamentos existentes com outras entidades no contexto B2B. Consulte a documentação para saber como as classes de esquema B2B se relacionam umas às outras."
 
-A Real-time Customer Data Platform B2B Edition fornece várias classes de Modelo de Dados de Experiência (XDM) que capturam entidades de dados B2B fundamentais, incluindo [contas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campanhas](../classes/b2b/business-campaign.md)e muito mais. Ao criar schemas com base nessas classes e habilitá-las para uso no [Perfil do cliente em tempo real](../../profile/home.md), é possível mesclar dados de fontes diferentes em uma representação unificada chamada de schema de união.
+A Adobe Real-time Customer Data Platform B2B Edition fornece várias classes de Modelo de Dados de Experiência (XDM) que capturam entidades de dados B2B fundamentais, incluindo [contas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campanhas](../classes/b2b/business-campaign.md)e muito mais. Ao criar schemas com base nessas classes e habilitá-las para uso no [Perfil do cliente em tempo real](../../profile/home.md), é possível mesclar dados de fontes diferentes em uma representação unificada chamada de schema de união.
 
 No entanto, os esquemas de união só podem conter campos capturados por esquemas que compartilham a mesma classe. É aqui que os relacionamentos de esquema entram. Ao implementar relacionamentos em seus esquemas B2B, você pode descrever como essas entidades de negócios se relacionam entre si e podem incluir atributos de várias classes em casos de uso de segmentação downstream.
 
@@ -24,7 +24,7 @@ O diagrama a seguir fornece um exemplo de como as diferentes classes B2B podem s
 
 ![Relações de classe B2B](../images/tutorials/relationship-b2b/classes.png)
 
-Este tutorial aborda as etapas para definir uma relação muitos para um entre dois schemas na CDP B2B Edition em tempo real.
+Este tutorial aborda as etapas para definir uma relação muitos para um entre dois schemas no Real-Time CDP B2B Edition.
 
 >[!NOTE]
 >
@@ -123,4 +123,4 @@ Se você exibir a estrutura do schema de destino, o marcador de relação aparec
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma relação muitos para um entre dois schemas usando o [!DNL Schema Editor]. Depois que os dados forem assimilados usando conjuntos de dados baseados nesses esquemas e os dados tiverem sido ativados no armazenamento de dados do Perfil, você poderá usar atributos de ambos os esquemas para casos de uso de segmentação de várias classes. Consulte a documentação da Real-time CDP B2B Edition para obter mais informações.
+Ao seguir este tutorial, você criou com êxito uma relação muitos para um entre dois schemas usando o [!DNL Schema Editor]. Depois que os dados forem assimilados usando conjuntos de dados baseados nesses esquemas e os dados tiverem sido ativados no armazenamento de dados do Perfil, você poderá usar atributos de ambos os esquemas para casos de uso de segmentação de várias classes. Consulte a documentação do Real-Time CDP B2B Edition para obter mais informações.

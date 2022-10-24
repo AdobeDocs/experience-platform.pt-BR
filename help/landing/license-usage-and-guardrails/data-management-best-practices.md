@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform, home, tópicos populares, gerenciamento de dados, direito de licença, licenciamento, práticas recomendadas
 title: Práticas recomendadas de direito à licença de gerenciamento de dados
-description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença com o Adobe Experience Platform.
+description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
-ht-degree: 1%
+source-wordcount: '2529'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +47,7 @@ Ao licenciar o Experience Platform, você recebe direitos de uso de licença que
 
 O [!DNL Profile Richness] varia dependendo do licenciamento adquirido. Há dois cálculos para [!DNL Profile Richness] disponível:
 
-* A soma de todos os dados de produção armazenados no Real-time Customer Data Platform (ou seja, Serviço de perfil e Serviço de identidade) em qualquer momento, dividida pela variável [!DNL Addressable Audience];
+* A soma de todos os dados de produção armazenados no Adobe Real-time Customer Data Platform (ou seja, Serviço de perfil e Serviço de identidade) em qualquer momento, dividida pela variável [!DNL Addressable Audience];
 * A soma de todos os dados armazenados no Platform (incluindo, mas não se limitando a, [!DNL Data Lake], Serviço de perfil e Serviço de identidade) em qualquer momento e em quaisquer dados transmitidos (em vez de armazenar na) na plataforma nos últimos 12 meses, divididos pela variável [!DNL Addressable Audience].
 
 A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização.

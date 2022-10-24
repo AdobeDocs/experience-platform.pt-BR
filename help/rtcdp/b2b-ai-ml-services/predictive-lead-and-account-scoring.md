@@ -1,15 +1,16 @@
 ---
-title: Lead preditivo e pontuação de conta na CDP em tempo real B2B
+title: Lead preditivo e pontuação de conta no Real-Time CDP B2B
 type: Documentation
 description: Uma visão geral e mais informações sobre o lead preditivo e o recurso de pontuação de conta na Experience Platform CDP B2B.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: d3afbabb-005d-4537-831a-857c88043759
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 2%
 
 ---
 
-# Lead preditivo e pontuação de conta na CDP em tempo real B2B
+# Lead preditivo e pontuação de conta no Real-Time CDP B2B
 
 Os profissionais de marketing B2B enfrentam vários desafios no topo do funil de marketing. Para serem eficazes, os profissionais de marketing B2B precisam de uma maneira automatizada de qualificar o grande número de pessoas para que possam se concentrar nos alvos de alto valor. A qualificação deve ser alinhada ao resultado final das vendas, não apenas à conversão de marketing.
 

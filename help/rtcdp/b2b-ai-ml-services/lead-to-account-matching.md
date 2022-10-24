@@ -1,16 +1,16 @@
 ---
-title: Lead para a correspondência de contas na CDP em tempo real B2B
+title: Lead para a correspondência da conta no Real-Time CDP B2B
 type: Documentation
 description: Uma visão geral e mais informações sobre o recurso de lead para o recurso de correspondência da conta no Experience Platform CDP B2B.
-source-git-commit: 827bd1b930478c3c0b553a9485f98545771a9062
+exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 3%
 
 ---
 
-
-# Lead para a correspondência de contas na CDP em tempo real B2B
+# Lead para a correspondência da conta no Real-Time CDP B2B
 
 ## Visão geral {#overview}
 

@@ -2,9 +2,9 @@
 title: Guia do painel Perfis da conta
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os perfis da conta B2B de sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Para obter uma visão geral de todos os recursos na interface do usuário do per
 
 ## Introdução
 
-Você deve ter direito a [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para ter acesso ao B2B [!UICONTROL Perfis de conta] painel.
+Você deve ter direito a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para ter acesso ao B2B [!UICONTROL Perfis de conta] painel.
 
 ## Dados de perfis de conta
 
@@ -45,7 +45,7 @@ Selecione o [!UICONTROL ID do perfil] dos resultados exibidos na [!UICONTROL Pro
 
 ![Os Perfis de conta navegam na guia com os resultados exibidos e a ID de perfil é realçada.](../images/account-profiles/account-profiles-browse-tab.png)
 
-As informações do perfil da conta exibidas no [!UICONTROL Detalhes] A guia foi unida de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação em [navegar pelos perfis da conta no Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização do perfil da conta na interface do usuário da plataforma.
+As informações do perfil da conta exibidas no [!UICONTROL Detalhes] A guia foi unida de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação em [navegar pelos perfis da conta no Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização do perfil da conta na interface do usuário da plataforma.
 
 ## O [!UICONTROL Perfis de conta] [!UICONTROL Visão geral] {#overview}
 

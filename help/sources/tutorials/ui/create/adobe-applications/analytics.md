@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ Várias conexões vinculadas podem ser feitas para trazer vários conjuntos de r
 
 >[!NOTE]
 >
->Os dados de vários conjuntos de relatórios podem ser ativados para o Perfil de dados do cliente em tempo real somente se não houver conflitos de dados, como duas propriedades personalizadas (eVars, listas e props) que tenham um significado diferente.
+>Os dados de vários conjuntos de relatórios podem ser ativados para o Perfil do cliente em tempo real somente se não houver conflitos de dados, como duas propriedades personalizadas (eVars, listas e props) que tenham um significado diferente.
 
 Para criar um [!DNL Analytics] conexão de origem, selecione um conjunto de relatórios e depois selecione **[!UICONTROL Próximo]** para continuar.
 

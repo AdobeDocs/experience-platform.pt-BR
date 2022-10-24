@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de março de 2022
 description: As notas de versão de março de 2022 para o Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -47,7 +47,7 @@ Para obter mais informações sobre logs de auditoria na Platform, consulte [vis
 >
 >O recurso Contas relacionadas está disponível somente para clientes do Real-Time CDP B2B Edition.
 
-As empresas B2B geralmente têm as informações de seus clientes armazenadas em vários sistemas, cada um incluindo apenas dados parciais ou até mesmo conflitantes para a mesma entidade de negócios real. Isto cria um enorme desafio de chegar a uma visão precisa dos seus clientes, reduzindo assim a eficiência e a eficácia dos seus esforços de marketing e vendas B2B. Com o lançamento de contas relacionadas, [!DNL Real-time CDP B2B] O agora mostra uma lista de contas semelhantes à conta que você está navegando. É possível incluir as contas relacionadas nas definições de segmento para ampliar o alcance ou aplicar critérios mais amplos em seus segmentos.
+As empresas B2B geralmente têm as informações de seus clientes armazenadas em vários sistemas, cada um incluindo apenas dados parciais ou até mesmo conflitantes para a mesma entidade de negócios real. Isto cria um enorme desafio de chegar a uma visão precisa dos seus clientes, reduzindo assim a eficiência e a eficácia dos seus esforços de marketing e vendas B2B. Com o lançamento de contas relacionadas, [!DNL Real-Time CDP B2B] O agora mostra uma lista de contas semelhantes à conta que você está navegando. É possível incluir as contas relacionadas nas definições de segmento para ampliar o alcance ou aplicar critérios mais amplos em seus segmentos.
 
 Leia mais sobre o recurso nas seguintes páginas de documentação:
 
@@ -55,7 +55,7 @@ Leia mais sobre o recurso nas seguintes páginas de documentação:
 - [Guia contas relacionadas no guia da interface do usuário do perfil da conta](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Como usar contas relacionadas em definições de segmento](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Para saber mais sobre a Real-time CDP B2B Edition, consulte o [visão geral](../../rtcdp/overview.md).
+Para saber mais sobre o Real-Time CDP B2B Edition, consulte o [visão geral](../../rtcdp/overview.md).
 
 ## Alertas {#alerts}
 

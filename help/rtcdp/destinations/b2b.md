@@ -1,10 +1,10 @@
 ---
 title: Destinos no Real-time Customer Data Platform B2B Edition
-description: Uma visão geral da função dos destinos no Real-time Customer Data Platform B2B Edition.
+description: Uma visão geral da função dos destinos no Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Se você não estiver usando o Real-time Customer Data Platform B2B Edition, consulte [visão geral dos destinos](../../destinations/home.md) em vez disso.
+>Se você não estiver usando o Adobe Real-time Customer Data Platform B2B Edition, consulte [visão geral dos destinos](../../destinations/home.md) em vez disso.
 
-Os destinos Experience Platform totalmente compatíveis com a Real-time CDP B2B Edition incluem Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads e Google Ad Manager.
+Os destinos de Experience Platform totalmente compatíveis com o Real-Time CDP B2B Edition incluem Correspondência de clientes do Google, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google e Google Ad Manager.
 
 Para entender como os destinos se encaixam no fluxo de trabalho B2B, consulte [tutorial completo](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-O Real-time Customer Data Platform B2B Edition permite exportar seus dados B2B por meio do conector de destino do Marketo Engage. Ao usar o destino Marketo Engage, é possível enviar segmentos criados no Adobe Experience Platform para o Marketo, onde serão exibidos como listas estáticas.
+O Adobe Real-time Customer Data Platform B2B Edition permite exportar seus dados B2B por meio do conector de destino do Marketo Engage. Ao usar o destino Marketo Engage, é possível enviar segmentos criados no Adobe Experience Platform para o Marketo, onde serão exibidos como listas estáticas.
 
 Os seguintes documentos fornecem mais informações sobre como usar o destino Marketo Engage para exportar dados:
 

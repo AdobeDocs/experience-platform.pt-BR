@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '888'
+ht-degree: 9%
 
 ---
 
@@ -91,13 +91,13 @@ Para obter mais informações sobre fontes, consulte o [visão geral das fontes]
 
 ## Destinos {#destinations}
 
-Em [CDP em tempo real](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+Em [Real-Time CDP](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 |--- | ---|
-| Suporte para permissões de controle de acesso | A funcionalidade Destinos na CDP em tempo real funciona com permissões de controle de acesso do Adobe Experience Platform. Dependendo do nível de permissão do usuário, você pode visualizar, gerenciar e ativar destinos. |
+| Suporte para permissões de controle de acesso | A funcionalidade Destinos no Real-Time CDP funciona com permissões de controle de acesso do Adobe Experience Platform. Dependendo do nível de permissão do usuário, você pode visualizar, gerenciar e ativar destinos. |
 
 **Permissões de controle de acesso**
 

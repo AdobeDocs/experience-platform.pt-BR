@@ -1,15 +1,16 @@
 ---
-title: Gerenciar lead preditivo e pontuação de conta na CDP em tempo real B2B
+title: Gerenciar lead preditivo e pontuação de conta no Real-Time CDP B2B
 type: Documentation
 description: Este documento fornece informações sobre o gerenciamento do lead preditivo e do recurso de pontuação de conta no Experience Platform CDP B2B.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 2%
 
 ---
 
-# Gerenciar lead preditivo e pontuação de conta no Real-time Customer Data Platform, B2B Edition
+# Gerenciar lead preditivo e pontuação de conta no Adobe Real-time Customer Data Platform, B2B Edition
 
 >[!NOTE]
 >

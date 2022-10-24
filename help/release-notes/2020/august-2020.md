@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '572'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -45,7 +45,7 @@ Novos destinos estão disponíveis, onde você pode ativar os dados do Adobe Exp
 
 | Destino | Descrição |
 |--- | ---|
-| [!DNL Google Customer Match] | A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como: [!DNL Search], [!DNL Shopping], Gmail e YouTube. <br><br> Visite o [!DNL Google Customer Match] [página](../../destinations/catalog/advertising/google-customer-match.md) no catálogo de destinos para obter mais informações sobre o destino e como configurá-lo na CDP em tempo real. |
+| [!DNL Google Customer Match] | A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como: [!DNL Search], [!DNL Shopping], Gmail e YouTube. <br><br> Visite o [!DNL Google Customer Match] [página](../../destinations/catalog/advertising/google-customer-match.md) no catálogo de destinos para obter mais informações sobre o destino e como configurá-lo no Real-Time CDP. |
 
 **Novos recursos**
 
@@ -54,17 +54,17 @@ Novos destinos estão disponíveis, onde você pode ativar os dados do Adobe Exp
 | Editor de nome de arquivo personalizado | Atualize para o workflow de ativação de dados para destinos de marketing por email e destinos de armazenamento na nuvem que permitem editar o nome dos arquivos exportados. Para obter mais informações, consulte [ Etapa de configuração](../../destinations/ui/activate-batch-profile-destinations.md) no fluxo de trabalho de ativação. |
 | Atributos recomendados | Atualize para o fluxo de trabalho de ativação de dados para destinos de marketing por email e destinos de armazenamento na nuvem que exibem atributos recomendados para você adicionar aos arquivos exportados. Para obter mais informações, consulte [Etapa Selecionar atributos](../../destinations/ui/activate-batch-profile-destinations.md) no fluxo de trabalho de ativação. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Criado no Experience Platform, Real-time Customer Data Platform ([!DNL Real-time CDP]) ajuda as empresas a unirem dados conhecidos e desconhecidos para ativar perfis do cliente com decisões inteligentes na jornada do cliente. [!DNL Real-time CDP] O combina várias fontes de dados corporativas para criar perfis de clientes em tempo real. Os segmentos criados a partir desses perfis podem ser enviados para destinos downstream para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
+Criado no Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) ajuda as empresas a unirem dados conhecidos e desconhecidos para ativar perfis do cliente com decisões inteligentes na jornada do cliente. [!DNL Real-Time CDP] O combina várias fontes de dados corporativas para criar perfis de clientes em tempo real. Os segmentos criados a partir desses perfis podem ser enviados para destinos downstream para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte ao IAB TCF 2.0 | [!DNL Real-time CDP] agora é um fornecedor registrado para a versão 2.0 do [!DNL Transparency & Consent Framework] (TCF), conforme descrito pela [!DNL Interactive Advertising Bureau] (IAB). Você pode configurar as operações de dados e os esquemas de perfil para aceitar os dados de consentimento do cliente gerados por uma CMP e aplicar as preferências de consentimento dos clientes ao ativar segmentos para destinos downstream. |
+| Suporte ao IAB TCF 2.0 | [!DNL Real-Time CDP] agora é um fornecedor registrado para a versão 2.0 do [!DNL Transparency & Consent Framework] (TCF), conforme descrito pela [!DNL Interactive Advertising Bureau] (IAB). Você pode configurar as operações de dados e os esquemas de perfil para aceitar os dados de consentimento do cliente gerados por uma CMP e aplicar as preferências de consentimento dos clientes ao ativar segmentos para destinos downstream. |
 
-Para obter mais informações sobre [!DNL Real-time CDP], consulte o [[!DNL Real-time CDP] visão geral](../../rtcdp/overview.md).
+Para obter mais informações sobre [!DNL Real-Time CDP], consulte o [[!DNL Real-Time CDP] visão geral](../../rtcdp/overview.md).
 
 ## Fontes {#sources}
 

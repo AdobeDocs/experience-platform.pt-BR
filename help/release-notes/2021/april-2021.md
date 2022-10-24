@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -61,7 +61,7 @@ O Customer AI disponível no Real-time Customer Data Platform é usado para gera
 
 Para obter mais informações sobre conjuntos de dados compatíveis, consulte o [[!DNL Intelligent Services] documentação de preparação de dados](../../intelligent-services/data-preparation.md).
 
-### Attribution AI
+### IA de atribuição
 
 O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 

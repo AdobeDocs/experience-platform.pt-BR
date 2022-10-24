@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -120,7 +120,7 @@ Em [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Atualizações de UX dos detalhes do destino | O fluxo de trabalho de destino da CDP em tempo real agora inclui o monitoramento em linha, para que você possa ver quais ativações em lote foram bem-sucedidas. Esse recurso permitirá que os usuários resolvam problemas diretamente no workflow para destinos em lote por meio de alertas e um painel de monitoramento para rastrear erros no pipeline de processamento. |
+| Atualizações de UX dos detalhes do destino | O fluxo de trabalho de destino do Real-Time CDP agora inclui monitoramento em linha para que você possa ver quais ativações em lote foram bem-sucedidas. Esse recurso permitirá que os usuários resolvam problemas diretamente no workflow para destinos em lote por meio de alertas e um painel de monitoramento para rastrear erros no pipeline de processamento. |
 | Criptografia de arquivo | Para destinos com base em arquivo, os usuários agora podem adicionar criptografia aos arquivos exportados. |
 | Agendamento de arquivo | Para destinos de armazenamento em nuvem e com base em email, os usuários podem criar uma exportação única ou criar instantâneos diários. |
 | Campos obrigatórios | Os usuários podem marcar campos como obrigatórios, garantindo que apenas os campos que contêm o campo obrigatório sejam exportados. |
@@ -139,7 +139,7 @@ Os Serviços inteligentes capacitam analistas e profissionais de marketing a apr
 
 Para mais informações, leia a seção sobre [adicionar campos de identidade a um conjunto de dados](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) no guia de preparação de dados dos Serviços inteligentes .
 
-### Attribution AI
+### IA de atribuição
 
 O Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais e algoritmos que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados.
 
@@ -163,7 +163,7 @@ Para obter mais informações, leia o [Visão geral do Attribution AI](../../int
 
 ### Customer AI
 
-O Customer AI, como parte dos Serviços inteligentes, fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações. Com a ajuda de fatores influentes, a AI do cliente pode informar o que um cliente deve fazer e por quê. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights do Customer AI para personalizar as experiências do cliente, disponibilizando as ofertas e mensagens mais apropriadas.
+O Customer AI, como parte dos Serviços inteligentes, fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações. Com a ajuda de fatores influentes, a IA do cliente pode informar o que um cliente deve fazer e por quê. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights da IA do cliente para personalizar as experiências do cliente, disponibilizando as ofertas e mensagens mais apropriadas.
 
 **Principais recursos**
 

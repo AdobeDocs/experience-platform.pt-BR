@@ -1,9 +1,9 @@
 ---
 title: Insights de relatórios da loja acelerada de query
 description: Saiba como criar um modelo de dados de insights de relatório por meio do Serviço de query para uso com dados de loja acelerados e painéis definidos pelo usuário.
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 O armazenamento acelerado de query permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Normalmente, os dados são processados em intervalos regulares (por exemplo, de hora em hora ou diariamente), onde exibições agregadas são criadas e relatadas. A análise desses relatórios gerados a partir de dados agregados deriva informações destinadas a melhorar o desempenho dos negócios. O armazenamento acelerado do query fornece um serviço de cache, simultaneidade, uma experiência interativa e uma API sem estado. No entanto, presume que os dados sejam pré-processados e otimizados para consulta agregada e não para consulta de dados brutos.
 
-O armazenamento acelerado de query permite criar um modelo de dados personalizado e/ou estender em modelos de dados existentes do Real-time Customer Data Platform. Em seguida, você pode interagir ou incorporar seus insights de relatórios em uma estrutura de relatórios/visualização de sua escolha. Consulte a documentação do Modelo de dados do Real-time Customer Data Platform Insights para saber como [personalize seus modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de indicador de desempenho principal (KPI) de marketing](../../dashboards/cdp-insights-data-model.md).
+O armazenamento acelerado de query permite criar um modelo de dados personalizado e/ou estender em modelos de dados existentes do Adobe Real-time Customer Data Platform. Em seguida, você pode interagir ou incorporar seus insights de relatórios em uma estrutura de relatórios/visualização de sua escolha. Consulte a documentação do Modelo de dados do Real-time Customer Data Platform Insights para saber como [personalize seus modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de indicador de desempenho principal (KPI) de marketing](../../dashboards/cdp-insights-data-model.md).
 
 O modelo de dados do Real-Time CDP do Adobe Experience Platform fornece informações sobre perfis, segmentos e destinos e permite o uso de painéis do Real-Time CDP Insight. Este documento o orienta pelo processo de criação de seu modelo de dados de insights de relatórios e também como estender modelos de dados do Real-Time CDP, conforme necessário.
 

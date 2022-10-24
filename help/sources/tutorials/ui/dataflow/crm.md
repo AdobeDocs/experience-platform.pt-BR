@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de CRM usando a interface do usuário da plataforma.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ A Platform fornece recomendações inteligentes para campos mapeados automaticam
 
 >[!NOTE]
 >
->Se estiver usando [!DNL Salesforce] como parte do Real-time Customer Data Platform B2B Edition, consulte [[!DNL Salesforce] documento de mapeamento de campo](../../../connectors/adobe-applications/mapping/salesforce.md) para orientação sobre mapeamento [!DNL Salesforce] campos de origem para seus campos de destino XDM apropriados.
+>Se estiver usando [!DNL Salesforce] como parte do Adobe Real-time Customer Data Platform B2B Edition, consulte [[!DNL Salesforce] documento de mapeamento de campo](../../../connectors/adobe-applications/mapping/salesforce.md) para orientação sobre mapeamento [!DNL Salesforce] campos de origem para seus campos de destino XDM apropriados.
 
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 

@@ -1,9 +1,9 @@
 ---
 title: Pacotes do Serviço de Consulta
 description: O documento a seguir descreve os pacotes de recursos e produtos disponíveis para o Serviço de query e destaca as diferenças entre consultas ad hoc e em lote.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ O Adobe Experience Platform Query Service pode ser dividido em dois recursos com
 
 Os recursos do Serviço de query são empacotados com os seguintes produtos e complementos:
 
-- **Aplicativos baseados em plataforma** (Real-time Customer Data Platform, Customer Journey Analytics e Adobe Journey Optimizer): O acesso do Serviço de query para executar consultas ad hoc é fornecido desde o início com cada variação e nível de aplicativos baseados em plataforma.
+- **Aplicativos baseados em plataforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): O acesso do Serviço de query para executar consultas ad hoc é fornecido desde o início com cada variação e nível de aplicativos baseados em plataforma.
 - **[!DNL Data Distiller]** (pacote complementar que pode ser comprado com Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): O acesso do Serviço de query para executar consultas em lote é fornecido com [!DNL Data Distiller].
 
 A tabela a seguir descreve os principais direitos do Serviço de Consulta com base em como são empacotados:
@@ -30,7 +30,7 @@ A tabela a seguir descreve os principais direitos do Serviço de Consulta com ba
 | Caso de uso suportado | <ul><li>&#x200B; de exploração</li><li>&#x200B; de descoberta de dados</li><li>Validação de dados</li><li>Experimentação</li></ul> | <ul><li>Limpeza</li><li>Forma</li><li>Manipulação</li><li>Enriquecimento</li></ul> |
 | Semântica suportada | <ul><li>SELECIONAR consultas</li></ul> | <ul><li>Consultas CTAS e ITAS</li></ul> |
 | Tempo Máximo de Execução | 10 minutos | 24 horas |
-| Métrica de licença | **Consultar simultaneidade do usuário**: <ul><li>1 usuário simultâneo (CDP em tempo real, Adobe Journey Optimizer) &#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics) &#x200B;</li></ul> **Simultaneidade de Consulta**: <ul><li>1 query de execução simultânea (todos os aplicativos) &#x200B;</li></ul> **Complemento do pacote de usuários ad hoc adicionais** O pode ser comprado para aumentar os direitos de consulta ad hoc autorizados dos clientes. <ul><li>+5 utilizadores simultâneos adicionais por embalagem</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Computar Horas**: <ul><li>Variável (com base nos direitos de aplicativo do cliente)</li></ul> **Computar Horas** é uma medida do tempo gasto pelo mecanismo do Serviço de Consulta para ler, processar e gravar dados de volta no lago de dados quando uma consulta em lote é executada. |
+| Métrica de licença | **Consultar simultaneidade do usuário**: <ul><li>1 usuário simultâneo (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics) &#x200B;</li></ul> **Simultaneidade de Consulta**: <ul><li>1 query de execução simultânea (todos os aplicativos) &#x200B;</li></ul> **Complemento do pacote de usuários ad hoc adicionais** O pode ser comprado para aumentar os direitos de consulta ad hoc autorizados dos clientes. <ul><li>+5 utilizadores simultâneos adicionais por embalagem</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Computar Horas**: <ul><li>Variável (com base nos direitos de aplicativo do cliente)</li></ul> **Computar Horas** é uma medida do tempo gasto pelo mecanismo do Serviço de Consulta para ler, processar e gravar dados de volta no lago de dados quando uma consulta em lote é executada. |
 | Interface de execução de query | <ul><li>Interface do usuário do serviço de query</li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do usuário do cliente</li></ul> | <ul><li>interface do usuário do Query </li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do usuário do cliente</li><li>REST APIs</li></ul> |
 | Resultados da consulta retornados por | Interface do usuário do cliente | Conjunto de dados derivado armazenado no lago de dados |
 | Limite do resultado | <ul><li>Interface do usuário do Query - 100 linhas</li><li>Cliente de terceiros - 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | <ul><li>Interface do usuário do Query (sem limite superior para linhas)</li><li>Clientes de terceiros (sem limite superior para linhas)</li><li>[!DNL PostgresSQL] cliente (sem limite superior para linhas)</li><li>REST APIs (sem limite superior para linhas)</li></ul> |

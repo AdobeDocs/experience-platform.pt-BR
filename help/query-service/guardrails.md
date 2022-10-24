@@ -3,7 +3,7 @@ keywords: Experience Platform; query; serviço de consulta; solução de problem
 title: Medidas de proteção para o serviço de consulta
 description: Este documento fornece informações sobre limites de uso para dados do Serviço de query para ajudá-lo a otimizar o uso do query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: e40a9fb0149e194de693a98e5d185860a255b5c4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 4%
@@ -84,7 +84,7 @@ A tabela abaixo fornece os limites de garantia e a descrição recomendados para
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 |---|---|---|---|
-| Simultaneidade de query | 4 | Grave | Para garantir que as consultas sobre dados agregados por meio da API de relatórios (incluindo consultas que aprimoram modelos de dados, como os modelos de dados da CDP em tempo real) tenham os recursos para serem executadas com eficiência, a API de relatórios rastreia a utilização de recursos atribuindo slots de simultaneidade a cada query. O sistema coloca consultas em uma fila e aguarda até que os slots de simultaneidade fiquem disponíveis ou possam ser enviados do cache. No máximo quatro slots de query simultâneos estão disponíveis em um determinado momento.<br>Se você acessar a API de relatórios por meio de uma ferramenta de BI e precisar de mais simultaneidade, será necessário um servidor de BI. |
+| Simultaneidade de query | 4 | Grave | Para garantir que as consultas sobre dados agregados por meio da API de relatórios (incluindo consultas que aprimoram modelos de dados como os modelos de dados do Real-Time CDP) tenham os recursos para serem executadas com eficiência, a API de relatórios rastreia a utilização de recursos ao atribuir slots de simultaneidade a cada query. O sistema coloca consultas em uma fila e aguarda até que os slots de simultaneidade fiquem disponíveis ou possam ser enviados do cache. No máximo quatro slots de query simultâneos estão disponíveis em um determinado momento.<br>Se você acessar a API de relatórios por meio de uma ferramenta de BI e precisar de mais simultaneidade, será necessário um servidor de BI. |
 
 {style=&quot;table-layout:auto&quot;}
 

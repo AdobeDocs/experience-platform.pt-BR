@@ -1,9 +1,9 @@
 ---
 title: Contas relacionadas no Real-Time CDP B2B Edition
 type: Documentation
-description: Uma visão geral e mais informações sobre o recurso de contas relacionadas no Experience Platform Real-time CDP B2B.
+description: Uma visão geral e mais informações sobre o recurso de contas relacionadas no Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 6%
@@ -26,7 +26,7 @@ As empresas B2B geralmente têm as informações de seus clientes armazenadas em
 
 {style=&quot;table-layout:auto&quot;}
 
-Com contas relacionadas, [!DNL Real-time CDP B2B] O agora mostra uma lista de contas semelhantes à conta que você está navegando.
+Com contas relacionadas, [!DNL Real-Time CDP B2B] O agora mostra uma lista de contas semelhantes à conta que você está navegando.
 
 ![Tela mostrando contas relacionadas na interface do usuário do Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

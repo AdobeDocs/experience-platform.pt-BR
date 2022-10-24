@@ -2,9 +2,9 @@
 title: Classe de Campanha Comercial XDM
 description: Este documento fornece uma visão geral da classe de Campanha comercial XDM no Experience Data Model (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '240'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Esta classe destina-se a ser utilizada por organizações com acesso a [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso à CDP B2B Edition em tempo real para que essa classe participe do [Perfil do cliente em tempo real](../../../profile/home.md).
+>Esta classe destina-se a ser utilizada por organizações com acesso a [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso ao Real-Time CDP B2B Edition para que essa classe participe do [Perfil do cliente em tempo real](../../../profile/home.md).
 
 [!UICONTROL Campanha comercial XDM] é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma campanha comercial.
 
@@ -31,6 +31,6 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-Para saber como essa classe se relaciona conceitualmente com outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform, consulte o guia em [relações de esquema na Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)
+Para saber como essa classe se relaciona conceitualmente com outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform, consulte o guia em [relações de esquema no Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 
 Para campos adicionais compatíveis com essa classe, consulte a referência de grupo de campos para [[!UICONTROL Detalhes da campanha comercial XDM]](../../field-groups/b2b-campaign/details.md).

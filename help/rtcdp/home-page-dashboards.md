@@ -3,22 +3,22 @@ keywords: visão geral das métricas; visão geral das métricas do rtcdp
 title: Página inicial e painéis do Real-time Customer Data Platform
 description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 2%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] página inicial e painéis
+# [!DNL Real-Time Customer Data Platform] página inicial e painéis
 
-A página inicial da Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibida ao fazer logon na CDP em tempo real.
+A página inicial do Adobe Real-time Customer Data Platform (Real-Time CDP), que inclui um painel de métricas, é exibida ao fazer logon no Real-Time CDP.
 
-A página inicial é apenas um dos locais onde os cartões de métrica são exibidos. A CDP em tempo real fornece cartões de métrica em toda a sua experiência. Essas métricas informam sobre os dados, o perfil e os públicos do segmento no sistema.
+A página inicial é apenas um dos locais onde os cartões de métrica são exibidos. O Real-Time CDP fornece cartões de métrica em toda a sua experiência. Essas métricas informam sobre os dados, o perfil e os públicos do segmento no sistema.
 
 ![imagem](assets/home.png)
 
-Se não houver dados no sistema quando você fizer logon na CDP em tempo real, o painel na página inicial não será exibido. Nesse caso, a página inicial fornece material de aprendizagem para uma primeira experiência do usuário. Conforme os dados são coletados, em outras palavras, como <!--sources-->conjuntos de dados, perfis, segmentos e destinos são criados e fluxos de dados no sistema — o painel é atualizado automaticamente para exibir informações sobre esses dados<!-- in metric cards-->.
+Se não houver dados no sistema quando você fizer logon no Real-Time CDP, o painel na página inicial não será exibido. Nesse caso, a página inicial fornece material de aprendizagem para uma primeira experiência do usuário. Conforme os dados são coletados, em outras palavras, como <!--sources-->conjuntos de dados, perfis, segmentos e destinos são criados e fluxos de dados no sistema — o painel é atualizado automaticamente para exibir informações sobre esses dados<!-- in metric cards-->.
 
 ## Exibição do painel da página inicial
 
@@ -53,7 +53,7 @@ Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) 
 
 O número de perfis é atualizado uma vez a cada 24 horas.
 
-Para obter mais informações sobre perfis, consulte [Uma visão unificada do cliente na CDP em tempo real](profile/profile-overview.md).
+Para obter mais informações sobre perfis, consulte [Uma exibição unificada de seu cliente no Real-Time CDP](profile/profile-overview.md).
 
 ### Segmentos
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

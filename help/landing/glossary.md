@@ -5,9 +5,9 @@ title: Glossário do Adobe Experience Platform
 topic-legacy: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 **Rótulo do contrato C6**: A `C6` o rótulo de uso de dados do contrato especifica que os dados não podem ser usados para direcionamento de anúncios no site. O direcionamento de anúncios no site inclui a seleção e a entrega de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tais anúncios. Isso inclui o uso de dados no site coletados anteriormente sobre o interesse dos usuários em selecionar anúncios, processar dados sobre quais anúncios foram mostrados, quando e onde foram exibidos e se os usuários tomaram alguma ação relacionada ao anúncio, como selecionar um anúncio ou fazer uma compra.
 
-**Rótulo do contrato C7**: A `C7` o rótulo de uso de dados do contrato especifica que os dados não podem ser usados para direcionamento no site do conteúdo. O direcionamento de conteúdo no site inclui a seleção e a entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre o interesse dos usuários em selecionar o conteúdo, processar dados sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo.
+**Rótulo do contrato C7**: A `C7` o rótulo de uso de dados do contrato especifica que os dados não podem ser usados para direcionamento no site do conteúdo. O direcionamento de conteúdo no site inclui a seleção e a entrega de conteúdo nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tal conteúdo. Isso inclui informações coletadas anteriormente sobre o interesse dos usuários em selecionar conteúdo, processar dados sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo foi exibido, quando e onde foi exibido e se os usuários realizaram ações relacionadas ao conteúdo, incluindo, por exemplo, a seleção de conteúdo.
 
 **Rótulo do contrato C8**: A `C8` o rótulo de uso de dados do contrato especifica que os dados não podem ser usados para medir os sites ou aplicativos de sua organização. Isso não inclui o direcionamento baseado em interesses, que é a coleção de informações sobre o uso desse serviço para personalizar subsequentemente o conteúdo e/ou a publicidade em outros contextos.
 
@@ -298,7 +298,7 @@ ht-degree: 0%
 
 **Recurso de entrada**: Um recurso de entrada é especificado no mapeamento de recursos e é usado por um modelo de aprendizado de máquina para fazer previsões.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] como [!DNL Attribution AI] e [!DNL Customer AI] são modelos baseados em inteligência artificial e aprendizado de máquina que exigem o Experience Platform (ou aplicativos criados sobre a plataforma, como o Real-time Customer Data Platform) para serem executados e operados.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] como [!DNL Attribution AI] e [!DNL Customer AI] são modelos baseados em inteligência artificial e aprendizado de máquina que exigem o Experience Platform (ou aplicativos criados sobre a plataforma, como o Adobe Real-time Customer Data Platform) para serem executados e operados.
 
 **Direcionamento ou personalização com base em interesses**: O direcionamento baseado em juros, também conhecido como personalização, ocorre se as três condições a seguir forem atendidas:
 
@@ -414,7 +414,7 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] reúne dados conhecidos e desconhecidos do cliente para criar perfis confiáveis do cliente com integração simplificada, segmentação inteligente e ativação em tempo real na jornada digital do cliente.
+**Real-time Customer Data Platform**: O Adobe Real-time Customer Data Platform (Real-Time CDP) reúne dados conhecidos e desconhecidos do cliente para criar perfis confiáveis do cliente com integração simplificada, segmentação inteligente e ativação em tempo real na jornada digital do cliente.
 
 **Perfil do cliente em tempo real**: O Perfil do cliente em tempo real (às vezes chamado de Perfil) fornece uma visualização holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar os dados do cliente em perfis individuais que oferecem contas acionáveis com carimbos de data e hora de cada interação com o cliente.
 

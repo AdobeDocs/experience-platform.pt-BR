@@ -5,9 +5,9 @@ title: Importação e uso de públicos externos
 description: Siga este tutorial para saber como usar públicos externos com o Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,6 @@ A primeira etapa para usar públicos externos é criar um namespace de identidad
 Para criar um namespace de identidade, siga as instruções em [guia do namespace de identidade](../../identity-service/namespaces.md#manage-namespaces). Ao criar seu namespace de identidade, adicione os detalhes da origem ao namespace de identidade e marque sua [!UICONTROL Tipo] como **[!UICONTROL Identificador de não pessoas]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->Para começar a usar namespaces personalizados com públicos externos, será necessário criar um tíquete de suporte. Entre em contato com o representante do Adobe para obter mais detalhes.
 
 ## Criar um esquema para os metadados do segmento
 

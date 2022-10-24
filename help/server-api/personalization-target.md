@@ -2,9 +2,9 @@
 title: Personalização via Adobe Target
 description: Saiba como usar a API do servidor para entregar e renderizar experiências personalizadas criadas no Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '735'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ A API do Servidor de rede de borda pode fornecer e renderizar experiências pers
 
 >[!IMPORTANT]
 >
->Experiências de personalização criadas com o [Visual Experience Composer (VEC) do Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) não são compatíveis com a API do servidor.
+>Experiências de personalização criadas com o [Visual Experience Composer (VEC) do Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) não são totalmente compatíveis com a API do servidor. A API do servidor pode **recuperar** atividades criadas pelo VEC, mas a API de servidor não pode **renderizar** atividades criadas pelo VEC. Se você deseja renderizar atividades criadas pelo VEC, use a variável [Web SDK](../edge/home.md).
 
 ## Configurar o fluxo de dados {#configure-your-datastream}
 
@@ -79,7 +79,7 @@ O [!DNL Server API] O permite atualizações no perfil do Target. Para atualizar
 
 ## Consulta de atividades do Target {#querying-target-activities}
 
-### Schemas {#schemas}
+### Esquemas {#schemas}
 
 A parte de consulta da solicitação determina qual conteúdo é retornado pelo Target. Em `personalization` objeto, `schemas` determina o tipo de conteúdo a ser retornado pelo Target.
 

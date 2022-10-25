@@ -2,14 +2,20 @@
 title: Notas de versão para Tags e Encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 8%
+source-wordcount: '350'
+ht-degree: 6%
 
 ---
 
 # Notas de versão para tags e encaminhamento de eventos
+
+## 26 de outubro de 2022
+
+* **Tratamento de dados confidenciais para conjuntos de dados**: Os datastreams agora usam várias tecnologias da plataforma para lidar adequadamente com dados confidenciais, conforme empregado por regulamentos, como o Health Insurance Portability and Accountability Act (HIPAA). Consulte a seção sobre [tratamento de dados confidenciais em fluxos de dados](../../edge/datastreams/overview.md#sensitive) para obter mais informações.
+* **[!DNL Splunk]extensão para encaminhamento de eventos**: Agora é possível enviar dados para o [!DNL Splunk] usando um [encaminhamento de eventos](../ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Splunk] visão geral da extensão](../extensions/web/splunk/overview.md) para obter mais informações.
+* **[!DNL Zendesk]extensão para encaminhamento de eventos**: Agora é possível enviar dados para o [!DNL Zendesk] usando um [encaminhamento de eventos](../ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Zendesk] visão geral da extensão](../extensions/web/zendesk/overview.md) para obter mais informações.
 
 ## 28 de setembro de 2022
 

@@ -5,9 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
+source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1123'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,19 @@ As fontes no Experience Platform são agrupadas nas seguintes categorias:
 O Experience Platform permite que os dados sejam assimilados de outros aplicativos do Adobe, incluindo Adobe Analytics e Adobe Audience Manager. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral da fonte do Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Criar uma conexão de origem do Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
+   - [Criar uma conexão de origem do Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Visão geral da fonte de dados de classificações do Adobe Analytics](connectors/adobe-applications/classifications.md)
-- [Criar uma conexão de fonte de dados de classificações do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
+   - [Criar uma conexão de fonte de dados de classificações do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Visão geral da fonte de dados do conjunto de relatórios do Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Criar uma conexão de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
+   - [Criar uma conexão de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Visão geral da fonte do Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
-- [Criar uma conexão de origem do Adobe Campaign Managed Cloud Services na interface do usuário](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [Criar uma conexão de origem do Adobe Campaign Managed Cloud Services na interface do usuário](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Visão geral da fonte de coleta de dados do Adobe](connectors/adobe-applications/data-collection.md)
-- [Criar uma conexão de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+   - [Criar uma conexão de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] visão geral da fonte](connectors/adobe-applications/marketo/marketo.md)
-- [Crie um [!DNL Marketo Engage] conexão de origem na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Crie um [!DNL Marketo Engage] conexão de origem na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Visão geral da fonte do Adobe Workfront](connectors/adobe-applications/workfront.md)
+   - [Criar uma conexão de origem do Workfront na interface do usuário](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
 

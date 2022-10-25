@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
+source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '844'
 ht-degree: 13%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 13%
       - [Origem do Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
       - [Fonte de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fonte da coleção de dados](connectors/adobe-applications/data-collection.md)
+      - [Origem do Workfront](connectors/adobe-applications/workfront.md)
       - Mapeamentos de campos {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -207,6 +208,7 @@ ht-degree: 13%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Publicidade {#advertising}
          - [Anúncios do Google](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}

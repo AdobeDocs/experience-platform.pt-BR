@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, conector de origem do A
 title: Criar uma conexão de origem do Adobe Audience Manager na interface do usuário
 description: Este tutorial o orienta pelas etapas para criar uma conexão de origem para o Adobe Audience Manager trazer dados do Evento de experiência do consumidor para a Plataforma usando a interface do usuário.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Depois de identificar e selecionar os segmentos que deseja usar, um novo painel 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 Como alternativa, você pode selecionar a variável **[!UICONTROL Selecionar todos os segmentos]** e **[!UICONTROL Selecionar todas as características]** caixas. A seleção de todos os segmentos trará segmentos Audience Manager para a Plataforma, enquanto a seleção de todas as características ativa todas as características próprias da Audience Manager.
+
+>[!WARNING]
+>
+>A assimilação de populações de segmentos de Audience Manager consideráveis afeta diretamente a contagem total de perfis ao enviar um segmento de Audience Manager para a Platform pela primeira vez usando a fonte de Audience Manager. Isso significa que a seleção de todos os segmentos pode levar a uma contagem de Perfis além do seu direito de uso de licença. Revise seu [licença de uso](../../../../../dashboards/guides/license-usage.md) antes de continuar.
 
 Depois de concluir, selecione **[!UICONTROL Próximo]**
 

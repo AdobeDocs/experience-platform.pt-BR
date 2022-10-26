@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para o Adobe Experience Platform.
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '916'
 ht-degree: 5%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 5%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Coleta de dados](#data-collection)
+- [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de query](#query-service)
 - [Fontes](#sources)
@@ -40,6 +41,27 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | [!DNL Zendesk] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Zendesk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Zendesk] visão geral da extensão](../../tags/extensions/web/zendesk/overview.md) para obter mais informações. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Destinos novos ou atualizados**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | O Line é uma plataforma de comunicação popular que conecta pessoas, serviços e informações e cresceu de um aplicativo de chat em um hub para atividades de entretenimento, sociais e diárias. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | O Microsoft Dynamics 365 é uma plataforma de aplicativos de negócios baseada em nuvem que combina o Enterprise Resource Planning (ERP) e o Customer Relationship Management (CRM), juntamente com aplicativos de produtividade e ferramentas de IA, para proporcionar operações completas e mais controladas, melhorar o potencial de crescimento e reduzir os custos. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentação nova ou atualizada**
+
+| Documentação | Descrição |
+| ----------- | ----------- |
+| [Medidas de proteção de destinos](../../destinations/guardrails.md) | Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. |
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

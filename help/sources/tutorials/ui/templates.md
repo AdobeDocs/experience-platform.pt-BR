@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home; tópicos populares;
-description: O Adobe Experience Platform fornece modelos pré-configurados que podem ser usados para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para o Experience Platform.
+description: O Adobe Experience Platform fornece modelos pré-configurados que podem ser usados para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, regras de mapeamento, identidades, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para o Experience Platform.
 title: (Alfa) Criar um fluxo de dados de fontes usando modelos na interface do usuário
 hide: true
 hidefromtoc: true
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '1184'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 >
 >Os modelos estão em Alfa e atualmente só são compatíveis com a variável [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). A documentação e as funcionalidades estão sujeitas a alterações.
 
-O Adobe Experience Platform fornece modelos pré-configurados que podem ser usados para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para o Experience Platform.
+O Adobe Experience Platform fornece modelos pré-configurados que podem ser usados para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para o Experience Platform.
 
 Com modelos, você pode:
 
-* Reduza o tempo para o valor da assimilação por meio da aceleração da criação de ativos com base em ML.
+* Reduza o tempo para o valor da assimilação por meio da aceleração da criação de ativos modelos.
 * Minimize erros que podem ocorrer durante o processo manual de assimilação de dados.
 * Atualize os ativos gerados automaticamente em qualquer ponto para atender aos seus casos de uso.
 
@@ -51,7 +51,12 @@ Em [!UICONTROL Aplicativos Adobe] categoria , selecione **[!UICONTROL Marketo En
 
 ![Um catálogo da área de trabalho de origens com a origem de Marketo Engage realçada.](../../images/tutorials/templates/catalog.png)
 
-Uma janela pop-up é exibida apresentando a opção de navegar pelos modelos ou usar esquemas e conjuntos de dados existentes. Para usar ativos gerados automaticamente, selecione **[!UICONTROL Procurar modelos]** e depois selecione **[!UICONTROL Selecionar]**.
+Uma janela pop-up é exibida apresentando a opção de navegar pelos modelos ou usar esquemas e conjuntos de dados existentes.
+
+* **Procurar modelos**: Os modelos de origens criam esquemas, identidades, conjuntos de dados e fluxos de dados automaticamente com regras de mapeamento para você. Você pode personalizar esses ativos conforme necessário.
+* **Usar meus ativos existentes**: Assimile seus dados usando conjuntos de dados e esquemas existentes que você criou. Você também pode criar novos conjuntos de dados e esquemas, se necessário.
+
+Para usar ativos gerados automaticamente, selecione **[!UICONTROL Procurar modelos]** e depois selecione **[!UICONTROL Selecionar]**.
 
 ![Uma janela pop-up com opções para procurar modelos ou usar ativos existentes.](../../images/tutorials/templates/browse-templates.png)
 
@@ -83,6 +88,12 @@ A janela de pré-visualização é exibida, permitindo explorar e inspecionar da
 
 Em seguida, selecione o template que deseja usar na lista. Você pode selecionar vários modelos e criar vários fluxos de dados de uma só vez. No entanto, um template só pode ser usado uma vez por conta. Após selecionar seus modelos, selecione **[!UICONTROL Concluir]** e permitir que alguns minutos os ativos sejam gerados.
 
+Se você selecionar um ou mais itens parciais da lista de modelos disponíveis, todos os esquemas B2B e namespaces de identidade ainda serão gerados para garantir que os relacionamentos B2B entre esquemas sejam configurados corretamente.
+
+>[!NOTE]
+>
+>Os modelos que já foram usados serão desativados na seleção.
+
 ![A lista de modelos com o modelo de Função de Contato de Oportunidade selecionado.](../../images/tutorials/templates/select-template.png)
 
 ### Revisar ativos {#review-assets}
@@ -92,7 +103,7 @@ Em seguida, selecione o template que deseja usar na lista. Você pode selecionar
 >title="Revisar os ativos gerados automaticamente"
 >abstract="Pode levar até cinco minutos para gerar todos os ativos. Se você optar por sair da página, receberá uma notificação para retornar depois que os ativos forem concluídos. Você pode revisar os ativos depois que eles são gerados e fazer configurações adicionais ao seu fluxo de dados a qualquer momento."
 
-O [!UICONTROL Revisar ativos do modelo] exibe os ativos gerados automaticamente como parte do modelo. Nesta página, você pode visualizar os esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados gerados automaticamente associados à conexão de origem.
+O [!UICONTROL Revisar ativos do modelo] exibe os ativos gerados automaticamente como parte do modelo. Nesta página, você pode visualizar os esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados gerados automaticamente associados à conexão de origem. Pode levar até cinco minutos para gerar todos os ativos. Se você optar por sair da página, receberá uma notificação para retornar depois que os ativos forem concluídos. Você pode revisar os ativos depois que eles são gerados e fazer configurações adicionais ao seu fluxo de dados a qualquer momento.
 
 Os fluxos de dados gerados automaticamente são ativados por padrão. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Visualizar mapeamentos]** para ver os conjuntos de mapeamento criados para o fluxo de dados.
 
@@ -104,8 +115,22 @@ Uma página de visualização é exibida, permitindo inspecionar a relação de 
 
 Você pode atualizar seus fluxos de dados a qualquer momento após a execução. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Atualizar fluxo de dados]**. Você é levado à página de fluxo de trabalho de fontes, onde é possível atualizar os detalhes do fluxo de dados, incluindo as configurações de assimilação parcial, diagnósticos de erros e notificações de alertas, bem como o mapeamento do fluxo de dados.
 
+Você pode usar a visualização do editor de esquema para fazer atualizações no esquema gerado automaticamente. Visite o guia em [uso do editor de esquema](../../../xdm/tutorials/create-schema-ui.md) para obter mais informações.
+
 ![Uma janela suspensa com a opção atualizar fluxos de dados selecionada.](../../images/tutorials/templates/update.png)
 
 ## Próximas etapas
 
 Ao seguir este tutorial, você criou fluxos de dados, bem como ativos como esquemas, conjuntos de dados e namespaces de identidade usando modelos. Para obter informações gerais sobre fontes, visite o [visão geral das fontes](../../home.md).
+
+## Apêndice
+
+A seção a seguir fornece informações adicionais sobre modelos.
+
+### Usar o painel de notificações para retornar à página de revisão
+
+Os alertas do Adobe Experience Platform dão suporte a modelos e você pode usar o painel de notificações para receber atualizações sobre o status de seus ativos e também para navegar de volta para a página de revisão.
+
+Selecione o ícone de notificação no cabeçalho superior da interface do usuário da plataforma e selecione o alerta de status para ver os ativos que deseja revisar.
+
+![O painel de notificações na interface do usuário da plataforma com uma notificação alertando um fluxo de dados com falha foi realçado.](../../images/tutorials/templates/notifications.png)

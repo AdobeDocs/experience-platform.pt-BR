@@ -5,16 +5,16 @@ title: Conectar o Tableau ao Serviço de consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Tableau ao Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '302'
 ht-degree: 2%
 
 ---
 
 # Connect [!DNL Tableau] para Serviço de Consulta
 
-Este documento aborda as etapas para conectar o Tableau ao Adobe Experience Platform [!DNL Query Service].
+Este documento aborda as etapas para conexão [!DNL Tableau] com o Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
@@ -22,17 +22,17 @@ Este documento aborda as etapas para conectar o Tableau ao Adobe Experience Plat
 
 Para ligar [!DNL Tableau] para [!DNL Query Service], abrir [!DNL Tableau]e no **[!DNL To a Server]** seção selecionar **[!DNL More]** seguida de **[!DNL PostgreSQL]**
 
-![](../images/clients/tableau/open-connection.png)
+![O [!DNL Tableau] painel com Mais e [!DNL PostgreSQL] destacado.](../images/clients/tableau/open-connection.png)
 
 Agora você pode inserir valores para se conectar ao Adobe Experience Platform. Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia a [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], em seguida selecione **[!UICONTROL Queries]**, seguida de **[!UICONTROL Credenciais]**.
 
-Verifique se você marcou a **[!UICONTROL SSL obrigatório]** antes de tentar se conectar.
+Verifique se você marcou a **[!UICONTROL Exigir SSL]** antes de tentar se conectar.
 
 >[!IMPORTANT]
 >
 >Consulte a [[!DNL Query Service] Documentação SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros com o Adobe Experience Platform Query Service e como se conectar usando `verify-full` Modo SSL.
 
-![](../images/clients/tableau/sign-in.png)
+![O [!DNL PostgreSQL] diálogo de ligação com detalhes de ligação concluídos.](../images/clients/tableau/sign-in.png)
 
 >[!IMPORTANT]
 >
@@ -42,7 +42,7 @@ Depois de preencher todas as suas credenciais, selecione **[!DNL Sign In]** para
 
 Agora você se conectou ao Adobe Experience Platform, com uma lista das tabelas exibidas no lado.
 
-![](../images/clients/tableau/connected.png)
+![Um novo [!DNL Tableau] painel com tabelas do Serviço de query realçadas no painel esquerdo.](../images/clients/tableau/connected.png)
 
 ## Próximas etapas
 

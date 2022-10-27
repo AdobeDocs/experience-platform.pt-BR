@@ -1,9 +1,9 @@
 ---
 title: Conectar o notebook do Júpiter ao serviço de query
 description: Saiba como conectar o Notebook Jupyter com o Serviço de query da Adobe Experience Platform.
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Para adquirir as credenciais necessárias para conexão [!DNL Jupyter Notebook] 
 
 Após ter aberto um novo [!DNL Jupyter Notebook] aplicação web, selecione o **[!DNL New]** lista suspensa seguida de **[!DNL Python 3]** para criar um novo Bloco de Notas. O [!DNL Notebook] é exibido.
 
-![O [!DNL Jupiter Notebook] Guia Arquivo com o [!DNL New dropdown] e [!DNL Python] 3 destacado.](../images/clients/jupyter-notebook/new-notebook.png)
+![O [!DNL Jupiter Notebook] Guia Arquivo com o [!DNL New] lista suspensa e [!DNL Python] 3 destacado.](../images/clients/jupyter-notebook/new-notebook.png)
 
 Na primeira linha do [!DNL Notebook] , insira o seguinte valor: `pip install psycopg2-binary` e selecione **[!DNL Run]** na barra de comandos. Uma mensagem de sucesso é exibida abaixo da linha de entrada.
 

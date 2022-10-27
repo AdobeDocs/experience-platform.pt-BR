@@ -2,9 +2,9 @@
 title: Suporte de Controle de Acesso Baseado em Atributo para Esquemas Ad Hoc
 description: Um guia para restringir o acesso aos campos de dados em esquemas ad hoc gerados pelo Serviço de query do Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -56,13 +56,13 @@ Para editar rótulos de dados para seu esquema ad hoc, selecione a variável [!U
 
 ## Editar rótulos para o esquema ou campo
 
-Para editar os rótulos de todo o esquema, selecione o ícone de lápis (![](../images/data-governance/edit-icon.png)) ao lado do nome do schema sob o [!UICONTROL Rótulos] guia .
+Para editar os rótulos de todo o esquema, selecione o ícone de lápis (![Um ícone de lápis.](../images/data-governance/edit-icon.png)) ao lado do nome do schema sob o [!UICONTROL Rótulos] guia .
 
 ![A exibição de rótulos no espaço de trabalho de schemas com o ícone de lápis realçado.](../images/data-governance/edit-entire-schema-labels.png)
 
 Para aplicar um rótulo a um campo existente, selecione um ou mais campos na lista seguida por [!UICONTROL Editar rótulos de governança] na barra lateral direita.
 
-![A exibição de rótulos no espaço de trabalho de schemas com a opção &quot;Editar rótulos de governança&quot; realçada na barra lateral do lado do direito.](../images/data-governance/edit-governance-labels.png)
+![A exibição de rótulos no espaço de trabalho de schemas com a opção &quot;Editar rótulos de governança&quot; realçada na barra lateral direita.](../images/data-governance/edit-governance-labels.png)
 
 ## Editar fornecedor de rótulos
 

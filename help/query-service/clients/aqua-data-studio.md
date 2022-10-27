@@ -5,9 +5,9 @@ title: Conectar o Aqua Data Studio ao Serviço de Consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Aqua Data Studio com o Adobe Experience Platform Query Service.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ O **[!DNL Register Server]** será exibida. Em **[!DNL General]** guia , selecio
 - **[!DNL Host and Port]**: O terminal do host e sua porta para [!DNL Query Service]. Você deve usar a porta 80 para se conectar [!DNL Query Service].
 - **[!DNL Database]:** O banco de dados que será usado. Usar o valor da credencial da interface do usuário da plataforma `dbname`: `prod:all`.
 
-![A guia Aqua Data Studio General com os campos de entrada necessários realçados.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![O [!DNL Aqua Data Studio] Guia General com os campos de entrada obrigatórios realçados.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] credenciais
 
@@ -56,7 +56,7 @@ Em seguida, selecione o **[!DNL Driver]** guia . Em **[!DNL Parameters]**, defin
 >
 >Consulte a [[!DNL Query Service] Documentação SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros com o Adobe Experience Platform Query Service e como se conectar usando `verify-full` Modo SSL.
 
-![A guia Controlador do Aqua Data Studio com o campo Parâmetros realçado.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![O [!DNL Aqua Data Studio] Guia Driver com o campo Parâmetros realçado.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 Depois de inserir os detalhes da conexão, selecione **[!DNL Test Connection]** para garantir que suas credenciais funcionem corretamente. Se o teste de conexão for bem-sucedido, selecione **[!DNL Save]** para registrar seu servidor. Uma caixa de diálogo de confirmação é exibida confirmando a conexão e a conexão é exibida no painel. Agora é possível se conectar ao servidor e exibir seus objetos de esquema.
 

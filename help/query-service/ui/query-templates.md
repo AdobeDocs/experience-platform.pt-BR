@@ -1,7 +1,8 @@
 ---
 title: Modelos de Consulta
 description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API do serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados do Experience Platform.
-source-git-commit: 5ed822ec16e8e8d38e93370440242ec4c1c01320
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -26,9 +27,11 @@ Você pode criar templates de query por meio de dois métodos, fazendo uma solic
 
 Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravação](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar seu query, ele estará disponível para ser reutilizado como um template de consulta a partir do [!UICONTROL Procurar] guia .
 
-No espaço de trabalho Consultas da interface do usuário da plataforma, selecione **[!UICONTROL Procurar]** para exibir a lista de consultas salvas disponíveis.
+No espaço de trabalho Consultas da interface do usuário da plataforma, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
 
-![A área de trabalho de consultas com a guia Procurar foi realçada.](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![O espaço de trabalho de consultas com a guia Modelos foi realçado.](../images/ui/query-templates/query-templates.png)
 
 Para encontrar informações relevantes do modelo, selecione qualquer modelo de consulta na lista disponível para abrir o painel de detalhes.
 

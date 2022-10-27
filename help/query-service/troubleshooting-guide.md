@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de query. Os tópicos incluem, exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 1%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Depois de fazer logon no Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda da interface do usuário para navegar até [!UICONTROL Conjuntos de dados] painel.
 - Os conjuntos de dados [!UICONTROL Procurar] será aberta. Use a barra de pesquisa para refinar as opções disponíveis. Selecione um conjunto de dados na lista exibida.
 
-![Um conjunto de dados destacado na interface do usuário da plataforma.](./images/troubleshooting/dataset-selection.png)
+![O painel Conjuntos de dados na interface do usuário da plataforma com a barra de pesquisa e um conjunto de dados realçado.](./images/troubleshooting/dataset-selection.png)
 
-- O [!UICONTROL Atividade dos conjuntos de dados] será exibida. Selecionar [!UICONTROL Visualizar conjunto de dados] para abrir uma caixa de diálogo do esquema XDM e exibição tabular de dados nivelados do conjunto de dados selecionado. Mais detalhes podem ser encontrados no [visualizar uma documentação do conjunto de dados](../catalog/datasets/user-guide.md#preview-a-dataset)
+- O [!UICONTROL Atividade dos conjuntos de dados] será exibida. Selecionar **[!UICONTROL Visualizar conjunto de dados]** para abrir uma caixa de diálogo do esquema XDM e exibição tabular de dados nivelados do conjunto de dados selecionado. Mais detalhes podem ser encontrados no [visualizar uma documentação do conjunto de dados](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![O esquema XDM e a exibição tabular dos dados nivelados.](./images/troubleshooting/dataset-preview.png)
+![A guia Dataset activity do painel Datasets com o conjunto de dados de Visualização destacado.](./images/troubleshooting/dataset-preview.png)
 
 - Selecione qualquer campo do esquema para exibir seu conteúdo em uma coluna nivelada. O nome da coluna é exibido acima de seu conteúdo no lado direito da página. Você deve copiar esse nome para usar para consultar esse conjunto de dados.
 
-![O nome da coluna de um conjunto de dados aninhado destacado na interface do usuário.](./images/troubleshooting/column-name.png)
+![O esquema XDM e a exibição tabular dos dados nivelados. O nome da coluna de um conjunto de dados aninhado é destacado na interface do usuário.](./images/troubleshooting/column-name.png)
 
 Consulte a documentação para obter orientação completa sobre [como trabalhar com estruturas de dados aninhadas](./best-practices/nested-data-structures.md) usando o Editor de consultas ou um cliente de terceiros.
 +++
@@ -119,12 +119,12 @@ Pode haver vários motivos para uma consulta ficar paralisada durante o processa
 - Navegar para [https://www.adobe.com/](https://www.adobe.com/) no navegador da Web.
 - No lado direito da barra de navegação superior, selecione **[!UICONTROL Fazer logon]**.
 
-![O site do Adobe com logon foi destacado.](./images/troubleshooting/adobe-sign-in.png)
+![O site do Adobe com Logon destacado.](./images/troubleshooting/adobe-sign-in.png)
 
 - Use a Adobe ID e a senha registradas com a licença do Adobe.
 - Selecionar **[!UICONTROL Ajuda e suporte]** na barra de navegação superior.
 
-![O menu suspenso da barra de navegação superior com ajuda e suporte destacado.](./images/troubleshooting/help-and-support.png)
+![O menu suspenso da barra de navegação superior com Ajuda e suporte, Suporte empresarial e Entre em contato conosco realçado.](./images/troubleshooting/help-and-support.png)
 
 Um banner suspenso é exibido contendo um [!UICONTROL Ajuda e suporte] seção. Selecionar **[!UICONTROL Entre em contato conosco]** para abrir o Adobe Customer Care Virtual Assistant ou selecione **[!UICONTROL Suporte empresarial]** para obter ajuda dedicada para grandes organizações.
 +++

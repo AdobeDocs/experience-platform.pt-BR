@@ -5,9 +5,9 @@ title: Conectar o DbVisualizer ao Serviço de query
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o DbVisualizer ao Serviço de query do Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Use a barra de pesquisa ou selecione [!DNL PostgreSQL] na lista suspensa nome do
 
 No espaço de trabalho Conexão de Banco de Dados, selecione o **[!DNL Properties]** , seguido pela guia **[!DNL Driver Properties]** na barra lateral de navegação.
 
-![O espaço de trabalho Database Connection com a guia de propriedades realçada.](../images/clients/dbvisualizer/driver-properties.png)
+![O espaço de trabalho Database Connection com Propriedades e Propriedades do Driver foi realçado.](../images/clients/dbvisualizer/driver-properties.png)
 
 Recomenda-se a utilização de SSL com DBVisualizer para as propriedades do driver visualizadas na tabela abaixo.
 
@@ -57,7 +57,7 @@ Recomenda-se a utilização de SSL com DBVisualizer para as propriedades do driv
 
 O `PGHOST` e `user` são obtidos de suas credenciais do Adobe Experience Platform. Para encontrar suas credenciais, faça logon na interface do usuário da plataforma e selecione **[!UICONTROL Queries]** no menu de navegação esquerdo, seguido por **[!UICONTROL Credenciais]**. Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia a [guia de credenciais](../ui/credentials.md).
 
-![O Experience Platform consulta o Painel de Credenciais com credenciais realçadas.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![A página Credenciais do espaço de trabalho Consultas do Experience Platform com Credenciais e as Credenciais de Expiração destacadas.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] O também oferece credenciais que não estão expirando para permitir uma configuração única com clientes de terceiros. Consulte a documentação para [instruções completas sobre como gerar e usar credenciais que não estão expirando](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ Para exigir uma autenticação baseada em ID de usuário e senha sempre que uma 
 
 No painel Autenticação de conexão, verifique as **[!DNL Require Userid]** e **[!DNL Require Password]** caixas de seleção e, em seguida, selecione **[!DNL Apply]**.
 
-![O painel Autenticação de conexão com as caixas de seleção ID de usuário e Senha está realçado.](../images/clients/dbvisualizer/connection-authentication.png)
+![O painel Autenticação para [!DNL PostgreSQL] Database Connection with the Require Userid and Password (Conexão do banco de dados com as caixas de seleção Require Userid e Password) realçada.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Conectar-se à plataforma
 
@@ -90,11 +90,11 @@ Para fazer uma conexão, selecione o **[!DNL Connection]** no espaço de trabalh
 
 Depois de ter inserido todas as credenciais relevantes, selecione **[!DNL Connect]**.
 
-![O espaço de trabalho Database Connection com a guia Connection e o botão connect são realçados.](../images/clients/dbvisualizer/connect.png)
+![O [!DNL PostgreSQL] Espaço de trabalho Database Connection com a guia Connection e o botão connect realçado.](../images/clients/dbvisualizer/connect.png)
 
 O [!DNL Connect] será exibida na primeira ocasião da sessão.
 
-![A caixa de diálogo Connect with the database userid and database password text fields é realçada.](../images/clients/dbvisualizer/connect-dialog.png)
+![A Conexão: [!DNL PostgreSQL] com os campos de texto ID do usuário do banco de dados e Senha do banco de dados destacados.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Digite sua ID de usuário e senha e selecione **[!DNL Connect]**. Uma mensagem é exibida no log para confirmar uma conexão bem-sucedida.
 

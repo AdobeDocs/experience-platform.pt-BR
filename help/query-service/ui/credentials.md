@@ -5,9 +5,9 @@ title: Guia de credenciais do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 1%
 
 ---
@@ -82,9 +82,9 @@ O arquivo JSON de configuração contém informações como nome técnico da con
 
 Depois de salvar suas credenciais geradas, selecione **[!UICONTROL Fechar]**. Agora você pode ver uma lista de todas as suas credenciais que não estão expirando.
 
-![A guia Query dashboard Credentials com a seção Non-expiring Credentials foi expandida.](../images/ui/credentials/list-credentials.png)
+![A guia Query dashboard Credentials com a seção Non-expiring Credentials realçada.](../images/ui/credentials/list-credentials.png)
 
-Você pode editar ou excluir suas credenciais que não expiram. Para editar uma credencial que não esteja expirando, selecione o ícone de lápis (![](../images/ui/credentials/edit-icon.png)). Para excluir uma credencial que não esteja expirando, selecione o ícone excluir (![](../images/ui/credentials/delete-icon.png)).
+Você pode editar ou excluir suas credenciais que não expiram. Para editar uma credencial que não esteja expirando, selecione o ícone de lápis (![Um ícone de lápis.](../images/ui/credentials/edit-icon.png)). Para excluir uma credencial que não esteja expirando, selecione o ícone excluir (![Um ícone de lixeira.](../images/ui/credentials/delete-icon.png)).
 
 Ao editar uma credencial que não esteja expirando, um modal é exibido. Você pode fornecer os seguintes detalhes para atualizar:
 
@@ -102,7 +102,7 @@ Você pode usar as credenciais que estão expirando ou que não estão expirando
 
 A imagem indica o local de cada parâmetro encontrado na interface do usuário, exceto a senha das credenciais que não expiram. Embora as credenciais que não expiram sejam fornecidas pelos arquivos de configuração JSON, você pode visualizar suas credenciais que expiram no **Credenciais** na interface do usuário.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![A guia Query workspace Credentials com a seção Expiring credentials realçada.](../images/ui/credentials/expiring-credentials.png)
 
 A tabela abaixo descreve os parâmetros normalmente necessários para se conectar a clientes externos.
 

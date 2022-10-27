@@ -5,9 +5,9 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -449,7 +449,7 @@ O exemplo retorna o seguinte:
 
 Este segundo exemplo demonstra ainda mais o conceito e a aplicação do `inline` . O modelo de dados do exemplo é ilustrado na imagem abaixo.
 
-![Um diagrama de esquema para productListItems](../images/sql/productListItems.png)
+![Um diagrama de esquema para productListItems.](../images/sql/productListItems.png)
 
 **Exemplo**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 Para retornar o valor de qualquer configuração, use `SET [property key]` sem um `property_value`.
 
-## Comandos PostgreSQL
+## [!DNL PostgreSQL] comandos
 
-As subseções abaixo abordam os comandos PostgreSQL suportados pelo Serviço de Consulta.
+As subseções abaixo abordam a [!DNL PostgreSQL] Comandos suportados pelo Serviço de Consulta.
 
 ### ANALISAR TABELA
 
@@ -677,7 +677,7 @@ Mais informações sobre os parâmetros de consulta SELECT padrão podem ser enc
 | Parâmetros | Descrição |
 | ------ | ------ |
 | `TEMPORARY` ou `TEMP` | Um parâmetro opcional. Se especificado, a tabela criada será uma tabela temporária. |
-| `UNLOGGED` | Um parâmetro opcional. Se especificado, a tabela criada como será uma tabela desconectada. Mais informações sobre tabelas desconectadas podem ser encontradas no [Documentação PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Um parâmetro opcional. Se especificado, a tabela criada como será uma tabela desconectada. Mais informações sobre tabelas desconectadas podem ser encontradas no [[!DNL PostgreSQL] documentação](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | O nome da tabela a ser criada. |
 
 **Exemplo**

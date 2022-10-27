@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: O Serviço de query do Adobe Experience Platform permite a criação de conjuntos de dados da interface do usuário. Depois que um conjunto de dados é criado, ele pode ser acessado como qualquer outro conjunto de dados no Data Lake e usado para uma variedade de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
+source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 0%
 
 ## Gerar conjuntos de dados da interface do usuário do Adobe Experience Platform
 
+<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
+
 Para criar conjuntos de dados da interface do usuário do Adobe Experience Platform, siga estas etapas:
 
 1. Crie uma consulta usando um cliente conectado e valide a saída. Para saber como gravar consultas usando [!DNL Query Editor]leia a [!DNL Query Editor] Guia da interface do usuário [ao gravar queries](./user-guide.md#writing-queries).
@@ -27,13 +29,13 @@ Para criar conjuntos de dados da interface do usuário do Adobe Experience Platf
 
 3. No painel Detalhes da consulta , selecione **[!UICONTROL Conjunto de dados de saída]**.
 
-   ![Selecionar conjunto de dados de saída](../images/ui/create-datasets/output-dataset.png)
+   ![A guia Modelo do espaço de trabalho Consultas com Selecionar conjunto de dados de saída realçada.](../images/ui/create-datasets/output-dataset.png)
 
 4. Na caixa de diálogo exibida, insira um nome de conjunto de dados anexado a sua ID LDAP. O nome do conjunto de dados não precisa ser exclusivo ou seguro para SQL. Observe que o nome da tabela para seu conjunto de dados será gerado com base no nome do conjunto de dados que você criar aqui.
 
 5. Em seguida, insira uma descrição para o conjunto de dados no [!UICONTROL Descrição] e selecione **[!UICONTROL Executar consulta]**.
 
-   ![Executar consulta](../images/ui/create-datasets/run-query.png)
+   ![A caixa de diálogo Conjunto de dados de saída com os detalhes do conjunto de dados e executar a consulta realçada](../images/ui/create-datasets/run-query.png)
 
 6. Quando a execução da consulta for concluída, navegue até **[!UICONTROL Conjuntos de dados]** para exibir o conjunto de dados criado. Para saber mais sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário da plataforma, consulte o [Guia da interface do usuário de conjuntos de dados](../../catalog/datasets/user-guide.md).
 

@@ -5,9 +5,9 @@ title: Visão geral da interface do usuário do Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ O **[!UICONTROL Esquemas]** permite criar e gerenciar esquemas do Experience Dat
 
 O **[!UICONTROL Conjuntos de dados]** permite criar e gerenciar conjuntos de dados. Mais informações sobre conjuntos de dados podem ser encontradas no [guia do usuário de conjuntos de dados](../catalog/datasets/user-guide.md).
 
-O **[!UICONTROL Queries]** A seção permite criar e gerenciar queries, registrar consultas SQL feitas pelo Adobe Experience Platform Query Service e exibir suas credenciais PostgreSQL. Mais informações sobre queries podem ser encontradas no [Guia do usuário do Serviço de query](../query-service/ui/overview.md).
+O **[!UICONTROL Queries]** permite criar e gerenciar queries, registrar queries SQL feitos pelo Adobe Experience Platform Query Service e exibir seus [!DNL PostgreSQL] credenciais. Mais informações sobre queries podem ser encontradas no [Guia do usuário do Serviço de query](../query-service/ui/overview.md).
 
 O **[!UICONTROL Monitoramento]** permite monitorar a assimilação de lote e streaming. Mais informações sobre o monitoramento podem ser encontradas no [guia do usuário de assimilação de dados de monitoramento](../ingestion/quality/monitor-data-ingestion.md).
 

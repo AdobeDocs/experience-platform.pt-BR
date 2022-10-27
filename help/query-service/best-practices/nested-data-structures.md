@@ -3,9 +3,9 @@ keywords: Experience Platform, serviço de consulta, serviço de consulta, estru
 title: Trabalhar com estruturas de dados aninhadas no Serviço de query
 description: Este documento fornece um exemplo de trabalho para processar e transformar campos de dados aninhados usando instruções CTAS e INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 O Serviço de query do Adobe Experience Platform oferece suporte ao uso de campos de dados aninhados. A complexidade das estruturas de dados empresariais pode complicar a transformação ou o processamento desses dados. Este documento fornece exemplos de como criar, processar ou transformar conjuntos de dados com tipos de dados complexos, incluindo estruturas de dados aninhadas.
 
-O Serviço de Consulta fornece uma interface PostgreSQL para executar consultas SQL em todos os conjuntos de dados gerenciados pelo Experience Platform. A plataforma suporta o uso de tipos de dados primitivos ou complexos em colunas de tabela, como struct, matrizes, mapas e estrutura, matrizes e mapas profundamente aninhados. Os conjuntos de dados também podem conter estruturas aninhadas, onde o tipo de dados da coluna pode ser tão complexo quanto uma matriz de estruturas aninhadas, ou um mapa de mapas, onde o valor de um par de valores chave pode ser uma estrutura com vários níveis de aninhamento.
+O Serviço de query fornece um [!DNL PostgreSQL] para executar consultas SQL em todos os conjuntos de dados gerenciados pelo Experience Platform. A plataforma suporta o uso de tipos de dados primitivos ou complexos em colunas de tabela, como struct, matrizes, mapas e estrutura, matrizes e mapas profundamente aninhados. Os conjuntos de dados também podem conter estruturas aninhadas, onde o tipo de dados da coluna pode ser tão complexo quanto uma matriz de estruturas aninhadas, ou um mapa de mapas, onde o valor de um par de valores chave pode ser uma estrutura com vários níveis de aninhamento.
 
 ## Introdução
 

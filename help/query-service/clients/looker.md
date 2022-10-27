@@ -5,9 +5,9 @@ title: Conectar Looker ao Serviço de Consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Looker ao Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ Este documento aborda as etapas para conexão [!DNL Looker] com o Adobe Experien
 
 Depois de fazer logon em [!DNL Looker], selecione **[!DNL Admin]**, seguida de **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![O [!DNL Looker] painel com Conexões , realçado no menu suspenso Admin .](../images/clients/looker/click-admin-connections.png)
 
 Nesta página, selecione **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![A área de trabalho Connections with New Connection (Conexões com nova conexão) foi realçada.](../images/clients/looker/click-new-connection.png)
 
 Aqui, você pode preencher os detalhes das configurações de conexão.
 
-![](../images/clients/looker/new-connection.png)
+![A página de configurações de Conexões para uma Nova Conexão.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** O nome da sua conexão.
 - **[!DNL Dialect]:** O dialeto usado para o banco de dados SQL. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
@@ -47,7 +47,7 @@ Para obter mais informações sobre como localizar o host e a porta, o nome do b
 
 Depois de inserir os detalhes da conexão, selecione **[!DNL Test These Settings]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem indicando que você pode se conectar será exibida abaixo. Se a conexão for bem-sucedida, selecione **[!DNL Add Connection]** para criar a conexão.
 
-![](../images/clients/looker/click-test-connection.png)
+![A página de configurações de Conexões para uma nova conexão com Testar essas configurações foi realçada.](../images/clients/looker/click-test-connection.png)
 
 ## Próximas etapas
 

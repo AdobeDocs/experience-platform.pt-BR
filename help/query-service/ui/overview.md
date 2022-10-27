@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '716'
 ht-degree: 2%
 
 ---
@@ -26,15 +26,15 @@ O [!DNL Query Editor] permite gravar e executar consultas sem usar um cliente ex
 
 ![Um zoom na exibição da variável [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Navegar {#browse}
+## Modelos {#browse}
 
-O **[!UICONTROL Procurar]** mostra queries salvas pelos usuários em sua organização. É útil considerar esses projetos como projetos de query, já que as consultas salvas aqui podem ainda estar em construção. Queries exibidos no **[!UICONTROL Procurar]** A guia também é exibida como consultas de execução no **[!UICONTROL Log]** se tiverem sido executados anteriormente por [!DNL Query Service].
+O **[!UICONTROL Modelos]** mostra queries salvas pelos usuários em sua organização. É útil considerar esses projetos como projetos de query, já que as consultas salvas aqui podem ainda estar em construção. Queries exibidos no **[!UICONTROL Modelos]** A guia também é exibida como consultas de execução no **[!UICONTROL Log]** se tiverem sido executados anteriormente por [!DNL Query Service].
 
-![Uma visualização ampliada da guia Procurar do painel de Consultas exibindo várias consultas salvas.](../images/ui/overview/browse.png)
+![Uma visualização ampliada da guia Modelos do painel de Consultas exibindo várias consultas salvas.](../images/ui/overview/templates.png)
 
 | Coluna | Descrição |
 | --- | --- |
-| **[!UICONTROL Nome]** | O nome da consulta criado pelo usuário. Você pode selecionar no nome para abrir o query no [!DNL Query Editor]. Também é possível usar a barra de pesquisa para pesquisar o Nome de uma consulta. As pesquisas diferenciam maiúsculas de minúsculas. |
+| **[!UICONTROL Nome]** | O campo name é o nome da consulta criado pelo usuário ou os primeiros caracteres da consulta SQL. Qualquer query criada por meio da interface do usuário com o Editor de consultas é nomeada no início. Se a consulta foi criada por meio da API, o nome da consulta é um trecho do SQL inicial usado para criar a consulta. Você pode selecionar o nome da consulta para abri-la no [!DNL Query Editor]. Também é possível usar a barra de pesquisa para pesquisar a variável [!UICONTROL Nome] de um query. As pesquisas diferenciam maiúsculas de minúsculas. |
 | **[!UICONTROL SQL]** | Os primeiros caracteres da consulta SQL. Passar o mouse sobre o código exibe a consulta completa. |
 | **[!UICONTROL Modificado por]** | O último usuário que modificou a query. Qualquer usuário da organização com acesso a [!DNL Query Service] O pode modificar queries. |
 | **[!UICONTROL Última modificação]** | A data e a hora da última modificação do query, no fuso horário do navegador. |

@@ -5,9 +5,9 @@ title: Conectar o RStudio ao serviço de query
 topic-legacy: connect
 description: Este documento percorre as etapas para conectar o R Studio ao Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -20,29 +20,29 @@ Este documento percorre as etapas de conexão [!DNL RStudio] com o Adobe Experie
 >
 > Este guia supõe que você já tenha acesso ao [!DNL RStudio] e estão familiarizados com como usá-lo. Mais informações sobre [!DNL RStudio] podem ser encontradas no [funcionário [!DNL RStudio] documentação](https://rstudio.com/products/rstudio/).
 > 
-> Além disso, para usar o RStudio com o Serviço de query, é necessário instalar o driver PostgreSQL JDBC 4.2. Você pode baixar o driver JDBC no [Site oficial do PostgreSQL](https://jdbc.postgresql.org/download/).
+> Além disso, para usar [!DNL RStudio] com o Serviço de query, é necessário instalar o [!DNL PostgreSQL] Driver JDBC 4.2. Você pode baixar o driver JDBC no [[!DNL PostgreSQL] site oficial](https://jdbc.postgresql.org/download/).
 
 ## Crie um [!DNL Query Service] na [!DNL RStudio] interface
 
 Depois de instalar [!DNL RStudio], é necessário instalar o pacote RJDBC. Vá para o **[!DNL Packages]** e selecione **[!DNL Install]**.
 
-![](../images/clients/rstudio/install-package.png)
+![O [!DNL RStudio] O painel com Pacotes e Instalação foi realçado.](../images/clients/rstudio/install-package.png)
 
 Um pop-up é exibido mostrando o **[!DNL Install Packages]** tela. Certifique-se de que **[!DNL Repository (CRAN)]** é selecionado para a variável **[!DNL Install from]** seção. O valor de **[!DNL Packages]** deve ser `RJDBC`. Garantir **[!DNL Install dependencies]** está selecionada. Depois de confirmar se todos os valores estão corretos, selecione **[!DNL Install]** para instalar os pacotes.
 
-![](../images/clients/rstudio/install-jrdbc.png)
+![A caixa de diálogo Instalar pacotes com RJDBC inseriu no campo Pacotes e Instalar foi realçada.](../images/clients/rstudio/install-jrdbc.png)
 
-Agora que o pacote RJDBC foi instalado, reinicie o RStudio para concluir o processo de instalação.
+Agora que o pacote RJDBC foi instalado, reinicie [!DNL RStudio] para concluir o processo de instalação.
 
-Depois que o RStudio for reiniciado, é possível se conectar ao Serviço de query. Selecione o **[!DNL RJDBC]** no **[!DNL Packages]** e insira o seguinte comando no console:
+Depois [!DNL RStudio] Se tiver sido reiniciado, você poderá se conectar ao Serviço de query. Selecione o **[!DNL RJDBC]** no **[!DNL Packages]** e insira o seguinte comando no console:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Onde {PATH TO THE POSTGRESQL JDBC JAR} representa o caminho para o PostgreSQL JDBC JAR que foi instalado em seu computador.
+Onde `{PATH TO THE POSTGRESQL JDBC JAR}` representa o caminho para a [!DNL PostgreSQL] JDBC JAR que foi instalado no seu computador.
 
-Agora, você pode criar sua conexão com o Serviço de query inserindo o seguinte comando no console:
+Agora, você pode criar sua conexão com o Serviço de query. Digite o seguinte comando no console:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -54,7 +54,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia a [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], em seguida selecione **[!UICONTROL Queries]**, seguida de **[!UICONTROL Credenciais]**.
 
-![](../images/clients/rstudio/connection-rjdbc.png)
+![A saída do console em [!DNL RStudio] da conexão com o Serviço de query.](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Gravação de queries
 

@@ -1,7 +1,7 @@
 ---
 title: Monitorar uso de licença de consulta em lote
 description: A interface do usuário do Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da Data Distiller de sua organização.
-source-git-commit: 74175e5e2ce31427ef6ea8d93055d6ca3a8406f4
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -34,4 +34,4 @@ O [!UICONTROL Calcular horas] O widget usa um gráfico de linhas para visualizar
 >
 >O [!UICONTROL Calcular horas] O widget é aplicável somente a clientes com a licença do Data Distiller para consultas em lote.
 
-![O painel de uso da licença com o widget Compute hours destacado .](../images/data-distiller/compute-hours.png)
+![O painel de uso da licença com o widget de horas de computação destacado.](../images/data-distiller/compute-hours.png)

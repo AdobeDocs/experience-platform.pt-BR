@@ -1,9 +1,9 @@
 ---
 title: (Beta) Conector de destino do Adobe Commerce
 description: Saiba como os comerciantes da Adobe Commerce e da Real-Time CDP podem personalizar a experiência de compra, fornecendo conteúdo e promoções de site altamente relevantes, personalizadas para segmentos de clientes criados e gerenciados no Real-Time CDP.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 > 
 >O **[!UICONTROL Adobe Commerce]** O conector está na versão beta e só está disponível para um número selecionado de clientes.
 
-O [!DNL Adobe Commerce] o conector de destino permite selecionar um ou mais segmentos de Experience Platform para ativar [!DNL Adobe Commerce] conta para fornecer uma experiência personalizada dinâmica para seus compradores. Within [!DNL Adobe Commerce], é possível selecionar esses segmentos do Adobe Experience Platform para personalizar ofertas exclusivas no carrinho, como &quot;comprar 2 obter 1 grátis&quot;. Você também pode exibir banners de heróis e modificar o preço do produto por meio de ofertas promocionais, todas personalizadas para segmentos do Adobe Experience Platform.
+O [!DNL Adobe Commerce] o conector de destino permite selecionar um ou mais segmentos do Real-Time CDP para ativar [!DNL Adobe Commerce] conta para fornecer uma experiência personalizada dinâmica para seus compradores. Within [!DNL Adobe Commerce], é possível selecionar esses segmentos do Real-Time CDP para personalizar ofertas exclusivas no carrinho, como &quot;comprar 2 obter 1 grátis&quot;. Você também pode exibir banners de heróis e modificar o preço do produto por meio de ofertas promocionais, todas personalizadas para segmentos do Adobe Real-Time CDP.
 
 <!--## Use cases {#use-cases}
 
@@ -90,7 +90,7 @@ Ler [Ativar perfis e segmentos para destinos de solicitação de perfil](../../u
 
 ## Próximas etapas em [!DNL Adobe Commerce]
 
-Agora que você configurou a variável [!DNL Commerce] no Experience Platform, é necessário configurar o [!DNL Commerce Admin] para importar os segmentos do Real-Time CDP criados. Consulte a [[!DNL Commerce] documentação](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) para saber mais.
+Agora que você configurou a variável [!DNL Commerce] no Experience Platform, é necessário configurar o [!DNL Commerce Admin] para importar os segmentos do Real-Time CDP criados. Consulte a [[!DNL Commerce] documentação](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) para saber mais.
 
 ## Validar exportação de dados {#exported-data}
 

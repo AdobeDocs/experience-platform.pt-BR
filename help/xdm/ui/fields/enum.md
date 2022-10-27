@@ -5,9 +5,9 @@ title: Definir campos de enumeração e valores sugeridos na interface do usuár
 description: Saiba como definir enumerações e valores sugeridos para campos de sequência na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Em contraste com os enumerações, a variável **[!UICONTROL Valores sugeridos]*
 When [definição de um novo campo](./overview.md#define) na interface do usuário do Adobe Experience Platform e definir o tipo como [!UICONTROL String], você tem a opção de definir um [enum](#enum) ou [valores sugeridos](#suggested-values) para esse campo.
 
 ![Imagem que mostra a opção Enum &amp; Suggested Values ativada para um campo de string na interface do usuário](../../images/ui/fields/enum/enum-options-selected.png)
+
+Este documento aborda como definir enumerações e valores sugeridos na [!UICONTROL Esquemas] Espaço de trabalho da interface do usuário. Para obter uma visão geral rápida das enumerações e valores sugeridos, incluindo como configurá-las na interface do usuário e seus efeitos de downstream, assista ao vídeo a seguir:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Definir um enum {#enum}
 

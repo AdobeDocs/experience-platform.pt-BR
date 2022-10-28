@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform à zona de aterrissagem de dados usando a API do Serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1224'
 ht-degree: 5%
 
 ---
@@ -72,7 +72,7 @@ A resposta a seguir retorna informações sobre uma zona de aterrissagem, inclui
 | Propriedade | Descrição |
 | --- | --- |
 | `containerName` | O nome da zona de aterrissagem recuperada. |
-| `containerTTL` | A configuração de tempo de vida útil aplicada aos seus dados dentro da zona de aterrissagem. Os produtos de uma determinada zona de aterrissagem são eliminados após sete dias. |
+| `containerTTL` | O tempo de expiração (em dias) aplicado aos seus dados na zona de aterrissagem. Os produtos de uma determinada zona de aterrissagem são eliminados após sete dias. |
 
 ## Recuperar [!DNL Data Landing Zone] credenciais
 

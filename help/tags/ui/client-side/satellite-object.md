@@ -2,7 +2,7 @@
 title: Referência a Objeto Satélite
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 79%
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Nos velhos [`setCookie`](#setCookie) método para definir cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o TTL (time-to-live) do cookie em dias. Nesse novo método, um objeto &quot;attributes&quot; é aceito como um terceiro argumento. Para definir um TTL para um cookie usando o novo método, você deve fornecer um `expires` no objeto attributes e defina-o para o valor desejado. Isso é demonstrado no exemplo abaixo.
+>Nos velhos [`setCookie`](#setCookie) método para definir cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o tempo de expiração do cookie em dias. Nesse novo método, um objeto &quot;attributes&quot; é aceito como um terceiro argumento. Para definir uma expiração para um cookie usando o novo método , você deve fornecer um `expires` no objeto attributes e defina-o para o valor desejado. Isso é demonstrado no exemplo abaixo.
 
 **Exemplo**
 

@@ -3,9 +3,9 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Visualizar ponto de extremidade da API de status de amostra (Visualização de perfil)
 description: O endpoint de status de amostra de visualização da API do Perfil do cliente em tempo real permite visualizar a amostra mais recente e bem-sucedida de seus dados de Perfil, listar a distribuição de perfis por conjunto de dados e por identidade e gerar relatórios que mostram a sobreposição de conjuntos de dados, a sobreposição de identidades e perfis não corrigidos.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2875'
+source-wordcount: '2874'
 ht-degree: 1%
 
 ---
@@ -303,7 +303,7 @@ A resposta inclui um `data` , com objetos individuais contendo os detalhes de ca
 
 ## Gerar o relatório de sobreposição de conjunto de dados
 
-O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do Armazenamento de perfil de sua organização, expondo os conjuntos de dados que mais contribuem para o público-alvo endereçável (perfis mesclados). Além de fornecer insights sobre seus dados, este relatório pode ajudar você a tomar ações para otimizar o uso da licença, como definir um TTL para determinados conjuntos de dados.
+O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do Armazenamento de perfil de sua organização, expondo os conjuntos de dados que mais contribuem para o público-alvo endereçável (perfis mesclados). Além de fornecer insights sobre seus dados, este relatório pode ajudar você a tomar ações para otimizar o uso da licença, como definir expirações para determinados conjuntos de dados.
 
 Você pode gerar o relatório de sobreposição de conjunto de dados executando uma solicitação de GET para o `/previewsamplestatus/report/dataset/overlap` endpoint .
 

@@ -2,10 +2,10 @@
 title: Visão geral dos hosts gerenciados pela Adobe
 description: Saiba mais sobre a opção de hospedagem padrão para implantar builds de biblioteca de tags na Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 96%
+ht-degree: 88%
 
 ---
 
@@ -54,7 +54,7 @@ Depois que a build for implantada no host gerenciado pelo Adobe, a CDN distribui
 >
 >Para hosts gerenciados pela Adobe, a primeira biblioteca publicada em qualquer novo ambiente pode levar até cinco minutos para se propagar para a CDN global.
 
-Quando um nó de borda recebe uma solicitação de um arquivo específico (como o build da biblioteca), o nó verifica primeiro o valor de TTL (time-to-live) no arquivo. Se o TTL não tiver expirado, o nó de borda fornecerá a versão em cache. Se o TTL tiver expirado, o nó de borda solicita uma nova cópia da origem mais próxima, fornece essa cópia atualizada e, a seguir, armazena em cache a cópia atualizada com um novo TTL.
+Quando um nó de borda recebe uma solicitação de um arquivo específico (como a build da biblioteca), o nó verifica primeiro a hora de expiração no arquivo. Se o tempo não tiver expirado, o nó de borda fornecerá a versão em cache. Se o tempo tiver expirado, o nó de borda solicita uma nova cópia da origem mais próxima, fornece essa cópia atualizada e, em seguida, armazena em cache a cópia atualizada com um novo tempo de expiração.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Essas invalidações de cache escalonadas dão aos grupos de servidores de orige
 
 As builds de biblioteca também são armazenadas em cache no navegador por meio do uso do cabeçalho HTTP `cache-control`. Ao usar hosts gerenciados pela Adobe, você não tem controle sobre os cabeçalhos retornados nas respostas da API, portanto, o padrão da Adobe para cache é usado. Em outras palavras, não é possível utilizar cabeçalhos personalizados para hosts gerenciados pela Adobe. Se precisar de um cabeçalho `cache-control` personalizado, talvez você queira considerar a hospedagem [automática](self-hosting-libraries.md).
 
-O TTL (time-to-live) do build da biblioteca em cache do navegador (determinado pelo cabeçalho `cache-control`) varia de acordo com o ambiente de tag que você está usando:
+O tempo de expiração da build de biblioteca em cache do navegador (determinado pela variável `cache-control` ) varia dependendo do ambiente de tags que você está usando:
 
 | Ambiente | Valor de `cache-control` |
 | --- | --- |

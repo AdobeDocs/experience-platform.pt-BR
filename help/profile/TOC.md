@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Guia do Real-time Customer Profile
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Profiles
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '135'
 ht-degree: 23%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 23%
 * [Visão geral do perfil (vídeo)](video/profile-overview.md)
 * [[!DNL Profile] e medidas de proteção da segmentação](guardrails.md)
 * [[!DNL Profile] painel](ui/profile-dashboard.md)
-* [Tempo de vida (TTL) para conjuntos de dados](apply-ttl.md)
+* [Expirações de evento de experiência](event-expirations.md)
 * [!DNL Profile] API {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)

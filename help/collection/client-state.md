@@ -4,9 +4,9 @@ description: Saiba como a Rede de borda da Adobe Experience Platform gerencia o 
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: cliente; estado; gerenciamento; borda; rede; gateway; api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ O estado retornado pelo [!DNL Edge Network] no corpo da resposta é uma `Handle`
 | --- | --- | --- |
 | `key` | String | **Obrigatório**. O nome da entrada. |
 | `value` | String | *Opcional*. O valor de entrada. |
-| `maxAge` | Número inteiro | *Opcional* A entrada do TTL (time-to-live), em segundos. Quando estiver ausente, as entradas devem ser armazenadas apenas para a sessão atual. |
+| `maxAge` | Número inteiro | *Opcional* O tempo (em segundos) até a entrada expirar. Quando estiver ausente, as entradas devem ser armazenadas apenas para a sessão atual. |
 | `attrs` | `Map<String, String>` | *Opcional*. Uma lista opcional de atributos de entrada. Para todas as conexões seguras com um cabeçalho HTTP referenciador seguro, a variável `SameSite` está definido como `None`. |
 
 

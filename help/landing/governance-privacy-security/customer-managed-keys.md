@@ -1,26 +1,26 @@
 ---
 title: Chaves gerenciadas pelo cliente na Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 1%
 
 ---
 
 # Chaves gerenciadas pelo cliente no Adobe Experience Platform
 
-Todos os dados armazenados no Adobe Experience Platform são criptografados em repouso usando chaves de nível de sistema. Se você estiver usando um aplicativo criado na plataforma, poderá optar por usar suas próprias chaves de criptografia, fornecendo maior controle sobre a segurança dos dados.
+Os dados armazenados no Adobe Experience Platform são criptografados em repouso usando chaves de nível de sistema. Se você estiver usando um aplicativo criado na plataforma, poderá optar por usar suas próprias chaves de criptografia, fornecendo maior controle sobre a segurança dos dados.
 
 Este documento aborda o processo de habilitação do recurso CMK (Customer-managed keys, chaves gerenciadas pelo cliente) na plataforma.
 
 ## Resumo do processo
 
-A CMK está incluída no Healthcare Shield e nas ofertas do Privacy and Security Shield do Adobe. Depois que sua organização comprar uma dessas ofertas, você poderá iniciar um processo único para configurar o recurso.
+A CMK está incluída no Healthcare Shield e nas ofertas do Privacy and Security Shield do Adobe. Depois que sua organização comprar uma licença para uma dessas ofertas, você poderá iniciar um processo único para configurar o recurso.
 
 >[!WARNING]
 >
->Após a configuração do CMK, não é possível reverter para chaves gerenciadas pelo sistema. Você é responsável por gerenciar com segurança suas chaves e cofres de chaves em [!DNL Azure] para evitar a perda de acesso aos seus dados.
+>Após a configuração do CMK, não é possível reverter para chaves gerenciadas pelo sistema. Você é responsável por gerenciar com segurança suas chaves e fornecer acesso ao seu Cofre de chaves, chave e aplicativo CMK em [!DNL Azure] para evitar a perda de acesso aos seus dados.
 
 O processo é o seguinte:
 
@@ -29,7 +29,7 @@ O processo é o seguinte:
 1. [Atribuir o principal de serviço ao aplicativo CMK](#assign-to-role) para uma função apropriada para o cofre de chaves.
 1. Usar chamadas de API para [enviar a ID da chave de criptografia para o Adobe](#send-to-adobe).
 
-Quando o processo de configuração for concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando o [!DNL Azure] configuração principal, específica para o seu [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) e [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) recursos. Aproveitamento do CMK [!DNL Azure]&#39;s [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) para tornar isso possível.
+Quando o processo de configuração for concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando o [!DNL Azure] configuração principal, específica para o seu [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) e [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) recursos. Para usar o CMK, você aproveitará [!DNL Microsoft Azure] que pode fazer parte de sua [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Crie um [!DNL Azure] Cofre de Chaves {#create-key-vault}
 
@@ -165,6 +165,10 @@ O **[!UICONTROL Identificador de Chave]** exibe o identificador de URI da chave.
 
 Depois de obter o URI do cofre de chaves, você pode enviá-lo usando uma solicitação de POST para o endpoint de configuração do CMK.
 
+>[!NOTE]
+>
+>Somente o cofre de chaves e o nome da chave são armazenados com o Adobe, não a versão da chave.
+
 **Solicitação**
 
 ```shell
@@ -265,6 +269,10 @@ O `status` pode ter um dos quatro valores com os seguintes significados:
 
 ## Próximas etapas
 
-Ao concluir as etapas acima, você ativou com êxito o CMK para sua organização. Todos os dados assimilados no Platform agora serão criptografados e descriptografados usando as chaves em seu [!DNL Azure] Cofre de Chaves. Se você quiser revogar o acesso da Platform aos seus dados, poderá remover a função de usuário associada ao aplicativo do cofre de chaves no [!DNL Azure].
+Ao concluir as etapas acima, você ativou com êxito o CMK para sua organização. Os dados assimilados no Platform agora serão criptografados e descriptografados usando as chaves em seu [!DNL Azure] Cofre de Chaves. Se você quiser revogar o acesso da Platform aos seus dados, poderá remover a função de usuário associada ao aplicativo do cofre de chaves no [!DNL Azure].
 
-Após desabilitar o acesso ao aplicativo, leva de duas a 24 horas para que os dados não estejam mais acessíveis na Platform. O mesmo intervalo de tempo se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
+Após desabilitar o acesso ao aplicativo, pode levar de alguns minutos a 24 horas para que os dados não estejam mais acessíveis na Platform. O mesmo atraso de tempo se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
+
+>[!WARNING]
+>
+>Quando o aplicativo Cofre de chaves, Chave ou CMK estiver desativado e os dados não estiverem mais acessíveis na plataforma, nenhuma operação de downstream relacionada a esses dados será mais possível. Certifique-se de entender os impactos downstream da revogação do acesso da Platform aos seus dados antes de fazer alterações na configuração.

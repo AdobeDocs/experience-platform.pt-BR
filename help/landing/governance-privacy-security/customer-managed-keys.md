@@ -1,9 +1,9 @@
 ---
 title: Chaves gerenciadas pelo cliente na Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -24,14 +24,14 @@ A CMK está incluída no Healthcare Shield e nas ofertas do Privacy and Security
 
 O processo é o seguinte:
 
-1. [Crie um [!DNL Microsoft Azure] Cofre de Chaves](#create-key-vault), em seguida [gerar uma chave de criptografia](#generate-a-key) (com base nas políticas de sua organização) que serão compartilhadas com o Adobe.
-1. Usar chamadas de API para [registrar o aplicativo CMK](#register-app) com seu [!DNL Azure] inquilino.
-1. [Atribuir o principal de serviço ao aplicativo CMK](#assign-to-role) para uma função apropriada para o cofre de chaves.
-1. Usar chamadas de API para [enviar a ID da chave de criptografia para o Adobe](#send-to-adobe).
+1. [Configure um [!DNL Microsoft Azure] Cofre de Chaves](#create-key-vault) com base nas políticas de sua organização, [gerar uma chave de criptografia](#generate-a-key) que será compartilhado com o Adobe.
+1. Usar chamadas de API para [configurar o aplicativo CMK](#register-app) com seu [!DNL Azure] inquilino.
+1. Usar chamadas de API para [enviar a ID da chave de criptografia para o Adobe](#send-to-adobe) e inicie o processo de ativação do recurso.
+1. [Verifique o status da configuração](#check-status) para verificar se o CMK foi ativado.
 
-Quando o processo de configuração for concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando o [!DNL Azure] configuração principal, específica para o seu [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) e [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) recursos. Para usar o CMK, você aproveitará [!DNL Microsoft Azure] que pode fazer parte de sua [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Quando o processo de configuração for concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando o [!DNL Azure] configuração principal. Para usar o CMK, você aproveitará [!DNL Microsoft Azure] que pode fazer parte de sua [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Crie um [!DNL Azure] Cofre de Chaves {#create-key-vault}
+## Configure um [!DNL Azure] Cofre de Chaves {#create-key-vault}
 
 O CMK só oferece suporte a chaves de um [!DNL Microsoft Azure] Cofre de Chaves. Para começar, você deve trabalhar com [!DNL Azure] para criar uma nova conta corporativa ou usar uma conta corporativa existente e siga as etapas abaixo para criar o Cofre de Chaves.
 
@@ -65,7 +65,7 @@ Assim que você chegar ao **[!DNL Review + create]** , é possível revisar os d
 
 ![Configuração básica para o cofre de chaves](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Configurar opções de rede
+### Configurar opções de rede
 
 Se o seu cofre de chaves estiver configurado para restringir o acesso público a determinadas redes virtuais ou desabilitar totalmente o acesso público, você deverá conceder à Microsoft uma exceção de firewall.
 
@@ -73,7 +73,7 @@ Selecionar **[!DNL Networking]** no painel de navegação esquerdo. Em **[!DNL F
 
 ![Configuração básica para o cofre de chaves](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## Gerar uma chave {#generate-a-key}
+### Gerar uma chave {#generate-a-key}
 
 Depois de criar um cofre de chaves, você pode gerar uma nova chave. Navegue até o **[!DNL Keys]** e selecione **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ A chave configurada aparece na lista de chaves do cofre.
 
 ![Chave adicionada](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## Registre o aplicativo CMK {#register-app}
+## Configurar o aplicativo CMK {#register-app}
 
 Depois que o cofre de chaves estiver configurado, a próxima etapa é se registrar no aplicativo CMK que será vinculado ao seu [!DNL Azure] inquilino.
 
@@ -135,7 +135,7 @@ Copie e cole o `applicationRedirectUrl` endereço em um navegador para abrir uma
 
 ![Aceitar solicitação de permissão](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## Atribuir o aplicativo CMK a uma função {#assign-to-role}
+### Atribuir o aplicativo CMK a uma função {#assign-to-role}
 
 Depois de concluir o processo de autenticação, retorne ao [!DNL Azure] Cofre de chaves e selecione **[!DNL Access control]** no painel de navegação esquerdo. Aqui, selecione **[!DNL Add]** seguida de **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ Na próxima tela, escolha **[!DNL Select members]** para abrir uma caixa de diá
 >
 >Se você não conseguir encontrar seu aplicativo na lista, o principal do serviço não foi aceito no locatário. Trabalhe com seu [!DNL Azure] administrador ou representante para garantir que você tenha os privilégios corretos.
 
-## Enviar o URI da chave para o Adobe {#send-to-adobe}
+## Ative a configuração da chave de criptografia no Experience Platform {#send-to-adobe}
 
 Depois de instalar o aplicativo CMK em [!DNL Azure], é possível enviar o identificador da chave de criptografia para o Adobe. Selecionar **[!DNL Keys]** no menu de navegação esquerdo, seguido pelo nome da chave que deseja enviar.
 
@@ -221,7 +221,7 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho de configuração.
 
 A tarefa deve concluir o processamento em alguns minutos.
 
-### Verifique o status da configuração {#check-status}
+## Verificar o status da configuração {#check-status}
 
 Para verificar o status da solicitação de configuração, você pode fazer uma solicitação de GET.
 

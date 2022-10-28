@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Expirações de evento de experiência
 description: Este documento fornece orientação geral sobre como configurar os tempos de expiração de eventos de experiência individuais em um conjunto de dados da Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 # Expirações de evento de experiência
 
-No Adobe Experience Platform, você pode configurar os tempos de expiração para todos os Eventos de experiência assimilados em um conjunto de dados habilitado para [Perfil do cliente em tempo real](./home.md). Isso permite remover automaticamente os dados do lago de dados e da Loja de perfis que não são mais válidos ou úteis para seus casos de uso.
+No Adobe Experience Platform, você pode configurar os tempos de expiração para todos os Eventos de experiência assimilados em um conjunto de dados habilitado para [Perfil do cliente em tempo real](./home.md). Isso permite remover automaticamente os dados da Loja de perfis que não são mais válidos ou úteis para seus casos de uso.
 
 As expirações do evento de experiência não podem ser configuradas por meio da interface do usuário da plataforma ou das APIs. Em vez disso, você deve entrar em contato com o suporte para habilitar as expirações do evento de experiência em seus conjuntos de dados necessários.
 
@@ -25,7 +25,7 @@ As expirações do evento de experiência não podem ser configuradas por meio d
 
 Depois que as expirações do evento de experiência são ativadas em um conjunto de dados habilitado para perfil, a Platform aplica automaticamente os valores de expiração para cada evento capturado em um processo de duas etapas:
 
-1. Todos os novos dados assimilados no conjunto de dados têm o valor de expiração aplicado no momento da assimilação.
+1. Todos os novos dados assimilados no conjunto de dados têm o valor de expiração aplicado no momento da assimilação com base no carimbo de data e hora do evento.
 1. Todos os dados existentes no conjunto de dados têm o valor de expiração aplicado retroativamente como uma tarefa de sistema de preenchimento retroativo única. Depois que o valor de expiração for colocado no conjunto de dados, os eventos mais antigos que o valor de expiração serão soltos imediatamente assim que o trabalho do sistema for executado. Todos os outros eventos serão descartados assim que atingirem seus valores de expiração no carimbo de data e hora do evento.
 
 >[!WARNING]

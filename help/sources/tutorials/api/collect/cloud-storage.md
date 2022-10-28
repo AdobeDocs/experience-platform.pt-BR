@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
+source-git-commit: e4853c61848bec20eb8a6902365b97c3a9d0b3b3
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
@@ -146,6 +146,47 @@ curl -X POST \
       "params": {
           "path": "/acme/summerCampaign/*premium*.csv",
           "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
+### Configurar uma conexão de origem para assimilar dados recursivamente
+
+Ao criar uma conexão de origem, você pode usar a variável `recursive` para assimilar dados de pastas profundamente aninhadas.
+
+**Formato da API**
+
+```http
+POST /sourceConnections
+```
+
+**Solicitação**
+
+No exemplo abaixo, a variável `recursive: true` informa o parâmetro [!DNL Flow Service] para ler todas as subpastas recursivamente durante o processo de ingestão.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",

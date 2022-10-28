@@ -3,15 +3,21 @@ keywords: Experience Platform, home, tópicos populares, segmentação, Segmenta
 title: Endpoint da API de públicos-alvo
 topic-legacy: developer guide
 description: O endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os públicos-alvo da organização.
-source-git-commit: 2a0c1f55115c541962f7bd3b7b11d367da50ff3b
+exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 4%
+source-wordcount: '1515'
+ht-degree: 5%
 
 ---
 
-
 # Ponto de extremidade de públicos-alvo
+
+>[!IMPORTANT]
+>
+>No momento, o endpoint do público-alvo está em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Um público-alvo é uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essas coleções de pessoas podem ser geradas usando o Adobe Experience Platform ou de fontes externas. Você pode usar o `/audiences` endpoint na API de segmentação, que permite recuperar, criar, atualizar e excluir públicos de forma programática.
 

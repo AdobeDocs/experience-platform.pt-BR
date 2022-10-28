@@ -4,10 +4,10 @@ title: Guia da API do serviço de segmentação
 topic-legacy: guide
 description: A API do Serviço de segmentação permite aos desenvolvedores gerenciar programaticamente as operações de segmentação no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: b48ead4255d50585cd315436ccb9727d86142d4c
+source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 2%
+source-wordcount: '497'
+ht-degree: 3%
 
 ---
 
@@ -19,11 +19,11 @@ O [!DNL Segmentation Service] A API fornece vários endpoints que permitem geren
 
 Para visualizar todos os endpoints disponíveis e operações CRUD, consulte [Referência da API do serviço de segmentação](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## Públicos-alvo
+<!-- ## Audiences
 
-Os públicos-alvo são uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Elas podem ser geradas usando o Platform ou de fontes externas. Você pode usar o `/audiences` endpoint para recuperar todos os públicos-alvo, criar um novo público-alvo, recuperar detalhes de um público-alvo específico, atualizar um público-alvo específico ou excluir um público-alvo específico.
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
-Para obter mais informações sobre o uso deste ponto de extremidade, leia a [guia do endpoint de públicos-alvo](./audiences.md).
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
 
 ## Exportar trabalhos
 

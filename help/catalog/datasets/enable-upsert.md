@@ -4,9 +4,9 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "atualização" para fazer atualizações nos dados de Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
+source-git-commit: 1e83bc3eb2a2cc10ab945aebeef66d5108b568ea
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1050'
 ht-degree: 2%
 
 ---
@@ -75,6 +75,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -249,6 +251,10 @@ Uma solicitação bem-sucedida do PATCH retorna o Status HTTP 200 (OK) e uma mat
 ### Ativar o conjunto de dados para Perfil e Revigorar {#enable-the-dataset}
 
 Um conjunto de dados existente pode ser ativado para atualizações de Perfil e atributo usando uma única solicitação de PATCH.
+
+>[!IMPORTANT]
+>
+>Ao ativar seu conjunto de dados para Perfil, verifique se o esquema ao qual o conjunto de dados está associado é **also** Perfil ativado. Se o esquema não estiver habilitado para perfil, o conjunto de dados **not** aparecem como Perfil ativado na interface do usuário da plataforma.
 
 **Formato da API**
 

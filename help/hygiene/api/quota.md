@@ -1,9 +1,9 @@
 ---
 title: Endpoint da API de cota
 description: O endpoint /quota na API da Higiene de Dados permite monitorar o uso da higiene de dados em relação aos limites de cota mensal da organização para cada tipo de trabalho.
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '352'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram o Healthcare Shield.
+>Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
 
 O `/quota` O endpoint na API da Higiene de dados permite monitorar o uso da higiene de dados em relação aos limites de cota de sua organização para cada tipo de trabalho.
 

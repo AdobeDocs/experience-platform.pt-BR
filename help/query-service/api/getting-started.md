@@ -5,9 +5,9 @@ title: Guia da API do Serviço de query
 topic-legacy: query templates
 description: A API do Serviço de query permite que desenvolvedores consultem seus dados do Adobe Experience Platform usando o SQL padrão. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 6%
 
 ---
@@ -55,8 +55,7 @@ Agora que você entende quais cabeçalhos devem ser usados, você está pronto p
 - [Consultas agendadas](scheduled-queries.md)
 - [É executado para consultas agendadas](runs-scheduled-queries.md)
 - [Templates de query](query-templates.md)
-
-<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
+- [Assinaturas de alertas](./alert-subscriptions.md)
 
 ## Próximas etapas
 

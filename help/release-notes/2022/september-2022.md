@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2934'
 ht-degree: 5%
 
 ---
@@ -220,7 +220,7 @@ O Serviço de Consulta permite que você use o SQL padrão para consultar dados 
 
 Para obter mais informações sobre [!DNL Query Service]consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+Consulte a [documentação dos alertas de consulta](../../query-service/api/alert-subscriptions.md) para saber mais.
 
 ## Fontes {#sources}
 

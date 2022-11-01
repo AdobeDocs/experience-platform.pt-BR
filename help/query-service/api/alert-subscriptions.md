@@ -2,9 +2,7 @@
 keywords: Experience Platform; home; tópicos populares; serviço de consulta; serviço de consulta; alerta;
 title: Ponto de extremidade da API de assinaturas de alerta
 description: Este guia fornece exemplos de solicitações e respostas HTTP para as várias chamadas de API que podem ser feitas no endpoint de assinaturas de alerta com a API do Serviço de query.
-hide: true
-hidefromtoc: true
-source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%

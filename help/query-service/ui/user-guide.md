@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Editor de consultas
 topic-legacy: query editor
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas de dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ Quando os erros são detectados, é possível exibir as mensagens de erro espec�
 
 Selecione qualquer modelo salvo no [!UICONTROL Modelos] para exibi-la no Editor de consultas. O painel Detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada.
 
-![O Editor de consultas com o painel de detalhes da consulta é realçado.](../images/ui/query-editor/query-details.png)
+![O Editor de consultas com o painel de detalhes da consulta está realçado.](../images/ui/query-editor/query-details.png)
 
 Esse painel permite gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear a consulta exibida e adicionar um agendamento à consulta.
 
@@ -116,13 +116,19 @@ Esse painel também mostra metadados úteis, como a última vez que a query foi 
 >
 >Esta é uma lista de limitações para consultas agendadas ao usar o Editor de consultas. Não se aplicam à [!DNL Query Service] API:<br/>Você só pode adicionar um agendamento a um query que já tenha sido criado, salvo e executado.<br/>Você **cannot** adicione um agendamento a um query parametrizado.<br/>Consultas agendadas **cannot** contém um bloco anônimo.
 
-Para adicionar um agendamento a um query, selecione **[!UICONTROL Adicionar programação]**.
+As programações são definidas no Editor de consultas. No entanto, somente as consultas que já foram salvas como um modelo podem ser agendadas. Para adicionar um agendamento a um query, selecione um template de query a partir da variável [!UICONTROL Modelos] ou a guia [!UICONTROL Consultas agendadas] para navegar até o Editor de consultas.
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+Para saber como adicionar agendamentos usando a API, leia o [guia do endpoint de consultas agendadas](../api/scheduled-queries.md).
 
-![O Editor de consultas com Adicionar agendamento foi realçado.](../images/ui/query-editor/add-schedule.png)
+Quando uma consulta salva é acessada no Editor de consultas, a variável [!UICONTROL Agendamentos] é exibida abaixo do nome da consulta. Selecionar **[!UICONTROL Agendamentos]**.
 
-O **[!UICONTROL Detalhes da programação]** será exibida. Nesta página, você pode escolher a frequência do query agendado, as datas em que o query agendado será executado, bem como o conjunto de dados para o qual exportar o query.
+![O Editor de consultas com a guia Agendamentos foi realçado.](../images/ui/query-editor/schedules-tab.png)
+
+O espaço de trabalho de agendamentos é exibido. Selecionar **[!UICONTROL Adicionar agendamento]** para criar um agendamento.
+
+![A área de trabalho Agendamento do Editor de Consultas com Agendamento de adição está realçada.](../images/ui/query-editor/add-schedule.png)
+
+A página de detalhes do agendamento é exibida. Nesta página, você pode escolher a frequência do query agendado, a data de início e de término, o dia da semana em que o query agendada será executado, bem como o conjunto de dados para o qual exportar o query.
 
 ![O painel Detalhes do agendamento foi realçado.](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ Para o conjunto de dados, você tem a opção de usar um conjunto de dados exist
 >
 > Como você está usando um conjunto de dados existente ou está criando um novo, **not** precisa incluir `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte do query, já que os conjuntos de dados já estão definidos. Incluindo `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte das consultas agendadas, resultará em um erro.
 
-Depois de confirmar todos esses detalhes, selecione **[!UICONTROL Salvar]** para criar um agendamento.
+Depois de confirmar todos esses detalhes, selecione **[!UICONTROL Salvar]** para criar um agendamento. Você é retornado ao espaço de trabalho de agendamentos que exibe detalhes do agendamento recém-criado, incluindo a ID da agenda, o próprio agendamento e o conjunto de dados de saída do agendamento. Você pode usar a ID de agendamento para pesquisar mais informações sobre as execuções do próprio query agendado. Para saber mais, leia o [guia de endpoints de execução de query agendada](../api/runs-scheduled-queries.md).
 
-A página de detalhes da consulta é exibida novamente e agora mostra os detalhes do agendamento recém-criado, incluindo a ID do agendamento, o próprio agendamento e o conjunto de dados de saída do agendamento. Você pode usar a ID de agendamento para pesquisar mais informações sobre as execuções do próprio query agendado. Para saber mais, leia o [guia de endpoints de execução de query agendada](../api/runs-scheduled-queries.md).
+![O espaço de trabalho de agendamentos com o agendamento recém-criado destacado.](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> Você só pode agendar **one** modelo de consulta usando a interface do usuário do . Se quiser adicionar agendamentos adicionais a um template de query, será necessário usar a API . Se um agendamento já tiver sido adicionado usando a API, você **not** possa adicionar agendamentos adicionais usando a interface do usuário do . Se vários agendamentos já estiverem anexados a um template de query, somente o agendamento mais antigo será exibido. Para saber como adicionar agendamentos usando a API, leia o [guia do endpoint de consultas agendadas](../api/scheduled-queries.md).
->
-> Além disso, você deve atualizar a página se quiser garantir que tenha o estado mais recente do agendamento que está visualizando.
+#### Excluir ou desativar uma programação {#delete-schedule}
 
-#### Excluir um agendamento {#delete-schedule}
+Você pode excluir ou desabilitar um agendamento do espaço de trabalho de agendamentos. Você deve selecionar um template de query do [!UICONTROL Modelos] ou a guia [!UICONTROL Consultas agendadas] para navegar até o Editor de consultas e selecionar **[!UICONTROL Agendar]** para acessar o espaço de trabalho de agendamentos.
 
-Você pode excluir uma programação selecionando **[!UICONTROL Excluir um agendamento]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![Destaque o Editor de consultas com Desativar agendamento e Excluir agendamento.](../images/ui/query-editor/delete-schedule.png)
+Selecione um agendamento nas linhas de agendamentos disponíveis. Você pode usar a alternância para desativar ou ativar a consulta agendada.
 
 >[!IMPORTANT]
 >
-> Se quiser excluir um agendamento para um query, desative o agendamento primeiro.
+>Você deve desativar o agendamento antes de poder excluir um agendamento para uma consulta.
+
+Selecionar **[!UICONTROL Excluir um agendamento]** para excluir o agendamento desativado.
+
+![O espaço de trabalho de agendamentos com Desativar agendamento e Excluir agendamento destacado.](../images/ui/query-editor/delete-schedule.png)
 
 ### Salvar consultas {#saving-queries}
 
-[!DNL Query Editor] O fornece uma função save que permite salvar um query e trabalhar nele posteriormente. Para salvar um query, selecione **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Antes que um query possa ser salvo, um nome deve ser fornecido para o query usando o **[!UICONTROL Detalhes da consulta]** painel.
+O [!DNL Query Editor] O fornece uma função save que permite salvar um query e trabalhar nele posteriormente. Para salvar um query, selecione **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Antes que um query possa ser salvo, um nome deve ser fornecido para o query usando o **[!UICONTROL Detalhes da consulta]** painel.
 
 >[!NOTE]
 >
->Consultas nomeadas e salvas no usando o Editor de consultas estão disponíveis como modelos no painel Consulta [!UICONTROL Procurar] guia . Consulte a [documentação dos modelos](./query-templates.md) para obter mais informações.
+>Consultas nomeadas e salvas no usando o Editor de consultas estão disponíveis como modelos no painel Consulta [!UICONTROL Modelos] guia . Consulte a [documentação dos modelos](./query-templates.md) para obter mais informações.
 
 ### Como encontrar consultas anteriores {#previous-queries}
 
-Todas as consultas executadas de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de query. As consultas salvas são listadas na variável **[!UICONTROL Procurar]** guia .
+Todas as consultas executadas de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de query. As consultas salvas são listadas na variável **[!UICONTROL Modelos]** guia .
 
 Consulte a [Visão geral da interface do usuário do serviço de query](./overview.md) para obter mais informações.
 
@@ -182,7 +184,7 @@ Consulte a [Visão geral da interface do usuário do serviço de query](./overvi
 
 ## Execução de consultas usando o Editor de consultas {#executing-queries}
 
-Para executar um query em [!DNL Query Editor], você pode inserir SQL no editor ou carregar uma query anterior do **[!UICONTROL Log]** ou **[!UICONTROL Procurar]** e selecione **Reproduzir**. O status da execução da consulta é exibido na variável **[!UICONTROL Console]** guia abaixo, e os dados de saída são mostrados na guia **[!UICONTROL Resultados]** guia .
+Para executar um query em [!DNL Query Editor], você pode inserir SQL no editor ou carregar uma query anterior do **[!UICONTROL Log]** ou **[!UICONTROL Modelos]** e selecione **Reproduzir**. O status da execução da consulta é exibido na variável **[!UICONTROL Console]** guia abaixo, e os dados de saída são mostrados na guia **[!UICONTROL Resultados]** guia .
 
 ### Console {#console}
 

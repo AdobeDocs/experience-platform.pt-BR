@@ -2,7 +2,7 @@
 title: Modelos de Consulta
 description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API do serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados do Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -25,11 +25,9 @@ Você pode criar templates de query por meio de dois métodos, fazendo uma solic
 
 ### Usar o Editor de consultas para criar e salvar uma consulta como modelo
 
-Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravação](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar seu query, ele estará disponível para ser reutilizado como um template de consulta a partir do [!UICONTROL Procurar] guia .
+Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravação](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar seu query, ele estará disponível para ser reutilizado como um template de consulta a partir do [!UICONTROL Modelos] guia .
 
 No espaço de trabalho Consultas da interface do usuário da plataforma, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
-
-<!-- This may need updating idf the Schedule are added to a separate Tab -->
 
 ![O espaço de trabalho de consultas com a guia Modelos foi realçado.](../images/ui/query-templates/query-templates.png)
 
@@ -43,7 +41,7 @@ Consulte a documentação para obter instruções sobre [como fazer um template 
 
 >[!NOTE]
 >
->Os modelos criados usando a API também estão visíveis na guia Navegação do serviço de consulta da interface do usuário da plataforma.
+>Os modelos criados usando a API também estão visíveis na guia Modelos do serviço de consulta da interface do usuário da plataforma .
 
 ## Próximas etapas
 

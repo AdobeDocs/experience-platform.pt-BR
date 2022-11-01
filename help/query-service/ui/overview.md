@@ -5,7 +5,7 @@ title: Guia da interface do usuário do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 2%
@@ -18,7 +18,7 @@ A Adobe Experience Platform [!DNL Query Service] O fornece uma interface de usu�
 
 ## [!DNL Query Editor]
 
-O [!DNL Query Editor] permite gravar e executar consultas sem usar um cliente externo. Selecionar **[!UICONTROL Criar Consulta]** para abrir o [!DNL Query Editor] e criar uma nova query. Você também pode acessar a variável [!DNL Query Editor] selecionando um query no **[!UICONTROL Log]** ou **[!UICONTROL Procurar]** guias. A seleção de uma consulta executada ou salva anteriormente abrirá o [!DNL Query Editor] e exibir o SQL para a query selecionada.
+O [!DNL Query Editor] permite gravar e executar consultas sem usar um cliente externo. Selecionar **[!UICONTROL Criar Consulta]** para abrir o [!DNL Query Editor] e criar uma nova query. Você também pode acessar a variável [!DNL Query Editor] selecionando um query no **[!UICONTROL Log]** ou **[!UICONTROL Modelos]** guias. A seleção de uma consulta executada ou salva anteriormente abrirá o [!DNL Query Editor] e exibir o SQL para a query selecionada.
 
 ![O painel Consultas com a opção Criar consulta foi realçado.](../images/ui/overview/overview.png)
 

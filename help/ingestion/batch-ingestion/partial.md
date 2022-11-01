@@ -5,7 +5,7 @@ title: Visão geral da assimilação parcial de lote
 topic-legacy: overview
 description: Este documento fornece um tutorial para gerenciar a assimilação parcial de lote.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Agora, você pode fazer upload de dados usando o **Adicionar dados** e será ass
 
 ### Use o &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot; fluxo {#map-flow}
 
-Para usar o &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot;, siga as etapas listadas na [Tutorial de mapeamento de um arquivo CSV](../tutorials/map-a-csv-file.md). Depois de alcançar o **[!UICONTROL Adicionar dados]** , tome nota da **[!UICONTROL Ingestão parcial]** e **[!UICONTROL Diagnóstico de erros]** campos.
+Para usar o &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot;, siga as etapas listadas na [Tutorial de mapeamento de um arquivo CSV](../tutorials/map-csv/overview.md). Depois de alcançar o **[!UICONTROL Adicionar dados]** , tome nota da **[!UICONTROL Ingestão parcial]** e **[!UICONTROL Diagnóstico de erros]** campos.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

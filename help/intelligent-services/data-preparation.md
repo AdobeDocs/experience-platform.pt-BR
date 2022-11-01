@@ -5,7 +5,7 @@ title: Preparar dados para uso em serviços inteligentes
 topic-legacy: Intelligent Services
 description: Para que os Serviços inteligentes descubram insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes usam esquemas do Experience Data Model (XDM) para fazer isso.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 1%
@@ -356,7 +356,7 @@ Se você estiver assimilando dados de um arquivo CSV local, ignore a próxima se
 
 #### Mapear e assimilar dados {#ingest}
 
-Depois de criar um esquema CEE e um conjunto de dados, você pode começar a mapear as tabelas de dados para o esquema e assimilar esses dados na plataforma. Veja o tutorial em [mapeamento de um arquivo CSV para um esquema XDM](../ingestion/tutorials/map-a-csv-file.md) para obter etapas sobre como executar isso na interface do usuário do . Você pode usar o seguinte [exemplo de arquivo JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para testar o processo de ingestão antes de usar seus próprios dados.
+Depois de criar um esquema CEE e um conjunto de dados, você pode começar a mapear as tabelas de dados para o esquema e assimilar esses dados na plataforma. Veja o tutorial em [mapeamento de um arquivo CSV para um esquema XDM](../ingestion/tutorials/map-csv/overview.md) para obter etapas sobre como executar isso na interface do usuário do . Você pode usar o seguinte [exemplo de arquivo JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para testar o processo de ingestão antes de usar seus próprios dados.
 
 Depois que um conjunto de dados é preenchido, o mesmo conjunto de dados pode ser usado para assimilar arquivos de dados adicionais.
 

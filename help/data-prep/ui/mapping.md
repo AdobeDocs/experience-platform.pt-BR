@@ -3,7 +3,7 @@ keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arqu
 title: Guia da interface do usuário de preparação de dados
 description: Este documento fornece instruções sobre como usar funções de preparação de dados na interface do usuário da plataforma para mapear arquivos CSV para um esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1845'
 ht-degree: 1%
@@ -79,7 +79,7 @@ O **[!UICONTROL mapeamento]** A interface fornece uma ferramenta abrangente para
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Noções básicas da interface de mapeamento
+### Noções básicas da interface de mapeamento {#mapping-interface}
 
 A interface de mapeamento inclui um painel que fornece informações sobre a integridade dos campos de mapeamento no contexto do fluxo de trabalho de assimilação. O painel exibe os seguintes detalhes sobre os campos de mapeamento:
 

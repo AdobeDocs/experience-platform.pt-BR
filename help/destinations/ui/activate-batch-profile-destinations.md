@@ -4,10 +4,10 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
+source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
 workflow-type: tm+mt
-source-wordcount: '2626'
-ht-degree: 0%
+source-wordcount: '3468'
+ht-degree: 1%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>
+>Alguns clientes que participam do programa beta de funcionalidade de exportação de arquivos aprimorado estão vendo o novo **[!UICONTROL Mapeamento]** como parte de seu fluxo de trabalho de ativação para a [novos destinos de armazenamento na nuvem beta](/help/release-notes/2022/october-2022.md#destinations). Observe também a [limitações conhecidas](#known-limitations) como parte da versão.
 
 ## Visão geral {#overview}
 
@@ -162,13 +164,13 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
 >title="Configurar nome de arquivo"
 >abstract="Para destinos com base em arquivo, um nome de arquivo exclusivo é gerado por segmento. Use o editor de nome de arquivo para criar e editar um nome de arquivo exclusivo ou manter o nome padrão."
 
-Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para ter o tempo de exportação de dados anexado aos arquivos.
+Para a maioria dos destinos, os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para ter o tempo de exportação de dados anexado aos arquivos. Observe que alguns desenvolvedores de destino podem optar por ter diferentes opções de anexação de nome de arquivo padrão exibidas para seus destinos.
 
 Selecione o ícone de lápis para abrir uma janela modal e editar os nomes dos arquivos. Os nomes de arquivo são limitados a 255 caracteres.
 
 >[!NOTE]
 >
->A imagem abaixo mostra como os nomes de arquivo podem ser editados para destinos Amazon S3, mas o processo é idêntico para todos os destinos em lote (por exemplo, SFTP ou Armazenamento Azure Blob).
+>A imagem abaixo mostra como os nomes de arquivo podem ser editados para [!DNL Amazon S3] destinos , mas o processo é idêntico para todos os destinos de lote (por exemplo, SFTP, [!DNL Azure Blob Storage]ou [!DNL Google Cloud Storage]).
 
 ![Imagem destacando o ícone de lápis, que é usado para configurar nomes de arquivos.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
@@ -178,9 +180,17 @@ No editor de nome de arquivo, é possível selecionar componentes diferentes par
 
 O nome de destino e a ID de segmento não podem ser removidos dos nomes de arquivo. Além disso, você pode adicionar o seguinte:
 
-* **[!UICONTROL Nome do segmento]**: Você pode anexar o nome do segmento ao nome do arquivo.
-* **[!UICONTROL Data e hora]**: Selecione entre adicionar um `MMDDYYYY_HHMMSS` ou um carimbo de data e hora Unix de 10 dígitos da hora em que os arquivos são gerados. Escolha uma dessas opções se desejar que seus arquivos tenham um nome de arquivo dinâmico gerado com cada exportação incremental.
-* **[!UICONTROL Texto personalizado]**: Adicione texto personalizado aos nomes dos arquivos.
+| Opção Nome do arquivo | Descrição |
+|---------|----------|
+| **[!UICONTROL Nome do segmento]** | O nome do segmento exportado. |
+| **[!UICONTROL Data e hora]** | Selecione entre adicionar um `MMDDYYYY_HHMMSS` ou um carimbo de data e hora Unix de 10 dígitos da hora em que os arquivos são gerados. Escolha uma dessas opções se desejar que seus arquivos tenham um nome de arquivo dinâmico gerado com cada exportação incremental. |
+| **[!UICONTROL Texto personalizado]** | Qualquer texto personalizado que você deseja adicionar aos nomes de arquivo. |
+| **[!UICONTROL ID de destino]** | A ID do fluxo de dados de destino usado para exportar o segmento. <br> **Observação**: Essa opção de anexação de nome de arquivo está disponível somente para clientes beta que participam do programa beta aprimorado da funcionalidade de exportação de arquivos. Entre em contato com o representante do Adobe ou com o Atendimento ao cliente se desejar acessar o programa beta. |
+| **[!UICONTROL Nome do destino]** | O nome do fluxo de dados de destino usado para exportar o segmento. <br> **Observação**: Essa opção de anexação de nome de arquivo está disponível somente para clientes beta que participam do programa beta aprimorado da funcionalidade de exportação de arquivos. Entre em contato com o representante do Adobe ou com o Atendimento ao cliente se desejar acessar o programa beta. |
+| **[!UICONTROL Nome da organização]** | Nome da organização no Experience Platform. <br> **Observação**: Essa opção de anexação de nome de arquivo está disponível somente para clientes beta que participam do programa beta aprimorado da funcionalidade de exportação de arquivos. Entre em contato com o representante do Adobe ou com o Atendimento ao cliente se desejar acessar o programa beta. |
+| **[!UICONTROL Nome da sandbox]** | A ID da sandbox usada para exportar o segmento. <br> **Observação**: Essa opção de anexação de nome de arquivo está disponível somente para clientes beta que participam do programa beta aprimorado da funcionalidade de exportação de arquivos. Entre em contato com o representante do Adobe ou com o Atendimento ao cliente se desejar acessar o programa beta. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Selecionar **[!UICONTROL Aplicar alterações]** para confirmar a seleção.
 
@@ -193,7 +203,6 @@ Após concluir a configuração de todos os segmentos, selecione **[!UICONTROL P
 ## Selecionar atributos de perfil {#select-attributes}
 
 Para destinos com base em perfil, você deve selecionar os atributos de perfil que deseja enviar para o destino do target.
-
 
 1. No **[!UICONTROL Selecionar atributos]** página, selecione **[!UICONTROL Adicionar novo campo]**.
 
@@ -386,6 +395,75 @@ O Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 >
 > Por exemplo, se o campo `person.name.firstName` Se tiver determinados rótulos de uso de dados que entram em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+## Mapeamento (Beta) {#mapping}
+
+>[!IMPORTANT]
+> 
+>Clientes beta selecionados podem exibir um relatório aprimorado **[!UICONTROL Mapeamento]** que substitui [Selecionar atributos de perfil](#select-attributes) etapa descrita acima. Este novo **[!UICONTROL Mapeamento]** permite editar os cabeçalhos de arquivos exportados para quaisquer nomes personalizados que você desejar.
+> 
+> A funcionalidade e a documentação estão sujeitas a alterações. Entre em contato com o representante do Adobe ou com o Atendimento ao cliente se desejar acessar esse programa beta.
+
+Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar aos arquivos exportados para o destino do target. Para selecionar os atributos e identidades do perfil para exportação:
+
+1. No **[!UICONTROL Mapeamento]** página, selecione **[!UICONTROL Adicionar novo campo]**.
+
+   ![Adicionar novo controle de campo destacado no workflow de mapeamento.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+
+1. Selecione a seta à direita da **[!UICONTROL Campo de origem]** entrada.
+
+   ![Selecione o controle de campo de origem destacado no workflow de mapeamento.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+1. No **[!UICONTROL Selecionar campo de origem]** selecione os atributos e identidades do perfil que deseja incluir nos arquivos exportados para o destino e escolha **[!UICONTROL Selecionar]**.
+
+   >[!TIP]
+   > 
+   >Você pode usar o campo de pesquisa para restringir sua seleção, como mostrado na imagem abaixo.
+
+   ![Janela modal que mostra os atributos de perfil que podem ser exportados para o destino.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+
+
+1. O campo selecionado para exportação agora aparece na visualização de mapeamento. Se desejar, é possível editar o nome do cabeçalho no arquivo exportado. Para fazer isso, selecione o ícone no campo target .
+
+   ![Janela modal que mostra os atributos de perfil que podem ser exportados para o destino.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. No **[!UICONTROL Selecionar campo de destino]** digite o nome desejado do cabeçalho no arquivo exportado e escolha **[!UICONTROL Selecionar]**.
+
+   ![Janela modal mostrando um nome amigável digitado para um cabeçalho.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. O campo selecionado para exportação agora aparece na exibição de mapeamento e mostra o cabeçalho editado no arquivo exportado.
+
+   ![Janela modal que mostra os atributos de perfil que podem ser exportados para o destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Opcional) Você pode selecionar o campo exportado para ser um [chave obrigatória](#mandatory-keys) ou [chave de desduplicação](#deduplication-keys).
+
+   ![Janela modal que mostra os atributos de perfil que podem ser exportados para o destino.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. Para adicionar mais campos para exportação, repita as etapas acima.
+
+### Limitações conhecidas {#known-limitations}
+
+O novo **[!UICONTROL Mapeamento]** tem as seguintes limitações conhecidas:
+
+#### Não é possível selecionar o atributo de associação de segmento por meio do fluxo de trabalho de mapeamento
+
+Devido a uma limitação conhecida, não é possível usar atualmente a variável **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.status` para suas exportações de arquivo. Em vez disso, é necessário colar manualmente o valor `xdm: segmentMembership.status` no campo schema , conforme mostrado abaixo.
+
+![Gravação de tela mostrando a solução alternativa de associação de segmento na etapa de mapeamento do fluxo de trabalho de ativação.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+
+As exportações de arquivo variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionada:
+* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
+* Se a variável `segmentMembership.status` não estiver selecionado, os arquivos exportados incluem somente **[!UICONTROL Ativo]** membros no instantâneo completo inicial e nas exportações incrementais subsequentes.
+
+#### Os namespaces de identidade não podem ser selecionados no momento para exportações
+
+No momento, não há suporte para a seleção de namespaces de identidade para exportação, como mostrado na imagem abaixo. Selecionar qualquer namespace de identidade para exportação resultará em um erro no **[!UICONTROL Revisão]** etapa.
+
+![Mapeamento não suportado mostrando exportações de identidade](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+Como solução temporária, se você precisar adicionar namespaces de identidade aos arquivos exportados durante o beta, é possível:
+* Use os destinos herdados de armazenamento em nuvem para os fluxos de dados nos quais deseja incluir namespaces de identidade nas exportações
+* Faça upload de identidades como atributos no Experience Platform para exportá-las para os destinos de armazenamento na nuvem.
+
 ## Revisão {#review}
 
 No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações, ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
@@ -402,11 +480,10 @@ Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL
 
 ## Verificar ativação de segmento {#verify}
 
-
-Para destinos de marketing por email e destinos de armazenamento em nuvem, o Adobe Experience Platform cria um `.csv` no local de armazenamento fornecido. Espera que um novo arquivo seja criado no seu local de armazenamento todos os dias. O formato de arquivo padrão é:
+Para destinos de marketing por email e destinos de armazenamento em nuvem, o Adobe Experience Platform cria um `.csv` no local de armazenamento fornecido. Esperar que um novo arquivo seja criado no local de armazenamento de acordo com a programação definida no fluxo de trabalho. O formato de arquivo padrão é:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-Os arquivos que você receberia em três dias consecutivos podem ter a seguinte aparência:
+Por exemplo, se você selecionasse uma frequência de exportação diária, os arquivos que você receberia em três dias consecutivos poderiam ter a seguinte aparência:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv

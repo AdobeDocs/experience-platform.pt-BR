@@ -3,9 +3,9 @@ keywords: destino de armazenamento na nuvem; armazenamento na nuvem
 title: Visão geral dos destinos de armazenamento na nuvem
 description: A Adobe Experience Platform pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamento em nuvem Amazon S3, AWS Kinesis, Hubs de eventos do Azure ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-A Adobe Experience Platform pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamento na nuvem. Isso permite enviar públicos-alvo e atributos de perfil para seus sistemas internos, por meio de arquivos CSV para [!DNL Amazon S3], [!DNL Azure Blob] e SFTP. Para [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinos, os dados são transmitidos do Experience Platform [!DNL JSON] formato.
+A Adobe Experience Platform pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamento na nuvem. Isso permite enviar públicos-alvo e atributos de perfil para seus sistemas internos, por meio de arquivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]e SFTP. Para [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinos, os dados são transmitidos do Experience Platform [!DNL JSON] formato.
 
 ![Destinos de armazenamento na nuvem do Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ O Adobe Experience Platform é compatível com os seguintes destinos de armazena
 * [Conexão Amazon Kinesis](amazon-kinesis.md)
 * [Conexão Amazon S3](amazon-s3.md)
 * [Conexão Blob do Azure](azure-blob.md)
+* [(Beta) Armazenamento Azure Data Lake Gen2](adls-gen2.md)
 * [Conexão de Hubs de Eventos do Azure](azure-event-hubs.md)
+* [Zona de aterrissagem de dados (Beta)](data-landing-zone.md)
+* [(Beta) Armazenamento em nuvem Google](google-cloud-storage.md)
 * [Conexão SFTP](sftp.md)
 
 ## Conectar-se a um novo destino de armazenamento em nuvem {#connect-destination}

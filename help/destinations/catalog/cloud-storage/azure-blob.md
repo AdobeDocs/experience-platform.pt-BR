@@ -3,14 +3,32 @@ keywords: Azure Blob; destino Blob; s3; destino de blob do azure
 title: Conexão Blob do Azure
 description: Crie uma conexão de saída em tempo real com o armazenamento do Azure Blob para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
 
 # [!DNL Azure Blob] conexão
+
+## Log de alterações de destino {#changelog}
+
+>[!IMPORTANT]
+>
+>Com a versão beta da funcionalidade de exportação de conjuntos de dados e a funcionalidade aprimorada de exportação de arquivos, agora é possível ver dois [!DNL Azure Blob] cartões no catálogo de destinos.
+>* Se você já estiver exportando arquivos para o **[!UICONTROL Azure Blob]** destino: Crie novos fluxos de dados para o novo **[!UICONTROL Azure Blob beta]** destino.
+>* Se você ainda não tiver criado nenhum fluxo de dados para a **[!UICONTROL Azure Blob]** destino, use o novo **[!UICONTROL Azure Blob beta]** cartão para exportar arquivos para **[!UICONTROL Azure Blob]**.
+
+
+![Imagem dos dois cartões de destino do Azure Blob em uma exibição lado a lado.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+
+Melhorias nas novas [!DNL Azure Blob] o cartão de destino inclui:
+
+* [Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+* Adicional [opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Capacidade de definir cabeçalhos de arquivo personalizados em seus arquivos exportados por meio do [etapa de mapeamento aprimorada](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Visão geral {#overview}
 
@@ -89,6 +107,10 @@ Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!U
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
+
+## (Beta) Exportar conjuntos de dados {#export-datasets}
+
+Esse destino é compatível com exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia a [tutorial exportar conjuntos de dados](/help/destinations/ui/export-datasets.md).
 
 ## Dados exportados {#exported-data}
 

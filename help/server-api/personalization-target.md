@@ -2,9 +2,9 @@
 title: Personalização via Adobe Target
 description: Saiba como usar a API do servidor para entregar e renderizar experiências personalizadas criadas no Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
+source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '744'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ A API do Servidor de rede de borda pode fornecer e renderizar experiências pers
 
 >[!IMPORTANT]
 >
->Experiências de personalização criadas com o [Visual Experience Composer (VEC) do Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) não são totalmente compatíveis com a API do servidor. A API do servidor pode **recuperar** atividades criadas pelo VEC, mas a API de servidor não pode **renderizar** atividades criadas pelo VEC. Se você deseja renderizar atividades criadas pelo VEC, use a variável [Web SDK](../edge/home.md).
+>Experiências de personalização criadas com o [Visual Experience Composer (VEC) do Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) não são totalmente compatíveis com a API do servidor. A API do servidor pode **recuperar** atividades criadas pelo VEC, mas a API de servidor não pode **renderizar** atividades criadas pelo VEC. Se você deseja renderizar atividades criadas pelo VEC, implemente [personalização híbrida](../edge/personalization/hybrid-personalization.md) usando o SDK da Web e a API do Servidor de Rede de Borda.
 
 ## Configurar o fluxo de dados {#configure-your-datastream}
 

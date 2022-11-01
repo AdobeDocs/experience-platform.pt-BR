@@ -4,22 +4,22 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '3388'
+source-wordcount: '3385'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Perfis] painel
 
-A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre sua [!DNL Real-time Customer Profile] dados, como capturados durante um instantâneo diário. Este guia descreve como acessar e trabalhar com a [!UICONTROL Perfis] painel na interface do usuário e fornece informações sobre as métricas exibidas no painel.
+A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre sua [!DNL Real-time Customer Profile] dados, como capturados durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel Perfis na interface do usuário e fornece informações sobre as métricas exibidas no painel.
 
-Para obter uma visão geral de todos os recursos de Perfil na interface do usuário do Experience Platform, visite o [Guia da interface do usuário do perfil do cliente em tempo real](../../profile/ui/user-guide.md).
+Para obter uma visão geral de todos os recursos de Perfil na interface do usuário do Experience Platform, consulte [Guia da interface do usuário do perfil do cliente em tempo real](../../profile/ui/user-guide.md).
 
 ## Dados do painel de perfis
 
-O [!UICONTROL Perfis] O painel exibe um instantâneo dos dados de atributo (registro) que sua organização tem na Loja de perfis no Experience Platform. O instantâneo não inclui nenhum dado de evento (série de tempo).
+O painel Perfis exibe um instantâneo dos dados de atributo (registro) que sua organização tem na Loja de perfis no Experience Platform. O instantâneo não inclui nenhum dado de evento (série de tempo).
 
 Os dados do atributo no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel de Perfil não está sendo atualizado em tempo real.
 
@@ -27,19 +27,19 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 >
 >Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
 
-## Explorar o [!UICONTROL Perfis] painel
+## Explorar o painel Perfis
 
-Para navegar até o [!UICONTROL Perfis] no painel da interface do usuário da plataforma, selecione **[!UICONTROL Perfis]** no painel à esquerda, selecione o **[!UICONTROL Visão geral]** para exibir o painel.
+Para navegar até o painel Perfis na interface do usuário da plataforma, selecione **[!UICONTROL Perfis]** no painel à esquerda, selecione o **[!UICONTROL Visão geral]** para exibir o painel.
 
 >[!NOTE]
 >
->Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, a variável [!UICONTROL Perfis] o painel não está visível. Em vez disso, a variável [!UICONTROL Visão geral] A guia exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
+>Se sua organização for nova na Platform e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel Perfis não estará visível. Em vez disso, a variável [!UICONTROL Visão geral] A guia exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
 
 ![](../images/profiles/dashboard-overview.png)
 
-### Modificação do [!UICONTROL Perfis] painel
+### Modificação do painel Perfis
 
-Você pode modificar a aparência da variável [!UICONTROL Perfis] painel selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência do painel Perfis selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) documentação para saber mais.
 
@@ -73,9 +73,9 @@ Para saber mais sobre os recursos de visualização de perfil fornecidos na inte
 
 ## Mesclar políticas {#merge-policies}
 
-As métricas exibidas no [!UICONTROL Perfis] O painel é baseado nas políticas de mesclagem aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são reunidos de várias fontes para criar o perfil do cliente, os dados podem conter valores conflitantes. Por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listá-lo como &quot;casado&quot;. É tarefa da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
+As métricas exibidas no painel Perfis são baseadas nas políticas de mesclagem aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são reunidos de várias fontes para criar o perfil do cliente, os dados podem conter valores conflitantes. Por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listá-lo como &quot;casado&quot;. É tarefa da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
 
-Para obter mais informações sobre políticas de mesclagem, incluindo como criar, editar e declarar uma política de mesclagem padrão para sua organização, comece lendo a variável [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
+Para obter mais informações sobre políticas de mesclagem, incluindo como criar, editar e declarar uma política de mesclagem padrão para sua organização, consulte a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
 
 O painel selecionará automaticamente uma política de mesclagem para usar. A política de mesclagem aplicada pode ser alterada usando o menu suspenso ao lado do nome da política de mesclagem.
 
@@ -140,7 +140,7 @@ Consulte a [seção sobre políticas de mesclagem no início deste documento](#m
 >
 >O [!UICONTROL Contagem de perfis] o widget pode mostrar um número diferente da contagem de perfis exibida no [!UICONTROL Procurar] na guia no [!UICONTROL Perfis] da interface do usuário por vários motivos. A razão mais comum para isso é porque a variável [!UICONTROL Procurar] guia faz referência ao número total de perfis mesclados com base na política de mesclagem padrão da organização, enquanto a variável [!UICONTROL Contagem de perfis] O widget faz referência ao número total de perfis mesclados com base na política de mesclagem que você selecionou para exibir no painel.
 >
->Outra razão comum é devido às diferenças entre o momento em que o instantâneo do painel é tirado e o momento em que o trabalho de amostra é executado para o [!UICONTROL Procurar] guia . Você pode ver quando a variável [!UICONTROL Contagem de perfis] O widget foi atualizado pela última vez, observando o carimbo de data e hora no widget e para saber mais sobre como o trabalho de amostra é acionado no [!UICONTROL Procurar] consulte a guia [seção contagem de perfis no guia da interface do usuário de perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Outra razão comum é devido às diferenças entre o momento em que o instantâneo do painel é tirado e o momento em que o trabalho de amostra é executado para o [!UICONTROL Procurar] guia . Você pode ver quando a variável [!UICONTROL Contagem de perfis] O widget foi atualizado pela última vez com o registro de data e hora no widget. Para saber mais sobre como o trabalho de amostra é acionado no [!UICONTROL Procurar] consulte a guia [seção contagem de perfis no guia da interface do usuário de perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
@@ -226,7 +226,7 @@ O **[!UICONTROL Sobreposição de identidade]** O widget usa um diagrama Venn ou
 
 Use os menus suspensos do widget para selecionar as identidades que deseja comparar. Os círculos exibem a contagem total relativa de perfis que contêm cada identidade. O número de perfis que contém ambas as identidades é representado pelo tamanho da sobreposição entre os círculos. Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
 
-Para obter mais informações sobre fragmentos de perfil, comece lendo a seção em [fragmentos de perfil vs. perfis mesclados](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) na visão geral do Perfil do cliente em tempo real.
+Para obter mais informações sobre fragmentos de perfil, consulte a seção em [fragmentos de perfil vs. perfis mesclados](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) na visão geral do Perfil do cliente em tempo real.
 
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
@@ -430,4 +430,4 @@ The three levels of completeness are:
 
 ## Próximas etapas
 
-Agora, ao seguir este documento, você pode localizar o painel Perfis e entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com a [!DNL Profile] na interface do usuário do Experience Platform, consulte o [Guia da interface do usuário do perfil do cliente em tempo real](../../profile/ui/user-guide.md).
+Agora, ao seguir este documento, você pode localizar o painel de perfis e entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com a [!DNL Profile] na interface do usuário do Experience Platform, consulte o [Guia da interface do usuário do perfil do cliente em tempo real](../../profile/ui/user-guide.md).

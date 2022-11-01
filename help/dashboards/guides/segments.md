@@ -4,9 +4,9 @@ title: Guia do painel Segmentos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2092'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 
 O **[!UICONTROL Tamanho do público-alvo]** O widget exibe o número total de perfis mesclados no segmento selecionado no momento em que o instantâneo foi tirado. Esse número é o resultado da aplicação da política de mesclagem de segmentos aos seus dados de Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo no segmento.
 
-Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a variável [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Para obter mais informações sobre fragmentos e perfis mesclados, consulte [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ![A visão geral do painel Segmentos com o widget Audience size é realçada.](../images/segments/audience-size.png)
 

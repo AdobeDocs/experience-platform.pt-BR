@@ -1,9 +1,9 @@
 ---
 title: Mapear um arquivo CSV para um esquema XDM usando o Recommendations gerado por IA (Beta)
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando recomendações geradas por IA.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 1%
 
 ---
@@ -35,13 +35,13 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]
 
 O **[!UICONTROL Mapear esquema CSV XDM]** for exibido, começando no **[!UICONTROL Detalhes do fluxo de dados]** etapa.
 
-Selecionar **[!UICONTROL Criar um novo schema usando recomendações de ML]**, fazendo com que novos controles apareçam. Escolha a classe apropriada para dados CSV que deseja mapear ([!UICONTROL Perfil] ou [!UICONTROL ExperienceEvent]) e use o menu suspenso para selecionar o setor relevante para sua empresa. Se sua organização opera sob uma [B2B (B2B)](../../../xdm/tutorials/relationship-b2b.md) selecione o **[!UICONTROL Dados B2B]** caixa de seleção.
+Selecionar **[!UICONTROL Criar um novo schema usando recomendações de ML]**, fazendo com que novos controles apareçam. Escolha a classe apropriada para os dados CSV que deseja mapear ([!UICONTROL Perfil] ou [!UICONTROL ExperienceEvent]). Como opção, você pode usar o menu suspenso para selecionar o setor relevante para sua empresa ou deixá-lo em branco se as categorias fornecidas não se aplicarem a você. Se sua organização opera sob uma [B2B (B2B)](../../../xdm/tutorials/relationship-b2b.md) selecione o **[!UICONTROL Dados B2B]** caixa de seleção.
 
 ![O [!UICONTROL Detalhes do fluxo de dados] etapa com a opção de recomendação ML selecionada. [!UICONTROL Perfil] é selecionado para a classe e [!UICONTROL Telecomunicações] selecionados para o setor](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 A partir daqui, forneça um nome para o schema que será criado a partir dos dados CSV e um nome para o conjunto de dados de saída que conterá os dados assimilados nesse esquema.
 
-Opcionalmente, é possível configurar os seguintes recursos adicionais para o fluxo de dados:
+Opcionalmente, é possível configurar os seguintes recursos adicionais para o fluxo de dados antes de continuar:
 
 | Nome de entrada | Descrição |
 | --- | --- |
@@ -50,6 +50,8 @@ Opcionalmente, é possível configurar os seguintes recursos adicionais para o f
 | [!UICONTROL Ingestão parcial] | Quando ativado, registros válidos para novos dados de lote serão assimilados dentro de um limite de erro especificado. Esse limite permite configurar a porcentagem de erros aceitáveis antes que todo o lote falhe. |
 | [!UICONTROL Detalhes do fluxo de dados] | Forneça um nome e uma descrição opcional para o fluxo de dados que trará os dados CSV para a Plataforma. Ao iniciar esse fluxo de trabalho, um nome padrão é atribuído automaticamente ao fluxo de trabalho. A alteração do nome é opcional. |
 | [!UICONTROL Alertas] | Selecione em uma lista de [alertas no produto](../../../observability/alerts/overview.md) que você deseja receber com relação ao status do fluxo de dados depois que ele for iniciado. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Quando terminar de configurar o fluxo de dados, selecione **[!UICONTROL Próximo]**.
 
@@ -81,7 +83,7 @@ Use a visualização de mapeamento de campo para editar mapeamentos existentes o
 
 ### Editar grupos de campos {#edit-field-groups}
 
-Os campos CSV são mapeados automaticamente para grupos de campos existentes usando modelos ML. Se desejar alterar o grupo de campos de qualquer campo CSV específico, selecione **[!UICONTROL Editar]** ao lado da árvore de esquema.
+Os campos CSV são mapeados automaticamente para grupos de campos XDM existentes usando modelos ML. Se desejar alterar o grupo de campos de qualquer campo CSV específico, selecione **[!UICONTROL Editar]** ao lado da árvore de esquema.
 
 ![O [!UICONTROL Editar] botão que está sendo selecionado ao lado da árvore de esquema](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 

@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Editor de consultas
 topic-legacy: query editor
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas de dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
+source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2081'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ O [!DNL Query Editor] O fornece uma função save que permite salvar um query e 
 
 Todas as consultas executadas de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de query. As consultas salvas são listadas na variável **[!UICONTROL Modelos]** guia .
 
-Consulte a [Visão geral da interface do usuário do serviço de query](./overview.md) para obter mais informações.
+Se um query foi agendado, então a variável [!UICONTROL Consultas agendadas] A guia fornece visibilidade aprimorada pela interface do usuário para esses trabalhos de consulta. Consulte a [documentação de monitoramento de consultas](../monitor-queries.md) para obter mais informações.
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
+source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1419'
 ht-degree: 4%
 
 ---
@@ -103,7 +103,8 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | [!DNL Sandbox Administration] | [!UICONTROL Redefinir uma sandbox] | Capacidade de redefinir uma sandbox. |
 | [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar, editar e desativar destinos. |
 | [!DNL Destinations] | [!UICONTROL Exibir destinos] | Acesso somente leitura a destinos disponíveis na **[!UICONTROL Catálogo]** e destinos autenticados no **[!UICONTROL Procurar]** guia . |
-| [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Esta permissão requer &quot;Exibir destinos&quot; ou &quot;Gerenciar [!UICONTROL Destinos&quot;] a ser concedido ao usuário que ativará destinos. |
+| [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Esta permissão requer [!UICONTROL Exibir destinos] ou [!UICONTROL Gerenciar destinos] a ser concedido ao usuário que ativará destinos. |
+| [!DNL Destinations] | [!UICONTROL Gerenciar e ativar destinos do conjunto de dados] | Capacidade de ler, criar, editar e desativar fluxos de exportação de conjunto de dados. Capacidade de ativar também dados em conjuntos de dados ativos que foram criados. |
 | [!DNL Destinations] | [!UICONTROL Criação de destinos] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
 | [!DNL Data Ingestion] | [!UICONTROL Exibir fontes] | Acesso somente leitura a fontes disponíveis no **[!UICONTROL Catálogo]** e fontes autenticadas na **[!UICONTROL Procurar]** guia . |

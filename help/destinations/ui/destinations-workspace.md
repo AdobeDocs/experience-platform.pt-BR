@@ -3,9 +3,9 @@ keywords: plataforma; destinos; espaço de trabalho de destinos; espaço de trab
 title: Área de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
+source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1223'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ No Adobe Experience Platform, selecione **[!UICONTROL Destinos]** na barra de na
 
 O [!UICONTROL Destinos] o workspace consiste em cinco seções, [!UICONTROL Visão geral], [!UICONTROL Catálogo], [!UICONTROL Procurar], [!UICONTROL Contas]e [!UICONTROL Exibição do sistema], descritas nas seções abaixo.
 
-![Visão geral dos destinos](../assets/ui/workspace/destinations-overview.png)
+![Painel de visão geral de Destinos que mostra três widgets.](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Visão geral] {#overview}
 
@@ -37,16 +37,18 @@ O [!DNL Platform] a interface do usuário fornece várias opções de pesquisa e
 * Use a funcionalidade de pesquisa na página para localizar um destino específico.
 * Filtrar destinos usando o [!UICONTROL Categorias] controlo.
 * Alternar entre [!UICONTROL Todos os destinos] e [!UICONTROL Meus destinos]. Ao selecionar **[!UICONTROL Todos os destinos]**, todos disponíveis [!DNL Platform] os destinos são exibidos. Ao selecionar **[!UICONTROL Meus destinos]**, você só poderá ver os destinos com os quais estabeleceu uma conexão.
-* Selecionar para exibição **[!UICONTROL Conexões]** e/ou **[!UICONTROL Extensões]**. Para entender a diferença entre as duas categorias, consulte [Tipos e categorias de destino](../destination-types.md).
+* Selecione para exibir o **[!UICONTROL Conexões]** e/ou **[!UICONTROL Extensões]** tipos. Para entender a diferença entre as duas categorias, leia [Tipos e categorias de destino](../destination-types.md).
 
-![Catálogo](../assets/ui/workspace/catalog.png)
+![Catálogo de destinos que mostra alguns destinos de publicidade e armazenamento em nuvem.](../assets/ui/workspace/catalog.png)
 
-Os cartões de destino contêm um **[!UICONTROL Configurar]** ou **[!UICONTROL Ativar segmentos]** controle e um controle secundário que traz mais opções. Esses controles estão descritos abaixo:
+As placas de destino contêm opções de controle primário e secundário. Os controles principais incluem [!UICONTROL Configurar], [!UICONTROL Ativar], [!UICONTROL Ativar segmentos]ou [!UICONTROL Exportar conjuntos de dados]. Os controles secundários permitem opções de visualização. Esses controles estão descritos abaixo:
 
 | Controle | Descrição |
 |---------|----------|
 | [!UICONTROL Configurar] | Permite criar uma conexão com o destino. |
-| [!UICONTROL Ativar segmentos] | Depois de estabelecer uma conexão com o destino, é possível ativar segmentos. |
+| [!UICONTROL Ativar] | Depois de estabelecer uma conexão com o destino, é possível ativar segmentos ou exportar conjuntos de dados para esse destino. |
+| [!UICONTROL Ativar segmentos] | Depois de estabelecer uma conexão com o destino, é possível ativar segmentos para esse destino. |
+| [!UICONTROL Exportar conjuntos de dados] | Depois de estabelecer uma conexão com o destino, é possível exportar conjuntos de dados para esse destino. |
 | [!UICONTROL Exibir conta] | Exiba as contas que você conectou para um destino. |
 | [!UICONTROL Exibir fluxos de dados] | Visualize os fluxos de ativação de dados que existem para um destino. |
 | [!UICONTROL Exibir documentação] | Abre um link para a página de documentação desse destino específico, para obter mais informações e para ajudar a configurá-lo. |
@@ -67,9 +69,9 @@ O **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões estabelecida
 
 >[!TIP]
 >
-> * Selecione os três pontos no [!UICONTROL Plataforma] e use a ![Botão Ativar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar segmentos ]**para enviar segmentos para esse destino.
-> * Selecione os três pontos no [!UICONTROL Plataforma] e use a ![Botão Editar detalhes](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalhes ]**botão para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
-> * Selecione os três pontos no [!UICONTROL Plataforma] e use a ![Botão Excluir](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**botão para [excluir](delete-destination-account.md) uma conta de destino existente.
+> * Selecione as reticências (`...`) na [!UICONTROL Plataforma] e use a ![Ativar controle](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**/**[!UICONTROL  Ativar segmentos ]**/**[!UICONTROL  Exportar conjuntos de dados ]**controle para exportar segmentos ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na [!UICONTROL Plataforma] e use a ![Editar controle de detalhes](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalhes ]**controle para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione as reticências (`...`) na [!UICONTROL Plataforma] e use a ![Excluir controle](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**controle para [excluir](delete-destination-account.md) uma conta de destino existente.
 
 
 ![Guia Contas](../assets/ui/workspace/destination-account-options.png)
@@ -90,10 +92,10 @@ O **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma
 
 >[!TIP]
 >
-> * Selecione os três pontos no [!UICONTROL Nome] e use a ![Botão Ativar segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar segmentos ]**para enviar segmentos para esse destino.
-> * Selecione os três pontos no [!UICONTROL Nome] e use a ![Botão Excluir](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**botão para [remove](delete-destinations.md) uma conexão existente com um destino.
-> * Selecione os três pontos no [!UICONTROL Nome] e use a ![Exibir no botão monitoramento](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Exibir no monitoramento ]**botão para exibir as informações de ativação para esse destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Selecione os três pontos no [!UICONTROL Nome] e use a ![Inscrever-se em alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Inscrever-se em alertas ]**para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens relacionadas ao status, sucesso ou falha da execução do fluxo. Consulte [Assinar alertas de destino no contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
+> * Selecione as reticências (`...`) na [!UICONTROL Nome] e use a ![Ativar controle de segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**controle para exportar segmentos ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na [!UICONTROL Nome] e use a ![Excluir controle](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**controle para [remove](delete-destinations.md) uma conexão existente com um destino.
+> * Selecione as reticências (`...`) na [!UICONTROL Nome] e use a ![Exibir no controle de monitoramento](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Exibir no monitoramento ]**controle para exibir informações de ativação para esse destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Selecione as reticências (`...`) na [!UICONTROL Nome] e use a ![Inscrever-se em alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Inscrever-se em alertas ]**controle para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens relacionadas ao status, sucesso ou falha da execução do fluxo. Consulte [Assinar alertas de destino no contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
 
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)

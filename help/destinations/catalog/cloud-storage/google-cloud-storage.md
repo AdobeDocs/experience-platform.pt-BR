@@ -1,7 +1,7 @@
 ---
 title: (Beta) Conexão de armazenamento em nuvem Google
 description: Saiba como se conectar ao Google Cloud Storage e ativar segmentos ou exportar conjuntos de dados.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
 
 * **[!UICONTROL ID da chave de acesso]**: Uma sequência de 61 caracteres alfanuméricos usada para autenticar o [!DNL Google Cloud Storage] para a Platform. Para obter informações sobre como obter esse valor, leia a [pré-requisitos](#prerequisites) acima.
-* **[!UICONTROL Chave de acesso secreta]**: Uma string codificada em 40 caracteres, base e 64, usada para autenticar seu [!DNL Google Cloud Storage] para a Platform. Para obter informações sobre como obter esse valor, leia a [pré-requisitos](#prerequisites) acima.
+* **[!UICONTROL Chave de acesso secreta]**: Uma string codificada em base64, de 40 caracteres, usada para autenticar seu [!DNL Google Cloud Storage] para a Platform. Para obter informações sobre como obter esse valor, leia a [pré-requisitos](#prerequisites) acima.
 * **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser escrita como uma [!DNL Base64-encoded] string. Visualize um exemplo de uma chave corretamente formatada e codificada em base64 no link da documentação abaixo. A parte central é encurtada por brevidade.
 
    ![Imagem mostrando um exemplo de uma chave PGP corretamente formatada e criptografada em base64 na interface do usuário](../../assets/catalog/cloud-storage/sftp/pgp-key.png)

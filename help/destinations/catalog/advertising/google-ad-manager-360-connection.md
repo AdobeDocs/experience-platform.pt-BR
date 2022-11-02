@@ -2,7 +2,7 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que oferece aos editores meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 1%
@@ -62,8 +62,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >
 >A Google simplificou o processo para conectar plataformas externas de gerenciamento de público-alvo ao Google Ad Manager 360. Agora você pode passar pelo processo de vinculação ao Google Ad Manager 360 de maneira automatizada. Ler [Segmentos de plataformas de gerenciamento de dados](https://support.google.com/admanager/answer/3289669?hl=en) na documentação do Google. Você deve ter as IDs listadas abaixo à mão.
 
-* **ID da conta**: ID da conta do Adobe com Google. ID da conta: 87933855.
-* **Customer ID**: ID da conta do cliente do Adobe com Google. ID do cliente: 89690775.
+* **ID da conta**: Adobe ID com Google. ID da conta: 87933855.
+* **Customer ID**: Adobe ID com Google. ID do cliente: 89690775.
 * **Código de rede**: Este é o seu [!DNL Google Ad Manager] identificador de rede, encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google, bem como no URL.
 * **ID do link de público-alvo**: Esse é um identificador específico associado ao [!DNL Google Ad Manager] rede (não sua [!DNL Network code]), também encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google.
 * Seu tipo de conta. DFP por Google ou comprador AdX.
@@ -81,7 +81,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
 
 * **[!UICONTROL ID da chave de acesso]**: Uma sequência de 61 caracteres alfanuméricos usada para autenticar o [!DNL Google Cloud Storage] para a Platform.
-* **[!UICONTROL Chave de acesso secreta]**: Uma string codificada em 40 caracteres, base e 64, usada para autenticar seu [!DNL Google Cloud Storage] para a Platform.
+* **[!UICONTROL Chave de acesso secreta]**: Uma string codificada em base64, de 40 caracteres, usada para autenticar seu [!DNL Google Cloud Storage] para a Platform.
 
 Para obter mais informações sobre esses valores, consulte o [Chaves HMAC do Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guia. Para obter etapas sobre como gerar sua própria ID de chave de acesso e chave de acesso secreta, consulte [[!DNL Google Cloud Storage] visão geral da fonte](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

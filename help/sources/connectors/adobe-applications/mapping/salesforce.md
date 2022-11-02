@@ -3,10 +3,10 @@ keywords: Experience Platform, home, tópicos populares, Salesforce, salesforce,
 title: Campos de mapeamento do Salesforce
 description: As tabelas abaixo contêm os mapeamentos entre os campos de origem do Salesforce e seus campos XDM correspondentes.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 15%
+source-wordcount: '494'
+ht-degree: 8%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 15%
 As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de origem e seus campos correspondentes do Experience Data Model (XDM).
 
 ## Contato {#contact}
+
+Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos Componentes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 
 ## Líder {#lead}
 
+Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos Componentes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
+
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 {style=&quot;table-layout:auto&quot;}
 
 ## Conta {#account}
+
+Leia o [Visão geral dos detalhes da conta comercial XDM](../../../../xdm/classes/b2b/business-account.md) para obter mais informações sobre a classe XDM.
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 
 ## Oportunidade {#opportunity}
 
+Leia o [Visão geral das oportunidades de negócios XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obter mais informações sobre a classe XDM.
+
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 
 ## Função de contato da oportunidade {#opportunity-contact-role}
 
+Leia o [Visão geral da classe de relação de pessoas da oportunidade de negócios XDM](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) para obter mais informações sobre a classe XDM.
+
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -239,6 +249,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 {style=&quot;table-layout:auto&quot;}
 
 ## Campaign {#campaign}
+
+Leia o [Visão geral da classe de Campanha comercial XDM](../../../../xdm/classes/b2b/business-campaign.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da campanha comercial XDM](../../../../xdm/field-groups/b2b-campaign/details.md) guia.
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 
 ## Membro da campanha {#campaign-member}
 
+Leia o [Visão geral dos membros da campanha comercial XDM](../../../../xdm/classes/b2b/business-campaign-members.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes do Membro da Campanha Empresarial XDM](../../../../xdm/field-groups/b2b-campaign/details.md) documento.
+
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 | `Type` | `b2b.personType` |
 
 ## Relação de contato da conta {#account-contact-relation}
+
+Leia o [Classe de Relação de Pessoa da Conta Funcional XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obter mais informações sobre a classe XDM.
 
 | Campo de origem | Caminho do campo XDM do Target | Notas |
 | --- | --- | --- |

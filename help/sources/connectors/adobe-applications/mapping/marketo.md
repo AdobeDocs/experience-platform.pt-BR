@@ -5,10 +5,10 @@ title: Mapeamento de campos para a fonte de Marketo Engage
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 6%
+source-wordcount: '952'
+ht-degree: 5%
 
 ---
 
@@ -28,6 +28,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos no [!DNL Marketo] conju
 ## Atividades {#activities}
 
 O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais. Para usar as atividades padrão, você deve atualizar o esquema usando o [utilitário de geração automática de esquema](../marketo/marketo-namespaces.md) porque se você criar um novo `activities` fluxo de dados sem atualizar o esquema, os modelos de mapeamento falharão, pois os novos campos de destino não estarão presentes no esquema. Se optar por não atualizar o esquema, ainda poderá criar um novo fluxo de dados e descartar quaisquer erros. No entanto, quaisquer campos novos ou atualizados não serão assimilados na Platform.
+
+Consulte a documentação em [Classe de evento de experiência XDM](../../../../xdm/classes/experienceevent.md) para obter mais informações sobre os Grupos de campos XDM e Classe XDM.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 
 ## Programas {#programs}
 
+Leia o [Visão geral da campanha comercial XDM](../../../../xdm/classes/b2b/business-campaign.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da campanha comercial](../../../../xdm/field-groups/b2b-campaign/details.md) guia.
+
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 {style=&quot;table-layout:auto&quot;}
 
 ## Associações do programa {#program-memberships}
+
+Leia o [Visão geral dos membros da campanha comercial XDM](../../../../xdm/classes/b2b/business-campaign-members.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes do Membro da Campanha Empresarial XDM](../../../../xdm/field-groups/b2b-campaign-members/details.md) guia.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 
 ## Empresas {#companies}
 
+Leia o [Visão geral da conta comercial XDM](../../../../xdm/classes/b2b/business-account.md) para obter mais informações sobre a classe XDM.
+
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 
 ## Listas estáticas {#static-lists}
 
+Leia o [Visão geral da Lista de marketing comercial XDM](../../../../xdm/classes/b2b/business-marketing-list.md) para obter mais informações sobre a classe XDM.
+
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 {style=&quot;table-layout:auto&quot;}
 
 ## Associações da lista estática {#static-list-memberships}
+
+Leia o [Visão geral dos membros da lista de marketing comercial XDM](../../../../xdm/classes/b2b/business-marketing-list-members.md) para obter mais informações sobre a Classe XDM.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 >[!IMPORTANT]
 >
 >O conjunto de dados de contas nomeadas é necessário somente com o recurso de ABM (Account-Based Marketing, marketing baseado em conta) da Marketo. Se você não estiver usando o ABM, não precisará configurar mapeamentos para contas nomeadas.
+
+Leia o [Visão geral da conta comercial XDM](../../../../xdm/classes/b2b/business-account.md) para obter mais informações sobre a classe XDM.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 {style=&quot;table-layout:auto&quot;}
 
 ## Oportunidades {#opportunities}
+
+Leia o [Visão geral das oportunidades de negócios XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obter mais informações sobre a classe XDM.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 
 ## Funções de contato da oportunidade {#opportunity-contact-roles}
 
+Leia o [Visão geral da relação de pessoas da oportunidade de negócios XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obter mais informações sobre a classe XDM.
+
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ O [!DNL Marketo] A fonte agora é compatível com atividades padrão adicionais.
 {style=&quot;table-layout:auto&quot;}
 
 ## Pessoas {#persons}
+
+Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos Componentes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |

@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
+source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '1905'
 ht-degree: 6%
 
 ---
@@ -136,7 +136,7 @@ O [!DNL Profile] o modelo de dados de armazenamento consiste em dois tipos de en
 
 ### Fragmentos de perfil
 
-Neste documento, há várias grades de proteção que se referem a &quot;fragmentos de perfil&quot;. No Experience Platform, vários fragmentos de perfil são unidos para formar o Perfil do cliente em tempo real. Cada fragmento representa uma identidade primária exclusiva e o registro ou dados de evento correspondentes a essa ID em um determinado conjunto de dados. Para saber mais sobre fragmentos de perfil, consulte [Visão geral do perfil](home.md#profile-fragments-vs-merged-profiles).
+Neste documento, há várias grades de proteção que se referem a &quot;fragmentos de perfil&quot;. No Experience Platform, vários fragmentos de perfil são unidos para formar o Perfil do cliente em tempo real. Cada fragmento representa uma identidade primária exclusiva e o registro correspondente ou o conjunto completo de dados do evento para essa ID em um determinado conjunto de dados. Para saber mais sobre fragmentos de perfil, consulte [Visão geral do perfil](home.md#profile-fragments-vs-merged-profiles).
 
 ### Mesclar políticas {#merge-policies}
 

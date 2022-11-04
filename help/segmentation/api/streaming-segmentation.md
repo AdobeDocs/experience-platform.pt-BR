@@ -5,9 +5,9 @@ title: Avaliar eventos em quase tempo real com a segmentação de streaming
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
+source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -439,3 +439,7 @@ O número total de segmentos qualificados é obtido do trabalho de segmentação
 O número em &quot;Últimos X dias&quot; **only** inclui públicos-alvo qualificados na segmentação de transmissão, e **only** O aumenta se você tiver transmitido dados para o sistema e isso contar para essa definição de transmissão. Este valor é **only** exibido para segmentos de transmissão. Como resultado, esse valor **pode** exibir como 0 para segmentos em lote.
 
 Como resultado, se você perceber que o número em &quot;Últimos X dias&quot; é zero, e o gráfico de linha também está relatando zero, você terá que **not** os perfis eram transmitidos no sistema e se qualificavam para esse segmento.
+
+### Quanto tempo leva para um segmento estar disponível?
+
+Leva até uma hora para um segmento estar disponível.

@@ -5,9 +5,9 @@ title: Guia da interface do usuário de segmentação de fluxo
 topic-legacy: ui guide
 description: A segmentação por streaming no Adobe Experience Platform permite fazer a segmentação quase em tempo real, ao mesmo tempo em que se concentra na riqueza de dados. Com a segmentação de fluxo, a qualificação de segmento agora acontece à medida que os dados chegam ao Platform, o que diminui a necessidade de agendar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
+source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -116,3 +116,7 @@ O número total de segmentos qualificados é obtido do trabalho de segmentação
 O número em &quot;Últimos X dias&quot; **only** inclui públicos-alvo qualificados na segmentação de transmissão, e **only** O aumenta se você tiver transmitido dados para o sistema e isso contar para essa definição de transmissão. Este valor é **only** exibido para segmentos de transmissão. Como resultado, esse valor **pode** exibir como 0 para segmentos em lote.
 
 Como resultado, se você perceber que o número em &quot;Últimos X dias&quot; é zero, e o gráfico de linha também está relatando zero, você terá que **not** os perfis eram transmitidos no sistema e se qualificavam para esse segmento.
+
+### Quanto tempo leva para um segmento estar disponível?
+
+Leva até uma hora para um segmento estar disponível.

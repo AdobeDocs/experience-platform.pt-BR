@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; Segmentação de borda; Segmentação de borda; borda de fluxo;
 solution: Experience Platform
-title: 'Segmentação de borda usando a API '
+title: Segmentação de borda usando a API
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1140'
 ht-degree: 1%
 
 ---
@@ -259,3 +259,11 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento recém-
 Agora que você sabe como criar segmentos com segmentação de borda, pode usá-los para ativar casos de uso de personalização de mesma página e próxima página.
 
 Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).
+
+## Apêndice
+
+A seção a seguir lista perguntas frequentes sobre a segmentação de borda:
+
+### Quanto tempo leva para um segmento estar disponível na Edge Network?
+
+Leva até uma hora para um segmento estar disponível na Edge Network.

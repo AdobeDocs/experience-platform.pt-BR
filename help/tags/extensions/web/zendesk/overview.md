@@ -1,7 +1,8 @@
 ---
 title: Extensão de encaminhamento de eventos do Zendesk
 description: Extensão de encaminhamento de eventos do Zendesk para o Adobe Experience Platform.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 6%
@@ -53,7 +54,7 @@ Em **[!UICONTROL Domínio do Zendesk]**, insira o valor do subdomínio do Zendes
 
 ## Configurar uma regra de encaminhamento de eventos
 
-Comece a criar uma nova regra de encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md) e configure as condições conforme desejado. Ao selecionar as ações para a regra, selecione o [!UICONTROL Splunk] e selecione a [!UICONTROL Criar evento] tipo de ação.
+Comece a criar uma nova regra de encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md) e configure as condições conforme desejado. Ao selecionar as ações para a regra, selecione o [!UICONTROL Zendesk] e selecione a [!UICONTROL Criar evento] tipo de ação.
 
 ![Definir regra](../../../images/extensions/zendesk/rule.png)
 

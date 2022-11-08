@@ -1,18 +1,15 @@
 ---
 title: Monitorar consultas
 description: Saiba como monitorar consultas por meio da interface do usuário do serviço de query.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# Monitorar consultas (versão limitada)
-
->[!IMPORTANT]
->
->No momento, esse recurso é uma versão limitada e só está disponível para um pequeno número de clientes.
+# Monitorar consultas
 
 O Adobe Experience Platform fornece visibilidade aprimorada para o status de todas as tarefas de consulta por meio da interface do usuário. De [!UICONTROL Consultas agendadas] agora é possível encontrar informações importantes sobre as execuções de query que incluem o status, detalhes de programação e mensagens/códigos de erro caso falhem. Também é possível assinar alertas para consultas com base em seu status por meio da interface do usuário para qualquer uma dessas consultas por meio de [!UICONTROL Consultas agendadas] guia .
 
@@ -126,4 +123,3 @@ A seção Status da consulta fornece o código de erro e a mensagem de erro caso
 Selecionar **[!UICONTROL Query]** para retornar à tela de detalhes da programação, ou **[!UICONTROL Consultas agendadas]** para retornar ao [!UICONTROL Consultas agendadas] guia .
 
 ![A tela de detalhes da execução com Query realçada.](./images/monitor-queries/return-navigation.png)
-

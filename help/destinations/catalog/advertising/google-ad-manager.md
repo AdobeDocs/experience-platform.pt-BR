@@ -3,9 +3,9 @@ keywords: google ad manager, google ad, doubleclick, DoubleClick AdX, DoubleClic
 title: Conexão com o Google Ad Manager
 description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
+source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '955'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,8 @@ Observe os detalhes a seguir que são específicos para [!DNL Google Ad Manager]
 
 * Os públicos-alvo ativados são criados de forma programática no [!DNL Google] plataforma.
 * [!DNL Platform] atualmente não inclui uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público-alvo no Google para validar a integração e entender o tamanho do direcionamento de público-alvo.
+* Depois de mapear um segmento para um [!DNL Google Ad Manager] de destino, o nome do segmento aparece imediatamente na [!DNL Google Ad Manager] interface do usuário.
+* A população do segmento precisa de 24 a 48 horas para aparecer em [!DNL Google Ad Manager]. Além disso, os segmentos devem ter um tamanho de público-alvo de pelo menos 50 perfis para serem exibidos em [!DNL Google Ad Manager]. Segmentos com tamanhos de público-alvo menores que 50 perfis não serão preenchidos em [!DNL Google Ad Manager].
 
 ## Identidades suportadas {#supported-identities}
 
@@ -63,8 +65,8 @@ Se você deseja criar seu primeiro destino com [!DNL Google Ad Manager] e não a
 
 Antes de criar a [!DNL Google Ad Manager] no Platform, você deve entrar em contato com [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Contato [!DNL Google] e fornecer as seguintes informações:
 
-* **ID da conta**: ID da conta do Adobe com Google. ID da conta: 87933855.
-* **Customer ID**: ID da conta do cliente do Adobe com Google. ID do cliente: 89690775.
+* **ID da conta**: Adobe ID com Google. ID da conta: 87933855.
+* **Customer ID**: Adobe ID com Google. ID do cliente: 89690775.
 * **Código de rede**: Este é o seu [!DNL Google Ad Manager] identificador de rede, encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google, bem como no URL.
 * **ID do link de público-alvo**: Esse é um identificador específico associado ao [!DNL Google Ad Manager] rede (não sua [!DNL Network code]), também encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google.
 * Seu tipo de conta. DFP por Google ou comprador AdX.

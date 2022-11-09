@@ -5,10 +5,10 @@ title: Glossário de rótulos de uso de dados
 topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
+source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 2%
+source-wordcount: '2117'
+ht-degree: 1%
 
 ---
 
@@ -30,17 +30,18 @@ Os rótulos &quot;C&quot; do contrato são usados para categorizar dados que tê
 
 | Rótulo | Definição |
 | --- | --- |
-| **C1** | Os dados só podem ser exportados do Adobe Experience Cloud de forma agregada sem incluir identificadores individuais ou de dispositivos. [Mais informações...](#c1) |
-| **C2** | Os dados não podem ser exportados para um terceiro. [Mais informações...](#c2) |
-| **C3** | Os dados não podem ser combinados ou usados com informações diretamente identificáveis. [Mais informações...](#c3) |
-| **C4** | Os dados não podem ser usados para direcionar qualquer anúncio ou conteúdo, seja no site ou entre sites. [Mais informações...](#c4) |
-| **C5** | Os dados não podem ser usados para direcionamento de conteúdo ou anúncios com base em interesses entre sites. [Mais informações...](#c5) |
-| **C6** | Os dados não podem ser usados para o direcionamento de anúncios no site. [Mais informações...](#c6) |
-| **C7** | Os dados não podem ser usados para o direcionamento no site do conteúdo. [Mais informações...](#c7) |
-| **C8** | Os dados não podem ser usados para medir os sites ou aplicativos de sua organização. [Mais informações...](#c8) |
-| **C9** | Os dados não podem ser usados em workflows da ciência de dados. [Mais informações...](#c9) |
-| **C10** | Os dados não podem ser usados para a ativação de identidade compilada. [Mais informações...](#c10) |
-| **C11** | Os dados não podem ser compartilhados com parceiros de Correspondência de segmentos. [Mais informações...](#c11) |
+| [C1](#c1) | Os dados só podem ser exportados do Adobe Experience Cloud de forma agregada sem incluir identificadores individuais ou de dispositivos. |
+| [C2](#c2) | Os dados não podem ser exportados para um terceiro. |
+| [C3](#c3) | Os dados não podem ser combinados ou usados com informações diretamente identificáveis. |
+| [C4](#c4) | Os dados não podem ser usados para direcionar qualquer anúncio ou conteúdo, seja no site ou entre sites. |
+| [C5](#c5) | Os dados não podem ser usados para direcionamento de conteúdo ou anúncios com base em interesses entre sites. |
+| [C6](#c6) | Os dados não podem ser usados para o direcionamento de anúncios no site. |
+| [C7](#c7) | Os dados não podem ser usados para o direcionamento no site do conteúdo. |
+| [C8](#c8) | Os dados não podem ser usados para medir os sites ou aplicativos de sua organização. |
+| [C9](#c9) | Os dados não podem ser usados em workflows da ciência de dados. |
+| [C10](#c10) | Os dados não podem ser usados para a ativação de identidade compilada. |
+| [C11](#c11) | Os dados não podem ser compartilhados com parceiros de Correspondência de segmentos. |
+| [C12](#c12) | Os dados não podem ser exportados de forma alguma. |
 
 ## Rótulos de identidade
 
@@ -78,7 +79,7 @@ Alguns dados só podem ser exportados do Adobe Experience Cloud em um formulári
 
 #### C2 {#c2}
 
-Alguns provedores de dados têm termos em seus contratos que proíbem a exportação de dados de onde eles foram originalmente coletados. Por exemplo, os contratos de rede social geralmente restringem a transferência de dados que você recebe deles. O rótulo C2 é mais restritivo do que [C1](#c1), que requer apenas agregação e dados anônimos.
+Alguns provedores de dados têm termos em seus contratos que proíbem a exportação de dados de onde eles foram originalmente coletados. Por exemplo, os contratos de rede social geralmente restringem a transferência de dados que você recebe deles. O rótulo C2 é mais restritivo do que [C1](#c1), que requer apenas agregação e dados anônimos, mas é menos restritivo que [C12](#c12), que impede as exportações de dados completamente, independentemente do destino.
 
 #### C3 {#c3}
 
@@ -86,7 +87,7 @@ Alguns provedores de dados têm termos em seus contratos que proíbem a combina�
 
 #### C4 {#c4}
 
-C4 é o rótulo mais restritivo - engloba rótulos [C5](#c5), [C6](#c6)e [C7](#c7).
+C4 abrange rótulos [C5](#c5), [C6](#c6)e [C7](#c7). É um dos rótulos mais restritivos, segundo somente para [C12](#c12).
 
 #### C5 {#c5}
 
@@ -139,3 +140,7 @@ Algumas políticas de uso de dados restringem o uso de dados de identidade compi
 #### C11 {#c11}
 
 A Correspondência de segmentos do Adobe Experience Platform permite que você corresponda segmentos primários com preferências de privacidade e consentimento, facilitando a criação de perfis enriquecidos e insights de downstream. O rótulo C11 indica dados que não devem ser usados em [!DNL Segment Match] processos. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir da Correspondência de segmentos e adicionar o rótulo C11 de acordo, o rótulo é aplicado automaticamente pelo fluxo de trabalho Correspondência de segmentos .
+
+#### C12 {#c12}
+
+Os dados com esse rótulo não podem ser exportados da Platform de nenhuma maneira. Os campos marcados com C12 são excluídos dos downloads de CSV, consumo de API e workflows de ativação.

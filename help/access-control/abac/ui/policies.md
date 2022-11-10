@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, controle de acesso, con
 title: Controle de acesso baseado em atributo Criar uma política
 description: Este documento fornece informações sobre como gerenciar políticas por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Em seguida, usando a lista suspensa, selecione o **Corresponde**.
 
 ![flac-policy-matches-drop-down](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Em seguida, usando a lista suspensa, selecione o **Usuário**.
+Em seguida, usando a lista suspensa, selecione o tipo de rótulo (**[!UICONTROL Rótulo principal]** ou **[!UICONTROL Rótulo personalizado]**) para corresponder ao rótulo atribuído ao Usuário nas funções.
 
 ![flac-policy-user-drop-down](../../images/flac-ui/flac-policy-user-dropdown.png)
 

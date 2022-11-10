@@ -5,9 +5,9 @@ title: Gerenciar políticas de uso de dados na interface do usuário
 topic-legacy: policies
 description: A Governança de dados do Adobe Experience Platform fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que podem ser executadas no espaço de trabalho Políticas na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1408'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,12 @@ As políticas de consentimento são compostas por dois componentes lógicos:
 * **[!UICONTROL If]**: A condição que acionará a verificação de política. Isso pode se basear em uma determinada ação de marketing que está sendo executada, na presença de determinados rótulos de uso de dados ou em uma combinação dos dois.
 * **[!UICONTROL Então]**: Os atributos de consentimento que devem estar presentes para um perfil ser incluído na ação que acionou a política.
 
-#### Configurar condições
+#### Configurar condições {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="Condição If"
+>abstract="Comece definindo as condições que acionarão a verificação de política. As condições podem incluir determinadas ações de marketing que estão sendo executadas, determinados rótulos de governança de dados que estão presentes ou uma combinação de ambos."
 
 Em **[!UICONTROL If]** selecione as ações de marketing e/ou rótulos de uso de dados que devem acionar essa política. Selecionar **[!UICONTROL Exibir tudo]** e **[!UICONTROL Selecionar rótulos]** para visualizar as listas completas de ações e rótulos de marketing disponíveis, respectivamente.
 
@@ -108,7 +113,12 @@ Se você selecionar mais de uma condição, poderá usar o ícone que aparece en
 
 ![](../images/policies/and-or-selection.png)
 
-#### Selecionar atributos de consentimento
+#### Selecionar atributos de consentimento {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Condição Then"
+>abstract="Depois que sua condição &#39;If&#39; tiver sido definida, use a seção &#39;Then&#39; para selecionar pelo menos um atributo de consentimento do schema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política."
 
 Em **[!UICONTROL Então]** selecione pelo menos um atributo de consentimento do schema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política. Você pode escolher uma das opções fornecidas na lista ou selecionar **[!UICONTROL Exibir tudo]** para escolher o atributo diretamente do schema de união.
 

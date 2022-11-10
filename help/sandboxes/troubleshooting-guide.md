@@ -5,10 +5,10 @@ title: Guia de solução de problemas de sandboxes
 topic-legacy: troubleshooting guide
 description: Este documento fornece respostas a perguntas frequentes sobre sandboxes no Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 0%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,13 @@ As sandboxes particionam uma única instância da Platform em ambientes virtuais
 
 As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada sandbox mantém sua própria biblioteca independente de recursos da plataforma (incluindo esquemas, conjuntos de dados, perfis e assim por diante). Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox. Consulte a [visão geral das sandboxes](home.md) para obter mais informações.
 
-## Que tipos de sandboxes estão disponíveis e quais são as suas diferenças?
+## Que tipos de sandboxes estão disponíveis e quais são as suas diferenças? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Tipo de sandbox"
+>abstract="O tipo de sandbox indica se é uma sandbox de produção ou desenvolvimento. As sandboxes de produção incluem dados ao vivo e as sandboxes de desenvolvimento são usadas para testes e desenvolvimento."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Criar uma sandbox na interface do usuário"
 
 Há dois tipos de sandbox disponíveis no Experience Platform:
 
@@ -48,7 +54,7 @@ Uma instância do Experience Platform suporta várias sandboxes de produção e 
 
 Uma licença Experience Platform padrão concede um total de cinco sandboxes, que podem ser classificadas como produção ou desenvolvimento. Você pode licenciar pacotes adicionais de 10 sandboxes até um máximo de 75 sandboxes no total.
 
-As sandboxes de produção podem ser redefinidas ou excluídas, exceto as sandboxes de produção que também estão sendo usadas pela Adobe Analytics para a [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) ou se o gráfico de identidade hospedado nele também estiver sendo usado pela Adobe Audience Manager para o [Destinos com base em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) recurso.
+As sandboxes de produção podem ser redefinidas ou excluídas, exceto as sandboxes de produção que também estão sendo usadas pela Adobe Analytics para a [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) ou se o gráfico de identidade hospedado nele também estiver sendo usado pela Adobe Audience Manager para o [Destinos com base em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=pt-BR) recurso.
 
 Você pode atualizar o título de uma sandbox de produção. No entanto, uma sandbox de produção não pode ser renomeada.
 

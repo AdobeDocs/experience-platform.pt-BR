@@ -2,9 +2,9 @@
 title: Configuração de segredos no encaminhamento de eventos
 description: Saiba como configurar segredos na interface do usuário para autenticar em endpoints usados em propriedades de encaminhamento de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 1%
 
 ---
@@ -37,6 +37,12 @@ Este guia pressupõe que você já esteja familiarizado com o gerenciamento de r
 Você também deve ter uma compreensão funcional do fluxo de publicação para tags e encaminhamento de eventos, incluindo como adicionar recursos a uma biblioteca e instalar uma build em seu site para testes. Consulte a [visão geral da publicação](../publishing/overview.md) para obter mais detalhes.
 
 ## Criar um segredo {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Ambientes para segredos"
+>abstract="Para que um segredo possa ser usado pelo encaminhamento de eventos, ele deve ser atribuído a um ambiente existente. Se você não tiver nenhum ambiente criado para sua propriedade de encaminhamento de eventos, será necessário configurá-los antes de continuar."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Visão geral dos ambientes"
 
 Para criar um segredo, selecione **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo, abra a propriedade de encaminhamento de eventos em que deseja adicionar o segredo. Em seguida, selecione **[!UICONTROL Segredos]** no painel de navegação esquerdo, seguido de **[!UICONTROL Criar novo segredo]**.
 

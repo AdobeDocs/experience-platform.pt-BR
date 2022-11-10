@@ -5,10 +5,10 @@ title: Guia da interface do usuário do Sandbox
 topic-legacy: user guide
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 1%
+source-wordcount: '816'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,17 @@ Depois que uma sandbox é selecionada, a tela é atualizada e atualizada para a 
 
 ![troca de sandbox](../images/ui/sandbox-switched.png)
 
-## Criar uma nova sandbox
+## Criar uma nova sandbox {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Nome da sandbox"
+>abstract="O nome da sandbox é o texto usado no back-end para criar uma ID exclusiva para essa sandbox."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Título da sandbox"
+>abstract="O título da sandbox é o nome de exibição que representará a sandbox em menus e menus e detalhamentos na interface do usuário do Experience Platform."
 
 >[!NOTE]
 >
@@ -68,7 +78,7 @@ Quando terminar de criar a sandbox, atualize a página e a nova sandbox aparecer
 
 >[!WARNING]
 >
->Esta é uma lista de exceções que podem impedir a redefinição da sandbox de produção padrão ou de uma sandbox de produção criada pelo usuário: <ul><li>A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado na sandbox também estiver sendo usado pela Adobe Analytics para a variável [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) recurso.</li><li>A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado na sandbox também estiver sendo usado pela Adobe Audience Manager para a variável [Destinos com base em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>A sandbox de produção padrão não pode ser redefinida se contiver dados para os recursos CDA e PBD.</li><li>Uma sandbox de produção criada pelo usuário e usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o Audience Core Service pode ser redefinida após uma mensagem de aviso.</li></ul>
+>Esta é uma lista de exceções que podem impedir a redefinição da sandbox de produção padrão ou de uma sandbox de produção criada pelo usuário: <ul><li>A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado na sandbox também estiver sendo usado pela Adobe Analytics para a variável [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) recurso.</li><li>A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado na sandbox também estiver sendo usado pela Adobe Audience Manager para a variável [Destinos com base em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=pt-BR).</li><li>A sandbox de produção padrão não pode ser redefinida se contiver dados para os recursos CDA e PBD.</li><li>Uma sandbox de produção criada pelo usuário e usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o Audience Core Service pode ser redefinida após uma mensagem de aviso.</li></ul>
 
 A redefinição de uma sandbox de produção ou desenvolvimento exclui todos os recursos associados a ela (esquemas, conjuntos de dados e assim por diante), mantendo o nome da sandbox e as permissões associadas. Essa sandbox &quot;limpa&quot; continua disponível com o mesmo nome para usuários que têm acesso a ela.
 

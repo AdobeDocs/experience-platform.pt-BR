@@ -3,23 +3,32 @@ keywords: Experience Platform, home, tópicos populares, dule, DULE
 solution: Experience Platform
 title: Visão geral das políticas de uso de dados
 topic-legacy: policies
-description: Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro do Experience Platform.
+description: Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro da Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 0%
+source-wordcount: '1180'
+ht-degree: 4%
 
 ---
 
-# Visão geral das políticas de uso de dados
+# Visão geral das políticas de uso de dados {#policies-overview}
 
-Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro de [!DNL Experience Platform].
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Restringir uso de dados"
+>abstract="O tipo de política de uso de dados avalia ações de marketing específicas aplicadas a rótulos de governança de dados para restringir o uso de dados para atividades de marketing."
+
+Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro da [!DNL Experience Platform].
 
 Há dois tipos de políticas disponíveis:
 
 * **[!UICONTROL Política de gestão de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
 * **[!UICONTROL Política de consentimento]**: Filtre os perfis que podem ser ativados para [destinos](../../destinations/home.md) com base no consentimento ou nas preferências dos clientes
+
+>[!NOTE]
+>
+>As políticas de utilização de dados não devem ser confundidas com [políticas de controle de acesso](../../access-control/abac/end-to-end-guide.md#policy), que determinam se determinados usuários da Platform em sua organização podem acessar determinados campos de dados e são configurados por meio da variável [!UICONTROL Permissões] guia .
 
 Este documento fornece uma visão geral de alto nível das políticas de uso de dados e fornece links para documentação adicional sobre como trabalhar com políticas na interface do usuário ou na API.
 

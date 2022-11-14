@@ -2,9 +2,9 @@
 title: Visão geral da higiene dos dados
 description: A Higiene de dados do Adobe Experience Platform permite gerenciar o ciclo de vida de seus dados ao atualizar ou limpar registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Solicitações de exclusão do consumidor e expiração do conjunto de dados tê
 
 O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados](./ui/dataset-expiration.md) é criado:
 
-| Preparo | Tempo após a expiração agendada | Descrição |
+| Fase | Tempo após a expiração agendada | Descrição |
 | --- | --- | --- |
 | Solicitação enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação para que um conjunto de dados expire em um determinado momento. A solicitação está visível no [!UICONTROL Interface do usuário de hierarquia de dados] após o envio, e permanece em um status pendente até o tempo de expiração agendado, após o qual a solicitação será executada. |
 | O conjunto de dados é descartado | 1 hora | O conjunto de dados é descartado do [página de inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do . Os dados no lago de dados são excluídos apenas de forma suave e permanecerão até o final do processo, após o que serão excluídos permanentemente. |
@@ -55,9 +55,13 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 
 ### Exclusão do consumidor {#consumer-delete-transparency}
 
+>[!IMPORTANT]
+>
+>As exclusões de consumidores só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
+
 O seguinte ocorre quando uma [solicitação de exclusão do consumidor](./ui/delete-consumer.md) é criado:
 
-| Preparo | Tempo após o envio da solicitação | Descrição |
+| Fase | Tempo após o envio da solicitação | Descrição |
 | --- | --- | --- |
 | Solicitação enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação de exclusão do consumidor. A solicitação está visível no [!UICONTROL Interface do usuário de hierarquia de dados] após a sua apresentação. |
 | Pesquisas de perfil atualizadas | 3 horas | A alteração nas contagens de perfil causada pela identidade excluída é refletida em [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |

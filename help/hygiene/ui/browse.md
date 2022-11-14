@@ -2,9 +2,9 @@
 title: Procurar Ordens de Serviço de Higiene de Dados
 description: Saiba como visualizar e gerenciar pedidos de higiene de dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Os seguintes filtros se aplicam às solicitações de expiração do conjunto de
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="O número de identidades que foram solicitadas a serem excluídas como parte desta ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte desta ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"

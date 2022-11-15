@@ -1,9 +1,10 @@
 ---
 title: Extensão de conversões aprimoradas do Google Ads
 description: Saiba mais sobre a extensão Conversões aprimoradas do Google Ads para encaminhamento de eventos no Adobe Experience Platform.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ As conversões aprimoradas aproveitam o [!DNL Google Ads] API para adicionar dad
 >Para associar o evento de conversão do lado do cliente aos dados primários enviados do encaminhamento do evento, a variável `transaction_ID` deve ser o mesmo em ambas as chamadas. Para obter mais informações sobre onde esse valor deve ser fornecido para cada serviço, consulte as seções sobre como configurar ações de conversão para [tags](#conversion-action-tags) e [encaminhamento de eventos](#conversion-action-event-forwarding), respectivamente.
 
 Como o envio de eventos de conversão envolve uma implementação do lado do cliente e do lado do servidor, este documento aborda as etapas de pré-requisito para configurar o lado do cliente [[!DNL Google Global Site Tag] extensão (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) além do [!DNL Enhanced Conversions] extensão para encaminhamento de eventos.
+
+O vídeo a seguir apresenta uma introdução ao [!DNL Enhanced Conversions] e analisa as etapas de implementação em um alto nível:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Enviar uma conversão usando tags
 

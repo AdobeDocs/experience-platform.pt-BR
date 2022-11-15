@@ -5,10 +5,10 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
-ht-degree: 3%
+source-wordcount: '4337'
+ht-degree: 4%
 
 ---
 
@@ -234,6 +234,11 @@ Para obter informações sobre o recurso de cópia de objetos, consulte a seçã
 {style=&quot;table-layout:auto&quot;}
 
 ### Funções do agente do usuário {#user-agent}
+
+Qualquer uma das funções do agente do usuário contidas na tabela abaixo pode retornar um dos seguintes valores:
+
+* Telefone - Um dispositivo móvel com uma tela pequena (geralmente &lt; 7&quot;)
+* Móvel - Um dispositivo móvel que ainda não foi identificado. Este dispositivo móvel pode ser um eReader, um tablet, um telefone, um relógio, etc.
 
 >[!NOTE]
 >

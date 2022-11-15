@@ -5,9 +5,9 @@ title: Ponto de extremidade da API de conjuntos de mapeamento
 topic-legacy: mapping sets
 description: Você pode usar o terminal `/mappingSets` na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os conjuntos de mapeamento.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | A ID do esquema XDM que você está referenciando. |
 | `outputSchema.schemaRef.contentType` | Determina o formato de resposta do schema referenciado. Mais informações sobre esse campo podem ser encontradas no [Guia do desenvolvedor do Registro de Schema](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | O tipo de origem descreve como o valor será extraído da origem para o destino. |
+| `mappings.sourceType` | O tipo de origem descreve como o valor será extraído da origem para o destino. O tipo de origem suporta dois valores possíveis: <ul><li>`ATTRIBUTE`: O tipo de origem `ATTRIBUTE` é usado quando o atributo de entrada é de um schema de origem.</li><li>`EXPRESSION`: O tipo de origem `EXPRESSION` é usada quando o mapeamento é concluído usando um campo calculado.</li></ul> **AVISO**: Definir incorretamente os valores do tipo de origem pode tornar os conjuntos de mapeamento ineditáveis. |
 | `mappings.source` | O local de onde deseja que os dados sejam mapeados. |
 | `mappings.destination` | O local para onde deseja que os dados sejam mapeados. |
 

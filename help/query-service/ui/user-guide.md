@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Editor de consultas
 topic-legacy: query editor
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas de dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+source-git-commit: d71bab9839289a8a1df849025b6db1b2b497087d
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,11 @@ Para minimizar o tempo de desenvolvimento, é recomendável desenvolver as consu
 
 ![A entrada do Editor de consultas exibindo as sugestões de nome da tabela suspensa.](../images/ui/query-editor/tables-auto.png)
 
-### Alternância de configuração da interface de usuário de preenchimento automático {#auto-complete}
+### (Beta) Alternância de configuração da interface de usuário de preenchimento automático {#auto-complete}
+
+>[!IMPORTANT]
+>
+>No momento, esse recurso está na versão beta e sua organização pode não ter acesso a ele. A funcionalidade e a documentação estão sujeitas a alterações.
 
 O [!DNL Query Editor] sugere automaticamente possíveis palavras-chave SQL, juntamente com detalhes da tabela ou coluna para a consulta à medida que você a escreve. O recurso de preenchimento automático é ativado por padrão e pode ser desativado ou ativado a qualquer momento selecionando o [!UICONTROL Preenchimento automático da sintaxe] alterne para a parte superior direita do Editor de consultas.
 

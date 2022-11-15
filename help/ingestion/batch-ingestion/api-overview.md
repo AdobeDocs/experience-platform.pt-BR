@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da API de assimilação em lote
 description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2413'
 ht-degree: 5%
 
 ---
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Esse caminho de arquivo é o local onde o arquivo será salvo no lado do Adobe. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Certifique-se de usar um nome de arquivo exclusivo para que ele não trave com outro arquivo para o lote de arquivos que está sendo enviado. |
 
 **Solicitação**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Resposta**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Esse caminho de arquivo é o local onde o arquivo será salvo no lado do Adobe. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Certifique-se de usar um nome de arquivo exclusivo para que ele não trave com outro arquivo para o lote de arquivos que está sendo enviado. |
 
 **Solicitação**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.parquet`. |
 
 **Resposta**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Esse caminho de arquivo é o local onde o arquivo será salvo no lado do Adobe. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Certifique-se de usar um nome de arquivo exclusivo para que ele não trave com outro arquivo para o lote de arquivos que está sendo enviado. |
 
 **Solicitação**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | Em números inteiros, o início e o fim do intervalo solicitado. |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.json`. |
 
 
 **Resposta**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Esse caminho de arquivo é o local onde o arquivo será salvo no lado do Adobe. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Certifique-se de usar um nome de arquivo exclusivo para que ele não trave com outro arquivo para o lote de arquivos que está sendo enviado. |
 
 **Solicitação**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.csv`. |
 
 
 **Resposta**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Esse caminho de arquivo é o local onde o arquivo será salvo no lado do Adobe. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja fazer upload. Certifique-se de usar um nome de arquivo exclusivo para que ele não trave com outro arquivo para o lote de arquivos que está sendo enviado. |
 
 **Solicitação**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Resposta**
 

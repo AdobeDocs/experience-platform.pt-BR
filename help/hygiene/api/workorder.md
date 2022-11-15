@@ -2,9 +2,9 @@
 title: Endpoint da API de ordem de trabalho
 description: O endpoint /workorder na API da Higiene de Dados permite gerenciar programaticamente tarefas de exclusão para identidades de consumidores.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1033'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,9 @@ O `/workorder` O endpoint na API da Higiene de Dados permite gerenciar programat
 >[!IMPORTANT]
 >
 >Solicitações de exclusão de consumidor estão disponíveis somente para organizações que compraram **Blindagem do Adobe Healthcare**.
+>
+>
+>As exclusões de consumidores devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
 ## Introdução
 

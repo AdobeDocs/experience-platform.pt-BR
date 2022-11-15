@@ -2,20 +2,23 @@
 title: Excluir registros do consumidor
 description: Saiba como excluir registros do consumidor na interface do usuário do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
 
 # Excluir registros do consumidor
 
+O [[!UICONTROL Higiene de dados] espaço de trabalho](./overview.md) na interface do usuário do Adobe Experience Platform permite excluir registros do consumidor que estão participando do Serviço de identidade e do Perfil do cliente em tempo real.
+
 >[!IMPORTANT]
 >
 >Solicitações de exclusão de consumidor estão disponíveis somente para organizações que compraram **Blindagem do Adobe Healthcare**.
-
-O [[!UICONTROL Higiene de dados] espaço de trabalho](./overview.md) na interface do usuário do Adobe Experience Platform permite excluir registros do consumidor que estão participando do Serviço de identidade e do Perfil do cliente em tempo real.
+>
+>
+>As exclusões de consumidores devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
 ## Pré-requisitos
 

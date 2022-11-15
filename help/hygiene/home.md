@@ -2,9 +2,9 @@
 title: Visão geral da higiene dos dados
 description: A Higiene de dados do Adobe Experience Platform permite gerenciar o ciclo de vida de seus dados ao atualizar ou limpar registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,11 @@ O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gere
 Os recursos de higiene de dados da Platform permitem gerenciar os dados armazenados do consumidor por meio do seguinte:
 
 * Agendamento de expirações automatizadas do conjunto de dados
-* Exclusão de dados do consumidor com base em identidades assimiladas
+* Exclusão de dados individuais do consumidor de seus registros
+
+>[!IMPORTANT]
+>
+>As exclusões de consumidores devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) em vez disso.
 
 Essas atividades podem ser executadas usando o [[!UICONTROL Higiene de dados] Espaço de trabalho da interface do usuário](#ui) ou [API de higiene de dados](#api). Quando um trabalho de higiene de dados é executado, o sistema fornece atualizações de transparência em cada etapa do processo. Consulte a seção sobre [prazos e transparência](#timelines-and-transparency) para obter mais informações sobre como cada tipo de trabalho é representado no sistema.
 

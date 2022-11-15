@@ -2,9 +2,9 @@
 title: Guia da API da Higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,10 @@ A expiração de um conjunto de dados é uma ação &quot;excluir um conjunto de
 
 >[!IMPORTANT]
 >
->As solicitações de exclusão do consumidor só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
+>Solicitações de exclusão de consumidor estão disponíveis somente para organizações que compraram **Blindagem do Adobe Healthcare**.
+>
+>
+>As exclusões de consumidores devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
 A API de Higiene de dados permite excluir todos os registros associados a uma identidade do consumidor em um ou todos os conjuntos de dados. Todas as tarefas de higiene de dados que excluem identidades de consumidores são representadas por uma construção chamada ordem de trabalho. Consulte a [guia do endpoint de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões do consumidor na API.
 

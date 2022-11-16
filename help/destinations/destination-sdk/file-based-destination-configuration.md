@@ -2,9 +2,9 @@
 description: Essa configuração permite indicar informações essenciais para seu destino baseado em arquivo, como nome de destino, categoria, descrição e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino baseadas em arquivo para o Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2989'
+source-wordcount: '3012'
 ht-degree: 5%
 
 ---
@@ -794,10 +794,13 @@ Os parâmetros desta seção determinam quais identidades seu destino aceita. Es
     },
 ```
 
-Você deve indicar qual [!DNL Platform] identidades que os clientes podem exportar para o seu destino. Alguns exemplos são [!DNL Experience Cloud ID], email com hash, ID do dispositivo ([!DNL IDFA], [!DNL GAID]). Esses valores são [!DNL Platform] namespaces de identidade que os clientes podem mapear para namespaces de identidade a partir do seu destino. Você também pode indicar se os clientes podem mapear namespaces personalizados para identidades suportadas pelo seu destino.
+Você deve indicar qual [!DNL Platform] identidades que os clientes podem exportar para o seu destino. Alguns exemplos são [!DNL Experience Cloud ID], email com hash, ID do dispositivo ([!DNL IDFA], [!DNL GAID]). Esses valores são [!DNL Platform] namespaces de identidade que os clientes podem mapear para namespaces de identidade a partir do seu destino. Você também pode indicar se os clientes podem mapear namespaces personalizados para identidades suportadas pelo seu destino (`acceptsCustomNamespaces: true`) e se os clientes podem mapear atributos XDM padrão para identidades suportadas pelo seu destino (`acceptsAttributes: true`).
 
 Os namespaces de identidade não exigem uma correspondência de 1 para 1 entre [!DNL Platform] e seu destino.
 Por exemplo, os clientes podem mapear uma [!DNL Platform] [!DNL IDFA] namespace para um [!DNL IDFA] namespace do seu destino ou podem mapear o mesmo [!DNL Platform] [!DNL IDFA] namespace para um [!DNL Customer ID] namespace no seu destino.
+
+Leia mais sobre identidades na [Visão geral do Namespace de identidade](/help/identity-service/namespaces.md).
+
 
 ## Configuração de lote - Nomeação de arquivo e agendamento de exportação {#batch-configuration}
 

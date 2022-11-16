@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '1095'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,29 @@ O [!DNL Query Editor] permite gravar e executar consultas sem usar um cliente ex
 [!DNL Query Editor] O fornece espaço de edição, onde você pode começar a digitar uma consulta. À medida que você digita, o editor conclui automaticamente palavras, tabelas e nomes de campos reservados do SQL nas tabelas. Quando terminar de gravar seu query, selecione a variável **Reproduzir** para executar o query. O **[!UICONTROL Console]** guia abaixo do editor mostra o que [!DNL Query Service] O está fazendo no momento, indicando quando um query foi retornado. O **[!UICONTROL Resultado]** , ao lado do Console, exibe os resultados da consulta. Consulte a [Guia do Editor de consultas](./user-guide.md) para obter mais informações sobre como usar o [!DNL Query Editor].
 
 ![Um zoom na exibição da variável [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## Consultas agendadas {#scheduled-queries}
+
+Consultas que já foram salvas como um modelo podem ser agendadas para execução em uma cadência regular. Ao agendar um query, você pode escolher a frequência de execuções, a data de início e de término, o dia da semana em que o query agendada é executado, bem como o conjunto de dados para o qual exportar o query. As programações de query são definidas por meio do Editor de consultas.
+
+Para saber como agendar um query por meio da interface do usuário, consulte o [guia de consultas agendadas](./user-guide.md#scheduled-queries). Para saber como adicionar agendamentos usando a API, leia o [guia do endpoint de consultas agendadas](../api/scheduled-queries.md).
+
+Depois que um query é agendado, ele aparece na lista de consultas agendadas na [!UICONTROL Consultas agendadas] guia . Detalhes completos sobre a consulta, as execuções, o criador e os tempos podem ser encontrados ao selecionar uma consulta agendada na lista.
+
+![O espaço de trabalho Queries com a guia Consultas agendadas foi realçado e exibiu linhas de agendamentos de consulta.](../images/ui/overview/scheduled-queries.png)
+
+| Coluna | Descrição |
+| --- | --- |
+| **[!UICONTROL Nome]** | O campo de nome é o nome do modelo ou os primeiros caracteres da consulta SQL. Qualquer query criada por meio da interface do usuário com o Editor de consultas é nomeada no início. Se a consulta foi criada por meio da API, o nome da consulta é um trecho do SQL inicial usado para criar a consulta. |
+| **[!UICONTROL Modelo]** | O nome do modelo da consulta. Selecione um nome de modelo para navegar até o Editor de consultas. O modelo de consulta é exibido no Editor de consultas para conveniência. Se não houver um nome de modelo, a linha será marcada com um hífen e não será possível redirecionar para o Editor de consultas para exibir a consulta. |
+| **[!UICONTROL SQL]** | Um trecho da consulta SQL. |
+| **[!UICONTROL Executar frequência]** | Essa é a cadência na qual seu query está definido para ser executado. Os valores disponíveis são `Run once` e `Scheduled`. As consultas podem ser filtradas de acordo com sua frequência de execução. |
+| **[!UICONTROL Criado por]** | O nome do usuário que criou o query. |
+| **[!UICONTROL Criado]** | O carimbo de data e hora quando a consulta foi criada, no formato UTC. |
+| **[!UICONTROL Carimbo de data e hora da última execução]** | O carimbo de data e hora mais recente quando a consulta foi executada. Essa coluna destaca se uma consulta foi executada de acordo com seu agendamento atual. |
+| **[!UICONTROL Status da última execução]** | O status da execução mais recente da consulta. Os três valores de status são: `successful` `failed` ou `in progress`. |
+
+Consulte a documentação para obter mais informações sobre como [monitorar consultas por meio da interface do usuário do serviço de query](../monitor-queries.md).
 
 ## Modelos {#browse}
 

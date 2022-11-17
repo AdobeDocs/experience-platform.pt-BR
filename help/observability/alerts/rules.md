@@ -4,9 +4,9 @@ title: Regras padrão de alerta
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
+source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '922'
 ht-degree: 3%
 
 ---
@@ -99,8 +99,6 @@ As seguintes regras de alerta são específicas para [Serviço de query](../../q
 
 | Assinatura de Evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações ad hoc do Serviço de query | Êxito ad hoc do Serviço de query | Esse alerta dispara quando um trabalho de esquema ad hoc é concluído com êxito. |
-| Atrasos, falhas e erros ad hoc do Serviço de query | Falha ad hoc do Serviço de query | Esse alerta dispara quando um trabalho de esquema ad hoc falha. |
 | Informações de consulta agendada do Serviço de Consulta | Início da consulta agendada do Serviço de Consulta | Esse alerta dispara quando uma consulta agendada começa a ser executada. |
 | Informações de consulta agendada do Serviço de Consulta | Êxito na consulta agendada do Serviço de Consulta | Esse alerta dispara quando um trabalho de consulta agendado é concluído com êxito. |
 | Atrasos, falhas e erros da consulta agendada do Serviço de query | falha na consulta agendada do serviço de consulta | Esse alerta dispara quando um trabalho de consulta agendado falha. |

@@ -1,18 +1,19 @@
 ---
 title: Amostras do conjunto de dados
 description: Os conjuntos de dados de amostra do Serviço de query permitem realizar consultas exploratórias em grandes dados com um tempo de processamento muito reduzido ao custo da precisão da consulta. Este guia fornece informações sobre como gerenciar suas amostras para o processamento aproximado de consultas
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# (Beta) Amostras do conjunto de dados
+# (Versão limitada) Amostras do conjunto de dados
 
 >[!IMPORTANT]
 >
->O recurso de amostras do conjunto de dados está em beta. Seus recursos e documentação estão sujeitos a alterações.
+>No momento, o recurso de amostras do conjunto de dados está em uma versão limitada e não está disponível para todos os clientes.
 
 O Adobe Experience Platform Query Service fornece conjuntos de dados de amostra como parte de seus recursos aproximados de processamento de consultas. Os conjuntos de dados de amostra são criados com amostras aleatórias uniformes de [!DNL Azure Data Lake Storage] (ADLS) conjuntos de dados que usam apenas uma porcentagem dos registros do original. Esta percentagem é conhecida como taxa de amostragem. Ajustar a taxa de amostragem para controlar o equilíbrio de precisão e tempo de processamento permite realizar consultas exploratórias em grandes dados com um tempo de processamento muito reduzido ao custo da precisão da consulta.
 

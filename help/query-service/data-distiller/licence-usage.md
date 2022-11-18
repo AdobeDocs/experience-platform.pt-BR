@@ -1,14 +1,19 @@
 ---
 title: Monitorar uso de licença de consulta em lote
 description: A interface do usuário do Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da Data Distiller de sua organização.
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
-# Monitorar uso de licença de consulta em lote {#monitor-license-usage}
+# (Beta) Monitorar o uso da licença de consulta em lote {#monitor-license-usage}
+
+>[!IMPORTANT]
+>
+>A capacidade de monitorar o uso da licença de consulta em lote por meio da interface do usuário está em beta. Seus recursos e documentação estão sujeitos a alterações.
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças do Serviço de query da sua organização.
 

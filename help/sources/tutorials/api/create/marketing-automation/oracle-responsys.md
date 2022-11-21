@@ -2,7 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; oracle;
 title: (Beta) Criar uma conexão base do Responsys do Oracle usando a API do Serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Oracle Responsys usando a API de Serviço de Fluxo.
-source-git-commit: aa4573325f2859c258e66d4b6df411118a5d1942
+hide: true
+hidefromtoc: true
+exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 1%

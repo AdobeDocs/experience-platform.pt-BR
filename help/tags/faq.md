@@ -2,9 +2,9 @@
 title: Guia de solução de problemas de tags
 description: Obtenha respostas a perguntas frequentes sobre tags na Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 6109e44ff4b20cadbd3a5016517e954c10c68931
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1044'
 ht-degree: 80%
 
 ---
@@ -106,4 +106,4 @@ Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.m
 
 ## E se eu tiver outras dúvidas?
 
-Se você tiver outras perguntas, poderá fazer uma pergunta no [Página da comunidade da Coleção de dados do Adobe Experience Platform](https://adobe.com/go/launchme) no Experience League ou participe da [grupo Slack oficial para desenvolvedores de tags](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Se você tiver outras perguntas, poderá fazer uma pergunta no [Página da comunidade da Coleção de dados do Adobe Experience Platform](https://adobe.com/go/launchme) no Experience League ou participe da [espaço de trabalho Slack da comunidade](http://join.connectionsdevs.chat) para desenvolvedores e tópicos de implementação técnica.

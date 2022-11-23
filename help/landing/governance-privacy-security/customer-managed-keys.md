@@ -2,9 +2,9 @@
 title: Chaves gerenciadas pelo cliente na Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1603'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ Este documento aborda o processo de habilitação do recurso CMK (Customer-manag
 
 ## Pré-requisitos
 
-Para ativar o CMK, você deve ter acesso ao **all** dos seguintes recursos em [!DNL Microsoft Azure]:
+Para ativar o CMK, seu [!DNL Azure] O Cofre de Chaves tem de ser configurado com as seguintes definições:
 
-* [Políticas de controle de acesso baseadas em funções](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (não confundir com o mesmo recurso no Experience Platform)
-* [Exclusão suave do Cofre de Chaves](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Proteção contra limpeza](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Ativar proteção de limpeza](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Habilitar exclusão suave](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Configure o acesso usando [!DNL Azure] controle de acesso baseado em funções](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Resumo do processo
 

@@ -1,16 +1,19 @@
 ---
 title: Determine Uma Pontuação De Propensão Usando Um Modelo Preditivo Gerado Por Aprendizado De Máquina
 description: Saiba como usar o Serviço de query para aplicar seu modelo preditivo aos dados da plataforma. Este documento demonstra como usar os dados da plataforma para prever a propensão de compra de um cliente em cada visita.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Determine uma pontuação de propensão usando um modelo preditivo gerado por aprendizado automatizado
 
-Usando o Serviço de query, você pode aproveitar os dados do Experience Platform em suas plataformas de aprendizado de máquina para gerar modelos preditivos, como pontuações de propensão. Este guia explica como usar o Serviço de query para enviar dados para sua plataforma de aprendizado de máquina a fim de treinar um modelo em um notebook computacional. O modelo treinado pode ser aplicado aos dados usando o SQL para prever a propensão de compra de um cliente para cada visita.
+Usando o Serviço de query, você pode aproveitar modelos preditivos, como pontuações de propensão, criados em sua plataforma de aprendizado de máquina para analisar dados de Experience Platform.
+
+Este guia explica como usar o Serviço de query para enviar dados para sua plataforma de aprendizado de máquina a fim de treinar um modelo em um notebook computacional. O modelo treinado pode ser aplicado aos dados usando o SQL para prever a propensão de compra de um cliente para cada visita.
 
 ## Introdução
 
@@ -322,5 +325,3 @@ As precisões do modelo com bootstrapped são classificadas. Depois disso, as 10
 ![O comando print para exibir o intervalo de confiança da pontuação de propensão.](../images/use-cases/confidence-interval.png)
 
 A figura acima indica que se você pegar apenas 1000 linhas para treinar seus modelos, é possível esperar que as precisões estejam entre aproximadamente 84% e 88%. Pode ajustar a variável `LIMIT` em consultas do Serviço de query com base em suas necessidades para garantir o desempenho dos modelos.
-
-

@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform novembro de 2022
 description: As notas de versão de novembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 9d5511697d3d4de2926c8862fdd413e2a9f1d1a2
+source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 11%
+source-wordcount: '454'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,37 @@ ht-degree: 11%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Coleta de dados](#data-collection)
+- [Experience Data Model (XDM)](#xdm)
 - [Fontes](#sources)
+
+## Coleta de dados {#data-collection}
+
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não-Adobe.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| [!DNL AWS] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Amazon Web Services] ([!DNL AWS]) usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL AWS] visão geral da extensão](../../tags/extensions/web/aws/overview.md) para obter mais informações. |
+| [!DNL Google Ads Enhanced Conversions] extensão para encaminhamento de eventos | Agora é possível enviar dados de conversão para [!DNL Google Ads] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Google Ads Enhanced Conversions] visão geral da extensão](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) para obter mais informações. |
+| [!DNL Microsoft Azure] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Microsoft Azure] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Microsoft Azure] visão geral da extensão](../../tags/extensions/web/azure/overview.md) para obter mais informações. |
+
+Para obter mais informações sobre os recursos de coleta de dados da Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Atribuir campos a classes personalizadas ao adicionar diretamente a um schema | When [adição de um campo individual diretamente a um schema](../../xdm/ui/resources/schemas.md#add-individual-fields), anteriormente era possível atribuir o campo somente a um grupo de campos como seu recurso pai. Agora, além dos grupos de campos, você pode [atribuir o campo a uma classe personalizada](../../xdm/ui/resources/schemas.md.md#add-to-class) como seu recurso principal. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
 
 ## Fontes {#sources}
 

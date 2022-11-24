@@ -3,7 +3,7 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 80%
@@ -18,7 +18,7 @@ ht-degree: 80%
 
 Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da rede da Adobe Experience Platform usando uma ou mais das três seguintes opções:
 
-* [SDK da Web da Adobe Experience Platform](../../extensions/web/sdk/overview.md)
+* [SDK da Web da Adobe Experience Platform](../../extensions/client/sdk/overview.md)
 * [SDK móvel da Adobe Experience Platform](https://sdkdocs.com)
 * [API servidor para servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=pt-BR)
 
@@ -100,7 +100,7 @@ Depois de configurar, anote as IDs de ambiente para a nova propriedade.
 
 Crie sua propriedade no **[!UICONTROL Tags]** espaço de trabalho e navegue até **[!UICONTROL Extensões]** e selecione a extensão Experience Platform Web SDK no catálogo para configurá-la e instalá-la.
 
-Consulte a [Documentação de extensão do SDK da Web](../../extensions/web/sdk/overview.md) para obter detalhes sobre as opções de configuração.
+Consulte a [Documentação de extensão do SDK da Web](../../extensions/client/sdk/overview.md) para obter detalhes sobre as opções de configuração.
 
 ## Criar uma regra de tag para enviar dados ao SDK da Web da Platform
 

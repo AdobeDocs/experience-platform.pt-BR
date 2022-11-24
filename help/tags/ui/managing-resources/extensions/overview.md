@@ -2,7 +2,7 @@
 title: Extensões
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 93%
@@ -27,7 +27,7 @@ As extensões determinam os elementos que estão disponíveis ao construir propr
 
 Use os links na parte superior da lista de extensões para exibir as extensões instaladas, o catálogo de extensões ou as atualizações.
 
-Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção sobre [adicionar uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
+Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção em [adição de uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ A página Extensões fornece três exibições:
 
 Selecione **[!UICONTROL Extensões]** para ver todas as extensões instaladas. Você também pode usar o catálogo para ver uma lista de todas as extensões disponíveis e quais extensões têm atualizações disponíveis.
 
-Consulte [Referência de extensões](../../../extensions/web/overview.md) para obter detalhes sobre as extensões de propriedade da Adobe.
+Consulte [Referência de extensões](../../../extensions/client/overview.md) para obter detalhes sobre as extensões de propriedade da Adobe.
 
 ## Adicione uma nova extensão {#add-a-new-extension}
 
@@ -86,4 +86,4 @@ Passe o mouse sobre uma extensão instalada e selecione **[!UICONTROL Configurar
 >
 >Algumas extensões não exigem configuração e não oferecem opções de configuração.
 
-Cada extensão configurável tem opções exclusivas. Consulte [Referência de extensões](../../../extensions/web/overview.md) para obter informações sobre as opções disponíveis para cada extensão da Adobe.
+Cada extensão configurável tem opções exclusivas. Consulte [Referência de extensões](../../../extensions/client/overview.md) para obter informações sobre as opções disponíveis para cada extensão da Adobe.

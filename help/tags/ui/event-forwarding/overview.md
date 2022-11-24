@@ -3,7 +3,7 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 9%
@@ -57,7 +57,7 @@ Toda a lista de propriedades de encaminhamento de eventos **[!UICONTROL Edge]** 
 
 ### Extensões {#extensions}
 
-O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como o [Núcleo](../../extensions/web/core/event-forwarding.md) extensão e [Conector da nuvem do Adobe](../../extensions/web/cloud-connector/overview.md) extensão. Você pode exibir as extensões disponíveis para as propriedades de encaminhamento de eventos na interface do usuário selecionando **[!UICONTROL Extensões]** no painel de navegação esquerdo, seguido de **[!UICONTROL Catálogo]**.
+O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como o [Núcleo](../../extensions/server/core/overview.md) extensão e [Conector da nuvem do Adobe](../../extensions/server/cloud-connector/overview.md) extensão. Você pode exibir as extensões disponíveis para as propriedades de encaminhamento de eventos na interface do usuário selecionando **[!UICONTROL Extensões]** no painel de navegação esquerdo, seguido de **[!UICONTROL Catálogo]**.
 
 ![Extensões de encaminhamento de eventos na interface do usuário da coleção de dados](../../images/ui/event-forwarding/overview/extensions.png)
 

@@ -1,7 +1,8 @@
 ---
 title: Notas de versão da Adobe Experience Platform novembro de 2022
 description: As notas de versão de novembro de 2022 para o Adobe Experience Platform.
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 5%
@@ -26,9 +27,9 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Recurso | Descrição |
 | --- | --- |
-| [!DNL AWS] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Amazon Web Services] ([!DNL AWS]) usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL AWS] visão geral da extensão](../../tags/extensions/web/aws/overview.md) para obter mais informações. |
-| [!DNL Google Ads Enhanced Conversions] extensão para encaminhamento de eventos | Agora é possível enviar dados de conversão para [!DNL Google Ads] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Google Ads Enhanced Conversions] visão geral da extensão](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) para obter mais informações. |
-| [!DNL Microsoft Azure] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Microsoft Azure] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Microsoft Azure] visão geral da extensão](../../tags/extensions/web/azure/overview.md) para obter mais informações. |
+| [!DNL AWS] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Amazon Web Services] ([!DNL AWS]) usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL AWS] visão geral da extensão](../../tags/extensions/server/aws/overview.md) para obter mais informações. |
+| [!DNL Google Ads Enhanced Conversions] extensão para encaminhamento de eventos | Agora é possível enviar dados de conversão para [!DNL Google Ads] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Google Ads Enhanced Conversions] visão geral da extensão](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para obter mais informações. |
+| [!DNL Microsoft Azure] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Microsoft Azure] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Microsoft Azure] visão geral da extensão](../../tags/extensions/server/azure/overview.md) para obter mais informações. |
 
 Para obter mais informações sobre os recursos de coleta de dados da Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
 

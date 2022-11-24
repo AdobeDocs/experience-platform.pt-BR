@@ -2,7 +2,7 @@
 title: Segredos na API do reator
 description: Saiba mais sobre os fundamentos de como configurar segredos na API de reator para uso no encaminhamento de eventos.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -131,7 +131,7 @@ Depois que o artefato de troca for salvo com sucesso no ambiente, o segredo `act
 
 ## Fazendo referência a segredos {#referencing-secrets}
 
-Para fazer referência a um segredo, você deve criar um elemento de dados do tipo &quot;[!UICONTROL Segredo]&quot; (fornecido pelo [[!UICONTROL Núcleo] extensão](../../extensions/web/core/overview.md)) em uma propriedade de encaminhamento de evento. Ao configurar esse elemento de dados, você será solicitado a indicar qual segredo usar para cada ambiente. Em seguida, você pode criar regras que fazem referência a um elemento de dados secreto, como no cabeçalho de uma chamada HTTP.
+Para fazer referência a um segredo, você deve criar um elemento de dados do tipo &quot;[!UICONTROL Segredo]&quot; (fornecido pelo [[!UICONTROL Núcleo] extensão](../../extensions/client/core/overview.md)) em uma propriedade de encaminhamento de evento. Ao configurar esse elemento de dados, você será solicitado a indicar qual segredo usar para cada ambiente. Em seguida, você pode criar regras que fazem referência a um elemento de dados secreto, como no cabeçalho de uma chamada HTTP.
 
 ![Elemento de dados secreto](../../images/api/guides/secrets/data-element.png)
 

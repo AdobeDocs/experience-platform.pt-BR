@@ -2,7 +2,7 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para as soluções da Adobe Experience Cloud usando os recursos de coleta de dados da Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 0%
@@ -212,7 +212,7 @@ A página de configuração do evento é exibida. Para configurar um evento, pri
 
 >[!NOTE]
 >
->Para obter mais informações sobre os diferentes tipos de eventos fornecidos pelas extensões da Web do Adobe, incluindo como configurá-los, consulte o [Referência de extensões Adobe](../tags/extensions/web/overview.md) na documentação das tags.
+>Para obter mais informações sobre os diferentes tipos de eventos fornecidos pelas extensões da Web do Adobe, incluindo como configurá-los, consulte o [Referência de extensões Adobe](../tags/extensions/client/overview.md) na documentação das tags.
 
 O evento de envio de formulário permite usar um [Seletor de CSS](https://www.w3schools.com/css/css_selectors.asp) para fazer referência a um elemento específico para a regra ser ativada. No exemplo abaixo, a ID `add-to-cart-form` é usada para que essa regra seja acionada somente para o formulário &quot;Adicionar ao carrinho&quot;. Selecionar **[!UICONTROL Manter alterações]** para adicionar o evento à regra.
 

@@ -2,7 +2,7 @@
 title: Implantação assíncrona
 description: Saiba como implantar bibliotecas de tag da Adobe Experience Platform de forma assíncrona em seu site.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 92%
@@ -56,7 +56,7 @@ Primeiramente, como a biblioteca de tags pode terminar o carregamento antes ou d
 
 Em segundo lugar, a biblioteca de tags pode terminar de ser carregada antes ou depois que o evento do navegador [`DOMContentLoaded`](https://developer.mozilla.org/pt-BR/docs/Web/Events/DOMContentLoaded) (DOM Pronto) ocorra.
 
-Devido a esses dois pontos, vale a pena demonstrar como funcionam os tipos de evento [Biblioteca carregada](../../extensions/web/core/overview.md#library-loaded-page-top), [Final da página](../../extensions/web/core/overview.md#page-bottom), [DOM Pronto](../../extensions/web/core/overview.md#page-bottom) e [Janela carregada](../../extensions/web/core/overview.md#window-loaded) da extensão principal ao carregar uma biblioteca de tags de forma assíncrona.
+Devido a esses dois pontos, vale a pena demonstrar como funcionam os tipos de evento [Biblioteca carregada](../../extensions/client/core/overview.md#library-loaded-page-top), [Final da página](../../extensions/client/core/overview.md#page-bottom), [DOM Pronto](../../extensions/client/core/overview.md#page-bottom) e [Janela carregada](../../extensions/client/core/overview.md#window-loaded) da extensão principal ao carregar uma biblioteca de tags de forma assíncrona.
 
 Se a propriedade da tag contiver as quatro seguintes regras:
 

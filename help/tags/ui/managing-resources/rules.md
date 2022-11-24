@@ -2,7 +2,7 @@
 title: Regras
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 81%
@@ -41,7 +41,7 @@ Se um evento especificado ocorrer, as condições serão avaliadas e, em seguida
 
 * **Condições**: restrinja o evento configurando quaisquer condições que devem ser verdadeiras para um evento acionar a regra. Uma exceção é definida como uma condição NOT. Várias condições são unidas por um AND.
 
-Os eventos disponíveis dependem das extensões instaladas. Para obter informações sobre os eventos na extensão principal, consulte [Tipos de evento da extensão principal](../../extensions/web/core/overview.md#core-extension-event-types).
+Os eventos disponíveis dependem das extensões instaladas. Para obter informações sobre os eventos na extensão principal, consulte [Tipos de evento da extensão principal](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Ações (then)
 

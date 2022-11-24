@@ -5,7 +5,7 @@ title: Visão geral da assimilação de fluxo
 topic-legacy: overview
 description: A assimilação de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%
@@ -58,4 +58,4 @@ A tabela abaixo exibe orientações sobre os limites de solicitação por segund
 
 ## Extensão da Adobe Experience Platform
 
-Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. O [!DNL Experience Platform] fornece ações para enviar beacons formatados em [!DNL Experience Data Model] (XDM) para ingestão em tempo real para [!DNL Experience Platform]. Visite o [Extensão Experience Platform](../../tags/extensions/web/sdk/overview.md) documentação para obter mais informações.
+Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. O [!DNL Experience Platform] fornece ações para enviar beacons formatados em [!DNL Experience Data Model] (XDM) para ingestão em tempo real para [!DNL Experience Platform]. Visite o [Extensão Experience Platform](../../tags/extensions/client/sdk/overview.md) documentação para obter mais informações.

@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para o Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -38,8 +38,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Recurso | Descrição |
 | --- | --- |
 | Tratamento de dados confidenciais para conjuntos de dados | Os datastreams agora usam várias tecnologias da plataforma para lidar adequadamente com dados confidenciais, conforme empregado por regulamentos, como o Health Insurance Portability and Accountability Act (HIPAA). Consulte a seção sobre [tratamento de dados confidenciais em fluxos de dados](../../edge/datastreams/overview.md#sensitive) para obter mais informações. |
-| [!DNL Splunk] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Splunk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Splunk] visão geral da extensão](../../tags/extensions/web/splunk/overview.md) para obter mais informações. |
-| [!DNL Zendesk] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Zendesk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Zendesk] visão geral da extensão](../../tags/extensions/web/zendesk/overview.md) para obter mais informações. |
+| [!DNL Splunk] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Splunk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Splunk] visão geral da extensão](../../tags/extensions/server/splunk/overview.md) para obter mais informações. |
+| [!DNL Zendesk] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Zendesk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Zendesk] visão geral da extensão](../../tags/extensions/server/zendesk/overview.md) para obter mais informações. |
 
 {style=&quot;table-layout:auto&quot;}
 

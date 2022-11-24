@@ -2,7 +2,7 @@
 title: Manual de início rápido
 description: Saiba como começar a usar as tags na Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 90%
@@ -53,7 +53,7 @@ Para obter mais informações sobre a criação de propriedades, consulte [Criar
 
 Uma extensão é uma integração criada pela Adobe ou por um parceiro da Adobe que adiciona opções novas e infinitas às tags que podem ser implantadas em seus sites. Comparando a tag a um sistema operacional, as extensões são os aplicativos que você instala para executar ações específicas necessárias.
 
-Todas as novas propriedades são fornecidas com a [Extensão principal](../extensions/web/core/overview.md) instalada. As propriedades móveis são fornecidas com extensões adicionais. A extensão principal é criada pela equipe da Adobe a fim de fornecer um conjunto padrão robusto de tipos de elemento de dados para sua camada de dados e tipos de evento para suas regras. A maioria das ações que você desejará executar (obter uma ECID, enviar beacons do [!DNL Adobe Analytics], carregar a mbox global do [!DNL Target], etc.) será proveniente de extensões instaladas no catálogo.
+Todas as novas propriedades são fornecidas com a [Extensão principal](../extensions/client/core/overview.md) instalada. As propriedades móveis são fornecidas com extensões adicionais. A extensão principal é criada pela equipe da Adobe a fim de fornecer um conjunto padrão robusto de tipos de elemento de dados para sua camada de dados e tipos de evento para suas regras. A maioria das ações que você desejará executar (obter uma ECID, enviar beacons do [!DNL Adobe Analytics], carregar a mbox global do [!DNL Target], etc.) será proveniente de extensões instaladas no catálogo.
 
 O que torna as tags na Platform realmente únicas é que essas extensões podem ser criadas por qualquer pessoa. Você precisa soltar um pixel de remarketing do Facebook em seu site? Confira a extensão que o Facebook criou. Deseja o mesmo para Twitter ou Linked In? Use essas extensões. Você precisa executar uma pesquisa? Veja o Question Pro ou Foresee. Você precisa gerenciar a privacidade e o consentimento dos usuários finais para ajudar no [!DNL GDPR]? Dê uma boa olhada no Evidon e no Trust Arc. Deseja obter uma visão detalhada do comportamento de usuários individuais no site? Talvez você deva dar uma olhada no Clicktale. Para obter mais informações, consulte a seção sobre [adição de uma nova extensão](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

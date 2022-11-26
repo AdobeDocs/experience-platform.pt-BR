@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '967'
 ht-degree: 37%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 37%
       * [Privacidade diferencial](https://exchange.adobe.com/apps/ec/104535)
       * [Visualizadores do Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalk OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -210,6 +211,7 @@ ht-degree: 37%
          * [Visão geral](./extensions/server/aws/overview.md)
       * Núcleo {#core}
          * [Visão geral](./extensions/server/core/overview.md)
+      * [API de conversões do facebook](https://exchange.adobe.com/apps/ec/105509)
       * Conversões aprimoradas de anúncios do Google {#google-ads-enhanced-conversions}
          * [Visão geral](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}

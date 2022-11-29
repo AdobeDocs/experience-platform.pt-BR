@@ -3,10 +3,10 @@ keywords: Experience Platform, home, tópicos populares, Conector de origem do A
 title: Conector de origem do Adobe Analytics para dados do conjunto de relatórios
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1014'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,9 @@ A latência esperada de dados do Analytics na plataforma é descrita na tabela a
 | Novos dados para [!DNL Real-time Customer Profile] (A4T **not** ativado) | &lt; 2 minutos |
 | Novos dados para [!DNL Real-time Customer Profile] (A4T **é** ativado) | &lt; 15 minutos |
 | Novos dados para o Data Lake | &lt; 90 minutos |
-| Dados de preenchimento retroativo (13 meses de dados ou 10 bilhões de eventos, o que for menor) | &lt; 4 semanas |
+| Preenchimento retroativo de menos de 10 bilhões de eventos | &lt; 4 semanas |
+
+Por padrão, os preenchimentos retroativos do Analytics são de 13 meses. O limite de 10 mil milhões de eventos mencionado no quadro acima é estritamente relativo à latência esperada.
 
 >[!NOTE]
 >

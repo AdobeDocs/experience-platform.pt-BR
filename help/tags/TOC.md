@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
+source-git-commit: 05cc1388f4b32036e1c1ba76bfc584774acb014c
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 37%
+source-wordcount: '976'
+ht-degree: 36%
 
 ---
 
@@ -209,6 +209,7 @@ ht-degree: 37%
          * [Visão geral](./extensions/server/cloud-connector/overview.md)
       * [!DNL AWS] {#aws}
          * [Visão geral](./extensions/server/aws/overview.md)
+      * [Conector do Cloud para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Núcleo {#core}
          * [Visão geral](./extensions/server/core/overview.md)
       * [API de conversões do facebook](https://exchange.adobe.com/apps/ec/105509)

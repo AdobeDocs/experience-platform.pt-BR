@@ -4,9 +4,9 @@ title: Guia da interface do usuário de políticas de mesclagem
 type: Documentation
 description: Ao reunir dados de várias fontes no Experience Platform, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a exibição unificada. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
 workflow-type: tm+mt
-source-wordcount: '2319'
+source-wordcount: '2321'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ A primeira etapa do fluxo de trabalho permite configurar a política de mesclage
    * **[!UICONTROL Gráfico privado]**: Realize a identificação com base no gráfico de identidade privado.
 * **[!UICONTROL Política de mesclagem padrão]**: Um botão de alternância que permite selecionar se essa política de mesclagem será ou não o padrão para sua organização. Se o seletor estiver ligado, será exibido um aviso solicitando que você confirme que deseja alterar a política de mesclagem padrão da sua organização. Consulte a [visão geral das políticas de mesclagem](overview.md) para saber mais sobre as políticas de mesclagem padrão.
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Política de Mesclagem Ativa On-Edge]**: Um botão de alternância que permite selecionar se essa política de mesclagem estará ou não ativa no Edge. Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um segmento seja ativado na borda (marcado como um segmento de borda), ele deve ser vinculado a uma política de mesclagem marcada como ativa na borda. Se um segmento for **not** vinculado a uma política de mesclagem marcada como ativa na borda, o segmento não será marcado como ativo na borda e será marcado como um segmento de streaming. Além disso, cada Organização IMS só pode ter **one** política de mesclagem ativa no edge.
+* **[!UICONTROL Política de Mesclagem Ativa On-Edge]**: Um botão de alternância que permite selecionar se essa política de mesclagem estará ou não ativa no Edge. Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um segmento seja ativado na borda (marcado como um segmento de borda), ele deve ser vinculado a uma política de mesclagem marcada como ativa na borda. Se um segmento for **not** vinculado a uma política de mesclagem marcada como ativa na borda, o segmento não será marcado como ativo na borda e será marcado como um segmento de streaming. Além disso, cada sandbox em uma organização só pode ter **one** política de mesclagem ativa no edge.
 
 Depois que os campos obrigatórios forem preenchidos, é possível selecionar **[!UICONTROL Próximo]** para continuar com o workflow.
 

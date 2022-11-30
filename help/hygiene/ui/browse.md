@@ -2,7 +2,7 @@
 title: Procurar Ordens de Serviço de Higiene de Dados
 description: Saiba como visualizar e gerenciar pedidos de higiene de dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Ao acessar o **[!UICONTROL Higiene de dados]** na interface do usuário, uma lis
 
 ![Imagem que mostra o [!UICONTROL Higiene de dados] espaço de trabalho na interface do usuário da plataforma](../images/ui/browse/work-order-list.png)
 
-A lista mostra somente pedidos de trabalho para uma categoria de cada vez. Selecionar **[!UICONTROL Consumidor]** para exibir uma lista de tarefas de exclusão do consumidor, e **[!UICONTROL Conjunto de dados]** para exibir uma lista de expirações agendadas do conjunto de dados.
+A lista mostra somente pedidos de trabalho para uma categoria de cada vez. Selecionar **[!UICONTROL Consumidor]** para exibir uma lista de tarefas de exclusão de registro, e **[!UICONTROL Conjunto de dados]** para exibir uma lista de expirações agendadas do conjunto de dados.
 
 ![Imagem que mostra o [!UICONTROL Conjunto de dados] guia](../images/ui/browse/dataset-tab.png)
 
@@ -41,9 +41,9 @@ Selecione o ícone de funil (![Imagem do ícone de funil](../images/ui/browse/fu
 
 Dependendo do tipo de ordem de trabalho que você estiver visualizando, diferentes opções de filtro estarão disponíveis.
 
-### Filtros para exclusões de consumidores
+### Filtros para exclusões de registros
 
-Os seguintes filtros se aplicam às solicitações de exclusão do consumidor:
+Os seguintes filtros se aplicam a solicitações de exclusão de registro:
 
 | Filtro | Descrição |
 | --- | --- |
@@ -78,8 +78,8 @@ Os seguintes filtros se aplicam às solicitações de expiração do conjunto de
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Resposta de exclusão do consumidor"
->abstract="Quando um processo de exclusão do consumidor recebe uma resposta do sistema, essas mensagens são exibidas na guia **[!UICONTROL Resultado]** seção. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nesta seção para ajudá-lo a solucionar o problema. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>title="Registrar resposta de exclusão"
+>abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na guia **[!UICONTROL Resultado]** seção. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nesta seção para ajudá-lo a solucionar o problema. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
 
 Selecione a ID de um pedido de trabalho listado para exibir seus detalhes.
 
@@ -87,11 +87,11 @@ Selecione a ID de um pedido de trabalho listado para exibir seus detalhes.
 
 Dependendo do tipo de ordem de trabalho selecionada, informações e controles diferentes são fornecidos. Elas são abordadas nas seções abaixo.
 
-### Detalhes de exclusão do consumidor {#consumer-delete}
+### Detalhes da exclusão de registro {#record-delete}
 
-Os detalhes de uma solicitação de exclusão do consumidor incluem seu status atual e o tempo decorrido desde que a solicitação foi feita. Cada solicitação também inclui uma **[!UICONTROL Status por serviço]** seção que fornece detalhes de status individuais sobre cada serviço de downstream envolvido na exclusão. No painel direito, você pode usar controles para atualizar o nome e a descrição da ordem de trabalho.
+Os detalhes de uma solicitação de exclusão de registro incluem seu status atual e o tempo decorrido desde que a solicitação foi feita. Cada solicitação também inclui uma **[!UICONTROL Status por serviço]** seção que fornece detalhes de status individuais sobre cada serviço de downstream envolvido na exclusão. No painel direito, você pode usar controles para atualizar o nome e a descrição da ordem de trabalho.
 
-![Imagem mostrando a página de detalhes de uma ordem de trabalho de exclusão do consumidor](../images/ui/browse/consumer-delete-details.png)
+![Imagem mostrando a página de detalhes de uma ordem de trabalho de exclusão de registro](../images/ui/browse/record-delete-details.png)
 
 ### Detalhes da expiração do conjunto de dados {#dataset-expiration}
 
@@ -104,4 +104,4 @@ A página de detalhes de uma expiração de conjunto de dados fornece informaç�
 Este guia cobriu como visualizar e gerenciar pedidos de higiene de dados existentes na interface do usuário da plataforma. Para obter informações sobre como criar seus próprios pedidos de trabalho, consulte a seguinte documentação:
 
 * [Gerenciar expirações do conjunto de dados](./dataset-expiration.md)
-* [Gerenciar exclusões de consumidores](./delete-consumer.md)
+* [Gerenciar exclusões de registros](./record-delete.md)

@@ -1,21 +1,21 @@
 ---
-title: Excluir registros do consumidor usando a API de higiene de dados
+title: Excluir registros usando a API de higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 3%
 
 ---
 
-# Excluir registros do consumidor usando a API de Higiene de Dados
+# Excluir registros usando a API de higiene de dados
 
 >[!IMPORTANT]
 >
->Esse terminal representa a funcionalidade beta para exclusões do consumidor. Para obter a funcionalidade mais recente, use o [`/workorder` endpoint](./workorder.md) em vez disso.
+>Esse terminal representa a funcionalidade beta para exclusões de registros. Para obter a funcionalidade mais recente, use o [`/workorder` endpoint](./workorder.md) em vez disso.
 
 A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 

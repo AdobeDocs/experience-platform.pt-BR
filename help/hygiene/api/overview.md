@@ -2,9 +2,9 @@
 title: Guia da API da Higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados de seus clientes no Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -43,16 +43,16 @@ Este documento fornece um exemplo de chamada à API para demonstrar como formata
 
 A expiração de um conjunto de dados é uma ação &quot;excluir um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando uma hora futura na qual esse conjunto de dados deve ser excluído. Consulte a [guia do endpoint de expiração de conjunto de dados](./dataset-expiration.md) para obter detalhes sobre como agendar expirações do conjunto de dados na API.
 
-## Exclusão do consumidor
+## Exclusões de registro
 
 >[!IMPORTANT]
 >
->Solicitações de exclusão de consumidor estão disponíveis somente para organizações que compraram **Blindagem do Adobe Healthcare**.
+>As solicitações de exclusão de registro só estão disponíveis para organizações que compraram **Blindagem do Adobe Healthcare**.
 >
 >
->As exclusões de consumidores devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
+>As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
-A API de Higiene de dados permite excluir todos os registros associados a uma identidade do consumidor em um ou todos os conjuntos de dados. Todas as tarefas de higiene de dados que excluem identidades de consumidores são representadas por uma construção chamada ordem de trabalho. Consulte a [guia do endpoint de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões do consumidor na API.
+A API de Higiene de dados permite excluir todos os registros associados a uma identidade em um ou em todos os conjuntos de dados. Todas as tarefas de higiene de dados que excluem identidades são representadas por uma construção chamada ordem de trabalho. Consulte a [guia do endpoint de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões de registro na API.
 
 ## Quota
 

@@ -2,9 +2,9 @@
 title: Guia da interface do usuário da análise de big data
 description: Saiba como gerenciar tarefas de higiene de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Roda de Higiene de Dados"
->abstract="Este widget mostra o status das tarefas de exclusão de consumidor da Higiene de dados para o período de tempo selecionado. Para obter mais informações sobre seus processos de Higiene de dados, selecione **Higiene de dados** no painel de navegação esquerdo."
+>abstract="Este widget mostra o status das tarefas de exclusão do registro de Higiene de dados para o período de tempo selecionado. Para obter mais informações sobre seus processos de Higiene de dados, selecione **Higiene de dados** no painel de navegação esquerdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Ordens de Serviço de Higiene de Dados Recentes"
 >abstract="Este widget mostra as cinco ordens de trabalho da Higiene de dados criadas ou atualizadas mais recentemente, dependendo da opção selecionada na parte superior direita. Para obter mais informações sobre seus processos de Higiene de dados, selecione **Higiene de dados** no painel de navegação esquerdo."
 
-O **[!UICONTROL Higiene de dados]** A área de trabalho na interface do usuário do Adobe Experience Platform permite criar e monitorar várias tarefas de higiene de dados, incluindo a exclusão de identidades do consumidor e a programação de expirações do conjunto de dados.
+O **[!UICONTROL Higiene de dados]** A área de trabalho na interface do usuário do Adobe Experience Platform permite criar e monitorar várias tarefas de higiene de dados, incluindo a exclusão de registros e o agendamento de expirações do conjunto de dados.
 
 Este guia aborda como gerenciar tarefas de higiene de dados na interface do usuário da plataforma. Para obter informações sobre como executar essas tarefas usando chamadas de API, consulte o [Guia da API de higiene de dados](../api/overview.md).
 
@@ -33,4 +33,4 @@ A partir daqui, você pode navegar pelos pedidos de trabalho existentes e config
 
 * [Procurar ordens de trabalho existentes](./browse.md)
 * [Criar uma solicitação de expiração de conjunto de dados](./dataset-expiration.md)
-* [Criar uma solicitação de exclusão do consumidor](./delete-consumer.md)
+* [Criar uma solicitação de exclusão de registro](./record-delete.md)

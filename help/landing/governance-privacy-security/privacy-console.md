@@ -1,10 +1,10 @@
 ---
 title: Visão geral do console de privacidade
 description: Saiba como monitorar seus fluxos de trabalho relacionados à privacidade na interface do usuário do Adobe Experience Platform.
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ A função de cada widget é explicada abaixo:
 
 | Nome do widget | Descrição |
 | --- | --- |
-| Status da ordem da higiene de dados | Mostra os status dos processos de exclusão do consumidor em [Higiene de dados](../../hygiene/home.md) para o período de tempo selecionado. Use o menu suspenso para alterar o período entre os últimos 7 dias, 14 dias e 30 dias. |
+| Status da ordem da higiene de dados | Mostra os status dos processos de exclusão de registro em [Higiene de dados](../../hygiene/home.md) para o período de tempo selecionado. Use o menu suspenso para alterar o período entre os últimos 7 dias, 14 dias e 30 dias. |
 | Recentes pedidos de higiene de dados | Mostra o mais recente [Higiene de dados](../../hygiene/home.md) ordens de serviço sendo processadas pelo sistema. Use a lista suspensa para alternar entre ordens de serviço criadas recentemente e ordens de serviço atualizadas recentemente. |
 | Ações mais frequentes | Mostra as ações mais frequentes no Platform capturadas por [logs de auditoria](./audit-logs/overview.md) para o período de tempo selecionado. Use o menu suspenso para alterar o período entre os últimos 7 dias, 14 dias e 30 dias. |
 | Usuários mais ativos | Mostra os usuários mais ativos da Plataforma em sua organização, capturados pelo [logs de auditoria](./audit-logs/overview.md) para o período de tempo selecionado. Use o menu suspenso para alterar o período entre os últimos 7 dias, 14 dias e 30 dias. |

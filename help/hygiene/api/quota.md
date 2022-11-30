@@ -1,9 +1,10 @@
 ---
 title: Endpoint da API de cota
 description: O endpoint /quota na API da Higiene de Dados permite monitorar o uso da higiene de dados em relação aos limites de cota mensal da organização para cada tipo de trabalho.
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
+source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '350'
 ht-degree: 3%
 
 ---
@@ -18,7 +19,7 @@ O `/quota` O endpoint na API da Higiene de dados permite monitorar o uso da higi
 
 As cotas são aplicadas para cada tipo de trabalho de higiene de dados das seguintes maneiras:
 
-* As exclusões de clientes e as atualizações de campo são limitadas a um determinado número de solicitações por mês.
+* As exclusões de registros e atualizações são limitadas a um determinado número de solicitações por mês.
 * As expirações do conjunto de dados têm um limite fixo para o número de trabalhos ativos simultaneamente, independentemente de quando as expirações serão executadas.
 
 ## Introdução
@@ -42,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUOTA_TYPE}` | Um parâmetro de consulta opcional que especifica o tipo de cota a ser recuperada. Se não `quotaType` for fornecido, todos os valores de cota serão retornados na resposta da API. Os valores de tipo aceitos incluem:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: Exclusões de consumidores</li><li>`fieldUpdateWorkOrderDatasetQuota`: Atualizações de campo</li></ul> |
+| `{QUOTA_TYPE}` | Um parâmetro de consulta opcional que especifica o tipo de cota a ser recuperada. Se não `quotaType` for fornecido, todos os valores de cota serão retornados na resposta da API. Os valores de tipo aceitos incluem:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: Exclusões de registro</li><li>`fieldUpdateWorkOrderDatasetQuota`: Registrar atualizações</li></ul> |
 
 **Solicitação**
 
@@ -70,7 +71,7 @@ Uma resposta bem-sucedida retorna os detalhes de suas cotas de higiene de dados.
     },
     {
       "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
+      "description": "The number of Record Delete Work Order requests for the organization for this month.",
       "consumed": 390,
       "quota": 10000
     }
@@ -80,6 +81,6 @@ Uma resposta bem-sucedida retorna os detalhes de suas cotas de higiene de dados.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `quotas` | Lista as informações de cota para cada tipo de trabalho de higiene de dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: Tipo de trabalho de higiene de dados:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: Exclusões de consumidores</li></ul></li><li>`description`: Uma descrição do tipo de trabalho de higiene de dados.</li><li>`consumed`: O número de ordens de produção desse tipo são executadas no período mensal atual.</li><li>`quota`: O limite de cota para esse tipo de trabalho. Para exclusões de clientes e atualizações de campo, isso representa o número de tarefas que podem ser executadas para cada período mensal. Para expirações do conjunto de dados, representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
+| `quotas` | Lista as informações de cota para cada tipo de trabalho de higiene de dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: Tipo de trabalho de higiene de dados:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: Exclusões de registro</li></ul></li><li>`description`: Uma descrição do tipo de trabalho de higiene de dados.</li><li>`consumed`: O número de ordens de produção desse tipo são executadas no período mensal atual.</li><li>`quota`: O limite de cota para esse tipo de trabalho. Para exclusões e atualizações de registros, isso representa o número de tarefas que podem ser executadas para cada período mensal. Para expirações do conjunto de dados, representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}

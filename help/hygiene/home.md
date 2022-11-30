@@ -2,7 +2,7 @@
 title: Visão geral da higiene dos dados
 description: A Higiene de dados do Adobe Experience Platform permite gerenciar o ciclo de vida de seus dados ao atualizar ou limpar registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 2%
@@ -17,14 +17,14 @@ ht-degree: 2%
 
 O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas a fim de orquestrar experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme esperado, atualizados quando for necessário corrigir dados incorretos e excluídos quando as políticas organizacionais o considerarem necessário.
 
-Os recursos de higiene de dados da Platform permitem gerenciar os dados armazenados do consumidor por meio do seguinte:
+Os recursos de higiene de dados da Platform permitem gerenciar os dados armazenados por meio do seguinte:
 
 * Agendamento de expirações automatizadas do conjunto de dados
-* Exclusão de dados individuais do consumidor de seus registros
+* Exclusão de registros individuais de um ou todos os conjuntos de dados
 
 >[!IMPORTANT]
 >
->As exclusões de consumidores devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) em vez disso.
+>As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) em vez disso.
 
 Essas atividades podem ser executadas usando o [[!UICONTROL Higiene de dados] Espaço de trabalho da interface do usuário](#ui) ou [API de higiene de dados](#api). Quando um trabalho de higiene de dados é executado, o sistema fornece atualizações de transparência em cada etapa do processo. Consulte a seção sobre [prazos e transparência](#timelines-and-transparency) para obter mais informações sobre como cada tipo de trabalho é representado no sistema.
 
@@ -40,7 +40,7 @@ O [!UICONTROL Higiene de dados] A interface do usuário é criada sobre a API de
 
 ## Linhas de tempo e transparência
 
-Solicitações de exclusão do consumidor e expiração do conjunto de dados têm seus próprios prazos de processamento e fornecem atualizações de transparência em pontos-chave em seus respectivos fluxos de trabalho. Consulte as seções abaixo para obter detalhes sobre cada tipo de trabalho.
+Registrar solicitações de exclusão e expiração de conjunto de dados têm suas próprias linhas do tempo de processamento e fornecem atualizações de transparência em pontos-chave em seus respectivos fluxos de trabalho. Consulte as seções abaixo para obter detalhes sobre cada tipo de trabalho.
 
 ### Expirações do conjunto de dados {#dataset-expiration-transparency}
 
@@ -57,17 +57,17 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 
 {style=&quot;table-layout:auto&quot;}
 
-### Exclusão do consumidor {#consumer-delete-transparency}
+### Exclusões de registro {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->As exclusões de consumidores só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
+>As exclusões de registros só estão disponíveis para organizações que compraram o Adobe Healthcare Shield.
 
-O seguinte ocorre quando uma [solicitação de exclusão do consumidor](./ui/delete-consumer.md) é criado:
+O seguinte ocorre quando uma [solicitação de exclusão de registro](./ui/record-delete.md) é criado:
 
 | Fase | Tempo após o envio da solicitação | Descrição |
 | --- | --- | --- |
-| Solicitação enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação de exclusão do consumidor. A solicitação está visível no [!UICONTROL Interface do usuário de hierarquia de dados] após a sua apresentação. |
+| Solicitação enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação de exclusão de registro. A solicitação está visível no [!UICONTROL Interface do usuário de hierarquia de dados] após a sua apresentação. |
 | Pesquisas de perfil atualizadas | 3 horas | A alteração nas contagens de perfil causada pela identidade excluída é refletida em [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
 | Segmentos atualizados | 24 horas | Depois que os perfis forem removidos, todos os [segmentos](../segmentation/home.md) são atualizadas para refletir seu novo tamanho. |
 | Jornadas e destinos atualizados | 26 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)e [destinos](../destinations/home.md) são atualizadas de acordo com as alterações em segmentos relacionados. |

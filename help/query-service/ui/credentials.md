@@ -5,9 +5,9 @@ title: Guia de credenciais do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,12 @@ ht-degree: 1%
 
 O Adobe Experience Platform Query Service permite conectar-se com clientes externos. Você pode se conectar a esses clientes externos usando credenciais que estão expirando ou credenciais que não estão expirando.
 
-## Credenciais de expiração
+## Credenciais de expiração {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="Modo SSL do cliente"
+>abstract="O SSL deve ser habilitado nos clientes conectados ao Serviço de query. Certifique-se de que o modo SSL esteja definido como &quot;obrigatório&quot;."
 
 Você pode usar as credenciais que estão expirando para configurar rapidamente uma conexão com um cliente externo.
 
@@ -96,7 +101,7 @@ Ao editar uma credencial que não esteja expirando, um modal é exibido. Você p
 
 Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Atualizar conta]** para concluir a atualização de suas credenciais.
 
-## Usar credenciais para se conectar a clientes externos
+## Usar credenciais para se conectar a clientes externos {#use-credential-to-connect}
 
 Você pode usar as credenciais que estão expirando ou que não estão expirando para se conectar a clientes externos, como o Aqua Data Studio, o Looker ou o Power BI. O método de entrada dessas credenciais varia dependendo do cliente externo. Consulte a documentação do cliente externo para obter instruções específicas sobre o uso dessas credenciais.
 

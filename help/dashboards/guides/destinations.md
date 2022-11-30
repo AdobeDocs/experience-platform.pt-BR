@@ -4,9 +4,9 @@ title: Guia do painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '3031'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ Na biblioteca de widgets, você pode navegar pela seleção de widgets de segmen
 ## Widgets padrão {#standard-widgets}
 
 O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos destinos e avaliar a integridade dos segmentos disponíveis para a análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre a criação de widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
+
+### Pré-requisitos {#prerequisites}
+
+Antes de continuar com as descrições dos widgets padrão, verifique se você está familiarizado com as definições dos seguintes termos principais usados em toda a documentação:
+
+* **Segmento:** Um segmento é **o conjunto de regras** que incluem atributos e dados de evento que qualificam vários perfis como um público-alvo.
+* **Público**: Um público-alvo é **o conjunto de perfis** que atendem aos critérios de uma definição de segmento.
+* **Mapeado/Mapeado**: O mapeamento de dados é o processo de mapeamento de campos de dados de origem para campos de destino relacionados em um destino.
+* **Identidade**: Uma identidade é um identificador que representa exclusivamente um cliente individual, como uma ID de cookie, ID de dispositivo ou ID de email.
+* **Ativar**: Ativar é a ação realizada por um usuário para mapear um segmento ou perfis para um destino, como Oracle Eloqua, Google ou Salesforce Marketing Cloud.
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
@@ -139,6 +149,8 @@ Você pode visualizar os detalhes de um segmento selecionando o nome de um segme
 
 ![Os segmentos ativados recentemente pelo widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
 
+Consulte a seção pré-requisitos para [definições dos termos utilizados](#prerequisites) nesta descrição.
+
 ### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ A lista suspensa da ID de destino filtra os segmentos disponíveis. As IDs de fi
 A coluna identidades conta o número de IDs de origem no segmento que podem ser mapeadas para a ID escolhida na lista suspensa ID de widget.
 
 ![Os segmentos não mapeados pelo widget de identidade.](../images/destinations/unmapped-segments-by-identity.png)
+
+Consulte a seção pré-requisitos para [definições dos termos utilizados](#prerequisites) nesta descrição.
 
 ### [!UICONTROL Segmentos mapeados por identidade] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ O widget fornece uma tabela de duas colunas para mostrar uma lista de plataforma
 
 ### [!UICONTROL Públicos-alvo ativados em todos os destinos] {#activated-audiences-across-all-destinations}
 
-O [!UICONTROL Públicos-alvo ativados em todos os destinos] O widget fornece o número total de públicos-alvo ativados em todos os destinos em uma única métrica. Esse número é preciso para o instantâneo mais recente.
+O [!UICONTROL Públicos-alvo ativados em todos os destinos] O widget fornece o número total de públicos-alvo ativados em todos os destinos em uma única métrica. Este widget mostra a contagem de públicos e não a contagem de segmentos. Esse número é preciso para o instantâneo mais recente.
 
 ![O widget Públicos-alvo ativados em todos os destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Selecionar **[!UICONTROL Públicos-alvo]** para navegar até os destinos [!UICONTROL Procurar] guia . Esta página fornece uma lista de todos os destinos ativados e uma variedade de métricas relevantes. Consulte a documentação para [mais informações sobre o [!UICONTROL Procurar] guia](../../destinations/ui/destinations-workspace.md#browse).
+Selecionar **[!UICONTROL Públicos-alvo]** para navegar até os destinos [!UICONTROL Procurar] guia . Esta página fornece uma lista de todos os destinos ativados e uma variedade de métricas relevantes. Consulte a documentação para obter mais informações sobre o [[!UICONTROL Procurar] guia](../../destinations/ui/destinations-workspace.md#browse).
+
+Consulte a seção pré-requisitos para [definições dos termos utilizados](#prerequisites) nesta descrição.
 
 ### [!UICONTROL Públicos-alvo ativados] {#activated-audiences}
 
@@ -276,6 +292,8 @@ Selecionar **[!UICONTROL Públicos-alvo]** para navegar até a página de detalh
 ![A página de detalhes do painel de destinos com a guia Ativation data realçada.](../images/destinations/activation-data-tab.png)
 
 Este widget ajuda você a entender o valor dos destinos com base no número de públicos-alvo ativados imediatamente. Também fornece acesso fácil a informações mais detalhadas para análises mais detalhadas.
+
+Consulte a seção pré-requisitos para [definições dos termos utilizados](#prerequisites) nesta descrição.
 
 ## Próximas etapas
 

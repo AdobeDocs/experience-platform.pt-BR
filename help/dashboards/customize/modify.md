@@ -3,9 +3,9 @@ keywords: Experience Platform, interface do usuário, interface do usuário, pai
 title: Modificar painéis da plataforma na interface do usuário
 description: Este guia fornece instruções passo a passo para personalizar como os dados do Adobe Experience Platform de sua organização são exibidos nos painéis.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Este guia fornece instruções passo a passo para personalizar como os dados do 
 
 Em qualquer painel (por exemplo, a variável [!UICONTROL Perfis] painel), você pode selecionar **[!UICONTROL Modificar painel]** para redimensionar e reordenar os widgets existentes.
 
-![](../images/customization/modify-dashboard.png)
+![O painel Perfis com o painel Modificar foi realçado.](../images/customization/modify-dashboard.png)
 
 ## Reordenar widgets
 
 Depois de escolher modificar o painel, você pode reordenar os widgets selecionando o título do widget e arrastando e soltando os widgets na ordem desejada. Neste exemplo, a variável **[!UICONTROL Tendência da contagem de perfis]** o widget é movido para a linha superior e a variável **[!UICONTROL Contagem de perfis]** O widget agora aparece na segunda linha.
 
-![](../images/customization/move-widget.png)
+![O painel Perfis com dois widgets reordenados é realçado.](../images/customization/move-widget.png)
 
 ## Redimensionar widgets
 
@@ -40,13 +40,13 @@ Também é possível redimensionar um widget selecionando o símbolo de ângulo 
 >
 >À medida que os widgets são ajustados em tamanho, os widgets ao redor são reposicionados dinamicamente. Isso pode fazer com que alguns widgets sejam movidos para linhas adicionais, o que requer a rolagem para ver todos os widgets.
 
-![](../images/customization/resize-widget.png)
+![O painel Perfis com um widget redimensionado é realçado.](../images/customization/resize-widget.png)
 
 ## Salvar atualizações do painel
 
 Depois de concluir a movimentação e o redimensionamento de widgets, selecione **[!UICONTROL Salvar e sair]** para salvar as alterações e retornar à exibição do painel principal. Se não quiser manter as alterações, selecione **[!UICONTROL Cancelar]** para redefinir o painel e retornar à exibição do painel principal.
 
-![](../images/customization/save-changes.png)
+![O painel Perfis com Cancelar e Salvar e sair foi realçado.](../images/customization/save-changes.png)
 
 ## Biblioteca de widgets
 
@@ -54,7 +54,7 @@ Além de redimensionar e reorganizar widgets, selecione **[!UICONTROL Modificar 
 
 Para obter instruções passo a passo sobre como acessar e trabalhar com a [!UICONTROL Biblioteca de widgets], consulte o [guia da biblioteca de widgets](widget-library.md).
 
-![](../images/customization/widget-library.png)
+![A área de trabalho da biblioteca de widgets com Padrão e Personalizado destacado.](../images/customization/widget-library.png)
 
 ## Próximas etapas
 

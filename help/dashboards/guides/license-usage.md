@@ -4,9 +4,9 @@ title: Guia do painel de uso de licença
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Para navegar até o painel de uso da licença na interface do usuário da plataf
 >
 >O painel de uso da licença não é habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poder visualizar o painel. Para obter etapas sobre a concessão de permissões de acesso para exibir o painel de uso da licença, consulte [guia de permissões do painel](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![A guia Visão geral do painel de uso da licença .](../images/license-usage/dashboard-overview.png)
 
 ### Selecionar uma sandbox
 
@@ -41,7 +41,7 @@ Para escolher uma sandbox para exibir no painel, selecione [!UICONTROL Produçã
 
 O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] O fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
 
-![](../images/license-usage/select-sandbox.png)
+![A guia Visão geral do painel de uso da licença com o seletor de sandbox realçado.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do me
 
 Depois de selecionar uma sandbox, você pode usar a lista suspensa intervalo de datas para selecionar o período de tempo a ser exibido no painel. Há várias opções disponíveis, incluindo o valor padrão dos últimos 30 dias.
 
-![](../images/license-usage/select-date-range.png)
+![A guia Visão geral do painel de uso da licença com a lista suspensa intervalo de datas realçada.](../images/license-usage/select-date-range.png)
 
 Você também pode selecionar **[!UICONTROL Data personalizada]** para escolher o período exibido.
 
-![](../images/license-usage/select-custom-date.png)
+![A guia Visão geral do painel de uso da licença com as opções de intervalo de datas personalizadas realçadas.](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -68,7 +68,7 @@ O painel de uso da licença é composto de widgets, que exibem métricas somente
 
 Cada widget exibe gráficos de linha que comparam os números reais de sua organização ao total disponível com o licenciamento de sua organização e fornecem uma porcentagem do uso total.
 
-![](../images/license-usage/widgets.png)
+![A guia Visão geral do painel de uso da licença com o gráfico de linha do widget de métrica de uso da licença de amostra destacado.](../images/license-usage/widgets.png)
 
 ## Métricas disponíveis
 

@@ -2,9 +2,9 @@
 title: Painéis definidos pelo usuário
 description: Saiba como criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de contexto para visualizar métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,12 @@ Os widgets podem ser reorganizados e redimensionados enquanto estiverem nesse es
 
 Para garantir que cada query de um painel do Adobe Real-time Customer Data Platform Insights tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso dos recursos atribuindo slots de simultaneidade a cada query. O sistema pode processar até quatro queries simultâneos e, portanto, quatro slots de query simultâneos estão disponíveis em um determinado momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que haja slots de simultaneidade suficientes disponíveis.
 
-## Próximas etapas
+## Próximas etapas e recursos adicionais
 
 Ao ler este documento, você tem uma melhor compreensão de como criar um painel personalizado e como criar, editar e atualizar widgets personalizados para esse painel.
 
 Para descobrir as métricas e visualizações pré-configuradas disponíveis para o [perfis](./guides/profiles.md#standard-widgets), [segmentos](./guides/segments.md#standard-widgets)e [destinos](./guides/destinations.md#standard-widgets) painéis, consulte a lista de widgets padrão em sua respectiva documentação.
+
+Para reforçar sua compreensão dos painéis definidos pelo usuário no Experience Platform, assista ao seguinte vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

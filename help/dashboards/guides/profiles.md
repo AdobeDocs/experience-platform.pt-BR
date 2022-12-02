@@ -4,9 +4,9 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Para navegar até o painel Perfis na interface do usuário da plataforma, seleci
 >
 >Se sua organização for nova na Platform e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel Perfis não estará visível. Em vez disso, a variável [!UICONTROL Visão geral] A guia exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
 
-![](../images/profiles/dashboard-overview.png)
+![O painel Experience Platform Profiles com Profiles and Overview (Perfis de com Perfis e Visão geral) foi realçado.](../images/profiles/dashboard-overview.png)
 
 ### Modificação do painel Perfis
 
@@ -142,7 +142,7 @@ Consulte a [seção sobre políticas de mesclagem no início deste documento](#m
 >
 >Outra razão comum é devido às diferenças entre o momento em que o instantâneo do painel é tirado e o momento em que o trabalho de amostra é executado para o [!UICONTROL Procurar] guia . Você pode ver quando a variável [!UICONTROL Contagem de perfis] O widget foi atualizado pela última vez com o registro de data e hora no widget. Para saber mais sobre como o trabalho de amostra é acionado no [!UICONTROL Procurar] consulte a guia [seção contagem de perfis no guia da interface do usuário de perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![O painel Experience Platform Profiles com o widget Profile count é realçado.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Tendência da contagem de perfis] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ Para obter mais informações sobre fragmentos de perfil, consulte a seção em 
 
 Para saber mais sobre identidades, visite o [Documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![A visão geral do painel Perfis com o dispositivo de sobreposição de identidade foi realçada.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Perfis de identidade única] {#single-identity-profiles}
 

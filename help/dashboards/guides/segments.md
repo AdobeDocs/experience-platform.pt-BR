@@ -4,9 +4,9 @@ title: Guia do painel Segmentos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Para navegar até o [!UICONTROL Segmentos] no painel da interface do usuário da
 >
 >Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, a variável [!UICONTROL Segmentos] o painel não está visível. Em vez disso, a variável [!UICONTROL Visão geral] A guia exibe links e documentação para ajudar você a começar a usar a segmentação.
 
-![A guia Visão geral do painel Segmentos .](../images/segments/dashboard-overview.png)
+![A guia Visão geral do painel Segmentos com os Segmentos e Visão geral é realçada.](../images/segments/dashboard-overview.png)
 
 ### Modifique o [!UICONTROL Segmentos] painel {#modify}
 
@@ -204,7 +204,7 @@ O **[!UICONTROL Perfis por identidade]** o widget exibe o detalhamento das ident
 
 Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo de legendas automáticas.
 
-![A caixa de diálogo Perfis por legendas de identidade.](../images/segments/profiles-by-identity.png)
+![A visão geral do painel Segmentos com a opção Perfis por dispositivo de identidade e Legendas foi realçada.](../images/segments/profiles-by-identity.png)
 
 Um modelo de aprendizado de máquina gera automaticamente insights de dados ao analisar a distribuição geral e as principais dimensões dos dados.
 

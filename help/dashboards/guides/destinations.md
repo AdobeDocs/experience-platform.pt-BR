@@ -4,7 +4,7 @@ title: Guia do painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 0%
@@ -273,7 +273,13 @@ O widget fornece uma tabela de duas colunas para mostrar uma lista de plataforma
 
 ### [!UICONTROL Públicos-alvo ativados em todos os destinos] {#activated-audiences-across-all-destinations}
 
-O [!UICONTROL Públicos-alvo ativados em todos os destinos] O widget fornece o número total de públicos-alvo ativados em todos os destinos em uma única métrica. Este widget mostra a contagem de públicos e não a contagem de segmentos. Esse número é preciso para o instantâneo mais recente.
+O [!UICONTROL Públicos-alvo ativados em todos os destinos] O widget fornece o número total de públicos-alvo ativados em todos os destinos em uma única métrica.
+
+>[!NOTE]
+>
+>Este widget mostra a contagem de públicos e não a contagem de segmentos.
+
+Esse número é preciso para o instantâneo mais recente.
 
 ![O widget Públicos-alvo ativados em todos os destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
 

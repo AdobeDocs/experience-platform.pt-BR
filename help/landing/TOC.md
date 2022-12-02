@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real.
-source-git-commit: 24efebb89ba36f5047558acd368638f456356a9e
+source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 25%
+source-wordcount: '256'
+ht-degree: 26%
 
 ---
 
@@ -58,6 +58,11 @@ ht-degree: 25%
       * [Integre o SDK da Web da plataforma para processar dados de consentimento e preferência](./governance-privacy-security/consent/sdk.md)
    * Logs de auditoria {#audit-logs}
       * [Visão geral](./governance-privacy-security/audit-logs/overview.md)
+      * Auditoria da API de consulta {#audit-api}
+         * [Visão geral](./governance-privacy-security/audit-logs/api/overview.md)
+         * [Introdução](./governance-privacy-security/audit-logs/api/getting-started.md)
+         * [Eventos](./governance-privacy-security/audit-logs/api/events.md)
+         * [Exportar](./governance-privacy-security/audit-logs/api/export.md)
    * [Criptografia de dados](./governance-privacy-security/encryption.md)
    * [Chaves gerenciadas pelo cliente](./governance-privacy-security/customer-managed-keys.md)
 * Utilização da licença e medidas de proteção {#license}

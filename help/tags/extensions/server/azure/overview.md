@@ -2,9 +2,9 @@
 title: Visão geral da extensão do Microsoft Azure
 description: Saiba mais sobre a extensão do Microsoft Azure para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '938'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ Como a extensão não tem propriedades de configuração, ela é adicionada imed
 
 ## Configurar uma regra de encaminhamento de eventos {#rule}
 
-Comece criando uma nova regra de encaminhamento de eventos e configure suas condições conforme desejado. Ao selecionar as ações para a regra, selecione **[!UICONTROL Microsoft Azure]** para a extensão e selecione **[!UICONTROL Enviar dados para Hubs de evento]** para o tipo de ação .
+Comece criando uma nova regra de encaminhamento de eventos e configure suas condições conforme desejado. Ao selecionar as ações para a regra, selecione **[!UICONTROL Microsoft Azure]** para a extensão e selecione **[!UICONTROL Enviar dados para Hubs de evento]** para o tipo de ação.
 
 ![O [!UICONTROL Enviar dados para Hubs de evento] tipo de ação sendo selecionado para uma regra na interface do usuário da Coleta de dados.](../../../images/extensions/server/azure/select-action-type.png)
 

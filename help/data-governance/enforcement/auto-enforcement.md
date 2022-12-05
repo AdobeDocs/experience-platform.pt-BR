@@ -5,7 +5,7 @@ title: Aplicação Automática de Política
 topic-legacy: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
 workflow-type: tm+mt
 source-wordcount: '1700'
 ht-degree: 0%
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 # Aplicação automática da política
 
-Depois que os dados forem rotulados e as políticas de uso forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos, o Adobe Experience Platform aplica automaticamente as políticas de uso caso ocorra qualquer violação.
+>[!IMPORTANT]
+>
+>A aplicação automática de políticas só está disponível para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
+
+Depois que os dados forem rotulados e as políticas de uso forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos, o Adobe Experience Platform aplica automaticamente as políticas de uso caso ocorra alguma violação.
 
 ## Pré-requisitos
 
@@ -107,10 +111,6 @@ Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados 
 ![](../images/enforcement/list-view.png)
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
-
->[!IMPORTANT]
->
->Atualmente, as políticas de consentimento só estão disponíveis para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
 
 Se tiver [políticas de consentimento criadas](../policies/user-guide.md#consent-policy) e estiverem ativando um segmento para um destino, você pode ver como suas políticas de consentimento afetam a porcentagem de perfis incluídos na ativação.
 

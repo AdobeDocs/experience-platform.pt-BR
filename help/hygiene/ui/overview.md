@@ -2,9 +2,9 @@
 title: Guia da interface do usuário da análise de big data
 description: Saiba como gerenciar tarefas de higiene de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Roda de Higiene de Dados"
->abstract="Este widget mostra o status das tarefas de exclusão do registro de Higiene de dados para o período de tempo selecionado. Para obter mais informações sobre seus processos de Higiene de dados, selecione **Higiene de dados** no painel de navegação esquerdo."
+>title="Status das solicitações de higiene de dados"
+>abstract="Este widget mostra as contagens totais de trabalhos de exclusão de registros de Higiene de dados criados, com falha e concluídos. Para obter mais informações sobre seus processos de Higiene de dados, selecione **Higiene de dados** no painel de navegação esquerdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"

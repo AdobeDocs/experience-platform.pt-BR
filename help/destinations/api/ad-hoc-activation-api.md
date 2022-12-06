@@ -6,10 +6,10 @@ description: Este artigo ilustra o fluxo de trabalho completo para ativar segmen
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 2%
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 2%
 
 A API de ativação ad-hoc permite que os profissionais de marketing ativem programaticamente segmentos de público-alvo para destinos, de maneira rápida e eficiente, para situações em que a ativação imediata é necessária.
 
+Use a API de ativação ad-hoc para exportar arquivos completos para o sistema de recepção de arquivos desejado. A ativação ad-hoc de público-alvo é compatível somente com [destinos com base em arquivo em lote](../destination-types.md#file-based).
+
 O diagrama abaixo ilustra o fluxo de trabalho completo para ativar segmentos por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem na plataforma a cada 24 horas.
 
 ![ativação ad-hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->A ativação ad-hoc de público-alvo é compatível somente com [destinos com base em arquivo em lote](../destination-types.md#file-based).
+
 
 ## Casos de uso {#use-cases}
 
@@ -129,7 +129,7 @@ O Adobe Experience Platform executa tarefas de segmentação agendadas uma vez a
 >
 >Observe a seguinte restrição única: Antes de executar um trabalho de ativação ad-hoc, verifique se pelo menos 20 minutos se passaram do momento em que o segmento foi ativado pela primeira vez de acordo com a programação definida em [Etapa 3 - Criar fluxo de ativação na interface do usuário da plataforma](#activation-flow).
 
-Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de segmentos agendados para seus segmentos foi concluído. Consulte [monitoramento de fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o seu fluxo de dados de ativação mostrar uma **[!UICONTROL Processamento]** , aguarde até que ele seja concluído antes de executar o trabalho de ativação ad-hoc.
+Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de segmentos agendados para seus segmentos foi concluído. Consulte [monitoramento de fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o seu fluxo de dados de ativação mostrar uma **[!UICONTROL Processamento]** , aguarde até que ele seja concluído antes de executar o trabalho de ativação ad-hoc para exportar um arquivo completo.
 
 Depois que o trabalho de exportação de segmento for concluído, é possível acionar a ativação.
 
@@ -250,3 +250,4 @@ Ao usar a API de ativação ad-hoc, você pode encontrar mensagens de erro espec
 ## Informações relacionadas {#related-information}
 
 * [Conecte-se a destinos em lote e ative dados usando a API do Serviço de Fluxo](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(Beta) Exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform](/help/destinations/ui/export-file-now.md)

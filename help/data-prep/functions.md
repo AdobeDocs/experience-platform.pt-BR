@@ -5,9 +5,9 @@ title: Funções de mapeamento de preparação de dados
 topic-legacy: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,11 @@ As funções de Preparação de dados podem ser usadas para calcular e calcular 
 
 Um nome de campo pode ser qualquer identificador legal - uma sequência ilimitada de letras e dígitos Unicode, começando com uma letra, o cifrão (`$`) ou o caractere sublinhado (`_`). Os nomes de variáveis também diferenciam maiúsculas de minúsculas.
 
-Se um nome de campo não seguir esta convenção, o nome do campo deve ser envolvido com `${}`. Assim, por exemplo, se o nome do campo for &quot;Nome&quot; ou &quot;Nome.Nome&quot;, o nome deverá ser colocado como `${First Name}` ou `${First.Name}` respectivamente.
+Se um nome de campo não seguir esta convenção, o nome do campo deve ser envolvido com `${}`. Assim, por exemplo, se o nome do campo for &quot;Nome&quot; ou &quot;Nome.Nome&quot;, o nome deverá ser colocado como `${First Name}` ou `${First\.Name}` respectivamente.
+
+>[!TIP]
+>
+>Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para escapar caracteres especiais. Para obter mais informações, leia o guia sobre [como escapar caracteres especiais](home.md#escape-special-characters).
 
 Além disso, se um nome de campo for **any** das seguintes palavras-chave reservadas, elas devem estar vinculadas a `${}`:
 

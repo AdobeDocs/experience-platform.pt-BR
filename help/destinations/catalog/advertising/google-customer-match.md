@@ -3,7 +3,7 @@ keywords: correspondência de cliente do google, correspondência de cliente do 
 title: Conexão Google Customer Match
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como Pesquisa, Compras, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
 workflow-type: tm+mt
 source-wordcount: '1778'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [Correspondência de cliente do Google](https://support.google.com/google-ads/answer/6379332?hl=en) O permite usar seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como: [!DNL Search], [!DNL Shopping], [!DNL Gmail]e [!DNL YouTube].
 
-![Destino de correspondência do cliente da Google na interface do usuário do Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Destino da Correspondência de clientes do Google na interface do usuário do Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Casos de uso {#use-cases}
 

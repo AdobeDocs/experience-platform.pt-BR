@@ -2,7 +2,7 @@
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
+source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 >* Se você ainda não tiver criado nenhum fluxo de dados para a **[!UICONTROL Marketo V1]** destino, use o novo **[!UICONTROL Marketo V2]** cartão para se conectar e exportar dados para o Marketo.
 
 
-![Imagem dos dois cartões de destino do Marketo em uma exibição lado a lado.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![Imagem dos dois cartões de destino do Marketo em uma exibição lado a lado.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 As melhorias no destino Marketo V2 incluem:
 

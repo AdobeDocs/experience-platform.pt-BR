@@ -1,9 +1,10 @@
 ---
 title: Destino da zona de aterrissagem de dados
 description: Saiba como se conectar à Zona de aterrissagem de dados para ativar segmentos e exportar conjuntos de dados.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -87,6 +88,8 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
 * **[!UICONTROL Caminho da pasta]**: Insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+* **[!UICONTROL Tipo de arquivo]**: selecione o Experience Platform format que deve ser usado para os arquivos exportados. Ao selecionar o [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados.
 
 ### Ativar alertas {#enable-alerts}
 

@@ -2,9 +2,9 @@
 title: (Beta) Conexão de armazenamento em nuvem Google
 description: Saiba como se conectar ao Google Cloud Storage e ativar segmentos ou exportar conjuntos de dados.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para conectar a Platform ao [!DNL Google Cloud Storage], você deve primeiro habilitar a interoperabilidade para [!DNL Google Cloud Storage] conta. Para acessar a configuração de interoperabilidade, abra [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** do **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
 
-![Destaque o painel Google Cloud Platform com Configurações e Armazenamento na nuvem.](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![Destaque o painel Google Cloud Platform com Configurações e Armazenamento na nuvem.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 O **[!UICONTROL Configurações]** será exibida. Aqui, você pode ver informações sobre seu [!DNL Google] ID do projeto e detalhes sobre seu [!DNL Google Cloud Storage] conta. Para acessar as configurações de interoperabilidade, selecione **[!UICONTROL Interoperabilidade]** no cabeçalho superior.
 
-![A guia Interoperability destacada no painel da Google Cloud Platform.](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![A guia Interoperability destacada no painel da Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 O **[!UICONTROL Interoperabilidade]** contém informações sobre autenticação, chaves de acesso e o projeto padrão associado à sua conta de serviço. Para gerar uma nova ID de chave de acesso e uma chave de acesso secreta para sua conta de serviço, selecione **[!UICONTROL Criar uma chave para uma conta de serviço]**.
 
-![A opção Create a key for a service account control realçada no painel da Google Cloud Platform.](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![A opção Create a key for a service account control realçada no painel da Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar [!DNL Google Cloud Storage] para a Platform.
 
@@ -74,6 +74,8 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
 * **[!UICONTROL Nome do bucket]**: Insira o nome do [!DNL Google Cloud Storage] bucket a ser usado por este destino.
 * **[!UICONTROL Caminho da pasta]**: Insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+* **[!UICONTROL Tipo de arquivo]**: selecione o Experience Platform format que deve ser usado para os arquivos exportados. Ao selecionar o [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados.
 
 ### Ativar alertas {#enable-alerts}
 

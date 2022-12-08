@@ -3,9 +3,9 @@ keywords: SFTP; sftp
 title: Conexão SFTP
 description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >* Se você ainda não tiver criado nenhum fluxo de dados para a **[!UICONTROL SFTP]** destino, use o novo **[!UICONTROL beta SFTP]** cartão para exportar arquivos para **[!UICONTROL SFTP]**.
 
 
-![Imagem dos dois cartões de destino SFTP em uma exibição lado a lado.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Imagem dos dois cartões de destino SFTP em uma exibição lado a lado.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Melhorias nas novas [!DNL SFTP] o cartão de destino inclui:
 
@@ -104,6 +104,8 @@ Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as
 * **[!UICONTROL Nome]**: insira um nome que o ajudará a identificar esse destino na interface do usuário do Experience Platform;
 * **[!UICONTROL Descrição]**: indicar uma descrição para este destino;
 * **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta no local SFTP onde os arquivos serão exportados.
+* **[!UICONTROL Tipo de arquivo]**: selecione o Experience Platform format que deve ser usado para os arquivos exportados. Essa opção só está disponível para a variável **[!UICONTROL beta SFTP]** destino. Ao selecionar o [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para a variável **[!UICONTROL beta SFTP]** destino.
 
 ## Ativar segmentos para este destino {#activate}
 

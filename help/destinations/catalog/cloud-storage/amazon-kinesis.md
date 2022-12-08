@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;destino cinesis;cinesis
 title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para fazer o stream de dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 0%
@@ -125,7 +125,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 * **[!UICONTROL Nome]**: Forneça um nome para a conexão com o [!DNL Amazon Kinesis]
 * **[!UICONTROL Descrição]**: Forneça uma descrição para a conexão com o [!DNL Amazon Kinesis].
-* **[!UICONTROL fluxo]**: Forneça o nome de um fluxo de dados existente em seu [!DNL Amazon Kinesis] conta. A Platform exportará dados para esse fluxo.
+* **[!UICONTROL Fluxo]**: Forneça o nome de um fluxo de dados existente em seu [!DNL Amazon Kinesis] conta. A Platform exportará dados para esse fluxo.
 * **[!UICONTROL Incluir nomes de segmentos]**: Alterne se deseja que a exportação de dados inclua os nomes dos segmentos que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte [Dados exportados](#exported-data) mais abaixo.
 * **[!UICONTROL Incluir carimbos de data e hora do segmento]**: Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte [Dados exportados](#exported-data) mais abaixo.
 
@@ -175,7 +175,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 Por exemplo, considere esse fluxo de dados como um [!DNL Amazon Kinesis] destino onde três segmentos são selecionados no fluxo de dados e quatro atributos são mapeados para o destino.
 
-![Fluxo de dados de destino do Amazon Kinesis](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Fluxo de dados de destino do Amazon Kinesis](../../assets/catalog/http/profile-export-example-dataflow.png)
 
 Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles. Se um perfil se qualificar para o segmento Cliente com Carros coreanos, mas também for membro do filme &quot;Voltar ao futuro&quot; assistido e dos segmentos de fãs de ficção científica, esses dois outros segmentos também estarão presentes `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados.
 

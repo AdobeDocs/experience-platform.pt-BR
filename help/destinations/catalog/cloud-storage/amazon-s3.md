@@ -3,9 +3,9 @@ keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados CSV do Adobe Experience Platform para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Com a versão beta da funcionalidade de exportação de conjuntos de dados e a funcionalidade aprimorada de exportação de arquivos, agora é possível ver dois [!DNL Amazon S3] cartões no catálogo de destinos.
->* Se você já estiver exportando arquivos para o **[!UICONTROL Amazon S3]** destino: Crie novos fluxos de dados para o novo **[!UICONTROL Amazon S3 beta]** destino.
+>* Se você já estiver exportando arquivos para o **[!UICONTROL Amazon S3]** , crie novos fluxos de dados para o novo **[!UICONTROL Amazon S3 beta]** destino.
 >* Se você ainda não tiver criado nenhum fluxo de dados para a **[!UICONTROL Amazon S3]** destino, use o novo **[!UICONTROL Amazon S3 beta]** cartão para exportar arquivos para **[!UICONTROL Amazon S3]**.
 
 
-![Imagem das duas placas de destino Amazon S3 em uma exibição lado a lado.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Imagem das duas placas de destino Amazon S3 em uma exibição lado a lado.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 Melhorias nas novas [!DNL Amazon S3] o cartão de destino inclui:
 
@@ -88,6 +88,9 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: insira uma descrição deste destino.
 * **[!UICONTROL Nome do bucket]**: digite o nome do [!DNL Amazon S3] bucket a ser usado por este destino.
 * **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+* **[!UICONTROL Tipo de arquivo]**: selecione o Experience Platform format que deve ser usado para os arquivos exportados. Essa opção só está disponível para a variável **[!UICONTROL Amazon S3 beta]** destino. Ao selecionar o [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para a variável **[!UICONTROL Amazon S3 beta]** destino.
+
 
 >[!TIP]
 >

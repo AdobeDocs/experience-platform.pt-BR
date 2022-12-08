@@ -5,24 +5,35 @@ title: Monitoramento da assimilação de dados
 topic-legacy: overview
 description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
+source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
 
 # Monitoramento da assimilação de dados
 
-A assimilação de dados permite assimilar seus dados na Adobe Experience Platform. Você pode usar a assimilação em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a assimilação de streaming, que permite assimilar seus dados em [!DNL Platform] usando endpoints de streaming em tempo real.
+A assimilação de dados permite assimilar seus dados na Adobe Experience Platform. Você pode usar a assimilação em lote, que permite inserir os dados usando vários tipos de arquivo (como CSVs), ou a assimilação de streaming, que permite assimilar os dados no [!DNL Platform] uso de endpoints de transmissão em tempo real.
 
 Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
 
-## Monitore a assimilação de dados de ponta a ponta de fluxo
+## Monitore a assimilação de dados de ponta a ponta de fluxo {#monitor-streaming-end-to-end-data-ingestion}
 
-No [Experience Platform UI](https://platform.adobe.com), selecione **[!UICONTROL Monitoring]** no menu de navegação esquerdo, seguido por **[!UICONTROL Streaming end-to-end]**.
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="Taxa de ingestão"
+>abstract="O número de eventos processados com êxito por segundo."
+>text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitorar fluxos de dados para fontes na interface do usuário"
 
-A página de monitoramento **[!UICONTROL Streaming end-to-end]** é exibida. Este espaço de trabalho fornece um gráfico que exibe a taxa de eventos transmitidos sendo recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados recebidos.
+>[!TIP]
+>
+>Para calcular o total de eventos em uma data específica, use a expressão de: `total events / day = ingestion rate * 60 * 60 * 24`.
+
+No [Interface do usuário do Experience Platform](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo, seguido por **[!UICONTROL Streaming completo]**.
+
+O **[!UICONTROL Streaming completo]** página de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que exibe a taxa de eventos transmitidos sendo recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados de entrada.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -34,7 +45,7 @@ O gráfico inferior mostra a taxa de eventos transmitidos processados com êxito
 
 >[!NOTE]
 >
->Para que os dados sejam exibidos neste gráfico, os dados devem ser **explicitamente** habilitados para [!DNL Profile]. Para saber como habilitar os dados de transmissão para [!DNL Profile], leia o [guia do usuário dos conjuntos de dados](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Para que os dados sejam exibidos nesse gráfico, os dados devem ser **explicitamente** habilitado para [!DNL Profile]. Para saber como habilitar os dados de transmissão para [!DNL Profile]leia a [guia do usuário de conjuntos de dados](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -56,15 +67,15 @@ Além disso, registros com falha fornecem detalhes sobre os erros que ocorreram 
 
 >[!NOTE]
 >
->Se houver erros nas linhas assimiladas, essas linhas **not** serão descartadas, a menos que a mensagem resultante resulte em XDM inválido.
+>Se houver erros nas linhas assimiladas, essas linhas **not** será descartada, a menos que a mensagem resultante resulte em XDM inválido.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Monitorar a assimilação de dados de ponta a ponta do lote
 
-No [[!DNL Experience Platform UI]](https://platform.adobe.com), selecione **[!UICONTROL Monitoring]** no menu de navegação esquerdo.
+No [[!DNL Experience Platform UI]](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo.
 
-A página de monitoramento **[!UICONTROL Batch end-to-end]** é exibida, exibindo uma lista dos lotes assimilados anteriormente. Você pode selecionar qualquer um dos lotes para obter informações mais detalhadas sobre esse registro.
+O **[!UICONTROL Lote completo]** página de monitoramento é exibida, exibindo uma lista dos lotes assimilados anteriormente. Você pode selecionar qualquer um dos lotes para obter informações mais detalhadas sobre esse registro.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 
@@ -82,6 +93,6 @@ Além disso, os lotes com falha fornecem detalhes sobre os erros que ocorreram d
 
 >[!NOTE]
 >
->Se houver erros nas linhas assimiladas, essas linhas **not** serão descartadas, a menos que a mensagem resultante resulte em XDM inválido.
+>Se houver erros nas linhas assimiladas, essas linhas **not** será descartada, a menos que a mensagem resultante resulte em XDM inválido.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

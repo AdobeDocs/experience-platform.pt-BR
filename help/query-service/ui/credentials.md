@@ -5,9 +5,9 @@ title: Guia de credenciais do serviço de query
 topic-legacy: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,15 @@ O **[!UICONTROL Credenciais de expiração]** fornece as seguintes informações
 - **[!UICONTROL Nome do usuário]**: O nome de usuário que você usará para se conectar ao Serviço de query.
 - **[!UICONTROL Senha]**: A senha que você usará para se conectar ao Serviço de query.
 - **[!UICONTROL comando PSQL]**: Um comando que inseriu automaticamente todas as informações relevantes para você se conectar ao Serviço de query usando PSQL na linha de comando.
-- **[!UICONTROL Expira]**: A data de expiração das credenciais que expiram. As credenciais expiram 24 horas após serem geradas.
+- **[!UICONTROL Expira]**: A data e a hora de expiração das credenciais. A duração padrão da validade do token é de 24 horas, mas pode ser alterada nas configurações avançadas do Admin Console.
+
+>[!TIP]
+>
+>Para alterar a vida da sessão para sua conexão de credenciais que expiram com o Serviço de query, navegue até o [Admin Console](https://adminconsole.adobe.com/) e selecione as seguintes opções na tela: **Configurações** > **Privacidade e segurança** > **Configurações de autenticação** > **Configurações avançadas** > **Duração máxima da sessão**.
+>
+>![A guia Admin Console settings com Privacy and Security, Authentication settings e Max session life foi realçada.](../images/ui/credentials/max-session-life.png)
+>
+>Consulte a documentação de Ajuda do Adobe para obter mais informações sobre [Configurações avançadas](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) oferecido pelo Admin Console.
 
 ## Credenciais que não expiram {#non-expiring-credentials}
 

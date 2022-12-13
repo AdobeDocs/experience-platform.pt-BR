@@ -5,10 +5,10 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '4103'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -253,7 +253,7 @@ Os intervalos válidos desses tipos escalares podem ser restritos ainda mais a d
 
 >[!NOTE]
 >
->O tipo de campo &quot;mapear&quot; permite dados de pares de valores chave, incluindo vários valores para uma única chave. Mapas podem ser encontrados em classes XDM padrão e grupos de campos, mas você também pode definir mapas personalizados usando a API do Registro de Esquema. Veja o tutorial em [definição de campos personalizados](../tutorials/custom-fields-api.md#maps) para obter mais informações.
+>O tipo de campo &quot;mapear&quot; permite dados de pares de valores chave, incluindo vários valores para uma única chave. Mapas podem ser encontrados em classes XDM padrão e grupos de campos, mas você também pode definir mapas personalizados usando a API do Registro de Esquema. Veja o tutorial em [definição de campos personalizados](../tutorials/custom-fields-api.md#custom-maps) para obter mais informações.
 
 ## Exemplo de composição
 
@@ -334,13 +334,13 @@ Há alguns fatores principais a serem considerados ao escolher objetos em vez de
 
 Os prós e contras do uso de objetos em campos de forma livre estão listados abaixo.
 
-**Prós**:
+**Pontos positivos**:
 
 * Os objetos são melhor usados quando você deseja criar um agrupamento lógico de determinados campos.
 * Os objetos organizam o schema de maneira mais estruturada.
 * Os objetos ajudam indiretamente na criação de uma boa estrutura de menu na interface do usuário do Construtor de segmentos. Os campos agrupados no schema são refletidos diretamente na estrutura de pastas fornecida na interface do usuário do Construtor de segmentos.
 
-**Desvantagens**:
+**Pontos negativos**:
 
 * Os campos ficam mais aninhados.
 * Ao usar [Serviço de query Adobe Experience Platform](../../query-service/home.md), strings de referência mais longas devem ser fornecidas para campos de consulta que estão aninhados em objetos.
@@ -349,11 +349,11 @@ Os prós e contras do uso de objetos em campos de forma livre estão listados ab
 
 Os prós e contras do uso de campos de forma livre em objetos estão listados abaixo.
 
-**Prós**:
+**Pontos positivos**:
 
 * Campos de forma livre são criados diretamente no objeto raiz do esquema (`_tenantId`), aumentando a visibilidade.
 * As sequências de referência para campos de forma livre tendem a ser mais curtas ao usar o Serviço de query.
 
-**Desvantagens**:
+**Pontos negativos**:
 
 * O local dos campos de forma livre no esquema é ad hoc, o que significa que eles aparecem em ordem alfabética no Editor de esquemas. Isso pode tornar os esquemas menos estruturados e campos de forma livre semelhantes podem acabar sendo muito separados, dependendo de seus nomes.

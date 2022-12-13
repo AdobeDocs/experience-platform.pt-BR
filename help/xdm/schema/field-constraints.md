@@ -5,7 +5,7 @@ title: Restrições de Tipo de Campo XDM
 topic-legacy: overview
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 6%
@@ -130,7 +130,7 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 >
 >Entre os tipos XDM padrão listados nas tabelas abaixo, a variável [!UICONTROL Mapa] também está incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem razoavelmente ser incluídas em um schema estático e devem ser tratadas como valores de dados.
 >
->Muitos componentes padrão do XDM usam tipos de mapa e você também pode [definir campos de mapa personalizados](../tutorials/custom-fields-api.md#maps) se desejar. A inclusão do tipo de mapa nas tabelas abaixo tem como objetivo ajudar você a determinar como mapear os dados existentes para XDM se eles estiverem armazenados atualmente em qualquer um dos formatos listados abaixo.
+>Muitos componentes padrão do XDM usam tipos de mapa e você também pode [definir campos de mapa personalizados](../tutorials/custom-fields-api.md#custom-maps) se desejar. A inclusão do tipo de mapa nas tabelas abaixo tem como objetivo ajudar você a determinar como mapear os dados existentes para XDM se eles estiverem armazenados atualmente em qualquer um dos formatos listados abaixo.
 
 ### Parquet, Spark SQL e Java {#parquet}
 

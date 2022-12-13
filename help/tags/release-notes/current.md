@@ -2,14 +2,20 @@
 title: Notas de versão para Tags e Encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 6%
+source-wordcount: '418'
+ht-degree: 5%
 
 ---
 
 # Notas de versão para tags e encaminhamento de eventos
+
+## 23 de novembro de 2022
+
+* **[!DNL AWS]extensão para encaminhamento de eventos**: Agora é possível enviar dados para o [!DNL Amazon Web Services] ([!DNL AWS]) usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL AWS] visão geral da extensão](../../tags/extensions/server/aws/overview.md) para obter mais informações.
+* **[!DNL Google Ads Enhanced Conversions]extensão para encaminhamento de eventos**: Agora é possível enviar dados de conversão para [!DNL Google Ads] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Google Ads Enhanced Conversions] visão geral da extensão](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para obter mais informações.
+* **[!DNL Microsoft Azure]extensão para encaminhamento de eventos**: Agora é possível enviar dados para o [!DNL Microsoft Azure] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Microsoft Azure] visão geral da extensão](../../tags/extensions/server/azure/overview.md) para obter mais informações.
 
 ## 26 de outubro de 2022
 

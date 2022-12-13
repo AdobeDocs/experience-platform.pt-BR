@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '965'
 ht-degree: 37%
 
 ---
@@ -213,11 +213,12 @@ ht-degree: 37%
       * [Conector do Cloud para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Núcleo {#core}
          * [Visão geral](./extensions/server/core/overview.md)
-      * [API de conversões do facebook](https://exchange.adobe.com/apps/ec/105509)
       * Conversões aprimoradas de anúncios do Google {#google-ads-enhanced-conversions}
          * [Visão geral](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Visão geral](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [Visão geral](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Visão geral](./extensions/server/azure/overview.md)
       * [Hub de decisão do cliente Pega](https://exchange.adobe.com/apps/ec/107597)

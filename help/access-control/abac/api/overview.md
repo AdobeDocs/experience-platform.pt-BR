@@ -2,11 +2,11 @@
 keywords: Experience Platform, home, tópicos populares, api, controle de acesso baseado em atributos, Controle de acesso baseado em atributos
 solution: Experience Platform
 title: Guia da API de controle de acesso com base em atributos
-description: A API de controle de acesso baseada em atributos permite gerenciar programaticamente funções e políticas no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
+description: A API de controle de acesso baseada em atributos permite gerenciar programaticamente funções e políticas de acesso no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '450'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
 
 A API de controle de acesso com base em atributos é usada para acessar funções, produtos, categorias de permissão e conjuntos de permissões no Adobe Experience Platform, fornecendo uma interface de usuário e uma RESTful API da qual todos os recursos de biblioteca disponíveis são acessíveis.
+
+>[!IMPORTANT]
+>
+>O acesso baseado em atributos não deve ser confundido com recursos de governança de dados Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Plataforma, em vez de quais usuários em sua organização têm acesso a eles. Consulte a [Guia da API do serviço de política](../../../data-governance/api/overview.md) para obter etapas sobre como aproveitar programaticamente esses recursos.
 
 Esses endpoints são descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, ler chamadas de API de exemplo e muito mais.
 

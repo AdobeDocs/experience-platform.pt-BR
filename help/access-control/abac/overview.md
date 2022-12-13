@@ -3,9 +3,9 @@ keywords: Experience Platform; home; tópicos populares; controle de acesso; con
 title: Visão geral do controle de acesso baseado em atributos
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1826'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 3%
 O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
 
 Essa funcionalidade permite rotular campos de esquema do Experience Data Model (XDM) com rótulos que definem escopos organizacionais ou de uso de dados. Em paralelo, os administradores podem usar a interface de administração de usuário e função para definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor o acesso dado aos usuários ou grupos de usuários (usuários internos, externos ou de terceiros). Além disso, o controle de acesso baseado em atributos permite que os administradores gerenciem o acesso a segmentos específicos.
+
+>[!IMPORTANT]
+>
+>O acesso baseado em atributos não deve ser confundido com recursos de governança de dados Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Plataforma, em vez de quais usuários em sua organização têm acesso a eles. Consulte a [visão geral de governança de dados](../../data-governance/home.md) para obter mais informações.
 
 Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que têm acesso apenas a campos e dados específicos que correspondem a esses campos.
 

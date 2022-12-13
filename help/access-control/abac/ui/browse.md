@@ -3,22 +3,22 @@ keywords: Experience Platform, home, tópicos populares, controle de acesso, con
 title: Procurar Controle de Acesso Baseado em Atributos
 description: Este documento fornece informações sobre o uso da interface de Permissões no Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 5%
 
 ---
 
 # Guia de permissões
 
-Permissões é a área do Adobe Experience Cloud onde os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
+[!UICONTROL Permissões] é a área do Adobe Experience Cloud na qual os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
 
-Com permissões, você pode configurar:
+Com [!UICONTROL Permissões], você pode configurar:
 
+* [Políticas de acesso](./policies.md)
 * [Rótulos](./labels.md)
 * [Permissões](./permissions.md)
-* [Políticas](./permissions.md)
 * [Funções](./roles.md)
 * [Sandboxes](./sandboxes.md)
 * [Usuários](./users.md)

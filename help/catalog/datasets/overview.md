@@ -5,10 +5,10 @@ title: Visão geral dos conjuntos de dados
 topic-legacy: datasets
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '784'
+ht-degree: 9%
 
 ---
 
@@ -41,6 +41,10 @@ Consulte a [Visão geral da assimilação de dados](../../ingestion/home.md) par
 ## Aplicar rótulos de uso a conjuntos de dados
 
 A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente para garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. A estrutura de Governança de dados permite aplicar rótulos de uso para categorizar dados de acordo com as políticas de uso que se aplicam a esses dados.
+
+>[!IMPORTANT]
+>
+>A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se você estiver tentando criar políticas de acesso para os dados, será necessário [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributo](../../access-control/abac/overview.md) para obter mais informações.
 
 Os rótulos de uso de dados podem ser aplicados a conjuntos de dados inteiros ou a campos individuais do conjunto de dados. Os rótulos adicionados no nível do conjunto de dados são herdados por todos os campos nesse conjunto de dados.
 

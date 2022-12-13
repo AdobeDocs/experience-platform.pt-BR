@@ -3,18 +3,18 @@ keywords: Experience Platform, home, tópicos populares, políticas eficazes, ap
 solution: Experience Platform
 title: Endpoint da API de políticas efetivas
 topic-legacy: developer guide
-description: O controle de acesso no Adobe Experience Platform permite gerenciar funções e permissões para vários recursos da plataforma usando a Adobe Admin Console. Este documento serve como um guia para visualizar políticas eficazes usando a API de controle de acesso para Adobe Experience Platform.
+description: Saiba como visualizar políticas de acesso efetivas usando a API de controle de acesso do Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '295'
 ht-degree: 2%
 
 ---
 
 # Ponto final de políticas efetivas
 
-Para visualizar políticas eficazes para o usuário atual, faça uma solicitação de POST para a `/acl/effective-policies` endpoint no [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação no formato de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
+Para exibir políticas eficazes de controle de acesso para o usuário atual, faça uma solicitação de POST para a `/acl/effective-policies` endpoint no [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação no formato de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
 
 **Formato da API**
 
@@ -65,7 +65,7 @@ Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos 
 
 ## Próximas etapas
 
-Este documento cobriu como fazer chamadas para o [!DNL Access Control] API para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para [!DNL Experience Platform], consulte o [visão geral do controle de acesso](../home.md).
+Este documento cobriu como fazer chamadas para o [!DNL Access Control] API para retornar informações sobre permissões ativas e políticas de acesso relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para [!DNL Experience Platform], consulte o [visão geral do controle de acesso](../home.md).
 
 ## Apêndice
 

@@ -5,9 +5,9 @@ title: Guia da API do Serviço de Política
 topic-legacy: developer guide
 description: A API do Serviço de política permite aos desenvolvedores gerenciar rótulos e políticas de uso de dados no Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '545'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,13 @@ As ações de marketing (também chamadas de casos de uso de marketing), no cont
 
 ## Políticas
 
-As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro de [!DNL Experience Platform]. Uma política é definida pelo seguinte:
+As políticas de governança de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados no [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>As políticas de governança de dados não devem ser confundidas com políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários da plataforma em sua organização. Consulte o guia sobre [controle de acesso baseado em atributo](../../access-control/abac/overview.md) para obter mais informações.
+
+Uma política de governança de dados é definida pelo seguinte:
 
 1. Uma ação de marketing específica
 1. Os rótulos de uso de dados com os quais a ação está restrita não são executados

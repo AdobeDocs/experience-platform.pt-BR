@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform, home, tópicos populares, api de conjunto de dados, gerenciar uso de dados, api de uso de dados
 solution: Experience Platform
-title: 'Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs '
+title: Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 topic-legacy: developer guide
 description: A API do Serviço de conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do Serviço de catálogo que gerencia os metadados do conjunto de dados.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '816'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 2%
 # Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 
 O [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) O permite aplicar e editar rótulos de uso para conjuntos de dados. Ele faz parte dos recursos de catálogo de dados do Adobe Experience Platform, mas é separado do [!DNL Catalog Service] API que gerencia metadados do conjunto de dados.
+
+>[!IMPORTANT]
+>
+>A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se você estiver tentando criar políticas de acesso para os dados, será necessário [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributo](../../access-control/abac/overview.md) para obter mais informações.
 
 Este documento aborda como gerenciar rótulos para conjuntos de dados e campos usando o [!DNL Dataset Service API]. Para obter etapas sobre como gerenciar os próprios rótulos de uso de dados usando chamadas de API, consulte o [guia de endpoint de etiquetas](../api/labels.md) para [!DNL Policy Service API].
 
@@ -155,10 +159,6 @@ Uma resposta bem-sucedida retorna o conjunto atualizado de rótulos para o conju
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a gerenciar rótulos de uso de dados para conjuntos de dados e campos usando o [!DNL Dataset Service] API.
-
-Depois de adicionar rótulos de uso de dados no nível do conjunto de dados e do campo, você pode começar a assimilar dados no [!DNL Experience Platform]. Para saber mais, comece lendo o [documentação de ingestão de dados](../../ingestion/home.md).
-
-Agora, também é possível definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte o [visão geral das políticas de uso de dados](../policies/overview.md).
+Ao ler este documento, você aprendeu a gerenciar rótulos de uso de dados para conjuntos de dados e campos usando o [!DNL Dataset Service] API. Agora você pode definir [políticas de uso de dados](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/ui/policies.md) com base nos rótulos aplicados.
 
 Para obter mais informações sobre o gerenciamento de conjuntos de dados no [!DNL Experience Platform], consulte o [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).

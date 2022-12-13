@@ -5,18 +5,22 @@ title: Gerenciar rótulos de uso de dados na interface do usuário
 topic-legacy: labels
 description: Este guia aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
 
 # Gerenciar rótulos de uso de dados na interface do usuário
 
-Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na [!DNL Experience Platform] interface do usuário. Antes de usar o guia, consulte o [Visão geral da governança de dados](../home.md) para obter uma introdução mais robusta à estrutura de Governança de dados.
+Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na [!DNL Experience Platform] interface do usuário.
 
 ## Gerenciar rótulos no nível do conjunto de dados
+
+>[!IMPORTANT]
+>
+>A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se você estiver tentando criar políticas de acesso para os dados, será necessário [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributo](../../access-control/abac/overview.md) para obter mais informações.
 
 Para gerenciar rótulos de uso de dados no nível do conjunto de dados, é necessário selecionar um conjunto de dados existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para abrir o **[!UICONTROL Conjuntos de dados]** espaço de trabalho. Esta página lista todos os conjuntos de dados criados pertencentes à sua organização, juntamente com detalhes úteis relacionados a cada conjunto de dados.
 
@@ -75,6 +79,10 @@ O **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, o que pe
 ![Ocultar rótulos herdados](../images/labels/inherited-labels.png)
 
 ## Gerenciar rótulos no nível do campo do conjunto de dados
+
+>[!IMPORTANT]
+>
+>A aplicação de rótulos no nível de campo do conjunto de dados só é compatível com casos de uso de governança de dados. Se você estiver tentando criar políticas de acesso para os dados, será necessário [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributo](../../access-control/abac/overview.md) para obter mais informações.
 
 Continuar o workflow para [adicionar e editar rótulos de uso de dados no nível do conjunto de dados](#add-labels), também é possível gerenciar rótulos em nível de campo no **[!UICONTROL Governança de dados]** espaço de trabalho para esse conjunto de dados.
 

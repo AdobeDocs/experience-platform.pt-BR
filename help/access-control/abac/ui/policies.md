@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform, home, tópicos populares, controle de acesso, controle de acesso baseado em atributos, ABAC
-title: Controle de acesso baseado em atributo Criar uma política
-description: Este documento fornece informações sobre como gerenciar políticas por meio da interface de Permissões no Adobe Experience Cloud
+title: Gerenciar políticas de controle de acesso
+description: Este documento fornece informações sobre como gerenciar políticas de controle de acesso por meio da interface de Permissões no Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Gerenciar políticas
+# Gerenciar políticas de controle de acesso
 
-Políticas são declarações que reúnem atributos para estabelecer ações admissíveis e não permissíveis. As políticas podem ser locais ou globais e podem substituir outras políticas.
+As políticas de controle de acesso são instruções que unem atributos para estabelecer ações permitidas e não permitidas. As políticas de acesso podem ser locais ou globais e podem substituir outras políticas.
+
+>[!IMPORTANT]
+>
+>As políticas de acesso não devem ser confundidas com políticas de uso de dados, que controlam como os dados são usados no Adobe Experience Platform, em vez de quais usuários em sua organização têm acesso a eles. Consulte o guia sobre criação [políticas de uso de dados](../../../data-governance/policies/create.md) para obter mais informações.
 
 ## Criar uma nova política
 

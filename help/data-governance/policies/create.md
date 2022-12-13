@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform, home, tópicos populares, governança de dados, política de uso de dados
 solution: Experience Platform
-title: Criar uma política de uso de dados na API
+title: Criar uma política de governança de dados na API
 topic-legacy: policies
 type: Tutorial
-description: A API de serviço de política permite criar e gerenciar políticas de uso de dados para determinar quais ações de marketing podem ser realizadas em relação aos dados que contêm determinados rótulos de uso de dados. Este documento fornece um tutorial passo a passo para a criação de uma política usando a API do serviço de política.
+description: Saiba como criar uma política de governança de dados usando a API do Serviço de política .
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1200'
+ht-degree: 3%
 
 ---
 
-# Criar uma política de uso de dados na API
+# Criar uma política de governança de dados na API
 
-O [API do serviço de política](https://www.adobe.io/experience-platform-apis/references/policy-service/) O permite criar e gerenciar políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados.
+O [API do serviço de política](https://www.adobe.io/experience-platform-apis/references/policy-service/) O permite criar e gerenciar políticas de governança de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados.
 
-Este documento fornece um tutorial passo a passo para a criação de uma política usando o [!DNL Policy Service] API. Para obter um guia mais abrangente sobre as diferentes operações disponíveis na API, consulte o [Guia do desenvolvedor do Serviço de políticas](../api/getting-started.md).
+Este documento fornece um tutorial passo a passo para a criação de uma política de governança usando o [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>Para obter as etapas sobre como criar uma política de controle de acesso, consulte `/policies` guia de endpoint para o [API de controle de acesso](../../access-control/abac/api/policies.md). Para saber como criar uma política de consentimento, consulte o [guia da interface do usuário de políticas](./user-guide.md#consent-policy).
 
 ## Introdução
 

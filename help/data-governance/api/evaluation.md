@@ -5,16 +5,16 @@ title: Endpoints da API de avaliação de política
 topic-legacy: developer guide
 description: Depois que as ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a API do Serviço de política para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1542'
 ht-degree: 2%
 
 ---
 
 # Pontos de extremidade de avaliação de política
 
-Depois que as ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a variável [!DNL Policy Service] API para avaliar se alguma política é violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
+Depois que as ações de marketing tiverem sido criadas e as políticas de uso de dados tiverem sido definidas, você poderá usar a variável [!DNL Policy Service] API para avaliar se alguma política é violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 
 Por padrão, somente as políticas cujo status está definido como `ENABLED` participar na avaliação. No entanto, é possível usar o parâmetro de consulta `?includeDraft=true` para incluir `DRAFT` políticas em avaliação.
 

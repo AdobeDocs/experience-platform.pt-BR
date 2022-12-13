@@ -2,10 +2,11 @@
 keywords: Experience Platform; home; tópicos populares; controle de acesso; controle de acesso baseado em atributos;
 title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
-source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
+exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 0%
+source-wordcount: '2427'
+ht-degree: 1%
 
 ---
 
@@ -13,8 +14,11 @@ ht-degree: 0%
 
 O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece aos clientes com várias marcas e privacidade maior flexibilidade para gerenciar o acesso dos usuários. O acesso a objetos individuais, como campos de esquema e segmentos, pode ser concedido/negado com políticas com base nos atributos e na função do objeto. Esse recurso permite que você conceda ou revogue o acesso a objetos individuais para usuários específicos da Plataforma em sua organização.
 
-Essa funcionalidade permite categorizar campos de esquema, segmentos e assim por diante com rótulos que definem escopos organizacionais ou de uso de dados. É possível aplicar esses mesmos rótulos a jornadas, Ofertas e outros objetos no Adobe Journey Optimizer. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
+Essa funcionalidade permite categorizar campos de esquema, segmentos e assim por diante com rótulos que definem escopos organizacionais ou de uso de dados. É possível aplicar esses mesmos rótulos a jornadas, Ofertas e outros objetos no Adobe Journey Optimizer. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos de esquema do Experience Data Model (XDM) e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
 
+>[!NOTE]
+>
+>Este documento foca no caso de uso das políticas de controle de acesso. Se você estiver tentando configurar políticas para administrar a variável **use** de dados em vez de quais usuários da Platform têm acesso a eles, consulte o guia completo sobre [governança de dados](../../data-governance/e2e.md) em vez disso.
 
 ## Introdução
 
@@ -46,7 +50,7 @@ Você irá:
 
 [!UICONTROL Permissões] é a área do Experience Cloud, onde os administradores podem definir funções de usuário e políticas para gerenciar permissões para recursos e objetos em um aplicativo de produto.
 
-Através de [!UICONTROL Permissões], é possível criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções. [!UICONTROL Permissões] também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.
+Através de [!UICONTROL Permissões], é possível criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções. [!UICONTROL As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.]
 
 Entre em contato com o administrador do sistema para obter acesso se você não tiver privilégios de administrador.
 

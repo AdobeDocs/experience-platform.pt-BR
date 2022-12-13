@@ -5,9 +5,9 @@ title: Aplicação Automática de Política
 topic-legacy: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->A aplicação automática de políticas só está disponível para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
+>A aplicação automática de política só está disponível para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
 
-Depois que os dados forem rotulados e as políticas de uso forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos, o Adobe Experience Platform aplica automaticamente as políticas de uso caso ocorra alguma violação.
+Depois que os dados forem rotulados e as políticas de uso de dados forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos, o Adobe Experience Platform aplica automaticamente as políticas de uso caso ocorra alguma violação.
+
+>[!NOTE]
+>
+>Este documento se concentra na aplicação da governança de dados e das políticas de consentimento. Para obter informações sobre políticas de controle de acesso, consulte a documentação em [controle de acesso baseado em atributo](../../access-control/abac/overview.md).
 
 ## Pré-requisitos
 

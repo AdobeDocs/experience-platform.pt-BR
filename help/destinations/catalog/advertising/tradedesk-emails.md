@@ -1,13 +1,13 @@
 ---
 title: (Beta) A conexão do Trade Desk - CRM
 description: Ative perfis para sua conta do Trade Desk para direcionamento e supressão de público-alvo com base em dados de CRM.
-source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
+exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) O [!DNL Trade Desk] - Conexão CRM
 
@@ -90,7 +90,7 @@ Antes de enviar ou ativar os dados do público-alvo para um destino, você deve 
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
 * **[!UICONTROL ID do anunciante]**: your [!DNL Trade Desk Advertiser ID], que pode ser compartilhado pelo [!DNL Trade Desk] Gerente de conta ou localizado em [!DNL Advertiser Preferences] no [!DNL Trade Desk] IU.
 
-Ao se conectar ao destino, a configuração de uma política de Governança de dados é totalmente opcional. Revise o Experience Platform [visão geral de governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) para obter mais detalhes.
+Ao se conectar ao destino, a configuração de uma política de governança de dados é totalmente opcional. Revise o Experience Platform [visão geral de governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) para obter mais detalhes.
 
 ## Ativar segmentos para este destino {#activate}
 

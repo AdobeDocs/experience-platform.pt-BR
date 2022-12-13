@@ -5,10 +5,10 @@ title: Visão geral da governança de dados
 topic-legacy: overview
 description: A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função essencial no Experience Platform em vários níveis, incluindo catálogos, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 0%
+source-wordcount: '1479'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 0%
 Um dos principais recursos do Adobe Experience Platform é unir dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e envolvam clientes. Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados no [!DNL Platform] são compatíveis com as políticas de uso de dados.
 
 A Governança de dados do Adobe Experience Platform permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental no [!DNL Experience Platform] em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing.
+
+>[!NOTE]
+>
+>No Experience Platform, o controle de dados só está preocupado com a forma como os dados são usados ou ativados, independentemente do usuário que está executando a ação. Para obter informações sobre como controlar o acesso a campos de dados específicos para determinados usuários da Plataforma em sua organização, consulte a documentação em [controle de acesso baseado em atributo](../access-control/abac/overview.md) em vez disso.
 
 ## Funções de governança de dados
 
@@ -74,7 +78,7 @@ Consulte a visão geral em [rótulos de uso de dados](./labels/overview.md) para
 
 ## Políticas de uso de dados
 
-Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro de [!DNL Experience Platform].
+Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro da [!DNL Experience Platform].
 
 Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor informando que as Informações pessoais identificáveis (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) tiver sido aplicado ao conjunto de dados, [!DNL Policy Service] impede qualquer ação que exportaria esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas de ação ocorrer, o Serviço de Política enviará uma mensagem informando que uma política de uso de dados foi violada.
 

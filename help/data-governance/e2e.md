@@ -1,14 +1,15 @@
 ---
 title: Guia completo da governança de dados
 description: Siga o processo completo para impor restrições de uso de dados para campos e conjuntos de dados no Adobe Experience Platform.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
 
-# Guia completo da Governança de dados
+# Guia completo de governança de dados
 
 Para controlar quais ações de marketing podem ser executadas em determinados conjuntos de dados e campos no Adobe Experience Platform, você deve configurar o seguinte:
 
@@ -16,7 +17,7 @@ Para controlar quais ações de marketing podem ser executadas em determinados c
 1. [Configurar e ativar as políticas de governança de dados](#policy) que determinam quais tipos de dados rotulados podem ser usados para determinadas ações de marketing.
 1. [Aplicar ações de marketing a seus destinos](#destinations) para indicar quais políticas se aplicam aos dados enviados para esses destinos.
 
-Quando terminar de configurar seus rótulos, políticas e ações de marketing, você poderá [testar sua aplicação de política](#test) para garantir que está funcionando como esperado.
+Quando terminar de configurar seus rótulos, políticas de governança e ações de marketing, você poderá [testar sua aplicação de política](#test) para garantir que está funcionando como esperado.
 
 Este guia aborda todo o processo de configuração e aplicação de uma política de governança de dados na interface do usuário da plataforma. Para obter informações mais detalhadas sobre os recursos usados neste guia, consulte a documentação de visão geral sobre os seguintes tópicos:
 
@@ -24,6 +25,10 @@ Este guia aborda todo o processo de configuração e aplicação de uma polític
 * [Rótulos de uso de dados](./labels/overview.md)
 * [Políticas de uso de dados](./policies/overview.md)
 * [Aplicação da política](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>Este guia se concentra em como configurar e aplicar políticas para como os dados são usados ou ativados no Experience Platform. Se você estiver tentando restringir **access** aos dados propriamente ditos de determinados usuários da Platform em sua organização, consulte o guia completo sobre [controle de acesso baseado em atributo](../access-control/abac/end-to-end-guide.md) em vez disso. O controle de acesso baseado em atributos também usa rótulos e políticas, mas para um caso de uso diferente do controle de dados.
 
 ## Aplicar rótulos {#labels}
 

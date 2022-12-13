@@ -5,9 +5,9 @@ title: Glossário de rótulos de uso de dados
 topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 >abstract="Há várias categorias de rótulos de uso de dados. Os rótulos definidos por Adobe incluem rótulos de contrato, rótulos de identidade e rótulos confidenciais. Rótulos definidos pela sua organização são categorizados como rótulos personalizados."
 >text="See the data usage labels glossary for more information on these label types."
 
-Os rótulos de uso de dados permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Governança de dados do Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que você pode usar para começar a categorizar seus dados.
+Os rótulos de uso de dados permitem categorizar os conjuntos de dados e campos de acordo com [políticas de governança](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/overview.md) que se aplicam a esses dados. O Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que você pode usar para começar a categorizar seus dados.
 
-Este documento descreve os principais rótulos de uso de dados atualmente fornecidos por [!DNL Experience Platform]. Mais informações sobre a Governança de dados podem ser encontradas na seção [Visão geral da governança de dados](../home.md).
+Este documento descreve os principais rótulos de uso de dados atualmente fornecidos pelo Experience Platform.
 
 ## Rótulos do contrato
 
@@ -135,7 +135,7 @@ Alguns contratos incluem proibições explícitas sobre a utilização de dados 
 
 #### C10 {#c10}
 
-Algumas políticas de uso de dados restringem o uso de dados de identidade compilados para personalização. O rótulo C10 é aplicado automaticamente aos segmentos se suas políticas de mesclagem usarem a opção &quot;gráfico privado&quot;.
+Algumas políticas de governança de dados restringem o uso de dados de identidade compilados para personalização. O rótulo C10 é aplicado automaticamente aos segmentos se suas políticas de mesclagem usarem a opção &quot;gráfico privado&quot;.
 
 #### C11 {#c11}
 

@@ -5,9 +5,9 @@ title: Glossário do Adobe Experience Platform
 topic-legacy: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7435'
+source-wordcount: '7433'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **Console**: Em [!DNL Query Service], o console fornece informações sobre o status e a operação de um query. O console exibe o status da conexão com [!DNL Query Service], as operações de query sendo executadas e qualquer mensagem de erro que resulte dessas consultas.
 
-**Rótulos contratuais (&quot;C&quot;)**: Os rótulos de uso de dados do contrato (&quot;C&quot;) são usados para categorizar os dados que têm obrigações contratuais ou estão relacionados às políticas de governança de dados de um cliente.
+**Rótulos contratuais (&quot;C&quot;)**: Os rótulos de uso de dados do contrato (&quot;C&quot;) são usados para categorizar dados que têm obrigações contratuais ou estão relacionados às políticas de governança de dados da sua organização.
 
 **Rótulo do contrato C1**: A `C1` o rótulo de uso de dados do contrato especifica que os dados só podem ser exportados da Adobe Experience Cloud em um formulário agregado sem incluir identificadores individuais ou de dispositivos. Por exemplo, dados que se originaram de redes sociais.
 
@@ -502,7 +502,7 @@ ht-degree: 0%
 
 **Conector de origem**: Os conectores de origem (também conhecidos como fontes) ajudam os usuários a assimilar facilmente dados de várias fontes, permitindo a estruturação, rotulagem e aprimoramento de dados usando serviços de Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas CRM.
 
-**Conexão de transmissão**: Uma conexão de transmissão é um terminal exclusivo fornecido pelo Adobe e vinculado à Organização IMS de um cliente para transmitir dados no Experience Platform.
+**Conexão de transmissão**: Uma conexão de transmissão é um terminal exclusivo fornecido pelo Adobe e vinculado à sua organização para transmitir dados no Experience Platform.
 
 **Namespace de identidade padrão**: Os namespaces de identidade padrão são namespaces de identidade predefinidos fornecidos pelo Adobe, que representam soluções padrão do setor, comumente usadas para identificar clientes.
 

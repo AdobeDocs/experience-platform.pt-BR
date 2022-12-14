@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de query. Os tópicos incluem, exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4362'
 ht-degree: 1%
 
 ---
@@ -38,14 +38,19 @@ Esta seção inclui informações sobre desempenho, limites e processos.
 +++Resposta Uma causa potencial é o recurso de preenchimento automático. O recurso processa determinados comandos de metadados que podem, ocasionalmente, atrasar o editor durante a edição da consulta.
 +++
 
-### Posso usar o Postman para a API do serviço de consulta?
+### Posso usar [!DNL Postman] para a API do Serviço de query?
 
-+++Responda Sim, você pode visualizar e interagir com todos os serviços de API do Adobe usando o Postman (um aplicativo gratuito de terceiros). Observe a [Guia de configuração do Postman](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para uso com o Postman. Veja a documentação oficial para [orientação sobre como iniciar, executar e compartilhar coleções do Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Responda Sim, você pode visualizar e interagir com todos os serviços de API do Adobe usando [!DNL Postman] (um pedido gratuito de terceiros). Observe a [[!DNL Postman] guia de configuração](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para uso com o [!DNL Postman]. Veja a documentação oficial para [orientação sobre iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe um limite para o número máximo de linhas retornadas de um query por meio da interface do usuário?
 
 +++Responder Sim, o Serviço de Consulta aplica internamente um limite de 50.000 linhas, a menos que um limite explícito seja especificado externamente. Veja as orientações em [execução de query interativa](./best-practices/writing-queries.md#interactive-query-execution) para obter mais detalhes.
++++
+
+### Posso usar queries para atualizar linhas?
+
++++Resposta Em consultas em lote, a atualização de uma linha dentro do conjunto de dados não é suportada.
 +++
 
 ### Existe um limite de tamanho de dados para a saída resultante de um query?
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### Existe algum problema ou impacto no desempenho do Serviço de query se várias consultas forem executadas simultaneamente?
 
 +++Nº Resposta O Serviço de query tem um recurso de dimensionamento automático que garante que as consultas simultâneas não tenham impacto notório no desempenho do serviço.
++++
+
+### Posso usar palavras-chave reservadas como um nome de coluna?
+
++++Resposta Existem determinadas palavras-chave reservadas que não podem ser usadas como nome de coluna, como `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Se você quiser usar essas palavras-chave, poderá escapar dessas colunas.
 +++
 
 ### Como faço para encontrar um nome de coluna em um conjunto de dados hierárquico?
@@ -451,6 +461,76 @@ WHERE T2.ID IS NULL
 ### Posso criar um conjunto de dados usando uma consulta CTAS com um nome de sublinhado duplo, como aqueles exibidos na interface do usuário? Por exemplo: `test_table_001`.
 
 +++Nº da resposta, essa é uma limitação intencional no Experience Platform que se aplica a todos os serviços da Adobe, incluindo o Serviço de consulta. Um nome com dois sublinhados é aceitável como um esquema e um nome de conjunto de dados, mas o nome da tabela para o conjunto de dados só pode conter um único sublinhado.
++++
+
+### Quantas consultas simultâneas você pode executar por vez?
+
++++Resposta Não há limite de simultaneidade de consultas, pois consultas em lote são executadas como trabalhos de back-end. Entretanto, há um limite de tempo limite de consulta definido para 24 horas.
++++
+
+### Existe um painel de atividades no qual você pode ver as atividades e o status do query?
+
++++Resposta Há recursos de monitoramento e alerta para verificar as atividades de query e os status. Consulte a [Integração de log de auditoria do Serviço de query](./data-governance/audit-log-guide.md) e [logs de consulta](./ui/overview.md#log) documentos para obter mais informações.
++++
+
+### Há alguma maneira de reverter atualizações? Por exemplo, se houver um erro ou alguns cálculos precisarem ser reconfigurados ao gravar dados de volta na Platform, como esse cenário deve ser tratado?
+
++++Resposta Atualmente, não oferecemos suporte a reversões ou atualizações dessa maneira.
++++
+
+### Como você pode otimizar consultas no Adobe Experience Platform?
+
++++Resposta O sistema não tem índices, pois não é um banco de dados, mas tem outras otimizações em vigor vinculadas ao armazenamento de dados. As seguintes opções estão disponíveis para ajustar suas consultas:
+
+- Um filtro baseado em tempo nos dados de séries de tempo.
+- Otimização do empurrão para baixo para o tipo de dados struct.
+- Aumento otimizado do custo e da memória para arrays e tipos de dados de mapa.
+- Processamento incremental usando instantâneos.
+- Um formato de dados persistente.
++++
+
+### Os logons podem ser restritos a determinados aspectos do Serviço de query ou é uma solução &quot;tudo ou nada&quot;?
+
++++Answer Query Service é uma solução &quot;tudo ou nada&quot;. Não é possível fornecer acesso parcial.
++++
+
+### Posso restringir quais dados o Serviço de Consulta pode usar ou simplesmente acessar todo o lago de dados do Adobe Experience Platform?
+
++++Responder Sim, você pode restringir a consulta a conjuntos de dados com acesso somente leitura.
++++
+
+### Que outras opções existem para restringir os dados que o Serviço de Consulta pode acessar?
+
++++Resposta Existem três abordagens para restringir o acesso. São as seguintes:
+
+- Use somente instruções SELECT e forneça acesso somente leitura aos conjuntos de dados. Além disso, atribua a permissão gerenciar consulta.
+- Use as instruções SELECT/INSERT/CREATE e forneça acesso de gravação aos conjuntos de dados. Além disso, atribua a permissão de gerenciamento de consultas.
+- Use uma conta de integração com as sugestões anteriores acima e atribua a permissão de integração de query.
+
++++
+
+### Depois que os dados são retornados pelo Serviço de query, há verificações que podem ser executadas pela Platform para garantir que ela não retornou nenhum dado protegido?
+
+- O Serviço de Consulta oferece suporte ao controle de acesso baseado em atributos. Você pode restringir o acesso aos dados no nível da coluna/folha e/ou no nível da estrutura. Consulte a documentação para saber mais sobre o controle de acesso baseado em atributos.
+
+### Posso especificar um modo SSL para a conexão com um cliente de terceiros? Por exemplo, posso usar &quot;verify-full&quot; com o Power BI?
+
++++Resposta Sim, os modos SSL são compatíveis. Consulte a [Documentação dos modos SSL](./clients/ssl-modes.md) para uma análise dos diferentes modos SSL disponíveis e do nível de proteção que proporcionam.
++++
+
+### Usamos o TLS 1.2 para todas as conexões de clientes do Power BI para consultar o serviço?
+
++++Resposta Sim. Os dados em trânsito são sempre compatíveis com HTTPS. A versão atualmente compatível é TLS1.2.
++++
+
+### Uma conexão feita na porta 80 ainda usa https?
+
++++Responda Sim, uma conexão feita na porta 80 ainda usa SSL. Você também pode usar a porta 5432.
++++
+
+### Posso controlar o acesso a conjuntos e colunas de dados específicos para uma conexão específica? Como isso é configurado?
+
++++Resposta Sim, o controle de acesso baseado em atributo é empregado se configurado. Consulte a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md) para obter mais informações.
 +++
 
 ## Exportar dados {#exporting-data}

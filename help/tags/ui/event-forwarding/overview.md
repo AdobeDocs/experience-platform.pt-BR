@@ -3,9 +3,9 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '996'
 ht-degree: 9%
 
 ---
@@ -89,7 +89,7 @@ Nas regras de tags, os elementos de dados são tokenizados com um `%` no início
 
 #### Sequência de ações de regras {#action-sequencing}
 
-O [!UICONTROL Ações] A seção de uma regra de encaminhamento de evento é sempre executada sequencialmente. Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser executada de forma assíncrona como pode com tags .
+O [!UICONTROL Ações] A seção de uma regra de encaminhamento de evento é sempre executada sequencialmente. Por exemplo, se uma regra tiver duas ações, a segunda ação não iniciará a execução até que a ação anterior seja concluída (e nos casos em que uma resposta é esperada de um endpoint, esse endpoint respondeu). Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser executada de forma assíncrona como pode com regras de tags.
 
 ## Segredos {#secrets}
 

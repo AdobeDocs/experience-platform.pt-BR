@@ -5,9 +5,9 @@ title: Guia da interface do usuário de segmentação de borda
 topic-legacy: ui guide
 description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,9 @@ A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experienc
 >
 > Além disso, o mecanismo de segmentação de borda só atenderá às solicitações na borda em que houver **one** identidade primária marcada, que é consistente com identidades primárias não baseadas em borda.
 
-## Tipos de query de segmentação de borda
+## Tipos de query de segmentação de borda {#query-types}
 
 Atualmente, somente os tipos de consulta selecionados podem ser avaliados com a segmentação de borda. As seções a seguir fornecem uma lista de tipos de query que podem ser avaliados com a segmentação de borda e aqueles que não são compatíveis no momento.
-
-### Tipos de consulta compatíveis {#query-types}
 
 Um query pode ser avaliado com segmentação de borda se atender a qualquer um dos critérios descritos na tabela a seguir.
 
@@ -54,6 +52,11 @@ Um query pode ser avaliado com segmentação de borda se atender a qualquer um d
 | Vários eventos com um perfil em uma janela de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **e** visitou a página de checkout nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. | Pessoas que vivem nos EUA e estão no segmento &quot;segmento existente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Consulta que se refere a um mapa | Qualquer definição de segmento que se refere a um mapa de propriedades. | Pessoas que adicionaram ao carrinho com base em dados de segmento externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+
+Uma definição de segmento **not** ser ativado para segmentação de borda nos seguintes cenários:
+
+- A definição de segmento inclui uma combinação de um único evento e um `inSegment` evento.
+   - No entanto, se o segmento continha a variável `inSegment` evento é somente perfil, definição de segmento **will** ser ativada para segmentação de borda.
 
 ## Próximas etapas
 

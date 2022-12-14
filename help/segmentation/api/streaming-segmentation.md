@@ -5,9 +5,9 @@ title: Avaliar eventos em quase tempo real com a segmentação de streaming
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1971'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,8 @@ Uma definição de segmento **not** ser habilitado para segmentação de transmi
 
 - A definição de segmento inclui segmentos ou características do Adobe Audience Manager (AAM).
 - A definição de segmento inclui várias entidades (consultas de várias entidades).
+- A definição de segmento inclui uma combinação de um único evento e um `inSegment` evento.
+   - No entanto, se o segmento continha a variável `inSegment` evento é somente perfil, definição de segmento **will** ser habilitado para segmentação de transmissão.
 
 Observe que as seguintes diretrizes se aplicam ao fazer a segmentação de fluxo:
 

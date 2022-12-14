@@ -5,9 +5,9 @@ title: Segmentação de borda usando a API
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 1%
 
 ---
@@ -60,6 +60,11 @@ Para que um segmento seja avaliado usando a segmentação de borda, a query deve
 | Consulta que se refere a um mapa | Qualquer definição de segmento que se refere a um mapa de propriedades. | Pessoas que adicionaram ao carrinho com base em dados de segmento externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Além disso, o segmento **must** estar vinculado a uma política de mesclagem ativa no Edge. Para obter mais informações sobre as políticas de mesclagem, leia o [guia de políticas de mesclagem](../../profile/api/merge-policies.md).
+
+Uma definição de segmento **not** ser ativado para segmentação de borda nos seguintes cenários:
+
+- A definição de segmento inclui uma combinação de um único evento e um `inSegment` evento.
+   - No entanto, se o segmento continha a variável `inSegment` evento é somente perfil, definição de segmento **will** ser ativada para segmentação de borda.
 
 ## Recuperar todos os segmentos ativados para a segmentação de borda
 

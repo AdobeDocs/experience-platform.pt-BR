@@ -5,9 +5,9 @@ title: Guia da interface do usuário de segmentação de fluxo
 topic-legacy: ui guide
 description: A segmentação por streaming no Adobe Experience Platform permite fazer a segmentação quase em tempo real, ao mesmo tempo em que se concentra na riqueza de dados. Com a segmentação de fluxo, a qualificação de segmento agora acontece à medida que os dados chegam ao Platform, o que diminui a necessidade de agendar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,8 @@ Uma definição de segmento **not** ser habilitado para segmentação de transmi
 
 - A definição de segmento inclui segmentos ou características do Adobe Audience Manager (AAM).
 - A definição de segmento inclui várias entidades (consultas de várias entidades).
+- A definição de segmento inclui uma combinação de um único evento e um `inSegment` evento.
+   - No entanto, se o segmento continha a variável `inSegment` evento é somente perfil, definição de segmento **will** ser habilitado para segmentação de transmissão.
 
 Observe que as seguintes diretrizes se aplicam ao fazer a segmentação de fluxo:
 

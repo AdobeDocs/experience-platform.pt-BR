@@ -4,9 +4,9 @@ title: Guia do painel Perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3381'
 ht-degree: 0%
 
 ---
@@ -275,14 +275,19 @@ O [!UICONTROL Tendência de perfis não segmentados] O widget fornece uma ilustr
 
 ### [!UICONTROL Perfis não segmentados por identidade] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+Os perfis não segmentados pelo widget de identidade foram descontinuados a partir de outubro de 2022 e não estão mais disponíveis.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="Perfis não segmentados por identidade"
->abstract="Esse widget categoriza o número total de perfis não segmentados por seu identificador exclusivo."
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-O [!UICONTROL Perfis não segmentados por identidade] O widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras para facilitar a comparação.
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![O widget Perfis não segmentados por identidade.](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Públicos-alvo] {#audiences}
 
@@ -318,8 +323,7 @@ O [!UICONTROL Relatório de sobreposição de público-alvo] será exibida. Essa
 ![A caixa de diálogo Relatório de sobreposição de público-alvo .](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->Selecione o **[!UICONTROL Sobreposição]** cabeçalho da coluna para alterar a classificação dos resultados entre mais alto e mais baixo ou mais baixo até o mais alto.
+Selecione o **[!UICONTROL Sobreposição]** cabeçalho da coluna para alterar a classificação dos resultados entre mais alto e mais baixo ou mais baixo até o mais alto.
 
 Para baixar o relatório inteiro no formato PDF, selecione o menu de opções (**`...`**) seguida de **[!UICONTROL Baixar]**.
 

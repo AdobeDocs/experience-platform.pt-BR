@@ -3,9 +3,9 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
+source-git-commit: eb9d2f9a233f4214057db5136f32fc1290ece63c
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1043'
 ht-degree: 9%
 
 ---
@@ -78,6 +78,8 @@ O **[!UICONTROL Caminho]** o valor do elemento de dados deve seguir o padrão `a
 ### Regras {#rules}
 
 A criação de regras no encaminhamento de eventos das propriedades funciona de maneira semelhante às tags, sendo que não é possível selecionar eventos como componentes da regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da variável [datastream](../../../edge/datastreams/overview.md) e encaminhar esses eventos para destinos, se determinadas condições forem satisfeitas.
+
+Além disso, há um tempo limite de 30 segundos que se aplica a um único evento, pois ele é processado em todas as regras (e, portanto, em todas as ações) em uma propriedade de encaminhamento de evento. Isso significa que todas as regras e ações de um único evento devem ser concluídas nesse período.
 
 ![Regras de encaminhamento de eventos na interface do usuário da coleção de dados](../../images/ui/event-forwarding/overview/rules.png)
 

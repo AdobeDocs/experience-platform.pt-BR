@@ -4,7 +4,7 @@ title: Guia da interface do usuário do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real cria uma visualização holística de cada cliente individual, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento é um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5500ba7f303fe4ebb9811d249f334d12f9fd3d66
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 0%
@@ -51,7 +51,7 @@ No lado direito do **[!UICONTROL Procurar]** é a guia [contagem de perfis](#pro
 
 Além dessas métricas, esta seção fornece uma data e hora atualizadas recentemente, mostrando quando as métricas foram avaliadas pela última vez.
 
-![](../images/user-guide/profiles-browse-metrics.png)
+![](../images/user-guide/browse-metrics.png)
 
 ### Contagem de perfis {#profile-count}
 
@@ -75,7 +75,7 @@ Semelhante ao [contagem de perfis](#profile-count) , quando a assimilação de r
 
 No **[!UICONTROL Procurar]** é possível exibir perfis de amostra usando uma política de mesclagem ou pesquisar perfis específicos usando um namespace e um valor de identidade.
 
-![](../images/user-guide/browse-by-none-selected.png)
+![](../images/user-guide/none-selected.png)
 
 ### Procurar por [!UICONTROL Política de mesclagem]
 
@@ -89,7 +89,7 @@ O **[!UICONTROL Procurar]** é definida como a política de mesclagem padrão pa
 
 Para escolher uma política de mesclagem na **[!UICONTROL Selecionar política de mesclagem]** , selecione o botão de opção ao lado do nome da política e use **[!UICONTROL Selecionar]** para retornar ao [!UICONTROL Procurar] guia . Em seguida, você pode selecionar **[!UICONTROL Exibir]** para atualizar os perfis de amostra e ver uma amostra de perfis com a nova política de mesclagem aplicada.
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 Os perfis mostrados representam uma amostra de até 20 perfis do armazenamento de perfis de sua organização, após a aplicação da política de mesclagem selecionada. As amostras de perfis para a política de mesclagem selecionada são atualizadas quando novos dados são adicionados ao armazenamento de perfil da sua organização.
 
@@ -104,17 +104,17 @@ Para saber mais sobre as políticas de mesclagem e sua função na Platform, con
 
 No **[!UICONTROL Procurar]** , você pode usar um namespace de identidade para buscar um perfil específico por um valor de identidade. A navegação por uma identidade requer que você forneça uma política de mesclagem, um namespace de identidade e um valor de identidade.
 
-![](../images/user-guide/browse-by-identity.png)
+![](../images/user-guide/browse-by-merge-policy.png)
 
 Se necessário, use o **[!UICONTROL Política de mesclagem]** seletor para abrir o **[!UICONTROL Selecionar política de mesclagem]** e escolha a política de mesclagem que deseja usar.
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 Em seguida, use o **[!UICONTROL Namespace de identidade]** seletor para abrir o **[!UICONTROL Selecionar namespace de identidade]** e escolha o namespace pelo qual deseja pesquisar. Se sua organização tiver muitos namespaces, você poderá usar a barra de pesquisa na caixa de diálogo para começar a digitar o nome de um namespace.
 
 Você pode selecionar um namespace para exibir detalhes adicionais ou selecionar o botão de opção para escolher um namespace. Você pode usar **[!UICONTROL Selecionar]** para continuar.
 
-![](../images/user-guide/profiles-select-identity-namespace.png)
+![](../images/user-guide/select-identity-namespace.png)
 
 Depois de selecionar uma [!UICONTROL Namespace de identidade] e regressando ao [!UICONTROL Procurar] você pode inserir uma **[!UICONTROL Valor de identidade]** relacionado ao namespace selecionado.
 
@@ -122,11 +122,11 @@ Depois de selecionar uma [!UICONTROL Namespace de identidade] e regressando ao [
 >
 >Esse valor é específico para um perfil de cliente individual e deve ser uma entrada válida para o namespace fornecido. Por exemplo, selecionar o namespace de identidade &quot;Email&quot; exigiria um valor de identidade no formato de um endereço de email válido.
 
-![](../images/user-guide/browse-by-identity-values.png)
+![](../images/user-guide/filter-identity-value.png)
 
 Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único perfil correspondente ao valor é retornado. Selecione o **[!UICONTROL ID do perfil]** para exibir os detalhes do perfil.
 
-![](../images/user-guide/browse-by-identity-profile.png)
+![](../images/user-guide/filtered-identity-value.png)
 
 ## Exibir detalhes do perfil {#profile-detail}
 
@@ -134,11 +134,9 @@ Depois de selecionar uma **[!UICONTROL ID do perfil]**, o **[!UICONTROL Detalhe]
 
 Os campos padrão mostrados também podem ser alterados em um nível organizacional para exibir os atributos preferenciais do Perfil. Para saber mais sobre como personalizar esses campos, incluindo instruções passo a passo para adicionar e remover atributos e redimensionar painéis, leia o [guia de personalização de detalhes do perfil](profile-customization.md).
 
-![](../images/user-guide/profiles-profile-detail.png)
+![](../images/user-guide/profile-detail.png)
 
 Você pode exibir informações adicionais relacionadas ao perfil individual do cliente selecionando outra das guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de segmento que mostra os segmentos para os quais o perfil está qualificado no momento.
-
-![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ### Guia Atributos
 
@@ -146,7 +144,7 @@ O **[!UICONTROL Atributos]** A guia fornece uma exibição de lista resumindo to
 
 Esses atributos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para qualquer usuário que deseje entender melhor como os atributos de perfil são assimilados na Platform.
 
-![](../images/user-guide/profiles-attributes.png)
+![](../images/user-guide/attributes.png)
 
 ### Guia Eventos
 
@@ -154,7 +152,7 @@ O **[!UICONTROL Eventos]** contém dados dos 100 ExperienceEvents mais recentes 
 
 Os eventos também podem ser exibidos como um objeto JSON ao selecionar para **[!UICONTROL Exibir JSON]**. Isso é útil para entender como os eventos são capturados na Platform.
 
-![](../images/user-guide/profiles-events.png)
+![](../images/user-guide/events.png)
 
 ### Guia Associação de segmento
 
@@ -162,7 +160,7 @@ O **[!UICONTROL Associação de segmento]** A guia exibe uma lista com o nome e 
 
 Para obter mais informações sobre a segmentação no Experience Platform, consulte [Documentação do Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md).
 
-![](../images/user-guide/profiles-segment-membership.png)
+![](../images/user-guide/segment-membership.png)
 
 ## Mesclar políticas
 
@@ -170,7 +168,7 @@ Do principal **[!UICONTROL Perfis]** selecione o **[!UICONTROL Políticas de Mes
 
 Para obter mais informações sobre políticas de mesclagem, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
-![](../images/user-guide/profiles-merge-policies.png)
+![](../images/user-guide/merge-policies.png)
 
 ## Schema da União {#union-schema}
 
@@ -178,7 +176,7 @@ Do principal **[!UICONTROL Perfis]** selecione o **[!UICONTROL Esquema de união
 
 Para obter mais informações sobre schemas de união, visite o [guia da interface do usuário do schema de união](union-schema.md).
 
-![](../images/user-guide/profiles-union-schema.png)
+![](../images/user-guide/union-schema.png)
 
 ## Próximas etapas
 

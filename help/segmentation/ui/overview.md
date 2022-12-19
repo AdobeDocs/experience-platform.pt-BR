@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -66,11 +66,11 @@ Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definiçõe
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Essa exibição lista informações sobre a definição do segmento, incluindo detalhamento, churn, contagem de perfis, método de avaliação, data criada e data da última modificação.
+Essa exibição lista informações sobre a definição do segmento, incluindo a contagem de perfis, a data de criação e a data da última modificação.
 
-O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Realizado], [!UICONTROL Existente]e [!UICONTROL Saindo]. Além disso, o detalhamento mostrado na variável [!UICONTROL Procurar] é o detalhamento mais preciso do status do segmento. Se este número diferir do que está indicado na variável [!UICONTROL Visão geral] use os números na guia [!UICONTROL Procurar] como a fonte correta de informações, já que [!UICONTROL Visão geral] os números de guia só são atualizados uma vez por dia.
+Você pode adicionar mais campos a essa exibição selecionando IMAGEM. Esses campos adicionais incluem detalhamento, churn, método de avaliação e ID do trabalho.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Realizado], [!UICONTROL Existente]e [!UICONTROL Saindo]. Além disso, o detalhamento mostrado na variável [!UICONTROL Procurar] é o detalhamento mais preciso do status do segmento. Se este número diferir do que está indicado na variável [!UICONTROL Visão geral] use os números na guia [!UICONTROL Procurar] como a fonte correta de informações, já que [!UICONTROL Visão geral] os números de guia só são atualizados uma vez por dia.
 
 | Status | Descrição |
 | ------ | ----------- |

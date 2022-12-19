@@ -5,7 +5,7 @@ title: Guia da interface do usuário de conjuntos de dados
 topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
+source-git-commit: 28b6944a14c07f14d8177e3f8ae1c1a83c4c9c86
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Se um conjunto de dados estiver ativado para o Perfil, a exclusão desse conjunt
 
 ## Monitorar assimilação de dados
 
-No [!DNL Experience Platform] IU, selecionar **[!UICONTROL Monitoramento]** na navegação à esquerda. O **[!UICONTROL Monitoramento]** O painel permite visualizar os status dos dados de entrada da assimilação em lote ou em fluxo. Para exibir os status de lotes individuais, selecione **[!UICONTROL Lote completo]** ou **[!UICONTROL Streaming completo]**. Os painéis listam todas as execuções de assimilação em lote ou streaming, incluindo aquelas que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada listagem fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados de destino e o número de registros assimilados. Se o conjunto de dados de destino estiver ativado para [!DNL Profile], o número de identidades assimiladas e registros de perfil também é exibido.
+No [!DNL Experience Platform] UI, selecione **[!UICONTROL Monitoramento]** na navegação à esquerda. O **[!UICONTROL Monitoramento]** O painel permite visualizar os status dos dados de entrada da assimilação em lote ou em fluxo. Para exibir os status de lotes individuais, selecione **[!UICONTROL Lote completo]** ou **[!UICONTROL Streaming completo]**. Os painéis listam todas as execuções de assimilação em lote ou streaming, incluindo aquelas que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada listagem fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados de destino e o número de registros assimilados. Se o conjunto de dados de destino estiver ativado para [!DNL Profile], o número de identidades assimiladas e registros de perfil também é exibido.
 
 ![](../images/datasets/user-guide/batch-listing.png)
 

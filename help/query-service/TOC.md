@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: 3764418c5c8a6159ec23f3cc7ba77792c9f15106
+source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '232'
 ht-degree: 17%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 17%
    - [Filtragem de bot](use-cases/bot-filtering.md)
    - [Insights do Web e de análises móveis](use-cases/analytics-insights.md)
    - [Pontuação de propensão](use-cases/propensity-score.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
 - API do serviço de consulta {#api}
    - [Introdução](api/getting-started.md)
    - [Consultas](api/queries.md)

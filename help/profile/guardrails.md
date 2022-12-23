@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1929'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ As seguintes medidas de proteção fornecem limites recomendados ao modelar dado
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Conjuntos de dados de classe de Perfil individual XDM | 20 | Suave | Recomenda-se um máximo de 20 conjuntos de dados que aproveitam a classe de Perfil individual XDM. |
-| Conjuntos de dados da classe XDM ExperienceEvent | 20º | Suave | Recomenda-se um máximo de 20 conjuntos de dados que aproveitam a classe XDM ExperienceEvent. |
+| Conjuntos de dados da classe XDM ExperienceEvent | 20 | Suave | Recomenda-se um máximo de 20 conjuntos de dados que aproveitam a classe XDM ExperienceEvent. |
 | Conjuntos de dados do conjunto de relatórios do Adobe Analytics habilitados para o Perfil | 1 | Suave | No máximo um (1) conjunto de dados do conjunto de relatórios do Analytics deve ser ativado para o Perfil. A tentativa de ativar vários conjuntos de dados do conjunto de relatórios do Analytics para o Perfil pode ter consequências não intencionais para a qualidade dos dados. Para obter mais informações, consulte a seção em [Conjuntos de dados do Adobe Analytics](#aa-datasets) no apêndice. |
 | Relacionamentos de várias entidades | 5 | Suave | Recomenda-se um máximo de 5 relacionamentos multientidades definidos entre entidades primárias e entidades de dimensão. Os mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desabilitado. |
 | Profundidade JSON para campo de ID usado em relacionamento de várias entidades | 4 | Suave | A profundidade máxima JSON recomendada para um campo de ID usado em relacionamentos de várias entidades é 4. Isso significa que, em um schema altamente aninhado, os campos aninhados com mais de 4 níveis de profundidade não devem ser usados como um campo de ID em um relacionamento. |
@@ -87,8 +87,8 @@ As medidas de proteção a seguir referem-se ao tamanho dos dados e fornecem lim
 | --- | --- | --- | --- |
 | Tamanho máximo do ExperienceEvent | 10 KB | Grave | **O tamanho máximo de um evento é de 10 KB.** A assimilação continuará, no entanto, todos os eventos maiores que 10 KB serão descartados. |
 | Tamanho máximo do registro de perfil | 100 KB | Grave | **O tamanho máximo de um registro de perfil é de 100 KB.** A assimilação continuará, no entanto, os registros de perfil com mais de 100 KB serão descartados. |
-| Tamanho máximo do fragmento de perfil | 50 MB | Grave | **O tamanho máximo de um fragmento de perfil único é de 50 MB.** Segmentação, exportações e pesquisas podem falhar em qualquer [fragmento de perfil](#profile-fragments) maior que 50 MB. |
-| Tamanho máximo de armazenamento de perfil | 50 MB | Suave | **O tamanho máximo de um perfil armazenado é de 50 MB.** Adicionar novo [fragmentos de perfil](#profile-fragments) em um perfil maior que 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. A tentativa de armazenar um perfil com um único fragmento maior que 50 MB, ou vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
+| Tamanho máximo do fragmento de perfil | 50MB | Grave | **O tamanho máximo de um fragmento de perfil único é de 50 MB.** Segmentação, exportações e pesquisas podem falhar em qualquer [fragmento de perfil](#profile-fragments) maior que 50 MB. |
+| Tamanho máximo de armazenamento de perfil | 50MB | Suave | **O tamanho máximo de um perfil armazenado é de 50 MB.** Adicionar novo [fragmentos de perfil](#profile-fragments) em um perfil maior que 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. A tentativa de armazenar um perfil com um único fragmento maior que 50 MB, ou vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
 | Número de lotes de Perfil ou ExperienceEvent assimilados por dia | 90 | Suave | **O número máximo de lotes de Perfil ou ExperienceEvent assimilados por dia é de 90.** Isso significa que o total combinado de lotes de Perfil e ExperienceEvent assimilados a cada dia não pode exceder 90. A inserção de lotes adicionais afetará o desempenho do sistema. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -128,11 +128,11 @@ O [!DNL Profile] o modelo de dados de armazenamento consiste em dois tipos de en
 
    Atributos independentes de tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto que os dados das séries cronológicas, também conhecidos como &quot;dados de eventos&quot;, são modelados utilizando [!DNL XDM ExperienceEvent]. Como os dados de registro e de série de tempo são assimilados no Adobe Experience Platform, ele dispara [!DNL Real-time Customer Profile] para começar a assimilar dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos serão os perfis individuais.
 
-   ![](images/guardrails/profile-entity.png)
+   ![Um infográfico que descreve as diferenças entre os dados de registro e os dados da série cronológica.](images/guardrails/profile-entity.png)
 
 * **Dimension entity:** Embora o armazenamento de dados do Perfil que mantém os dados do perfil não seja uma loja relacional, o Perfil permite a integração com pequenas entidades de dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md). Sua organização também pode definir classes XDM para descrever coisas diferentes de indivíduos, como lojas, produtos ou propriedades. Esses[!DNL XDM Individual Profile] os schemas são conhecidos como &quot;entidades de dimensão&quot; e não contêm dados de séries de tempo. As entidades de Dimension fornecem dados de pesquisa que auxilia e simplifica definições de segmentos de várias entidades e devem ser pequenos o suficiente para que o mecanismo de segmentação possa carregar todo o conjunto de dados na memória para um processamento ideal (pesquisa de ponto rápido).
 
-   ![](images/guardrails/profile-and-dimension-entities.png)
+   ![Um infográfico que mostra que uma entidade de perfil é composta de entidades de dimensão.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Fragmentos de perfil
 

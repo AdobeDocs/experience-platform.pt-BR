@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic-legacy: ui guide
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Você pode arrastar e soltar facilmente [!DNL ExperienceEvents] e &quot;[!UICONT
 
 Por padrão, somente os campos de esquema preenchidos do armazenamento de dados são mostrados. Isso inclui &quot;[!UICONTROL Tipos de evento]&quot;. Se a variável[!UICONTROL Tipos de evento]&quot; lista não está visível ou você só pode selecionar &quot;[!UICONTROL Qualquer]&quot; como um &quot;[!UICONTROL Tipo de evento]&quot;, selecione o **ícone de engrenagem** ao lado de **[!UICONTROL Campos]**, em seguida selecione **[!UICONTROL Mostrar esquema XDM completo]** under **[!UICONTROL Campos disponíveis]**. Selecione o **ícone de engrenagem** novamente para retornar ao **[!UICONTROL Campos]** e agora você deve ser capaz de exibir vários &quot;[!UICONTROL Tipos de evento]&quot; e campos de esquema, independentemente de conterem ou não dados.
 
-![](../images/ui/segment-builder/show-populated.png)
+![Os botões de opção que permitem escolher entre mostrar apenas campos com dados ou mostrar todos os campos XDM são realçados.](../images/ui/segment-builder/show-populated.png)
 
 #### Conjuntos de dados do conjunto de relatórios Adobe Analytics
 
@@ -76,7 +76,7 @@ Por exemplo, considere uma situação em que você tinha dois conjuntos de relat
 | eVar3 | URL | Nome da página |
 | eVar4 | Pesquisar termos | Nome do produto |
 | evento 1 | Cliques | Page Views |
-| evento 2 | Exibições de página | Adições ao carrinho |
+| evento 2 | Page Views | Adições ao carrinho |
 | event3 | Adições ao carrinho | Finalizações |
 | event4 | Compras | Compras |
 

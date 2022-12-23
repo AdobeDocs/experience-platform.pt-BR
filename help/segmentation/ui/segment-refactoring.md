@@ -5,10 +5,9 @@ title: Guia da interface do usuário de restrições de tempo de segmentação r
 topic-legacy: ui guide
 description: O Construtor de segmentos fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -21,12 +20,12 @@ Antes da versão de outubro de 2020, todas as restrições de tempo a nível de 
 
 Anteriormente, um evento individual podia ter várias regras de restrição de tempo anexadas a ele.
 
-![](../images/ui/segment-refactoring/former-time-constraint.png)
+![O estilo anterior de restrições de tempo é destacado no Construtor de segmentos.](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Como é possível observar, esse segmento tem duas restrições no nível da regra: Um para &quot;[!UICONTROL Today]&quot; e outro para &quot;[!UICONTROL Yesterday]&quot;.
+Como é possível observar, esse segmento tem duas restrições no nível da regra: Um para &quot;[!UICONTROL Hoje]&quot; e o outro para &quot;[!UICONTROL Ontem]&quot;.
 
 O segmento anterior é equivalente ao seguinte segmento — ambas as restrições de tempo no nível do evento foram conectadas usando um operador AND. A primeira restrição de tempo de nível de evento faz referência a um evento de clique cujo nome é &quot;Treinamento&quot; e está acontecendo hoje, enquanto a segunda restrição de tempo de nível de evento faz referência a um evento de clique cujo nome é igual a &quot;Predefinições&quot; e aconteceu ontem.
 
-![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
+![O novo estilo de restrições de tempo é destacado no Construtor de segmentos.](../images/ui/segment-refactoring/time-constraint-1.png) ![O novo estilo de restrições de tempo é destacado no Construtor de segmentos.](../images/ui/segment-refactoring/time-constraint-2.png)
 
 Essa refatoração das restrições de tempo também afeta as restrições de tempo que são conectadas usando um operador OU.

@@ -2,9 +2,9 @@
 title: Visão geral da extensão do AWS
 description: Saiba mais sobre a extensão AWS para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) é uma plataforma de computação em nuvem que oferece uma grande variedade de serviços, como computação distribuída, armazenamento de banco de dados, entrega de conteúdo e gerenciamento de relacionamento com o cliente (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) é uma plataforma de computação em nuvem que oferece uma grande variedade de serviços, como computação distribuída, armazenamento de banco de dados, entrega de conteúdo e serviços de integração de software como um serviço (SaaS) para gerenciamento de relacionamento com o cliente (CRM) e ERP (Enterprise Resource Planning, planejamento de recursos corporativos).
 
 O [!DNL AWS] [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) aproveitadores de extensão [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) para enviar eventos da rede de borda da Adobe Experience Platform para o [!DNL AWS] para transformação subsequente. Este guia aborda como instalar a extensão e empregar seus recursos em uma regra de encaminhamento de eventos.
 

@@ -5,9 +5,9 @@ title: Criar e editar classes na interface do usuário
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -50,10 +50,6 @@ Agora você pode começar [adicionar campos à classe](#add-fields), que será c
 
 ## Editar uma classe existente {#edit}
 
->[!IMPORTANT]
->
->As classes personalizadas criadas após 30 de abril de 2022 não podem ser editadas diretamente e uma correção está em desenvolvimento no momento. Como solução alternativa, você pode [criar um grupo de campos personalizado](./field-groups.md) e reutilize-o para cada schema que usa a classe personalizada que deseja estender. As classes personalizadas criadas antes de 30 de abril de 2022 não são afetadas por essa limitação.
-
 >[!NOTE]
 >
 >Somente as classes personalizadas definidas pela sua organização podem ser totalmente editadas e personalizadas. Para classes principais definidas por Adobe, somente os nomes de exibição de seus campos podem ser editados no contexto de schemas individuais. Consulte a seção sobre [edição de nomes de exibição para campos de esquema](./schemas.md#display-names) para obter detalhes.
@@ -73,10 +69,6 @@ O [!DNL Schema Editor] for exibida, com a estrutura do esquema mostrada na tela.
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Adicionar campos a uma classe {#add-fields}
-
->[!IMPORTANT]
->
->As classes personalizadas criadas após 30 de abril de 2022 não podem ser editadas diretamente e uma correção está em desenvolvimento no momento. Como solução alternativa, você pode [criar um grupo de campos personalizado](./field-groups.md) e reutilize-o para cada schema que usa a classe personalizada que deseja estender. As classes personalizadas criadas antes de 30 de abril de 2022 não são afetadas por essa limitação.
 
 Depois de ter um schema que emprega uma classe personalizada aberta no [!UICONTROL Editor de esquema], você pode começar a adicionar campos à classe . Para adicionar um novo campo, selecione o **mais (+)** ícone ao lado do nome do schema.
 

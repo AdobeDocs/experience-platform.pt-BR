@@ -5,10 +5,10 @@ title: Endpoint da API de tarefas de privacidade
 topic-legacy: developer guide
 description: Saiba como gerenciar tarefas de privacidade para aplicativos Experience Cloud usando a API do Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1429'
-ht-degree: 4%
+source-wordcount: '1451'
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser procurado. Os valores aceitos incluem: <ul><li>`gdpr` (União Europeia)</li><li>`ccpa` (Califórnia)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nova Zelândia)</li><li>`pdpa_tha` (Tailândia)</li></ul> |
+| `{REGULATION}` | O tipo de regulamento a ser procurado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos compatíveis](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `1` e o máximo é `100`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 
@@ -161,7 +161,7 @@ curl -X POST \
 | `priority` | Uma propriedade opcional usada pelo Adobe Analytics que define a prioridade para o processamento de solicitações. Os valores aceitos são `normal` e `low`. If `priority` for omitido, o comportamento padrão será `normal`. |
 | `analyticsDeleteMethod` | Uma propriedade opcional que especifica como o Adobe Analytics deve lidar com os dados pessoais. Dois valores possíveis são aceitos para este atributo: <ul><li>`anonymize`: Todos os dados referenciados pela coleção de IDs de usuário fornecida são tornados anônimos. If `analyticsDeleteMethod` for omitido, esse será o comportamento padrão.</li><li>`purge`: Todos os dados são removidos completamente.</li></ul> |
 | `mergePolicyId` | Ao fazer solicitações de privacidade para o Perfil do cliente em tempo real (`profileService`), é possível fornecer a ID do [política de mesclagem](../../profile/merge-policies/overview.md) que você deseja usar na compilação de ID. Ao especificar uma política de mesclagem, as solicitações de privacidade podem incluir informações do segmento ao retornar dados em um cliente. Somente uma política de mesclagem pode ser especificada por solicitação. Se nenhuma política de mesclagem for fornecida, as informações de segmentação não serão incluídas na resposta. |
-| `regulation` **(Obrigatório)** | O regulamento para o trabalho de privacidade. Os seguintes valores são aceitos: <ul><li>`gdpr` (União Europeia)</li><li>`ccpa` (Califórnia)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nova Zelândia)</li><li>`pdpa_tha` (Tailândia)</li></ul> |
+| `regulation` **(Obrigatório)** | O regulamento para o trabalho de privacidade. Os seguintes valores são aceitos: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos compatíveis](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
 
 {style=&quot;table-layout:auto&quot;}
 

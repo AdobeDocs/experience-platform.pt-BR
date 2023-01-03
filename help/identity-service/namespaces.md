@@ -5,9 +5,9 @@ title: Visão geral do Namespace de identidade
 topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1642'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Trabalhar com namespaces de identidade requer uma compreensão dos vários servi
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Identity Service]](./home.md): Obtenha uma melhor visão de clientes individuais e seu comportamento ao unir identidades em dispositivos e sistemas.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Os namespaces de identidade são usados para estar em conformidade com o Regulamento Geral sobre a Proteção de Dados (GDPR), em que as solicitações do GDPR podem ser feitas em relação a um namespace.
+- [[!DNL Privacy Service]](../privacy-service/home.md): Os namespaces de identidade são usados em solicitações de conformidade para regulamentos de privacidade legais, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Cada solicitação de privacidade é feita em relação a um namespace para identificar quais dados de consumidores devem ser afetados.
 
 ## Noções básicas sobre namespaces de identidade
 

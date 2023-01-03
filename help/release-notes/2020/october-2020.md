@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 4%
@@ -37,18 +37,18 @@ Para obter mais informações, leia o [Visão geral da preparação de dados](..
 
 ## Perfil do cliente em tempo real {#profile}
 
-O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-time Customer Profile], você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar seus dados de clientes diferentes em uma visualização unificada que oferece uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-Time Customer Profile], você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar seus dados de clientes diferentes em uma visualização unificada que oferece uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Adições à API de visualização do perfil | A API de visualização do perfil (`/previewsamplestatus`) agora inclui a capacidade de exibir um detalhamento do total de fragmentos de perfil na organização IMS, bem como exibir a distribuição de fragmentos de perfil nos namespaces de identidade. |
 | Atualizações da exibição de esquema de união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações sobre todos os esquemas e conjuntos de dados que contribuem para o esquema de união, bem como atributos principais de superfície, como campos de identidade e relação. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, as identidades são compiladas corretamente e os dados foram assimilados com êxito. |
 
-Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com o [!DNL Profile] leia os [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Para obter mais informações sobre [!DNL Real-Time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com o [!DNL Profile] leia os [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
+O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-Time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 

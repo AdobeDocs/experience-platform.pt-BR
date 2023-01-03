@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem na interface do usuário para trazer os dados de perfil dos atributos do cliente para o Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%
@@ -76,7 +76,7 @@ O [!UICONTROL Revisão] é exibida, permitindo que você revise o novo fluxo de 
 
 ## Próximas etapas
 
-Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a assimilação inicial for concluída, os dados de perfil dos atributos do cliente poderão ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a assimilação inicial for concluída, os dados de perfil dos atributos do cliente poderão ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] visão geral](../../../../../segmentation/home.md)
+* [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Visão geral do [!DNL Segmentation Service]](../../../../../segmentation/home.md)

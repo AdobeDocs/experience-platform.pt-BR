@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Atributos calculados são funções para agregar dados a nível de evento em atributos a nível de perfil. Essas funções são calculadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
@@ -27,9 +26,9 @@ Este guia ajudará você a entender melhor a função dos atributos calculados n
 
 ## Como entender atributos calculados
 
-O Adobe Experience Platform permite importar e mesclar facilmente dados de várias fontes para gerar [!DNL Real-time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
+O Adobe Experience Platform permite importar e mesclar facilmente dados de várias fontes para gerar [!DNL Real-Time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
 
-Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a dependência de outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar rapidamente a compreensão desses dados, [!DNL Platform] permite criar atributos calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
+Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a dependência de outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para tornar esses dados mais fáceis de entender rapidamente, [!DNL Platform] O permite criar atributos calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
 Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera nos dados recebidos e armazena o valor resultante em um atributo de perfil. As expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, um evento e dados de perfil recebidos ou um evento recebido, dados de perfil e eventos históricos.
 
@@ -37,9 +36,9 @@ Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&qu
 
 Os casos de uso para atributos calculados podem variar desde cálculos simples até referências muito complexas. Estes são alguns exemplos de casos de uso para atributos calculados:
 
-1. **[!UICONTROL Percentages]:** um atributo calculado simples pode incluir a captura de dois campos numéricos em um registro e a divisão para criar uma porcentagem. Por exemplo, você pode pegar o número total de emails enviados para um indivíduo e dividi-lo pelo número de emails que o indivíduo abre. Olhar para o campo de atributo calculado resultante mostraria rapidamente a porcentagem do total de emails abertos pelo indivíduo.
-1. **[!UICONTROL Application use]:** Outro exemplo inclui a capacidade de agregar o número de vezes que um usuário abre seu aplicativo. Ao rastrear o número total de aberturas do aplicativo, com base em eventos individuais abertos, você pode fornecer ofertas ou mensagens especiais aos usuários na 100ª abertura, incentivando um envolvimento mais profundo com a sua marca.
-1. **[!UICONTROL Lifetime values]:** reunir totais em execução, como um valor de compra vitalício para um cliente, pode ser muito difícil. Isso requer a atualização do total histórico sempre que um novo evento de compra ocorrer. Um atributo calculado permite fazer isso com muito mais facilidade, mantendo o valor vitalício em um único campo que é atualizado automaticamente após cada evento de compra bem-sucedido relacionado ao cliente.
+1. **[!UICONTROL Porcentagens]:** Um atributo calculado simples pode incluir a captura de dois campos numéricos em um registro e a divisão para criar uma porcentagem. Por exemplo, você pode pegar o número total de emails enviados para um indivíduo e dividi-lo pelo número de emails que o indivíduo abre. Olhar para o campo de atributo calculado resultante mostraria rapidamente a porcentagem do total de emails abertos pelo indivíduo.
+1. **[!UICONTROL Uso do aplicativo]:** Outro exemplo inclui a capacidade de agregar o número de vezes que um usuário abre seu aplicativo. Ao rastrear o número total de aberturas do aplicativo, com base em eventos individuais abertos, você pode fornecer ofertas ou mensagens especiais aos usuários na 100ª abertura, incentivando um envolvimento mais profundo com a sua marca.
+1. **[!UICONTROL Valores de tempo de vida]:** A coleta de totais em execução, como um valor de compra vitalício para um cliente, pode ser muito difícil. Isso requer a atualização do total histórico sempre que um novo evento de compra ocorrer. Um atributo calculado permite fazer isso com muito mais facilidade, mantendo o valor vitalício em um único campo que é atualizado automaticamente após cada evento de compra bem-sucedido relacionado ao cliente.
 
 ## Limitações conhecidas
 

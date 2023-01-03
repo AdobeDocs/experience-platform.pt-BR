@@ -3,7 +3,7 @@ keywords: Experience Platform; solução de problemas; medidas de proteção; di
 title: Grades de proteção para assimilação de dados
 description: Este documento fornece orientação sobre medidas de proteção para a assimilação de dados no Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 1%

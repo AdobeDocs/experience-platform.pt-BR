@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Na interface do usuário do Adobe Experience Platform (UI), é possível visualizar facilmente qualquer esquema de união em sua organização e visualizar os campos, identidades, relacionamentos e esquemas de contribuição de uma classe específica. Este guia fornece informações detalhadas sobre como visualizar e explorar schemas de união usando a interface do usuário da plataforma.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -20,15 +20,15 @@ Na interface do usuário do Adobe Experience Platform (UI), é possível visuali
 
 Este guia da interface do usuário requer uma compreensão das várias [!DNL Experience Platform] serviços envolvidos no gerenciamento de dados do Perfil do cliente em tempo real. Antes de ler este guia ou trabalhar na interface do usuário, revise a documentação dos seguintes serviços:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
-* [[!DNL Identity Service]](../../identity-service/home.md): Habilitar [!DNL Real-time Customer Profile] por conectar identidades a partir de fontes de dados diferentes, à medida que são assimiladas [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Habilitar [!DNL Real-Time Customer Profile] por conectar identidades a partir de fontes de dados diferentes, à medida que são assimiladas [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 ## Noções básicas sobre schemas de união
 
 O Perfil do cliente em tempo real permite criar perfis robustos e centralizados contendo atributos do cliente e eventos com carimbos de data e hora para cada interação do cliente em sistemas integrados com o Adobe Experience Platform. O formato e a estrutura desses dados são fornecidos pelos esquemas do Experience Data Model (XDM), com cada schema sendo baseado em uma classe XDM e contendo campos compatíveis com essa classe.
 
-Os esquemas podem ser criados para vários casos de uso, fazendo referência à mesma classe, mas contendo campos específicos para seu uso. Quando um schema é ativado para Perfil, ele se torna parte de um schema de união. Em outras palavras, os esquemas de união são compostos de vários esquemas que compartilham a mesma classe e foram habilitados para o Perfil. O esquema de união permite ver uma combinação de todos os campos contidos em esquemas que compartilham a mesma classe. O Perfil do cliente em tempo real usa o esquema de união para criar uma visualização holística de cada cliente individual.
+Os esquemas podem ser criados para vários casos de uso, fazendo referência à mesma classe, mas contendo campos específicos para seu uso. Quando um schema é ativado para Perfil, ele se torna parte de um schema de união. Em outras palavras, os esquemas de união são compostos de vários esquemas que compartilham a mesma classe e foram habilitados para o Perfil. O esquema de união permite ver uma combinação de todos os campos contidos em esquemas que compartilham a mesma classe. O Perfil do cliente em tempo real usa o schema de união para criar uma visualização holística de cada cliente individual.
 
 Trabalhar com schemas de união requer uma compreensão profunda dos esquemas XDM. Para obter mais informações, comece lendo o [noções básicas da composição do schema](../../xdm/schema/composition.md).
 

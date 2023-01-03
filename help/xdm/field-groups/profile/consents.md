@@ -4,7 +4,7 @@ title: Grupo de campos Esquema de Consentimento e Preferências
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Consents and Preferences schema .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -182,7 +182,7 @@ Veja o tutorial em [criação de um schema na interface do usuário](https://www
 
 >[!IMPORTANT]
 >
->Se desejar enviar dados de consentimento para o [!DNL Real-time Customer Profile], é necessário criar um [!DNL Profile]-enabled schema baseado no [!DNL XDM Individual Profile] classe que contém [!UICONTROL Consentimentos e preferências] grupo de campos. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas a [!DNL Real-time Customer Profile] requisitos para esquemas e conjuntos de dados.
+>Se desejar enviar dados de consentimento para o [!DNL Real-Time Customer Profile], é necessário criar um [!DNL Profile]-enabled schema baseado no [!DNL XDM Individual Profile] classe que contém [!UICONTROL Consentimentos e preferências] grupo de campos. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas a [!DNL Real-Time Customer Profile] requisitos para esquemas e conjuntos de dados.
 >
 >Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral em [políticas de mesclagem](../../../rtcdp/profile/merge-policies.md) para obter mais informações.
 

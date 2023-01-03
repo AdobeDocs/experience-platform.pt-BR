@@ -5,7 +5,7 @@ title: Guia de solução de problemas de assimilação de fluxo
 topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -46,9 +46,9 @@ Quando a validação síncrona não é compatível com o local solicitado, uma r
 
 [!DNL Experience Platform] O suporta coleta de dados segura. Quando a coleta de dados autenticada está ativada, os clientes devem enviar um JSON Web Token (JWT) e sua IMS Organization ID como cabeçalhos de solicitação. Para obter mais informações sobre como enviar dados autenticados para o [!DNL Platform]consulte o guia em [coleta de dados autenticada](../tutorials/create-authenticated-streaming-connection.md).
 
-### Qual é a latência de dados de streaming para [!DNL Real-time Customer Profile]?
+### Qual é a latência de dados de streaming para [!DNL Real-Time Customer Profile]?
 
-Os eventos continuados geralmente são refletidos em [!DNL Real-time Customer Profile] em menos de 60 segundos. As latências reais podem variar devido ao volume de dados, tamanho da mensagem e limitações de largura de banda.
+Os eventos continuados geralmente são refletidos em [!DNL Real-Time Customer Profile] em menos de 60 segundos. As latências reais podem variar devido ao volume de dados, tamanho da mensagem e limitações de largura de banda.
 
 ### É possível incluir várias mensagens na mesma solicitação de API?
 
@@ -94,9 +94,9 @@ O JSON a seguir é um exemplo de objeto de resposta para uma solicitação de AP
 }
 ```
 
-### Por que minhas mensagens enviadas não estão sendo recebidas por [!DNL Real-time Customer Profile]?
+### Por que minhas mensagens enviadas não estão sendo recebidas por [!DNL Real-Time Customer Profile]?
 
-If [!DNL Real-time Customer Profile] rejeita uma mensagem, provavelmente ela se deve a informações de identidade incorretas. Isso pode ser o resultado de fornecer um valor ou namespace inválido para uma identidade.
+If [!DNL Real-Time Customer Profile] rejeita uma mensagem, provavelmente ela se deve a informações de identidade incorretas. Isso pode ser o resultado de fornecer um valor ou namespace inválido para uma identidade.
 
 Há dois tipos de namespaces de identidade: padrão e personalizado. Ao usar namespaces personalizados, verifique se o namespace foi registrado no [!DNL Identity Service]. Consulte a [visão geral do namespace de identidade](../../identity-service/namespaces.md) para obter mais informações sobre o uso de namespaces padrão e personalizados.
 

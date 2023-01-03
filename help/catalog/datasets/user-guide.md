@@ -5,7 +5,7 @@ title: Guia da interface do usuário de conjuntos de dados
 topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Editor de esquema](../../xdm/tutorials/create-schema-ui.md): Saiba como criar seus próprios esquemas XDM personalizados usando o [!DNL Schema Editor] no [!DNL Platform] interface do usuário.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Assegure a conformidade com regulamentos, restrições e políticas relacionadas ao uso de dados do cliente.
 
 ## Exibir conjuntos de dados {#view-datasets}
@@ -108,7 +108,7 @@ O **[!UICONTROL Adicionar dados]** será exibida. Carregue o arquivo CSV arrasta
 
 ## Ativar um conjunto de dados para o Perfil do cliente em tempo real {#enable-profile}
 
-Cada conjunto de dados tem a capacidade de enriquecer perfis de clientes com seus dados assimilados. Para fazer isso, o esquema que o conjunto de dados adere deve ser compatível para uso em [!DNL Real-time Customer Profile]. Um schema compatível satisfaz os seguintes requisitos:
+Cada conjunto de dados tem a capacidade de enriquecer perfis de clientes com seus dados assimilados. Para fazer isso, o esquema que o conjunto de dados adere deve ser compatível para uso em [!DNL Real-Time Customer Profile]. Um schema compatível satisfaz os seguintes requisitos:
 
 * O esquema tem pelo menos um atributo especificado como uma propriedade de identidade.
 * O esquema tem uma propriedade de identidade definida como a identidade primária.

@@ -3,7 +3,7 @@ keywords: identidades rtcdp; identidades rtcdp; identidades cdp em tempo real
 title: Identidades na Real-time Customer Data Platform
 description: O serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visão de seus clientes e de seu comportamento ao unir identidades em dispositivos e sistemas.
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%
@@ -28,4 +28,4 @@ Um gráfico de identidade é um mapa de relacionamentos entre diferentes namespa
 
 ## Próximas etapas
 
-As identidades e os relacionamentos entre elas são definidas e mantidas por [!DNL Identity Service] e aproveitado por [!DNL Real-time Customer Profile] para criar uma imagem completa de cada cliente individual e suas interações. Para saber mais, visite o [Documentação do Serviço de identidade](../../identity-service/home.md).
+As identidades e os relacionamentos entre elas são definidas e mantidas por [!DNL Identity Service] e aproveitado por [!DNL Real-Time Customer Profile] para criar uma imagem completa de cada cliente individual e suas interações. Para saber mais, visite o [Documentação do Serviço de identidade](../../identity-service/home.md).

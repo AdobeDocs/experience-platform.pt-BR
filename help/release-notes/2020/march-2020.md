@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notas de versão;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -61,7 +61,7 @@ O Adobe Experience Platform fornece um conjunto avançado de recursos para assim
 
 **Problemas conhecidos**
 
-* Nenhum
+* None
 
 Para saber mais sobre como assimilar dados no Platform, visite a [Documentação da assimilação de dados](../../ingestion/home.md).
 
@@ -95,7 +95,7 @@ Adobe Experience Platform [!DNL Identity Service] O ajuda você a obter uma melh
 
 **Problemas conhecidos**
 
-* Nenhum
+* None
 
 Para obter mais informações sobre [!DNL Identity Service], consulte o [Visão geral do Serviço de identidade](../../identity-service/home.md).
 
@@ -111,13 +111,13 @@ O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo 
 | ------- | ----------- |
 | Sinais obsoletos para o conector Adobe Audience Manager | Os dados a nível de sinal do Audience Manager não serão mais enviados. Observe que a associação de segmentos para Características e segmentos ainda será incluída. Como resultado dessa alteração, os conjuntos de dados de entrada não serão mais gerados. |
 | Conjuntos de dados renomeados | Os conjuntos de dados gerados pelo conector do Audience Manager terão nomes e descrições atualizados. |
-| Habilitar [!DNL Profile] alternar no Audience Manager | [!DNL Profile] alternar pode ser ativado ou desativado para promover o conjunto de dados para [!DNL Real-time Customer Profile]. Alternar será ativado por padrão. |
+| Habilitar [!DNL Profile] alternar no Audience Manager | [!DNL Profile] alternar pode ser ativado ou desativado para promover o conjunto de dados para [!DNL Real-Time Customer Profile]. Alternar será ativado por padrão. |
 | Suporte à interface do usuário para sistemas de armazenamento em nuvem | Novo conector de origem para [!DNL Azure Data Lake Storage Gen2] na interface do usuário do . |
 | Suporte à interface do usuário para sistemas CRM | Novo conector de origem para [!DNL HubSpot], [!DNL Salesforce Service Cloud]e [!DNL ServiceNow] na interface do usuário do . |
 | Suporte à interface do usuário para sistemas de banco de dados | Novo conector de origem para [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]e [!DNL MySQL] na interface do usuário do . |
 
 **Problemas conhecidos**
 
-* Nenhum
+* None
 
 Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).

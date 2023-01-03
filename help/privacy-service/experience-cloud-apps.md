@@ -5,7 +5,7 @@ title: Aplicativos Privacy Service e Experience Cloud
 topic-legacy: overview
 description: Este documento fornece uma referência para como configurar diferentes aplicativos Experience Cloud para operações relacionadas à privacidade.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 11%
@@ -31,7 +31,7 @@ Esta é uma lista de [!DNL Experience Cloud] aplicativos integrados com [!DNL Pr
 >
 >Todos os produtos integrados respondem às solicitações de privacidade em 30 dias ou menos.
 
-| Aplicação | Acessar/excluir | Recusa de venda | Excluir comportamento | Documentação e outras considerações |
+| Aplicativo | Acessar/excluir | Recusa de venda | Excluir comportamento | Documentação e outras considerações |
 | --- | :---: | :---: | --- | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | A ID de cookie ou ID de dispositivo do titular dos dados é excluída do sistema, juntamente com todos os dados de custo, clique e receita associados ao cookie. | <ul><li>[Documentação de acesso/exclusão do GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Documentação de acesso/exclusão para CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentação de cancelamento de venda da CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | If `analyticsDeleteMethod` é omitido ou definido como `anonymize` ao fazer a solicitação de privacidade, todos os dados referenciados pela coleção de IDs de usuário fornecida são tornados anônimos. If `analyticsDeleteMethod` está definida como `purge`, todos os dados serão removidos completamente. | <ul><li>[Documentação de acesso/exclusão](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=pt-BR)</li><li>[!DNL Analytics] lida com solicitações de recusa usando [variáveis de relatórios de privacidade](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=pt-BR)</li></ul> |
@@ -49,7 +49,7 @@ Esta é uma lista de [!DNL Experience Cloud] aplicativos integrados com [!DNL Pr
 
 Esta é uma lista de [!DNL Experience Cloud] aplicativos que não estejam integrados com [!DNL Privacy Service] e devem gerenciar suas preocupações de privacidade internamente. São fornecidos links para a documentação de cada aplicativo, juntamente com descrições do conteúdo da documentação.
 
-| Aplicação | Descrição da documentação |
+| Aplicativo | Descrição da documentação |
 | ------- | ----------- |
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=pt-BR) | Uma visão geral das funcionalidades do GDPR para o Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Uma visão geral de como um administrador de privacidade do cliente ou AEM administrador pode lidar com solicitações do GDPR. |

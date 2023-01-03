@@ -1,17 +1,17 @@
 ---
 title: Modelos de relatório do Power BI para painéis da plataforma
 description: Use modelos de relatório para explorar dados do Experience Platform usando o Power BI.
-source-git-commit: 19b0ce2c8125fa5253cbba34adbd2884e27b5133
+exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
 
 ---
 
-
 # Modelos de relatório do Power BI para painéis
 
-O recurso de modelo de relatório do Power BI permite criar relatórios convincentes preenchidos com dados do Adobe Experience Platform. O processo de instalação simplificado instala automaticamente widgets padrão para Perfil do cliente em tempo real, segmentação e destinos. A instalação também conecta o Power BI aos seus modelos de dados para que você possa personalizar e estender seus modelos de relatório com facilidade. Esses relatórios podem ser compartilhados em toda a organização sem que os recipients precisem de credenciais para a organização IMS na plataforma.
+O recurso de modelo de relatório do Power BI permite criar relatórios convincentes preenchidos com dados do Adobe Experience Platform. O processo de instalação simplificado instala automaticamente os widgets padrão para o Perfil do cliente em tempo real, a segmentação e os destinos. A instalação também conecta o Power BI aos seus modelos de dados para que você possa personalizar e estender seus modelos de relatório com facilidade. Esses relatórios podem ser compartilhados em toda a organização sem que os recipients precisem de credenciais para a organização IMS na plataforma.
 
 Este documento fornece instruções sobre como conectar o Adobe Experience Platform ao aplicativo Power BI e usar modelos de relatório para compartilhar informações importantes dos dados da plataforma com usuários externos.
 

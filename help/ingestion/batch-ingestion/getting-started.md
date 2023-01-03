@@ -2,9 +2,9 @@
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API
 title: Introdução à API de assimilação de dados
 type: Documentation
-description: The Data Ingestion API getting started guide outlines the key concepts and basic functionality that you need to know before you can begin to ingest data into Experience Platform using APIs.
+description: O guia de introdução à API de assimilação de dados descreve os principais conceitos e a funcionalidade básica que você precisa saber antes de começar a assimilar dados no Experience Platform usando APIs.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 Usando pontos de extremidade da API de assimilação de dados, é possível executar operações básicas de CRUD para assimilar dados no Adobe Experience Platform.
 
-O uso dos guias da API requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no trabalho com dados. Before using the Data Ingestion API, please review the documentation for the following services:
+O uso dos guias da API requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no trabalho com dados. Antes de usar a API de assimilação de dados, revise a documentação dos seguintes serviços:
 
-* [Batch ingestion](./overview.md): Allows you to ingest data into Adobe Experience Platform as batch files.
-* [[!DNL Real-time Customer Profile]](../home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+* [Ingestão em lote](./overview.md): Permite assimilar dados no Adobe Experience Platform como arquivos em lote.
+* [[!DNL Real-Time Customer Profile]](../home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
@@ -30,15 +30,15 @@ A documentação da API de assimilação de dados fornece exemplos de chamadas d
 
 ## Cabeçalhos obrigatórios
 
-A documentação da API também requer que você tenha completado o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas para [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+A documentação da API também requer que você tenha completado o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas para [!DNL Platform] endpoints. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters.
+Todas as solicitações com uma carga no corpo da solicitação (como chamadas de POST, PUT e PATCH) devem incluir uma `Content-Type` cabeçalho. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros de chamada .
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

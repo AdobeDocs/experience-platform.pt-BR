@@ -3,7 +3,8 @@ keywords: Experience Platform, home, tópicos populares, analytics, mixpanel
 solution: Experience Platform
 title: Criar um fluxo de dados usando uma fonte do Analytics na interface do usuário
 description: Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de análise usando a interface do usuário da plataforma.
-source-git-commit: d23f3791b040a856c0e3c048be31ac36a60e0cf1
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes da Pla
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial do Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
 <!-- ## Add data
@@ -140,10 +141,10 @@ Depois que o fluxo de dados for criado, você poderá monitorar os dados que est
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados da sua fonte de análise para a Platform. Os dados recebidos agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados da sua fonte de análise para a Platform. Os dados recebidos agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile] visão geral](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] visão geral](../../../../data-science-workspace/home.md)
+* [Visão geral do [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
+* [Visão geral do [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

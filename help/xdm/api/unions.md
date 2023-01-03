@@ -5,7 +5,7 @@ title: Ponto de Extremidade da API Unions
 description: O endpoint /unips na API do Registro de Schema permite gerenciar programaticamente esquemas de união XDM em seu aplicativo de experiência.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Ponto de extremidade de Unions
 
-Uniões (ou visualizações de união) são esquemas somente leitura gerados pelo sistema que agregam os campos de todos os esquemas que compartilham a mesma classe ([!DNL XDM ExperienceEvent] ou [!DNL XDM Individual Profile]) e estão ativadas para [[!DNL Real-time Customer Profile]](../../profile/home.md).
+Uniões (ou visualizações de união) são esquemas somente leitura gerados pelo sistema que agregam os campos de todos os esquemas que compartilham a mesma classe ([!DNL XDM ExperienceEvent] ou [!DNL XDM Individual Profile]) e estão ativadas para [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 Este documento aborda conceitos essenciais para trabalhar com uniões na API do Registro de Schema, incluindo chamadas de amostra para várias operações. Para obter informações mais gerais sobre uniões no XDM, consulte a seção sobre uniões no [noções básicas da composição do schema](../schema/composition.md#union).
 

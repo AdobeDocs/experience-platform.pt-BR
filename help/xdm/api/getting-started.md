@@ -5,7 +5,7 @@ title: Introdução à API do Registro de Schema
 description: Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do Registro de Schema.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 1%
@@ -22,7 +22,7 @@ O uso do guia do desenvolvedor requer uma compreensão funcional dos seguintes c
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../schema/composition.md): Saiba mais sobre os componentes básicos dos esquemas XDM.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 O XDM usa a formatação Esquema JSON para descrever e validar a estrutura dos dados de experiência do cliente assimilados. Portanto, é altamente recomendável revisar a variável [documentação oficial do Esquema JSON](https://json-schema.org/) para uma melhor compreensão desta tecnologia subjacente.
@@ -230,7 +230,7 @@ Atualmente, a Platform suporta apenas uma única versão principal (`1`) para ca
 >O requisito não destrutivo da evolução do schema é empregado somente após o schema ter sido referenciado por um conjunto de dados e um dos seguintes casos ser verdadeiro:
 >
 >* Os dados foram assimilados no conjunto de dados.
->* O conjunto de dados foi ativado para uso no Perfil do cliente em tempo real (mesmo se nenhum dado tiver sido assimilado).
+>* O conjunto de dados foi habilitado para uso no Perfil do cliente em tempo real (mesmo se nenhum dado tiver sido assimilado).
 >
 >Se o esquema não tiver sido associado a um conjunto de dados que atende a um dos critérios acima, qualquer alteração poderá ser feita nele. No entanto, em todos os casos, o `version` o componente ainda permanece em `1`.
 

@@ -5,7 +5,7 @@ title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns da API.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Para obter mais informações, consulte o [identificação de recursos](api/gett
 
 ### Quando um esquema começa a impedir a quebra de alterações?
 
-As alterações de detalhamento podem ser feitas em um schema, desde que nunca tenha sido usado na criação de um conjunto de dados ou habilitado para uso em [[!DNL Real-time Customer Profile]](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-time Customer Profile], as regras de [Evolução do esquema](schema/composition.md#evolution) se torne estritamente aplicado pelo sistema.
+As alterações de detalhamento podem ser feitas em um schema, desde que nunca tenha sido usado na criação de um conjunto de dados ou habilitado para uso em [[!DNL Real-Time Customer Profile]](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-Time Customer Profile], as regras de [Evolução do esquema](schema/composition.md#evolution) se torne estritamente aplicado pelo sistema.
 
 ### Qual é o tamanho máximo de um tipo de campo longo?
 
@@ -72,17 +72,17 @@ Para obter mais detalhes sobre o gerenciamento de identidades na interface do us
 
 ### Meu esquema precisa de uma identidade primária?
 
-As identidades primárias são opcionais, uma vez que os esquemas podem ter zero ou um deles. No entanto, um schema deve ter uma identidade primária para que o schema seja ativado para uso em [!DNL Real-time Customer Profile]. Consulte a [identidade](./tutorials/create-schema-ui.md#identity-field) seção do tutorial do Editor de esquemas para obter mais informações.
+As identidades primárias são opcionais, uma vez que os esquemas podem ter zero ou um deles. No entanto, um schema deve ter uma identidade primária para que o schema seja ativado para uso em [!DNL Real-Time Customer Profile]. Consulte a [identidade](./tutorials/create-schema-ui.md#identity-field) seção do tutorial do Editor de esquemas para obter mais informações.
 
-### Como ativar um esquema para uso em [!DNL Real-time Customer Profile]?
+### Como ativar um esquema para uso em [!DNL Real-Time Customer Profile]?
 
-Os esquemas são habilitados para uso em [[!DNL Real-time Customer Profile]](../profile/home.md) por meio da adição de uma tag &quot;union&quot; no `meta:immutableTags` do schema. Ativação de um esquema para usar com [!DNL Profile] pode ser feito usando a API ou a interface do usuário.
+Os esquemas são habilitados para uso em [[!DNL Real-Time Customer Profile]](../profile/home.md) por meio da adição de uma tag &quot;union&quot; no `meta:immutableTags` do schema. Ativação de um esquema para usar com [!DNL Profile] pode ser feito usando a API ou a interface do usuário.
 
 #### Ativação de um esquema existente para [!DNL Profile] uso da API
 
 Faça uma solicitação do PATCH para atualizar o esquema e adicionar o `meta:immutableTags` como uma matriz contendo o valor &quot;union&quot;. Se a atualização for bem-sucedida, a resposta mostrará o schema atualizado que agora contém a tag de união.
 
-Para obter mais informações sobre como usar a API para ativar um schema para uso em [!DNL Real-time Customer Profile], consulte o [sindicatos](./api/unions.md) documento do [!DNL Schema Registry] guia do desenvolvedor.
+Para obter mais informações sobre como usar a API para ativar um schema para uso em [!DNL Real-Time Customer Profile], consulte o [sindicatos](./api/unions.md) documento do [!DNL Schema Registry] guia do desenvolvedor.
 
 #### Ativação de um esquema existente para [!DNL Profile] uso da interface do usuário
 
@@ -230,9 +230,9 @@ Dependendo do terminal que você estiver usando, a variável `detailed-message` 
 
 Para obter listas de cabeçalhos Accept compatíveis para diferentes solicitações de API, consulte as seções correspondentes na seção [Guia do desenvolvedor do Registro de Schema](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] erros
+### [!DNL Real-Time Customer Profile] erros
 
-As mensagens de erro a seguir estão associadas às operações envolvidas na ativação de schemas para o [!DNL Real-time Customer Profile]. Consulte a [sindicatos](./api/unions.md) na seção [!DNL Schema Registry] Guia de API para obter mais informações.
+As mensagens de erro a seguir estão associadas às operações envolvidas na ativação de schemas para o [!DNL Real-Time Customer Profile]. Consulte a [sindicatos](./api/unions.md) na seção [!DNL Schema Registry] Guia de API para obter mais informações.
 
 #### Deve haver um descritor de identidade de referência
 

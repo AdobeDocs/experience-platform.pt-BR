@@ -5,7 +5,7 @@ title: Segmentação de borda usando a API
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 1%
@@ -32,8 +32,8 @@ A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experienc
 
 Este guia do desenvolvedor requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de borda. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-time Customer Profile] dados.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-Time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 Para fazer chamadas com êxito para qualquer endpoint da API do Experience Platform, leia o guia em [introdução às APIs do Platform](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.

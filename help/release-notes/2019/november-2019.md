@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Novos recursos no Adobe Experience Platform:
 Atualizações dos recursos existentes:
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
-* [[!DNL Real-time Customer Profile]](#profile)
+* [[!DNL Real-Time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
@@ -104,7 +104,7 @@ Para obter mais informações sobre fontes, consulte [Visão geral das fontes](.
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] permite que os cientistas de dados gerem informações facilmente de dados e conteúdo em aplicativos Adobe e sistemas de terceiros, criando e operacionalizando Modelos de Aprendizagem de Máquina. [!DNL Data Science Workspace] é totalmente integrado ao [!DNL Platform] e potencializa o ciclo de vida completo da ciência de dados, incluindo a exploração e a preparação de dados XDM, seguido do desenvolvimento e da operacionalização de Modelos para enriquecer automaticamente [!DNL Real-time Customer Profile] com Insights de aprendizado de máquina.
+Adobe Experience Platform [!DNL Data Science Workspace] permite que os cientistas de dados gerem informações facilmente de dados e conteúdo em aplicativos Adobe e sistemas de terceiros, criando e operacionalizando Modelos de Aprendizagem de Máquina. [!DNL Data Science Workspace] é totalmente integrado ao [!DNL Platform] e potencializa o ciclo de vida completo da ciência de dados, incluindo a exploração e a preparação de dados XDM, seguido do desenvolvimento e da operacionalização de Modelos para enriquecer automaticamente [!DNL Real-Time Customer Profile] com Insights de aprendizado de máquina.
 
 **Novos recursos**
 
@@ -115,7 +115,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] permite que os cientista
 
 Para obter mais informações, consulte o [Visão geral do Data Science Workspace](../../data-science-workspace/home.md).
 
-## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
+## Sistema de [!DNL Experience Data Model] (XDM) {#xdm}
 
 A normalização e a interoperabilidade são conceitos-chave subjacentes [!DNL Experience Platform]. [!DNL Experience Data Model] O (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
@@ -128,7 +128,7 @@ O XDM é uma especificação publicamente documentada projetada para melhorar o 
 | Schema de notificação | Novo schema que representa dados de notificação enviados durante o processo de assimilação de dados. |
 | Esquemas de DSP da Adobe AdCloud | Cinco novos esquemas foram adicionados para representar os metadados da plataforma de demanda (DSP) do Adobe Advertising Cloud: Disposição, Campanha, Pacote, Anunciante, Conta. |
 | Grupos de campos de esquema Detalhes da implementação do ExperienceEvent | Novos grupos de campos ExperienceEvent que adicionam um campo padrão para armazenar informações sobre o software usado para coletar o evento. |
-| [!DNL Profile Privacy] grupos de campos | Novos grupos de campos de perfil que adicionam campos para aceitar sinais de recusa gerais de saída e de vendas/compartilhamento de [!DNL Real-time Customer Profile]. |
+| [!DNL Profile Privacy] grupos de campos | Novos grupos de campos de perfil que adicionam campos para aceitar sinais de recusa gerais de saída e de vendas/compartilhamento de [!DNL Real-Time Customer Profile]. |
 | Restrições de formato para `xdm:alternateDisplayInfo` | Os campos &quot;Título&quot; e &quot;Descrição&quot; para `xdm:alternateDisplayInfo` devem ser strings para passar na validação. |
 | Alteração de nome: XDM [!DNL Individual Profile] | O &quot;título&quot; do &quot;XDM [!DNL Profile]&quot; classe foi atualizada para &quot;XDM [!DNL Individual Profile]&quot;. O `$id` da classe não foi alterada. |
 
@@ -138,9 +138,9 @@ O XDM é uma especificação publicamente documentada projetada para melhorar o 
 
 Para saber mais sobre como trabalhar com o XDM usando o [!DNL Schema Registry] API e [!DNL Schema Editor] interface do usuário, leia a [Documentação do sistema XDM](../../xdm/home.md).
 
-## [!DNL Real-time Customer Profile] {#profile}
+## [!DNL Real-Time Customer Profile] {#profile}
 
-O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-time Customer Profile], você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar seus dados de clientes diferentes em uma visualização unificada que oferece uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-Time Customer Profile], você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar seus dados de clientes diferentes em uma visualização unificada que oferece uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
 
 | Recurso | Descrição |
 | -----------| ---------- |
@@ -156,13 +156,13 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 
 **Problemas conhecidos**
 
-* Nenhum.
+* None.
 
-Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com o [!DNL Profile] leia os [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Para obter mais informações sobre [!DNL Real-Time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com o [!DNL Profile] leia os [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos-alvo a partir de [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos-alvo a partir de [!DNL Real-Time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -185,6 +185,6 @@ Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de u
 
 **Problemas conhecidos**
 
-* Nenhum.
+* None.
 
 Para saber mais sobre [!DNL Segmentation Service]Por favor leia o [Visão geral do serviço de segmentação](../../segmentation/home.md).

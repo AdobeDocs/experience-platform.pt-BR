@@ -2,7 +2,7 @@
 title: Grupo de Campos de Esquema Componentes da Pessoa Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Componentes de pessoa comercial do XDM.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 2%

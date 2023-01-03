@@ -5,8 +5,7 @@ title: Visão geral da assimilação de dados
 topic-legacy: overview
 description: Este documento apresenta as três principais maneiras pelas quais os dados são assimilados na Platform, com links para sua respectiva documentação de visão geral para obter informações mais detalhadas.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 14%
@@ -15,9 +14,9 @@ ht-degree: 14%
 
 # Visão geral da assimilação de dados
 
-A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A Assimilação de dados do Adobe Experience Platform representa os vários métodos pelos quais [!DNL Platform] assimila dados dessas fontes, bem como como esses dados são mantidos no Data Lake para uso pelos serviços de downstream [!DNL Platform].
+A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A Assimilação de dados do Adobe Experience Platform representa os vários métodos pelos quais [!DNL Platform] assimila dados dessas fontes, bem como como esses dados são mantidos no Data Lake para uso em downstream [!DNL Platform] serviços.
 
-Este documento apresenta as três principais maneiras pelas quais os dados são assimilados em [!DNL Platform], com links para sua respectiva documentação de visão geral para obter informações mais detalhadas.
+Este documento apresenta as três principais maneiras pelas quais os dados são assimilados [!DNL Platform], com links para a respectiva documentação de visão geral para obter informações mais detalhadas.
 
 ## Assimilação em lote
 
@@ -37,16 +36,16 @@ Consulte a [visão geral da assimilação de streaming](./streaming-ingestion/ov
 
 [!DNL Experience Platform] O permite configurar conexões de origem para vários provedores de dados. Essas conexões permitem autenticar em suas fontes de dados externas, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação.
 
-As conexões de origem podem ser configuradas para coletar dados de outros aplicativos do Adobe (como Adobe Analytics e Adobe Audience Manager), fontes de armazenamento em nuvem de terceiros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
+As conexões de origem podem ser configuradas para coletar dados de outros aplicativos do Adobe (como Adobe Analytics e Adobe Audience Manager), fontes de armazenamento em nuvem de terceiros (como [!DNL Azure Blob], [!DNL Amazon] Servidores S3, FTP e SFTP) e sistemas CRM de terceiros (como [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Consulte a [Visão geral das fontes](../sources/home.md) para obter mais informações.
 
 ## Próximas etapas e recursos adicionais
 
-Este documento forneceu uma breve introdução aos diferentes aspectos de [!DNL Data Ingestion] em [!DNL Experience Platform]. Continue lendo a documentação de visão geral de cada método de ingestão para se familiarizar com seus diferentes recursos, casos de uso e práticas recomendadas. Você também pode complementar seu aprendizado assistindo ao vídeo de visão geral da assimilação abaixo. Para obter informações sobre como [!DNL Experience Platform] rastreia os metadados para registros assimilados, consulte a [Visão geral do Serviço de Catálogo](../catalog/home.md).
+Este documento apresentou uma breve introdução aos diferentes aspectos da [!DNL Data Ingestion] em [!DNL Experience Platform]. Continue lendo a documentação de visão geral de cada método de ingestão para se familiarizar com seus diferentes recursos, casos de uso e práticas recomendadas. Você também pode complementar seu aprendizado assistindo ao vídeo de visão geral da assimilação abaixo. Para obter informações sobre como [!DNL Experience Platform] rastreia os metadados para registros assimilados, consulte o [Visão geral do serviço de catálogo](../catalog/home.md).
 
 >[!WARNING]
 >
->O termo &quot;Perfil unificado&quot; usado no vídeo a seguir está desatualizado. Os termos [!DNL "Profile"] ou [!DNL "Real-time Customer Profile"] são os termos corretos usados na documentação [!DNL Experience Platform]. Consulte a documentação para obter a funcionalidade mais recente.
+>O termo &quot;Perfil unificado&quot; usado no vídeo a seguir está desatualizado. Os termos [!DNL "Profile"] ou [!DNL "Real-Time Customer Profile"] são os termos corretos usados no [!DNL Experience Platform] documentação. Consulte a documentação para obter a funcionalidade mais recente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

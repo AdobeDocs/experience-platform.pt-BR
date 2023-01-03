@@ -5,7 +5,7 @@ title: Criar e editar esquemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar esquemas na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 0%
@@ -249,7 +249,7 @@ Depois de aplicar as alterações, o novo campo aparece sob o namespace da ID do
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Ativar um esquema para o Perfil"
->abstract="Quando um esquema é ativado para o Perfil, todos os conjuntos de dados criados a partir desse esquema participam do Perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um schema é usado para assimilar dados no Perfil, ele não pode ser desativado. Consulte a documentação da para obter mais informações."
+>abstract="Quando um esquema é ativado para o Perfil, qualquer conjunto de dados criado a partir desse esquema participa do Perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um schema é usado para assimilar dados no Perfil, ele não pode ser desativado. Consulte a documentação da para obter mais informações."
 
 [Perfil do cliente em tempo real](../../../profile/home.md) mescla dados de fontes diferentes para criar uma visualização completa de cada cliente individual. Se desejar que os dados capturados por um schema participem neste processo, é necessário habilitar o schema para uso em [!DNL Profile].
 

@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para o Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%

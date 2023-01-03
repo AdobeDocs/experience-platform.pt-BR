@@ -5,7 +5,7 @@ description: A Detecção de dispositivo compartilhado identifica diferentes usu
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -92,7 +92,7 @@ When [!DNL Shared Device Detection] está ativado, [!DNL Profile] define a ident
 
 Um **evento de experiência autenticada** é uma ação concluída por um usuário durante o logon em um dispositivo. Para eventos de experiência autenticados, a identidade primária é a variável **Namespace de identidade do usuário** (ID de logon). Um **evento de experiência não autenticado** é uma ação concluída por um usuário que não está conectado a um dispositivo. Para eventos de experiência não autenticados, a identidade primária é a variável **Namespace de identidade compartilhada** (ECID).
 
-Para obter mais informações, consulte o  [[!DNL Real-time Customer Profile] visão geral](../../profile/home.md).
+Para obter mais informações, consulte o  [[!DNL Real-Time Customer Profile] visão geral](../../profile/home.md).
 
 ## Interface do usuário de dispositivos compartilhados
 

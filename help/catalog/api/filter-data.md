@@ -5,7 +5,7 @@ title: Filtrar dados do catálogo usando parâmetros de consulta
 topic-legacy: developer guide
 description: A API do Serviço de catálogo permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de consulta de solicitação. Parte das práticas recomendadas para o Catálogo é usar filtros em todas as chamadas de API, pois eles reduzem a carga na API e ajudam a melhorar o desempenho geral.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 2%
@@ -210,7 +210,7 @@ Há algumas limitações a serem consideradas ao usar tags:
 * Nomes de tag são exclusivos de sua organização IMS.
 * Os processos do Adobe podem aproveitar as tags para determinados comportamentos. Os nomes dessas tags recebem o prefixo &quot;adobe&quot; como padrão. Portanto, você deve evitar essa convenção ao declarar nomes de tags.
 * Os seguintes nomes de tag são reservados para uso em [!DNL Experience Platform]e, portanto, não pode ser declarado como um nome de tag para sua organização:
-   * `unifiedProfile`: Esse nome de tag é reservado para que os conjuntos de dados sejam assimilados por [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedProfile`: Esse nome de tag é reservado para que os conjuntos de dados sejam assimilados por [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: Esse nome de tag é reservado para que os conjuntos de dados sejam assimilados por [[!DNL Identity Service]](../../identity-service/home.md).
 
 Abaixo está um exemplo de um conjunto de dados que contém um `tags` propriedade. As tags dessa propriedade assumem a forma de pares de valores chave, com cada valor de tag exibido como uma matriz contendo uma única string:
@@ -552,7 +552,7 @@ Uma resposta bem-sucedida contém uma lista de conjuntos de dados, excluindo qua
 
 ### Usar o `property` parâmetro {#using-the-property-parameter}
 
-O `property` o parâmetro de consulta fornece mais flexibilidade para a filtragem baseada em propriedade do que os filtros simples. Além da filtragem com base em se uma propriedade tem um valor específico, a variável `property` pode usar outros operadores de comparação (como &quot;mais do que&quot; (`>`) e &quot;menor que&quot; (`<`)), bem como expressões regulares para filtrar por valores de propriedade. Ela também pode filtrar se uma propriedade existe ou não, independentemente do seu valor.
+O `property` O parâmetro de consulta fornece mais flexibilidade para a filtragem baseada em propriedade do que os filtros simples. Além da filtragem com base em se uma propriedade tem um valor específico, a variável `property` pode usar outros operadores de comparação (como &quot;mais do que&quot; (`>`) e &quot;menor que&quot; (`<`)), bem como expressões regulares para filtrar por valores de propriedade. Ela também pode filtrar se uma propriedade existe ou não, independentemente do seu valor.
 
 O `property` aceita apenas propriedades de objetos de nível superior, o que significa que para o seguinte objeto de amostra, você pode filtrar por propriedade para `name`, `description`e `subItem`, mas NÃO para `sampleKey`.
 

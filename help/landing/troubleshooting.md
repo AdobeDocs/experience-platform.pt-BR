@@ -7,7 +7,7 @@ landing-page-description: Encontre respostas para perguntas frequentes e um guia
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 4%
@@ -89,10 +89,10 @@ Os seguintes códigos de status podem ser encontrados em qualquer [!DNL Experien
 | Código de status | Descrição | Causas possíveis |
 |--- | --- | ---|
 | 400 | Solicitação inválida | A solicitação foi construída incorretamente, faltavam informações de chave e/ou continha sintaxe incorreta. |
-| 401° | Falha na autenticação | A solicitação não passou uma verificação de autenticação. O token de acesso pode estar ausente ou ser inválido. Consulte a [Erros de token OAuth](#oauth-token-is-missing) para obter mais detalhes. |
+| 401 | Falha na autenticação | A solicitação não passou uma verificação de autenticação. O token de acesso pode estar ausente ou ser inválido. Consulte a [Erros de token OAuth](#oauth-token-is-missing) para obter mais detalhes. |
 | 403 | Proibido | O recurso foi encontrado, mas você não tem as credenciais corretas para exibi-lo. |
 | 404 | Não encontrado | Não foi possível localizar o recurso solicitado no servidor. O recurso pode ter sido excluído ou o caminho solicitado foi inserido incorretamente. |
-| 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisa filtrar os resultados. (Consulte o [!DNL Catalog Service] Subguia do guia do desenvolvedor de API em [filtragem de dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar sua solicitação novamente e entre em contato com o administrador se o problema persistir. |
+| 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisar filtrar os resultados. (Consulte o [!DNL Catalog Service] Subguia do guia do desenvolvedor de API em [filtragem de dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar sua solicitação novamente e entre em contato com o administrador se o problema persistir. |
 
 ## Erros do cabeçalho da solicitação {#request-header-errors}
 
@@ -218,5 +218,5 @@ Veja a seguir uma lista de guias de solução de problemas e a documentação de
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] Perguntas frequentes e guia de solução de problemas](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] e [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] guia de solução de problemas](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] guia de solução de problemas](../profile/troubleshooting.md) |
 | Sandboxes | [API de sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guia de solução de problemas de sandboxes](../sandboxes/troubleshooting-guide.md) |

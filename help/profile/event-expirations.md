@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Expirações de evento de experiência
 description: Este documento fornece orientação geral sobre como configurar os tempos de expiração de eventos de experiência individuais em um conjunto de dados da Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%

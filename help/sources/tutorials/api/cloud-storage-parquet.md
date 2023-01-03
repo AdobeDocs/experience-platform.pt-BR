@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial usa a API do Serviço de fluxo para orientá-lo pelas etapas para assimilar dados do Apache Parquet de um sistema de armazenamento em nuvem de terceiros.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 3%
@@ -428,7 +428,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um conector de origem para coletar dados do Parquet de seu sistema de armazenamento em nuvem de terceiros de forma agendada. Os dados recebidos agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou um conector de origem para coletar dados do Parquet de seu sistema de armazenamento em nuvem de terceiros de forma agendada. Os dados recebidos agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do perfil do cliente em tempo real](../../../profile/home.md)
 - [Visão geral do Data Science Workspace](../../../data-science-workspace/home.md)

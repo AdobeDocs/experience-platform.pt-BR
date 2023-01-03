@@ -3,7 +3,7 @@ keywords: visão geral das métricas; visão geral das métricas do rtcdp
 title: Página inicial e painéis do Real-time Customer Data Platform
 description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Para obter mais informações sobre conjuntos de dados, consulte o [visão geral
 
 ### Perfis
 
-O **[!UICONTROL Perfis]** contagem mostra o número total de pessoas com perfis na [!DNL Real-time Customer Profile]. Ela não inclui fragmentos de perfil. Esse é seu público-alvo totalmente endereçável.
+O **[!UICONTROL Perfis]** contagem mostra o número total de pessoas com perfis na [!DNL Real-Time Customer Profile]. Ela não inclui fragmentos de perfil. Esse é seu público-alvo totalmente endereçável.
 
 Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil unificado.
 

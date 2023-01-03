@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -21,8 +21,8 @@ Este documento fornece um tutorial para avaliar segmentos e acessar resultados d
 
 Este tutorial requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de público-alvo. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite criar segmentos de público-alvo a partir de [!DNL Real-time Customer Profile] dados.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite criar segmentos de público-alvo a partir de [!DNL Real-Time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para utilizar melhor a Segmentação, verifique se os dados são assimilados como perfis e eventos de acordo com a variável [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
@@ -86,9 +86,9 @@ A avaliação sob demanda permite criar um trabalho de segmento para gerar um se
 
 ### Criar um trabalho de segmento
 
-Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a uma definição de segmento, bem como a quaisquer políticas de mesclagem que controlam como [!DNL Real-time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo. Um trabalho de segmento precisa ser executado sempre que você quiser atualizar o público-alvo que está qualificado para a definição do segmento no momento.
+Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a uma definição de segmento, bem como a quaisquer políticas de mesclagem que controlam como [!DNL Real-Time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo. Um trabalho de segmento precisa ser executado sempre que você quiser atualizar o público-alvo que está qualificado para a definição do segmento no momento.
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação de POST para a variável `/segment/jobs` endpoint no [!DNL Real-time Customer Profile] API.
+Você pode criar um novo trabalho de segmento fazendo uma solicitação de POST para a variável `/segment/jobs` endpoint no [!DNL Real-Time Customer Profile] API.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas na seção [guia do endpoint de tarefas do segmento](../api/segment-jobs.md#create)
 
@@ -140,7 +140,7 @@ As seções a seguir descrevem essas opções com mais detalhes.
 
 ## Pesquisar um perfil
 
-Se você souber o perfil específico que gostaria de acessar, poderá fazer isso usando o [!DNL Real-time Customer Profile] API. As etapas completas para acessar perfis individuais estão disponíveis na variável [Acesse os dados do Perfil do cliente em tempo real usando a API do perfil](../../profile/api/entities.md) tutorial.
+Se você souber o perfil específico que gostaria de acessar, poderá fazer isso usando o [!DNL Real-Time Customer Profile] API. As etapas completas para acessar perfis individuais estão disponíveis na variável [Acesse os dados do Perfil do cliente em tempo real usando a API do perfil](../../profile/api/entities.md) tutorial.
 
 ## Exportar um segmento {#export}
 
@@ -210,7 +210,7 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva gerada pelo
 
 ### Gerar perfis para membros do público-alvo {#generate-profiles}
 
-Depois de ter um conjunto de dados que persiste em união, você pode criar um trabalho de exportação para manter os membros do público-alvo no conjunto de dados, fazendo uma solicitação de POST para a variável `/export/jobs` endpoint no [!DNL Real-time Customer Profile] API e o fornecimento da ID do conjunto de dados e das informações do segmento para os segmentos que você deseja exportar.
+Depois de ter um conjunto de dados que persiste em união, você pode criar um trabalho de exportação para manter os membros do público-alvo no conjunto de dados, fazendo uma solicitação de POST para a variável `/export/jobs` endpoint no [!DNL Real-Time Customer Profile] API e o fornecimento da ID do conjunto de dados e das informações do segmento para os segmentos que você deseja exportar.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas na seção [guia do endpoint de tarefas de exportação](../api/export-jobs.md#create)
 

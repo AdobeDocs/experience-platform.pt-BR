@@ -5,7 +5,7 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 Trabalhar com definições de segmento requer uma compreensão das várias [!DNL Experience Platform] serviços envolvidos com a segmentação. Antes de ler este guia do usuário, reveja a documentação dos seguintes serviços:
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permite dividir os dados armazenados em [!DNL Experience Platform] que se relaciona a indivíduos (como clientes, clientes potenciais, usuários ou organizações) em grupos menores.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permite a criação de perfis de clientes ao unir identidades de fontes de dados diferentes que estão sendo assimiladas em [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente. Para utilizar melhor a Segmentação, verifique se os dados são assimilados como perfis e eventos de acordo com a variável [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ O tamanho da amostra da verificação depende do número geral de entidades no a
 | 1 a 20 milhões | 1 milhão |
 | Mais de 20 milhões | 5% do total |
 
-Informações mais detalhadas sobre cada [!DNL Profile] pode ser visualizada selecionando a variável [!DNL Profile] ID. Para saber mais sobre os detalhes de um perfil, leia o [[!DNL Real-time Customer Profile] guia do usuário](../../profile/ui/user-guide.md#profile-detail).
+Informações mais detalhadas sobre cada [!DNL Profile] pode ser visualizada selecionando a variável [!DNL Profile] ID. Para saber mais sobre os detalhes de um perfil, leia o [[!DNL Real-Time Customer Profile] guia do usuário](../../profile/ui/user-guide.md#profile-detail).
 
 ![As amostras de perfis para a definição do segmento são destacadas. Informações de perfil de amostra incluem a ID do perfil, o nome, o sobrenome e o email da pessoa.](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ Para obter informações mais detalhadas sobre o uso da variável [!DNL Segment 
 
 ## Segmentação programada {#scheduled-segmentation}
 
-Depois que as definições de segmento forem criadas, você poderá avaliá-las por meio de uma avaliação sob demanda ou programada (contínua). Avaliação significa mudança [!DNL Real-time Customer Profile] por meio de definições de segmento, para produzir públicos-alvo correspondentes. Depois de criados, os públicos-alvo são salvos e armazenados para que possam ser exportados usando [!DNL Experience Platform] APIs.
+Depois que as definições de segmento forem criadas, você poderá avaliá-las por meio de uma avaliação sob demanda ou programada (contínua). Avaliação significa mudança [!DNL Real-Time Customer Profile] por meio de definições de segmento, para produzir públicos-alvo correspondentes. Depois de criados, os públicos-alvo são salvos e armazenados para que possam ser exportados usando [!DNL Experience Platform] APIs.
 
 A avaliação sob demanda envolve o uso da API para executar a avaliação e criar públicos-alvo, conforme necessário, enquanto a avaliação agendada (também conhecida como &quot;segmentação agendada&quot;) permite criar um agendamento recorrente para avaliar as definições de segmento em um horário específico (no máximo, uma vez por dia).
 
@@ -294,6 +294,6 @@ Quando terminar de criar seu segmento, o segmento será analisado pela Governan�
 
 ## Próximas etapas e recursos adicionais {#next-steps}
 
-O [!DNL Segmentation Service] A interface do usuário fornece um fluxo de trabalho avançado que permite isolar públicos comercializáveis do [!DNL Real-time Customer Profile] dados.
+O [!DNL Segmentation Service] A interface do usuário fornece um fluxo de trabalho avançado que permite isolar públicos comercializáveis do [!DNL Real-Time Customer Profile] dados.
 
 Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação. Para saber como usar o [!DNL Segmentation Service] Leia a API [[!DNL Segmentation Service] guia do desenvolvedor](../api/overview.md).

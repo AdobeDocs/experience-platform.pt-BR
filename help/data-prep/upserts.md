@@ -3,7 +3,7 @@ keywords: Experience Platform, home, tópicos populares, preparação de dados, 
 title: Enviar Atualizações Parciais De Linha Para O Serviço De Perfil Usando A Preparação De Dados
 description: Este documento fornece informações sobre como enviar atualizações de linha parciais ao Serviço de perfil usando a Preparação de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%

@@ -3,7 +3,7 @@ keywords: Experience Platform, home, tópicos populares, conexão de transmissã
 title: Criar uma conexão de transmissão de API HTTP usando a API do Serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do Serviço de Fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 4%
@@ -22,7 +22,7 @@ Este tutorial usa o [[!DNL Flow Service] API](https://www.adobe.io/experience-pl
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados da experiência.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 Além disso, a criação de uma conexão de transmissão exige um esquema XDM de destino e um conjunto de dados. Para saber como criá-los, leia o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md) ou o tutorial em [transmissão de dados da série de tempo](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 

@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Para trabalhar com políticas de mesclagem usando a interface do usuário do , c
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte do [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Componentes de políticas de mesclagem {#components-of-merge-policies}
 
@@ -194,7 +194,7 @@ Para saber mais sobre o XDM e trabalhar com esquemas no Experience Platform, com
 
 ## Acessar políticas de mesclagem {#access-merge-policies}
 
-Usar o [!DNL Real-time Customer Profile] API, a variável `/config/mergePolicies` O endpoint permite executar uma solicitação de pesquisa para exibir uma política de mesclagem específica pela ID ou acessar todas as políticas de mesclagem na organização IMS, filtradas por critérios específicos. Também é possível usar a variável `/config/mergePolicies/bulk-get` endpoint para recuperar várias políticas de mesclagem por suas IDs. As etapas para executar cada uma dessas chamadas são descritas nas seções a seguir.
+Usar o [!DNL Real-Time Customer Profile] API, a variável `/config/mergePolicies` O endpoint permite executar uma solicitação de pesquisa para exibir uma política de mesclagem específica pela ID ou acessar todas as políticas de mesclagem na organização IMS, filtradas por critérios específicos. Também é possível usar a variável `/config/mergePolicies/bulk-get` endpoint para recuperar várias políticas de mesclagem por suas IDs. As etapas para executar cada uma dessas chamadas são descritas nas seções a seguir.
 
 ### Acessar uma única política de mesclagem por ID
 
@@ -762,6 +762,6 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, pode usá-las para ajustar a exibição de perfis de clientes no Platform e criar segmentos de público-alvo a partir de sua [!DNL Real-time Customer Profile] dados.
+Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, pode usá-las para ajustar a exibição de perfis de clientes no Platform e criar segmentos de público-alvo a partir de sua [!DNL Real-Time Customer Profile] dados.
 
 Consulte a [Documentação do Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md) para começar a definir e trabalhar com segmentos.

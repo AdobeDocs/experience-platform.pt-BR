@@ -5,7 +5,7 @@ title: Suporte ao IAB TCF 2.0 no Experience Platform
 topic-legacy: privacy events
 description: Saiba como configurar operações de dados e esquemas para transmitir opções de consentimento do cliente ao ativar segmentos para destinos no Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
@@ -40,10 +40,10 @@ Este guia também requer uma compreensão funcional dos seguintes serviços da p
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [Serviço de identidade da Adobe Experience Platform](../../../../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
-* [Perfil do cliente em tempo real](../../../../profile/home.md): Aproveitamento [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-time Customer Profile] extrai dados do Data Lake e mantém perfis de clientes em seu próprio armazenamento de dados separado.
+* [Perfil do cliente em tempo real](../../../../profile/home.md): Aproveitamento [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-Time Customer Profile] extrai dados do Data Lake e mantém perfis de clientes em seu próprio armazenamento de dados separado.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): Uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços da plataforma ao seu site voltado para o cliente.
    * [Comandos de consentimento do SDK](../../../../edge/consent/supporting-consent.md): Uma visão geral do caso de uso dos comandos SDK relacionados ao consentimento mostrados neste guia.
-* [Serviço de segmentação do Adobe Experience Platform](../../../../segmentation/home.md): Permite dividir [!DNL Real-time Customer Profile] dados em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
+* [Serviço de segmentação do Adobe Experience Platform](../../../../segmentation/home.md): Permite dividir [!DNL Real-Time Customer Profile] dados em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 
 Além dos serviços da plataforma listados acima, você também deve estar familiarizado com [destinos](../../../../data-governance/home.md) e seu papel no ecossistema da plataforma.
 
@@ -68,7 +68,7 @@ Qualquer segmento compartilhado com a plataforma pela Adobe Audience Manager (po
 
 Depois que os dados de consentimento da TCF forem assimilados com êxito, os seguintes processos ocorrerão nos serviços downstream da plataforma:
 
-1. [!DNL Real-time Customer Profile] atualiza os dados de consentimento armazenados para o perfil do cliente.
+1. [!DNL Real-Time Customer Profile] atualiza os dados de consentimento armazenados para o perfil do cliente.
 1. A Platform processa as IDs do cliente somente se a permissão do fornecedor para a Plataforma (565) for fornecida para cada ID em um cluster.
 1. Ao exportar segmentos para destinos pertencentes aos membros da lista de fornecedores TCF 2.0, a Platform inclui apenas perfis se o fornecedor permitir ambas as plataformas (565) *e* o destino individual é fornecido para cada ID em um cluster.
 
@@ -243,7 +243,7 @@ O TCF 2.0 também exige que a fonte de dados verifique a permissão de fornecedo
 
 >[!NOTE]
 >
->Qualquer segmento compartilhado com a Adobe Audience Manager conterá os mesmos valores de consentimento da TCF 2.0 que seus equivalentes da plataforma. Since [!DNL Audience Manager] compartilha a mesma ID de fornecedor que a Plataforma (565), as mesmas finalidades e permissões de fornecedor são necessárias. Consulte o documento na [Plug-in do Adobe Audience Manager para a TCF do IAB](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) para obter mais informações.
+>Qualquer segmento compartilhado com a Adobe Audience Manager conterá os mesmos valores de consentimento da TCF 2.0 que seus equivalentes da plataforma. Since [!DNL Audience Manager] compartilha a mesma ID de fornecedor que a Plataforma (565), as mesmas finalidades e permissões de fornecedor são necessárias. Consulte o documento na [Plug-in do Adobe Audience Manager para a TCF do IAB](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=pt-BR) para obter mais informações.
 
 ## Testar sua implementação {#test-implementation}
 

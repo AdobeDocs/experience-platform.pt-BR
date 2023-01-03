@@ -5,7 +5,7 @@ title: Importação e uso de públicos externos
 description: Siga este tutorial para saber como usar públicos externos com o Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Agora que o esquema foi criado, será necessário especificar qual campo conter�
 
 ![As caixas de seleção para marcar o campo selecionado como a identidade primária são destacadas no Editor de esquemas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Depois de marcar a `_id` como a identidade primária, selecione o título do esquema, seguido pelo botão rotulado **[!UICONTROL Perfil]**. Selecionar **[!UICONTROL Habilitar]** para ativar o schema de [!DNL Real-time Customer Profile].
+Depois de marcar a `_id` como a identidade primária, selecione o título do esquema, seguido pelo botão rotulado **[!UICONTROL Perfil]**. Selecionar **[!UICONTROL Habilitar]** para ativar o schema de [!DNL Real-Time Customer Profile].
 
 ![A alternância para ativar o esquema do Perfil é realçada no Editor de esquemas.](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -76,7 +76,7 @@ Para criar um conjunto de dados, siga as instruções em [guia do usuário do co
 
 ![O esquema no qual você deseja basear seu conjunto de dados é realçado.](../images/tutorials/external-audiences/select-schema.png)
 
-Depois de criar o conjunto de dados, continue seguindo as instruções em [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para ativar esse conjunto de dados no Perfil do cliente em tempo real.
+Depois de criar o conjunto de dados, continue seguindo as instruções em [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para ativar esse conjunto de dados para o Perfil do cliente em tempo real.
 
 ![A alternância para ativar o esquema do Perfil é realçada na página de atividade do Conjunto de dados.](../images/tutorials/external-audiences/dataset-profile.png)
 
@@ -145,7 +145,7 @@ Uma amostra dos metadados de carga de público-alvo externo pode ser vista abaix
 | `xdmEntity._id` | A ID **must** consulte a mesma ID de segmento que você está usando como público externo. |
 | `xdmEntity.identityMap` | Esta seção **must** contém o rótulo de identidade usado ao criar o namespace criado anteriormente. |
 | `{IDENTITY_NAMESPACE}` | Esse é o rótulo do namespace de identidade criado anteriormente. Assim, por exemplo, se você chamasse seu namespace de identidade de &quot;externalAudience&quot;, você o usaria como a chave do array. |
-| `segmentName` | O nome do segmento pelo qual você deseja que o público-alvo externo seja segmentado. |
+| `segmentName` | O nome do segmento pelo qual você deseja que o público externo seja segmentado. |
 
 ## Criação de segmentos usando públicos importados
 
@@ -183,7 +183,7 @@ Para criar um conjunto de dados, siga as instruções em [guia do usuário do co
 
 ![O schema usado para criar o banco de dados é realçado.](../images/tutorials/external-audiences/select-schema.png)
 
-Depois de criar o conjunto de dados, continue seguindo as instruções em [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para ativar esse conjunto de dados no Perfil do cliente em tempo real.
+Depois de criar o conjunto de dados, continue seguindo as instruções em [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para ativar esse conjunto de dados para o Perfil do cliente em tempo real.
 
 ![A alternância para ativar o esquema para Perfil é realçada no fluxo de trabalho criar conjuntos de dados .](../images/tutorials/external-audiences/dataset-profile.png)
 

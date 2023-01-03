@@ -6,66 +6,66 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem ServiceNow usando a interface do usuário do Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
 
 ---
 
-# Criar uma conexão de origem [!DNL ServiceNow] na interface do usuário
+# Crie um [!DNL ServiceNow] conexão de origem na interface do usuário
 
-Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para criar um conector de origem [!DNL ServiceNow] usando a interface do usuário [!DNL Platform].
+Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para criar um [!DNL ServiceNow] conector de origem usando o [!DNL Platform] interface do usuário.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) do Editor de esquema: Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão válida [!DNL ServiceNow], poderá ignorar o restante deste documento e prosseguir para o tutorial em [configurar um fluxo de dados](../../dataflow/customer-success.md)
+Se você já tiver um [!DNL ServiceNow] , você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/customer-success.md)
 
 ### Obter credenciais necessárias
 
-Para acessar sua conta [!DNL ServiceNow] em [!DNL Platform], você deve fornecer os seguintes valores:
+Para acessar o [!DNL ServiceNow] conta em [!DNL Platform], você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `endpoint` | O endpoint do servidor [!DNL ServiceNow]. |
-| `username` | O nome de usuário usado para se conectar ao servidor [!DNL ServiceNow] para autenticação. |
-| `password` | A senha para se conectar ao servidor [!DNL ServiceNow] para autenticação. |
+| `endpoint` | O terminal da [!DNL ServiceNow] servidor. |
+| `username` | O nome de usuário usado para se conectar ao [!DNL ServiceNow] para autenticação. |
+| `password` | A senha para se conectar ao [!DNL ServiceNow] para autenticação. |
 
-Para obter mais informações sobre a introdução, consulte [this [!DNL ServiceNow] document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Para obter mais informações sobre a introdução, consulte [this [!DNL ServiceNow] documento](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
-## Conecte sua conta [!DNL ServiceNow]
+## Conecte seu [!DNL ServiceNow] account
 
-Depois de coletar suas credenciais necessárias, siga as etapas abaixo para vincular sua conta [!DNL ServiceNow] a [!DNL Platform].
+Depois de reunir suas credenciais necessárias, siga as etapas abaixo para vincular seus [!DNL ServiceNow] para [!DNL Platform].
 
-Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e depois selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o **[!UICONTROL Fontes]** espaço de trabalho. O **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Customer Success]**, selecione **[!UICONTROL ServiceNow]**. Se esta for a primeira vez que você usa esse conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Connect source]** para criar um novo conector [!DNL ServiceNow].
+Em **[!UICONTROL Sucesso do cliente]** categoria , selecione **[!UICONTROL ServiceNow]**. Se esta for a primeira vez que você usa esse conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Fonte do Connect]** para criar um novo [!DNL ServiceNow] conector.
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-A página **[!UICONTROL Conectar ao ServiceNow]** é exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+O **[!UICONTROL Ligar ao ServiceNow]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
 
 ### Nova conta
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais [!DNL ServiceNow]. Quando terminar, selecione **[!UICONTROL Connect]** e deixe algum tempo para que a nova conexão seja estabelecida.
+Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e [!DNL ServiceNow] credenciais. Quando terminar, selecione **[!UICONTROL Connect]** e, em seguida, permitir que a nova conexão seja estabelecida.
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta [!DNL ServiceNow] com a qual deseja se conectar e selecione **[!UICONTROL Próximo]** para prosseguir.
+Para conectar uma conta existente, selecione a [!DNL ServiceNow] conta com a qual deseja se conectar e selecione **[!UICONTROL Próximo]** para continuar.
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta [!DNL ServiceNow]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados para [!DNL Platform]](../../dataflow/customer-success.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com seu [!DNL ServiceNow] conta. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer os dados para [!DNL Platform]](../../dataflow/customer-success.md).

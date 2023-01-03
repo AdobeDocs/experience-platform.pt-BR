@@ -5,7 +5,7 @@ title: Respeito do consentimento em segmentos
 topic-legacy: overview
 description: Saiba como honrar as preferências de consentimento do cliente para coleta de dados pessoais e compartilhamento em operações do segmento.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%
@@ -14,25 +14,25 @@ ht-degree: 0%
 
 # Respeito do consentimento em segmentos
 
-Regulamentações legais de privacidade como a [!DNL California Consumer Privacy Act] (CCPA) oferecem aos consumidores o direito de optar por não coletar ou compartilhar seus dados pessoais com terceiros. A Adobe Experience Platform fornece componentes padrão do Experience Data Model (XDM), destinados a capturar essas preferências de consentimento do cliente em dados do Perfil do cliente em tempo real.
+Regulamentos legais de privacidade, como o [!DNL California Consumer Privacy Act] (CCPA) confere aos consumidores o direito de optarem por não terem os seus dados pessoais recolhidos ou partilhados com terceiros. A Adobe Experience Platform fornece componentes padrão do Experience Data Model (XDM), destinados a capturar essas preferências de consentimento do cliente em dados do Perfil do cliente em tempo real.
 
 Se um cliente tiver retirado ou retido o consentimento de ter seus dados pessoais compartilhados, é importante que sua organização respeite essa preferência ao gerar públicos-alvo para atividades de marketing. Este documento descreve como integrar valores de consentimento do cliente em suas definições de segmento usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
-O cumprimento dos valores de consentimento do cliente requer uma compreensão dos vários serviços [!DNL Adobe Experience Platform] envolvidos. Antes de iniciar este tutorial, verifique se você está familiarizado com os seguintes serviços:
+O cumprimento dos valores de consentimento do cliente requer uma compreensão das várias [!DNL Adobe Experience Platform] serviços envolvidos. Antes de iniciar este tutorial, verifique se você está familiarizado com os seguintes serviços:
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos de público-alvo a partir de  [!DNL Real-time Customer Profile] dados.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos de público-alvo a partir de [!DNL Real-Time Customer Profile] dados.
 
 ## Campos de esquema de consentimento
 
-Para honrar os consentimentos e preferências do cliente, um dos esquemas que faz parte do esquema de união [!UICONTROL Perfil individual XDM] deve conter o grupo de campos padrão **[!UICONTROL Consentimentos e Preferências]**.
+Para honrar os consentimentos e as preferências do cliente, um dos esquemas que faz parte de [!UICONTROL Perfil individual XDM] o schema de união deve conter o grupo de campos padrão **[!UICONTROL Consentimentos e preferências]**.
 
-Para obter detalhes sobre a estrutura e o caso de uso pretendido de cada atributo fornecido pelo grupo de campos, consulte o [guia de referência de consentimentos e preferências](../xdm/field-groups/profile/consents.md). Para obter instruções passo a passo sobre como adicionar um grupo de campos a um esquema, consulte o [Guia da interface do usuário XDM](../xdm/ui/resources/schemas.md#add-field-groups).
+Para obter detalhes sobre a estrutura e o caso de uso pretendido de cada atributo fornecido pelo grupo de campos, consulte o [guia de referência de consentimentos e preferências](../xdm/field-groups/profile/consents.md). Para obter instruções passo a passo sobre como adicionar um grupo de campos a um schema, consulte o [Guia da interface do usuário do XDM](../xdm/ui/resources/schemas.md#add-field-groups).
 
-Depois que o grupo de campos tiver sido adicionado a um [Esquema habilitado para perfil](../xdm/ui/resources/schemas.md#profile) e seus campos tiverem sido usados para assimilar dados de consentimento do seu aplicativo de experiência, você poderá usar os atributos de consentimento coletados nas regras do segmento.
+Depois que o grupo de campos é adicionado a um [Esquema habilitado para perfil](../xdm/ui/resources/schemas.md#profile) e seus campos tiverem sido usados para assimilar dados de consentimento do aplicativo de experiência, você poderá usar os atributos de consentimento coletados nas regras do segmento.
 
 ## Manuseio de consentimento na segmentação
 
@@ -45,29 +45,29 @@ As etapas abaixo demonstram como adicionar os campos apropriados para dois tipos
 
 >[!NOTE]
 >
->Embora este guia se concentre nos dois sinalizadores de opt-out acima, você pode configurar seus segmentos para incorporar também sinais de consentimento adicionais. O [guia de referência de consentimento e preferências](../xdm/field-groups/profile/consents.md) fornece mais informações sobre cada uma dessas opções e seus casos de uso planejados.
+>Embora este guia se concentre nos dois sinalizadores de opt-out acima, você pode configurar seus segmentos para incorporar também sinais de consentimento adicionais. O [guia de referência de consentimentos e preferências](../xdm/field-groups/profile/consents.md) O fornece mais informações sobre cada uma dessas opções e seus casos de uso planejados.
 
-Ao criar um segmento na interface do usuário, em **[!UICONTROL Atributos]**, navegue até **[!UICONTROL Perfil individual XDM]** e selecione **[!UICONTROL Consentimentos e Preferências]**. Aqui, você pode ver as opções para **[!UICONTROL Coleta de dados]** e **[!UICONTROL Compartilhar dados]**.
+Ao criar um segmento na interface do usuário, em **[!UICONTROL Atributos]**, navegue até **[!UICONTROL Perfil individual XDM]**, em seguida selecione **[!UICONTROL Consentimentos e preferências]**. Aqui, você pode ver as opções de **[!UICONTROL Coleta de dados]** e **[!UICONTROL Compartilhar dados]**.
 
 ![](./images/opt-outs/consents.png)
 
-Comece selecionando a categoria **[!UICONTROL Coleta de dados]** e arraste **[!UICONTROL Valor de escolha]** para o construtor de segmentos. Ao adicionar o atributo ao segmento, você pode especificar os [valores de consentimento](../xdm/field-groups/profile/consents.md#choice-values) que devem ser incluídos ou excluídos.
+Comece selecionando o **[!UICONTROL Coleta de dados]** categoria e arraste **[!UICONTROL Valor da escolha]** no construtor de segmentos. Ao adicionar o atributo ao segmento, você pode especificar a variável [valores de consentimento](../xdm/field-groups/profile/consents.md#choice-values) que devem ser incluídas ou excluídas.
 
 ![](./images/opt-outs/consent-values.png)
 
-Uma abordagem é excluir todos os clientes que optaram por não ter seus dados coletados. Para fazer isso, defina o operador como **[!UICONTROL não é igual a]** e escolha os seguintes valores:
+Uma abordagem é excluir todos os clientes que optaram por não ter seus dados coletados. Para fazer isso, defina o operador como **[!UICONTROL não é igual]** e escolha os seguintes valores:
 
 * **[!UICONTROL Não (opt-out)]**
 * **[!UICONTROL Padrão de Não (opt out)]**
-* **[!UICONTROL Desconhecido]**  (se o consentimento for presumido como retido, caso contrário desconhecido)
+* **[!UICONTROL Desconhecido]** (se o consentimento for presumido como retido, caso contrário desconhecido)
 
 ![](./images/opt-outs/collect.png)
 
-Em **[!UICONTROL Atributos]** no painel à esquerda, navegue de volta para a seção **[!UICONTROL Consentimentos e Preferências]** e selecione **[!UICONTROL Compartilhar dados]**. Arraste seu **[!UICONTROL Valor de escolha]** correspondente para a tela e selecione os mesmos valores que aqueles para o valor de escolha [!UICONTROL Coleta de dados]. Certifique-se de que uma relação **[!UICONTROL Or]** seja estabelecida entre os dois atributos.
+Em **[!UICONTROL Atributos]** no painel à esquerda, navegue de volta para a **[!UICONTROL Consentimentos e preferências]** e selecione **[!UICONTROL Compartilhar dados]**. Arraste o correspondente **[!UICONTROL Valor da escolha]** na tela e selecione os mesmos valores para a [!UICONTROL Coleta de dados] valor de escolha. Certifique-se de que **[!UICONTROL Ou]** é estabelecida entre os dois atributos.
 
 ![](./images/opt-outs/share.png)
 
-Com os valores de consentimento **[!UICONTROL Data Collection]** e **[!UICONTROL Share Data]** adicionados ao segmento, todos os clientes que optaram por não ter seus dados usados serão excluídos do público resultante. A partir daqui, você pode continuar personalizando a definição do segmento antes de selecionar **[!UICONTROL Salvar]** para concluir o processo.
+Com ambas as variáveis **[!UICONTROL Coleta de dados]** e **[!UICONTROL Compartilhar dados]** valores de consentimento adicionados ao segmento, quaisquer clientes que optaram por não ter seus dados usados serão excluídos do público resultante. A partir daqui, você pode continuar personalizando a definição do segmento antes de selecionar **[!UICONTROL Salvar]** para concluir o processo.
 
 ## Próximas etapas
 

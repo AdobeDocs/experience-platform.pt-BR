@@ -2,7 +2,8 @@
 keywords: Experience Platform, home, tópicos populares, Oracle Service Cloud, nuvem de serviço do oracle
 title: Criar uma conexão de origem na nuvem do serviço do Oracle na interface do usuário
 description: Saiba como criar uma conexão de origem da Nuvem do serviço do Oracle usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 8e4f2170489d7e4e73bbc726e3253fac97c9f9f3
+exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%
@@ -24,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 Se você já tiver uma conexão de origem válida do Oracle Service Cloud, ignore o restante deste documento e prossiga para o tutorial em [configuração de um fluxo de dados](../../dataflow/customer-success.md)
 

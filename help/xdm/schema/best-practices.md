@@ -5,7 +5,7 @@ title: Práticas Recomendadas Para A Modelagem De Dados
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 2%
@@ -86,8 +86,8 @@ Se quiser analisar como determinados atributos em uma entidade são alterados ao
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | 1 de outubro, 10:32 |
 | 1234567 | Remover | 275098 | 1 | 1 de outubro, 10:33 |
-| 1234567 | Adicionar | 486502 | 1 | 1 de outubro, 10:41 |
-| 1234567 | Adicionar | 910482 | 5 | 3 de outubro de 2015 |
+| 1234567 | Add | 486502 | 1 | 1 de outubro, 10:41 |
+| 1234567 | Add | 910482 | 5 | 3 de outubro de 2015 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -151,12 +151,12 @@ A primeira abordagem seria incluir uma matriz de subscrições como atributos na
 
 <img src="../images/best-practices/profile-schema.png" width="800"><br>
 
-**Prós**
+**Pontos positivos**
 
 * A segmentação é viável para o caso de uso pretendido.
 * O schema preservará apenas os registros de subscrição mais recentes de um cliente.
 
-**Desvantagens**
+**Pontos negativos**
 
 * Toda a matriz deve ser reiniciada sempre que ocorrerem alterações em qualquer campo da matriz.
 * Se diferentes fontes de dados ou unidades de negócios estiverem alimentando dados no array, será desafiador manter o storage atualizado mais recente sincronizado em todos os canais.
@@ -167,12 +167,12 @@ A segunda abordagem seria usar esquemas de eventos para representar assinaturas.
 
 <img src="../images/best-practices/event-schema.png" width="800"><br>
 
-**Prós**
+**Pontos positivos**
 
 * As regras de segmentação podem ser mais flexíveis (como encontrar todos os clientes que alteraram suas subscrições nos últimos 30 dias).
 * Quando o status de assinatura de um cliente é alterado, não é mais necessário atualizar uma matriz longa e potencialmente complexa dentro dos atributos do perfil do cliente. Isso é especialmente útil se alterações simultâneas na lista de assinaturas do cliente estiverem ocorrendo de várias fontes.
 
-**Desvantagens**
+**Pontos negativos**
 
 * A segmentação se torna mais complexa para o caso de uso pretendido original (identificando o status das assinaturas mais recentes dos clientes). O segmento agora precisa de lógica adicional para sinalizar o último evento de assinatura para um cliente para verificar seu status.
 * Os eventos têm um risco maior de expirar automaticamente e ser removidos da loja de perfis. Consulte o guia sobre [Expirações de evento de experiência](../../profile/event-expirations.md) para obter mais informações.
@@ -205,7 +205,7 @@ Se você não tiver certeza se um campo específico é necessário para incluir 
 
 ### Campos de identidade
 
-No Experience Platform, os campos XDM marcados como identidades são usados para unir informações sobre clientes individuais provenientes de várias fontes de dados. Embora um schema possa ter vários campos marcados como identidades, uma única identidade primária deve ser definida para que o schema seja ativado para uso em [!DNL Real-time Customer Profile]. Consulte a seção sobre [campos de identidade](./composition.md#identity) nas noções básicas da composição do schema para obter informações mais detalhadas sobre o caso de uso desses campos.
+No Experience Platform, os campos XDM marcados como identidades são usados para unir informações sobre clientes individuais provenientes de várias fontes de dados. Embora um schema possa ter vários campos marcados como identidades, uma única identidade primária deve ser definida para que o schema seja ativado para uso em [!DNL Real-Time Customer Profile]. Consulte a seção sobre [campos de identidade](./composition.md#identity) nas noções básicas da composição do schema para obter informações mais detalhadas sobre o caso de uso desses campos.
 
 Ao projetar seus esquemas, qualquer chave primária nas tabelas do banco de dados relacional provavelmente será candidata para identidades primárias. Outros exemplos de campos de identidade aplicáveis são endereços de email do cliente, números de telefone, IDs de conta e [ECID](../../identity-service/ecid.md).
 

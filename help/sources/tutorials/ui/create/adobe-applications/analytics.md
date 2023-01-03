@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%
@@ -290,12 +290,12 @@ Para excluir um fluxo de dados, direcione para [!UICONTROL Fluxos de dados] e, e
 
 ## Próximas etapas e recursos adicionais
 
-Depois que a conexão é criada, o fluxo de dados é criado automaticamente para conter os dados recebidos e preencher um conjunto de dados com o esquema selecionado. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a ingestão inicial for concluída, [!DNL Analytics] dados e ser usado por serviços de plataforma downstream, como [!DNL Real-time Customer Profile] e Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, o fluxo de dados é criado automaticamente para conter os dados recebidos e preencher um conjunto de dados com o esquema selecionado. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a ingestão inicial for concluída, [!DNL Analytics] dados e ser usado por serviços de plataforma downstream, como [!DNL Real-Time Customer Profile] e Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] visão geral](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace] visão geral](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service] visão geral](../../../../../query-service/home.md)
+* [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Visão geral do [!DNL Segmentation Service]](../../../../../segmentation/home.md)
+* [Visão geral do [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
+* [Visão geral do [!DNL Query Service]](../../../../../query-service/home.md)
 
 O vídeo a seguir é destinado a respaldar a compreensão da assimilação de dados pelo uso do conector do Adobe Analytics Source:
 

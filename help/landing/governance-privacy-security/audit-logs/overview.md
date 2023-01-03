@@ -2,10 +2,10 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '944'
-ht-degree: 15%
+ht-degree: 27%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 15%
 
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário para vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas na plataforma e ajudar sua empresa a cumprir com eficácia as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 
-Em um sentido básico, um log de auditoria informa **who** executado **what** e **when**. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação.
+Basicamente, um log de auditoria informa **quem** executou **qual** ação e **quando**. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação.
 
 Este documento aborda logs de auditoria na Platform, incluindo como visualizá-los e gerenciá-los na interface do usuário ou na API.
 
@@ -61,7 +61,7 @@ A tabela a seguir descreve quais ações, em quais recursos do , são registrada
 
 ## Acesso a logs de auditoria
 
-Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleta de log.
+Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleção de log.
 
 Para visualizar e exportar logs de auditoria, é necessário ter o **[!UICONTROL Exibir registro de atividades do usuário]** permissão de controle de acesso concedida (encontrada no [!UICONTROL Governança de dados] categoria). Para saber como gerenciar permissões individuais para recursos da plataforma, consulte [documentação de controle de acesso](../../../access-control/home.md).
 
@@ -114,7 +114,7 @@ Na caixa de diálogo exibida, selecione o formato preferido (ou **[!UICONTROL CS
 
 ## Gerenciamento de logs de auditoria na API
 
-Todas as ações que você pode executar na interface do usuário também podem ser realizadas usando chamadas de API. Consulte a [Documento de referência da API](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obter mais informações.
+Todas as ações que você pode executar na interface do usuário também podem ser realizadas usando chamadas de API. Consulte a [documentação de referência da API do ](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obter mais informações.
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 

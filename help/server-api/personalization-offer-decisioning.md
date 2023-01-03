@@ -2,7 +2,7 @@
 title: Personalização via Offer Decisioning
 description: Saiba como usar a API do servidor para entregar e renderizar experiências personalizadas pelo Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Consulte a [guia sobre como adicionar serviços a um armazenamento de dados](../
 
 O [!DNL Offer Decision Engine] usa dados e [Perfis do cliente em tempo real](../profile/home.md), juntamente com o [!DNL Offer Library], para fornecer ofertas aos clientes e canais certos na hora certa.
 
-Para saber mais sobre o [!DNL Offer Decisioning Engine], consulte os [documentação](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html).
+Para saber mais sobre o [!DNL Offer Decisioning Engine], consulte os [documentação](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=pt-BR).
 
 Depois [configuração do armazenamento de dados](#configure-your-datastream), você deve definir os escopos de decisão a serem usados na campanha de personalização.
 

@@ -6,66 +6,66 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Armazenamento de Arquivos do Azure usando a interface do usuário do Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
 
 ---
 
-# Criar uma conexão de origem [!DNL Azure File Storage] na interface do usuário
+# Crie um [!DNL Azure File Storage] conexão de origem na interface do usuário
 
-Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para autenticar um conector de origem [!DNL Azure File Storage] usando a interface do usuário [!DNL Platform].
+Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para a autenticação de um [!DNL Azure File Storage] conector de origem usando o [!DNL Platform] interface do usuário.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   - [Noções básicas da composição](../../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) do Editor de esquema: Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   - [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão válida [!DNL Azure File Storage], poderá ignorar o restante deste documento e prosseguir para o tutorial em [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
+Se você já tiver um [!DNL Azure File Storage] , você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
 ### Obter credenciais necessárias
 
-Para autenticar seu conector de origem [!DNL Azure File Storage], você deve fornecer valores para as seguintes propriedades de conexão:
+Para autenticar seu [!DNL Azure File Storage] conector de origem, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `host` | O endpoint da instância [!DNL Azure File Storage] que você está acessando. |
-| `userId` | O usuário com acesso suficiente ao endpoint [!DNL Azure File Storage]. |
-| `password` | A chave de acesso [!DNL Azure File Storage]. |
+| `host` | O terminal da [!DNL Azure File Storage] instância que você está acessando. |
+| `userId` | O usuário com acesso suficiente ao [!DNL Azure File Storage] endpoint . |
+| `password` | O [!DNL Azure File Storage] chave de acesso. |
 
-Para obter mais informações sobre a introdução, consulte [this [!DNL Azure File Storage] document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+Para obter mais informações sobre a introdução, consulte [this [!DNL Azure File Storage] documento](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
-## Conecte sua conta [!DNL Azure File Storage]
+## Conecte seu [!DNL Azure File Storage] account
 
-Depois de coletar suas credenciais necessárias, siga as etapas abaixo para vincular sua conta [!DNL Azure File Storage] a [!DNL Platform].
+Depois de reunir suas credenciais necessárias, siga as etapas abaixo para vincular seus [!DNL Azure File Storage] para [!DNL Platform].
 
-Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e depois selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o **[!UICONTROL Fontes]** espaço de trabalho. O **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Bancos de Dados]**, selecione **[!UICONTROL Armazenamento de Arquivos do Azure]**. Se esta for a primeira vez que você usa esse conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Add data]** para criar um novo conector [!DNL Azure File Storage].
+Em **[!UICONTROL Bancos de dados]** categoria , selecione **[!UICONTROL Armazenamento de Arquivos do Azure]**. Se esta for a primeira vez que você usa esse conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Azure File Storage] conector.
 
 ![catálogo](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 
-A página **[!UICONTROL Conectar-se ao Armazenamento de Arquivos do Azure]** é exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+O **[!UICONTROL Conectar-se ao Armazenamento de Arquivos do Azure]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
 
 ### Nova conta
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais [!DNL Azure File Storage]. Quando terminar, selecione **[!UICONTROL Connect]** e deixe algum tempo para que a nova conexão seja estabelecida.
+Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e [!DNL Azure File Storage] credenciais. Quando terminar, selecione **[!UICONTROL Connect]** e, em seguida, permitir que a nova conexão seja estabelecida.
 
 ![connect](../../../../images/tutorials/create/azure-file-storage/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta [!DNL Azure File Storage] com a qual deseja se conectar e selecione **[!UICONTROL Próximo]** para prosseguir.
+Para conectar uma conta existente, selecione a [!DNL Azure File Storage] conta com a qual deseja se conectar e selecione **[!UICONTROL Próximo]** para continuar.
 
 ![existente](../../../../images/tutorials/create/azure-file-storage/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta [!DNL Azure File Storage]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do armazenamento de nuvem para [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com seu [!DNL Azure File Storage] conta. Agora você pode continuar para o próximo tutorial e [configure um fluxo de dados para trazer dados do armazenamento na nuvem para [!DNL Platform]](../../dataflow/batch/cloud-storage.md).

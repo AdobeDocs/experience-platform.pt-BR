@@ -5,7 +5,7 @@ breadcrumb-title: Guia do Data Science Workspace
 user-guide-description: Use o aprendizado de máquina para desenvolver, treinar e pontuar modelos e receitas com Adobe Sensei e notebooks JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 16%

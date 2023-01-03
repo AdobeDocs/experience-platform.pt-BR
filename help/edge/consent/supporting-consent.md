@@ -3,7 +3,7 @@ title: Suporte às preferências de consentimento do cliente usando o SDK da Web
 description: Saiba como oferecer suporte às preferências de consentimento com o SDK da Web da Adobe Experience Platform.
 keywords: consentimento; defaultConsent; consentimento padrão; setConsent; grupo de campos Privacidade de perfil; grupo de campos Privacidade de eventos de experiência; grupo de campos Privacidade;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%

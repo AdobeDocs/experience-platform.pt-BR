@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite acessar os dados do Perfil do cliente em tempo real usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como "perfis", usando a API de perfil.
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Ponto de extremidade de entidades (acesso do perfil)
 
-O Adobe Experience Platform permite acessar [!DNL Real-time Customer Profile] dados usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando o [!DNL Platform] Por favor, consulte a [Guia do usuário do perfil](../ui/user-guide.md).
+O Adobe Experience Platform permite acessar [!DNL Real-Time Customer Profile] dados usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando o [!DNL Platform] Por favor, consulte a [Guia do usuário do perfil](../ui/user-guide.md).
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte do [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Acessar dados do perfil por identidade
 
@@ -888,7 +888,7 @@ Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver
 
 ## Próximas etapas
 
-Ao seguir este guia, você acessou com êxito [!DNL Real-time Customer Profile] campos de dados, perfis e dados de séries de tempo. Para saber como acessar outros recursos de dados armazenados em [!DNL Platform], consulte o [Visão geral do acesso a dados](../../data-access/home.md).
+Ao seguir este guia, você acessou com êxito [!DNL Real-Time Customer Profile] campos de dados, perfis e dados de séries de tempo. Para saber como acessar outros recursos de dados armazenados em [!DNL Platform], consulte o [Visão geral do acesso a dados](../../data-access/home.md).
 
 ## Apêndice {#appendix}
 

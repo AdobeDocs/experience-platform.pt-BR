@@ -3,7 +3,7 @@ keywords: segmentos rtcdp; rtcdp do construtor de segmentos; segmento rtcdp; rtc
 title: Customer AI no Real-time Customer Data Platform
 description: Uma visão geral do Customer AI e como ele pode ajudar na geração de pontuações para resultados específicos, como conversões ou churn.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 6%

@@ -5,7 +5,7 @@ title: Configurar um conjunto de dados para capturar o consentimento e os dados 
 topic-legacy: getting started
 description: Saiba como configurar um esquema e conjunto de dados do Experience Data Model (XDM) para capturar dados de consentimento e preferência no Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurar um conjunto de dados para capturar dados de consentimento e preferência
 
-Para que o Adobe Experience Platform processe seus dados de consentimento/preferência do cliente, esses dados devem ser enviados para um conjunto de dados cujo esquema contenha campos relacionados a consentimentos e outras permissões. Especificamente, esse conjunto de dados deve se basear no [!DNL XDM Individual Profile] e habilitado para uso em [!DNL Real-time Customer Profile].
+Para que o Adobe Experience Platform processe seus dados de consentimento/preferência do cliente, esses dados devem ser enviados para um conjunto de dados cujo esquema contenha campos relacionados a consentimentos e outras permissões. Especificamente, esse conjunto de dados deve se basear no [!DNL XDM Individual Profile] e habilitado para uso em [!DNL Real-Time Customer Profile].
 
 Este documento fornece etapas para configurar um conjunto de dados para processar dados de consentimento no Experience Platform. Para obter uma visão geral do fluxo de trabalho completo para processar dados de consentimento/preferência no Platform, consulte [visão geral do processamento de consentimento](./overview.md).
 
@@ -133,7 +133,7 @@ Se o schema editado for usado pela variável [!UICONTROL Conjunto de dados de pe
 
 ## Criar um conjunto de dados com base no esquema de consentimento {#dataset}
 
-Depois de criar um schema com campos de consentimento, você deve criar um conjunto de dados que, em última análise, assimilará os dados de consentimento dos clientes. Esse conjunto de dados deve ser habilitado para [!DNL Real-time Customer Profile].
+Depois de criar um schema com campos de consentimento, você deve criar um conjunto de dados que, em última análise, assimilará os dados de consentimento dos clientes. Esse conjunto de dados deve ser habilitado para [!DNL Real-Time Customer Profile].
 
 Para começar, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda, selecione **[!UICONTROL Criar conjunto de dados]** no canto superior direito.
 
@@ -151,7 +151,7 @@ O **[!UICONTROL Configurar conjunto de dados]** será exibida. Fornecer um nome 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-A página de detalhes do conjunto de dados recém-criado é exibida. Se o conjunto de dados se basear no esquema da série de tempo, o processo será concluído. Se o conjunto de dados se basear no esquema de registro, a etapa final no processo será habilitar o conjunto de dados para uso em [!DNL Real-time Customer Profile].
+A página de detalhes do conjunto de dados recém-criado é exibida. Se o conjunto de dados se basear no esquema da série de tempo, o processo será concluído. Se o conjunto de dados se basear no esquema de registro, a etapa final no processo será habilitar o conjunto de dados para uso em [!DNL Real-Time Customer Profile].
 
 No painel direito, selecione o **[!UICONTROL Perfil]** alternar.
 

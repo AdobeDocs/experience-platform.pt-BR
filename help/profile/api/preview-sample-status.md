@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API, visualização, amostra
 title: Visualizar ponto de extremidade da API de status de amostra (Visualização de perfil)
-description: O endpoint de status de amostra de visualização da API do Perfil do cliente em tempo real permite visualizar a amostra mais recente e bem-sucedida de seus dados de Perfil, listar a distribuição de perfis por conjunto de dados e por identidade e gerar relatórios que mostram a sobreposição de conjuntos de dados, a sobreposição de identidades e perfis não corrigidos.
+description: O ponto de extremidade de status de amostra de visualização da API do Perfil do cliente em tempo real permite visualizar a amostra mais recente e bem-sucedida de seus dados de Perfil, listar a distribuição de perfis por conjunto de dados e por identidade e gerar relatórios que mostram a sobreposição de conjuntos de dados, a sobreposição de identidades e perfis não corrigidos.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Os resultados desse trabalho de amostra podem ser exibidos usando o `/previewsam
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte do [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Fragmentos de perfil versus perfis mesclados
 

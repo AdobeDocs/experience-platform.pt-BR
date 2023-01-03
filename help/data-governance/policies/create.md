@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Saiba como criar uma política de governança de dados usando a API do Serviço de política .
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 3%
@@ -423,6 +423,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e os detalhes da polít
 
 Ao seguir este tutorial, você criou com êxito uma política de uso de dados para uma ação de marketing. Agora você pode continuar para o tutorial em [aplicação de políticas de uso de dados](../enforcement/api-enforcement.md) para saber como verificar violações de política e lidar com elas no aplicativo de experiência.
 
-Para obter mais informações sobre as diferentes operações disponíveis no [!DNL Policy Service] API, consulte o [Guia do desenvolvedor do Serviço de políticas](../api/getting-started.md). Para obter informações sobre como aplicar políticas de [!DNL Real-time Customer Profile] dados, consulte o tutorial em [impor a conformidade do uso de dados para segmentos de público-alvo](../../segmentation/tutorials/governance.md).
+Para obter mais informações sobre as diferentes operações disponíveis no [!DNL Policy Service] API, consulte o [Guia do desenvolvedor do Serviço de políticas](../api/getting-started.md). Para obter informações sobre como aplicar políticas de [!DNL Real-Time Customer Profile] dados, consulte o tutorial em [impor a conformidade do uso de dados para segmentos de público-alvo](../../segmentation/tutorials/governance.md).
 
 Para saber como gerenciar políticas de uso na [!DNL Experience Platform] interface do usuário, consulte a [guia do usuário de política](user-guide.md).

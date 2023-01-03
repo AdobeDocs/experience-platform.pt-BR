@@ -4,16 +4,16 @@ title: Visão geral do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos relacionados à série de tempo. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] visão geral
+# Visão geral do [!DNL Real-Time Customer Profile]
 
-O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-time Customer Profile], você pode ver uma visualização holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar os dados do cliente em uma visualização unificada que oferece uma conta acionável com carimbo de data e hora de cada interação com o cliente. Essa visão geral ajudará você a entender a função e o uso de [!DNL Real-time Customer Profile] em [!DNL Experience Platform].
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-Time Customer Profile], você pode ver uma visualização holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar os dados do cliente em uma visualização unificada que oferece uma conta acionável com carimbo de data e hora de cada interação com o cliente. Essa visão geral ajudará você a entender a função e o uso de [!DNL Real-Time Customer Profile] em [!DNL Experience Platform].
 
 ## [!DNL Profile] no Experience Platform
 
@@ -23,7 +23,7 @@ A relação entre o Perfil do cliente em tempo real e outros serviços no Experi
 
 ## Como entender perfis
 
-[!DNL Real-time Customer Profile] mescla dados de vários sistemas corporativos e fornece acesso a esses dados na forma de perfis de clientes com eventos de séries cronológicas relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais. As seções a seguir destacam alguns dos conceitos principais que você deve entender para criar e manter perfis com eficácia no Platform.
+[!DNL Real-Time Customer Profile] mescla dados de vários sistemas corporativos e fornece acesso a esses dados na forma de perfis de clientes com eventos de séries cronológicas relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais. As seções a seguir destacam alguns dos conceitos principais que você deve entender para criar e manter perfis com eficácia no Platform.
 
 ### Composição da entidade de perfil
 
@@ -40,7 +40,7 @@ Um Perfil do cliente em tempo real é composto por uma entidade principal, chama
 
 ### Armazenamento de dados do perfil
 
-Embora [!DNL Real-time Customer Profile] processa dados assimilados e usa o Adobe Experience Platform [!DNL Identity Service] para mesclar dados relacionados por meio do mapeamento de identidade, ele mantém seus próprios dados no [!DNL Profile] armazenamento de dados. O [!DNL Profile] O armazenamento é separado dos dados do catálogo no lago de dados e [!DNL Identity Service] dados no gráfico de identidade.
+Embora [!DNL Real-Time Customer Profile] processa dados assimilados e usa o Adobe Experience Platform [!DNL Identity Service] para mesclar dados relacionados por meio do mapeamento de identidade, ele mantém seus próprios dados no [!DNL Profile] armazenamento de dados. O [!DNL Profile] O armazenamento é separado dos dados do catálogo no lago de dados e [!DNL Identity Service] dados no gráfico de identidade.
 
 O armazenamento de Perfis usa uma infraestrutura Microsoft Azure Cosmos DB e o Platform Data Lake usa o armazenamento do Microsoft Azure Data Lake.
 
@@ -82,7 +82,7 @@ Para saber mais sobre as políticas de mesclagem e seu papel no Experience Platf
 
 ### Schemas da União {#profile-fragments-and-union-schemas}
 
-Um dos principais recursos do [!DNL Real-time Customer Profile] é a capacidade de unificar dados de vários canais. When [!DNL Real-time Customer Profile] for usado para acessar uma entidade, poderá fornecer uma visualização mesclada de todos os fragmentos de perfil dessa entidade em conjuntos de dados, chamada de &quot;visualização de união&quot;, e disponibilizada por meio do que é conhecido como schema de união.
+Um dos principais recursos do [!DNL Real-Time Customer Profile] é a capacidade de unificar dados de vários canais. When [!DNL Real-Time Customer Profile] for usado para acessar uma entidade, poderá fornecer uma visualização mesclada de todos os fragmentos de perfil dessa entidade em conjuntos de dados, chamada de &quot;visualização de união&quot;, e disponibilizada por meio do que é conhecido como schema de união.
 
 Para saber mais sobre schemas de união, incluindo como acessar schemas de união na interface do usuário, visite o [guia da interface do usuário do schema de união](ui/union-schema.md).
 
@@ -96,15 +96,15 @@ Atributos calculados são funções usadas para agregar dados no nível do event
 
 ## Perfis e segmentos
 
-Adobe Experience Platform [!DNL Segmentation Service] O produz os públicos-alvo necessários para potencializar as experiências de seus clientes individuais. Quando um segmento de público-alvo é criado, a ID desse segmento é adicionada à lista de associações de segmento para todos os perfis qualificados. As regras de segmento são criadas e aplicadas a [!DNL Real-time Customer Profile] dados que usam RESTful APIs e a interface do usuário do Construtor de segmento. Para saber mais sobre a segmentação, comece lendo o [Visão geral do serviço de segmentação](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] O produz os públicos-alvo necessários para potencializar as experiências de seus clientes individuais. Quando um segmento de público-alvo é criado, a ID desse segmento é adicionada à lista de associações de segmento para todos os perfis qualificados. As regras de segmento são criadas e aplicadas a [!DNL Real-Time Customer Profile] dados que usam RESTful APIs e a interface do usuário do Construtor de segmento. Para saber mais sobre a segmentação, comece lendo o [Visão geral do serviço de segmentação](../segmentation/home.md).
 
 ### Assimilação de streaming e segmentação de streaming
 
-A entrada em tempo real é disponibilizada por meio de um processo chamado assimilação de streaming. À medida que os dados do perfil e da série cronológica são assimilados, [!DNL Real-time Customer Profile] decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado segmentação de fluxo, antes de mesclá-los com dados existentes e atualizar a visualização da união. Como resultado, você pode executar instantaneamente os cálculos e tomar decisões para oferecer experiências aprimoradas e individualizadas aos clientes, à medida que eles interagem com a sua marca. Ao serem assimilados, os dados também são validados para garantir que sejam assimilados corretamente e em conformidade com o esquema no qual o conjunto de dados se baseia. Para obter mais informações sobre o que a validação é feita durante a assimilação, comece lendo o [visão geral da qualidade da assimilação de dados](../ingestion/quality/overview.md).
+A entrada em tempo real é disponibilizada por meio de um processo chamado assimilação de streaming. À medida que os dados do perfil e da série cronológica são assimilados, [!DNL Real-Time Customer Profile] decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado segmentação de fluxo, antes de mesclá-los com dados existentes e atualizar a visualização da união. Como resultado, você pode executar instantaneamente os cálculos e tomar decisões para oferecer experiências aprimoradas e individualizadas aos clientes, à medida que eles interagem com a sua marca. Ao serem assimilados, os dados também são validados para garantir que sejam assimilados corretamente e em conformidade com o esquema no qual o conjunto de dados se baseia. Para obter mais informações sobre o que a validação é feita durante a assimilação, comece lendo o [visão geral da qualidade da assimilação de dados](../ingestion/quality/overview.md).
 
 ## Projeções de borda
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente conforme as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e a torna acessível para os aplicativos. Por exemplo, aplicativos Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo as informações específicas que serão disponibilizadas na borda. Para saber mais e começar a trabalhar com projeções usando o [!DNL Real-time Customer Profile] consulte a API [guia de endpoints de projeção de borda](api/edge-projections.md).
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente conforme as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e a torna acessível para os aplicativos. Por exemplo, aplicativos Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo as informações específicas que serão disponibilizadas na borda. Para saber mais e começar a trabalhar com projeções usando o [!DNL Real-Time Customer Profile] consulte a API [guia de endpoints de projeção de borda](api/edge-projections.md).
 
 ## Inserção de dados no [!DNL Profile]
 
@@ -136,7 +136,7 @@ A Governança de dados é gerenciada em vários pontos. Isso inclui decidir em q
 
 ### Tratamento de solicitações de recusa e privacidade de dados
 
-[!DNL Experience Platform] permite que os clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no [!DNL Real-time Customer Profile]. Para obter mais informações sobre como as solicitações de recusa são tratadas, consulte a documentação em [atender às solicitações de recusa](../segmentation/consents.md).
+[!DNL Experience Platform] permite que os clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no [!DNL Real-Time Customer Profile]. Para obter mais informações sobre como as solicitações de recusa são tratadas, consulte a documentação em [atender às solicitações de recusa](../segmentation/consents.md).
 
 ## Próximas etapas e recursos adicionais
 

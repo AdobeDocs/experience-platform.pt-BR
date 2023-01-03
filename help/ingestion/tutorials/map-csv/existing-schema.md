@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM existente usando a interface do usuário do Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%
@@ -121,4 +121,4 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você mapeou com sucesso um arquivo CSV simples para um esquema XDM e o assimilou em [!DNL Platform]. Esses dados agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-time Customer Profile]. Consulte a visão geral para [[!DNL Real-time Customer Profile]](../../../profile/home.md) para obter mais informações.
+Ao seguir este tutorial, você mapeou com sucesso um arquivo CSV simples para um esquema XDM e o assimilou em [!DNL Platform]. Esses dados agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-Time Customer Profile]. Consulte a visão geral para [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obter mais informações.

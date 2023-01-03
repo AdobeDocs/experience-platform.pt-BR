@@ -5,7 +5,7 @@ title: Ponto de extremidade da API de tarefas de segmento
 topic-legacy: developer guide
 description: O endpoint de tarefas de segmento na API do Serviço de segmentação da Adobe Experience Platform permite gerenciar programaticamente tarefas de segmento para sua organização.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Ponto de extremidade de trabalhos de segmento
 
-Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a um [definição de segmento](./segment-definitions.md), bem como qualquer [políticas de mesclagem](../../profile/api/merge-policies.md) controlar como [!DNL Real-time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
+Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a um [definição de segmento](./segment-definitions.md), bem como qualquer [políticas de mesclagem](../../profile/api/merge-policies.md) controlar como [!DNL Real-Time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
 
 Este guia fornece informações para ajudá-lo a entender melhor as tarefas do segmento e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 

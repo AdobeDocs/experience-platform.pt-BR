@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Perfil do cliente em tempo real permite criar uma única visualização de clientes individuais no Adobe Experience Platform, reunindo dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Ponto de extremidade de trabalhos de exportação de perfil
 
-[!DNL Real-time Customer Profile] O permite criar uma única visualização de clientes individuais ao reunir dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional. Por exemplo, segmentos de público-alvo de [!DNL Profile] os dados podem ser exportados para ativação, e os atributos de perfil podem ser exportados para relatórios.
+[!DNL Real-Time Customer Profile] O permite criar uma única visualização de clientes individuais ao reunir dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional. Por exemplo, segmentos de público-alvo de [!DNL Profile] os dados podem ser exportados para ativação, e os atributos de perfil podem ser exportados para relatórios.
 
 Este documento fornece instruções passo a passo para criar e gerenciar tarefas de exportação usando o [API de perfil](https://www.adobe.com/go/profile-apis-en).
 
@@ -26,7 +26,7 @@ Além de criar um trabalho de exportação, você também pode acessar o [!DNL P
 
 ## Introdução
 
-Os endpoints de API usados neste guia fazem parte do [!DNL Real-time Customer Profile] API. Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+Os endpoints de API usados neste guia fazem parte do [!DNL Real-Time Customer Profile] API. Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Criar um trabalho de exportação
 
@@ -86,7 +86,7 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva, gerada pel
 
 ### Iniciar trabalho de exportação {#initiate}
 
-Depois de ter um conjunto de dados que persiste em união, você pode criar um trabalho de exportação para manter os dados do Perfil no conjunto de dados, fazendo uma solicitação de POST para a variável `/export/jobs` endpoint na API do Perfil do cliente em tempo real e fornecendo os detalhes dos dados que deseja exportar no corpo da solicitação.
+Depois de ter um conjunto de dados que persiste em união, você pode criar um trabalho de exportação para manter os dados do Perfil no conjunto de dados, fazendo uma solicitação de POST para a variável `/export/jobs` endpoint na API do perfil do cliente em tempo real e fornecendo os detalhes dos dados que deseja exportar no corpo da solicitação.
 
 **Formato da API**
 

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 2%
@@ -701,7 +701,7 @@ Depois que o fluxo de dados tiver sido criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um conector de origem para coletar dados de um aplicativo de pagamentos de forma agendada. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou um conector de origem para coletar dados de um aplicativo de pagamentos de forma agendada. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do perfil do cliente em tempo real](../../../../profile/home.md)
 * [Visão geral do Data Science Workspace](../../../../data-science-workspace/home.md)

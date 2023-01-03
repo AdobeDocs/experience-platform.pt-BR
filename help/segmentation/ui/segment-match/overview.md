@@ -5,14 +5,14 @@ title: Visão geral da correspondência de segmentos
 topic-legacy: overview
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] visão geral
+# Visão geral do [!DNL Segment Match]
 
 A Correspondência de segmentos do Adobe Experience Platform é um serviço de compartilhamento de segmentos que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade. [!DNL Segment Match] O usa padrões de privacidade da plataforma e identificadores pessoais, como emails com hash, números de telefone com hash e identificadores de dispositivos, como IDFAs e GAIDs.
 
@@ -37,7 +37,7 @@ O primeiro passo para começar a usar o [!DNL Segment Match] O é para garantir 
 
 Os namespaces de identidade são um componente do [Serviço de identidade da Adobe Experience Platform](../../../identity-service/home.md). Cada identidade do cliente contém um namespace associado que indica o contexto da identidade. Por exemplo, um namespace pode distinguir um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica.
 
-Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Ao corresponder dados de registro em fragmentos de perfil (como quando [!DNL Real-time Customer Profile] une os dados do perfil), o valor de identidade e o namespace devem corresponder.
+Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Ao corresponder dados de registro em fragmentos de perfil (como quando [!DNL Real-Time Customer Profile] une os dados do perfil), o valor de identidade e o namespace devem corresponder.
 
 No contexto de [!DNL Segment Match], os namespaces são usados no processo de sobreposição ao compartilhar dados.
 
@@ -204,4 +204,4 @@ Ao ler este documento, você conseguiu entender [!DNL Segment Match], seus recur
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] visão geral](../../../profile/home.md)
+* [Visão geral do [!DNL Real-Time Customer Profile]](../../../profile/home.md)

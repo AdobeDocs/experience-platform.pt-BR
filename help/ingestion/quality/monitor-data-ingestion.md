@@ -5,7 +5,7 @@ title: Monitoramento da assimilação de dados
 topic-legacy: overview
 description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Este guia do usuário fornece etapas sobre como monitorar seus dados na interfac
 
 No [Interface do usuário do Experience Platform](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo, seguido por **[!UICONTROL Streaming completo]**.
 
-O **[!UICONTROL Streaming completo]** página de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que exibe a taxa de eventos transmitidos sendo recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados de entrada.
+O **[!UICONTROL Streaming completo]** página de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que exibe a taxa de eventos transmitidos sendo recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-Time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados de entrada.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

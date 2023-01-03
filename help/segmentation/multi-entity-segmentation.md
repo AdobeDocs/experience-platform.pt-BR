@@ -5,7 +5,7 @@ title: Visão geral da segmentação de várias entidades
 topic-legacy: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais com base em produtos, lojas ou outras classes que não sejam de perfil. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos no esquema Perfil.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Visão geral da segmentação de várias entidades
 
-A segmentação de várias entidades é um recurso avançado disponível como parte do Adobe Experience Platform [!DNL Segmentation Service]. Esse recurso permite estender [!DNL Real-time Customer Profile] dados com dados adicionais de &quot;não pessoas&quot; (também conhecidos como &quot;entidades de dimensão&quot;) que sua organização pode definir, como dados relacionados a produtos ou lojas. A segmentação de várias entidades oferece flexibilidade ao definir segmentos de público-alvo com base em dados relevantes para suas necessidades comerciais exclusivas e pode ser executada sem ter experiência em consultar bancos de dados. Com a segmentação de várias entidades, é possível adicionar dados principais aos seus segmentos sem precisar fazer alterações caras nos fluxos de dados ou esperar uma mesclagem de dados de back-end.
+A segmentação de várias entidades é um recurso avançado disponível como parte do Adobe Experience Platform [!DNL Segmentation Service]. Esse recurso permite estender [!DNL Real-Time Customer Profile] dados com dados adicionais de &quot;não pessoas&quot; (também conhecidos como &quot;entidades de dimensão&quot;) que sua organização pode definir, como dados relacionados a produtos ou lojas. A segmentação de várias entidades oferece flexibilidade ao definir segmentos de público-alvo com base em dados relevantes para suas necessidades comerciais exclusivas e pode ser executada sem ter experiência em consultar bancos de dados. Com a segmentação de várias entidades, é possível adicionar dados principais aos seus segmentos sem precisar fazer alterações caras nos fluxos de dados ou esperar uma mesclagem de dados de back-end.
 
 ## Introdução
 
 A segmentação de várias entidades requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos na segmentação. Antes de continuar com este guia, reveja a seguinte documentação:
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
    * [Medidas de proteção de perfil](../profile/guardrails.md): Práticas recomendadas para a criação de modelos de dados compatíveis com o [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos a partir de [!DNL Real-time Customer Profile] dados.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos a partir de [!DNL Real-Time Customer Profile] dados.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../xdm/schema/composition.md#union): Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform. Para utilizar melhor a Segmentação, verifique se os dados são assimilados como perfis e eventos de acordo com a variável [práticas recomendadas para modelagem de dados](../xdm/schema/best-practices.md).
 

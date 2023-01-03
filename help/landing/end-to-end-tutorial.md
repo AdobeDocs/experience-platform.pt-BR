@@ -3,10 +3,11 @@ keywords: Experience Platform, home, tópicos populares, CJA, análise de jornad
 title: Fluxo de trabalho de exemplo completo do Adobe Experience Platform
 topic-legacy: getting started
 description: Saiba mais sobre o fluxo de trabalho completo básico do Adobe Experience Platform em alto nível.
-source-git-commit: 9ed521c4e2ebcd20da662e93b9591ef690f51c5e
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -26,7 +27,7 @@ Esse fluxo de trabalho completo usa vários serviços da Adobe Experience Platfo
 - [[!DNL Identity Service]](../identity-service/home.md): Fornece uma visão abrangente de seus clientes e seu comportamento ao unir identidades em dispositivos e sistemas.
 - [Fontes](../sources/home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] permite dividir os dados armazenados em [!DNL Experience Platform] que se relaciona a indivíduos (como clientes, clientes potenciais, usuários ou organizações) em grupos menores.
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 - [Conjuntos de dados](../catalog/datasets/overview.md): A construção de armazenamento e gerenciamento para a persistência de dados em [!DNL Experience Platform].
 - [Destinos](../destinations/home.md): Os destinos são integrações pré-criadas com aplicativos comumente usados que permitem a ativação simplificada de dados da Platform para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 
@@ -42,7 +43,7 @@ O tutorial acima mostra como definir campos de identidade para seus esquemas. Um
 
 Depois de criar um esquema XDM, você pode começar a trazer seus dados para o sistema.
 
-Todos os dados trazidos para a Platform são armazenados em conjuntos de dados individuais após a assimilação. Um conjunto de dados é uma coleção de registros de dados que mapeiam para um esquema XDM específico. Antes que os dados possam ser usados pelo [!DNL Real-time Customer Profile], o conjunto de dados em questão deve ser configurado especificamente. Para obter instruções completas sobre como ativar um conjunto de dados para o Perfil, consulte o [Guia da interface do usuário de conjuntos de dados](../catalog/datasets/user-guide.md#enable-profile) e [tutorial da API de configuração do conjunto de dados](../profile/tutorials/dataset-configuration.md). Após configurar o conjunto de dados, você pode começar a assimilar dados nele.
+Todos os dados trazidos para a Platform são armazenados em conjuntos de dados individuais após a assimilação. Um conjunto de dados é uma coleção de registros de dados que mapeiam para um esquema XDM específico. Antes que os dados possam ser usados pelo [!DNL Real-Time Customer Profile], o conjunto de dados em questão deve ser configurado especificamente. Para obter instruções completas sobre como ativar um conjunto de dados para o Perfil, consulte o [Guia da interface do usuário de conjuntos de dados](../catalog/datasets/user-guide.md#enable-profile) e [tutorial da API de configuração do conjunto de dados](../profile/tutorials/dataset-configuration.md). Após configurar o conjunto de dados, você pode começar a assimilar dados nele.
 
 A Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras. Por exemplo, é possível assimilar seus dados usando [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). Uma lista completa das fontes disponíveis pode ser encontrada no [visão geral dos conectores de origem](../sources/home.md).
 
@@ -92,7 +93,7 @@ Para obter instruções sobre como ativar dados para destinos de marketing em lo
 
 ## Monitore atividades de dados da plataforma
 
-A Platform permite rastrear como os dados estão sendo processados por meio do uso de fluxos de dados, que são representações de trabalhos que movem dados pelos vários componentes da plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, onde são utilizados por [!DNL Identity Service] e [!DNL Real-time Customer Profile] antes de ser ativado para destinos. O painel de monitoramento fornece uma representação visual da jornada de um fluxo de dados. Para saber como monitorar fluxos de dados na interface do usuário da plataforma, consulte os tutoriais em [monitoramento de fluxos de dados para fontes](../dataflows/ui/monitor-sources.md) e [monitoramento de fluxos de dados para destinos](../dataflows/ui/monitor-destinations.md).
+A Platform permite rastrear como os dados estão sendo processados por meio do uso de fluxos de dados, que são representações de trabalhos que movem dados pelos vários componentes da plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, onde são utilizados por [!DNL Identity Service] e [!DNL Real-Time Customer Profile] antes de ser ativado para destinos. O painel de monitoramento fornece uma representação visual da jornada de um fluxo de dados. Para saber como monitorar fluxos de dados na interface do usuário da plataforma, consulte os tutoriais em [monitoramento de fluxos de dados para fontes](../dataflows/ui/monitor-sources.md) e [monitoramento de fluxos de dados para destinos](../dataflows/ui/monitor-destinations.md).
 
 Você também pode monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos usando [!DNL Observability Insights]. Você pode assinar notificações de alerta por meio da interface do usuário da plataforma ou enviá-las para um webhook configurado. Para obter mais detalhes sobre como visualizar, ativar, desativar e assinar alertas disponíveis na interface do usuário do Experience Platform, consulte o [[!UICONTROL Alertas] Guia da interface do usuário](../observability/alerts/ui.md). Para obter detalhes sobre como receber alertas por meio de webhooks, consulte o guia sobre [assinando notificações de Adobe I/O Event](../observability/alerts/subscribe.md).
 

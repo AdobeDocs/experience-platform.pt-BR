@@ -6,14 +6,14 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1929'
 ht-degree: 6%
 
 ---
 
-# Grades de proteção padrão para [!DNL Real-time Customer Profile] dados
+# Grades de proteção padrão para [!DNL Real-Time Customer Profile] dados
 
 O Adobe Experience Platform permite fornecer experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis do cliente em tempo real. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
 
@@ -27,7 +27,7 @@ Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus 
 
 Os seguintes serviços do Experience Platform estão envolvidos com a modelagem de dados do Perfil do cliente em tempo real:
 
-* [[!DNL Real-time Customer Profile]](home.md): Crie perfis de consumidor unificados usando dados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](home.md): Crie perfis de consumidor unificados usando dados de várias fontes.
 * [Identidades](../identity-service/home.md): Unir identidades de fontes de dados diferentes à medida que são assimiladas na plataforma.
 * [Esquemas](../xdm/home.md): Os esquemas do Experience Data Model (XDM) são a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 * [Segmentos](../segmentation/home.md): O mecanismo de segmentação na Platform é usado para criar segmentos a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
@@ -46,7 +46,7 @@ Existem dois tipos de limites padrão neste documento:
 
 ## Limites do modelo de dados
 
-As seguintes medidas de proteção fornecem limites recomendados ao modelar dados de Perfil do cliente em tempo real. Para saber mais sobre entidades primárias e entidades de dimensão, consulte a seção em [tipos de entidade](#entity-types) no apêndice.
+As seguintes medidas de proteção fornecem limites recomendados ao modelar dados do Perfil do cliente em tempo real. Para saber mais sobre entidades primárias e entidades de dimensão, consulte a seção em [tipos de entidade](#entity-types) no apêndice.
 
 ### Medidas de proteção de entidade primária
 
@@ -124,9 +124,9 @@ Esta seção fornece detalhes adicionais para os limites neste documento.
 
 O [!DNL Profile] o modelo de dados de armazenamento consiste em dois tipos de entidade principais:
 
-* **Entidade primária:** Uma entidade primária ou entidade de perfil une os dados para formar uma &quot;única fonte de verdade&quot; para um indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;exibição de união&quot;. Uma exibição de união agrega os campos de todos os esquemas que implementam a mesma classe em um único schema de união. O schema de união para [!DNL Real-time Customer Profile] é um modelo de dados híbrido desnormalizado que atua como um contêiner para todos os atributos de perfil e eventos comportamentais.
+* **Entidade primária:** Uma entidade primária ou entidade de perfil une os dados para formar uma &quot;única fonte de verdade&quot; para um indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;exibição de união&quot;. Uma exibição de união agrega os campos de todos os esquemas que implementam a mesma classe em um único schema de união. O schema de união para [!DNL Real-Time Customer Profile] é um modelo de dados híbrido desnormalizado que atua como um contêiner para todos os atributos de perfil e eventos comportamentais.
 
-   Atributos independentes de tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto que os dados das séries cronológicas, também conhecidos como &quot;dados de eventos&quot;, são modelados utilizando [!DNL XDM ExperienceEvent]. Como os dados de registro e de série de tempo são assimilados no Adobe Experience Platform, ele dispara [!DNL Real-time Customer Profile] para começar a assimilar dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos serão os perfis individuais.
+   Atributos independentes de tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto que os dados das séries cronológicas, também conhecidos como &quot;dados de eventos&quot;, são modelados utilizando [!DNL XDM ExperienceEvent]. Como os dados de registro e de série de tempo são assimilados no Adobe Experience Platform, ele dispara [!DNL Real-Time Customer Profile] para começar a assimilar dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos serão os perfis individuais.
 
    ![Um infográfico que descreve as diferenças entre os dados de registro e os dados da série cronológica.](images/guardrails/profile-entity.png)
 

@@ -3,7 +3,7 @@ keywords: Experience Platform, home, tópicos populares, fluxo de dados, fluxo d
 title: Configure um fluxo de dados para assimilar dados em lote de uma fonte de armazenamento na nuvem na interface do usuário do
 description: Este tutorial fornece etapas sobre como configurar um novo fluxo de dados para assimilar dados em lote de uma fonte de armazenamento em nuvem na interface do usuário
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 0910de76d817eea7c7c3cb2b988d81268b3e5812
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 ### Formatos de arquivo não compatíveis
 
@@ -183,10 +183,10 @@ Depois de revisar o fluxo de dados, clique em **[!UICONTROL Concluir]** e permit
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados de um armazenamento externo em nuvem e ganhou informações sobre o monitoramento de conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados de entrada agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados de um armazenamento externo em nuvem e ganhou informações sobre o monitoramento de conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados de entrada agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] visão geral](../../../../../data-science-workspace/home.md)
+* [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Visão geral do [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >

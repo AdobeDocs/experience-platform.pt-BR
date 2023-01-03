@@ -1,7 +1,8 @@
 ---
 title: Grupo de Campos Detalhes da Campanha Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da campanha comercial do XDM.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 5%

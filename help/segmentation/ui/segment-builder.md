@@ -5,7 +5,7 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic-legacy: ui guide
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 1%
@@ -254,7 +254,7 @@ Mais informações sobre os diferentes métodos de avaliação de definição de
 
 ## Próximas etapas {#next-steps}
 
-O Construtor de segmentos fornece um fluxo de trabalho avançado que permite isolar públicos comercializáveis do [!DNL Real-time Customer Profile] dados. Após a leitura deste guia, você deve ser capaz de:
+O Construtor de segmentos fornece um fluxo de trabalho avançado que permite isolar públicos comercializáveis do [!DNL Real-Time Customer Profile] dados. Após a leitura deste guia, você deve ser capaz de:
 
 - Crie definições de segmento usando uma combinação de atributos, eventos e públicos-alvo existentes como blocos de construção.
 - Use a tela e os contêineres do construtor de regras para controlar a ordem em que as regras de segmento são executadas.

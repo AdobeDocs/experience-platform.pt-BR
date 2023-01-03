@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para impor a conformidade do uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 # Impor conformidade de uso de dados para um segmento de público-alvo usando APIs
 
-Este tutorial aborda as etapas para impor a conformidade do uso de dados para o [!DNL Real-time Customer Profile] segmentos de público-alvo usando APIs.
+Este tutorial aborda as etapas para impor a conformidade do uso de dados para o [!DNL Real-Time Customer Profile] segmentos de público-alvo usando APIs.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] é um armazenamento de entidade de pesquisa genérico e é usado para gerenciar [!DNL Experience Data Model (XDM)] dados no [!DNL Platform]. O perfil mescla dados em vários ativos de dados da empresa e fornece acesso a esses dados em uma apresentação unificada.
-   - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas por [!DNL Real-time Customer Profile] para determinar quais dados podem ser mesclados em uma exibição unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para fins de Governança de dados.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] divide um grande grupo de indivíduos contidos no armazenamento de perfil em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] é um armazenamento de entidade de pesquisa genérico e é usado para gerenciar [!DNL Experience Data Model (XDM)] dados no [!DNL Platform]. O perfil mescla dados em vários ativos de dados da empresa e fornece acesso a esses dados em uma apresentação unificada.
+   - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas por [!DNL Real-Time Customer Profile] para determinar quais dados podem ser mesclados em uma exibição unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para fins de Governança de dados.
+- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divide um grande grupo de indivíduos contidos no armazenamento de perfil em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 - [Governança de dados](../../data-governance/home.md): A Governança de dados fornece a infraestrutura para a rotulagem e aplicação do uso de dados, usando os seguintes componentes:
    - [Rótulos de uso de dados](../../data-governance/labels/user-guide.md): Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.
    - [Políticas de uso de dados](../../data-governance/policies/overview.md): Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos específicos de uso de dados.
@@ -58,7 +58,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 ## Pesquisar uma política de mesclagem para uma definição de segmento {#merge-policy}
 
-Esse workflow começa acessando um segmento de público-alvo conhecido. Segmentos habilitados para uso em [!DNL Real-time Customer Profile] contém uma ID de política de mesclagem na definição do segmento. Essa política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que, por sua vez, contêm quaisquer rótulos de uso de dados aplicáveis.
+Esse workflow começa acessando um segmento de público-alvo conhecido. Segmentos habilitados para uso em [!DNL Real-Time Customer Profile] contém uma ID de política de mesclagem na definição do segmento. Essa política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que, por sua vez, contêm quaisquer rótulos de uso de dados aplicáveis.
 
 Usar o [!DNL Segmentation] Você pode pesquisar uma definição de segmento pela ID para encontrar a política de mesclagem associada.
 

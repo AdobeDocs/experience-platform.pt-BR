@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector da base de armazenamento em nuvem.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 ## Adicionar dados
 
@@ -136,7 +136,7 @@ Depois que o fluxo de dados do armazenamento em nuvem de transmissão for criado
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para transmitir dados de uma fonte de armazenamento em nuvem. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para transmitir dados de uma fonte de armazenamento em nuvem. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-- [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace] visão geral](../../../../../data-science-workspace/home.md)
+- [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+- [Visão geral do [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

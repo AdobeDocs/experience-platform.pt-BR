@@ -5,7 +5,7 @@ title: Endpoint da API de métricas
 topic-legacy: developer guide
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API do Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 4%
@@ -230,9 +230,9 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Ident
 
 {style=&quot;table-layout:auto&quot;}
 
-#### [!DNL Real-time Customer Profile] {#profile}
+#### [!DNL Real-Time Customer Profile] {#profile}
 
-A tabela a seguir descreve as métricas para [!DNL Real-time Customer Profile].
+A tabela a seguir descreve as métricas para [!DNL Real-Time Customer Profile].
 
 | Métrica de insights | Descrição | Parâmetro de consulta de ID |
 | ---- | ---- | ---- |

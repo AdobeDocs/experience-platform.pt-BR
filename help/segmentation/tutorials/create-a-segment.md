@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para saber como desenvolver, testar, visualizar e salvar uma definição de segmento usando a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -23,8 +23,8 @@ Para obter informações sobre como criar segmentos usando a interface do usuár
 
 Este tutorial requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de público-alvo. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite criar segmentos de público-alvo a partir de dados do Perfil do cliente em tempo real.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente. Para utilizar melhor a Segmentação, verifique se os dados são assimilados como perfis e eventos de acordo com a variável [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas para o [!DNL Platform] APIs.
@@ -55,7 +55,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 ## Desenvolver uma definição de segmento
 
-A primeira etapa da segmentação é definir um segmento, representado em uma construção chamada de definição de segmento. Uma definição de segmento é um objeto que encapsula uma consulta escrita em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado PQL. Os predicados PQL definem as regras para o segmento com base nas condições relacionadas a qualquer registro ou série de tempo que você fornecer para [!DNL Real-time Customer Profile]. Consulte a [Guia PQL](../pql/overview.md) para obter mais informações sobre como gravar consultas PQL.
+A primeira etapa da segmentação é definir um segmento, representado em uma construção chamada de definição de segmento. Uma definição de segmento é um objeto que encapsula uma consulta escrita em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado PQL. Os predicados PQL definem as regras para o segmento com base nas condições relacionadas a qualquer registro ou série de tempo que você fornecer para [!DNL Real-Time Customer Profile]. Consulte a [Guia PQL](../pql/overview.md) para obter mais informações sobre como gravar consultas PQL.
 
 Você pode criar uma nova definição de segmento fazendo uma solicitação de POST para a variável `/segment/definitions` endpoint no [!DNL Segmentation] API. O exemplo a seguir descreve como formatar uma solicitação de definição, incluindo quais informações são necessárias para que um segmento seja definido com êxito.
 
@@ -63,7 +63,7 @@ Para obter uma explicação detalhada sobre como definir um segmento, leia o [gu
 
 ## Estimar e visualizar um público-alvo {#estimate-and-preview-an-audience}
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Real-time Customer Profile] to view summary-level information to help ensure you are isolating the expected audience. As estimativas fornecem informações estatísticas sobre uma definição de segmento, como o tamanho projetado do público-alvo e o intervalo de confiança. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
+À medida que desenvolve a definição do segmento, você pode usar as ferramentas de estimativa e visualização em [!DNL Real-Time Customer Profile] para exibir informações de resumo para ajudar a garantir que você esteja isolando o público-alvo esperado. As estimativas fornecem informações estatísticas sobre uma definição de segmento, como o tamanho projetado do público-alvo e o intervalo de confiança. As visualizações fornecem listas paginadas de perfis de qualificação para uma definição de segmento, permitindo que você compare os resultados com o que espera.
 
 Ao estimar e visualizar seu público-alvo, você pode testar e otimizar seus predicados de PQL até que eles produzam um resultado desejável, onde poderão ser usados em uma definição de segmento atualizada.
 
@@ -72,7 +72,7 @@ Há duas etapas necessárias para visualizar ou obter uma estimativa do seu segm
 1. [Criar um trabalho de pré-visualização](#create-a-preview-job)
 2. [Exibir estimativa ou pré-visualização](#view-an-estimate-or-preview) usar a ID do trabalho de visualização
 
-### How estimates are generated
+### Como as estimativas são geradas
 
 As amostras de dados são usadas para avaliar segmentos e estimar o número de perfis qualificados. Novos dados são carregados na memória toda manhã (entre 12AM e 2AM PT, que é de 7 a 9AM UTC), e todas as consultas de segmentação são estimadas usando os dados de amostra desse dia. Consequentemente, quaisquer novos campos ou dados adicionais recolhidos serão refletidos nas estimativas do dia seguinte.
 
@@ -81,16 +81,16 @@ O tamanho da amostra depende do número geral de entidades no armazenamento de p
 | Entidades no armazenamento de perfis | Tamanho da amostra |
 | ------------------------- | ----------- |
 | Menos de 1 milhão | Conjunto de dados completo |
-| 1 to 20 million | 1 milhão |
+| 1 a 20 milhões | 1 milhão |
 | Mais de 20 milhões | 5% do total |
 
-Estimates generally run over 10-15 seconds, beginning with a rough estimate and refining as more records are read.
+As estimativas geralmente são executadas de 10 a 15 segundos, começando com uma estimativa aproximada e refinando à medida que mais registros são lidos.
 
 ### Criar um trabalho de pré-visualização
 
 Você pode criar um novo trabalho de pré-visualização, fazendo uma solicitação de POST para o `/preview` endpoint .
 
-Detailed instructions on creating a preview job can be found in the [previews and estimates endpoints guide](../api/previews-and-estimates.md#create-preview).
+Instruções detalhadas sobre a criação de um trabalho de pré-visualização podem ser encontradas no [guia de visualizações e estimativas de endpoints](../api/previews-and-estimates.md#create-preview).
 
 ### Exibir uma estimativa ou pré-visualização
 

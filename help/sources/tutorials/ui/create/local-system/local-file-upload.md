@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem para seu sistema local para trazer arquivos locais para o Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes da Pla
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 ## Fazer upload de arquivos locais para a plataforma
 
@@ -92,4 +92,4 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você mapeou com sucesso um arquivo CSV simples para um esquema XDM e o assimilou na Platform. Esses dados agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-time Customer Profile]. Consulte a visão geral para [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) para obter mais informações.
+Ao seguir este tutorial, você mapeou com sucesso um arquivo CSV simples para um esquema XDM e o assimilou na Platform. Esses dados agora podem ser usados pelo downstream [!DNL Platform] serviços como [!DNL Real-Time Customer Profile]. Consulte a visão geral para [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) para obter mais informações.

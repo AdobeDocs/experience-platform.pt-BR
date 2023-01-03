@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial usa a API do Registro de esquema para orientá-lo pelas etapas para compor um esquema usando uma classe padrão.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para o [!DNL Schema Registry] API. Isso inclui as `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
@@ -955,7 +955,7 @@ Executar uma solicitação de GET para pesquisar o esquema agora mostra a refer�
 
 ### Definir um descritor de identidade
 
-Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados são usados em vários serviços para criar uma única visualização unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a assimilação de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados em [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visão unificada de cada cliente individual.
+Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados são usados em vários serviços para criar uma única visualização unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a assimilação de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados em [[!DNL Real-Time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visão unificada de cada cliente individual.
 
 Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de e-mail, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM ou outros campos de ID exclusivos.
 
@@ -1016,9 +1016,9 @@ Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) com um corpo de res
 }
 ```
 
-## Habilitar esquema para uso em [!DNL Real-time Customer Profile] {#profile}
+## Habilitar esquema para uso em [!DNL Real-Time Customer Profile] {#profile}
 
-Ao adicionar a tag &quot;union&quot; ao `meta:immutableTags` , você pode habilitar o esquema Membros do Loyalty para ser usado por [!DNL Real-time Customer Profile].
+Ao adicionar a tag &quot;union&quot; ao `meta:immutableTags` , você pode habilitar o esquema Membros do Loyalty para ser usado por [!DNL Real-Time Customer Profile].
 
 Para obter mais informações sobre como trabalhar com visualizações de união, consulte a seção sobre [sindicatos](../api/unions.md) no [!DNL Schema Registry] guia do desenvolvedor.
 

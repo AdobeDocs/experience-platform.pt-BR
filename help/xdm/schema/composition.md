@@ -5,7 +5,7 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -58,7 +58,7 @@ Os esquemas de registro e de série de tempo contêm um mapa de identidades (`xd
 
 Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma única visualização unificada de uma entidade individual. Portanto, é importante pensar em schemas pensar nas identidades do cliente e quais campos podem ser usados para identificar um assunto, independentemente de onde os dados possam vir.
 
-Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Gráfico de identidade]&quot; para esse indivíduo. Os dados do gráfico podem ser acessados em [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visão unificada de cada cliente individual.
+Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Gráfico de identidade]&quot; para esse indivíduo. Os dados do gráfico podem ser acessados em [[!DNL Real-Time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visão unificada de cada cliente individual.
 
 Campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; inclui: endereço de e-mail, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois podem ser bons &quot;[!UICONTROL Identidade]&quot; também.
 
@@ -114,7 +114,7 @@ Como mostra o exemplo acima, cada chave no `identityMap` representa um namespace
 
 >[!NOTE]
 >
->Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. Só é necessário definir identidades primárias para esquemas destinados a serem utilizados em [!DNL Real-time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
+>Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. Só é necessário definir identidades primárias para esquemas destinados a serem utilizados em [!DNL Real-Time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
 
 ### Princípios de evolução do schema {#evolution}
 
@@ -273,7 +273,7 @@ Ao [!DNL Experience Platform] permite compor schemas para casos de uso específi
 
 ![](../images/schema-composition/union.png)
 
-Ao ativar um schema para uso com [!DNL Real-time Customer Profile], ele será incluído na união para esse tipo de classe. [!DNL Profile] O oferece perfis robustos e centralizados de atributos do cliente, bem como uma conta com carimbos de data e hora de cada evento que o cliente teve em qualquer sistema integrado com o [!DNL Platform]. [!DNL Profile] O usa a exibição de união para representar esses dados e fornecer uma visão holística de cada cliente individual.
+Ao ativar um schema para uso com [!DNL Real-Time Customer Profile], ele será incluído na união para esse tipo de classe. [!DNL Profile] O oferece perfis robustos e centralizados de atributos do cliente, bem como uma conta com carimbos de data e hora de cada evento que o cliente teve em qualquer sistema integrado com o [!DNL Platform]. [!DNL Profile] O usa a exibição de união para representar esses dados e fornecer uma visão holística de cada cliente individual.
 
 Para obter mais informações sobre como trabalhar com a [!DNL Profile], consulte o [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 

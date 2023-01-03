@@ -4,7 +4,7 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "atualização" para fazer atualizações nos dados de Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 2%
@@ -23,8 +23,8 @@ Este tutorial aborda o processo de ativação de um conjunto de dados com recurs
 
 Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfil. Antes de iniciar este tutorial, revise a documentação referente a esses [!DNL Platform] serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Catalog Service]](../../catalog/home.md): Uma RESTful API que permite criar conjuntos de dados e configurá-los para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Catalog Service]](../../catalog/home.md): Uma RESTful API que permite criar conjuntos de dados e configurá-los para [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 - [Ingestão em lote](../../ingestion/batch-ingestion/overview.md): A API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
 
@@ -119,7 +119,7 @@ As etapas a seguir abordam como configurar um conjunto de dados existente habili
 
 ### Verifique se o conjunto de dados está ativado para o Perfil
 
-Usar o [!DNL Catalog] Você pode inspecionar um conjunto de dados existente para determinar se ele está ativado para uso em [!DNL Real-time Customer Profile]. A chamada a seguir recupera os detalhes de um conjunto de dados por ID.
+Usar o [!DNL Catalog] Você pode inspecionar um conjunto de dados existente para determinar se ele está ativado para uso em [!DNL Real-Time Customer Profile]. A chamada a seguir recupera os detalhes de um conjunto de dados por ID.
 
 **Formato da API**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Em `tags` você pode ver que `unifiedProfile` está presente com o valor `enabled:true`. Por conseguinte, [!DNL Real-time Customer Profile] está ativado para este conjunto de dados.
+Em `tags` você pode ver que `unifiedProfile` está presente com o valor `enabled:true`. Por conseguinte, [!DNL Real-Time Customer Profile] está ativado para este conjunto de dados.
 
 ### Desativar o conjunto de dados para o Perfil
 

@@ -5,7 +5,7 @@ title: Endpoints da API de avaliação de política
 topic-legacy: developer guide
 description: Depois que as ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a API do Serviço de política para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 2%
@@ -682,6 +682,6 @@ Uma resposta bem-sucedida retorna uma matriz de resultados de avaliação; um pa
 ]
 ```
 
-## Avaliação de políticas para [!DNL Real-time Customer Profile]
+## Avaliação de políticas para [!DNL Real-Time Customer Profile]
 
-O [!DNL Policy Service] A API também pode ser usada para verificar violações de política envolvendo o uso de [!DNL Real-time Customer Profile] segmentos. Veja o tutorial em [impor a conformidade do uso de dados para segmentos de público-alvo](../../segmentation/tutorials/governance.md) para obter mais informações.
+O [!DNL Policy Service] A API também pode ser usada para verificar violações de política envolvendo o uso de [!DNL Real-Time Customer Profile] segmentos. Veja o tutorial em [impor a conformidade do uso de dados para segmentos de público-alvo](../../segmentation/tutorials/governance.md) para obter mais informações.

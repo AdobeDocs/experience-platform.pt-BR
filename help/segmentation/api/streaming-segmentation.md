@@ -5,7 +5,7 @@ title: Avaliar eventos em quase tempo real com a segmentação de streaming
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 1%
@@ -32,8 +32,8 @@ Transmitir a segmentação em [!DNL Adobe Experience Platform] O permite que os 
 
 Este guia do desenvolvedor requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de fluxo. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-time Customer Profile] dados.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-Time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas para o [!DNL Platform] APIs.

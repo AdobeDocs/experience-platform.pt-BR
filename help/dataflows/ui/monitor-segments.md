@@ -4,7 +4,8 @@ description: A segmentação permite criar segmentos e públicos-alvo a partir d
 title: Monitorar fluxos de dados para segmentos na interface do usuário
 topic-legacy: overview
 type: Tutorial
-source-git-commit: cec27197d47d2dd979bdf29f16fef77e8ff855e3
+exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%

@@ -5,7 +5,7 @@ title: Visão geral da fonte de Audience Manager
 topic-legacy: overview
 description: A fonte do Adobe Audience Manager transmite dados primários coletados no Audience Manager para o Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -84,4 +84,4 @@ Também é possível verificar o uso do perfil que sua conta tem disponível por
 | --- | --- | --- | --- |
 | Dados em tempo real | Eventos | &lt;25 minutos | Tempo de ser capturado no nó Audience Manager Edge até aparecer no lago de dados. |
 | Dados em tempo real | Atualizações do perfil | &lt;10 minutos | Hora de chegar ao Perfil do cliente em tempo real. |
-| Dados integrados e em tempo real | Atualizações do perfil | 24 a 36 horas | Tempo de ser capturado por meio de dados DCS/PCS Edge e dados integrados, sendo processado para um perfil de usuário e aparecendo no Perfil do cliente em tempo real. Atualmente, esses dados não chegam diretamente ao lago de dados. A alternância de perfil pode ser ativada para conjuntos de dados de perfil do Audience Manager para assimilar esses dados diretamente no Perfil do cliente em tempo real. |
+| Dados integrados e em tempo real | Atualizações do perfil | 24 a 36 horas | Tempo de ser capturado por meio de dados DCS/PCS Edge e dados integrados, sendo processado para um perfil de usuário e aparecendo no Perfil do cliente em tempo real. Atualmente, esses dados não chegam diretamente ao lago de dados. A alternância de perfil pode ser ativada para conjuntos de dados de Perfil do Audience Manager para assimilar esses dados diretamente no Perfil do cliente em tempo real. |

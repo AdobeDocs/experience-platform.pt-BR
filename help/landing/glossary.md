@@ -5,7 +5,7 @@ title: Glossário do Adobe Experience Platform
 topic-legacy: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '7919'
 ht-degree: 0%
@@ -402,7 +402,7 @@ ht-degree: 0%
 
 **Sandbox de produção**: Uma sandbox de produção é uma sandbox destinada ao uso no ambiente de produção. Diferentemente das sandboxes de não produção, as sandboxes de produção não podem ser redefinidas ou excluídas.
 
-**Perfil**: Para não ser confundido com o Real-time Customer Profile como um serviço, um perfil é uma representação completa de um cliente individual, construída a partir de dados de registro e série de tempo unidos de várias fontes.
+**Perfil**: Para não ser confundido com o Perfil do cliente em tempo real como um serviço, um perfil é uma representação completa de um cliente individual, construído a partir de dados de registro e série de tempo unidos de várias fontes.
 
 **Acesso ao perfil**: O `/entities` O endpoint na API do Perfil do cliente em tempo real permite acessar dados de registro e eventos de série de tempo no armazenamento de dados do perfil. Consulte também: Entidades de perfil
 
@@ -522,9 +522,9 @@ ht-degree: 0%
 
 **Assimilação de fluxo**: A assimilação de streaming permite enviar dados de dispositivos cliente e servidor para o Experience Platform em tempo real.
 
-**Segmentação de streaming**: A segmentação de streaming é um processo contínuo de seleção de dados que atualiza os segmentos em resposta à atividade do usuário. Depois que um segmento é criado e salvo, a definição do segmento é aplicada aos dados de entrada para [!DNL Real-time Customer Profile]. Adições e remoções de segmentos são processadas regularmente, garantindo que o público-alvo permaneça relevante.
+**Segmentação de streaming**: A segmentação de streaming é um processo contínuo de seleção de dados que atualiza os segmentos em resposta à atividade do usuário. Depois que um segmento é criado e salvo, a definição do segmento é aplicada aos dados de entrada para [!DNL Real-Time Customer Profile]. Adições e remoções de segmentos são processadas regularmente, garantindo que o público-alvo permaneça relevante.
 
-**Exibição do sistema**: Exibição do sistema é uma representação visual de conjuntos de dados de origem que fluem [!DNL Real-time Customer Profile] para destinos.
+**Exibição do sistema**: Exibição do sistema é uma representação visual de conjuntos de dados de origem que fluem [!DNL Real-Time Customer Profile] para destinos.
 
 ## T
 
@@ -540,7 +540,7 @@ ht-degree: 0%
 
 ## U
 
-**Schema da União**: Um schema de união é uma consolidação de schemas que compartilham a mesma classe e foram habilitados para [!DNL Real-time Customer Profile]. Vários esquemas de união podem existir para uma organização, mas só pode haver um esquema de união por classe.
+**Schema da União**: Um schema de união é uma consolidação de schemas que compartilham a mesma classe e foram habilitados para [!DNL Real-Time Customer Profile]. Vários esquemas de união podem existir para uma organização, mas só pode haver um esquema de união por classe.
 
 ## V
 

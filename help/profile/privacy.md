@@ -5,18 +5,18 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 0%
 
 ---
 
-# Processamento de solicitação de privacidade em [!DNL Real-time Customer Profile]
+# Processamento de solicitação de privacidade em [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] processa solicitações de acesso, recusa de venda ou exclusão de seus dados pessoais pelo cliente, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e [!DNL California Consumer Privacy Act] (CCPA).
 
-Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade de [!DNL Real-time Customer Profile] no Adobe Experience Platform.
+Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade de [!DNL Real-Time Customer Profile] no Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais nos aplicativos Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
-* [[!DNL Real-time Customer Profile]](home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre namespaces de identidade em [!DNL Experience
 
 ## Envio de solicitações {#submit}
 
-As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-time Customer Profile] usando o [!DNL Privacy Service] API ou interface do usuário. Antes de ler essas seções, é altamente recomendável revisar a seção [API Privacy Service](../privacy-service/api/getting-started.md) ou [Interface do usuário do Privacy Service](../privacy-service/ui/overview.md) documentação para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
+As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-Time Customer Profile] usando o [!DNL Privacy Service] API ou interface do usuário. Antes de ler essas seções, é altamente recomendável revisar a seção [API Privacy Service](../privacy-service/api/getting-started.md) ou [Interface do usuário do Privacy Service](../privacy-service/ui/overview.md) documentação para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### Uso da interface do usuário
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** under **[!UICONTROL Produtos]** para processar trabalhos de dados armazenados no lago de dados ou [!DNL Real-time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** under **[!UICONTROL Produtos]** para processar trabalhos de dados armazenados no lago de dados ou [!DNL Real-Time Customer Profile], respectivamente.
 
 ![Uma solicitação de trabalho de acesso que está sendo criada na interface do usuário, com a opção Perfil selecionada em Produtos](./images/privacy/product-value.png)
 

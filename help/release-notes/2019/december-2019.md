@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 6%
@@ -25,7 +25,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
+O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir de sua [!DNL Real-Time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-as facilmente acessíveis por qualquer aplicação de Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -71,11 +71,11 @@ O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo 
 
 **Problemas conhecidos**
 
-* Nenhum.
+* None.
 
 Para obter mais informações sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).
 
-## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
+## Sistema de [!DNL Experience Data Model] (XDM) {#xdm}
 
 A normalização e a interoperabilidade são conceitos-chave subjacentes [!DNL Experience Platform]. [!DNL Experience Data Model] O (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
@@ -94,6 +94,6 @@ O XDM é uma especificação publicamente documentada projetada para melhorar o 
 
 **Problemas conhecidos**
 
-* Nenhum
+* None
 
 Para saber mais sobre como trabalhar com o XDM usando o [!DNL Schema Registry] API e [!DNL Schema Editor] interface do usuário, leia a [Documentação do sistema XDM](../../xdm/home.md).

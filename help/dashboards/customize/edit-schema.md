@@ -3,7 +3,7 @@ keywords: Experience Platform, interface do usuário, interface do usuário, pai
 title: Editar esquema para criar widgets de painel personalizados
 description: Este guia fornece instruções passo a passo para selecionar atributos e configurar o esquema da sua organização para criar widgets personalizados para painéis do Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -61,4 +61,4 @@ Depois de escolher os atributos que deseja adicionar, selecione **[!UICONTROL Sa
 
 ## Próximas etapas
 
-Após a leitura deste guia, você pode navegar até a biblioteca de widgets e selecionar Atributos de perfil do cliente em tempo real para configurar seu esquema. Com os atributos de perfil selecionados, você pode começar [criação de widgets personalizados para seus painéis](custom-widgets.md).
+Após a leitura deste guia, você pode navegar até a biblioteca de widgets e selecionar os atributos de Perfil do cliente em tempo real para configurar seu esquema. Com os atributos de perfil selecionados, você pode começar [criação de widgets personalizados para seus painéis](custom-widgets.md).

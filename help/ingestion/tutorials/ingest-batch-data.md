@@ -6,14 +6,14 @@ topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform permite importar facilmente dados como arquivos em lote na forma de arquivos Parquet ou dados que estejam em conformidade com um esquema conhecido do Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
-# Assimilar dados na Adobe Experience Platform
+# Assimilar dados no Adobe Experience Platform
 
 O Adobe Experience Platform permite importar dados facilmente para o [!DNL Platform] como arquivos em lote. Os exemplos de dados a serem assimilados podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um arquivo conhecido [!DNL Experience Data Model] (XDM) no Registro de Esquema.
 
@@ -75,23 +75,23 @@ Um conjunto de dados vazio foi criado e você foi retornado para o **[!UICONTROL
 
 No lado direito do espaço de trabalho Conjuntos de dados, você verá a variável **[!UICONTROL Informações]** guia que contém informações relacionadas ao novo conjunto de dados, como ID do conjunto de dados, nome, descrição, nome da tabela, esquema, transmissão e origem. A guia Informações também inclui informações sobre quando o conjunto de dados foi criado e sua última data de modificação.
 
-Também na guia Informações há uma  **[!UICONTROL Perfil]** alternar usado para habilitar seu conjunto de dados para uso com [!DNL Real-time Customer Profile]. Usar essa alternância e [!DNL Real-time Customer Profile], serão explicadas com mais detalhes na seção a seguir.
+Também na guia Informações há uma  **[!UICONTROL Perfil]** alternar usado para habilitar seu conjunto de dados para uso com [!DNL Real-Time Customer Profile]. Usar essa alternância e [!DNL Real-Time Customer Profile], serão explicadas com mais detalhes na seção a seguir.
 
 ![Atividade do conjunto de dados](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Ativar conjunto de dados para [!DNL Real-time Customer Profile]
+## Ativar conjunto de dados para [!DNL Real-Time Customer Profile]
 
 Os conjuntos de dados são usados para assimilar dados no [!DNL Experience Platform]e que os dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Essa informação unida é chamada de [!DNL Real-Time Customer Profile]. Para [!DNL Platform] para saber quais informações devem ser incluídas no [!DNL Real-Time Profile], os conjuntos de dados podem ser marcados para inclusão usando o **[!UICONTROL Perfil]** alternar.
 
 Por padrão, essa alternância está desativada. Se você optar por ativar [!DNL Profile], todos os dados assimilados no conjunto de dados serão usados para ajudar a identificar um indivíduo e unir seus dados [!DNL Real-Time Profile].
 
-Para saber mais sobre [!DNL Real-time Customer Profile] e trabalhando com identidades, reveja o [Serviço de identidade](../../identity-service/home.md) documentação.
+Para saber mais sobre [!DNL Real-Time Customer Profile] e trabalhando com identidades, reveja o [Serviço de identidade](../../identity-service/home.md) documentação.
 
-Para ativar o conjunto de dados para [!DNL Real-time Customer Profile], clique no botão **[!UICONTROL Perfil]** alternar no **[!UICONTROL Informações]** guia .
+Para ativar o conjunto de dados para [!DNL Real-Time Customer Profile], clique no botão **[!UICONTROL Perfil]** alternar no **[!UICONTROL Informações]** guia .
 
 ![Ativar/desativar perfil](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Uma caixa de diálogo será exibida solicitando que você confirme que deseja ativar o conjunto de dados para o [!DNL Real-time Customer Profile].
+Uma caixa de diálogo será exibida solicitando que você confirme que deseja ativar o conjunto de dados para o [!DNL Real-Time Customer Profile].
 
 ![Caixa de diálogo Ativar perfil](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
@@ -121,7 +121,7 @@ Depois de arrastar e soltar (ou procurar e selecionar) um arquivo Parquet ou JSO
 
 Após a conclusão do upload do arquivo, a variável **[!UICONTROL Atividade do conjunto de dados]** A guia não mostra mais que &quot;Nenhum lote foi adicionado.&quot; Em vez disso, a variável **[!UICONTROL Atividade do conjunto de dados]** agora mostra métricas do conjunto de dados. Todas as métricas mostrarão &quot;0&quot; neste estágio, pois o lote ainda não foi carregado.
 
-Na parte inferior da guia há uma lista que mostra a variável **[!UICONTROL ID em lote]** dos dados que foram assimilados por meio da variável [&quot;Adicionar dados ao conjunto de dados&quot;](#add-data-to-dataset) processo. Também inclui informações relacionadas ao lote, incluindo data assimilada, número de registros assimilados e o status atual do lote.
+Na parte inferior da guia há uma lista que mostra a variável **[!UICONTROL ID em lote]** dos dados que foram assimilados por meio do [&quot;Adicionar dados ao conjunto de dados&quot;](#add-data-to-dataset) processo. Também inclui informações relacionadas ao lote, incluindo data assimilada, número de registros assimilados e o status atual do lote.
 
 ![Métricas do conjunto de dados](../images/tutorials/ingest-batch-data/batch-id.png)
 

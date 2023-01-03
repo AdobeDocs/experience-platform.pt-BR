@@ -4,7 +4,7 @@ title: Gerar o relatório de sobreposição de conjunto de dados
 type: Tutorial
 description: Este tutorial descreve as etapas necessárias para gerar o relatório de sobreposição de conjunto de dados usando a API do perfil do cliente em tempo real.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -17,7 +17,7 @@ O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a
 
 Além de fornecer insights sobre seus dados, este relatório pode ajudar você a tomar ações para otimizar o uso da licença, como definir um limite para a duração de determinados dados.
 
-Este tutorial descreve as etapas necessárias para gerar o relatório de sobreposição de conjunto de dados usando o [!DNL Real-time Customer Profile] API e interprete os resultados para sua organização.
+Este tutorial descreve as etapas necessárias para gerar o relatório de sobreposição de conjunto de dados usando o [!DNL Real-Time Customer Profile] API e interprete os resultados para sua organização.
 
 ## Introdução
 

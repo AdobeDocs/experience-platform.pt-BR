@@ -2,7 +2,8 @@
 keywords: Experience Platform, home, tópicos populares, Quadrado, quadrado
 title: Criar uma conexão de origem quadrada na interface do usuário
 description: Saiba como criar uma conexão de origem quadrada usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: e905b11040c8de33aa757bd5743605bb36a8009b
+exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 2%
@@ -20,7 +21,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 ### Obter credenciais necessárias
 

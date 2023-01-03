@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2022
 description: As notas de versão de abril de 2022 para o Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 6%
@@ -173,7 +173,7 @@ Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral 
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Os serviços de IA/ML capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de experiência em ciência de dados.
+Os serviços de IA/ML capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso da experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de uma especialização em ciência de dados.
 
 ### IA de atribuição
 
@@ -200,7 +200,7 @@ O Customer AI disponível no Real-time Customer Data Platform é usado para gera
 
 Para obter mais informações sobre [!DNL Intelligent Services]consulte o [[!DNL Intelligent Services] visão geral](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-Time Customer Data Platform B2B Edition {#B2B}
 
 Baseado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido para profissionais de marketing que operam em um modelo de serviço de empresa para empresa. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
 

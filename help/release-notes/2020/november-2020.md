@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 5%
@@ -29,7 +29,7 @@ Atualizações dos recursos existentes:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Serviço de](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Migração do Adobe Experience Platform Data Lake {#migration}
@@ -60,7 +60,7 @@ Para obter mais informações, consulte o [visão geral do controle de acesso](.
 | Recurso | Descrição |
 | ------- | ----------- |
 | Biblioteca de ofertas centralizada | A interface onde você cria e gerencia os diferentes elementos que compõem suas ofertas e define suas regras e restrições. |
-| Mecanismo de decisão da oferta | O mecanismo de decisão da oferta aproveita [!DNL Platform] dados e [!DNL Real-time Customer Profiles], juntamente com a Biblioteca de ofertas, para selecionar o momento certo, os clientes e canais aos quais as ofertas serão entregues. |
+| Mecanismo de decisão da oferta | O mecanismo de decisão da oferta aproveita [!DNL Platform] dados e [!DNL Real-Time Customer Profiles], juntamente com a Biblioteca de ofertas, para selecionar o momento certo, os clientes e canais aos quais as ofertas serão entregues. |
 
 Para obter mais informações, consulte o [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=pt-BR) documentação.
 

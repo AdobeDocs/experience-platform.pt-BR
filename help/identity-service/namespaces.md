@@ -5,7 +5,7 @@ title: Visão geral do Namespace de identidade
 topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 3%
@@ -20,13 +20,13 @@ Os namespaces de identidade são um componente do [[!DNL Identity Service]](./ho
 
 Trabalhar com namespaces de identidade requer uma compreensão dos vários serviços da Adobe Experience Platform envolvidos. Antes de começar a trabalhar com namespaces, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Identity Service]](./home.md): Obtenha uma melhor visão de clientes individuais e seu comportamento ao unir identidades em dispositivos e sistemas.
 - [[!DNL Privacy Service]](../privacy-service/home.md): Os namespaces de identidade são usados em solicitações de conformidade para regulamentos de privacidade legais, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Cada solicitação de privacidade é feita em relação a um namespace para identificar quais dados de consumidores devem ser afetados.
 
 ## Noções básicas sobre namespaces de identidade
 
-Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-time Customer Profile] mescla dados de perfil, o valor de identidade e o namespace devem corresponder.
+Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla dados de perfil, o valor de identidade e o namespace devem corresponder.
 
 Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para o namespace &quot;Email&quot;, portanto [!DNL Platform] O é capaz de ver que esses fragmentos são, na verdade, o mesmo indivíduo e reúne os dados no gráfico de identidade do indivíduo.
 

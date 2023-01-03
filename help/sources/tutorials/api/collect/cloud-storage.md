@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: e4853c61848bec20eb8a6902365b97c3a9d0b3b3
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 2%
@@ -681,7 +681,7 @@ Depois que o fluxo de dados tiver sido criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um conector de origem para coletar dados do armazenamento em nuvem de forma agendada. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou um conector de origem para coletar dados do armazenamento em nuvem de forma agendada. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do perfil do cliente em tempo real](../../../../profile/home.md)
 - [Visão geral do Data Science Workspace](../../../../data-science-workspace/home.md)

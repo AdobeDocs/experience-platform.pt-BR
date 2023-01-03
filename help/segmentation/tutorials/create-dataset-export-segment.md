@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de público-alvo usando a interface do usuário do Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Selecionar **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para a
 
 >[!NOTE]
 >
->Selecione o ícone de filtro ao lado da barra de pesquisa para usar os recursos de filtragem para exibir somente os conjuntos de dados habilitados para [!DNL Real-time Customer Profile].
+>Selecione o ícone de filtro ao lado da barra de pesquisa para usar os recursos de filtragem para exibir somente os conjuntos de dados habilitados para [!DNL Real-Time Customer Profile].
 
 ![O espaço de trabalho de conjuntos de dados é exibido.](../images/tutorials/segment-export-dataset/browse.png)
 

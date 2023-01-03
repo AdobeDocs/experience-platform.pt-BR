@@ -5,7 +5,8 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e limites de taxa.
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 4%
@@ -33,7 +34,7 @@ Existem dois tipos de limites padrão neste documento:
 
 ## Limites de ativação {#activation-limits}
 
-As seguintes medidas de proteção fornecem limites recomendados ao ativar os dados de Perfil do cliente em tempo real para destinos.
+As seguintes medidas de proteção fornecem limites recomendados ao ativar dados de Perfil do cliente em tempo real para destinos.
 
 ### Medidas de proteção gerais de ativação {#general-activation-guardrails}
 
@@ -90,7 +91,7 @@ As medidas de proteção abaixo aplicam-se à ativação através de [destinos d
 | --- | --- | --- | --- |
 | Número máximo de [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos | 10 | Suave | Você pode configurar fluxos de dados para 10 destinos de personalização personalizados por sandbox. |
 | Número máximo de atributos mapeados para um destino de personalização por sandbox | 20 | Grave | É possível mapear no máximo 20 atributos em um fluxo de dados para um destino de personalização, por sandbox. |
-| Número máximo de segmentos mapeados para um único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50º | Suave | Você pode ativar no máximo 50 segmentos em um fluxo de ativação para um único destino do Adobe Target. |
+| Número máximo de segmentos mapeados para um único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50 | Suave | Você pode ativar no máximo 50 segmentos em um fluxo de ativação para um único destino do Adobe Target. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -121,5 +122,5 @@ Exibir informações de medidas de proteção para outros serviços de Experienc
 
 * Medidas de proteção [ingestão de dados](/help/ingestion/guardrails.md)
 * Medidas de proteção [[!DNL Identity Service] dados](/help/identity-service/guardrails.md)
-* Medidas de proteção [[!DNL Real-time Customer Profile] dados](/help/profile/guardrails.md)
+* Medidas de proteção [[!DNL Real-Time Customer Profile] dados](/help/profile/guardrails.md)
 * Medidas de proteção [[!DNL Query Service] dados](/help/query-service/guardrails.md)

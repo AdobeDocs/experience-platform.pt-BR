@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de fonte Marketo Engage na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Criar e editar esquemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md): Saiba como criar e editar esquemas na interface do usuário.
 * [Namespaces de identidade](../../../../../identity-service/namespaces.md): Os namespaces de identidade são um componente do [!DNL Identity Service] que servem como indicadores do contexto a que uma identidade se refere. Uma identidade totalmente qualificada inclui um valor de ID e um namespace.
-* [[!DNL Real-time Customer Profile]](/help/profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Obter credenciais necessárias
@@ -171,7 +171,7 @@ Os atributos personalizados em conjuntos de dados não podem ser ocultos ou remo
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer [!DNL Marketo] dados. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer [!DNL Marketo] dados. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile] visão geral](/help/profile/home.md)
-* [[!DNL Data Science Workspace] visão geral](/help/data-science-workspace/home.md)
+* [Visão geral do [!DNL Real-Time Customer Profile]](/help/profile/home.md)
+* [Visão geral do [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)

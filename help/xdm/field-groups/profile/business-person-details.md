@@ -2,7 +2,7 @@
 title: Grupo de Campos de Esquema Detalhes da Pessoa Comercial XDM
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da pessoa de negócios XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 6%

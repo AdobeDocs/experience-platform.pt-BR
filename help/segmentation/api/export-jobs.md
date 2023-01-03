@@ -5,7 +5,7 @@ title: Ponto de extremidade da API de tarefas de exportação de segmentos
 topic-legacy: developer guide
 description: Os trabalhos de exportação são processos assíncronos usados para manter os membros do segmento do público-alvo em conjuntos de dados. Você pode usar o endpoint /export/jobs na API do Serviço de Segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Os trabalhos de exportação são processos assíncronos usados para manter os m
 
 >[!NOTE]
 >
->Este guia aborda o uso de trabalhos de exportação no [!DNL Segmentation API]. Para obter informações sobre como gerenciar trabalhos de exportação para [!DNL Real-time Customer Profile] , consulte o guia sobre [exportar trabalhos na API de perfil](../../profile/api/export-jobs.md)
+>Este guia aborda o uso de trabalhos de exportação no [!DNL Segmentation API]. Para obter informações sobre como gerenciar trabalhos de exportação para [!DNL Real-Time Customer Profile] , consulte o guia sobre [exportar trabalhos na API de perfil](../../profile/api/export-jobs.md)
 
 ## Introdução
 

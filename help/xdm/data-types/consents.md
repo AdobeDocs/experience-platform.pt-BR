@@ -4,7 +4,7 @@ title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consent for Privacy, Personalization and Marketing Preferences tem como objetivo oferecer suporte à coleta de permissões e preferências do cliente geradas pelas CMPs (Consent Management Platforms) e outras fontes de suas operações de dados.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 2%
@@ -263,7 +263,7 @@ Veja o tutorial em [criação de um schema na interface do usuário](https://www
 
 >[!IMPORTANT]
 >
->Se desejar enviar dados de consentimento para o [!DNL Real-time Customer Profile], é necessário criar um [!DNL Profile]-enabled schema baseado no [!DNL XDM Individual Profile] classe que contém [!UICONTROL Consentimentos e preferências] tipo de dados. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas a [!DNL Real-time Customer Profile] requisitos para esquemas e conjuntos de dados.
+>Se desejar enviar dados de consentimento para o [!DNL Real-Time Customer Profile], é necessário criar um [!DNL Profile]-enabled schema baseado no [!DNL XDM Individual Profile] classe que contém [!UICONTROL Consentimentos e preferências] tipo de dados. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas a [!DNL Real-Time Customer Profile] requisitos para esquemas e conjuntos de dados.
 >
 >Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral em [políticas de mesclagem](../../rtcdp/profile/merge-policies.md) para obter mais informações.
 

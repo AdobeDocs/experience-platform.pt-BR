@@ -3,7 +3,7 @@ title: Suporte à TCF 2.0 do IAB no SDK da Web da Adobe Experience Platform
 description: Saiba como oferecer suporte às preferências de consentimento do TCF 2.0 do IAB usando o SDK da Web da Adobe Experience Platform
 keywords: consentimento; setConsent; grupo de campo de privacidade do perfil; grupo de campo de privacidade do evento de experiência; grupo de campo de privacidade; IAB TCF 2.0; Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Para implementar o SDK da Web com o IAB TCF 2.0, você deve ter uma compreensão
 
 Para enviar dados de consentimento ao Adobe Experience Platform usando o SDK, o seguinte é obrigatório:
 
-- Um conjunto de dados cujo esquema se baseia na variável [!DNL XDM Individual Profile] e contém campos de consentimento TCF 2.0, habilitados para uso em [!DNL Real-time Customer Profile].
+- Um conjunto de dados cujo esquema se baseia na variável [!DNL XDM Individual Profile] e contém campos de consentimento TCF 2.0, habilitados para uso em [!DNL Real-Time Customer Profile].
 - Um conjunto de dados configurado com a Platform e o conjunto de dados habilitado para perfil mencionado acima.
 
 Consulte o guia em [Conformidade com o TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter instruções sobre como criar os conjuntos de dados e o conjunto de dados necessários.

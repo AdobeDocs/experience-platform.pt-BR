@@ -6,25 +6,25 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este documento fornece um guia sobre como enriquecer o Perfil do cliente em tempo real com insights de aprendizado de máquina.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 89a9b64f2fb238c08a281f29a035ce0b24b34804
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-# Enriquecer [!DNL Real-time Customer Profile] com insights de aprendizado de máquina
+# Enriquecer [!DNL Real-Time Customer Profile] com insights de aprendizado de máquina
 
 Adobe Experience Platform [!DNL Data Science Workspace] O fornece as ferramentas e os recursos para criar, avaliar e utilizar modelos de aprendizado de máquina para gerar previsões e insights de dados. Quando os insights de aprendizado de máquina são assimilados em um [!DNL Profile]conjunto de dados habilitado para , que os mesmos dados também sejam assimilados como [!DNL Profile] registros que podem então ser segmentados usando [!DNL Adobe Experience Platform Segmentation Service].
 
-Este documento fornece links para tutoriais que permitem enriquecer [!DNL Real-time Customer Profile] com seus insights de aprendizado de máquina.
+Este documento fornece links para tutoriais que permitem enriquecer [!DNL Real-Time Customer Profile] com seus insights de aprendizado de máquina.
 
 ## Introdução
 
 Para concluir os tutoriais abaixo, você deve ter uma compreensão funcional da assimilação [!DNL Profile] dados e criação de segmentos. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece uma representação completa e unificada de cada cliente individual com base em dados agregados de várias fontes.
-- [[!DNL Identity Service]](../../identity-service/home.md): Habilitar [!DNL Real-time Customer Profile] ao fazer a ponte de identidades de fontes de dados diferentes que estão sendo assimiladas na Platform.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece uma representação completa e unificada de cada cliente individual com base em dados agregados de várias fontes.
+- [[!DNL Identity Service]](../../identity-service/home.md): Habilitar [!DNL Real-Time Customer Profile] ao fazer a ponte de identidades de fontes de dados diferentes que estão sendo assimiladas na Platform.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 
 Além dos documentos mencionados acima, é altamente recomendável revisar os seguintes guias sobre schemas e o Editor de esquema:
@@ -34,7 +34,7 @@ Além dos documentos mencionados acima, é altamente recomendável revisar os se
 
 ## Criar e configurar um schema de saída e um conjunto de dados {#create-an-output-schema-and-dataset}
 
-Primeiro passo para o enriquecimento [!DNL Real-time Customer Profile] com insights de pontuação, o é saber qual objeto do mundo real (como uma pessoa) seus dados definem. Compreender seus dados permite descrever e projetar uma estrutura para adicionar significado, como projetar um banco de dados relacional.
+Primeiro passo para o enriquecimento [!DNL Real-Time Customer Profile] com insights de pontuação, o é saber qual objeto do mundo real (como uma pessoa) seus dados definem. Compreender seus dados permite descrever e projetar uma estrutura para adicionar significado, como projetar um banco de dados relacional.
 
 A composição de um schema começa pela atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o schema conterá (registro ou série de tempo). Para começar a criar seus próprios schemas, siga as etapas no tutorial em [criação de um esquema usando o Editor de esquemas](../../xdm/tutorials/create-schema-ui.md). Observe que, antes de poder ativar um conjunto de dados para [!DNL Profile], é necessário configurar o esquema do conjunto de dados para ter um campo de identidade primário e, em seguida, habilitar o esquema para [!DNL Profile]. Quando os dados são assimilados em um [!DNL Profile]conjunto de dados habilitado para , que os mesmos dados também sejam assimilados como [!DNL Profile] registros.
 
@@ -58,4 +58,4 @@ O [!DNL Segment Builder] O fornece um espaço de trabalho avançado com o qual v
 
 Para saber mais sobre os segmentos e a [!DNL Segment Builder]leia a [Visão geral do serviço de segmentação](../../segmentation/home.md).
 
-Para saber mais sobre [!DNL Real-time Customer Profile]leia a [Visão geral do perfil do cliente em tempo real](../../profile/home.md)
+Para saber mais sobre [!DNL Real-Time Customer Profile]leia a [Visão geral do perfil do cliente em tempo real](../../profile/home.md)

@@ -5,7 +5,7 @@ title: Visão geral da assimilação de fluxo
 topic-legacy: overview
 description: A assimilação de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%
@@ -18,7 +18,7 @@ A assimilação de streaming para Adobe Experience Platform fornece aos usuário
 
 ## O que você pode fazer com a ingestão de streaming?
 
-O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes, gerando uma [!DNL Real-time Customer Profile] para cada um dos clientes individuais. A assimilação de streaming tem um papel importante na criação desses perfis, permitindo que você forneça [!DNL Profile] dados no [!DNL Data Lake] com o mínimo de latência possível.
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes, gerando uma [!DNL Real-Time Customer Profile] para cada um dos clientes individuais. A assimilação de streaming tem um papel importante na criação desses perfis, permitindo que você forneça [!DNL Profile] dados no [!DNL Data Lake] com o mínimo de latência possível.
 
 O vídeo a seguir foi criado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
@@ -32,7 +32,7 @@ Leia o [criar um guia de conexão de transmissão](../tutorials/create-streaming
 
 ### Fluxo para conjuntos de dados
 
-Depois de ter certeza de que os dados estão limpos, é possível ativar os conjuntos de dados para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
+Depois de ter certeza de que os dados estão limpos, é possível ativar os conjuntos de dados para [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
 
 Para obter mais informações sobre como ativar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service]Por favor leia o [configurar um guia de conjunto de dados](../../profile/tutorials/dataset-configuration.md).
 

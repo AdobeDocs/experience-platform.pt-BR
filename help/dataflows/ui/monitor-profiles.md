@@ -4,13 +4,13 @@ description: O Perfil do cliente em tempo real permite que você visualize uma v
 title: Monitorar fluxos de dados para perfis na interface do usuário
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
-
 
 # Monitorar fluxos de dados para perfis na interface do usuário
 

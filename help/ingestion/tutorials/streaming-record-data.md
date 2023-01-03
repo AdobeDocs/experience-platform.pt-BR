@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Este tutorial requer um conhecimento prático de vários serviços da Adobe Expe
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados da experiência.
    - [Guia do desenvolvedor do Registro de Schema](../../xdm/api/getting-started.md): Um guia abrangente que abrange cada um dos endpoints disponíveis do [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas em todo este tutorial, bem como saber como criar esquemas, que são usados na criação de um conjunto de dados para assimilação.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ### Uso de APIs da plataforma
 
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | O nome que deseja usar para o esquema. Este nome deve ser exclusivo. |
 | `description` | Uma descrição significativa para o esquema que você está criando. |
-| `meta:immutableTags` | Neste exemplo, a variável `union` é usada para persistir seus dados em [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | Neste exemplo, a variável `union` é usada para persistir seus dados em [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Resposta**
 
@@ -139,7 +139,7 @@ Em seguida, adicione um [descritor de identidade](../../xdm/api/descriptors.md) 
 
 1. O endereço de email de trabalho se tornará um campo obrigatório. Isso significa que as mensagens enviadas sem esse campo falharão na validação e não serão assimiladas.
 
-2. [!DNL Real-time Customer Profile] O usará o endereço de email como um identificador para ajudar a unir mais informações sobre esse indivíduo.
+2. [!DNL Real-Time Customer Profile] O usará o endereço de email como um identificador para ajudar a unir mais informações sobre esse indivíduo.
 
 ### Solicitação
 
@@ -199,7 +199,7 @@ Depois de criar o esquema, será necessário criar um conjunto de dados para ass
 
 >[!NOTE]
 >
->Esse conjunto de dados será ativado para **[!DNL Real-time Customer Profile]** e **[!DNL Identity Service]**.
+>Esse conjunto de dados será ativado para **[!DNL Real-Time Customer Profile]** e **[!DNL Identity Service]**.
 
 **Formato da API**
 

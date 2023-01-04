@@ -2,7 +2,7 @@
 title: Tipo de Dados de Origem B2B
 description: Este documento fornece uma visão geral do tipo de dados do Modelo de Dados de Experiência de Origem B2B (XDM).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 3%
@@ -23,7 +23,7 @@ O [!UICONTROL Origem B2B] o tipo de dados permite usar a ID da string original d
 | --- | --- | --- |
 | `sourceID` | String | Uma ID exclusiva para o registro de origem. |
 | `sourceInstanceID` | String | A ID da instância ou da organização dos dados de origem. |
-| `sourceKey` | String | Um identificador exclusivo composto pela variável `sourceId`, `sourceInstanceId`e `sourceType` concatenadas no seguinte formato: `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Alguns conectores de origem como o Marketo concatenam esse valor automaticamente para determinados identificadores. Outros devem ser concatenados manualmente usando o [Preparação de dados `concat` função](../../data-prep/functions.md#string), por exemplo: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | String | Um identificador exclusivo composto pela variável `sourceId`, `sourceInstanceId`e `sourceType` concatenadas no seguinte formato: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Alguns conectores de origem como o Marketo concatenam esse valor automaticamente para determinados identificadores. Outros devem ser concatenados manualmente usando o [Preparação de dados `concat` função](../../data-prep/functions.md#string), por exemplo: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | String | O nome da plataforma que fornece os dados de origem. |
 
 {style=&quot;table-layout:auto&quot;}

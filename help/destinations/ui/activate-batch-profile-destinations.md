@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
+source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
 workflow-type: tm+mt
-source-wordcount: '3411'
+source-wordcount: '3414'
 ht-degree: 1%
 
 ---
@@ -207,7 +207,7 @@ Para destinos com base em perfil, você deve selecionar os atributos de perfil q
 
    ![Imagem destacando como selecionar um campo de origem.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. No **[!UICONTROL Selecionar campo]** selecione os atributos XDM que deseja enviar para o destino e escolha **[!UICONTROL Selecionar]**.
+1. No **[!UICONTROL Selecionar campo]** selecione os atributos XDM ou os namespaces de identidade que deseja enviar para o destino e escolha **[!UICONTROL Selecionar]**.
 
    ![Imagem que mostra os vários campos disponíveis como campos de origem.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 

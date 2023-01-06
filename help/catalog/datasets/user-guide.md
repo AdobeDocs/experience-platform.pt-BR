@@ -5,7 +5,7 @@ title: Guia da interface do usuário de conjuntos de dados
 topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Para ativar um conjunto de dados para o Perfil, acesse seu **[!UICONTROL Ativida
 
 Os rótulos de uso de dados permitem categorizar os conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Consulte a [Visão geral da governança de dados](../../data-governance/home.md) para saber mais sobre rótulos ou consulte o [guia do usuário de rótulos de uso de dados](../../data-governance/labels/overview.md) para obter instruções sobre como aplicar rótulos a conjuntos de dados.
 
-## Excluir um conjunto de dados
+## Excluir um conjunto de dados {#delete}
 
 É possível excluir um conjunto de dados acessando primeiro seu **[!UICONTROL Atividade do conjunto de dados]** tela. Em seguida, selecione **[!UICONTROL Excluir conjunto de dados]** para excluí-lo.
 

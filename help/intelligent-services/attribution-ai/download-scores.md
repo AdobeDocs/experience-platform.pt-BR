@@ -2,10 +2,9 @@
 keywords: Experience Platform, atribuição ai, pontuações de acesso, tópicos populares, pontuações de download, pontuações de atribuição ai, exportar, exportar
 feature: Attribution AI
 title: Fazer download das pontuações no Attribution AI
-topic-legacy: Downloading scores
 description: Este documento serve como um guia para baixar pontuações para o Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 3%
@@ -277,7 +276,7 @@ Você pode acessar pontuações de Attribution AI agregadas por meio do Snowflak
 Depois que o suporte ao Adobe processar sua solicitação, você receberá um URL para a conta do leitor no Snowflake e as credenciais correspondentes abaixo:
 
 - Snowflake URL
-- Nome do usuário
+- Nome de usuário
 - Senha
 
 >[!NOTE]

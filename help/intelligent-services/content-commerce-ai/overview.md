@@ -2,10 +2,9 @@
 keywords: Experience Cloud, introdução, conteúdo e comércio, tópicos populares, Serviços inteligentes, ccai
 solution: Experience Platform
 title: Visão geral do Content e Commerce AI
-topic-legacy: Content and Commerce AI
 description: O Content and Commerce AI é um conjunto de serviços de IA que permite extrair recursos inteligentes de seu conteúdo, organizar, simplificar o fluxo de conteúdo e fornecer experiências personalizadas mais impactantes para seus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%

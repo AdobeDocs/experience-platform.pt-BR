@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, Serviços inteligentes, tópicos populares, serviço inteligente, serviço inteligente
 solution: Experience Platform
 title: Preparar dados para uso em serviços inteligentes
-topic-legacy: Intelligent Services
 description: Para que os Serviços inteligentes descubram insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes usam esquemas do Experience Data Model (XDM) para fazer isso.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 1%
@@ -183,13 +182,13 @@ A tabela a seguir fornece alguns exemplos de canais de marketing mapeados para a
 | Canal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Pesquisa paga | https:/<span>/ns.adobe.com/xdm/channel-types/search | pago | clicks |
-| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | ganho | cliques |
-| Exibir | https:/<span>/ns.adobe.com/xdm/channel-types/display | pago | cliques |
-| Email | https:/<span>/ns.adobe.com/xdm/channel-types/email | pago | cliques |
-| Referenciador interno | https:/<span>/ns.adobe.com/xdm/channel-types/direct | possuído | cliques |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | ganho | clicks |
+| Exibir | https:/<span>/ns.adobe.com/xdm/channel-types/display | pago | clicks |
+| Email | https:/<span>/ns.adobe.com/xdm/channel-types/email | pago | clicks |
+| Referenciador interno | https:/<span>/ns.adobe.com/xdm/channel-types/direct | possuído | clicks |
 | Exibir ViewThrough | https:/<span>/ns.adobe.com/xdm/channel-types/display | pago | impressões |
-| Redirecionamento do código QR | https:/<span>/ns.adobe.com/xdm/channel-types/direct | possuído | cliques |
-| Dispositivo móvel | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | possuído | cliques |
+| Redirecionamento do código QR | https:/<span>/ns.adobe.com/xdm/channel-types/direct | possuído | clicks |
+| Dispositivo móvel | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | possuído | clicks |
 
 ### Campos recomendados
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform, introdução, ai do conteúdo, ai do comércio, ai do conteúdo e comércio, extração de palavra-chave, extração de palavra-chave
 solution: Experience Platform
 title: Extração de palavra-chave na API do Content and Commerce AI
-topic-legacy: Developer guide
 description: O serviço de extração de palavras-chave, ao receber um documento de texto, extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, é usada uma combinação de reconhecimento de entidade nomeado (NER) e algoritmos de extração de palavra-chave não supervisionados.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%
@@ -115,7 +114,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | --- | --- | --- |
 | `analyzer_id` | O [!DNL Sensei] ID de serviço em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] são usadas. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa um documento. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
+| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa um documento. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora do `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
 | `language` | Idioma do texto de entrada. O valor padrão é `en`. | Não |
 | `content-type` | Usado para indicar se a entrada é parte do corpo da solicitação ou um url assinado para um bucket S3. O padrão para essa propriedade é `inline`. | Sim |
 | `encoding` | O formato de codificação do texto de entrada. Pode ser `utf-8` ou `utf-16`. O padrão para essa propriedade é `utf-8`. | Não |
@@ -277,7 +276,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | --- | --- | --- |
 | `analyzer_id` | O [!DNL Sensei] ID de serviço em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] são usadas. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa um documento. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
+| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa um documento. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora do `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
 | `language` | Idioma da entrada. O valor padrão é `en` (inglês). | Não |
 | `content-type` | Usado para indicar o tipo de conteúdo de entradas. Isso deve ser definido como `file`. | Sim |
 | `encoding` | O formato de codificação da entrada. Isso deve ser definido como `pdf`. Mais tipos de codificação são definidos para serem suportados em uma data posterior. | Sim |

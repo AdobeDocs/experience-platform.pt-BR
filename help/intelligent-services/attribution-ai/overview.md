@@ -2,11 +2,10 @@
 keywords: Experience Platform, visão geral do Attribution ai, tópicos populares, atribuição ai, Atribuição ai
 feature: Attribution AI
 title: Visão geral do Attribution AI
-topic-legacy: Attribution AI
 description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 landing-page-description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 30%

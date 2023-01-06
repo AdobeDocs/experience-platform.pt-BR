@@ -2,10 +2,9 @@
 keywords: Experience Platform, introdução, ai do conteúdo, ai do comércio, ai do conteúdo e ai do comércio
 solution: Experience Platform
 title: Introdução ao Content and Commerce AI
-topic-legacy: Getting started
 description: A API do conteúdo e do Commerce utiliza APIs do Adobe I/O. Para fazer chamadas para APIs do Adobe I/O e a Integração do console de E/S, primeiro complete o tutorial de autenticação.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%

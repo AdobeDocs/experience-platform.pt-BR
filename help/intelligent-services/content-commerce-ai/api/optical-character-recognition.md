@@ -2,10 +2,9 @@
 keywords: OCR; presença de texto; reconhecimento óptico de caracteres
 solution: Experience Platform
 title: Presença de texto e reconhecimento óptico de caracteres
-topic-legacy: Developer guide
 description: Na API da API do Content and Commerce AI, o serviço de Presença de texto / Reconhecimento óptico de caracteres (OCR) pode indicar se o texto está presente em uma determinada imagem. Se o texto estiver presente, o OCR poderá retornar o texto.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%
@@ -75,7 +74,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | --- | --- | --- |
 | `analyzer_id` | O [!DNL Sensei] ID de serviço em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] são usadas. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz representando uma imagem passada. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
+| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz representando uma imagem passada. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora do `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
 | `language` | Idioma do texto de entrada. O valor padrão é `en`. | Não |
 | `content-type` | Usado para indicar se a entrada é parte do corpo da solicitação ou um url assinado para um bucket S3. O padrão para essa propriedade é `inline`. | Não |
 | `encoding` | O formato de arquivo da imagem de entrada. Atualmente, somente imagens JPEG e PNG podem ser processadas. O padrão para essa propriedade é `jpeg`. | Não |

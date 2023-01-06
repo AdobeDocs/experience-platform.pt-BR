@@ -2,10 +2,9 @@
 keywords: Similaridade visual, similaridade visual, api ccai
 solution: Experience Platform
 title: Similaridade visual na API Content and Commerce AI
-topic-legacy: Developer guide
 description: O serviço de similaridade visual, ao receber uma imagem, encontra automaticamente imagens visualmente semelhantes de um catálogo.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
@@ -77,7 +76,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | --- | --- | --- |
 | `analyzer_id` | O [!DNL Sensei] ID de serviço em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] são usadas. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa uma imagem. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
+| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa uma imagem. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora do `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
 | `content-id` | A ID exclusiva para o elemento de dados retornado na resposta. Se isso não for passado, uma ID gerada automaticamente será atribuída. | Não |
 | `content` | O conteúdo a ser analisado pelo serviço de semelhança visual. Caso a imagem faça parte do corpo da solicitação, use `-F file=@<filename>` no comando curl para passar a imagem, deixando esse parâmetro como uma string vazia. <br> Se a imagem for um arquivo no S3, passe o url assinado. Quando o conteúdo faz parte do corpo da solicitação, a lista de elementos de dados deve ter apenas um objeto. Se mais de um objeto for transmitido, somente o primeiro objeto será processado. | Sim |
 | `content-type` | Usado para indicar se a entrada é parte do corpo da solicitação ou um url assinado para um bucket S3. O padrão para essa propriedade é `inline`. | Não |

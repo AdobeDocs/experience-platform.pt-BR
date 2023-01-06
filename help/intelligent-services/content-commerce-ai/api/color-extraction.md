@@ -2,10 +2,9 @@
 keywords: Experience Platform, introdução, ai do conteúdo, ai do comércio, ai do conteúdo e comércio, extração de cores, extração de cores
 solution: Experience Platform
 title: Extração de cores na API do Content and Commerce AI
-topic-legacy: Developer guide
 description: O serviço de extração de cores, quando recebe uma imagem, pode computar o histograma de cores de pixels e classificá-las por cores dominantes em compartimentos.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -88,7 +87,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | --- | --- | --- |
 | `analyzer_id` | O [!DNL Sensei] ID de serviço em que sua solicitação é implantada. Essa ID determina qual das [!DNL Sensei Content Frameworks] são usadas. Para serviços personalizados, entre em contato com a equipe de API de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém objetos JSON. Cada objeto na matriz representa uma imagem. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
+| `data` | Uma matriz que contém objetos JSON. Cada objeto na matriz representa uma imagem. Quaisquer parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora do `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída por dentro de `data`. | Sim |
 | `content-id` | A ID exclusiva para o elemento de dados retornado na resposta. Se isso não for passado, uma ID gerada automaticamente será atribuída. | Não |
 | `content` | O conteúdo a ser analisado pelo serviço de extração de cores. Caso a imagem faça parte do corpo da solicitação, use `-F file=@<filename>` no comando curl para passar a imagem, deixando esse parâmetro como uma string vazia. <br> Se a imagem for um arquivo no S3, passe o url assinado. Quando o conteúdo faz parte do corpo da solicitação, a lista de elementos de dados deve ter apenas um objeto. Se mais de um objeto for transmitido, somente o primeiro objeto será processado. | Sim |
 | `content-type` | Usado para indicar se a entrada é parte do corpo da solicitação ou um url assinado para um bucket S3. O padrão para essa propriedade é `inline`. | Não |

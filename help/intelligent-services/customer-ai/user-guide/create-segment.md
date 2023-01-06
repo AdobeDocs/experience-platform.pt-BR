@@ -3,10 +3,9 @@ keywords: Experience Platform, insights, atendimento ao cliente, tópicos popula
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Criar segmentos de clientes com pontuações previstas
-topic-legacy: Create a segment
 description: Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecer perfis com pontuações do Customer AI permite que a criação de segmentos de clientes encontre públicos com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%

@@ -3,10 +3,9 @@ keywords: Experience Platform, guia do usuário, atendimento ao cliente, tópico
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configurar uma instância do Customer AI
-topic-legacy: Instance creation
 description: Os Serviços de IA/ML oferecem ao Customer AI como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3342'
 ht-degree: 0%

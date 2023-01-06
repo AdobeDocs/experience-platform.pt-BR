@@ -2,10 +2,9 @@
 keywords: insights, ajuda da atribuição, insights do ai da atribuição, serviço de consulta AAI, consultas de atribuição, pontuações de atribuição
 feature: Attribution AI
 title: Analisando Pontuações de Atribuição Usando O Serviço De Query
-topic-legacy: Attribution AI queries
 description: Saiba como usar o Serviço de query da Adobe Experience Platform para analisar pontuações do Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 # Análise de pontuações de atribuição usando o Serviço de query
 
-Cada linha nos dados representa uma conversão, na qual as informações dos pontos de contato relacionados são armazenadas como uma matriz de estruturas na coluna `touchpointsDetail`.
+Cada linha nos dados representa uma conversão, na qual as informações para os pontos de contato relacionados são armazenadas como uma matriz de estruturas na variável `touchpointsDetail` coluna.
 
 | Informações do ponto de contato | Coluna |
 | ---------------------- | ------ |
@@ -24,7 +23,7 @@ Cada linha nos dados representa uma conversão, na qual as informações dos pon
 
 ## Encontrar os caminhos de dados
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo. A página **[!UICONTROL Datasets]** é exibida. Em seguida, selecione a guia **[!UICONTROL Browse]** e localize o conjunto de dados de saída para suas pontuações de Attribution AI.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo. O **[!UICONTROL Conjuntos de dados]** será exibida. Em seguida, selecione o **[!UICONTROL Procurar]** e encontre o conjunto de dados de saída para suas pontuações do Attribution AI.
 
 ![Acessar sua instância](./images/aai-query/datasets_browse.png)
 
@@ -32,7 +31,7 @@ Selecione o conjunto de dados de saída. A página de atividade do conjunto de d
 
 ![página de atividade do conjunto de dados](./images/aai-query/select_preview.png)
 
-Na página de atividade do conjunto de dados, selecione **[!UICONTROL Preview dataset]** no canto superior direito para visualizar seus dados e garantir que eles foram assimilados conforme esperado.
+Na página de atividade do conjunto de dados, selecione **[!UICONTROL Visualizar conjunto de dados]** no canto superior direito para visualizar seus dados e garantir que eles foram assimilados conforme esperado.
 
 ![visualizar conjunto de dados](./images/aai-query/preview_dataset.JPG)
 
@@ -40,17 +39,17 @@ Após visualizar seus dados, selecione o schema no painel direito. Um provedor �
 
 ![selecionar o esquema](./images/aai-query/select_schema.png)
 
-Usando o esquema de pontuação, você pode selecionar ou pesquisar um valor. Depois de selecionado, o painel lateral **[!UICONTROL Propriedades do campo]** é aberto, permitindo copiar o caminho para uso na criação de consultas.
+Usando o esquema de pontuação, você pode selecionar ou pesquisar um valor. Depois de selecionado, a variável **[!UICONTROL Propriedades do campo]** o painel lateral é aberto, permitindo copiar o caminho para uso na criação de consultas.
 
 ![copiar o caminho](./images/aai-query/copy_path.png)
 
 ## Acessar Serviço de Query
 
-Para acessar o Serviço de query na interface do usuário da plataforma, comece selecionando **[!UICONTROL Queries]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]**. Uma lista de suas consultas salvas anteriormente é carregada.
+Para acessar o Serviço de query na interface do usuário da plataforma, comece selecionando **[!UICONTROL Queries]** na navegação à esquerda, selecione o **[!UICONTROL Procurar]** guia . Uma lista de suas consultas salvas anteriormente é carregada.
 
 ![navegação do serviço de query](./images/aai-query/query_tab.png)
 
-Em seguida, selecione **[!UICONTROL Create query]** no canto superior direito. O Editor de consultas é carregado. Usando o Editor de consultas, você pode começar a criar consultas usando seus dados de pontuação.
+Em seguida, selecione **[!UICONTROL Criar query]** no canto superior direito. O Editor de consultas é carregado. Usando o Editor de consultas, você pode começar a criar consultas usando seus dados de pontuação.
 
 ![editor de consultas](./images/aai-query/query_example.png)
 
@@ -58,11 +57,11 @@ Para obter mais informações sobre o Editor de consultas, visite o [Guia do usu
 
 ## Modelos de query para análise de pontuação de atribuição
 
-As consultas abaixo podem ser usadas como um modelo para diferentes cenários de análise de pontuação. Você precisa substituir os `_tenantId` e `your_score_output_dataset` pelos valores adequados encontrados no esquema de saída de pontuação.
+As consultas abaixo podem ser usadas como um modelo para diferentes cenários de análise de pontuação. É necessário substituir a variável `_tenantId` e `your_score_output_dataset` com os valores adequados encontrados no esquema de saída de pontuação.
 
 >[!NOTE]
 >
-> Dependendo de como seus dados foram assimilados, os valores usados abaixo, como `timestamp`, podem estar em um formato diferente.
+> Dependendo de como seus dados foram assimilados, os valores usados abaixo, como `timestamp` pode estar em um formato diferente.
 
 ### Exemplos de validação
 
@@ -306,7 +305,7 @@ Esse query nivela a coluna struct em várias colunas do singular e explora matri
 
 >[!TIP]
 >
-> Neste exemplo, você precisa substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. A variável `COLUMN_NAME` pode obter os valores de passagens opcionais pelos nomes das colunas (colunas de relatórios) que foram adicionados durante a configuração da sua instância do Attribution AI. Revise seu esquema de saída de pontuação para localizar os valores `{COLUMN_NAME}` necessários para concluir esta consulta.
+> Neste exemplo, é necessário substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. O `COLUMN_NAME` pode obter os valores da passagem opcional pelos nomes das colunas (colunas de relatórios) que foram adicionadas durante a configuração da sua instância do Attribution AI. Revise seu esquema de saída de pontuação para encontrar a variável `{COLUMN_NAME}` valores necessários para concluir esta consulta.
 
 ```sql
 SELECT 

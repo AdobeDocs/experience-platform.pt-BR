@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, permissões de controle de acesso, tipos de recursos de controle de acesso, api de controle de acesso
 solution: Experience Platform
 title: Endpoint da API de referência
-topic-legacy: developer guide
 description: O endpoint de referência na API de Controle de Acesso permite exibir os nomes das permissões e dos tipos de recursos disponíveis, que podem ser usados para exibir políticas eficazes de controle de acesso para o usuário atual.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 2%

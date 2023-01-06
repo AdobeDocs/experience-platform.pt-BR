@@ -1,20 +1,19 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API, perfil unificado, perfil unificado, unificado, perfil, rtcp, gráficos XDM
 title: Recursos gerais de acessibilidade na plataforma
-topic-legacy: guide
 type: Documentation
 description: Saiba mais sobre os recursos gerais de acessibilidade compatíveis com o Adobe Experience Platform, incluindo navegação por teclado, paletas de cores e contraste, e suporte a tecnologia assistiva.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-
 # Recursos de acessibilidade no Experience Platform
 
-A Adobe Experience Platform tem o compromisso de fornecer recursos acessíveis e inclusivos a todos os indivíduos, incluindo usuários que trabalham com dispositivos de assistência, como software de reconhecimento de voz e leitores de tela. Este documento descreve os recursos gerais de acessibilidade compatíveis com a plataforma, incluindo a navegação por teclado, a estrutura semântica, o contraste suficiente entre elementos em primeiro plano e elementos em segundo plano e o suporte para tecnologias assistivas.
+A Adobe Experience Platform tem o compromisso de fornecer recursos acessíveis e inclusivos a todos os indivíduos, incluindo usuários que trabalham com dispositivos de assistência, como software de reconhecimento de voz e leitores de tela. Este documento descreve os recursos gerais de acessibilidade compatíveis com a plataforma, incluindo navegação por teclado, estrutura semântica, contraste suficiente entre elementos em primeiro plano e elementos em segundo plano e suporte para tecnologias assistivas.
 
 ## Tecnologias de assistência
 
@@ -36,7 +35,7 @@ Os seguintes elementos de navegação facilitam a acessibilidade:
 
 ## Paletas de cores e contraste
 
-O Experience Platform se esforça para obter a conformidade [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), incluindo os requisitos para contraste de cores. A interface do usuário do Experience Platform fornece contraste suficiente no aplicativo para garantir uma experiência de visualização acessível para usuários com deficiências de visão ou cores baixas.
+Experience Platform se esforça para [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformidade, incluindo requisitos para contraste de cores. A interface do usuário do Experience Platform fornece contraste suficiente no aplicativo para garantir uma experiência de visualização acessível para usuários com deficiências de visão ou cores baixas.
 
 ![A paleta de cores e o contraste presentes na página inicial da interface do usuário do Experience Platform.](images/homepage.png)
 
@@ -44,4 +43,4 @@ O Experience Platform se esforça para obter a conformidade [WCAG 2.1 AA](https:
 
 Ao adicionar dados, criar esquemas ou definir segmentos, os campos obrigatórios são indicados visualmente, usando um asterisco ao lado do rótulo de texto de um campo e programaticamente. Esses campos acionam a validação ao inserir dados inválidos em campos e ao salvar. Se um campo obrigatório não passar na validação, ele será contornado em vermelho com um ícone de erro e também será exibida uma descrição escrita do problema que precisa ser corrigido.
 
-![Um fechamento de um campo obrigatório que não passou na validação. O campo aparece em vermelho e um ícone de erro está presente.](images/field-validation.png)
+![Um fechamento de um campo obrigatório que não passou na validação. O campo aparece em vermelho e há um ícone de erro.](images/field-validation.png)

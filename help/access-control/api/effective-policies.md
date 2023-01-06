@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, políticas eficazes, api de controle de acesso
 solution: Experience Platform
 title: Endpoint da API de políticas efetivas
-topic-legacy: developer guide
 description: Saiba como visualizar políticas de acesso efetivas usando a API de controle de acesso do Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 2%

@@ -1,9 +1,9 @@
 ---
 title: Exclusões no serviço de identidade
 description: Este documento fornece uma visão geral dos vários mecanismos que podem ser usados para excluir seus dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1318'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ A tabela abaixo fornece um detalhamento das diferenças entre a exclusão de ide
 | Casos de uso aceitos | Somente solicitações de privacidade de dados (GDPR, CCPA). | Gestão dos dados armazenados no Experience Platform. |
 | Latência estimada | Dias até semanas | Days |
 | Serviços afetados | A exclusão de identidade única no Privacy Service permite selecionar se os dados serão excluídos do Serviço de identidade, do Perfil do cliente em tempo real ou do lago de dados. | A exclusão de identidade única na higiene de dados exclui os dados selecionados no Serviço de identidade, no Perfil do cliente em tempo real e no lago de dados. |
-| Padrões de exclusão | Exclua uma identidade do Serviço de identidade. | Exclua uma identidade e todos os links correspondentes completamente do Serviço de identidade, em todos os conjuntos de dados ou para um único conjunto de dados. |
+| Padrões de exclusão | Exclua uma identidade do Serviço de identidade. | Exclua uma identidade do Serviço de identidade. |
 
 {style=&quot;table-layout:auto&quot;}
 

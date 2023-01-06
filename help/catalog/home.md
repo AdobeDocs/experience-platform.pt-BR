@@ -2,11 +2,10 @@
 keywords: Experience Platform;página inicial;tópicos populares;serviço de catálogo;catálogo;Serviço de catálogo;localização de dados;Localização de dados;Gestão de dados;gestão de dados;Linhagem;linhagem;Catálogo;ativar conjunto de dados
 solution: Experience Platform
 title: Visão geral do serviço de catálogo
-topic-legacy: overview
 description: O Serviço de catálogo é o sistema de registro para localização e linhagem de dados na Adobe Experience Platform. Embora todos os dados assimilados na Experience Platform sejam armazenados no Data Lake como arquivos e diretórios, o Catálogo retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa e monitoramento.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 100%
 

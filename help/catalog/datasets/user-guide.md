@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, ativar conjunto de dados, conjunto de dados, conjunto de dados
 solution: Experience Platform
 title: Guia da interface do usuário de conjuntos de dados
-topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%

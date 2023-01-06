@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, criar lote, serviço de catálogo, api
 solution: Experience Platform
 title: Criar um lote na API
-topic-legacy: developer guide
 description: Você pode criar um lote fazendo uma solicitação POST para o ponto de extremidade /lotes na API do catálogo.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 5%

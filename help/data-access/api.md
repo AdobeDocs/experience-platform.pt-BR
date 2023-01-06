@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, acesso aos dados, python sdk, spark sdk, api de acesso aos dados, exportar, exportar
 solution: Experience Platform
 title: Guia da API de acesso a dados
-topic-legacy: developer guide
 description: A API de acesso a dados oferece suporte ao Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na capacidade de descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 6%
@@ -29,7 +28,7 @@ Uma descrição de alguns termos comumente usados em todo este documento.
 | Termo | Descrição |
 | ----- | ------------ |
 | Conjunto de dados | Uma coleção de dados que inclui esquema e campos. |
-| Em lote | Um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. |
+| Lote | Um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. |
 
 ## Recuperar a lista de arquivos em um lote
 
@@ -240,4 +239,4 @@ Para amostras adicionais, consulte o [tutorial de acesso a dados](tutorials/data
 
 ## Assinar eventos de assimilação de dados
 
-[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio do [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Veja o tutorial em [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio do [Console do Adobe Developer](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Veja o tutorial em [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.

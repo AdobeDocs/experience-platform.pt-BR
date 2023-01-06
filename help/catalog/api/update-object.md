@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, catálogo, api, atualizar um objeto
 solution: Experience Platform
 title: Atualizar um objeto de catálogo
-topic-legacy: developer guide
 description: Você pode atualizar parte de um objeto de Catálogo incluindo sua ID no caminho de uma solicitação de PATCH. Este documento aborda o uso de campos e a notação de Patch JSON para executar operações de PATCH em objetos do catálogo.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 4%

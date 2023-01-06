@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, filtro, filtro, filtrar dados, filtrar dados, intervalo de datas
 solution: Experience Platform
 title: Filtrar dados do catálogo usando parâmetros de consulta
-topic-legacy: developer guide
 description: A API do Serviço de catálogo permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de consulta de solicitação. Parte das práticas recomendadas para o Catálogo é usar filtros em todas as chamadas de API, pois eles reduzem a carga na API e ajudam a melhorar o desempenho geral.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 2%

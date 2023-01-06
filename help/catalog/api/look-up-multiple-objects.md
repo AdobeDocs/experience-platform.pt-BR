@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, catálogo, pesquisa de vários objetos, api
 solution: Experience Platform
 title: Pesquisar vários objetos do catálogo
-topic-legacy: developer guide
 description: Se você deseja exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, excluir um objeto, serviço de catálogo, api
 solution: Experience Platform
 title: Excluir um objeto na API
-topic-legacy: developer guide
 description: Você pode excluir um objeto de Catálogo fornecendo sua ID no caminho de uma solicitação de DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 2%

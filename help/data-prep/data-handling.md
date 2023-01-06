@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário; mapeador; mapeamento; preparação de dados; preparação de dados;
 solution: Experience Platform
 title: Manuseio de formatos de dados com Preparação de dados
-topic-legacy: overview
 description: Este documento fornece uma visão geral de como diferentes tipos de dados são tratados na Preparação de dados.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 13%
@@ -94,15 +93,15 @@ A tabela a seguir mostra quais letras de padrão são definidas para cadeias de 
 | u | Dia da semana, como um número. 1 representa segunda-feira, ..., 7 representa domingo | Número | 1 |
 | a | Marcador AM/PM | Texto | PM |
 | H | Hora no dia (0-23) | Número | 0 |
-| k | Hora no dia (1-24) | Número | 24º |
+| k | Hora no dia (1-24) | Número | 24 |
 |  mil | Hora em AM/PM (0-11) | Número | 0 |
 | h | Hora em AM/PM (1-12) | Número | 12 |
-| m | Minuto na hora | Número | 38º |
+| m | Minuto na hora | Número | 38 |
 | s | Segundo no minuto | Número | 44 |
 | S | Milissegundo | Número | 245 |
 | z | Fuso horário | Fuso horário geral | Hora Padrão do Pacífico; PST; GMT-08:00 |
 | Z | Fuso horário | Fuso horário RFC 822 | -0800 |
-| X | Fuso horário | Fuso horário ISO 8601 | -08; -0800; 08:00 |
+| X | Fuso horário | Fuso horário ISO 8601 | -08; -0800; -08:00 |
 | V | ID de fuso horário | Texto | América/Los_Angeles |
 | O | Deslocamento do fuso horário | Texto | GMT+8 |
 | Q/q | Trimestre do ano | Número/Texto | 3; 03; Q3; 3º trimestre |

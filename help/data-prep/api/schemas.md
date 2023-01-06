@@ -2,9 +2,8 @@
 keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, esquemas;
 solution: Experience Platform
 title: Ponto de Extremidade da API de Esquemas
-topic-legacy: schemas
-description: 'Você pode usar o endpoint `/schemas` na API do Adobe Experience Platform para recuperar, criar e atualizar programaticamente os esquemas para uso com o Mapper na Platform. '
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+description: Você pode usar o endpoint `/schemas` na API do Adobe Experience Platform para recuperar, criar e atualizar programaticamente os esquemas para uso com o Mapper na Platform.
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 5%

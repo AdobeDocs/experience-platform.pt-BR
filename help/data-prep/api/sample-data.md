@@ -2,9 +2,8 @@
 keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, dados de amostra;
 solution: Experience Platform
 title: Endpoint da API de dados de exemplo
-topic-legacy: sample data
-description: 'Você pode usar o terminal `/samples na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os dados de amostra do mapeamento. '
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+description: Você pode usar o terminal `/samples na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os dados de amostra do mapeamento.
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 6%

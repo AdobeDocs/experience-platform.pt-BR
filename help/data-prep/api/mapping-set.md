@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, conjuntos de mapeamento;
 solution: Experience Platform
 title: Ponto de extremidade da API de conjuntos de mapeamento
-topic-legacy: mapping sets
 description: Você pode usar o terminal `/mappingSets` na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os conjuntos de mapeamento.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 5%

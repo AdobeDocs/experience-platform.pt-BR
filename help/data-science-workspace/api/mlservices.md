@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, mlservices, api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Ponto de Extremidade da API do MLServices
-topic-legacy: Developer guide
 description: Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso essencial do MLServices é a capacidade de automatizar o treinamento e a pontuação de acordo com a programação. As execuções de treinamento programado podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 2%

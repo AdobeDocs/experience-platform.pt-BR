@@ -2,11 +2,10 @@
 keywords: Experience Platform; JupyterLab; fórmula; blocos de anotações; Data Science Workspace; tópicos populares; criar fórmula
 solution: Experience Platform
 title: Criar um modelo usando notebooks JupyterLab
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial o orienta pelas etapas necessárias para criar uma receita usando o modelo do construtor de receitas de notebooks JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%

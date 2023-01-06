@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, modelos, api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Ponto de extremidade da API de modelos
-topic-legacy: Developer guide
 description: Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver um caso de uso comercial.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

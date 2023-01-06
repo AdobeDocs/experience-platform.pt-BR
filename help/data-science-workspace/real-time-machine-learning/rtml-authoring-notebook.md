@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, Data Science Workspace, tópicos populares, aprendizado de máquina em tempo real, referência do nó;
 solution: Experience Platform
 title: Gerenciar notebooks de aprendizado de máquina em tempo real
-topic-legacy: Training and scoring a ML model
 description: O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real no Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
@@ -409,7 +408,7 @@ Você retorna o DSL atualizado.
 
 ## Pontuação {#scoring}
 
-Depois de publicar em [!DNL Edge], a pontuação é feita por uma solicitação de POST de um cliente. Normalmente, isso pode ser feito de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso do Postman. O **[!UICONTROL ML em tempo real]** O modelo usa EdgeUtils para demonstrar esse processo.
+Depois de publicar em [!DNL Edge], a pontuação é feita por uma solicitação de POST de um cliente. Normalmente, isso pode ser feito de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso no Postman. O **[!UICONTROL ML em tempo real]** O modelo usa EdgeUtils para demonstrar esse processo.
 
 >[!NOTE]
 >

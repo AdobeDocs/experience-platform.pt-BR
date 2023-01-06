@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, insights, api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Endpoint da API do Insights
-topic-legacy: Developer guide
 description: Os insights contêm métricas que são usadas para capacitar um cientista de dados a avaliar e escolher modelos de ML ideais ao exibir métricas de avaliação relevantes.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, SDK, SDK de acesso a dados, Data Science Workspace, tópicos populares
 solution: Experience Platform
 title: Criação de modelos usando o SDK da plataforma Adobe Experience Platform
-topic-legacy: SDK authoring
 description: Este tutorial fornece informações sobre a conversão de data_access_sdk_python para a nova plataforma Python_sdk em Python e R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%

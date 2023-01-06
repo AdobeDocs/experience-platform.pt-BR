@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, circunstâncias, api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Ponto de Extremidade da API MLInpositions
-topic-legacy: Developer guide
 description: Uma MLInposition é um emparelhamento de um Mecanismo existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%

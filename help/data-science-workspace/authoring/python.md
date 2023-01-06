@@ -2,12 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, acesso a dados, python sdk, api de acesso a dados, ler python, escrever python
 solution: Experience Platform
 title: Acesso a dados usando o Python no Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: O documento a seguir contém exemplos de como acessar dados no Python para uso no Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -16,7 +14,7 @@ ht-degree: 0%
 
 # Acesso a dados usando Python no Data Science Workspace
 
-O documento a seguir contém exemplos de como acessar dados usando o Python para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite a documentação [Acesso a dados dos blocos de anotações JupyterLab](../jupyterlab/access-notebook-data.md).
+O documento a seguir contém exemplos de como acessar dados usando o Python para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite o [Acesso aos dados dos notebooks JupyterLab](../jupyterlab/access-notebook-data.md) documentação.
 
 ## Leitura de um conjunto de dados
 
@@ -55,7 +53,7 @@ partitions = dataset.get_partitions_info()
 
 A cláusula DISTINCT permite buscar todos os valores distintos em um nível de linha/coluna, removendo todos os valores duplicados da resposta.
 
-Um exemplo de uso da função `distinct()` pode ser visto abaixo:
+Um exemplo de uso da variável `distinct()` pode ser vista abaixo:
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,9 +85,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Cláusula ORDER BY
 
-A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando a função `sort()` .
+A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando a variável `sort()` .
 
-Um exemplo de uso da função `sort()` pode ser visto abaixo:
+Um exemplo de uso da variável `sort()` pode ser vista abaixo:
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +97,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 A cláusula LIMIT permite limitar o número de registros recebidos do conjunto de dados.
 
-Um exemplo de uso da função `limit()` pode ser visto abaixo:
+Um exemplo de uso da variável `limit()` pode ser vista abaixo:
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +107,7 @@ df = dataset_reader.limit(100).read()
 
 A cláusula OFFSET permite ignorar linhas, desde o início, para começar a retornar linhas a partir de um ponto posterior. Em combinação com LIMIT, pode ser usado para iterar linhas em blocos.
 
-Um exemplo de uso da função `offset()` pode ser visto abaixo:
+Um exemplo de uso da variável `offset()` pode ser vista abaixo:
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -138,7 +136,7 @@ Para tarefas em execução mais longa, talvez seja necessário armazenar etapas 
 
 >[!NOTE]
 >
->Os caminhos para os dados são **e não** armazenados. Você precisa armazenar o caminho correspondente para seus respectivos dados.
+>Os caminhos para os dados são **not** armazenado. Você precisa armazenar o caminho correspondente para seus respectivos dados.
 
 ### Gravar no espaço do usuário
 
@@ -160,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Próximas etapas
 
-O Adobe Experience Platform Data Science Workspace fornece uma amostra de receita que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, consulte o [Repositório GitHub Python do Data Science&lt;/a1/>.](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)
+O Adobe Experience Platform Data Science Workspace fornece uma amostra de receita que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, consulte o [Repositório do Data Science Workspace Python GitHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

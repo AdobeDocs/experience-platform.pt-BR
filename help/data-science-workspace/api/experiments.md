@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, experimentos, api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Ponto de extremidade da API de experimentos
-topic-legacy: Developer guide
 description: O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, onde um Experimento consiste em uma Instância MLI, execuções de treinamento e execuções de pontuação.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

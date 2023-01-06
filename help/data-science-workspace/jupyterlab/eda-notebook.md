@@ -2,11 +2,10 @@
 keywords: Experience Platform, JupyterLab, notebooks, Data Science Workspace, tópicos populares, analisar blocos de dados, eda, análise de dados exploratória, ciência de dados
 solution: Experience Platform
 title: Notebook de Análise de dados exploratória (EDA)
-topic-legacy: overview
 type: Tutorial
 description: Este guia tem como foco o Notebook de análise de dados exploratórios (EDA) para descobrir padrões em dados da Web, agregar eventos com uma meta de previsão, limpar dados agregados e entender a relação entre preditores e uma meta.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%

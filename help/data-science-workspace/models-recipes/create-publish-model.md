@@ -2,11 +2,10 @@
 keywords: Experience Platform, modelo de aprendizado de máquina, Data Science Workspace, tópicos populares, criar e publicar um modelo
 solution: Experience Platform
 title: Criar e publicar um modelo de aprendizado de máquina
-topic-legacy: tutorial
 type: Tutorial
 description: O guia a seguir descreve as etapas necessárias para criar e publicar um modelo de aprendizado de máquina.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, Data Science Workspace, tópicos populares, Aprendizagem de máquina em tempo real, referência do nó;
 solution: Experience Platform
 title: Referência de nó de aprendizado de máquina em tempo real
-topic-legacy: Nodes reference
 description: Um nó é a unidade fundamental da formação dos gráficos. Cada nó executa uma tarefa específica e pode ser encadeado usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou esquema ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para o(s) próximo(s) nó(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Dividir
 
-Use o seguinte nó para dividir o dataframe em um trem e testar passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar dados de treinamento e teste usando o exemplo a seguir, `msg5.data.xs(“train”)`.
+Use o seguinte nó para dividir o dataframe em um trem e testar passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar dados de treinamento e teste usando o exemplo a seguir, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

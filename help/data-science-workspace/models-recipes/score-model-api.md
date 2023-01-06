@@ -2,11 +2,10 @@
 keywords: Experience Platform; Pontuar um modelo; Data Science Workspace; tópicos populares; api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Pontuar um modelo usando a API de aprendizado de máquina do Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial mostrará como aproveitar as APIs de aprendizado de máquina do Sensei para criar um experimento e uma execução de experimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%

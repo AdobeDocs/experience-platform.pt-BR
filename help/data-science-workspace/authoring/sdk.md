@@ -2,11 +2,9 @@
 keywords: Experience Platform, guia do desenvolvedor, SDK, criação de modelo, Data Science Workspace, tópicos populares, teste
 solution: Experience Platform
 title: SDK de criação de modelo
-topic-legacy: Overview
 description: O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado de máquina personalizadas e Pipelines de recursos que podem ser usadas no Adobe Experience Platform Data Science Workspace, fornecendo modelos implementáveis em PySpark e Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
@@ -15,7 +13,7 @@ ht-degree: 1%
 
 # SDK de criação de modelo
 
-O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado de máquina e Pipelines de recursos personalizados que podem ser usadas no [!DNL Adobe Experience Platform] Data Science Workspace, fornecendo modelos implementáveis em [!DNL PySpark] e [!DNL Spark (Scala)].
+O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado de máquina personalizadas e Pipelines de recursos que podem ser usadas em [!DNL Adobe Experience Platform] Data Science Workspace, fornecendo modelos implementáveis em [!DNL PySpark] e [!DNL Spark (Scala)].
 
 Este documento fornece informações sobre as várias classes encontradas no SDK de criação de modelo.
 
@@ -53,7 +51,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe PySpark Data Load
 
 **Spark**
 
-A tabela a seguir descreve os métodos abstratos de uma classe de [!DNL Spark] Data Loader :
+A tabela a seguir descreve os métodos abstratos de um [!DNL Spark] Classe do carregador de dados:
 
 <table>
     <thead>
@@ -78,9 +76,9 @@ A tabela a seguir descreve os métodos abstratos de uma classe de [!DNL Spark] D
     </tbody>
 </table>
 
-### Carregar dados de um conjunto de dados [!DNL Platform] {#load-data-from-a-platform-dataset}
+### Carregar dados de um [!DNL Platform] conjunto de dados {#load-data-from-a-platform-dataset}
 
-O exemplo a seguir recupera dados [!DNL Platform] por ID e retorna um DataFrame, onde a ID do conjunto de dados (`datasetId`) é uma propriedade definida no arquivo de configuração.
+O exemplo a seguir recupera [!DNL Platform] dados por ID e retorna um DataFrame, onde a ID do conjunto de dados (`datasetId`) é uma propriedade definida no arquivo de configuração .
 
 **PySpark**
 
@@ -199,7 +197,7 @@ A classe DataSaver encapsula qualquer coisa relacionada ao armazenamento de dado
 
 **PySpark**
 
-A tabela a seguir descreve os métodos abstratos de uma classe [!DNL PySpark] do Data Saver:
+A tabela a seguir descreve os métodos abstratos de um [!DNL PySpark] Classe do Data Saver:
 
 <table>
     <thead>
@@ -227,7 +225,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe [!DNL PySpark] do
 
 **Spark (Scala)**
 
-A tabela a seguir descreve os métodos abstratos de uma classe [!DNL Spark] do Data Saver:
+A tabela a seguir descreve os métodos abstratos de um [!DNL Spark] Classe do Data Saver:
 
 <table>
     <thead>
@@ -252,14 +250,14 @@ A tabela a seguir descreve os métodos abstratos de uma classe [!DNL Spark] do D
     </tbody>
 </table>
 
-### Salvar dados em um conjunto de dados [!DNL Platform] {#save-data-to-a-platform-dataset}
+### Salvar dados em um [!DNL Platform] conjunto de dados {#save-data-to-a-platform-dataset}
 
-Para armazenar dados em um conjunto de dados [!DNL Platform], as propriedades devem ser fornecidas ou definidas no arquivo de configuração:
+Para armazenar dados em um [!DNL Platform] conjunto de dados, as propriedades devem ser fornecidas ou definidas no arquivo de configuração:
 
-- Uma ID de conjunto de dados [!DNL Platform] válida para a qual os dados serão armazenados
+- Um [!DNL Platform] ID do conjunto de dados para o qual os dados serão armazenados
 - A ID do locatário pertencente à sua organização
 
-Os exemplos a seguir armazenam dados (`prediction`) em um conjunto de dados [!DNL Platform], onde a ID do conjunto de dados (`datasetId`) e a ID do locatário (`tenantId`) são propriedades definidas no arquivo de configuração.
+Os exemplos a seguir armazenam dados (`prediction`) em um [!DNL Platform] conjunto de dados, em que a ID do conjunto de dados (`datasetId`) e ID do locatário (`tenantId`) são propriedades definidas no arquivo de configuração.
 
 
 **PySpark**
@@ -395,7 +393,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-A classe DatasetTransformer modifica e transforma a estrutura de um conjunto de dados. O [!DNL Sensei Machine Learning Runtime] não requer que esse componente seja definido e é implementado com base em seus requisitos.
+A classe DatasetTransformer modifica e transforma a estrutura de um conjunto de dados. O [!DNL Sensei Machine Learning Runtime] não exige que esse componente seja definido e é implementado com base em seus requisitos.
 
 No que diz respeito a um pipeline de recursos, os transformadores de conjunto de dados podem ser usados cooperativamente com uma fábrica de pipeline de recursos para preparar dados para a engenharia de recursos.
 
@@ -429,7 +427,7 @@ A tabela a seguir descreve os métodos de classe de uma classe de transformador 
 
 **Spark (Scala)**
 
-A tabela a seguir descreve os métodos abstratos de uma classe de transformador de conjunto de dados [!DNL Spark]:
+A tabela a seguir descreve os métodos abstratos de um [!DNL Spark] classe do transformador do conjunto de dados:
 
 <table>
     <thead>

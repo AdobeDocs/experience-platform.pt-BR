@@ -2,10 +2,9 @@
 keywords: Experience Platform, receita de recomendação do produto, Data Science Workspace, tópicos populares, receitas, receita de pré-criação
 solution: Experience Platform
 title: Receita de recomendação do produto
-topic-legacy: overview
 description: A fórmula do Recommendations do produto permite fornecer recomendações personalizadas de produtos, adaptadas às necessidades e interesses do cliente. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer informações sobre quais produtos eles podem estar interessados.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 3%

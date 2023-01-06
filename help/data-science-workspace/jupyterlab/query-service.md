@@ -2,11 +2,10 @@
 keywords: Experience Platform; JupyterLab; notebooks; Data Science Workspace; tópicos populares; serviço de consulta
 solution: Experience Platform
 title: Serviço de query no notebook Júpiter
-topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform permite usar a Linguagem de consulta estruturada (SQL) no Data Science Workspace ao integrar o Serviço de consulta ao JupyterLab como um recurso padrão. Este tutorial demonstra exemplos de consultas SQL para casos de uso comuns para explorar, transformar e analisar dados do Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 1%

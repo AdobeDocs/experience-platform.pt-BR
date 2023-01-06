@@ -2,11 +2,9 @@
 keywords: Experience Platform, receita de compra do produto, Data Science Workspace, tópicos populares, receitas, receita de pré-criação
 solution: Experience Platform
 title: Receita de previsão de compra do produto
-topic-legacy: overview
 description: A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 7%
@@ -33,7 +31,7 @@ A fórmula Previsão de compra do produto utiliza o aprendizado de máquina para
 
 ## Schema de dados
 
-Essa fórmula usa [esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
+Esta receita usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |
@@ -48,16 +46,16 @@ Essa fórmula usa [esquemas XDM](../../xdm/home.md) para modelar os dados. O esq
 | totalOrders | Número |
 | totalItems | Número |
 | orderDate1 | Número |
-| ShippingDate1 | Número |
+| shippingDate1 | Número |
 | totalPrice1 | Número |
 | tax1 | Número |
 | orderDate2 | Número |
-| ShippingDate2 | Número |
+| shippingDate2 | Número |
 | totalPrice2 | Número |
 
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no schema *ProductPredição* é carregado. A partir daqui, o modelo é treinado usando um [random forest classificfier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador Random forest é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter um desempenho preditivo aprimorado. A ideia por trás do algoritmo é que o classificador random forest cria várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
+Primeiro, o conjunto de dados de treinamento no *Previsão de produto* O esquema é carregado. A partir daqui, o modelo é treinado usando um [classificador de floresta aleatória](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador Random forest é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter um desempenho preditivo aprimorado. A ideia por trás do algoritmo é que o classificador random forest cria várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
 
 Esse processo começa com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois, calcula-se a média dos resultados de cada árvore de decisão.

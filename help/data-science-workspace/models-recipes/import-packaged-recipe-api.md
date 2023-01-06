@@ -2,11 +2,10 @@
 keywords: Experience Platform, importar receita empacotada, Data Science Workspace, tópicos populares, receitas, api, aprendizado de máquina do sensei, criar mecanismo
 solution: Experience Platform
 title: Importar uma Receita Empacotada Usando a API de Aprendizagem de Máquina do Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial usa a API do Sensei Machine Learning para criar um Mecanismo, também conhecido como Receita na interface do usuário.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%

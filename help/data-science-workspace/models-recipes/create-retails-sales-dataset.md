@@ -2,11 +2,10 @@
 keywords: Experience Platform, receita de vendas de varejo, Data Science Workspace, tópicos populares, receitas
 solution: Experience Platform
 title: Criar o esquema de vendas de varejo e o conjunto de dados
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do Adobe Experience Platform Data Science Workspace. Após a conclusão, o esquema de Vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros de sua Organização IMS no Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%

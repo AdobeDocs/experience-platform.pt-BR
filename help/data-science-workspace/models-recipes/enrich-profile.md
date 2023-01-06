@@ -2,11 +2,10 @@
 keywords: Experience Platform, modelo de aprendizado de máquina, Data Science Workspace, Perfil do cliente em tempo real, tópicos populares, insights de aprendizado de máquina
 solution: Experience Platform
 title: Enriqueça o perfil do cliente em tempo real com os insights de aprendizado da máquina
-topic-legacy: tutorial
 type: Tutorial
 description: Este documento fornece um guia sobre como enriquecer o Perfil do cliente em tempo real com insights de aprendizado de máquina.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%

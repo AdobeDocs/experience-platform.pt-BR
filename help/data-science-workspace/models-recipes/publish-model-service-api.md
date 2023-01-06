@@ -2,11 +2,10 @@
 keywords: Experience Platform; publicar um modelo; Data Science Workspace; tópicos populares; api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Publicar um modelo como um serviço usando a API de aprendizado de máquina do Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda o processo de publicação de um modelo como um serviço usando a API de aprendizado de máquina do Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 2%

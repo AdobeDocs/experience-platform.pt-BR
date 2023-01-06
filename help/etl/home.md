@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, ETL, etl, integrações etl, integrações ETL
 solution: Experience Platform
 title: Desenvolvimento de integrações de ETL para o Adobe Experience Platform
-topic-legacy: overview
 description: O guia de integração ETL descreve as etapas gerais para criar conectores seguros e de alto desempenho para o Experience Platform e assimilar dados na plataforma.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 1%
@@ -787,7 +786,7 @@ A Adobe Experience Platform não identifica dados adiados no momento, portanto, 
 
 | Data | Ação | Descrição |
 | ---- | ------ | ----------- |
-| 2019-01-2019 | Remoção da propriedade &quot;campos&quot; dos conjuntos de dados | Anteriormente, os conjuntos de dados incluíam uma propriedade &quot;fields&quot; que continha uma cópia do esquema. Esse recurso não deve mais ser usado. Se a propriedade &quot;fields&quot; for encontrada, ela deverá ser ignorada e, em vez disso, &quot;observationSchema&quot; ou &quot;schemaRef&quot; deverá ser usado. |
-| 2019-03-2015 | propriedade &quot;schemaRef&quot; adicionada aos conjuntos de dados | A propriedade &quot;schemaRef&quot; de um conjunto de dados contém um URI que faz referência ao esquema XDM no qual o conjunto de dados se baseia e representa todos os campos em potencial que podem ser usados pelo conjunto de dados. |
-| 2019-03-2015 | Todos os identificadores de usuários finais mapeiam para a propriedade &quot;identityMap&quot; | O &quot;identityMap&quot; é um encapsulamento de todos os identificadores exclusivos de um assunto, como ID do CRM, ECID ou ID do programa de fidelidade. Este mapa é usado por [[!DNL Identity Service]](../identity-service/home.md) para resolver todas as identidades conhecidas e anônimas de um assunto, formando um único gráfico de identidade para cada usuário final. |
+| 2019-01-19 | Remoção da propriedade &quot;campos&quot; dos conjuntos de dados | Anteriormente, os conjuntos de dados incluíam uma propriedade &quot;fields&quot; que continha uma cópia do esquema. Esse recurso não deve mais ser usado. Se a propriedade &quot;fields&quot; for encontrada, ela deverá ser ignorada e, em vez disso, &quot;observationSchema&quot; ou &quot;schemaRef&quot; deverá ser usado. |
+| 2019-03-15 | propriedade &quot;schemaRef&quot; adicionada aos conjuntos de dados | A propriedade &quot;schemaRef&quot; de um conjunto de dados contém um URI que faz referência ao esquema XDM no qual o conjunto de dados se baseia e representa todos os campos em potencial que podem ser usados pelo conjunto de dados. |
+| 2019-03-15 | Todos os identificadores de usuários finais mapeiam para a propriedade &quot;identityMap&quot; | O &quot;identityMap&quot; é um encapsulamento de todos os identificadores exclusivos de um assunto, como ID do CRM, ECID ou ID do programa de fidelidade. Este mapa é usado por [[!DNL Identity Service]](../identity-service/home.md) para resolver todas as identidades conhecidas e anônimas de um assunto, formando um único gráfico de identidade para cada usuário final. |
 | 2019-05-30 | EOL e Remover a propriedade &quot;schema&quot; dos conjuntos de dados | A propriedade &quot;schema&quot; do conjunto de dados forneceu um link de referência para o esquema usando o `/xdms` endpoint no [!DNL Catalog] API. Isso foi substituído por um &quot;schemaRef&quot; que fornece o &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; do schema, conforme referenciado no novo [!DNL Schema Registry] API. |

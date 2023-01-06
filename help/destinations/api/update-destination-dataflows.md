@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, serviço de fluxo, atualizar fluxos de dados de destino
 solution: Experience Platform
 title: Atualizar fluxos de dados de destino usando a API de Serviço de Fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover segmentos e atributos usando a API do Serviço de Fluxo.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 2%

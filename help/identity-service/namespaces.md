@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, namespace, Namespace, Namespaces, namespaces, namespace de identidade, namespace de identidade, identidade, identidade, serviço de identidade, serviço de identidade
 solution: Experience Platform
 title: Visão geral do Namespace de identidade
-topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 3%

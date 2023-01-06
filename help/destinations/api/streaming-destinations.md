@@ -3,10 +3,9 @@ keywords: Experience Platform; home; tópicos populares; Tutoriais de API; API d
 solution: Experience Platform
 title: Conecte-se a destinos de transmissão e ative dados usando a API de Serviço de Fluxo no Adobe Experience Platform
 description: Este documento aborda a criação de destinos de transmissão usando a API do Adobe Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 2%

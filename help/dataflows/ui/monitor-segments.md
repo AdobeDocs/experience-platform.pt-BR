@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, monitorar segmentos, monitorar fluxos de dados, fluxos de dados, segmentação
 description: A segmentação permite criar segmentos e públicos-alvo a partir dos dados do Perfil do cliente em tempo real. Este tutorial fornece instruções sobre como monitorar os fluxos de dados durante a segmentação usando a interface do usuário do Experience Platform.
 title: Monitorar fluxos de dados para segmentos na interface do usuário
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%

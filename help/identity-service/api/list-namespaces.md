@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, lista de namespace, namespace de lista
 solution: Experience Platform
 title: Listar namespaces de identidade disponíveis
-topic-legacy: API guide
 description: Liste todos os namespaces disponíveis.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 7%

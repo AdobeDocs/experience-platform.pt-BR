@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, fluxos de dados, fluxos de dados, dados, monitoramento, monitorar fluxos de dados, monitorar fluxos de dados, monitorar, monitorar fluxos de dados, monitorar fluxos de dados, fluxo, serviço de fluxo;
 solution: Experience Platform
 title: Visão geral dos fluxos de dados
-topic-legacy: overview
 description: Este documento apresenta fluxos de dados, expressando como são usados no Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%

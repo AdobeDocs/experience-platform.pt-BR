@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, namespace de identidade, namespace de identidade
 solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
-topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 0%

@@ -3,10 +3,9 @@ keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Conecte-se a destinos em lote e ative dados usando a API do Serviço de Fluxo
 description: Instruções passo a passo para usar a API do Serviço de Fluxo para criar um armazenamento em lote na nuvem ou um destino de marketing por email no Experience Platform e ativar os dados
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%

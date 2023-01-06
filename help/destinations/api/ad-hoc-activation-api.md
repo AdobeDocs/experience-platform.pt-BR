@@ -3,10 +3,9 @@ keywords: Experience Platform, api de destino, ativação ad-hoc, ativar segment
 solution: Experience Platform
 title: Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc
 description: Este artigo ilustra o fluxo de trabalho completo para ativar segmentos de público-alvo por meio da API de ativação ad hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 1%

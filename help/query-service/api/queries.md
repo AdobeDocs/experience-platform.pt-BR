@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, guia de api, consultas, query, serviço de query;
 solution: Experience Platform
 title: Ponto de Extremidade da API de Consultas
-topic-legacy: queries
 description: As seções a seguir abordam as chamadas que você pode fazer usando o endpoint /queries na API do Serviço de query.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 4%

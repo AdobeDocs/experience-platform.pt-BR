@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, serviço de consulta, serviço de consulta, query
 title: Introdução ao Serviço de query do Adobe Experience Platform
-topic-legacy: tutorial
 description: Um detalhamento das etapas necessárias para utilizar totalmente o Serviço de query da Adobe Experience Platform
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 7%

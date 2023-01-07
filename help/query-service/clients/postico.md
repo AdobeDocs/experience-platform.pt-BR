@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de query, postico, Postico, conectar ao serviço de query;
 solution: Experience Platform
 title: Ligar Postico ao Serviço de Consulta
-topic-legacy: connect
 description: Este documento contém o link para instalar o cliente de backup Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, guia de api, serviço de query, contas do serviço de query, contas;
 solution: Experience Platform
 title: Endpoint da API de contas
-topic-legacy: connection parameters
 description: Você pode criar uma conta do Serviço de query para persistente .
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%

@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; PSQL; psqlconnect para serviço de consulta; serviço de consulta; serviço de consulta;
 solution: Experience Platform
 title: Conectar o PSQL ao Serviço de Consulta
-topic-legacy: connect
 description: O PSQL é uma interface de linha de comando que vem quando você instala o PostgreSQL em sua máquina. Você pode instalá-lo seguindo estas instruções.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, modelos de consulta, guia de api, modelos, serviço de query;
 solution: Experience Platform
 title: Ponto de extremidade da API de modelos de consulta
-topic-legacy: query templates
 description: Este guia detalha as várias chamadas de API de modelo de consulta que podem ser feitas usando a API do serviço de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 5%

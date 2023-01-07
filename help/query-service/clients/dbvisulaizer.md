@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, Db Visualizer, DbVisualizer, db visulaizer, conectar ao serviço de consulta;
 solution: Experience Platform
 title: Conectar o DbVisualizer ao Serviço de query
-topic-legacy: connect
 description: Este documento aborda as etapas para conectar o DbVisualizer ao Serviço de query do Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 1%

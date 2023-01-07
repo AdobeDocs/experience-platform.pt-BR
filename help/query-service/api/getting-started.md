@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, query
 solution: Experience Platform
 title: Guia da API do Serviço de query
-topic-legacy: query templates
 description: A API do Serviço de query permite que desenvolvedores consultem seus dados do Adobe Experience Platform usando o SQL padrão. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 6%

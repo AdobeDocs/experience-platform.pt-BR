@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; serviço de consulta; serviço de consulta; instruções preparadas; preparado; sql;
 solution: Experience Platform
 title: Declarações Preparadas no Serviço de Consulta
-topic-legacy: prepared statements
 description: No SQL, as instruções preparadas são usadas para modelar consultas ou atualizações semelhantes. O Adobe Experience Platform Query Service oferece suporte a instruções preparadas usando uma consulta parametrizada.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 11%
@@ -86,7 +85,7 @@ A consulta SQL acima retornará a seguinte resposta:
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexandro | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 11-1999-26 | example3@example.com | Tóquio | Japão |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
 | 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
 | 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
@@ -105,11 +104,11 @@ EXECUTE getIdRange(10000, 10005);
 
 Quando isso for chamado, você verá exatamente os mesmos resultados de antes:
 
-| id | firstname | lastname | data de nascimento | email | cidade | country |
+| id | firstname | lastname | data de nascimento | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexandro | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 11-1999-26 | example3@example.com | Tóquio | Japão |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
 | 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
 | 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consultas, serviço de consultas, consultas agendadas, consulta agendada;
 solution: Experience Platform
 title: Ponto de Extremidade da API de Consultas Agendadas
-topic-legacy: scheduled queries
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas agendadas com a API do serviço de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 3%

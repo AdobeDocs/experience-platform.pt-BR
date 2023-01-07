@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, query
 solution: Experience Platform
 title: Visão geral do serviço de consulta
-topic-legacy: overview
 description: Este documento fornece uma visão geral da função do Serviço de query no Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 1%

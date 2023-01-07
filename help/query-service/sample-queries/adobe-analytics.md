@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, consultas de amostra, consulta de amostra, adobe analytics;
 solution: Experience Platform
 title: Exemplos de consultas para dados do Adobe Analytics
-topic-legacy: queries
 description: Os dados dos conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e assimilados no Adobe Experience Platform como conjuntos de dados. Este documento descreve uma série de casos de uso em que o Serviço de query usa esses dados e inclui consultas de amostra projetadas para funcionar com seus conjuntos de dados do Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 1%
@@ -122,7 +121,7 @@ Nos relatórios, os pedidos, a receita, as visualizações de produtos e as incl
 | eVar6 (método de descoberta do produto) | Receita | ordens | exibições de produto | adições ao carrinho |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | pesquisa interna:camisa de verão | 19,99 | 1 | 1 | 1 |
-| pesquisa interna:chapéu de inverno | 12,99 | 1 | 1 | 1 |
+| pesquisa interna:chapéu de inverno | 12.99 | 1 | 1 | 1 |
 
 Para saber mais sobre o uso da sintaxe de conversão, leia a documentação do Adobe Analytics em [implementação de eVars usando sintaxe de conversão](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 

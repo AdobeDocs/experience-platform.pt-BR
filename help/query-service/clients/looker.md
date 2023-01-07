@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, Looker, looker, conectar ao serviço de consulta;
 solution: Experience Platform
 title: Conectar Looker ao Serviço de Consulta
-topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Looker ao Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%

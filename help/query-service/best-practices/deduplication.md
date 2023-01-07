@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, serviço de query, serviço de query, desduplicação de dados, desduplicação;
 solution: Experience Platform
 title: Desduplicação de dados no serviço de query
-topic-legacy: queries
 type: Tutorial
 description: 'Este documento descreve exemplos de consulta de amostra completa e de subseleção para desduplicação de três casos de uso comuns: Eventos de experiência, compras e métricas.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%

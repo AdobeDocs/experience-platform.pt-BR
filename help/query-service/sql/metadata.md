@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, PSQL, psql, serviço de consulta, serviço de consulta, metadados, comandos, comandos de metadados;
 solution: Experience Platform
 title: Comandos PostgreSQL de Metadados no Serviço de Consulta
-topic-legacy: metadata
 description: Uma lista de comandos PostgreSQL atualmente compatíveis com a consulta de metadados no Serviço de Consulta do Adobe Experience Platform.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

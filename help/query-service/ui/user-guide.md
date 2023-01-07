@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; Editor de consultas; editor de consultas; serviço de consultas;
 solution: Experience Platform
 title: Guia da interface do usuário do Editor de consultas
-topic-legacy: query editor
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas de dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 0%

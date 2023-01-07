@@ -5,9 +5,9 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de query. Os tópicos incluem, exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4383'
 ht-degree: 1%
 
 ---
@@ -533,6 +533,11 @@ WHERE T2.ID IS NULL
 +++Resposta Sim, o controle de acesso baseado em atributo é empregado se configurado. Consulte a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md) para obter mais informações.
 +++
 
+### O Serviço de Consulta suporta o comando &quot;INSERT OVERWRITE INTO&quot;?
+
++++Nº da resposta, o Serviço de consulta não suporta o comando &quot;INSERT OVERWRITE INTO&quot;.
++++
+
 ## Exportar dados {#exporting-data}
 
 Esta seção fornece informações sobre exportação de dados e limites.
@@ -665,5 +670,5 @@ A tabela a seguir fornece códigos de erro HTTP e suas possíveis causas.
 | Código do status HTTP | Descrição | Possíveis causas |
 |------------------|-----------------------|----------------------------|
 | 400 | Solicitação inválida | Consulta malformada ou ilegal |
-| 401° | Falha na autenticação | Token de autenticação inválido |
+| 401 | Falha na autenticação | Token de autenticação inválido |
 | 500 | Erro interno do servidor | Falha do sistema interno |

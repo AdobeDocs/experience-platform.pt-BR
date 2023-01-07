@@ -5,9 +5,9 @@ title: Criar e editar grupos de campos de esquema na interface do usuário
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,13 @@ Depois de ter o schema aberto no [!DNL Schema Editor], selecione **[!UICONTROL A
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Uma caixa de diálogo é exibida mostrando uma lista de grupos de campos existentes para sua organização. Próximo à parte superior da caixa de diálogo, selecione **[!UICONTROL Criar novo grupo de campos]**. Aqui você pode fornecer uma **[!UICONTROL Nome de exibição]** e **[!UICONTROL Descrição]** para o grupo de campos. Quando terminar, selecione **[!UICONTROL Adicionar grupo de campos]**.
+Na caixa de diálogo exibida, selecione **[!UICONTROL Criar novo grupo de campos]**. Aqui você pode fornecer uma **[!UICONTROL Nome de exibição]** e **[!UICONTROL Descrição]** para o grupo de campos. Quando terminar, selecione **[!UICONTROL Adicionar grupos de campos]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 O [!DNL Schema Editor] será exibido novamente, com o novo grupo de campos listado no painel esquerdo. Como esse é um grupo de campos totalmente novo, atualmente não fornece campos para o esquema e, portanto, a tela permanece inalterada. Agora você pode começar [adição de campos ao grupo de campos](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## Editar um grupo de campos existente {#edit}
 
@@ -58,13 +60,17 @@ Depois de abrir o schema no editor, você pode iniciar [adição de campos ao gr
 >
 >Esta seção foca na adição de campos a grupos de campos personalizados. Para obter informações sobre como adicionar campos personalizados a grupos de campos padrão, consulte [guia da interface do usuário do schemas](./schemas.md#custom-fields-for-standard-groups).
 
-Para adicionar campos a um grupo de campos personalizado na [!DNL Schema Editor], comece selecionando o nome do grupo de campos no painel à esquerda e selecione o **mais (+)** ícone ao lado do nome do esquema na tela.
+Para adicionar campos a um grupo de campos personalizado, comece selecionando o **mais (+)** ícone ao lado do nome do esquema na tela.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Novo campo]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia sobre [definição de campos na interface do usuário](../fields/overview.md#define) para obter etapas específicas sobre como configurar e adicionar o campo ao grupo de campos.
+A **[!UICONTROL Novo campo]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia sobre [definição de campos na interface do usuário](../fields/overview.md#define) para etapas específicas sobre como configurar tipos de campos diferentes.
 
-Continue a adicionar quantos campos forem necessários ao grupo de campos. Quando terminar, selecione **[!UICONTROL Salvar]** para salvar o schema e o grupo de campos.
+Em **[!UICONTROL Atribuir a]**, selecione o **[!UICONTROL Grupo de campos]** , em seguida, use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para limitar os resultados.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Depois que o campo é adicionado ao schema, ele é atribuído ao grupo de campos selecionado. Continue a adicionar quantos campos forem necessários ao grupo de campos. Quando terminar, selecione **[!UICONTROL Salvar]** para salvar o schema e o grupo de campos.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

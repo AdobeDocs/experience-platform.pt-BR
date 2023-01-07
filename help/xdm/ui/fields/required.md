@@ -3,7 +3,7 @@ keywords: Experience Platform; home; tópicos populares; api; API; XDM; sistema 
 title: Definir campos obrigatórios na interface do usuário
 description: Saiba como definir um campo XDM necessário na interface do usuário do Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Se o campo for um atributo de nível raiz sob o objeto de ID do locatário, seu 
 
 Se um campo obrigatório estiver aninhado dentro de um objeto que não esteja marcado como necessário, no entanto, o campo aninhado não aparecerá em **[!UICONTROL Campos obrigatórios]** no painel esquerdo.
 
-No exemplo abaixo, a variável `loyaltyId` for definido conforme necessário, mas seu objeto pai `loyalty` não é. Nesse caso, nenhum erro de validação ocorreria se `loyalty` foi excluído ao assimilar dados, mesmo que o campo filho `loyaltyId` estiver marcada conforme necessário. Em outras palavras, enquanto `loyalty` é opcional, deve conter um `loyaltyId` no caso de inclusão.
+No exemplo abaixo, a variável `internalSKU` for definido conforme necessário, mas seu objeto pai `SKUs` não é. Nesse caso, nenhum erro de validação ocorreria se `SKUs` é excluída ao assimilar dados, mesmo que o campo filho `internalSKU` estiver marcada conforme necessário. Em outras palavras, enquanto `SKUs` é opcional, deve conter um `internalSKU` no caso de inclusão.
 
 ![Campo obrigatório aninhado](../../images/ui/fields/required/nested.png)
 

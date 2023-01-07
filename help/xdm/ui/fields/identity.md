@@ -5,9 +5,9 @@ title: Definir campos de identidade na interface do usuário
 description: Saiba como definir um campo de identidade na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar a alteração a
 
 A tela é atualizada para refletir as alterações, com o campo selecionado ganhando um símbolo de impressão digital (![](../../images/ui/fields/special/identity-symbol.png)) para designá-la como uma identidade. No painel à esquerda, o campo de identidade agora é listado sob o nome da classe ou do grupo de campos do esquema que fornece o campo para o esquema.
 
-Como todos os campos de identidade são obrigatórios por padrão, o campo agora é listado em **[!UICONTROL Campos obrigatórios]** no painel esquerdo. Se o campo de identidade estiver aninhado dentro da estrutura do schema, todos os campos pai também serão listados conforme necessário.
+Se o campo também tiver sido definido como a identidade primária, ele também será listado em **[!UICONTROL Campos obrigatórios]** no painel esquerdo. Se o campo de identidade estiver aninhado dentro da estrutura do schema, todos os campos pai também serão listados conforme necessário.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 

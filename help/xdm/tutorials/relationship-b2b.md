@@ -2,9 +2,9 @@
 title: Definir uma relação entre dois esquemas no Real-time Customer Data Platform B2B Edition
 description: Saiba como definir uma relação muitos para um entre dois schemas no Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Se você exibir a estrutura do schema de destino, o marcador de relação aparec
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma relação muitos para um entre dois schemas usando o [!DNL Schema Editor]. Depois que os dados forem assimilados usando conjuntos de dados baseados nesses esquemas e os dados tiverem sido ativados no armazenamento de dados do Perfil, você poderá usar atributos de ambos os esquemas para casos de uso de segmentação de várias classes. Consulte a documentação do Real-Time CDP B2B Edition para obter mais informações.
+Ao seguir este tutorial, você criou com êxito uma relação muitos para um entre dois schemas usando o [!DNL Schema Editor]. Depois que os dados forem assimilados usando conjuntos de dados baseados nesses esquemas e os dados tiverem sido ativados no armazenamento de dados do Perfil, você poderá usar atributos de ambos os esquemas para [casos de uso de segmentação de várias classes](../../rtcdp/segmentation/b2b.md).

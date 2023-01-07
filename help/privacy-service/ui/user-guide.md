@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, exportar, exportar
 solution: Experience Platform
 title: Gerenciar trabalhos de privacidade na interface do usuário do Privacy Service
-topic-legacy: UI guide
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos do Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 1%

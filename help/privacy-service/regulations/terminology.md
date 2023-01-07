@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; GDPR; Gdpr; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; visão geral; visão geral; regulamento; regulamentos; regulamentos; privacidade; Privacidade;
 solution: Experience Platform
 title: Terminologia dos Regulamentos de Privacidade
-topic-legacy: troubleshooting
 description: Este documento fornece definições para termos-chave relacionados às regulamentações de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 65ff39c99eee98654daee89c86d6047dc055c196
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 3%
@@ -82,7 +81,7 @@ Este documento fornece definições para termos-chave relacionados às regulamen
 
 **Consentimento implícito**: Também conhecido como consentimento inequívoco, refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas que é de natureza inequívoca. Por exemplo, durante o processo de inscrição de um site da empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consentiu em receber emails em ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento implícito.
 
-**ID organizacional IMS**: Refere-se a um token de autorização Adobe para autenticação de serviço para serviço, que não requer logon do usuário. Ele é emitido para um cliente IMS e não tem nenhum usuário associado. Um cliente IMS precisa de um token de serviço para autorizar solicitações de canal de retorno entre serviços. (O termo &quot;token do sistema&quot; é usado ocasionalmente para significar token de serviço).
+**ID organizacional IMS**: Refere-se a um token de autorização Adobe para autenticação de serviço para serviço, que não requer logon do usuário. Ele é emitido para um cliente IMS e não tem nenhum usuário associado. Um cliente IMS precisa de um token de serviço para autorizar solicitações de canal de retorno entre serviços. (O termo “token do sistema” é usado ocasionalmente para significar token de serviço).
 
 ## J
 

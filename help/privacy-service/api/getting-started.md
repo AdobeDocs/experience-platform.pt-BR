@@ -1,9 +1,8 @@
 ---
 title: Introdução à API do Privacy Service
 description: Saiba como autenticar na API do Privacy Service e interpretar chamadas de API de exemplo na documentação.
-topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 59dc28a84971dc8c21d633741cfe2dc1b44ea1a6
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 10%

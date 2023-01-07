@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API
 title: Endpoint da API de tarefas do sistema de perfis
-topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite que você exclua um conjunto de dados ou lote do armazenamento de Perfil para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou foram adicionados com erro. Isso requer o uso da API de perfil para criar um trabalho do sistema de perfil ou excluir uma solicitação.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 3%

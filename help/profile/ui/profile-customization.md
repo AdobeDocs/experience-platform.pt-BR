@@ -2,9 +2,8 @@
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, interface do usuário, interface do usuário, personalização, detalhes do perfil, detalhes
 title: Personalização de detalhes do perfil na interface do usuário
 description: Este guia fornece instruções passo a passo para personalizar a maneira como os dados do Perfil do cliente em tempo real são exibidos na interface do usuário do Adobe Experience Platform.
-topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%

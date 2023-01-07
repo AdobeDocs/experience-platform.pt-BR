@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Endpoint da API de tarefas de privacidade
-topic-legacy: developer guide
 description: Saiba como gerenciar tarefas de privacidade para aplicativos Experience Cloud usando a API do Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 3%

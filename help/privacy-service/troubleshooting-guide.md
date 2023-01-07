@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Guia de solução de problemas de Privacy Service
-topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre o Privacy Service, bem como informações sobre erros comumente encontrados na API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 0%

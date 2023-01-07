@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API
 title: Como configurar um campo de atributo calculado
-topic-legacy: guide
 type: Documentation
 description: Atributos calculados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Esse campo pode ser criado usando um grupo de campo de esquema para adicionar o campo a um schema existente ou selecionando um campo que já foi definido em um schema.
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 1%

@@ -2,17 +2,16 @@
 keywords: Experience Platform; home; tópicos populares; GDPR; gdpr; ccpa:CCPA; pdpa; PDPA; pdpa_que; PDPA_THA; lgpd; LGPD; lgpd_bra; LGPD_BRA;
 solution: Experience Platform
 title: Visão geral do Privacy Service
-topic-legacy: overview
 description: O Privacy Service permite facilitar a conformidade automatizada com as normas legais de privacidade em suas operações de dados do Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
-# [!DNL Privacy Service] visão geral
+# Visão geral do [!DNL Privacy Service]
 
 Para oferecer melhores experiências ao cliente, é necessário coletar e armazenar os dados pessoais dos clientes. Ao usar esses dados, é importante entender e respeitar a privacidade de seus clientes. As novas regulamentações legais e organizacionais dão aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados, mediante solicitação.
 
@@ -39,7 +38,7 @@ As seções abaixo fornecem orientação geral sobre essas importantes etapas de
 
 ### Determine os requisitos de privacidade da sua organização {#requirements}
 
-Dependendo da natureza da sua empresa e das jurisdições sob as quais ela opera, suas operações de dados podem estar sujeitas a regulamentos legais de privacidade. Essas regulamentações geralmente dão aos clientes o direito de solicitar acesso aos dados coletados deles e o direito de solicitar a exclusão desses dados armazenados. Essas solicitações de clientes para seus dados pessoais são chamadas de &quot;solicitações de privacidade&quot; em toda a documentação.
+Dependendo da natureza da sua empresa e das jurisdições sob as quais ela opera, suas operações de dados podem estar sujeitas a regulamentos legais de privacidade. Esses regulamentos geralmente oferecem aos clientes o direito de solicitar acesso aos dados coletados deles e o direito de solicitar a exclusão desses dados armazenados. Essas solicitações de clientes para seus dados pessoais são chamadas de &quot;solicitações de privacidade&quot; em toda a documentação.
 
 Para obter detalhes sobre as diferentes regulamentações legais de privacidade que [!DNL Privacy Service] gerencia solicitações de, incluindo termos-chave e respostas a perguntas frequentes, consulte o [documentação de regulamentos de privacidade](./regulations/overview.md).
 
@@ -89,7 +88,7 @@ Depois de fazer tarefas de privacidade, você tem várias opções para monitora
 
 | Método de monitorização | Descrição |
 | --- | --- |
-| [!DNL Privacy Service] Interface | O [!DNL Privacy Service] A interface do usuário fornece um painel de monitoramento que permite visualizar uma representação visual do status de todas as solicitações ativas. Consulte a [Guia do usuário do Privacy Service](ui/overview.md) para obter mais informações. |
+| [!DNL Privacy Service] Interface do usuário | O [!DNL Privacy Service] A interface do usuário fornece um painel de monitoramento que permite visualizar uma representação visual do status de todas as solicitações ativas. Consulte a [Guia do usuário do Privacy Service](ui/overview.md) para obter mais informações. |
 | [!DNL Privacy Service] API | Você pode monitorar programaticamente o status de tarefas de Privacidade usando os endpoints de pesquisa fornecidos pelo [!DNL Privacy Service] API. Consulte a [Guia da API do Privacy Service](./api/overview.md) para obter etapas detalhadas sobre como usar a API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] aproveite os Adobe I/O Events enviados para um webhook configurado para facilitar a automação eficiente de solicitações de trabalhos. Eles reduzem ou eliminam a necessidade de pesquisar a variável [!DNL Privacy Service] API para verificar se uma tarefa foi concluída ou se um determinado marco em um fluxo de trabalho foi atingido. Veja o tutorial em [assinatura de eventos de privacidade](./privacy-events.md) para obter mais informações. |
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; GDPR; Gdpr; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; visão geral; visão geral; regulamento; regulamentos; regulamentos; privacidade; Privacidade;
 solution: Experience Platform
 title: Visão geral dos regulamentos de privacidade
-topic-legacy: troubleshooting
 description: Este documento fornece uma visão geral das diferentes regulamentações de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%

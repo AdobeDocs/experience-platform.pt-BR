@@ -2,13 +2,12 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Inscrever-se em eventos do Privacy Service
-topic-legacy: privacy events
 description: Saiba como assinar eventos do Privacy Service usando um webhook pré-configurado.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

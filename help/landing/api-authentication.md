@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Autenticar, acesso
 solution: Experience Platform
 title: Autenticar e acessar APIs do Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 9%
@@ -37,19 +36,19 @@ Para fazer chamadas com êxito para APIs do Experience Platform, você deve ter 
 
 Você também deve ter uma Adobe ID para concluir este tutorial. Se você não tiver uma Adobe ID, poderá criar uma usando as seguintes etapas:
 
-1. Ir para [Console do desenvolvedor do Adobe](https://console.adobe.io).
+1. Ir para [Console do Adobe Developer](https://console.adobe.io).
 2. Selecionar **[!UICONTROL Criar uma nova conta]**.
 3. Conclua o processo de inscrição.
 
 ## Obter acesso de desenvolvedor e usuário para o Experience Platform
 
-Antes de criar integrações no Console do desenvolvedor do Adobe, sua conta deve ter permissões de desenvolvedor e de usuário para um perfil de produto do Experience Platform no Adobe Admin Console.
+Antes de criar integrações no Adobe Developer Console, sua conta deve ter permissões de desenvolvedor e de usuário para um perfil de produto do Experience Platform no Adobe Admin Console.
 
 ### Obter acesso do desenvolvedor
 
 Entre em contato com um [!DNL Admin Console] administrador em sua organização para adicioná-lo como desenvolvedor a um perfil de produto do Experience Platform usando o [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulte a [!DNL Admin Console] documentação para obter instruções específicas sobre como [gerenciar o acesso do desenvolvedor para perfis de produtos](https://helpx.adobe.com/br/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Depois de ser atribuído como um desenvolvedor, você pode começar a criar integrações no [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para APIs do Adobe.
+Depois de ser atribuído como um desenvolvedor, você pode começar a criar integrações no [Console do Adobe Developer](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para APIs do Adobe.
 
 ### Obter acesso do usuário
 
@@ -65,7 +64,7 @@ Depois de ter recebido acesso de desenvolvedor e usuário à Platform por meio d
 
 ### Adicionar Experience Platform a um projeto
 
-Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criação de um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
+Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criação de um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do Adobe Developer.
 
 Depois de criar um novo projeto, selecione **[!UICONTROL Adicionar API]** no **[!UICONTROL Visão geral do projeto]** tela.
 

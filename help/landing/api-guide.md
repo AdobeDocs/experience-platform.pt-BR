@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Adobe Experience Platform, guia de api, guia de api da plataforma, introdução à plataforma, guia do desenvolvedor
 solution: Experience Platform
 title: Introdução às APIs do Adobe Experience Platform
-topic-legacy: api guide
 description: A Adobe Experience Platform fornece serviços de API que estão intimamente vinculados uns aos outros. Este guia contém informações sobre os serviços disponíveis, cabeçalhos necessários para operações CRUD, mensagens de erro, coleções de Postman e chamadas de API de exemplo.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 2%

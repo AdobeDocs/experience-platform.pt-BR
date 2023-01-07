@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, home, tópicos populares, CJA, análise de jornada, análise de jornada do cliente, orquestração de campanha, orquestração, jornada do cliente, jornada, orquestração de jornada, capacidade, região
 title: Fluxo de trabalho de exemplo completo do Adobe Experience Platform
-topic-legacy: getting started
 description: Saiba mais sobre o fluxo de trabalho completo básico do Adobe Experience Platform em alto nível.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 3%

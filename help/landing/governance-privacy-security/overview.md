@@ -2,13 +2,12 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Visão geral de governança, privacidade e segurança
-topic-legacy: overview
 description: A Adobe Experience Platform fornece vários serviços e ferramentas que permitem controlar com segurança seus dados de experiência coletados para cumprir suas práticas comerciais, obrigações legais e processo de desenvolvimento.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +35,7 @@ Consulte a [Visão geral da governança de dados](../../data-governance/home.md)
 
 ### Catálogo e conjuntos de dados {#catalog}
 
-O Serviço de Catálogo é o sistema de registro para localização e linhagem de dados na Plataforma. Embora todos os dados assimilados no Experience Platform sejam armazenados no Data Lake como arquivos e diretórios, o Catalog retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa e monitoramento.
+O Serviço de catálogo é o sistema de registro para localização e linhagem de dados na Platform. Embora todos os dados assimilados na Experience Platform sejam armazenados no Data Lake como arquivos e diretórios, o Catálogo retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa e monitoramento.
 
 O Catálogo organiza os dados assimilados em conjuntos de dados, com cada conjunto de dados contendo metadados que podem ser usados para rotular e categorizar os dados que ele contém.
 

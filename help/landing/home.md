@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, CJA, análise de jornada, análise de jornada do cliente, orquestração de campanha, orquestração, jornada do cliente, jornada, orquestração de jornada, capacidade, região
 solution: Experience Platform
 title: Visão geral da Adobe Experience Platform
-topic-legacy: getting started
 description: O Adobe Experience Platform permite que as organizações centralizem e padronizem dados de clientes antes de aplicar a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 10%
@@ -30,7 +29,7 @@ O Adobe criou vários serviços de aplicativos além do Experience Platform. Voc
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Endpoint da API de métricas
-topic-legacy: developer guide
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API do Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 4%

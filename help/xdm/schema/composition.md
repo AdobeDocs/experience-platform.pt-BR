@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
 workflow-type: tm+mt
-source-wordcount: '4103'
+source-wordcount: '4108'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ Um exemplo de um mapa de identidade simples seria semelhante ao seguinte:
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -100,10 +100,10 @@ Um exemplo de um mapa de identidade simples seria semelhante ao seguinte:
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -197,7 +197,7 @@ Os grupos de campos definem a(s) classe(s) com a qual são compatíveis, com bas
 
 [!DNL Experience Platform] O inclui muitos grupos de campos Adobe padrão, além de permitir que os fornecedores definam grupos de campos para seus usuários e usuários individuais definam grupos de campos para seus próprios conceitos específicos.
 
-Por exemplo, para capturar detalhes como &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Endereço residencial]&quot; para seu &quot;[!UICONTROL Membros de Fidelidade]&quot;, você poderá usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos específicos para casos de uso menos comuns (como &quot;[!UICONTROL Nível do Programa de Fidelidade]&quot;) muitas vezes não têm um grupo de campos predefinido. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
+Por exemplo, para capturar detalhes como &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Endereço residencial]&quot; para seu &quot;[!UICONTROL Membros de Fidelidade]&quot;, você poderá usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos mais específicos à sua organização (como detalhes do programa de fidelidade personalizado ou atributos de produto) que podem não ser cobertos por grupos de campo padrão. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
 
 >[!NOTE]
 >

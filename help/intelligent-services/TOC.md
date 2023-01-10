@@ -7,12 +7,12 @@ user-guide-description: Utilize os serviços inteligentes de IA para gerar pontu
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
 
-# Serviços inteligentes do Adobe {#intelligent-services}
+# Serviços inteligentes da Adobe {#intelligent-services}
 
 - [Visão geral dos Serviços inteligentes](home.md)
 - [Preparar dados para uso nos Serviços inteligentes](data-preparation.md)

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Ajuda da higiene de dados
 breadcrumb-title: Guia de higiene de dados
-user-guide-description: Exclua registros individuais e programe as expirações do conjunto de dados no Experience Platform para limpeza de dados, remoção de dados anônimos e minimização de dados.
+user-guide-description: Exclua registros individuais e programe as expirações dos conjuntos de dados na Experience Platform para limpeza de dados, remoção de dados anônimos e minimização de dados.
 feature: Data Hygiene
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '52'
-ht-degree: 15%
+ht-degree: 51%
 
 ---
 

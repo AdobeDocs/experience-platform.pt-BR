@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; Aplicação de políticas; Aplicação automática; Aplicação baseada em API; governança de dados
 solution: Experience Platform
 title: Endpoints da API de avaliação de política
-topic-legacy: developer guide
 description: Depois que as ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a API do Serviço de política para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 2%

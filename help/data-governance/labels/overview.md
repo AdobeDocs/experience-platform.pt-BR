@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, governança de dados, api de etiqueta de uso de dados, api de serviço de política, visão geral dos rótulos de uso de dados
 solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
-topic-legacy: labels
 description: Saiba como os rótulos de uso de dados são usados para ajudar a reforçar a conformidade com o controle de dados no Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

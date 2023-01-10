@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, imposição de políticas, aplicação baseada em API, controle de dados
 solution: Experience Platform
 title: Endpoint da API de políticas de governança de dados
-topic-legacy: developer guide
 description: As políticas de governança de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito, com desempenho em dados no Experience Platform. O endpoint /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão das políticas de governança de dados.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 3%

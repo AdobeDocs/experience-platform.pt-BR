@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, DULE, dule
 solution: Experience Platform
 title: Introdução à API do serviço de política
-topic-legacy: developer guide
 description: A API do Serviço de política permite criar e gerenciar vários recursos relacionados à Governança de dados do Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do serviço de política.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%

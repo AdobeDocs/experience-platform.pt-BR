@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, dule, DULE
 solution: Experience Platform
 title: Visão geral das políticas de uso de dados
-topic-legacy: policies
 description: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados no Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 2%

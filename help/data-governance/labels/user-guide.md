@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, governança de dados, rótulo de uso de dados, serviço de política, guia do usuário de rótulos de uso de dados
 solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface do usuário
-topic-legacy: labels
 description: Este guia aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%

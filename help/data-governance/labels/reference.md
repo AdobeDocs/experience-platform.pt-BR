@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, governança de dados, api de etiqueta de uso de dados, api de serviço de política, rótulos de uso de dados suportados, rótulos de contrato, rótulos de identidade, rótulos sensíveis
 solution: Experience Platform
 title: Glossário de rótulos de uso de dados
-topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 1%

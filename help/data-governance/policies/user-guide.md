@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, governança de dados, guia do usuário da política de uso de dados
 solution: Experience Platform
 title: Gerenciar políticas de uso de dados na interface do usuário
-topic-legacy: policies
 description: A Governança de dados do Adobe Experience Platform fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que podem ser executadas no espaço de trabalho Políticas na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 0%

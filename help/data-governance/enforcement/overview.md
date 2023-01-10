@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; Aplicação de políticas; Aplicação automática; Aplicação baseada em API; governança de dados
 solution: Experience Platform
 title: Visão geral da aplicação de políticas
-topic-legacy: guide
 description: Saiba como as políticas de uso de dados são aplicadas no Adobe Experience Platform.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
-source-git-commit: 6f79b1a03a75558d1a25f0375e8393ad56756d80
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%

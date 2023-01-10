@@ -2,10 +2,10 @@
 title: Visão geral da extensão Adobe Medium Analytics (3.x SDK) for Audio and Video
 description: Saiba mais sobre o Adobe Media Analytics (3.x SDK) para a extensão de áudio e tag de vídeo na Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 96%
+source-wordcount: '752'
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ A extensão do Media Analytics (MA) adiciona a principal SDK de mídia JavaScrip
 
 >[!IMPORTANT]
 >
->Essa extensão é implantada com o SDK do Media 3.x, que não é compatível com o SDK do Media 2.x. Se sua página já usa o SDK do Media 2.x, use a [Extensão Adobe Media Analytics for Audio and Video](../media-analytics/overview.md) em vez dessa extensão.
+>Essa extensão é implantada com o SDK do Media 3.x, que não é compatível com o SDK do Media 2.x. Como a 2.x foi descontinuada, atualize para 3.x.
 
 Depois de incluir todas as três extensões mencionadas acima em seu projeto com tags habilitadas, você pode prosseguir de uma das duas seguintes formas:
 

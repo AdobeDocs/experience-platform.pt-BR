@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, conexão de transmissão autenticada, conexão de transmissão, criar conexão de transmissão, criar conexão de transmissão autenticada, criar conexão de transmissão autenticada, ingestão de transmissão, ingestão;
 solution: Experience Platform
 title: Criar uma conexão de transmissão autenticada
-topic-legacy: tutorial
 type: Tutorial
 description: A Coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como Perfil do cliente em tempo real e Identidade, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis.
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%

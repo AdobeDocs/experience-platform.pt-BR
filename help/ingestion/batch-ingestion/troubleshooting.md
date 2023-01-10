@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; dados assimilados; solução de problemas; perguntas frequentes; Assimilação; Assimilação em lote; ingestão em lote;
 solution: Experience Platform
 title: Guia de solução de problemas de assimilação em lote
-topic-legacy: troubleshooting
 description: Essa documentação ajudará a responder às perguntas frequentes sobre as APIs de assimilação de dados em lote do Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%

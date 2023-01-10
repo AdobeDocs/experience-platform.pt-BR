@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; assimilação de streaming; ingestão; streaming de várias mensagens; várias mensagens;
 solution: Experience Platform
 title: Enviar várias mensagens em uma única solicitação HTTP
-topic-legacy: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial para enviar várias mensagens para o Adobe Experience Platform em uma única solicitação HTTP usando assimilação de streaming.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 1%
@@ -544,7 +543,7 @@ A tabela a seguir mostra os códigos de status retornados por mensagens de respo
 | :---: | --- |
 | 207 | Embora &#39;207&#39; seja usado como o código de status de resposta geral, o recipient precisa consultar o conteúdo do corpo de resposta de vários status para obter mais informações sobre o sucesso ou a falha da execução do método. O código de resposta é usado em situações de sucesso, sucesso parcial e também em situações de falha. |
 | 400 | Houve um problema com o pedido. Consulte o corpo da resposta para obter uma mensagem de erro mais específica (por exemplo, falta de campos obrigatórios na carga da mensagem ou o formato xdm da mensagem era desconhecido). |
-| 401° | Não autorizado: solicitação sem cabeçalho de autorização válido. Isso é retornado somente para entradas que têm autenticação ativada. |
+| 401 | Não autorizado: solicitação sem cabeçalho de autorização válido. Isso é retornado somente para entradas que têm autenticação ativada. |
 | 403 | Não autorizado: O token de autorização fornecido é inválido ou está expirado. Isso é retornado somente para entradas que têm autenticação ativada. |
 | 413 | Carga muito grande - lançada quando a solicitação de carga total é maior que 1MB. |
 | 429 | Demasiadas solicitações dentro de uma duração de tempo especificada. |

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, notificações de assimilação de dados, notificações, eventos de assinatura, eventos de status de assimilação de dados, eventos de status, assinar, notificações de status;
 solution: Experience Platform
 title: Notificações de assimilação de dados
-topic-legacy: overview
 description: Para auxiliar no monitoramento do processo de ingestão, a Adobe Experience Platform possibilita a assinatura de um conjunto de eventos publicados por cada etapa do processo, notificando o status dos dados assimilados e quaisquer possíveis falhas.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%

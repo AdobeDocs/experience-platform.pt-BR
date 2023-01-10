@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; qualidade de dados; qualidade; Qualidade; Validação suportada; Validação; validação suportada;
 solution: Experience Platform
 title: Qualidade dos dados
-topic-legacy: overview
 description: O documento a seguir fornece um resumo das verificações e comportamentos de validação suportados para a assimilação em lote e streaming no Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, transmissão, assimilação de streaming, solução de problemas, solução de problemas de assimilação de streaming, perguntas frequentes sobre assimilação de streaming, perguntas frequentes;
 solution: Experience Platform
 title: Guia de solução de problemas de assimilação de fluxo
-topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%

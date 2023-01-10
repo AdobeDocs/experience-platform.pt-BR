@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; ingestão; dados de lote de assimilação; tutorial; ingestão em lote; tutorial; guia da interface do usuário;
 solution: Experience Platform
 title: Assimilar Dados No Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform permite importar facilmente dados como arquivos em lote na forma de arquivos Parquet ou dados que estejam em conformidade com um esquema conhecido do Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%

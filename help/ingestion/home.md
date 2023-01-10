@@ -2,10 +2,9 @@
 keywords: Experience Platform, página inicial, tópicos populares, assimilação de dados, local dos dados, Localização de dados, Gerenciamento de dados, Lineage, linhagem, lote, lote, dados assimilados
 solution: Experience Platform
 title: Visão geral da assimilação de dados
-topic-legacy: overview
 description: Este documento apresenta as três principais maneiras pelas quais os dados são assimilados na Platform, com links para sua respectiva documentação de visão geral para obter informações mais detalhadas.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 14%

@@ -2,12 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, conexão de transmissão, criar conexão de transmissão, guia de api, tutorial, criar uma conexão de transmissão, assimilação de transmissão, ingestão;
 solution: Experience Platform
 title: Criar uma conexão de transmissão usando a API
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, assimilação de dados, lote, lote, ativar conjunto de dados, visão geral da assimilação em lote, visão geral, visão geral da ingestão em lote;
 solution: Experience Platform
 title: Visão geral da API de assimilação em lote
-topic-legacy: overview
 description: A API de assimilação de dados do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estão em conformidade com um esquema conhecido no registro do Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 6%

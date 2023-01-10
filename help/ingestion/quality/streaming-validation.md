@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, streaming, assimilação de streaming, validação de assimilação de streaming, validação, validação de assimilação de streaming, validar, validação síncrona, validação síncrona, validação assíncrona, validação assíncrona;
 solution: Experience Platform
 title: Validação de Assimilação de Fluxo
-topic-legacy: tutorial
 type: Tutorial
 description: A assimilação de streaming permite carregar seus dados no Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 4%
@@ -206,7 +205,7 @@ Esta seção contém informações sobre o que significam os vários códigos de
 | ----------- | ------------- |
 | 200 | Sucesso. Para validação síncrona, significa que ela passou nas verificações de validação. Para validação assíncrona, significa que somente recebeu a mensagem com êxito. Os usuários podem descobrir o status de uma eventual mensagem observando o conjunto de dados. |
 | 400 | Erro. Há algo errado com seu pedido. Uma mensagem de erro com mais detalhes é recebida dos Serviços de validação de fluxo. |
-| 401° | Erro. Sua solicitação não está autorizada - será necessário solicitar com um token portador. Para obter mais informações sobre como solicitar acesso, confira esta [tutorial](https://www.adobe.com/go/platform-api-authentication-en) ou [publicação do blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Erro. Sua solicitação não está autorizada - será necessário solicitar com um token portador. Para obter mais informações sobre como solicitar acesso, confira esta [tutorial](https://www.adobe.com/go/platform-api-authentication-en) ou [publicação do blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Erro. Há um erro interno do sistema. |
-| 501° | Erro. Isso significa que a validação síncrona é **not** suportado para esta localização. |
+| 501 | Erro. Isso significa que a validação síncrona é **not** suportado para esta localização. |
 | 503 | Erro. O serviço está indisponível no momento. Os clientes devem tentar novamente pelo menos três vezes usando uma estratégia exponencial de recuo. |

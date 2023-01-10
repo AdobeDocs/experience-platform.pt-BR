@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, monitoramento, monitoramento, fluxos de dados, ingestão de monitor, assimilação de dados, ingestão de dados, exibir registros, exibir lotes;
 solution: Experience Platform
 title: Monitoramento da assimilação de dados
-topic-legacy: overview
 description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%

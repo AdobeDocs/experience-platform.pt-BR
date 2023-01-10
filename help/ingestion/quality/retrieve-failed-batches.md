@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, recuperar lotes com falha, lotes com falha, assimilação em lote, assimilação em lote, lotes com falha, obter lotes com falha, obter lotes com falha, baixar lotes com falha, baixar lotes com falha, baixar lotes com falha;
 solution: Experience Platform
 title: Recuperação de Lotes com Falha Usando a API de Acesso a Dados
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda etapas para recuperar informações sobre um lote com falha usando APIs de assimilação de dados.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%

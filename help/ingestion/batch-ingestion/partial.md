@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, ingestão em lote, ingestão em lote, ingestão parcial, ingestão parcial, erro de recuperação, erro de recuperação, ingestão parcial em lote, ingestão parcial em lote, parcial, ingestão, ingestão; ingestão;
 solution: Experience Platform
 title: Visão geral da assimilação parcial de lote
-topic-legacy: overview
 description: Este documento fornece um tutorial para gerenciar a assimilação parcial de lote.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%

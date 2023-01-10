@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, ingestão em lote, ingestão em lote, ingestão parcial, ingestão parcial, erro parcial, recuperar erro, recuperar a ingestão parcial em lote, ingestão parcial em lote, parcial, ingestão, ingestão, diagnóstico de erro, recuperar diagnósticos de erro, obter erro, obter erros, recuperar erros, erros;
 solution: Experience Platform
 title: Recuperando Diagnósticos de Erro de Ingestão de Dados
-topic-legacy: overview
 description: Este documento fornece informações sobre o monitoramento da ingestão em lote, o gerenciamento de erros de ingestão em lote parcial, bem como uma referência para tipos de ingestão em lote parcial.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 3%

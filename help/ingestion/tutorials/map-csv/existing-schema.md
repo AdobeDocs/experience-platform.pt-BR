@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário;
 solution: Experience Platform
 title: Mapear um arquivo CSV para um esquema XDM existente
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM existente usando a interface do usuário do Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

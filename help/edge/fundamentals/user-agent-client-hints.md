@@ -2,13 +2,13 @@
 title: Dicas do cliente do agente do usuário
 description: Saiba como as Dicas do cliente do agente-usuário funcionam no SDK da Web
 keywords: agente do usuário;dicas do cliente; string; sequência agente-utilizador; baixa entropia; alta entropia
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 6%
+source-wordcount: '1065'
+ht-degree: 5%
 
 ---
-
 
 # Dicas do cliente do agente do usuário
 
@@ -116,13 +116,7 @@ Se você não ativar dicas de cliente de alta entropia em seu ambiente, os relat
 
 ### Relatórios do Adobe Analytics que dependem de dicas de cliente de alta entropia {#analytics}
 
-Os seguintes relatórios do Adobe Analytics não funcionarão enquanto as dicas de cliente de alta entropia estiverem desativadas.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Tipo de navegador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Tipos de sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Dimensões móveis](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+O [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) A dimensão inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas de navegadores Chromium.
 
 ### Audience Manager traços que dependem de dicas de cliente de alta entropia {#aam}
 

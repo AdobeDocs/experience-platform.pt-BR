@@ -3,7 +3,7 @@ title: Instalar o SDK da Web da Adobe Experience Platform
 description: Saiba como instalar o SDK da Web do Experience Platform.
 keywords: instalação do sdk da web; instalação do sdk da web; internet explorer; promessa; pacote npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: c3476d7f9e758678cdf270ab55f8b85c0614b546
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Há três maneiras compatíveis de usar o Adobe Experience Platform Web SDK:
 
 ## Opção 1: Instalação da extensão de tag
 
-Para obter a documentação sobre a extensão de tag, consulte [documentação de lançamento](../../tags/extensions/client/sdk/overview.md)
+Para obter a documentação sobre a extensão de tag, consulte [Documentação de tags](../../tags/extensions/client/sdk/overview.md)
 
 ## Opção 2: Instalação da versão independente pré-criada
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Suporte ao Internet Explorer
 
-O Adobe Experience Platform SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. O [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) A implementação usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polietileno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+O Adobe Experience Platform SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. O [Promessa](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) A implementação usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polietileno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Uma biblioteca que você poderia usar para cumprir a promessa de polyfill é a promessa de polyfill. Consulte a [documentação de declaração de polyfill](https://www.npmjs.com/package/promise-polyfill) para obter mais informações sobre como instalar com o NPM.
 

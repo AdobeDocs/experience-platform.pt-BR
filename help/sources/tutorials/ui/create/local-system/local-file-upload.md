@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; sistema local; upload de arquivo; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário;
 solution: Experience Platform
 title: Criar um conector de origem de upload de arquivo local na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem para seu sistema local para trazer arquivos locais para o Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%

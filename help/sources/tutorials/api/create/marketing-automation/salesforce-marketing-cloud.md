@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, salesforce marketing cloud, Marketing Cloud Salesforce
 solution: Experience Platform
 title: Criar uma conexão base de Marketing Cloud do Salesforce usando a API do Serviço de Fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Salesforce Marketing Cloud usando a API de Serviço de Fluxo.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 2%

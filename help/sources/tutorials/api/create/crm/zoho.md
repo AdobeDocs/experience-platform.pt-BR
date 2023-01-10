@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Zoho CRM, zoho crm, Zoho, zoho
 solution: Experience Platform
 title: Criar uma conexão básica do Zoho CRM usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Zoho CRM usando a API do Serviço de Fluxo.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%

@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Tipo de dados do campo de consentimento genérico
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do campo de consentimento genérico.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 2%

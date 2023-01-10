@@ -2,19 +2,18 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, dispositivo, tipo de dados, tipo de dados, tipo de dados;
 solution: Experience Platform
 title: Tipo de dados de marketing
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados Marketing XDM.
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL Marketing] tipo de dados
 
-#  Tipo de dados de marketing
-
- O Marketing é um tipo de dados XDM padrão que descreve atividades de marketing que estão ativas com um ponto de contato específico.
+[!UICONTROL Marketing] é um tipo de dados XDM padrão que descreve atividades de marketing que estão ativas com um ponto de contato específico.
 
 ![](../images/data-types/marketing.png)
 

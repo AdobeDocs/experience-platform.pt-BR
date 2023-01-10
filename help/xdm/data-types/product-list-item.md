@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, endereço, xdm:endereço, tipo de dados, tipo de dados, tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados do Item da Lista de Produtos
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do item da lista de produtos.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 4%

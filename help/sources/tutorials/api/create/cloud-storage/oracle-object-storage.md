@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Armazenamento de objetos do Oracle, Armazenamento de objetos do oracle
 solution: Experience Platform
 title: Criar uma conexão básica de armazenamento de objetos do Oracle usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Oracle Object Storage usando a API do Serviço de Fluxo.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%

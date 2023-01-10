@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; esquema; Esquema; XDM; ExperienceEvent; campos; esquemas; Esquemas; Design de esquema; grupo de campos; grupo de campos; ambiente; detalhes de ambiente;
 solution: Experience Platform
 title: Grupo de campos do esquema Detalhes do ambiente
-topic-legacy: overview
-description: This document provides an overview of the ExperienceEvent Environment Details schema field group.
+description: Este documento fornece uma visão geral do grupo de campos Detalhes do ambiente ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -13,21 +12,21 @@ ht-degree: 3%
 ---
 
 
-# [!UICONTROL Environment Details] schema field group
+# [!UICONTROL Detalhes do ambiente] grupo de campos de esquema
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Environment Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) used to capture information regarding environment details related to an Experience Event such as device details, browser information, local time, and other geographical information.
+[!UICONTROL Detalhes do ambiente] é um grupo de campos de esquema padrão para a variável [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usado para capturar informações relacionadas a detalhes do ambiente relacionados a um evento de experiência, como detalhes do dispositivo, informações do navegador, hora local e outras informações geográficas.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `device` | [Dispositivo](../../data-types/device.md) | Describes an identified device, application or device browser instance that is trackable across sessions, normally by cookies. |
+| `device` | [Dispositivo](../../data-types/device.md) | Descreve uma instância identificada de dispositivo, aplicativo ou navegador de dispositivo que é rastreável entre sessões, normalmente por cookies. |
 | `environment` | [Ambiente](../../data-types/environment.md) | Descreve informações sobre o contexto de situação da observação do evento, detalhando especificamente informações transitórias, como a rede ou as versões de software. |
-| `placeContext` | [Inserir contexto](../../data-types/place-context.md) | Describes the transient circumstances related to the event observation. Examples include locale-specific information such as weather, local time, traffic, day of the week, workday vs. holiday, and working hours. |
+| `placeContext` | [Inserir contexto](../../data-types/place-context.md) | Descreve as circunstâncias transitórias relacionadas com a observação de eventos. Os exemplos incluem informações específicas da localidade, como tempo, hora local, tráfego, dia da semana, dia útil vs. feriado e horário de trabalho. |
 
 {style=&quot;table-layout:auto&quot;}
 

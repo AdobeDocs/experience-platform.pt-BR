@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, configurar fluxo de dados, conector de publicidade
 solution: Experience Platform
 title: Criar um fluxo de dados usando uma fonte de publicidade na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de publicidade usando a interface do usuário da plataforma.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, HP Vertica
 solution: Experience Platform
 title: Criar uma conexão de origem HP Vertica na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem HP Vertica usando a interface do usuário do Adobe Experience Platform.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%

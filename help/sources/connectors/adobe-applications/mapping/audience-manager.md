@@ -2,14 +2,12 @@
 keywords: Experience Platform, home, tópicos populares, mapeamento de Audience Manager, mapeamento do audience manager
 solution: Experience Platform
 title: Mapeamento de campos para o conector de origem do Adobe Audience Manager
-topic-legacy: overview
 description: Saiba como mapear dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) para os campos correspondentes do Experience Data Model (XDM) do conector de origem do Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -17,7 +15,7 @@ ht-degree: 0%
 
 As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) e seus campos XDM correspondentes.
 
-Consulte o [dicionário de campos XDM](../../../../xdm/schema/field-dictionary.md) para obter mais informações sobre cada campo XDM.
+Consulte a [Dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md) para obter mais informações sobre cada campo XDM.
 
 ## Dados em tempo real
 
@@ -26,9 +24,9 @@ Tipo: Dados em tempo real
 | Campo de dados em tempo real | Campo XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente o primeiro valor.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |

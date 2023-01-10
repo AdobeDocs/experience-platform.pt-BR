@@ -2,19 +2,18 @@
 keywords: Experience Platform, home, tópicos populares, esquema, Esquema, XDM, campos, esquemas, esquemas, navegador, detalhes do navegador, tipo de dados, tipo de dados, tipo de dados;
 solution: Experience Platform
 title: Tipo de dados de detalhes do navegador
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de detalhes do navegador.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Tipo de dados de ] detalhes do navegador
+# [!UICONTROL Detalhes do navegador] tipo de dados
 
-[!UICONTROL O navegador ] detalha um tipo de dados XDM padrão que descreve os detalhes relacionados a um navegador ou aplicativo.
+[!UICONTROL Detalhes do navegador] é um tipo de dados XDM padrão que descreve detalhes relacionados a um navegador ou aplicativo.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -27,7 +26,7 @@ ht-degree: 8%
 | `javaScriptVersion` | String | A versão do JavaScript suportada durante a observação. |
 | `javaVersion` | String | A versão do Java suportada durante a observação. |
 | `name` | String | O nome do aplicativo ou do navegador. |
-| `quicktimeVersion` | String | A versão do Apple Quicktime é compatível durante a observação. |
+| `quicktimeVersion` | String | A versão do Apple Quicktime suportada durante a observação. |
 | `thirdPartyCookiesEnabled` | Booleano | Indica se cookies de terceiros foram ativados no dispositivo a partir do qual a observação foi feita. |
 | `userAgent` | String | A sequência do agente do usuário HTTP da solicitação do cliente. |
 | `vendor` | String | O fornecedor do aplicativo ou navegador. |

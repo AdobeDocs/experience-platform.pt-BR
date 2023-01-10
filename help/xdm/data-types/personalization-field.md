@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Tipo de dados do campo de preferência Personalização genérica
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do campo de preferência de personalização genérica.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 2%

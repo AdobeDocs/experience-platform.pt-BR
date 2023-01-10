@@ -2,18 +2,18 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, esquemas, detalhes da página da Web, tipo de dados, tipo de dados, tipo de dados, página da Web
 solution: Experience Platform
 title: Tipo de dados de informações da Web
-topic-legacy: overview
 description: Este documento fornece uma visão geral das informações da Web do tipo de dados do Experience Data Model (XDM).
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+exl-id: bfb00835-5908-4baf-af2a-6d845710e340
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Tipo de ] dados de informações da Web
+# [!UICONTROL Informações da Web] tipo de dados
 
-[!UICONTROL As ] informações da Web são um tipo de dados padrão do Experience Data Model (XDM) que descreve as informações gravadas por um Evento de experiência específico para o canal da World Wide Web, incluindo a página da Web, o referenciador e/ou o link relacionado à interação na página.
+[!UICONTROL Informações da Web] é um tipo de dados padrão do Experience Data Model (XDM) que descreve as informações registradas por meio de um Evento de experiência específico para o canal da World Wide Web, incluindo a página da Web, o referenciador e/ou o link relacionado à interação na página.
 
 ![](../images/data-types/web-information.png)
 

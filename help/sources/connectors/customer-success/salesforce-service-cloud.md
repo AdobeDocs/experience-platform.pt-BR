@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Salesforce Service Cloud, salesforce service cloud
 solution: Experience Platform
 title: Visão geral do conector de origem da Salesforce Service Cloud
-topic-legacy: overview
 description: Saiba como conectar o Salesforce Service Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

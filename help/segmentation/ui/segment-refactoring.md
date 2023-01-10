@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, construtor de segmentos, Construtor de segmentos
 solution: Experience Platform
 title: Guia da interface do usuário de restrições de tempo de segmentação refatoradas
-topic-legacy: ui guide
 description: O Construtor de segmentos fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

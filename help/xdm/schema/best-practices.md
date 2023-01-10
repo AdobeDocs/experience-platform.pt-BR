@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, enum, identidade primária, identidade primária, perfil individual XDM, evento de experiência, Evento de experiência XDM, ExperienceEvent XDM, evento de experiência, evento de experiência, evento de experiência XDM, design de esquema, práticas recomendadas
 solution: Experience Platform
 title: Práticas Recomendadas Para A Modelagem De Dados
-topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 2%

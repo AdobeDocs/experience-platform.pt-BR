@@ -3,9 +3,8 @@ keywords: Experience Platform, home, tópicos populares, endereço ip, endereço
 description: Endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem.
 solution: Experience Platform
 title: LISTA DE PERMISSÕES de endereço IP para conexões de origem
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

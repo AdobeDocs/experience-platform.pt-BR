@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Azure synapse Analytics, Synapse, sinapse, azure synapse analytics
 solution: Experience Platform
 title: Criar uma conexão de origem do Azure synapse Analytics na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Azure synapse Analytics (a seguir, "Synapse") usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 1%

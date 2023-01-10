@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, cs, CS, sistema de sucesso do cliente
 solution: Experience Platform
 title: Explorar um sistema de sucesso do cliente usando a API do Serviço de fluxo
-topic-legacy: overview
 description: Este tutorial usa a API do Serviço de fluxo para explorar sistemas de CSS (Customer Success).
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, CRM, crm, serviço de fluxo de crm
 solution: Experience Platform
 title: Explore um sistema CRM usando a API do serviço de fluxo
-topic-legacy: overview
 description: Este tutorial usa a API do Serviço de fluxo para explorar sistemas CRM.
 exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 3%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, serviço de fluxo, atualizar fluxos de dados
 solution: Experience Platform
 title: Atualizar fluxos de dados usando a API de serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e programação, usando a API do Serviço de Fluxo.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 3%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Salesforce, salesforce
 solution: Experience Platform
 title: Criar uma conexão base do Salesforce usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Salesforce usando a API do Serviço de Fluxo.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 2%

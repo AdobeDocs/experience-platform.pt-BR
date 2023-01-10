@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, recusar, segmentação, serviço de segmentação, serviço de segmentação, opções de honra, recusas, rejeitar, recusar, consentimento, compartilhar, coletar;
 solution: Experience Platform
 title: Respeito do consentimento em segmentos
-topic-legacy: overview
 description: Saiba como honrar as preferências de consentimento do cliente para coleta de dados pessoais e compartilhamento em operações do segmento.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%

@@ -2,18 +2,18 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, esquemas, detalhes da página da Web, tipo de dados, tipo de dados, tipo de dados, página da Web
 solution: Experience Platform
 title: Tipo de dados do canal de experiência
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados do Experience Channel Experience Data Model (XDM).
-source-git-commit: b9168052174c250810e59e403cb77419d510df3b
+exl-id: 209654f7-0bde-439a-989c-ce2e41599105
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Tipo ] de dados do canal de experiência
+# [!UICONTROL Canal de experiência] tipo de dados
 
-[!UICONTROL Os ] canais de experiência são um tipo de dados padrão do Experience Data Model (XDM) que descreve um canal de experiência. Um canal de experiência representa um método ou caminho para como as experiências digitais são consumidas.
+[!UICONTROL Canal de experiência] é um tipo de dados padrão do Experience Data Model (XDM) que descreve um canal de experiência. Um canal de experiência representa um método ou caminho para como as experiências digitais são consumidas.
 
 Há vários canais de experiência, cada um com restrições diferentes sobre como o conteúdo é entregue, como a interação do cliente pode ser observada e como os dados são coletados. Em um canal, as experiências podem ser entregues a locais específicos. Os locais e os tipos de locais que existem em um canal diferem de canal para canal.
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, conformidade de uso de dados, impor, impor conformidade de uso de dados, Serviço de segmentação, segmentação, Segmentação,
 solution: Experience Platform
 title: Reforçar a conformidade do uso de dados para um segmento de público-alvo usando APIs
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para impor a conformidade do uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%

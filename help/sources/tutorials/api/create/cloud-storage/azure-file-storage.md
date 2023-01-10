@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Azure, Armazenamento de arquivos do Azure, Armazenamento de arquivos do Azure
 solution: Experience Platform
 title: Criar uma Conexão Base de Armazenamento de Arquivos do Azure usando a API do Serviço de Fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Armazenamento de Arquivos do Azure à Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 2%

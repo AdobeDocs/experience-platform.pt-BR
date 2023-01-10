@@ -2,10 +2,9 @@
 keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; agendamentos; agendamento; api; API;
 solution: Experience Platform
 title: Agendamentos do Ponto de Extremidade da API
-topic-legacy: developer guide
 description: Os agendamentos são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 4%

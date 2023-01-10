@@ -2,24 +2,22 @@
 keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, pql, PQL, Linguagem de consulta de perfil, funções de objeto, objeto;
 solution: Experience Platform
 title: Funções de objeto PQL
-topic-legacy: developer guide
 description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com objetos.
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
 # Funções do objeto
 
-[!DNL Profile Query Language] (PQL) oferece funções para simplificar a interação com objetos. Mais informações sobre outras funções PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
+[!DNL Profile Query Language] (PQL) oferece funções para simplificar a interação com objetos. Mais informações sobre outras funções PQL podem ser encontradas no [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## É nulo
 
-A função `isNull` determina se uma referência de objeto não existe.
+O `isNull` determina se uma referência de objeto não existe.
 
 **Formato**
 
@@ -37,7 +35,7 @@ person.homeAddress.isNull()
 
 ## Não é nulo
 
-A função `isNotNull` determina se existe uma referência de objeto.
+O `isNotNull` determina se existe uma referência de objeto.
 
 **Formato**
 
@@ -55,4 +53,4 @@ person.homeAddress.isNotNull()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre as funções do objeto, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia a [Visão geral da linguagem de consulta de perfil](./overview.md).
+Agora que você aprendeu sobre as funções do objeto, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia a seção [Visão geral do idioma de consulta do perfil](./overview.md).

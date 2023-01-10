@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, serviço de fluxo, publicidade, google adwords, publicidade
 solution: Experience Platform
 title: Criar um fluxo de dados para fontes de publicidade usando a API do serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los na Plataforma usando conectores de origem e a API do Serviço de Fluxo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 2%

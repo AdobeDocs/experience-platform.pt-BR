@@ -3,10 +3,9 @@ keywords: Experience Platform; home; tópicos populares; excluir contas
 description: Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para excluir contas do espaço de trabalho Fontes .
 solution: Experience Platform
 title: Excluir contas de conexão de origem na interface do usuário
-topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%

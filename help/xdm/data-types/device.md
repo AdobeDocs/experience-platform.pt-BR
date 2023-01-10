@@ -2,19 +2,18 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, dispositivo, tipo de dados, tipo de dados, tipo de dados;
 solution: Experience Platform
 title: Tipo de dados do dispositivo
-topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados do Device XDM.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 5%
 
 ---
 
-#  Tipo de dados de dispositivo
+# [!UICONTROL Dispositivo] tipo de dados
 
- Dispositivo é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é uma instância de aplicativo ou navegador que pode ser rastreada nas sessões, normalmente por cookies.
+[!UICONTROL Dispositivo] é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é uma instância de aplicativo ou navegador que pode ser rastreada nas sessões, normalmente por cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -29,7 +28,7 @@ ht-degree: 5%
 | `screenWidth` | String | O número de pixels horizontais da exibição ativa do dispositivo na orientação padrão. |
 | `type` | String | O tipo de dispositivo que está sendo rastreado. Os valores aceitos incluem: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | String | Um identificador para o dispositivo. Pode ser um identificador do DeviceAtlas ou outro serviço que identifique o hardware que está sendo usado. |
-| `typeIDService` | String | O namespace do serviço usado para identificar o tipo de dispositivo. Consulte o [apêndice](#typeIDService) para obter detalhes sobre os valores aceitos. |
+| `typeIDService` | String | O namespace do serviço usado para identificar o tipo de dispositivo. Consulte a [apêndice](#typeIDService) para obter detalhes sobre valores aceitos. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -40,11 +39,11 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device].
+A seção a seguir contém informações adicionais sobre o [!UICONTROL Dispositivo] tipo de dados.
 
 ## Valores aceitos para typeIDService {#typeIDService}
 
-A tabela a seguir descreve os valores aceitos para `typeIDService` e seus significados associados:
+A tabela a seguir descreve os valores aceitos para `typeIDService` e o significado que lhes está associado:
 
 | Valor | Descrição |
 | --- | --- |

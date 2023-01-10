@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, guia do desenvolvedor do sandbox
 solution: Experience Platform
 title: Endpoint da API de gerenciamento de sandbox
-topic-legacy: developer guide
 description: O endpoint /sandboxes na API do Sandbox permite gerenciar sandboxes de forma programática no Adobe Experience Platform.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 4%
@@ -405,7 +404,7 @@ Uma resposta bem-sucedida retorna os detalhes da sandbox atualizada, mostrando q
 }
 ```
 
-A sandbox de produção padrão e as sandboxes de produção criadas pelo usuário não podem ser redefinidas se o gráfico de identidade hospedado nela também estiver sendo usado pela Adobe Analytics para a variável [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) ou se o gráfico de identidade hospedado nele também estiver sendo usado pela Adobe Audience Manager para o [Destinos com base em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) recurso.
+A sandbox de produção padrão e as sandboxes de produção criadas pelo usuário não podem ser redefinidas se o gráfico de identidade hospedado nela também estiver sendo usado pela Adobe Analytics para a variável [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=pt-BR) ou se o gráfico de identidade hospedado nele também estiver sendo usado pela Adobe Audience Manager para o [Destinos com base em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=pt-BR) recurso.
 
 Veja a seguir uma lista de possíveis exceções que podem impedir a redefinição de uma sandbox:
 

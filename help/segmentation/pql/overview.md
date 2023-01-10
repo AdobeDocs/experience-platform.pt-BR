@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, PQL, pql, linguagem de consulta de perfil
 solution: Experience Platform
 title: Visão geral da linguagem de consulta do perfil (PQL)
-topic-legacy: developer guide
 description: Este guia fornece uma visão geral do PQL, abordando as diretrizes de formatação e fornecendo exemplos de expressões PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 3%

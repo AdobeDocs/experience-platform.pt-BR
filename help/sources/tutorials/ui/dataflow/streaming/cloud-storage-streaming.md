@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, streaming, conector de armazenamento em nuvem, armazenamento em nuvem
 solution: Experience Platform
 title: Crie um fluxo de dados para uma fonte de armazenamento em nuvem na interface do usuário do
-topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector da base de armazenamento em nuvem.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, esquema, Esquema, XDM, ExperienceEvent, campos, esquemas, Esquemas, Design de esquema, grupo de campos, grupo de campos, enduserids, usuário final, usuário final, ids;
 solution: Experience Platform
 title: Grupo de Campos do Esquema Detalhes da ID do Usuário Final
-topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da ID do usuário final.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 5%

@@ -2,9 +2,8 @@
 solution: Experience Platform
 title: Gerar dados de amostra para um esquema XDM na interface do usuário
 description: Saiba como gerar dados JSON de amostra com base em um esquema existente na interface do usuário do Adobe Experience Platform.
-topic-legacy: user guide
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%

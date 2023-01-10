@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, couchbase, Couchbase
 solution: Experience Platform
 title: Criar uma conexão de base de banco de dados de cupom usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Couchbase ao Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 2%

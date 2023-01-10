@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Greenplum, greenplum
 solution: Experience Platform
 title: Criar uma conexão de origem GreenPlum na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem GreenPlum usando a interface do usuário do Adobe Experience Platform.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%

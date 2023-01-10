@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Marketo Engage, marketing de engajamento, marketo
 solution: Experience Platform
 title: conector Marketo Engage
-topic-legacy: overview
 description: Este documento fornece uma visão geral do conector de fonte Marketo Engage, incluindo informações sobre autenticação, mapeamento e latência de dados.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%

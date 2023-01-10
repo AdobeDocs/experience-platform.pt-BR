@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
 title: Guia da API de Fontes de autoatendimento (SDK em lote)
-topic-legacy: overview
 description: Este documento fornece uma visão geral do processo de criação de uma nova fonte, incluindo etapas sobre como recuperar, gravar e enviar uma nova especificação de conexão usando a API do Serviço de Fluxo.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%

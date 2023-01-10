@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Coletar dados de pagamento, dados de pagamento
 solution: Experience Platform
 title: Criar um Fluxo de Dados para Fontes de Pagamentos Usando a API do Serviço de Fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 2%

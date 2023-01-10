@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, serviço de fluxo, atualizar contas
 solution: Experience Platform
 title: Atualizar contas usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conta usando a API do Serviço de Fluxo.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, schema, esquema, XDM, perfil individual, campos, esquemas, esquemas, telecom, subscrição, telecomunicações, design de esquema, grupo de campos, grupo de campos;
 solution: Experience Platform
 title: Grupo de campos do esquema de assinatura Telecom
-topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Telecom Subscription schema .
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%

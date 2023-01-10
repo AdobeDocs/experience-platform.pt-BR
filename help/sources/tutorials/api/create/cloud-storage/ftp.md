@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; Protocolo de transferência de ficheiros; protocolo de transferência de arquivos
 solution: Experience Platform
 title: Criar uma conexão base FTP usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a um servidor FTP (File Transfer Protocol) usando a API de Serviço de Fluxo.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 2%

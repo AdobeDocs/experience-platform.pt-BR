@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
 solution: Experience Platform
 title: Visão geral das fontes de autoatendimento (SDK em lote)
-topic-legacy: overview
 description: Fontes de autoatendimento Adobe Experience Platform (SDK em lote) é um conjunto de APIs de configuração que permitem integrar uma fonte baseada em REST API usando a API de Serviço de fluxo para trazer seus dados para o Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%

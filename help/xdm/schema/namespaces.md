@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, schema, esquema, xdm, modelo de dados de experiência, namespace, namespaces, modo de compatibilidade, xed;
 solution: Experience Platform
 title: Namespacing no Experience Data Model (XDM)
-topic-legacy: overviews
 description: Saiba como o namespacing no Experience Data Model (XDM) permite estender seus esquemas e evitar colisões de campo, pois diferentes componentes do esquema são reunidos.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

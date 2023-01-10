@@ -3,9 +3,8 @@ keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Importação e uso de públicos externos
 description: Siga este tutorial para saber como usar públicos externos com o Adobe Experience Platform.
-topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -145,7 +144,7 @@ Uma amostra dos metadados de carga de público-alvo externo pode ser vista abaix
 | `xdmEntity._id` | A ID **must** consulte a mesma ID de segmento que você está usando como público externo. |
 | `xdmEntity.identityMap` | Esta seção **must** contém o rótulo de identidade usado ao criar o namespace criado anteriormente. |
 | `{IDENTITY_NAMESPACE}` | Esse é o rótulo do namespace de identidade criado anteriormente. Assim, por exemplo, se você chamasse seu namespace de identidade de &quot;externalAudience&quot;, você o usaria como a chave do array. |
-| `segmentName` | O nome do segmento pelo qual você deseja que o público externo seja segmentado. |
+| `segmentName` | O nome do segmento pelo qual você deseja que o público-alvo externo seja segmentado. |
 
 ## Criação de segmentos usando públicos importados
 

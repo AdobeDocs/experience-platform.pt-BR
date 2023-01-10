@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, monitorar fluxos de dados, api de serviço de fluxo, Serviço de fluxo
 solution: Experience Platform
 title: Monitorar fluxos de dados de fontes usando a API do serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para fins de integridade, erros e métricas usando a API do Serviço de fluxo.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 2%

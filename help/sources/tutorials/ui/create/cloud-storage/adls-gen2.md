@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Azure Data Lake Storage Gen2, ADLS Gen2, adls gen2, conector adls
 solution: Experience Platform
 title: Criar uma conexão de origem Gen2 do Armazenamento do Azure Data Lake na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem Gen2 do Armazenamento do Azure Data Lake usando a interface do usuário do Adobe Experience Platform.
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 1%

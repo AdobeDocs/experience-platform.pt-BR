@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Oracle, oracle
 solution: Experience Platform
 title: Visão geral do conector de origem do Oracle
-topic-legacy: overview
 description: Saiba como conectar o Oracle ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%

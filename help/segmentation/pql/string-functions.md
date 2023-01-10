@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, pql, PQL, Linguagem de consulta de perfil, funções de string, string;
 solution: Experience Platform
 title: Funções de sequência de caracteres PQL
-topic-legacy: developer guide
 description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com strings.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 7%

@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; Vertica; vertica
 solution: Experience Platform
 title: Criar uma conexão básica HP Vertica usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o HP Vertica à Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 2%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, ativar dados de entrada, preencher perfil, preencher rtcp, perfil unificado preenchido
 solution: Experience Platform
 title: Ativar dados de origem de entrada para preencher perfis de cliente na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Os dados de entrada do conector de origem podem ser usados para enriquecer e preencher os dados do Perfil do cliente em tempo real.
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%

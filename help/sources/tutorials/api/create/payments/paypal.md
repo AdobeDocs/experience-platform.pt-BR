@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, conector do PayPal, paypal, Paypal
 solution: Experience Platform
 title: Criar uma conexão base do PayPal usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o PayPal à Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 2%

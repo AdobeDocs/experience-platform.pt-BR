@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Armazenamento de arquivos do Azure, Conector de armazenamento de arquivos do Azure
 solution: Experience Platform
 title: Criar uma Conexão da Fonte de Armazenamento de Arquivos do Azure na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Armazenamento de Arquivos do Azure usando a interface do usuário do Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, hubspot, Hubspot
 solution: Experience Platform
 title: Criar uma conexão base HubSpot usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao HubSpot usando a API do Serviço de Fluxo.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 2%

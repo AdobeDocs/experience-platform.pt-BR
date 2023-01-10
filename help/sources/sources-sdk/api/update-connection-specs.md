@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
 title: Atualizar uma especificação de conexão usando a API do Serviço de Fluxo
-topic-legacy: developer guide
 description: Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Armazenamento de tabela do Azure, armazenamento de tabela do azure, ATS, ats
 solution: Experience Platform
 title: Visão Geral do Conector de Origem de Armazenamento de Tabela do Azure
-topic-legacy: overview
 description: Saiba como conectar o Armazenamento de Tabela do Azure à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%

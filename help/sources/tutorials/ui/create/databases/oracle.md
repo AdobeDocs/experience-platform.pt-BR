@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Oracle DB, oracle db
 solution: Experience Platform
 title: Criar uma conexão de origem de banco de dados do Oracle na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem de banco de dados do Oracle usando a interface do usuário do Adobe Experience Platform.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 1%

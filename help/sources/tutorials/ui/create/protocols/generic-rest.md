@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, home, tópicos populares, API REST genérica
 title: Criar uma conexão de fonte de API REST genérica na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem da API REST genérica usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%
@@ -49,7 +48,7 @@ Para acessar o [!DNL Generic REST API] na Platform, você deve fornecer credenci
 | Credencial | Descrição |
 | --- | --- |
 | Host | O URL do host da fonte para a qual você está fazendo sua solicitação. |
-| Nome do usuário | O nome de usuário que corresponde à sua conta de usuário. |
+| Nome de usuário | O nome de usuário que corresponde à sua conta de usuário. |
 | Senha | A senha que corresponde à sua conta de usuário. |
 
 ## Conecte sua conta da API REST genérica

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, REST genérico, repouso genérico
 solution: Experience Platform
 title: Criar uma conexão básica da API REST genérica usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar a API REST genérica ao Adobe Experience Platform usando a API do Serviço de fluxo.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

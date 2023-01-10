@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, interface do usuário, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, Editor de esquema, Editor de esquema, esquema, Esquema, esquemas, esquemas, criar
 solution: Experience Platform
 title: Criar um esquema usando o editor de esquema
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 84a1b9df30da06edee093824c19f3bea338e5970
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '3893'
 ht-degree: 0%
@@ -315,7 +314,7 @@ No lado direito do editor, são mostradas informações sobre o schema, incluind
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-Selecionar **[!UICONTROL Perfil]** e uma instância será exibida, solicitando que você confirme que deseja habilitar o schema de [!DNL Profile].
+Selecionar **[!UICONTROL Perfil]** e uma instância será exibida, solicitando que você confirme que deseja ativar o schema para o [!DNL Profile].
 
 ![](../images/tutorials/create-schema/enable-profile.png)
 

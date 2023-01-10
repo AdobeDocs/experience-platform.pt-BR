@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Marketo Engage, marketing de engajamento, marketo
 solution: Experience Platform
 title: Autentique seu conector de origem do Marketo
-topic-legacy: overview
 description: Este documento fornece informações sobre como gerar suas credenciais de autenticação da Marketo.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%

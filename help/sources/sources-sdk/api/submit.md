@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
 title: Enviar sua fonte
-topic-legacy: overview
 description: O documento a seguir fornece etapas sobre como testar e verificar uma nova fonte usando a API do Serviço de Fluxo e integrar uma nova fonte por meio de Fontes de Autoatendimento (SDK em lote).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 0%

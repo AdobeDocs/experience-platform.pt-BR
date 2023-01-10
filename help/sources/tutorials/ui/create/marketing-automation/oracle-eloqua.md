@@ -2,15 +2,14 @@
 keywords: Experience Platform, home, tópicos populares, fontes, conectores, oracle, oracle eloqua, eloqua
 solution: Experience Platform
 title: Criar uma conexão de origem Eloqua do Oracle usando a interface do usuário da plataforma
-topic-legacy: tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Oracle Eloqua usando a interface do usuário da plataforma.
-source-git-commit: a40a1b8fae41c495afd9cdfc3c8d68148e90f2cd
+exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
 
 ---
-
 
 # Crie um [!DNL Oracle Eloqua] conexão de origem usando a interface do usuário da plataforma
 
@@ -32,7 +31,7 @@ Para se conectar [!DNL Oracle Eloqua] para o Platform, você deve fornecer valor
 | Credencial | Descrição |
 | --- | --- |
 | Endpoint | O terminal de sua [!DNL Oracle Eloqua]. |
-| Nome do usuário | O nome de usuário de seu [!DNL Oracle Eloqua] conta. O nome de usuário deve ser formatado como `siteName + \\ + username`, onde `siteName` é o nome da empresa na qual você usou para fazer logon [!DNL Oracle Eloqua] e `username` é seu nome de usuário. Por exemplo, seu nome de usuário de logon pode ser: `adobe\\emily`. |
+| Nome de usuário | O nome de usuário de seu [!DNL Oracle Eloqua] conta. O nome de usuário deve ser formatado como `siteName + \\ + username`, onde `siteName` é o nome da empresa na qual você usou para fazer logon [!DNL Oracle Eloqua] e `username` é seu nome de usuário. Por exemplo, seu nome de usuário de logon pode ser: `adobe\\emily`. |
 | Senha | A senha correspondente ao seu [!DNL Oracle Eloqua] nome de usuário. |
 
 Para obter mais informações sobre credenciais de autenticação para [!DNL Oracle Eloqua], consulte o [[!DNL Oracle Eloqua] guia de autenticação](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
@@ -66,4 +65,3 @@ Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forne
 ## Próximas etapas
 
 Ao seguir este tutorial, você autenticou e criou uma conexão de origem entre os [!DNL Oracle Eloqua] conta e plataforma. Agora você pode continuar para o próximo tutorial e [criar um fluxo de dados para trazer os dados de automação de marketing para a Platform](../../dataflow/marketing-automation.md).
-

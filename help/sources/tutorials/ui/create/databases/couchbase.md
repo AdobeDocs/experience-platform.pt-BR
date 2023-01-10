@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Couchbase, couchbase
 solution: Experience Platform
 title: Criar uma conexão de fonte do banco de dados de cubos na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem Couchbase usando a interface do usuário do Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%

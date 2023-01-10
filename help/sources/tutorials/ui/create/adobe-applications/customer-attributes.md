@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, atributos do cliente
 solution: Experience Platform
 title: Criar uma conexão de fonte de atributos do cliente na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem na interface do usuário para trazer os dados de perfil dos atributos do cliente para o Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%

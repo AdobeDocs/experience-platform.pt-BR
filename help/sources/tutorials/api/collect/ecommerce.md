@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Coletar dados de comércio eletrônico, dados de comércio eletrônico
 solution: Experience Platform
 title: Criar um fluxo de dados para fontes de comércio eletrônico usando a API de serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 2%

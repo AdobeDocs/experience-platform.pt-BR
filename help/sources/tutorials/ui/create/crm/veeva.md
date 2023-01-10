@@ -2,11 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; Veeva CRM; veeva
 solution: Experience Platform
 title: Criar uma conexão de fonte de CRM de tela na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Veeva CRM usando a interface do usuário do Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 1%

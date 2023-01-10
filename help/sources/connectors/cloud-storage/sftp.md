@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, SFTP, sftp
 solution: Experience Platform
 title: Visão geral do conector de origem SFTP
-topic-legacy: overview
 description: Saiba como conectar um servidor SFTP à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -89,7 +88,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 O comando acima salva o [!DNL Base64]-chave privada codificada no caminho de arquivo designado. Em seguida, você pode usar essa chave privada para autenticar para [!DNL SFTP] e conecte-se à Platform.
 
-### [!DNL Mac] usuários
+### [!DNL Mac] users
 
 Se estiver usando um [!DNL Mac], abrir **Terminal** e execute o seguinte comando para gerar a chave privada (nesse caso, a chave privada será salva em `/Documents/id_rsa`):
 

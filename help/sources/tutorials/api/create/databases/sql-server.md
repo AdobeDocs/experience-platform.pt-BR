@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Microsoft SQL, microsoft sql, sql server, SQL server
 solution: Experience Platform
 title: Criar uma Conexão Base do SQL Server usando a API do Serviço de Fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a um Microsoft SQL Server usando a API do Serviço de Fluxo.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 2%

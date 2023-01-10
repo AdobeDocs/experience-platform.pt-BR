@@ -2,11 +2,11 @@
 keywords: Experience Platform, inicial, tópicos populares, Serviço de segmentação, segmentação, serviço de segmentação, guia do usuário, guia da interface do usuário, guia de interface do público-alvo, construtor de público-alvo, público-alvo, públicos-alvo, guia de interface do usuário de públicos-alvo;
 solution: Experience Platform
 title: Guia da interface do usuário do Audiences
-topic-legacy: ui guide
 description: O Audience Builder na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. A área de trabalho oferece controles intuitivos para criar e editar públicos-alvo para sua organização.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%

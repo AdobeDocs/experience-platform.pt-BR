@@ -3,22 +3,20 @@ keywords: Experience Platform, home, tópicos populares, atualizar contas
 description: Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conta de fontes existente. A área de trabalho Fontes oferece a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de transmissão existente, incluindo o nome, a descrição e as credenciais.
 solution: Experience Platform
 title: Atualizar detalhes da conta da conexão de origem na interface do usuário
-topic-legacy: overview
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
 
 # Atualizar detalhes da conta na interface do usuário
 
-Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conta de fontes existente. O espaço de trabalho [!UICONTROL Sources] fornece a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de transmissão existente, incluindo seu nome, descrição e credenciais.
+Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conta de fontes existente. O [!UICONTROL Fontes] o workspace fornece a capacidade de adicionar, editar e excluir detalhes de uma conexão de lote ou fluxo, incluindo o nome, a descrição e as credenciais.
 
-Este tutorial fornece etapas para atualizar os detalhes e as credenciais de uma conta existente do espaço de trabalho [!UICONTROL Sources].
+Este tutorial fornece etapas para atualizar os detalhes e as credenciais de uma conta existente do [!UICONTROL Fontes] espaço de trabalho.
 
 ## Introdução
 
@@ -29,11 +27,11 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 ## Atualizar contas
 
-Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Sources]** no painel de navegação esquerdo para acessar o espaço de trabalho [!UICONTROL Sources]. Selecione **[!UICONTROL Accounts]** no cabeçalho superior para exibir as contas existentes.
+Faça logon no [Interface do usuário do Experience Platform](https://platform.adobe.com) e depois selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. Selecionar **[!UICONTROL Contas]** no cabeçalho superior para exibir as contas existentes.
 
 ![catálogo](../../images/tutorials/update/catalog.png)
 
-A página **[!UICONTROL Accounts]** é exibida. Nesta página, há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
+O **[!UICONTROL Contas]** será exibida. Nesta página, há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
 
 Selecione o ícone de filtro ![filter](../../images/tutorials/update/filter.png) na parte superior esquerda para iniciar o painel de classificação.
 
@@ -45,11 +43,11 @@ Selecione a fonte com a qual deseja trabalhar para ver uma lista de suas contas 
 
 ![classificação de contas](../../images/tutorials/update/accounts-sort.png)
 
-Um menu suspenso é exibido, fornecendo opções para **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]**. Selecione **[!UICONTROL Edit details]** no menu para atualizar sua conta.
+Um menu suspenso é exibido, fornecendo opções para **[!UICONTROL Adicionar dados]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]**. Selecionar **[!UICONTROL Editar detalhes]** no menu para atualizar sua conta.
 
 ![atualizar](../../images/tutorials/update/update.png)
 
-A caixa de diálogo **[!UICONTROL Edit account details]** permite atualizar o nome de uma conta, a descrição e as credenciais de autenticação. Depois de atualizar as informações desejadas, selecione **[!UICONTROL Save]**.
+O **[!UICONTROL Editar detalhes da conta]** caixa de diálogo permite atualizar o nome de uma conta, a descrição e as credenciais de autenticação. Depois de atualizar as informações desejadas, selecione **[!UICONTROL Salvar]**.
 
 ![editar detalhes da conta](../../images/tutorials/update/edit-account-details.png)
 
@@ -59,6 +57,6 @@ Após alguns instantes, uma caixa de confirmação será exibida na parte inferi
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com êxito o espaço de trabalho [!UICONTROL Sources] para atualizar as informações de uma conta de origem existente.
+Ao seguir este tutorial, você usou com sucesso a variável [!UICONTROL Fontes] espaço de trabalho para atualizar as informações de uma conta de origem existente.
 
-Para obter etapas sobre como executar essas operações programaticamente usando a API [!DNL Flow Service], consulte o tutorial em [atualizar informações de conexão usando a API do Serviço de Fluxo](../../tutorials/api/update.md).
+Para obter etapas sobre como executar essas operações de forma programática usando o [!DNL Flow Service] Consulte o tutorial em [atualização de informações de conexão usando a API do Serviço de Fluxo](../../tutorials/api/update.md).

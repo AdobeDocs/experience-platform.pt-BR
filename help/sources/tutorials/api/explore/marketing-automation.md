@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, automação de marketing
 solution: Experience Platform
 title: Explore um sistema de automação de marketing usando a API do serviço de fluxo
-topic-legacy: overview
 description: Este tutorial usa a API do Serviço de fluxo para explorar sistemas de automação de marketing.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 3%

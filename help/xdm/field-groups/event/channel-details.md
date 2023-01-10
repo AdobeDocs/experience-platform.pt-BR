@@ -2,23 +2,22 @@
 keywords: Experience Platform, home, tópicos populares, esquema, Esquema, XDM, ExperienceEvent, campos, esquemas, Esquemas, Design de esquema, grupo de campos, grupo de campos;
 solution: Experience Platform
 title: Grupo de Campos do Esquema de Detalhes do Canal
-topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes do canal .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 3%
 
 ---
 
-
-# [!UICONTROL Grupo de campos ] Detalhes do canal
+# [!UICONTROL Detalhes do canal] grupo de campos de esquema
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes do canal ] é um grupo de campo de esquema padrão para a  [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usado para descrever informações do canal, como ID, tipo de canal, tipo de mídia e tipo de local.
+[!UICONTROL Detalhes do canal] é um grupo de campos de esquema padrão para a variável [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usado para descrever informações do canal, como ID, tipo de canal, tipo de mídia e tipo de local.
 
 ![](../../images/field-groups/channel-details.png)
 

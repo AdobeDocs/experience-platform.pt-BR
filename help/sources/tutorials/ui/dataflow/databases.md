@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, conector de banco de dados
 solution: Experience Platform
 title: Criar um fluxo de dados usando uma fonte de banco de dados na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de banco de dados usando a interface do usuário da plataforma.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 0%

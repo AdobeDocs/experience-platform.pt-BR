@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Azure HDInsights, Apache Spark
 solution: Experience Platform
 title: Criar um Apache Spark na Conexão de Origem do Azure HDInsights na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar um Apache Spark na conexão de origem do Azure HDInsights usando a interface do usuário do Adobe Experience Platform.
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 1%

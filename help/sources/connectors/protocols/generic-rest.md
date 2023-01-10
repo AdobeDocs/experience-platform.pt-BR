@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, REST genérico, repouso genérico
 solution: Experience Platform
 title: Visão geral do conector de origem da API REST genérica
-topic-legacy: overview
 description: Saiba como conectar a API REST genérica ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

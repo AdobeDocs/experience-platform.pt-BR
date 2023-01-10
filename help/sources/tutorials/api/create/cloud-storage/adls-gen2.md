@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Azure Data Lake Storage Gen2, armazenamento de dados azure no lago, Azure
 solution: Experience Platform
 title: Criar uma Conexão Base Gen2 do Armazenamento do Azure Data Lake usando a API do Serviço de Fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Azure Data Lake Storage Gen2 usando a API do Serviço de Fluxo.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 2%

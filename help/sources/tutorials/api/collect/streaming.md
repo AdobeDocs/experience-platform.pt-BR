@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, dados de armazenamento em nuvem, dados de transmissão, streaming
 solution: Experience Platform
 title: Criar um fluxo de dados de fluxo para dados brutos usando a API do serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 3%

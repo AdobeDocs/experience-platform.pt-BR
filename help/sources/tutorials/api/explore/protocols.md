@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, protocolo
 solution: Experience Platform
 title: Explore um sistema de protocolo usando a API do serviço de fluxo
-topic-legacy: overview
 description: Este tutorial usa a API de Serviço de Fluxo para explorar aplicativos de protocolos.
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 3%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, conector de protocolo
 solution: Experience Platform
 title: Criar um fluxo de dados usando uma fonte de protocolos na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de protocolos usando a interface do usuário da plataforma.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 0%

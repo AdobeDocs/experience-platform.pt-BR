@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, conector de Audience Manager, Audience Manager, audience manager
 solution: Experience Platform
 title: Visão geral da fonte de Audience Manager
-topic-legacy: overview
 description: A fonte do Adobe Audience Manager transmite dados primários coletados no Audience Manager para o Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%

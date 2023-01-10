@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, ontrust, OneTrust
 solution: Experience Platform
 title: (Beta) Criar uma Conexão de Fonte OneTrust na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do OneTrust usando a interface do usuário do Adobe Experience Platform.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%

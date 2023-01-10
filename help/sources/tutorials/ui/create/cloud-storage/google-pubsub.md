@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Google PubSub, google pubsub
 solution: Experience Platform
 title: Criar uma conexão Google PubSub-fonte na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar um conector Google PubSub-source usando a interface do usuário da plataforma.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%

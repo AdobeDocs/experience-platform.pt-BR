@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Phoenix, phonix
 solution: Experience Platform
 title: Criar uma conexão de origem Phoenix na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem Phoenix usando a interface do usuário do Adobe Experience Platform.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

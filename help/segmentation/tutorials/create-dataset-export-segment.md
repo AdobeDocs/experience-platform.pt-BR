@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Serviço de segmentação, segmentação, Segmentação, criar um conjunto de dados, exportar segmento do público-alvo, exportar segmento;
 solution: Experience Platform
 title: Criar um conjunto de dados para exportar um segmento de público-alvo
-topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de público-alvo usando a interface do usuário do Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%

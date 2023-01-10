@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, configurar fluxo de dados, conector de sucesso do cliente
 solution: Experience Platform
 title: Criar um fluxo de dados usando uma fonte de sucesso do cliente na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de sucesso do cliente usando a interface do usuário da plataforma.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 0%

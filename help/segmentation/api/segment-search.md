@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform, segmentação, serviço de segmentação, solução de problemas, API, seg, segmento, segmento, pesquisa, pesquisa de segmento;
 title: Endpoint da API de pesquisa de segmento
-topic-legacy: guide
 description: Na API do Serviço de segmentação da Adobe Experience Platform, a Pesquisa de segmento é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real. Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmento e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 2%

@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Google Big Query, google big query, GBQ, gbq
 solution: Experience Platform
 title: Criar uma conexão de fonte de consulta grande do Google na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Google Big Query usando a interface do usuário do Adobe Experience Platform.
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 1%

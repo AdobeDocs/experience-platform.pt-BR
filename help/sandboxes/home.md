@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, sandbox, sandbox, teste, teste
 solution: Experience Platform
 title: Visão geral das sandboxes
-topic-legacy: overview
 description: As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 0%

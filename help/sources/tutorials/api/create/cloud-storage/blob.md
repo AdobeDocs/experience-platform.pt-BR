@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Azure, blob do azure, blob, Blob
 solution: Experience Platform
 title: Criar uma conexão base do Azure Blob usando a API do Serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Azure Blob usando a API do Serviço de Fluxo.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 0d891acd4e33eb7080da44e204672dc3601cf166
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 2%

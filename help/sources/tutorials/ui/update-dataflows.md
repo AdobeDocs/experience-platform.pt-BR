@@ -3,13 +3,12 @@ keywords: Experience Platform, home, tópicos populares, atualizar fluxos de dad
 description: Este tutorial aborda as etapas para atualizar uma programação de fluxo de dados, incluindo sua frequência de assimilação e taxa de intervalo, usando a área de trabalho Fontes .
 solution: Experience Platform
 title: Atualizar um fluxo de dados da conexão de origem na interface do usuário
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -76,7 +75,7 @@ Aqui, você pode usar a interface de mapeamento para modificar os conjuntos de m
 
 ![mapeamento](../../images/tutorials/update-dataflows/mapping.png)
 
-### Agendamento
+### Programação
 
 O [!UICONTROL Agendamento] é exibida, permitindo atualizar o agendamento de assimilação do fluxo de dados e assimilar automaticamente os dados de origem selecionados com os mapeamentos atualizados.
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, enumerar, mixin, grupo de campos, grupos de campos, mixins, tipo de dados, tipos de dados, tipo de dados, identidade primária, identidade primária, perfil individual XDM, campos XDM, tipo de dados de enumeração, evento de experiência, Evento de experiência XDM, ExperienceEvent XDM, evento de experiência, evento de experiência XDM, design de esquema, classe Classe; classes; Classes; tipo de dados; Tipo de dados; tipo de dados; Tipo de dados; esquemas; Esquemas; Mapa de identidade; Mapa de identidade; Mapa de identidade; Design do esquema; mapa; Mapa; esquema de união; união
 solution: Experience Platform
 title: Noções básicas da composição do esquema
-topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%

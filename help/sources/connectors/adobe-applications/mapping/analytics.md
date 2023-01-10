@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, campos de mapeamento do Analytics, mapeamento do analytics
 solution: Experience Platform
 title: Mapeamento de campos para o conector de origem do Adobe Analytics
-topic-legacy: overview
 description: O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio da fonte do Analytics. Alguns dos dados assimilados por meio do ADC podem ser mapeados diretamente dos campos do Analytics para campos do Experience Data Model (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 15%
@@ -85,7 +84,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo Analytics (*Campo d
 | mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | número | Beacon do Mobile Services menor. |
 | mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | UUID de beacon do Mobile Services. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | string | ID da sessão de vídeo. |
-| videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Gênero | array | Gênero de vídeo. | {title (Object), descrição (Object), tipo (Object), meta:xdmType (Object), itens (string), meta:xdmField (Object)} |
+| videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | array | Gênero de vídeo. | {title (Object), descrição (Object), tipo (Object), meta:xdmType (Object), itens (string), meta:xdmField (Object)} |
 | mobileinstalls | application.firstLaunches | Objeto | Isso é acionado na primeira execução após a instalação ou reinstalação | {id (cadeia de caracteres), valor (número)} |
 | mobileupgrades | application.upgrades | Objeto | Relata a quantidade de atualizações do aplicativo. Acionadores na primeira execução após a atualização ou quando o número da versão mudar. | {id (cadeia de caracteres), valor (número)} |
 | mobilelaunches | application.launches | Objeto | O número de vezes que o aplicativo foi iniciado. | {id (cadeia de caracteres), valor (número)} |

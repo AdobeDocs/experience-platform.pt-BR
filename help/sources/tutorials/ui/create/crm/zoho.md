@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Zoho CRM, zoho crm, Zoho, zoho
 solution: Experience Platform
 title: Criar uma conexão de origem Zoho CRM na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem Zoho CRM usando a interface do usuário do Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%

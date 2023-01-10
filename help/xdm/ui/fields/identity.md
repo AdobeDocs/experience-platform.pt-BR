@@ -3,9 +3,8 @@ keywords: Experience Platform; home; tópicos populares; api; API; XDM; sistema 
 solution: Experience Platform
 title: Definir campos de identidade na interface do usuário
 description: Saiba como definir um campo de identidade na interface do usuário do Experience Platform.
-topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%

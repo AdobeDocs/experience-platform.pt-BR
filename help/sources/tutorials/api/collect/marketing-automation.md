@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, sistema de automação de marketing, coletar dados de automação de marketing
 solution: Experience Platform
 title: Criar um fluxo de dados para fontes de automação de marketing usando a API do serviço de fluxo
-topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de automação de marketing e trazê-los para o Adobe Experience Platform usando conectores de origem e APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 2%

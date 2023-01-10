@@ -2,10 +2,9 @@
 keywords: Experience Platform, home, tópicos populares, Amazon Redshift, Amazon redshift, redshift, Redshift, Redshift
 solution: Experience Platform
 title: Visão geral do conector de origem do Snowflake
-topic-legacy: overview
 description: Saiba como conectar o Snowflake ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%

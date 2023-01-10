@@ -3,10 +3,9 @@ keywords: Experience Platform; home; tópicos populares; analytics, classificaç
 description: Saiba como criar um conector de origem do Adobe Analytics na interface do usuário para trazer dados de classificações para o Adobe Experience Platform.
 solution: Experience Platform
 title: Criar uma conexão de origem do Adobe Analytics para dados de classificações na interface do usuário
-topic-legacy: overview
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 6%

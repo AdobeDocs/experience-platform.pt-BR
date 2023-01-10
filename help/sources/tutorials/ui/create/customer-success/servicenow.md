@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, ServiceNow, servicenow
 solution: Experience Platform
 title: Criar uma conexão de origem ServiceNow na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem ServiceNow usando a interface do usuário do Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%

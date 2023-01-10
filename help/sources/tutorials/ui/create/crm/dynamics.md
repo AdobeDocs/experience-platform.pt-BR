@@ -2,11 +2,10 @@
 keywords: Experience Platform, home, tópicos populares, Microsoft Dynamics, microsoft dynamics, Dynamics, dinâmica
 solution: Experience Platform
 title: Criar uma conexão de origem do Microsoft Dynamics na interface do usuário
-topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Microsoft Dynamics usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 1%

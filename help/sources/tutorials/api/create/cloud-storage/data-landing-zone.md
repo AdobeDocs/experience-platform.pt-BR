@@ -5,7 +5,7 @@ title: Conectar a zona de aterrissagem de dados ao Adobe Experience Platform usa
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform à zona de aterrissagem de dados usando a API do Serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 5%
@@ -80,7 +80,7 @@ Para recuperar credenciais para um [!DNL Data Landing Zone], faça uma solicita�
 **Formato da API**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Solicitação**
@@ -124,7 +124,7 @@ Você pode atualizar seu `SASToken` ao fazer uma solicitação de POST à `/cred
 **Formato da API**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Cabeçalhos | Descrição |

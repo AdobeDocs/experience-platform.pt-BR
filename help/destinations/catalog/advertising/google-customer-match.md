@@ -3,9 +3,9 @@ keywords: correspondência de cliente do google, correspondência de cliente do 
 title: Conexão Google Customer Match
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como Pesquisa, Compras, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
+source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1769'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-[Correspondência de cliente do Google](https://support.google.com/google-ads/answer/6379332?hl=en) O permite usar seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como: [!DNL Search], [!DNL Shopping], [!DNL Gmail]e [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) O permite usar seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas da Google, como: [!DNL Search], [!DNL Shopping], [!DNL Gmail]e [!DNL YouTube].
 
 ![Destino da Correspondência de clientes do Google na interface do usuário do Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -69,7 +69,7 @@ Em seguida, verifique se [!DNL Google] está configurada para uma [!DNL Standard
 
 ### Lista de permissões {#allowlist}
 
-Antes de criar a [!DNL Google Customer Match] no Experience Platform, verifique se [!DNL Google Ads] A conta cumpre os requisitos [Política de correspondência de clientes do Google](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Antes de criar a [!DNL Google Customer Match] no Experience Platform, verifique se [!DNL Google Ads] A conta cumpre os requisitos [[!DNL Google Customer Match] política](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Os clientes com contas compatíveis são autorizados automaticamente pela Google.
 
@@ -96,10 +96,10 @@ Você pode fazer hash nos endereços de email antes de assimilá-los no Adobe Ex
 
 Para obter mais informações sobre os requisitos de hash do Google e outras restrições à ativação, consulte as seguintes seções na documentação de  do Google:
 
-* [[!DNL Customer Match] com endereço de email, endereço ou ID do usuário](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match] considerações](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-* [Correspondência de cliente com número de telefone](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [Correspondência do cliente com IDs de dispositivo móvel](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match] com endereço de email, endereço ou ID do usuário](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] considerações](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match] com número de telefone](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match] com IDs de dispositivo móvel](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
 Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte o [visão geral da ingestão em lote](../../../ingestion/batch-ingestion/overview.md) e [visão geral da assimilação de streaming](../../../ingestion/streaming-ingestion/overview.md).
@@ -209,5 +209,5 @@ Esse erro ocorre quando as contas do cliente não estão em conformidade com a [
 
 ## Recursos adicionais {#additional-resources}
 
-* [Integração da correspondência do cliente do Google - Tutorial em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+* [Integrar [!DNL Google Customer Match] - Tutorial em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 

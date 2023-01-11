@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Namespacing no Experience Data Model (XDM)
 description: Saiba como o namespacing no Experience Data Model (XDM) permite estender seus esquemas e evitar colisões de campo, pois diferentes componentes do esquema são reunidos.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ As seções a seguir demonstram como os namespaces são atribuídos na sintaxe X
 
 A sintaxe XDM padrão fornece informações sobre como os namespaces são representados em schemas (incluindo [como eles são traduzidos no Adobe Experience Platform](#compatibility)).
 
-O XDM padrão usa [JSON-LD](https://json-ld.org/) sintaxe para atribuir namespaces a campos. Este namespace vem na forma de um URI (como `https://ns.adobe.com/xdm` para `xdm` namespace) ou como um prefixo abreviado configurado no `@context` de um schema.
+O XDM padrão usa [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintaxe para atribuir namespaces a campos. Este namespace vem na forma de um URI (como `https://ns.adobe.com/xdm` para `xdm` namespace) ou como um prefixo abreviado configurado no `@context` de um schema.
 
 Este é um exemplo de esquema para um produto na sintaxe XDM padrão. Com exceção de `@id` (o identificador exclusivo, conforme definido pela especificação JSON-LD), cada campo sob `properties` começa com um namespace e termina com o nome do campo. Se estiver usando um prefixo abreviado definido em `@context`, o namespace e o nome do campo são separados por dois pontos (`:`). Se não estiver usando um prefixo, o namespace e o nome do campo serão separados por uma barra (`/`).
 
@@ -75,7 +75,7 @@ Este é um exemplo de esquema para um produto na sintaxe XDM padrão. Com exceç
 | Propriedade | Descrição |
 | --- | --- |
 | `@context` | Um objeto que define os prefixos abreviados que podem ser usados em vez de um URI de namespace completo em `properties`. |
-| `@id` | Um identificador exclusivo para o registro, conforme definido pela variável [Especificação JSON-LD](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | Um identificador exclusivo para o registro, conforme definido pela variável [Especificação JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | Um exemplo de campo que usa um prefixo abreviado para indicar um namespace. Nesse caso, `xdm` é o namespace (`https://ns.adobe.com/xdm`), e `sku` é o nome do campo. |
 | `https://ns.adobe.com/xdm/channels/application` | Um exemplo de um campo que usa o URI completo do namespace. Nesse caso, `https://ns.adobe.com/xdm/channels` é o namespace e `application` é o nome do campo. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Os campos fornecidos pelos recursos do fornecedor usam seus próprios namespaces exclusivos. Neste exemplo, `https://ns.adobe.com/vendorA/product` é o namespace do fornecedor e `stockNumber` é o nome do campo. |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ponto de Extremidade da API de Consultas Agendadas
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas agendadas com a API do serviço de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ A solicitação PATCH suporta dois caminhos diferentes: `/state` e `/schedule/sc
 
 ### Atualizar estado de consulta agendada
 
-Você pode usar `/state` para atualizar o estado da consulta agendada selecionada - ATIVADA ou DESATIVADA. Para atualizar o estado, será necessário definir o valor como `enable` ou `disable`.
+Você pode atualizar o estado da consulta agendada selecionada definindo a variável `path` propriedade para `/state` e `value` propriedade como `enable` ou `disable`.
 
 **Formato da API**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propriedade | Descrição |
 | -------- | ----------- |
+| `op` | A operação a ser executada no agendamento de consulta. O valor aceito é `replace`. |
 | `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado da consulta agendada, é necessário definir o valor de `path` para `/state`. |
 | `value` | O valor atualizado da variável `/state`. Esse valor pode ser definido como `enable` ou `disable` para ativar ou desativar a consulta agendada. |
 
@@ -363,7 +364,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte me
 
 ### Atualizar agendamento de consulta agendada
 
-Você pode usar `/schedule/schedule` para atualizar o cronograma de execução da consulta agendada. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação.
+Você pode atualizar o cronograma de execução do query agendado definindo a variável `path` propriedade para `/schedule/schedule` no corpo da solicitação. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação.
 
 **Formato da API**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propriedade | Descrição |
 | -------- | ----------- |
+| `op` | A operação a ser executada no agendamento de consulta. O valor aceito é `replace`. |
 | `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o agendamento do query agendado, é necessário definir o valor de `path` para `/schedule/schedule`. |
 | `value` | O valor atualizado da variável `/schedule`. Esse valor precisa estar no formato de um cronograma de execução. Portanto, neste exemplo, a consulta agendada será executada a cada hora, na marca de 45 minutos. |
 

@@ -2,9 +2,10 @@
 keywords: Experience Platform; home; tópicos populares; serviço de consulta; serviço de consulta; alerta;
 title: Ponto de extremidade da API de assinaturas de alerta
 description: Este guia fornece exemplos de solicitações e respostas HTTP para as várias chamadas de API que podem ser feitas no endpoint de assinaturas de alerta com a API do Serviço de query.
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -49,7 +50,23 @@ Recupere uma lista de todos os alertas de uma sandbox da organização, fazendo 
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| Propriedade | Descrição |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Opcional) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (&amp;). Os parâmetros disponíveis estão listados abaixo. |
+
+**Parâmetros de consulta**
+
+Veja a seguir uma lista de parâmetros de query disponíveis para listar queries. Todos esses parâmetros são opcionais. Fazer uma chamada para esse terminal sem parâmetros recuperará todas as consultas disponíveis para sua organização.
+
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| `orderby` | O campo que especifica a ordem dos resultados. Os campos compatíveis são `created` e `updated`. Inclua o nome da propriedade como `+` em ordem crescente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) deve ser evitada com `%2B`. Por exemplo `%2Bcreated` é o valor de uma ordem crescente criada. |
+| `pagesize` | Use esse parâmetro para controlar o número de registros que deseja obter da chamada da API por página. O limite padrão é definido para a quantidade máxima de 50 registros por página. |
+| `page` | Indique o número da página dos resultados retornados para os quais você deseja visualizar os registros. |
+| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem filtrar: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores compatíveis são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
 
 **Solicitação**
 
@@ -283,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `ALERT_TYPE` | Cada alerta pode ter três tipos diferentes de alerta. Eles são: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
+| `ALERT_TYPE` | Essa propriedade descreve o estado da execução da consulta que aciona um alerta. A resposta incluirá apenas informações de assinatura de alertas para alertas desse tipo. Cada alerta pode ter três tipos diferentes de alerta. Eles são: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
 | `QUERY_ID` | O identificador exclusivo da consulta a ser atualizada. |
 | `SCHEDULE_ID` | O identificador exclusivo da consulta agendada a ser atualizada. |
 
@@ -370,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parâmetros | Descrição |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Um endereço de email registrado em uma conta do Adobe é usado para identificar os usuários que assinaram alertas. |
+| `orderby` | O campo que especifica a ordem dos resultados. Os campos compatíveis são `created` e `updated`. Inclua o nome da propriedade como `+` em ordem crescente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) deve ser evitada com `%2B`. Por exemplo `%2Bcreated` é o valor de uma ordem crescente criada. |
+| `pagesize` | Use esse parâmetro para controlar o número de registros que deseja obter da chamada da API por página. O limite padrão é definido para a quantidade máxima de 50 registros por página. |
+| `page` | Indique o número da página dos resultados retornados para os quais você deseja visualizar os registros. |
+| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem filtrar: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores compatíveis são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
 
 **Solicitação**
 

@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1954'
 ht-degree: 6%
 
 ---
@@ -122,17 +122,25 @@ Esta seção fornece detalhes adicionais para os limites neste documento.
 
 ### Tipos de entidade
 
-O [!DNL Profile] o modelo de dados de armazenamento consiste em dois tipos de entidade principais:
+O [!DNL Profile] o modelo de dados de armazenamento consiste em dois tipos de entidade principais: [entidades primárias](#primary-entity) e [entidades de dimensão](#dimension-entity).
 
-* **Entidade primária:** Uma entidade primária ou entidade de perfil une os dados para formar uma &quot;única fonte de verdade&quot; para um indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;exibição de união&quot;. Uma exibição de união agrega os campos de todos os esquemas que implementam a mesma classe em um único schema de união. O schema de união para [!DNL Real-Time Customer Profile] é um modelo de dados híbrido desnormalizado que atua como um contêiner para todos os atributos de perfil e eventos comportamentais.
+#### Entidade primária
 
-   Atributos independentes de tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto que os dados das séries cronológicas, também conhecidos como &quot;dados de eventos&quot;, são modelados utilizando [!DNL XDM ExperienceEvent]. Como os dados de registro e de série de tempo são assimilados no Adobe Experience Platform, ele dispara [!DNL Real-Time Customer Profile] para começar a assimilar dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos serão os perfis individuais.
+Uma entidade primária ou entidade de perfil une os dados para formar uma &quot;única fonte de verdade&quot; para um indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;exibição de união&quot;. Uma exibição de união agrega os campos de todos os esquemas que implementam a mesma classe em um único schema de união. O schema de união para [!DNL Real-Time Customer Profile] é um modelo de dados híbrido desnormalizado que atua como um contêiner para todos os atributos de perfil e eventos comportamentais.
 
-   ![Um infográfico que descreve as diferenças entre os dados de registro e os dados da série cronológica.](images/guardrails/profile-entity.png)
+Atributos independentes de tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto que os dados das séries cronológicas, também conhecidos como &quot;dados de eventos&quot;, são modelados utilizando [!DNL XDM ExperienceEvent]. Como os dados de registro e de série de tempo são assimilados no Adobe Experience Platform, ele dispara [!DNL Real-Time Customer Profile] para começar a assimilar dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos serão os perfis individuais.
 
-* **Dimension entity:** Embora o armazenamento de dados do Perfil que mantém os dados do perfil não seja uma loja relacional, o Perfil permite a integração com pequenas entidades de dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md). Sua organização também pode definir classes XDM para descrever coisas diferentes de indivíduos, como lojas, produtos ou propriedades. Esses[!DNL XDM Individual Profile] os schemas são conhecidos como &quot;entidades de dimensão&quot; e não contêm dados de séries de tempo. As entidades de Dimension fornecem dados de pesquisa que auxilia e simplifica definições de segmentos de várias entidades e devem ser pequenos o suficiente para que o mecanismo de segmentação possa carregar todo o conjunto de dados na memória para um processamento ideal (pesquisa de ponto rápido).
+![Um infográfico que descreve as diferenças entre os dados de registro e os dados da série cronológica.](images/guardrails/profile-entity.png)
 
-   ![Um infográfico que mostra que uma entidade de perfil é composta de entidades de dimensão.](images/guardrails/profile-and-dimension-entities.png)
+#### Dimension entity
+
+Embora o armazenamento de dados do Perfil que mantém os dados do perfil não seja uma loja relacional, o Perfil permite a integração com pequenas entidades de dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
+
+Sua organização também pode definir classes XDM para descrever coisas diferentes de indivíduos, como lojas, produtos ou propriedades. Esses[!DNL XDM Individual Profile] os schemas são chamados de &quot;entidades de dimensão&quot; (também conhecidos como &quot;entidades de pesquisa&quot;) e não contêm dados de séries de tempo. Os esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relações de esquema](../xdm/tutorials/relationship-ui.md).
+
+As entidades de Dimension fornecem dados de pesquisa que auxilia e simplifica definições de segmentos de várias entidades e devem ser pequenos o suficiente para que o mecanismo de segmentação possa carregar todo o conjunto de dados na memória para um processamento ideal (pesquisa de ponto rápido).
+
+![Um infográfico que mostra que uma entidade de perfil é composta de entidades de dimensão.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Fragmentos de perfil
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Práticas Recomendadas Para A Modelagem De Dados
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2722'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Depois de criar um ERD para identificar as entidades essenciais que você gostar
 | Categoria | Descrição |
 | --- | --- |
 | Entidades de perfil | As entidades de perfil representam atributos relacionados a uma pessoa individual, normalmente um cliente. As entidades abrangidas por esta categoria devem ser representadas por esquemas baseados no **[!DNL XDM Individual Profile]classe**. |
-| Entidades de pesquisa | As entidades de pesquisa representam conceitos que podem estar relacionados a uma pessoa, mas não podem ser usados diretamente para identificar o indivíduo. As entidades abrangidas por esta categoria devem ser representadas por esquemas baseados em **classes personalizadas**. |
+| Entidades de pesquisa | As entidades de pesquisa representam conceitos que podem estar relacionados a uma pessoa, mas não podem ser usados diretamente para identificar o indivíduo. As entidades abrangidas por esta categoria devem ser representadas por esquemas baseados em **classes personalizadas** e estão vinculadas a perfis e eventos por meio de [relações de esquema](../tutorials/relationship-ui.md). |
 | Entidades de evento | As entidades de evento representam conceitos relacionados às ações que um cliente pode realizar, aos eventos do sistema ou a qualquer outro conceito, onde você pode querer rastrear as alterações ao longo do tempo. As entidades abrangidas por esta categoria devem ser representadas por esquemas baseados no **[!DNL XDM ExperienceEvent]classe**. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -186,7 +186,7 @@ A categoria na qual uma entidade foi classificada deve determinar a classe XDM n
 
 * As entidades de perfil devem usar a variável [!DNL XDM Individual Profile] classe .
 * As entidades do evento devem usar a variável [!DNL XDM ExperienceEvent] classe .
-* As entidades de pesquisa devem usar classes XDM personalizadas definidas pela sua organização.
+* As entidades de pesquisa devem usar classes XDM personalizadas definidas pela sua organização. As entidades de perfil e evento podem fazer referência a essas entidades de pesquisa por meio de relações de esquema.
 
 >[!NOTE]
 >

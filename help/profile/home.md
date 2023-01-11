@@ -3,9 +3,9 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Visão geral do perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos relacionados à série de tempo. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ A relação entre o Perfil do cliente em tempo real e outros serviços no Experi
 
 ### Composição da entidade de perfil
 
-Um Perfil do cliente em tempo real é composto por uma entidade principal, chamada de **entidade primária** e várias entidades de suporte. A entidade primária é composta de características, comportamentos e associações de segmentos de um perfil. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade primária do perfil e incluem o seguinte:
+Um Perfil do cliente em tempo real é composto por uma entidade principal, chamada de **entidade primária** e várias entidades de suporte. No contexto do Experience Platform, a entidade primária normalmente é uma **entidade de perfil**, que é composto de características, comportamentos e associações de segmentos de uma pessoa individual. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade primária do perfil e incluem o seguinte:
 
 - **Entidade dimensional**: A entidade usada para simplificar o processo de modelagem de dados para informações compartilhadas em eventos ou registros de perfil. Isso também é conhecido como entidade de pesquisa ou entidade de classificação.
 - **Entidade B2B**: Entidades que descrevem a relação do perfil com contas e oportunidades entre empresas.
@@ -36,6 +36,11 @@ Um Perfil do cliente em tempo real é composto por uma entidade principal, chama
 >[!IMPORTANT]
 >
 >Como as entidades dimensionais e B2B só existem fora da entidade primária, elas são usadas apenas para segmentação de lote.
+
+As entidades dimensionais e B2B estão vinculadas à entidade primária por meio de **relações de esquema**. Consulte a seguinte documentação para obter mais informações:
+
+- [Criar uma relação de esquema um para um para entidades de pesquisa](../xdm/tutorials/relationship-ui.md)
+- [Criar uma relação de esquema muitos para um para entidades B2B](../xdm/tutorials/relationship-b2b.md)
 
 ### Armazenamento de dados do perfil
 

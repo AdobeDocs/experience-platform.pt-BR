@@ -5,7 +5,7 @@ title: Conectar a zona de aterrissagem de dados ao Adobe Experience Platform usa
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform à zona de aterrissagem de dados usando a API do Serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
+source-git-commit: b1021f985626157895d7350e941238c3197db0b6
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 5%
@@ -36,7 +36,7 @@ A primeira etapa do uso de APIs para acessar o [!DNL Data Landing Zone] é fazer
 **Formato da API**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | Cabeçalhos | Descrição |

@@ -2,7 +2,7 @@
 title: Casos de uso de segmentação para Real-time Customer Data Platform B2B Edition
 description: Uma visão geral dos vários casos de uso disponíveis do Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 0%
@@ -42,7 +42,7 @@ A imagem abaixo ilustra as relações entre as classes B2B disponíveis no Real-
 
 Como seu modelo de dados pode ser complicado, você pode usar a interface do usuário da plataforma para exibir uma representação visual mais detalhada do modelo de dados para ajudar a encontrar os atributos relevantes para o caso de uso. Para iniciar, vá para a interface do usuário da plataforma e selecione Schemas no painel de navegação esquerdo.
 
-Selecione o schema apropriado na lista disponível e selecione o relacionamento apropriado no [!UICONTROL Composição] painel lateral. No exemplo abaixo, selecionar a relação &quot;Pessoa&quot; revela qual atributo no schema atual faz referência ao schema &quot;Pessoa&quot; relacionado (se for o schema de origem no relacionamento), ou é referenciado pelo schema &quot;Pessoa&quot; (se for o schema de destino no relacionamento).
+Selecione o schema apropriado na lista disponível e selecione o relacionamento apropriado no [!UICONTROL Composição] painel lateral. No exemplo abaixo, selecionar a relação &quot;Pessoa&quot; revela qual atributo no schema atual faz referência ao schema &quot;Pessoa&quot; relacionado (se for o schema de origem no relacionamento), ou é referenciado pelo schema &quot;Pessoa&quot; (se for o schema de referência no relacionamento).
 
 ![exemplo de chave de origem usando o relacionamento de pessoas no espaço de trabalho do schema](../assets/segmentation/source-key-schema-relationship-example.png)
 

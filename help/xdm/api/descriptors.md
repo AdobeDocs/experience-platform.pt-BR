@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O endpoint /descriptors na API do Registro de Schema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 4%
@@ -385,15 +385,15 @@ Descritores de relacionamento descrevem uma relação entre dois esquemas difere
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | Caminho para o campo no schema de origem onde o relacionamento está sendo definido. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, &quot;/pessoalEmail/address&quot; em vez de &quot;/properties/pessoalEmail/properties/address&quot;). |
-| `xdm:destinationSchema` | O `$id` URI do esquema de destino com o qual este descritor está definindo uma relação. |
-| `xdm:destinationVersion` | A versão principal do schema de destino. |
-| `xdm:destinationProperty` | Caminho opcional para um campo de destino dentro do esquema de destino. Se essa propriedade for omitida, o campo de destino será inferido por qualquer campo que contenha um descritor de identidade de referência correspondente (veja abaixo). |
+| `xdm:destinationSchema` | O `$id` URI do schema de referência com o qual esse descritor está definindo uma relação. |
+| `xdm:destinationVersion` | A versão principal do schema de referência. |
+| `xdm:destinationProperty` | Caminho opcional para um campo de destino dentro do schema de referência. Se essa propriedade for omitida, o campo de destino será inferido por qualquer campo que contenha um descritor de identidade de referência correspondente (veja abaixo). |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### Descritor de identidade de referência
 
-Os descritores de identidade de referência fornecem um contexto de referência para a identidade primária de um campo de esquema, permitindo que ele seja referenciado por campos em outros schemas. O schema de destino já deve ter um campo de identidade primário definido antes que possa ser referenciado por outros schemas por meio deste descritor.
+Os descritores de identidade de referência fornecem um contexto de referência para a identidade primária de um campo de esquema, permitindo que ele seja referenciado por campos em outros schemas. O schema de referência já deve ter um campo de identidade primário definido antes que possa ser referenciado por outros schemas por meio desse descritor.
 
 ```json
 {
@@ -410,7 +410,7 @@ Os descritores de identidade de referência fornecem um contexto de referência 
 | `@type` | O tipo de descritor que está sendo definido. Para um descritor de identidade de referência, esse valor deve ser definido como `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
-| `xdm:sourceProperty` | Caminho para o campo no schema de origem que será usado para fazer referência ao schema de destino. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, `/personalEmail/address` em vez de `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Caminho para o campo no schema de origem que será usado para fazer referência ao schema de referência. Deve começar com um &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, `/personalEmail/address` em vez de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | O código do namespace de identidade para a propriedade de origem. |
 
 {style=&quot;table-layout:auto&quot;}

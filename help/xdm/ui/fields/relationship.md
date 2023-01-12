@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir campos de relacionamento na interface do usuário
 description: Saiba como definir um campo de relacionamento na interface do usuário do Experience Platform.
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -17,6 +17,6 @@ No Experience Data Model (XDM), um [schema de união](../../schema/composition.m
 
 Em alguns casos, você pode estar assimilando dados que não são necessariamente parte de um perfil, mas que ainda estão relacionados ao perfil. Um exemplo desse tipo de dados seria um campo de &quot;hotel favorito&quot; para um cliente. Como os atributos do hotel favorito de uma pessoa não são atributos da própria pessoa, um hotel é melhor representado por um esquema separado baseado em uma classe personalizada em vez de [!DNL XDM Individual Profile].
 
-Como os schemas de união são baseados apenas em schemas que compartilham a mesma classe, simplesmente habilitar o schema &quot;Hotéis&quot; para uso no Perfil não incluirá seu schema de união de campos para [!DNL XDM Individual Profile]. Em vez disso, você deve definir uma relação entre &quot;Hotéis&quot; e outro schema pertencente à união. Isso envolve definir uma **campo de relacionamento** em um schema de origem que faz referência à identidade primária de um schema de destino.
+Como os schemas de união são baseados apenas em schemas que compartilham a mesma classe, simplesmente habilitar o schema &quot;Hotéis&quot; para uso no Perfil não incluirá seu schema de união de campos para [!DNL XDM Individual Profile]. Em vez disso, você deve definir uma relação entre &quot;Hotéis&quot; e outro schema pertencente à união. Isso envolve definir uma **campo de relacionamento** em um schema de origem que faz referência à identidade primária de um schema de referência.
 
 Para obter etapas detalhadas sobre como definir uma relação entre dois schemas na interface do usuário do Adobe Experience Platform, consulte o [tutorial da interface do usuário do relacionamento](../../tutorials/relationship-ui.md).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns da API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,13 @@ Essa mensagem de erro é exibida ao tentar ativar um esquema para [!DNL Profile]
 }
 ```
 
-Para ativar schemas que contêm descritores de relacionamento para uso em [!DNL Profile], o namespace do campo de origem e o namespace primário do campo de destino devem ser iguais. Essa mensagem de erro é exibida ao tentar ativar um esquema que contém um namespace sem correspondência para seu descritor de identidade de referência. Certifique-se de que `xdm:namespace` o valor do campo de identidade do schema de destino corresponde ao do `xdm:identityNamespace` no descritor de identidade de referência do campo de origem para resolver esse problema.
+>[!NOTE]
+>
+>Para esse erro, o &quot;schema de destino&quot; se refere ao schema de referência no relacionamento.
+
+Para ativar schemas que contêm descritores de relacionamento para uso em [!DNL Profile], o namespace do campo de origem e o namespace primário do campo de referência devem ser iguais. Essa mensagem de erro é exibida ao tentar ativar um esquema que contém um namespace sem correspondência para seu descritor de identidade de referência.
+
+Certifique-se de que `xdm:namespace` o valor do campo de identidade do schema de referência corresponde ao do `xdm:identityNamespace` no descritor de identidade de referência do campo de origem para resolver esse problema.
 
 Para obter uma lista de códigos de namespace de identidade padrão, consulte a seção em [namespaces padrão](../identity-service/namespaces.md) na visão geral do namespace de identidade.
 

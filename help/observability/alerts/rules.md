@@ -4,9 +4,9 @@ title: Regras padrão de alerta
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '961'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ As seguintes regras de alerta são específicas para [Serviço de segmentação]
 | --- | --- | --- |
 | Informações do trabalho de avaliação de segmento | Início do trabalho de segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento inicia o processamento de dados. |
 | Informações do trabalho de avaliação de segmento | Êxito do trabalho de segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento é concluído com êxito. |
-| Atrasos, falhas e erros do trabalho de avaliação de segmentos | Atraso no trabalho do segmento | Esse alerta é disparado quando as tarefas de avaliação de segmento levam mais de 150 minutos para serem concluídas. |
+| Atrasos, falhas e erros do trabalho de avaliação de segmentos | Atraso no trabalho do segmento | Esse alerta é disparado quando as tarefas de avaliação de segmento levam mais de 150 minutos para serem concluídas. <br> Um dos seguintes status será exibido: <br>- ACIONAMENTO - A condição para falha ou atraso foi atendida (Considere-a em um estado ATIVO). <br>- INATIVO - A condição não foi cumprida ou não foi resolvida (Considere-a em um estado RESOLVIDO). |
 | Atrasos, falhas e erros do trabalho de avaliação de segmentos | Falha no trabalho do segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento resulta em um erro. |
 | Atrasos, falhas e erros do trabalho de avaliação de segmentos | Definição de segmento desativada | Esse alerta dispara quando uma definição de segmento é desativada devido a um erro interno. Isso aciona automaticamente uma sala de guerra para uma equipe de engenharia de Adobe para investigar o problema. Este alerta destina-se apenas a ser informativo e não requer nenhuma ação da sua parte. |
 

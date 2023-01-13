@@ -1,10 +1,11 @@
 ---
 title: Lançar uma extensão
-description: Saiba como lançar de forma privada ou pública uma extensão de tag no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como lançar de forma privada ou pública uma extensão de tag na Adobe Experience Platform.
+exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 52%
+source-wordcount: '319'
+ht-degree: 92%
 
 ---
 
@@ -17,22 +18,22 @@ ht-degree: 52%
 Quando os testes e a documentação estiverem concluídos, a extensão estará pronta para ser lançada. Atualmente, existem dois tipos de lançamentos que podem ser executados:
 
 - **Lançamento privado**: a extensão concluída está disponível para todas as propriedades na sua empresa, mas não está disponível para outras empresas no Adobe Experience Platform.
-- **Versão** pública: A extensão concluída está disponível no mercado público para todos os usuários do Adobe Experience Platform.
+- **Lançamento público**: a extensão concluída está disponível no marketplace público para todos os usuários da Adobe Experience Platform.
 
 >[!NOTE]
 >
->Depois de liberar sua extensão, não é mais possível fazer alterações nela e não é possível cancelar a liberação.  Depois de lançada, as correções de erros e as adições de recursos são realizadas `POST` adicionando uma nova versão do pacote de extensão e seguindo as etapas de teste e versão acima nessa nova versão.
+>Depois de lançar sua extensão, você não poderá mais fazer alterações nela e não poderá cancelar o lançamento.  Depois de lançada, as correções de erros e as adições de recursos são realizadas `POST`adicionando uma nova versão do pacote de extensão e seguindo as etapas de teste e versão acima nessa nova versão.
 
 Você deve lançar sua extensão como uma extensão privada antes de lançá-la publicamente.
 
 ## Lançamento privado
 
-A maneira mais fácil de liberar sua extensão com disponibilidade privada é usar o [liberador de extensão de tag](https://www.npmjs.com/package/@adobe/reactor-releaser). Mais instruções estão disponíveis na documentação.
+A maneira mais fácil de lançar sua extensão com disponibilidade privada é usar o [lançador de extensão de tag](https://www.npmjs.com/package/@adobe/reactor-releaser). Mais instruções estão disponíveis na documentação.
 
-Se quiser liberar sua extensão com disponibilidade privada usando a API diretamente, consulte o exemplo de chamada para [liberar privadamente um pacote de extensão](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) nos documentos da API para obter mais detalhes.
+Se quiser lançar sua extensão com disponibilidade privada usando a API diretamente, veja o exemplo de chamada para [lançar de forma privada um pacote de extensão](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) na documentação da API para obter mais detalhes.
 
 ## Lançamento público
 
-Depois de concluir o lançamento privado, peça à Adobe para lançá-lo publicamente. Isso tornará sua extensão disponível no catálogo público. Qualquer usuário da coleta de dados pode instalar sua extensão em qualquer propriedade.
+Depois de concluir o lançamento privado, peça à Adobe para lançá-lo publicamente. Isso tornará sua extensão disponível no catálogo público. Qualquer usuário da coleção de dados pode instalar sua extensão em qualquer propriedade.
 
-Preencha o [formulário de solicitação de lançamento público](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U) para iniciar o processo de lançamento.
+Preencha o [formulário de solicitação de lançamento público](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) para iniciar o processo de lançamento.

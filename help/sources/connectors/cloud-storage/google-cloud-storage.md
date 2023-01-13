@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do conector de origem de armazenamento da Google Cloud
 description: Saiba como conectar o Google Cloud Storage à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -25,15 +25,15 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 
 Para se conectar à Plataforma, você deve primeiro habilitar a interoperabilidade para sua [!DNL Google Cloud Storage] conta. Para acessar a configuração de interoperabilidade, abra [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** do **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
 
-![](../../images/tutorials/create/google-cloud-storage/nav.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
 O **[!UICONTROL Configurações]** será exibida. Aqui, você pode ver informações sobre seu [!DNL Google] ID do projeto e detalhes sobre seu [!DNL Google Cloud Storage] conta. Para acessar as configurações de interoperabilidade, selecione **[!UICONTROL Interoperabilidade]** no cabeçalho superior.
 
-![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
 O **[!UICONTROL Interoperabilidade]** contém informações sobre autenticação, chaves de acesso e o projeto padrão associado à sua conta de serviço. Para gerar uma nova ID de chave de acesso e uma chave de acesso secreta para sua conta de serviço, selecione **[!UICONTROL Criar uma chave para uma conta de serviço]**.
 
-![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar [!DNL Google Cloud Storage] para a Platform.
 

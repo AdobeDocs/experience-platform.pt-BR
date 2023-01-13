@@ -5,9 +5,9 @@ title: Criar uma conexão da fonte de armazenamento da Google Cloud na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem de armazenamento do Google Cloud usando a interface do usuário do Adobe Experience Platform.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Se você já tiver uma conexão GCS válida, ignore o restante deste documento e
 
 [!DNL Experience Platform] O suporta os seguintes formatos de arquivo a serem assimilados de armazenamentos externos:
 
-* Valores separados por delimitador (DSV): No momento, o suporte para arquivos de dados formatados em DSV está limitado a valores separados por vírgula. O valor dos cabeçalhos de campo em arquivos formatados em DSV deve consistir apenas em caracteres alfanuméricos e sublinhados. O suporte para arquivos DSV gerais será fornecido no futuro.
+* Valores separados por delimitador (DSV): Qualquer valor de caractere único pode ser usado como delimitador para arquivos de dados formatados em DSV.
 * Notação de objeto JavaScript (JSON): Os arquivos de dados formatados JSON devem ser compatíveis com XDM.
 * Parqueta Apache: Os arquivos de dados formatados do parâmetro devem ser compatíveis com XDM.
 

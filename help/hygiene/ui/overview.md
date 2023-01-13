@@ -2,9 +2,9 @@
 title: Guia da interface do usuário da análise de big data
 description: Saiba como gerenciar tarefas de higiene de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ A partir daqui, você pode navegar pelos pedidos de trabalho existentes e config
 
 * [Procurar ordens de trabalho existentes](./browse.md)
 * [Criar uma solicitação de expiração de conjunto de dados](./dataset-expiration.md)
-* [Criar uma solicitação de exclusão de registro](./record-delete.md)
+<!-- * [Create a record delete request](./record-delete.md) -->

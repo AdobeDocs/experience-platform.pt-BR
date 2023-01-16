@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ligar Postico ao Serviço de Consulta
 description: Este documento contém o link para instalar o cliente de backup Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -21,35 +21,27 @@ Este documento aborda as etapas para conexão [!DNL Postico] com o Adobe Experie
 > 
 > Além disso, [!DNL Postico] é **only** disponível em dispositivos macOS.
 
-Para ligar [!DNL Postico] para o Serviço de Consulta, abra [!DNL Postico] e selecione **[!DNL New Favorite]**.
+Para ligar [!DNL Postico] para o Serviço de Consulta, abra [!DNL Postico] e selecione **[!DNL New Favorite]**. A caixa de diálogo para configurações de conexão é exibida. Aqui, você pode inserir valores de parâmetro para se conectar com o Adobe Experience Platform. Insira as configurações de conexão listadas abaixo. Instruções sobre como [conectar-se a um servidor PostgreSQL com Postico](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) também estão disponíveis no site oficial Postico.
 
-![O [!DNL Postico] Interface do usuário com Novo favorito destacado.](../images/clients/postico/open-postico.png)
-
-Agora você pode inserir valores para se conectar ao Adobe Experience Platform.
+| Parâmetro de conexão | Descrição |
+|---|---|
+| **[!DNL Host]:** | O nome do host do servidor PostgreSQL. |
+| **[!DNL Port]:** | A porta para [!DNL Query Service]. Você deve usar a porta **80º** ou **5432** para conectar-se com [!DNL Query Service]. |
+| **[!DNL User]** | Crie um nome para a conexão específica. Deixe o campo em branco para usar seu nome de logon do Mac. |
+| **[!DNL Password]** | Esta sequência alfanumérica é o seu Experience Platform **[!UICONTROL Senha]** credencial. Se você quiser usar credenciais que não estejam expirando, esse valor será o argumento concatenado da variável `technicalAccountID` e `credential` baixado no arquivo JSON de configuração. O valor da senha assume o formulário: {technicalAccountId}:{credential}. O arquivo JSON de configuração para credenciais que não expiram é um download único durante a inicialização que o Adobe não mantém uma cópia. |
+| **[!DNL Database]** | Use seu Experience Platform **[!UICONTROL Banco de dados]** valor da credencial: `prod:all`. |
 
 Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia a [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], em seguida selecione **[!UICONTROL Queries]**, seguida de **[!UICONTROL Credenciais]**.
 
 Depois de inserir suas credenciais, selecione **[!DNL Connect]** para se conectar ao Serviço de query.
 
-![A caixa de diálogo Novo favorito com conexão realçada.](../images/clients/postico/authentication-details.png)
-
 Após se conectar à Platform, você poderá ver uma lista de todas as relações feitas anteriormente com o Serviço de query.
-
-![Uma lista de conexões na [!DNL Postico] IU.](../images/clients/postico/show-queries.png)
 
 ## Criar instruções SQL
 
-Para criar uma nova consulta SQL, selecione e abra &quot;Consulta SQL&quot;.
+Para criar uma nova consulta SQL, selecione **[!DNL SQL Query]** na barra lateral. Como alternativa, use o atalho de teclado ( ⇧ ⌘ T) para navegar até a exibição de query e inserir a consulta que deseja executar. Quando terminar, selecione **[!DNL Execute Statement]** para executar o query. Uma tabela é exibida com os resultados da execução de query concluída.
 
-![O [!DNL Postico] Interface do usuário com o atalho de Consulta SQL realçado.](../images/clients/postico/create-query.png)
-
-Uma caixa é exibida e aqui você pode digitar a consulta que deseja executar. Quando terminar, selecione **[!DNL Execute Statement]** para executar o query.
-
-![Destaque o editor SQL com a instrução Execute.](../images/clients/postico/run-statement.png)
-
-Uma tabela é exibida mostrando os resultados da execução de query concluída.
-
-![Uma tabela de resultados da query de exemplo.](../images/clients/postico/query-results.png)
+Consulte a documentação oficial do Postico para obter mais informações sobre [uso da exibição de query](https://eggerapps.at/postico/docs/v1.3.1/sql-query-view.html).
 
 ## Próximas etapas
 

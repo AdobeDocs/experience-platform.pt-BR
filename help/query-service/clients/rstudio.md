@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conectar o RStudio ao serviço de query
 description: Este documento percorre as etapas para conectar o R Studio ao Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ Este documento percorre as etapas de conexão [!DNL RStudio] com o Adobe Experie
 
 >[!NOTE]
 >
+> [!DNL RStudio] foi reformulado como [!DNL Posit]. [!DNL RStudio] os produtos foram renomeados para [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Gerente, [!DNL Posit Cloud]e [!DNL Posit Academy].
+>
 > Este guia supõe que você já tenha acesso ao [!DNL RStudio] e estão familiarizados com como usá-lo. Mais informações sobre [!DNL RStudio] podem ser encontradas no [funcionário [!DNL RStudio] documentação](https://rstudio.com/products/rstudio/).
 > 
 > Além disso, para usar [!DNL RStudio] com o Serviço de query, é necessário instalar o [!DNL PostgreSQL] Driver JDBC 4.2. Você pode baixar o driver JDBC no [[!DNL PostgreSQL] site oficial](https://jdbc.postgresql.org/download/).
 
 ## Crie um [!DNL Query Service] na [!DNL RStudio] interface
 
-Depois de instalar [!DNL RStudio], é necessário instalar o pacote RJDBC. Vá para o **[!DNL Packages]** e selecione **[!DNL Install]**.
+Depois de instalar [!DNL RStudio], é necessário instalar o pacote RJDBC. Instruções sobre como [conectar um banco de dados por meio da linha de comando](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) pode ser encontrada na documentação oficial do Posit.
 
-![O [!DNL RStudio] O painel com Pacotes e Instalação foi realçado.](../images/clients/rstudio/install-package.png)
+Se estiver usando um sistema operacional Mac, você pode selecionar **[!UICONTROL Ferramentas]** na barra de menus seguida de **[!UICONTROL Instalar pacotes]** no menu suspenso. Como alternativa, selecione o **[!DNL Packages]** na interface do usuário do RStudio e selecione **[!DNL Install]**.
 
-Um pop-up é exibido mostrando o **[!DNL Install Packages]** tela. Certifique-se de que **[!DNL Repository (CRAN)]** é selecionado para a variável **[!DNL Install from]** seção. O valor de **[!DNL Packages]** deve ser `RJDBC`. Garantir **[!DNL Install dependencies]** está selecionada. Depois de confirmar se todos os valores estão corretos, selecione **[!DNL Install]** para instalar os pacotes.
-
-![A caixa de diálogo Instalar pacotes com RJDBC inseriu no campo Pacotes e Instalar foi realçada.](../images/clients/rstudio/install-jrdbc.png)
-
-Agora que o pacote RJDBC foi instalado, reinicie [!DNL RStudio] para concluir o processo de instalação.
+Um pop-up é exibido mostrando o **[!DNL Install Packages]** tela. Certifique-se de que **[!DNL Repository (CRAN)]** é selecionado para a variável **[!DNL Install from]** seção. O valor de **[!DNL Packages]** deve ser `RJDBC`. Garantir **[!DNL Install dependencies]** está selecionada. Depois de confirmar se todos os valores estão corretos, selecione **[!DNL Install]** para instalar os pacotes. Agora que o pacote RJDBC foi instalado, reinicie [!DNL RStudio] para concluir o processo de instalação.
 
 Depois [!DNL RStudio] Se tiver sido reiniciado, você poderá se conectar ao Serviço de query. Selecione o **[!DNL RJDBC]** no **[!DNL Packages]** e insira o seguinte comando no console:
 
@@ -53,7 +51,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Para obter mais informações sobre como encontrar o nome do banco de dados, o host, a porta e as credenciais de logon, leia a [guia de credenciais](../ui/credentials.md). Para localizar suas credenciais, faça logon em [!DNL Platform], em seguida selecione **[!UICONTROL Queries]**, seguida de **[!UICONTROL Credenciais]**.
 
-![A saída do console em [!DNL RStudio] da conexão com o Serviço de query.](../images/clients/rstudio/connection-rjdbc.png)
+Uma mensagem na saída do console confirma a conexão com o Serviço de query.
 
 ## Gravação de queries
 

@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Use o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Depois de configurar seu destino usando os endpoints de configuração nas etapa
 
 Como parte do processo para testar seu destino, você deve usar a interface do usuário do Experience Platform para criar segmentos, que você ativará no seu destino. Consulte os dois recursos abaixo para obter instruções sobre como criar segmentos no Experience Platform:
 
-* [Criar uma página de documentação do segmento](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
+* [Criar uma página de documentação do segmento](/help/segmentation/ui/overview.md#create-segment)
 * [Criar uma apresentação de vídeo de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Etapa 7: Publicar o destino {#publish-destination}
@@ -187,3 +187,11 @@ Após configurar e testar seu destino, use o [API de publicação de destino](./
 >Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
 
 Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md).
+
+## Etapa 9: Enviar destino para revisão do Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
+Finalmente, o destino pode ser publicado no catálogo de Experience Platform e visível para todos os clientes do Experience Platform, é necessário enviar oficialmente o destino para revisão do Adobe. Encontre informações completas sobre como [enviar para análise um destino produzido criado no Destination SDK](/help/destinations/destination-sdk/submit-destination.md).

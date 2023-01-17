@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: Use o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -261,16 +261,16 @@ Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"
 * Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte o [Configuração de autenticação](./authentication-configuration.md#when-to-use).
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## Etapa 5: Teste seu destino {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+Depois de configurar seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar a variável [ferramenta de teste de destino](./file-based-destination-testing-overview.md) para testar a integração entre o Adobe Experience Platform e seu destino.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+Como parte do processo para testar seu destino, você deve usar a interface do usuário do Experience Platform para criar segmentos, que você ativará no seu destino. Consulte os dois recursos abaixo para obter instruções sobre como criar segmentos no Experience Platform:
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [Criar uma página de documentação do segmento](/help/segmentation/ui/overview.md#create-segment)
+* [Criar uma apresentação de vídeo de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-## Etapa 5: Publicar o destino {#publish-destination}
+## Etapa 6: Publicar o destino {#publish-destination}
 
 >[!NOTE]
 >
@@ -278,10 +278,18 @@ As part of the process to test your destination, you must use the Experience Pla
 
 Após configurar e testar seu destino, use o [API de publicação de destino](./destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
 
-## Etapa 6: Documente seu destino {#document-destination}
+## Etapa 7: Documente seu destino {#document-destination}
 
 >[!NOTE]
 >
 >Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
 
 Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](./overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](./docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md).
+
+## Etapa 8: Enviar destino para revisão do Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
+Finalmente, o destino pode ser publicado no catálogo de Experience Platform e visível para todos os clientes do Experience Platform, é necessário enviar oficialmente o destino para revisão do Adobe. Encontre informações completas sobre como [enviar para análise um destino produzido criado no Destination SDK](/help/destinations/destination-sdk/submit-destination.md).

@@ -3,9 +3,9 @@ keywords: personalização do target; destino; destino do target da experience p
 title: Conexão Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação alimentados por IA em tempo real em todas as interações de entrada do cliente em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
+source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 
 * **Nome**: Preencha o nome preferencial para esse destino.
 * **Descrição**: Insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **ID do fluxo de dados**: Isso determina em qual armazenamento de dados da Coleta de dados os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm o destino do Target ativado. Consulte [configuração de um armazenamento de dados](../../../edge/datastreams/overview.md#target) para obter informações detalhadas sobre como configurar um conjunto de dados para o Adobe Target.
+* **ID do fluxo de dados**: Isso determina em qual armazenamento de dados da Coleta de dados os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm os serviços do Target e Adobe Experience Platform ativados. Consulte [configuração de um armazenamento de dados](../../../edge/datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar um conjunto de dados para Adobe Experience Platform e Adobe Target.
    * **[!UICONTROL Nenhum]**: Selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os segmentos exportados do Experience Platform para o Target são compatíveis apenas com a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela abaixo para obter mais informações.
 
 | Nenhum armazenamento de dados selecionado | Datastream selecionado |

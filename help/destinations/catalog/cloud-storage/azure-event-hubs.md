@@ -3,9 +3,9 @@ keywords: Destino do hub de eventos do Azure; hub de eventos do azure; azure eve
 title: Conexão de Hubs de Eventos do Azure
 description: Crie uma conexão de saída em tempo real com o [!DNL Azure Event Hubs] armazenamento de dados para fluxo de dados do Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fd6a9f082c830de5a46d484bccfeba3b4116d05d
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Se você selecionar a variável **[!UICONTROL Autenticação padrão]** digite p
 * **[!UICONTROL Nome da chave SAS]**: O nome da regra de autorização, que também é conhecida como o nome da chave SAS.
 * **[!UICONTROL Chave SAS]**: A chave primária do namespace de Hubs de Eventos. O `sasPolicy` que `sasKey` corresponde a deve ter **gerenciar** direitos configurados para que a lista Hubs de eventos seja preenchida. Saiba mais sobre como autenticar para [!DNL Azure Event Hubs] com chaves SAS no [Documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Preencha o [!DNL Azure Event Hubs] namespace. Saiba mais sobre [!DNL Azure Event Hubs] namespaces no [Documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL Namespace]**: Preencha o [!DNL Azure Event Hubs] namespace. Saiba mais sobre [!DNL Azure Event Hubs] namespaces no [Documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Nome do Hub de Eventos]**: Preencha o [!DNL Azure Event Hub] name . Saiba mais sobre [!DNL Azure Event Hubs] nos nomes da [Documentação do Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### Preencha os detalhes do destino {#destination-details}
 

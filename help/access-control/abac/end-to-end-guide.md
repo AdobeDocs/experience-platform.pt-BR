@@ -3,9 +3,9 @@ keywords: Experience Platform; home; tópicos populares; controle de acesso; con
 title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2425'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Você irá:
 
 * [Rotular as funções para seus usuários](#label-roles): Use o exemplo de um provedor de saúde (ACME Business Group) cujo grupo de marketing trabalha com agências externas.
 * [Rotular os recursos (campos de esquema e segmentos)](#label-resources): Atribua o **[!UICONTROL PHI/ Dados de integridade regulamentados]** para recursos e segmentos do schema.
-* [Crie a política que os vinculará](#policy): Crie uma política para vincular os rótulos em seus recursos aos rótulos em sua função, negando acesso aos campos e segmentos do esquema. Isso negará o acesso ao campo de esquema e ao segmento em todas as sandboxes para usuários que não tenham rótulos correspondentes.
+* [Crie a política que os vinculará](#policy): Crie uma política para vincular os rótulos em seus recursos aos rótulos em sua função, negando acesso aos campos e segmentos do esquema. Isso concederá acesso ao campo de esquema e ao segmento em todas as sandboxes para usuários que tenham rótulos correspondentes.
 
 ## Permissões
 

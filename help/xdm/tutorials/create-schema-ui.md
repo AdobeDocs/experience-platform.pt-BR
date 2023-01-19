@@ -5,9 +5,9 @@ title: Criar um esquema usando o editor de esquema
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 A interface do usuário do Adobe Experience Platform permite criar e gerenciar [!DNL Experience Data Model] Esquemas (XDM) em uma tela visual interativa chamada de [!DNL Schema Editor]. Este tutorial aborda como criar um schema usando o [!DNL Schema Editor].
 
+Para fins de demonstração, as etapas neste tutorial envolvem a criação de um schema de exemplo que descreve membros de um programa de fidelidade do cliente. Embora você possa usar essas etapas para criar um schema diferente para seus próprios propósitos, é recomendável primeiro acompanhar a criação do schema de exemplo para saber mais sobre os recursos da variável [!DNL Schema Editor].
+
 >[!NOTE]
 >
->Para fins de demonstração, as etapas neste tutorial envolvem a criação de um schema de exemplo que descreve membros de um programa de fidelidade do cliente. Embora você possa usar essas etapas para criar um schema diferente para seus próprios propósitos, é recomendável primeiro acompanhar a criação do schema de exemplo para saber mais sobre os recursos da variável [!DNL Schema Editor].
-
-Se preferir compor um schema usando o [!DNL Schema Registry] Em vez disso, comece lendo a API [[!DNL Schema Registry] guia do desenvolvedor](../api/getting-started.md) antes de tentar o tutorial em [criação de um schema usando a API](create-schema-api.md).
+>Se você estiver assimilando dados CSV na Platform, é possível [mapear esses dados para um esquema XDM criado por recomendações geradas por AI](../../ingestion/tutorials/map-csv/recommendations.md) (no momento em beta) sem precisar criar manualmente o schema por conta própria.
+>
+>Se preferir compor um schema usando o [!DNL Schema Registry] Comece lendo a API [[!DNL Schema Registry] guia do desenvolvedor](../api/getting-started.md) antes de tentar o tutorial em [criação de um schema usando a API](create-schema-api.md).
 
 ## Introdução
 
@@ -314,7 +316,7 @@ No lado direito do editor, são mostradas informações sobre o schema, incluind
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-Selecionar **[!UICONTROL Perfil]** e uma instância será exibida, solicitando que você confirme que deseja ativar o schema para o [!DNL Profile].
+Selecionar **[!UICONTROL Perfil]** e uma instância será exibida, solicitando que você confirme que deseja habilitar o schema de [!DNL Profile].
 
 ![](../images/tutorials/create-schema/enable-profile.png)
 

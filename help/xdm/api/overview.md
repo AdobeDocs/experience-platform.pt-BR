@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da API do Registro de Schema
 description: A API do Registro de Esquema permite aos desenvolvedores gerenciar programaticamente todos os esquemas e recursos relacionados do Experience Data Model (XDM) no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1118'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,9 @@ Para exibir todos os endpoints e operações CRUD disponíveis, visite a [Refer�
 
 Os esquemas XDM representam e validam a estrutura e o formato dos dados assimilados no Platform. Um schema é composto de uma classe e zero ou mais grupos de campos de schema. Você pode criar, exibir, editar e excluir esquemas usando o `/schemas` endpoint . Para saber como usar esse terminal, consulte a [guia do endpoint de schemas](./schemas.md).
 
-Para obter um guia passo a passo sobre como criar um esquema completo na API do Registro de Schema, incluindo a criação e adição de grupos de campos e tipos de dados, consulte [Tutorial de criação de esquema da API](../tutorials/create-schema-api.md).
+Para obter um guia passo a passo sobre como criar manualmente um esquema completo na API do Registro de Schema, incluindo a criação e adição de grupos de campos e tipos de dados, consulte [Tutorial de criação de esquema da API](../tutorials/create-schema-api.md).
+
+Se estiver assimilando dados de CSV, consulte a seção em [CSV para conversão do schema](#csv-to-schema).
 
 ## Comportamentos
 
@@ -62,6 +64,10 @@ Para saber como visualizar sindicatos na API do Registro de Schema, consulte o [
 Você pode gerar automaticamente um esquema XDM usando um arquivo CSV como modelo, permitindo criar modelos para importar campos de esquema em massa e reduzir o trabalho manual da API ou da interface do usuário.
 
 Consulte a [CSV para o guia do endpoint de conversão do schema](./export.md) para obter mais informações.
+
+>[!NOTE]
+>
+>Você também pode usar a interface do usuário para [mapear um CSV para um schema usando recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (atualmente em beta).
 
 ## Exportar {#export}
 

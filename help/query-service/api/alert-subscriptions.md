@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform; home; tópicos populares; serviço de consulta; serviço de consulta; alerta;
-title: Ponto de extremidade da API de assinaturas de alerta
+title: Ponto de Extremidade de Assinaturas de Alerta
 description: Este guia fornece exemplos de solicitações e respostas HTTP para as várias chamadas de API que podem ser feitas no endpoint de assinaturas de alerta com a API do Serviço de query.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2667'
 ht-degree: 2%
 
 ---
 
-# Ponto de extremidade da API de assinaturas de alerta
+# Ponto de extremidade Assinaturas de Alerta
 
-O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. O conteúdo da notificação é o mesmo para alertas na plataforma e de email. Atualmente, os alertas de consulta só podem assinar o usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. O conteúdo da notificação é o mesmo para alertas na plataforma e de email. Atualmente, os alertas de consulta só podem ser subscritos usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >

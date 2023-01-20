@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, guia de solução de problemas, perguntas frequentes, solução de problemas;
 solution: Experience Platform
-title: Guia de solução de problemas do serviço de query
+title: Perguntas frequentes
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de query. Os tópicos incluem, exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] guia de solução de problemas
+# Perguntas frequentes
 
 Este documento fornece respostas a perguntas frequentes sobre o Serviço de query e fornece uma lista de códigos de erro vistos com frequência ao usar o Serviço de query. Para dúvidas e solução de problemas relacionados a outros serviços na Adobe Experience Platform, consulte a [Guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![O esquema XDM e a exibição tabular dos dados nivelados. O nome da coluna de um conjunto de dados aninhado é destacado na interface do usuário.](./images/troubleshooting/column-name.png)
 
-Consulte a documentação para obter orientação completa sobre [como trabalhar com estruturas de dados aninhadas](./best-practices/nested-data-structures.md) usando o Editor de consultas ou um cliente de terceiros.
+Consulte a documentação para obter orientação completa sobre [como trabalhar com estruturas de dados aninhadas](./essential-concepts/nested-data-structures.md) usando o Editor de consultas ou um cliente de terceiros.
 +++
 
 ### Como acelerar um query em um conjunto de dados que contém arrays?
@@ -142,7 +142,7 @@ Um banner suspenso é exibido contendo um [!UICONTROL Ajuda e suporte] seção. 
 
 +++Answer O recurso de bloco anônimo permite encadear uma ou mais instruções SQL que são executadas em sequência. Permitem também a opção de tratamento de exceções.
 
-Consulte a [documentação de bloco anônimo](./best-practices/anonymous-block.md) para obter mais detalhes.
+Consulte a [documentação de bloco anônimo](./essential-concepts/anonymous-block.md) para obter mais detalhes.
 +++
 
 ### Como implementar atribuição personalizada no Serviço de query?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### Como posso processar rapidamente os novos dados que entram no sistema todos os dias?
 
-+++Responda O [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) A cláusula pode ser usada para ler dados de forma incremental em uma tabela com base em uma ID de instantâneo. Isso é ideal para ser usado com o [carga incremental](./best-practices/incremental-load.md) padrão de design que processa apenas as informações no conjunto de dados que foram criadas ou modificadas desde a última execução do carregamento. Como resultado, ele aumenta a eficiência do processamento e pode ser usado com streaming e processamento de dados em lote.
++++Responda O [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) A cláusula pode ser usada para ler dados de forma incremental em uma tabela com base em uma ID de instantâneo. Isso é ideal para ser usado com o [carga incremental](./essential-concepts/incremental-load.md) padrão de design que processa apenas as informações no conjunto de dados que foram criadas ou modificadas desde a última execução do carregamento. Como resultado, ele aumenta a eficiência do processamento e pode ser usado com streaming e processamento de dados em lote.
 +++
 
 ### Por que há uma diferença entre os números mostrados na interface do usuário do perfil e os números calculados do conjunto de dados de exportação do perfil?

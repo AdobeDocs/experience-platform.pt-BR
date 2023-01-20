@@ -1,16 +1,17 @@
 ---
-title: 'Insights Do Analytics Para Interações Web E Móveis '
+title: Insights Do Analytics Para Interações Web E Móveis
 description: Este documento explica como usar o Serviço de query para criar insights acionáveis a partir de dados assimilados do Adobe Analytics.
-source-git-commit: cdceba9caf035831f4c376edf34356f666b79aa8
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 # Insights do Analytics para interações da Web e móveis
 
-O Adobe Experience Platform permite assimilar dados de conjuntos de relatórios do Adobe Analytics usando campos do Experience Data Model (XDM) para preencher conjuntos de dados. O Serviço de query pode então usar esses dados de análise executando consultas SQL para gerar informações valiosas de um comportamento de usuários nas plataformas digitais.
+O Adobe Experience Platform permite assimilar dados de conjuntos de relatórios do Adobe Analytics usando campos do Experience Data Model (XDM) para preencher conjuntos de dados. Esses dados de análise são modificados para estarem em conformidade com a [!DNL XDM ExperienceEvent] classe . O Serviço de query pode então usar esses dados executando consultas SQL para gerar informações valiosas do comportamento de um usuário sobre as plataformas digitais.
 
 Este documento fornece uma variedade de consultas SQL de amostra que demonstram casos de uso comuns ao criar insights de dados da Web e do Mobile Analytics.
 

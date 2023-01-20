@@ -2,7 +2,7 @@
 title: Integração de Log de Auditoria do Serviço de Query
 description: Os registros de auditoria do Serviço de Consulta mantêm registros de várias ações do usuário para formar uma trilha de auditoria para solucionar problemas ou seguir políticas corporativas de gerenciamento de dados e requisitos normativos. Este tutorial fornece uma visão geral dos recursos de log de auditoria específicos do Serviço de query.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 2%

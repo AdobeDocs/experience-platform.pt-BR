@@ -1,7 +1,8 @@
 ---
 title: Pacotes do Serviço de Consulta
 description: O documento a seguir descreve os pacotes de recursos e produtos disponíveis para o Serviço de query e destaca as diferenças entre consultas ad hoc e em lote.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%

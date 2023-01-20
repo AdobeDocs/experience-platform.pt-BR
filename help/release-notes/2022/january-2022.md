@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform em janeiro de 2022
 description: As notas de versão de janeiro de 2022 para o Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -39,7 +39,7 @@ Para obter mais informações sobre alertas na Platform, consulte [visão geral 
 
 ## [!DNL Dashboards] {#dashboards}
 
-O Adobe Experience Platform fornece vários painéis através dos quais você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante os instantâneos diários.
+O Adobe Experience Platform fornece vários painéis através dos quais você pode visualizar informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -91,7 +91,7 @@ Para obter informações mais gerais sobre destinos, consulte [visão geral dos 
 
 | Recurso | Descrição |
 | --- | --- |
-| Bloco Anônimo | A construção SQL de bloco anônimo permite dividir tarefas de preparação de dados em grande escala no Serviço de Consulta em tarefas menores, reutilizá-las e executá-las em sequência para carregamento de dados incrementais. Para obter mais informações, consulte o [consultas de exemplo para documentação de blocos anônimos](../../query-service/best-practices/anonymous-block.md). |
+| Bloco Anônimo | A construção SQL de bloco anônimo permite dividir tarefas de preparação de dados em grande escala no Serviço de Consulta em tarefas menores, reutilizá-las e executá-las em sequência para carregamento de dados incrementais. Para obter mais informações, consulte o [consultas de exemplo para documentação de blocos anônimos](../../query-service/essential-concepts/anonymous-block.md). |
 | Organização do conjunto de dados | Fornece uma estrutura de dados lógica e coerente para organizar seus ativos de dados para uso com o Serviço de query, à medida que a quantidade de ativos de dados na sandbox cresce. Para obter mais informações, consulte o [documentação dos ativos da organização](../../query-service/best-practices/organize-data-assets.md). |
 
 Para obter mais informações sobre [!DNL Query Service]consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).

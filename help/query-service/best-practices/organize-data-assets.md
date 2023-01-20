@@ -1,7 +1,8 @@
 ---
 title: Práticas recomendadas para a organização de ativos de dados no serviço de query
 description: Este documento descreve um meio lógico de organizar dados para facilitar o uso com o Serviço de query.
-source-git-commit: ed9fa7b83f9e1c974bc74e9dde018a87823954ee
+exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
+source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -169,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Próximas etapas
 
-Ao ler este documento, você agora tem uma melhor compreensão das práticas recomendadas relacionadas à organização e estrutura dos ativos de dados para usar com o Serviço de query da Adobe Experience Platform. É recomendável continuar aprendendo sobre as práticas recomendadas do Serviço de query lendo sobre [documentação de desduplicação de dados](./deduplication.md).
+Ao ler este documento, você agora tem uma melhor compreensão das práticas recomendadas relacionadas à organização e estrutura dos ativos de dados para usar com o Serviço de query da Adobe Experience Platform. É recomendável continuar aprendendo sobre as práticas recomendadas do Serviço de query lendo sobre [documentação de desduplicação de dados](../essential-concepts/deduplication.md).

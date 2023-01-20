@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do serviço de query
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%
@@ -46,7 +46,7 @@ Depois que um query é agendado, ele aparece na lista de consultas agendadas na 
 | **[!UICONTROL Carimbo de data e hora da última execução]** | O carimbo de data e hora mais recente quando a consulta foi executada. Essa coluna destaca se uma consulta foi executada de acordo com seu agendamento atual. |
 | **[!UICONTROL Status da última execução]** | O status da execução mais recente da consulta. Os três valores de status são: `successful` `failed` ou `in progress`. |
 
-Consulte a documentação para obter mais informações sobre como [monitorar consultas por meio da interface do usuário do serviço de query](../monitor-queries.md).
+Consulte a documentação para obter mais informações sobre como [monitorar consultas por meio da interface do usuário do serviço de query](./monitor-queries.md).
 
 ## Modelos {#browse}
 

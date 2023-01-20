@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas de dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -115,57 +115,17 @@ Esse painel também mostra metadados úteis, como a última vez que a query foi 
 
 ### Consultas agendadas {#scheduled-queries}
 
->[!IMPORTANT]
->
->Esta é uma lista de limitações para consultas agendadas ao usar o Editor de consultas. Não se aplicam à [!DNL Query Service] API:<br/>Você só pode adicionar um agendamento a um query que já tenha sido criado, salvo e executado.<br/>Você **cannot** adicione um agendamento a um query parametrizado.<br/>Consultas agendadas **cannot** contém um bloco anônimo.
+As consultas que foram salvas como modelo podem ser agendadas no Editor de consultas. Isso permite automatizar execuções de query executadas em uma cadência personalizada. Você pode agendar consultas com base na frequência, data e hora e também escolher um conjunto de dados de saída para seus resultados, se necessário. Os agendamentos de consulta também podem ser desativados ou excluídos por meio da interface do usuário.
 
-As programações são definidas no Editor de consultas. No entanto, somente as consultas que já foram salvas como um modelo podem ser agendadas. Para adicionar um agendamento a um query, selecione um template de query a partir da variável [!UICONTROL Modelos] ou a guia [!UICONTROL Consultas agendadas] para navegar até o Editor de consultas.
+As programações são definidas no Editor de consultas. Esta é uma lista de limitações para consultas agendadas ao usar o Editor de consultas. Não se aplicam à [!DNL Query Service] API:
 
-Para saber como adicionar agendamentos usando a API, leia o [guia do endpoint de consultas agendadas](../api/scheduled-queries.md).
+- Você só pode adicionar um agendamento a um query que já tenha sido criado, salvo e executado.
+- Você **cannot** adicione um agendamento a um query parametrizado.
+- Consultas agendadas **cannot** contém um bloco anônimo.
 
-Quando uma consulta salva é acessada no Editor de consultas, a variável [!UICONTROL Agendamentos] é exibida abaixo do nome da consulta. Selecionar **[!UICONTROL Agendamentos]**.
+Consulte a documentação de agendamentos de consulta para saber como [criar agendamentos de consulta na interface do usuário](./query-schedules.md). Como alternativa, para saber como adicionar agendamentos usando a API, leia a [guia do endpoint de consultas agendadas](../api/scheduled-queries.md).
 
-![O Editor de consultas com a guia Agendamentos foi realçado.](../images/ui/query-editor/schedules-tab.png)
-
-O espaço de trabalho de agendamentos é exibido. Selecionar **[!UICONTROL Adicionar agendamento]** para criar um agendamento.
-
-![A área de trabalho Agendamento do Editor de Consultas com Agendamento de adição está realçada.](../images/ui/query-editor/add-schedule.png)
-
-A página de detalhes do agendamento é exibida. Nesta página, você pode escolher a frequência do query agendado, a data de início e de término, o dia da semana em que o query agendada será executado, bem como o conjunto de dados para o qual exportar o query.
-
-![O painel Detalhes do agendamento foi realçado.](../images/ui/query-editor/schedule-details.png)
-
-Você pode escolher as seguintes opções para **[!UICONTROL Frequência]**:
-
-- **[!UICONTROL Por hora]**: A consulta agendada será executada a cada hora para o período de datas selecionado.
-- **[!UICONTROL Diariamente]**: A consulta agendada será executada a cada X dias no momento e no período de datas selecionado. Observe que o tempo selecionado está em **UTC**, e não seu fuso horário local.
-- **[!UICONTROL Semanalmente]**: A consulta selecionada será executada nos dias da semana, da hora e do período de datas selecionado. Observe que o tempo selecionado está em **UTC**, e não seu fuso horário local.
-- **[!UICONTROL Mensalmente]**: A consulta selecionada será executada todos os meses no dia, hora e período de datas selecionado. Observe que o tempo selecionado está em **UTC**, e não seu fuso horário local.
-- **[!UICONTROL Anualmente]**: A consulta selecionada será executada todos os anos no dia, mês, hora e período de datas selecionado. Observe que o tempo selecionado está em **UTC**, e não seu fuso horário local.
-
-Para o conjunto de dados, você tem a opção de usar um conjunto de dados existente ou criar um novo conjunto de dados.
-
->[!IMPORTANT]
->
-> Como você está usando um conjunto de dados existente ou está criando um novo, **not** precisa incluir `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte do query, já que os conjuntos de dados já estão definidos. Incluindo `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte das consultas agendadas, resultará em um erro.
-
-Depois de confirmar todos esses detalhes, selecione **[!UICONTROL Salvar]** para criar um agendamento. Você é retornado ao espaço de trabalho de agendamentos que exibe detalhes do agendamento recém-criado, incluindo a ID da agenda, o próprio agendamento e o conjunto de dados de saída do agendamento. Você pode usar a ID de agendamento para pesquisar mais informações sobre as execuções do próprio query agendado. Para saber mais, leia o [guia de endpoints de execução de query agendada](../api/runs-scheduled-queries.md).
-
-![O espaço de trabalho de agendamentos com o agendamento recém-criado destacado.](../images/ui/query-editor/schedules-workspace.png)
-
-#### Excluir ou desativar uma programação {#delete-schedule}
-
-Você pode excluir ou desabilitar um agendamento do espaço de trabalho de agendamentos. Você deve selecionar um template de query do [!UICONTROL Modelos] ou a guia [!UICONTROL Consultas agendadas] para navegar até o Editor de consultas e selecionar **[!UICONTROL Agendar]** para acessar o espaço de trabalho de agendamentos.
-
-Selecione um agendamento nas linhas de agendamentos disponíveis. Você pode usar a alternância para desativar ou ativar a consulta agendada.
-
->[!IMPORTANT]
->
->Você deve desativar o agendamento antes de poder excluir um agendamento para uma consulta.
-
-Selecionar **[!UICONTROL Excluir um agendamento]** para excluir o agendamento desativado.
-
-![O espaço de trabalho de agendamentos com Desativar agendamento e Excluir agendamento destacado.](../images/ui/query-editor/delete-schedule.png)
+Quaisquer consultas agendadas são adicionadas à lista na [!UICONTROL Consultas agendadas] guia . Desse espaço de trabalho, você pode monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas agendadas] é possível encontrar informações importantes sobre a execução do query e assinar alertas. As informações disponíveis incluem o status, os detalhes do agendamento e as mensagens/códigos de erro em caso de falha de execução. Consulte a [Monitorar documento de consultas agendadas](./monitor-queries.md) para obter mais informações.
 
 ### Salvar consultas {#saving-queries}
 
@@ -179,7 +139,7 @@ O [!DNL Query Editor] O fornece uma função save que permite salvar um query e 
 
 Todas as consultas executadas de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de query. As consultas salvas são listadas na variável **[!UICONTROL Modelos]** guia .
 
-Se um query foi agendado, então a variável [!UICONTROL Consultas agendadas] A guia fornece visibilidade aprimorada pela interface do usuário para esses trabalhos de consulta. Consulte a [documentação de monitoramento de consultas](../monitor-queries.md) para obter mais informações.
+Se um query foi agendado, então a variável [!UICONTROL Consultas agendadas] A guia fornece visibilidade aprimorada pela interface do usuário para esses trabalhos de consulta. Consulte a [documentação de monitoramento de consultas](./monitor-queries.md) para obter mais informações.
 
 >[!NOTE]
 >

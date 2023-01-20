@@ -2,7 +2,7 @@
 title: Filtragem de bot no Serviço de query com aprendizado de máquina
 description: Este documento fornece uma visão geral de como usar o Serviço de query e o aprendizado de máquina para determinar a atividade de bot e filtrar suas ações do tráfego online de visitantes genuíno.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '899'
 ht-degree: 5%
@@ -103,7 +103,7 @@ O resultado dessa expressão pode ser semelhante à tabela fornecida abaixo.
 |---|---|---|---|
 | 4833075303848917832 | 1 | 1 | 1 |
 | 1469109497068938520 | 1 | 1 | 1 |
-| 504568251944554093 | 1 | 1 | 1 |
+| 5045682519445554093 | 1 | 1 | 1 |
 | 7148203816406620066 | 3 | 3 | 3 |
 | 1013065429311352386 | 1 | 1 | 1 |
 | 3077475871984695013 | 7 | 7 | 7 |
@@ -169,6 +169,6 @@ O modelo de exemplo determinado com alto grau de precisão que qualquer visitant
 
 ## Próximas etapas
 
-Ao ler este documento, você tem uma melhor compreensão de como usar [!DNL Query Service] e aprendizado de máquina para determinar e filtrar a atividade de bot.
+Ao ler este documento, você tem um melhor entendimento de como usar [!DNL Query Service] e aprendizado de máquina para determinar e filtrar a atividade de bot.
 
 Outros documentos que demonstram os benefícios de [!DNL Query Service] os insights de negócios estratégicos de sua organização são a [caso de uso de navegação abandonada](./abandoned-browse.md) exemplo.

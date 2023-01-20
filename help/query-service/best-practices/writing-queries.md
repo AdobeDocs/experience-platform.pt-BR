@@ -5,9 +5,9 @@ title: Orientações gerais para a execução de query no serviço de query
 type: Tutorial
 description: Este documento descreve detalhes importantes a saber ao gravar consultas no Serviço de Consulta do Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Desduplicação
 
-O Serviço de query oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia o [Guia de desduplicação do serviço de query](./deduplication.md).
+O Serviço de query oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia o [Guia de desduplicação do serviço de query](../essential-concepts/deduplication.md).
 
 ## Cálculo de fuso horário no Serviço de query
 
@@ -325,4 +325,7 @@ Para obter mais exemplos de consultas que podem ser usadas no Serviço de query,
 
 - [Insights do Analytics](../use-cases/analytics-insights.md)
 - [Análise de atividade com o Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [Consultas de amostra do ExperienceEvent](../sample-queries/experience-event.md).
+- [Criar um relatório de tendências de eventos](../use-cases/trended-report-of-events.md)
+- [Exibir um relatório de roll-up de um visitante](../use-cases/roll-up-report-of-a-visitor.md)
+- [Listar as exibições de página de um usuário](../use-cases/list-visitor-sessions.md)
+- [Listar visitantes por seu número de exibições de página](../use-cases/visitors-by-number-of-page-views.md)

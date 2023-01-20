@@ -2,7 +2,7 @@
 title: Modelo de dados do Real-time Customer Data Platform Insights
 description: Saiba como usar consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Modelo de dados do Real-time Customer Data Platform Insights
 
-O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que alimenta os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de KPI (indicador de desempenho principal) e de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação de insights de relatório de loja acelerada de query para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de query para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de KPI (indicador de desempenho principal) e de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação de insights de relatório de loja acelerada de query para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de query para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Pré-requisitos
 

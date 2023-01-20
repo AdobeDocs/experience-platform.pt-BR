@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para o Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -104,8 +104,8 @@ O Serviço de Consulta permite que você use o SQL padrão para consultar dados 
 
 | Recurso | Descrição |
 | --- | --- |
-| Monitorar consultas por meio da interface do usuário da plataforma | O Serviço de Consulta [!UICONTROL Consultas agendadas] A guia fornece visibilidade aprimorada para o status de todas as tarefas de query por meio da interface do usuário. Agora é possível encontrar informações importantes sobre o status de suas execuções de query, incluindo mensagens de erro e códigos em caso de falha, de [!UICONTROL Consultas agendadas] guia . Também é possível assinar alertas por meio da interface do usuário para qualquer uma dessas consultas com base em seu status. Consulte a [Monitorar documento de consultas](../../query-service/monitor-queries.md) para saber mais sobre esse recurso. |
-| Modelo de dados de insights de relatórios acelerados de query | Como parte da SKU do Data Distiller, o armazenamento acelerado de query permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Com a loja acelerada de query, você pode criar um modelo de dados personalizado e/ou estender em modelos de dados existentes do Adobe Real-time Customer Data Platform para melhorar seus insights de relatórios e suas visualizações. Consulte a [documento de insights de relatórios de armazenamento acelerado de query](../../query-service/query-accelerated-store/reporting-insights-data-model.md) para saber mais sobre esse recurso. |
+| Monitorar consultas por meio da interface do usuário da plataforma | O Serviço de Consulta [!UICONTROL Consultas agendadas] A guia fornece visibilidade aprimorada para o status de todas as tarefas de query por meio da interface do usuário. Agora é possível encontrar informações importantes sobre o status de suas execuções de query, incluindo mensagens de erro e códigos em caso de falha, de [!UICONTROL Consultas agendadas] guia . Também é possível assinar alertas por meio da interface do usuário para qualquer uma dessas consultas com base em seu status. Consulte a [Monitorar documento de consultas](../../query-service/ui/monitor-queries.md) para saber mais sobre esse recurso. |
+| Modelo de dados de insights de relatórios acelerados de query | Como parte da SKU do Data Distiller, o armazenamento acelerado de query permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Com a loja acelerada de query, você pode criar um modelo de dados personalizado e/ou estender em modelos de dados existentes do Adobe Real-time Customer Data Platform para melhorar seus insights de relatórios e suas visualizações. Consulte a [documento de insights de relatórios de armazenamento acelerado de query](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) para saber mais sobre esse recurso. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '872'
 ht-degree: 13%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 13%
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Conector Salesforce](connectors/crm/salesforce.md)
+      - [Conector SugarCRM](connectors/crm/sugarcrm.md)
       - [Conector Veeva CRM](connectors/crm/veeva.md)
       - [Conector Zoho CRM](connectors/crm/zoho.md)
    - Sucesso do cliente {#customer-success}
@@ -129,6 +130,8 @@ ht-degree: 13%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Contas e Contatos do SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [Eventos SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Sucesso do cliente {#customer-success}
@@ -237,6 +240,8 @@ ht-degree: 13%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Contas e Contatos do SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [Eventos SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Sucesso do cliente {#customer-success}

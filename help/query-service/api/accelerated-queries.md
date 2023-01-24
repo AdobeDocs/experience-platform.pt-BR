@@ -1,7 +1,8 @@
 ---
 title: Ponto de Extremidade de Consultas Acelerado
 description: Saiba como acessar o armazenamento acelerado do query de maneira sem estado para retornar rapidamente os resultados com base em dados agregados. Este documento fornece uma amostra de solicitação e resposta HTTP para o ponto de extremidade de consultas aceleradas do Serviço de Consulta.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%
@@ -16,7 +17,7 @@ Antes de continuar com este guia, leia e entenda o [Guia da API do Serviço de q
 
 ## Introdução
 
-O SKU do Data Distiller é necessário para usar o armazenamento acelerado do query. Consulte a [embalagem](../packages.md), [medidas de proteção](../guardrails.md#query-accelerated-store)e [licenciamento](../data-distiller/licence-usage.md) documentação relacionada ao SKU do Data Distiller. Se você não tiver a SKU do Data Distiller, entre em contato com o representante de serviço ao cliente do Adobe para obter mais informações.
+O SKU do Data Distiller é necessário para usar o armazenamento acelerado do query. Consulte a [embalagem](../packages.md), [medidas de proteção](../guardrails.md#query-accelerated-store)e [licenciamento](../data-distiller/license-usage.md) documentação relacionada ao SKU do Data Distiller. Se você não tiver a SKU do Data Distiller, entre em contato com o representante de serviço ao cliente do Adobe para obter mais informações.
 
 As seções a seguir detalham as chamadas de API necessárias para acessar o armazenamento acelerado da consulta de maneira sem estado por meio da API do Serviço de query. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
 
@@ -210,4 +211,3 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o schema ad hoc criado p
 | `resultsMeta._adhoc.meta:xdmType` | Esse é um valor gerado pelo sistema para o tipo de campo XDM. Para obter mais informações sobre os tipos disponíveis, consulte a documentação em [tipos XDM disponíveis](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
 | `resultsMeta._adhoc.properties` | Esses são os nomes das colunas do conjunto de dados consultado. |
 | `resultsMeta._adhoc.results` | Esses são os nomes de linha do conjunto de dados consultado. Elas refletem cada uma das colunas retornadas. |
-

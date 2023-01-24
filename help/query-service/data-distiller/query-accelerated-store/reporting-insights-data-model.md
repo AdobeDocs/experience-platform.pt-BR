@@ -2,7 +2,7 @@
 title: Guia do Query Accelerated Store Reporting Insights
 description: Saiba como criar um modelo de dados de insights de relatório por meio do Serviço de query para uso com dados de loja acelerados e painéis definidos pelo usuário.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Este tutorial usa painéis definidos pelo usuário para visualizar dados do mode
 
 ## Introdução
 
-O SKU do Distiller de dados é necessário para criar um modelo de dados personalizado para seus insights de relatórios e estender os modelos de dados do Real-Time CDP que contêm dados enriquecidos da plataforma. Consulte a [embalagem](../../packages.md), [medidas de proteção](../../guardrails.md#query-accelerated-store)e [licenciamento](../../data-distiller/licence-usage.md) documentação relacionada ao SKU do Data Distiller. Se você não tiver a SKU do Data Distiller, entre em contato com o representante de serviço ao cliente do Adobe para obter mais informações.
+O SKU do Distiller de dados é necessário para criar um modelo de dados personalizado para seus insights de relatórios e estender os modelos de dados do Real-Time CDP que contêm dados enriquecidos da plataforma. Consulte a [embalagem](../../packages.md), [medidas de proteção](../../guardrails.md#query-accelerated-store)e [licenciamento](../../data-distiller/license-usage.md) documentação relacionada ao SKU do Data Distiller. Se você não tiver a SKU do Data Distiller, entre em contato com o representante de serviço ao cliente do Adobe para obter mais informações.
 
 ## Criar um modelo de dados de insights de relatórios
 

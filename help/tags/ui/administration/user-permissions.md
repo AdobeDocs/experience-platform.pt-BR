@@ -2,7 +2,7 @@
 title: Permissões de usuário para tags
 description: Saiba mais sobre os diferentes tipos de permissões disponíveis para tags e algumas estratégias básicas de implementação para diferentes casos de uso comercial.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 22%
@@ -110,10 +110,10 @@ A tabela a seguir fornece alguns exemplos dos tipos de funções que você pode 
 
 | Função | Descrição | Propriedades | Direitos de propriedade | Direitos da empresa |
 | --- | --- | --- | --- | --- |
-| O gerente | Quer ver o que está acontecendo no sistema, mas não deve poder fazer alterações. | Incluir automaticamente | (None) | (Nenhum) |
+| O gerente | Quer ver o que está acontecendo no sistema, mas não deve poder fazer alterações. | Incluir automaticamente | (None) | (None) |
 | O profissional de marketing | Pode instalar extensões e configurar novas tags para propriedades existentes, mas não pode publicar nos ambientes de preparo ou produção. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
 | O desenvolvedor de aplicativos móveis | É responsável pela implementação de soluções Adobe e de terceiros dentro de um aplicativo móvel nativo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <li>Gerenciar propriedades</li><li>Gerenciar configurações do aplicativo</li> |
-| A equipe de TI | Na verdade, não modifica nenhuma tag, mas elas têm controle total sobre os ambientes de preparação e produção e o que está neles. | Incluir automaticamente | (Nenhum) | <ul><li>Aprovar</li><li>Publicar</li><li>Gerenciar ambientes</li></ul> |
+| A equipe de TI | Na verdade, não modifica nenhuma tag, mas elas têm controle total sobre os ambientes de preparação e produção e o que está neles. | Incluir automaticamente | (None) | <ul><li>Aprovar</li><li>Publicar</li><li>Gerenciar ambientes</li></ul> |
 | O desenvolvedor de extensões | Desenvolve extensões e pode enviar para aprovação, mas não pode publicá-las ou adicioná-las às propriedades existentes. | Incluir automaticamente | <ul><li>Desenvolver</li></ul> | <ul><li>Gerenciar propriedades</li><li>Desenvolver extensões</li></ul> |
 | O Superusuário | Faz tudo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Aprovar</li><li>Publicar</li><li>Gerenciar extensões</li><li>Gerenciar ambientes</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
 

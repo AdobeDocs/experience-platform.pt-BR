@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface do usuário
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Para adicionar campos a um grupo de campos personalizado, comece selecionando o 
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Novo campo]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia sobre [definição de campos na interface do usuário](../fields/overview.md#define) para etapas específicas sobre como configurar tipos de campos diferentes.
+Um **[!UICONTROL Campo sem título]** o espaço reservado aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia sobre [definição de campos na interface do usuário](../fields/overview.md#define) para etapas específicas sobre como configurar tipos de campos diferentes.
+
+Em **[!UICONTROL Atribuir a]**, selecione o **[!UICONTROL Grupo de campos]** , em seguida, use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para limitar os resultados.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Em **[!UICONTROL Atribuir a]**, selecione o **[!UICONTROL Grupo de campos]** , em seguida, use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para limitar os resultados.
 

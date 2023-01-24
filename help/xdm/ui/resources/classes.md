@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar classes na interface do usuário
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,9 @@ Depois de ter um schema que emprega uma classe personalizada aberta no [!UICONTR
 >
 >Lembre-se de que quaisquer campos adicionados a uma classe serão usados em todos os esquemas que empregam essa classe. Portanto, você deve considerar cuidadosamente quais campos serão úteis em todos os casos de uso do schema. Se estiver pensando em adicionar um campo que pode ver o uso somente em alguns schemas desta classe, considere adicioná-lo a esses esquemas por [criação de um grupo de campos](./field-groups.md#create) em vez disso.
 
-A **[!UICONTROL Novo campo]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Em **[!UICONTROL Atribuir a]**, selecione **[!UICONTROL Classe]**.
+Um **[!UICONTROL Campo sem título]** o espaço reservado aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Em **[!UICONTROL Atribuir a]**, selecione **[!UICONTROL Classe]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 

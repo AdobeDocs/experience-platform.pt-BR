@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform, home, tópicos populares, SFTP, sftp
-solution: Experience Platform
 title: Criar uma conexão de fonte SFTP na interface do usuário
-type: Tutorial
 description: Saiba como criar uma conexão de origem SFTP usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -44,12 +41,13 @@ Para se conectar ao [!DNL SFTP], você deve fornecer valores para as seguintes p
 | `privateKeyContent` | O conteúdo da chave privada SSH codificada em Base64. O tipo de chave OpenSSH deve ser classificado como RSA ou DSA. |
 | `passPhrase` | A senha ou senha para descriptografar a chave privada se o arquivo da chave ou o conteúdo da chave estiver protegido por uma senha. Se PrivateKeyContent estiver protegido por senha, esse parâmetro precisará ser usado com a senha de PrivateKeyContent como valor. |
 | `maxConcurrentConnections` | Esse parâmetro permite especificar um limite máximo para o número de conexões simultâneas que a Platform criará ao se conectar ao servidor SFTP. É necessário definir esse valor como sendo inferior ao limite definido pelo SFTP. **Observação**: Quando essa configuração é ativada para uma conta SFTP existente, ela só afeta os fluxos de dados futuros e não os fluxos de dados existentes. |
+| Caminho da pasta | O caminho para a pasta à qual você deseja fornecer acesso. [!DNL SFTP] na origem, você pode fornecer o caminho da pasta para especificar o acesso do usuário à subpasta de sua escolha. |
 
 Depois de coletar suas credenciais necessárias, siga as etapas abaixo para criar um novo [!DNL SFTP] para se conectar à Platform.
 
 ## Conecte-se ao seu [!DNL SFTP] server
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta de entrada.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -67,31 +65,31 @@ Para conectar uma conta existente, selecione a conta FTP ou SFTP com a qual dese
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para o novo [!DNL SFTP] conta.
-
-![A nova tela de conta do SFTP](../../../../images/tutorials/create/sftp/new.png)
-
-#### Autenticar usando senha
-
-[!DNL SFTP] O suporta tipos de autenticação diferentes para acesso. Em **[!UICONTROL Autenticação da conta]** select **[!UICONTROL Senha]** e, em seguida, forneça os valores de host e porta para conexão, junto com seu nome de usuário e senha.
-
-![A nova tela de conta da fonte SFTP usando autenticação básica](../../../../images/tutorials/create/sftp/password.png)
-
-#### Autenticar usando chave pública SSH
-
-Para usar credenciais baseadas em chave pública SSH, selecione **[!UICONTROL Chave pública SSH]**  e, em seguida, forneça seus valores de host e porta, bem como sua combinação de conteúdo de chave privada e senha.
-
 >[!IMPORTANT]
 >
 >O SFTP suporta uma chave OpenSSH tipo RSA ou DSA. Certifique-se de que o conteúdo do arquivo principal comece com `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` e termina com `"-----END [RSA/DSA] PRIVATE KEY-----"`. Se o arquivo de chave privada for um arquivo no formato PPK, use a ferramenta PuTTY para converter do formato PPK para OpenSSH.
 
+Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para o novo [!DNL SFTP] conta.
+
+![A nova tela de conta do SFTP](../../../../images/tutorials/create/sftp/new.png)
+
+O [!DNL SFTP] A origem suporta autenticação e autenticação básicas por meio da chave pública SSH.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticação básica]
+
+Para usar a autenticação básica, selecione **[!UICONTROL Senha]** e, em seguida, forneça os valores de host e porta para conexão, junto com seu nome de usuário e senha. Durante essa etapa, também é possível designar o caminho para a subpasta à qual deseja fornecer acesso. Quando terminar, selecione **[!UICONTROL Conectar-se à origem]**.
+
+![A nova tela de conta da fonte SFTP usando autenticação básica](../../../../images/tutorials/create/sftp/password.png)
+
+>[!TAB Autenticação de chave pública SSH]
+
+Para usar credenciais baseadas em chave pública SSH, selecione **[!UICONTROL Chave pública SSH]**  e, em seguida, forneça seus valores de host e porta, bem como sua combinação de conteúdo de chave privada e senha. Durante essa etapa, também é possível designar o caminho para a subpasta à qual deseja fornecer acesso. Quando terminar, selecione **[!UICONTROL Conectar-se à origem]**.
+
 ![A nova tela de conta da fonte SFTP usando a chave pública SSH.](../../../../images/tutorials/create/sftp/ssh.png)
 
-| Credencial | Descrição |
-| ---------- | ----------- |
-| Conteúdo da chave privada | O conteúdo da chave privada SSH codificada em Base64. O tipo de chave OpenSSH deve ser classificado como RSA ou DSA. |
-| Senha | Especifica a senha ou senha para descriptografar a chave privada se o arquivo de chave ou o conteúdo de chave estiver protegido por uma senha. Se PrivateKeyContent estiver protegido por senha, esse parâmetro precisará ser usado com a senha de PrivateKeyContent como seu valor. |
-
+>[!ENDTABS]
 
 ## Próximas etapas
 

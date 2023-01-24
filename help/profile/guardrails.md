@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1982'
 ht-degree: 6%
 
 ---
@@ -90,6 +90,7 @@ As medidas de proteção a seguir referem-se ao tamanho dos dados e fornecem lim
 | Tamanho máximo do fragmento de perfil | 50MB | Grave | **O tamanho máximo de um fragmento de perfil único é de 50 MB.** Segmentação, exportações e pesquisas podem falhar em qualquer [fragmento de perfil](#profile-fragments) maior que 50 MB. |
 | Tamanho máximo de armazenamento de perfil | 50MB | Suave | **O tamanho máximo de um perfil armazenado é de 50 MB.** Adicionar novo [fragmentos de perfil](#profile-fragments) em um perfil maior que 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. A tentativa de armazenar um perfil com um único fragmento maior que 50 MB, ou vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
 | Número de lotes de Perfil ou ExperienceEvent assimilados por dia | 90 | Suave | **O número máximo de lotes de Perfil ou ExperienceEvent assimilados por dia é de 90.** Isso significa que o total combinado de lotes de Perfil e ExperienceEvent assimilados a cada dia não pode exceder 90. A inserção de lotes adicionais afetará o desempenho do sistema. |
+| Número de ExperienceEvents por registro de perfil | 5000 | Suave | **O número máximo de ExperienceEvents por registro de perfil é 5000.** Perfis com mais de 5000 ExperienceEvents **not** ser considerados para segmentação. |
 
 {style=&quot;table-layout:auto&quot;}
 

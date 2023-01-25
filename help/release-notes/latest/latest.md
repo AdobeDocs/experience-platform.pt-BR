@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2808ee4cd952e9739d4d346e08a96fa9d49ccc5
+source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 7%
+source-wordcount: '1993'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Assurance](#assurance)
 - [Coleta de dados](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
@@ -48,6 +49,53 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Enviar dados para [!DNL Google Ads] uso do encaminhamento de eventos | Agora você pode usar o [[!DNL Google Ads Enhanced Conversions] Extensão da API](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos, combinado com [Segredo do Google Oauth 2](../../tags/ui/event-forwarding/secrets.md#google-oauth2), para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Destinos {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos destinos**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [(Beta) Conexão do Adobe Experience Cloud Audiences](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Use o [!UICONTROL (Beta) Públicos-alvo da Adobe Experience Cloud] conexão para compartilhar segmentos do Experience Platform para várias soluções Experience Platform, como Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target ou Marketo. |
+| [Conexão de perfil Pega](../../destinations/catalog/personalization/pega-profile.md) | Use o [!DNL Pega Profile Connector] no Adobe Experience Platform para criar uma conexão de saída ao vivo com seu [!DNL Amazon] Armazenamento S3 para exportar periodicamente dados de perfil para arquivos CSV do Adobe Experience Platform em seus próprios buckets do S3. Em [!DNL Pega Customer Decision Hub], você pode agendar trabalhos de dados para importar esses dados de perfil do armazenamento S3 para atualizar o [!DNL Pega Customer Decision Hub] perfil. |
+| [(Beta) A conexão EU do CRM do Trade Desk](../../destinations/catalog/advertising/tradedesk-emails.md) | Com o lançamento da EUID (European Unified ID), você verá duas [!DNL The Trade Desk - CRM] os destinos [catálogo de destinos](/help/destinations/catalog/overview.md). <ul><li> Se você criar dados na UE, use a variável **[!DNL The Trade Desk - CRM (EU)]** destino.</li><li> Se você gerar dados nas regiões APAC ou NAMER, use a variável **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destino. </li></ul> |
+
+**Funcionalidade nova ou atualizada**
+
+| Funcionalidade | Descrição |
+| ----------- | ----------- |
+| Novas opções de delimitador para conectores de destino de armazenamento na nuvem beta | Três novas opções de delimitador (dois pontos) `:`, Pipe `|`, Ponto e vírgula `;`) agora estão disponíveis para os novos destinos de armazenamento na nuvem beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Armazenamento Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Zona de aterrissagem de dados (Beta)](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Armazenamento em nuvem Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP (Beta)](/help/destinations/catalog/cloud-storage/sftp.md). <br> Leia sobre os [opções de formatação de arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) para destinos com base em arquivo. |
+| Novo parâmetro opcional disponível em [campos de dados do cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurações em [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use isso quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização do usuário. <br> Por exemplo, a variável **[!UICONTROL Alias de integração]** no campo [[!UICONTROL Personalização personalizada]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) o destino deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor para esse campo. |
+
+**Correções e aprimoramentos** {#fixes-and-enhancements}
+
+<!--
+
+| Fix or enhancement | Description |
+| ----------- | ----------- |
+| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
+| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>Correção ou aprimoramento</b></td>
+        <td><b>Descrição</b></td>
+    </tr>
+    <tr>
+        <td>Validação de interface do usuário e API para mapeamentos e mapeamentos duplicados necessários (PLAT-123316)</td>
+        <td>A validação agora é aplicada da seguinte maneira na interface do usuário e na API quando <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campos de mapeamento</a> no workflow ativar destinos :<ul><li><b>Mapeamentos necessários</b>: Se o destino tiver sido configurado pelo desenvolvedor de destino com os mapeamentos necessários (por exemplo, a variável <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destino), esses mapeamentos necessários precisam ser adicionados pelo usuário ao ativar os dados no destino. </li><li><b>Mapeamentos duplicados</b>: Na etapa de mapeamento do fluxo de trabalho de ativação, é possível adicionar valores duplicados nos campos de origem, mas não nos campos de destino. Consulte a tabela abaixo para obter um exemplo de combinações de mapeamento permitidas e proibidas. <br><table><thead><tr><th>Permitido/proibido</th><th>Campo de origem</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias de email2</li></ul></td></tr><tr><td>Proibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>
+    <tr>
+        <td>Comportamento de exportação atualizado para destinos com base em arquivo (PLAT-123316)</td>
+        <td>Corrigimos um problema no comportamento do <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">atributos obrigatórios</a> ao exportar arquivos de dados para destinos em lote. <br> Anteriormente, cada registro nos arquivos de saída era verificado para conter ambos: <ol><li>Um valor não nulo da variável <code>mandatoryField</code> coluna e</li><li>Um valor não nulo em pelo menos um dos outros campos não obrigatórios.</li></ol> A segunda condição foi removida. Como resultado, você pode estar vendo mais linhas de saída em seus arquivos de dados exportados, conforme mostrado no exemplo abaixo:<br> <b> Exemplo de comportamento antes da versão de janeiro de 2023 </b> <br> Campo obrigatório: <code>emailAddress</code> <br> <b>Inserir dados para ativar</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Saída de Ativation</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Exemplo de comportamento após a versão de janeiro de 2023 </b> <br> <b>Saída de Ativation</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

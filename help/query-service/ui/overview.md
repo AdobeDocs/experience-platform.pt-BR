@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do serviço de query
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1135'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ O **[!UICONTROL Modelos]** mostra queries salvas pelos usuários em sua organiza
 
 Consulte a [templates de query](./query-templates.md) documentação para obter mais informações sobre modelos na interface do usuário da plataforma.
 
-## Log
+## Log {#log}
 
 O **[!UICONTROL Log]** A guia fornece uma lista de consultas que foram executadas anteriormente. Por padrão, o log lista os queries na cronologia inversa.
 
@@ -81,6 +81,8 @@ O **[!UICONTROL Log]** A guia fornece uma lista de consultas que foram executada
 
 >!![Note]
 Selecione o ícone de lápis (![Um ícone de lápis.](../images/ui/overview/edit-icon.png)) de qualquer linha do log de query para navegar até a [!DNL Query Editor]. O query é preenchido previamente para uma edição conveniente.
+
+Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações sobre os arquivos de log gerados automaticamente por um evento de query.
 
 ## Credenciais
 

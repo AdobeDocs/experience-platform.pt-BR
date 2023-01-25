@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Google PubSub, google pubsub
-solution: Experience Platform
 title: Criar uma conexão Google PubSub-fonte na interface do usuário
-type: Tutorial
 description: Saiba como criar um conector Google PubSub-source usando a interface do usuário da plataforma.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -31,8 +28,9 @@ Para se conectar [!DNL PubSub] para a Platform, você deve fornecer um valor vá
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `projectId` | A ID do projeto necessária para autenticação [!DNL PubSub]. |
-| `credentials` | A ID da credencial ou da chave privada necessária para a autenticação [!DNL PubSub]. |
+| Projeto ID | A ID do projeto necessária para autenticação [!DNL PubSub]. |
+| Credenciais | A ID da credencial ou da chave privada necessária para a autenticação [!DNL PubSub]. |
+| ID do tópico | A ID da variável [!DNL PubSub] que representa um feed de mensagens. Você deve especificar uma ID de tópico se desejar fornecer acesso a um fluxo específico de dados no [!DNL Google PubSub] fonte. |
 
 Para obter mais informações sobre esses valores, consulte o seguinte [Autenticação PubSub](https://cloud.google.com/pubsub/docs/authentication) documento. Se você estiver usando a autenticação baseada em conta de serviço, consulte o seguinte [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
 
@@ -44,9 +42,9 @@ Depois de reunir suas credenciais necessárias, siga as etapas abaixo para vincu
 
 ## Conecte seu [!DNL PubSub] account
 
-No [Interface do usuário da plataforma](https://platform.adobe.com), selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Em [!UICONTROL armazenamento na nuvem] categoria , selecione **[!UICONTROL Google PubSub]** e selecione **[!UICONTROL Adicionar dados]**.
 
@@ -62,7 +60,13 @@ Para usar uma conta existente, selecione a [!DNL PubSub] conta com a qual deseja
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e [!DNL PubSub] credenciais de autenticação no formulário de entrada. Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e, em seguida, permitir que a nova conexão seja estabelecida.
+Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e [!DNL PubSub] credenciais de autenticação no formulário de entrada. Durante essa etapa, é possível definir os dados aos quais sua conta tem acesso fornecendo uma ID de tópico. Somente as subscrições associadas à ID de tópico estarão acessíveis.
+
+>[!NOTE]
+>
+>Os principais (funções) atribuídos a um projeto público são herdados em todos os tópicos e subscrições criados dentro de um [!DNL PubSub] projeto. Se você quiser adicionar um principal (função) para ter acesso a um tópico específico, esse principal (função) também deverá ser adicionado à assinatura correspondente do tópico. Para obter mais informações, leia a [[!DNL PubSub] documentação sobre o controle de acesso](https://cloud.google.com/pubsub/docs/access-control).
+
+Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e, em seguida, permitir que a nova conexão seja estabelecida.
 
 ![novo](../../../../images/tutorials/create/google-pubsub/new.png)
 

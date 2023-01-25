@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Google PubSub, google pubsub
-solution: Experience Platform
 title: Criar uma conexão Google PubSub-source usando a API do Serviço de fluxo
-type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a uma conta Google PubSub usando a API de Serviço de Fluxo.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 2%
+source-wordcount: '864'
+ht-degree: 1%
 
 ---
 
@@ -33,6 +30,7 @@ Para [!DNL Flow Service] para se conectar a [!DNL PubSub], você deve fornecer v
 | ---------- | ----------- |
 | `projectId` | A ID do projeto necessária para autenticação [!DNL PubSub]. |
 | `credentials` | A credencial ou chave necessária para a autenticação [!DNL PubSub]. |
+| `topicId` | A ID da variável [!DNL PubSub] que representa um feed de mensagens. Você deve especificar uma ID de tópico se desejar fornecer acesso a um fluxo específico de dados no [!DNL Google PubSub] fonte. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem do target. O [!DNL PubSub] a ID de especificação de conexão é: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Para obter mais informações sobre esses valores, consulte esta seção [[!DNL PubSub] autenticação](https://cloud.google.com/pubsub/docs/authentication) documento. Para usar a autenticação baseada em conta de serviço, consulte esta seção [[!DNL PubSub] guia sobre a criação de contas de serviço](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
@@ -51,6 +49,12 @@ A primeira etapa na criação de uma conexão de origem é autenticar seu [!DNL 
 
 Para criar uma ID de conexão base, faça uma solicitação de POST para a variável `/connections` endpoint enquanto fornece seu [!DNL PubSub] credenciais de autenticação como parte dos parâmetros da solicitação.
 
+Durante essa etapa, é possível definir os dados aos quais sua conta tem acesso fornecendo uma ID de tópico. Somente as subscrições associadas à ID de tópico estarão acessíveis.
+
+>[!NOTE]
+>
+>Os principais (funções) atribuídos a um projeto público são herdados em todos os tópicos e subscrições criados dentro de um [!DNL PubSub] projeto. Se você quiser adicionar um principal (função) para ter acesso a um tópico específico, esse principal (função) também deverá ser adicionado à assinatura correspondente do tópico. Para obter mais informações, leia a [[!DNL PubSub] documentação sobre o controle de acesso](https://cloud.google.com/pubsub/docs/access-control).
+
 **Formato da API**
 
 ```http
@@ -61,33 +65,35 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google PubSub connection",
-        "description": "Google PubSub connection",
-        "auth": {
-            "specName": "Google PubSub authentication credentials",
-            "params": {
-                "projectId": "{PROJECT_ID}",
-                "credentials": "{CREDENTIALS}"
-            }
-        },
-        "connectionSpec": {
-            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google PubSub connection",
+      "description": "Google PubSub connection",
+      "auth": {
+          "specName": "Google PubSub authentication credentials",
+          "params": {
+              "projectId": "acme-project",
+              "credentials": "{CREDENTIALS}",
+              "topicID": "acmeProjectAPI"
+          }
+      },
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `auth.params.projectId` | A ID do projeto necessária para autenticação [!DNL PubSub]. |
 | `auth.params.credentials` | A credencial ou chave necessária para a autenticação [!DNL PubSub]. |
+| `auth.params.topicID` | A ID do tópico da sua [!DNL PubSub] fonte à qual você deseja fornecer acesso. |
 | `connectionSpec.id` | O [!DNL PubSub] ID de especificação de conexão: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Resposta**
@@ -103,7 +109,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 ## Criar uma conexão de origem {#source}
 
-Uma conexão de origem cria e gerencia a conexão com a fonte externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e uma ID de conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica de um locatário e da Organização IMS.
+Uma conexão de origem cria e gerencia a conexão com a fonte externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e uma ID de conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica de um locatário e de uma organização.
 
 Para criar uma conexão de origem, faça uma solicitação de POST para a variável `/sourceConnections` endpoint da variável [!DNL Flow Service] API.
 
@@ -117,29 +123,29 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'content-type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -d '{
-        "name": "Google PubSub source connection",
-        "description": "A source connection for Google PubSub",
-        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
-        "connectionSpec": {
-            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "topicId": "{TOPIC_ID}",
-            "subscriptionId": "{SUBSCRIPTION_ID}",
-            "dataType": "raw"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'content-type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "Google PubSub source connection",
+      "description": "A source connection for Google PubSub",
+      "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "topicId": "acme-project",
+          "subscriptionId": "{SUBSCRIPTION_ID}",
+          "dataType": "raw"
+      }
+  }'
 ```
 
 | Propriedade | Descrição |
@@ -149,8 +155,8 @@ curl -X POST \
 | `baseConnectionId` | A ID de conexão básica da [!DNL PubSub] fonte gerada na etapa anterior. |
 | `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL PubSub]. Essa ID é: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | O formato do [!DNL PubSub] dados que você deseja assimilar. Atualmente, o único formato de dados compatível é `json`. |
-| `params.topicId` | A ID do tópico define o recurso nomeado específico para o qual as mensagens são enviadas por editores |
-| `params.subscriptionId` | A ID de assinatura define o recurso nomeado específico que representa o fluxo de mensagens de um único tópico específico a ser entregue ao aplicativo de assinatura. |
+| `params.topicId` | O nome ou a ID do [!DNL PubSub] tópico. Em [!DNL PubSub], um tópico é um recurso nomeado que representa um feed de mensagens. |
+| `params.subscriptionId` | A ID de assinatura que corresponde a um determinado tópico. Em [!DNL PubSub], as assinaturas permitem ler mensagens de um tópico. Uma ou várias subscrições podem ser atribuídas a um único tópico. |
 | `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados compatíveis incluem: `raw` e `xdm`. |
 
 **Resposta**

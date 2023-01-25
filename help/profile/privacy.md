@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 ## Introdução
 
-É recomendável que você tenha uma compreensão funcional do seguinte [!DNL Experience Platform] antes de ler este guia:
+Este guia requer uma compreensão funcional do seguinte [!DNL Platform] componentes:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais nos aplicativos Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
@@ -48,7 +48,7 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 >
 >O Privacy Service só pode processar [!DNL Profile] dados que usam uma política de mesclagem que não executa a identificação. Consulte a seção sobre [limitações da política de mesclagem](#merge-policy-limitations) para obter mais informações.
 >
->Também é importante observar que o tempo que uma solicitação de privacidade pode levar para ser concluída não pode ser garantido. Se ocorrerem alterações no [!DNL Profile] dados enquanto uma solicitação ainda está sendo processada, não é possível garantir se esses registros são processados ou não.
+>Observe que o tempo que uma solicitação de privacidade pode levar para ser concluída **cannot** ser garantidas. Se ocorrerem alterações no [!DNL Profile] dados enquanto uma solicitação ainda está sendo processada, não é possível garantir se esses registros são processados ou não.
 
 ### Uso da API
 
@@ -65,6 +65,8 @@ Além disso, a variável `include` a matriz da carga da solicitação deve inclu
 >Consulte a seção sobre [solicitações de perfil e solicitações de identidade](#profile-v-identity) mais adiante neste documento para obter informações mais detalhadas sobre os efeitos da utilização de `ProfileService` e `identity` no `include` matriz.
 
 A solicitação a seguir cria um novo trabalho de privacidade para os dados de um único cliente na [!DNL Profile] armazenar. Dois valores de identidade são fornecidos para o cliente na variável `userIDs` Array; uma usando a norma `Email` namespace de identidade e outro usando um `Customer_ID` namespace. Também inclui o valor do produto para [!DNL Profile] (`ProfileService`) na `include` array:
+
+**Solicitação**
 
 ```shell
 curl -X POST \
@@ -108,6 +110,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >A plataforma processa solicitações de privacidade em todas as [sandboxes](../sandboxes/home.md) pertencente à sua organização. Como resultado, qualquer `x-sandbox-name` o cabeçalho incluído na solicitação é ignorado pelo sistema.
+
+**Resposta do produto**
+
+Para o Serviço de perfil, uma vez concluída a tarefa de privacidade, uma resposta é retornada no formato JSON com informações relacionadas às IDs de usuário solicitadas.
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### Uso da interface do usuário
 
@@ -161,6 +213,6 @@ O Privacy Service só pode processar [!DNL Profile] dados que usam uma política
 >
 ## Próximas etapas
 
-Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Experience Platform]. É recomendável continuar lendo a documentação fornecida neste guia para aprofundar sua compreensão de como gerenciar dados de identidade e criar tarefas de privacidade.
+Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Experience Platform]. Para aprofundar sua compreensão de como gerenciar dados de identidade e criar tarefas de privacidade, continue lendo a documentação fornecida neste guia.
 
 Para obter informações sobre o processamento de solicitações de privacidade de [!DNL Platform] recursos não usados por [!DNL Profile], consulte o documento em [processamento de solicitação de privacidade no data lake](../catalog/privacy.md).

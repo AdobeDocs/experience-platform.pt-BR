@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform em janeiro de 2023
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: 3fd3e96d5db6b1e63df338efe383d209690eb1f6
+source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '1316'
 ht-degree: 6%
 
 ---
@@ -14,9 +14,25 @@ ht-degree: 6%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Assurance](#assurance)
 - [Coleta de dados](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
+- [Perfil do cliente em tempo real](#profile)
 - [Fontes](#sources)
+
+## Assurance {#assurance}
+
+O Adobe Assurance permite inspecionar, provar, simular e validar a forma como você coleta dados ou veicula experiências em seu aplicativo móvel.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Editor de validação | Foram adicionados novos aprimoramentos ao editor de validação. Esses aprimoramentos incluem colunas de validação, novas ferramentas de criação de código e exibições aprimoradas. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre o Assurance, leia o [Documentação de garantia](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Coleta de dados {#data-collection}
 
@@ -72,6 +88,29 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 {style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
+
+## Perfil do cliente em tempo real {#profile}
+
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com o Perfil do cliente em tempo real, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. O Perfil permite consolidar os dados do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Expiração de associação de segmento gerado pela plataforma | Qualquer associação de segmento que esteja no `Exited` por mais de 30 dias, com base no `lastQualificationTime` estará sujeito a exclusão. |
+| Expiração de associação de público-alvo externo | Por padrão, as associações de público-alvo externo são mantidas por 30 dias. Para mantê-los por mais tempo, use a variável `validUntil` durante a assimilação dos dados de público-alvo. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Descontinuação futura** {#deprecation}
+
+Para remover a redundância no ciclo de vida de associação do segmento, a variável `Existing` será descontinuado do [mapa de associação de segmento](../../xdm/field-groups/profile/segmentation.md) no final de março de 2023. Um anúncio de acompanhamento incluirá a data exata da desativação.
+
+Pós-descontinuação, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão sendo representados como `Exited`. Isso trará paridade com destinos baseados em arquivo com `Active` e `Expired` status do segmento.
+
+Essa alteração pode afetar você se estiver usando o [destinos corporativos](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Hubs de eventos do Azure, API HTTP) e tem processos downstream automatizados em vigor, com base no `Existing` status. Revise suas integrações downstream, se for o caso. Se estiver interessado em identificar perfis recém-qualificados além de um determinado tempo, considere usar uma combinação do `Realized` e o `lastQualificationTime` no mapa de associação de segmentos. Para obter mais informações, entre em contato com o representante do Adobe.
+
+Para saber mais sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados de perfil, comece lendo o [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
 ## Fontes {#sources}
 

@@ -2,10 +2,10 @@
 title: Modelos de Consulta
 description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API do serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados do Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,8 @@ Você pode criar templates de query por meio de dois métodos, fazendo uma solic
 
 Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravação](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar seu query, ele estará disponível para ser reutilizado como um template de consulta a partir do [!UICONTROL Modelos] guia .
 
+## Procurar modelos de consulta {#browse}
+
 No espaço de trabalho Consultas da interface do usuário da plataforma, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
 
 ![O espaço de trabalho de consultas com a guia Modelos foi realçado.](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ No espaço de trabalho Consultas da interface do usuário da plataforma, selecio
 Para encontrar informações relevantes do modelo, selecione qualquer modelo de consulta na lista disponível para abrir o painel de detalhes.
 
 ![O painel de detalhes no espaço de trabalho de consultas com a ID de consulta realçada.](../images/ui/query-templates/details-panel.png)
+
+No painel de detalhes, é possível executar quatro ações separadas:
+
+* Selecionar **[!UICONTROL Conjunto de dados de saída]** para editar o conjunto de dados de saída do modelo selecionado.
+* Selecionar **[!UICONTROL Exibir programação]** para navegar até o [!UICONTROL Agendamentos] guia . Esta exibição contém qualquer informação de agendamento associada ao query.
+* Selecionar **[!UICONTROL Excluir consulta]** para excluir o modelo.
+* Selecione o nome do modelo para navegar até o Editor de consultas, onde o SQL é preenchido previamente para edição.
 
 ### Usar a API do Serviço de query para criar um modelo
 

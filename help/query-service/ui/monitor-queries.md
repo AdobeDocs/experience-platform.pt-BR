@@ -2,10 +2,10 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do serviço de query.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7b5a22d849f0f46a9ff14843c594b743bbd01c9d
+source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 1%
+source-wordcount: '1204'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ O Adobe Experience Platform fornece visibilidade aprimorada para o status de tod
 
 ## [!UICONTROL Consultas agendadas]
 
-O [!UICONTROL Consultas agendadas] A guia fornece uma visão geral das consultas executadas e programadas. A área de trabalho contém todas as consultas CTAS e ITAS que estão agendadas para execução ou foram executadas pelo menos uma vez. É possível encontrar detalhes de execução para todas as consultas programadas, bem como códigos de erro e mensagens para consultas com falha.
+O [!UICONTROL Consultas agendadas] A guia fornece uma visão geral de todas as consultas programadas do CTAS e do ITAS. É possível encontrar detalhes de execução para todas as consultas programadas, bem como códigos de erro e mensagens para quaisquer consultas com falha.
 
 Para navegar até o [!UICONTROL Consultas agendadas] guia , selecione **[!UICONTROL Queries]** na barra de navegação esquerda, seguida por **[!UICONTROL Consultas agendadas]**
 
@@ -29,14 +29,14 @@ A tabela abaixo descreve cada coluna disponível.
 
 | Coluna | Descrição |
 |---|---|
-| Nome | O campo de nome é o nome do modelo ou os primeiros caracteres da consulta SQL. Qualquer query criada por meio da interface do usuário com o Editor de consultas é nomeada no início. Se a consulta foi criada por meio da API, o nome da consulta é um trecho do SQL inicial usado para criar a consulta. |
-| Modelo | O nome do modelo da consulta. Selecione um nome de modelo para navegar até o Editor de consultas. O modelo de consulta é exibido no Editor de consultas para conveniência. Se não houver um nome de modelo, a linha será marcada com um hífen e não será possível redirecionar para o Editor de consultas para exibir a consulta. |
-| SQL | Um trecho da consulta SQL. |
-| Executar frequência | Essa é a cadência na qual seu query está definido para ser executado. Os valores disponíveis são `Run once` e `Scheduled`. As consultas podem ser filtradas de acordo com sua frequência de execução. |
-| Criado por | O nome do usuário que criou o query. |
-| Criado | O carimbo de data e hora quando a consulta foi criada, no formato UTC. |
-| Carimbo de data e hora da última execução | O carimbo de data e hora mais recente quando a consulta foi executada. Essa coluna destaca se uma consulta foi executada de acordo com seu agendamento atual. |
-| Status da última execução | O status da execução mais recente da consulta. Os três valores de status são: `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Nome]** | O campo de nome é o nome do modelo ou os primeiros caracteres da consulta SQL. Qualquer query criada por meio da interface do usuário com o Editor de consultas é nomeada no início. Se a consulta foi criada por meio da API, seu nome se torna um trecho do SQL inicial usado para criar a consulta. Selecione qualquer item no [!UICONTROL Nome] para ver uma lista de todas as execuções associadas à query. Para obter mais informações, consulte [a consulta executa detalhes da programação](#query-runs) seção. |
+| **[!UICONTROL Modelo]** | O nome do modelo da consulta. Selecione um nome de modelo para navegar até o Editor de consultas. O modelo de consulta é exibido no Editor de consultas para conveniência. Se não houver um nome de modelo, a linha será marcada com um hífen e não será possível redirecionar para o Editor de consultas para exibir a consulta. |
+| **[!UICONTROL SQL]** | Um trecho da consulta SQL. |
+| **[!UICONTROL Executar frequência]** | Essa é a cadência na qual seu query está definido para ser executado. Os valores disponíveis são `Run once` e `Scheduled`. As consultas podem ser filtradas de acordo com sua frequência de execução. |
+| **[!UICONTROL Criado por]** | O nome do usuário que criou o query. |
+| **[!UICONTROL Criado]** | O carimbo de data e hora quando a consulta foi criada, no formato UTC. |
+| **[!UICONTROL Carimbo de data e hora da última execução]** | O carimbo de data e hora mais recente quando a consulta foi executada. Essa coluna destaca se uma consulta foi executada de acordo com seu agendamento atual. |
+| **[!UICONTROL Status da última execução]** | O status da execução mais recente da consulta. Os valores de status são: `Success`, `Failed`, `In progress`e `No runs`. |
 
 >[!TIP]
 >
@@ -64,7 +64,7 @@ Alterne as caixas de seleção relevantes para remover ou adicionar uma coluna d
 
 Consulte a [documentação da API de assinaturas de alertas](../api/alert-subscriptions.md) para obter mais informações.
 
-### Filtrar consultas
+### Filtrar consultas {#filter}
 
 Você pode filtrar consultas com base na frequência de execução. No [!UICONTROL Consultas agendadas] selecione o ícone de filtro (![Um ícone de filtro](../images/ui/monitor-queries/filter-icon.png)) para abrir a barra lateral do filtro.
 
@@ -80,7 +80,7 @@ Selecione uma das opções **[!UICONTROL Programado]** ou **[!UICONTROL Executar
 
 Após ativar os critérios de filtro, selecione **[!UICONTROL Ocultar filtros]** para fechar o painel de filtro.
 
-## A consulta executa Detalhes da programação
+## O query executa detalhes da programação {#query-runs}
 
 Selecione um nome de consulta para navegar até a página de detalhes da programação. Esta exibição fornece uma lista de todas as execuções executadas como parte dessa consulta agendada. As informações fornecidas incluem a hora inicial e final, o status e o conjunto de dados usados.
 
@@ -90,23 +90,23 @@ Essas informações são fornecidas em uma tabela de cinco colunas. Cada linha i
 
 | Nome da coluna | Descrição |
 |---|---|
-| ID de execução da consulta | A ID de execução da consulta para a execução diária. |
-| Início da execução da consulta | O carimbo de data e hora quando o query foi executado. Está no formato UTC. |
-| Execução da consulta concluída | O carimbo de data e hora quando o query foi concluído. Está no formato UTC. |
-| Status | O status da execução mais recente da consulta. Os três valores de status são: `successful` `failed` ou `in progress`. |
-| Conjunto de dados | O conjunto de dados envolvido na execução. |
+| **[!UICONTROL ID de execução da consulta]** | A ID de execução da consulta para a execução diária. Selecione o **[!UICONTROL ID de execução da consulta]** para navegar até o [!UICONTROL Visão geral da execução de query]. |
+| **[!UICONTROL Início da execução da consulta]** | O carimbo de data e hora quando o query foi executado. Está no formato UTC. |
+| **[!UICONTROL Execução da consulta concluída]** | O carimbo de data e hora quando o query foi concluído. Está no formato UTC. |
+| **[!UICONTROL Status]** | O status da execução mais recente da consulta. Os três valores de status são: `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Conjunto de dados]** | O conjunto de dados envolvido na execução. |
 
 Os detalhes da consulta que está sendo agendada podem ser vistos no [!UICONTROL Propriedades] painel. Esse painel inclui a ID da consulta inicial, o tipo de cliente, o nome do modelo, o SQL da consulta e a cadência do agendamento.
 
 ![A página de detalhes do agendamento com o painel de propriedades realçado.](../images/ui/monitor-queries/properties-panel.png)
 
-### Executar detalhes
-
 Selecione uma ID de execução de consulta para navegar até a página de detalhes da execução e exibir informações da consulta.
 
 ![A tela de detalhes do agendamento com uma ID de execução realçada.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-Esta exibição fornece informações sobre execuções individuais para esta consulta agendada e uma análise mais detalhada do status de execução. Esta página também inclui as informações do cliente e os detalhes de qualquer erro que tenha causado falha na consulta.
+## Visão geral da execução de query {#query-run-overview}
+
+O [!UICONTROL Visão geral da execução de query] O fornece informações sobre execuções individuais para esta consulta agendada e um detalhamento mais detalhado do status de execução. Esta página também inclui as informações do cliente e os detalhes de qualquer erro que possa ter causado falha na consulta.
 
 ![A tela de detalhes da execução com a seção de visão geral realçada.](../images/ui/monitor-queries/query-run-details.png)
 
@@ -117,6 +117,20 @@ A seção Status da consulta fornece o código de erro e a mensagem de erro caso
 É possível copiar o SQL da consulta para a área de transferência nessa visualização. Selecione o ícone de cópia na parte superior direita do trecho SQL para copiar a consulta. Uma mensagem pop-up confirma que o código foi copiado.
 
 ![A tela de detalhes da execução com o ícone de cópia SQL destacado.](../images/ui/monitor-queries/copy-sql.png)
+
+### Executar detalhes de consultas com bloco anônimo {#anonymous-block-queries}
+
+Queries que usam blocos anônimos para compor suas instruções SQL são separados em suas consultas individuais. Isso permite inspecionar os detalhes de execução de cada bloco de query individualmente.
+
+Blocos anônimos são indicados por meio de um `$$` antes da consulta. Consulte a [documento de bloco anônimo](../essential-concepts/anonymous-block.md) para saber mais sobre blocos anônimos no serviço de query.
+
+As consultas de bloco anônimo têm guias à esquerda do status de execução. Selecione uma guia para exibir os detalhes da execução.
+
+![A visão geral da execução de Query exibe uma consulta de bloco anônima. As várias guias do query são destacadas.](../images/ui/monitor-queries/anonymous-block-overview.png)
+
+Caso uma consulta de bloco anônimo falhe, você pode encontrar o código de erro para esse bloco específico por meio dessa interface.
+
+![A visão geral da execução de Query exibe uma consulta de bloco anônima com o código de erro para um único bloco destacado.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Selecionar **[!UICONTROL Query]** para retornar à tela de detalhes da programação, ou **[!UICONTROL Consultas agendadas]** para retornar ao [!UICONTROL Consultas agendadas] guia .
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do serviço de query
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1117'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,8 @@ O **[!UICONTROL Modelos]** mostra queries salvas pelos usuários em sua organiza
 | **[!UICONTROL Modificado por]** | O último usuário que modificou a query. Qualquer usuário da organização com acesso a [!DNL Query Service] O pode modificar queries. |
 | **[!UICONTROL Última modificação]** | A data e a hora da última modificação do query, no fuso horário do navegador. |
 
+Consulte a [templates de query](./query-templates.md) documentação para obter mais informações sobre modelos na interface do usuário da plataforma.
+
 ## Log
 
 O **[!UICONTROL Log]** A guia fornece uma lista de consultas que foram executadas anteriormente. Por padrão, o log lista os queries na cronologia inversa.
@@ -69,13 +71,16 @@ O **[!UICONTROL Log]** A guia fornece uma lista de consultas que foram executada
 
 | Coluna | Descrição |
 | --- | --- |
-| **[!UICONTROL Nome]** | O nome da consulta, que consiste nos primeiros caracteres da consulta SQL. Selecionar o nome abre a janela [!DNL Query Editor], permitindo editar o query. Você pode usar a barra de pesquisa para pesquisar o Nome de um query. As pesquisas diferenciam maiúsculas de minúsculas. |
-| **[!UICONTROL Criado por]** | O nome da pessoa que criou o query. |
-| **[!UICONTROL Cliente]** | O cliente usado para o query. |
-| **[!UICONTROL Conjunto de dados]** | O conjunto de dados de entrada usado pelo query. Selecione o conjunto de dados a ser acessado na tela de detalhes do conjunto de dados de entrada. |
+| **[!UICONTROL Nome]** | O nome da consulta, que consiste nos primeiros caracteres da consulta SQL. Selecione o nome do modelo para abrir o [!UICONTROL Detalhes do log de consultas] exibir para essa execução. Você pode usar a barra de pesquisa para pesquisar o nome de um query. As pesquisas diferenciam maiúsculas de minúsculas. |
+| **[!UICONTROL Hora de início]** | A hora em que o query foi executado. |
+| **[!UICONTROL Hora de conclusão]** | A hora em que a execução da consulta foi concluída. |
 | **[!UICONTROL Status]** | O status atual da query. |
-| **[!UICONTROL Última execução]** | Quando a consulta foi executada por último. Você pode classificar a lista em ordem crescente ou decrescente selecionando a seta sobre essa coluna. |
-| **[!UICONTROL Tempo de execução]** | O tempo necessário para executar o query. |
+| **[!UICONTROL Conjunto de dados]** | O conjunto de dados de entrada usado pelo query. Selecione o conjunto de dados a ser acessado na tela de detalhes do conjunto de dados de entrada. |
+| **[!UICONTROL Cliente]** | O cliente usado para o query. |
+| **[!UICONTROL Criado por]** | O nome da pessoa que criou o query. |
+
+>!![Note]
+Selecione o ícone de lápis (![Um ícone de lápis.](../images/ui/overview/edit-icon.png)) de qualquer linha do log de query para navegar até a [!DNL Query Editor]. O query é preenchido previamente para uma edição conveniente.
 
 ## Credenciais
 

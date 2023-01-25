@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do serviço de query
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,11 @@ Você pode usar as credenciais que estão expirando para configurar rapidamente 
 
 O **[!UICONTROL Credenciais de expiração]** fornece as seguintes informações:
 
-- **[!UICONTROL Host]**: O nome do host ao qual você se conectará. Para conexão com o Serviço de query, isso incluirá o nome da Organização IMS que você está usando no momento.
-- **[!UICONTROL Port]**: O número da porta do host à qual você se conectará.
-- **[!UICONTROL Banco de dados]**: O nome do banco de dados ao qual você se conectará.
-- **[!UICONTROL Nome do usuário]**: O nome de usuário que você usará para se conectar ao Serviço de query.
-- **[!UICONTROL Senha]**: A senha que você usará para se conectar ao Serviço de query.
+- **[!UICONTROL Host]**: O nome do host ao qual conectar seu cliente. Isso incorpora o nome da sua organização, conforme visto na faixa superior da interface do usuário da plataforma.
+- **[!UICONTROL Port]**: O número da porta do host à qual se conectar.
+- **[!UICONTROL Banco de dados]**: O nome do banco de dados ao qual conectar um cliente.
+- **[!UICONTROL Nome do usuário]**: O nome de usuário usado para se conectar ao Serviço de query.
+- **[!UICONTROL Senha]**: A senha usada para se conectar ao Serviço de Consulta. As senhas na interface do usuário foram transformadas em hash para fins de segurança. Selecione o ícone de cópia (![O ícone de cópia.](../images/ui/credentials/copy-icon.png)) para copiar suas credenciais completas e sem hash para a área de transferência.
 - **[!UICONTROL comando PSQL]**: Um comando que inseriu automaticamente todas as informações relevantes para você se conectar ao Serviço de query usando PSQL na linha de comando.
 - **[!UICONTROL Expira]**: A data e a hora de expiração das credenciais. A duração padrão da validade do token é de 24 horas, mas pode ser alterada nas configurações avançadas do Admin Console.
 

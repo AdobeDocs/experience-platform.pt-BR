@@ -3,10 +3,10 @@ keywords: destinos; soluções da experience cloud; target; destino do target; n
 title: Visão geral dos destinos Adobe
 description: Gerencie a experiência do cliente ao conectar seus dados na Platform a outras soluções da Adobe Experience Cloud para direcionamento de anúncios, personalização, automação de marketing e muito mais
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 13%
+source-wordcount: '230'
+ht-degree: 12%
 
 ---
 
@@ -24,7 +24,10 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 ### Conexões
 
+* [Conexão Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Conexão Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Conexão Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [Públicos-alvo do Experience Cloud (Beta)](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Extensões

@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 3%
 
 Este documento aborda as notas de versão do SDK da Web da Adobe Experience Platform.
 Para obter as notas de versão mais recentes sobre a extensão de tag do SDK da Web, consulte o [Notas de versão da extensão de tag do SDK da Web](extension/web-sdk-ext-release-notes.md).
+
+## Versão 2.14.0 - 25 de janeiro de 2023
+
+**Novos recursos**
+
+* (Beta) Adição de suporte para superfícies e apresentações do AJO.
+
+**Correções e melhorias**
+
+* Correção de um problema com as ações de código personalizado do VEC do Adobe Target, em que o código era inserido em um local alternativo do que com [!DNL at.js].
+* Correção de um problema em que, em alguns casos de borda, o cabeçalho &quot;referenciador&quot; não era definido corretamente em solicitações à Edge Network.
+* Correção de um problema em que [dica do cliente do agente do usuário](fundamentals/user-agent-client-hints.md) propriedades podem ser definidas como um tipo incorreto.
+* Correção de um problema em que `placeContext.localTime` não correspondia ao esquema.
 
 ## Versão 2.13.1 - 13 de outubro de 2022
 

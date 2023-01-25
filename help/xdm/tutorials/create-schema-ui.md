@@ -5,9 +5,9 @@ title: Criar um esquema usando o editor de esquema
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '3947'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ Ao definir campos na variável [!DNL Schema Editor], há algumas opções adicio
 | --- | --- |
 | [!UICONTROL Obrigatório] | Indica que o campo é obrigatório para a assimilação de dados. Qualquer dado carregado em um conjunto de dados com base nesse esquema que não contenha esse campo falhará ao ser assimilado. |
 | [!UICONTROL Matriz] | Indica que o campo contém uma matriz de valores, cada um com o tipo de dados especificado. Por exemplo, o uso dessa restrição em um campo com um tipo de dados &quot;[!UICONTROL String]&quot; especifica que o campo conterá uma matriz de sequências de caracteres. |
-| [!UICONTROL Enum e valores sugeridos] | Um enum indica que esse campo deve conter um dos valores de uma lista enumerada de valores possíveis. Como alternativa, você também pode usar essa opção para fornecer uma lista de valores sugeridos para um campo de string sem restringir o campo a esses valores. |
+| [!UICONTROL Enum e valores sugeridos] | Um enum indica que esse campo deve conter um dos valores de uma lista enumerada de valores possíveis. Como alternativa, você também pode usar essa opção para fornecer uma lista de valores sugeridos para um campo de string sem restringir o campo a esses valores. Consulte o guia sobre [definição de enumerações e valores sugeridos](../ui/fields/enum.md) para obter mais informações sobre como gerenciar esses tipos de campos na interface do usuário do . |
 | [!UICONTROL Identidade] | Indica que este campo é um campo de identidade. Mais informações sobre campos de identidade são fornecidas [mais tarde neste tutorial](#identity-field). |
 | [!UICONTROL Relação] | Embora os relacionamentos de schema possam ser inferidos por meio do uso do schema de união e [!DNL Real-Time Customer Profile], isso se aplica somente a esquemas que compartilham a mesma classe. O [!UICONTROL Relação] constraint indica que esse campo faz referência à identidade primária de um schema com base em uma classe diferente, implicando uma relação entre os dois schemas. Veja o tutorial em [definição de uma relação](./relationship-ui.md) para obter mais informações. |
 

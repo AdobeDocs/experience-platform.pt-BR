@@ -2,9 +2,9 @@
 title: Definir campos XDM na API do Registro de esquema
 description: Saiba como definir campos diferentes ao criar recursos personalizados do Experience Data Model (XDM) na API do Registro de Schema.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Como opção, você pode fornecer rótulos voltados para o cliente para cada val
 
 >[!NOTE]
 >
->O `meta:enum` valor faz **not** declare uma enumeração ou direcione qualquer validação de dados sozinha. Na maioria dos casos, as cadeias de caracteres fornecidas em `meta:enum` são igualmente fornecidas nos termos do `enum` para garantir que os dados sejam restritos. No entanto, existem alguns casos de uso em que `meta:enum` é fornecido sem um `enum` matriz. Veja o tutorial em [definição de valores sugeridos](../tutorials/suggested-values.md) para obter mais informações.
+>O `meta:enum` valor faz **not** declare uma enumeração ou direcione qualquer validação de dados sozinha. Na maioria dos casos, as cadeias de caracteres fornecidas em `meta:enum` são igualmente fornecidas nos termos do `enum` para garantir que os dados sejam restritos. No entanto, existem alguns casos de uso em que `meta:enum` é fornecido sem um `enum` matriz. Veja o tutorial em [definição de valores sugeridos na API](../tutorials/suggested-values.md) para obter mais informações.
 
 Como opção, você pode fornecer uma `default` propriedade para indicar o padrão `enum` valor que o campo usará se nenhum valor for fornecido.
 

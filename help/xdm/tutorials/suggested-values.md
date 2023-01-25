@@ -2,10 +2,10 @@
 title: Gerenciar valores sugeridos na API
 description: Saiba como adicionar valores sugeridos a um campo de cadeia de caracteres na API do Registro de Schema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 2f916ea4b05ca67c2b9e603512d732a2a3f7a3b2
+source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 0%
+source-wordcount: '942'
+ht-degree: 1%
 
 ---
 
@@ -69,11 +69,11 @@ Como alternativa, você pode definir um campo de string que não contenha um `en
 
 Como a cadeia de caracteres não tem um `enum` matriz para definir restrições, sua `meta:enum` pode ser estendida para incluir novos valores.
 
-<!-- ## Manage suggested values for standard fields
+## Gerenciar valores sugeridos para campos padrão
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+Para campos padrão existentes, é possível [adicionar valores sugeridos](#add-suggested-standard) ou [desativar valores sugeridos](#disable-suggested-standard).
 
-## Adicionar valores sugeridos a um campo padrão {#add-suggested-standard}
+### Adicionar valores sugeridos a um campo padrão {#add-suggested-standard}
 
 Para estender o `meta:enum` de um campo de string padrão, é possível criar um [descritor de nome amigável](../api/descriptors.md#friendly-name) para o campo em questão em um schema específico.
 
@@ -151,19 +151,25 @@ Depois de aplicar o descritor, o Registro de Esquema responde com o seguinte ao 
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+### Desativar valores sugeridos para um campo padrão {#disable-suggested-standard}
 
-If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
+Se um campo de string padrão tiver valores sugeridos predefinidos em `meta:enum`, é possível desativar os valores que não deseja ver na segmentação. Isso é feito criando uma [descritor de nome amigável](../api/descriptors.md#friendly-name) para o schema que inclui um `xdm:excludeMetaEnum` propriedade.
 
-**API format**
+>[!IMPORTANT]
+>
+>Você só pode desativar os valores sugeridos para campos padrão que não têm restrições de enumeração correspondentes. Em outras palavras, se o campo tiver uma `enum` array, em seguida `meta:excludeMetaEnum` não terá efeito.
+>
+>Consulte a seção sobre [regras de evolução para enumerações e valores sugeridos](../ui/fields/enum.md#evolution) para obter mais informações sobre restrições para editar campos existentes.
+
+**Formato da API**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Request**
+**Solicitação**
 
-The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
+A solicitação a seguir desativa os valores sugeridos &quot;[!DNL Web Form Filled Out]&quot; e &quot;[!DNL Media ping]&quot; para `eventType` em um schema baseado na variável [Classe XDM ExperienceEvent](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -185,19 +191,19 @@ curl -X POST \
       }'
 ```
 
-| Property | Description |
+| Propriedade | Descrição |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
+| `@type` | O tipo de descritor que está sendo definido. Para um descritor de nome amigável, esse valor deve ser definido como `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | O `$id` URI do esquema em que o descritor está sendo definido. |
+| `xdm:sourceVersion` | A versão principal do schema de origem. |
+| `xdm:sourceProperty` | O caminho para a propriedade específica cujos valores sugeridos você deseja gerenciar. O caminho deve começar com uma barra (`/`) e não termine com um. Não incluir `properties` no caminho (por exemplo, use `/personalEmail/address` em vez de `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | Um objeto que descreve os valores sugeridos que devem ser excluídos para o campo na segmentação. A chave e o valor de cada entrada devem corresponder aos incluídos no original `meta:enum` do campo para que a entrada seja excluída. |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
-**Response**
+**Resposta**
 
-A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
+Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do descritor recém-criado. Os valores sugeridos incluídos em `xdm:excludeMetaEnum` agora estará oculta da interface do usuário de segmentação.
 
 ```json
 {
@@ -211,7 +217,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+```
 
 ## Gerenciar valores sugeridos para um campo personalizado {#suggested-custom}
 

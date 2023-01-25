@@ -5,9 +5,9 @@ title: Avaliar e acessar os resultados do segmento
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,10 @@ O exemplo a seguir mostra o que a função `segmentMembership` é semelhante par
 | -------- | ----------- |
 | `lastQualificationTime` | O carimbo de data e hora quando a asserção de associação de segmento foi feita e o perfil entrou ou saiu do segmento. |
 | `status` | O status da participação do segmento como parte da solicitação atual. Deve ser igual a um dos seguintes valores conhecidos: <ul><li>`existing`: A entidade continua a estar no segmento.</li><li>`realized`: A entidade está inserindo o segmento.</li><li>`exited`: A entidade está saindo do segmento.</li></ul> |
+
+>[!NOTE]
+>
+>Qualquer associação de segmento que esteja no `exited` por mais de 30 dias, com base no `lastQualificationTime`, estará sujeita a exclusão.
 
 ## Acessar resultados do segmento
 

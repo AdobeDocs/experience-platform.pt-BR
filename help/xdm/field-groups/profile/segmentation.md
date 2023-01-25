@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Detalhes da associação ao segmento Grupo de campos do esquema
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da associação ao segmento .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 3%
 
 ---
@@ -75,11 +75,15 @@ Este é um exemplo `segmentMembership` mapa que o sistema preencheu para um perf
 | --- | --- |
 | `xdm:version` | A versão do segmento para a qual este perfil se qualificou. |
 | `xdm:lastQualificationTime` | Um carimbo de data e hora da última vez que esse perfil se qualificou para o segmento. |
-| `xdm:validUntil` | Um carimbo de data e hora de quando a associação de segmento não deve mais ser considerada válida. |
+| `xdm:validUntil` | Um carimbo de data e hora de quando a associação de segmento não deve mais ser considerada válida. Para públicos externos, se esse campo não estiver definido, a associação do segmento será retida somente por 30 dias a partir da data de `lastQualificationTime`. |
 | `xdm:status` | Campo de string que indica se a associação de segmentos foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
 | `xdm:payload` | Algumas associações de segmento incluem uma carga que descreve valores adicionais diretamente relacionados à associação. Somente uma carga de um determinado tipo pode ser fornecida para cada associação. `xdm:payloadType` indica o tipo de carga (`boolean`, `number`, `propensity`ou `string`), enquanto sua propriedade irmão fornece o valor para o tipo de carga útil. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Qualquer associação de segmento que esteja no `exited` por mais de 30 dias, com base no `lastQualificationTime`, estará sujeita a exclusão.
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 

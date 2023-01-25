@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importação e uso de públicos externos
 description: Siga este tutorial para saber como usar públicos externos com o Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Uma amostra dos metadados de carga de público-alvo externo pode ser vista abaix
 | `xdmEntity._id` | A ID **must** consulte a mesma ID de segmento que você está usando como público externo. |
 | `xdmEntity.identityMap` | Esta seção **must** contém o rótulo de identidade usado ao criar o namespace criado anteriormente. |
 | `{IDENTITY_NAMESPACE}` | Esse é o rótulo do namespace de identidade criado anteriormente. Assim, por exemplo, se você chamasse seu namespace de identidade de &quot;externalAudience&quot;, você o usaria como a chave do array. |
-| `segmentName` | O nome do segmento pelo qual você deseja que o público-alvo externo seja segmentado. |
+| `segmentName` | O nome do segmento pelo qual você deseja que o público externo seja segmentado. |
 
 ## Criação de segmentos usando públicos importados
 
@@ -257,3 +257,7 @@ Uma amostra da carga de associação de público-alvo externo pode ser vista aba
 | `xdmEntity._id` | Uma ID adequada usada para identificar exclusivamente o registro no conjunto de dados. |
 | `{TENANT_NAME}.identities` | Esta seção é usada para conectar o grupo de campos das identidades personalizadas com os usuários importados anteriormente. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Esse é o rótulo do namespace de identidade personalizado criado anteriormente. Assim, por exemplo, se você chamasse seu namespace de identidade de &quot;externalAudience&quot;, você o usaria como a chave do array. |
+
+>[!NOTE]
+>
+>Por padrão, as associações de público-alvo externo são retidas somente por 30 dias. Para as manter por mais de 30 dias, use a `validUntil` enquanto assimila seus dados de público-alvo. Para obter mais informações sobre este campo, leia o guia sobre [Grupos de campos de esquema Detalhes da associação ao segmento](../../xdm/field-groups/profile/segmentation.md).

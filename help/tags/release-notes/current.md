@@ -2,14 +2,23 @@
 title: Notas de versão para Tags e Encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---
 
 # Notas de versão para tags e encaminhamento de eventos
+
+## 25 de janeiro de 2022
+
+* **Nova tela inicial**: A página inicial da interface do usuário da coleta de dados foi atualizada para incluir informações úteis sobre integração e links para simplificar a produtividade. Isso inclui:
+   1. Documentação e fluxos de trabalho recomendados para começar
+   1. Propriedades, regras e elementos de dados recentes
+   1. Extensões populares
+   1. Novas atualizações de extensão com um recurso de instalação rápida
+* **Enviar dados para [!DNL Google Ads] uso do encaminhamento de eventos**: Agora você pode usar o [[!DNL Google Ads Enhanced Conversions] Extensão da API](../extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos, combinado com [Segredo do Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real.
 
 ## 23 de novembro de 2022
 

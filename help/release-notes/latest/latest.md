@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1994'
-ht-degree: 5%
+source-wordcount: '1847'
+ht-degree: 6%
 
 ---
 
@@ -75,10 +75,6 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
     <tr>
         <td><b>Correção ou aprimoramento</b></td>
         <td><b>Descrição</b></td>
-    </tr>
-    <tr>
-        <td>Validação de interface do usuário e API para mapeamentos e mapeamentos duplicados necessários (PLAT-123316)</td>
-        <td>A validação agora é aplicada da seguinte maneira na interface do usuário e na API quando <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campos de mapeamento</a> no workflow ativar destinos :<ul><li><b>Mapeamentos necessários</b>: Se o destino tiver sido configurado pelo desenvolvedor de destino com os mapeamentos necessários (por exemplo, a variável <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destino), esses mapeamentos necessários precisam ser adicionados pelo usuário ao ativar os dados no destino. </li><li><b>Mapeamentos duplicados</b>: Na etapa de mapeamento do fluxo de trabalho de ativação, é possível adicionar valores duplicados nos campos de origem, mas não nos campos de destino. Consulte a tabela abaixo para obter um exemplo de combinações de mapeamento permitidas e proibidas. <br><table><thead><tr><th>Permitido/proibido</th><th>Campo de origem</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias de email2</li></ul></td></tr><tr><td>Proibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>Comportamento de exportação atualizado para destinos com base em arquivo (PLAT-123316)</td>

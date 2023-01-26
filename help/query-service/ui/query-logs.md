@@ -1,14 +1,18 @@
 ---
 title: Logs de consulta
 description: Os logs de query são gerados automaticamente sempre que um query é executado e estão disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de query da interface do usuário.
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # Logs de consulta
+
+>[!IMPORTANT]
+>
+>Determinados recursos de logs de consulta estão em uma versão limitada no momento e não estão disponíveis para todos os clientes. Sua interface do usuário pode parecer um pouco diferente sem um ícone de edição. Além disso, o processo de seleção de um nome de consulta pode navegar até o Editor de consultas em vez do [!UICONTROL Detalhes do log de consultas] exibir.
 
 A Adobe Experience Platform mantém um log de todos os eventos de query que ocorrem por meio da API e da interface do usuário. Essas informações estão disponíveis na interface do usuário do serviço de query do [!UICONTROL Logs] guia .
 
@@ -39,6 +43,10 @@ Cada linha representa dados de log de uma execução de consulta associada a um 
 No painel de detalhes do log, é possível selecionar um novo conjunto de dados de saída e ver ou copiar a consulta SQL completa usada na execução.
 
 ![O espaço de trabalho Log de consultas com uma linha selecionada e o conjunto de dados de saída e a consulta SQL são realçados.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>Determinados recursos de logs de consulta estão em uma versão limitada no momento e não estão disponíveis para todos os clientes.
 
 Também é possível selecionar um nome de modelo de consulta na variável [!UICONTROL Nome] para navegar diretamente para a [!UICONTROL Detalhes do log de consultas] exibir.
 

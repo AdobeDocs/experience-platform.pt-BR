@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
+source-git-commit: 9dd05980bdb360fba23b01f2b3e3ecc5d8d3e9e0
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4392'
 ht-degree: 4%
 
 ---
@@ -139,7 +139,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Verifica se um objeto está vazio ou não. | <ul><li>ENTRADA: **Obrigatório** O objeto que você está tentando verificar está vazio.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| arrays_to_object | Cria uma lista de objetos. | <ul><li>ENTRADA: **Obrigatório** Um agrupamento de pares de chave e matriz.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;: &quot;id1&quot;, &quot;price&quot;: 22.5 }, { &quot;sku&quot;: &quot;id2&quot;, &quot;price&quot;: 14,35 }] |
+| arrays_to_object | Cria uma lista de objetos. | <ul><li>ENTRADA: **Obrigatório** Um agrupamento de pares de chave e matriz.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Cria um objeto com base nos pares de chave/valor simples fornecidos. | <ul><li>ENTRADA: **Obrigatório** Uma lista simples de pares de chave/valor.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Cria um objeto a partir da string de entrada. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A string que está sendo analisada para criar um objeto.</li><li>VALUE_DELIMITITER: *Opcional* O delimitador que separa um campo do valor. O delimitador padrão é `:`.</li><li>FIELD_DELIMITADOR: *Opcional* O delimitador que separa pares de valores de campo. O delimitador padrão é `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Observação**: Você pode usar o `get()` , juntamente com `str_to_object()` para recuperar valores para as chaves na string. | <ul><li>Exemplo #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Exemplo 2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Exemplo #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemplo 2: &quot;John&quot;</li></ul> |
 | contains_key | Verifica se o objeto existe nos dados de origem. **Observação:** Essa função substitui a função obsoleta `is_set()` . | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se existir nos dados de origem.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |

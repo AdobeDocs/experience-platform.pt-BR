@@ -2,9 +2,9 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do seu destino
 description: Use este modelo para criar documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substitua pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
+source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1534'
 ht-degree: 1%
 
 ---
@@ -83,8 +83,9 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados na *YourDestination* destino. |
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Tipo de exportação | **[!UICONTROL Exportação do conjunto de dados]** | Você está exportando conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações do público-alvo. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
-| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+| Frequência de exportação | **[!UICONTROL Lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -130,11 +131,13 @@ Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!U
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-*Exclua conforme apropriado - Se você estiver documentando um novo destino de transmissão, mantenha o primeiro parágrafo abaixo. Se você estiver documentando um novo destino baseado em arquivo, mantenha o segundo parágrafo.*
+*Exclua conforme apropriado - Se você estiver documentando um novo destino de transmissão, mantenha o primeiro parágrafo abaixo. Se você estiver documentando um novo destino baseado em arquivo, mantenha o segundo parágrafo. Se você estiver documentando um destino que exporta conjuntos de dados, mantenha o terceiro parágrafo.*
 
 Ler [Ativar perfis e segmentos para destinos de exportação de segmentos de fluxo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
 Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
+
+Ler [(Beta) Exportar conjuntos de dados](/help/destinations/ui/export-datasets.md) para obter instruções detalhadas sobre como exportar conjuntos de dados para esse destino.
 
 ### Mapear atributos e identidades {#map}
 

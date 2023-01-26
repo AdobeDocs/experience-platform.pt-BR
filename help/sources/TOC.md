@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
+source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '875'
 ht-degree: 13%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 13%
    - [Repetir as execuções de fluxo de dados com falha](tutorials/api/retry-flows.md)
    - [Excluir contas](tutorials/api/delete.md)
    - [Excluir fluxos de dados](tutorials/api/delete-dataflows.md)
+   - [Assimilar dados criptografados](tutorials/api/encrypt-data.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar uma conexão de origem {#create}
       - Aplicativos Adobe {#adobe-applications}

@@ -1,23 +1,40 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: As notas de versão mais recentes do Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: aabf715475b3634ef134226f67b722f84e830556
+title: Notas de versão da Adobe Experience Platform em janeiro de 2023
+description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
+source-git-commit: 4d69d0dbb1dd72279a6999cf2cda94e9fb380572
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 8%
+source-wordcount: '1848'
+ht-degree: 5%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 23 de novembro de 2022**
+**Data de lançamento: 25 de janeiro de 2023**
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Assurance](#assurance)
 - [Coleta de dados](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Perfil do cliente em tempo real](#profile)
+- [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
+
+## Assurance {#assurance}
+
+O Adobe Assurance permite inspecionar, provar, simular e validar a forma como você coleta dados ou veicula experiências em seu aplicativo móvel.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Editor de validação | Foram adicionados novos aprimoramentos ao editor de validação. Esses aprimoramentos incluem colunas de validação, novas ferramentas de criação de código e exibições aprimoradas. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre o Assurance, leia o [Documentação de garantia](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Coleta de dados {#data-collection}
 
@@ -27,11 +44,44 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Recurso | Descrição |
 | --- | --- |
-| [!DNL AWS] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Amazon Web Services] ([!DNL AWS]) usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL AWS] visão geral da extensão](../../tags/extensions/server/aws/overview.md) para obter mais informações. |
-| [!DNL Google Ads Enhanced Conversions] extensão para encaminhamento de eventos | Agora é possível enviar dados de conversão para [!DNL Google Ads] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Google Ads Enhanced Conversions] visão geral da extensão](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para obter mais informações. |
-| [!DNL Microsoft Azure] extensão para encaminhamento de eventos | Agora é possível enviar dados para o [!DNL Microsoft Azure] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Microsoft Azure] visão geral da extensão](../../tags/extensions/server/azure/overview.md) para obter mais informações. |
+| Nova tela inicial | A página inicial da interface do usuário da coleta de dados foi atualizada para incluir informações úteis sobre integração e links para simplificar a produtividade. Isso inclui:<ol><li>Documentação e fluxos de trabalho recomendados para começar</li><li>Propriedades, regras e elementos de dados recentes</li><li>Extensões populares</li><li>Novas atualizações de extensão com um recurso de instalação rápida</li></ol> |
+| Enviar dados para [!DNL Google Ads] uso do encaminhamento de eventos | Agora você pode usar o [[!DNL Google Ads Enhanced Conversions] Extensão da API](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos, combinado com [Segredo do Google Oauth 2](../../tags/ui/event-forwarding/secrets.md#google-oauth2), para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real. |
 
-Para obter mais informações sobre os recursos de coleta de dados da Platform, consulte o [visão geral da coleta de dados](../../collection/home.md).
+{style=&quot;table-layout:auto&quot;}
+
+## Destinos {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos destinos**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [(Beta) Conexão do Adobe Experience Cloud Audiences](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Use o [!UICONTROL (Beta) Públicos-alvo da Adobe Experience Cloud] conexão para compartilhar segmentos do Experience Platform para várias soluções Experience Platform, como Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target ou Marketo. |
+| [Conexão de perfil Pega](../../destinations/catalog/personalization/pega-profile.md) | Use o [!DNL Pega Profile Connector] no Adobe Experience Platform para criar uma conexão de saída ao vivo com seu [!DNL Amazon] Armazenamento S3 para exportar periodicamente dados de perfil para arquivos CSV do Adobe Experience Platform em seus próprios buckets do S3. Em [!DNL Pega Customer Decision Hub], você pode agendar trabalhos de dados para importar esses dados de perfil do armazenamento S3 para atualizar o [!DNL Pega Customer Decision Hub] perfil. |
+| [(Beta) A conexão EU do CRM do Trade Desk](../../destinations/catalog/advertising/tradedesk-emails.md) | Com o lançamento da EUID (European Unified ID), você verá duas [!DNL The Trade Desk - CRM] os destinos [catálogo de destinos](/help/destinations/catalog/overview.md). <ul><li> Se você criar dados na UE, use a variável **[!DNL The Trade Desk - CRM (EU)]** destino.</li><li> Se você gerar dados nas regiões APAC ou NAMER, use a variável **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destino. </li></ul> |
+
+**Funcionalidade nova ou atualizada**
+
+| Funcionalidade | Descrição |
+| ----------- | ----------- |
+| Novas opções de delimitador para conectores de destino de armazenamento na nuvem beta | Três novas opções de delimitador (dois pontos) `:`, Pipe, Ponto e Vírgula `;`) agora estão disponíveis para os novos destinos de armazenamento na nuvem beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Armazenamento Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Zona de aterrissagem de dados (Beta)](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Armazenamento em nuvem Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP (Beta)](/help/destinations/catalog/cloud-storage/sftp.md). <br> Leia sobre os [opções de formatação de arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) para destinos com base em arquivo. |
+| Novo parâmetro opcional disponível em [campos de dados do cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurações em [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização do usuário. <br> Por exemplo, a variável **[!UICONTROL Alias de integração]** no campo [[!UICONTROL Personalização personalizada]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) o destino deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor para esse campo. |
+
+**Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
+
+<table>
+    <tr>
+        <td><b>Correção ou aprimoramento</b></td>
+        <td><b>Descrição</b></td>
+    </tr>
+    <tr>
+        <td>Comportamento de exportação atualizado para destinos com base em arquivo (PLAT-123316)</td>
+        <td>Corrigimos um problema no comportamento do <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">atributos obrigatórios</a> ao exportar arquivos de dados para destinos em lote. <br> Anteriormente, cada registro nos arquivos de saída era verificado para conter ambos: <ol><li>Um valor não nulo da variável <code>mandatoryField</code> coluna e</li><li>Um valor não nulo em pelo menos um dos outros campos não obrigatórios.</li></ol> A segunda condição foi removida. Como resultado, você pode estar vendo mais linhas de saída em seus arquivos de dados exportados, conforme mostrado no exemplo abaixo:<br> <b> Exemplo de comportamento antes da versão de janeiro de 2023 </b> <br> Campo obrigatório: <code>emailAddress</code> <br> <b>Inserir dados para ativar</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Saída de Ativation</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Exemplo de comportamento após a versão de janeiro de 2023 </b> <br> <b>Saída de Ativation</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -41,22 +91,76 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Recurso | Descrição |
 | --- | --- |
-| Atribuir campos a classes personalizadas ao adicionar diretamente a um schema | When [adição de um campo individual diretamente a um schema](../../xdm/ui/resources/schemas.md#add-individual-fields), anteriormente era possível atribuir o campo somente a um grupo de campos como seu recurso pai. Agora, além dos grupos de campos, você pode [atribuir o campo a uma classe personalizada](../../xdm/ui/resources/schemas.md#add-to-class) como seu recurso principal. |
+| Desativar valores sugeridos para campos de cadeia de caracteres | Agora você pode [desativar valores sugeridos individuais para campos de cadeia de caracteres](../../xdm/ui/fields/enum.md) no [!UICONTROL Esquemas] espaço de trabalho, incluindo aqueles de componentes padrão. Esse recurso está disponível somente para campos com valores sugeridos e não é compatível com restrições de enumeração. |
+
+**Novos componentes XDM**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Classe | [[!UICONTROL Conversão]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Uma classe para rastrear dados de conversão como conversões de moeda. |
+| Grupo de campos | [[!UICONTROL Detalhes da Taxa de Conversão de Moeda]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Um grupo de campos para a variável [!UICONTROL Conversão] , capturando detalhes adicionais relacionados à conversão de moeda. |
+| Grupo de campos | [[!UICONTROL Mapa de resultados de avaliação de políticas de consentimento com metadados]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Captura detalhes para o resultado da avaliação de várias políticas de consentimento, incluindo informações de metadados sobre entradas e saídas da política de consentimento. |
+
+**Componentes XDM atualizados**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Tipo de dados | [[!UICONTROL Informações de detalhes de publicidade]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | O `ID` foi renomeado para `name`e as `name` campo agora `friendlyName`. |
+| Tipo de dados | [[!UICONTROL Detalhes da proposta de decisão]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Adicionado um `selectionStrategy` campo que captura os detalhes de uma estratégia de seleção. |
+| Grupo de campos | [[!UICONTROL Evento de experiência - Interações de proposta]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | O grupo de campos agora é compatível com o [!UICONTROL Evento de etapa de Jornada] classe . |
+| Tipo de dados | [[!UICONTROL Informações de detalhes do erro]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | O `ID` foi renomeado para `name`. |
+| Tipo de dados | [[!UICONTROL Informações da mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Reversão de uma alteração no padrão para a propriedade de segmento de vídeo. |
+| Tipo de dados | [[!UICONTROL Informações de detalhes de dados de Qoe]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Remoção do `droppedFrameCount` campo. |
+| Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Renomeada a função `isAuthorized` campo para `authorized`e atualizou seu `type` para uma string quando era anteriormente uma booleana. |
+| Tipo de dados | [[!UICONTROL Envio]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Adição de vários novos campos: `shipDate`, `trackingNumber`e `trackingURL`. |
+| Grupo de campos | [[!UICONTROL Campos de entidade AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | Adição de vários novos campos: `journeyNodeID`, `journeyNodeName`e `journeyModeType`. |
+| Grupo de campos | [[!UICONTROL Evento de experiência do consumidor]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | O grupo de campos agora também é compatível com o [!UICONTROL Métricas de resumo] classe . |
+| Grupo de campos | [[!UICONTROL Acionadores do produto]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | O `productTriggers` agora está aninhado em um `weather` objeto. |
+| Grupo de campos | [[!UICONTROL Acionadores relativos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | O `relativeTriggers` agora está aninhado em um `weather` objeto. |
+| Grupo de campos | [[!UICONTROL Acionadores graves]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | O `severeTriggers` agora está aninhado em um `weather` objeto. |
+| Grupo de campos | [[!UICONTROL Acionadores do tempo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | O `weatherTriggers` agora está aninhado em um `weather` objeto. |
+| Grupo de campos | [[!UICONTROL Contas Comerciais Relacionadas ao XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | O grupo de campos agora está estável. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Para obter mais informações sobre o XDM na Platform, consulte o [Visão geral do sistema XDM](../../xdm/home.md).
 
+## Perfil do cliente em tempo real {#profile}
+
+O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com o Perfil do cliente em tempo real, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. O Perfil permite consolidar os dados do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
+
+**Descontinuação futura** {#deprecation}
+
+Para remover a redundância no ciclo de vida de associação do segmento, a variável `Existing` será descontinuado do [mapa de associação de segmento](../../xdm/field-groups/profile/segmentation.md) no final de março de 2023. Um anúncio de acompanhamento incluirá a data exata da desativação.
+
+Pós-descontinuação, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão sendo representados como `Exited`. Isso trará paridade com destinos baseados em arquivo com `Active` e `Expired` status do segmento.
+
+Essa alteração pode afetar você se estiver usando o [destinos corporativos](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Hubs de eventos do Azure, API HTTP) e tem processos downstream automatizados em vigor, com base no `Existing` status. Revise suas integrações downstream, se for o caso. Se estiver interessado em identificar perfis recém-qualificados além de um determinado tempo, considere usar uma combinação do `Realized` e o `lastQualificationTime` no mapa de associação de segmentos. Para obter mais informações, entre em contato com o representante do Adobe.
+
+Para saber mais sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados de perfil, comece lendo o [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+
+## Serviço de segmentação {#segmentation}
+
+[!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Expiração de associação de segmento gerado pela plataforma | Qualquer associação de segmento que esteja no `Exited` por mais de 30 dias, com base no `lastQualificationTime` estará sujeito a exclusão. |
+| Expiração de associação de público-alvo externo | Por padrão, as associações de público-alvo externo são mantidas por 30 dias. Para mantê-los por mais tempo, use a variável `validUntil` durante a assimilação dos dados de público-alvo. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre [!DNL Segmentation Service]consulte o [Visão geral da segmentação](../../segmentation/home.md).
+
 ## Fontes {#sources}
 
-A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
-**Recursos atualizados**
-
 | Recurso | Descrição |
-| --- | --- | 
-| Disponibilidade beta da origem da nuvem do Oracle Service | Use a fonte da nuvem do Oracle Service para assimilar dados da sua conta da Oracle Service Cloud para o Experience Platform. Para obter mais informações, leia a documentação sobre o [Origem da nuvem do Oracle Service](../../sources/connectors/customer-success/oracle-service-cloud.md). |
-
-Para saber mais sobre fontes, leia a [visão geral das fontes](../../sources/home.md).
+| --- | --- |
+| Permitir acesso do usuário às subpastas de fontes de armazenamento na nuvem | Agora é possível definir o acesso a uma subpasta específica da fonte de armazenamento na nuvem ao criar uma nova conta. Depois de criados, os usuários só poderão acessar dados da subpasta permitida. Esse recurso está disponível nas seguintes fontes de armazenamento em nuvem: [Armazenamento Azure Blob](../../sources/connectors/cloud-storage/blob.md), [Armazenamento em nuvem Google](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md)e [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
+| Disponibilidade beta de [!DNL SugarCRM] | [!DNL SugarCRM] Agora, as fontes estão disponíveis em beta. Use o [!DNL SugarCRM Accounts & Contacts] e [!DNL SugarCRM Events] fontes para trazer dados de [!DNL SugarCRM] para o Experience Platform. Para obter mais informações, leia a [[!DNL SugarCRM] visão geral](../../sources/connectors/crm/sugarcrm.md). |

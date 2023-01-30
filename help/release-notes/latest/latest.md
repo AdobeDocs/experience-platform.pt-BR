@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform em janeiro de 2023
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
+source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1911'
 ht-degree: 5%
 
 ---
@@ -61,11 +61,11 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | [Conexão de perfil Pega](../../destinations/catalog/personalization/pega-profile.md) | Use o [!DNL Pega Profile Connector] no Adobe Experience Platform para criar uma conexão de saída ao vivo com seu [!DNL Amazon] Armazenamento S3 para exportar periodicamente dados de perfil para arquivos CSV do Adobe Experience Platform em seus próprios buckets do S3. Em [!DNL Pega Customer Decision Hub], você pode agendar trabalhos de dados para importar esses dados de perfil do armazenamento S3 para atualizar o [!DNL Pega Customer Decision Hub] perfil. |
 | [(Beta) A conexão EU do CRM do Trade Desk](../../destinations/catalog/advertising/tradedesk-emails.md) | Com o lançamento da EUID (European Unified ID), você verá duas [!DNL The Trade Desk - CRM] os destinos [catálogo de destinos](/help/destinations/catalog/overview.md). <ul><li> Se você criar dados na UE, use a variável **[!DNL The Trade Desk - CRM (EU)]** destino.</li><li> Se você gerar dados nas regiões APAC ou NAMER, use a variável **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destino. </li></ul> |
 
-**Funcionalidade nova ou atualizada**
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Aprimoramento do consentimento de mídia paga para integrações com destinos de transmissão | Um aprimoramento de [aplicação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md) on [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations) para casos de uso de ativação de mídia paga. Perfis que retiraram o consentimento de uma experiência específica agora são removidos proativamente desses destinos. <br> <b>Observação</b>: Essa funcionalidade está disponível somente para clientes do **[!UICONTROL Privacy e Security Shield]**, bem como os **[!UICONTROL Escudo da Saúde]**. |
+| Aprimoramento da política de consentimento de mídia paga para integrações com destinos de transmissão | Um aprimoramento de [aplicação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md) on [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations) para casos de uso de ativação de mídia paga. Quando os perfis não estão mais qualificados para uma política de consentimento, o Experience Platform agora comunica proativamente sua saída da política para destinos de streaming. <br> <b>Observação</b>: Essa funcionalidade está disponível somente para clientes do **[!UICONTROL Privacy e Security Shield]**, bem como os **[!UICONTROL Escudo da Saúde]**. |
 | Novas opções de delimitador para conectores de destino de armazenamento na nuvem beta | Três novas opções de delimitador (dois pontos) `:`, Pipe, Ponto e Vírgula `;`) agora estão disponíveis para os novos destinos de armazenamento na nuvem beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Armazenamento Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Zona de aterrissagem de dados (Beta)](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Armazenamento em nuvem Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP (Beta)](/help/destinations/catalog/cloud-storage/sftp.md). <br> Leia sobre os [opções de formatação de arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) para destinos com base em arquivo. |
 | Novo parâmetro opcional disponível em [campos de dados do cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurações em [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização do usuário. <br> Por exemplo, a variável **[!UICONTROL Alias de integração]** no campo [[!UICONTROL Personalização personalizada]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) o destino deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor para esse campo. |
 

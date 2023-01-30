@@ -5,9 +5,9 @@ title: Criar um esquema usando o editor de esquema
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 0%
 
 ---
@@ -177,8 +177,10 @@ Selecione o **mais (+)** ícone ao lado do `loyaltyTier` objeto para começar a 
 
 Cada campo requer as seguintes informações:
 
-* **[!UICONTROL Nome do campo]:** O nome do campo, escrito em camel case. Exemplo: loyaltyLevel
-* **[!UICONTROL Nome de exibição]:** O nome do campo, escrito no caso de título. Exemplo: Nível de Fidelidade
+* **[!UICONTROL Nome do campo]:** O nome do campo, de preferência escrito em camelCase. Não são permitidos caracteres de espaço. Esse é o nome usado para fazer referência ao campo no código e em outros aplicativos downstream.
+   * Exemplo: loyaltyLevel
+* **[!UICONTROL Nome de exibição]:** O nome do campo, escrito no caso de título. Esse é o nome que será exibido na tela ao visualizar ou editar o esquema.
+   * Exemplo: Nível de Fidelidade
 * **[!UICONTROL Tipo]:** O tipo de dados do campo. Isso inclui tipos escalares básicos e quaisquer tipos de dados definidos na variável [!DNL Schema Registry]. Exemplos: [!UICONTROL String], [!UICONTROL Número inteiro], [!UICONTROL Booleano], [!UICONTROL Pessoa], [!UICONTROL Endereço], [!UICONTROL Número de telefone], etc.
 * **[!UICONTROL Descrição]:** Uma descrição opcional do campo deve ser incluída com no máximo 200 caracteres.
 

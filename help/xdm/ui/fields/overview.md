@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos XDM na interface do usuário
 description: Saiba como definir campos XDM na interface do usuário do Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ Dependendo de você estar adicionando um campo diretamente a um schema ou sua cl
 
 ## Definição das propriedades de um campo {#define}
 
-Depois de selecionar o **mais (+)** ícone, um **[!UICONTROL Novo campo]** aparece na tela, localizada em um objeto com o namespace da sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos personalizados adicionados a um schema são colocados automaticamente nesse namespace para evitar conflitos com outros campos a partir de classes fornecidas por Adobe e grupos de campos.
+Depois de selecionar o **mais (+)** ícone, um **[!UICONTROL Campo sem título]** o espaço reservado aparece na tela.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ No painel direito em **[!UICONTROL Propriedades do campo]**, é possível config
 
 | Propriedade do campo | Descrição |
 | --- | --- |
-| [!UICONTROL Nome do campo] | Um nome descritivo e exclusivo para o campo. Observe que o nome do campo não pode ser alterado depois que o esquema é salvo.<br><br>O nome deve ser escrito em camelCase. Pode conter caracteres alfanuméricos, traço ou sublinhados, mas **podem não** comece com um sublinhado.<ul><li>**Correto**: `fieldName`</li><li>**Aceitável:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorreto**: `_fieldName`</li></ul> |
-| [!UICONTROL Nome de exibição] | Um nome amigável para o campo. |
+| [!UICONTROL Nome do campo] | Um nome descritivo e exclusivo para o campo. Observe que o nome do campo não pode ser alterado depois que o esquema é salvo. Esse valor é usado para identificar e fazer referência ao campo no código e em outros aplicativos downstream<br><br>O nome deve ser escrito em camelCase. Pode conter caracteres alfanuméricos, traço ou sublinhados, mas **podem não** comece com um sublinhado.<ul><li>**Correto**: `fieldName`</li><li>**Aceitável:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorreto**: `_fieldName`</li></ul> |
+| [!UICONTROL Nome de exibição] | Um nome de exibição para o campo. Esse é o nome que será usado para representar o campo na tela do Editor de esquemas. |
 | [!UICONTROL Tipo] | O tipo de dados que o campo conterá. Nesse menu suspenso, é possível selecionar uma das opções [tipos escalares padrão](../../schema/field-constraints.md) suportado pelo XDM ou por um dos vários campos [tipos de dados](../resources/data-types.md) que tenham sido previamente definidas no [!DNL Schema Registry].<br><br>Você também pode selecionar **[!UICONTROL Pesquisa de tipo avançada]** para pesquisar e filtrar os tipos de dados existentes e localizar o tipo desejado mais facilmente. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ Depois de concluir a configuração do campo, selecione **[!UICONTROL Aplicar]**
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-A tela é atualizada para mostrar o nome e o tipo do campo, e o painel direito agora lista o caminho do campo, além de suas outras propriedades.
+A tela é atualizada para mostrar o campo recém-adicionado, localizado em um objeto nomeado para sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos personalizados adicionados a um schema são colocados automaticamente nesse namespace para evitar conflitos com outros campos a partir de classes fornecidas por Adobe e grupos de campos. O painel direito agora lista o caminho do campo, além de suas outras propriedades.
 
 ![](../../images/ui/fields/overview/field-added.png)
 

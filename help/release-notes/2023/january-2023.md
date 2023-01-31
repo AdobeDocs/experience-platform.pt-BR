@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform em janeiro de 2023
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 5%
+source-wordcount: '2294'
+ht-degree: 7%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [Coleta de dados](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
+
+## Serviços de aprendizado artificial/de máquina {#ai-ml}
+
+Os serviços de inteligência artificial e aprendizado de máquina capacitam analistas e profissionais de marketing a aproveitar o potencial da IA/ML nos casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões, sem a necessidade de experiência em ciência de dados, específicas para as necessidades de uma empresa usando configurações de nível empresarial.
+
+### IA de atribuição
+
+O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Preparo para a HIPAA | Os clientes do Healthcare Shield agora podem receber, usar, manter ou transmitir informações de saúde protegidas no Attribution AI e em determinados outros aplicativos baseados em Experience Platform. O Healthcare Shield destina-se aos clientes de saúde que são uma entidade coberta ou associados de negócios sob a HIPAA. Para obter mais informações, leia a documentação em [HIPAA e produtos e serviços de Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Editar colunas adicionais de conjunto de dados de pontuação | Agora é possível adicionar ou remover colunas adicionais de conjunto de dados de pontuação (colunas de relatório) ao editar modelos existentes. Isso estende a flexibilidade das pontuações de atribuição para fornecer insights para dimensões adicionais depois que um modelo já tiver sido criado. Consulte a [Guia da interface do usuário de atribuição](../../intelligent-services/attribution-ai/user-guide.md) para saber mais. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Consulte a [Serviços de IA/ML](../../intelligent-services/attribution-ai/overview.md) visão geral para obter mais informações.
+
+### Customer AI
+
+O Customer AI para Real-time Customer Data Platform é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Preparo para a HIPAA | Os clientes do Healthcare Shield agora podem receber, usar, manter ou transmitir informações de saúde protegidas no Customer AI para Real-time Customer Data Platform e em determinados outros aplicativos baseados em Experience Platform. O Healthcare Shield destina-se aos clientes de saúde que são uma entidade coberta ou associados de negócios sob a HIPAA. Para obter mais informações, consulte a documentação em [HIPAA e produtos e serviços de Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+Consulte a [Serviços de IA/ML](../../intelligent-services/customer-ai/overview.md) visão geral para obter mais informações.
 
 ## Assurance {#assurance}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da Adobe Experience Platform
 description: O Adobe Experience Platform permite que as organizações centralizem e padronizem dados de clientes antes de aplicar a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 10%
@@ -17,9 +17,11 @@ O Adobe Experience Platform é o sistema mais eficiente, flexível e aberto do m
 
 Baseado em RESTful APIs, [!DNL Experience Platform] expõe a funcionalidade completa do sistema para desenvolvedores, suportando a fácil integração de soluções corporativas usando ferramentas conhecidas. [!DNL Experience Platform] também apoia os parceiros na criação e integração de seus próprios produtos e tecnologias, conforme necessário. Esse poder e a flexibilidade tornam [!DNL Experience Platform] único no mercado. Ele oferece aos parceiros, clientes e a uma comunidade de desenvolvedores uma base sobre a qual criar inovações que impulsionam a Experience Business: excedendo as expectativas do cliente, fornecendo uma experiência continuamente aprimorada e totalmente personalizada com base em uma visualização de 360 graus do cliente e suas preferências individuais.
 
-<div id="recs-overview-body-1"></div>
-<div id="recs-overview-body-2"></div>
-<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-wrapper-1">
+    <div id="recs-overview-body-1"></div>
+    <div id="recs-overview-body-2"></div>
+    <div id="recs-overview-body-3"></div>
+</div>
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>

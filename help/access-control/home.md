@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
 workflow-type: tm+mt
-source-wordcount: '1419'
-ht-degree: 4%
+source-wordcount: '1473'
+ht-degree: 3%
 
 ---
 
@@ -79,6 +79,12 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 
 | Categoria | Permissão | Descrição |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL Exibir Histórico de Alertas] | Acesso somente leitura para histórico de alertas. |
+| [!DNL Alerts] | [!UICONTROL Resolver alertas] | Acesso para ler, editar e excluir alertas. |
+| [!DNL Alerts] | [!UICONTROL Visualizar alertas] | Acesso somente leitura para alertas. |
+| [!DNL Alerts] | [!UICONTROL Gerenciar alertas] | Acesso para ler, criar, editar e excluir o histórico de alertas. |
+| [!DNL Data Hygiene] | [!UICONTROL Exibir Higiene De Dados] | Acesso somente leitura para higiene dos dados. |
+| [!DNL Data Hygiene] | [!UICONTROL Gerenciar a higiene dos dados] | Acesso para ler, criar, editar e excluir a higiene dos dados. |
 | [!DNL Data Modeling] | [!UICONTROL Gerenciar esquemas] | Acesso para ler, criar, editar e excluir esquemas e recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Visualizar esquemas] | Acesso somente leitura a schemas e recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Gerenciar Relacionamentos] | Acesso para ler, criar, editar e excluir relacionamentos de esquema. |
@@ -94,9 +100,9 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | [!DNL Profile Management] | [!UICONTROL Exibir Políticas de Mesclagem] | Acesso somente leitura às políticas de mesclagem disponíveis. |
 | [!DNL Profile Management] | [!UICONTROL Exportar público-alvo para segmento] | Capacidade de exportar um segmento de público-alvo avaliado para um conjunto de dados. |
 | [!DNL Profile Management] | [!UICONTROL Avaliar um segmento para um público-alvo] | Capacidade de gerar perfis para um público-alvo avaliando uma definição de segmento. |
-| [!DNL Identities] | [!UICONTROL Gerenciar namespaces de identidade] | Acesso para ler, criar, editar e excluir namespaces de identidade. |
-| [!DNL Identities] | [!UICONTROL Exibir namespaces de identidade] | Acesso somente leitura para namespaces de identidade. |
-| [!DNL Identities] | [!UICONTROL Exibir gráfico de identidade] | Acesso somente leitura para gráficos de identidade. |
+| [!DNL Identity Management] | [!UICONTROL Gerenciar namespaces de identidade] | Acesso para ler, criar, editar e excluir namespaces de identidade. |
+| [!DNL Identity Management] | [!UICONTROL Exibir namespaces de identidade] | Acesso somente leitura para namespaces de identidade. |
+| [!DNL Identity Management] | [!UICONTROL Exibir gráfico de identidade] | Acesso somente leitura para gráficos de identidade. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gerenciar sandboxes] | Acesso para ler, criar, editar e excluir sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL Visualizar sandboxes] | Acesso somente leitura para sandboxes pertencentes à sua organização. |
 | [!DNL Sandbox Administration] | [!UICONTROL Redefinir uma sandbox] | Capacidade de redefinir uma sandbox. |

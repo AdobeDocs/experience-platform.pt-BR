@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil de 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil de transmissão.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -80,15 +80,25 @@ As exportações de arquivo variam das seguintes maneiras, dependendo se `segmen
 
 No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações, ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
->[!IMPORTANT]
->
->Nesta etapa, o Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação da política](../../rtcdp/privacy/data-governance-overview.md#enforcement) na seção de documentação de governança de dados .
+![Resumo da seleção na etapa de revisão.](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
 
-![Imagem que mostra uma violação da política de dados na etapa de revisão.](../assets/common/data-policy-violation.png)
+### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
+Se sua organização comprou **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 
-![Imagem que mostra a etapa de revisão do fluxo de trabalho de ativação.](../assets/ui/activate-streaming-profile-destinations/review.png)
+### Verificações da política de uso de dados {#data-usage-policy-checks}
+
+No **[!UICONTROL Revisão]** , o Experience Platform também verifica se há violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, leia sobre [violações da política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação de governança de dados .
+
+![violação da política de dados](../assets/common/data-policy-violation.png)
+
+### Filtrar segmentos {#filter-segments}
+
+Além disso, nesta etapa, você pode usar os filtros disponíveis na página para exibir apenas os segmentos cujo agendamento ou mapeamento foi atualizado como parte desse fluxo de trabalho.
+
+![Gravação de tela mostrando os filtros de segmento disponíveis na etapa de revisão.](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+
+Se estiver satisfeito com sua seleção e nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
 ## Verificar ativação de segmento {#verify}
 

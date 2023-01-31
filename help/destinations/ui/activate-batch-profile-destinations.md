@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3537'
 ht-degree: 1%
 
 ---
@@ -463,19 +463,29 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações, ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
->[!IMPORTANT]
->
->Nesta etapa, o Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação da política](../../rtcdp/privacy/data-governance-overview.md#enforcement) na seção de documentação de governança de dados .
+![Resumo da seleção na etapa de revisão.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
-![Imagem que mostra um exemplo de violação da política de dados.](../assets/common/data-policy-violation.png)
+### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
+Se sua organização comprou **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 
-![Imagem que mostra a tela de revisão do fluxo de trabalho de ativação do segmento.](../assets/ui/activate-batch-profile-destinations/review.png)
+### Verificações da política de uso de dados {#data-usage-policy-checks}
+
+No **[!UICONTROL Revisão]** , o Experience Platform também verifica se há violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, leia sobre [violações da política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação de governança de dados .
+
+![violação da política de dados](../assets/common/data-policy-violation.png)
+
+### Filtrar segmentos {#filter-segments}
+
+Além disso, nesta etapa, você pode usar os filtros disponíveis na página para exibir apenas os segmentos cujo agendamento ou mapeamento foi atualizado como parte desse fluxo de trabalho. Também é possível alternar quais colunas de tabela você deseja visualizar.
+
+![Gravação de tela mostrando os filtros de segmento disponíveis na etapa de revisão.](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+Se estiver satisfeito com sua seleção e nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
 ## Verificar ativação de segmento {#verify}
 
-Para destinos de marketing por email e destinos de armazenamento em nuvem, o Adobe Experience Platform cria um `.csv` no local de armazenamento fornecido. Esperar que um novo arquivo seja criado no local de armazenamento de acordo com a programação definida no fluxo de trabalho. O formato de arquivo padrão é:
+Para destinos de marketing por email e destinos de armazenamento em nuvem, o Adobe Experience Platform cria um `.csv` no local de armazenamento fornecido. Esperar que um novo arquivo seja criado no local de armazenamento de acordo com a programação definida no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por exemplo, se você selecionasse uma frequência de exportação diária, os arquivos que você receberia em três dias consecutivos poderiam ter a seguinte aparência:

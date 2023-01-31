@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Analisando Pontuações de Atribuição Usando O Serviço De Query
 description: Saiba como usar o Serviço de query da Adobe Experience Platform para analisar pontuações do Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Cada linha nos dados representa uma conversão, na qual as informações para os
 
 Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo. O **[!UICONTROL Conjuntos de dados]** será exibida. Em seguida, selecione o **[!UICONTROL Procurar]** e encontre o conjunto de dados de saída para suas pontuações do Attribution AI.
 
-![Acessar sua instância](./images/aai-query/datasets_browse.png)
+![Acessar o modelo](./images/aai-query/datasets_browse.png)
 
 Selecione o conjunto de dados de saída. A página de atividade do conjunto de dados é exibida.
 
@@ -305,7 +305,7 @@ Esse query nivela a coluna struct em várias colunas do singular e explora matri
 
 >[!TIP]
 >
-> Neste exemplo, é necessário substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. O `COLUMN_NAME` pode obter os valores da passagem opcional pelos nomes das colunas (colunas de relatórios) que foram adicionadas durante a configuração da sua instância do Attribution AI. Revise seu esquema de saída de pontuação para encontrar a variável `{COLUMN_NAME}` valores necessários para concluir esta consulta.
+> Neste exemplo, é necessário substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. O `COLUMN_NAME` pode obter os valores da passagem opcional pelos nomes das colunas (colunas de relatórios) que foram adicionadas durante a configuração do modelo do Attribution AI. Revise seu esquema de saída de pontuação para encontrar a variável `{COLUMN_NAME}` valores necessários para concluir esta consulta.
 
 ```sql
 SELECT 

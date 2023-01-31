@@ -5,10 +5,10 @@ feature: Customer AI
 title: Introdução ao Customer AI
 description: Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 1%
+source-wordcount: '572'
+ht-degree: 0%
 
 ---
 
@@ -46,12 +46,6 @@ Todos os recursos no Experience Platform são isolados para sandboxes virtuais e
 ### Lendo exemplos de chamadas de API
 
 Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md) no guia de solução de problemas do Experience Platform.
-
-## Controle de acesso {#access-control}
-
-Ao usar o controle de acesso, a variável **Exibir AI do cliente** e **Gerenciar o Customer AI** concede acesso a diferentes funcionalidades da API do cliente. O **Gerenciar o Customer AI** permissão permite **criar**,**atualizar**, **excluir**, **habilitar** ou **disable** uma instância ao **Exibir AI do cliente** permite que você leia ou visualize. O **criar**, **atualizar** e **excluir** ações são registradas por logs de auditoria.
-
-Consulte a documentação para saber mais [atribuição de permissões para controle de acesso](../../../help/access-control/home.md) ou como [usar logs de auditoria para monitorar o acesso e a atividade](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Próximas etapas
 

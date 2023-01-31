@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurar uma instância do Customer AI
 description: Os Serviços de IA/ML oferecem ao Customer AI como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3342'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -250,46 +250,6 @@ Se a instância for criada com êxito, uma execução de previsão será imediat
 >Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
 
 Ao seguir esta seção, você configurou uma instância do Customer AI e executou uma execução de previsão. Após a conclusão bem-sucedida da execução, os insights pontuados preenchem automaticamente os perfis com pontuações previstas se a alternância de perfil estiver ativada. Aguarde até 24 horas antes de continuar para a próxima seção deste tutorial.
-
-## Políticas de governança
-
-Depois de passar pelo workflow para criar uma instância e enviar a configuração do modelo, a variável [aplicação da política](/help/data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibida uma janela indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing no Platform sejam compatíveis com as políticas de uso de dados.
-
-![fornecedor mostrando violação de política](../images/user-guide/policy-violation-popover-cai.png)
-
-O provedor fornece informações específicas sobre a violação. Você pode resolver essas violações por meio de configurações de política e outras medidas que não estão diretamente relacionadas ao fluxo de trabalho de configuração. Por exemplo, é possível alterar os rótulos para que determinados campos possam ser usados para fins de ciência de dados. Como alternativa, você também pode modificar a própria configuração do modelo para que ele não use nada com um rótulo nela. Consulte a documentação para saber mais sobre como configurar [políticas](/help/data-governance/policies/overview.md).
-
-## Controle de acesso baseado em atributos
-
->[!IMPORTANT]
->
->O controle de acesso baseado em atributos está disponível apenas em uma versão limitada.
-
-[Controle de acesso baseado em atributos](../../../access-control/abac/overview.md) é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
-
-Essa funcionalidade permite rotular campos de esquema do Experience Data Model (XDM) com rótulos que definem escopos organizacionais ou de uso de dados. Em paralelo, os administradores podem usar a interface de administração de usuário e função para definir políticas de acesso em torno dos campos do esquema XDM e gerenciar melhor o acesso dado aos usuários ou grupos de usuários (usuários internos, externos ou de terceiros). Além disso, o controle de acesso baseado em atributos permite que os administradores gerenciem o acesso a segmentos específicos.
-
-Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários aos dados pessoais confidenciais (SPD) e às informações de identificação pessoal (PII) em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que têm acesso apenas a campos e dados específicos que correspondem a esses campos.
-
-Devido ao controle de acesso baseado em atributos, alguns campos e funcionalidades teriam acesso restrito e não estariam disponíveis para determinadas instâncias do serviço de API do cliente. Os exemplos incluem, &quot;Identidade&quot;, &quot;Definição de pontuação&quot; e &quot;Clonar&quot;.
-
-![A área de trabalho do Customer AI com os campos restritos da instância de serviço é realçada.](../images/user-guide/unavailable-functionalities.png)
-
-Na parte superior da área de trabalho do Customer AI **página de insights**, observe que os detalhes na barra lateral, definição de pontuação, identidade e atributos de perfil mostram &quot;Acesso restrito&quot;.
-
-![A área de trabalho do Customer AI com os campos restritos do schema realçado.](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-Ao visualizar conjuntos de dados com esquema restrito na **[!UICONTROL Criar fluxo de trabalho da instância]** , um aviso será exibido para informá-lo que [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na visualização do conjunto de dados.]
-
-![A área de trabalho do Customer AI com os campos restritos dos conjuntos de dados de visualização com resultados restritos do schema são realçados.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-Depois de criar uma instância com informações restritas e prosseguir para o **[!UICONTROL Definir meta]** , um aviso é exibido na parte superior: [!UICONTROL Devido a restrições de acesso, determinadas informações não são exibidas na configuração.]
-
-![A área de trabalho do Customer AI com os campos restritos da instância de serviço é realçada.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Próximas etapas {#next-steps}
 

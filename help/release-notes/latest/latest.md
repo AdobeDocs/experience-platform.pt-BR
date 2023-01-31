@@ -1,9 +1,9 @@
 ---
-title: Notas de versão da Adobe Experience Platform em janeiro de 2023
+title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1948'
 ht-degree: 5%
 
 ---
@@ -148,8 +148,9 @@ Para saber mais sobre o Perfil do cliente em tempo real, incluindo tutoriais e p
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Expiração de associação de segmento gerado pela plataforma | Qualquer associação de segmento que esteja no `Exited` por mais de 30 dias, com base no `lastQualificationTime` estará sujeito a exclusão. |
+| Importação de valor em massa no Construtor de segmentos | O Construtor de segmentos agora é compatível com a importação de vários valores, seja fazendo upload de um arquivo CSV ou TSV ou inserindo valores separados por vírgula manualmente. Mais informações podem ser encontradas no [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Expiração de associação de público-alvo externo | Por padrão, as associações de público-alvo externo são mantidas por 30 dias. Para mantê-los por mais tempo, use a variável `validUntil` durante a assimilação dos dados de público-alvo. |
+| Expiração de associação de segmento gerado pela plataforma | Qualquer associação de segmento que esteja no `Exited` por mais de 30 dias, com base no `lastQualificationTime` estará sujeito a exclusão. |
 
 {style=&quot;table-layout:auto&quot;}
 

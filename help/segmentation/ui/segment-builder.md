@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3258'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,22 @@ Ao selecionar um valor para o atributo, você verá uma lista de valores de enum
 Se selecionar um valor nessa lista de enumerações, o valor será contornado com uma borda sólida. No entanto, para campos que usam `meta:enum` (soft) enumerações, você também pode selecionar um valor que é **not** na lista de enumerações. Se você criar seu próprio valor, ele será contornado com uma borda pontilhada, juntamente com um aviso de que esse valor não está na lista de enumeração.
 
 ![Um aviso que é exibido se você estiver inserindo um valor que não faz parte da lista de enumerações.](../images/ui/segment-builder/enum-warning.png)
+
+Se estiver criando vários valores, é possível adicionar todos ao mesmo tempo usando o upload em massa. Selecione o ![ícone de mais](../images/ui/segment-builder/plus-icon.png) para mostrar a **[!UICONTROL Adicionar valores em massa]** poder.
+
+![O ícone de adição é realçado, mostrando o botão que você pode selecionar para acessar o upload em massa.](../images/ui/segment-builder/add-bulk-values.png)
+
+No **[!UICONTROL Adicionar valores em massa]** Você pode fazer upload de um arquivo CSV ou TSV.
+
+![É exibido Adicionar valores em massa. A caixa de diálogo que você pode selecionar para fazer upload de um arquivo CSV ou TSV é realçada.](../images/ui/segment-builder/bulk-values-popover.png)
+
+Como alternativa, é possível adicionar valores separados por vírgula manualmente.
+
+![É exibido Adicionar valores em massa. A caixa de diálogo que pode ser usada para inserir valores e os valores adicionados são realçados.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+Observe que há um máximo de 250 valores permitidos. Se exceder esse valor, será necessário remover alguns valores antes de adicionar mais.
+
+![Um aviso que mostra que você atingiu o número máximo de valores é exibido.](../images/ui/segment-builder/maximum-values.png)
 
 ### Adição de públicos-alvo
 

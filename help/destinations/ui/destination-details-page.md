@@ -1,11 +1,11 @@
 ---
 keywords: destinos, destino, página de detalhes de destinos, página de detalhes de destinos
 title: Exibir detalhes do destino
-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados. '
+description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '799'
 ht-degree: 2%
 
 ---
@@ -78,11 +78,17 @@ O [!UICONTROL Execuções do fluxo de dados] A guia fornece dados de métrica em
 
 >[!NOTE]
 >
->* A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
+>* A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Públicos-alvo do Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
 >* Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas não são exibidas no momento.
 
 
 ![Exibição de execuções do fluxo de dados](../assets/ui/details-page/dataflow-runs.png)
+
+### Duração das execuções do fluxo de dados {#dataflow-runs-duration}
+
+Há um problema conhecido na duração exibida das execuções do fluxo de dados. Enquanto a variável **[!UICONTROL Duração do processamento]** indicado para a maioria das execuções de fluxo de dados é de cerca de quatro horas, como mostrado na imagem abaixo, o tempo de processamento real para qualquer execução de fluxo de dados é muito menor. As janelas de execução de fluxo de dados permanecem abertas por mais tempo, caso o Experience Platform precise tentar fazer chamadas novamente para o destino.
+
+![A imagem do Fluxo de dados executa a página com a coluna Tempo de processamento realçada.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
 
 ## [!UICONTROL Dados de ativação] {#activation-data}
 

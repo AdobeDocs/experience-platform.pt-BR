@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: Controle de acesso para Customer AI
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos para o Customer AI.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
@@ -42,8 +42,8 @@ Depois de criar um modelo com informações restritas e prosseguir para a **[!UI
 
 Ao usar o controle de acesso, a variável **Exibir AI do cliente** e **Gerenciar o Customer AI** concede acesso a diferentes funcionalidades da API do cliente. O **Gerenciar o Customer AI** permissão permite **criar**,**atualizar**, **excluir**, **habilitar** ou **disable** um modelo ao **Exibir AI do cliente** permite que você leia ou visualize. O **criar**, **atualizar** e **excluir** ações são registradas por logs de auditoria.
 
-Consulte a documentação para saber mais [atribuição de permissões para controle de acesso](../../../help/access-control/home.md) ou como [usar logs de auditoria para monitorar o acesso e a atividade](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Consulte a documentação para saber mais [atribuição de permissões para controle de acesso](../../../access-control/home.md) ou como [usar logs de auditoria para monitorar o acesso e a atividade](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Próximas etapas
 
-Ao ler este guia, você foi apresentado aos principais princípios do controle de acesso no [!DNL Experience Platform]. Agora você pode continuar com o [guia do usuário de controle de acesso](./ui/overview.md) para obter etapas detalhadas sobre como usar o [!DNL Admin Console] para criar perfis de produto e atribuir permissões para [!DNL Platform].
+Ao ler este guia, você foi apresentado aos principais princípios do controle de acesso no [!DNL Experience Platform]. Agora você pode continuar com o [guia do usuário de controle de acesso](../overview.md) para obter etapas detalhadas sobre como usar o [!DNL Admin Console] para criar perfis de produto e atribuir permissões para [!DNL Platform].

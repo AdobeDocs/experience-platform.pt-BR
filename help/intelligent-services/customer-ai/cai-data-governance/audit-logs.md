@@ -1,11 +1,10 @@
 ---
 keywords: insights, atendimento ao cliente, insights do atendimento ao cliente, serviço de consulta da CAI, consultas do atendimento ao cliente, pontuações do atendimento ao cliente
-feature: Customer AI audit logs
-title: Visão geral dos logs de auditoria
+title: Visão geral dos logs de auditoria no Customer AI
 description: Saiba como visualizar e gerenciar logs de auditoria no Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 36%
 
 ---
@@ -22,4 +21,4 @@ Basicamente, um log de auditoria informa quem executou qual ação e quando. Cad
 
 Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleção de log.
 
-Para visualizar e exportar logs de auditoria, você deve ter recebido a permissão de controle Acesso aos logs de auditoria no console da Adobe. Para saber como gerenciar permissões individuais para os recursos do Customer AI, consulte [documentação de controle de acesso](../../customer-ai/user-guide/access-controls.md).
+Para visualizar e exportar logs de auditoria, você deve ter recebido a permissão de controle Acesso aos logs de auditoria no console da Adobe. Para saber como gerenciar permissões individuais para os recursos do Customer AI, consulte [documentação de controle de acesso](../cai-data-governance/access-controls.md).

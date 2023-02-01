@@ -1,12 +1,11 @@
 ---
 keywords: insights, atendimento ao cliente, insights do atendimento ao cliente, serviço de consulta AAI, consultas do atendimento ao cliente, pontuações do atendimento ao cliente; chaves gerenciadas pelo cliente no CAI
-feature: Customer-Managed Keys in Customer AI
-title: Chaves gerenciadas pelo cliente
+title: Chaves gerenciadas pelo cliente na API do cliente.
 description: Saiba como configurar Chaves gerenciadas pelo cliente para a API do cliente.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 

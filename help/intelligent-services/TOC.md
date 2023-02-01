@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 26%
+source-wordcount: '149'
+ht-degree: 27%
 
 ---
 
@@ -23,6 +23,12 @@ ht-degree: 26%
    - [Guia da interface do usuário](attribution-ai/user-guide.md)
    - [Informações do Discover](attribution-ai/discover-insights.md)
    - [Fazer download das pontuações](attribution-ai/download-scores.md)
+   - Governança de dados {#aai-data-governance}
+      - [Controles de acesso](attribution-ai/aai-data-governance/access-controls.md)
+      - [Logs de auditoria](attribution-ai/aai-data-governance/audit-logs.md)
+      - [Chaves gerenciadas pelo cliente](attribution-ai/aai-data-governance/customer-managed-keys.md)
+      - [Governança de dados](attribution-ai/aai-data-governance/data-governance.md)
+      - [Políticas de governança](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analisar pontuações usando o Serviço de query](attribution-ai/aai-query-service.md)
    - [Solução de problemas de erros](attribution-ai/troubleshooting.md)
 - Content e Commerce AI (beta) {#content-commerce-ai}
@@ -44,4 +50,10 @@ ht-degree: 26%
       - [Criar segmentos usando pontuações do Customer AI](customer-ai/user-guide/create-segment.md)
       - [Fazer download das pontuações](customer-ai/user-guide/download-scores.md)
    - [Solução de problemas de erros](customer-ai/troubleshooting.md)
+   - Governança de dados {#cai-data-governance}
+      - [Controles de acesso](customer-ai/cai-data-governance/access-controls.md)
+      - [Logs de auditoria](customer-ai/cai-data-governance/audit-logs.md)
+      - [Chaves gerenciadas pelo cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
+      - [Governança de dados](customer-ai/cai-data-governance/data-governance.md)
+      - [Políticas de governança](customer-ai/cai-data-governance/governance-policies.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

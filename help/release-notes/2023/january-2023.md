@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform em janeiro de 2023
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 7%
+source-wordcount: '2444'
+ht-degree: 6%
 
 ---
 
@@ -83,7 +83,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 {style=&quot;table-layout:auto&quot;}
 
-## Destinos {#destinations}
+## Destinos (atualizado em 2 de fevereiro) {#destinations}
 
 [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 
@@ -114,6 +114,10 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
         <td>Comportamento de exportação atualizado para destinos com base em arquivo (PLAT-123316)</td>
         <td>Corrigimos um problema no comportamento do <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">atributos obrigatórios</a> ao exportar arquivos de dados para destinos em lote. <br> Anteriormente, cada registro nos arquivos de saída era verificado para conter ambos: <ol><li>Um valor não nulo da variável <code>mandatoryField</code> coluna e</li><li>Um valor não nulo em pelo menos um dos outros campos não obrigatórios.</li></ol> A segunda condição foi removida. Como resultado, você pode estar vendo mais linhas de saída em seus arquivos de dados exportados, conforme mostrado no exemplo abaixo:<br> <b> Exemplo de comportamento antes da versão de janeiro de 2023 </b> <br> Campo obrigatório: <code>emailAddress</code> <br> <b>Inserir dados para ativar</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Saída de Ativation</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Exemplo de comportamento após a versão de janeiro de 2023 </b> <br> <b>Saída de Ativation</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>Validação de interface do usuário e API para mapeamentos e mapeamentos duplicados necessários (PLAT-123316)</td>
+        <td>A validação agora é aplicada da seguinte maneira na interface do usuário e na API quando <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campos de mapeamento</a> no workflow ativar destinos :<ul><li><b>Mapeamentos necessários</b>: Se o destino tiver sido configurado pelo desenvolvedor de destino com os mapeamentos necessários (por exemplo, a variável <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destino), esses mapeamentos necessários precisam ser adicionados pelo usuário ao ativar os dados no destino. </li><li><b>Mapeamentos duplicados</b>: Na etapa de mapeamento do fluxo de trabalho de ativação, é possível adicionar valores duplicados nos campos de origem, mas não nos campos de destino. Consulte a tabela abaixo para obter um exemplo de combinações de mapeamento permitidas e proibidas. <br><table><thead><tr><th>Permitido/proibido</th><th>Campo de origem</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias de email2</li></ul></td></tr><tr><td>Proibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).

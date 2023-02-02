@@ -4,10 +4,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 13%
+source-wordcount: '928'
+ht-degree: 12%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 13%
       - [Usar um editor de texto no ambiente local para criar uma página de documentação de fontes](sources-sdk/documentation/text-editor.md)
       - [Modelo de API de autoatendimento da documentação](sources-sdk/documentation/template.md)
       - [Modelo de interface de usuário de autoatendimento da documentação](sources-sdk/documentation/ui-template.md)
+   - SDK de transmissão {#streaming-sdk}
+      - [Introdução às fontes de autoatendimento (SDK de streaming)](sources-sdk/streaming/getting-started.md)
+      - [Criar uma especificação de conexão para uma fonte de transmissão](sources-sdk/streaming/create.md)
+      - [Atualizar uma especificação de conexão para uma fonte de transmissão](sources-sdk/streaming/update-connection-specs.md)
+      - [Atualizar a especificação do fluxo de transmissão](sources-sdk/streaming/update-flow-specs.md)
+      - [Teste e envie sua especificação de conexão para verificação](sources-sdk/streaming/submit.md)
+      - [Documente sua fonte (SDK de streaming)](sources-sdk/streaming/document-streaming.md)
+      - [Modelo de fluxo de API de autoatendimento da documentação](sources-sdk/streaming/streaming-template-api.md)
+      - [Modelo de transmissão da interface de usuário de autoatendimento da documentação](sources-sdk/streaming/streaming-template-ui.md)
 - [Notificações de execução de fluxo](notifications.md)
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)

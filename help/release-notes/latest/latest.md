@@ -1,7 +1,7 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
+source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
 workflow-type: tm+mt
 source-wordcount: '2443'
 ht-degree: 7%
@@ -25,7 +25,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 ## Serviços de aprendizado artificial/de máquina {#ai-ml}
 
-Os serviços de inteligência artificial e aprendizado de máquina capacitam analistas e profissionais de marketing a aproveitar o potencial da IA/ML nos casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões, sem a necessidade de experiência em ciência de dados, específicas para as necessidades de uma empresa usando configurações de nível empresarial.
+Os serviços de inteligência artificial e aprendizado de máquina capacitam analistas e profissionais de marketing a aproveitar o potencial da IA/ML nos casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões, sem a necessidade de conhecimento em ciência de dados, específicas para as necessidades de uma empresa, usando configurações de nível empresarial.
 
 ### IA de atribuição
 
@@ -99,7 +99,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Aprimoramento da política de consentimento de mídia paga para integrações com destinos de transmissão | Um aprimoramento de [aplicação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md) on [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations) para casos de uso de ativação de mídia paga. Quando os perfis não estão mais qualificados para uma política de consentimento, o Experience Platform agora comunica proativamente sua saída da política para destinos de streaming. <br> <b>Observação</b>: Essa funcionalidade está disponível somente para clientes do **[!UICONTROL Privacy e Security Shield]**, bem como os **[!UICONTROL Escudo da Saúde]**. |
+| Aprimoramento da política de consentimento de mídia paga para integrações com destinos de transmissão | Um [reforço da aplicação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations) para casos de uso de ativação de mídia paga. Quando os perfis não estão mais qualificados para uma política de consentimento, o Experience Platform agora comunica proativamente sua saída da política para destinos de streaming. <br> <b>Observação</b>: Essa funcionalidade está disponível somente para clientes do **[!UICONTROL Privacy e Security Shield]**, bem como os **[!UICONTROL Escudo da Saúde]**. |
 | Novas opções de delimitador para conectores de destino de armazenamento na nuvem beta | Três novas opções de delimitador (dois pontos) `:`, Pipe, Ponto e Vírgula `;`) agora estão disponíveis para os novos destinos de armazenamento na nuvem beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Armazenamento Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Zona de aterrissagem de dados (Beta)](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Armazenamento em nuvem Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP (Beta)](/help/destinations/catalog/cloud-storage/sftp.md). <br> Leia sobre os [opções de formatação de arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) para destinos com base em arquivo. |
 | Novo parâmetro opcional disponível em [campos de dados do cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurações em [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização do usuário. <br> Por exemplo, a variável **[!UICONTROL Alias de integração]** no campo [[!UICONTROL Personalização personalizada]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) o destino deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor para esse campo. |
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicação Automática de Política
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >A aplicação automática de política só está disponível para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
 
-Depois que os dados forem rotulados e as políticas de uso de dados forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos, o Adobe Experience Platform aplica automaticamente as políticas de uso caso ocorra alguma violação.
+Depois que os dados forem rotulados e as políticas de uso de dados forem definidas, é possível impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos, o Adobe Experience Platform aplica automaticamente as políticas de uso caso ocorra qualquer violação.
 
 >[!NOTE]
 >
@@ -116,6 +116,16 @@ Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
 Se tiver [políticas de consentimento criadas](../policies/user-guide.md#consent-policy) e estiverem ativando um segmento para um destino, você pode ver como suas políticas de consentimento afetam a porcentagem de perfis incluídos na ativação.
+
+#### Aprimoramento da política de consentimento para mídia paga {#consent-policy-enhancement}
+
+Foi feito um aprimoramento na aplicação da política de consentimento em destinos de transmissão, incluindo ativações de mídia paga. Esse aprimoramento está disponível para clientes do Privacy and Security Shield ou do Healthcare Shield e remove proativamente os perfis de destinos de transmissão contínua conforme o status do consentimento muda. Também garante que as alterações de consentimento sejam propagadas imediatamente, para que o público-alvo correto seja sempre direcionado.
+
+Esses aprimoramentos permitem maior confiança na estratégia de marketing, pois remove a necessidade de os profissionais de marketing adicionarem manualmente atributos de consentimento à expressão do segmento. Isso garante que nenhum perfil seja inadvertidamente direcionado para qualquer experiência de marketing depois que o consentimento for retirado ou não estiver mais qualificado para uma política de consentimento. As políticas de consentimento de marketing que definem regras para como os dados de consentimento ou preferência devem ser gerenciados em vários fluxos de trabalho de marketing agora são aplicadas automaticamente em fluxos de trabalho de ativação nas soluções de downstream.
+
+>[!NOTE]
+>
+>Não há alterações na interface do usuário como resultado desse aprimoramento.
 
 #### Avaliação de pré-ativação
 

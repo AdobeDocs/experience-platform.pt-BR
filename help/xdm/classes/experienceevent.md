@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Este documento fornece uma visão geral da classe XDM ExperienceEvent e práticas recomendadas para modelagem de dados de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ A raiz `timestamp` campo de um schema de evento pode **only** representa a obser
 
 Por exemplo, se uma empresa do setor de viagens e hospitalidade modelar um evento de reserva de voo, o nível da classe `timestamp` representa a hora em que o evento de reserva foi observado. Outros carimbos de data e hora relacionados ao evento, como a data de início da reserva de viagem, devem ser capturados em campos separados fornecidos por grupos de campos padrão ou personalizados.
 
-![](../images/classes/experienceevent/timestamps.png)
+![Uma amostra de esquema Evento de experiência com Reserva de voo e Data de início realçada.](../images/classes/experienceevent/timestamps.png)
 
 Mantendo o carimbo de data e hora em nível de classe separado de outros valores de data e hora relacionados em seus esquemas de evento, é possível implementar casos de uso de segmentação flexível, preservando uma conta com carimbo de data e hora das jornadas do cliente em seu aplicativo de experiência.
 

@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que oferece aos editores meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 1%
+source-wordcount: '926'
+ht-degree: 2%
 
 ---
 
@@ -46,7 +46,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema aplicáveis (por exemplo, seu PPID), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Em lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+| Frequência de exportação | **[!UICONTROL Lote]** | Destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo em lote](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -54,19 +54,15 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ### Lista de permissões {#allow-listing}
 
+A lista de permissões é obrigatória antes da configuração da primeira [!DNL Google Ad Manager 360] no Platform. Conclua o processo de lista de permissões descrito abaixo, antes de criar seu destino.
+
 >[!NOTE]
 >
->A lista de permissões é obrigatória antes de configurar a primeira [!DNL Google Ad Manager] no Platform. Verifique se o processo de lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
+>A exceção a esta regra é para os [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) clientes. Se você já criou uma conexão com esse destino Google no Audience Manager, não é necessário passar pelo processo de lista de permissões novamente e prosseguir para as próximas etapas.
 
->[!IMPORTANT]
->
->A Google simplificou o processo para conectar plataformas externas de gerenciamento de público-alvo ao Google Ad Manager 360. Agora você pode passar pelo processo de vinculação ao Google Ad Manager 360 de maneira automatizada. Ler [Segmentos de plataformas de gerenciamento de dados](https://support.google.com/admanager/answer/3289669?hl=en) na documentação do Google. Você deve ter as IDs listadas abaixo à mão.
+1. Siga as etapas descritas em [Documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de gerenciamento de dados vinculada (DMP).
+2. No [!DNL Google Ad Manager] interface, vá para **[!UICONTROL Administrador]** > **[!UICONTROL Configurações globais]** > **[!UICONTROL Configurações de rede]** e ative a **[!UICONTROL Acesso à API]** controle deslizante.
 
-* **ID da conta**: Adobe ID com Google. ID da conta: 87933855.
-* **Customer ID**: Adobe ID com Google. ID do cliente: 89690775.
-* **Código de rede**: Este é o seu [!DNL Google Ad Manager] identificador de rede, encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google, bem como no URL.
-* **ID do link de público-alvo**: Esse é um identificador específico associado ao [!DNL Google Ad Manager] rede (não sua [!DNL Network code]), também encontrado em **[!UICONTROL Administração > Configurações globais]** na interface do Google.
-* Seu tipo de conta. DFP por Google ou comprador AdX.
 
 ## Conecte-se ao destino {#connect}
 
@@ -91,12 +87,12 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL Nome do bucket]**: Insira o nome do [!DNL Google Cloud Storage] bucket a ser usado por este destino.
 * **[!UICONTROL Caminho da pasta]**: Insira o caminho para a pasta de destino que hospedará os arquivos exportados.
-* **[!UICONTROL ID da conta]**: Preencha a ID do link de público-alvo com [!DNL Google].
-* **[!UICONTROL Tipo de conta]**: Selecione uma opção, dependendo da sua conta com o Google:
-   * Use `DFP by Google` para [!DNL DoubleClick] para editores
+* **[!UICONTROL Nome do bucket]**: Insira o nome do [!DNL Google Cloud Storage] bucket a ser usado por este destino.
+* **[!UICONTROL ID da conta]**: Insira seu [!DNL Audience Link ID] do [!DNL Google] conta. Esse é um identificador específico associado ao [!DNL Google Ad Manager] rede (não sua [!DNL Network code]). Você pode encontrar isso em **[!UICONTROL Administração > Configurações globais]** no [!DNL Google Ad Manager] interface.
+* **[!UICONTROL Tipo de conta]**: Selecione uma opção, dependendo do [!DNL Google] conta:
    * Use `AdX buyer` para [!DNL Google AdX]
+   * Use `DFP by Google` para [!DNL DoubleClick] para editores
 
 ### Ativar alertas {#enable-alerts}
 
@@ -127,3 +123,12 @@ Esses mapeamentos são exigidos por [!DNL Google Ad Manager 360] e são criadas 
 ## Dados exportados {#exported-data}
 
 Para verificar se os dados foram exportados com êxito, verifique seu [!DNL Google Cloud Storage] e verifique se os arquivos exportados contêm as populações de perfis esperadas.
+
+## Solução de problemas {#troubleshooting}
+
+Caso encontre erros ao usar esse destino e precise entrar em contato com o Adobe ou Google, mantenha as seguintes IDs em mãos.
+
+Estas são IDs de conta Google do Adobe:
+
+* **[!UICONTROL ID da conta]**: 87933855
+* **[!UICONTROL Customer ID]**: 89690775

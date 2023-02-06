@@ -1,7 +1,7 @@
 ---
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos de Experience Platform.
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Uma exportação de perfil para o destino pode ser determinada por um perfil qua
 
 Do ponto de vista dos atributos do perfil, qualquer alteração nos três atributos mapeados acima determinará uma exportação de destino.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## Destinos em lote (com base em arquivo) {#file-based-destinations}
 

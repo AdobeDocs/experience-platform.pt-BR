@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino cinesis;cinesis
 title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para fazer o stream de dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1958'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e segmentos mapeados servem como a dica para uma exportação de destino. Isso significa que, se qualquer segmento mapeado alterar estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para [!DNL Amazon Kinesis] destinos, as alterações em qualquer identidade em um determinado perfil também determinam exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>Todos os segmentos (com o status de associação mais recente), independentemente de estarem ou não mapeados no fluxo de dados, são incluídos na variável `segmentMembership` objeto.</li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade na [!DNL Amazon Kinesis] destino).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como a dica para uma exportação de destino. Isso significa que, se qualquer segmento mapeado alterar estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para [!DNL Amazon Kinesis] destinos, as alterações em qualquer identidade em um determinado perfil também determinam exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou de saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem ao mesmo [política de mesclagem](/help/profile/merge-policies/overview.md) como o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade na [!DNL Amazon Kinesis] destino).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -177,7 +177,7 @@ Por exemplo, considere esse fluxo de dados como um [!DNL Amazon Kinesis] destino
 
 ![Fluxo de dados de destino do Amazon Kinesis](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles. Se um perfil se qualificar para o segmento Cliente com Carros coreanos, mas também for membro do filme &quot;Voltar ao futuro&quot; assistido e dos segmentos de fãs de ficção científica, esses dois outros segmentos também estarão presentes `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados.
+Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles e se compartilharem a mesma política de mesclagem do segmento que acionou a exportação. Se um perfil se qualificar para a variável **Cliente com Carros da Coreia** , mas também é membro do **Assistiu ao &quot;Regresso ao Futuro&quot;** filme e **Fãs de ficção científica** , esses outros dois segmentos também estarão presentes na variável `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados, se eles compartilharem a mesma política de mesclagem com a **Cliente com Carros da Coreia** segmento.
 
 Do ponto de vista dos atributos do perfil, qualquer alteração nos quatro atributos mapeados acima determinará uma exportação de destino e qualquer um dos quatro atributos mapeados presentes no perfil estará presente na exportação de dados.
 

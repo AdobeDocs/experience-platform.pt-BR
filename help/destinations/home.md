@@ -3,10 +3,10 @@ keywords: destinos; adobe experience platform; plataforma; visão geral de desti
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '755'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ Uma das funcionalidades principais da Platform é assimilar seus dados primário
 
 ## Controles {#controls}
 
-Os controles no [Área de trabalho Destinos](./ui/destinations-workspace.md) permite:
+Os controles no [espaço de trabalho destinos](./ui/destinations-workspace.md) permite:
 
 * Navegue pelo catálogo de plataformas de destino, onde você pode ativar seus dados;
 * Criar, editar, ativar e desativar fluxos de dados para os destinos no catálogo;
@@ -45,7 +45,7 @@ Os controles no [Área de trabalho Destinos](./ui/destinations-workspace.md) per
 
 ## Tipos e categorias de destino {#types-and-categories}
 
-Para obter informações detalhadas, consulte o [visão geral de tipos e categorias de destino](./destination-types.md).
+Com o Experience Platform, você pode ativar dados para vários tipos de destinos, para atender aos casos de uso de ativação. Os destinos variam de integrações baseadas em API, a integrações com sistemas de recepção de arquivos, destinos de pesquisa de perfil e muito mais. Para obter informações detalhadas sobre todos os destinos disponíveis, consulte [visão geral de tipos e categorias de destino](./destination-types.md).
 
 ## Destinos e controles de acesso {#access-controls}
 
@@ -69,6 +69,12 @@ O controle de acesso baseado em atributos no Adobe Experience Platform permite q
 Com o controle de acesso baseado em atributos, você pode aplicar configurações de mapeamento a campos aos quais tem permissões. Além disso, não será possível exportar dados para um destino se você não tiver acesso a todos os campos no conjunto de dados.
 
 Para obter mais informações sobre como os destinos funcionam com controles de acesso baseados em atributos, leia a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md#destinations).
+
+## Monitoramento de destinos {#destinations-monitoring}
+
+Depois de estabelecer uma conexão com um destino e concluir o fluxo de trabalho de ativação, você pode monitorar as exportações de dados para seu sistema de recebimento. Leia o [guia sobre o monitoramento de fluxos de dados para destinos na interface do usuário](/help/dataflows/ui/monitor-destinations.md) para obter mais informações.
+
+Você também pode validar se os dados estão chegando com sucesso ao seu destino. A maioria das páginas de documentação de destino no catálogo tem um *Validar a seção de exportação de dados*, que indica como você pode verificar na plataforma de destino se os dados estão sendo trazidos com êxito do Experience Platform.
 
 ## Restrições de governança de dados na ativação de dados para destinos {#data-governance}
 

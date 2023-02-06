@@ -3,9 +3,9 @@ keywords: transmissão contínua; Destino HTTP
 title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil ao endpoint HTTP de terceiros para executar sua própria análise ou executar quaisquer outras operações necessárias nos dados de perfil exportados do Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c65e8b4a4b3a3f9e546126258d3b9ca58de07081
+source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2442'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e segmentos mapeados servem como a dica para uma exportação de destino. Isso significa que, se qualquer segmento mapeado alterar estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas no momento para destinos da API HTTP, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>Todos os segmentos (com o status de associação mais recente), independentemente de estarem ou não mapeados no fluxo de dados, são incluídos na variável `segmentMembership` objeto.</li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade no destino da API HTTP).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como a dica para uma exportação de destino. Isso significa que, se qualquer segmento mapeado alterar estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas no momento para destinos da API HTTP, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou de saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem ao mesmo [política de mesclagem](/help/profile/merge-policies/overview.md) como o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade no destino da API HTTP).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -221,7 +221,7 @@ Por exemplo, considere esse fluxo de dados como um destino HTTP, onde três segm
 
 ![Fluxo de dados de destino da API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles. Se um perfil se qualificar para o segmento Cliente com Carros coreanos, mas também for membro do filme &quot;Voltar ao futuro&quot; assistido e dos segmentos de fãs de ficção científica, esses dois outros segmentos também estarão presentes `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados.
+Uma exportação de perfil para o destino pode ser determinada por um perfil que se qualifica para ou sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no `segmentMembership` objeto (consulte [Dados exportados](#exported-data) seção abaixo), outros segmentos não mapeados podem aparecer, se esse perfil específico for membro deles e se compartilharem a mesma política de mesclagem do segmento que acionou a exportação. Se um perfil se qualificar para a variável **Cliente com Carros da Coreia** , mas também é membro do **Assistiu ao &quot;Regresso ao Futuro&quot;** filme e **Fãs de ficção científica** , esses outros dois segmentos também estarão presentes na variável `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados, se eles compartilharem a mesma política de mesclagem com a **Cliente com Carros da Coreia** segmento.
 
 Do ponto de vista dos atributos do perfil, qualquer alteração nos quatro atributos mapeados acima determinará uma exportação de destino e qualquer um dos quatro atributos mapeados presentes no perfil estará presente na exportação de dados.
 

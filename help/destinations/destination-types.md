@@ -3,9 +3,9 @@ keywords: destinos, destino, tipos de destino
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,11 @@ Leia esta página para entender os diferentes tipos e categorias de destinos do 
 
 ## Tipos de destino {#destination-types}
 
-No Adobe Experience Platform, distinguimos entre dois tipos de destino: conexões e extensões. Há dois tipos de destinos de conexão, Destinos de exportação de perfil e Destinos de exportação de segmento.
+No Adobe Experience Platform, diferenciamos tipos de destino diferentes - conexões, exportações de conjunto de dados e extensões. Há vários tipos de destinos de conexão, permitindo exportar dados para destinos com base em API, .
 
-![Tipos de destinos](./assets/destination-types/types-of-destinations.png)
+Por último, as conexões também podem ser distinguidas entre destinos públicos disponíveis em todas as organizações no catálogo de destinos e destinos privados que os clientes do Real-time CDP Ultimate podem criar para atender aos seus casos de uso de exportação específicos.
+
+![Tipos de diagrama de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Conexões {#connections}
 

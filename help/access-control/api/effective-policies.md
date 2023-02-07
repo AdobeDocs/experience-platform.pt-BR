@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Endpoint da API de políticas efetivas
 description: Saiba como visualizar políticas de acesso efetivas usando a API de controle de acesso do Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '318'
 ht-degree: 2%
 
 ---
 
 # Ponto final de políticas efetivas
+
+>[!NOTE]
+>
+>Se um token de usuário estiver sendo transmitido, o usuário do token deverá ter uma função &quot;org admin&quot; para a organização solicitada.
 
 Para exibir políticas eficazes de controle de acesso para o usuário atual, faça uma solicitação de POST para a `/acl/effective-policies` endpoint no [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação no formato de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
 

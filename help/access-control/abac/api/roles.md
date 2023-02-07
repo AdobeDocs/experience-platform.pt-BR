@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Ponto de Extremidade da API de Funções
 description: O endpoint /funções na API de Controle de Acesso Baseado em Atributo permite gerenciar programaticamente funções no Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1606'
 ht-degree: 4%
 
 ---
 
 # Ponto de extremidade de funções
+
+>[!NOTE]
+>
+>Se um token de usuário estiver sendo transmitido, o usuário do token deverá ter uma função &quot;org admin&quot; para a organização solicitada.
 
 As funções definem o acesso que um administrador, especialista ou usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de exibição ou gravação necessário.
 

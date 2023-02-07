@@ -1,9 +1,9 @@
 ---
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos de Experience Platform.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ Do ponto de vista dos atributos do perfil, qualquer alteração nos quatro atrib
 
 ## Streaming de destinos com base em API {#streaming-api-based-destinations}
 
-O comportamento de exportação do perfil para destinos de transmissão, como Facebook, Trade Desk e outras integrações baseadas em API é idêntico ao acima.
+O comportamento de exportação do perfil para destinos de transmissão, como Facebook, Trade Desk e outras integrações baseadas em API é muito semelhante ao comportamento descrito acima para destinos corporativos.
 
-Exemplos de destino: publicidade, social, etc.
+Exemplos de destinos de transmissão são os destinos pertencentes à variável [categorias sociais e publicitárias](/help/destinations/destination-types.md#categories) no catálogo.
 
 O Experience Platform otimiza o comportamento de exportação do perfil para o seu destino de streaming, para exportar apenas dados para destinos com base em API de streaming quando ocorrerem atualizações relevantes em um perfil após a qualificação de segmento ou outros eventos significativos. Os perfis são exportados para o seu destino nas seguintes situações:
 

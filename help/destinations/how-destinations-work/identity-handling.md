@@ -1,9 +1,9 @@
 ---
 title: Manuseio de identidade no fluxo de trabalho de ativação de destinos
 description: Saiba como a exportação de identidade é tratada no workflow de ativação, dependendo do tipo de destino
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -107,3 +107,5 @@ Ao configurar um armazenamento de dados conforme descrito na documentação vinc
 Depois de ler este documento, você agora sabe como descobrir quais identidades são suportadas ou necessárias para destinos individuais. Agora você também sabe como a seleção de identidade funciona para cada tipo de destino.
 
 Em seguida, você pode ler sobre qual [exportar configurações](/help/destinations/how-destinations-work/destinations-configurations.md) os destinos são comuns em tipos de destino, que podem ser configurados em um nível de destino individual por desenvolvedores e quais configurações podem ser editadas pelos usuários no fluxo de trabalho de ativação.
+
+Você também pode fazer check-out de todos os destinos disponíveis no [catálogo](/help/destinations/catalog/overview.md).

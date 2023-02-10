@@ -2,9 +2,9 @@
 title: Chaves gerenciadas pelo cliente na Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
+source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1618'
 ht-degree: 1%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 1%
 # Chaves gerenciadas pelo cliente no Adobe Experience Platform
 
 Os dados armazenados no Adobe Experience Platform são criptografados em repouso usando chaves de nível de sistema. Se você estiver usando um aplicativo criado na plataforma, poderá optar por usar suas próprias chaves de criptografia, fornecendo maior controle sobre a segurança dos dados.
+
+>[!NOTE]
+>
+>Os dados no data lake da Adobe Experience Platform e no Profile Store (CosmosDB) são criptografados usando o CMK.
 
 Este documento aborda o processo de habilitação do recurso CMK (Customer-managed keys, chaves gerenciadas pelo cliente) na plataforma.
 

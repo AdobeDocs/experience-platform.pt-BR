@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de janeiro de 2023 para o Adobe Experience Platform.
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2431'
 ht-degree: 7%
 
 ---
@@ -130,7 +130,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Recurso | Descrição |
 | --- | --- |
-| Desativar valores sugeridos para campos de cadeia de caracteres | Agora você pode [desativar valores sugeridos individuais para campos de cadeia de caracteres](../../xdm/ui/fields/enum.md) no [!UICONTROL Esquemas] espaço de trabalho, incluindo aqueles de componentes padrão. Esse recurso está disponível somente para campos com valores sugeridos e não é compatível com restrições de enumeração. |
+| Melhorias no nome de exibição da árvore de esquema | Anteriormente, os nomes de campo eram exibidos na interface do usuário, mas agora, os nomes de exibição dos campos de esquema na tela de esquema eram mais amigáveis para leitura. |
 
 **Novos componentes XDM**
 

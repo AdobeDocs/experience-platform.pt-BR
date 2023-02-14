@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3595'
 ht-degree: 1%
 
 ---
@@ -459,13 +459,18 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 * Use os destinos herdados de armazenamento em nuvem para os fluxos de dados nos quais deseja incluir namespaces de identidade nas exportações
 * Faça upload de identidades como atributos no Experience Platform para exportá-las para os destinos de armazenamento na nuvem.
 
-## Revisão {#review}
+## Consulte a seção {#review}
 
 No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações, ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
 ![Resumo da seleção na etapa de revisão.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Exibir políticas de consentimento aplicáveis"
+>abstract="Se sua organização comprou **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Esse controle será desativado se a empresa não tiver acesso às SKUs mencionadas acima."
 
 Se sua organização comprou **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 

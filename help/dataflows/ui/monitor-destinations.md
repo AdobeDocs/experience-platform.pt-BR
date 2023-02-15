@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do usuário
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
 workflow-type: tm+mt
-source-wordcount: '3211'
+source-wordcount: '3214'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 >[!NOTE]
 >
 >- A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos.
->- Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas não são exibidas no momento.
+>- Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas, com falha e ativadas não são exibidos no momento.
 
 
 >[!CONTEXTUALHELP]

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Expirações de evento de experiência
 description: Este documento fornece orientação geral sobre como configurar os tempos de expiração de eventos de experiência individuais em um conjunto de dados da Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ As expirações do evento de experiência não podem ser configuradas por meio d
 Depois que as expirações do evento de experiência são ativadas em um conjunto de dados habilitado para perfil, a Platform aplica automaticamente os valores de expiração para cada evento capturado em um processo de duas etapas:
 
 1. Todos os novos dados assimilados no conjunto de dados têm o valor de expiração aplicado no momento da assimilação com base no carimbo de data e hora do evento.
-1. Todos os dados existentes no conjunto de dados têm o valor de expiração aplicado retroativamente como uma tarefa de sistema de preenchimento retroativo única. Depois que o valor de expiração for colocado no conjunto de dados, os eventos mais antigos que o valor de expiração serão soltos imediatamente assim que o trabalho do sistema for executado. Todos os outros eventos serão descartados assim que atingirem seus valores de expiração no carimbo de data e hora do evento.
+1. Todos os dados existentes no conjunto de dados têm o valor de expiração aplicado retroativamente como uma tarefa de sistema de preenchimento retroativo única. Depois que o valor de expiração for colocado no conjunto de dados, os eventos mais antigos que o valor de expiração serão soltos imediatamente assim que o trabalho do sistema for executado. Todos os outros eventos serão descartados assim que atingirem seus valores de expiração no carimbo de data e hora do evento. Quando todos os Eventos de experiência tiverem sido removidos, se o perfil não tiver mais atributos de perfil, o perfil não existirá mais.
 
 >[!WARNING]
 >

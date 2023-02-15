@@ -5,9 +5,9 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '209'
 ht-degree: 33%
 
 ---
@@ -31,6 +31,9 @@ ht-degree: 33%
    * [Visão geral](./datastreams/overview.md)
    * [Configurar um conjunto de dados](./datastreams/configure.md)
    * [Preparação de dados para coleção de dados](./datastreams/data-prep.md)
+   * Enriquecimento de dados {#data-enrichment}
+      * [Dados do tempo pelo canal do tempo](./datastreams/data-enrichment/weather.md)
+      * [Mapeamentos de campos de dados meteorológicos](./datastreams/data-enrichment/weather-reference.md)
 * Identidade {#identity}
    * [Visão geral](identity/overview.md)
    * [IDs de dispositivo próprio](identity/first-party-device-ids.md)

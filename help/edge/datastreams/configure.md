@@ -1,7 +1,8 @@
 ---
 title: Configurar um conjunto de dados
 description: Conecte sua integração do SDK da Experience Platform do lado do cliente aos produtos da Adobe e destinos de terceiros.
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 3%
@@ -28,7 +29,7 @@ Selecione o ícone &quot;mais&quot; (**...**) para um armazenamento de dados esp
 
 Para criar um armazenamento de dados, comece selecionando **[!UICONTROL Novo fluxo de dados]**.
 
-![Selecionar novo fluxo de dados](../assets/datastreams/configure/new-datastream-button.png)
+![Selecione Novo fluxo de dados](../assets/datastreams/configure/new-datastream-button.png)
 
 O fluxo de trabalho de criação do armazenamento de dados é exibido, começando na etapa de configuração. Aqui, você deve fornecer um nome e uma descrição opcional para o armazenamento de dados.
 
@@ -38,11 +39,11 @@ Se você estiver configurando esse armazenamento de dados para uso no Experience
 
 Selecionar **[!UICONTROL Opções avançadas]** para revelar controles adicionais para configurar o conjunto de dados.
 
-![Opções de configuração avançadas](../assets/datastreams/configure/advanced-options.png)
+![Opções de configuração avançadas](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Configuração | Descrição |
 | --- | --- |
-| [!UICONTROL Localização geográfica] | Determina se as pesquisas de GPS ocorrem com base no endereço IP do usuário. A configuração padrão **[!UICONTROL Nenhum]** desativa qualquer pesquisa de GPS, enquanto a variável **[!UICONTROL Cidade]** A configuração fornece coordenadas GPS com duas casas decimais. |
+| [!UICONTROL Localização geográfica] | Determina se as pesquisas geográficas ocorrem com base no endereço IP do usuário. A configuração padrão **[!UICONTROL Nenhum]** desativa qualquer pesquisa geográfica, enquanto a variável **[!UICONTROL Cidade]** A configuração fornece coordenadas GPS com duas casas decimais. |
 | [!UICONTROL Cookie da ID própria] | Quando habilitada, essa configuração informa à Edge Network para fazer referência a um cookie especificado ao pesquisar um [ID de dispositivo próprio](../identity/first-party-device-ids.md), em vez de pesquisar esse valor no Mapa de identidade.<br><br>Ao ativar essa configuração, você deve fornecer o nome do cookie no qual a ID deve ser armazenada. |
 | [!UICONTROL Sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em contêineres para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Quando ativada, essa configuração permite especificar qual contêiner de sincronizações de ID é executado para esse armazenamento de dados. |
 | [!UICONTROL Tipo de acesso] | Define o tipo de autenticação aceito pela Rede de Borda para o armazenamento de dados. <ul><li>**[!UICONTROL Autenticação mista]**: Quando essa opção é selecionada, a Edge Network aceita solicitações autenticadas e não autenticadas. Selecione essa opção quando planeja usar o SDK da Web ou [SDK móvel](https://aep-sdks.gitbook.io/docs/), juntamente com o [API do servidor](../../server-api/overview.md). </li><li>**[!UICONTROL Apenas Autenticado]**: Quando essa opção é selecionada, a Rede de Borda aceita apenas solicitações autenticadas. Selecione essa opção quando planeja usar somente a API do Servidor e deseja impedir que qualquer solicitação não autenticada seja processada pela Rede de Borda.</li></ul> |

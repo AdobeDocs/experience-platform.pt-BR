@@ -3,7 +3,7 @@ keywords: Experience Platform, identidade, serviço de identidade, solução de 
 title: Garantias do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e de taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -48,7 +48,7 @@ A tabela a seguir descreve as regras existentes que devem ser seguidas para gara
 
 ### Assimilação de namespace de identidade
 
-A partir de 31 de janeiro de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, essa identidade é assimilada por meio do [Origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se você quiser alterar essa configuração padrão, entre em contato com o gerente da conta.
+A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, essa identidade é assimilada por meio do [Origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se você quiser alterar essa configuração padrão, entre em contato com o gerente da conta.
 
 ## Próximas etapas
 

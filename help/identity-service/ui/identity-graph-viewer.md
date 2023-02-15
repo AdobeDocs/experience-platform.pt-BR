@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, visualizador de gráficos de identidade, visualizador de gráficos de identidade, visualizador de gráficos, visualizador de gráficos, namespace de identidade, namespace de identidade, identidade, serviço de identidade, serviço de identidade
-solution: Experience Platform
-title: Visão geral do visualizador do gráfico de identidade
+title: Visualizador de gráfico de identidade
 description: Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como seu cliente interage com sua marca em diferentes canais.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 1%
+source-wordcount: '1388'
+ht-degree: 2%
 
 ---
 
-# Visão geral do visualizador de gráficos de identidade
+# Visualizador de gráfico de identidade
 
 Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como seu cliente interage com sua marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo Adobe Experience Platform Identity Service em tempo quase real, em resposta às atividades do cliente.
 
 O visualizador de gráficos de identidade na interface do usuário da Platform permite visualizar e entender melhor quais identidades de cliente são unidas e de que maneiras. O visualizador permite que você arraste e interaja com diferentes partes do gráfico, permitindo examinar relacionamentos de identidade complexos, depurar com mais eficiência e aproveitar o aumento da transparência com a forma como as informações estão sendo utilizadas.
+
+O documento a seguir fornece etapas sobre como acessar e usar o visualizador de gráficos de identidade na interface do usuário da plataforma.
 
 ## Tutorial em vídeo
 
@@ -28,28 +28,96 @@ O vídeo a seguir tem como objetivo oferecer suporte para a compreensão do visu
 Trabalhar com o visualizador de gráficos de identidade requer uma compreensão dos vários serviços da Adobe Experience Platform envolvidos. Antes de começar a trabalhar com o visualizador de gráficos de identidade, revise a documentação dos seguintes serviços:
 
 - [[!DNL Identity Service]](../home.md): Obtenha uma melhor visão de clientes individuais e seu comportamento ao unir identidades em dispositivos e sistemas.
+- [Perfil do cliente em tempo real](../../profile/home.md): Os gráficos de identidade são aproveitados pelo Perfil do cliente em tempo real para criar uma exibição abrangente e singular dos atributos e comportamento do cliente.
 
 ### Terminologia
 
-- **Identidade (nó):** Uma identidade ou um nó são dados exclusivos de uma entidade, normalmente uma pessoa. Uma identidade é composta de um namespace e um valor de identidade.
-- **Link (borda):** Um link ou uma borda representa a conexão entre identidades.
+- **Identidade (nó):** Uma identidade ou um nó são dados exclusivos de uma entidade, normalmente uma pessoa. Uma identidade é composta de um namespace de identidade e um valor de identidade. Por exemplo, uma identidade totalmente qualificada pode consistir em um namespace de identidade para **Email**, combinado com um valor de identidade de **robina<span>@email.com**.
+- **Link (borda):** Um link ou uma borda representa a conexão entre identidades. Os links de identidade incluem propriedades, como carimbos de data e hora estabelecidos pela primeira vez e atualizados pela última vez. O primeiro carimbo de data e hora estabelecido define a data e a hora em que uma nova identidade está vinculada a uma identidade existente. O último carimbo de data e hora atualizado define a data e a hora em que um link de identidade existente foi atualizado pela última vez.
 - **Gráfico (cluster):** Um gráfico ou cluster é um grupo de identidades e links que representam uma pessoa.
 
 ## Acessar o visualizador de gráfico de identidade {#access-identity-graph-viewer}
 
-Para usar o visualizador de gráficos de identidade na interface do usuário, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione o **[!UICONTROL Gráfico de identidade]** guia . No **[!UICONTROL Namespace de identidade]** clique no botão **[!UICONTROL Selecionar namespace de identidade]** ícone para procurar pelo namespace que pretende usar.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Gráfico de identidade]** na lista de guias no cabeçalho.
 
-![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
+![O espaço de trabalho Identidades na interface do usuário do Experience Platform, com a guia Gráfico de identidade selecionada.](../images/graph-viewer/identity-graph.png)
 
-O **[!UICONTROL Selecionar namespace de identidade]** será exibido. Esta tela contém uma lista de namespaces disponíveis para sua organização, incluindo informações sobre **[!UICONTROL Nome de exibição]**, **[!UICONTROL Símbolo de identidade]**, **[!UICONTROL Proprietário]**, **[!UICONTROL Última atualização]** data, e **[!UICONTROL Descrição]**. Você pode usar qualquer um dos namespaces fornecidos, desde que tenha um valor de identidade válido conectado a eles.
+Para exibir um gráfico de identidade, forneça um namespace de identidade e seu valor correspondente e selecione **[!UICONTROL Exibir]**.
 
-Selecione o namespace que deseja usar e clique em **[!UICONTROL Selecionar]** para continuar.
+>[!TIP]
+>
+>Selecione o ícone da tabela ![ícone de tabela](../images/identity-graph-viewer/table-icon.png) para ver um painel com uma lista de todos os namespaces de identidade disponíveis na organização. Você pode usar qualquer um dos namespaces de identidade, desde que tenha um valor de identidade válido conectado a eles. Para obter mais informações, leia a [guia do namespace de identidade](../namespaces.md).
 
-![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
+![Um namespace de identidade e seu valor correspondente, fornecido na tela de pesquisa do Gráfico de identidade.](../images/graph-viewer/namespace-and-value.png)
 
-Depois de selecionar um namespace, insira o valor correspondente para um cliente específico na **[!UICONTROL Valor de identidade]** caixa de texto e selecione **[!UICONTROL Exibir]**.
+## Noções básicas da interface do visualizador do gráfico de identidade
 
-![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+A interface do visualizador do gráfico de identidade é composta de vários elementos que você pode usar para interagir e entender melhor seus dados de identidade.
+
+![A interface do visualizador do gráfico de identidade.](../images/graph-viewer/identity-graph-viewer-main.png)
+
+O gráfico de identidade exibe todas as identidades vinculadas à combinação de namespace de identidade e valor inserida. Cada nó consiste em um namespace de identidade e seu valor correspondente. Você pode selecionar, segurar e arrastar qualquer nó para interagir com o gráfico. Como alternativa, você pode passar o mouse sobre um nó para ver informações sobre seu valor de identidade correspondente. Selecionar **[!UICONTROL Exibir gráfico]** para ocultar ou exibir o gráfico.
+
+>[!IMPORTANT]
+>
+>Um gráfico de identidade requer no mínimo duas identidades vinculadas para serem geradas e um namespace de identidade e uma combinação de valor válidos. O número máximo de identidades que o visualizador de gráficos pode exibir é 150. Consulte a [apêndice](#appendix) para obter mais informações.
+
+![O visualizador de gráficos de identidade com cinco identidades vinculadas.](../images/graph-viewer/graph.png)
+
+Selecione um link no gráfico para ver o conjunto de dados e a ID do lote que contribuem para esse link. A seleção de um link também atualiza o painel direito para fornecer mais informações sobre detalhes da fonte de dados, bem como propriedades como carimbos de data e hora estabelecidos pela primeira vez e atualizados pela última vez.
+
+![O link de identidade entre o email e os nós GAID selecionados.](../images/graph-viewer/identity-link.png)
+
+O [!UICONTROL Identidades] tabela fornece uma exibição diferente dos dados de identidade, listando o namespace de identidade e a combinação de valor de identidade em um formato tabular. Selecionar um nó no gráfico atualizará o item de linha realçado no [!UICONTROL Identidades] tabela.
+
+![A tabela Identidades com a lista de identidades vinculadas no gráfico.](../images/graph-viewer/identities-table.png)
+
+Use o menu suspenso para classificar os dados do gráfico e destacar as informações sobre um namespace de identidade específico. Por exemplo, selecione **[!UICONTROL Email]** no menu para exibir dados específicos para o namespace da identidade do email.
+
+![A tabela Identities foi classificada para exibir somente os dados de email.](../images/graph-viewer/sort-email.png)
+
+O painel direito exibe informações sobre uma identidade selecionada, incluindo seu último carimbo de data e hora atualizado. O painel direito também exibe informações sobre a fonte de dados que corresponde à identidade selecionada, incluindo a ID do lote, o nome do conjunto de dados, a ID do conjunto de dados e o nome do esquema.
+
+A tabela a seguir fornece informações adicionais sobre as propriedades da fonte de dados exibidas no painel direito:
+
+| Fonte de dados | Descrição |
+| --- | --- | 
+| ID em lote | O identificador gerado automaticamente que corresponde aos dados do lote. |
+| ID do conjunto de dados | O identificador gerado automaticamente que corresponde ao conjunto de dados. |
+| Nome do conjunto de dados | O nome do conjunto de dados que contém seus dados em lote. |
+| Nome do esquema | O nome do schema. O esquema fornece um conjunto de regras que representam e validam a estrutura e o formato dos dados. |
+
+![O painel direito, que exibe os dados de identidade, bem como a fonte de dados das informações.](../images/graph-viewer/right-rail.png)
+
+Também é possível usar a variável *[!UICONTROL Fonte de dados]* para ver uma lista de fontes de dados que contribuem para suas identidades. Selecionar [!UICONTROL Fonte de dados] para obter uma exibição em tabela de seus conjuntos de dados e IDs de lote.
+
+![A guia fonte de dados selecionada.](../images/graph-viewer/data-source-table.png)
+
+Use o controle deslizante para filtrar os dados do gráfico pela primeira vez em que as identidades foram estabelecidas. Por padrão, o visualizador de gráficos de identidade exibe todas as identidades vinculadas ao gráfico. Mantenha pressionado e arraste o controle deslizante para ajustar a hora ao último carimbo de data e hora em que uma nova identidade foi vinculada ao gráfico. No exemplo abaixo, o gráfico exibe que o link de identidade mais recente (GAID) foi estabelecido em **[!UICONTROL 19/08/2020, 4:29:29:00]**.
+
+![O controle deslizante do carimbo de data e hora do visualizador de gráficos selecionado.](../images/graph-viewer/slider-one.png)
+
+Ajuste o controle deslizante para ver se outro link de identidade (Email) foi estabelecido em **[!UICONTROL 19/08/2020, 4:25:23:00]**.
+
+![O controle deslizante do carimbo de data e hora do visualizador de gráficos é ajustado para o último link estabelecido.](../images/graph-viewer/slider-two.png)
+
+Também é possível ajustar o controle deslizante para ver a iteração mais antiga do gráfico. No exemplo abaixo, o visualizador de gráficos de identidade exibe que o gráfico foi criado pela primeira vez em **[!UICONTROL 19/08/2020, 4:11:16:00]**, com seus primeiros links sendo ECID, Email e Telefone.
+
+![O controle deslizante do carimbo de data e hora do visualizador de gráficos é ajustado para o primeiro novo link estabelecido.](../images/graph-viewer/slider-three.png)
+
+## Apêndice
+
+A seção a seguir fornece informações adicionais para trabalhar com o visualizador de gráficos de identidade.
+
+### Noções básicas sobre mensagens de erro
+
+Podem ocorrer erros ao acessar o visualizador de gráficos de identidade. Esta é uma lista de pré-requisitos e limitações que devem ser levados em consideração ao trabalhar com o visualizador de gráficos de identidade.
+
+- Um valor de identidade deve existir no namespace selecionado.
+- O visualizador de gráficos de identidade requer no mínimo duas identidades vinculadas para serem geradas. É possível que haja apenas um valor de identidade e nenhuma identidade vinculada e, nesse caso, o valor só existiria em [!DNL Profile] visualizador.
+- O visualizador de gráficos de identidade não pode exceder o máximo de 150 identidades.
+
+![tela de erro](../images/graph-viewer/error-screen.png)
 
 ### Acessar o visualizador de gráficos de identidade dos conjuntos de dados
 
@@ -65,60 +133,6 @@ Na janela de visualização, selecione um ícone de impressão digital para ver 
 
 ![impressão digital](../images/identity-graph-viewer/fingerprint.png)
 
-O visualizador de gráficos de identidade é exibido. No lado esquerdo da tela, há o gráfico de identidade que exibe todas as identidades vinculadas ao namespace selecionado e o valor de identidade inserido. Cada nó de identidade consiste em um namespace e seu valor de ID correspondente. É possível selecionar e manter qualquer identidade para arrastar e interagir com o gráfico. Como alternativa, você pode passar o mouse sobre uma identidade para ver informações sobre seu valor de ID. A saída do gráfico também é exibida como uma lista com guias no centro da tela.
-
->[!IMPORTANT]
->
->Um gráfico de identidade requer no mínimo duas identidades vinculadas para serem geradas, bem como um namespace e um par de ID válidos. O número máximo de identidades que o visualizador de gráficos pode exibir é 150. Consulte a [apêndice](#appendix) para obter mais informações.
-
-![gráfico de identidade](../images/identity-graph-viewer/graph-viewer.png)
-
-Selecione uma identidade para atualizar a linha realçada no **[!UICONTROL Identidades]** e para atualizar as informações fornecidas no painel direito, que inclui uma **[!UICONTROL Valor]**, **[!UICONTROL ID em lote]**, e **[!UICONTROL Última atualização]** data.
-
-![select-identity](../images/identity-graph-viewer/select-identity.png)
-
-Você pode filtrar por meio de um gráfico e isolar um namespace específico usando a opção de classificação na parte superior da variável **[!UICONTROL Identidades]** tabela. No menu suspenso, selecione o namespace que deseja realçar.
-
-![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
-
-O visualizador de gráfico retorna, destacando o namespace selecionado. A opção de filtro também atualiza o **[!UICONTROL Identidades]** tabela para retornar informações somente para o namespace selecionado.
-
-![filtrado](../images/identity-graph-viewer/filtered.png)
-
-A parte superior direita da caixa do visualizador de gráficos contém opções de ampliação. Selecione o **(+)** ícone para ampliar o gráfico ou a **(-)** ícone para diminuir o zoom.
-
-![zoom](../images/identity-graph-viewer/zoom.png)
-
-Você pode exibir mais informações em lotes selecionando o **[!UICONTROL Fonte de dados]** no cabeçalho. O **[!UICONTROL Fonte de dados]** tabela exibe uma lista de **[!UICONTROL IDs em lote]** associada ao gráfico, bem como **[!UICONTROL IDs vinculadas]**, schema de origem e data da assimilação.
-
-![fonte de dados](../images/identity-graph-viewer/data-source-table.png)
-
-Você pode selecionar qualquer um dos links em um gráfico de identidade para ver todos os lotes de origem que contribuíram para o link.
-
-![select-links](../images/identity-graph-viewer/select-edge.png)
-
-Como alternativa, você pode selecionar um lote para ver todos os links para os quais esse lote contribuiu.
-
-![select-links](../images/identity-graph-viewer/select-batch.png)
-
-Os gráficos de identidade com grupos maiores de identidades também são acessíveis por meio do visualizador de gráficos de identidade.
-
-![grande cluster](../images/identity-graph-viewer/large-cluster.png)
-
-## Apêndice
-
-A seção a seguir fornece informações adicionais para trabalhar com o visualizador de gráficos de identidade.
-
-### Noções básicas sobre mensagens de erro
-
-Podem ocorrer erros ao acessar o visualizador de gráficos de identidade. Esta é uma lista de pré-requisitos e limitações que devem ser levados em consideração ao trabalhar com o visualizador de gráficos de identidade.
-
-- Um valor de identidade deve existir no namespace selecionado.
-- O visualizador de gráficos de identidade requer no mínimo duas identidades vinculadas para serem geradas. É possível que haja apenas um valor de identidade e nenhuma identidade vinculada e, nesse caso, o valor só existiria em [!DNL Profile] visualizador.
-- O visualizador de gráficos de identidade não pode exceder o máximo de 150 identidades.
-
-![tela de erro](../images/identity-graph-viewer/error-screen.png)
-
 ## Próximas etapas
 
 Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da plataforma. Para obter mais informações sobre identidades na Platform, consulte o [Visão geral do Serviço de identidade](../home.md)
@@ -129,3 +143,4 @@ Ao ler este documento, você aprendeu a explorar os gráficos de identidade de s
 | ---- | ------ |
 | 2021-01 | <ul><li>Adição de suporte para streaming de dados assimilados e sandbox de não produção.</li><li>Correção de erros secundários.</li></ul> |
 | 2021-02 | <ul><li>O visualizador de gráficos de identidade é disponibilizado por meio da visualização de conjunto de dados.</li><li>Correção de erros secundários.</li><li>O visualizador de gráficos de identidade é disponibilizado Geralmente.</li></ul> |
+| 2023-01 | <ul><li>Atualizações da interface do usuário.</li></ul> |

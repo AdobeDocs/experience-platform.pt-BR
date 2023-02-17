@@ -2,7 +2,7 @@
 description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/destination`.
 title: Operações de endpoint da API de destinos
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
 source-wordcount: '2545'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**Ponto de extremidade da API**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**Ponto de acesso da API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/destinations` Ponto de extremidade da API. Para obter uma descrição da funcionalidade suportada por este ponto de extremidade, leia [configuração de destino](./destination-configuration.md).
 
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | String | Forneça uma descrição que o Adobe usará no catálogo de destinos do Experience Platform para o cartão de destino. Mire por não mais do que 4 a 5 frases. |
 | `status` | String | Indica o status do ciclo de vida do cartão de destino. Os valores aceitos são `TEST`, `PUBLISHED` e `DELETED`. Use `TEST` ao configurar o destino pela primeira vez. |
 | `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para valores aceitos. |
-| `customerAuthenticationConfigurations.authType` | String | Os valores compatíveis para destinos de transmissão são: <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> Os valores suportados para destinos baseados em arquivo são: <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
+| `customerAuthenticationConfigurations.authType` | String | Os valores compatíveis para destinos de transmissão são: <ul><li>`BASIC`</li><li>`BEARER`</li><li>`OAUTH2`</li></ul> Os valores suportados para destinos baseados em arquivo são: <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
 | `customerDataFields.name` | String | Forneça um nome para o campo personalizado que está sendo introduzido. |
 | `customerDataFields.type` | String | Indica o tipo de campo personalizado que está sendo introduzido. Os valores aceitos são `string`, `object`, `integer` |
 | `customerDataFields.title` | String | Indica o nome do campo, como é visto pelos clientes na interface do usuário do Experience Platform |

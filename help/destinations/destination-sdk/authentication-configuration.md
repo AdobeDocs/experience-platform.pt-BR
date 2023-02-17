@@ -2,9 +2,9 @@
 description: Use as configurações de autenticação compatíveis no Adobe Experience Platform Destination SDK para autenticar usuários e ativar dados no terminal de destino.
 title: Configuração de autenticação
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,7 @@ A configuração de autenticação selecionada determina como o Experience Platf
 O Adobe Experience Platform Destination SDK suporta vários tipos de autenticação:
 
 * [Autenticação do portador](#bearer)
+* [Autenticação básica](#basic)
 * [[!DNL Amazon S3] autenticação](#s3)
 * [[!DNL Azure Blob] Armazenamento](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
@@ -34,6 +35,22 @@ Consulte as seguintes seções para obter detalhes sobre a configuração de aut
 
 * [Configurações de autenticação para destinos de transmissão](destination-configuration.md#customer-authentication-configurations)
 * [Configurações de autenticação para destinos com base em arquivo](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## Autenticação básica {#basic}
+
+A autenticação básica é compatível com destinos de transmissão no Experience Platform.
+
+Ao configurar o tipo de autenticação básico, os usuários são solicitados a inserir um nome de usuário e senha para se conectarem ao seu destino.
+
+Para configurar a autenticação básica para o seu destino, configure a variável `customerAuthenticationConfigurations` seção por meio da `/destinations` endpoint como mostrado abaixo:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## Autenticação do portador {#bearer}
 

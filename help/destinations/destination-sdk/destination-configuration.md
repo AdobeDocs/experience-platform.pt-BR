@@ -2,9 +2,9 @@
 description: Essa configuração permite indicar informações básicas, como nome de destino, categoria, descrição, logotipo e muito mais. As configurações nessa configuração também determinam como os usuários do Experience Platform se autenticam para o seu destino, como ele aparece na interface do usuário do Experience Platform e as identidades que podem ser exportadas para o seu destino.
 title: Opções de configuração de destino de fluxo para o Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1907'
 ht-degree: 4%
 
 ---
@@ -152,7 +152,7 @@ Usuários selecionados **[!UICONTROL Ligar ao destino]** para acionar o fluxo de
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | String | Indica a configuração usada para autenticar clientes do Experience Platform para o servidor. Consulte `authType` abaixo para valores aceitos. |
-| `authType` | String | Os valores aceitos para destinos de transmissão são:<ul><li>`BEARER`. Se o destino oferecer suporte à autenticação do portador, defina `"authType":"Bearer"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li><li>`OAUTH2`. Se o destino oferecer suporte à autenticação OAuth 2, defina `"authType":"OAUTH2"` e adicione os campos obrigatórios para o OAuth 2, conforme mostrado no [Página de autenticação do Destination SDK OAuth 2](./oauth2-authentication.md). Além disso, defina `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li> |
+| `authType` | String | Os valores aceitos para destinos de transmissão são:<ul><li>`BASIC`. Se o destino oferecer suporte à autenticação básica, defina `"authType":"Basic"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li><li>`BEARER`. Se o destino oferecer suporte à autenticação do portador, defina `"authType":"Bearer"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li><li>`OAUTH2`. Se o destino oferecer suporte à autenticação OAuth 2, defina `"authType":"OAUTH2"` e adicione os campos obrigatórios para o OAuth 2, conforme mostrado no [Página de autenticação do Destination SDK OAuth 2](./oauth2-authentication.md). Além disso, defina `"authenticationRule":"CUSTOMER_AUTHENTICATION"` no [seção delivery de destino](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 

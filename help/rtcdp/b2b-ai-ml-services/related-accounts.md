@@ -3,9 +3,9 @@ title: Contas relacionadas no Real-Time CDP B2B Edition
 type: Documentation
 description: Uma visão geral e mais informações sobre o recurso de contas relacionadas no Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '433'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ As empresas B2B geralmente têm as informações de seus clientes armazenadas em
 | ID | Nome | Site | Setor | Estado | Telefone | Tem oportunidade aberta com valor > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
-| 2 | Acme | acm.com | Software | CA | 408536000 | x |
+| 2 | Acme | acm.com | Software | CA | 4085366000 | x |
 | 3 | Acme Inc |  |  | CA | (408)5366000 |  |
 | 4 | Serviço Acme Consulting | `http://www.acme.com/consulting` | Consultoria em tecnologia | NY | (212)471-0904 | x |
 | 5 | Acme IT |  |  | CA |  |  |
@@ -31,6 +31,16 @@ Com contas relacionadas, [!DNL Real-Time CDP B2B] O agora mostra uma lista de co
 ![Tela mostrando contas relacionadas na interface do usuário do Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Use esse recurso para visualizar perfis de conta relacionados para um perfil de conta na interface do usuário do Experience Platform e, em seguida, incluir as contas relacionadas em suas definições de segmento para ampliar seu alcance ou aplicar critérios mais amplos em seus segmentos.
+
+## Ativar o serviço de contas relacionadas {#enable}
+
+Para habilitar o serviço, selecione **[!UICONTROL Perfis]** na barra lateral seguida de **[!UICONTROL Configurações]**.
+
+![Experience Platform UI destacando perfis e configurações.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Selecione a alternância ao lado [!UICONTROL Ativar contas relacionadas] para ativar o serviço e, em seguida, selecione **[!UICONTROL Salvar]**.
+
+![Tela de configurações da conta que destaca o botão de alternância e salvamento.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Como funciona {#how-it-works}
 

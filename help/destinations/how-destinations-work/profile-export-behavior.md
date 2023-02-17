@@ -1,9 +1,9 @@
 ---
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos de Experience Platform.
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
 workflow-type: tm+mt
-source-wordcount: '2944'
+source-wordcount: '2979'
 ht-degree: 0%
 
 ---
@@ -169,11 +169,11 @@ Com base nas informações da seção acima, o comportamento de exportação do 
 
 **Exportações completas de arquivos**
 
-A população completa do segmento é exportada todos os dias.
+A população ativa completa do segmento é exportada todos os dias.
 
 | O que determina uma exportação de destino | O que está incluído no arquivo exportado |
 |---------|----------|
-| <ul><li>O agendamento de exportação definido na interface do usuário ou na API e a ação do usuário (seleção de [Exportar arquivo agora](/help/destinations/ui/export-file-now.md) na interface do usuário ou usando o [API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md)) determinam o início de uma exportação de destino.</li><li>Qualquer alteração na associação de segmentos de um perfil, seja ela qualificada ou desqualificada do segmento, qualifica um perfil para ser incluído em exportações incrementais.</li></ul> | Em exportações completas de arquivos, toda a população de perfis de um segmento, com base na avaliação de segmento mais recente, é incluída em cada exportação de arquivo. Os valores mais recentes para cada atributo XDM selecionado para exportação também são incluídos como colunas em cada arquivo. |
+| <ul><li>O agendamento de exportação definido na interface do usuário ou na API e a ação do usuário (seleção de [Exportar arquivo agora](/help/destinations/ui/export-file-now.md) na interface do usuário ou usando o [API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md)) determinam o início de uma exportação de destino.</li><li>Qualquer alteração na associação de segmentos de um perfil, seja ela qualificada ou desqualificada do segmento, qualifica um perfil para ser incluído em exportações incrementais.</li></ul> | Em exportações completas de arquivos, toda a população de perfil ativo de um segmento, com base na avaliação de segmento mais recente, é incluída em cada exportação de arquivo. Os valores mais recentes para cada atributo XDM selecionado para exportação também são incluídos como colunas em cada arquivo. Observe que os perfis no status de saída não são incluídos na exportação de arquivo. |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -183,7 +183,7 @@ Na primeira exportação de arquivo após a configuração do workflow de ativa�
 
 | O que determina uma exportação de destino | O que está incluído no arquivo exportado |
 |---------|----------|
-| <ul><li>O agendamento de exportação definido na interface do usuário ou na API determina o início de uma exportação de destino.</li><li>Qualquer alteração na associação de segmentos de um perfil, seja ela qualificada ou desqualificada do segmento, qualifica um perfil para ser incluído em exportações incrementais. Alterações em atributos ou em mapas de identidade de um perfil *não* qualificar um perfil a ser incluído em exportações incrementais.</li></ul> | Os perfis para os quais a associação de segmento foi alterada, juntamente com as informações mais recentes para cada atributo XDM selecionado para exportação. |
+| <ul><li>O agendamento de exportação definido na interface do usuário ou na API determina o início de uma exportação de destino.</li><li>Qualquer alteração na associação de segmentos de um perfil, seja ela qualificada ou desqualificada do segmento, qualifica um perfil para ser incluído em exportações incrementais. Alterações em atributos ou em mapas de identidade de um perfil *não* qualificar um perfil a ser incluído em exportações incrementais.</li></ul> | <p>Os perfis para os quais a associação de segmento foi alterada, juntamente com as informações mais recentes para cada atributo XDM selecionado para exportação.</p><p>Os perfis com status de saída são incluídos nas exportações de destino, se a variável `segmentMembership.status` O campo XDM é selecionado na etapa de mapeamento.</p> |
 
 {style=&quot;table-layout:fixed&quot;}
 

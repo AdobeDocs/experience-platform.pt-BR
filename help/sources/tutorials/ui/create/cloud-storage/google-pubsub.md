@@ -2,9 +2,9 @@
 title: Criar uma conexão Google PubSub-fonte na interface do usuário
 description: Saiba como criar um conector Google PubSub-source usando a interface do usuário da plataforma.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '658'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,10 @@ Para se conectar [!DNL PubSub] para a Platform, você deve fornecer um valor vá
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| Projeto ID | A ID do projeto necessária para autenticação [!DNL PubSub]. |
+| Projeto  ID | A ID do projeto necessária para autenticação [!DNL PubSub]. |
 | Credenciais | A ID da credencial ou da chave privada necessária para a autenticação [!DNL PubSub]. |
 | ID do tópico | A ID da variável [!DNL PubSub] que representa um feed de mensagens. Você deve especificar uma ID de tópico se desejar fornecer acesso a um fluxo específico de dados no [!DNL Google PubSub] fonte. |
+| ID de assinatura | A ID do [!DNL PubSub] assinatura. Em [!DNL PubSub], as subscrições permitem receber mensagens, assinando o tópico no qual as mensagens foram publicadas. |
 
 Para obter mais informações sobre esses valores, consulte o seguinte [Autenticação PubSub](https://cloud.google.com/pubsub/docs/authentication) documento. Se você estiver usando a autenticação baseada em conta de serviço, consulte o seguinte [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
 
@@ -48,7 +49,7 @@ Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da te
 
 Em [!UICONTROL armazenamento na nuvem] categoria , selecione **[!UICONTROL Google PubSub]** e selecione **[!UICONTROL Adicionar dados]**.
 
-![catálogo](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![O catálogo de fontes na interface do usuário do Experience Platform.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 O **[!UICONTROL Conectar-se ao Google PubSub]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
 
@@ -56,7 +57,7 @@ O **[!UICONTROL Conectar-se ao Google PubSub]** será exibida. Nesta página, vo
 
 Para usar uma conta existente, selecione a [!DNL PubSub] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próximo]** para continuar.
 
-![existente](../../../../images/tutorials/create/google-pubsub/existing.png)
+![A seleção de conta existente no workflow de fontes.](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Nova conta
 
@@ -68,7 +69,7 @@ Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forne
 
 Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e, em seguida, permitir que a nova conexão seja estabelecida.
 
-![novo](../../../../images/tutorials/create/google-pubsub/new.png)
+![A nova interface de conta no workflow de fontes.](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Próximas etapas
 

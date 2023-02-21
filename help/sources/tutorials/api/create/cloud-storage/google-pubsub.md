@@ -2,9 +2,9 @@
 title: Criar uma conexão Google PubSub-source usando a API do Serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform a uma conta Google PubSub usando a API de Serviço de Fluxo.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,7 @@ Para [!DNL Flow Service] para se conectar a [!DNL PubSub], você deve fornecer v
 | `projectId` | A ID do projeto necessária para autenticação [!DNL PubSub]. |
 | `credentials` | A credencial ou chave necessária para a autenticação [!DNL PubSub]. |
 | `topicId` | A ID da variável [!DNL PubSub] que representa um feed de mensagens. Você deve especificar uma ID de tópico se desejar fornecer acesso a um fluxo específico de dados no [!DNL Google PubSub] fonte. |
+| `subscriptionId` | A ID do [!DNL PubSub] assinatura. Em [!DNL PubSub], as subscrições permitem receber mensagens, assinando o tópico no qual as mensagens foram publicadas. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem do target. O [!DNL PubSub] a ID de especificação de conexão é: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Para obter mais informações sobre esses valores, consulte esta seção [[!DNL PubSub] autenticação](https://cloud.google.com/pubsub/docs/authentication) documento. Para usar a autenticação baseada em conta de serviço, consulte esta seção [[!DNL PubSub] guia sobre a criação de contas de serviço](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
@@ -79,7 +80,8 @@ curl -X POST \
           "params": {
               "projectId": "acme-project",
               "credentials": "{CREDENTIALS}",
-              "topicID": "acmeProjectAPI"
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-new"
           }
       },
       "connectionSpec": {
@@ -93,7 +95,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | A ID do projeto necessária para autenticação [!DNL PubSub]. |
 | `auth.params.credentials` | A credencial ou chave necessária para a autenticação [!DNL PubSub]. |
-| `auth.params.topicID` | A ID do tópico da sua [!DNL PubSub] fonte à qual você deseja fornecer acesso. |
+| `auth.params.topicId` | A ID do tópico da sua [!DNL PubSub] fonte à qual você deseja fornecer acesso. |
+| `auth.params.subscriptionId` | A ID da assinatura em relação ao seu [!DNL PubSub] tópico. |
 | `connectionSpec.id` | O [!DNL PubSub] ID de especificação de conexão: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Resposta**

@@ -4,7 +4,7 @@ description: Saiba como adicionar campos individualmente de grupos de campos exi
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Este guia aborda os diferentes métodos para adicionar campos individuais a um e
 
 Este tutorial presume que você esteja familiarizado com o [composição de esquemas XDM](../schema/composition.md) e como usar o Editor de esquema na interface do usuário da plataforma. Para continuar, você deve iniciar o processo de [criação de um novo schema](./resources/schemas.md) e atribuí-la a uma classe padrão antes de continuar com este guia.
 
-## Remover campos adicionados de grupos de campos padrão
+## Remover campos adicionados de grupos de campos padrão {#remove-field-group}
 
 Após adicionar um grupo de campos padrão a um esquema, é possível remover os campos padrão que não são necessários.
 

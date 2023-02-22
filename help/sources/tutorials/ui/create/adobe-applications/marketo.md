@@ -1,22 +1,19 @@
 ---
-keywords: Experience Platform, home, tópicos populares, conector de origem do Marketo, conector do Marketo, fonte do Marketo, Marketo
-solution: Experience Platform
-title: Crie um conector de origem do Marketo Engage na interface do usuário
-type: Tutorial
-description: Este tutorial fornece etapas para criar um conector de fonte Marketo Engage na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
+title: Criar uma conexão de fonte Marketo Engage e um fluxo de dados na interface do usuário
+description: Este tutorial fornece etapas para criar uma conexão de fonte Marketo Engage e um fluxo de dados na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
 
-# Crie um [!DNL Marketo Engage] conector de origem na interface do usuário
+# Crie um [!DNL Marketo Engage] conexão de origem e fluxo de dados na interface do usuário
 
 >[!IMPORTANT]
 >
->Antes de criar um [!DNL Marketo Engage] conexão de origem e um fluxo de dados, primeiro verifique se você tem [mapeada a ID da organização do Adobe IMS](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) em [!DNL Marketo]. Além disso, você também deve garantir que tenha concluído o [preencher automaticamente [!DNL Marketo] Espaços de nomes e esquemas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de criar uma conexão de origem e um fluxo de dados.
+>Antes de criar um [!DNL Marketo Engage] conexão de origem e um fluxo de dados, primeiro verifique se você tem [mapeada a ID da organização do Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) em [!DNL Marketo]. Além disso, você também deve garantir que tenha concluído o [preencher automaticamente [!DNL Marketo] Espaços de nomes e esquemas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de criar uma conexão de origem e um fluxo de dados.
 
 Este tutorial fornece etapas para criar um [!DNL Marketo Engage] (a seguir designado por &quot;[!DNL Marketo]&quot;) conector de origem na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 
@@ -84,23 +81,27 @@ Selecione o conjunto de dados que deseja assimilar primeiro e, em seguida, selec
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Fornecer detalhes do fluxo de dados
+## Fornecer detalhes do fluxo de dados {#provide-dataflow-details}
 
 O [!UICONTROL Detalhes do fluxo de dados] permite selecionar se deseja usar um conjunto de dados existente ou um novo conjunto de dados. Durante esse processo, também é possível definir as configurações para [!UICONTROL Conjunto de dados de perfil], [!UICONTROL Diagnóstico de erros], [!UICONTROL Ingestão parcial]e [!UICONTROL Alertas].
 
 ![detalhes do fluxo de dados](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### Usar um conjunto de dados existente
+>[!BEGINTABS]
+
+>[!TAB Usar um conjunto de dados existente]
 
 Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. Você pode recuperar um conjunto de dados existente usando o [!UICONTROL Pesquisa avançada] ou percorrendo a lista de conjuntos de dados existentes no menu suspenso. Depois de selecionar um conjunto de dados, forneça um nome e uma descrição para o seu fluxo de dados.
 
 ![conjunto de dados existente](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-### Usar um novo conjunto de dados
+>[!TAB Usar um novo conjunto de dados]
 
 Para assimilar em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e, em seguida, forneça um nome de conjunto de dados de saída e uma descrição opcional. Em seguida, selecione um esquema para mapear usando o [!UICONTROL Pesquisa avançada] ou rolando pela lista de schemas existentes no menu suspenso. Depois de selecionar um esquema, forneça um nome e uma descrição para o seu fluxo de dados.
 
 ![novo conjunto de dados](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!ENDTABS]
 
 ### Habilitar [!DNL Profile] e diagnóstico de erros
 
@@ -110,7 +111,7 @@ Em seguida, selecione o **[!UICONTROL Conjunto de dados de perfil]** alternar pa
 
 >[!IMPORTANT]
 >
->O [!DNL Marketo] O conector usa a assimilação em lote para assimilar todos os registros históricos e usa a assimilação de streaming para atualizações em tempo real. Isso permite que o conector continue o streaming ao assimilar qualquer registro incorreto. Ative o **[!UICONTROL Ingestão parcial]** e, em seguida, defina a [!UICONTROL Limite de erros %] como máximo para impedir que o fluxo de dados falhe.
+>O [!DNL Marketo] O source usa a assimilação em lote para assimilar todos os registros históricos e usa a assimilação de streaming para atualizações em tempo real. Isso permite que a fonte continue o streaming ao assimilar quaisquer registros incorretos. Ative o **[!UICONTROL Ingestão parcial]** e, em seguida, defina a [!UICONTROL Limite de erros %] como máximo para impedir que o fluxo de dados falhe.
 
 ![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -121,6 +122,14 @@ Você pode habilitar alertas para receber notificações sobre o status do seu f
 Quando terminar de fornecer detalhes do fluxo de dados, selecione **[!UICONTROL Próximo]**.
 
 ![alertas](../../../../images/tutorials/create/marketo/alerts.png)
+
+### Ignorar contas não reclamadas ao assimilar dados de empresas
+
+Ao criar um fluxo de dados para assimilar dados do conjunto de dados de empresas, você pode configurar [!UICONTROL Excluir contas não reclamadas] excluir ou incluir contas não reclamadas da assimilação.
+
+Quando indivíduos preenchem um formulário, [!DNL Marketo] cria um registro de conta fantasma com base no Nome da empresa que não contém outros dados. Para novos fluxos de dados, a alternância para excluir contas não reclamadas é ativada por padrão. Para fluxos de dados existentes, você pode ativar ou desativar o recurso, com alterações aplicáveis a dados assimilados recentemente e não a dados existentes.
+
+![contas não reclamadas](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Mapeie seu [!DNL Marketo] campos de origem do conjunto de dados para direcionar campos XDM
 

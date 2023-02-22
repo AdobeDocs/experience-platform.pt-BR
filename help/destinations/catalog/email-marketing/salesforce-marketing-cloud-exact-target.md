@@ -3,9 +3,9 @@ keywords: email, Email, email, destinos de email, salesforce, api salesforce mar
 title: (API) Conexão do Salesforce Marketing Cloud
 description: O destino do Marketing Cloud Salesforce (conhecido anteriormente como ExactTarget) permite exportar os dados da conta e ativá-los no Marketing Cloud Salesforce para as necessidades de sua empresa.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d75c272b3c86e25d3f162c630963c10e8206bd9d
+source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2464'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,9 @@ Observe os seguintes pré-requisitos para exportar dados do Platform para seu [!
 
 #### Você precisa ter um [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-Entre em contato com o [!DNL Salesforce Account Executive] para assinar o [!DNL Salesforce Marketing Cloud Account Engagement] produto se você ainda não o tiver.
+A [!DNL Salesforce Marketing Cloud] com uma assinatura para a [Envolvimento da conta do Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) produto é obrigatório para prosseguir.
+
+Entre em contato com o [[!DNL Salesforce] Suporte](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) se você não tiver um [!DNL Salesforce Marketing Cloud] ou sua conta estiver sem a [!DNL Marketing Cloud Account Engagement] assinatura do produto.
 
 #### Criar atributos dentro de [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 

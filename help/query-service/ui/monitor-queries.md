@@ -2,9 +2,9 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do serviço de query.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -118,11 +118,7 @@ A seção Status da consulta fornece o código de erro e a mensagem de erro caso
 
 ![A tela de detalhes da execução com o ícone de cópia SQL destacado.](../images/ui/monitor-queries/copy-sql.png)
 
-### (Versão limitada) Execute detalhes para consultas com bloco anônimo {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->O recurso de monitoramento de query que exibe detalhes de execução de consultas de bloco anônimas está atualmente em uma versão limitada e não está disponível para todos os clientes.
+### Executar detalhes de consultas com bloco anônimo {#anonymous-block-queries}
 
 Queries que usam blocos anônimos para compor suas instruções SQL são separados em suas consultas individuais. Isso permite inspecionar os detalhes de execução de cada bloco de query individualmente.
 

@@ -3,10 +3,10 @@ title: Dicas do cliente do agente do usuário
 description: Saiba como as Dicas do cliente do agente-usuário funcionam no SDK da Web
 keywords: agente do usuário;dicas do cliente; string; sequência agente-utilizador; baixa entropia; alta entropia
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 5%
+source-wordcount: '1132'
+ht-degree: 7%
 
 ---
 
@@ -116,16 +116,13 @@ Se você não ativar dicas de cliente de alta entropia em seu ambiente, os relat
 
 ### Relatórios do Adobe Analytics que dependem de dicas de cliente de alta entropia {#analytics}
 
-O [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) A dimensão inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas de navegadores Chromium.
+O [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=pt-BR) A dimensão inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas de navegadores Chromium.
 
 ### Audience Manager traços que dependem de dicas de cliente de alta entropia {#aam}
 
-Se suas características do Audience Manager usarem qualquer uma das seguintes propriedades, você deverá ativar dicas de cliente de alta entropia. Caso contrário, as características deixarão de funcionar.
+[!DNL Google] atualizou o [!DNL Chrome] funcionalidade do navegador para minimizar as informações coletadas pelo `User-Agent` cabeçalho. Como resultado, os clientes do Audience Manager usam [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) não receberá mais informações confiáveis para características baseadas em [chaves de nível de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=pt-BR).
 
-* Versão do sistema operacional
-* Modelo do dispositivo
-* Fabricante do dispositivo
-* Fornecedor de dispositivo
+Os clientes do Audience Manager que usam chaves de nível de plataforma para direcionamento devem mudar para [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=pt-BR) em vez de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)e ativar [Dicas de cliente de alta criptografia](#enabling-high-entropy-client-hints) para continuar recebendo dados de características confiáveis.
 
 ## Ativar dicas de cliente de alta entropia {#enabling-high-entropy-client-hints}
 

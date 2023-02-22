@@ -3,10 +3,10 @@ keywords: Experience Platform, home, tópicos populares, conexão de transmissã
 title: Criar uma conexão de transmissão de API HTTP usando a API do Serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do Serviço de Fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 4%
+source-wordcount: '1496'
+ht-degree: 3%
 
 ---
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `auth.params.sourceId` | Um identificador adicional que pode ser usado ao criar uma conexão base autenticada. Esse parâmetro é opcional e usará o mesmo valor da variável `name` , se não for fornecido. |
-| `auth.params.authenticationRequired` | O parâmetro que especifica a conexão de transmissão criada |
+| `auth.params.authenticationRequired` | Esse parâmetro especifica se a conexão de transmissão requer autenticação ou não. If `authenticationRequired` está definida como `true` a autenticação deve ser fornecida para a conexão de transmissão. If `authenticationRequired` está definida como `false` então a autenticação não é necessária. |
 
 **Resposta**
 

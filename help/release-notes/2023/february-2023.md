@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform fevereiro de 2023
 description: As notas de versão de fevereiro de 2023 para o Adobe Experience Platform.
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 3%
+source-wordcount: '953'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de query](#query-service)
-- [Contas relacionadas no Real-Time CDP B2B Edition](#related-accounts)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Fontes](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -47,7 +47,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 **Recursos atualizados**
 &#x200B; | Recurso | Descrição | | — | — | | Descontinuação de campo por meio da interface do usuário | Agora é possível descontinuar os campos dos seus esquemas depois que os dados forem assimilados. A desativação do campo XDM permite remover campos da exibição da interface do usuário, mantendo-os para uso. Se necessário, é possível revelar campos obsoletos, e todos os segmentos, consultas ou soluções de downstream que referenciam os campos serão executados como de costume. |
 
-&#x200B; Para obter mais informações sobre o XDM na plataforma, leia o [Visão geral do sistema XDM](../../xdm/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Para obter mais informações sobre o XDM na plataforma, leia o [Visão geral do sistema XDM](../../xdm/home.md). &#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Serviço de query {#query-service}
@@ -57,20 +57,16 @@ O Serviço de Consulta permite que você use o SQL padrão para consultar dados 
 **Recursos atualizados**
 &#x200B; | Recurso | Descrição | | — | — | | Habilitar conjuntos de dados para perfil com SQL | Use LABELs em queries CTAS para fazer um &quot;perfil ativado&quot; de conjunto de dados ou use ALTER para atualizar conjuntos de dados existentes para serem habilitados para o perfil. | | Monitorar consultas programadas | Use a guia Consultas agendadas para encontrar informações importantes sobre a execução do query e assinar alertas. Monitore consultas para detalhes de agendamento, status e mensagens/códigos de erro em caso de falha.  | | Alternar recurso de preenchimento automático | Elimine determinados comandos de metadados e melhore os tempos de processamento, alternando o recurso de preenchimento automático do Editor de consultas. Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que você a escreve. | | Amostras do conjunto de dados | Especifique uma taxa de amostragem em sua consulta e use amostras de conjunto de dados para criar uma amostra aleatória uniforme ou crie amostras condicionais com base em critérios específicos. |
 
-&#x200B; Para obter mais informações sobre os Serviços de Consulta, consulte o [Visão geral do Serviço de query](../../query-service/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Para obter mais informações sobre os Serviços de Consulta, consulte o [Visão geral do Serviço de query](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Contas relacionadas no Real-Time CDP B2B Edition {#related-accounts}
+## Real-Time Customer Data Platform B2B Edition {#b2b}
 
->[!NOTE]
->
->O recurso Contas relacionadas está disponível somente para clientes do Real-Time CDP B2B Edition.
-
-Contas relacionadas, [!DNL Real-Time CDP B2B] O permite visualizar uma lista de contas semelhantes à conta que você está navegando. É possível incluir as contas relacionadas nas definições de segmento para ampliar o alcance ou aplicar critérios mais amplos em seus segmentos.
+Baseado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido para profissionais de marketing que operam em um modelo de serviço de empresa para empresa. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
 
 **Recursos atualizados**
 
@@ -79,12 +75,6 @@ Contas relacionadas, [!DNL Real-Time CDP B2B] O permite visualizar uma lista de 
 | Ativar serviço de contas relacionadas | A nova função de alternância permite habilitar o serviço de contas relacionadas em sua conta. Para obter mais informações, leia o guia sobre [habilitando o serviço de contas relacionadas](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-Leia mais sobre recursos de contas relacionadas nas seguintes páginas de documentação:
-
-- [Contas relacionadas na visão geral do Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Guia contas relacionadas no guia da interface do usuário do perfil da conta](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Como usar contas relacionadas em definições de segmento](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Para saber mais sobre o Real-Time CDP B2B Edition, leia a [Visão geral do Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 

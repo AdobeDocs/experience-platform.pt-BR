@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de fevereiro de 2023 para o Adobe Experience Platform.
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '1137'
 ht-degree: 6%
 
 ---
@@ -45,10 +45,31 @@ Para obter informações mais gerais sobre destinos, consulte [visão geral dos 
 O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
 
 **Recursos atualizados**
-&#x200B; | Recurso | Descrição | | — | — | | Descontinuação de campo por meio da interface do usuário | Agora é possível descontinuar os campos dos seus esquemas depois que os dados forem assimilados. A desativação do campo XDM permite remover campos da exibição da interface do usuário, mantendo-os para uso. Se necessário, é possível revelar campos obsoletos, e todos os segmentos, consultas ou soluções de downstream que referenciam os campos serão executados como de costume. |
+&#x200B; | Recurso | Descrição | | — | — | | Descontinuação de campo por meio da interface do usuário | Agora você pode [descontinuar campos de seus esquemas depois que os dados forem assimilados](../../xdm/tutorials/field-deprecation-ui.md). A desativação do campo XDM permite remover campos da exibição da interface do usuário, mantendo-os para uso. Se necessário, é possível revelar campos obsoletos, e todos os segmentos, consultas ou soluções de downstream que referenciam os campos serão executados como de costume. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Para obter mais informações sobre o XDM na plataforma, leia o [Visão geral do sistema XDM](../../xdm/home.md). &#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**Novos componentes XDM**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Classe | [[!UICONTROL Perfil de Prospecto Individual XDM]](https://github.com/adobe/xdm/pull/1669/files) | A classe Perfil individual de prospecto XDM traz IDs fornecidas por parceiros. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Componentes XDM atualizados**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Grupo de campos | [!UICONTROL Restrições de limite de frequência] | O [!UICONTROL Restrições de limite de frequência] grupo de campos foi [atualizado para suportar eventos repetidos e personalizados](https://github.com/adobe/xdm/pull/1641/files). |
+| Tipo de dados | [!UICONTROL Referenciador da Web] | As propriedades do referenciador da Web foram [atualizado para incluir `xdm:linkName` e `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivamente, esses são o nome e a região do elemento HTML que foi selecionado na página anterior. |
+| Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent - Detalhes de interação da mensagem] | [O [!UICONTROL URL do rastreador] campo adicionado](https://github.com/adobe/xdm/pull/1665/files) para [!UICONTROL Adobe CJM ExperienceEvent]. Esse rastreador fornece o URL selecionado pelo usuário. |
+| Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent - Detalhes da interação da mensagem] | [O vazio `meta:enum` propriedade foi removida](https://github.com/adobe/xdm/pull/1668/files) do URL [!UICONTROL Tipo de rastreamento] campo. |
+| Tipo de dados | [!UICONTROL Informações da mídia] | [O padrão de regex da variável `videoSegment` propriedade em [!UICONTROL Informações da mídia] o tipo de dados foi removido](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre o XDM na Platform, leia o [Visão geral do sistema XDM](../../xdm/home.md).
 
 ## Serviço de query {#query-service}
 

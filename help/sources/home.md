@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d456dcb7f6fa724cbb6c6f7d7f9f91f73699db2
+source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 2%
@@ -138,12 +138,12 @@ O Experience Platform oferece suporte para assimilar dados do sistema local. Con
 
 O Experience Platform oferece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
-
 <!-- - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md) -->
 
 ### Pagamentos {#payments}

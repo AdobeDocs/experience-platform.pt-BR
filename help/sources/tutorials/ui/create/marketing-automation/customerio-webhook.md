@@ -2,9 +2,9 @@
 title: Criar uma conexão de fonte Customer.io e um fluxo de dados na interface do usuário
 description: Saiba como criar uma conexão de origem Customer.io usando a interface do usuário do Adobe Experience Platform.
 badge: "Beta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -64,13 +64,13 @@ Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na nav
 
 Use o *[!UICONTROL Categorias]* para filtrar fontes por categoria. Como alternativa, insira um nome de origem na barra de pesquisa para localizar uma origem específica no catálogo.
 
-Vá para o [!UICONTROL Automação de marketing] para ver a [!DNL Customer.io] cartão de origem. Para começar, selecione [!UICONTROL Adicionar dados].
+Vá para o [!UICONTROL Automação de marketing] para ver a [!DNL Customer.io] cartão de origem. Para começar, selecione **[!UICONTROL Adicionar dados]**.
 
 ![Captura de tela da interface do usuário da plataforma para catálogo com o cartão Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Selecionar dados {#select-data}
 
-O **[!UICONTROL Selecionar dados]** será exibida, fornecendo uma interface para selecionar os dados trazidos para a plataforma.
+O **[!UICONTROL Selecionar dados]** será exibida, fornecendo uma interface para selecionar os dados que deseja trazer para a plataforma.
 
 * A parte esquerda da interface é um navegador que permite visualizar os fluxos de dados disponíveis em sua conta;
 * A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo JSON.

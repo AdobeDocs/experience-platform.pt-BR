@@ -2,9 +2,10 @@
 title: (Beta) Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento de nuvem preferencial.
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,9 @@ ht-degree: 1%
 >* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
 
 
-Este artigo explica o workflow necessário para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) do Adobe Experience Platform para o local de armazenamento em nuvem preferencial, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage].
+Este artigo explica o workflow necessário para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) do Adobe Experience Platform para o local de armazenamento em nuvem preferencial, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage] usando a interface do usuário do Experience Platform.
+
+Também é possível usar as APIs do Experience Platform para exportar conjuntos de dados. Leia o [tutorial da API exportar conjuntos de dados](/help/destinations/api/export-datasets.md) para obter mais informações.
 
 ## Quando ativar segmentos ou exportar conjuntos de dados {#when-to-activate-segments-or-activate-datasets}
 
@@ -99,7 +102,7 @@ O **[!UICONTROL Exportar arquivos incrementais]** é selecionada automaticamente
 > 
 >Para exportações do conjunto de dados, os nomes dos arquivos têm um formato predefinido e padrão, que não pode ser modificado. Consulte a seção [Verificar exportação bem-sucedida do conjunto de dados](#verify) para obter mais informações e exemplos de arquivos exportados.
 
-## Revisão {#review}
+## Consulte a seção {#review}
 
 No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações, ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a exportar conjuntos de dados para o destino.
 

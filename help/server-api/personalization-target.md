@@ -2,10 +2,10 @@
 title: Personalização via Adobe Target
 description: Saiba como usar a API do servidor para entregar e renderizar experiências personalizadas criadas no Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 3%
+source-wordcount: '620'
+ht-degree: 2%
 
 ---
 
@@ -28,15 +28,6 @@ Consulte a [guia sobre como adicionar serviços a um armazenamento de dados](../
 Ao configurar seu armazenamento de dados, você pode (opcionalmente) fornecer valores para [!DNL Property Token], [!DNL Target Environment ID]e [!DNL Target Third Party ID Namespace].
 
 ![Imagem da interface do usuário mostrando a tela de configuração do serviço de armazenamento de dados, com Adobe Target selecionado](assets/target-datastream.png)
-
-Você pode escolher entre as seguintes opções [!DNL Analytics Logging] opções:
-
-* **[!DNL Server Side]**: Esta é a opção padrão para [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR). Quando essa opção é selecionada, cada vez que o conteúdo de personalização é retornado pelo Target, a variável [!DNL A4T] Os dados do são enviados automaticamente para o Analytics, com base na resposta do mecanismo de personalização do Target.
-* **[!DNL Client Side]**: Quando essa opção é selecionada, cada vez que o conteúdo de personalização é retornado pelo Target, a variável [!DNL A4T] Os dados são retornados ao aplicativo chamador. Se sua intenção é gravar esses dados no Analytics, é necessário garantir que eles sejam relatados em uma chamada subsequente para [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >Além da seleção de **[!UICONTROL Lado do cliente]** na configuração do Target, você também deve desativar o Analytics para que a rede de borda retorne a variável [!DNL A4T] informações de volta à resposta.
 
 
 ## Parâmetros personalizados {#custom-parameters}

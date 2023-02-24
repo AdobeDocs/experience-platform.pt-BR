@@ -2,7 +2,7 @@
 title: Criar uma conexão de origem do Chatlio na interface do usuário
 description: Saiba como criar uma conexão de origem do Chatlio usando a interface do usuário do Adobe Experience Platform.
 badge: "Beta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
@@ -111,7 +111,7 @@ O **[!UICONTROL Revisão]** é exibida, permitindo que você revise o novo fluxo
 * **[!UICONTROL Conexão]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas dentro desse arquivo de origem.
 * **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
 
-Depois de revisar o fluxo de dados, clique em **[!UICONTROL Concluir]** e permitir que o fluxo de dados seja criado.
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e permitir que o fluxo de dados seja criado.
 
 ![A etapa de revisão do fluxo de trabalho de fontes.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 

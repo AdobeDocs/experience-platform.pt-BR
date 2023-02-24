@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Target v2
 description: As mais recentes notas de versão de extensão de tag do Adobe Target v2 na Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 61%
+source-wordcount: '650'
+ht-degree: 59%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 61%
 ## v0.19.2 (14 de fevereiro de 2023)
 
 - Correção de um problema que permitia que o tempo limite fosse definido como um elemento de dados.
+
+## v0.19.1 (3 de fevereiro de 2023)
+
+- Atualizado para suporte `at.js` v2.10.1
+- Os parâmetros da Mbox personalizada do cliente agora suportam corretamente a notação de pontos
+- Chamadas de delivery não são mais feitas no VEC
 
 ## v0.19.0 (19 de setembro de 2022)
 

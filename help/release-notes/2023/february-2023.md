@@ -1,7 +1,7 @@
 ---
 title: Notas de versão da Adobe Experience Platform fevereiro de 2023
 description: As notas de versão de fevereiro de 2023 para o Adobe Experience Platform.
-source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
+source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 6%
@@ -45,9 +45,12 @@ Para obter informações mais gerais sobre destinos, consulte [visão geral dos 
 O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
 
 **Recursos atualizados**
-&#x200B; | Recurso | Descrição | | — | — | | Descontinuação de campo por meio da interface do usuário | Agora você pode [descontinuar campos de seus esquemas depois que os dados forem assimilados](../../xdm/tutorials/field-deprecation-ui.md). A desativação do campo XDM permite remover campos da exibição da interface do usuário, mantendo-os para uso. Se necessário, é possível revelar campos obsoletos, e todos os segmentos, consultas ou soluções de downstream que referenciam os campos serão executados como de costume. |
 
+| Recurso | Descrição |
+| --- | --- |
+| Descontinuação de campo por meio da interface do usuário | Agora você pode [descontinuar campos de seus esquemas depois que os dados forem assimilados](../../xdm/tutorials/field-deprecation-ui.md). A desativação do campo XDM permite remover campos da exibição da interface do usuário, mantendo-os para uso. Se necessário, é possível revelar campos obsoletos, e todos os segmentos, consultas ou soluções de downstream que referenciam os campos serão executados como de costume. |
 
+{style=&quot;table-layout:auto&quot;}
 
 **Novos componentes XDM**
 
@@ -76,9 +79,18 @@ Para obter mais informações sobre o XDM na Platform, leia o [Visão geral do s
 O Serviço de Consulta permite que você use o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. É possível unir qualquer conjunto de dados de data lake e capturar os resultados da consulta como um novo conjunto de dados para uso em relatórios, na Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
-&#x200B; | Recurso | Descrição | | — | — | | Habilitar conjuntos de dados para perfil com SQL | Use LABELs em queries CTAS para fazer um &quot;perfil ativado&quot; de conjunto de dados ou use ALTER para atualizar conjuntos de dados existentes para serem habilitados para o perfil. | | Monitorar consultas programadas | Use a guia Consultas agendadas para encontrar informações importantes sobre a execução do query e assinar alertas. Monitore consultas para detalhes de agendamento, status e mensagens/códigos de erro em caso de falha.  | | Alternar recurso de preenchimento automático | Elimine determinados comandos de metadados e melhore os tempos de processamento, alternando o recurso de preenchimento automático do Editor de consultas. Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que você a escreve. | | Amostras do conjunto de dados | Especifique uma taxa de amostragem em sua consulta e use amostras de conjunto de dados para criar uma amostra aleatória uniforme ou crie amostras condicionais com base em critérios específicos. |
 
-&#x200B; Para obter mais informações sobre os Serviços de Consulta, consulte o [Visão geral do Serviço de query](../../query-service/home.md). &#x200B;
+| Recurso | Descrição |
+| --- | --- |
+| Ativar conjuntos de dados para perfil com SQL | Use LABELs em queries CTAS para fazer um &quot;perfil ativado&quot; de conjunto de dados ou use ALTER para atualizar conjuntos de dados existentes para serem habilitados para o perfil. |
+| Monitorar consultas agendadas | Use a guia Consultas agendadas para encontrar informações importantes sobre a execução da consulta e assinar alertas. Monitore consultas para detalhes de agendamento, status e mensagens/códigos de erro em caso de falha. |
+| Alternar recurso de preenchimento automático | Elimine determinados comandos de metadados e melhore os tempos de processamento, alternando o recurso de preenchimento automático do Editor de consultas. Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que você a escreve. |
+| Amostras do conjunto de dados | Especifique uma taxa de amostragem em sua consulta e use amostras de conjunto de dados para criar uma amostra aleatória uniforme ou crie amostras condicionais com base em critérios específicos. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Para obter mais informações sobre Serviços de query, consulte [Visão geral do Serviço de query](../../query-service/home.md).
+
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->

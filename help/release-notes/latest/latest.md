@@ -47,7 +47,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 **Recursos atualizados**
 &#x200B; | Recurso | Descrição | | — | — | | Descontinuação de campo por meio da interface do usuário | Agora você pode [descontinuar campos de seus esquemas depois que os dados forem assimilados](../../xdm/tutorials/field-deprecation-ui.md). A desativação do campo XDM permite remover campos da exibição da interface do usuário, mantendo-os para uso. Se necessário, é possível revelar campos obsoletos, e todos os segmentos, consultas ou soluções de downstream que referenciam os campos serão executados como de costume. |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 **Novos componentes XDM**
 
@@ -78,7 +78,7 @@ O Serviço de Consulta permite que você use o SQL padrão para consultar dados 
 **Recursos atualizados**
 &#x200B; | Recurso | Descrição | | — | — | | Habilitar conjuntos de dados para perfil com SQL | Use LABELs em queries CTAS para fazer um &quot;perfil ativado&quot; de conjunto de dados ou use ALTER para atualizar conjuntos de dados existentes para serem habilitados para o perfil. | | Monitorar consultas programadas | Use a guia Consultas agendadas para encontrar informações importantes sobre a execução do query e assinar alertas. Monitore consultas para detalhes de agendamento, status e mensagens/códigos de erro em caso de falha.  | | Alternar recurso de preenchimento automático | Elimine determinados comandos de metadados e melhore os tempos de processamento, alternando o recurso de preenchimento automático do Editor de consultas. Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que você a escreve. | | Amostras do conjunto de dados | Especifique uma taxa de amostragem em sua consulta e use amostras de conjunto de dados para criar uma amostra aleatória uniforme ou crie amostras condicionais com base em critérios específicos. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Para obter mais informações sobre os Serviços de Consulta, consulte o [Visão geral do Serviço de query](../../query-service/home.md). &#x200B;
+&#x200B; Para obter mais informações sobre os Serviços de Consulta, consulte o [Visão geral do Serviço de query](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->

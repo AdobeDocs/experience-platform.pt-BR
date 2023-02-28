@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, conexão de transmissã
 title: Criar uma conexão de transmissão de API HTTP usando a API do Serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do Serviço de Fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1544'
 ht-degree: 3%
 
 ---
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB Sem transformações]
 
+A solicitação a seguir cria um fluxo de dados de transmissão para a API HTTP sem transformações de dados.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB Com transformações]
+
+As solicitações a seguir criam um fluxo de dados de transmissão para a API HTTP com transformações de mapeamento aplicadas aos seus dados.
+
+Ao criar um fluxo de dados com transformações, a variável `name` não é possível alterar o parâmetro. Esse valor deve sempre ser definido como `Mapping`.
 
 ```shell
 curl -X POST \

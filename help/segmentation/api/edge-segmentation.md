@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; Segmentação de borda; Segmentação de borda; borda de fluxo;
+keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;segmentação de borda;segmentação de borda;borda de transmissão;
 solution: Experience Platform
 title: Segmentação de borda usando a API
-description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
+description: Este documento contém exemplos sobre como usar a segmentação de borda com a API de serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 1%
@@ -15,59 +15,59 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->O documento a seguir explica como executar a segmentação de borda usando a API . Para obter informações sobre como executar a segmentação de borda usando a interface do usuário, leia o [guia da interface do usuário de segmentação de borda](../ui/edge-segmentation.md).
+>O documento a seguir declara como executar a segmentação de borda usando a API. Para obter informações sobre como executar a segmentação de borda usando a interface do, leia o [guia da interface de segmentação de borda](../ui/edge-segmentation.md).
 >
->A segmentação de borda agora está disponível para todos os usuários da plataforma. Se você criou segmentos de borda durante o beta, esses segmentos continuarão operacionais.
+>A segmentação de borda agora está disponível para todos os usuários da Platform. Se você criou segmentos de borda durante a versão beta, esses segmentos continuarão operacionais.
 
-A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experience Platform instantaneamente na borda, permitindo casos de uso de personalização de página igual e próxima.
+A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experience Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 
 >[!IMPORTANT]
 >
-> Os dados de borda serão armazenados em um local de servidor de borda mais próximo de onde foram coletados e podem ser armazenados em um local diferente daquele designado como o data center (ou principal) da Adobe Experience Platform.
+> Os dados de borda serão armazenados em um local de servidor de borda mais próximo de onde foram coletados e podem ser armazenados em um local diferente daquele designado como data center do Adobe Experience Platform hub (ou principal).
 >
-> Além disso, o mecanismo de segmentação de borda só atenderá às solicitações na borda em que houver **one** identidade primária marcada, que é consistente com identidades primárias não baseadas em borda.
+> Além disso, o mecanismo de segmentação de borda somente respeitará as solicitações na borda em que há **um** identidade primária marcada, que é consistente com identidades primárias não baseadas em borda.
 
 ## Introdução
 
-Este guia do desenvolvedor requer uma compreensão funcional das várias [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de borda. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este guia do desenvolvedor requer uma compreensão funcional dos vários [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de borda. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e públicos-alvo a partir de [!DNL Real-Time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Segmentation]](../home.md): oferece a capacidade de criar segmentos e públicos-alvo a partir do [!DNL Real-Time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
-Para fazer chamadas com êxito para qualquer endpoint da API do Experience Platform, leia o guia em [introdução às APIs do Platform](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
+Para fazer chamadas com êxito para qualquer ponto de extremidade de API do Experience Platform, leia o manual em [introdução às APIs da Platform](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de amostra.
 
-## Tipos de query de segmentação de borda {#query-types}
+## Tipos de consulta de segmentação de borda {#query-types}
 
-Para que um segmento seja avaliado usando a segmentação de borda, a query deve estar em conformidade com as seguintes diretrizes:
+Para que um segmento seja avaliado usando a segmentação de borda, a consulta deve estar em conformidade com as seguintes diretrizes:
 
 | Tipo de consulta | Detalhes | Exemplo | Exemplo de PQL |
 | ---------- | ------- | ------- | ----------- |
-| Evento único | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. | Pessoas que adicionaram um item ao carrinho. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| Perfil único | Qualquer definição de segmento que se refere a um único atributo somente de perfil | Pessoas que vivem nos EUA. | `homeAddress.countryCode = "US"` |
-| Evento único que se refere a um perfil | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um único evento de entrada sem restrição de tempo. | Pessoas que vivem nos EUA que visitaram a página inicial. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| Evento único negado com um atributo de perfil | Qualquer definição de segmento que se refere a um evento de entrada único negado e um ou mais atributos de perfil | Pessoas que vivem nos EUA e têm **not** visitou a página inicial. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| Evento único em uma janela de tempo | Qualquer definição de segmento que se refere a um único evento de entrada dentro de um período de tempo definido. | Pessoas que visitaram a página inicial nas últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| Evento único com um atributo de perfil em uma janela de tempo | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um único evento de entrada dentro de um período de tempo definido. | Pessoas que vivem nos EUA que visitaram a página inicial nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| Evento único negado com um atributo de perfil dentro de uma janela de tempo | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento de entrada único negado em um período de tempo. | Pessoas que vivem nos EUA e têm **not** visitou a página inicial nas últimas 24 horas. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
-| Evento de frequência dentro de um período de 24 horas | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| Evento de frequência com um atributo de perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| Evento de frequência negado com um perfil dentro de uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento negado que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que não visitaram a página inicial **more** mais de cinco vezes nas últimas 24 horas. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| Várias ocorrências recebidas em um perfil de tempo de 24 horas | Qualquer definição de segmento que se refere a vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **ou** visitou a página de checkout nas últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| Vários eventos com um perfil em uma janela de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e vários eventos que ocorrem dentro de uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **e** visitou a página de checkout nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. | Pessoas que vivem nos EUA e estão no segmento &quot;segmento existente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| Consulta que se refere a um mapa | Qualquer definição de segmento que se refere a um mapa de propriedades. | Pessoas que adicionaram ao carrinho com base em dados de segmento externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| Evento único | Qualquer definição de segmento que se refere a um único evento recebido sem restrição de tempo. | Pessoas que adicionaram um item ao carrinho. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| Perfil único | Qualquer definição de segmento que se refira a um único atributo somente de perfil | Pessoas que vivem nos EUA. | `homeAddress.countryCode = "US"` |
+| Evento único que se refere a um perfil | Qualquer definição de segmento que se refira a um ou mais atributos de perfil e um único evento de entrada sem restrição de tempo. | Pessoas que moram nos EUA que visitaram a página inicial. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| Evento único negado com um atributo de perfil | Qualquer definição de segmento que se refira a um evento de entrada único negado e um ou mais atributos de perfil | As pessoas que vivem nos EUA e têm **não** visitou a página inicial. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| Um único evento em uma janela de tempo | Qualquer definição de segmento que se refere a um único evento recebido em um período definido. | Pessoas que visitaram a página inicial nas últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| Evento único com um atributo de perfil em uma janela de tempo | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um único evento de entrada em um período definido. | Pessoas que vivem nos EUA que visitaram a página inicial nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| Evento único negado com um atributo de perfil em uma janela de tempo | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento de entrada único negado em um período de tempo. | As pessoas que vivem nos EUA e têm **não** visitou a página inicial nas últimas 24 horas. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| Evento de frequência em uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| Evento de frequência com um atributo de perfil em uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **pelo menos** cinco vezes nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| Evento de frequência negado com um perfil em uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e um evento negado que ocorre um determinado número de vezes em uma janela de tempo de 24 horas. | Pessoas que não visitaram a página inicial **mais** cinco vezes nas últimas 24 horas. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| Várias ocorrências recebidas em um perfil de tempo de 24 horas | Qualquer definição de segmento que se refere a vários eventos que ocorrem em uma janela de tempo de 24 horas. | Pessoas que visitaram a página inicial **ou** visitou a página de check-out nas últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| Vários eventos com um perfil em uma janela de tempo de 24 horas | Qualquer definição de segmento que se refere a um ou mais atributos de perfil e vários eventos que ocorrem em uma janela de tempo de 24 horas. | Pessoas dos EUA que visitaram a página inicial **e** visitou a página de check-out nas últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. | Pessoas que vivem nos EUA e estão no segmento &quot;segmento existente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
+| Consulta que se refere a um mapa | Qualquer definição de segmento que se refira a um mapa de propriedades. | Pessoas que foram adicionadas ao carrinho com base em dados de segmentos externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Além disso, o segmento **must** estar vinculado a uma política de mesclagem ativa no Edge. Para obter mais informações sobre as políticas de mesclagem, leia o [guia de políticas de mesclagem](../../profile/api/merge-policies.md).
+Além disso, o segmento **deve** estar vinculado a uma política de mesclagem ativa no edge. Para obter mais informações sobre políticas de mesclagem, leia o [guia de políticas de mesclagem](../../profile/api/merge-policies.md).
 
-Uma definição de segmento **not** ser ativado para segmentação de borda nos seguintes cenários:
+Uma definição de segmento **não** ser ativado para segmentação de borda nos seguintes cenários:
 
-- A definição de segmento inclui uma combinação de um único evento e um `inSegment` evento.
-   - No entanto, se o segmento continha a variável `inSegment` evento é somente perfil, definição de segmento **will** ser ativada para segmentação de borda.
+- A definição de segmento inclui uma combinação de um único evento e uma `inSegment` evento.
+   - No entanto, se o segmento contido na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação de borda.
 
-## Recuperar todos os segmentos ativados para a segmentação de borda
+## Recuperar todos os segmentos habilitados para segmentação de borda
 
-Você pode recuperar uma lista de todos os segmentos que são ativados para a segmentação de borda em sua Organização IMS fazendo uma solicitação de GET para a `/segment/definitions` endpoint .
+Você pode recuperar uma lista de todos os segmentos que estão ativados para segmentação de borda na sua Organização IMS fazendo uma solicitação GET para a `/segment/definitions` terminal.
 
 **Formato da API**
 
@@ -90,7 +90,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS que são ativados para a segmentação de borda. Informações mais detalhadas sobre a definição de segmento retornada podem ser encontradas no [guia do endpoint de definições de segmento](./segment-definitions.md).
+Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS que estão habilitados para segmentação de borda. Informações mais detalhadas sobre a definição de segmento retornada podem ser encontradas na [guia de endpoint de definições de segmento](./segment-definitions.md).
 
 ```json
 {
@@ -177,9 +177,9 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS q
 }
 ```
 
-## Criar um segmento que esteja habilitado para a segmentação de borda
+## Criar um segmento habilitado para segmentação de borda
 
-Você pode criar um segmento habilitado para a segmentação de borda, fazendo uma solicitação de POST para a `/segment/definitions` endpoint que corresponde a uma das [tipos de consulta de segmentação de borda listados acima](#query-types).
+Você pode criar um segmento que esteja ativado para segmentação de borda fazendo uma solicitação POST para o `/segment/definitions` ponto de extremidade que corresponde a um dos [tipos de consulta de segmentação de borda listados acima](#query-types).
 
 **Formato da API**
 
@@ -212,13 +212,24 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
     }
 }'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da definição de segmento recém-criada que é habilitada para a segmentação de borda.
+Uma resposta bem-sucedida retorna os detalhes da definição de segmento recém-criada que está habilitada para segmentação de borda.
 
 ```json
 {
@@ -260,14 +271,14 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento recém-
 
 ## Próximas etapas
 
-Agora que você sabe como criar segmentos com segmentação de borda, pode usá-los para ativar casos de uso de personalização de mesma página e próxima página.
+Agora que você sabe como criar segmentos habilitados para segmentação de borda, pode usá-los para habilitar casos de uso de personalização de mesma página e próxima página.
 
 Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).
 
 ## Apêndice
 
-A seção a seguir lista perguntas frequentes sobre a segmentação de borda:
+A seção a seguir lista as perguntas frequentes sobre a segmentação de borda:
 
-### Quanto tempo leva para um segmento estar disponível na Edge Network?
+### Quanto tempo leva para um segmento ficar disponível na Rede de borda?
 
-Leva até uma hora para um segmento estar disponível na Edge Network.
+Leva até uma hora para um segmento estar disponível na Rede de borda.

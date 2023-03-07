@@ -1,12 +1,12 @@
 ---
-keywords: destinos, destino, página de detalhes de destinos, página de detalhes de destinos
+keywords: destinos;destino;página detalhes de destinos;página detalhes de destinos
 title: Exibir detalhes do destino
-description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados.
+description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e para ativar e desativar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 2%
+source-wordcount: '912'
+ht-degree: 1%
 
 ---
 
@@ -14,29 +14,29 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Na interface do usuário do Adobe Experience Platform, é possível visualizar e monitorar os atributos e atividades dos destinos. Esses detalhes incluem o nome e a ID do destino, controles para ativar ou desativar os destinos e muito mais. Os detalhes também incluem métricas para registros de perfil ativados, identidades ativadas, falhas e excluídas, e um histórico de execuções de fluxo de dados.
+Na interface do usuário do Adobe Experience Platform, é possível visualizar e monitorar os atributos e as atividades dos destinos. Esses detalhes incluem o nome e a ID do destino, controles para ativar ou desativar os destinos e muito mais. Os detalhes também incluem métricas para registros de perfis ativados, identidades ativadas, com falha e excluídas, e um histórico de execuções de fluxo de dados.
 
 >[!NOTE]
 >
->A página de detalhes de destinos faz parte do [!UICONTROL Destinos] na área de trabalho do [!DNL Platform] [!DNL UI]. Consulte a [[!UICONTROL Destinos] visão geral do espaço de trabalho](./destinations-workspace.md) para obter mais informações.
+>A página de detalhes dos destinos faz parte da [!UICONTROL Destinos] espaço de trabalho no [!DNL Platform] [!DNL UI]. Consulte a [[!UICONTROL Destinos] visão geral do espaço de trabalho](./destinations-workspace.md) para obter mais informações.
 
 ## Exibir detalhes do destino {#view-details}
 
-Siga as etapas abaixo para visualizar mais detalhes sobre um destino existente.
+Siga as etapas abaixo para exibir mais detalhes sobre um destino existente.
 
-1. Faça logon no [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecionar **[!UICONTROL Procurar]** no cabeçalho superior para exibir os destinos existentes.
+1. Faça logon no [IU DO EXPERIENCE PLATFORM](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecionar **[!UICONTROL Procurar]** no cabeçalho superior para exibir os destinos existentes.
 
    ![Procurar destinos](../assets/ui/details-page/browse-destinations.png)
 
-1. Selecione o ícone de filtro ![Ícone Filtro](../assets/ui/details-page/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associada ao destino selecionado.
+1. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/details-page/filter.png) na parte superior esquerda para iniciar o painel classificar. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/details-page/filter-destinations.png)
 
-1. Selecione o nome do destino que deseja visualizar.
+1. Selecione o nome do destino que deseja exibir.
 
    ![Selecionar destino](../assets/ui/details-page/destination-select.png)
 
-1. A página de detalhes do destino é exibida, mostrando os controles disponíveis.
+1. A página de detalhes do destino é exibida, mostrando seus controles disponíveis.
 
    ![Detalhes do destino](../assets/ui/details-page/destination-details.png)
 
@@ -44,14 +44,14 @@ Siga as etapas abaixo para visualizar mais detalhes sobre um destino existente.
 
 O painel direito exibe as informações básicas sobre o destino selecionado.
 
-![trilho direito](../assets/ui/details-page/right-sidebar.png)
+![painel direito](../assets/ui/details-page/right-sidebar.png)
 
-O quadro seguinte cobre os controlos e os pormenores fornecidos pelo painel direito:
+A tabela a seguir abrange os controles e os detalhes fornecidos pelo painel direito:
 
 | Item do painel direito | Descrição |
 | --- | --- |
-| [!UICONTROL Ativar segmentos] | Selecione esse controle para editar quais segmentos são mapeados para o destino, atualizar programações de exportação ou adicionar e remover atributos e identidades mapeadas. Veja os guias em [como ativar dados do público-alvo para segmentar destinos de transmissão](./activate-segment-streaming-destinations.md), [ativação de dados de público-alvo para destinos com base em perfil em lote](./activate-batch-profile-destinations.md)e [ativação de dados de público-alvo para streaming de destinos com base em perfil](./activate-streaming-profile-destinations.md) para obter mais informações. |
-| [!UICONTROL Excluir] | Permite excluir esse fluxo de dados e desmapeia os segmentos que foram ativados anteriormente, caso existam. |
+| [!UICONTROL Ativar segmentos] | Selecione este controle para editar quais segmentos estão mapeados para o destino, atualizar agendas de exportação ou adicionar e remover atributos e identidades mapeados. Consulte as guias sobre [ativação de dados de público-alvo para destinos de transmissão de segmento](./activate-segment-streaming-destinations.md), [ativação de dados de público-alvo para destinos baseados em perfil de lote](./activate-batch-profile-destinations.md), e [ativação de dados de público-alvo para destinos com base em perfil de transmissão](./activate-streaming-profile-destinations.md) para obter mais informações. |
+| [!UICONTROL Excluir] | Permite excluir esse fluxo de dados e cancela o mapeamento dos segmentos que foram ativados anteriormente, se houver. |
 | [!UICONTROL Nome do destino] | Este campo pode ser editado para atualizar o nome do destino. |
 | [!UICONTROL Descrição] | Este campo pode ser editado para atualizar ou adicionar uma descrição opcional ao destino. |
 | [!UICONTROL Destino] | Representa a plataforma de destino para a qual os públicos-alvo são enviados. Consulte a [catálogo de destinos](../catalog/overview.md) para obter mais informações. |
@@ -59,49 +59,63 @@ O quadro seguinte cobre os controlos e os pormenores fornecidos pelo painel dire
 | [!UICONTROL Ações de marketing] | Indica as ações de marketing (casos de uso) que se aplicam a esse destino para fins de governança de dados. |
 | [!UICONTROL Categoria] | Indica o tipo de destino. Consulte a [catálogo de destinos](../catalog/overview.md) para obter mais informações. |
 | [!UICONTROL Tipo de conexão] | Indica o formulário pelo qual seus públicos-alvo estão sendo enviados para o destino. Os valores possíveis incluem [!UICONTROL Cookie] e [!UICONTROL Baseado em perfil]. |
-| [!UICONTROL Frequência] | Indica a frequência com que os públicos-alvo são enviados para o destino. Os valores possíveis incluem [!UICONTROL Streaming] e [!UICONTROL Em lote]. |
-| [!UICONTROL Identidade] | Representa o namespace de identidade aceito pelo destino, como `GAID`, `IDFA`ou `email`. Para obter mais informações sobre namespaces de identidade aceitos, consulte o [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
+| [!UICONTROL Frequência] | Indica a frequência com que os públicos-alvo são enviados para o destino. Os valores possíveis incluem [!UICONTROL Streaming] e [!UICONTROL Lote]. |
+| [!UICONTROL Identidade] | Representa o namespace de identidade aceito pelo destino, como `GAID`, `IDFA`ou `email`. Para obter mais informações sobre namespaces de identidade aceitos, consulte a [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
 | [!UICONTROL Criado por] | Indica o usuário que criou esse destino. |
 | [!UICONTROL Criado] | Indica a data e hora UTC em que esse destino foi criado. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Ativado]/[!UICONTROL Desabilitado] alternar {#enabled-disabled-toggle}
 
-Você pode usar o **[!UICONTROL Ativado]/[!UICONTROL Desabilitado]** para iniciar e pausar todas as exportações de dados para o destino.
+Você pode usar o **[!UICONTROL Ativado]/[!UICONTROL Desabilitado]** alterne para iniciar e pausar todas as exportações de dados para o destino.
 
 ![Ativar ou desativar a alternância de fluxo de dados](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL Execuções do fluxo de dados] {#dataflow-runs}
+## [!UICONTROL O fluxo de dados é executado] {#dataflow-runs}
 
-O [!UICONTROL Execuções do fluxo de dados] A guia fornece dados de métrica em suas execuções de fluxo de dados para destinos de lote e fluxo. Consulte [Monitorar fluxos de dados](monitor-dataflows.md) para obter detalhes e definições de métricas.
+A variável [!UICONTROL O fluxo de dados é executado] A guia fornece dados de métrica sobre as execuções de fluxo de dados para destinos em lote e de fluxo. Consulte [Monitorar fluxos de dados](monitor-dataflows.md) para obter detalhes e definições de métricas.
 
 >[!NOTE]
 >
->* A funcionalidade de monitoramento de destinos é atualmente compatível com todos os destinos no Experience Platform *Except* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Públicos-alvo do Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
->* Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas, com falha e ativadas não são exibidos no momento.
+>* No momento, a funcionalidade de monitoramento de destinos é compatível com todos os destinos no Experience Platform *exceto* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Públicos do Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
+>* Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas, com falha e ativadas não são exibidos no momento.
 
 
-![Exibição de execuções do fluxo de dados](../assets/ui/details-page/dataflow-runs.png)
+![Exibição de execuções de fluxo de dados](../assets/ui/details-page/dataflow-runs.png)
 
-### Duração das execuções do fluxo de dados {#dataflow-runs-duration}
+### Duração das execuções de fluxo de dados {#dataflow-runs-duration}
 
-Há um problema conhecido na duração exibida das execuções do fluxo de dados. Enquanto a variável **[!UICONTROL Duração do processamento]** indicado para a maioria das execuções de fluxo de dados é de cerca de quatro horas, como mostrado na imagem abaixo, o tempo de processamento real para qualquer execução de fluxo de dados é muito menor. As janelas de execução de fluxo de dados permanecem abertas por mais tempo, caso o Experience Platform precise tentar fazer chamadas novamente para o destino.
+Há uma diferença na duração exibida das execuções de fluxo de dados entre destinos de transmissão e destinos baseados em arquivo.
 
-![A imagem do Fluxo de dados executa a página com a coluna Tempo de processamento realçada.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### Destinos de transmissão {#streaming}
+
+Embora a **[!UICONTROL Duração do processamento]** o indicado para a maioria das execuções de fluxo de dados de transmissão é cerca de quatro horas, como mostrado na imagem abaixo, o tempo de processamento real para qualquer execução de fluxo de dados é muito mais curto. As janelas de execução do fluxo de dados permanecem abertas por mais tempo caso o Experience Platform precise tentar fazer chamadas novamente para o destino e também garantir que ele não perca nenhum dado de chegada tardia na mesma janela de tempo.
+
+![Imagem da página Execuções do fluxo de dados com a coluna Tempo de processamento destacada para um destino de transmissão.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+Para obter mais informações, leia sobre [o fluxo de dados é executado para destinos de transmissão](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) na documentação de monitoramento.
+
+### Destinos baseados em arquivo {#file-based}
+
+Para execuções de fluxo de dados para destinos baseados em arquivo, a variável **[!UICONTROL Duração do processamento]** depende do tamanho dos dados que estão sendo exportados e do carregamento do sistema. Observe também que o fluxo de dados é executado para destinos baseados em arquivo e é detalhado por segmento.
+
+![Imagem da página Execuções do fluxo de dados com a coluna Tempo de processamento destacada para um destino baseado em arquivo.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+Para obter mais informações, leia sobre [o fluxo de dados é executado para destinos em lote (baseados em arquivo)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) na documentação de monitoramento.
 
 ## [!UICONTROL Dados de ativação] {#activation-data}
 
-O [!UICONTROL Dados de ativação] exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data de início e a data de término (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um segmento específico, selecione o nome na lista.
+A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data inicial e a data final (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um segmento específico, selecione o nome dele na lista.
 
 >[!TIP]
 >
->Para exibir e editar detalhes sobre os atributos e identidades mapeados para um destino, selecione **[!UICONTROL Ativar segmentos]** no [trilho direito](#right-rail).
+>Para exibir e editar detalhes sobre os atributos e identidades mapeados para um destino, selecione **[!UICONTROL Ativar segmentos]** no [painel direito](#right-rail).
 
-![Destino em lote da exibição de dados de ativação](../assets/ui/details-page/activation-data-batch.png)
+![Destino do lote da visualização de dados de ativação](../assets/ui/details-page/activation-data-batch.png)
 
-![Destino de transmissão da exibição de dados de ativação](../assets/ui/details-page/activation-data-streaming.png)
+![Destino de transmissão da visualização de dados de ativação](../assets/ui/details-page/activation-data-streaming.png)
 
 >[!NOTE]
 >
->Para obter detalhes sobre como explorar a página de detalhes de um segmento, consulte o [Visão geral da interface do usuário de segmentação](../../segmentation/ui/overview.md#segment-details).
+>Para obter detalhes sobre como explorar a página de detalhes de um segmento, consulte a [Visão geral da interface de segmentação](../../segmentation/ui/overview.md#segment-details).

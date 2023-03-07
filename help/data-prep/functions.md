@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4557'
 ht-degree: 4%
 
 ---
@@ -54,7 +54,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | upper /<br>ucase | Converte uma cadeia de caracteres em maiúsculas. | <ul><li>ENTRADA: **Obrigatório** A cadeia de caracteres que será convertida em maiúsculas.</li></ul> | upper(ENTRADA) | upper(&quot;HeLo&quot;)<br>ucase(&quot;HeLo&quot;) | &quot;OLÁ&quot; |
 | split | Divide uma cadeia de caracteres de entrada em um separador. O seguinte separador **necessidades** para ser evitada com `\`: `\`. Se você incluir vários delimitadores, a cadeia de caracteres será dividida em **qualquer** dos delimitadores presentes na string. | <ul><li>ENTRADA: **Obrigatório** A cadeia de caracteres de entrada que será dividida.</li><li>SEPARADOR: **Obrigatório** A cadeia de caracteres usada para dividir a entrada.</li></ul> | split(ENTRADA, SEPARADOR) | split(&quot;Olá mundo&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | ingressar | Une uma lista de objetos usando o separador. | <ul><li>SEPARADOR: **Obrigatório** A string que será usada para unir os objetos.</li><li>OBJETOS: **Obrigatório** Uma matriz de cadeias de caracteres que serão unidas.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Olá, mundo&quot; |
-| lpad | Preenche o lado esquerdo de uma cadeira de caracteres com a outra cadeia de caracteres especificada. | <ul><li>ENTRADA: **Obrigatório** A string que será preenchida. Esta cadeia de caracteres pode ser nula.</li><li>CONTAGEM: **Obrigatório** O tamanho da cadeia de caracteres a ser preenchida.</li><li>PREENCHIMENTO: **Obrigatório** A sequência de caracteres com a qual preencher a entrada. Se for nulo ou estiver vazio, será tratado como um único espaço.</li></ul> | lpad(ENTRADA, CONTAGEM, PREENCHIMENTO) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
+| lpad | Preenche o lado esquerdo de uma cadeira de caracteres com a outra cadeira de caracteres especificada. | <ul><li>ENTRADA: **Obrigatório** A string que será preenchida. Esta cadeia de caracteres pode ser nula.</li><li>CONTAGEM: **Obrigatório** O tamanho da cadeia de caracteres a ser preenchida.</li><li>PREENCHIMENTO: **Obrigatório** A sequência de caracteres com a qual preencher a entrada. Se for nulo ou estiver vazio, será tratado como um único espaço.</li></ul> | lpad(ENTRADA, CONTAGEM, PREENCHIMENTO) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Preenche o lado direito de uma cadeia de caracteres com a outra cadeia de caracteres fornecida. | <ul><li>ENTRADA: **Obrigatório** A string que será preenchida. Esta cadeia de caracteres pode ser nula.</li><li>CONTAGEM: **Obrigatório** O tamanho da cadeia de caracteres a ser preenchida.</li><li>PREENCHIMENTO: **Obrigatório** A sequência de caracteres com a qual preencher a entrada. Se for nulo ou estiver vazio, será tratado como um único espaço.</li></ul> | rpad(ENTRADA, CONTAGEM, PREENCHIMENTO) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Obtém os primeiros caracteres &quot;n&quot; da cadeira de caracteres fornecida. | <ul><li>STRING: **Obrigatório** A string para a qual você está obtendo os primeiros caracteres &quot;n&quot;.</li><li>CONTAGEM: **Obrigatório** Os caracteres &quot;n&quot; que você deseja obter da cadeia de caracteres.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
 | direita | Obtém os últimos caracteres &quot;n&quot; da cadeira de caracteres fornecida. | <ul><li>STRING: **Obrigatório** A string para a qual você está obtendo os últimos caracteres &quot;n&quot;.</li><li>CONTAGEM: **Obrigatório** Os caracteres &quot;n&quot; que você deseja obter da cadeia de caracteres.</li></ul> | right(STRING, COUNT) | right(&quot;abcde&quot;, 2) | &quot;de&quot; |
@@ -64,7 +64,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | igual a | Compara duas strings para confirmar se são iguais. Esta função diferencia maiúsculas de minúsculas. | <ul><li>SEQUÊNCIA1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>SEQUÊNCIA2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar.</li></ul> | STRING1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Compara duas strings para confirmar se são iguais. Esta função é **não** distinção entre maiúsculas e minúsculas. | <ul><li>SEQUÊNCIA1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>SEQUÊNCIA2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar.</li></ul> | STRING1.&#x200B;equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;.&#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funções de expressão regular
 
@@ -73,7 +73,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | extract_regex | Extrai grupos da string de entrada, com base em uma expressão regular. | <ul><li>STRING: **Obrigatório** A sequência de caracteres da qual você está extraindo os grupos.</li><li>REGEX: **Obrigatório** A expressão regular que você deseja que o grupo corresponda.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Verifica se a string corresponde à expressão regular inserida. | <ul><li>STRING: **Obrigatório** A sequência de caracteres que você está verificando corresponde à expressão regular.</li><li>REGEX: **Obrigatório** A expressão regular com a qual você está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funções de hash {#hashing}
 
@@ -89,7 +89,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | md5 | Pega uma entrada e produz um valor de hash usando MD5. | <ul><li>ENTRADA: **Obrigatório** O texto sem formatação a ser transformado em hash.</li><li>CHARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII. </li></ul> | md5(ENTRADA, CHARSET) | md5(&quot;meu texto&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4&#x200B;e9bd0198d03ba6852c7 |
 | crc32 | Pega uma entrada e usa um algoritmo de verificação de redundância cíclica (CRC) para produzir um código cíclico de 32 bits. | <ul><li>ENTRADA: **Obrigatório** O texto sem formatação a ser transformado em hash.</li><li>CHARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;meu texto&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funções de URL {#url}
 
@@ -104,8 +104,10 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | get_url_port | Retorna a porta do URL fornecido. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** O URL do qual a porta precisa ser extraída.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;) | 22 |
 | get_url_path | Retorna o caminho do URL fornecido. Por padrão, o caminho completo é retornado. | <ul><li>URL: **Obrigatório** O URL do qual o caminho precisa ser extraído.</li><li>FULL_PATH: *Opcional* Um valor booleano que determina se o caminho completo é retornado. Se definido como false, somente o final do caminho é retornado.</li></ul> | get_url_path&#x200B;(URL, CAMINHO_COMPLETO) | get_url_path&#x200B;(&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B;employee.csv&quot; |
 | get_url_query_str | Retorna a cadeia de caracteres de consulta de um determinado URL como um mapa de nome de cadeia de caracteres de consulta e valor de cadeia de caracteres de consulta. | <ul><li>URL: **Obrigatório** O URL do qual você está tentando obter a cadeia de caracteres de consulta.</li><li>ÂNCORA: **Obrigatório** Determina o que será feito com a âncora na sequência de consulta. Pode ser um destes três valores: &quot;keep&quot;, &quot;remove&quot; ou &quot;append&quot;.<br><br>Se o valor for &quot;reter&quot;, a âncora será anexada ao valor retornado.<br>Se o valor for &quot;remover&quot;, a âncora será removida do valor retornado.<br>Se o valor for &quot;append&quot;, a âncora será retornada como um valor separado.</li></ul> | get_url_query_str&#x200B;(URL, ÂNCORA) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remover&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com&#x200B;:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | Essa função pega uma URL como entrada e substitui ou codifica os caracteres especiais por caracteres ASCII. Para obter mais informações sobre caracteres especiais, leia a [lista de caracteres especiais](#special-characters) no apêndice deste documento. | <ul><li>URL: **Obrigatório** O URL de entrada com caracteres especiais que você deseja substituir ou codificar com caracteres ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | Essa função pega uma URL como entrada e decodifica os caracteres ASCII em caracteres especiais.  Para obter mais informações sobre caracteres especiais, leia a [lista de caracteres especiais](#special-characters) no apêndice deste documento. | <ul><li>URL: **Obrigatório** O URL de entrada com caracteres ASCII que você deseja decodificar em caracteres especiais.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funções de data e hora {#date-and-time}
 
@@ -128,7 +130,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | zone_date_to_utc | Converte uma data em qualquer fuso horário em uma data em UTC. | <ul><li>DATA: **Obrigatório** A data que você está tentando converter.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Converte uma data de um fuso horário em outro. | <ul><li>DATA: **Obrigatório** A data que você está tentando converter.</li><li>ZONA: **Obrigatório** O fuso horário para o qual você está tentando converter a data.</li></ul> | zone_date_to_zone&#x200B;(DATA, ZONA) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hierarquias - Objetos {#objects}
 
@@ -147,7 +149,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | get_keys | Analisa os pares chave/valor e retorna todas as chaves. | <ul><li>OBJETO: **Obrigatório** O objeto do qual as chaves serão extraídas.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Orgulho e Preconceito&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analisa os pares chave/valor e retorna o valor da string, com base na chave fornecida. | <ul><li>STRING: **Obrigatório** A sequência de caracteres que você deseja analisar.</li><li>CHAVE: **Obrigatório** A chave para a qual o valor deve ser extraído.</li><li>VALUE_DELIMITER: **Obrigatório** O delimitador que separa o campo e o valor. Se um dos dois `null` ou uma string vazia for fornecida, esse valor será `:`.</li><li>FIELD_DELIMITER: *Opcional* O delimitador que separa pares de campo e valor. Se um dos dois `null` ou uma string vazia for fornecida, esse valor será `,`.</li></ul> | get_values(STRING, CHAVE, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter informações sobre o recurso de cópia de objeto, consulte a seção [abaixo](#object-copy).
 
@@ -169,7 +171,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | upsert_array_append | Esta função é usada para anexar todos os elementos na matriz de entrada inteira ao final da matriz no Perfil. Esta função é **somente** aplicável durante as atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>MATRIZ: **Obrigatório** A matriz à qual anexar a matriz no Perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Esta função é usada para substituir elementos em uma matriz. Esta função é **somente** aplicável durante as atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>MATRIZ: **Obrigatório** A matriz para substituir a matriz no Perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Operadores lógicos {#logical-operators}
 
@@ -182,7 +184,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | decodificar | Dada uma chave e uma lista de pares de valores chave nivelados como uma matriz, a função retorna o valor se a chave for encontrada ou retorna um valor padrão se presente na matriz. | <ul><li>CHAVE: **Obrigatório** A chave a ser correspondida.</li><li>OPTIONS: **Obrigatório** Uma matriz nivelada de pares de chave/valor. Opcionalmente, um valor padrão pode ser colocado no final.</li></ul> | decode(CHAVE, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;Califórnia&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se o stateCode fornecido for &quot;ca&quot;, &quot;California&quot;.<br>Se o stateCode fornecido for &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode não corresponder ao seguinte, &quot;N/A&quot;. |
 | iif | Avalia uma determinada expressão booleana e retorna o valor especificado com base no resultado. | <ul><li>EXPRESSÃO: **Obrigatório** A expressão booleana que está sendo avaliada.</li><li>VALOR_REAL: **Obrigatório** O valor retornado se a expressão for avaliada como verdadeira.</li><li>VALOR_FALSO: **Obrigatório** O valor retornado se a expressão for avaliada como falsa.</li></ul> | iif(EXPRESSÃO, VALOR_VERDADEIRO, VALOR_FALSO) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Verdadeiro&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Agregação {#aggregation}
 
@@ -195,7 +197,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | min | Retorna o mínimo dos argumentos fornecidos. Usa a ordenação natural. | <ul><li>OPTIONS: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Retorna o máximo dos argumentos fornecidos. Usa a ordenação natural. | <ul><li>OPTIONS: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Conversões de tipo {#type-conversions}
 
@@ -210,7 +212,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | to_float | Converte uma cadeia de caracteres em um flutuante. | <ul><li>STRING: **Obrigatório** A sequência de caracteres a ser convertida em Float.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | Converte uma string em um inteiro. | <ul><li>STRING: **Obrigatório** A sequência de caracteres a ser convertida em um número inteiro.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funções JSON {#json}
 
@@ -222,7 +224,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Desserialize o conteúdo JSON da string fornecida. | <ul><li>STRING: **Obrigatório** A cadeia de caracteres JSON a ser desserializada.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}}) | Um objeto que representa o JSON. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Operações especiais {#special-operations}
 
@@ -234,7 +236,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Gera uma ID pseudo-aleatória. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funções do agente do usuário {#user-agent}
 
@@ -258,7 +260,7 @@ Qualquer uma das funções do agente do usuário contidas na tabela abaixo pode 
 | ua_agent_name | Extrai o nome do agente da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrai a classe de dispositivo da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefone |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Cópia do objeto {#object-copy}
 
@@ -302,3 +304,43 @@ Para garantir que o mapeamento automático funcione, os seguintes pré-requisito
 * Os novos atributos devem ter nomes correspondentes no esquema de origem e no esquema XDM.
 
 Se qualquer um dos pré-requisitos não for atendido, você deverá mapear manualmente o esquema de origem para o esquema XDM usando o preparo de dados.
+
+## Apêndice
+
+Veja a seguir informações adicionais sobre o uso das funções de mapeamento do Preparo de dados
+
+### Caracteres especiais {#special-characters}
+
+A tabela abaixo descreve uma lista de caracteres reservados e seus caracteres codificados correspondentes.
+
+| Caractere reservado | Caractere codificado |
+| --- | --- |
+| espaço | %20 |
+| ! | %21 |
+| ” | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}

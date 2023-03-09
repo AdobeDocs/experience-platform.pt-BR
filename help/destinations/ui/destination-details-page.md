@@ -3,9 +3,9 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e para ativar e desativar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
+source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '926'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ A variável [!UICONTROL O fluxo de dados é executado] A guia fornece dados de m
 >[!NOTE]
 >
 >* No momento, a funcionalidade de monitoramento de destinos é compatível com todos os destinos no Experience Platform *exceto* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Públicos do Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
->* Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, identidades excluídas, com falha e ativadas não são exibidos no momento.
+>* Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, as métricas relacionadas às identidades excluídas, com falha e ativadas são estimadas. Volumes maiores de dados de ativação levam a uma maior precisão das métricas.
 
 
 ![Exibição de execuções de fluxo de dados](../assets/ui/details-page/dataflow-runs.png)

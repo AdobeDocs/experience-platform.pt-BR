@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: fd82f109b8af665540e2ff30e92c6546ef9f3d2c
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1322'
 ht-degree: 2%
 
 ---
@@ -184,11 +184,21 @@ A tabela a seguir descreve como a interface do usuário se comporta com base em 
 
 Para obter mais informações sobre as permissões disponíveis concedidas por meio das Permissões do Adobe, leia o [visão geral do controle de acesso](../access-control/home.md).
 
-### Controle de acesso baseado em atributos para origens
+### Controle de acesso baseado em atributos
 
 O controle de acesso baseado em atributos no Adobe Experience Platform permite que os administradores controlem o acesso a objetos e/ou recursos específicos com base em atributos.
 
 Com o controle de acesso baseado em atributos, é possível aplicar configurações de mapeamento a campos aos quais você tem permissões. Além disso, não é possível assimilar dados em um conjunto de dados se você não tiver acesso a todos os campos no conjunto de dados.
+
+#### Suporte para controle de acesso baseado em atributos nas origens [!BADGE Novo recurso]
+
+>[!TIP]
+>
+>O controle de acesso baseado em atributos funciona da seguinte maneira: **funções** são criados para categorizar os tipos de usuários que interagem com sua instância da Platform. **Rótulos** são aplicados a **funções** para designar o acesso a essa determinada função. **Rótulos** também são aplicados a recursos como campos de esquema e segmentos. Para que um usuário tenha acesso a determinados campos e segmentos de esquema, ele deve ser adicionado a *uma função com o mesmo rótulo que é atribuída ao recurso consultado*. Para obter mais informações, leia a [guia completo do controle de acesso baseado em atributos](../access-control/abac/end-to-end-guide.md).
+
+- Aplique rótulos a campos de esquema para definir o acesso a campos de esquema específicos na organização. Uma vez estabelecido o acesso a campos de esquema específicos, os usuários só poderão criar mapeamentos para os campos aos quais têm acesso.
+- Os usuários sem as funções apropriadas não poderão criar ou atualizar fluxos de dados com mapeamentos que envolvam campos de esquema inacessíveis. Além disso, os usuários não autorizados não podem atualizar, excluir, ativar ou desativar fluxos de dados existentes com campos de esquema inacessíveis.
+- Além disso, um fluxo de dados deve ter exatamente a mesma ID e versão do esquema em seu mapeamento, conjunto de dados de destino e conexão de destino.
 
 Para obter mais informações sobre o controle de acesso baseado em atributos, leia a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md).
 

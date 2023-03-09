@@ -2,7 +2,7 @@
 title: Lançar uma extensão
 description: Saiba como lançar de forma privada ou pública uma extensão de tag na Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 92%
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Quando os testes e a documentação estiverem concluídos, a extensão estará pronta para ser lançada. Atualmente, existem dois tipos de lançamentos que podem ser executados:
 
@@ -36,4 +36,4 @@ Se quiser lançar sua extensão com disponibilidade privada usando a API diretam
 
 Depois de concluir o lançamento privado, peça à Adobe para lançá-lo publicamente. Isso tornará sua extensão disponível no catálogo público. Qualquer usuário da coleção de dados pode instalar sua extensão em qualquer propriedade.
 
-Preencha o [formulário de solicitação de lançamento público](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) para iniciar o processo de lançamento.
+Preencha o [formulário de solicitação de lançamento público](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) para iniciar o processo de lançamento.

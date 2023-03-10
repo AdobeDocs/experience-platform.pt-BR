@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;tags unificadas;tags;
-title: (Beta) Visão geral das tags unificadas
+title: Visão geral das tags unificadas (beta)
 description: Este documento fornece informações sobre tags unificadas na Adobe Experience Platform
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# (Beta) Visão geral de tags unificadas
+# Visão geral de tags unificadas (beta)
 
 >[!IMPORTANT]
 >

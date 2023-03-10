@@ -5,9 +5,9 @@ title: Expiração de dados do perfil pseudônimo
 description: Este documento fornece orientação geral sobre como configurar a expiração de dados para Perfis pseudônimos no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ A expiração de dados do perfil de pseudônimo não pode ser configurada por me
 
 - Os tipos de identidade a serem considerados para exclusões de perfil pseudônimo.
    - Por exemplo: `ECID` somente, `AAID` ou uma combinação de `ECID` e `AAID`.
-- O tempo de espera antes da exclusão de um perfil com pseudônimo. A recomendação padrão para clientes é de 30 dias. No entanto, esse valor pode ser diferente com base no seu caso de uso.
+- O tempo de espera antes da exclusão de um perfil com pseudônimo. A recomendação padrão para clientes é 14 dias. No entanto, esse valor pode ser diferente com base no seu caso de uso.
 - A contagem de perfis atual em comparação à contagem de perfis de licenças.
 
 ## Perguntas frequentes {#faq}
@@ -37,10 +37,10 @@ A seção a seguir lista as perguntas frequentes sobre a expiração dos dados d
 
 ### Quais usuários devem usar a expiração de dados de perfis pseudônimos?
 
-- Se estiver usando um conector que envia dados diretamente da origem para a Platform.
+- Se você estiver usando uma fonte de transmissão que envia dados diretamente para a Platform.
 - Se você tiver um site que atende clientes não autenticados em massa.
 - Se você tiver contagens excessivas de perfis em seus conjuntos de dados e tiver confirmado que essa contagem excessiva de perfis se deve ao tipo de identidade anônima baseada em cookies.
-   - Para determinar isso, você deve usar o relatório de sobreposição do tipo de identidade. Mais informações sobre este relatório podem ser encontradas em LINK
+   - Para determinar isso, você deve usar o relatório de sobreposição do tipo de identidade. Mais informações sobre este relatório podem ser encontradas no [seção relatório de sobreposição de identidade](./api/preview-sample-status.md#identity-overlap-report) do guia da API de status da amostra de visualização.
 
 ### Quais são alguns avisos que você deve estar ciente antes de usar a expiração de dados de perfis pseudônimos?
 

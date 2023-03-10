@@ -1,15 +1,19 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;tags administrativas;tags;
-title: Visão geral das tags administrativas
-description: Este documento fornece informações sobre tags administrativas no Adobe Experience Platform
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+keywords: Experience Platform;página inicial;tópicos populares;tags unificadas;tags;
+title: (Beta) Visão geral das tags unificadas
+description: Este documento fornece informações sobre tags unificadas na Adobe Experience Platform
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
-# Visão geral das tags
+# (Beta) Visão geral de tags unificadas
+
+>[!IMPORTANT]
+>
+>As tags unificadas estão na versão beta. Se quiser deixar feedback, selecione o botão na parte superior da página de administração das Tags.
 
 As tags são um recurso da Adobe Experience Platform que permite aos administradores gerenciar taxonomias de metadados para classificar objetos de negócios para facilitar a descoberta e a categorização. Tags são metadados que podem ser considerados palavras-chave que podem ser anexadas a um segmento, conjunto de dados, jornada ou outros objetos para permitir que as pesquisas localizem esse objeto e objetos relacionados. As tags são classificadas em dois tipos: categorizadas e não categorizadas.
 

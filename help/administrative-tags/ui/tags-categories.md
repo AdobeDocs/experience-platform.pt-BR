@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;categorias de tags;tags;
 title: Categorias de tags
-description: Este documento fornece informações sobre como gerenciar categorias de tags administrativas no Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+description: Este documento fornece informações sobre como gerenciar categorias de tags unificadas no Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 0%

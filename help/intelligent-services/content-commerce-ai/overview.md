@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud;introdução;ia de conteúdo e comércio;tópicos populares;Serviços inteligentes;ccai
+keywords: Experience Cloud;introdução;marcação de conteúdo;tópicos populares;Serviços inteligentes
 solution: Experience Platform
 title: Visão geral da marcação de conteúdo
-description: A IA de conteúdo e comércio é um conjunto de serviços de IA que permite extrair recursos inteligentes do seu conteúdo, organizar, simplificar o fluxo de conteúdo e fornecer experiências personalizadas mais impactantes aos seus clientes.
+description: A marcação de conteúdo é um conjunto de serviços de IA que permite extrair recursos inteligentes do seu conteúdo, organizar, simplificar o fluxo de conteúdo e fornecer experiências personalizadas mais impactantes aos seus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---

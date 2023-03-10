@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;introdução;ia de conteúdo;ia de comércio;ia de marcação de conteúdo;marcação de palavra-chave;marcação de palavra-chave
+keywords: Experience Platform;introdução;conteúdo;marcação de conteúdo ai;marcação de palavra-chave;marcação de palavra-chave
 solution: Experience Platform
 title: Marcação de palavras-chave na API de marcação de conteúdo
-description: O serviço de marcação de palavras-chave, quando recebe um documento de texto, extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada é usada.
+description: O serviço de marcação de palavra-chave, quando recebe um documento de texto, extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada é usada.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 6%
 
 ---
 

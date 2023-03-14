@@ -4,7 +4,7 @@ description: Saiba como começar a usar a API do Reactor, incluindo etapas para 
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1057'
 ht-degree: 97%
 
 ---
@@ -47,7 +47,7 @@ A tela **Adicionar uma API** é exibida. Selecione **API do Reactor da Experienc
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Na próxima tela, você será solicitado a criar uma credencial JSON Web Token (JWT). Para fazer isso, gere um novo par de chaves ou carregue sua própria chave pública. Para este tutorial, selecione a opção **Gerar um par de chaves** e selecione **Gerar par de chaves** no canto inferior direito.
+Na próxima tela, você será solicitado a criar uma credencial JSON Web Token (JWT) gerando um novo par de chaves ou fazendo upload de sua própria chave pública. Para este tutorial, selecione a opção **Gerar um par de chaves** e selecione **Gerar par de chaves** no canto inferior direito.
 
 ![](../images/api/getting-started/create-jwt.png)
 
@@ -149,7 +149,7 @@ Uma resposta bem-sucedida retorna um novo token de acesso, bem como o número de
 | `access_token` | O valor do token de acesso recém-gerado. Esse valor é usado para o cabeçalho `Authorization` necessário e deve ser fornecido no formato `Bearer {ACCESS_TOKEN}`. |
 | `expires_in` | O tempo restante até o token expirar, em milissegundos. Depois que um token expira, um novo deve ser gerado. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Próximas etapas
 

@@ -293,7 +293,7 @@ Importante: usar a ação &quot;variáveis definidas&quot; não enviará o beaco
 
 #### eVars
 
-Defina uma ou mais [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html).
+Defina uma ou mais [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=pt-BR).
 
 1. Selecione uma eVar na lista suspensa.
 1. Especifique se deseja definir o eVar como o valor (Definir como) ou copia (Duplicar de) outro eVar.

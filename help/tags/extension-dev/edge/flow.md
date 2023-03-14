@@ -1,10 +1,11 @@
 ---
 title: Fluxo de extensão de borda
-description: Saiba como os componentes de uma extensão de borda no Adobe Experience Platform interagem entre si no tempo de execução.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como os componentes de uma extensão de borda na Adobe Experience Platform interagem entre si no tempo de execução.
+exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 60%
+ht-degree: 93%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 60%
 
 Em extensões de borda, cada condição, ação e tipo de elemento de dados tem uma visualização que permite aos usuários modificar as configurações e um módulo de biblioteca para agir de acordo com essas configurações definidas pelo usuário.
 
-Como mostra o diagrama de alto nível a seguir, a visualização do tipo de ação da extensão será mostrada em um iframe no aplicativo integrado ao Adobe Experience Platform. A exibição é então usada para modificar configurações que são salvas na Plataforma. Quando a biblioteca de tempo de execução da tag é criada, tanto o módulo da biblioteca de tipo de ação da extensão quanto as configurações definidas pelo usuário serão incluídos na biblioteca de tempo de execução que é implantada no nó de borda. As configurações definidas pelo usuário da Platform são inseridas no módulo da biblioteca no tempo de execução.
+Como mostra o diagrama de alto nível a seguir, a visualização do tipo de ação da extensão será mostrada em um iframe no aplicativo integrado ao Adobe Experience Platform. A exibição é então usada para modificar configurações que são salvas na Plataform. Quando a biblioteca de tempo de execução da tag for criada, tanto o módulo de biblioteca do tipo de ação da extensão quanto as configurações definidas pelo usuário serão incluídos na biblioteca de tempo de execução que é implantada no nó de borda. As configurações definidas pelo usuário da Platform são inseridas no módulo de biblioteca no tempo de execução.
 
 ![diagrama do fluxo de extensão](../images/flow/edge/event-processing-flow.png)
 

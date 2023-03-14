@@ -4,7 +4,7 @@ description: Saiba como os erros são tratados na API do Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 99%
 
 ---
@@ -49,7 +49,7 @@ As respostas de erro têm como objetivo se adequar às [especificações de erro
 | `source` | Um objeto que contém referências à origem do erro, incluindo, opcionalmente, qualquer um dos seguintes membros:<ul><li>`pointer`: uma string [JSON Pointer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) que faz referência à entidade associada no documento de solicitação (como `/data` para um objeto de dados principal ou `/data/attributes/title` para um atributo específico).</li></ul> |
 | `meta` | Um objeto que contém metadados não padrão sobre o erro. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Referência de erro
 
@@ -107,4 +107,4 @@ A tabela a seguir lista os diferentes erros que a API pode retornar.
 | `upgraded-extension-required` | Depois de instalar uma atualização de extensão, você deve incluí-la em todas as bibliotecas até que a atualização chegue à produção. A única exceção será se a extensão ainda não tiver sido publicada. |
 | `upstream-build-required` | É necessário um build bem-sucedido para a Biblioteca upstream para que você possa criá-la. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

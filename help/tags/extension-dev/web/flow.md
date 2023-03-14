@@ -1,10 +1,11 @@
 ---
 title: Fluxo de extensão da Web
-description: Saiba como os componentes de extensão da Web interagem entre si no tempo de execução no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como os componentes de extensão da Web interagem entre si durante o tempo de execução na Adobe Experience Platform.
+exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 62%
+ht-degree: 93%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 62%
 
 Em extensões da Web, cada evento, condição, ação e tipo de elemento de dados tem uma visualização que permite aos usuários modificar as configurações e um módulo de biblioteca para agir de acordo com essas configurações definidas pelo usuário.
 
-Como mostra o diagrama de alto nível a seguir, a visualização do tipo de evento da extensão será mostrada em um iframe no aplicativo integrado ao Adobe Experience Platform. O usuário usa a exibição para modificar as configurações que são salvas na Plataforma. Quando a biblioteca de tempo de execução da tag é criada, tanto o módulo da biblioteca de tipos de evento da extensão quanto as configurações definidas pelo usuário serão incluídos na biblioteca de tempo de execução. No tempo de execução, o Platform injetará as configurações definidas pelo usuário no módulo da biblioteca.
+Como mostra o diagrama de alto nível a seguir, a visualização do tipo de evento da extensão será mostrada em um iframe no aplicativo integrado ao Adobe Experience Platform. O usuário usa a exibição para modificar as configurações, que são salvas na Platform. Quando a biblioteca de tempo de execução de tag for criada, tanto o módulo da biblioteca de tipos de evento da extensão quanto as configurações definidas pelo usuário serão incluídos na biblioteca de tempo de execução. No tempo de execução, o Platform injetará as configurações definidas pelo usuário no módulo da biblioteca.
 
 ![diagrama do fluxo de extensão](../images/flow/web/extension-flow.png)
 
@@ -28,6 +29,6 @@ O fluxo de processamento de regras contém as seguintes fases:
 
 1. Os métodos `settings` e `trigger` são fornecidos ao módulo da biblioteca de eventos na inicialização.
 1. Quando o módulo da biblioteca de eventos determina que o evento ocorreu, o módulo da biblioteca de eventos chama `trigger`.
-1. As tags passam `settings` para os módulos de biblioteca de condições da regra, onde as condições são avaliadas.
+1. As tags passam `settings` para os módulos de biblioteca de condições de regra, nos quais as condições são avaliadas.
 1. Cada módulo de biblioteca de condições retorna se uma condição é avaliada como verdadeira.
 1. Se todas as condições forem aprovadas, as ações da regra serão executadas.

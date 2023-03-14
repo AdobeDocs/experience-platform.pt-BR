@@ -4,7 +4,7 @@ description: Saiba como filtrar resultados ao listar recursos na API do Reactor.
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '553'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | `{OPERATOR}` | O operador que determina como os resultados são avaliados em relação ao `{VALUE}` fornecido. Os operadores compatíveis estão listados na seção [Apêndice](#supported-operators). |
 | `{VALUE}` | O valor para comparar os resultados retornados. Quando você compara para determinar a igualdade usando o operador `EQ`, o valor deve ser uma correspondência exata, que diferencia maiúsculas e minúsculas, para ser incluído na resposta. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

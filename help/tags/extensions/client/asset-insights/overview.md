@@ -37,7 +37,7 @@ A extensão de tag do &quot;*Adobe Analytics*&quot; para o Adobe Experience Plat
 
 ### Adobe Experience Manager (AEM)
 
-1. Ative o [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). No AEM, selecione **[!UICONTROL Ferramentas > Ativos]** e abra o painel **[!UICONTROL Configuração do Insights]**.
+1. Ative o [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR). No AEM, selecione **[!UICONTROL Ferramentas > Ativos]** e abra o painel **[!UICONTROL Configuração do Insights]**.
 
 1. Desative o rastreamento de UUID.
 
@@ -61,7 +61,7 @@ A integração recomendada do [Platform](https://experienceleague.adobe.com/docs
 
 ### Ativar o Asset Insight no AEM
 
-Para obter instruções sobre como ativar o Asset Insights, consulte o [Guia do usuário do Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+Para obter instruções sobre como ativar o Asset Insights, consulte o [Guia do usuário do Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR).
 
 ### Ativar o rastreamento de UUID para o Assets
 
@@ -132,7 +132,7 @@ Configure três regras conforme descrito acima:
 
    * Nunca houve um ativo na área de visualização do navegador
 
-   * Não havia ativos na página configurada com o [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) habilitado no AEM.
+   * Não havia ativos na página configurada com o [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR) habilitado no AEM.
 
 **Cliques**
 
@@ -142,7 +142,7 @@ Configure três regras conforme descrito acima:
 
 Na solicitação de imagem resultante do Analytics (da próxima página), se `a.assets.idlist` tiver as IDs de ativo na página de destino e `a.assets.clickedid` tiver a ID do ativo que foi selecionado na página de origem, isso indicará que a regra está funcionando corretamente.
 
-Se `a.assets.clickedid` não está na solicitação de imagem, é provável que o ativo que foi selecionado não tenha o [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) habilitado no AEM.
+Se `a.assets.clickedid` não está na solicitação de imagem, é provável que o ativo que foi selecionado não tenha o [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR) habilitado no AEM.
 
 **Cliques sem destino**
 
@@ -152,4 +152,4 @@ Se `a.assets.clickedid` não está na solicitação de imagem, é provável que 
 
 Na solicitação de imagem resultante do Analytics, se `a.assets.clickedid` tiver a ID do ativo, a regra está funcionando corretamente.
 
-Se `a.assets.clickedid` não está na solicitação de imagem, é provável que o ativo que foi selecionado não tenha o [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) habilitado no AEM.
+Se `a.assets.clickedid` não está na solicitação de imagem, é provável que o ativo que foi selecionado não tenha o [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR) habilitado no AEM.

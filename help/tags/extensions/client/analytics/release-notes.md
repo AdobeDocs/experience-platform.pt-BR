@@ -57,7 +57,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 **Correções de erros**:
 
-* Atualizado [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Atualizado [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
 * Atualização de fallback linkName para espelhar a lógica de Activity Map em vez de usar innerHTML.
 
 ## 6 de agosto de 2020
@@ -70,7 +70,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 **Recursos**:
 
-* [AppMeasurement atualizado para a versão 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* [AppMeasurement atualizado para a versão 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
 * Pequenas alterações na interface do usuário para que as configurações adicionais agora apareçam recolhidas em forma de acordeão em vez de em uma caixa de seleção.
 
 ## 2 de junho de 2020
@@ -98,7 +98,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 **Recursos**:
 
-* [AppMeasurement atualizado para 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* [AppMeasurement atualizado para 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR)
 
 ## 2 de março de 2020
 
@@ -110,7 +110,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 **Recursos**:
 
-* [AppMeasurement atualizado para 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* [AppMeasurement atualizado para 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR)
 * Atualização da biblioteca DIL no módulo do Audience Manager para a versão 9.4
 * Aumento do comprimento dos campos de entrada na extensão
 * eVars e props nas configurações de extensão e ação agora mostram o nome amigável do Analytics
@@ -171,7 +171,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 * Atualização da extensão do Adobe Analytics para oferecer suporte à DIL 9.2 para o Audience Manager
 
-* Atualização da extensão para oferecer suporte ao [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Atualização da extensão para oferecer suporte ao [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR#version-2.15.0)
 * A seguinte caixa de seleção foi removida, pois não há mais suporte: &quot;Não anexe o IFRAME de publicação de destino aos destinos DOM ou fire&quot;
 
 ## 4 de junho de 2019

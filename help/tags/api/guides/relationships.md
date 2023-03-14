@@ -4,7 +4,7 @@ description: Saiba como as relações de recursos são estabelecidas na API do r
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '762'
 ht-degree: 99%
 
 ---
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | A ID da propriedade à qual o recurso pertence. |
 | `{RESOURCE_TYPE}` | O tipo de recurso a ser criado. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | O identificador exclusivo de um recurso. Cada `id` deve ser acompanhado por uma propriedade irmã `type`, indicando o tipo de recurso em questão. |
 | `type` | O tipo de recurso conforme referenciado por um campo `id` irmão. Os valores aceitos são `data_elements`, `rules`, `extensions` e `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Criar uma relação por URL {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | O identificador exclusivo de um recurso. Cada `id` deve ser acompanhado por uma propriedade irmã `type`, indicando o tipo de recurso em questão. |
 | `type` | O tipo de recurso conforme referenciado por um campo `id` irmão. Os valores aceitos são `data_elements`, `rules`, `extensions` e `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Requisitos de relação por recurso {#requirements}
 
@@ -151,9 +151,9 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
-| `entity` | Instantâneo |  |  |
+| `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Builds
 
@@ -162,19 +162,19 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
 | `rules` |  |  |  |
-| `environment` | Instantâneo |  |  |
-| `library` | Instantâneo |  |  |
-| `property` | Instantâneo |  |  |
+| `environment` | ✓ |  |  |
+| `library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Retornos de chamada
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | Instantâneo |  |  |
+| `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Empresas
 
@@ -182,22 +182,22 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Elementos de dados
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | Instantâneo |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | Instantâneo |  |  |
-| `origin` | Instantâneo |  |  |
-| `extension` | Instantâneo | Instantâneo |  |
-| `updated_with_extension` | Instantâneo |  |  |
-| `updated_with_extension_package` | Instantâneo |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
+| `updated_with_extension` | ✓ |  |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Ambientes
 
@@ -205,62 +205,62 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
-| `host` | Instantâneo | Instantâneo |  |
-| `property` | Instantâneo |  |  |
+| `host` | ✓ | ✓ |  |
+| `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Extensões
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | Instantâneo |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | Instantâneo |  |  |
-| `origin` | Instantâneo |  |  |
-| `extension_package` | Instantâneo | Instantâneo |  |
-| `updated_with_extension_package` | Instantâneo |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension_package` | ✓ | ✓ |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hosts
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | Instantâneo |  |  |
+| `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Bibliotecas
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
-| `environment` |  |  | Instantâneo |
-| `data_elements` |  |  | Instantâneo |
-| `extensions` |  |  | Instantâneo |
-| `rules` |  |  | Instantâneo |
+| `environment` |  |  | ✓ |
+| `data_elements` |  |  | ✓ |
+| `extensions` |  |  | ✓ |
+| `rules` |  |  | ✓ |
 | `notes` |  |  |  |
-| `upstream_library` | Instantâneo |  |  |
-| `property` | Instantâneo |  |  |
+| `upstream_library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Notas
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | Instantâneo |  |  |
+| `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Propriedades
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `company` | Instantâneo |  |  |
+| `company` | ✓ |  |  |
 | `callbacks` |  |  |  |
 | `environments` |  |  |  |
 | `libraries` |  |  |  |
@@ -268,38 +268,38 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Componentes da regra
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | Instantâneo |  |  |
-| `updated_with_extension` | Instantâneo |  |  |
-| `extension` | Instantâneo | Instantâneo |  |
+| `updated_with_extensions_package` | ✓ |  |  |
+| `updated_with_extension` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
 | `notes` |  |  |  |
-| `origin` | Instantâneo |  |  |
-| `property` | Instantâneo |  |  |
-| `rules` | Instantâneo | Instantâneo |  |
-| `revisions` | Instantâneo |  |  |
+| `origin` | ✓ |  |  |
+| `property` | ✓ |  |  |
+| `rules` | ✓ | ✓ |  |
+| `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Regras
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | Instantâneo |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | Instantâneo |  |  |
-| `origin` | Instantâneo |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
 | `rule_components` |  |  |  |
 
 ### Segredos
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | Instantâneo |  | Instantâneo |
-| `environment` | Instantâneo | Instantâneo |  |
+| `property` | ✓ |  | ✓ |
+| `environment` | ✓ | ✓ |  |
 

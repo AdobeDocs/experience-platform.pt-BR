@@ -1,16 +1,17 @@
 ---
 title: Criptografar valores
-description: Saiba como criptografar valores confidenciais ao usar a API de reator.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+description: Saiba como criptografar valores confidenciais ao usar a API do Reactor.
+exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 1%
+source-wordcount: '392'
+ht-degree: 100%
 
 ---
 
 # Criptografar valores
 
-Ao usar tags no Adobe Experience Platform, alguns workflows exigem o fornecimento de valores confidenciais (por exemplo, o fornecimento de uma chave privada ao fornecer bibliotecas a ambientes por meio de hosts). A natureza sensível desses poderes exige
+Ao serem usadas tags na Adobe Experience Platform, alguns workflows exigem o fornecimento de valores confidenciais (por exemplo, o fornecimento de uma chave privada ao enviar bibliotecas a ambientes por meio de hosts). A natureza confidencial dessas credenciais exige
 transferência e armazenamento seguros.
 
 Este documento descreve como criptografar valores confidenciais usando a [criptografia GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (também conhecida como GPG) para que somente o sistema de tags possa lê-los.
@@ -22,9 +23,9 @@ Depois de [baixar](https://gnupg.org/download/) e instalar a versão mais recent
 * [Chave GPG](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
 * [Soma de verificação](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
-## Importe a tecla para o seu chaveiro
+## Importe a chave para seu chaveiro
 
-Depois de salvar a chave em seu computador, o próximo passo é adicioná-la ao seu chaveiro GPG.
+Depois de salvar a chave em seu computador, o próximo passo é adicioná-la a seu chaveiro GPG.
 
 **Sintaxe**
 
@@ -36,7 +37,7 @@ gpg --import {KEY_NAME}
 | --- | --- |
 | `{KEY_NAME}` | O nome do arquivo de chave pública. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Exemplo**
 
@@ -46,7 +47,7 @@ gpg --import launch@adobe.com_pub.gpg
 
 ## Criptografar valores
 
-Depois de adicionar a chave ao seu chaveiro, você pode começar a criptografar valores usando o sinalizador `--encrypt`. O script a seguir demonstra como esse comando funciona:
+Depois de adicionar a chave ao chaveiro, você pode começar a criptografar valores usando o sinalizador `--encrypt`. O script a seguir demonstra como esse comando funciona:
 
 ```shell
 echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch@adobe.com>"
@@ -56,10 +57,10 @@ Esse comando pode ser detalhado da seguinte maneira:
 
 * A entrada é fornecida para o comando `gpg`.
 * `--armor` cria saída blindada ASCII em vez de binária. Isso simplifica a transferência do valor por meio do JSON.
-* `--encrypt` instrui o GPG a criptografar os dados.
-* `-r` define o recipient para os dados. Somente o recipient (o detentor da chave privada que corresponde à chave pública) pode descriptografar os dados. O nome do recipient da chave desejada pode ser encontrado examinando a saída de `gpg --list-keys`.
+* `--encrypt` instrui o GPG para criptografar os dados.
+* `-r` define o recipient dos dados. Somente o recipient (o detentor da chave privada que corresponde à chave pública) pode descriptografar os dados. Para encontrar o nome do recipient da chave desejada, examine a saída de `gpg --list-keys`.
 
-O comando acima usa a chave pública para `Tags Data Encryption <launch@adobe.com>` criptografar o valor, `Example value`, no formato ASCII blindado.
+O comando acima usa a chave pública de `Tags Data Encryption <launch@adobe.com>` para criptografar o valor, `Example value`, no formato ASCII blindado.
 
 A saída do comando seria semelhante ao seguinte:
 
@@ -86,8 +87,8 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 Essa saída só pode ser descriptografada por sistemas que tenham a chave privada que
 corresponde à chave pública `Tags Data Encryption <launch@adobe.com>`.
 
-Essa saída é o valor que deve ser fornecido em um ao enviar dados para a API do reator. O sistema armazena essa saída criptografada e a decodifica temporariamente conforme necessário. Por exemplo, o sistema descriptografa as credenciais do host por tempo suficiente para iniciar uma conexão com o servidor e remove imediatamente todos os rastreamentos do valor descriptografado.
+Essa saída é o valor que deve ser fornecido ao serem enviados dados à API do Reactor. O sistema armazena essa saída criptografada e a decodifica temporariamente, conforme a necessidade. Por exemplo, o sistema descriptografa as credenciais do host por tempo suficiente para iniciar uma conexão com o servidor e remove imediatamente todos os rastreamentos do valor descriptografado.
 
 >[!NOTE]
 >
->O formato do valor blindado e criptografado é importante. Certifique-se de que as retornos de linha sejam evitadas corretamente no valor fornecido na solicitação.
+>O formato do valor blindado e criptografado é importante. Certifique-se de que os retornos de linha tenham um escape adequado no valor fornecido na solicitação.

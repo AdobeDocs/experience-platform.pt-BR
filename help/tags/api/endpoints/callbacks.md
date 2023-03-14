@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o endpoint /callbacks na API do Reac
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 96%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujos retornos de chamada você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | O `id` do retorno de chamada que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | O `id` da [propriedade](./properties.md) sob a qual o retorno de chamada está sendo definido. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | O destino da URL para a mensagem de retorno de chamada. A URL deve usar a extensão de protocolo HTTPS. |
 | `subscriptions` | Uma matriz de strings, indicando os tipos de evento de auditoria que acionarão o retorno de chamada. Consulte o [manual de endpoint de eventos de auditoria](./audit-events.md) para obter uma lista de tipos de eventos possíveis. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | A `id` do retorno de chamada que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | A `id` do retorno de chamada que você deseja atualizar. Isso deve corresponder ao valor `{CALLBACK_ID}` informado no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `callbacks`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | A `id` do retorno de chamada que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

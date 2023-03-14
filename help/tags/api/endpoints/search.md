@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o endpoint /search na API do Reactor
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 97%
 
 ---
@@ -100,7 +100,7 @@ curl -X POST \
 | `sort` | Uma matriz de objetos, indicando a ordem na qual classificar os resultados. Cada objeto deve conter uma única propriedade: a chave representa o caminho do campo de acordo com o qual classificar, e o valor representa a ordem de classificação (`asc` para crescente, `desc` para decrescente). |
 | `resource_types` | Uma matriz de sequências de caracteres, indicando os tipos de recurso específicos a serem pesquisados. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 

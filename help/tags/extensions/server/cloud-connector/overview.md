@@ -64,12 +64,12 @@ A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a
 | Header | Descrição |
 |---|---|
 | [A-IM](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Transmitido por um agente do usuário para indicar que deseja acessar um estado anterior de um recurso original. Para esse fim, o cabeçalho `Accept-Datetime` é transmitido em uma solicitação HTTP emitida em relação a um TimeGate para um recurso original, e seu valor indica a data e hora do estado anterior desejado do recurso original. |
-| Access-Control-Request-Headers | Usado pelos navegadores ao emitir uma [solicitação de comprovação](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), para informar ao servidor quais [cabeçalhos HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) o cliente pode enviar quando a solicitação real é feita. |
+| [Accept-Datetime](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) | Transmitido por um agente do usuário para indicar que deseja acessar um estado anterior de um recurso original. Para esse fim, o cabeçalho `Accept-Datetime` é transmitido em uma solicitação HTTP emitida em relação a um TimeGate para um recurso original, e seu valor indica a data e hora do estado anterior desejado do recurso original. |
+| Access-Control-Request-Headers | Usado pelos navegadores ao emitir uma [solicitação de comprovação](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), para informar ao servidor quais [cabeçalhos HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers) o cliente pode enviar quando a solicitação real é feita. |
 | Método de solicitação de controle de acesso | Usado pelos navegadores ao emitir uma [solicitação de comprovação](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), para informar ao servidor qual [método HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods) será usado quando a solicitação real for feita. Esse cabeçalho é necessário porque a solicitação de comprovação é sempre [OPÇÃO](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/OPTIONS) e não usa o mesmo método que a solicitação real. |
 | Autorização | Contém as credenciais para autenticar um agente-usuário com um servidor. |
 | [Controle de cache](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Cache-Control) | Diretivas para mecanismos de armazenamento em cache tanto em solicitações quanto em respostas. |
@@ -88,7 +88,7 @@ A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a
 | [Se-Nenhuma-Correspondência](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-None-Match) |  |
 | [Se-Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Range) |  |
 | [Se-Inalterado-Desde](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Máx-Encaminhados](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
+| [Máx-Encaminhados](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
 | [Origem](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Origin) |  |
 | [Pragma](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Pragma) | Cabeçalho específico da implementação que pode ter vários efeitos em qualquer lugar na cadeia de solicitação-resposta. Usado para compatibilidade com versões anteriores com caches HTTP/1.0 nos quais o cabeçalho Cache-Control ainda não está presente. |  |
 | [Autorização de proxy](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Proxy-Authorization) |

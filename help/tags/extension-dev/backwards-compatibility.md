@@ -1,10 +1,11 @@
 ---
 title: Padrão de compatibilidade com versões anteriores
-description: Saiba mais sobre o padrão de compatibilidade com versões anteriores no Adobe Experience Platform, que garante que as versões atualizadas das extensões de tags sejam compatíveis com as versões anteriores.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre o padrão de compatibilidade com versões anteriores na Adobe Experience Platform, que garante que as versões atualizadas das extensões de tags sejam compatíveis com as versões anteriores.
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 84%
+ht-degree: 97%
 
 ---
 
@@ -14,11 +15,11 @@ ht-degree: 84%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-As atualizações para uma extensão de tag no Adobe Experience Platform devem ser compatíveis com versões anteriores da extensão. Isso significa que:
+As atualizações de uma extensão de tag na Adobe Experience Platform devem ser compatíveis com versões anteriores da extensão. Isso significa que:
 
 * Quaisquer modificações nos componentes principais das extensões devem ser compatíveis com as versões anteriores. Isso inclui a configuração de extensão, os tipos de evento, os tipos de condição, os tipos de ação, os tipos de elementos de dados e os módulos compartilhados.
 * Os componentes criados por um usuário com a versão mais antiga da extensão devem poder passar pela validação em relação aos esquemas fornecidos pela versão mais recente.
-* Um usuário do Adobe Experience Platform deve ser capaz de instalar uma versão atualizada de sua extensão e fazer com que tudo o que fez continue a funcionar exatamente como está até fazer alterações deliberadas.
+* Um usuário da Adobe Experience Platform deve ser capaz de instalar uma versão atualizada da extensão e fazer com que tudo o que eles criou continue a funcionar exatamente como está até que ele faça alterações deliberadas.
 
 ## Alterações permitidas
 
@@ -56,7 +57,7 @@ Podem existir cenários em que você tem um motivo de negócios válido e acha q
 1. Desejo alterar um campo opcional para ser obrigatório => Criar um novo componente que exija o campo desejado e substituir o antigo
 1. Desejo alterar a API de um módulo compartilhado => Criar um novo módulo compartilhado e substituir o antigo
 
-Você pode ter encontrado uma questão comum. Isso é bom. Ao descontinuar um componente antigo, você notificará os usuários da sua extensão de que ele foi descontinuado e que eles precisam alternar para um novo componente.  Algumas sugestões sobre como se comunicar com os usuários:
+Você pode ter encontrado uma questão comum. Isso é bom. Ao substituir um componente antigo, convém notificar os usuários da extensão sobre a substituição e informá-los de que precisam mudar para um novo componente.  Algumas sugestões sobre como se comunicar com os usuários:
 
 * Atualize o nome de exibição do componente antigo para incluir &quot;(Obsoleto)&quot;.
 * Atualize a visualização do componente antigo para ter um texto de aviso vermelho grande de que esse componente foi descontinuado e que o usuário deve mudar para o novo componente.

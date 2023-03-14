@@ -1,10 +1,11 @@
 ---
 title: Notas
-description: Saiba como adicionar anotações textuais a determinados recursos de tags no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como adicionar anotações textuais a determinados recursos de tag na Adobe Experience Platform.
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 73%
+ht-degree: 94%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 73%
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Notas são anotações textuais que podem ser adicionadas a determinados recursos de tags no Adobe Experience Platform. As notas podem ser anexadas aos seguintes recursos:
+Notas são anotações textuais que podem ser adicionadas a determinados recursos de tags na Adobe Experience Platform. As notas podem ser anexadas aos seguintes recursos:
 
 * Extensões
 * Elementos de dados
@@ -42,6 +43,6 @@ Selecione **[!UICONTROL Notas]** para expandir o painel direito e exibir as nota
 
 ## Outras
 
-* As notas nos recursos de tag correspondem ao comportamento das notas no DTM, na medida em que são imutáveis e não podem ser editadas ou excluídas.
+* As notas nos recursos de tags correspondem ao comportamento das notas no DTM, pois são imutáveis e não podem ser editadas nem excluídas.
 * Ao exibir revisões anteriores de um recurso, somente as notas que foram criadas antes da `created_at` data dessa revisão são exibidas.
 * Quando você exclui um recurso, todas as notas anexadas ao recurso também são excluídas.

@@ -4,8 +4,8 @@ description: A Higiene de dados do Adobe Experience Platform permite gerenciar o
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 2%
+source-wordcount: '604'
+ht-degree: 1%
 
 ---
 
@@ -55,7 +55,7 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 | Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)e [destinos](../destinations/home.md) são atualizadas de acordo com as alterações em segmentos relacionados. |
 | Exclusão em disco concluída | 14 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do lago de dados. O [estatuto do trabalho de higiene](./ui/browse.md#view-details) que excluiu o conjunto de dados é atualizado para refletir isso. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- ### Record deletes {#record-delete-transparency}
 

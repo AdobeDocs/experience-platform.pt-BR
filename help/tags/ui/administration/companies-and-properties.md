@@ -1,10 +1,11 @@
 ---
 title: Propriedades
 description: Saiba como suas extensões, ambientes e bibliotecas são organizados e agrupados para sua organização no Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1178'
-ht-degree: 69%
+ht-degree: 98%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 69%
 
 ## Propriedades da Web
 
-Uma propriedade da Web é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Cada propriedade da Web tem seu próprio conjunto de códigos incorporados e pode ser implantada em qualquer número de sites distintos (domínios diferentes).
+Uma propriedade da Web é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Cada propriedade da Web tem seu próprio conjunto de códigos integrados e pode ser implantada em qualquer número de sites distintos (domínios diferentes).
 
 ## Propriedades para dispositivo móvel
 
@@ -24,7 +25,7 @@ O tipo de propriedade para dispositivo móvel pode conter vários aplicativos. P
 
 ## Práticas recomendadas para o planejamento de propriedades {#best-practices-for-planning-properties}
 
-Cada implementação de tag no Adobe Experience Platform pode ser muito diferente. Eles têm uma grande variedade de necessidades de coleta de dados, uso de variáveis, extensões, tags de terceiros, outros sistemas e tecnologias, pessoas, equipes, regiões geográficas etc. Você deve estruturar suas propriedades de uma maneira que corresponda ao fluxo de trabalho e processos da organização IMS.
+Cada implementação de tag na Adobe Experience Platform pode ser muito diferente. Elas têm diversas necessidades de coleção de dados, uso de variáveis, extensões, tags de terceiros, outros sistemas e tecnologias, pessoas, equipes, áreas geográficas etc. Você deve estruturar suas propriedades de forma que corresponda ao fluxo de trabalho e aos processos de sua empresa de IMS.
 
 Considere os itens a seguir ao planejar propriedades:
 
@@ -36,7 +37,7 @@ Considere os itens a seguir ao planejar propriedades:
 
 ### Estrutura de código
 
-Os sites são em HTML, e os aplicativos para dispositivos móveis se baseiam em códigos. Se os modelos ou bases de código HTML subjacentes forem os mesmos para vários sites e aplicativos, considere usar uma única propriedade de tag para gerenciar vários sites ou aplicativos.
+Os sites são em HTML, e os aplicativos para dispositivos móveis se baseiam em códigos. Se os modelos ou as bases de código HTML subjacentes forem os mesmos para vários sites e aplicativos, considere o uso de uma única propriedade de tag para gerenciar vários sites ou aplicativos.
 
 ### Dados
 
@@ -44,7 +45,7 @@ Os dados que você coletará de todos seus sites e aplicativos são muito semelh
 
 Quando os dados que você precisa coletar são semelhantes, pode ser interessante agrupar esses sites ou aplicativos em outra propriedade para evitar regras duplicadas ou a cópia de uma propriedade para outra.
 
-Se a coleta de dados é exclusiva para cada site ou aplicativo, pode fazer sentido separá-los em suas próprias propriedades. Este método permite controlar a coleção de dados mais especificamente sem usar grandes quantidades de lógica condicional nos scripts personalizados.
+Se a coleção de dados for exclusiva a cada site ou aplicativo, talvez faça sentido separá-las em propriedades próprias. Este método permite controlar a coleção de dados mais especificamente sem usar grandes quantidades de lógica condicional nos scripts personalizados.
 
 ### Variáveis
 
@@ -54,9 +55,9 @@ Por exemplo, se eVar27 é utilizada para o mesmo valor de origem entre os sites,
 
 ### Extensões, tags e sistemas
 
-As extensões, tags e sistemas que você implantará são muito semelhantes, mais ou menos semelhantes ou exclusivas?
+As extensões, as tags e os sistemas que você implantará são muito semelhantes, mais ou menos semelhantes ou exclusivos?
 
-Se as extensões, tags e sistemas que você implantará forem semelhantes nos seus sites ou aplicativos, você pode inclui-los na mesma propriedade.
+Se as extensões, as tags e os sistemas que você implantará são muito semelhantes em seus sites ou aplicativos, convém incluí-los na mesma propriedade.
 
 Se você estiver implantando o [!DNL Adobe Analytics] somente em um site ou aplicativo, e suas outras extensões e tags também forem exclusivas, talvez você queira criar propriedades separadas para ter mais controle.
 
@@ -64,13 +65,13 @@ Por exemplo, se estiver implantando o [!DNL Adobe Analytics], o [!DNL Target] e 
 
 ### Pessoas
 
-Indivíduos, equipes e organizações que estão trabalhando com o Adobe Experience Platform precisarão acessar todos os sites e aplicativos, alguns deles ou apenas um?
+Os indivíduos, as equipes e as organizações que trabalham na Adobe Experience Platform precisarão acessar todos os sites e aplicativos, alguns deles ou apenas um?
 
-Os recursos do Gerenciamento de usuários permitem que você atribua funções diferentes a pessoas diferentes para todas as propriedades da ou de acordo com cada uma. Se alguém tiver as permissões necessárias, essa pessoa poderá executar ações administrativas em todas as propriedades dessa Organização do Platform IMS. Todas as demais funções podem ser atribuídas de acordo com propriedades. Você pode ocultar uma propriedade de determinados usuários (que não sejam administradores) não atribuindo a eles nenhuma função na propriedade.
+Os recursos do Gerenciamento de usuários permitem que você atribua funções diferentes a pessoas diferentes para todas as propriedades da ou de acordo com cada uma. Se uma pessoa tiver direitos suficientes, poderá executar ações administrativas em todas as propriedades naquela empresa de IMS da Platform. Todas as demais funções podem ser atribuídas de acordo com propriedades. Você pode ocultar uma propriedade de determinados usuários (que não sejam administradores) não atribuindo a eles nenhuma função na propriedade.
 
 ## Página Propriedades
 
-Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Para a web, há apenas um código incorporado de publicação por propriedade. Para dispositivos móveis, há uma ID de aplicativo de configuração por propriedade.
+Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Para a Web, há apenas um código incorporado de publicação por propriedade. Para dispositivos móveis, há uma ID de aplicativo para configuração por propriedade.
 
 Uma propriedade pode ser qualquer agrupamento de um ou mais domínios e subdomínios. É possível gerenciar e rastrear esses ativos da mesma maneira. Por exemplo, suponhamos que você tenha vários sites baseados em um só modelo e queira rastrear os mesmos recursos em todos. É possível aplicar uma propriedade a vários domínios.
 
@@ -88,7 +89,7 @@ Selecione uma propriedade para ter uma visão geral dela. A visão geral mostra 
 
 ## Criar ou configurar uma propriedade
 
-Esta seção fornece orientação sobre como criar ou configurar uma propriedade de tag no Adobe Experience Platform.
+Esta seção fornece orientação sobre como criar ou configurar uma propriedade de tag na Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -122,7 +123,7 @@ Siga as instruções para criar uma propriedade móvel.
 1. Preencha os campos:
 
    * **Nome:** o nome da sua propriedade.
-   * **Privacidade:** por padrão, a configuração de privacidade está definida como Aceitar, o que significa que você gostaria que o SDK coletasse e enviasse dados para soluções. Se você selecionar Recusar, o SDK, por padrão, NÃO enviará dados para soluções. Se você escolher Desconhecido como a configuração, o SDK exigirá que o aplicativo primeiro solicite ao usuário que permita a coleta e o compartilhamento de dados.
+   * **Privacidade:** por padrão, a configuração de privacidade está definida como Aceitar, o que significa que você gostaria que o SDK coletasse e enviasse dados para soluções. Se você selecionar Recusar, o SDK, por padrão, NÃO enviará dados para soluções. Se você escolher Desconhecido como configuração, o SDK exigirá que o aplicativo primeiro ofereça ao usuário a permissão para compartilhamento e coleção de dados.
 
       >[!NOTE]
       >
@@ -132,7 +133,7 @@ Siga as instruções para criar uma propriedade móvel.
 
 1. Selecione **[!UICONTROL Salvar]**.
 
-Após a criação da propriedade, a Platform adiciona automaticamente um host padrão, um conjunto de ambientes (desenvolvimento, armazenamento temporário e produção) e as extensões padrão.
+Após a criação da propriedade, a Platform adiciona automaticamente um host padrão, um conjunto de ambientes (Desenvolvimento, Preparo e Produção) e as extensões padrão.
 
 ## Excluir uma propriedade da
 

@@ -3,9 +3,9 @@ keywords: transmissão; destino HTTP
 title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2436'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Se você selecionar a variável **[!UICONTROL Credenciais de cliente OAuth 2]** 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos tiverem sido criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos tiverem sido mapeados para o destino para ativação. Exiba a documentação de um exemplo de exportação de dados com esta opção selecionada.<p>conteúdo do primeiro marcador</p><p>conteúdo do segundo marcador</p><ul><li>Item de lista um.</li><li>Item de lista dois.</li></ul> - Mais linhas de texto. - Ainda mais linhas de texto. Teste de formatação para ver se podemos: <br>Usar formatação HTML</p><p>Ou até mesmo usar tags de parágrafo. Esta é a linha um.</p><p>E mais marcas de parágrafo, para a linha dois.</p><p>Todas as marcas de parágrafo. Para a linha três.</p>Finalmente, um teste para incluir links com markdown [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](link absoluto) e HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=pt-BR">texto do link</a> syntax.Really finalmente, um teste para incluir links com o markdown [../overview.md](links relativos) e HTML <a href="../overview.md">texto do link relativo</a> sintaxe."
+>abstract="Ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos tiverem sido criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos tiverem sido mapeados para o destino para ativação. Exiba a documentação de um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"

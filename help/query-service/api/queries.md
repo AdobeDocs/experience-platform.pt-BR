@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;guia de api;consultas;consulta;serviço de consulta;
 solution: Experience Platform
 title: Endpoint da API de consultas
-description: As seções a seguir abordam as chamadas que você pode fazer usando o endpoint /queries na API do serviço de consulta.
+description: As seções a seguir abordam as chamadas que você pode fazer usando o endpoint /queries na API de serviço de consulta.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '868'
+ht-degree: 3%
 
 ---
 

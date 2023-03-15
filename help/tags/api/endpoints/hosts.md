@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /hosts na API
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '797'
 ht-degree: 92%
 
 ---
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que tem os hosts. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ GET /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | O `id` do host que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -190,7 +190,7 @@ POST /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | O `id` da [propriedade](./properties.md) em que você está definindo o host. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -228,11 +228,11 @@ curl -X POST \
 | `attributes.path` | O caminho a ser anexado ao URL `server`. |
 | `attributes.port` | Um número inteiro que indica a porta específica do servidor que será usada. |
 | `attributes.server` | O URL do host do servidor. |
-| `attributes.skip_symlinks`<br><br>(Somente para hosts SFTP) | Por padrão, todos os hosts SFTP usam links simbólicos (symlinks) para referenciar builds de biblioteca que são salvas no servidor. No entanto, nem todos os servidores suportam o uso de links simbólicos. Quando este atributo é incluído e definido como `true`, o host usa uma operação de cópia para atualizar os ativos de criação diretamente, em vez de usar links simbólicos. |
+| `attributes.skip_symlinks`<br><br>(Somente para hosts SFTP) | Por padrão, todos os hosts SFTP usam links simbólicos (symlinks) para fazer referência às builds de biblioteca que são salvas no servidor. No entanto, nem todos os servidores suportam o uso de symlinks. Quando este atributo é incluído e definido como `true`, o host usa uma operação de cópia para atualizar os ativos de build diretamente, em vez de usar symlinks. |
 | `attributes.username` | Um nome de usuário opcional para autenticação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `hosts`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -292,7 +292,7 @@ PATCH /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | O `id` do host que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -322,7 +322,7 @@ curl -X PATCH \
 | `id` | O `id` do host que você deseja atualizar. Ele deve corresponder ao valor `{HOST_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `hosts`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -378,7 +378,7 @@ DELETE /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | O `id` do host que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -414,7 +414,7 @@ GET /hosts/{HOST_ID}/property
 | --- | --- |
 | `{HOST_ID}` | O `id` do host cuja propriedade você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

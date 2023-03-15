@@ -13,7 +13,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão de tag principal é a extensão padrão lançada com a Adobe Experience Platform.
 
@@ -88,7 +88,7 @@ O evento será acionado se o volume for aumentado ou diminuído. Consulte a seç
 
 #### Orientation Change
 
-O evento dispara se a orientação do dispositivo mudar. É preciso especificar a duração da mudança de orientação para acionar o evento. Não há configurações para esse tipo de evento.
+O evento será acionado se a orientação do dispositivo mudar. É preciso especificar a duração da mudança de orientação para acionar o evento. Não há configurações para esse tipo de evento.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Se o elemento for uma tag de âncora (`<a>`) para um conteúdo vinculado, você 
 
 Quando você usa o atraso de link, a Platform na verdade impede que o navegador saia da página. Em seguida, ele executa um redirecionamento do JavaScript para o destino original após o tempo limite especificado. Isso é especialmente perigoso quando sua marcação de página tem tags `<a>` em que a funcionalidade desejada não leva o usuário para fora da página. Se não for possível resolver seu problema de outra forma, você deverá ser extremamente preciso na definição do seletor, para que esse evento seja disparado exatamente onde é necessário e em nenhum outro lugar.
 
-O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre esperarão pela quantidade de tempo especificada e não estarão conectadas à execução das ações da regra de forma alguma. É possível que o atraso force o usuário a esperar mais do que o necessário e também seja possível que o atraso não seja longo o suficiente para que todas as ações da regra sejam concluídas com sucesso. Atrasos maiores fornecem mais tempo para a execução da regra, mas também prejudicam a experiência do usuário.
+O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre aguardarão o tempo especificado, e isso não está conectado de forma alguma à execução das ações da regra. É possível que o atraso obrigue o usuário a aguardar mais tempo do que o necessário e também que o atraso não seja suficientemente longo para que todas as ações da regra sejam concluídas com êxito. Atrasos maiores fornecem mais tempo para a execução da regra, mas também prejudicam a experiência do usuário.
 
 Para acionar o atraso, é necessário fornecer o elemento selecionado que aciona o evento e o período específico antes que ele seja acionado.
 
@@ -132,9 +132,9 @@ O evento será acionado se um elemento de dados especificado for alterado. É pr
 
 Um evento de chamada direta ignora a detecção de eventos e os sistemas de pesquisa. As regras de chamada direta são perfeitas para situações em que se deseja informar ao sistema exatamente o que está acontecendo. Além disso, são adequadas quando o sistema não consegue detectar um evento no DOM.
 
-Ao definir um evento de chamada direta, você deve especificar uma string que atuará como o identificador desse evento. Se uma [acionar ação de chamada direta](#direct-call-action) contendo o mesmo identificador é acionado e, em seguida, qualquer regra de evento de chamada direta que acompanha esse identificador é executada.
+Ao definir um evento de chamada direta, você deve especificar uma string que atuará como o identificador desse evento. Se um [acionar ação de chamada direta](#direct-call-action) quando o mesmo identificador é acionado, qualquer regra de evento de chamada direta que escute esse identificador é executada.
 
-![Captura de tela de um evento de Chamada direta na interface do usuário da coleta de dados](../../../images/extensions/client/core/direct-call-event.png)
+![Captura de tela de um evento de chamada direta na interface da coleção de dados](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -227,7 +227,7 @@ Especifique qualquer código personalizado que deve existir como uma condição 
 
 >[!NOTE]
 >
->O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não suportam ES6+. Para entender o impacto do uso de funções ES6+, teste todos os navegadores da Web que devem ser compatíveis.
+>O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não são compatíveis com ES6+. Para entender o impacto do uso das funções ES6+, teste em todos os navegadores da Web que devem ser compatíveis.
 
 Use o editor de código incorporado para inserir o código personalizado:
 
@@ -524,7 +524,7 @@ Especifique um intervalo de datas. Escolha a data e a hora em que o evento ocorr
 Especifique o número máximo de vezes que a condição retorna true. Você pode selecionar entre as opções a seguir:
 
 * Page view
-* Sessões
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -544,11 +544,11 @@ Especifique a porcentagem de tempo em que a condição retorna &quot;true&quot;.
 
 Esta seção descreve os tipos de ação disponíveis na extensão principal.
 
-### Código personalizado
+### Custom Code
 
 >[!NOTE]
 >
->O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não suportam ES6+. Para entender o impacto do uso de funções ES6+, teste todos os navegadores da Web que devem ser compatíveis.
+>O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não são compatíveis com ES6+. Para entender o impacto do uso das funções ES6+, teste em todos os navegadores da Web que devem ser compatíveis.
 
 Forneça o código que é executado depois que o evento é acionado e as condições são avaliadas.
 
@@ -592,7 +592,7 @@ Quando a opção &quot;Run rule components in sequence&quot; das configurações
 
 *JavaScript*
 
-Ao criar uma ação de código personalizado JavaScript, você pode retornar uma [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) de sua ação. A próxima ação na regra será executada somente quando a promessa retornada é resolvida. Se a promessa for rejeitada, as próximas ações da regra não serão executadas.
+Ao criar uma ação de código personalizado JavaScript, você pode retornar uma [Promessa](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) de sua ação. A próxima ação na regra será executada somente quando a promessa retornada é resolvida. Se a promessa for rejeitada, as próximas ações da regra não serão executadas.
 
 >[!NOTE]
 >
@@ -632,11 +632,11 @@ setTimeout(function() {
 
 ### Acionar chamada direta {#direct-call-action}
 
-Essa ação aciona todas as regras que usam um [evento de chamada direta](#direct-call-event). Ao configurar a ação, você deve fornecer a string de identificador do evento de chamada direta que deseja acionar. Opcionalmente, também é possível passar dados para o evento de chamada direta por meio de um `detail` , que pode conter um conjunto personalizado de pares de valores chave.
+Essa ação aciona todas as regras que usam um [evento de chamada direta](#direct-call-event). Ao configurar a ação, você deve fornecer a cadeia de caracteres do identificador para o evento de chamada direta que deseja acionar. Como opção, você também pode transmitir dados para o evento de chamada direta por meio de um `detail` que pode conter um conjunto personalizado de pares de valores chave.
 
-![Captura de tela de uma ação Acionar chamada direta na interface do usuário da coleta de dados](../../../images/extensions/client/core/direct-call-action.png)
+![Captura de tela de uma ação de chamada direta de acionador na interface da coleção de dados](../../../images/extensions/client/core/direct-call-action.png)
 
-A ação mapeia diretamente para a [`track` método](../../../ui/client-side/satellite-object.md?lang=en#track) no `satellite` objeto , que pode ser acessado pelo código do lado do cliente.
+A ação é mapeada diretamente para o [`track` método](../../../ui/client-side/satellite-object.md?lang=en#track) no `satellite` que pode ser acessado pelo código do lado do cliente.
 
 ## Tipos de elementos de dados da extensão principal
 
@@ -664,7 +664,7 @@ Qualquer valor constante de string que possa ser referenciado em ações ou cond
 
 >[!NOTE]
 >
->O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não suportam ES6+. Para entender o impacto do uso de funções ES6+, teste todos os navegadores da Web que devem ser compatíveis.
+>O ES6+ JavaScript agora é compatível com o código personalizado. Observe que alguns navegadores mais antigos não são compatíveis com ES6+. Para entender o impacto do uso das funções ES6+, teste em todos os navegadores da Web que devem ser compatíveis.
 
 JavaScript personalizado pode ser inserido na interface selecionando Abrir editor e inserindo o código na janela do editor.
 
@@ -708,7 +708,7 @@ Obtenha o valor de:
 
 Todo objeto ou variável disponíveis do JavaScript pode ser referido usando o campo de caminho.
 
-Elementos de dados de tag podem ser usados para capturar as variáveis de JavaScript de marcação ou as propriedades do objeto. Esses valores podem ser usados em suas extensões ou regras personalizadas, fazendo referência aos elementos de dados da tag. Se a fonte de dados mudar, será necessário atualizar a referência para a fonte.
+Elementos de dados de tag podem ser usados para capturar as variáveis de JavaScript de marcação ou as propriedades do objeto. Esses valores podem ser usados em suas extensões ou regras personalizadas, fazendo referência aos elementos de dados da tag. Se a fonte de dados for alterada, será necessário apenas atualizar a referência para a fonte.
 
 No exemplo abaixo, a marcação contém uma variável JavaScript chamada `Page_Name`.
 
@@ -721,7 +721,7 @@ No exemplo abaixo, a marcação contém uma variável JavaScript chamada `Page_N
 
 Ao criar o elemento de dados, forneça apenas o caminho para essa variável.
 
-Se você usar um objeto coletor de dados como parte da camada de dados, use a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName`ou `digitalData.pageName`e assim por diante.
+Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName`ou `digitalData.pageName`e assim por diante.
 
 #### Exemplo:
 
@@ -737,7 +737,7 @@ Use o campo fornecido para especificar o valor criado para um item de armazename
 
 ### Objetos Mesclados
 
-Selecione vários elementos de dados que fornecerão um objeto cada. Esses objetos serão profundamente (recursivamente) unidos para produzir um novo objeto. Os objetos de origem não serão modificados. Se uma propriedade for encontrada no mesmo local em vários objetos de origem, o valor do último objeto será usado. Se um valor de propriedade de origem for `undefined`, ele não substituirá um valor de um objeto de origem anterior. Se as matrizes forem encontradas no mesmo local em vários objetos de origem, elas serão concatenadas.
+Selecione vários elementos de dados que fornecerão um objeto. Esses objetos serão profundamente (recursivamente) mesclados para produzir um novo objeto. Os objetos de origem não serão modificados. Se uma propriedade for encontrada no mesmo local em vários objetos de origem, o valor do último objeto será usado. Se o valor de uma propriedade de origem for `undefined`, ele não substituirá um valor de um objeto de origem anterior. Se matrizes forem encontradas no mesmo local em vários objetos de origem, as matrizes serão concatenadas.
 
 Como exemplo, suponha que você selecione um elemento de dados que forneça o seguinte objeto:
 
@@ -815,7 +815,7 @@ Somente a seção de nome é necessária e qualquer designador especial como “
 
 ### Número aleatório
 
-Use esse elemento de dados para gerar um número aleatório. Geralmente é usado para amostras de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
+Use esse elemento de dados para gerar um número aleatório. É usado frequentemente para amostra de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
 
 * Gerar uma ID de ocorrência
 * Concatene o número para um token de usuário ou carimbo de data e hora para garantir exclusividade
@@ -859,21 +859,21 @@ Alguns casos de uso comuns incluem:
 
 ### Valor condicional
 
-Um invólucro para o [Comparação de valores](#value-comparison-value-comparison) condição. Com base no resultado da comparação, o retornará um dos dois valores disponíveis no formulário. Pode, assim, lidar com &quot;If... Então.. Senão...&quot; cenários sem a necessidade de regras adicionais.
+Um invólucro para o [Value Comparison](#value-comparison-value-comparison) condição. Com base no resultado da comparação, retornará um dos dois valores disponíveis no formulário. Pode lidar com &quot;Se... Então... Outros...&quot; sem a necessidade de regras adicionais.
 
 ### Ambiente de tempo de execução
 
 Permite selecionar uma das seguintes variáveis:
 
-* Estágio do ambiente - Retornos `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/armazenamento temporário/produção.
-* Data de build da biblioteca - Retorna `turbine.buildInfo.buildDate` que contém o mesmo valor como `_satellite.buildInfo.buildDate`.
-* Nome da propriedade - Retorna `_satellite.property.name` para obter o nome da propriedade do Launch.
-* ID da propriedade - Retorna `_satellite.property.id` para obter a ID da propriedade do Launch
-* Nome da regra - Retorna `event.$rule.name` contendo o nome da regra executada.
-* ID da regra - Retorna `event.$rule.id` contendo a ID da regra executada.
-* Tipo de evento - Retorna `event.$type` contendo o tipo de evento que acionou a regra.
-* Carga dos detalhes do evento - Retorna `event.detail` contendo a carga útil de um evento personalizado ou regra de chamada direta.
-* Identificador de chamada direta - Retorna `event.identifier` contendo o identificador de uma regra de chamada direta.
+* Estágio de ambiente - Devoluções `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/preparo/produção.
+* Data de build da biblioteca - Devoluções `turbine.buildInfo.buildDate` que contém o mesmo valor como `_satellite.buildInfo.buildDate`.
+* Nome da propriedade - Devoluções `_satellite.property.name` para obter o nome da propriedade do Launch.
+* ID da propriedade - Devoluções `_satellite.property.id` para obter a ID da propriedade do Launch
+* Nome da regra - Devoluções `event.$rule.name` contendo o nome da regra executada.
+* ID da regra - Devoluções `event.$rule.id` contendo a ID da regra executada.
+* Tipo de evento - Retornos `event.$type` que contém o tipo de evento que acionou a regra.
+* Carga de detalhes do evento - Devoluções `event.detail` contendo a carga de um Evento personalizado ou Regra de chamada direta.
+* Identificador de chamada direta - Retornos `event.identifier` contendo o identificador de uma Regra de chamada direta.
 
 ### Atributos do dispositivo
 
@@ -884,8 +884,8 @@ Retorna um dos seguintes atributos de dispositivo do visitante:
 
 ### Ferramentas JavaScript
 
-É um wrapper para operações comuns do JavaScript. Ele recebe um elemento de dados como uma entrada. Ele retorna o resultado de uma das seguintes transformações do valor do elemento de dados:
+É um invólucro para operações comuns de JavaScript. Ele recebe um elemento de dados como uma entrada. Ele retorna o resultado de uma das seguintes transformações do valor do elemento de dados:
 
-* Manipulação básica da sequência de caracteres (substituir, substring, correspondência de regex, primeiro e último índice, divisão, fatia)
-* Operações básicas de matriz (fatia, junção, pop, turno)
+* Manipulação básica de string (substituir, substring, correspondência de regex, primeiro e último índice, divisão, fatia)
+* Operações básicas de array (slice, join, pop, shift)
 * Operações universais básicas (fatia, comprimento)

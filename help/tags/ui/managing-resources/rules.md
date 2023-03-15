@@ -13,13 +13,13 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags na Adobe Experience Platform seguem um sistema baseado em regras. Elas buscam a interação do usuário e dados associados. Quando os critérios definidos nas regras são cumpridos, a regra aciona a extensão, o script ou o código do lado do cliente identificado.
 
 Crie regras para integrar os dados e a funcionalidade de tecnologia de marketing e de anúncios que unifique produtos diferentes em uma única solução.
 
-## Estrutura das regras
+## Estrutura da regra
 
 **Eventos (If):** O evento é o que você deseja que a regra procure. Isso é definido escolhendo um evento, quaisquer condições aplicáveis e quaisquer exceções.
 
@@ -123,16 +123,16 @@ Ao criar ou editar regras, você pode salvar e incorporar em sua [biblioteca ati
 
 A ordenação de regras permite controlar a ordem de execução das regras que compartilham um evento. Cada regra contém um número inteiro que determina a prioridade da ordem (o valor padrão é 50). As regras que contêm valores mais baixos para sua ordem são executadas antes daquelas com valores mais altos.
 
-Considere um conjunto de cinco regras que compartilham um evento e todas têm prioridade padrão:
+Considere um conjunto de cinco regras que todos compartilham um evento e todas têm prioridade padrão:
 
-* Se houver uma regra que você deseja executar por último, é possível editar esse um componente de regra e atribuir a ele um número maior que 50 (60 por exemplo).
-* Se houver uma regra que você deseja executar primeiro, é possível editar esse um componente de regra e atribuir a ele um número menor que 50 (40 por exemplo).
+* Se houver uma regra que você deseja executar por último, edite esse um componente de regra e atribua a ele um número maior que 50 (60 por exemplo).
+* Se houver uma regra que você deseja executar primeiro, edite esse um componente de regra e atribua a ele um número menor que 50 (40 por exemplo).
 
 >[!NOTE]
 >
->Em última análise, a responsabilidade de executar ações em ordem é do desenvolvedor de extensão do tipo de evento que você está usando. Os desenvolvedores de extensão da Adobe garantem que suas extensões funcionem conforme o esperado. O Adobe fornece orientação a desenvolvedores de extensão de terceiros para fazer isso corretamente, mas não pode garantir como essas diretrizes são seguidas.
+>Em última análise, a responsabilidade de executar ações em ordem é do desenvolvedor de extensão do tipo de evento que você está usando. Os desenvolvedores de extensão da Adobe garantem que suas extensões funcionem conforme o esperado. O Adobe fornece orientação para desenvolvedores de extensão de terceiros para fazer isso corretamente, mas não pode garantir como essas diretrizes são seguidas.
 
-É altamente recomendável ordenar suas regras com números positivos entre 1 e 100 (o padrão é 50). Como a ordem das regras deve ser mantida manualmente, é prática recomendada manter o esquema de pedidos o mais simples possível. Se houver casos de borda em que essa restrição é muito limitante, as tags suportarão números de ordem de regra entre +/- 2.147.483.648.
+É altamente recomendável que você ordene suas regras com números positivos entre 1 e 100 (o padrão é 50). Como a ordem da regra deve ser mantida manualmente, é prática recomendada manter o esquema de pedidos o mais simples possível. Se houver casos de borda em que essa restrição seja muito limitada, as tags suportarão números de ordem de regra entre +/- 2.147.483.648.
 
 ### Manuseio de regras no lado do cliente
 
@@ -142,7 +142,7 @@ Você pode usar `document.write` nos scripts personalizados, independentemente d
 
 É possível ordenar tipos de código personalizados diferentes entre si. Por exemplo, agora você pode ter uma ação de código personalizado JavaScript e, em seguida, uma ação de código personalizado HTML, depois uma ação de código personalizado JavaScript. As tags garante que elas sejam executadas nessa ordem.
 
-## Pacote de regras
+## Agrupamento de regras
 
 Os eventos e as condições das regras são sempre agrupados na biblioteca de tags principal. As ações podem ser agrupadas na biblioteca principal ou carregadas depois como subrecursos, conforme necessário. Se as ações são agrupadas ou não é determinado pelo tipo de evento da regra.
 
@@ -167,13 +167,13 @@ O comportamento do ambiente de tempo de execução do depende de a opção **[!U
 
 >[!IMPORTANT]
 >
->Essa configuração determina somente como as condições e ações são avaliadas em cada regra e não afeta a sequência em que as regras são executadas em sua propriedade. Consulte a seção anterior em [ordenação de regra](#rule-ordering) para obter mais informações sobre como determinar a ordem de execução de várias regras.
+>Essa configuração determina apenas como as condições e ações são avaliadas em cada regra e não afeta a sequência na qual as próprias regras são executadas na propriedade. Consulte a seção anterior sobre [ordenação de regra](#rule-ordering) para obter mais informações sobre como determinar a ordem de execução de várias regras.
 >
->Em [encaminhamento de eventos](../event-forwarding/overview.md) propriedades, as ações da regra são sempre executadas sequencialmente e essa configuração não está disponível. Verifique se a ordem está correta ao criar a regra.
+>Entrada [encaminhamento de eventos](../event-forwarding/overview.md) As propriedades e as ações de regra são sempre executadas sequencialmente e essa configuração não está disponível. Verifique se a ordem está correta ao criar a regra.
 
 ### Ativado
 
-Se a configuração estiver ativada quando um evento for acionado no tempo de execução, as condições e ações da regra serão adicionadas a uma fila de processamento (com base na ordem definida) e processadas uma de cada vez na base &quot;primeiro a entrar, primeiro a sair&quot; (FIFO). A regra aguarda a conclusão do componente antes de passar para o próximo.
+Se a configuração estiver ativada quando um evento for acionado no tempo de execução, as condições e ações da regra serão adicionadas a uma fila de processamento (com base na ordem definida) e processadas uma de cada vez de acordo com a metodologia FIFO (first in, first out). A regra aguarda a conclusão do componente antes de passar para o próximo.
 
 Se uma condição for avaliada como falsa ou atingir o tempo limite definido, as condições e ações subsequentes da regra serão removidas da fila.
 

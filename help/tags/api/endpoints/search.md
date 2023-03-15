@@ -46,7 +46,7 @@ O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io
 
 ## Executar uma pesquisa {#perform}
 
-Você pode realizar uma pesquisa fazendo uma solicitação de POST.
+Você pode executar uma pesquisa fazendo uma solicitação POST.
 
 **Formato da API**
 

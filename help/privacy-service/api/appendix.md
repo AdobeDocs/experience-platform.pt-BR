@@ -1,67 +1,67 @@
 ---
-keywords: Experience Platform, home, tópicos populares
+keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
-title: Apêndice do guia da API do Privacy Service
-description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
+title: Apêndice do guia de API do Privacy Service
+description: Este documento contém informações adicionais para trabalhar com a API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 7%
+source-wordcount: '476'
+ht-degree: 5%
 
 ---
 
-# Apêndice do guia da API do Privacy Service
+# Apêndice do guia de API do Privacy Service
 
 As seções a seguir contêm informações adicionais para trabalhar com a API do Adobe Experience Platform Privacy Service.
 
 ## Namespaces de identidade padrão {#standard-namespaces}
 
-Todas as identidades enviadas para [!DNL Privacy Service] deve ser fornecido em um namespace de identidade específico. Os namespaces de identidade são um componente do [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md) que indicam o contexto ao qual uma identidade está relacionada.
+Todas as identidades enviadas para [!DNL Privacy Service] deve ser fornecido em um namespace de identidade específico. Os namespaces de identidade são um componente de [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md) que indicam o contexto ao qual uma identidade está relacionada.
 
-A tabela a seguir descreve vários tipos de identidade predefinidos e usados com frequência, disponibilizados por [!DNL Experience Platform], juntamente com os `namespace` valores:
+A tabela a seguir descreve vários tipos de identidade predefinidos e comumente usados, disponibilizados pelo [!DNL Experience Platform], juntamente com os respectivos `namespace` valores:
 
 | Tipo de identidade | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | Email | `Email` | `6` |
 | Telefone | `Phone` | `7` |
-| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
 | UUID do Adobe Audience Manager | `CORE` | `0` |
 | Adobe Experience Cloud ID | `ECID` | `4` |
-| Adobe Target ID | `TNTID` | `9` |
+| ADOBE TARGET ID | `TNTID` | `9` |
 | [!DNL Apple] ID para anunciantes | `IDFA` | `20915` |
 | [!DNL Google] ID do anúncio | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->Cada tipo de identidade também tem uma `namespaceId` valor inteiro, que pode ser usado no lugar do `namespace` ao definir o `type` para &quot;namespaceId&quot;. Consulte a seção sobre [qualificadores de namespace](#namespace-qualifiers) para obter mais informações.
+>Cada tipo de identidade também tem um `namespaceId` valor inteiro, que pode ser usado no lugar de `namespace` ao definir a variável da identidade `type` propriedade para &quot;namespaceId&quot;. Consulte a seção sobre [qualificadores de namespace](#namespace-qualifiers) para obter mais informações.
 
-Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação do GET para a `idnamespace/identities` endpoint no [!DNL Identity Service] API. Consulte a [Guia do desenvolvedor do Serviço de identidade](../../identity-service/api/getting-started.md) para obter mais informações.
+Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização fazendo uma solicitação GET para a `idnamespace/identities` endpoint na variável [!DNL Identity Service] API. Consulte a [Guia do desenvolvedor do Serviço de identidade](../../identity-service/api/getting-started.md) para obter mais informações.
 
 ## Qualificadores de namespace
 
-Ao especificar uma `namespace` na variável [!DNL Privacy Service] API, um **qualificador de namespace** deve ser incluída em um `type` parâmetro. A tabela a seguir descreve os diferentes qualificadores de namespace aceitos.
+Ao especificar um `namespace` valor no [!DNL Privacy Service] API, uma **qualificador de namespace** deve ser incluído em um correspondente `type` parâmetro. A tabela a seguir descreve os diferentes qualificadores de namespace aceitos.
 
 | Qualificador | Definição |
 | --------- | ---------- |
-| `standard` | Um dos namespaces padrão definidos globalmente, não vinculado a um conjunto de dados individual da organização (por exemplo, email, número de telefone etc.). A ID de namespace é fornecida. |
-| `custom` | Um namespace exclusivo criado no contexto de uma organização, não compartilhado no [!DNL Experience Cloud]. O valor representa o nome amigável (campo &quot;nome&quot;) a ser pesquisado. A ID de namespace é fornecida. |
-| `integrationCode` | Código de integração - semelhante ao &quot;personalizado&quot;, mas definido especificamente como o código de integração de uma fonte de dados a ser pesquisada. A ID de namespace é fornecida. |
-| `namespaceId` | Indica que o valor é a ID real do namespace que foi criada ou mapeada pelo serviço de namespace. |
-| `unregistered` | Uma string de forma livre que não é definida no serviço de namespace e é considerada &quot;como está&quot;. Qualquer aplicativo que manipule esses tipos de namespaces verifica-os e lida, se apropriado, com o contexto da empresa e o conjunto de dados. Nenhuma ID de namespace é fornecida. |
+| `standard` | Um dos namespaces padrão definidos globalmente, não vinculado a um conjunto de dados de organização individual (por exemplo, email, número de telefone etc.). A ID do namespace é fornecida. |
+| `custom` | Um namespace exclusivo criado no contexto de uma organização, não compartilhado em toda a [!DNL Experience Cloud]. O valor representa o nome amigável (campo &quot;nome&quot;) a ser pesquisado. A ID do namespace é fornecida. |
+| `integrationCode` | Código de integração - semelhante a &quot;personalizado&quot;, mas especificamente definido como o código de integração de uma fonte de dados a ser pesquisada. A ID do namespace é fornecida. |
+| `namespaceId` | Indica que o valor é a ID real do namespace que foi criado ou mapeado por meio do serviço de namespace. |
+| `unregistered` | Uma cadeia de caracteres de forma livre que não está definida no serviço de namespace e é obtida &quot;como está&quot;. Qualquer aplicativo que manipule esses tipos de namespaces verifica se eles são apropriados para o contexto da empresa e para o conjunto de dados. Nenhuma ID de namespace é fornecida. |
 | `analytics` | Um namespace personalizado que é mapeado internamente em [!DNL Analytics], não no serviço de namespace. Isso é transmitido diretamente, conforme especificado pela solicitação original, sem uma ID de namespace |
 | `target` | Um namespace personalizado compreendido internamente por [!DNL Target], não no serviço de namespace. Isso é transmitido diretamente, conforme especificado pela solicitação original, sem uma ID de namespace |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Valores do produto aceitos
+## Valores de produto aceitos
 
-A tabela a seguir descreve os valores aceitos para especificar um produto de Adobe no `include` de uma solicitação de criação de emprego.
+A tabela a seguir descreve os valores aceitos para especificar um produto Adobe na variável `include` atributo de uma solicitação de criação de trabalho.
 
-| Produto | Valor para uso na variável `include` atributo |
+| Produto | Valor para uso na `include` atributo |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
@@ -75,4 +75,4 @@ A tabela a seguir descreve os valores aceitos para especificar um produto de Ado
 | Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

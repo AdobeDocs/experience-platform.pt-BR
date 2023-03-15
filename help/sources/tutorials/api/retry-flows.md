@@ -1,36 +1,37 @@
 ---
-keywords: Experience Platform; home; tópicos populares; serviço de fluxo;
-title: Tentativa de Execução de Fluxo de Dados com Falha
-description: Este tutorial aborda as etapas sobre como tentar novamente executar o fluxo de dados com falha usando a API do Serviço de Fluxo
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+keywords: Experience Platform;página inicial;tópicos populares;serviço de fluxo;
+title: Repetir Execuções de Fluxo de Dados com Falha
+description: Este tutorial aborda etapas sobre como tentar novamente execuções de fluxo de dados com falha usando a API do serviço de fluxo
+exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 3%
 
 ---
 
-# Repetir as execuções de fluxo de dados com falha
+# Tentar novamente execuções de fluxo de dados com falha
 
 >[!IMPORTANT]
 >
->O suporte para repetição de execuções de fluxo de dados com falha está disponível para origens em lote. Você só pode tentar executar novamente o fluxo de dados que falharam.
+>O suporte para novas tentativas de execuções de fluxo de dados com falha está disponível para fontes em lote. Você só pode repetir execuções de fluxo de dados que falharam.
 
-Este tutorial aborda as etapas sobre como tentar novamente executar o fluxo de dados com falha usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda etapas sobre como tentar novamente execuções de fluxo de dados com falha usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
 
-## Repetir a execução do fluxo de dados com falha
+## Tentar novamente uma execução de fluxo de dados com falha
 
-Para repetir uma execução de fluxo de dados com falha, faça uma solicitação de POST para a `/runs` endpoint ao fornecer a ID de execução do seu fluxo de dados e da variável `re-trigger` como parte dos parâmetros de consulta.
+Para tentar executar novamente um fluxo de dados com falha, faça uma solicitação POST ao `/runs` ao fornecer a ID de execução do fluxo de dados e a variável `re-trigger` como parte dos parâmetros de consulta.
 
 **Formato da API**
 
@@ -40,12 +41,12 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RUN_ID}` | A ID de execução que corresponde à execução do fluxo de dados que você deseja repetir. |
-| `op` | Uma operação que determina a ação a ser executada. Para repetir uma execução de fluxo de dados com falha, você deve especificar `re-trigger` como sua operação. |
+| `{RUN_ID}` | A ID de execução que corresponde à execução do fluxo de dados que você deseja tentar novamente. |
+| `op` | Uma operação que determina a ação a ser executada. Para repetir uma execução com falha do fluxo de dados, é necessário especificar `re-trigger` como sua operação. |
 
 **Solicitação**
 
-A solicitação a seguir tenta executar o fluxo de dados para a ID de execução `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
+A solicitação a seguir tenta novamente a execução do fluxo de dados para a ID de execução `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
 ```shell
 curl -X POST \
@@ -59,7 +60,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma ID de execução de fluxo recém-criada e a versão de tag correspondente.
+Uma resposta bem-sucedida retorna uma ID de execução de fluxo recém-criada e sua versão etag correspondente.
 
 ```json
 {

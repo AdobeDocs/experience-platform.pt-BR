@@ -1,10 +1,11 @@
 ---
 title: Bibliotecas
-description: Saiba mais sobre o conceito de bibliotecas de tags e como elas funcionam no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre o conceito de bibliotecas de tags e como elas funcionam na Adobe Experience Platform.
+exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '791'
-ht-degree: 76%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma biblioteca é um conjunto de instruções sobre como as extensões, os elementos de dados e as regras interagem entre si após a implantação. Ao criar uma biblioteca, especifique as alterações que você deseja fazer na biblioteca. No momento da criação, essas alterações são combinadas com tudo o que foi enviado, aprovado ou publicado nas bibliotecas anteriores.
 
@@ -56,13 +57,13 @@ Para adicionar um item, selecione **[!UICONTROL Adicionar uma alteração]** e e
 
 Após criar uma biblioteca, use o menu suspenso dessa biblioteca para selecionar uma das seguintes opções:
 
-* **Editar**: Essa opção permite alterar a configuração da biblioteca.
+* **Editar**: essa opção permite alterar a configuração da biblioteca.
 
-* **Criar para desenvolvimento**: Essa opção compila uma criação e a implanta no ambiente atribuído.
+* **Criar para desenvolvimento**: essa opção compila um build e o implanta no ambiente atribuído.
 
-* **Enviar para aprovação**: Essa opção disponibiliza a biblioteca para que um Aprovador a mova para a próxima etapa do processo de publicação.
+* **Enviar para aprovação**: essa opção disponibiliza a biblioteca para que um Aprovador a mova para a próxima etapa do processo de publicação.
 
-* **Excluir**: Essa opção remove a biblioteca selecionada no momento do processo de publicação.
+* **Excluir**: essa opção remove a biblioteca selecionada no momento do processo de publicação.
 
 ![](../../images/library-menu.png)
 
@@ -106,7 +107,7 @@ Para editar as opções da biblioteca, conclua as etapas a seguir.
 
    ![](../../images/library-contents-revision.jpg)
 
-1. Selecione se deseja mostrar os itens **All** ou **Changed**.
+1. Selecione se deseja mostrar **todos** os itens ou os itens **alterados**.
 1. Selecione a revisão e clique em **[!UICONTROL Selecionar revisão]**.
 1. Selecione **[!UICONTROL Adicionar uma alteração]** ou **[!UICONTROL Adicionar todos os recursos alterados]**.
 
@@ -114,7 +115,7 @@ Para editar as opções da biblioteca, conclua as etapas a seguir.
 
 As bibliotecas encapsulam um conjunto de alterações que você gostaria de fazer no código implantado. A Biblioteca ativa facilita isso, permitindo que você repita rapidamente as alterações e veja o impacto.
 
-Extensões, regras e elementos de dados agora podem ser salvos diretamente na biblioteca em que você está trabalhando. Se necessário, uma nova build também pode ser criada ou até mesmo uma nova biblioteca na lista suspensa [!UICONTROL Biblioteca ativa].
+Extensões, regras e elementos de dados agora podem ser salvos diretamente na biblioteca em que você está trabalhando. Se necessário, também é possível criar um novo build ou até mesmo uma nova biblioteca na lista suspensa [!UICONTROL Biblioteca ativa].
 
 A lista a seguir fornece mais informações sobre o gerenciamento de uma biblioteca ativa.
 

@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma extensão de tag deve ser considerada como um produto (pequeno) com requisitos próprios. Determinar como um usuário do Adobe Experience Platform desejará usar sua extensão pode ajudar você a classificar a funcionalidade em quais tipos de evento, tipos de condição, tipos de ação e tipos de elementos de dados sua extensão deve fornecer.
 

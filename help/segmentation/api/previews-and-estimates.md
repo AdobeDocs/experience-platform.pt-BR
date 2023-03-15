@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; visualizações; estimativas; visualizações e estimativas; estimativas e visualizações; api; API;
+keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;visualizações;estimativas;visualizações e estimativas;estimativas e visualizações;api;API;
 solution: Experience Platform
-title: Pré-visualizações e Estimativas de pontos de extremidade da API
-description: Conforme a definição do segmento é desenvolvida, você pode usar as ferramentas de estimativa e visualização no Adobe Experience Platform para exibir informações de nível de resumo, de modo a ajudar a garantir que você esteja isolando o público-alvo esperado.
+title: Visualizações e estimativas de endpoints de API
+description: À medida que a definição de segmento é desenvolvida, é possível usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para exibir informações em nível de resumo e ajudar a garantir que você esteja isolando o público-alvo esperado.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,32 +11,32 @@ ht-degree: 2%
 
 ---
 
-# Pré-visualizações e endpoints de estimativas
+# Visualizações e estimativas de endpoints
 
-Conforme você desenvolve uma definição de segmento, pode usar as ferramentas de estimativa e visualização no Adobe Experience Platform para exibir informações de nível de resumo, de modo a ajudar a garantir que você esteja isolando o público-alvo que espera.
+À medida que desenvolve uma definição de segmento, você pode usar as ferramentas de estimativa e visualização no Adobe Experience Platform para exibir informações de nível de resumo e ajudar a garantir que esteja isolando o público-alvo que espera.
 
-* **Visualizações** O fornece listas paginadas de perfis qualificados para uma definição de segmento, permitindo comparar os resultados com o que você espera.
+* **Visualizações** fornecer listas paginadas de perfis qualificados para uma definição de segmento, permitindo comparar os resultados com o que você espera.
 
-* **Estimativas** fornecer informações estatísticas sobre uma definição de segmento, como o tamanho projetado do público-alvo, intervalo de confiança e desvio padrão do erro.
+* **Estimativas** O fornece informações estatísticas sobre uma definição de segmento, como o tamanho do público projetado, o intervalo de confiança e o desvio padrão de erro.
 
 >[!NOTE]
 >
->Para acessar métricas semelhantes relacionadas aos dados do Perfil do cliente em tempo real, como o número total de fragmentos de perfil e perfis mesclados em namespaces específicos ou o armazenamento de dados do perfil como um todo, consulte o [guia do endpoint preview (visualizar status da amostra) do perfil](../../profile/api/preview-sample-status.md), parte do guia do desenvolvedor da API de perfil.
+>Para acessar métricas semelhantes relacionadas aos dados do Perfil do cliente em tempo real, como o número total de fragmentos de perfil e perfis mesclados em namespaces específicos ou o armazenamento de dados do perfil como um todo, consulte o [guia de endpoint de visualização de perfil (status da amostra de visualização)](../../profile/api/preview-sample-status.md), parte do guia do desenvolvedor da API de perfil.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os endpoints usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
 
 ## Como as estimativas são geradas
 
-Quando a assimilação de registros no armazenamento de perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é disparado para atualizar a contagem. A forma como a amostragem de dados é acionada depende do método de ingestão:
+Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. A maneira como a amostragem de dados é acionada depende do método de assimilação:
 
-* **Ingestão em lote:** Para assimilação em lote, dentro de 15 minutos da assimilação bem-sucedida de um lote no armazenamento de Perfil, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem.
-* **Assimilação de fluxo:** Para fluxos de trabalho de dados de transmissão, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, uma tarefa é acionada automaticamente para atualizar a contagem.
+* **Assimilação em lote:** Para assimilação em lote, dentro de 15 minutos após a assimilação bem-sucedida de um lote no Armazenamento de perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem.
+* **Assimilação por transmissão:** Para workflows de dados de transmissão, uma verificação é feita por hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, uma tarefa será automaticamente acionada para atualizar a contagem.
 
 O tamanho da amostra da verificação depende do número geral de entidades no armazenamento de perfis. Esses tamanhos de amostra são representados na tabela a seguir:
 
-| Entidades no armazenamento de perfis | Tamanho da amostra |
+| Entidades na loja de perfis | Tamanho da amostra |
 | ------------------------- | ----------- |
 | Menos de 1 milhão | Conjunto de dados completo |
 | 1 a 20 milhões | 1 milhão |
@@ -48,11 +48,11 @@ O tamanho da amostra da verificação depende do número geral de entidades no a
 
 ## Criar uma nova visualização {#create-preview}
 
-Você pode criar uma nova visualização, fazendo uma solicitação de POST para o `/preview` endpoint .
+Você pode criar uma nova visualização fazendo uma solicitação POST para a `/preview` terminal.
 
 >[!NOTE]
 >
->Uma tarefa de estimativa é criada automaticamente quando uma tarefa de visualização é criada. Esses dois trabalhos compartilham a mesma ID.
+>Um trabalho estimado é criado automaticamente quando um trabalho de visualização é criado. Esses dois trabalhos compartilharão a mesma ID.
 
 **Formato da API**
 
@@ -80,10 +80,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `predicateExpression` | A expressão PQL para consultar os dados. |
-| `predicateType` | O tipo de predicado para a expressão de consulta em `predicateExpression`. Atualmente, o único valor aceito para essa propriedade é `pql/text`. |
-| `predicateModel` | O nome do [!DNL Experience Data Model] Classe de esquema (XDM) em que os dados do perfil se baseiam. |
-| `graphType` | O tipo de gráfico do qual você deseja obter o cluster. Os valores compatíveis são `none` (não executa a identificação) e `pdg` (O executa a identificação com base no seu gráfico de identidade privado). |
+| `predicateExpression` | A expressão PQL pela qual consultar os dados. |
+| `predicateType` | O tipo de predicado para a expressão de consulta em `predicateExpression`. Atualmente, o único valor aceito para esta propriedade é `pql/text`. |
+| `predicateModel` | O nome do [!DNL Experience Data Model] Classe de esquema (XDM) na qual os dados do perfil se baseiam. |
+| `graphType` | O tipo de gráfico do qual você deseja obter o cluster. Os valores compatíveis são `none` (não executa compilação de identidade) e `pdg` (executa a compilação de identidade com base no seu gráfico de identidade privado). |
 
 **Resposta**
 
@@ -101,12 +101,12 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) com detalhes da vis
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `state` | O estado atual do trabalho de visualização. Quando criado pela primeira vez, ele estará no estado &quot;NOVO&quot;. Subsequentemente, ele estará no estado &quot;EXECUTANDO&quot; até que o processamento seja concluído, e nesse ponto se tornará &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
-| `previewId` | A ID do trabalho de visualização, que será usada para fins de pesquisa ao visualizar uma estimativa ou pré-visualização, conforme descrito na próxima seção. |
+| `state` | O estado atual do trabalho de visualização. Quando criado inicialmente, ele estará no estado &quot;NEW&quot;. Posteriormente, ele estará no estado &quot;EM EXECUÇÃO&quot; até que o processamento seja concluído, momento em que se torna &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
+| `previewId` | A ID do trabalho de visualização, a ser usada para fins de pesquisa ao exibir uma estimativa ou visualização, conforme descrito na próxima seção. |
 
 ## Recuperar os resultados de uma visualização específica {#get-preview}
 
-Você pode recuperar informações detalhadas sobre uma visualização específica fazendo uma solicitação do GET para a `/preview` endpoint e fornecer a ID de visualização no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma visualização específica fazendo uma solicitação GET para a `/preview` e fornecendo a ID de visualização no caminho da solicitação.
 
 **Formato da API**
 
@@ -116,7 +116,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | O `previewId` valor da visualização que deseja recuperar. |
+| `{PREVIEW_ID}` | A variável `previewId` valor da visualização que você deseja recuperar. |
 
 **Solicitação**
 
@@ -179,11 +179,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para pesquisar as entidades especificadas, usando a variável [ponto de extremidade da API de acesso de perfil](../../profile/api/entities.md). |
+| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para pesquisar as entidades especificadas, usando o [endpoint da API de acesso ao perfil](../../profile/api/entities.md). |
 
-## Recuperar os resultados de uma ordem de produção de estimativa específica {#get-estimate}
+## Recuperar os resultados de um trabalho de estimativa específico {#get-estimate}
 
-Depois de criar um trabalho de pré-visualização, você pode usar `previewId` no caminho de uma solicitação do GET para o `/estimate` endpoint para visualizar informações estatísticas sobre a definição do segmento, incluindo o tamanho projetado do público-alvo, o intervalo de confiança e o desvio padrão do erro.
+Depois de criar um trabalho de visualização, você pode usar suas `previewId` no caminho de uma solicitação GET para o `/estimate` endpoint para exibir informações estatísticas sobre a definição do segmento, incluindo tamanho do público projetado, intervalo de confiança e desvio padrão de erro.
 
 **Formato da API**
 
@@ -193,7 +193,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Um trabalho de estimativa só é acionado quando um trabalho de visualização é criado e os dois trabalhos compartilham o mesmo valor de ID para fins de pesquisa. Especificamente, este é o `previewId` valor retornado quando o trabalho de visualização foi criado. |
+| `{PREVIEW_ID}` | Um trabalho estimado só é acionado quando um trabalho de visualização é criado e os dois trabalhos compartilham o mesmo valor de ID para fins de pesquisa. Especificamente, este é o `previewId` valor retornado quando o trabalho de visualização foi criado. |
 
 **Solicitação**
 
@@ -209,7 +209,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de estimativa.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho estimado.
 
 ```json
 {
@@ -244,9 +244,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `estimatedNamespaceDistribution` | Uma matriz de objetos que mostra o número de perfis no segmento detalhados por namespace de identidade. O número total de perfis por namespace (somando os valores mostrados para cada namespace) pode ser maior que a métrica de contagem de perfis, pois um perfil pode ser associado a vários namespaces. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual. |
-| `state` | O estado atual do trabalho de visualização. O estado será &quot;EXECUTANDO&quot; até que o processamento seja concluído, ponto em que se torna &quot;RESULT_READY&quot; ou &quot;FALHA&quot;. |
-| `_links.preview` | Quando a variável `state` é &quot;RESULT_READY&quot;, este campo fornece um URL para visualizar a estimativa. |
+| `state` | O estado atual do trabalho de visualização. O estado será &quot;RUNNING&quot; até que o processamento seja concluído, momento em que ele se torna &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
+| `_links.preview` | Quando a variável `state` é &quot;RESULT_READY&quot;, esse campo fornece um URL para exibir a estimativa. |
 
 ## Próximas etapas
 
-Depois de ler este guia, você deve ter uma melhor compreensão de como trabalhar com visualizações e estimativas usando a API de segmentação. Para saber como acessar métricas relacionadas aos dados do Perfil do cliente em tempo real, como o número total de fragmentos de perfil e perfis mesclados em namespaces específicos ou o armazenamento de dados do perfil como um todo, visite o [visualização de perfil (`/previewsamplestatus`) guia de endpoint](../../profile/api/preview-sample-status.md).
+Depois de ler este guia, você terá uma melhor compreensão de como trabalhar com visualizações e estimativas usando a API de segmentação. Para saber como acessar métricas relacionadas aos seus dados de Perfil do cliente em tempo real, como o número total de fragmentos de perfil e perfis mesclados em namespaces específicos ou o armazenamento de dados do perfil como um todo, visite o [visualização do perfil (`/previewsamplestatus`) manual do endpoint](../../profile/api/preview-sample-status.md).

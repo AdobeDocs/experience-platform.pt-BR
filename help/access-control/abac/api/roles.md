@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, Controle de acesso com base em atributos, controle de acesso com base em atributos
+keywords: Experience Platform;página inicial;tópicos populares;api;Controle de acesso baseado em atributo;controle de acesso baseado em atributo
 solution: Experience Platform
-title: Ponto de Extremidade da API de Funções
-description: O endpoint /funções na API de Controle de Acesso Baseado em Atributo permite gerenciar programaticamente funções no Adobe Experience Platform.
+title: Endpoint da API de Funções
+description: O ponto de extremidade /roles na API de controle de acesso baseado em atributos permite gerenciar programaticamente funções no Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 4%
 
 ---
 
-# Ponto de extremidade de funções
+# Endpoint de funções
 
 >[!NOTE]
 >
->Se um token de usuário estiver sendo transmitido, o usuário do token deverá ter uma função &quot;org admin&quot; para a organização solicitada.
+>Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-As funções definem o acesso que um administrador, especialista ou usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de exibição ou gravação necessário.
+As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de visualização ou acesso de gravação de que precisam.
 
-O `/roles` O endpoint na API de controle de acesso baseada em atributos permite gerenciar programaticamente as funções em sua organização.
+A variável `/roles` O endpoint na API de controle de acesso baseada em atributos permite gerenciar de forma programática as funções na organização.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de funções {#list}
 
-Você pode listar todas as funções existentes que pertencem à sua organização, fazendo uma solicitação do GET para a `/roles` endpoint .
+Você pode listar todas as funções existentes pertencentes à sua organização fazendo uma solicitação GET para `/roles` terminal.
 
 **Formato da API**
 
@@ -49,7 +49,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de funções em sua organização, incluindo informações sobre os respectivos tipos de função, conjuntos de permissões e atributos de assunto.
+Uma resposta bem-sucedida retorna uma lista de funções na organização, incluindo informações sobre o respectivo tipo de função, conjuntos de permissões e atributos de assunto.
 
 ```json
 {
@@ -101,18 +101,18 @@ Uma resposta bem-sucedida retorna uma lista de funções em sua organização, i
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID que corresponde à função . Essa ID é gerada automaticamente. |
+| `id` | A ID que corresponde à função. Essa ID é gerada automaticamente. |
 | `name` | O nome da sua função. |
 | `description` | A propriedade description fornece informações adicionais sobre sua função. |
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
-| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas a partir de uma função predefinida que contém um grupo de permissões. |
-| `sandboxes` | Essa propriedade exibe as sandboxes dentro da organização que foram provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da Plataforma aos quais eles têm acesso. |
-| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à função consultada. |
+| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
+| `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
-## Procurar uma função {#lookup}
+## Pesquisar uma função {#lookup}
 
-Você pode pesquisar uma função individual fazendo uma solicitação do GET que inclui o `roleId` no caminho da solicitação.
+Você pode pesquisar uma função individual fazendo uma solicitação GET que inclua a função correspondente `roleId` no caminho da solicitação.
 
 **Formato da API**
 
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes para a ID de função consultada, incluindo informações sobre o tipo de função, conjuntos de permissões e atributos de assunto.
+Uma resposta bem-sucedida retorna detalhes da ID de função consultada, incluindo informações sobre o tipo de função, conjuntos de permissões e atributos de assunto.
 
 ```json
 {
@@ -168,18 +168,18 @@ Uma resposta bem-sucedida retorna detalhes para a ID de função consultada, inc
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID que corresponde à função . Essa ID é gerada automaticamente. |
+| `id` | A ID que corresponde à função. Essa ID é gerada automaticamente. |
 | `name` | O nome da sua função. |
 | `description` | A propriedade description fornece informações adicionais sobre sua função. |
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
-| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas a partir de uma função predefinida que contém um grupo de permissões. |
-| `sandboxes` | Essa propriedade exibe as sandboxes dentro da organização que foram provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da Plataforma aos quais eles têm acesso. |
-| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à função consultada. |
+| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
+| `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Pesquisar assuntos por ID de função
 
-Também é possível recuperar assuntos fazendo uma solicitação do GET para o `/roles` endpoint ao fornecer um {ROLE_ID}.
+Também é possível recuperar assuntos fazendo uma solicitação GET para a `/roles` ao fornecer uma {ROLE_ID}.
 
 **Formato da API**
 
@@ -205,7 +205,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os assuntos associados à ID de função consultada, incluindo a ID de assunto correspondente e o tipo de assunto.
+Uma resposta bem-sucedida retorna os assuntos associados à ID de função consultada, incluindo a ID de assunto e o tipo de assunto correspondentes.
 
 ```json
 {
@@ -255,7 +255,7 @@ Uma resposta bem-sucedida retorna os assuntos associados à ID de função consu
 
 ## Criar uma função {#create}
 
-Para criar uma nova função, faça uma solicitação de POST para a função `/roles` endpoint enquanto fornece valores para o nome, a descrição e o tipo da função da sua função.
+Para criar uma nova função, faça uma solicitação POST ao `/roles` ao fornecer valores para o nome, a descrição e o tipo de função da sua função.
 
 **Formato da API**
 
@@ -281,12 +281,12 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome da sua função. Certifique-se de que o nome da sua função seja descritivo, pois você pode usá-lo para pesquisar informações sobre sua função. |
-| `description` | (Opcional) Um valor descritivo que pode ser incluído para fornecer mais informações sobre sua função. |
+| `description` | (Opcional) Um valor descritivo que você pode incluir para fornecer mais informações sobre sua função. |
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna sua função recém-criada, com sua ID de função correspondente, bem como informações sobre seu tipo de função, conjuntos de permissões e atributos de assunto.
+Uma resposta bem-sucedida retorna a função recém-criada, com a ID de função correspondente, bem como informações sobre o tipo de função, os conjuntos de permissões e os atributos do assunto.
 
 ```json
 {
@@ -316,18 +316,18 @@ Uma resposta bem-sucedida retorna sua função recém-criada, com sua ID de fun�
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID que corresponde à função . Essa ID é gerada automaticamente. |
+| `id` | A ID que corresponde à função. Essa ID é gerada automaticamente. |
 | `name` | O nome da sua função. |
 | `description` | A propriedade description fornece informações adicionais sobre sua função. |
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
-| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas a partir de uma função predefinida que contém um grupo de permissões. |
-| `sandboxes` | Essa propriedade exibe as sandboxes dentro da organização que foram provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da Plataforma aos quais eles têm acesso. |
-| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à função consultada. |
+| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
+| `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Atualizar uma função {#patch}
 
-Você pode atualizar as propriedades de uma função fazendo uma solicitação de PATCH para a função `/roles` endpoint ao fornecer a ID da função correspondente e os valores para as operações que deseja aplicar.
+Você pode atualizar as propriedades de uma função fazendo uma solicitação PATCH para o `/roles` ao fornecer a ID de função e os valores correspondentes para as operações que deseja aplicar.
 
 **Formato da API**
 
@@ -360,13 +360,13 @@ curl -X PATCH \
 
 | Operações | Descrição |
 | --- | --- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores para as propriedades que você escolheu atualizar.
+Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores para as propriedades que você optou por atualizar.
 
 ```json
 {
@@ -396,18 +396,18 @@ Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID que corresponde à função . Essa ID é gerada automaticamente. |
+| `id` | A ID que corresponde à função. Essa ID é gerada automaticamente. |
 | `name` | O nome da sua função. |
 | `description` | A propriedade description fornece informações adicionais sobre sua função. |
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
-| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas a partir de uma função predefinida que contém um grupo de permissões. |
-| `sandboxes` | Essa propriedade exibe as sandboxes dentro da organização que foram provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da Plataforma aos quais eles têm acesso. |
-| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à função consultada. |
+| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
+| `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Atualizar uma função por ID de função {#put}
 
-Você pode atualizar uma função fazendo uma solicitação de PUT para o `/roles` endpoint e especificando a ID da função que corresponde à função que deseja atualizar.
+Você pode atualizar uma função fazendo uma solicitação PUT para o `/roles` e especificando a ID de função que corresponde à função que você deseja atualizar.
 
 **Formato da API**
 
@@ -470,18 +470,18 @@ Um bem-sucedido retorna sua função atualizada, incluindo novos valores para se
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID que corresponde à função . Essa ID é gerada automaticamente. |
+| `id` | A ID que corresponde à função. Essa ID é gerada automaticamente. |
 | `name` | O nome da sua função. |
 | `description` | A propriedade description fornece informações adicionais sobre sua função. |
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
-| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas a partir de uma função predefinida que contém um grupo de permissões. |
-| `sandboxes` | Essa propriedade exibe as sandboxes dentro da organização que foram provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da Plataforma aos quais eles têm acesso. |
-| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à função consultada. |
+| `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
+| `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Atualizar assunto por ID de função
 
-Para atualizar os assuntos associados a uma função, faça uma solicitação de PATCH para a função `/roles` endpoint ao fornecer a ID da função dos assuntos que deseja atualizar.
+Para atualizar os assuntos associados a uma função, faça uma solicitação PATCH ao `/roles` ao fornecer a ID de função dos assuntos que deseja atualizar.
 
 **Formato da API**
 
@@ -495,7 +495,7 @@ PATCH /roles/{ROLE_ID}
 
 **Solicitação**
 
-A solicitação a seguir atualiza os assuntos associados ao `{ROLE_ID}`.
+A solicitação a seguir atualiza os assuntos associados a `{ROLE_ID}`.
 
 ```shell
 curl -X PATCH \
@@ -516,7 +516,7 @@ curl -X PATCH \
 
 | Operações | Descrição |
 | --- | --- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
@@ -556,7 +556,7 @@ Uma resposta bem-sucedida retorna os assuntos atualizados associados à ID de fu
 
 ## Excluir uma função {#delete}
 
-Para excluir uma função, faça uma solicitação de DELETE para a função `/roles` endpoint ao especificar a ID da função que deseja excluir.
+Para excluir uma função, faça uma solicitação DELETE à `/roles` ao especificar a ID da função que deseja excluir.
 
 **Formato da API**
 
@@ -584,4 +584,4 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
-Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para a função. Você receberá um status HTTP 404 (Not Found) porque a função foi removida da administração.
+Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para a função. Você receberá um status HTTP 404 (Não encontrado) porque a função foi removida da administração.

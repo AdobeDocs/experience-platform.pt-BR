@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home; tópicos populares; esquema; Esquema; XDM; perfil individual; campos; esquemas; Esquemas; Design do esquema; grupo de campos; grupo de campos; pessoa; detalhes da pessoa; detalhes da pessoa; pessoa;
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;pessoa;detalhes da pessoa;detalhes da pessoa do perfil;pessoa;
 solution: Experience Platform
-title: Detalhes demográficos - Grupo de campos do esquema
-description: Este documento fornece uma visão geral do grupo de campos do schema Detalhes demográficos .
+title: Grupo de Campos de Esquema de Detalhes Demográficos
+description: Este documento fornece uma visão geral do grupo de campos do esquema Detalhes demográficos.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 4%
+source-wordcount: '279'
+ht-degree: 3%
 
 ---
 
@@ -16,26 +16,26 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes demográficos] é um grupo de campos de esquema padrão para a variável [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um nível raiz `person` , cujos subcampos descrevem informações sobre uma pessoa individual.
+[!UICONTROL Detalhes demográficos] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um nível raiz `person` objeto, cujos subcampos descrevem informações sobre uma pessoa individual.
 
 ![](../../images/field-groups/demographic-details.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `person.name` | [Nome da pessoa](../../data-types/person-name.md) | Um objeto cujos subcampos descrevem vários elementos do nome de uma pessoa. |
-| `person.birthDate` | Data | A data completa em que uma pessoa nasceu, na forma de um carimbo de data e hora ISO 8601. |
-| `person.birthDayAndMonth` | String | O dia e o mês em que uma pessoa nasceu, no formato MM-DD. Este campo deve ser usado quando o dia e o mês de nascimento de uma pessoa forem conhecidos, mas não o ano. |
-| `person.birthYear` | Número inteiro | O ano em que uma pessoa nasceu, incluindo o século (como 1989). Este campo deve ser usado quando somente a idade da pessoa é conhecida, não a data de nascimento completa. |
+| `person.birthDate` | Data | A data de nascimento completa de uma pessoa, na forma de um carimbo de data e hora ISO 8601. |
+| `person.birthDayAndMonth` | String | O dia e mês em que uma pessoa nasceu, no formato MM-DD. Este campo deve ser usado quando o dia e o mês de nascimento de uma pessoa são conhecidos, mas não o ano. |
+| `person.birthYear` | Número inteiro | O ano em que uma pessoa nasceu, incluindo o século (como 1989). Este campo deve ser usado quando apenas a idade da pessoa é conhecida, não a data de nascimento completa. |
 | `person.gender` | String | A identidade de gênero da pessoa. |
-| `person.martialStatus` | String | Descreve a relação de uma pessoa com uma outra significativa. |
-| `person.nationality` | String | A relação jurídica entre uma pessoa e seu estado representado usando o código alfa-2 da ISO 3166-1. |
-| `person.taxId` | String | A ID fiscal/fiscal da pessoa, como a TIN nos EUA ou a CIF/NIF em Espanha. |
+| `person.martialStatus` | String | Descreve o relacionamento de uma pessoa com uma outra pessoa importante. |
+| `person.nationality` | String | A relação jurídica entre uma pessoa e seu estado representado usando o código ISO 3166-1 Alfa-2. |
+| `person.taxId` | String | A ID fiscal da pessoa, como o TIN nos EUA ou o CIF/NIF na Espanha. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)

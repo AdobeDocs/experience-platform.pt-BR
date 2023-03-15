@@ -14,7 +14,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão de encaminhamento de eventos principais fornece eventos, condições e tipos de dados padrão para o encaminhamento de eventos na Adobe Experience Platform.
 
@@ -153,7 +153,7 @@ Os seguintes operadores de comparação de valores estão disponíveis:
 
 Esta seção descreve os tipos de ação disponíveis na extensão principal.
 
-### Código personalizado
+### Custom Code
 
 Forneça o código que é executado depois que o evento é acionado e as condições são avaliadas. O encaminhamento de eventos na Adobe Experience Platform é compatível com ES6.
 

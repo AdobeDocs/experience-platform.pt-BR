@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, catálogo, pesquisa de objeto, api
+keywords: Experience Platform;página inicial;tópicos populares;catálogo;pesquisa de objeto;api
 solution: Experience Platform
 title: Pesquisar um objeto de catálogo
-description: Se você souber o identificador exclusivo de um objeto de Catálogo específico, poderá executar uma solicitação de GET para exibir os detalhes desse objeto.
+description: Se você souber o identificador exclusivo de um objeto de Catálogo específico, poderá executar uma solicitação do GET para exibir os detalhes desse objeto.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# Pesquisar um objeto de catálogo
+# Pesquisar um objeto de Catálogo
 
-Se você sabe o identificador exclusivo de um [!DNL Catalog] , é possível executar uma solicitação do GET para exibir os detalhes desse objeto.
+Se você souber o identificador exclusivo de um [!DNL Catalog] objeto, você pode executar uma solicitação GET para exibir os detalhes desse objeto.
 
 >[!NOTE]
 >
->Ao exibir objetos específicos, a prática recomendada é [filtrar por propriedades](filter-data.md) e retornam somente as propriedades em que está interessado.
+>Ao visualizar objetos específicos, ainda é prática recomendada [filtrar por propriedades](filter-data.md) e retornam somente as propriedades em que você está interessado.
 
 **Formato da API**
 
@@ -33,7 +33,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 **Solicitação**
 
-A solicitação a seguir recupera um conjunto de dados por sua ID, retornando seu `name`, `description`, `state`, `tags`e `files` propriedades.
+A solicitação a seguir recupera um conjunto de dados por sua ID, retornando seu `name`, `description`, `state`, `tags`, e `files` propriedades.
 
 ```shell
 curl -X GET \
@@ -66,4 +66,4 @@ Uma resposta bem-sucedida retorna o conjunto de dados especificado somente com o
 
 >[!NOTE]
 >
->Propriedades cujos valores recebem o prefixo `@` representam objetos interrelacionados. Consulte a seção do apêndice em [como visualizar objetos interrelacionados](appendix.md#view-interrelated-objects) para obter etapas sobre como visualizar os detalhes desses objetos.
+>Propriedades cujos valores recebem o prefixo `@` representam objetos inter-relacionados. Consulte a seção do apêndice sobre [exibição de objetos inter-relacionados](appendix.md#view-interrelated-objects) para obter etapas sobre como visualizar os detalhes desses objetos.

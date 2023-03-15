@@ -1,61 +1,61 @@
 ---
-title: Modelo CSV para Ponto de extremidade da API de conversão de esquema
-description: O endpoint /rpc/csv2schema na API do Registro de Schema permite usar modelos CSV para criar esquemas do Experience Data Model (XDM) automaticamente.
+title: Ponto de acesso da API de modelo CSV para conversão de esquema
+description: O endpoint /rpc/csv2schema na API do Registro de esquema permite usar modelos CSV para criar esquemas do Experience Data Model (XDM) automaticamente.
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '854'
 ht-degree: 6%
 
 ---
 
-# Modelo CSV para o endpoint da API de conversão de esquema
+# Modelo CSV para endpoint da API de conversão de esquema
 
-O `/rpc/csv2schema` endpoint no [!DNL Schema Registry] A API permite criar automaticamente um esquema do Experience Data Model (XDM) usando um arquivo CSV como modelo. Usando esse endpoint, você pode criar modelos para importar campos de esquema em massa e fazer a redução na API manual ou no trabalho da interface do usuário.
+A variável `/rpc/csv2schema` endpoint na variável [!DNL Schema Registry] A API permite criar automaticamente um esquema do Experience Data Model (XDM) usando um arquivo CSV como modelo. Usando esse endpoint, é possível criar modelos para importar campos de esquema em massa e reduzir o trabalho manual da API ou da interface do usuário.
 
 ## Introdução
 
-O `/rpc/csv2schema` o ponto de extremidade é parte do [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Adobe Experience Platform.
+A variável `/rpc/csv2schema` o endpoint faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Adobe Experience Platform.
 
-O `/rpc/csv2schema` o ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Diferente de outros endpoints no [!DNL Schema Registry] A API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` namespace, conforme demonstrado nas chamadas de API abaixo.
+A variável `/rpc/csv2schema` O ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints no [!DNL Schema Registry] API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`, e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` conforme demonstrado nas chamadas de API abaixo.
 
 ## Requisitos do arquivo CSV
 
-Para usar esse terminal, primeiro crie um arquivo CSV com cabeçalhos de coluna apropriados e valores correspondentes. Algumas colunas são necessárias, enquanto as outras são opcionais. A tabela abaixo descreve essas colunas e sua função na construção do schema.
+Para usar esse endpoint, primeiro crie um arquivo CSV com cabeçalhos de coluna apropriados e valores correspondentes. Algumas colunas são necessárias, enquanto o restante é opcional. A tabela abaixo descreve essas colunas e sua função na construção do schema.
 
-| Posição do cabeçalho CSV | Nome do cabeçalho CSV | Obrigatório / Opcional | Descrição |
+| Posição do cabeçalho do CSV | Nome do cabeçalho CSV | Obrigatório / Opcional | Descrição |
 | --- | --- | --- | --- |
 | 1 | `isIgnored` | Opcional | Quando incluído e definido como `true`, indica que o campo não está pronto para o upload da API e deve ser ignorado. |
-| 2 | `isCustom` | Obrigatório | Indica se o campo é um campo personalizado ou não. |
+| 2 | `isCustom` | Obrigatório | Indica se o campo é personalizado ou não. |
 | 3 | `fieldGroupId` | Opcional | A ID do grupo de campos ao qual um campo personalizado deve ser associado. |
-| 4 | `fieldGroupName` | (Consulte a descrição) | O nome do grupo de campos ao qual associar este campo.<br><br>Opcional para campos personalizados que não estendem campos padrão existentes. Se deixado em branco, o sistema atribuirá automaticamente o nome.<br><br>Necessário para campos padrão ou campos personalizados que estendem grupos de campos padrão, que é usado para consultar a variável `fieldGroupId`. |
+| 4 | `fieldGroupName` | (Consulte a descrição) | O nome do grupo de campos ao qual associar este campo.<br><br>Opcional para campos personalizados que não estendem campos padrão existentes. Se deixado em branco, o sistema atribuirá o nome automaticamente.<br><br>Obrigatório para campos padrão ou campos personalizados que estendem grupos de campos padrão, usado para consultar a variável `fieldGroupId`. |
 | 5 | `fieldPath` | Obrigatório | O caminho completo da notação de pontos XED para o campo. Para incluir todos os campos de um grupo de campos padrão (conforme indicado em `fieldGroupName`), defina o valor como `ALL`. |
 | 6 | `displayName` | Opcional | O título ou nome de exibição amigável do campo. Também pode ser um alias para o título, se existir. |
 | 7 | `fieldDescription` | Opcional | Uma descrição para o campo. Também pode ser um alias para a descrição, se existir. |
-| 8 | `dataType` | (Consulte a descrição) | Indica o [tipo de dados básico](../schema/field-constraints.md#basic-types) para o campo . Obrigatório para todos os campos personalizados.<br><br>If `dataType` está definida como `object`ou `properties` ou `$ref` também precisa ser definido para a mesma linha, mas não para ambas. |
-| 9 | `isRequired` | Opcional | Indica se o campo é obrigatório para a assimilação de dados. |
+| 8 | `dataType` | (Consulte a descrição) | Indica a [tipo de dados básico](../schema/field-constraints.md#basic-types) para o campo. Obrigatório para todos os campos personalizados.<br><br>Se `dataType` está definida como `object`, ou `properties` ou `$ref` também precisa ser definido para a mesma linha, mas não para ambas. |
+| 9 | `isRequired` | Opcional | Indica se o campo é necessário para assimilação de dados. |
 | 10 | `isArray` | Opcional | Indica se o campo é uma matriz de seus `dataType`. |
 | 11 | `isIdentity` | Opcional | Indica se o campo é um campo de identidade. |
-| 12 | `identityNamespace` | Obrigatório se `isIdentity` é verdadeiro | O [namespace de identidade](../../identity-service/namespaces.md) para o campo de identidade. |
-| 13º | `isPrimaryIdentity` | Opcional | Indica se o campo é a identidade primária do esquema. |
+| 12 | `identityNamespace` | Obrigatório se `isIdentity` é verdadeiro | A variável [namespace de identidade](../../identity-service/namespaces.md) para o campo de identidade. |
+| 13 | `isPrimaryIdentity` | Opcional | Indica se o campo é a identidade principal do esquema. |
 | 14 | `minimum` | Opcional | (Somente para campos numéricos) O valor mínimo do campo. |
 | 15 | `maximum` | Opcional | (Somente para campos numéricos) O valor máximo do campo. |
-| 16 | `enum` | Opcional | Uma lista de valores de enumeração para o campo, expressos como uma matriz (por exemplo, `[value1,value2,value3]`). |
-| 17 | `stringPattern` | Opcional | (Somente para campos de string) Um padrão regex que o valor da string deve corresponder para passar a validação durante a assimilação de dados. |
-| 18 | `format` | Opcional | (Somente para campos de string) O formato do campo de string. |
-| 19º | `minLength` | Opcional | (Somente para campos de string) O comprimento mínimo do campo de string. |
-| 20 | `maxLength` | Opcional | (Somente para campos de string) O comprimento máximo do campo de string. |
-| 21 | `properties` | (Consulte a descrição) | Obrigatório se `dataType` está definida como `object` e `$ref` não estiver definido. Isso define o corpo do objeto como uma string JSON (por exemplo, `{"myField": {"type": "string"}}`). |
-| 22 | `$ref` | (Consulte a descrição) | Obrigatório se `dataType` está definida como `object` e `properties` não estiver definido. Isso define o `$id` do objeto referenciado para o tipo de objeto (por exemplo, `https://ns.adobe.com/xdm/context/person`). |
-| 23 | `comment` | Opcional | When `isIgnored` está definida como `true`, essa coluna é usada para fornecer as informações de cabeçalho do schema. |
+| 16 | `enum` | Opcional | Uma lista de valores de enumeração para o campo, expressa como uma matriz (por exemplo, `[value1,value2,value3]`). |
+| 17 | `stringPattern` | Opcional | (Somente para campos de sequência) Um padrão regex que o valor da sequência de caracteres deve corresponder para passar pela validação durante a assimilação de dados. |
+| 18 | `format` | Opcional | (Somente para campos de sequência de caracteres) O formato do campo de sequência. |
+| 19 | `minLength` | Opcional | (Somente para campos de sequência de caracteres) O comprimento mínimo do campo de sequência de caracteres. |
+| 20 | `maxLength` | Opcional | (Somente para campos de sequência de caracteres) O comprimento máximo do campo de sequência de caracteres. |
+| 21 | `properties` | (Consulte a descrição) | Obrigatório se `dataType` está definida como `object` e `$ref` não está definido. Isso define o corpo do objeto como uma string JSON (por exemplo, `{"myField": {"type": "string"}}`). |
+| 22 | `$ref` | (Consulte a descrição) | Obrigatório se `dataType` está definida como `object` e `properties` não está definido. Isso define o `$id` do objeto referenciado para o tipo de objeto (por exemplo, `https://ns.adobe.com/xdm/context/person`). |
+| 23 | `comment` | Opcional | Quando `isIgnored` está definida como `true`, esta coluna é usada para fornecer as informações do cabeçalho do esquema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Consulte o seguinte [Modelo CSV](../assets/sample-csv-template.csv) para determinar como o arquivo CSV deve ser formatado.
+Consulte o seguinte [Modelo de arquivo CSV](../assets/sample-csv-template.csv) para determinar como o arquivo CSV deve ser formatado.
 
-## Criar uma carga de exportação a partir de um arquivo CSV
+## Criar uma carga de exportação de um arquivo CSV
 
-Depois de configurar seu modelo CSV, você pode enviar o arquivo para a `/rpc/csv2schema` e converta-o em uma carga de exportação.
+Após configurar seu modelo CSV, você pode enviar o arquivo para o `/rpc/csv2schema` ponto de extremidade e converta-o em uma carga de exportação.
 
 **Formato da API**
 
@@ -65,7 +65,7 @@ POST /rpc/csv2schema
 
 **Solicitação**
 
-A carga da solicitação deve usar os dados do formulário como seu formato. Os campos de formulário obrigatórios são mostrados abaixo.
+A carga da solicitação deve usar dados de formulário como formato. Os campos de formulário obrigatórios são mostrados abaixo.
 
 ```shell
 curl -X POST \
@@ -82,14 +82,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `csv-file` | O caminho para o modelo CSV armazenado em sua máquina local. |
-| `schema-class-id` | O `$id` do XDM [classe](../schema/composition.md#class) que este esquema utilizará. |
+| `csv-file` | O caminho para o modelo CSV armazenado no computador local. |
+| `schema-class-id` | A variável `$id` do XDM [classe](../schema/composition.md#class) que este esquema utilizará. |
 | `schema-name` | Um nome de exibição para o esquema. |
 | `schema-description` | Uma descrição para o esquema. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga de exportação gerada a partir do arquivo CSV. A carga assume uma forma de matriz e cada item de matriz é um objeto que representa um componente XDM dependente para o esquema. Selecione a seção abaixo para visualizar um exemplo completo de uma carga de exportação gerada de um arquivo CSV.
+Uma resposta bem-sucedida retorna uma carga útil de exportação gerada pelo arquivo CSV. A carga assume a forma de uma matriz e cada item da matriz é um objeto que representa um componente XDM dependente do esquema. Selecione a seção abaixo para ver um exemplo completo de uma carga útil de exportação gerada de um arquivo CSV.
 
 +++ Exemplo de carga de resposta
 
@@ -358,8 +358,8 @@ Uma resposta bem-sucedida retorna uma carga de exportação gerada a partir do a
 
 +++
 
-## Importe a carga do esquema
+## Importar a carga do esquema
 
-Depois de gerar a carga de exportação do arquivo CSV, você pode enviar essa carga para o `/rpc/import` endpoint para gerar o schema .
+Depois de gerar a carga de exportação do arquivo CSV, você pode enviar essa carga para o `/rpc/import` endpoint para gerar o esquema.
 
-Consulte a [guia de endpoint de importação](./import.md) para obter detalhes sobre como gerar schemas a partir de cargas de exportação.
+Consulte a [guia de endpoint de importação](./import.md) para obter detalhes sobre como gerar esquemas a partir de cargas úteis de exportação.

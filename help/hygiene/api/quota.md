@@ -1,38 +1,38 @@
 ---
-title: Endpoint da API de cota
-description: O endpoint /quota na API da Higiene de Dados permite monitorar o uso da higiene de dados em relação aos limites de cota mensal da organização para cada tipo de trabalho.
+title: Endpoint da API de Cota
+description: O ponto de extremidade /quota na API da higiene de dados permite monitorar a utilização da higiene de dados em relação aos limites de cota mensais da organização para cada tipo de tarefa.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 3%
+source-wordcount: '347'
+ht-degree: 2%
 
 ---
 
-# Ponto final da quota
+# Endpoint da cota
 
 >[!IMPORTANT]
 >
->Os recursos de higiene de dados no Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**.
+>Atualmente, os recursos de higiene de dados na Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
 
-O `/quota` O endpoint na API da Higiene de dados permite monitorar o uso da higiene de dados em relação aos limites de cota de sua organização para cada tipo de trabalho.
+A variável `/quota` O endpoint na API da higiene de dados permite monitorar a utilização da higiene de dados em relação aos limites de cota da organização para cada tipo de trabalho.
 
 As cotas são aplicadas para cada tipo de trabalho de higiene de dados das seguintes maneiras:
 
-* As exclusões de registros e atualizações são limitadas a um determinado número de solicitações por mês.
-* As expirações do conjunto de dados têm um limite fixo para o número de trabalhos ativos simultaneamente, independentemente de quando as expirações serão executadas.
+* As exclusões e atualizações de registros estão limitadas a um determinado número de solicitações a cada mês.
+* As expirações de conjunto de dados têm um limite simples para o número de trabalhos ativos simultaneamente, independentemente de quando as expirações serão executadas.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da API da Higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para as seguintes informações:
+O endpoint usado neste guia faz parte da API de higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para obter as seguintes informações:
 
 * Links para a documentação relacionada
-* Um guia para ler as chamadas de API de exemplo neste documento
-* Informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform
+* Um guia para ler as chamadas de API de amostra neste documento
+* Informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API Experience Platform
 
 ## Listar cotas {#list}
 
-Você pode visualizar as informações de cota de sua organização fazendo uma solicitação de GET para a `/quota` endpoint .
+É possível exibir as informações de cota de sua organização fazendo uma solicitação GET ao `/quota` terminal.
 
 **Formato da API**
 
@@ -43,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUOTA_TYPE}` | Um parâmetro de consulta opcional que especifica o tipo de cota a ser recuperada. Se não `quotaType` for fornecido, todos os valores de cota serão retornados na resposta da API. Os valores de tipo aceitos incluem:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: Exclusões de registro</li><li>`fieldUpdateWorkOrderDatasetQuota`: Registrar atualizações</li></ul> |
+| `{QUOTA_TYPE}` | Um parâmetro de consulta opcional que especifica o tipo de cota a ser recuperada. Se não `quotaType` for fornecido, todos os valores de cota serão retornados na resposta da API. Os valores de tipo aceitos incluem:<ul><li>`expirationDatasetQuota`: expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li><li>`fieldUpdateWorkOrderDatasetQuota`: Atualizações de registro</li></ul> |
 
 **Solicitação**
 
@@ -58,7 +58,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes de suas cotas de higiene de dados.
+Uma resposta bem-sucedida retorna os detalhes das cotas de higiene de dados.
 
 ```json
 {
@@ -81,6 +81,6 @@ Uma resposta bem-sucedida retorna os detalhes de suas cotas de higiene de dados.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `quotas` | Lista as informações de cota para cada tipo de trabalho de higiene de dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: Tipo de trabalho de higiene de dados:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: Exclusões de registro</li></ul></li><li>`description`: Uma descrição do tipo de trabalho de higiene de dados.</li><li>`consumed`: O número de ordens de produção desse tipo são executadas no período mensal atual.</li><li>`quota`: O limite de cota para esse tipo de trabalho. Para exclusões e atualizações de registros, isso representa o número de tarefas que podem ser executadas para cada período mensal. Para expirações do conjunto de dados, representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
+| `quotas` | Lista as informações de cota para cada tipo de trabalho de higiene de dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: O tipo de trabalho de higiene de dados:<ul><li>`expirationDatasetQuota`: expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li></ul></li><li>`description`: uma descrição do tipo de trabalho de higiene de dados.</li><li>`consumed`: o número de trabalhos desse tipo executados no período mensal atual.</li><li>`quota`: o limite de cota para esse tipo de trabalho. Para exclusões e atualizações de registro, representa o número de trabalhos que podem ser executados para cada período mensal. Para expirações de conjunto de dados, representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

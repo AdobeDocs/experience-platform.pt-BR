@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, sql, referência de sql;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;sql;referência de sql;
 solution: Experience Platform
 title: Referência SQL do Serviço de Consulta
 description: O Adobe Experience Platform Query Service fornece a capacidade de usar o SQL ANSI padrão para instruções SELECT e outros comandos limitados.
@@ -11,6 +11,6 @@ ht-degree: 0%
 
 ---
 
-# Referência SQL do Serviço de Consulta
+# Referência SQL do serviço de consulta
 
-[!DNL Query Service] fornece a capacidade de usar o ANSI SQL padrão para `SELECT` instruções e outros comandos limitados. [!DNL Query Service] não inclui a funcionalidade Linguagem de definição de dados ou Linguagem de manipulação de dados . Os dados consultados por meio do serviço vêm de [!DNL Experience Data Lake], que contém conjuntos de dados amplamente imutáveis.
+[!DNL Query Service] oferece a capacidade de usar o ANSI SQL padrão para `SELECT` instruções e outros comandos limitados. [!DNL Query Service] não inclui a funcionalidade Data Definition Language ou Data Manipulation Language. Os dados consultados por meio do serviço vêm de [!DNL Experience Data Lake], que contém conjuntos de dados amplamente imutáveis.

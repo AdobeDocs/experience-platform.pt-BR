@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; mapeador; conjunto de mapeamento; mapeamento;
+keywords: Experience Platform;home;mapeador;conjunto de mapeamento;mapeamento;
 solution: Experience Platform
 title: Visão geral dos conjuntos de mapeamento
-description: Saiba como usar conjuntos de mapeamento com a Preparação de dados do Adobe Experience Platform.
+description: Saiba como usar conjuntos de mapeamento com o Preparo de dados do Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
@@ -13,20 +13,20 @@ ht-degree: 0%
 
 # Visão geral dos conjuntos de mapeamento
 
-Um conjunto de mapeamentos é um conjunto de mapeamentos que transforma dados de um esquema para outro. Este documento fornece informações sobre como os conjuntos de mapeamento são compostos, incluindo schema de entrada, schema de saída e mapeamentos.
+Um conjunto de mapeamento é um conjunto de mapeamentos que transforma os dados de um esquema para outro. Este documento fornece informações sobre como os conjuntos de mapeamento são compostos, incluindo o esquema de entrada, o esquema de saída e os mapeamentos.
 
 ## Introdução
 
-Essa visão geral requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Esta visão geral requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Preparação de dados](./home.md): A Preparação de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
-- [Fluxos de dados](../dataflows/home.md): Os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile]e para [!DNL Destinations].
-- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): Os métodos pelos quais os dados podem ser enviados para [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [Preparação de dados](./home.md): o Preparo de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
+- [Fluxos de dados](../dataflows/home.md): os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para os conjuntos de dados de destino para [!DNL Identity] e [!DNL Profile], e para [!DNL Destinations].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): os métodos pelos quais os dados podem ser enviados para o [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
 ## Sintaxe do conjunto de mapeamento
 
-Um conjunto de mapeamentos é composto de uma ID, nome, schema de entrada, schema de saída e uma lista de mapeamentos associados.
+Um conjunto de mapeamento é composto de uma ID, nome, esquema de entrada, esquema de saída e uma lista de mapeamentos associados.
 
 O JSON a seguir é um exemplo de um conjunto de mapeamento típico:
 
@@ -68,24 +68,24 @@ O JSON a seguir é um exemplo de um conjunto de mapeamento típico:
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | Um identificador exclusivo para o conjunto de mapeamento. |
-| `name` | O nome do conjunto de mapeamentos. |
-| `inputSchema` | O esquema XDM para os dados recebidos. |
-| `outputSchema` | O esquema XDM ao qual os dados de entrada serão transformados em conformidade. |
-| `mappings` | Uma matriz de mapeamentos de campo para campo do schema de origem para o schema de destino. |
-| `sourceType` | Para cada mapeamento listado, sua `sourceType` indica o tipo de fonte que deve ser mapeada. Pode ser um dos `ATTRIBUTE`, `STATIC`ou `EXPRESSION`: <ul><li> `ATTRIBUTE` é usada para qualquer valor encontrado no caminho de origem. </li><li>`STATIC` é usada para valores inseridos no caminho de destino. Esse valor permanece constante e não é afetado pelo schema de origem.</li><li> `EXPRESSION` é usada para uma expressão, que será resolvida durante o tempo de execução. Uma lista de expressões disponíveis pode ser encontrada no [guia de funções de mapeamento](./functions.md).</li> </ul> |
-| `source` | Para cada mapeamento listado, a variável `source` indica o campo que você deseja mapear. Encontre mais informações sobre como configurar sua fonte no [seção fontes](#sources). |
-| `destination` | Para cada mapeamento listado, a variável `destination` indica o campo, ou o caminho para o campo, onde o valor extraído do `source` será colocado. Mais informações sobre como configurar seus destinos podem ser encontradas no [seção destino](#destination). |
+| `id` | Um identificador exclusivo do conjunto de mapeamento. |
+| `name` | O nome do conjunto de mapeamento. |
+| `inputSchema` | O esquema XDM para os dados de entrada. |
+| `outputSchema` | O esquema XDM ao qual os dados de entrada foram transformados para se adequar. |
+| `mappings` | Uma matriz de mapeamentos de campo para campo do esquema de origem para o esquema de destino. |
+| `sourceType` | Para cada mapeamento listado, seu `sourceType` attribute indica o tipo de origem a ser mapeada. Pode ser um de `ATTRIBUTE`, `STATIC`ou `EXPRESSION`: <ul><li> `ATTRIBUTE` é usado para qualquer valor encontrado no caminho de origem. </li><li>`STATIC` é usado para valores inseridos no caminho de destino. Esse valor permanece constante e não é afetado pelo esquema de origem.</li><li> `EXPRESSION` é usado para uma expressão, que será resolvida durante o tempo de execução. Uma lista de expressões disponíveis pode ser encontrada no [guia de funções de mapeamento](./functions.md).</li> </ul> |
+| `source` | Para cada mapeamento listado, a variável `source` attribute indica o campo que você deseja mapear. Mais informações sobre como configurar sua origem podem ser encontradas na [seção origens](#sources). |
+| `destination` | Para cada mapeamento listado, a variável `destination` atributo indica o campo, ou o caminho para o campo, onde o valor extraído do campo `source` será colocado. Mais informações sobre como configurar os destinos podem ser encontradas na [seção de destino](#destination). |
 | `mappings.name` | (*Opcional*) Um nome para o mapeamento. |
 | `mappings.description` | (*Opcional*) Uma descrição do mapeamento. |
 
-## Configuração de fontes de mapeamento
+## Configuração de origens de mapeamento
 
 Em um mapeamento, a variável `source` pode ser um campo, uma expressão ou um valor estático. Com base no tipo de origem fornecido, o valor pode ser extraído de várias maneiras.
 
-### Campo em dados em coluna
+### Campo em dados de colunas
 
-Ao mapear um campo em dados em colunas, como um arquivo CSV, use a `ATTRIBUTE` tipo de origem. Se o campo contiver `.` em seu nome, use `\` para escapar do valor. Um exemplo desse mapeamento pode ser encontrado abaixo:
+Ao mapear um campo em dados de colunas, como um arquivo CSV, use o `ATTRIBUTE` tipo de origem. Se o campo contiver `.` em seu nome, use `\` para omitir o valor. Um exemplo desse mapeamento pode ser encontrado abaixo:
 
 **Arquivo CSV de exemplo:**
 
@@ -94,7 +94,7 @@ Full.Name, Email
 John Smith, js@example.com
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -114,11 +114,11 @@ John Smith, js@example.com
 }
 ```
 
-### Campo de dados aninhados
+### Campo em dados aninhados
 
-Ao mapear um campo em dados aninhados, como um arquivo JSON, use a variável `ATTRIBUTE` tipo de origem. Se o campo contiver `.` em seu nome, use `\` para escapar do valor. Um exemplo desse mapeamento pode ser encontrado abaixo:
+Ao mapear um campo em dados aninhados, como um arquivo JSON, use o `ATTRIBUTE` tipo de origem. Se o campo contiver `.` em seu nome, use `\` para omitir o valor. Um exemplo desse mapeamento pode ser encontrado abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -129,7 +129,7 @@ Ao mapear um campo em dados aninhados, como um arquivo JSON, use a variável `AT
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -151,9 +151,9 @@ Ao mapear um campo em dados aninhados, como um arquivo JSON, use a variável `AT
 
 ### Campo dentro de uma matriz
 
-Ao mapear um campo em uma matriz, é possível recuperar um valor específico usando um índice. Para fazer isso, use o `ATTRIBUTE` tipo de origem e o índice do valor que você deseja mapear. Um exemplo desse mapeamento pode ser encontrado abaixo:
+Ao mapear um campo em uma matriz, você pode recuperar um valor específico usando um índice. Para fazer isso, use o `ATTRIBUTE` tipo de origem e o índice do valor que você deseja mapear. Um exemplo desse mapeamento pode ser encontrado abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -172,7 +172,7 @@ Ao mapear um campo em uma matriz, é possível recuperar um valor específico us
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -194,9 +194,9 @@ Ao mapear um campo em uma matriz, é possível recuperar um valor específico us
 
 ### Matriz para matriz ou objeto para objeto
 
-Usar o `ATTRIBUTE` tipo de origem, também é possível mapear diretamente uma matriz para uma matriz ou um objeto para um objeto. Um exemplo desse mapeamento pode ser encontrado abaixo:
+Usar o `ATTRIBUTE` tipo de origem, você também pode mapear diretamente uma matriz para uma matriz ou um objeto para um objeto. Um exemplo desse mapeamento pode ser encontrado abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -215,7 +215,7 @@ Usar o `ATTRIBUTE` tipo de origem, também é possível mapear diretamente uma m
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -246,9 +246,9 @@ Usar o `ATTRIBUTE` tipo de origem, também é possível mapear diretamente uma m
 
 ### Operações iterativas em arrays
 
-Usar o `ATTRIBUTE` tipo de origem, é possível executar loop repetidamente por arrays e mapeá-los para um schema de destino usando um índice curinga (`[*]`). Um exemplo desse mapeamento pode ser encontrado abaixo:
+Usar o `ATTRIBUTE` tipo de origem, é possível executar um loop iterativo pelas matrizes e mapeá-las para um esquema de destino usando um índice curinga (`[*]`). Um exemplo desse mapeamento pode ser encontrado abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -267,7 +267,7 @@ Usar o `ATTRIBUTE` tipo de origem, é possível executar loop repetidamente por 
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -298,9 +298,9 @@ Usar o `ATTRIBUTE` tipo de origem, é possível executar loop repetidamente por 
 
 ### Valor constante
 
-Se quiser mapear uma constante ou um valor estático, use a variável `STATIC` tipo de origem.  Ao usar a variável `STATIC` tipo de origem, a variável `source` representa o valor codificado que deseja atribuir ao `destination`. Um exemplo desse mapeamento pode ser encontrado abaixo:
+Se quiser mapear um valor constante ou estático, use o `STATIC` tipo de origem.  Ao usar o `STATIC` tipo de origem, a variável `source` representa o valor embutido em código que você deseja atribuir à variável `destination`. Um exemplo desse mapeamento pode ser encontrado abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -309,7 +309,7 @@ Se quiser mapear uma constante ou um valor estático, use a variável `STATIC` t
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -329,9 +329,9 @@ Se quiser mapear uma constante ou um valor estático, use a variável `STATIC` t
 
 ### Expressões
 
-Se quiser mapear uma expressão, use a variável `EXPRESSION` tipo de origem. Uma lista de funções aceitas pode ser encontrada no [guia de funções de mapeamento](./functions.md). Ao usar a variável `EXPRESSION` tipo de origem, a variável `source` representa a função que deseja resolver. Um exemplo desse mapeamento pode ser encontrado abaixo:
+Se quiser mapear uma expressão, use o `EXPRESSION` tipo de origem. Uma lista de funções aceitas pode ser encontrada no [guia de funções de mapeamento](./functions.md). Ao usar o `EXPRESSION` tipo de origem, a variável `source` representa a função que você deseja resolver. Um exemplo desse mapeamento pode ser encontrado abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -341,7 +341,7 @@ Se quiser mapear uma expressão, use a variável `EXPRESSION` tipo de origem. Um
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -363,13 +363,13 @@ Se quiser mapear uma expressão, use a variável `EXPRESSION` tipo de origem. Um
 
 ## Configuração de destinos de mapeamento
 
-Em um mapeamento, a variável `destination` é o local onde o valor extraído do `source` será inserido.
+Em um mapeamento, a variável `destination` é o local onde o valor extraído da variável `source` será inserido.
 
-### Campo no nível da raiz
+### Campo no nível raiz
 
-Quando quiser mapear a variável `source` para o nível raiz dos dados transformados, siga o exemplo abaixo:
+Quando quiser mapear a variável `source` para o nível raiz dos seus dados transformados, siga o exemplo abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -380,7 +380,7 @@ Quando quiser mapear a variável `source` para o nível raiz dos dados transform
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -400,9 +400,9 @@ Quando quiser mapear a variável `source` para o nível raiz dos dados transform
 
 ### Campo aninhado
 
-Quando quiser mapear a variável `source` para um campo aninhado nos dados transformados, siga o exemplo abaixo:
+Quando quiser mapear a variável `source` para um campo aninhado em seus dados transformados, siga o exemplo abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -411,7 +411,7 @@ Quando quiser mapear a variável `source` para um campo aninhado nos dados trans
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -435,7 +435,7 @@ Quando quiser mapear a variável `source` para um campo aninhado nos dados trans
 
 Quando quiser mapear a variável `source` para um índice específico em uma matriz nos dados transformados, siga o exemplo abaixo:
 
-**Arquivo JSON de exemplo**
+**Arquivo JSON de amostra**
 
 ```json
 {
@@ -446,7 +446,7 @@ Quando quiser mapear a variável `source` para um índice específico em uma mat
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -466,7 +466,7 @@ Quando quiser mapear a variável `source` para um índice específico em uma mat
 
 ### Operação de matriz iterativa
 
-Quando você quiser realizar repetições em arrays e mapear os valores para o destino, poderá usar um índice curinga (`[*]`). Um exemplo disso pode ser visto abaixo:
+Quando quiser executar um loop iterativo pelas matrizes e mapear os valores para o destino, você poderá usar um índice curinga (`[*]`). Um exemplo disso pode ser visto abaixo:
 
 ```json
 {
@@ -485,7 +485,7 @@ Quando você quiser realizar repetições em arrays e mapear os valores para o d
 }
 ```
 
-**Exemplo de mapeamento**
+**Mapeamento de amostra**
 
 ```json
 {
@@ -516,4 +516,4 @@ Quando você quiser realizar repetições em arrays e mapear os valores para o d
 
 ## Próximas etapas
 
-Ao ler este documento, agora você deve entender como os conjuntos de mapeamento são construídos, incluindo como configurar mapeamentos individuais em um conjunto de mapeamento. Para obter mais informações sobre outros recursos de Preparação de dados, leia a [Visão geral da preparação de dados](./home.md). Para saber como usar conjuntos de mapeamento na API de preparação de dados, leia o [Guia do desenvolvedor de Preparação de dados](./api/overview.md).
+Após a leitura deste documento, você deve entender como os conjuntos de mapeamento são construídos, incluindo como configurar mapeamentos individuais em um conjunto de mapeamento. Para obter mais informações sobre outros recursos do Preparo de dados, leia a [Visão geral do Preparo de dados](./home.md). Para saber como usar conjuntos de mapeamento na API de Preparo de dados, leia o [Guia do desenvolvedor de Preparo de dados](./api/overview.md).

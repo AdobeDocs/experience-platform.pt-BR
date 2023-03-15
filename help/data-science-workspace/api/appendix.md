@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares;
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;tópicos populares;
 solution: Experience Platform
-title: Apêndice do Guia da API do Sensei Machine Learning
-description: As seções a seguir fornecem informações de referência para vários recursos da API Sensei Machine Learning.
+title: Apêndice do Guia da API de Aprendizado de Máquina do Sensei
+description: As seções a seguir fornecem informações de referência para vários recursos da API do Sensei Machine Learning.
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -17,24 +17,24 @@ As seções a seguir fornecem informações de referência para vários recursos
 
 ## Parâmetros de consulta para recuperação de ativos {#query}
 
-O [!DNL Sensei Machine Learning] A API fornece suporte para parâmetros de consulta com a recuperação de ativos. Os parâmetros de consulta disponíveis e seus usos estão descritos na tabela a seguir:
+A variável [!DNL Sensei Machine Learning] A API oferece suporte a parâmetros de consulta com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos são descritos na tabela a seguir:
 
 | Parâmetro de consulta | Descrição | Valor padrão |
 | --------------- | ----------- | ------- |
 | `start` | Indica o índice inicial para paginação. | `start=0` |
 | `limit` | Indica o número máximo de resultados a serem retornados. | `limit=25` |
-| `orderby` | Indica as propriedades a serem usadas para classificação em ordem de prioridade. Incluir um traço (**-**) antes de um nome de propriedade para classificar em ordem decrescente, caso contrário, os resultados são classificados em ordem crescente. | `orderby=created` |
-| `property` | Indica a expressão de comparação que um objeto deve atender para ser retornado. | `property=deleted==false` |
+| `orderby` | Indica as propriedades a serem usadas para classificar em ordem de prioridade. Incluir um traço (**-**) antes do nome de uma propriedade para classificar em ordem decrescente, caso contrário, os resultados serão classificados em ordem crescente. | `orderby=created` |
+| `property` | Indica a expressão de comparação que um objeto deve satisfazer para ser retornado. | `property=deleted==false` |
 
 >[!NOTE]
 >
 >Ao combinar vários parâmetros de consulta, eles devem ser separados por &quot;E&quot; comercial (**&amp;**).
 
-## Configurações de CPU Python e GPU {#cpu-gpu-config}
+## Configurações de CPU e GPU Python {#cpu-gpu-config}
 
-Os mecanismos Python têm a capacidade de escolher entre uma CPU ou uma GPU para seus propósitos de treinamento ou pontuação, e são definidos em um [InstânciaMLI](./mlinstances.md) como uma especificação de tarefa (`tasks.specification`).
+Os Mecanismos Python têm a capacidade de escolher entre uma CPU ou uma GPU para fins de treinamento ou pontuação e são definidos em um [MLInstance](./mlinstances.md) como especificação de tarefa (`tasks.specification`).
 
-A seguir, um exemplo de configuração que especifica o uso de uma CPU para treinamento e uma GPU para pontuação:
+Este é um exemplo de configuração que especifica o uso de uma CPU para treinamento e de uma GPU para pontuação:
 
 ```json
 [
@@ -69,21 +69,21 @@ A seguir, um exemplo de configuração que especifica o uso de uma CPU para trei
 
 >[!NOTE]
 >
->Os valores de `cpus` e `gpus` O não significa o número de CPUs ou GPUs, mas sim o número de máquinas físicas. Esses valores são permitidos `"1"` e lançará uma exceção de outra forma.
+>Os valores de `cpus` e `gpus` não significa o número de CPUs ou GPUs, mas o número de máquinas físicas. Esses valores são permitidos `"1"` e lançará uma exceção caso contrário.
 
-## Configurações de recursos PySpark e Spark {#resource-config}
+## Configurações de recursos do PySpark e do Spark {#resource-config}
 
-Os Mecanismos Spark têm a capacidade de modificar recursos tecnológicos para fins de treinamento e pontuação. Esses recursos estão descritos na tabela a seguir:
+Os Spark Engines têm a capacidade de modificar recursos computacionais para fins de treinamento e pontuação. Esses recursos são descritos na tabela a seguir:
 
 | Recurso | Descrição | Tipo |
 | -------- | ----------- | ---- |
-| driverMemory | Memória para driver em megabytes | int |
+| driverMemory | Memória do driver em megabytes | int |
 | driverCores | Número de núcleos usados pelo driver | int |
-| executorMemory | Memória para executor em megabytes | int |
+| executorMemory | Memória do executor em megabytes | int |
 | executorCores | Número de núcleos usados pelo executor | int |
 | numExecutors | Número de executores | int |
 
-Os recursos podem ser especificados em um [InstânciaMLI](./mlinstances.md) como (A) treinamento individual ou parâmetros de pontuação, ou (B) dentro de um objeto de especificações adicionais (`specification`). Por exemplo, as seguintes configurações de recursos são as mesmas para treinamento e pontuação:
+Os recursos podem ser especificados em um [MLInstance](./mlinstances.md) como (A) treinamento individual ou parâmetros de pontuação, ou (B) dentro de um objeto de especificações adicionais (`specification`). Por exemplo, as configurações de recursos a seguir são as mesmas para treinamento e pontuação:
 
 ```json
 [

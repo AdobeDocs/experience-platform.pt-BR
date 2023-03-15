@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, CJA, análise de jornada, análise de jornada do cliente, orquestração de campanha, orquestração, jornada do cliente, jornada, orquestração de jornada, capacidade, região
+keywords: Experience Platform;página inicial;tópicos populares;CJA;análise de jornada;análise de jornada do cliente;orquestração de campanhas;orquestração;jornada do cliente;jornada;orquestração de jornadas;capacidade;região
 solution: Experience Platform
-title: Suporte a navegador e idioma para a interface do usuário do Experience Platform
-description: O Adobe Experience Platform é o sistema mais eficiente, flexível e aberto do mercado para criar e gerenciar soluções completas que impulsionam a experiência do cliente. A Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
+title: Suporte de navegador e idioma para a interface do Experience Platform
+description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para criar e gerenciar soluções completas que impulsionam a experiência do cliente. A Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 21%
 
 ---
 
-# Suporte a navegador e idioma para a interface do usuário do Experience Platform
+# Suporte a navegador e idioma para a interface de usuário do Experience Platform
 
-A interface do usuário do Adobe Experience Platform (UI) foi projetada para ser compatível com vários navegadores e idiomas.
+A interface do usuário (UI) do Adobe Experience Platform foi projetada para ser compatível com vários navegadores e idiomas.
 
 ## Suporte para navegador
 
-A interface do usuário da plataforma foi projetada para funcionar de maneira ideal no **versões mais recentes** do Google Chrome, Safari, Firefox e Microsoft Edge. Você pode ter problemas ao usar determinados recursos em versões mais antigas de navegadores.
+A interface do usuário da Platform foi projetada para funcionar de maneira ideal no **versões mais recentes** do Google Chrome, Safari, Firefox e Microsoft Edge. Você pode ter problemas ao usar determinados recursos em versões mais antigas dos navegadores.
 
 | Sistema operacional | Navegadores compatíveis |
 |---|---|
@@ -31,9 +31,9 @@ Os seguintes sistemas operacionais e navegadores não são compatíveis:
 * Internet Explorer 10
 * Opera
 
-## Suporte de idiomas
+## Suporte de idioma
 
-A interface do usuário da plataforma está disponível atualmente nos seguintes idiomas:
+A interface do usuário da Platform está disponível atualmente nos seguintes idiomas:
 
 * Inglês
 * Francês
@@ -42,7 +42,7 @@ A interface do usuário da plataforma está disponível atualmente nos seguintes
 
 ### Alterar idioma padrão
 
-Seu idioma padrão da interface do usuário é determinado pela região especificada no perfil do usuário.
+Seu idioma padrão da interface do usuário é determinado pela região especificada em seu perfil de usuário.
 
 Para alterar o idioma:
 
@@ -52,4 +52,4 @@ Para alterar o idioma:
 
 >[!NOTE]
 >
-> Selecionar uma região também define o idioma para o conteúdo em Adobe.com.
+> Selecionar uma região também define o idioma do conteúdo no Adobe.com.

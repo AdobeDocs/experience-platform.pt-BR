@@ -1,34 +1,34 @@
 ---
 title: Visão geral da personalização
-description: Saiba como usar a API do servidor de rede de borda do Adobe Experience Platform para recuperar conteúdo personalizado das soluções de personalização do Adobe.
+description: Saiba como usar a API do servidor de rede de borda da Adobe Experience Platform para recuperar conteúdo personalizado de soluções de personalização Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
 source-wordcount: '741'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 # Visão geral da personalização
 
-Com o [!DNL Server API], você pode recuperar o conteúdo personalizado das soluções de personalização do Adobe, incluindo [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) e [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+Com o [!DNL Server API], você poderá recuperar o conteúdo personalizado nas soluções de personalização do Adobe, incluindo [Adobe Target](https://business.adobe.com/br/products/target/adobe-target.html) e [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
-Além disso, a variável [!DNL Server API] O capacita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) e [conexão de personalização personalizada](../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../destinations/ui/configure-personalization-destinations.md).
+Além disso, a [!DNL Server API] O capacita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) e a variável [conexão de personalização personalizada](../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../destinations/ui/configure-personalization-destinations.md).
 
-Ao usar a API do servidor, é necessário integrar a resposta fornecida pelo mecanismo de personalização com a lógica usada para renderizar o conteúdo do site. Ao contrário do [Web SDK](../edge/home.md), o [!DNL Server API] não tem um mecanismo para aplicar automaticamente o conteúdo retornado por [!DNL Adobe Target] e [!DNL Offer Decisioning].
+Ao usar a API do servidor, você deve integrar a resposta fornecida pelo mecanismo de personalização com a lógica usada para renderizar o conteúdo em seu site. Ao contrário do [SDK da Web](../edge/home.md), o [!DNL Server API] não tem um mecanismo para aplicar automaticamente o conteúdo retornado por [!DNL Adobe Target] e [!DNL Offer Decisioning].
 
 ## Terminologia {#terminology}
 
-Antes de trabalhar com soluções de personalização do Adobe, compreenda os seguintes conceitos:
+Antes de trabalhar com as soluções de personalização de Adobe, compreenda os seguintes conceitos:
 
 * **Oferta**: uma oferta é uma mensagem de marketing que pode ter regras associadas que especificam quem está qualificado para ver a oferta.
-* **Decisão**: Uma decisão (anteriormente conhecida como atividade de oferta) informa a seleção de uma oferta.
-* **Esquema**: O schema de uma decisão informa o tipo de oferta retornada.
-* **Escopo**: O âmbito da decisão.
-   * No Adobe Target, essa é a variável [!DNL mbox]. O [!DNL global mbox] é `__view__` escopo
-   * Para [!DNL Offer Decisioning], essas são as strings codificadas em Base64 do JSON que contêm as IDs de atividade e disposição que você deseja que o serviço offer decisioning use para propor ofertas.
+* **Decisão**: uma decisão (anteriormente conhecida como atividade de oferta) informa a seleção de uma oferta.
+* **Esquema**: o schema de uma decisão informa o tipo de oferta retornada.
+* **Escopo**: O escopo da decisão.
+   * No Adobe Target, essa é a variável [!DNL mbox]. A variável [!DNL global mbox] é o `__view__` escopo
+   * Para [!DNL Offer Decisioning], essas são as sequências de caracteres codificadas na Base64 do JSON que contêm as IDs de atividade e posicionamento que você deseja que o serviço do offer decisioning use para propor ofertas.
 
-## O `query` objeto {#query-object}
+## A variável `query` objeto {#query-object}
 
 A recuperação de conteúdo personalizado requer um objeto de consulta de solicitação explícita para um exemplo de solicitação. O objeto de consulta tem o seguinte formato:
 
@@ -55,12 +55,12 @@ A recuperação de conteúdo personalizado requer um objeto de consulta de solic
 
 | Atributo | Tipo | Obrigatório / Opcional | Descrição |
 | --- | --- | --- | ---|
-| `schemas` | `String[]` | Obrigatório para personalização do Target. Opcional para Offer Decisioning. | Lista de schemas usados na decisão, para selecionar o tipo de ofertas retornadas. |
-| `scopes` | `String[]` | Opcional | Lista dos escopos de decisão. Máximo de 30 por solicitação. |
+| `schemas` | `String[]` | Obrigatório para personalização do Target. Opcional para o Offer Decisioning. | Lista de schemas usados na decisão para selecionar o tipo de ofertas retornadas. |
+| `scopes` | `String[]` | Opcional | Lista de escopos de decisão. Máximo de 30 por solicitação. |
 
-## O objeto de identificador {#handle}
+## O objeto handle {#handle}
 
-O conteúdo personalizado recuperado das soluções de personalização é apresentado em um `personalization:decisions` identificador, que tem o seguinte formato para sua carga:
+O conteúdo personalizado recuperado das soluções de personalização é apresentado em uma `personalization:decisions` que tem o seguinte formato para sua carga:
 
 ```json
 {
@@ -113,20 +113,20 @@ O conteúdo personalizado recuperado das soluções de personalização é apres
 
 | Atributo | Tipo | Descrição |
 | --- | --- | --- |
-| `payload.id` | String | A ID de decisão. |
-| `payload.scope` | String | O âmbito de decisão que resultou nas ofertas propostas. |
+| `payload.id` | String | A ID da decisão. |
+| `payload.scope` | String | O escopo de decisão que resultou nas ofertas propostas. |
 | `payload.scopeDetails.decisionProvider` | String | Defina como `TGT` ao usar o Adobe Target. |
-| `payload.scopeDetails.activity.id` | String | A ID exclusiva da atividade de oferta. |
-| `payload.scopeDetails.experience.id` | String | A ID exclusiva da disposição da oferta. |
-| `items[].id` | String | A ID exclusiva da disposição da oferta. |
+| `payload.scopeDetails.activity.id` | String | O identificador exclusivo da atividade de oferta. |
+| `payload.scopeDetails.experience.id` | String | O identificador exclusivo do posicionamento da oferta. |
+| `items[].id` | String | O identificador exclusivo do posicionamento da oferta. |
 | `items[].data.id` | String | A ID da oferta proposta. |
 | `items[].data.schema` | String | O schema do conteúdo associado à oferta proposta. |
 | `items[].data.format` | String | O formato do conteúdo associado à oferta proposta. |
 | `items[].data.language` | String | Uma matriz de idiomas associados ao conteúdo da oferta proposta. |
-| `items[].data.content` | String | Conteúdo associado à oferta proposta no formato de uma string. |
-| `items[].data.selector` | String | HTML seletor usado para identificar o elemento DOM de destino para uma oferta de ação DOM. |
-| `items[].data.prehidingSelector` | String | HTML seletor usado para identificar o elemento DOM que deve ser oculto ao manipular uma oferta de ação DOM. |
-| `items[].data.deliveryUrl` | String | Conteúdo da imagem associada à oferta proposta no formato de um URL. |
+| `items[].data.content` | String | Conteúdo associado à oferta proposta no formato de uma cadeia de caracteres. |
+| `items[].data.selector` | String | Seletor de HTML usado para identificar o elemento DOM de destino para uma oferta de ação DOM. |
+| `items[].data.prehidingSelector` | String | Seletor de HTML usado para identificar o elemento DOM a ser ocultado ao manipular uma oferta de ação DOM. |
+| `items[].data.deliveryUrl` | String | Conteúdo de imagem associado à oferta proposta no formato de um URL. |
 | `items[].data.characteristics` | String | Características associadas à oferta proposta no formato de um objeto JSON. |
 
 ## Exemplo de chamada de API {#sample-call}
@@ -185,12 +185,12 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| `configId` | String | Sim | A ID do conjunto de dados. |
-| `requestId` | String | Não | Forneça uma ID de rastreamento de solicitação externa. Se nenhum for fornecido, a Edge Network gerará um para você e o retornará aos cabeçalhos/corpo da resposta. |
+| `configId` | String | Sim | A ID do fluxo de dados. |
+| `requestId` | String | Não | Forneça uma ID de rastreamento de solicitação externa. Se nenhum for fornecido, a rede de borda gerará um para você e o retornará no corpo/cabeçalhos de resposta. |
 
 ### Resposta {#response}
 
-Retorna um `200 OK` e um ou mais `Handle` objetos, dependendo dos serviços de borda que estão ativados na configuração do conjunto de dados.
+Retorna um `200 OK` e um ou mais `Handle` objetos, dependendo dos serviços de borda ativados na configuração da sequência de dados.
 
 ```json
 {
@@ -248,9 +248,9 @@ Retorna um `200 OK` e um ou mais `Handle` objetos, dependendo dos serviços de b
 
 ## Notificações {#notifications}
 
-As notificações devem ser acionadas quando um conteúdo ou exibição pré-buscado tiver sido visitado ou renderizado para o usuário final. Para que as notificações sejam acionadas no escopo correto, certifique-se de rastrear os `id` para cada escopo.
+As notificações devem ser disparadas quando um conteúdo ou uma exibição previamente buscada for visitada ou renderizada para o usuário final. Para que as notificações sejam desativadas para o escopo correto, certifique-se de rastrear os respectivos `id` para cada escopo.
 
-Notificações com o direito `id` para que os escopos correspondentes sejam acionados para que os relatórios sejam refletidos corretamente.
+Notificações com a direita `id` para que os escopos correspondentes sejam refletidos corretamente, é necessário acionar.
 
 **Formato da API**
 
@@ -309,16 +309,16 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sim | A ID do armazenamento de dados usada pelo endpoint da coleta de dados. |
-| `requestId` | `String` | Não | ID de rastreamento de solicitação externa externa externa externa. Se nenhum for fornecido, a Edge Network gerará um para você e o retornará aos cabeçalhos/corpo da resposta. |
-| `silent` | `Boolean` | Não | Parâmetro booleano opcional que indica se a Rede de Borda deve retornar um `204 No Content` com uma carga vazia. Erros críticos são relatados usando o código de status HTTP e a carga útil correspondentes. |
+| `dataStreamId` | `String` | Sim | A ID da sequência de dados usada pelo ponto de extremidade de coleta de dados. |
+| `requestId` | `String` | Não | ID de rastreamento de solicitação externa externa. Se nenhum for fornecido, a rede de borda gerará um para você e o retornará no corpo/cabeçalhos de resposta. |
+| `silent` | `Boolean` | Não | Parâmetro booliano opcional que indica se a Rede de borda deve retornar um `204 No Content` resposta com uma carga vazia. Erros críticos são relatados usando o código de status HTTP e a carga correspondentes. |
 
 ### Resposta {#notifications-response}
 
-Uma resposta bem-sucedida retorna um dos seguintes status e um `requestID` se nenhum tiver sido fornecido na solicitação.
+Uma resposta bem-sucedida retorna um dos seguintes status, e uma `requestID` se nenhum foi fornecido na solicitação.
 
 * `202 Accepted` quando o pedido foi processado com êxito;
-* `204 No Content` quando a solicitação foi processada com êxito e o `silent` foi definido como `true`;
+* `204 No Content` quando a solicitação foi processada com êxito e a variável `silent` O parâmetro foi definido como `true`;
 * `400 Bad Request` quando a solicitação não foi formada corretamente (por exemplo, a identidade primária obrigatória não foi encontrada).
 
 ```json

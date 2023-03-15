@@ -13,13 +13,13 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Quando você faz alterações em builds da biblioteca de tags na Adobe Experience Platform, elas devem ser testadas antes da implantação do build no ambiente de produção. Se não tiver um ambiente dedicado de preparo ou desenvolvimento para seu site, você poderá usar o Adobe Experience Platform Debugger para testar localmente diferentes códigos incorporados dentro do site.
 
 ## Pré-requisitos
 
-Este tutorial requer uma compreensão funcional do uso de ambientes e códigos incorporados para tags. Consulte a [visão geral de ambientes](./environments.md) para obter mais informações.
+Este tutorial requer entendimento prático do uso de ambientes e códigos incorporados para tags. Consulte a [visão geral de ambientes](./environments.md) para obter mais informações.
 
 Este tutorial também requer que a extensão do navegador do Platform Debugger esteja instalada. O Platform Debugger só está disponível para os navegadores Chrome e Firefox. Use um dos links a seguir para instalar a extensão antes de iniciar o tutorial:
 

@@ -1,6 +1,6 @@
 ---
 description: Como configurar o Experience Platform Debugger
-keywords: depurador, extensão do experience platform debugger, chrome, extensão, configurar
+keywords: depurador;extensão do experience platform debugger;chrome;extensão;configurar
 seo-description: How to configure Experience Platform Debugger
 seo-title: Configure Experience Platform Debugger
 title: Configurar o Experience Platform Debugger

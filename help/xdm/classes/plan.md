@@ -1,25 +1,26 @@
 ---
-title: Classe de Plano
+title: Classe do plano
 description: Este documento fornece uma visão geral da classe Plano no Experience Data Model (XDM).
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '149'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Plano] classe
 
-No Experience Data Model (XDM), a variável [!UICONTROL Plano] captura o conjunto mínimo de propriedades que definem um plano, como um plano de saúde ou plano de seguro.
+No Experience Data Model (XDM), a variável [!UICONTROL Plano] classe captura o conjunto mínimo de propriedades que definem um plano, como um plano de saúde ou um plano de seguro.
 
-![Estrutura de classes](../images/classes/plan.png)
+![Estrutura de classe](../images/classes/plan.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `_id` | [!UICONTROL String] | Um identificador de string exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, evitar a duplicação de dados e buscar esse registro em serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não recebe um valor explícito durante a assimilação de dados. No entanto, ainda é possível optar por fornecer seus próprios valores de ID exclusivos. |
-| `planId` | [!UICONTROL String] | Um identificador exclusivo para o plano. |
+| `_id` | [!UICONTROL String] | Um identificador de sequência de caracteres exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, impedir a duplicação de dados e pesquisar esse registro nos serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não recebe um valor explícito durante a assimilação de dados. No entanto, você ainda pode optar por fornecer seus próprios valores de ID exclusivos, se desejar. |
+| `planId` | [!UICONTROL String] | Um identificador exclusivo do plano. |
 | `planName` | [!UICONTROL String] | O nome do plano. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-A classe pode ser estendida com a variável [[!UICONTROL Detalhes do Plano de Saúde] grupo de campos](../field-groups/plan/healthcare-plan-details.md) descrever mais pormenores sobre um plano de seguro de doença.
+A classe pode ser estendida com a variável [[!UICONTROL Detalhes do plano de saúde] grupo de campos](../field-groups/plan/healthcare-plan-details.md) para descrever mais detalhes sobre um plano de seguro de saúde.

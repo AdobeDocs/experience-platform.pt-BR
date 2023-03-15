@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, cs, CS, sistema de sucesso do cliente
+keywords: Experience Platform;página inicial;tópicos populares;sistema de sucesso do cliente;;home;popular topics;cs;CS;customer success system
 solution: Experience Platform
-title: Explorar um sistema de sucesso do cliente usando a API do Serviço de fluxo
-description: Este tutorial usa a API do Serviço de fluxo para explorar sistemas de CSS (Customer Success).
+title: Explore um sistema de sucesso do cliente usando a API do serviço de fluxo
+description: Este tutorial usa a API de serviço de fluxo para explorar os sistemas de Sucesso do cliente (CS).
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -11,51 +11,51 @@ ht-degree: 3%
 
 ---
 
-# Explore um sistema bem-sucedido do cliente usando o [!DNL Flow Service] API
+# Explore um sistema de sucesso do cliente usando o [!DNL Flow Service] API
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa o [!DNL Flow Service] API para explorar os sistemas de CSS (Customer Success, sucesso do cliente).
+Este tutorial usa o [!DNL Flow Service] API para explorar sistemas de Sucesso do cliente (CS).
 
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um sistema CS usando o [!DNL Flow Service] API.
 
-### Obter uma conexão base
+### Obter uma conexão básica
 
-Para explorar seu sistema de CS usando [!DNL Platform] APIs, você deve possuir uma ID de conexão base válida. Se ainda não tiver uma conexão básica para o sistema CS com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
+Para explorar seu sistema CS usando [!DNL Platform] , você deve possuir uma ID de conexão base válida. Se você ainda não tiver uma conexão básica para o sistema CS com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
 
-### Lendo exemplos de chamadas de API
+### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
-Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo as que pertencem a [!DNL Flow Service], são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * Tipo de conteúdo: `application/json`
 
-## Explorar suas tabelas de dados
+## Explore suas tabelas de dados
 
-Usando a conexão básica para seu sistema CS, você pode explorar suas tabelas de dados executando solicitações GET. Use a chamada a seguir para encontrar o caminho da tabela na qual você deseja inspecionar ou assimilar [!DNL Platform].
+Usando a conexão básica para seu sistema CS, você pode explorar suas tabelas de dados executando solicitações do GET. Use a chamada a seguir para encontrar o caminho da tabela que você deseja inspecionar ou assimilar [!DNL Platform].
 
 **Formato da API**
 
@@ -65,7 +65,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | A ID de uma conexão básica do CS. |
+| `{BASE_CONNECTION_ID}` | A ID de uma conexão base CS. |
 
 **Solicitação**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de tabelas do seu sistema CS. Encontre a tabela que deseja trazer [!DNL Platform] e toma nota da sua `path` , conforme você precisará fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de tabelas do sistema CS. Encontre a tabela que deseja trazer para [!DNL Platform] e toma nota da sua `path` propriedade, conforme necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -117,7 +117,7 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas do seu sistema CS. Encon
 
 ## Inspect a estrutura de uma tabela
 
-Para inspecionar a estrutura de uma tabela do seu sistema CS, execute uma solicitação de GET enquanto especifica o caminho de uma tabela como um parâmetro de consulta.
+Para inspecionar a estrutura de uma tabela no sistema CS, execute uma solicitação GET enquanto especifica o caminho de uma tabela como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -127,7 +127,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | A ID de uma conexão básica do CS. |
+| `{BASE_CONNECTION_ID}` | A ID de uma conexão base CS. |
 | `{TABLE_PATH}` | O caminho de uma tabela. |
 
 ```shell
@@ -141,7 +141,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Os detalhes relativos a cada coluna da tabela estão localizados em elementos do `columns` matriz.
+Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Detalhes sobre cada coluna da tabela estão localizados em elementos do `columns` matriz.
 
 ```json
 {
@@ -176,4 +176,4 @@ Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Os detalhe
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você explorou seu sistema CS e encontrou o caminho da tabela na qual deseja assimilar [!DNL Platform]e obteve informações sobre a sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do sistema CS e trazê-los para a plataforma](../collect/customer-success.md).
+Ao seguir este tutorial, você explorou seu sistema CS, encontrou o caminho da tabela na qual deseja assimilar [!DNL Platform]e obteve informações sobre a sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu sistema CS e trazê-los para a Plataforma](../collect/customer-success.md).

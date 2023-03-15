@@ -1,76 +1,76 @@
 ---
-keywords: Experience Platform; home; tópicos populares; esquema; Esquema; XDM; ExperienceEvent; campos; esquemas; Esquemas; Design de esquema; grupo de campos; grupo de campos; reserva; alojamento;
-title: A Carregar Grupo de Campos de Esquema de Reserva
-description: Este documento fornece uma visão geral do grupo de campos Loading Reservation .
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+keywords: Experience Platform;início;tópicos populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;reserva;hospedagem;
+title: Grupo de Campos de Esquema de Reserva de Hospedagem
+description: Este documento fornece uma visão geral do grupo de campos do esquema de Reserva de Hospedagem.
+exl-id: f0eafc83-21f1-483d-9397-1133e3777699
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '679'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL Reserva de acomodação] grupo de campos de esquema
 
-# [!UICONTROL Carregando grupo de campos ] Reservationschema
+[!UICONTROL Reserva de acomodação] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usado para registrar informações sobre uma reserva de hospedagem.
 
-[!UICONTROL A ] Reserva de Carregamento é um grupo de campo de esquema padrão para a classe  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) usada para capturar informações relacionadas a uma reserva de hospedagem.
-
-O grupo de campos é uma extensão do grupo de campos [!UICONTROL Detalhes da Reserva] e contém todos os mesmos campos em um único campo do tipo de objeto, `reservations`. Além desses campos genéricos, [!UICONTROL Loading Reservation] também inclui a matriz `lodgingReservations`. Essa matriz de objetos é usada para descrever uma ou mais reservas com propriedades exclusivas para hospedagem.
+O grupo de campos é uma extensão do [!UICONTROL Detalhes da reserva] grupo de campos, e contém todos os mesmos campos sob um único campo de tipo de objeto, `reservations`. Além desses campos genéricos, [!UICONTROL Reserva de acomodação] também inclui `lodgingReservations` matriz. Essa matriz de objetos é usada para descrever uma ou mais reservas com propriedades exclusivas de hospedagem.
 
 >[!NOTE]
 >
->Este documento aborda os detalhes da matriz `lodgingReservations`. Para obter informações sobre os outros campos fornecidos no objeto `reservations`, consulte a [[!UICONTROL Referência do grupo de campos Detalhes da Reserva]](./reservation-details.md).
+>Este documento abrange os detalhes da `lodgingReservations` matriz. Para obter informações sobre os outros campos fornecidos no `reservations` objeto, consulte o [[!UICONTROL Detalhes da reserva] referência do grupo de campos](./reservation-details.md).
 
-![Estrutura de reserva de empréstimo](../../images/field-groups/lodging-reservation/structure.png)
+![Estrutura de reserva de hospedagem](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` é uma matriz de objetos que representa uma lista de reservas de hospedagem. Se um evento de reserva envolver reservas em vários hotéis diferentes ao longo da rota de uma viagem, por exemplo, essas reservas podem ser listadas como objetos individuais em `lodgingReservations` para um único evento.
+`lodgingReservations` é uma matriz de objetos que representa uma lista de reservas de hospedagem. Se um evento de reserva envolve reservas em vários hotéis diferentes ao longo da rota de uma viagem, por exemplo, essas reservas podem ser listadas como objetos individuais em `lodgingReservations` por um único evento.
 
-A estrutura de cada objeto fornecido em `lodgingReservations` é fornecida abaixo.
+A estrutura de cada objeto fornecido em `lodgingReservations` é fornecido abaixo.
 
-![estrutura de hospedagemReservas](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![Estrutura lodgingReservations](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `averageDailyPrice` | [[!UICONTROL Moeda]](../../data-types/currency.md) | O preço médio diário do quarto de hotel. |
-| `lodgingCheckIn` | Objeto | Um objeto que descreve os detalhes do check-in do depósito. Inclui os seguintes valores:<ul><li>`digitalKey`: (Número inteiro) Indica quando um convidado seleciona o uso de uma chave digital ao fazer o check-in.</li><li>`earlyCheckInRequested`: (Número inteiro) Indica quando um convidado solicita o check-in antes do horário normal de check-in.</li><li>`lateCheckInRequested`: (Número inteiro) Indica quando um convidado solicita o check-in mais tarde do que as horas normais de check-in.</li><li>`noRoomCheckIn`: (Número inteiro) Esse valor é capturado quando um convidado termina de fazer check-in quando não há salas disponíveis no momento.</li><li>`oneRoomCheckIn`: (Número inteiro) Esse valor é capturado quando um convidado termina de fazer check-in quando há apenas um quarto disponível no momento.</li><li>`roomKeys`: (Número inteiro) O número de chaves de sala padrão fornecidas no check-in.</li><li>`userSelectedRoom`: (Booleano) Indica se o convidado selecionou o quarto no check-in.</li></ul> |
-| `rackrate` | [[!UICONTROL Moeda]](../../data-types/currency.md) | O custo de uma reserva de um mesmo dia sem acordos de reserva prévios. |
+| `lodgingCheckIn` | Objeto | Um objeto que descreve os detalhes do check-in da hospedagem. Inclui os seguintes valores:<ul><li>`digitalKey`: (Número inteiro) indica quando um convidado seleciona o uso de uma chave digital ao fazer check-in.</li><li>`earlyCheckInRequested`: (Número inteiro) indica quando um convidado solicita o check-in antes do horário normal.</li><li>`lateCheckInRequested`: (Número inteiro) indica quando um convidado solicita o check-in após o horário normal.</li><li>`noRoomCheckIn`: (Número inteiro) Esse valor é capturado quando um convidado conclui o check-in quando não há salas disponíveis no momento.</li><li>`oneRoomCheckIn`: (Número inteiro) Esse valor é capturado quando um convidado termina o check-in quando há apenas um quarto disponível no momento.</li><li>`roomKeys`: (número inteiro) o número de chaves padrão do quarto fornecidas no check-in.</li><li>`userSelectedRoom`: (Booleano) Indica se o hóspede escolheu o quarto no check-in.</li></ul> |
+| `rackrate` | [[!UICONTROL Moeda]](../../data-types/currency.md) | O custo de uma reserva no mesmo dia sem acordo prévio de reserva. |
 | `ID` | String | O número ou identificador da reserva. |
-| `agentID` | String | A ID do agente associada à reserva do hotel. |
-| `basePrice` | String | O preço de base antes da adição de quaisquer descontos. |
-| `bookingID` | String | A ID de reserva associada à reserva do hotel. |
+| `agentID` | String | A ID do agente associada à reserva de hotel. |
+| `basePrice` | String | O preço base antes da adição de descontos. |
+| `bookingID` | String | A ID da reserva associada à reserva de hotel. |
 | `cancellation` | Número inteiro | Esse valor é capturado quando uma reserva é cancelada. |
-| `checkInDate` | DateTime | A data de check-in da reserva de quarto. |
-| `checkOutDate` | DateTime | A data de check-out da reserva de quarto. |
-| `confirmationNumber` | String | O número ou identificador de confirmação da reserva. |
-| `couponCode` | String | Um código de cupom associado à reserva do hotel. |
+| `checkInDate` | DateTime | A data de check-in da reserva do quarto. |
+| `checkOutDate` | DateTime | A data de check-out da reserva do quarto. |
+| `confirmationNumber` | String | O número ou identificador de confirmação de reserva. |
+| `couponCode` | String | Um código de cupom associado à reserva de hotel. |
 | `created` | Número inteiro | Esse valor é capturado quando uma reserva é criada. |
-| `currencyCode` | String | O código monetário ISO 4217 usado para fazer a compra. |
+| `currencyCode` | String | O código de moeda ISO 4217 usado para fazer a compra. |
 | `discountPercent` | Duplo | A porcentagem de desconto associada à reserva. |
-| `freeCancelation` | Booleano | Indica se a sala tem uma política de cancelamento gratuita. |
-| `guestID` | String | A ID de convidado associada à reserva do hotel. |
-| `length` | Número inteiro | O número total de dias para a reserva. |
-| `loyaltyID` | String | A ID do programa de fidelidade para o convidado listado na reserva. |
+| `freeCancelation` | Booleano | Indica se o quarto tem uma política de cancelamento gratuito. |
+| `guestID` | String | A ID do hóspede associada à reserva de hotel. |
+| `length` | Número inteiro | O número total de dias da reserva. |
+| `loyaltyID` | String | A ID do programa de fidelidade do convidado listado na reserva. |
 | `modification` | Número inteiro | Esse valor é capturado quando uma reserva é modificada. |
 | `modificationDate` | DateTime | A hora em que a reserva foi modificada pela última vez. |
-| `numberOfAdults` | Número inteiro | O número de adultos associado à reserva. |
-| `numberOfChildren` | Número inteiro | O número de filhos associados à reserva. |
-| `numberOfRooms` | Número inteiro | O número de salas associadas à reserva. |
-| `propertyID` | String | Um identificador do hotel ou recurso para a reserva. |
-| `propertyName` | String | O nome do hotel ou resort para a reserva. |
-| `purpose` | String | A finalidade da reserva, normalmente comercial ou pessoal. |
-| `ratePlan` | String | O acordo de tarifas em que o quarto foi vendido. |
-| `refundable` | Booleano | Indica se a sala é reembolsável. |
+| `numberOfAdults` | Número inteiro | O número de adultos associados à reserva. |
+| `numberOfChildren` | Número inteiro | O número de filhos associado à reserva. |
+| `numberOfRooms` | Número inteiro | O número de quartos associado à reserva. |
+| `propertyID` | String | Um identificador do hotel ou resort da reserva. |
+| `propertyName` | String | O nome do hotel ou resort da reserva. |
+| `purpose` | String | O objetivo da reserva, normalmente comercial ou pessoal. |
+| `ratePlan` | String | A tarifa em que o quarto foi vendido. |
+| `refundable` | Booleano | Indica se o quarto é reembolsável. |
 | `reservationStatus` | String | O status da reserva. |
 | `roomAccessibilityType` | String | O tipo de acessibilidade da sala, como mobilidade, audição ou outro. |
-| `roomCapacity` | Número inteiro | O número de pessoas que o quarto de hotel contém. |
-| `roomType` | String | O tipo de espaço reservado. |
-| `smoking` | Booleano | Indica se a sala permite fumar. |
-| `tripType` | String | Indica se a reserva é para uma viagem unidirecional, uma viagem de ida e volta ou uma viagem multicidade. |
+| `roomCapacity` | Número inteiro | O número de pessoas que o quarto de hotel comporta. |
+| `roomType` | String | O tipo de quarto que está sendo reservado. |
+| `smoking` | Booleano | Indica se o quarto permite fumar. |
+| `tripType` | String | Indica se a reserva é para uma viagem só de ida, ida e volta ou uma viagem em várias cidades. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)

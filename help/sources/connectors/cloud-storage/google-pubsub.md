@@ -11,20 +11,20 @@ ht-degree: 0%
 
 # [!DNL Google PubSub]
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você insira dados desses sistemas na Platform para uso em serviços e destinos de downstream.
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como [!DNL AWS], [!DNL Google Cloud Platform], e [!DNL Azure], permitindo que você traga dados desses sistemas para a Platform para uso em serviços e destinos downstream.
 
-As fontes de armazenamento em nuvem podem trazer seus dados para a plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de fontes. A Platform permite trazer dados do [!DNL Google PubSub] em tempo real.
+As fontes de armazenamento na nuvem podem trazer seus dados para a Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de origens. A Platform permite trazer dados de [!DNL Google PubSub] em tempo real.
 
-## Connect [!DNL Google PubSub] para a plataforma
+## Conectar [!DNL Google PubSub] para a Platform
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Google PubSub] para Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Google PubSub] para a Platform usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 
-- [Criar uma conexão Google PubSub-source usando a API do Serviço de Fluxo](../../tutorials/api/create/cloud-storage/google-pubsub.md)
-- [Coletar dados de fluxo usando a API do Serviço de fluxo](../../tutorials/api/collect/streaming.md)
+- [Crie uma conexão de origem Google PubSub usando a API do Serviço de fluxo](../../tutorials/api/create/cloud-storage/google-pubsub.md)
+- [Coletar dados de transmissão usando a API de Serviço de Fluxo](../../tutorials/api/collect/streaming.md)
 
-### Uso da interface do usuário
+### Uso da interface
 
-- [Criar uma conexão Google PubSub-fonte na interface do usuário](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
-- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Criar uma conexão de origem Google PubSub na interface](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
+- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

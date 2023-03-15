@@ -13,7 +13,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta referência para obter informações sobre como configurar a extensão de plug-ins comuns do Analytics e as opções disponíveis ao usá-la para aumentar a Extensão [!DNL Adobe Analytics].
 
@@ -58,7 +58,7 @@ Essas ações inicializam o plug-in específico que você pretende usar individu
 
 ## Elementos de dados da extensão de plug-ins comuns do Analytics
 
-Os seguintes elementos de dados estão disponíveis na extensão de plug-ins comuns do Analytics, que aproveita os recursos de tags para configurar e configurar os plug-ins correspondentes no Analytics:
+Os seguintes elementos de dados estão disponíveis na extensão de plug-ins comuns do Analytics, que aproveita recursos de tag para configurar os plug-ins correspondentes no Analytics:
 
 * `getGeoCoordinates`
 * `getNewRepeat`

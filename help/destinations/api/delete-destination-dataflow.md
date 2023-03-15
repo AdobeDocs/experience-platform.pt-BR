@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de fluxo, API, api, excluir, excluir fluxos de dados de destino
+keywords: Experience Platform;início;tópicos populares;serviço de fluxo;API;api;excluir;excluir fluxos de dados de destino
 solution: Experience Platform
-title: Excluir um fluxo de dados de destino usando a API de Serviço de Fluxo
+title: Excluir um fluxo de dados de destino usando a API do Serviço de fluxo
 type: Tutorial
-description: Saiba como excluir fluxos de dados para destinos de lote e fluxo por meio da API de Serviço de Fluxo.
+description: Saiba como excluir fluxos de dados para destinos em lote e de transmissão usando a API de serviço de fluxo.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
 source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
@@ -12,50 +12,50 @@ ht-degree: 1%
 
 ---
 
-# Excluir um fluxo de dados de destino usando a API de Serviço de Fluxo
+# Excluir um fluxo de dados de destino usando a API do Serviço de fluxo
 
-Você pode excluir fluxos de dados que contenham erros ou que se tornaram obsoletos usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Você pode excluir fluxos de dados que contêm erros ou se tornaram obsoletos usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Este tutorial aborda as etapas para excluir fluxos de dados para destinos de lote e streaming usando [!DNL Flow Service].
+Este tutorial aborda as etapas para excluir fluxos de dados para destinos em lote e de transmissão usando [!DNL Flow Service].
 
 ## Introdução {#get-started}
 
-Este tutorial requer uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione o destino escolhido na [catálogo de destinos](../catalog/overview.md) e siga as etapas descritas em [conectar-se ao destino](../ui/connect-destination.md) e [ativar dados](../ui/activation-overview.md) antes de tentar este tutorial.
+Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tiver um ID de fluxo válido, selecione seu destino de escolha no [catálogo de destinos](../catalog/overview.md) e siga as etapas descritas em [conectar ao destino](../ui/connect-destination.md) e [ativar dados](../ui/activation-overview.md) antes de tentar este tutorial.
 
-Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito um fluxo de dados usando o [!DNL Flow Service] API.
+As seções a seguir fornecem as informações adicionais que você precisará saber para excluir com êxito um fluxo de dados usando o [!DNL Flow Service] API.
 
-### Lendo exemplos de chamadas de API {#reading-sample-api-calls}
+### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
+### Coletar valores para cabeçalhos obrigatórios {#gather-values-for-required-headers}
 
-Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo as que pertencem a [!DNL Flow Service], são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Se a variável `x-sandbox-name` não for especificado, as solicitações serão resolvidas na variável `prod` sandbox.
+>Se a variável `x-sandbox-name` cabeçalho não for especificado, as solicitações serão resolvidas no `prod` sandbox.
 
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
 ## Excluir um fluxo de dados de destino {#delete-destination-dataflow}
 
-Com uma ID de fluxo existente, é possível excluir um fluxo de dados de destino executando uma solicitação de DELETE para a [!DNL Flow Service] API.
+Com uma ID de fluxo existente, é possível excluir um fluxo de dados de destino executando uma solicitação DELETE para [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -65,7 +65,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FLOW_ID}` | O único `id` para o fluxo de dados de destino que você deseja excluir. |
+| `{FLOW_ID}` | O único `id` para o fluxo de dados de destino que deseja excluir. |
 
 **Solicitação**
 
@@ -80,16 +80,16 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Sem conteúdo) e um corpo em branco. É possível confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o fluxo de dados. A API retornará um erro HTTP 404 (Not Found), indicando que o fluxo de dados foi excluído.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Sem conteúdo) e um corpo em branco. Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o fluxo de dados. A API retornará um erro HTTP 404 (Não encontrado), indicando que o fluxo de dados foi excluído.
 
-## Tratamento de erros da API {#api-error-handling}
+## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints de API neste tutorial seguem os princípios gerais da mensagem de erro da API de Experience Platform. Consulte [Códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma para obter mais informações sobre a interpretação das respostas dos erros.
+Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform para obter mais informações sobre como interpretar respostas de erro.
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você usou com sucesso a variável [!DNL Flow Service] API para excluir um fluxo de dados existente para um destino.
+Ao seguir este tutorial, você usou com êxito o [!DNL Flow Service] API para excluir um fluxo de dados existente para um destino.
 
-Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface do usuário](../ui/delete-destinations.md).
+Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface](../ui/delete-destinations.md).
 
-Pode agora prosseguir e [excluir contas de destino](/help/destinations/api/delete-destination-account.md) usando o [!DNL Flow Service] API.
+Agora você pode continuar e [excluir contas de destino](/help/destinations/api/delete-destination-account.md) usando o [!DNL Flow Service] API.

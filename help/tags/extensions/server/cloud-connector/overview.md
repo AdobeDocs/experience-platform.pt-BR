@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão de encaminhamento de eventos do Cloud Connector permite criar solicitações HTTP personalizadas para enviar ou recuperar dados de um destino. A extensão do Cloud Connector é como ter o Postman na Adobe Experience Platform Edge Network e pode ser usada para enviar dados a um terminal que ainda não tem uma extensão dedicada.
 

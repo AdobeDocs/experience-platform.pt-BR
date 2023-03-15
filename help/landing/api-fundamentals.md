@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares
+keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
-title: Fundamentos da API do Experience Platform
-description: Este documento fornece uma breve visão geral de algumas tecnologias e sintaxes subjacentes envolvidas com APIs do Experience Platform.
+title: Fundamentos da API Experience Platform
+description: Este documento fornece uma breve visão geral de algumas das tecnologias subjacentes e sintaxes envolvidas com as APIs Experience Platform.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 2%
 
 ---
 
-# Fundamentos da API do Experience Platform
+# Fundamentos da API Experience Platform
 
-As APIs do Adobe Experience Platform utilizam várias tecnologias e sintaxes subjacentes que são importantes para entender a fim de gerenciar com eficácia o JSON [!DNL Platform] recursos. Este documento fornece uma breve visão geral dessas tecnologias, bem como links para a documentação externa para obter mais informações.
+As APIs do Adobe Experience Platform empregam várias tecnologias e sintaxes subjacentes que são importantes de entender para gerenciar com eficácia a API baseada em JSON [!DNL Platform] recursos. Este documento fornece uma breve visão geral dessas tecnologias, bem como links para documentação externa para obter mais informações.
 
 ## Ponteiro JSON {#json-pointer}
 
-Ponteiro JSON é uma sintaxe de sequência de caracteres padronizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos em documentos JSON. Um ponteiro JSON é uma string de tokens separados por `/` caracteres, que especificam chaves de objeto ou índices de matriz, e os tokens podem ser uma string ou um número. As strings de ponteiro JSON são usadas em muitas operações de PATCH para [!DNL Platform] APIs, conforme descrito posteriormente neste documento. Para obter mais informações sobre o ponteiro JSON, consulte o [Documentação de visão geral do ponteiro JSON](https://rapidjson.org/md_doc_pointer.html).
+O ponteiro JSON é uma sintaxe de sequência de caracteres padronizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos em documentos JSON. Um ponteiro JSON é uma cadeia de tokens separada por `/` caracteres, que especificam chaves de objeto ou índices de matriz, e os tokens podem ser uma string ou um número. As cadeias de caracteres JSON Pointer são usadas em muitas operações PATCH para [!DNL Platform] APIs, conforme descrito posteriormente neste documento. Para obter mais informações sobre o ponteiro JSON, consulte o [Documentação de visão geral do ponteiro JSON](https://rapidjson.org/md_doc_pointer.html).
 
 ### Exemplo de objeto de esquema JSON
 
-O JSON a seguir representa um esquema XDM simplificado cujos campos podem ser referenciados usando strings de ponteiro JSON. Observe que todos os campos que foram adicionados usando grupos de campos de esquema personalizados (como `loyaltyLevel`) são namespacadas em uma `_{TENANT_ID}` , enquanto os campos que foram adicionados usando grupos de campos principais (como `fullName`) não.
+O JSON a seguir representa um esquema XDM simplificado cujos campos podem ser referenciados usando cadeias de caracteres de ponteiro JSON. Observe que todos os campos que foram adicionados usando grupos de campos de esquema personalizados (como `loyaltyLevel`) são nomeados com um espaço para nome em `_{TENANT_ID}` ao passo que os campos que foram adicionados usando grupos de campos `fullName`) não são.
 
 ```json
 {
@@ -86,19 +86,19 @@ O JSON a seguir representa um esquema XDM simplificado cujos campos podem ser re
 | --- | --- |
 | `"/title"` | `"Example schema"` |
 | `"/properties/person/properties/name/properties/fullName"` | (Retorna uma referência à variável `fullName` , fornecido por um grupo de campos principal.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retorna uma referência à variável `loyaltyLevel` , fornecido por um grupo de campos personalizado.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retorna uma referência à variável `loyaltyLevel` campo, fornecido por um grupo de campos personalizado.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->Ao lidar com o `xdm:sourceProperty` e `xdm:destinationProperty` atributos de [!DNL Experience Data Model] (XDM) descritores, quaisquer `properties` as chaves devem ser **excluídos** na string JSON Pointer . Consulte a [!DNL Schema Registry] Subguia do guia do desenvolvedor de API em [descritores](../xdm/api/descriptors.md) para obter mais informações.
+>Ao lidar com a `xdm:sourceProperty` e `xdm:destinationProperty` atributos de [!DNL Experience Data Model] Descritores do (XDM), qualquer `properties` as chaves devem ser **excluído** na string JSON Pointer. Consulte a [!DNL Schema Registry] Subguia do guia do desenvolvedor de API em [descritores](../xdm/api/descriptors.md) para obter mais informações.
 
 ## Patch JSON {#json-patch}
 
-Há muitas operações do PATCH para [!DNL Platform] APIs que aceitam objetos de patch JSON para suas cargas de solicitação. O Patch JSON é um formato padronizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para descrever alterações em um documento JSON. Ela permite definir atualizações parciais para o JSON sem precisar enviar o documento inteiro em um corpo da solicitação.
+Existem muitas operações de PATCH para [!DNL Platform] APIs que aceitam objetos JSON Patch para suas cargas de solicitação. O Patch JSON é um formato padronizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para descrever alterações em um documento JSON. Ela permite definir atualizações parciais no JSON sem precisar enviar o documento inteiro em um corpo de solicitação.
 
-### Exemplo de objeto de patch JSON
+### Exemplo de objeto de patch de JSON
 
 ```json
 {
@@ -107,21 +107,21 @@ Há muitas operações do PATCH para [!DNL Platform] APIs que aceitam objetos de
 }
 ```
 
-* `op`: O tipo de operação de patch. Embora o Patch JSON seja compatível com vários tipos de operação diferentes, nem todas as operações de PATCH em [!DNL Platform] As APIs são compatíveis com cada tipo de operação. Os tipos de operação disponíveis são:
+* `op`: O tipo de operação de patch. Embora o JSON Patch suporte vários tipos de operação diferentes, nem todas as operações de PATCH em [!DNL Platform] As APIs são compatíveis com todos os tipos de operação. Os tipos de operação disponíveis são:
    * `add`
    * `remove`
    * `replace`
    * `copy`
    * `move`
    * `test`
-* `path`: A parte da estrutura JSON a ser atualizada, identificada usando [Ponteiro JSON](#json-pointer) notação.
+* `path`: a parte da estrutura JSON que deve ser atualizada, identificada com o uso de [Ponteiro JSON](#json-pointer) notação.
 
-Dependendo do tipo de operação indicado em `op`, o objeto Patch JSON pode exigir propriedades adicionais. Para obter mais informações sobre as diferentes operações de Patch JSON e sua sintaxe necessária, consulte o [Documentação do patch JSON](https://datatracker.ietf.org/doc/html/rfc6902).
+Dependendo do tipo de operação indicado em `op`, o objeto JSON Patch pode exigir propriedades adicionais. Para obter mais informações sobre as diferentes operações de patch de JSON e sua sintaxe necessária, consulte o [Documentação de patch de JSON](https://datatracker.ietf.org/doc/html/rfc6902).
 
 ## Esquema JSON {#json-schema}
 
-Esquema JSON é um formato usado para descrever e validar a estrutura dos dados JSON. [Experience Data Model (XDM)](../xdm/home.md) usam os recursos do Esquema JSON para impor restrições na estrutura e no formato dos dados de experiência do cliente assimilados. Para obter mais informações sobre o Esquema JSON, consulte [documentação oficial](https://json-schema.org/).
+O esquema JSON é um formato usado para descrever e validar a estrutura dos dados JSON. [Experience Data Model (XDM)](../xdm/home.md) A aproveita os recursos do Esquema JSON para aplicar restrições na estrutura e no formato dos dados de experiência do cliente assimilados. Para obter mais informações sobre o Esquema JSON, consulte a [documentação oficial](https://json-schema.org/).
 
 ## Próximas etapas
 
-Este documento apresentou algumas tecnologias e sintaxes envolvidas no gerenciamento de recursos baseados em JSON para [!DNL Experience Platform]. Consulte a [guia de introdução](api-guide.md) para obter mais informações sobre como trabalhar com APIs da plataforma, incluindo práticas recomendadas. Para obter respostas para perguntas frequentes, consulte o [Guia de solução de problemas da plataforma](troubleshooting.md).
+Esse documento apresentou algumas das tecnologias e sintaxes envolvidas no gerenciamento de recursos baseados em JSON para [!DNL Experience Platform]. Consulte a [guia de introdução](api-guide.md) para obter mais informações sobre como trabalhar com APIs da Platform, incluindo práticas recomendadas. Para obter respostas para perguntas frequentes, consulte o [Guia de solução de problemas da Platform](troubleshooting.md).

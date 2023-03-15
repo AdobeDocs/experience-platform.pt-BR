@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 No diretório base da sua extensão, você deve criar um arquivo chamado `extension.json`. Ele contém detalhes críticos da sua extensão que permitem que o Adobe Experience Platform o consuma corretamente. Alguns conteúdos são formados à maneira de [npms `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -23,7 +23,7 @@ Um manifesto de extensão deve consistir no seguinte:
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da sua extensão. Ele deve ser exclusivo de todas as outras extensões e estar em conformidade com [regras de nomenclatura](#naming-rules). **É usado pelas tags como um identificador e não deve ser alterado após a publicação de sua extensão.** |
+| `name` | O nome da sua extensão. Ele deve ser exclusivo dentre todas as outras extensões e deve estar em conformidade com [regras de nomenclatura](#naming-rules). **É usado pelas tags como um identificador e não deve ser alterado após a publicação de sua extensão.** |
 | `platform` | A plataforma para sua extensão. O único valor aceito neste momento é `web`. |
 | `version` | A versão da sua extensão. Deve seguir o formato de controle de versão [semver](https://semver.org/). É consistente com o campo de versão [npm](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | O nome legível da sua extensão. Isso será exibido para os usuários da Platform. Não é necessário mencionar &quot;tags&quot; ou &quot;extensão&quot;. Os usuários já saberão que estão observando uma extensão de tag. |
@@ -134,7 +134,20 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
       <td><code>schema</code></td>
       <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> descrevendo o formato de um objeto de configurações válido que pode ser salvo pelo usuário. Normalmente, as configurações são definidas e salvas por um usuário por meio da interface da Coleção de dados. Nesses casos, a visualização da extensão pode tomar as etapas necessárias para validar as configurações fornecidas pelo usuário. Por outro lado, alguns usuários optam por usar APIs de tags diretamente, sem a ajuda de qualquer interface do usuário. A finalidade desse esquema é permitir que o Platform valide adequadamente se os objetos de configurações salvos pelos usuários, independentemente de uma interface do usuário ser usada, estão em um formato compatível com o módulo da biblioteca que atuará sobre o objeto de configurações no tempo de execução.<br><br>Este é um exemplo de objeto de esquema:<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": { "delay": { "type": "número", "mínimo": 1 }, "obrigatório": [ "delay" ], "additionalProperties": false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       Recomendamos usar uma ferramenta como <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
     </tr>

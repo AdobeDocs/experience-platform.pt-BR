@@ -1,9 +1,10 @@
 ---
-title: Tipo de Dados de Pesquisa de Site Interno
+title: Tipo de dados de pesquisa interna do site
 description: Este documento fornece uma visão geral do tipo de dados XDM de pesquisa interna do site.
-source-git-commit: eaea904ddda6b7ffee6f52cd4af897c2a8885714
+exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '396'
 ht-degree: 5%
 
 ---
@@ -21,21 +22,21 @@ ht-degree: 5%
 | `autoCompleteValue` | [!UICONTROL String] | Para cenários de preenchimento automático, os usuários às vezes abandonam a pesquisa e selecionam um termo específico no menu suspenso. Esse valor é usado para rastrear os termos específicos selecionados. |
 | `instances` | [!UICONTROL Número inteiro] | O número de vezes que a pesquisa interna do site ocorreu. |
 | `locationInPage` | [!UICONTROL String] | Quando existem várias caixas de pesquisa na página, esse valor deve ser usado para identificar o local específico que o usuário usou para pesquisar. |
-| `nullInstances` | [!UICONTROL Número inteiro] | O número de vezes que ocorreu a pesquisa interna do site que forneceu resultados zero. |
-| `numberOfResults` | [!UICONTROL Número inteiro] | O número total de resultados de pesquisa retornados. |
-| `postalCode` | [!UICONTROL String] | O código postal utilizado para a pesquisa, se aplicável. |
-| `productFindingMethods` | [!UICONTROL String] | O valor do termo de pesquisa interna do site com vínculo de comercialização. Esse valor indica qual termo foi procurado imediatamente antes de visualizar um produto. |
-| `radiusDistance` | [!UICONTROL Número inteiro] | Combinado com `radiusType`, indica a distância selecionada do raio de pesquisa. |
-| `radiusType` | [!UICONTROL Número inteiro] | O tipo de distância selecionado de `radiusDistance`, em milhas ou quilômetros. |
+| `nullInstances` | [!UICONTROL Número inteiro] | O número de vezes que ocorreu a pesquisa interna do site que não forneceu resultados. |
+| `numberOfResults` | [!UICONTROL Número inteiro] | O número total de resultados da pesquisa retornados. |
+| `postalCode` | [!UICONTROL String] | O código postal usado para a pesquisa, se aplicável. |
+| `productFindingMethods` | [!UICONTROL String] | O valor do termo de pesquisa interna do site com vinculação de merchandising. Esse valor indica qual termo foi pesquisado imediatamente antes de visualizar um produto. |
+| `radiusDistance` | [!UICONTROL Número inteiro] | Combinado com `radiusType`, indica a distância selecionada do raio de busca. |
+| `radiusType` | [!UICONTROL Número inteiro] | O tipo de distância selecionado de `radiusDistance`, seja quilômetros ou milhas. |
 | `refinementInstances` | [!UICONTROL Número inteiro] | O número de vezes que a pesquisa interna do site foi refinada. |
-| `refinementType` | Matriz de cadeias de caracteres | Lista os tipos de refinamento aplicados aos resultados da pesquisa. Os exemplos incluem departamento, marca, preço, na loja, classificação de revisão, cor, material e assim por diante. |
+| `refinementType` | Matriz de cadeias de caracteres | Lista os tipos de refinamento aplicados aos resultados da pesquisa. Os exemplos incluem departamento, marca, preço, na loja, avaliação, cor, material e assim por diante. |
 | `refinementValue` | [!UICONTROL String] | O valor para o qual a pesquisa foi refinada. |
-| `resultsPageNumber` | [!UICONTROL Número inteiro] | Para resultados de pesquisa paginada, esse valor rastreia a página de resultados que o visitante está visualizando. |
-| `resultsPerPage` | [!UICONTROL Número inteiro] | Para resultados de pesquisa paginada, esse valor rastreia o número de resultados de pesquisa exibidos por página. |
-| `searchType` | [!UICONTROL String] | Captura o método de pesquisa que está sendo executado, se aplicável. Os exemplos podem incluir uma pesquisa do tipo antecipada, uma pesquisa diretamente digitada ou qualquer outro tipo de funcionalidade de pesquisa personalizada que um site possa ter. |
-| `sortOrder` | [!UICONTROL String] | Combinado com `sortType`, indica a ordem de classificação dos resultados da pesquisa, crescente ou decrescente. |
-| `term` | [!UICONTROL String] | O termo interno de pesquisa do site inserido pelo visitante. |
+| `resultsPageNumber` | [!UICONTROL Número inteiro] | Para resultados de pesquisa paginados, esse valor rastreia a página de resultados que o visitante está visualizando. |
+| `resultsPerPage` | [!UICONTROL Número inteiro] | Para resultados de pesquisa paginados, esse valor rastreia o número de resultados de pesquisa exibidos por página. |
+| `searchType` | [!UICONTROL String] | Registra o método de pesquisa que está sendo executado, se aplicável. Os exemplos podem incluir uma pesquisa com digitação antecipada, uma pesquisa digitada diretamente ou qualquer outro tipo de funcionalidade de pesquisa personalizada que um site possa ter. |
+| `sortOrder` | [!UICONTROL String] | Combinado com `sortType`, indica a ordem de classificação dos resultados da pesquisa, em ordem crescente ou decrescente. |
+| `term` | [!UICONTROL String] | O termo de pesquisa interna do site inserido pelo visitante. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Para obter mais detalhes sobre o tipo de dados, consulte [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).
+Para obter mais informações sobre o tipo de dados, consulte a [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de fluxo, API, api, excluir, excluir fluxos de dados
+keywords: Experience Platform;início;tópicos populares;serviço de fluxo;API;api;excluir;excluir fluxos de dados
 solution: Experience Platform
-title: Excluir um fluxo de dados usando a API do Serviço de fluxo
+title: Excluir um fluxo de dados usando a API do serviço de fluxo
 type: Tutorial
-description: Saiba como excluir fluxos de dados de lote e fluxo usando a API do Serviço de fluxo.
+description: Saiba como excluir fluxos de dados em lote e de transmissão usando a API do serviço de fluxo.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -14,26 +14,26 @@ ht-degree: 3%
 
 # Excluir um fluxo de dados usando a API do Serviço de fluxo
 
-Você pode excluir fluxos de dados de lote e fluxo que contenham erros ou que se tornaram obsoletos usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+É possível excluir fluxos de dados em lote e de transmissão que contenham erros ou que se tenham tornado obsoletos usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Este tutorial aborda as etapas para excluir fluxos de dados feitos com fontes de lote e fluxo contínuo usando [!DNL Flow Service].
+Este tutorial aborda as etapas para excluir fluxos de dados feitas com fontes em lote e de transmissão usando [!DNL Flow Service].
 
 ## Introdução
 
-Este tutorial requer uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione o conector escolhido na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tiver um ID de fluxo válido, selecione o conector de sua escolha no [visão geral das origens](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
-Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
 
 ## Excluir um fluxo de dados
 
-Com uma ID de fluxo existente, é possível excluir um fluxo de dados executando uma solicitação de DELETE para a [!DNL Flow Service] API.
+Com uma ID de fluxo existente, é possível excluir um fluxo de dados executando uma solicitação DELETE para [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -58,10 +58,10 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco. É possível confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o fluxo de dados. A API retornará um erro HTTP 404 (Not Found), indicando que o fluxo de dados foi excluído.
+Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco. Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o fluxo de dados. A API retornará um erro HTTP 404 (Não encontrado), indicando que o fluxo de dados foi excluído.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com sucesso a variável [!DNL Flow Service] API para excluir um fluxo de dados existente.
+Ao seguir este tutorial, você usou com êxito o [!DNL Flow Service] API para excluir um fluxo de dados existente.
 
-Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface do usuário](../../tutorials/ui/delete.md)
+Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface](../../tutorials/ui/delete.md)

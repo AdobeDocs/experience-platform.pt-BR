@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, receita de vendas de varejo, Data Science Workspace, tópicos populares, receitas, receita de pré-criação
+keywords: Experience Platform;receita de vendas de varejo;Espaço de trabalho de ciência de dados;tópicos populares;receitas;pré-criar fórmula
 solution: Experience Platform
-title: Receita de Vendas de Varejo
-description: A receita Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período. Com um modelo de previsão preciso, o varejista poderia encontrar a relação entre as políticas de demanda e de preços e tomar decisões otimizadas de preços para maximizar as vendas e a receita.
+title: Receita de vendas de varejo
+description: A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# Receita de vendas de varejo
+# Receita de venda de varejo
 
-A receita Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período. Com um modelo de previsão preciso, o varejista poderia encontrar a relação entre as políticas de demanda e de preços e tomar decisões otimizadas de preços para maximizar as vendas e a receita.
+A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 
 O documento a seguir responderá perguntas como:
 * Para quem esta receita foi criada?
@@ -22,21 +22,21 @@ O documento a seguir responderá perguntas como:
 
 ## Para quem esta receita foi criada?
 
-Um varejista enfrenta muitos desafios para se manter competitivo no mercado atual. Sua marca busca aumentar as vendas anuais para sua marca de varejo, mas há muitas decisões a serem tomadas para minimizar seus custos operacionais. Demasiada oferta aumenta os custos do inventário, ao mesmo tempo que a oferta diminui o risco de perder clientes para outras marcas. Você precisa pedir mais suprimento para os próximos meses? Como você decide qual é o preço ideal para seus produtos manter as metas semanais de vendas?
+Um varejista enfrenta muitos desafios para se manter competitivo no mercado atual. Sua marca busca aumentar as vendas anuais para sua marca de varejo, mas há muitas decisões a serem tomadas para minimizar seus custos operacionais. Demasiada oferta aumenta os custos de estoque, enquanto uma oferta muito pequena aumenta o risco de perder clientes para outras marcas. Você precisa pedir mais suprimentos para os próximos meses? Como você decide os preços ideais para seus produtos a fim de manter as metas de vendas semanais?
 
 ## O que esta receita faz?
 
-A fórmula Previsão de Vendas de Varejo usa aprendizagem de máquina para prever tendências de vendas. A receita faz isso aproveitando a riqueza de dados históricos de varejo e o algoritmo de aprendizado de máquina personalizado de reforço de gradiente para prever vendas com uma semana de antecedência. O modelo utiliza o histórico de compras e os padrões anteriores para parâmetros de configuração predeterminados determinados pelos nossos cientistas de dados, a fim de melhorar a precisão preditiva.
+A fórmula Previsão de vendas de varejo usa aprendizado de máquina para prever tendências de venda. A fórmula faz isso aproveitando a riqueza de dados históricos de varejo e o algoritmo de aprendizado de máquina regressor de reforço de gradiente personalizado para prever as vendas com uma semana de antecedência. O modelo utiliza o histórico de compras anteriores e assume como padrão os parâmetros de configuração predeterminados por nossos cientistas de dados para melhorar a precisão preditiva.
 
 ## Como começar?
 
-Você pode começar seguindo este exemplo [tutorial](../jupyterlab/create-a-model.md).
+Você pode começar seguindo este [tutorial](../jupyterlab/create-a-model.md).
 
-Este tutorial irá criar a receita de Vendas de varejo em um Bloco de Notas de Júpiter e usar o bloco de notas para receber fluxo de trabalho para criar a receita no Adobe Experience Platform.
+Este tutorial abordará a criação da fórmula de vendas de varejo em um Jupyter Notebook e o uso do fluxo de trabalho notebook para fórmula para criar a fórmula no Adobe Experience Platform.
 
-## Schema de dados
+## Esquema de dados
 
-Esta receita usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
+Esta fórmula usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |
@@ -46,8 +46,8 @@ Esta receita usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para model
 | weeklySales | Número |
 | storeSize | Número inteiro |
 | temperatura | Número |
-| regionalFuelPrice | Número |
-| marcação | Número |
+| regionalPreçoDoCombustível | Número |
+| markdown | Número |
 | cpi | Número |
 | desemprego | Número |
 | isHoliday | Booleano |
@@ -55,12 +55,12 @@ Esta receita usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para model
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no *DSWRetailSales* O esquema é carregado. A partir daqui, o modelo é treinado usando um [algoritmo de regressor de reforço de gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). A valorização de gradiente usa a ideia de que os aprendentes fracos (um que é pelo menos ligeiramente melhor do que o acaso aleatório) podem formar uma sucessão de aprendentes focados em melhorar as fraquezas do aluno anterior. Juntas, elas podem ser usadas para criar um modelo preditivo poderoso.
+Primeiro, o conjunto de dados de treinamento na *DSWRetailSales* o esquema é carregado. A partir daqui, o modelo é treinado usando um [algoritmo regressor de reforço de gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). O incentivo de gradiente usa a ideia de que alunos fracos (um que é pelo menos um pouco melhor do que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
 
-O processo envolve três elementos: uma função de perda, um aprendiz fraco e um modelo aditivo.
+O processo envolve três elementos: uma função de perda, um aluno fraco e um modelo aditivo.
 
-A função de perda refere-se a uma medida do desempenho de um modelo de previsão em termos de capacidade de prever o resultado esperado - pelo menos a regressão dos quadrados é utilizada nesta receita.
+A função de perda refere-se a uma medida de quão bom um modelo de previsão faz em termos de ser capaz de prever o resultado esperado - regressão dos quadrados mínimos é usada nesta fórmula.
 
-Na promoção de gradiente, uma árvore de decisão é usada como o aprendiz fraco. Normalmente, as árvores com um número restrito de camadas, nós e divisões são usadas para garantir que o aluno permaneça fraco.
+No aumento de gradiente, uma árvore de decisão é usada como o aluno fraco. Normalmente, árvores com um número restrito de camadas, nós e divisões são usadas para garantir que o aluno permaneça fraco.
 
-Por último, é utilizado um modelo de aditivo. Depois de calcular a perda com a função de perda, a árvore que reduz a perda é escolhida e ponderada para melhorar a modelagem das observações mais difíceis. A produção da árvore ponderada é então adicionada à sequência de árvores existente para melhorar a produção final do modelo - quantidade de vendas futuras .
+Por último, utiliza-se um modelo aditivo. Depois de calcular a perda com a função de perda, escolhe-se a árvore que reduz a perda e pondera-se para melhorar a modelagem das observações mais difíceis. A saída da árvore ponderada é então adicionada à sequência existente de árvores para melhorar a saída final do modelo - quantidade de vendas futuras .

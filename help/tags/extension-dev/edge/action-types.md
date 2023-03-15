@@ -13,9 +13,9 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Em uma regra de tag, uma ação é algo que é executado depois que as condições da regra tenham passado na avaliação. Os tipos de ação são fornecidos por extensões e seus efeitos são totalmente definidos pelo autor da extensão.
+Em uma regra de tag, uma ação é algo que é executado depois que as condições da regra passam na avaliação. Os tipos de ação são fornecidos por extensões e seus efeitos são totalmente definidos pelo autor da extensão.
 
 Por exemplo, uma extensão pode fornecer um tipo de ação &quot;mostrar o bate-papo de suporte&quot;, que pode exibir uma caixa de diálogo de bate-papo de suporte para ajudar usuários que estejam com dificuldades ao fazer check-out.
 
@@ -25,12 +25,12 @@ Este documento aborda como definir tipos de ação para uma extensão de borda n
 >
 >Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [tipos de ação para extensões da Web](../web/action-types.md).
 >
->Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões do Edge. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+>Este documento pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de borda. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
 
-Os tipos de ação normalmente consistem no seguinte:
+Os tipos de ação geralmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
-2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e executar uma ação.
+1. Uma visualização mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações da ação.
+2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e executar uma ação.
 
 Por exemplo, um módulo para encaminhar alguns dados a um endpoint de terceiros pode ter esta aparência.
 

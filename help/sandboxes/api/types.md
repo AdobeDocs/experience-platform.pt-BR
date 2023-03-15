@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, sandboxes de lista
+keywords: Experience Platform;página inicial;tópicos populares;listar sandboxes
 solution: Experience Platform
-title: Ponto de extremidade da API de tipos de sandbox
-description: Você pode recuperar uma lista dos tipos de sandbox suportados para sua organização fazendo uma solicitação do GET para o endpoint /sandboxTypes .
+title: Ponto de acesso da API de tipos de sandbox
+description: Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para o endpoint /sandboxTypes.
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 3%
 
 ---
 
-# Ponto de extremidade Tipos de sandbox
+# Ponto de extremidade de Tipos de sandbox
 
-É possível recuperar uma lista dos tipos de sandbox suportados pela organização fazendo uma solicitação do GET para a `/sandboxTypes` endpoint .
+Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para a `/sandboxTypes` terminal.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint da API usado neste guia faz parte da [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
-## Recuperar uma lista dos tipos de sandbox suportados
+## Recuperar uma lista de tipos de sandbox compatíveis
 
-É possível recuperar uma lista dos tipos de sandbox suportados pela organização fazendo uma solicitação do GET para a `/sandboxTypes` endpoint .
+Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para a `/sandboxTypes` terminal.
 
 **Formato da API**
 

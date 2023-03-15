@@ -1,6 +1,6 @@
 ---
-title: Notas de versão da extensão de plug-ins comuns do SDK da Web
-description: As notas de versão mais recentes para a extensão de tag de plug-ins comuns do SDK da Web no Adobe Experience Platform.
+title: Notas de versão da Extensão de plug-ins comuns do SDK da Web
+description: As notas de versão mais recentes da extensão de tag de plug-ins comuns do SDK da Web na Adobe Experience Platform.
 exl-id: e9b05ca5-0efc-426c-855a-5f0ccbfe20da
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt

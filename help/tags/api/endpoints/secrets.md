@@ -4,16 +4,16 @@ description: Saiba como fazer chamadas para o endpoint /segredos na API do Reato
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 15%
+source-wordcount: '1247'
+ht-degree: 12%
 
 ---
 
 # Ponto de extremidade secreto
 
-Um segredo é um recurso que existe somente nas propriedades de encaminhamento de eventos (propriedades com um `platform` conjunto de atributos para `edge`). Eles permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca de dados segura.
+Um segredo é um recurso que existe somente nas propriedades do encaminhamento de eventos (propriedades com um `platform` atributo definido como `edge`). Eles permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca segura de dados.
 
-Este guia mostra como fazer chamadas para o `/secrets` endpoint na API do reator. Para obter uma explicação detalhada dos diferentes tipos de segredo e como usá-los, consulte a visão geral de alto nível em [segredos](../guides/secrets.md) antes de retornar a este guia.
+Este guia mostra como fazer chamadas para a variável `/secrets` ponto de extremidade na API do Reator. Para obter uma explicação detalhada dos diferentes tipos secretos e como usá-los, consulte a visão geral de alto nível em [segredos](../guides/secrets.md) antes de retornar a este guia.
 
 ## Introdução
 
@@ -21,7 +21,7 @@ O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io
 
 ## Recuperar uma lista de segredos de uma propriedade {#list-property}
 
-Você pode listar os segredos que pertencem a uma propriedade fazendo uma solicitação do GET.
+Você pode listar os segredos que pertencem a uma propriedade fazendo uma solicitação GET.
 
 **Formato da API**
 
@@ -33,7 +33,7 @@ GET /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | A ID da propriedade cujos segredos você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -117,7 +117,7 @@ Uma resposta bem-sucedida retorna uma lista de segredos pertencentes à propried
 
 ## Recuperar uma lista de segredos de um ambiente {#list-environment}
 
-Você pode listar os segredos que pertencem a um ambiente fazendo uma solicitação do GET.
+Você pode listar os segredos que pertencem a um ambiente fazendo uma solicitação GET.
 
 **Formato da API**
 
@@ -129,7 +129,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 | --- | --- |
 | `{ENVIRONMENT_ID}` | A ID do ambiente cujos segredos você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de segredos pertencentes ao ambiente .
+Uma resposta bem-sucedida retorna uma lista de segredos pertencentes ao ambiente.
 
 ```json
 {
@@ -211,9 +211,9 @@ Uma resposta bem-sucedida retorna uma lista de segredos pertencentes ao ambiente
 }
 ```
 
-## Procurar um segredo {#lookup}
+## Pesquisar um segredo {#lookup}
 
-Você pode pesquisar um segredo incluindo sua ID no caminho de uma solicitação do GET.
+Você pode pesquisar um segredo incluindo a respectiva ID no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -225,7 +225,7 @@ GET /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | A ID do segredo que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -298,11 +298,11 @@ Uma resposta bem-sucedida retorna os detalhes do segredo.
 
 ## Criar um segredo {#create}
 
-Você pode criar um segredo fazendo uma solicitação de POST.
+Você pode criar um segredo fazendo uma solicitação POST.
 
 >[!NOTE]
 >
->Ao criar um novo segredo, a API retorna uma resposta imediata que contém informações para esse recurso. Ao mesmo tempo, uma tarefa de troca secreta é acionada para testar se a troca de credenciais está funcionando. Esta tarefa é processada de forma assíncrona e atualiza o atributo de status do segredo para `succeeded` ou `failed` dependendo do resultado.
+>Ao criar um novo segredo, a API retorna uma resposta imediata que contém informações desse recurso. Ao mesmo tempo, uma tarefa de troca de segredos é acionada para testar se a troca de credenciais está funcionando. Essa tarefa é processada de forma assíncrona e atualiza o atributo de status do segredo para `succeeded` ou `failed` dependendo do resultado.
 
 **Formato da API**
 
@@ -314,7 +314,7 @@ POST /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | A ID da propriedade em que você deseja definir o segredo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -351,13 +351,13 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | Um nome exclusivo e descritivo para o segredo. |
-| `type_of` | O tipo de credencial de autenticação que o segredo representa. Tem três valores aceitos:<ul><li>`token`: Uma string de token.</li><li>`simple-http`: Um nome de usuário e senha.</li><li>`oauth2`: Credenciais em conformidade com o padrão OAuth.</li></ul> |
-| `credentials` | Um objeto que contém os valores de credencial do segredo. Dependendo do `type_of` , propriedades diferentes devem ser fornecidas. Consulte a seção sobre [credenciais](../guides/secrets.md#credentials) no guia de segredos para obter detalhes sobre os requisitos para cada tipo. |
-| `relationships.environment` | Cada segredo deve ser associado a um ambiente quando é criado pela primeira vez. O `data` dentro dessa propriedade deve conter a variável `id` do ambiente ao qual o segredo está sendo atribuído, juntamente com um `type` valor de `environments`. |
+| `name` | Um nome descritivo exclusivo para o segredo. |
+| `type_of` | O tipo de credencial de autenticação que o segredo representa. Tem três valores aceitos:<ul><li>`token`: uma cadeia de caracteres de token.</li><li>`simple-http`: Um nome de usuário e senha.</li><li>`oauth2`: credenciais em conformidade com o padrão OAuth.</li></ul> |
+| `credentials` | Um objeto que contém os valores de credencial do segredo. Dependendo do `type_of` atributo, propriedades diferentes devem ser fornecidas. Consulte a seção sobre [credenciais](../guides/secrets.md#credentials) no guia de segredos para obter detalhes sobre os requisitos para cada tipo. |
+| `relationships.environment` | Cada segredo deve ser associado a um ambiente ao ser criado pela primeira vez. A variável `data` o objeto nessa propriedade deve conter a variável `id` do ambiente ao qual o segredo está sendo atribuído, juntamente com uma `type` valor de `environments`. |
 | `type` | O tipo de recurso que está sendo criado. Para esta chamada, o valor deve ser `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -421,9 +421,9 @@ Uma resposta bem-sucedida retorna os detalhes do segredo. Observe que, dependend
 
 >[!NOTE]
 >
->Esta operação só pode ser executada em segredos com uma `type_of` valor de `oauth2`.
+>Esta operação só pode ser executada em segredos com um `type_of` valor de `oauth2`.
 
-Você pode testar um `oauth2` secreta ao incluir sua ID no caminho de uma solicitação de PATCH. A operação de teste realiza uma troca e inclui a resposta do serviço de autorização na `test_exchange` no `meta` objeto. Esta operação não atualiza o segredo em si.
+Você pode testar um `oauth2` secreta incluindo a ID no caminho de uma solicitação PATCH. A operação de teste executa uma troca e inclui a resposta do serviço de autorização no `test_exchange` atributo no do segredo `meta` objeto. Essa operação não atualiza o segredo em si.
 
 **Formato da API**
 
@@ -433,9 +433,9 @@ PATCH /secrets/{SECRET_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SECRET_ID}` | A ID do `oauth2` segredo que você quer testar. |
+| `{SECRET_ID}` | A ID do `oauth2` segredo que você deseja testar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -466,9 +466,9 @@ curl -X PATCH \
 | `attributes` | Deve conter um `type_of` propriedade com um valor de `oauth2`. |
 | `meta` | Deve conter um `action` propriedade com um valor de `test`. |
 | `id` | A ID do segredo que você está testando. Deve corresponder à ID fornecida no caminho da solicitação. |
-| `type` | O tipo de recurso que está sendo operado. Deve ser definido como `secrets`. |
+| `type` | O tipo de recurso em operação. Deve ser definido como `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -538,9 +538,9 @@ Uma resposta bem-sucedida retorna os detalhes do segredo, com a resposta do serv
 }
 ```
 
-## Repetir um segredo {#retry}
+## Tentar novamente um segredo {#retry}
 
-Repetir um segredo é a ação de acionar manualmente a troca secreta. Você pode tentar novamente um segredo incluindo sua ID no caminho de uma solicitação de PATCH.
+Tentar novamente um segredo é a ação de acionar manualmente a troca de segredos. Você pode tentar novamente um segredo incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 **Formato da API**
 
@@ -552,7 +552,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | A ID do segredo que você deseja tentar novamente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -580,16 +580,16 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Deve conter um `type_of` propriedade correspondente à do segredo que está sendo atualizado (`token`, `simple-http`ou `oauth2`). |
+| `attributes` | Deve conter um `type_of` propriedade correspondente ao segredo que está sendo atualizado (`token`, `simple-http`ou `oauth2`). |
 | `meta` | Deve conter um `action` propriedade com um valor de `retry`. |
 | `id` | A ID do segredo que você está tentando novamente. Deve corresponder à ID fornecida no caminho da solicitação. |
-| `type` | O tipo de recurso que está sendo operado. Deve ser definido como `secrets`. |
+| `type` | O tipo de recurso em operação. Deve ser definido como `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do segredo, com seu status redefinido para `pending`. Após a conclusão da troca, o status do segredo será atualizado para `succeeded` ou `failed` dependendo do resultado.
+Uma resposta bem-sucedida retorna os detalhes do segredo, com o status redefinido como `pending`. Após a troca ser concluída, o status do segredo será atualizado para `succeeded` ou `failed` dependendo do resultado.
 
 ```json
 {
@@ -644,11 +644,11 @@ Uma resposta bem-sucedida retorna os detalhes do segredo, com seu status redefin
 }
 ```
 
-## Reautorizar uma `oauth2-google` segredo {#reauthorize}
+## Reautorizar um `oauth2-google` segredo {#reauthorize}
 
-Cada `oauth2-google` o segredo contém um `meta.authorization_url_expires_at` que indica quando o URL de autorização expirará. Após esse tempo, o segredo deve ser reautorizado para que possa renovar o processo de autenticação.
+Each `oauth2-google` o segredo contém um `meta.authorization_url_expires_at` propriedade que indica quando o URL de autorização irá expirar. Após esse período, o segredo deverá ser reautorizado para que possa renovar o processo de autenticação.
 
-Para autorizar novamente uma `oauth2-google` secreto, faça um pedido PATCH para o segredo em questão.
+Para reautorizar uma `oauth2-google` segredo, faça uma solicitação PATCH para o segredo em questão.
 
 **Formato da API**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SECRET_ID}` | O `id` do segredo que você deseja autorizar novamente. |
+| `{SECRET_ID}` | A variável `id` do segredo que você deseja reautorizar. |
 
 **Solicitação**
 
-O `data` no payload da solicitação deve conter um `meta.action` propriedade definida como `reauthorize`.
+A variável `data` o objeto na carga da solicitação deve conter um `meta.action` propriedade definida como `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do segredo atualizado. A partir daqui, você deve copiar e colar o `meta.authorization_url` em um navegador para concluir o processo de autorização.
+Uma resposta bem-sucedida retorna os detalhes do segredo atualizado. Aqui, você deve copiar e colar o `meta.authorization_url` em um navegador para concluir o processo de autorização.
 
 ```json
 {
@@ -753,13 +753,13 @@ Uma resposta bem-sucedida retorna os detalhes do segredo atualizado. A partir da
 
 ## Excluir um segredo {#delete}
 
-Você pode excluir um segredo incluindo sua ID no caminho de uma solicitação de DELETE. Esta é uma exclusão rígida com efeito imediato e não requer uma republicação da biblioteca.
+Você pode excluir um segredo incluindo a respectiva ID no caminho de uma solicitação DELETE. Essa é uma exclusão permanente com efeito imediato e não requer uma republicação da biblioteca.
 
-Essa operação remove o segredo do ambiente ao qual está relacionado e o recurso subjacente é excluído.
+Esta operação remove o segredo do ambiente ao qual está relacionada e o recurso subjacente é excluído.
 
 >[!WARNING]
 >
->Se você tiver alguma regra implantada que faça referência a um segredo excluído, essas regras não funcionarão imediatamente. Todos os elementos de dados que referenciam esse segredo devem ser atualizados ou removidos posteriormente.
+>Se você tiver regras implantadas que façam referência a um segredo excluído, essas regras deixarão de funcionar imediatamente. Quaisquer elementos de dados que referenciam esse segredo devem ser atualizados ou removidos posteriormente.
 
 **Formato da API**
 
@@ -771,7 +771,7 @@ DELETE /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | A ID do segredo que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -789,15 +789,15 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo de resposta vazio, indicando que o segredo foi excluído do sistema.
 
-## Listar as notas de um segredo {#notes}
+## Listar as anotações de um segredo {#notes}
 
-A API Reator permite adicionar observações a determinados recursos, incluindo segredos. Notas são anotações textuais que não têm impacto no comportamento dos recursos e podem ser usadas para uma variedade de casos de uso.
+A API do Reator permite adicionar observações a determinados recursos, incluindo segredos. As notas são anotações textuais que não têm impacto no comportamento dos recursos e podem ser usadas para vários casos de uso.
 
 >[!NOTE]
 >
->Consulte a [guia do endpoint de notas](./notes.md) para obter detalhes sobre como criar e editar notas para os recursos da API do reator.
+>Consulte a [manual de endpoint de notas](./notes.md) para obter detalhes sobre como criar e editar notas para os recursos da API do Reator.
 
-Você pode recuperar todas as notas relacionadas a um segredo fazendo uma solicitação do GET.
+Você pode recuperar todas as notas relacionadas a um segredo fazendo uma solicitação GET.
 
 **Formato da API**
 
@@ -809,7 +809,7 @@ GET /secrets/{SECRET_ID}/notes
 | --- | --- |
 | `{SECRET_ID}` | A ID do segredo cujas notas você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -870,13 +870,13 @@ Uma resposta bem-sucedida retorna uma lista de notas pertencentes ao segredo.
 
 ## Recuperar recursos relacionados de um segredo {#related}
 
-As chamadas a seguir demonstram como recuperar os recursos relacionados para um segredo. When [procurando um segredo](#lookup), esses relacionamentos estão listados na variável `relationships` propriedade.
+As chamadas a seguir demonstram como recuperar os recursos relacionados de um segredo. Quando [procurar um segredo](#lookup), essas relações são listadas na seção `relationships` propriedade.
 
 Consulte o [manual de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API do Reactor.
 
-### Procure um segredo no ambiente relacionado {#environment}
+### Pesquisar um segredo no ambiente relacionado {#environment}
 
-Você pode pesquisar o ambiente que utiliza um segredo ao anexar `/environment` para o caminho de uma solicitação do GET.
+Você pode pesquisar o ambiente que utiliza um segredo anexando `/environment` ao caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -888,7 +888,7 @@ GET /secrets/{SECRET_ID}/environment
 | --- | --- |
 | `{SECRET_ID}` | A ID do segredo cujo ambiente você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -983,9 +983,9 @@ Uma resposta bem-sucedida retorna os detalhes do ambiente.
 }
 ```
 
-### Procure uma propriedade relacionada por um segredo {#property}
+### Pesquisar um segredo na propriedade relacionada {#property}
 
-Você pode pesquisar a propriedade que possui um segredo ao anexar `/property` para o caminho de uma solicitação do GET.
+Você pode pesquisar a propriedade que possui um segredo anexando `/property` ao caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -997,7 +997,7 @@ GET /secrets/{SECRET_ID}/property
 | --- | --- |
 | `{SECRET_ID}` | A ID do segredo cuja propriedade você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

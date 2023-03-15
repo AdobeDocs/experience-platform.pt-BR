@@ -7,19 +7,19 @@ feature: Dashboards
 source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 33%
+ht-degree: 38%
 
 ---
 
 
-# Painéis Adobe Experience Platform {#dashboards}
+# Painéis do Adobe Experience Platform {#dashboards}
 
 * [Visão geral dos painéis](home.md)
 * [Permissões de acesso ao painel](permissions.md)
 * [Inventário de painéis](inventory.md)
 * [Painéis definidos pelo usuário](user-defined-dashboards.md)
-* [Baixar painéis para o PDF](download.md)
-* Painéis disponíveis {#guides}
+* [Baixar painéis no PDF](download.md)
+* Painéis de controle disponíveis {#guides}
    * [Perfis](guides/profiles.md)
    * [Perfis de conta](guides/account-profiles.md)
    * [Segmentos](guides/segments.md)
@@ -34,6 +34,6 @@ ht-degree: 33%
    * [Editar esquema](customize/edit-schema.md)
 * Integrações de aplicativos {#integrations}
    * [Power BI](integrations/power-bi.md)
-* [Conjuntos de dados do painel de query](query.md)
+* [Consultar conjuntos de dados do painel](query.md)
 * [Modelo de dados do Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

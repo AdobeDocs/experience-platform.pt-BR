@@ -16,18 +16,18 @@ ht-degree: 52%
 
 * [Visão geral do Privacy Service](./home.md)
 * [Gerenciar permissões do Privacy Service](./permissions.md)
-* [Aplicativos Privacy Service e Experience Cloud](./experience-cloud-apps.md)
+* [aplicativos Privacy Service e Experience Cloud](./experience-cloud-apps.md)
 * [Dados de identidade para solicitações de privacidade](./identity-data.md)
 * [Visão geral da biblioteca JS de privacidade](./js-library.md)
-* API Privacy Service {#api}
+* API PRIVACY SERVICE {#api}
    * [Visão geral](./api/overview.md)
    * [Introdução](./api/getting-started.md)
    * [Trabalhos de privacidade](./api/privacy-jobs.md)
    * [Consentimento](./api/consent.md)
    * [Apêndice](./api/appendix.md)
-* Interface do usuário do Privacy Service {#ui}
+* IU DO PRIVACY SERVICE {#ui}
    * [Visão geral](./ui/overview.md)
-   * [Gerenciar tarefas de privacidade](./ui/user-guide.md)
+   * [Gerenciar processos de privacidade](./ui/user-guide.md)
 * [Assinar eventos de privacidade](./privacy-events.md)
 * Regras de privacidade {#regulations}
    * [Visão geral](./regulations/overview.md)

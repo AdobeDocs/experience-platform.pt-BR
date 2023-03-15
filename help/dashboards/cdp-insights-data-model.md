@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # Modelo de dados do Real-time Customer Data Platform Insights
 
-O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights de vários perfis, destinos e widgets de segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de KPI (indicador de desempenho principal) e de marketing. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação de insights de relatório de loja acelerada de query para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de query para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação do query accelerated store reporting insights para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Pré-requisitos
 
-Este guia requer um entendimento prático do [recurso de painéis definidos pelo usuário](./user-defined-dashboards.md). Leia a documentação antes de continuar com este guia.
+Este guia requer uma compreensão funcional do [recurso de painéis definido pelo usuário](./user-defined-dashboards.md). Leia a documentação antes de continuar com este guia.
 
-## Relatórios e casos de uso do Real-Time CDP Insight
+## Relatórios e casos de uso do Real-Time CDP Insights
 
-Os relatórios do Real-Time CDP fornecem informações sobre seus dados de perfil e seu relacionamento com segmentos e destinos. Vários modelos de esquema de estrela foram desenvolvidos para responder a uma variedade de casos de uso de marketing comuns e cada modelo de dados pode suportar vários casos de uso.
+Os relatórios do Real-Time CDP fornecem insights sobre os dados do perfil e sua relação com segmentos e destinos. Vários modelos de esquema estrela foram desenvolvidos para responder a uma variedade de casos de uso comuns de marketing e cada modelo de dados pode suportar vários casos de uso.
 
 >[!IMPORTANT]
 >
@@ -37,13 +37,13 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 ![Um ERD do modelo de perfil.](./images/cdp-insights/profile-model.png)
 
-#### Caso de uso de contagem de perfis
+#### O caso de uso de contagem de perfis
 
-A lógica usada para o widget de contagem de perfis retorna o número total de perfis mesclados na Loja de perfis no momento em que o instantâneo foi tirado. Consulte a [[!UICONTROL Contagem de perfis] documentação do widget](./guides/profiles.md#profile-count) para obter mais informações.
+A lógica usada para o widget contagem de perfis retorna o número total de perfis mesclados no Armazenamento de perfis no momento em que o instantâneo foi tirado. Consulte a [[!UICONTROL Contagem de perfis] documentação do widget](./guides/profiles.md#profile-count) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Contagem de perfis] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Contagem de perfis] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT adwh_dim_merge_policies.merge_policy_name,
@@ -57,13 +57,13 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 +++
 
-#### Caso de uso de Perfis de identidade únicos
+#### O caso de uso de perfis de identidade única
 
-A lógica usada para a variável [!UICONTROL Perfis de identidade única] O widget fornece uma contagem dos perfis de sua organização que têm apenas um tipo de ID que cria sua identidade. Consulte a[[!UICONTROL Perfis de identidade única] documentação do widget](./guides/profiles.md#single-identity-profiles) para obter mais informações.
+A lógica usada para o [!UICONTROL Perfis de identidade única] O widget fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria a identidade. Consulte a[[!UICONTROL Perfis de identidade única] documentação do widget](./guides/profiles.md#single-identity-profiles) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Perfis de identidade única] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Perfis de identidade única] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT adwh_dim_merge_policies.merge_policy_name,
@@ -79,7 +79,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 ### Modelo de namespace {#namespace-model}
 
-O modelo de namespace é composto dos seguintes conjuntos de dados:
+O modelo de namespace é composto pelos seguintes conjuntos de dados:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_namespace`
@@ -90,13 +90,13 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 ![Um ERD do modelo de namespace.](./images/cdp-insights/namespace-model.png)
 
-#### Perfis por caso de uso de identidade
+#### Caso de uso de perfis por identidade
 
-O [!UICONTROL Perfis por identidade] O widget exibe o detalhamento das identidades em todos os perfis mesclados na Loja de perfis. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](./guides/profiles.md#profiles-by-identity) para obter mais informações.
+A variável [!UICONTROL Perfis por identidade] O widget exibe o detalhamento das identidades em todos os perfis mesclados na sua Loja de perfis. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](./guides/profiles.md#profiles-by-identity) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Perfis por identidade] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Perfis por identidade] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT adwh_dim_namespaces.namespace_description,
@@ -115,13 +115,13 @@ LIMIT 5;
 
 +++
 
-#### Perfis de identidade únicos por caso de uso de identidade
+#### Caso de uso de perfis de identidade únicos por identidade
 
-A lógica usada para a variável [!UICONTROL Perfis de identidade únicos por identidade] O widget ilustra o número total de perfis identificados com apenas um único identificador exclusivo. Consulte a [Perfis de identidade única por documentação do widget de identidade](./guides/profiles.md#single-identity-profiles-by-identity) para obter mais informações.
+A lógica usada para o [!UICONTROL Perfis de identidade únicos por identidade] O widget ilustra o número total de perfis identificados com apenas um identificador exclusivo. Consulte a [Documentação do widget Perfis de identidade únicos por identidade](./guides/profiles.md#single-identity-profiles-by-identity) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Perfis de identidade únicos por identidade] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Perfis de identidade únicos por identidade] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT
@@ -160,13 +160,13 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 ![Um ERD do modelo de segmento.](./images/cdp-insights/segment-model.png)
 
-#### Caso de uso de tamanho de público-alvo
+#### Caso de uso de tamanho do público
 
-A lógica usada para a variável [!UICONTROL Tamanho do público-alvo] o widget retorna o número total de perfis mesclados no segmento selecionado no momento do instantâneo mais recente. Consulte a [[!UICONTROL Tamanho do público-alvo] documentação do widget](./guides/segments.md#audience-size) para obter mais informações.
+A lógica usada para o [!UICONTROL Tamanho do público] O widget retorna o número total de perfis mesclados no segmento selecionado no momento do instantâneo mais recente. Consulte a [[!UICONTROL Tamanho do público] documentação do widget](./guides/segments.md#audience-size) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Tamanho do público-alvo] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Tamanho do público] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT adwh_fact_profile_by_segment.date_key,
@@ -189,13 +189,13 @@ LIMIT 20;
 
 +++
 
-#### Caso de uso de tendência de alteração de tamanho de público-alvo
+#### Caso de uso de tendência de alteração de tamanho do público
 
-A lógica usada para a variável [!UICONTROL Tendência de alteração do tamanho do público-alvo] O widget fornece um gráfico de linhas que ilustra a diferença no número total de perfis que se qualificaram para um determinado segmento entre os instantâneos diários mais recentes. Consulte a [[!UICONTROL Tendência de alteração do tamanho do público-alvo] documentação do widget](./guides/segments.md#audience-size-change-trend) para obter mais informações.
+A lógica usada para o [!UICONTROL Tendência de alteração de tamanho do público] O widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado segmento entre os instantâneos diários mais recentes. Consulte a [[!UICONTROL Tendência de alteração de tamanho do público] documentação do widget](./guides/segments.md#audience-size-change-trend) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Tendência de alteração do tamanho do público-alvo] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Tendência de alteração de tamanho do público] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT DISTINCT cast(adwh_dim_segments.create_date AS Date) Date_key, adwh_dim_merge_policies.merge_policy_name,
@@ -210,13 +210,13 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 +++
 
-#### Caso de uso de destinos mais usados
+#### Caso de uso dos destinos mais usados
 
-A lógica usada na variável [!UICONTROL Destinos mais usados] O widget lista os destinos mais usados de sua organização de acordo com o número de segmentos mapeados para eles. Essa classificação fornece informações sobre quais destinos estão sendo utilizados, além de mostrar potencialmente aqueles que podem ser subutilizados. Consulte a documentação no [[!UICONTROL Destinos mais usados] widget](./guides/destinations.md#most-used-destinations) para obter mais informações.
+A lógica usada no [!UICONTROL Destinos mais usados] O widget lista os destinos mais usados de sua organização de acordo com o número de segmentos mapeados para eles. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados. Consulte a documentação no [[!UICONTROL Destinos mais usados] widget](./guides/destinations.md#most-used-destinations) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Destinos mais usados] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Destinos mais usados] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT
@@ -239,11 +239,11 @@ FROM
 
 #### Caso de uso de segmentos ativados recentemente
 
-A lógica da [!UICONTROL Segmentos ativados recentemente] fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Segmentos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-segments) para obter mais informações.
+A lógica para o [!UICONTROL Segmentos ativados recentemente] O widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Segmentos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-segments) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Segmentos ativados recentemente] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Segmentos ativados recentemente] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT segment_name, segment, destination_name, a.create_time create_time
@@ -257,7 +257,7 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 ### Modelo de segmento de namespace
 
-O modelo namespace-segment é composto pelos seguintes conjuntos de dados:
+O modelo de segmento de namespace é composto pelos seguintes conjuntos de dados:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -274,11 +274,11 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Perfis por identidade para um caso de uso de segmento
 
-A lógica usada na variável [!UICONTROL Perfis por identidade] O widget fornece um detalhamento de identidades em todos os perfis mesclados na Loja de perfis para um determinado segmento. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](./guides/segments.md#profiles-by-identity) para obter mais informações.
+A lógica usada no [!UICONTROL Perfis por identidade] O widget fornece um detalhamento das identidades em todos os perfis mesclados na sua Loja de perfis para um determinado segmento. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](./guides/segments.md#profiles-by-identity) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Perfis por identidade] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Perfis por identidade] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT adwh_dim_namespaces.namespace_description,
@@ -295,7 +295,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 +++
 
-### Modelo de namespace de sobreposição
+### Sobrepor modelo de namespace
 
 O modelo de namespace de sobreposição é composto pelos seguintes conjuntos de dados:
 
@@ -310,11 +310,11 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de sobreposição de identidade (perfis)
 
-A lógica usada na variável [!UICONTROL Sobreposição de identidade] o widget exibe a sobreposição de perfis em seu **Loja de perfis** que contêm as duas identidades selecionadas. Para obter mais informações, consulte o [[!UICONTROL Sobreposição de identidade] seção de widget do [!UICONTROL Perfis] documentação do painel](./guides/profiles.md#identity-overlap).
+A lógica usada no [!UICONTROL Sobreposição de identidade] exibe a sobreposição de perfis no seu **Loja de perfis** que contêm as duas identidades selecionadas. Para obter mais informações, consulte [[!UICONTROL Sobreposição de identidade] seção widget do [!UICONTROL Perfis] documentação do painel](./guides/profiles.md#identity-overlap).
 
-O SQL que gera a variável [!UICONTROL Sobreposição de identidade] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Sobreposição de identidade] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -378,11 +378,11 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de sobreposição de identidade (segmentos)
 
-A lógica usada na variável [!UICONTROL Segmentos] painel [!UICONTROL Sobreposição de identidade] O widget ilustra a sobreposição de perfis que contêm as duas identidades selecionadas para um segmento específico. Para obter mais informações, consulte o [[!UICONTROL Sobreposição de identidade] seção de widget do [!UICONTROL Segmentação] documentação do painel](./guides/segments.md#identity-overlap).
+A lógica usada no [!UICONTROL Segmentos] painel [!UICONTROL Sobreposição de identidade] O widget ilustra a sobreposição de perfis que contém as duas identidades selecionadas para um segmento específico. Para obter mais informações, consulte [[!UICONTROL Sobreposição de identidade] seção widget do [!UICONTROL Segmentação] documentação do painel](./guides/segments.md#identity-overlap).
 
-O SQL que gera a variável [!UICONTROL Sobreposição de identidade] O widget é visto na seção que pode ser recolhida abaixo.
+O SQL que gera a variável [!UICONTROL Sobreposição de identidade] o widget está na seção recolhível abaixo.
 
-consulta +++SQL
+Consulta +++SQL
 
 ```sql
 SELECT

@@ -1,10 +1,11 @@
 ---
 title: Compatibilidade de Integridade de sub-recursos (SRI)
 description: Saiba como a integridade de sub-recursos (SRI) é compatível com o Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '601'
-ht-degree: 78%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento aborda como a SRI (Integridade de sub-recursos) é compatível com o Adobe Experience Platform.
 
@@ -33,11 +34,11 @@ O processo de validação da SRI pode ser resumido da seguinte forma:
 
 ## Limitações nos sistemas de gerenciamento de tags
 
-Como um sistema de gerenciamento de tags (TMS), as tags no Adobe Experience Platform fornecem uma build de biblioteca JavaScript que você carrega em suas páginas com um único elemento `<script>` (código incorporado). A funcionalidade dinâmica oferecida pelo TMS é alcançada pela troca dinâmica do conteúdo desse script sem a necessidade de alterar mais nada.
+Como um sistema de gerenciamento de tags (TMS), as tags na Adobe Experience Platform fornecem um build de biblioteca JavaScript que você carrega em suas páginas com um único elemento `<script>` (código incorporado). A funcionalidade dinâmica oferecida pelo TMS é alcançada pela troca dinâmica do conteúdo desse script sem a necessidade de alterar mais nada.
 
 No entanto, quando o conteúdo do script é alterado, o mesmo acontece com o hash criptográfico desse conteúdo. Portanto, a única maneira de fazer a SRI funcionar com um TMS é atualizar seu código integrado ao mesmo tempo em que você publica uma nova build. Para muitos, isso elimina o objetivo principal de usar um TMS em primeiro lugar.
 
-A próxima melhor opção de segurança para tags é implementar uma Política de segurança de conteúdo. Para obter mais informações, consulte o guia sobre [CSPs e tags](./content-security-policy.md).
+A próxima melhor opção de segurança para tags é implementar uma Política de segurança de conteúdo. Para obter mais informações, consulte o manual sobre [CSPs e tags](./content-security-policy.md).
 
 ## Integração da SRI na implantação de build
 
@@ -55,4 +56,4 @@ A automatização do processo de atualização do código integrado varia em com
 
 ## Próximas etapas
 
-Este documento cobriu as limitações do uso da SRI com tags e as etapas necessárias para integrá-la às implantações de build da biblioteca, apesar dessas limitações. Caso ainda não o tenha feito, é altamente recomendável que você leia o guia em [CSPs e tags](./content-security-policy.md) para obter uma opção alternativa de segurança.
+Esse documento abordou as limitações do uso da SRI com tags e as etapas necessárias para integrá-la às implantações de build da biblioteca, apesar dessas limitações. Se ainda não tiver lido, é altamente recomendável que você leia o manual sobre as [CSPs e tags](./content-security-policy.md) para obter uma opção alternativa de segurança.

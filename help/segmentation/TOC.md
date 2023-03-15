@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 22%
+ht-degree: 31%
 
 ---
 
@@ -25,28 +25,28 @@ ht-degree: 22%
    - [Visualizações e estimativas](api/previews-and-estimates.md)
    - [Agendamentos](api/schedules.md)
    - [Definições de segmento](api/segment-definitions.md)
-   - [Trabalhos de segmento](api/segment-jobs.md)
-   - [Pesquisa de segmento](api/segment-search.md)
-   - [Segmentação de streaming](api/streaming-segmentation.md)
-- Interface do usuário de segmentação {#ui}
+   - [Trabalhos do segmento](api/segment-jobs.md)
+   - [Pesquisa de segmentos](api/segment-search.md)
+   - [Segmentação de transmissão](api/streaming-segmentation.md)
+- Interface de segmentação {#ui}
    - [Visão geral](ui/overview.md)
-   - [Construtor de público-alvo](ui/audience-builder.md)
-   - [Painel de segmentos](ui/segment-dashboard.md)
+   - [Audience Builder](ui/audience-builder.md)
+   - [Painel do segmento](ui/segment-dashboard.md)
    - [Construtor de segmentos](ui/segment-builder.md)
    - [Segmentação de borda](ui/edge-segmentation.md)
-   - [Segmentação de streaming](ui/streaming-segmentation.md)
-   - [Segmentação de transmissão (vídeo)](video/streaming-segmentation-overview.md)
-   - [Refatoração das restrições de tempo](ui/segment-refactoring.md)
+   - [Segmentação de transmissão](ui/streaming-segmentation.md)
+   - [Segmentação de transmissão (Vídeo)](video/streaming-segmentation-overview.md)
+   - [Refatoração de restrições de tempo](ui/segment-refactoring.md)
    - Correspondência de segmentos {#segment-match}
-      - [Visão geral da Correspondência de segmento](ui/segment-match/overview.md)
+      - [Visão geral da correspondência de segmentos](ui/segment-match/overview.md)
       - [Solução de problemas](ui/segment-match/troubleshooting.md)
-- [Respeito do consentimento](consents.md)
+- [Cumprimento do consentimento](consents.md)
 - [Segmentação de várias entidades](multi-entity-segmentation.md)
-- Idioma da Consulta de Perfil {#pql}
+- Idioma de consulta do perfil {#pql}
    - [Visão geral](pql/overview.md)
    - [Funções booleanas](pql/boolean-functions.md)
    - [Funções de comparação](pql/comparison-functions.md)
-   - [Array, list e defina funções](pql/array-functions.md)
+   - [Funções de matriz, lista e definição](pql/array-functions.md)
    - [Funções do mapa](pql/map-functions.md)
    - [Funções de string](pql/string-functions.md)
    - [Funções do objeto](pql/object-functions.md)
@@ -54,16 +54,16 @@ ht-degree: 22%
    - [Funções de agregação](pql/aggregation-functions.md)
    - [Funções de data e hora](pql/datetime-functions.md)
    - [Filtrar funções](pql/filter-functions.md)
-   - [quantificadores lógicos](pql/logical-quantifiers.md)
+   - [Quantificadores lógicos](pql/logical-quantifiers.md)
    - [Funções diversas](pql/misc-functions.md)
 - Tutoriais {#tutorials}
    - [Criar um segmento](tutorials/create-a-segment.md)
    - [Criar um segmento (Vídeo)](video/create-segment.md)
    - [Criar um segmento dinâmico (Vídeo)](video/create-a-dynamic-segment.md)
-   - [Criar um segmento de várias entidades (vídeo)](video/create-multi-entity-segments.md)
+   - [Criar um segmento com várias entidades (vídeo)](video/create-multi-entity-segments.md)
    - [Avaliar um segmento](tutorials/evaluate-a-segment.md)
    - [Importação e uso de públicos externos](tutorials/using-external-audiences.md)
    - [Criar um conjunto de dados para exportar dados](tutorials/create-dataset-export-segment.md)
-   - [Impor conformidade de uso de dados para segmentos](tutorials/governance.md)
+   - [Impor a conformidade de uso de dados para segmentos](tutorials/governance.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

@@ -1,8 +1,8 @@
 ---
-keywords: perfil, perfil do cliente em tempo real, solução de problemas, medidas de proteção, diretrizes, limite, entidade, entidade primária, entidade de dimensão, RTCDP, CDP, B2B Edition, Real-time Customer Data Platform, plataforma de dados do cliente em tempo real, cdp em tempo real, b2b, cdp;
-title: Grades de proteção padrão para Real-time Customer Data Platform B2B Edition
+keywords: perfil;perfil do cliente em tempo real;solução de problemas;medidas de proteção;diretrizes;limite;entidade;entidade primária;entidade de dimensão;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;plataforma de dados do cliente em tempo real;cdp em tempo real;b2b;cdp;
+title: Proteções padrão para o Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudá-lo a modelar seus dados para obter o melhor desempenho do sistema usando o Adobe Real-time Customer Data Platform B2B Edition.
+description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados para obter o melhor desempenho do sistema usando o Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
@@ -11,97 +11,97 @@ ht-degree: 2%
 
 ---
 
-# Grades de proteção padrão para Real-time Customer Data Platform B2B Edition
+# Proteções padrão para o Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >
->Os limites descritos neste documento representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+>Os limites descritos neste documento representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
-O Real-time Customer Data Platform B2B Edition permite que você forneça experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis do cliente em tempo real e Perfis de conta. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
+O Real-time Customer Data Platform B2B Edition permite que você forneça experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis de clientes em tempo real e Perfis de conta. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
 
-Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados para obter o melhor desempenho do sistema. Ao revisar as seguintes medidas de proteção, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do serviço de atendimento ao cliente.
+Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados para obter o melhor desempenho do sistema. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
 
 >[!INFO]
 >
->A maioria dos clientes não excede esses limites padrão. Se quiser saber mais sobre limites personalizados, entre em contato com seu representante de atendimento ao cliente.
+>A maioria dos clientes não excede esses limites padrão. Se quiser saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.
 
 ## Tipos de limite
 
-Existem dois tipos de limites padrão neste documento:
+Há dois tipos de limites padrão neste documento:
 
-* **Limite suave:** É possível ir além de um limite suave, no entanto, os limites suaves fornecem uma diretriz recomendada para o desempenho do sistema.
+* **Limite flexível:** É possível ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema.
 
 * **Limite rígido:** Um limite rígido fornece um máximo absoluto.
 
 >[!INFO]
 >
->Os limites indicados neste documento são constantemente melhorados. Verifique regularmente se há atualizações. Se você estiver interessado em saber mais sobre limites personalizados, entre em contato com seu representante de atendimento ao cliente.
+>Os limites descritos neste documento estão sendo constantemente melhorados. Verifique regularmente se há atualizações. Se você estiver interessado em saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.
 
 ## Limites do modelo de dados
 
-As seguintes medidas de proteção fornecem limites recomendados ao modelar dados do Perfil do cliente em tempo real. Para saber mais sobre entidades primárias e entidades de dimensão, consulte a seção em [tipos de entidade](#entity-types) no apêndice.
+As medidas de proteção a seguir fornecem limites recomendados ao modelar dados do Perfil do cliente em tempo real. Para saber mais sobre entidades primárias e entidades de dimensão, consulte a seção sobre [tipos de entidade](#entity-types) no apêndice.
 
-### Medidas de proteção de entidade primária
-
->[!NOTE]
->
->Os limites do modelo de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
-
-| Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
-| Conjuntos de dados da classe XDM padrão do Real-Time CDP B2B Edition | 60 | Suave | Recomenda-se um máximo de 60 conjuntos de dados que aproveitam as classes padrão do Experience Data Model (XDM) fornecidas pela Real-Time CDP B2B Edition. Para obter uma lista completa das classes XDM padrão para casos de uso B2B, consulte [esquemas na documentação do Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Observação: Devido à natureza do modelo de dados híbridos personalizado, a maioria dos clientes não excede esse limite. Em caso de dúvidas sobre como modelar seus dados ou se você deseja saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.* |
-| Relações de várias entidades herdadas | 20 | Suave | Recomenda-se um máximo de 20 relacionamentos de várias entidades definidos entre entidades primárias e entidades de dimensão. Os mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desabilitado. |
-| Relações de muitos para um por classe XDM | 2 | Suave | Recomenda-se um máximo de 2 relações muitos para um definidas por classe XDM. Não deve ser estabelecida uma relação adicional enquanto não for removida ou desativada uma relação existente. Para obter etapas sobre como criar uma relação entre dois schemas, consulte o tutorial em [definição de relações de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
-
-### Medidas de proteção de Dimension entity
+### Medidas de proteção da entidade principal
 
 >[!NOTE]
 >
->Os limites do modelo de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+>Os limites do modelo de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Nenhum relacionamento herdado aninhado | 0 | Suave | Você não deve criar uma relação entre dois[!DNL XDM Individual Profile] esquemas. A capacidade de criar relacionamentos não é recomendada para qualquer schema que não faça parte do [!DNL Profile] esquema de união. |
-| Somente objetos B2B podem participar de relacionamentos muitos para um | 0 | Grave | O sistema suporta apenas relações muitos para um entre objetos B2B. Para obter mais informações sobre relacionamentos muitos para um, consulte o tutorial em [definição de relações de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
-| Profundidade máxima dos relacionamentos aninhados entre objetos B2B | 3 | Grave | A profundidade máxima de relacionamentos aninhados entre objetos B2B é 3. Isso significa que em um schema altamente aninhado, você não deve ter uma relação entre objetos B2B aninhados com mais de três níveis de profundidade. |
+| Conjuntos de dados da classe XDM padrão do Real-Time CDP B2B Edition | 60 | Suave | Recomenda-se um máximo de 60 conjuntos de dados que usam as classes padrão do Experience Data Model (XDM) fornecidas pelo Real-Time CDP B2B Edition. Para obter uma lista completa de classes XDM padrão para casos de uso B2B, consulte o [esquemas na documentação do Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Observação: devido à natureza do modelo de dados híbrido desnormalizado de Experience Platform, a maioria dos clientes não excede esse limite. Para perguntas sobre como modelar seus dados ou se quiser saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.* |
+| Relacionamentos herdados de várias entidades | 20 | Suave | Recomenda-se um máximo de 20 relacionamentos de várias entidades definidos entre entidades primárias e entidades de dimensão. Mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desabilitado. |
+| Relacionamentos muitos para um por classe XDM | 2 | Suave | Recomenda-se um máximo de 2 relações muitos para um definidas por classe XDM. Uma relação adicional não deve ser feita até que uma relação existente seja removida ou desabilitada. Para obter etapas sobre como criar uma relação entre dois schemas, consulte o tutorial sobre [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
+
+### Medidas de proteção de entidade Dimension
+
+>[!NOTE]
+>
+>Os limites do modelo de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+
+| Grade de Proteção | Limite | Tipo de limite | Descrição |
+| --- | --- | --- | --- |
+| Nenhuma relação herdada aninhada | 0 | Suave | Você não deve criar uma relação entre dois[!DNL XDM Individual Profile] esquemas. A capacidade de criar relações não é recomendada para esquemas que não fazem parte da [!DNL Profile] esquema de união. |
+| Somente objetos B2B podem participar de relações muitos para um | 0 | Grave | O sistema só suporta relações muitos para um entre objetos B2B. Para obter mais informações sobre relações muitos para um, consulte o tutorial em [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
+| Profundidade máxima de relações aninhadas entre objetos B2B | 3 | Grave | A profundidade máxima das relações aninhadas entre objetos B2B é 3. Isso significa que em um esquema altamente aninhado, você não deve ter uma relação entre objetos B2B aninhados a mais de 3 níveis de profundidade. |
 
 ## Limites de tamanho de dados
 
-As medidas de proteção a seguir referem-se ao tamanho dos dados e fornecem limites recomendados para dados que podem ser assimilados, armazenados e consultados conforme planejado. Para saber mais sobre entidades primárias e entidades de dimensão, consulte a seção em [tipos de entidade](#entity-types) no apêndice.
+As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem limites recomendados para os dados que podem ser assimilados, armazenados e consultados conforme esperado. Para saber mais sobre entidades primárias e entidades de dimensão, consulte a seção sobre [tipos de entidade](#entity-types) no apêndice.
 
 >[!INFO]
 >
->O tamanho dos dados é medido como dados descompactados no JSON no momento da ingestão.
+>O tamanho dos dados é medido como dados descompactados no JSON no momento da assimilação.
 
-### Medidas de proteção de entidade primária
+### Medidas de proteção da entidade principal
 
 >[!NOTE]
 >
->Os limites de tamanho de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+>Os limites de tamanho de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Lotes assimilados por classe XDM por dia | 45 | Suave | O número total de lotes ingeridos por dia por classe XDM não deve exceder 45. A incorporação de lotes adicionais pode impedir o desempenho ideal. |
+| Lotes assimilados por classe XDM por dia | 45 | Suave | O número total de lotes assimilados a cada dia por classe XDM não deve exceder 45. A ingestão de lotes adicionais pode impedir o desempenho ideal. |
 
-### Medidas de proteção de Dimension entity
+### Medidas de proteção de entidade Dimension
 
 >[!NOTE]
 >
->Os limites de tamanho de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+>Os limites de tamanho de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Tamanho total para todas as entidades dimensionais | 5 GB | Suave | O tamanho total recomendado para todas as entidades dimensionais é de 5 GB. Inserir grandes entidades de dimensão pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
-| Conjuntos de dados por esquema de entidade dimensional | 5 | Suave | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao schema de produtos. |
-| lotes de entidade Dimension ingeridos por dia | 4 por entidade | Suave | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. Inserir lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
+| Tamanho total de todas as entidades dimensionais | 5 GB | Suave | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
+| Esquema de entidade dimensional de conjuntos de dados | 5 | Suave | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
+| Lotes de entidades Dimension assimilados por dia | 4 por entidade | Suave | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
 
-## Medidas de proteção de segmentação
+## Proteções de segmentação
 
-As grades de proteção descritas nesta seção se referem ao número e à natureza dos segmentos que uma organização pode criar no Experience Platform, bem como ao mapeamento e ativação de segmentos para destinos.
+As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos segmentos que uma organização pode criar no Experience Platform, bem como mapear e ativar segmentos para destinos.
 
 >[!NOTE]
 >
->Os limites de segmentação descritos nesta seção representam as alterações habilitadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+>Os limites de segmentação descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ As grades de proteção descritas nesta seção se referem ao número e à natur
 
 ## Próximas etapas
 
-Os limites descritos neste documento representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa dos limites padrão do Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
+Os limites descritos neste documento representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 ## Apêndice
 
@@ -117,22 +117,22 @@ Esta seção fornece detalhes adicionais para os limites neste documento.
 
 ### Tipos de entidade
 
-O [!DNL Profile] o modelo de dados de armazenamento consiste em dois tipos de entidade principais: [entidades primárias](#primary-entity) e [entidades de dimensão](#dimension-entity).
+A variável [!DNL Profile] o modelo de armazenamento de dados consiste em dois tipos de entidade principais: [entidades principais](#primary-entity) e [entidades de dimensão](#dimension-entity).
 
-#### Entidade primária
+#### Entidade principal
 
-Uma entidade primária ou entidade de perfil une os dados para formar uma &quot;única fonte de verdade&quot; para um indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;exibição de união&quot;. Uma exibição de união agrega os campos de todos os esquemas que implementam a mesma classe em um único schema de união. O schema de união para [!DNL Real-Time Customer Profile] é um modelo de dados híbrido desnormalizado que atua como um contêiner para todos os atributos de perfil e eventos comportamentais.
+Uma entidade principal, ou entidade de perfil, mescla dados para formar uma &quot;única fonte de verdade&quot; para um indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;visualização de união&quot;. Uma visualização de união agrega os campos de todos os esquemas que implementam a mesma classe em um único esquema de união. O esquema de união para [!DNL Real-Time Customer Profile] é um modelo de dados híbrido desnormalizado que atua como um container para todos os atributos de perfil e eventos comportamentais.
 
-Atributos independentes de tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto que os dados das séries cronológicas, também conhecidos como &quot;dados de eventos&quot;, são modelados utilizando [!DNL XDM ExperienceEvent]. Como os dados de registro e de série de tempo são assimilados no Adobe Experience Platform, ele dispara [!DNL Real-Time Customer Profile] para começar a assimilar dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos serão os perfis individuais.
+Os atributos independentes do tempo, também conhecidos como &quot;dados de registro&quot;, são modelados usando [!DNL XDM Individual Profile], enquanto os dados de série temporal, também conhecidos como &quot;dados de evento&quot;, são modelados usando [!DNL XDM ExperienceEvent]. À medida que os dados de registro e de série temporal são assimilados no Adobe Experience Platform, ele é acionado [!DNL Real-Time Customer Profile] para começar a assimilar dados que foram ativados para seu uso. Quanto mais interações e detalhes forem assimilados, mais robustos os perfis individuais se tornarão.
 
-![Um infográfico que descreve as diferenças entre os dados de registro e os dados da série cronológica.](../profile/images/guardrails/profile-entity.png)
+![Um infográfico que descreve as diferenças entre os dados de registro e os dados de série temporal.](../profile/images/guardrails/profile-entity.png)
 
-#### Dimension entity
+#### entidade Dimension
 
-Embora o armazenamento de dados do Perfil que mantém os dados do perfil não seja uma loja relacional, o Perfil permite a integração com pequenas entidades de dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
+Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
 
-Sua organização também pode definir classes XDM para descrever coisas diferentes de indivíduos, como lojas, produtos ou propriedades. Esses[!DNL XDM Individual Profile] os schemas são chamados de &quot;entidades de dimensão&quot; (também conhecidos como &quot;entidades de pesquisa&quot;) e não contêm dados de séries de tempo. Os esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relações de esquema](../xdm/tutorials/relationship-ui.md).
+Sua organização também pode definir classes XDM para descrever coisas que não sejam indivíduos, como lojas, produtos ou propriedades. Esses programas,[!DNL XDM Individual Profile] os esquemas são chamados de &quot;entidades de dimensão&quot; (também conhecidas como &quot;entidades de pesquisa&quot;) e não contêm dados de série temporal. Os esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relacionamentos de esquema](../xdm/tutorials/relationship-ui.md).
 
-As entidades de Dimension fornecem dados de pesquisa que auxilia e simplifica definições de segmentos de várias entidades e devem ser pequenos o suficiente para que o mecanismo de segmentação possa carregar todo o conjunto de dados na memória para um processamento ideal (pesquisa de ponto rápido).
+As entidades Dimension fornecem dados de pesquisa que auxiliam e simplificam as definições de segmento de várias entidades e devem ser pequenas o suficiente para que o mecanismo de segmentação possa carregar todo o conjunto de dados na memória para um processamento ideal (pesquisa rápida por ponto).
 
 ![Um infográfico que mostra que uma entidade de perfil é composta de entidades de dimensão.](../profile/images/guardrails/profile-and-dimension-entities.png)

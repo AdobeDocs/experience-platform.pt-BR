@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, consultas de evento de experiência, consulta de evento de experiência, consulta de evento de experiência, consulta de evento de experiência;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;consultas experienceevent;consulta experienceevent;consulta Experience Event;
 title: Criar um relatório de tendências de eventos
-description: Saiba como gravar consultas que usam Eventos de experiência para criar um relatório de tendências de eventos em um intervalo de datas especificado, agrupado por data.
+description: Saiba como gravar consultas que usam Eventos de experiência para criar um relatório de tendências de eventos em um intervalo de datas especificado, agrupados por data.
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '379'
@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # Criar um relatório de tendências de eventos
 
-Este documento fornece um exemplo do SQL necessário para criar um relatório de tendências de eventos por dia em um intervalo de datas específico. Com o Adobe Experience Platform Query Service, você pode gravar consultas que usam [!DNL Experience Events] para capturar uma variedade de casos de uso. Os Eventos de experiência são representados pela classe ExperienceEvent do Experience Data Model (XDM), que captura um instantâneo imutável e não agregado do sistema quando um usuário interage com um site ou serviço. Os Eventos de experiência podem ser usados para análise de domínio de tempo. Consulte a [seção próximas etapas](#next-steps) para mais casos de uso que envolvam [!DNL Experience Events] para gerar relatórios de visitante.
+Este documento fornece um exemplo do SQL necessário para criar um relatório de tendências de eventos por dia em um intervalo de datas específico. Com o Serviço de consulta da Adobe Experience Platform, é possível gravar consultas que usam [!DNL Experience Events] para capturar uma variedade de casos de uso. Eventos de experiência são representados pela classe Experience Data Model (XDM) ExperienceEvent, que captura um instantâneo imutável e não agregado do sistema quando um usuário interage com um site ou serviço. Eventos de experiência podem até ser usados para análise de domínio de tempo. Consulte a [seção próximas etapas](#next-steps) para obter mais casos de uso que envolvem [!DNL Experience Events] para gerar relatórios de visitantes.
 
-Os relatórios fornecem acesso aos dados da plataforma para beneficiar os insights estratégicos de negócios da organização. Com esses relatórios, você pode examinar os dados da plataforma de várias maneiras, exibir as métricas principais em formatos fáceis de entender e compartilhar os insights resultantes.
+Os relatórios fornecem acesso aos dados da plataforma para beneficiar os insights estratégicos de negócios de sua organização. Com esses relatórios, você pode examinar os dados da Platform de várias maneiras, exibir as métricas principais em formatos fáceis de entender e compartilhar os insights resultantes.
 
-Mais informações sobre o XDM e [!DNL Experience Events] podem ser encontradas no [[!DNL XDM System] visão geral](../../xdm/home.md). Ao combinar o Serviço de query com [!DNL Experience Events], você pode efetivamente rastrear tendências comportamentais entre seus usuários. O documento a seguir fornece exemplos de consultas envolvendo [!DNL Experience Events].
+Mais informações sobre XDM e [!DNL Experience Events] pode ser encontrado no [[!DNL XDM System] visão geral](../../xdm/home.md). Combinando o Serviço de consulta com [!DNL Experience Events], você pode rastrear com eficiência as tendências comportamentais entre os usuários. O documento a seguir fornece exemplos de consultas envolvendo [!DNL Experience Events].
 
 ## Objetivos
 
-O exemplo a seguir cria um relatório de tendências de eventos em um intervalo de datas especificado, agrupado por data. Especificamente, este exemplo SQL soma vários valores de análise como `A`, `B`e `C`e, em seguida, soma o número de vezes que os parâmetros foram exibidos ao longo do período de um mês.
+O exemplo a seguir cria um relatório de tendências de eventos em um intervalo de datas especificado, agrupado por data. Especificamente, este exemplo de SQL soma vários valores de análise como `A`, `B`, e `C`, e então soma o número de vezes que parkas foram visualizados no período de um mês.
 
-A coluna de carimbo de data e hora encontrada em [!DNL Experience Event] Os conjuntos de dados estão no formato UTC. O exemplo usa a variável `from_utc_timestamp()` para transformar o carimbo de data e hora de UTC em EDT e, em seguida, usa a variável `date_format()` para isolar a data do restante do carimbo de data e hora.
+A coluna de carimbo de data/hora encontrada em [!DNL Experience Event] conjuntos de dados está no formato UTC. O exemplo usa o `from_utc_timestamp()` para transformar o carimbo de data e hora de UTC em EDT e usa a função `date_format()` para isolar a data do restante do carimbo de data e hora.
 
 ```sql
 SELECT 
@@ -42,7 +42,7 @@ GROUP BY Day
 ORDER BY Day ASC, pageViews DESC;
 ```
 
-Os resultados desta consulta podem ser vistos abaixo.
+Os resultados dessa query podem ser vistos abaixo.
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
@@ -83,10 +83,10 @@ Os resultados desta consulta podem ser vistos abaixo.
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este documento, você tem uma melhor compreensão de como usar o Serviço de query com [!DNL Experience Events] para rastrear com eficácia as tendências comportamentais entre seus usuários.
+Ao ler este documento, você terá uma melhor compreensão de como usar o Serviço de consulta com [!DNL Experience Events] para rastrear efetivamente as tendências comportamentais entre os usuários.
 
-Para saber mais sobre outros casos de uso baseados em visitantes que usam [!DNL Experience Events], ler os seguintes documentos:
+Para saber mais sobre outros casos de uso com base em visitantes que usam o [!DNL Experience Events], leia os seguintes documentos:
 
-- [Recupere uma lista de visitantes organizados pelo número de exibições da página.](./visitors-by-number-of-page-views.md)
-- [Lista as sessões anteriores de um visitante.](./list-visitor-sessions.md)
-- [Exibir um relatório de roll-up de um visitante.](./roll-up-report-of-a-visitor.md)
+- [Recupere uma lista de visitantes organizada por número de exibições de página.](./visitors-by-number-of-page-views.md)
+- [Liste as sessões anteriores de um visitante.](./list-visitor-sessions.md)
+- [Exibir um relatório de rollup de um visitante.](./roll-up-report-of-a-visitor.md)

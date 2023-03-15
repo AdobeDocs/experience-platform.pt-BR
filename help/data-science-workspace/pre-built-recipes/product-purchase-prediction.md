@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, receita de compra do produto, Data Science Workspace, tópicos populares, receitas, receita de pré-criação
+keywords: Experience Platform;receita de compra do produto;Data Science Workspace;tópicos populares;receitas;pré-criar fórmula
 solution: Experience Platform
-title: Receita de previsão de compra do produto
-description: A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
+title: Receita de Previsão de Compra do Produto
+description: 'A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente: uma compra de produto, por exemplo.'
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,9 +11,9 @@ ht-degree: 7%
 
 ---
 
-# Receita de previsão de compra do produto
+# Receita de previsão de compra de produto
 
-A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
+A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente: uma compra de produto, por exemplo.
 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
@@ -23,15 +23,15 @@ O documento a seguir responderá perguntas como:
 
 ## Para quem esta receita foi criada?
 
-Sua marca busca impulsionar as vendas trimestrais de sua linha de produtos por meio de promoções eficazes e direcionadas para seus clientes. No entanto, nem todos os clientes são iguais e você quer o seu dinheiro. Quem você quer? Quais dos seus clientes têm maior probabilidade de responder sem achar sua promoção intrusiva? Como personalizar suas promoções para cada cliente? Em quais canais você deve confiar e quando você deve enviar as promoções?
+Sua marca busca aumentar as vendas trimestrais para sua linha de produtos por meio de promoções eficazes e direcionadas para seus clientes. No entanto, nem todos os clientes são iguais e você quer o seu dinheiro no valor. A quem você direciona? Quais de seus clientes têm maior probabilidade de responder sem achar sua promoção intrusiva? Como você personaliza suas promoções para cada cliente? Em quais canais você deve confiar e quando enviar promoções?
 
 ## O que esta receita faz?
 
-A fórmula Previsão de compra do produto utiliza o aprendizado de máquina para prever o comportamento de compra do cliente. Ele faz isso aplicando um classificador de floresta aleatória personalizado e um Modelo de Dados de Experiência em Duas Pontas (XDM) para prever a probabilidade de um evento de compra. O modelo utiliza dados de entrada que incorporam informações de perfil do cliente e histórico de compras anteriores, além de padrões para parâmetros de configuração predeterminados determinados determinados pelos nossos cientistas de dados para aprimorar a precisão preditiva.
+A fórmula de Previsão de compra do produto usa o aprendizado de máquina para prever o comportamento de compra do cliente. Ela faz isso aplicando um classificador de floresta aleatória personalizado e um Experience Data Model (XDM) de duas camadas para prever a probabilidade de um evento de compra. O modelo utiliza dados de entrada incorporando informações de perfil do cliente e histórico de compras anteriores, além de assumir como padrão parâmetros de configuração predeterminados por nossos cientistas de dados para melhorar a precisão preditiva.
 
-## Schema de dados
+## Esquema de dados
 
-Esta receita usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
+Esta fórmula usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |
@@ -56,6 +56,6 @@ Esta receita usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esqu
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no *Previsão de produto* O esquema é carregado. A partir daqui, o modelo é treinado usando um [classificador de floresta aleatória](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador Random forest é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter um desempenho preditivo aprimorado. A ideia por trás do algoritmo é que o classificador random forest cria várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
+Primeiro, o conjunto de dados de treinamento na *ProductPrediction* o esquema é carregado. A partir daqui, o modelo é treinado usando um [classificador random forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador de floresta aleatória é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter melhor desempenho preditivo. A ideia por trás do algoritmo é que o classificador de floresta aleatória constrói várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
 
-Esse processo começa com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois, calcula-se a média dos resultados de cada árvore de decisão.
+Esse processo começa com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois, é feita a média dos resultados de cada árvore decisória.

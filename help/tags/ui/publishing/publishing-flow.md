@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O fluxo de publicação de tags na Adobe Experience Platform se refere ao processo de criação de bibliotecas, ao teste de builds e à aprovação deles para produção.
 
@@ -42,7 +42,7 @@ Quando se trata do fluxo de publicação, uma biblioteca pode estar em quatro es
 * [[!UICONTROL Aprovada]](#approved)
 * [[!UICONTROL Publicada]](#published)
 
-Esses quatro estados são representados como colunas na variável **[!UICONTROL Fluxo de publicação]** guia .
+Esses quatro estados são representados como colunas na variável **[!UICONTROL Fluxo de publicação]** guia.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ O que está incluído no upstream depende do estágio atual da biblioteca. Por e
 
 ![](./images/approval-workflow/upstream.png)
 
-Ao editar uma biblioteca na interface do usuário, todos os recursos herdados do upstream são representados no **[!UICONTROL Recursos upstream]** seção. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
+Ao editar uma biblioteca na interface do usuário, todos os recursos herdados do upstream são representados na variável **[!UICONTROL Recursos upstream]** seção. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

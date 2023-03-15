@@ -1,6 +1,6 @@
 ---
 title: Gerenciar valores sugeridos na API
-description: Saiba como adicionar valores sugeridos a um campo de cadeia de caracteres na API do Registro de Schema.
+description: Saiba como adicionar valores sugeridos a um campo de string na API do registro de esquema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
@@ -11,28 +11,28 @@ ht-degree: 0%
 
 # Gerenciar valores sugeridos na API
 
-Para qualquer campo de string no Experience Data Model (XDM), é possível definir um **enum** que restringe os valores que o campo pode assimilar a um conjunto predefinido. Se você tentar assimilar dados para um campo enum e o valor não corresponder a nenhum daqueles definidos em sua configuração, a assimilação será negada.
+Para qualquer campo de string no Experience Data Model (XDM), é possível definir um **enum** que restringe os valores que o campo pode assimilar em um conjunto predefinido. Se você tentar assimilar dados em um campo enum e o valor não corresponder a nenhum dos definidos em sua configuração, a assimilação será negada.
 
-Em contraste com enumerações, adicionar **valores sugeridos** para um campo de string não restringe os valores que ele pode assimilar. Em vez disso, os valores sugeridos afetam quais valores predefinidos estão disponíveis na variável [Interface do usuário de segmentação](../../segmentation/ui/overview.md) ao incluir o campo de string como um atributo.
+Ao contrário de enumerações, adicionar **valores sugeridos** a um campo de string não restringe os valores que ele pode assimilar. Em vez disso, os valores sugeridos afetam quais valores predefinidos estão disponíveis no [Interface de segmentação](../../segmentation/ui/overview.md) ao incluir o campo de string como um atributo.
 
 >[!NOTE]
 >
 >Há um atraso de aproximadamente cinco minutos para que os valores sugeridos atualizados de um campo sejam refletidos na interface do usuário de segmentação.
 
-Este guia aborda como gerenciar os valores sugeridos usando o [API do Registro de Schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Para obter etapas sobre como fazer isso na interface do usuário do Adobe Experience Platform, consulte o [Guia de interface do usuário sobre enumerações e valores sugeridos](../ui/fields/enum.md).
+Este guia aborda como gerenciar valores sugeridos usando o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Para obter etapas sobre como fazer isso na interface do usuário do Adobe Experience Platform, consulte a [Guia da interface do usuário sobre enumerações e valores sugeridos](../ui/fields/enum.md).
 
 ## Pré-requisitos
 
-Este guia pressupõe que você esteja familiarizado com os elementos da composição do esquema no XDM e como usar a API do Registro de Schema para criar e editar recursos do XDM. Consulte a seguinte documentação se você precisar de uma introdução:
+Este guia supõe que você esteja familiarizado com os elementos da composição do esquema no XDM e como usar a API do Registro de esquema para criar e editar recursos do XDM. Consulte a documentação a seguir se precisar de uma introdução:
 
-* [Noções básicas da composição do schema](../schema/composition.md)
-* [Guia da API do Registro de Schema](../api/overview.md)
+* [Noções básicas da composição do esquema](../schema/composition.md)
+* [Guia da API do registro de esquema](../api/overview.md)
 
-Também é altamente recomendável revisar a variável [regras de evolução para enumerações e valores sugeridos](../ui/fields/enum.md#evolution) se estiver atualizando campos existentes. Se você estiver gerenciando valores sugeridos para schemas que participam de uma união, consulte o [regras para mesclar enumerações e valores sugeridos](../ui/fields/enum.md#merging).
+Também é altamente recomendável que você revise a [regras de evolução para enumerações e valores sugeridos](../ui/fields/enum.md#evolution) se estiver atualizando campos existentes. Se você estiver gerenciando valores sugeridos para esquemas que participam de uma união, consulte [regras para mesclar enumerações e valores sugeridos](../ui/fields/enum.md#merging).
 
 ## Composição
 
-Na API, os valores restritos de um **enum** são representadas por um `enum` array, enquanto um `meta:enum` O objeto fornece nomes de exibição amigáveis para esses valores:
+Na API, os valores restritos de um **enum** são representados por um `enum` , enquanto uma `meta:enum` O objeto fornece nomes de exibição amigáveis para esses valores:
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ Na API, os valores restritos de um **enum** são representadas por um `enum` arr
 }
 ```
 
-Para campos enum, o Registro de Esquema não permite `meta:enum` , para além dos valores previstos no `enum`, pois tentar assimilar valores de string fora dessas restrições não passaria pela validação.
+Para campos enum, o Registro de esquema não permite `meta:enum` para além dos valores fornecidos em `enum`, já que tentar assimilar valores de string fora dessas restrições não passaria na validação.
 
-Como alternativa, você pode definir um campo de string que não contenha um `enum` e usa somente o `meta:enum` objeto a denotar **valores sugeridos**:
+Como alternativa, você pode definir um campo de string que não contenha um `enum` e usa somente o `meta:enum` objeto a ser denotado **valores sugeridos**:
 
 ```json
 "exampleStringField": {
@@ -67,7 +67,7 @@ Como alternativa, você pode definir um campo de string que não contenha um `en
 }
 ```
 
-Como a cadeia de caracteres não tem um `enum` matriz para definir restrições, sua `meta:enum` pode ser estendida para incluir novos valores.
+Como a cadeia de caracteres não tem um `enum` matriz para definir restrições, suas `meta:enum` pode ser estendida para incluir novos valores.
 
 <!-- ## Manage suggested values for standard fields
 
@@ -75,13 +75,13 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## Adicionar valores sugeridos a um campo padrão {#add-suggested-standard}
 
-Para estender o `meta:enum` de um campo de string padrão, é possível criar um [descritor de nome amigável](../api/descriptors.md#friendly-name) para o campo em questão em um schema específico.
+Para estender o `meta:enum` de um campo de sequência padrão, é possível criar uma [descritor de nome amigável](../api/descriptors.md#friendly-name) para o campo em questão em um esquema específico.
 
 >[!NOTE]
 >
->Os valores sugeridos para campos de cadeia de caracteres só podem ser adicionados no nível do esquema. Por outras palavras, estender a `meta:enum` de um campo padrão em um schema não afeta outros schemas que usam o mesmo campo padrão.
+>Os valores sugeridos para campos de string só podem ser adicionados no nível do esquema. Por outras palavras, a extensão do `meta:enum` de um campo padrão em um esquema não afeta outros esquemas que empregam o mesmo campo padrão.
 
-A solicitação a seguir adiciona valores sugeridos ao padrão `eventType` (fornecido pelo [Classe XDM ExperienceEvent](../classes/experienceevent.md)) para o schema identificado em `sourceSchema`:
+A solicitação a seguir adiciona os valores sugeridos ao padrão `eventType` campo (fornecido pela variável [Classe XDM ExperienceEvent](../classes/experienceevent.md)) para o esquema identificado em `sourceSchema`:
 
 ```curl
 curl -X POST \
@@ -112,7 +112,7 @@ curl -X POST \
       }'
 ```
 
-Depois de aplicar o descritor, o Registro de Esquema responde com o seguinte ao recuperar o esquema (resposta truncada para espaço):
+Após aplicar o descritor, o Registro de esquema responde com o seguinte ao recuperar o esquema (resposta truncada por espaço):
 
 ```json
 {
@@ -215,18 +215,18 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 ## Gerenciar valores sugeridos para um campo personalizado {#suggested-custom}
 
-Para gerenciar a `meta:enum` de um campo personalizado, é possível atualizar a classe pai, o grupo de campos ou o tipo de dados do campo por meio de uma solicitação de PATCH.
+Para gerenciar o `meta:enum` de um campo personalizado, você pode atualizar a classe pai, o grupo de campos ou o tipo de dados do campo por meio de uma solicitação PATCH.
 
 >[!WARNING]
 >
->Em contraste com os campos padrão, atualize o `meta:enum` de um campo personalizado afeta todos os outros schemas que empregam esse campo. Se você não quiser que as alterações se propaguem entre esquemas, considere criar um novo recurso personalizado:
+>Ao contrário dos campos padrão, a atualização da variável `meta:enum` de um campo personalizado afeta todos os outros esquemas que empregam esse campo. Se você não quiser que as alterações se propaguem nos esquemas, considere criar um novo recurso personalizado:
 >
 >* [Criar uma classe personalizada](../api/classes.md#create)
 >* [Criar um grupo de campos personalizado](../api/field-groups.md#create)
 >* [Criar um tipo de dados personalizado](../api/data-types.md#create)
 
 
-A solicitação a seguir atualiza o `meta:enum` de um campo de &quot;nível de fidelidade&quot; fornecido por um tipo de dados personalizado:
+A solicitação a seguir atualiza o `meta:enum` de um campo &quot;nível de fidelidade&quot; fornecido por um tipo de dados personalizado:
 
 ```curl
 curl -X PATCH \
@@ -251,7 +251,7 @@ curl -X PATCH \
       ]'
 ```
 
-Depois de aplicar a alteração, o Registro de Esquema responde com o seguinte ao recuperar o esquema (resposta truncada para espaço):
+Depois de aplicar a alteração, o Registro de esquema responde com o seguinte ao recuperar o esquema (resposta truncada por espaço):
 
 ```json
 {
@@ -276,4 +276,4 @@ Depois de aplicar a alteração, o Registro de Esquema responde com o seguinte a
 
 ## Próximas etapas
 
-Este guia cobriu como gerenciar valores sugeridos para campos de sequência na API do Registro de Schema. Consulte o guia sobre [definição de campos personalizados na API](./custom-fields-api.md) para obter mais informações sobre como criar tipos de campos diferentes.
+Este guia abordou como gerenciar valores sugeridos para campos de string na API do registro de esquema. Consulte o guia sobre [definição de campos personalizados na API](./custom-fields-api.md) para obter mais informações sobre como criar tipos de campo diferentes.

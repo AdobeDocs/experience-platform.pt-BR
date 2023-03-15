@@ -1,6 +1,6 @@
 ---
 title: Personalização via Offer Decisioning
-description: Saiba como usar a API do servidor para entregar e renderizar experiências personalizadas pelo Offer Decisioning.
+description: Saiba como usar a API do servidor para fornecer e renderizar experiências personalizadas por meio do Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -13,33 +13,33 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-A API do Servidor de rede de borda pode fornecer experiências personalizadas gerenciadas em [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) para o canal da Web.
+A API do servidor de rede de borda pode fornecer experiências personalizadas gerenciadas no [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) ao canal da web.
 
-[!DNL Offer Decisioning] O suporta uma interface não visual para criar, ativar e entregar suas atividades e experiências de personalização.
+[!DNL Offer Decisioning] O é compatível com uma interface não visual para criar, ativar e fornecer suas atividades e experiências de personalização.
 
 ## Configurar o fluxo de dados {#configure-your-datastream}
 
-Antes de usar a API do servidor em conjunto com o Offer Decisioning, é necessário habilitar a personalização do Adobe Experience Platform na configuração do conjunto de dados e habilitar o **[!UICONTROL offer decisioning]** opção.
+Antes de usar a API do servidor em conjunto com o Offer Decisioning, é necessário habilitar a personalização do Adobe Experience Platform na configuração do fluxo de dados e habilitar a **[!UICONTROL Offer decisioning]** opção.
 
-Consulte a [guia sobre como adicionar serviços a um armazenamento de dados](../edge/datastreams/overview.md#adobe-experience-platform-settings)para obter informações detalhadas sobre como ativar o Offer Decisioning.
+Consulte a [guia sobre como adicionar serviços a um fluxo de dados](../edge/datastreams/overview.md#adobe-experience-platform-settings), para obter informações detalhadas sobre como ativar o Offer Decisioning.
 
-![Imagem da interface do usuário que mostra a tela de configuração do serviço de armazenamento de dados, com Offer decisioning selecionado](assets/aep-od-datastream.png)
+![Imagem da interface do usuário mostrando a tela de configuração do serviço de sequência de dados, com o Offer Decisioning selecionado](assets/aep-od-datastream.png)
 
-## Criação do público {#audience-creation}
+## Criação de público {#audience-creation}
 
-[!DNL Offer Decisioning] O depende do Serviço de segmentação da Adobe Experience Platform para criação de público-alvo. Você pode encontrar a documentação do [!DNL Segmentation Service] [here](../segmentation/home.md).
+[!DNL Offer Decisioning] O depende do Serviço de segmentação da Adobe Experience Platform para a criação de públicos-alvo. Você pode encontrar a documentação para o [!DNL Segmentation Service] [aqui](../segmentation/home.md).
 
-## Definição dos escopos de decisão {#creating-decision-scopes}
+## Definição de escopos de decisão {#creating-decision-scopes}
 
-O [!DNL Offer Decision Engine] usa dados e [Perfis do cliente em tempo real](../profile/home.md), juntamente com o [!DNL Offer Library], para fornecer ofertas aos clientes e canais certos na hora certa.
+A variável [!DNL Offer Decision Engine] usa dados do Adobe Experience Platform e [Perfis de clientes em tempo real](../profile/home.md), juntamente com o [!DNL Offer Library], para fornecer ofertas aos clientes e canais certos na hora certa.
 
-Para saber mais sobre o [!DNL Offer Decisioning Engine], consulte os [documentação](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=pt-BR).
+Para saber mais sobre o [!DNL Offer Decisioning Engine], consulte a seção dedicada [documentação](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=pt-BR).
 
-Depois [configuração do armazenamento de dados](#configure-your-datastream), você deve definir os escopos de decisão a serem usados na campanha de personalização.
+Depois [configuração do seu fluxo de dados](#configure-your-datastream), você deve definir os escopos de decisão que serão usados na campanha de personalização.
 
-[Escopos de decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) são as strings JSON codificadas em Base64 que contêm as IDs de atividade e posicionamento que você deseja [!DNL Offer Decisioning Service] para usar ao propor ofertas.
+[Escopos de decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) são as cadeias de caracteres JSON codificadas na Base64 que contêm as IDs de atividade e posicionamento que você deseja que o [!DNL Offer Decisioning Service] para usar ao propor ofertas.
 
-**JSON do escopo de decisão**
+**Escopo de decisão JSON**
 
 ```json
 {
@@ -48,17 +48,17 @@ Depois [configuração do armazenamento de dados](#configure-your-datastream), v
 }
 ```
 
-**String codificada em Base64 para o escopo de decisão**
+**String codificada na Base64 do escopo de decisão**
 
 ```shell
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Depois de criar as ofertas e coleções, é necessário definir um [escopo de decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+Após criar as ofertas e coleções, é necessário definir um [escopo da decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
 
-Copie o escopo de decisão codificado em Base64. Você o usará no `query` objeto da solicitação de API do servidor.
+Copie o escopo de decisão codificado na Base64. Você o usará no `query` objeto da solicitação de API do servidor.
 
-![Imagem da interface do usuário que mostra a interface do usuário do Offer Decisioning, destacando o escopo da decisão.](assets/decision-scope.png)
+![Imagem da interface do usuário mostrando a interface do usuário do Offer Decisioning, destacando o escopo da decisão.](assets/decision-scope.png)
 
 ```json
 "query":{
@@ -84,7 +84,7 @@ Uma solicitação completa que inclui um objeto XDM completo, um objeto de dados
 
 >[!NOTE]
 >
->O `xdm` e `data` objetos são opcionais e só são necessários para o Offer Decisioning se você tiver criado segmentos com condições que usam campos em um desses objetos.
+>A variável `xdm` e `data` objetos são opcionais e só são necessários para o Offer Decisioning se você tiver criado segmentos com condições que usam campos em qualquer um desses objetos.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -177,7 +177,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Resposta {#response}
 
-A Edge Network retornará uma resposta semelhante à abaixo.
+A rede de borda retornará uma resposta semelhante à mostrada abaixo.
 
 ```json
 {
@@ -240,22 +240,22 @@ A Edge Network retornará uma resposta semelhante à abaixo.
 }
 ```
 
-Se o visitante se qualificar para uma atividade de personalização com base nos dados enviados para o [!DNL Offer Decisioning], o conteúdo relevante da atividade será encontrado no `handle` objeto , onde o tipo é `personalization:decisions`.
+Se o visitante se qualificar para uma atividade de personalização com base nos dados enviados para o [!DNL Offer Decisioning], o conteúdo de atividade relevante será encontrado no `handle` objeto, em que o tipo é `personalization:decisions`.
 
-Outro conteúdo será retornado no `handle` também. Outros tipos de conteúdo não são relevantes para [!DNL Offer Decisioning] personalização. Se o visitante se qualificar para várias atividades, elas serão contidas em uma matriz.
+Outro conteúdo será retornado na variável `handle` também. Outros tipos de conteúdo não são relevantes para [!DNL Offer Decisioning] personalização. Se o visitante se qualificar para várias atividades, elas estarão contidas em uma matriz.
 
-A tabela abaixo explica os elementos-chave dessa parte da resposta.
+A tabela abaixo explica os principais elementos dessa parte da resposta.
 
 | Propriedade | Descrição | Exemplo |
 |---|---|---|
 | `scope` | O escopo de decisão associado às ofertas propostas que foram retornadas. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `activity.id` | A ID exclusiva da atividade de oferta. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
-| `placement.id` | A ID exclusiva da disposição da oferta. | `"id": "xcore:offer-placement:1175009612b0100c"` |
-| `items.id` | A ID exclusiva da oferta proposta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `activity.id` | O identificador exclusivo da atividade de oferta. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
+| `placement.id` | O identificador exclusivo do posicionamento da oferta. | `"id": "xcore:offer-placement:1175009612b0100c"` |
+| `items.id` | O identificador exclusivo da oferta proposta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `schema` | O schema do conteúdo associado à oferta proposta. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
-| `data.id` | A ID exclusiva da oferta proposta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `data.id` | O identificador exclusivo da oferta proposta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `format` | O formato do conteúdo associado à oferta proposta. | `"format": "text/html"` |
 | `language` | Uma matriz de idiomas associados ao conteúdo da oferta proposta. | `"language": [ "en-US" ]` |
-| `content` | Conteúdo associado à oferta proposta no formato de uma string. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
-| `deliveryUrl` | Conteúdo da imagem associada à oferta proposta no formato de um URL. | `"deliveryURL": "https://image.jpeg"` |
-| `characteristics` | Objeto JSON contendo as características associadas à oferta proposta. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+| `content` | Conteúdo associado à oferta proposta no formato de uma cadeia de caracteres. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
+| `deliveryUrl` | Conteúdo de imagem associado à oferta proposta no formato de um URL. | `"deliveryURL": "https://image.jpeg"` |
+| `characteristics` | Objeto JSON que contém as características associadas à oferta proposta. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |

@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Instalação
 
-Para instalar a extensão, navegue até o catálogo de extensões na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados e selecione Camada de dados do cliente do Adobe.
+Para instalar a extensão, navegue até o catálogo de extensões na interface do usuário do Experience Platform ou na interface da Coleção de dados e selecione Camada de dados do cliente Adobe.
 
 ![Visualização da extensão ACDL no catálogo](./images/catalog.png)
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, catálogo, pesquisa de vários objetos, api
+keywords: Experience Platform;página inicial;tópicos populares;catálogo;pesquisa de vários objetos;api
 solution: Experience Platform
-title: Pesquisar vários objetos do catálogo
-description: Se você deseja exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
+title: Pesquisar Vários Objetos de Catálogo
+description: Se você quiser exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação do GET para retornar vários objetos específicos incluindo uma lista de IDs separadas por vírgulas.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 ---
 
-# Pesquisar vários objetos do catálogo
+# Pesquisar vários objetos de Catálogo
 
-Se quiser exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] O fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
+Se desejar exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] O fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação do GET para retornar vários objetos específicos incluindo uma lista de IDs separadas por vírgulas.
 
 >[!NOTE]
 >
->Mesmo quando solicitar [!DNL Catalog] objetos, ainda é prática recomendada `properties` parâmetro de consulta para retornar somente as propriedades necessárias.
+>Mesmo ao solicitar informações [!DNL Catalog] objetos, ainda é prática recomendada `properties` parâmetro de consulta para retornar apenas as propriedades necessárias.
 
 **Formato da API**
 
@@ -33,7 +33,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 **Solicitação**
 
-A solicitação a seguir inclui uma lista separada por vírgulas de IDs de conjuntos de dados, bem como uma lista separada por vírgulas de propriedades a serem retornadas para cada conjunto de dados.
+A solicitação a seguir inclui uma lista separada por vírgulas de IDs de conjunto de dados, bem como uma lista separada por vírgulas de propriedades a serem retornadas para cada conjunto de dados.
 
 ```shell
 curl -X GET \
@@ -46,11 +46,11 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista dos conjuntos de dados especificados, contendo apenas as propriedades solicitadas (`name`, `description`e `files`) para cada.
+Uma resposta bem-sucedida retorna uma lista dos conjuntos de dados especificados, contendo apenas as propriedades solicitadas (`name`, `description`, e `files`) para cada um.
 
 >[!NOTE]
 >
->Se um objeto retornado não contiver mais uma das propriedades solicitadas indicadas pela variável `properties` , a resposta retorna somente as propriedades solicitadas que não incluem, como mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
+>Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pelo `properties` consulta, a resposta retorna somente as propriedades solicitadas que ela inclui, conforme mostrado na ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
 
 ```json
 {

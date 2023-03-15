@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, excluir um objeto, serviço de catálogo, api
+keywords: Experience Platform;página inicial;tópicos populares;excluir um objeto;serviço de catálogo;api
 solution: Experience Platform
 title: Excluir um objeto na API
-description: Você pode excluir um objeto de Catálogo fornecendo sua ID no caminho de uma solicitação de DELETE.
+description: Você pode excluir um objeto de Catálogo fornecendo a respectiva ID no caminho de uma solicitação DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Excluir um objeto na API
 
-Você pode excluir um [!DNL Catalog] ao fornecer a ID no caminho de uma solicitação de DELETE.
+É possível excluir um [!DNL Catalog] fornecendo a respectiva ID no caminho de uma solicitação DELETE.
 
 >[!WARNING]
 >
->Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outro local do [!DNL Experience Platform].
+>Tenha cuidado extra ao excluir objetos, pois essa ação não pode ser desfeita e pode produzir alterações de quebra em outro local no [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -27,7 +27,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->O `DELETE /batches/{ID}` endpoint foi descontinuado. Para excluir um lote, você deve usar a variável [API de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>A variável `DELETE /batches/{ID}` O ponto de extremidade foi descontinuado. Para excluir um lote, você deve usar o [API de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parâmetro | Descrição |
 | --- | --- |
@@ -36,7 +36,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 **Solicitação**
 
-A solicitação a seguir exclui um conjunto de dados cuja ID esteja especificada no caminho da solicitação.
+A solicitação a seguir exclui um conjunto de dados cuja ID está especificada no caminho da solicitação.
 
 ```shell
 curl -X DELETE \
@@ -49,7 +49,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados excluído. Essa ID deve corresponder à enviada na solicitação DELETE. A execução de uma solicitação do GET no objeto excluído retorna o status HTTP 404 (Não encontrado), confirmando que o conjunto de dados foi excluído com êxito.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados excluído. Essa ID deve corresponder à enviada na solicitação DELETE. A execução de uma solicitação GET no objeto excluído retorna o status HTTP 404 (Não encontrado), confirmando que o conjunto de dados foi excluído com sucesso.
 
 ```json
 [
@@ -59,4 +59,4 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz contendo a
 
 >[!NOTE]
 >
->Se não [!DNL Catalog] objetos que correspondem à ID fornecida em sua solicitação, você ainda pode receber um Código de status HTTP 200, mas a matriz de resposta estará vazia.
+>Se não [!DNL Catalog] Os objetos do correspondem à ID fornecida na solicitação. Você ainda poderá receber um Código de status HTTP 200, mas a matriz de resposta estará vazia.

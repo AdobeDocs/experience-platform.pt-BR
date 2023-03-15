@@ -13,20 +13,20 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 ## 4 de janeiro de 2022
 
 v3.3.0
 
-* Altera o [Acionar ação Chamada direta](./overview.md#direct-call-action) para que você possa fornecer informações de evento personalizadas para enviar para regras de chamada direta.
+* Altera o [Acionar ação de chamada direta](./overview.md#direct-call-action) para que você possa fornecer informações de evento personalizadas para enviar para as regras de chamada direta.
 
 ## 8 de outubro de 2021
 
 v3.2.2
 
 * Corrija o esquema JSON do elemento de dados de valor condicional para todos os operadores disponíveis.
-* Correção https://github.com/adobe/reactor-extension-core/issues/64.
+* Corrigir https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23 de setembro de 2021
 
@@ -40,15 +40,15 @@ v3.2.0
 
 As seguintes alterações foram introduzidas no elemento de dados Valor condicional:
 
-* Adicione uma caixa de seleção para os valores condicionais e de fallback que permite que o usuário escolha se deseja que indefinido seja o valor retornado.
-* Valores numéricos são expostos como números no objeto de configurações.
+* Adicione uma caixa de seleção para os valores condicional e de fallback que permita ao usuário escolher se deseja que indefinido seja o valor retornado.
+* Os valores numéricos são expostos como números no objeto de configurações.
 * O valor condicional não é mais necessário para que possa se comportar da mesma maneira que o valor de fallback.
 
 ## 17 de setembro de 2021
 
 v3.1.1
 
-* Correção de um erro de JS que impedia o carregamento da exibição de condição do intervalo de datas.
+* Correção de um erro JS que impedia que a exibição de condição do intervalo de datas fosse carregada.
 
 ## 16 de setembro de 2021
 
@@ -56,21 +56,21 @@ v3.1.0
 
 Novos elementos de dados foram adicionados:
 
-* Objeto mesclado - Selecione vários elementos de dados que fornecerão cada um um um objeto. Esses objetos serão profundamente (recursivamente) unidos para produzir um novo objeto.
-* Valor condicional - Retorna um de dois valores (conditionalValue ou fallbackValue) com base no resultado da comparação.
-* Ambiente de tempo de execução - Retorne uma das seguintes variáveis de ambiente do Launch: estágio do ambiente, data de build da biblioteca, nome da propriedade, ID da propriedade, nome da regra, id da regra, tipo de evento, carga útil detalhada do evento, identificador de chamada direta.
-* Ferramentas do JavaScript - Wrapper para operações comuns do JavaScript: manipulação básica da sequência de caracteres (substituir, substring, correspondência de regex, primeiro e último índice, divisão, fatia), operações básicas da matriz (fatia, junção, pop, shift) e operações básicas universais (fatia, comprimento).
-* Atributos do dispositivo - Retorna atributos do dispositivo, como tamanho da janela ou tamanho da tela.
+* Objeto mesclado - Selecione vários elementos de dados que fornecerão um objeto. Esses objetos serão profundamente (recursivamente) mesclados para produzir um novo objeto.
+* Valor condicional - Retorna um dos dois valores (conditionalValue ou fallbackValue) com base no resultado da comparação.
+* Ambiente de tempo de execução - Retorna uma das seguintes variáveis de ambiente do Launch: estágio do ambiente, data de criação da biblioteca, nome da propriedade, ID da propriedade, nome da regra, ID da regra, tipo de evento, carga de detalhes do evento, identificador de chamada direta.
+* Ferramentas JavaScript - Wrapper para operações JavaScript comuns: manipulação básica de string (replace, substring, regex match, first e last index, split, slice), operações básicas de array (slice, join, pop, shift) e operações universais básicas (slice, length).
+* Atributos do dispositivo - Retorna atributos do dispositivo como tamanho da janela ou tamanho da tela.
 
 ## 11 de agosto de 2021
 
 v3.0.0
 
-* PDCL-6153: Adiciona suporte para obter de maneira confiável o URL totalmente qualificado para ações de código personalizado em cache.
+* PDCL-6153: adiciona suporte para obter de forma confiável o URL totalmente qualificado para ações de código personalizado em cache.
 
-A v3.0.0 da extensão principal está associada a alterações na [v27.2.0 do tempo de execução da Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário suportar o Premium CDN.
+A v3.0.0 da Extensão principal é combinada com alterações no [v27.2.0 do tempo de execução da Web do Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário suportar o CDN Premium.
 
-Essa atualização é opcional e compatível com versões anteriores para usuários sem CDN Premium e é obrigatória para clientes com CDN Premium habilitado em sua empresa.
+Essa atualização é opcional e compatível com versões anteriores para usuários sem a CDN Premium e obrigatória para clientes que têm a CDN Premium ativada em suas empresas.
 
 ## 20 de maio de 2021
 
@@ -161,7 +161,7 @@ v1.6.2
 
 v1.6.1
 
-* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração suporta o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com uma CSP [here](../../../ui/client-side/content-security-policy.md).
+* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração aceita o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junho de 2019
 

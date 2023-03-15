@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Atualizar uma especificação de conexão usando a API do Serviço de Fluxo
+keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
+title: Atualizar uma especificação de conexão usando a API de Serviço de Fluxo
 description: Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -10,9 +10,9 @@ ht-degree: 3%
 
 ---
 
-# Atualizar uma especificação de conexão usando a API do Serviço de Fluxo
+# Atualizar uma especificação de conexão usando a API de Serviço de Fluxo
 
-Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT. Ao atualizar uma especificação de conexão por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de conexão em uma solicitação de POST.
+Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT. Ao atualizar uma especificação de conexão por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de conexão em uma solicitação POST.
 
 **Formato da API**
 
@@ -205,7 +205,7 @@ PUT -X GET \
 
 **Resposta**
 
-Uma chamada bem-sucedida retorna os detalhes atualizados da especificação da conexão, incluindo o nome atualizado.
+Uma chamada bem-sucedida retorna os detalhes atualizados da especificação da conexão, incluindo seu nome atualizado.
 
 ```json
 {

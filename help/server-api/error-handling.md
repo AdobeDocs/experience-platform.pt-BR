@@ -1,6 +1,6 @@
 ---
 title: Tratamento de erros
-description: Saiba mais sobre os possíveis erros que você pode encontrar ao executar solicitações de API para a API do servidor de rede de borda do Adobe Experience Platform.
+description: Saiba mais sobre os possíveis erros que você pode encontrar ao executar solicitações de API para a API do servidor da rede de borda do Adobe Experience Platform.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,49 +13,49 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Os erros de API na API do Servidor de Rede de Borda do Adobe Experience Platform podem ter várias causas, internas (própria Rede de Borda) ou externas (entrada, configuração ou relacionadas a upstream).
+Os erros de API na API do servidor da rede de borda da Adobe Experience Platform podem ter várias causas, internas (rede de borda em si) ou externas (relacionadas a entrada, configuração ou upstream).
 
 ## Tipos de erro {#error-types}
 
 | Erro | Tipo | Descrição | Código de status |
 | --- | --- | --- | --- |
-| `RequestProcessingError` | Interno | Erro de propósito geral emitido pela Rede de borda do Adobe Experience Platform em circunstâncias inesperadas. | `500` |
+| `RequestProcessingError` | Interno | Erro de uso geral emitido pela Adobe Experience Platform Edge Network em circunstâncias inesperadas. | `500` |
 | `InputError` | Externo | Inclui erros causados por entrada malformada, bem como erros de validação de entidade. | `4xx` |
 | `ConfigurationError` | Externo | Erros de configuração do lado do servidor. | `422` |
 | `UpstreamError` | Externo | Erros de comunicação com serviços upstream. | `207 Multi-Status` |
 
-## Gravidade
+## Severidade
 
 Os erros da API do servidor também podem ser divididos por gravidade:
 
-* **Erros fatais** interromperá o pipeline de despacho.
-* **Erros não fatais** O pode sinalizar um processamento parcial, permitindo que o processamento da solicitação continue.
+* **Erros fatais** interromperá o pipeline de expedição.
+* **Erros não fatais** O poderia sinalizar um processamento parcial, permitindo que o processamento de solicitações continuasse.
    * Quando presente, o código de status geral da solicitação será alterado para `207 Multi-Status`.
 
 | Erro | Tipo | Observações |
 | --- | --- | --- |
-| `RequestProcessingError` | Fatal | Pode ocorrer em qualquer ponto durante o processamento da solicitação. |
-| `InputError` | Fatal | Ocorre ao aceitar a solicitação, antes de enviá-la para upstream. |
-| `ConfigurationError` | Fatal | Ocorre ao aceitar a solicitação, antes de enviá-la para upstream. |
-| `UpstreamError` | Não fatal | Erros de comunicação com serviços upstream. |
+| `RequestProcessingError` | Fatal | Pode ocorrer a qualquer momento durante o processamento da solicitação. |
+| `InputError` | Fatal | Ocorre ao aceitar a solicitação, antes de despachá-la upstream. |
+| `ConfigurationError` | Fatal | Ocorre ao aceitar a solicitação, antes de despachá-la upstream. |
+| `UpstreamError` | Não Fatal | Erros de comunicação com serviços upstream. |
 
 ### Erros fatais {#fatal-errors}
 
-Erros fatais interrompem o processamento da solicitação e fazem com que um status de resposta não 2xx seja retornado. Confira o [tipos de erro](#error-types) para ver o código de status esperado, correspondente a cada tipo de erro.
+Erros fatais interrompem o processamento de solicitações e fazem com que um status de resposta não 2xx seja retornado. Confira o [tipos de erro](#error-types) para ver o código de status esperado, correspondente a cada tipo de erro.
 
-Os erros serão acompanhados por um corpo de resposta contendo um objeto de erro. Nesse caso, o corpo da resposta contém um detalhe do problema, conforme definido por [Detalhes do problema RFC 7807 para APIs HTTP](https://tools.ietf.org/html/rfc7807).
+Os erros serão acompanhados por um corpo de resposta contendo um objeto de erro. Nesse caso, o corpo da resposta contém um detalhe do problema, conforme definido por [RFC 7807 Detalhes do problema para APIs HTTP](https://tools.ietf.org/html/rfc7807).
 
-O tipo de conteúdo retornado é a variável `application/problem+json` tipo de mídia. Quando presente, essa resposta contém detalhes legíveis por máquina relacionados ao erro. Os detalhes do problema incluem um tipo de URI.
+O tipo de conteúdo retornado é o `application/problem+json` tipo de mídia. Quando presente, essa resposta contém detalhes legíveis por máquina relacionados ao erro. Os detalhes do problema incluem um tipo de URI.
 
-Todos os objetos de erro têm uma `type`, `status`, `title`, `detail` e `report` propriedades da mensagem para que o cliente da API possa saber qual é o problema.
+Todos os objetos com erro têm um `type`, `status`, `title`, `detail` e `report` para que o cliente da API possa informar qual é o problema.
 
 | Propriedade | Tipo | Descrição |
 | -------- | ------ | ----------- |
 | `type` | String | Uma referência de URI (RFC3986) que identifica o tipo de problema, seguindo o formato `https://ns.adobe.com/aep/errors/<ERROR-CODE>`. |
-| `status` | Número | O código de status HTTP gerado pelo servidor para essa ocorrência do problema. |
-| `title` | String | Um resumo breve e legível por humanos do tipo de problema. |
-| `detail` | String | Uma breve descrição legível por humanos do tipo de problema. |
-| `report` | Objeto | Um mapa de propriedades adicionais que auxilia na depuração, como a ID da solicitação ou a ID da organização. Em alguns casos, pode conter dados específicos para o erro em questão, como uma lista de erros de validação. |
+| `status` | Número | O código do status HTTP gerado pelo servidor para esta ocorrência do problema. |
+| `title` | String | Um resumo curto e em formato legível por humanos do tipo de problema. |
+| `detail` | String | Uma descrição curta e legível do tipo de problema. |
+| `report` | Objeto | Um mapa de propriedades adicionais que ajudam na depuração, como a ID da solicitação ou a ID da organização. Em alguns casos, ela pode conter dados específicos para o erro em questão, como uma lista de erros de validação. |
 
 ```json
 {
@@ -77,16 +77,16 @@ Todos os objetos de erro têm uma `type`, `status`, `title`, `detail` e `report`
 
 ### Erros não fatais {#non-fatal-errors}
 
-Os erros não fatais podem ser divididos em:
+Os erros não fatais podem ser ainda divididos em:
 
-* Erros: Problemas que ocorreram ao processar a solicitação, mas não fizeram com que toda a solicitação fosse rejeitada (por exemplo, uma falha não crítica de upstream).
-* Avisos: Mensagens de serviços upstream que poderiam sinalizar que ocorreu um processamento parcial da solicitação.
+* Erros: problemas que ocorreram ao processar a solicitação, mas não fizeram com que toda a solicitação fosse rejeitada (por exemplo, uma falha de upstream não crítica).
+* Avisos: mensagens de serviços upstream que poderiam sinalizar que ocorreu um processamento parcial da solicitação.
 
-Ao encontrar erros não fatais (excluindo avisos), a variável [!DNL Server API] alterará o status da resposta para `207 Multi-Status`.
+Ao encontrar erros não fatais (excluindo avisos), a variável [!DNL Server API] mudará o status da resposta para `207 Multi-Status`.
 
-Os avisos, por outro lado, são na sua maioria informativos, uma vez que geralmente representam uma condição potencialmente transitória, que não afetou totalmente a solicitação. Um exemplo aqui é um perfil parcial lido no mecanismo de segmentação, nesse caso a precisão é afetada até certo ponto, mas a funcionalidade ainda é oferecida.
+Por outro lado, os avisos são na sua maioria informativos, uma vez que representam geralmente uma condição potencialmente transitória, que não afetou totalmente o pedido. Um exemplo aqui é uma leitura parcial de perfil no mecanismo de segmentação, nesse caso, a precisão é afetada em algum grau, mas a funcionalidade ainda é fornecida.
 
-Erros não fatais são representados na variável _Detalhes do problema_ , mas são incorporados diretamente na resposta padrão do gateway do Edge, que é do tipo `application/json`.
+Os erros não fatais são representados na variável _Detalhes do problema_ mas são incorporados diretamente na resposta padrão do gateway do Edge, que é do tipo `application/json`.
 
 ```json
 {
@@ -121,9 +121,9 @@ Erros não fatais são representados na variável _Detalhes do problema_ , mas s
 
 | Código de erro | Descrição |
 |---|---|
-| `4xx Bad Request` | Mais `4xx` erros, como 400, 403, 404, não devem ser repetidos em nome do cliente, exceto por `429`. Esses são erros de cliente e não terão êxito. O cliente deve corrigir o erro antes de tentar novamente a solicitação. |
-| `429 Too Many Requests` | `429` O código de resposta HTTP indica que a rede de borda da Adobe Experience Platform ou um serviço upstream está limitando a taxa de solicitações. Nesse caso, o chamador deve respeitar o `Retry-After` cabeçalho de resposta. Qualquer resposta que retorne deve ter o código de resposta HTTP com um código de erro específico de domínio. |
-| `500 Internal Server Error` | `500` são erros genéricos e catch-all . `500` os erros não devem ser repetidos, exceto para `502` e `503`. Os intermediários devem responder com uma `500` e pode responder com um código/mensagem de erro genérico ou um código/mensagem de erro mais específico do domínio. |
-| `502 Bad Gateway` | Indica que a Rede de Borda da Adobe Experience Platform recebeu uma resposta inválida de servidores upstream. Isso pode ocorrer devido a problemas de rede entre servidores. O problema temporário de rede pode ser resolvido e, portanto, uma nova tentativa pode resolver o problema, de modo que os recipients do `502` erros podem repetir a solicitação após algum tempo. |
-| `503 Service Unavailable` | Este código de erro indica que o serviço está temporariamente indisponível. Isso pode acontecer durante os períodos de manutenção. Recipients de `503` erros podem repetir a solicitação, mas devem respeitar a variável `Retry-After` cabeçalho. |
-| `504 Gateway Timeout` | Indica que a solicitação da Rede de borda da Adobe Experience Platform para os servidores de upstream atingiu o tempo limite. Isso pode ocorrer devido a problemas de rede entre servidores, problemas de DNS ou outros problemas de rede. Os problemas temporários de rede podem ser resolvidos após algum tempo e uma nova tentativa pode resolver o problema. |
+| `4xx Bad Request` | Mais `4xx` erros, como 400, 403, 404, não devem ser repetidos em nome do cliente, exceto por `429`. Esses são erros do cliente e não terão êxito. O cliente deve corrigir o erro antes de tentar novamente a solicitação. |
+| `429 Too Many Requests` | `429` O código de resposta HTTP indica que a Rede de borda da Adobe Experience Platform ou um serviço upstream está limitando a taxa de solicitações. Nesse caso, o chamador deve respeitar a variável `Retry-After` cabeçalho de resposta. Qualquer resposta que flua de volta deve ter o código de resposta HTTP com um código de erro específico de domínio. |
+| `500 Internal Server Error` | `500` os erros são genéricos, erros &quot;catch-all&quot;. `500` os erros não devem ser repetidos, exceto por `502` e `503`. Os intermediários devem `500` e pode responder com uma mensagem/código de erro genérico ou uma mensagem/código de erro mais específico do domínio. |
+| `502 Bad Gateway` | Indica que a Rede de Borda da Adobe Experience Platform recebeu uma resposta inválida dos servidores upstream. Isso pode ocorrer devido a problemas de rede entre servidores. O problema de rede temporário pode ser resolvido e, portanto, uma nova tentativa pode resolver o problema. Portanto, os destinatários de `502` erros podem repetir a solicitação depois de algum tempo. |
+| `503 Service Unavailable` | Este código de erro indica que o serviço está temporariamente indisponível. Isso pode ocorrer durante os períodos de manutenção. Destinatários de `503` podem repetir a solicitação, mas devem respeitar as `Retry-After` cabeçalho. |
+| `504 Gateway Timeout` | Indica que a solicitação da Rede de borda da Adobe Experience Platform para os servidores upstream atingiu o tempo limite. Isso pode ocorrer devido a problemas de rede entre servidores, problemas de DNS ou outros problemas de rede. Os problemas temporários da rede podem ser resolvidos depois de algum tempo e uma nova tentativa pode resolver o problema. |

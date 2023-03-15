@@ -19,15 +19,15 @@ Atualizações no Experience Platform.
 
 ### Interface do usuário {#ui}
 
-A interface do usuário foi atualizada com as seguintes alterações:
+A interface do usuário do foi atualizada com as seguintes alterações:
 
 | Recurso | Descrição |
 | --- | --- |
-| Tema escuro | Use a troca de tema escuro para alternar entre temas claros e escuros na interface da plataforma. O switch está localizado no perfil do usuário abaixo do nome de usuário e email. |
-| Alternar navegação à esquerda | Use a alternância de navegação aprimorada na parte superior do cabeçalho do aplicativo para mostrar ou ocultar o menu que exibe seus recursos do Experience Platform. O sistema lembra da última seleção e mostra apenas os recursos aos quais você tem acesso. |
-| Visibilidade de acesso | A barra de navegação esquerda mostra apenas os recursos que você pode acessar. Em versões anteriores do Adobe Experience Platform, os itens indisponíveis ficavam visíveis, mesmo se você não conseguisse acessá-los. |
+| Tema escuro | Use o switch de tema escuro para alternar entre temas claros e escuros na interface da Platform. O comutador está localizado no perfil de usuário abaixo do nome de usuário e e-mail. |
+| Alternar navegação à esquerda | Use o botão de navegação aprimorado na parte superior do cabeçalho do aplicativo para mostrar ou ocultar o menu que exibe seus recursos de Experience Platform. O sistema lembra da última seleção e mostra apenas os recursos aos quais você tem acesso. |
+| Visibilidade de acesso | A barra de navegação esquerda mostra apenas os recursos que você pode acessar. Em versões anteriores do Adobe Experience Platform, os itens indisponíveis estavam visíveis, mesmo se você não conseguisse acessá-los. |
 
-Consulte a [Guia da interface do usuário da plataforma](../../landing/ui-guide.md) para saber mais.
+Consulte a [Guia da interface do usuário da Platform](../../landing/ui-guide.md) para saber mais.
 
 ## Atualizações dos recursos existentes
 
@@ -44,21 +44,21 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 | Recurso | Descrição |
 | --- | --- |
-| Função `contains_key`  | O `contains_key` foi introduzida, permitindo verificar se o objeto existe na fonte. Essa função substitui `is_set` , que agora está obsoleta. |
-| Mensagens de erro | Mensagens de erro retornadas pela `/mappingSets/preview` endpoint na API de preparação de dados agora são consistentes com as mensagens de erro geradas durante o tempo de execução. |
+| Função `contains_key`  | A variável `contains_key` foi introduzida, que permite verificar se o objeto existe dentro da origem. Esta função substitui a `is_set` função, que agora está obsoleta. |
+| Mensagens de erro | Mensagens de erro retornadas pelo `/mappingSets/preview` Os pontos de extremidade na API de preparação de dados agora são consistentes com as mensagens de erro geradas durante o tempo de execução. |
 
-Consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md) para saber mais sobre esse serviço.
+Consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md) para saber mais sobre este serviço.
 
 ### Fontes {#sources}
 
-A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 | Recurso | Descrição |
 | --- | --- |
-| [!DNL Amazon S3] melhorias na fonte | Agora você pode usar o `s3SessionToken` para conectar seu [!DNL Amazon S3] conta para a Platform usando credenciais de segurança temporárias. Esse token permite que você forneça acesso temporário e de curto prazo ao seu [!DNL Amazon S3] recursos para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação da ](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
-| [!DNL Generic REST API] (Beta) | Agora você pode criar um [!DNL Generic REST API] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a plataforma. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
-| [!DNL Zoho CRM] (Beta) | Agora você pode criar um [!DNL Zoho CRM] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou [interface do usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados do [!DNL Zoho CRM] para a Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
+| [!DNL Amazon S3] aprimoramentos na origem | Agora você pode usar o `s3SessionToken` parâmetro para conectar seu [!DNL Amazon S3] para a Platform usando credenciais de segurança temporárias. Esse token permite fornecer acesso temporário a curto prazo aos [!DNL Amazon S3] recursos para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação da](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
+| [!DNL Generic REST API] (Beta) | Agora você pode criar um [!DNL Generic REST API] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a Platform. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
+| [!DNL Zoho CRM] (Beta) | Agora você pode criar um [!DNL Zoho CRM] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou o [interface do usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados de seu [!DNL Zoho CRM] para a Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
 
-Para saber mais sobre fontes, consulte o [visão geral das fontes](../../sources/home.md).
+Para saber mais sobre fontes, consulte a [visão geral das origens](../../sources/home.md).

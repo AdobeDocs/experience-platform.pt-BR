@@ -12,10 +12,10 @@ ht-degree: 50%
 ---
 
 
-# Higiene dos dados {#hygiene}
+# Higiene de dados {#hygiene}
 
 * [Visão geral da higiene de dados](./home.md)
-* Interface do usuário de hierarquia de dados {#ui}
+* Interface de higiene de dados {#ui}
    * [Visão geral](./ui/overview.md)
    * [Procurar ordens de trabalho existentes](./ui/browse.md)
    * [Gerenciar expirações do conjunto de dados](./ui/dataset-expiration.md)
@@ -25,4 +25,4 @@ ht-degree: 50%
    * [Expirações do conjunto de dados](./api/dataset-expiration.md)
    * [Exclusões de registro](./api/jobs.md)
    * [Exclusões de registro](./api/workorder.md)
-   * [Quota](./api/quota.md)
+   * [Cota](./api/quota.md)

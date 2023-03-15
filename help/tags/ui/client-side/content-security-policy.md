@@ -1,10 +1,11 @@
 ---
 title: Suporte à Política de segurança de conteúdo (CSP)
-description: Saiba como lidar com restrições da Política de segurança de conteúdo (CSP) ao integrar seu site com tags no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba como lidar com restrições da Política de segurança de conteúdo (CSP) ao integrar seu site com tags à Adobe Experience Platform.
+exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1080'
-ht-degree: 57%
+ht-degree: 98%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Uma Política de Segurança de Conteúdo (CSP) é um recurso de segurança que ajuda a impedir ataques de script entre sites (XSS). Isso acontece quando o navegador é enganado para executar conteúdo mal-intencionado que parece vir de uma fonte confiável, mas vem de outro lugar. As CSPs permitem que o navegador verifique (em nome do usuário) se o script realmente vem de uma fonte confiável.
+Uma Política de Segurança de Conteúdo (CSP) é um recurso de segurança que ajuda a impedir ataques de script entre sites (XSS). Isso acontece quando o navegador é induzido a executar conteúdo mal-intencionado que parece vir de uma fonte confiável, mas vem de outro lugar. As CSPs permitem que o navegador verifique (em nome do usuário) se o script realmente vem de uma fonte confiável.
 
 As CSPs são implementadas adicionando um cabeçalho HTTP `Content-Security-Policy` às respostas do servidor ou adicionando um elemento `<meta>` configurado na seção `<head>` dos arquivos HTML.
 
@@ -22,18 +23,18 @@ As CSPs são implementadas adicionando um cabeçalho HTTP `Content-Security-Poli
 >
 > Para obter informações mais detalhadas sobre a CSP, consulte os [documentos da Web do MDN](https://developer.mozilla.org/pt/docs/Web/HTTP/CSP).
 
-As tags no Adobe Experience Platform são um sistema de gerenciamento de tags projetado para carregar scripts dinamicamente em seu site. Uma CSP padrão bloqueia esses scripts carregados dinamicamente devido a possíveis problemas de segurança. Este documento fornece orientação sobre como configurar a CSP para permitir scripts carregados dinamicamente de tags.
+As tags na Adobe Experience Platform são um sistema de gerenciamento de tags projetado para carregar scripts dinamicamente em seu site. Uma CSP padrão bloqueia esses scripts carregados dinamicamente devido a possíveis problemas de segurança. Este documento fornece orientação sobre como configurar a CSP para permitir scripts carregados dinamicamente de tags.
 
-Se você quiser que as tags funcionem com sua CSP, há dois desafios principais a serem superados:
+Se você quer que as tags funcionem com seu CSP, há dois desafios principais a serem superados:
 
 * **A origem da biblioteca de tags deve ser confiável.** Se essa condição não for atendida, a biblioteca de tags e outros arquivos JavaScript necessários serão bloqueados pelo navegador e não serão carregados na página.
 * **Os scripts incorporados devem ser permitidos.** Se essa condição não for atendida, as ações de regra do Código personalizado serão bloqueadas na página e não serão executadas adequadamente.
 
-O aumento da segurança requer um aumento da quantidade de trabalho em nome do criador de conteúdo. Se quiser usar tags e tiver uma CSP em vigor, será necessário corrigir esses problemas sem marcar outros scripts como confiáveis incorretamente. O resto deste documento fornece orientações sobre como fazer isso.
+O aumento da segurança requer maior quantidade de trabalho em nome do criador do conteúdo. Se quiser usar tags e tiver uma CSP em vigor, você precisará corrigir esses problemas sem marcar outros scripts como confiáveis incorretamente. O resto deste documento fornece orientações sobre como fazer isso.
 
-## Adicionar tags como uma fonte confiável
+## Adicionar tags como uma origem confiável
 
-Ao usar uma CSP, você deve todos os domínios confiáveis dentro do valor do cabeçalho `Content-Security-Policy`. O valor que você deve fornecer para tags varia de acordo com o tipo de hospedagem que você está usando.
+Ao usar uma CSP, você deve todos os domínios confiáveis dentro do valor do cabeçalho `Content-Security-Policy`. O valor que você deve fornecer para tags varia de acordo com o tipo de hospedagem que está usando.
 
 ### Auto-hospedagem
 
@@ -53,7 +54,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Hospedagem gerenciada pela Adobe
 
-Se você estiver usando um [host gerenciado pela Adobe](../publishing/hosts/managed-by-adobe-host.md), sua build será mantida no `assets.adobedtm.com`. Você deve especificar `self` como um domínio seguro para não interromper nenhum script que já esteja carregando, mas também precisa que `assets.adobedtm.com` seja listado como seguro ou a biblioteca de tags não será carregada na página. Nesse caso, você deve usar a seguinte configuração:
+Se você estiver usando um [host gerenciado pela Adobe](../publishing/hosts/managed-by-adobe-host.md), sua build será mantida no `assets.adobedtm.com`. Você deve especificar o `self` como um domínio seguro para não interromper scripts que já estejam sendo carregados, mas também é preciso que `assets.adobedtm.com` esteja listado como seguro ou a biblioteca de tags não será carregada na página. Nesse caso, você deve usar a seguinte configuração:
 
 **Cabeçalho HTTP**
 
@@ -64,7 +65,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **Tag `<meta>` HTML**
 
 
-Há um pré-requisito muito importante: Você deve carregar a biblioteca de tags [de forma assíncrona](./asynchronous-deployment.md). Isso não funciona com uma carga síncrona da biblioteca de tags (o que resulta em erros e regras do console não serem executados corretamente).
+Há um pré-requisito muito importante: você deve carregar a biblioteca de tags [de forma assíncrona](./asynchronous-deployment.md). Isso não funciona com o carregamento síncrono da biblioteca de tags (que resulta em erros e na execução incorreta de regras do console).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -81,7 +82,7 @@ A CSP não permite scripts integrados por padrão e, portanto, deve ser configur
 
 >[!NOTE]
 >
->A especificação da CSP tem detalhes para uma terceira opção usando hashes, mas essa abordagem não é viável para ser usada com sistemas de gerenciamento de tags como tags. Para obter mais informações sobre as limitações do uso de hashes com tags na Platform, consulte o [guia de Integridade de sub-recursos (SRI)](./sri.md).
+>A especificação da CSP tem detalhes para uma terceira opção com o uso de hashes, mas essa abordagem não é viável para ser usada com sistemas de gerenciamento de tags como tags. Para obter mais informações sobre as limitações do uso de hashes com tags na Platform, consulte o [manual de Integridade de sub-recursos (SRI)](./sri.md).
 
 ### Permitir por nonce {#nonce}
 
@@ -105,7 +106,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-Depois de configurar o cabeçalho ou a tag HTML, é necessário indicar à tag onde localizar o nonce ao carregar um script integrado. Para que uma tag use o nonce ao carregar o script, é necessário:
+Depois de configurar o cabeçalho ou a tag HTML, é necessário indicar onde localizar o nonce ao carregar um script integrado. Para que a tag use o nonce ao carregar o script, você deve:
 
 1. Criar um elemento de dados que faça referência ao local em que o nonce está localizado na sua camada de dados.
 1. Configure a Extensão principal e especifique o elemento de dados usado.
@@ -113,7 +114,7 @@ Depois de configurar o cabeçalho ou a tag HTML, é necessário indicar à tag o
 
 >[!NOTE]
 >
->O processo acima trata apenas do carregamento do código personalizado, não do que esse código personalizado faz. Se um script integrado tiver um código personalizado incompatível com a CSP, ela terá prioridade. Por exemplo, se você usar o código personalizado para carregar um script integrado ao anexá-lo ao DOM, a tag não poderá adicionar o nonce corretamente, de modo que determinada ação de código personalizado não funcionará conforme esperado.
+>O processo acima trata apenas do carregamento do código personalizado, não do que esse código personalizado faz. Se um script integrado tiver um código personalizado incompatível com a CSP, ela terá prioridade. Por exemplo, se você usar o código personalizado para carregar um script integrado anexando-o ao DOM, a tag não poderá adicionar o nonce corretamente. Portant, essa ação específica de código personalizado não funcionará conforme esperado.
 
 ### Permitir todos os scripts integrados {#unsafe-inline}
 
@@ -155,6 +156,6 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 ## Próximas etapas
 
-Ao ler este documento, você deve entender como configurar o cabeçalho da CSP para aceitar o arquivo da biblioteca de tags e scripts integrados.
+Após a leitura desse documento, você deve entender como configurar o cabeçalho da CSP para aceitar o arquivo da biblioteca de tags e scripts integrados.
 
-Como medida de segurança adicional, você também pode optar por usar a SRI (Integridade de sub-recursos) para validar builds de bibliotecas pesquisadas. No entanto, esse recurso tem algumas limitações importantes quando usado com sistemas de gerenciamento de tags, como tags. Consulte o guia sobre [compatibilidade com a SRI no Platform](./sri.md) para obter mais informações.
+Como medida de segurança adicional, você também pode optar por usar a SRI (Integridade de sub-recursos) para validar builds de bibliotecas pesquisadas. No entanto, esse recurso tem algumas limitações importantes quando usado com sistemas de gerenciamento de tags como tags. Consulte o manual sobre [compatibilidade da SRI na Platform](./sri.md) para obter mais informações.

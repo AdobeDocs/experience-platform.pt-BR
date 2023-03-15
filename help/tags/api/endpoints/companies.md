@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /company na A
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '240'
 ht-degree: 97%
 
 ---
@@ -121,7 +121,7 @@ GET /companies/{COMPANY_ID}
 | --- | --- |
 | `{COMPANY_ID}` | O valor `id` da empresa que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de consultas, executar consultas agendadas, executar consultas agendadas, serviço de consultas, consultas agendadas, consulta agendada;
+keywords: Experience Platform;início;tópicos populares;serviço de consulta;executar consultas agendadas;executar consulta agendada;serviço de consulta;consultas agendadas;consulta agendada;
 solution: Experience Platform
-title: Consulta agendada executa Ponto de Extremidade da API
-description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para a execução de consultas agendadas com a API do serviço de consulta.
+title: Ponto de Extremidade da API de Execuções de Consulta Agendada
+description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para executar consultas programadas com a API de serviço de consulta.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# A consulta agendada executa o ponto de extremidade
+# Ponto de extremidade de execuções de consulta agendada
 
 ## Exemplos de chamadas de API
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que você pode fazer usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
-### Recuperar uma lista de todas as execuções de uma consulta agendada especificada
+### Recupera uma lista de todas as execuções de uma consulta agendada especificada
 
-Você pode recuperar uma lista de todas as execuções de uma consulta agendada específica, independentemente de elas estarem em execução ou já terem sido concluídas. Isso é feito fazendo uma solicitação GET para o `/schedules/{SCHEDULE_ID}/runs` endpoint, em que `{SCHEDULE_ID}` é `id` valor da query agendada cujas execuções você deseja recuperar.
+Você pode recuperar uma lista de todas as execuções de uma consulta agendada específica, independentemente de estarem em execução no momento ou já concluídas. Isso é feito fazendo uma solicitação GET ao `/schedules/{SCHEDULE_ID}/runs` endpoint, onde `{SCHEDULE_ID}` é o `id` valor da consulta programada cujas execuções você deseja recuperar.
 
 **Formato da API**
 
@@ -30,23 +30,23 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da consulta agendada que deseja recuperar. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada que deseja recuperar. |
 | `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
 **Parâmetros de consulta**
 
-Veja a seguir uma lista de parâmetros de consulta disponíveis para listar execuções de uma query programada especificada. Todos esses parâmetros são opcionais. Efetuar uma chamada para este ponto de extremidade sem parâmetros recuperará todas as execuções disponíveis para a consulta agendada especificada.
+Veja a seguir uma lista de parâmetros de consulta disponíveis para execuções de listagem para uma consulta programada especificada. Todos esses parâmetros são opcionais. Fazer uma chamada para esse ponto de extremidade sem parâmetros recuperará todas as execuções disponíveis para a consulta agendada especificada.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20º*) |
-| `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
-| `property` | Filtre os resultados com base nos campos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `state`e `externalTrigger`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que), e  `==` (igual a), e `!=` (não igual a). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas, bem-sucedidas e criadas manualmente após 20 de abril de 2019. |
+| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira consulta listada. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `state`, e `externalTrigger`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que) e  `==` (igual a) e `!=` (diferente de). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas manualmente, bem-sucedidas e criadas após 20 de abril de 2019. |
 
 **Solicitação**
 
-A solicitação a seguir recupera as quatro últimas execuções da consulta agendada especificada.
+A solicitação a seguir recupera as quatro últimas execuções para a consulta programada especificada.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções para a consulta agendada especificada como JSON. A resposta a seguir retorna as quatro últimas execuções da query agendada especificada.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções para a consulta agendada especificada como JSON. A resposta a seguir retorna as quatro últimas execuções da consulta agendada especificada.
 
 ```json
 {
@@ -150,9 +150,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 >
 >Você pode usar o valor de `_links.cancel` para [interromper uma execução para uma consulta agendada especificada](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
-### Acionar imediatamente uma execução para uma consulta agendada específica
+### Acionar imediatamente uma execução para uma consulta programada específica
 
-Você pode acionar imediatamente uma execução para uma consulta agendada específica fazendo uma solicitação de POST para a `/schedules/{SCHEDULE_ID}/runs` endpoint, em que `{SCHEDULE_ID}` é `id` valor da query agendada cuja execução você deseja acionar.
+Você pode acionar imediatamente uma execução para uma consulta agendada especificada fazendo uma solicitação POST para o `/schedules/{SCHEDULE_ID}/runs` endpoint, onde `{SCHEDULE_ID}` é o `id` valor da consulta programada cuja execução você deseja acionar.
 
 **Formato da API**
 
@@ -172,7 +172,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem.
 
 ```json
 {
@@ -183,7 +183,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte me
 
 ### Recuperar detalhes de uma execução para uma consulta agendada específica
 
-Você pode recuperar detalhes sobre uma execução de uma consulta agendada específica fazendo uma solicitação de GET para a `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
+Você pode recuperar detalhes sobre uma execução para uma consulta agendada específica fazendo uma solicitação GET para a `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -193,8 +193,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da query agendada cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | O `id` valor da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | A variável `id` valor da execução que você deseja recuperar. |
 
 **Solicitação**
 
@@ -242,9 +242,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da execução e
 }
 ```
 
-### Interromper imediatamente uma execução para uma consulta agendada específica
+### Interromper imediatamente uma execução para uma consulta programada específica
 
-Você pode interromper imediatamente uma execução de uma consulta agendada específica fazendo uma solicitação de PATCH para a `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
+Você pode interromper imediatamente uma execução para uma consulta agendada específica fazendo uma solicitação PATCH para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -254,12 +254,12 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da query agendada cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | O `id` valor da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | A variável `id` valor da execução que você deseja recuperar. |
 
 **Solicitação**
 
-Essa solicitação de API usa a sintaxe do Patch JSON para sua carga útil. Para obter mais informações sobre como o patch JSON funciona, leia o documento de fundamentos da API.
+Essa solicitação de API usa a sintaxe do patch de JSON para sua carga. Para obter mais informações sobre como o Patch JSON funciona, leia o documento Fundamentos da API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem.
 
 ```json
 {

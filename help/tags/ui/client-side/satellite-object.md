@@ -1,6 +1,6 @@
 ---
-title: Referência a Objeto Satélite
-description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
+title: Referência a objeto satélite
+description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele nas tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento serve como referência para o objeto `_satellite` do lado do cliente e as várias funções que você pode executar com ele.
 
@@ -51,9 +51,9 @@ No exemplo fornecido, se um elemento de dados existir com um nome correspondente
 
 >[!NOTE]
 >
->Você pode usar a porcentagem (`%`) para fazer referência às variáveis de muitos campos de formulário na implementação de tags, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usando `%product%` O acessará o valor do elemento de dados do produto ou da variável personalizada.
+>É possível usar a porcentagem (`%`) para fazer referência a variáveis para muitos campos de formulário na implementação de tags, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usando `%product%` acessará o valor do elemento de dados do produto ou a variável personalizada.
 
-Quando um evento aciona uma regra, você pode transmitir a regra correspondente `event` objeto em `_satellite.getVar()` assim:
+Quando um evento aciona uma regra, você pode transmitir as informações correspondentes da regra `event` objeto em `_satellite.getVar()` assim:
 
 ```javascript
 // event refers to the calling rule's event
@@ -142,7 +142,7 @@ Isso registra um aviso no console do navegador. A mensagem é exibida independen
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contém funções para ler e gravar cookies. Essa é uma cópia exposta do js-cookie de biblioteca de terceiros. Para obter detalhes sobre o uso mais avançado desta biblioteca, consulte a [documentação do cookie js](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contém funções para ler e gravar cookies. Essa é uma cópia exposta do js-cookie de biblioteca de terceiros. Para obter detalhes sobre o uso mais avançado desta biblioteca, consulte a [Documentação do js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Definir um cookie {#cookie-set}
 
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Nos velhos [`setCookie`](#setCookie) método para definir cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o tempo de expiração do cookie em dias. Nesse novo método, um objeto &quot;attributes&quot; é aceito como um terceiro argumento. Para definir uma expiração para um cookie usando o novo método , você deve fornecer um `expires` no objeto attributes e defina-o para o valor desejado. Isso é demonstrado no exemplo abaixo.
+>No antigo [`setCookie`](#setCookie) método de configuração de cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o tempo de expiração do cookie em dias. Neste novo método, um objeto &quot;atributos&quot; é aceito como um terceiro argumento. Para definir uma expiração para um cookie usando o novo método, você deve fornecer um `expires` no objeto attributes e defina-o com o valor desejado. Isso é demonstrado no exemplo abaixo.
 
 **Exemplo**
 
@@ -236,7 +236,7 @@ Este exemplo demonstra os valores do objeto:
 
 ## `environment`
 
-Esse objeto contém informações sobre o ambiente em que a biblioteca de tempo de execução de tags atual está implantada.
+Esse objeto contém informações sobre o ambiente no qual a biblioteca de tempo de execução de tag atual está implantada.
 
 **Código**
 
@@ -256,7 +256,7 @@ O objeto contém as seguintes propriedades:
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID do ambiente. |
-| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`e `production`. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`, e `production`. |
 
 ## `notify`
 

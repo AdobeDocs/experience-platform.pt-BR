@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o endpoint /extension_packages na AP
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '939'
 ht-degree: 70%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 70%
 
 Um pacote de extensão representa uma [extensão](./extensions.md) criada por um desenvolvedor de extensões. Um pacote de extensão define recursos adicionais que podem ser disponibilizados para usuários de tags. Normalmente, esses recursos vêm na forma de [componentes de regra](./rule-components.md) (eventos, condições e ações) e [elementos de dados](./data-elements.md), mas também podem incluir módulos principais e compartilhados.
 
-Os pacotes de extensão são exibidos no catálogo de extensões na interface do usuário da coleção de dados e na interface do usuário do Adobe Experience Platform para que os usuários instalem. A adição de um pacote de extensão a uma propriedade é realizada por meio da criação de uma extensão com um link para o pacote de extensão.
+Os pacotes de extensão são exibidos no catálogo de extensões na interface da Coleção de dados e na interface do Adobe Experience Platform para que os usuários os instalem. A adição de um pacote de extensão a uma propriedade é realizada por meio da criação de uma extensão com um link para o pacote de extensão.
 
 Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor que o criou.
 
@@ -25,31 +25,31 @@ Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor qu
 
 O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [Guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
-Além de entender como fazer chamadas para a API do reator, também é importante entender como um pacote de extensão `status` e `availability` os atributos afetam quais ações você pode executar nela. Elas são explicadas nas seções abaixo.
+Além de entender como fazer chamadas para a API do Reator, também é importante entender como funciona um pacote de extensão do `status` e `availability` Os atributos do afetam quais ações você pode executar nele. Eles são explicados nas seções abaixo.
 
 ### Status
 
-Os pacotes de extensão têm três status possíveis: `pending`, `succeeded`e `failed`.
+Os pacotes de extensão têm três status possíveis: `pending`, `succeeded`, e `failed`.
 
 | Status | Descrição |
 | --- | --- |
-| `pending` | Quando um pacote de extensão é criado, seu `status` está definida como `pending`. Isso indica que o sistema recebeu as informações do pacote de extensão e começará o processamento. Pacotes de extensão com status `pending` não estão disponíveis para utilização. |
+| `pending` | Quando um pacote de extensão é criado, suas `status` está definida como `pending`. Isso indica que o sistema recebeu as informações do pacote de extensão e iniciará o processamento. Pacotes de extensão com status de `pending` não estão disponíveis para uso. |
 | `succeeded` | O status de um pacote de extensão é atualizado para `succeeded` se o processamento for concluído com êxito. |
-| `failed` | O status de um pacote de extensão é atualizado para `failed` se o processamento não for concluído com êxito. Um pacote de extensão com o status de `failed` pode ser atualizado até que o processamento seja bem-sucedido. Pacotes de extensão com status `failed` não estão disponíveis para utilização. |
+| `failed` | O status de um pacote de extensão é atualizado para `failed` se o processamento não for concluído com êxito. Um pacote de extensão com status de `failed` pode ser atualizado até o processamento ser bem-sucedido. Pacotes de extensão com status de `failed` não estão disponíveis para uso. |
 
 ### Disponibilidade
 
-Há níveis de disponibilidade para um pacote de extensão: `development`, `private`e `public`.
+Há níveis de disponibilidade para um pacote de extensão: `development`, `private`, e `public`.
 
 | Disponibilidade | Descrição |
 | --- | --- |
-| `development` | Um pacote de extensão em `development` só é visível e disponível na empresa proprietária. Além disso, ele só pode ser usado em propriedades que estão configuradas para desenvolvimento de extensão. |
-| `private` | A `private` o pacote de extensão só é visível para a empresa proprietária e só pode ser instalado nas propriedades que a empresa possui. |
-| `public` | A `public` o pacote de extensão é visível e está disponível para todas as empresas e propriedades. |
+| `development` | Um pacote de extensão no `development` O só pode ser visualizado e estar disponível na empresa proprietária. Além disso, ele só pode ser usado em propriedades configuradas para desenvolvimento de extensão. |
+| `private` | A `private` o pacote de extensão só é visível para a empresa que o possui e só pode ser instalado nas propriedades que a empresa possui. |
+| `public` | A `public` o pacote de extensão está visível e disponível para todas as empresas e propriedades. |
 
 >[!NOTE]
 >
->Quando um pacote de extensão é criado, `availability` está definida como `development`. Depois que o teste for concluído, é possível fazer a transição do pacote de extensão para `private` ou `public`.
+>Quando um pacote de extensão é criado, `availability` está definida como `development`. Após a conclusão do teste, é possível fazer a transição do pacote de extensão para `private` ou `public`.
 
 ## Recuperar uma lista de pacotes de extensão {#list}
 
@@ -249,7 +249,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão que você deseja consultar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -705,7 +705,7 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão recém-cria
 
 ## Atualizar um pacote de extensão {#update}
 
-Você pode atualizar um pacote de extensão incluindo sua ID no caminho de uma solicitação de PATCH.
+Você pode atualizar um pacote de extensão incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 **Formato da API**
 
@@ -717,7 +717,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -956,7 +956,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão que você deseja liberar de forma privada. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1201,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão que você deseja descontinuar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1294,7 +1294,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | O `id` do pacote de extensão cujas versões você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

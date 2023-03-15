@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As cinco bibliotecas mais recentes que foram publicadas no seu ambiente de produção em uma propriedade da Web estão disponíveis para posterior recuperação. Esse recurso é útil quando você encontra um bug na biblioteca de produção e precisa revertê-la para um estado em boas condições imediatamente.
 
@@ -45,7 +45,7 @@ Isso significa que, ao publicar novamente uma biblioteca mais antiga:
 
 * A forma como os ambientes de desenvolvimento e de preparo calculam o que está em contrafluxo não muda
 
-Leve em consideração a situação ao reverter a versão por causa de um problema com uma regra específica. A revisão de regra que está em produção pode, por exemplo, ter sido implementada há três versões atrás. Quando você exibe essa regra na interface do usuário para corrigi-la, ela ainda reflete as alterações mais salvas recentes, em vez das que estão em produção.
+Leve em consideração a situação ao reverter a versão por causa de um problema com uma regra específica. A revisão de regra que está em produção pode, por exemplo, ter sido implementada há três versões atrás. Quando você exibe essa regra na interface para corrigi-la, ela ainda reflete as alterações salvas mais recentemente, em vez das que estão em produção no momento.
 
 Por essa razão, a Platform notifica você de que uma propriedade consta como republicada, para lembrá-lo de que o que está vendo na interface da Coleção de dados está um pouco mais distante da produção do que o normal. Essa notificação é dispensável e aparece uma vez por sessão do navegador na primeira vez que você exibe a propriedade.
 

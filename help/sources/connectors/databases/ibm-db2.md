@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares, IBM DB2, ibm db2, DB2, db2
+keywords: Experience Platform;página inicial;tópicos populares;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: Visão geral do conector de origem do IBM DB2
 description: Saiba como conectar o IBM DB2 ao Adobe Experience Platform usando APIs ou a interface do usuário.
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->O conector IBM DB2 está em beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com rótulo beta.
+>O conector IBM DB2 está na versão beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como [!DNL Microsoft], MySQL e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 
-Há suporte para diferentes tipos de bancos de dados de terceiros, incluindo depósitos relacionais, NoSQL ou de dados. O suporte para provedores de banco de dados inclui o IBM DB2.
+Há suporte para diferentes tipos de bancos de dados de terceiros, incluindo bancos de dados relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui o IBM DB2.
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como conectar o IBM DB2 ao [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o IBM DB2 ao [!DNL Platform] uso de APIs ou da interface do usuário:
 
-## Conecte o IBM DB2 ao [!DNL Platform] uso de APIs
+## Conectar o IBM DB2 a [!DNL Platform] uso de APIs
 
-- [Criar uma conexão básica do IBM DB2 usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/ibm-db2.md)
-- [Explorar tabelas de dados usando a API do Serviço de fluxo](../../tutorials/api/explore/tabular.md)
-- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica do IBM DB2 usando a API do Serviço de fluxo](../../tutorials/api/create/databases/ibm-db2.md)
+- [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conecte o IBM DB2 ao [!DNL Platform] uso da interface do usuário
+## Conectar o IBM DB2 a [!DNL Platform] uso da interface
 
-- [Criar uma conexão de origem IBM DB2 na interface do usuário](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar uma conexão de origem do IBM DB2 na interface](../../tutorials/ui/create/databases/ibm-db2.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)

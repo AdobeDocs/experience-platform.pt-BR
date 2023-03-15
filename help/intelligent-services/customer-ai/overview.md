@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, visão geral, atendimento ao cliente, tópicos populares, visão geral do atendimento ao cliente
+keywords: Experience Platform;visão geral;ia do cliente;tópicos populares;visão geral da ia do cliente
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Visão geral do Customer AI
@@ -16,39 +16,39 @@ ht-degree: 26%
 
 # Visão geral do Customer AI
 
-A Customer AI, como parte dos Serviços inteligentes, fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações.
+A IA do cliente, como parte dos Serviços inteligentes, fornece aos profissionais de marketing o poder de gerar previsões de clientes individualmente com explicações.
 
 Com a ajuda de fatores influentes, a IA do cliente pode informar o que um cliente deve fazer e por quê. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights da IA do cliente para personalizar as experiências do cliente, disponibilizando as ofertas e mensagens mais apropriadas.
 
-## Noções básicas sobre o Customer AI
+## Noções básicas sobre a IA do cliente
 
 o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
-O Customer AI foi criado para:
+A IA do cliente foi criada para:
 
-- Forneça modelos de propensão do cliente de alta precisão para segmentação e definição de metas mais fortes.
-- Ajuda para entender os fatores influentes e a probabilidade por trás de determinados comportamentos do cliente.
+- Forneça modelos de propensão de alta precisão do cliente para segmentação e direcionamento mais sólidos.
+- Ajude a entender os fatores influentes e a probabilidade por trás de determinados comportamentos do cliente.
 - Forneça opções personalizáveis para os casos de uso e dados exclusivos de sua empresa.
-- Melhore o Perfil do cliente em tempo real com pontuações de propensão do cliente, como churn e conversão.
-- Aprimore os perfis do cliente com fatores influentes para pontuações de propensão.
+- Aprimore o Perfil do cliente em tempo real com pontuações de propensão do cliente, como churn e conversão.
+- Aprimore os perfis de clientes com fatores influentes para pontuações de propensão.
 - Crie segmentos de clientes com base em fatores influentes e pontuações de propensão.
 
 O cliente não foi criado para:
 
-- A API do cliente não deve ser usada para prever preços dinâmicos ou o ponto de preço no qual o cliente fará uma compra.
-- O Customer AI não pode determinar se a oferta aumentará a probabilidade do cliente comprar um item. Embora você possa decidir enviar ofertas de desconto com base em pontuações de propensão, não é necessariamente a melhor maneira de converter esses clientes.
-- O Customer AI não é uma ferramenta de recomendações do produto. Se você tiver milhares de SKUs, não use o Customer AI como proxy para uma solução de recomendações de produto real, como [!DNL Adobe Target].
-- O Customer AI não pode prever em qual estágio da Jornada de compra o cliente está, por exemplo, se ele estiver em estágios de &quot;consciência&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
-- Não use o Customer AI para determinar os clientes que provavelmente comprarão um lançamento de produto no futuro. Isso requer que alguns eventos de sucesso estejam presentes no passado para que a API do cliente treine com sucesso o algoritmo de aprendizado de máquina em seus dados.
+- A IA do cliente não deve ser usada para prever a precificação dinâmica ou o ponto de preço no qual o cliente fará uma compra.
+- A IA do cliente não pode determinar se fornecer uma oferta aumentará a probabilidade do cliente comprar um item. Embora você possa decidir enviar ofertas de desconto com base em pontuações de propensão, não é necessariamente a melhor maneira de converter esses clientes.
+- A IA do cliente não é uma ferramenta de recomendações de produto. Se você tiver milhares de SKUs, não use a IA do cliente como um proxy para uma solução real de recomendações do produto, como [!DNL Adobe Target].
+- A IA do cliente não pode prever em qual estágio da Jornada de compra o cliente está, por exemplo, se estiver em estágios de &quot;percepção&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
+- Não use a IA do cliente para determinar os clientes que provavelmente comprarão um lançamento de produto no futuro. Isso requer que determinados eventos bem-sucedidos estejam presentes no passado para que a IA do cliente treine com êxito o algoritmo de aprendizado de máquina em seus dados.
 
-O vídeo a seguir foi criado para oferecer suporte à compreensão da API do cliente.
+O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA do cliente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Como funciona
 
-O Customer AI funciona analisando os dados existentes do Evento de experiência do consumidor para prever pontuações de abandono ou propensão de conversão. O Adobe sabe que a definição de churn e conversão não é uniforme em todos os casos de uso e, por esse motivo, você tem a capacidade de definir metas personalizadas como um conjunto de condições. Você pode configurar a meta prevista, desde que o evento de interesse esteja presente nos dados de entrada do Evento de experiência do consumidor.
+A IA do cliente funciona analisando os dados existentes do Evento de experiência do consumidor para prever pontuações de churn ou propensão de conversão. O Adobe percebe que a definição de churn e conversão não é uniforme em todos os casos de uso e, por esse motivo, você tem a capacidade de definir metas de público-alvo personalizadas como um conjunto de condições. Você pode configurar a meta prevista enquanto o evento de interesse estiver presente nos dados de entrada do Evento de experiência do consumidor.
 
 ## Próximas etapas
 
-Você pode começar seguindo a [introdução](./getting-started.md) guia. Este guia aborda a configuração de todos os pré-requisitos necessários para o Customer AI. Se você já tiver todas as suas credenciais e dados prontos, visite  [configuração de uma instância do Customer AI](./user-guide/configure.md). Ela fornece etapas para usar a API do cliente.
+Você pode começar seguindo o [introdução](./getting-started.md) guia. Este guia aborda a configuração de todos os pré-requisitos necessários para a IA do cliente. Se você já tiver todas as suas credenciais e dados prontos, visite  [configuração de uma instância da IA do cliente](./user-guide/configure.md). Ela fornece etapas para usar a IA do cliente.

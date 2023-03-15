@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, auditoria, log de auditoria, log de alterações, log de alterações, rpc;
+keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;auditoria;log de auditoria;changelog;log de alterações;rpc;
 solution: Experience Platform
-title: Ponto de extremidade da API de log de auditoria
-description: O endpoint /auditlog na API do Registro de Schema permite recuperar uma lista cronológica de alterações feitas em um recurso XDM existente.
+title: Endpoint da API de Log de Auditoria
+description: O ponto de extremidade /auditlog na API do registro de esquema permite recuperar uma lista cronológica de alterações feitas em um recurso XDM existente.
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 6%
+source-wordcount: '401'
+ht-degree: 5%
 
 ---
 
-# Ponto de extremidade de log de auditoria
+# Endpoint do log de auditoria
 
-Para cada recurso do Experience Data Model (XDM), a variável [!DNL Schema Registry] O mantém um log de todas as alterações que ocorreram entre atualizações diferentes. O `/auditlog` endpoint no [!DNL Schema Registry] A API permite recuperar um log de auditoria para qualquer classe, grupo de campos de esquema, tipo de dados ou esquema especificado pela ID.
+Para cada recurso do Experience Data Model (XDM), a variável [!DNL Schema Registry] O mantém um log de todas as alterações que ocorreram entre atualizações diferentes. A variável `/auditlog` endpoint na variável [!DNL Schema Registry] A API permite recuperar um log de auditoria para qualquer classe, grupo de campos de esquema, tipo de dados ou esquema especificado pela ID.
 
 ## Introdução
 
-O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
-O `/auditlog` o ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Diferente de outros endpoints no [!DNL Schema Registry] A API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` namespace, conforme demonstrado na chamada de API abaixo.
+A variável `/auditlog` O ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints no [!DNL Schema Registry] API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`, e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` conforme demonstrado na chamada de API abaixo.
 
-## Recuperar um log de auditoria de um recurso
+## Recuperar um log de auditoria para um recurso
 
-Você pode recuperar um log de auditoria para qualquer classe, grupo de campos, tipo de dados ou esquema na Biblioteca de Esquemas especificando a ID do recurso no caminho de uma solicitação de GET para a `/auditlog` endpoint .
+Você pode recuperar um log de auditoria para qualquer classe, grupo de campos, tipo de dados ou esquema na Biblioteca de esquemas especificando a ID do recurso no caminho de uma solicitação GET para a `/auditlog` terminal.
 
 **Formato da API**
 
@@ -33,13 +33,13 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RESOURCE_ID}` | O `meta:altId` ou codificado por URL `$id` do recurso cujo log de auditoria você deseja recuperar. |
+| `{RESOURCE_ID}` | A variável `meta:altId` ou codificado em URL `$id` do recurso cujo log de auditoria você deseja recuperar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir recupera o log de auditoria de um schema.
+A solicitação a seguir recupera o log de auditoria de um esquema.
 
 ```shell
 curl -X GET \
@@ -118,11 +118,11 @@ Uma resposta bem-sucedida retorna uma lista cronológica de alterações feitas 
 
 | Propriedade | Descrição |
 | --- | --- |
-| `updates` | Uma matriz de objetos, com cada objeto representando uma alteração feita no recurso especificado ou um de seus recursos dependentes. |
-| `id` | O `$id` do recurso que foi alterado. Normalmente, esse valor representa o recurso especificado no caminho da solicitação, mas pode representar um recurso dependente se essa for a fonte da alteração. |
+| `updates` | Uma matriz de objetos, com cada objeto representando uma alteração feita no recurso especificado ou em um de seus recursos dependentes. |
+| `id` | A variável `$id` do recurso que foi alterado. Normalmente, esse valor representa o recurso especificado no caminho da solicitação, mas pode representar um recurso dependente se essa for a origem da alteração. |
 | `xdmType` | O tipo de recurso que foi alterado. |
-| `action` | O tipo de mudança que foi feita. |
+| `action` | O tipo de alteração que foi feita. |
 | `path` | A [Ponteiro JSON](../../landing/api-fundamentals.md#json-pointer) string que indica o caminho para o campo específico que foi alterado ou adicionado. |
 | `value` | O valor atribuído ao campo novo ou atualizado. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

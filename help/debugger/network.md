@@ -1,7 +1,7 @@
 ---
 title: Guia Rede
 description: Saiba como usar a guia Rede no Adobe Experience Platform Debugger.
-keywords: depurador, extensão do Experience Platform Debugger, chrome, extensão, rede, informações
+keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;rede;informações
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
@@ -15,7 +15,7 @@ ht-degree: 58%
 
 # Guia Rede
 
-O **Rede** A guia agrega todas as chamadas da solução da Adobe Experience Cloud feitas na página e as exibe em ordem da esquerda para a direita. Os parâmetros padrão são identificados automaticamente com nomes familiares e organizados para agrupar parâmetros comuns na mesma função.
+A variável **Rede** A guia agrega todas as chamadas da solução do Adobe Experience Cloud feitas na página e as exibe da esquerda para a direita. Os parâmetros padrão são identificados automaticamente com nomes familiares e organizados para agrupar parâmetros comuns na mesma função.
 
 ![](images/network.jpg)
 
@@ -31,7 +31,7 @@ Para alterar as informações por solução, selecione a solução que deseja ex
 
 Para voltar a exibir todas as soluções, selecione **[!UICONTROL Rede]**
 
-Selecione um item na exibição Rede para ver uma exibição expandida. Na janela de exibição expandida, é possível copiar as informações mostradas para a Área de transferência.
+Selecione em um item na exibição Rede para ter uma exibição expandida. Na janela de exibição expandida, é possível copiar as informações mostradas para a Área de transferência.
 
 ![](images/network-expand.jpg)
 

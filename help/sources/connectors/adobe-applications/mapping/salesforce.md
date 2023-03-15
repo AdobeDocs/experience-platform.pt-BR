@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Salesforce, salesforce, mapeamento de campo, mapeamento de campo, mapeamento, marketo, B2B, b2b
+keywords: Experience Platform;página inicial;tópicos populares;Salesforce;salesforce;mapeamento de campos;mapeamento de campos;marketo;B2B;b2b
 title: Campos de mapeamento do Salesforce
 description: As tabelas abaixo contêm os mapeamentos entre os campos de origem do Salesforce e seus campos XDM correspondentes.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 8%
+source-wordcount: '479'
+ht-degree: 6%
 
 ---
 
@@ -16,16 +16,16 @@ As tabelas abaixo contêm os mapeamentos entre [!DNL Salesforce] campos de orige
 
 ## Contato {#contact}
 
-Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos Componentes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
+Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos de esquema Detalhes da pessoa de negócios XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos de esquema Componentes de pessoas de negócios XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
@@ -72,13 +72,13 @@ Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individua
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `"Contact"` | `b2b.personType` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Líder {#lead}
+## Cliente potencial {#lead}
 
-Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos Componentes da Pessoa Comercial XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
+Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos de esquema Detalhes da pessoa de negócios XDM](../../../../xdm/field-groups/profile/business-person-details.md) guia e [Grupo de campos de esquema Componentes de pessoas de negócios XDM](../../../../xdm/field-groups/profile/business-person-components.md) guia.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
@@ -92,7 +92,7 @@ Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individua
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
 | `Id` | `personComponents.sourcePersonKey.sourceID` |
@@ -123,16 +123,16 @@ Leia o [Visão geral do perfil individual XDM](../../../../xdm/classes/individua
 | `"Lead"` | `b2b.personType` |
 | `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Conta {#account}
 
-Leia o [Visão geral dos detalhes da conta comercial XDM](../../../../xdm/classes/b2b/business-account.md) para obter mais informações sobre a classe XDM.
+Leia o [Visão geral dos detalhes da conta de negócios XDM](../../../../xdm/classes/b2b/business-account.md) para obter mais informações sobre a classe XDM.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `accountKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `AccountNumber` | `accountNumber` |
 | `AccountSource` | `accountSourceType` |
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
@@ -145,19 +145,19 @@ Leia o [Visão geral dos detalhes da conta comercial XDM](../../../../xdm/classe
 | `BillingStreet` | `accountBillingAddress.street1` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `accountDescription` |
-| `DunsNumber` | `accountOrganization.DUNSNumber` | recurso data.com |
+| `DunsNumber` | `accountOrganization.DUNSNumber` | Recurso do data.com |
 | `Fax` | `accountFax.number` |
 | `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
 | `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
-| `NaicsCode` | `accountOrganization.NAICSCode` | recurso data.com |
-| `NaicsDesc` | `accountOrganization.NAICSDescription` | recurso data.com |
+| `NaicsCode` | `accountOrganization.NAICSCode` | Recurso do data.com |
+| `NaicsDesc` | `accountOrganization.NAICSDescription` | Recurso do data.com |
 | `Name` | `accountName` |
 | `NumberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `Ownership` | `accountOwnership` |
@@ -175,21 +175,21 @@ Leia o [Visão geral dos detalhes da conta comercial XDM](../../../../xdm/classe
 | `SicDesc` | `accountOrganization.SICDescription` |
 | `Site` | `accountSite` |
 | `TickerSymbol` | `accountOrganization.tickerSymbol` |
-| `Tradestyle` | `accountTradeStyle` | recurso data.com |
+| `Tradestyle` | `accountTradeStyle` | Recurso do data.com |
 | `Type` | `accountType` |
 | `Website` | `accountOrganization.website` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Oportunidade {#opportunity}
 
-Leia o [Visão geral das oportunidades de negócios XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obter mais informações sobre a classe XDM.
+Leia o [Visão geral da oportunidade de negócios XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obter mais informações sobre a classe XDM.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | Relação. |
 | `Amount` | `opportunityAmount.amount` |
@@ -220,23 +220,23 @@ Leia o [Visão geral das oportunidades de negócios XDM](../../../../xdm/classes
 | `Type` | `opportunityType` |
 | `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Função de contato da oportunidade {#opportunity-contact-role}
+## Função do contato da oportunidade {#opportunity-contact-role}
 
-Leia o [Visão geral da classe de relação de pessoas da oportunidade de negócios XDM](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) para obter mais informações sobre a classe XDM.
+Leia o [Visão geral da classe de relação pessoal de oportunidade de negócios XDM](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) para obter mais informações sobre a classe XDM.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `"Salesforce"` | `personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personKey.sourceInstanceID` |
 | `ContactId` | `personKey.sourceID` |
 | `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -246,19 +246,19 @@ Leia o [Visão geral da classe de relação de pessoas da oportunidade de negóc
 | `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campaign {#campaign}
 
-Leia o [Visão geral da classe de Campanha comercial XDM](../../../../xdm/classes/b2b/business-campaign.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes da campanha comercial XDM](../../../../xdm/field-groups/b2b-campaign/details.md) guia.
+Leia o [Visão geral da classe Campanha de negócios XDM](../../../../xdm/classes/b2b/business-campaign.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos de esquema de detalhes da campanha de negócios XDM](../../../../xdm/field-groups/b2b-campaign/details.md) guia.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `Name` | `campaignName` |
 | `ParentId` | `parentCampaignKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
@@ -281,15 +281,15 @@ Leia o [Visão geral da classe de Campanha comercial XDM](../../../../xdm/classe
 
 ## Membro da campanha {#campaign-member}
 
-Leia o [Visão geral dos membros da campanha comercial XDM](../../../../xdm/classes/b2b/business-campaign-members.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos Detalhes do Membro da Campanha Empresarial XDM](../../../../xdm/field-groups/b2b-campaign/details.md) documento.
+Leia o [Visão geral dos membros da campanha de negócios XDM](../../../../xdm/classes/b2b/business-campaign-members.md) para obter mais informações sobre a classe XDM. Para obter mais informações sobre os grupos de campos XDM, leia a [Grupo de campos de esquema de detalhes do membro da campanha de negócios XDM](../../../../xdm/field-groups/b2b-campaign/details.md) documento.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Identidade primária. O valor de `"${CRM_ORG_ID}"` será substituído automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Identidade principal. O valor de `"${CRM_ORG_ID}"` serão substituídos automaticamente. |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
 | `CampaignId` | `campaignKey.sourceID` |
@@ -307,9 +307,9 @@ Leia o [Visão geral dos membros da campanha comercial XDM](../../../../xdm/clas
 
 ## Relação de contato da conta {#account-contact-relation}
 
-Leia o [Classe de Relação de Pessoa da Conta Funcional XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obter mais informações sobre a classe XDM.
+Leia o [Classe de relação pessoal da conta comercial XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obter mais informações sobre a classe XDM.
 
-| Campo de origem | Caminho do campo XDM do Target | Notas |
+| Campo de origem | Caminho do campo XDM de destino | Notas |
 | --- | --- | --- |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
@@ -322,7 +322,7 @@ Leia o [Classe de Relação de Pessoa da Conta Funcional XDM](../../../../xdm/cl
 | `Id` | `accountPersonKey.sourceID` |
 | `"Salesforce"` | `accountPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountPersonKey.sourceInstanceID` |
-| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | Identidade primária. |
+| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | Identidade principal. |
 | `IsActive` | `IsActive` |
 | `IsDirect` | `IsDirect` |
 | `LastModifiedById` | `extSourceSystemAudit.lastUpdatedBy` |
@@ -332,4 +332,4 @@ Leia o [Classe de Relação de Pessoa da Conta Funcional XDM](../../../../xdm/cl
 
 ## Próximas etapas
 
-Ao ler este documento, você obteve informações sobre a relação de mapeamento entre [!DNL Salesforce] campos de origem e seus campos XDM correspondentes. Consulte a documentação em [criar um [!DNL Salesforce] conexão de origem](../../../connectors/crm/salesforce.md) para obter mais informações.
+Ao ler este documento, você obtém informações sobre a relação de mapeamento entre [!DNL Salesforce] e seus campos XDM correspondentes. Consulte a documentação em [criação de um [!DNL Salesforce] conexão de origem](../../../connectors/crm/salesforce.md) para obter mais informações.

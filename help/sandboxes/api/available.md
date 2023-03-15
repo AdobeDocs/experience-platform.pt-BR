@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, sandboxes disponíveis de lista, sandboxes de lista
+keywords: Experience Platform;página inicial;tópicos populares;lista sandboxes disponíveis;listar sandboxes
 solution: Experience Platform
-title: Ponto de extremidade da API de sandboxes disponível
-description: Você pode listar as sandboxes disponíveis para o usuário atual fazendo uma solicitação do GET para o endpoint de sandboxes disponível.
+title: Endpoint da API de sandboxes disponível
+description: Você pode listar as sandboxes que estão disponíveis para o usuário atual fazendo uma solicitação GET para o ponto de extremidade das sandboxes disponíveis.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Ao contrário de outros endpoints fornecidos na API do Sandbox, esse endpoint está disponível para todos os usuários, incluindo aqueles sem permissões de acesso à Administração do Sandbox.
+>Ao contrário de outros endpoints fornecidos na API de sandbox, esse endpoint está disponível para todos os usuários, incluindo aqueles sem permissões de acesso de Administração de sandbox.
 
-Você pode listar as sandboxes disponíveis para o usuário atual fazendo uma solicitação do GET para o endpoint de sandboxes disponível.
+Você pode listar as sandboxes que estão disponíveis para o usuário atual fazendo uma solicitação GET para o ponto de extremidade das sandboxes disponíveis.
 
 **Formato da API**
 
@@ -27,7 +27,7 @@ GET /{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte a [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
+| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados. Consulte a [documento do apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 **Solicitação**
 
@@ -41,7 +41,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usuário atual, incluindo detalhes como `name`, `title`, `state`e `type`.
+Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usuário atual, incluindo detalhes como `name`, `title`, `state`, e `type`.
 
 ```json
 {
@@ -103,7 +103,7 @@ Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usu
 | --- | --- |
 | `name` | O nome da sandbox. Usado para fins de pesquisa em chamadas de API. |
 | `title` | O nome de exibição da sandbox. |
-| `state` | O estado de processamento atual da sandbox. O estado de uma sandbox pode ser qualquer um dos seguintes: <ul><li>`creating`: A sandbox foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>`active`: A sandbox é criada e ativa.</li><li>`failed`: Devido a um erro, a sandbox não pôde ser provisionada pelo sistema e está desativada.</li><li>`deleted`: A sandbox foi desativada manualmente.</li></ul> |
-| `type` | O tipo de sandbox, seja &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
+| `state` | O estado de processamento atual da sandbox. O estado de uma sandbox pode ser qualquer um dos seguintes: <ul><li>`creating`: a sandbox foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>`active`: a sandbox é criada e está ativa.</li><li>`failed`: devido a um erro, a sandbox não pôde ser provisionada pelo sistema e está desabilitada.</li><li>`deleted`: a sandbox foi desativada manualmente.</li></ul> |
+| `type` | O tipo de sandbox, &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
 | `isDefault` | Uma propriedade booleana que indica se essa sandbox é a sandbox de produção padrão da organização. |
-| `eTag` | Um identificador para uma versão específica da sandbox. Usado para controle de versão e eficiência de armazenamento em cache, esse valor é atualizado sempre que uma alteração é feita na sandbox. |
+| `eTag` | Um identificador para uma versão específica da sandbox. Usado para controlar a versão e a eficiência do armazenamento em cache, esse valor é atualizado sempre que uma alteração é feita na sandbox. |

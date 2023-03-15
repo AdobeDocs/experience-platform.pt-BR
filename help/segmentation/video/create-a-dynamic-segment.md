@@ -9,23 +9,22 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: d06e3c979b9279c6178e5049442fa009927bbb11
+exl-id: 62345f9d-11fe-4659-a513-ee15938f0c85
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
-
 # Criar um segmento dinâmico na interface do usuário do Experience Platform
 
-O vídeo a seguir tem como objetivo oferecer suporte à sua compreensão da criação de segmentos dinâmicos. Ele mostra um exemplo de experiência do cliente seguido por um rápido tour dos principais recursos na interface [!DNL Platform]. Para saber mais sobre a segmentação e como criar segmentos na interface do usuário, leia o [guia do Construtor de segmentos](../ui/segment-builder.md).
+O vídeo a seguir é destinado a ajudá-lo a entender a criação de segmentos dinâmicos. Ele mostra um exemplo de experiência do cliente, seguida de um rápido tour pelos principais recursos na [!DNL Platform] interface. Para saber mais sobre segmentação e como criar segmentos na interface do usuário, leia o [Guia do Construtor de segmentos](../ui/segment-builder.md).
 
-Se você estiver interessado em criar um segmento usando a API de segmentação, leia [criar um guia de API de segmento](../tutorials/create-a-segment.md).
+Se você estiver interessado em criar um segmento usando a API de segmentação, leia a [criar um guia de API de segmento](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia do Construtor de segmentos](../ui/segment-builder.md).
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [Guia do Construtor de segmentos](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

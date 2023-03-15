@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; api;
+keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;api;
 solution: Experience Platform
 title: Introdução à API do serviço de segmentação
 description: A documentação a seguir fornece informações adicionais que você precisa saber para trabalhar com êxito com a API de segmentação.
@@ -13,30 +13,30 @@ ht-degree: 1%
 
 # Introdução à API do serviço de segmentação {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] permite criar segmentos e gerar públicos no Adobe Experience Platform a partir de [!DNL Real-Time Customer Profile] dados.
+Adobe Experience Platform [!DNL Segmentation Service] O permite criar segmentos e gerar públicos no Adobe Experience Platform a partir de seus [!DNL Real-Time Customer Profile] dados.
 
-O guia do desenvolvedor requer uma compreensão funcional das várias [!DNL Experience Platform] serviços envolvidos na utilização de [!DNL Segmentation Service].
+O guia do desenvolvedor requer uma compreensão funcional dos vários [!DNL Experience Platform] serviços envolvidos na utilização [!DNL Segmentation Service].
 
-- [[!DNL Segmentation]](../home.md): Permite criar segmentos de público-alvo a partir de [!DNL Real-Time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente. Para utilizar melhor a Segmentação, verifique se os dados são assimilados como perfis e eventos de acordo com a variável [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [[!DNL Segmentation]](../home.md): permite criar segmentos de público-alvo a partir do [!DNL Real-Time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para trabalhar com o [!DNL Segmentation] API.
+As seções a seguir fornecem as informações adicionais que você precisará saber para trabalhar com a [!DNL Segmentation] API.
 
-## Lendo exemplos de chamadas de API
+## Leitura de chamadas de API de amostra
 
-O [!DNL Segmentation Service] A documentação da API fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+A variável [!DNL Segmentation Service] A documentação da API fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ## Cabeçalhos obrigatórios
 
-A documentação da API também requer que você tenha completado o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas para [!DNL Platform] endpoints. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+A documentação da API também exige que você tenha concluído a [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para o [!DNL Platform] pontos finais. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários no [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - Autorização: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,4 +46,4 @@ Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtu
 
 ## Próximas etapas
 
-Para fazer chamadas usando o [!DNL Segmentation Service] API, selecione um dos guias de ponto de extremidade disponíveis usando a navegação à esquerda ou dentro do [visão geral do guia do desenvolvedor](./overview.md)
+Para fazer chamadas usando o [!DNL Segmentation Service] , selecione um dos manuais de endpoint disponíveis, usando a navegação à esquerda ou no [visão geral do guia do desenvolvedor](./overview.md)

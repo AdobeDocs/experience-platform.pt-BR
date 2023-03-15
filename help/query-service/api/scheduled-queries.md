@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de consultas, serviço de consultas, consultas agendadas, consulta agendada;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;consultas agendadas;consulta agendada;
 solution: Experience Platform
-title: Ponto Final de Programações
-description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas agendadas com a API do serviço de consulta.
+title: Endpoint de agendamentos
+description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas programadas com a API de serviço de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# Ponto de extremidade de agendamentos
+# Endpoint de agendamentos
 
 ## Exemplos de chamadas de API
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que você pode fazer usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de consultas agendadas
 
-Você pode recuperar uma lista de todas as consultas agendadas para sua Organização IMS fazendo uma solicitação GET para a `/schedules` endpoint .
+Você pode recuperar uma lista de todas as consultas agendadas para sua Organização IMS fazendo uma solicitação GET para o `/schedules` terminal.
 
 **Formato da API**
 
@@ -34,18 +34,18 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **Parâmetros de consulta**
 
-Veja a seguir uma lista de parâmetros de consulta disponíveis para listar consultas programadas. Todos esses parâmetros são opcionais. Fazer uma chamada para esse terminal sem parâmetros recuperará todas as consultas agendadas disponíveis para sua organização.
+Veja a seguir uma lista de parâmetros de consulta disponíveis para listar consultas programadas. Todos esses parâmetros são opcionais. Fazer uma chamada para esse endpoint sem parâmetros recuperará todas as consultas agendadas disponíveis para sua organização.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20º*) |
-| `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
-| `property` | Filtre os resultados com base nos campos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `templateId`e `userId`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que), e `==` (igual a). Por exemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas agendadas nas quais a ID do usuário está conforme especificado. |
+| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira consulta listada. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `templateId`, e `userId`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que) e `==` (igual a). Por exemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas agendadas em que a ID do usuário esteja conforme especificado. |
 
 **Solicitação**
 
-A solicitação a seguir recupera a consulta agendada mais recente criada para a organização IMS.
+A solicitação a seguir recupera a consulta agendada mais recente criada para sua organização IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas programadas para a Organização IMS especificada. A resposta a seguir retorna a consulta agendada mais recente criada para sua organização IMS.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas agendadas para a Organização IMS especificada. A resposta a seguir retorna a consulta agendada mais recente criada para sua organização IMS.
 
 ```json
 {
@@ -123,7 +123,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas p
 
 ### Criar uma nova consulta agendada
 
-Você pode criar uma nova consulta agendada fazendo uma solicitação de POST para a `/schedules` endpoint . Ao criar uma consulta agendada na API, você também pode vê-la no Editor de consultas. Para obter mais informações sobre consultas agendadas na interface do usuário, leia o [Documentação do Editor de consultas](../ui/user-guide.md#scheduled-queries).
+Você pode criar uma nova consulta agendada fazendo uma solicitação POST para a `/schedules` terminal. Ao criar uma consulta agendada na API, você também pode vê-la no Editor de consultas. Para obter mais informações sobre consultas programadas na interface do usuário, leia o [Documentação do Editor de consultas](../ui/user-guide.md#scheduled-queries).
 
 **Formato da API**
 
@@ -160,12 +160,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | O nome do banco de dados para o qual você está criando uma consulta agendada. |
 | `query.sql` | A consulta SQL que você deseja criar. |
 | `query.name` | O nome da consulta agendada. |
-| `schedule.schedule` | O cronograma de execução do query. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. Neste exemplo, &quot;30 * * * *&quot; significa que o query será executado a cada hora na marca de 30 minutos.<br><br>Como alternativa, você pode usar as seguintes expressões abreviadas:<ul><li>`@once`: A consulta só é executada uma vez.</li><li>`@hourly`: O query é executado a cada hora no início da hora. É equivalente à expressão cron `0 * * * *`.</li><li>`@daily`: O query é executado uma vez por dia à meia-noite. É equivalente à expressão cron `0 0 * * *`.</li><li>`@weekly`: O query é executado uma vez por semana, no domingo, à meia-noite. É equivalente à expressão cron `0 0 * * 0`.</li><li>`@monthly`: O query é executado uma vez por mês, no primeiro dia do mês, à meia-noite. É equivalente à expressão cron `0 0 1 * *`.</li><li>`@yearly`: O query é executado uma vez por ano, em 1º de janeiro, à meia-noite. É equivalente à expressão cron `1 0 0 1 1 *`. |
-| `schedule.startDate` | A data de início da consulta agendada, escrita como um carimbo de data e hora UTC. |
+| `schedule.schedule` | O cronograma cron para a consulta. Para obter mais informações sobre cronogramas cron, leia a [formato de expressão do cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação. Neste exemplo, &quot;30 * * * *&quot; significa que a consulta será executada a cada hora na marca de 30 minutos.<br><br>Como alternativa, você pode usar as seguintes expressões abreviadas:<ul><li>`@once`: a consulta é executada apenas uma vez.</li><li>`@hourly`: A consulta é executada a cada hora no início da hora. É equivalente à expressão cron `0 * * * *`.</li><li>`@daily`: O query é executado uma vez por dia à meia-noite. É equivalente à expressão cron `0 0 * * *`.</li><li>`@weekly`: O query é executado uma vez por semana, no domingo, à meia-noite. É equivalente à expressão cron `0 0 * * 0`.</li><li>`@monthly`: O query é executado uma vez por mês, no primeiro dia do mês, à meia-noite. É equivalente à expressão cron `0 0 1 * *`.</li><li>`@yearly`: O query é executado uma vez por ano, no dia 1º de janeiro, à meia-noite. É equivalente à expressão cron `1 0 0 1 1 *`. |
+| `schedule.startDate` | A data de início da consulta agendada, gravada como carimbo de data e hora UTC. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes da sua query agendada recém-criada. Quando o query agendado terminar de ser ativado, a função `state` mudará de `REGISTERING` para `ENABLED`.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes da consulta agendada recém-criada. Quando a ativação da consulta programada for concluída, a variável `state` mudará de `REGISTERING` para `ENABLED`.
 
 ```json
 {
@@ -222,7 +222,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes da s
 
 ### Solicitar detalhes de uma consulta agendada especificada
 
-Você pode recuperar informações de uma consulta agendada específica fazendo uma solicitação do GET para a `/schedules` endpoint e fornecer sua ID no caminho da solicitação.
+Você pode recuperar informações de uma consulta agendada específica fazendo uma solicitação GET ao `/schedules` e fornecendo sua ID no caminho da solicitação.
 
 **Formato da API**
 
@@ -232,7 +232,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da consulta agendada que deseja recuperar. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada que deseja recuperar. |
 
 **Solicitação**
 
@@ -305,13 +305,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da consulta age
 
 ### Atualizar detalhes de uma consulta agendada especificada
 
-Você pode atualizar os detalhes de uma consulta agendada específica fazendo uma solicitação de PATCH para a `/schedules` e fornecendo sua ID no caminho da solicitação.
+Você pode atualizar os detalhes de uma consulta agendada especificada fazendo uma solicitação PATCH para o `/schedules` e fornecendo a respectiva ID no caminho da solicitação.
 
 A solicitação PATCH suporta dois caminhos diferentes: `/state` e `/schedule/schedule`.
 
 ### Atualizar estado de consulta agendada
 
-Você pode atualizar o estado da consulta agendada selecionada definindo a variável `path` propriedade para `/state` e `value` propriedade como `enable` ou `disable`.
+Você pode atualizar o estado da consulta agendada selecionada definindo o `path` propriedade para `/state` e a variável `value` propriedade como um dos dois `enable` ou `disable`.
 
 **Formato da API**
 
@@ -321,12 +321,12 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da consulta agendada que você deseja PATCH. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada que você deseja PATCH. |
 
 
 **Solicitação**
 
-Essa solicitação de API usa a sintaxe do Patch JSON para sua carga útil. Para obter mais informações sobre como o patch JSON funciona, leia o documento de fundamentos da API.
+Essa solicitação de API usa a sintaxe do patch de JSON para sua carga. Para obter mais informações sobre como o Patch JSON funciona, leia o documento Fundamentos da API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -349,11 +349,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | -------- | ----------- |
 | `op` | A operação a ser executada no agendamento de consulta. O valor aceito é `replace`. |
 | `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado da consulta agendada, é necessário definir o valor de `path` para `/state`. |
-| `value` | O valor atualizado da variável `/state`. Esse valor pode ser definido como `enable` ou `disable` para ativar ou desativar a consulta agendada. |
+| `value` | O valor atualizado de `/state`. Esse valor pode ser definido como `enable` ou `disable` para ativar ou desativar a consulta programada. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem.
 
 ```json
 {
@@ -362,9 +362,9 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte me
 }
 ```
 
-### Atualizar agendamento de consulta agendada
+### Atualizar programação de consulta programada
 
-Você pode atualizar o cronograma de execução do query agendado definindo a variável `path` propriedade para `/schedule/schedule` no corpo da solicitação. Para obter mais informações sobre programações de cron, leia a [formato de expressão cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação.
+Você pode atualizar a programação cron da consulta agendada definindo o parâmetro `path` propriedade para `/schedule/schedule` no corpo da solicitação. Para obter mais informações sobre cronogramas cron, leia a [formato de expressão do cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentação.
 
 **Formato da API**
 
@@ -374,11 +374,11 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da consulta agendada que você deseja PATCH. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada que você deseja PATCH. |
 
 **Solicitação**
 
-Essa solicitação de API usa a sintaxe do Patch JSON para sua carga útil. Para obter mais informações sobre como o patch JSON funciona, leia o documento de fundamentos da API.
+Essa solicitação de API usa a sintaxe do patch de JSON para sua carga. Para obter mais informações sobre como o Patch JSON funciona, leia o documento Fundamentos da API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -400,12 +400,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `op` | A operação a ser executada no agendamento de consulta. O valor aceito é `replace`. |
-| `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o agendamento do query agendado, é necessário definir o valor de `path` para `/schedule/schedule`. |
-| `value` | O valor atualizado da variável `/schedule`. Esse valor precisa estar no formato de um cronograma de execução. Portanto, neste exemplo, a consulta agendada será executada a cada hora, na marca de 45 minutos. |
+| `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o agendamento da consulta agendada, é necessário definir o valor de `path` para `/schedule/schedule`. |
+| `value` | O valor atualizado de `/schedule`. Esse valor precisa estar no formato de um cronograma cron. Portanto, neste exemplo, a consulta agendada será executada a cada hora na marca de 45 minutos. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem.
 
 ```json
 {
@@ -416,11 +416,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte me
 
 ### Excluir uma consulta agendada especificada
 
-Você pode excluir uma consulta agendada específica fazendo uma solicitação de DELETE para a `/schedules` endpoint e fornecendo a ID da consulta agendada que deseja excluir no caminho da solicitação.
+Você pode excluir uma consulta agendada especificada fazendo uma solicitação DELETE à `/schedules` e fornecendo a ID da consulta agendada que deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >
->O cronograma **must** ser desativado antes de ser excluído.
+>A programação **deve** ser desabilitado antes de ser excluído.
 
 **Formato da API**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor da consulta agendada que você deseja DELETE. |
+| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada que você deseja DELETE. |
 
 **Solicitação**
 
@@ -444,7 +444,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem.
 
 ```json
 {

@@ -1,34 +1,34 @@
 ---
 title: Endpoint da API de ordem de trabalho
-description: O endpoint /workorder na API da Higiene de Dados permite gerenciar programaticamente tarefas de exclusão para identidades.
+description: O ponto de extremidade /workorder na API de higiene de dados permite gerenciar de forma programática tarefas de exclusão para identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 5%
+source-wordcount: '1011'
+ht-degree: 3%
 
 ---
 
 # Ponto de extremidade da ordem de trabalho
 
-O `/workorder` O endpoint na API da Higiene de Dados permite gerenciar programaticamente solicitações de exclusão de registros no Adobe Experience Platform.
+A variável `/workorder` O endpoint na API da higiene de dados permite gerenciar de forma programática as solicitações de exclusão de registros no Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->As solicitações de exclusão de registro só estão disponíveis para organizações que compraram **Blindagem do Adobe Healthcare**.
+>As solicitações de exclusão de registro só estão disponíveis para organizações que compraram **Adobe Healthcare Shield**.
 >
 >
->As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **not** a ser usado para solicitações de direitos do titular de dados (conformidade) como parte de regulamentos de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
+>As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **não** a ser usado para solicitações de direitos do titular dos dados (conformidade) como relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da API da Higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint usado neste guia faz parte da API de higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Criar uma solicitação de exclusão de registro {#create}
 
-É possível excluir uma ou mais identidades de um único conjunto de dados ou de todos os conjuntos de dados, fazendo uma solicitação de POST para a variável `/workorder` endpoint .
+Você pode excluir uma ou mais identidades de um único conjunto de dados ou de todos os conjuntos de dados fazendo uma solicitação POST para o `/workorder` terminal.
 
 **Formato da API**
 
@@ -38,7 +38,7 @@ POST /workorder
 
 **Solicitação**
 
-Dependendo do valor da variável `datasetId` fornecida na carga da solicitação, a chamada da API excluirá identidades de todos os conjuntos de dados ou de um único conjunto de dados especificado. A solicitação a seguir exclui três identidades de um conjunto de dados específico.
+Dependendo do valor da variável `datasetId` fornecido na carga da solicitação, a chamada à API excluirá identidades de todos os conjuntos de dados ou de um único conjunto de dados especificado. A solicitação a seguir exclui três identidades de um conjunto de dados específico.
 
 ```shell
 curl -X POST \
@@ -78,17 +78,17 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `action` | A ação a ser executada. O valor deve ser definido como `delete_identity` para exclusões de registros. |
-| `datasetId` | Se estiver excluindo de um único conjunto de dados, esse valor deve ser a ID do conjunto de dados em questão. Se estiver excluindo de todos os conjuntos de dados, defina o valor como `ALL`.<br><br>Se você estiver especificando um único conjunto de dados, o esquema do Experience Data Model (XDM) associado do conjunto de dados deverá ter uma identidade primária definida. |
+| `action` | A ação a ser executada. O valor deve ser definido como `delete_identity` para exclusões de registro. |
+| `datasetId` | Se você estiver excluindo de um único conjunto de dados, esse valor deverá ser a ID do conjunto de dados em questão. Se estiver excluindo de todos os conjuntos de dados, defina o valor como `ALL`.<br><br>Se você estiver especificando um único conjunto de dados, o esquema do Experience Data Model (XDM) associado ao conjunto de dados deve ter uma identidade primária definida. |
 | `displayName` | O nome de exibição da solicitação de exclusão de registro. |
 | `description` | Uma descrição para a solicitação de exclusão de registro. |
-| `identities` | Uma matriz contendo as identidades de pelo menos um usuário cujas informações você gostaria de excluir. Cada identidade é composta por um [namespace de identidade](../../identity-service/namespaces.md) e um valor:<ul><li>`namespace`: Contém uma única propriedade de string, `code`, que representa o namespace de identidade. </li><li>`id`: O valor de identidade.</ul>If `datasetId` especifica um único conjunto de dados, cada entidade em `identities` deve usar o mesmo namespace de identidade que a identidade primária do esquema.<br><br>If `datasetId` está definida como `ALL`, o `identities` A matriz não está restrita a nenhum namespace único, pois cada conjunto de dados pode ser diferente. No entanto, suas solicitações ainda estão restritas aos namespaces disponíveis para sua organização, conforme relatado por [Serviço de identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Uma matriz que contém as identidades de pelo menos um usuário cujas informações você deseja excluir. Cada identidade é composta de um [namespace de identidade](../../identity-service/namespaces.md) e um valor:<ul><li>`namespace`: contém uma única propriedade de sequência de caracteres, `code`, que representa o namespace de identidade. </li><li>`id`: o valor da identidade.</ul>Se `datasetId` especifica um único conjunto de dados, cada entidade em `identities` deve usar o mesmo namespace de identidade que a identidade primária do esquema.<br><br>Se `datasetId` está definida como `ALL`, o `identities` a matriz não está restrita a um único namespace, pois cada conjunto de dados pode ser diferente. No entanto, suas solicitações ainda restringem os namespaces disponíveis para sua organização, conforme relatado por [Serviço de identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da exclusão de registro.
+Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 
 ```json
 {
@@ -108,21 +108,21 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão de registro.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para procurar o status da exclusão posteriormente. |
+| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para consultar o status da exclusão posteriormente. |
 | `orgId` | Sua ID da organização. |
-| `bundleId` | A ID do pacote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
-| `action` | A ação que está sendo executada pela ordem de trabalho. Para exclusões de registros, o valor é `identity-delete`. |
+| `bundleId` | A ID do pacote ao qual esta ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
+| `action` | A ação que está sendo executada pela ordem de serviço. Para exclusões de registro, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
 | `updatedAt` | Um carimbo de data e hora de quando a ordem de exclusão foi atualizada pela última vez. |
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
-| `datasetId` | A ID do conjunto de dados que está sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
+| `datasetId` | A ID do conjunto de dados sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Recuperar o status de uma exclusão de registro (#lookup)
 
-Depois [criação de uma solicitação de exclusão de registro](#create), é possível verificar seu status usando uma solicitação do GET.
+Depois [criando uma solicitação de exclusão de registro](#create), é possível verificar o status usando uma solicitação do GET.
 
 **Formato da API**
 
@@ -132,9 +132,9 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{WORK_ORDER_ID}` | O `workorderId` da exclusão de registro que você está pesquisando. |
+| `{WORK_ORDER_ID}` | A variável `workorderId` da exclusão de registro que você está pesquisando. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -186,20 +186,20 @@ Uma resposta bem-sucedida retorna os detalhes da operação de exclusão, inclui
 
 | Propriedade | Descrição |
 | --- | --- |
-| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para procurar o status da exclusão posteriormente. |
+| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para consultar o status da exclusão posteriormente. |
 | `orgId` | Sua ID da organização. |
-| `bundleId` | A ID do pacote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
-| `action` | A ação que está sendo executada pela ordem de trabalho. Para exclusões de registros, o valor é `identity-delete`. |
+| `bundleId` | A ID do pacote ao qual esta ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
+| `action` | A ação que está sendo executada pela ordem de serviço. Para exclusões de registro, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
 | `updatedAt` | Um carimbo de data e hora de quando a ordem de exclusão foi atualizada pela última vez. |
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
-| `datasetId` | A ID do conjunto de dados que está sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
-| `productStatusDetails` | Uma matriz que lista o status atual de processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: O nome do serviço downstream.</li><li>`productStatus`: O status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: Um carimbo de data e hora de quando o status mais recente foi publicado pelo serviço.</li></ul> |
+| `datasetId` | A ID do conjunto de dados sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
+| `productStatusDetails` | Uma matriz que lista o status atual dos processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: o nome do serviço downstream.</li><li>`productStatus`: o status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: um carimbo de data e hora de quando o status mais recente foi postado pelo serviço.</li></ul> |
 
 ## Atualizar uma solicitação de exclusão de registro
 
-Você pode atualizar o `displayName` e `description` para um registro, exclua fazendo uma solicitação de PUT.
+Você pode atualizar o `displayName` e `description` para uma exclusão de registro fazendo uma solicitação PUT.
 
 **Formato da API**
 
@@ -209,9 +209,9 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{WORK_ORDER_ID}` | O `workorderId` da exclusão de registro que você está pesquisando. |
+| `{WORK_ORDER_ID}` | A variável `workorderId` da exclusão de registro que você está pesquisando. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -233,11 +233,11 @@ curl -X GET \
 | `displayName` | Um nome de exibição atualizado para a solicitação de exclusão de registro. |
 | `description` | Uma descrição atualizada da solicitação de exclusão de registro. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da exclusão de registro.
+Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 
 ```json
 {
@@ -274,15 +274,15 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão de registro.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para procurar o status da exclusão posteriormente. |
+| `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para consultar o status da exclusão posteriormente. |
 | `orgId` | Sua ID da organização. |
-| `bundleId` | A ID do pacote ao qual essa ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
-| `action` | A ação que está sendo executada pela ordem de trabalho. Para exclusões de registros, o valor é `identity-delete`. |
+| `bundleId` | A ID do pacote ao qual esta ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
+| `action` | A ação que está sendo executada pela ordem de serviço. Para exclusões de registro, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
 | `updatedAt` | Um carimbo de data e hora de quando a ordem de exclusão foi atualizada pela última vez. |
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
-| `datasetId` | A ID do conjunto de dados que está sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
-| `productStatusDetails` | Uma matriz que lista o status atual de processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: O nome do serviço downstream.</li><li>`productStatus`: O status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: Um carimbo de data e hora de quando o status mais recente foi publicado pelo serviço.</li></ul> |
+| `datasetId` | A ID do conjunto de dados sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
+| `productStatusDetails` | Uma matriz que lista o status atual dos processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: o nome do serviço downstream.</li><li>`productStatus`: o status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: um carimbo de data e hora de quando o status mais recente foi postado pelo serviço.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

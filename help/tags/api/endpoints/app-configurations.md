@@ -258,7 +258,7 @@ Uma resposta bem-sucedida retorna os detalhes da configuração do aplicativo re
 
 ## Atualizar uma configuração de aplicativo
 
-Você pode atualizar uma configuração de aplicativo incluindo sua ID no caminho de uma solicitação de PATCH.
+Você pode atualizar uma configuração de aplicativo incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 **Formato da API**
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, catálogo, api, atualizar um objeto
+keywords: Experience Platform;página inicial;tópicos populares;catálogo;api;atualizar um objeto
 solution: Experience Platform
 title: Atualizar um objeto de catálogo
-description: Você pode atualizar parte de um objeto de Catálogo incluindo sua ID no caminho de uma solicitação de PATCH. Este documento aborda o uso de campos e a notação de Patch JSON para executar operações de PATCH em objetos do catálogo.
+description: Você pode atualizar parte de um objeto de Catálogo incluindo a respectiva ID no caminho de uma solicitação PATCH. Este documento aborda o uso de campos e a utilização da notação JSON Patch para executar operações PATCH em objetos de Catálogo.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,20 +11,20 @@ ht-degree: 4%
 
 ---
 
-# Atualizar um objeto de catálogo
+# Atualizar um objeto de Catálogo
 
-Você pode atualizar parte de um [!DNL Catalog] ao incluir sua ID no caminho de uma solicitação de PATCH. Este documento aborda os dois métodos para executar operações de PATCH em objetos do catálogo:
+Você pode atualizar parte de um [!DNL Catalog] incluindo a respectiva ID no caminho de uma solicitação PATCH. Este documento aborda os dois métodos para executar operações de PATCH em objetos de Catálogo:
 
 * Uso de campos
-* Uso da notação de patch JSON
+* Uso da notação de patch de JSON
 
 >[!NOTE]
 >
->As operações de PATCH em um objeto não podem modificar seus campos expansíveis, que representam objetos inter-relacionados. As modificações em objetos interrelacionados devem ser feitas diretamente.
+>as operações de PATCH em um objeto não podem modificar seus campos expansíveis, que representam objetos inter-relacionados. As modificações em objetos inter-relacionados devem ser feitas diretamente.
 
 ## Atualizar usando campos
 
-A chamada de exemplo a seguir demonstra como atualizar um objeto usando campos e valores.
+O exemplo de chamada a seguir demonstra como atualizar um objeto usando campos e valores.
 
 **Formato da API**
 
@@ -39,7 +39,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 **Solicitação**
 
-A solicitação a seguir atualiza o `name` e `description` campos de um conjunto de dados para os valores fornecidos no payload. Os campos de objeto que não devem ser atualizados podem ser excluídos da carga útil.
+A solicitação a seguir atualiza o `name` e `description` de um conjunto de dados aos valores fornecidos na carga. Os campos de objeto que não devem ser atualizados podem ser excluídos da carga.
 
 ```shell
 curl -X PATCH \
@@ -57,7 +57,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação do GET para esse conjunto de dados agora mostra que somente a variável `name` e `description` foram atualizados enquanto todos os outros valores permaneciam inalterados.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação GET para esse conjunto de dados agora mostra que somente o `name` e `description` foram atualizadas, enquanto todos os outros valores permanecem inalterados.
 
 ```json
 [
@@ -65,9 +65,9 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados 
 ]
 ```
 
-## Atualizar usando a notação de patch JSON
+## Atualizar usando a notação JSON Patch
 
-A chamada de exemplo a seguir demonstra como atualizar um objeto usando o Patch JSON, conforme descrito em [RFC-6902](https://tools.ietf.org/html/rfc6902).
+O exemplo de chamada a seguir demonstra como atualizar um objeto usando o JSON Patch, conforme descrito em [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
 <!-- (Include once API fundamentals guide is published) 
 
@@ -88,7 +88,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 **Solicitação**
 
-A solicitação a seguir atualiza o `name` e `description` campos de um conjunto de dados para os valores fornecidos em cada objeto de patch JSON. Ao usar o Patch JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
+A solicitação a seguir atualiza o `name` e `description` de um conjunto de dados aos valores fornecidos em cada objeto JSON Patch. Ao usar o patch de JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
@@ -106,7 +106,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz contendo a ID do objeto atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação de GET para esse objeto agora mostra que somente a variável `name` e `description` foram atualizados enquanto todos os outros valores permaneciam inalterados.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do objeto atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação GET para esse objeto agora mostra que somente o `name` e `description` foram atualizadas, enquanto todos os outros valores permanecem inalterados.
 
 ```json
 [

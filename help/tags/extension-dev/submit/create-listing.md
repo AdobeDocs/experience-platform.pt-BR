@@ -13,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A Adobe Experience Platform tem um catálogo unificado em que os usuários podem encontrar extensões de tag disponíveis para instalação. Este catálogo está disponível no produto e contém extensões de três tipos:
 
@@ -21,17 +21,17 @@ A Adobe Experience Platform tem um catálogo unificado em que os usuários podem
 1. **Extensões privadas**: são extensões concluídas projetadas para produção, mas foram desenvolvidas por outros usuários em sua empresa e só estão disponíveis para usuários em sua empresa.
 1. **Extensões de desenvolvimento**: essas extensões estão em desenvolvimento ativo e só estão disponíveis na empresa e em uma propriedade designada especificamente como uma propriedade de desenvolvimento.
 
-Separadas das extensões no catálogo de produtos, as extensões públicas também têm listagens na variável [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
+Separadas das extensões no catálogo de produtos, as extensões públicas também têm listagens no [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
 
-Essas listas permitem que os desenvolvedores de extensões publiquem informações de suporte, links para suporte ou documentação adicionais e comercializem suas extensões para usuários potenciais que talvez não conheçam sua empresa ou a funcionalidade de sua extensão. Neste marketplace, sua extensão terá uma lista pública que pode ser visualizada sem que o usuário seja autenticado no Platform. Para extensões públicas, criar essa listagem do Exchange é uma etapa necessária.
+Essas listas permitem que os desenvolvedores de extensões publiquem informações de suporte, links para suporte ou documentação adicionais e comercializem suas extensões para usuários potenciais que talvez não conheçam sua empresa ou a funcionalidade de sua extensão. Neste marketplace, sua extensão terá uma lista pública que pode ser visualizada sem que o usuário seja autenticado no Platform. Para extensões públicas, criar essa lista do Exchange é uma etapa necessária.
 
 >[!TIP]
 >
->Quando sua listagem do Exchange é publicada, um link é adicionado automaticamente ao conteúdo da listagem, permitindo que seus clientes e prospetos cliquem e `Connect with publisher` para obter mais informações sobre seus produtos e serviços. Seu endereço de email de contato não é exibido, pois essas mensagens serão encaminhadas para você pelo sistema Exchange.
+>Quando sua lista do Exchange é publicada, um link é adicionado automaticamente ao conteúdo da lista que permite que seus clientes e clientes potenciais cliquem e `Connect with publisher` para obter mais informações sobre seus produtos e serviços. Seu endereço de email de contato não é exibido, pois essas mensagens serão encaminhadas a você pelo sistema do Exchange.
 
-Se você não tiver uma empresa para fazer upload e testar seu pacote de extensão, será necessário registrar-se no programa Exchange e iniciar uma lista. Isso acionará a criação de uma conta de empresa (leva algum tempo; você receberá um email quando estiver concluído) que poderá usar para fazer upload e testar sua extensão. Novamente, as listagens do Exchange só são necessárias para extensões públicas.
+Se você não tiver uma empresa para fazer upload e testar seu pacote de extensão, será necessário registrar-se no programa Exchange e iniciar uma lista. Isso acionará a criação de uma conta de empresa (leva algum tempo; você receberá um email quando estiver concluído) que poderá usar para fazer upload e testar sua extensão. Novamente, as listagens do Exchange são necessárias somente para extensões públicas.
 
-Se já tiver uma conta da empresa ou se não precisar de uma listagem do Exchange (somente extensões privadas), ignore o restante desta etapa e continue para [como carregar e testar sua extensão](./upload-and-test.md).
+Se você já tiver uma conta da empresa ou se não precisar de uma lista do Exchange (somente extensões privadas), ignore o restante desta etapa e prossiga para [fazer upload e testar sua extensão](./upload-and-test.md).
 
 ## Criar uma lista
 
@@ -43,14 +43,14 @@ Se já tiver uma conta da empresa ou se não precisar de uma listagem do Exchang
 
 1. Fazer logon no [site do Exchange Partner](https://partners.adobe.com/exchangeprogram/experiencecloud). Depois de fazer logon, selecione o link do **Gerenciador de aplicativos** próximo a seu nome.
 1. Selecione a guia **Criar novo aplicativo** e selecione **Criar novo aplicativo** para obter uma solução personalizada ou selecione um modelo aplicável.
-1. Forneça suas informações de lista. Para obter informações detalhadas sobre o Gerenciador de aplicativos, confira o [artigo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). As informações da lista devem ser muito claras sobre o que a extensão faz e por que ela é útil. A lista funciona como um espaço de divulgação para seu aplicativo. Promova sua extensão aqui usando descrições claras, links das páginas de aterrissagem de seu site, links de documentos de ajuda e endereços de email de suporte, entre outros. Embora o espaço de exibição de extensões seja limitado, a lista do Exchange oferece uma oportunidade de divulgar a extensão e sua empresa. Veja a seguir sugestões para melhorar a divulgação da extensão:
-   - **Ícone do aplicativo** - Certifique-se de que o ícone para a listagem do Exchange tenha as dimensões apropriadas, 512 x 512 para png ou 1:1 proporção para jpg.
+1. Forneça suas informações de lista. Para obter informações detalhadas sobre o App Manager, verifique a versão completa [artigo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). As informações da lista devem ser muito claras sobre o que a extensão faz e por que ela é útil. A lista funciona como um espaço de divulgação para seu aplicativo. Promova sua extensão aqui usando descrições claras, links das páginas de aterrissagem de seu site, links de documentos de ajuda e endereços de email de suporte, entre outros. Embora o espaço de exibição de extensões seja limitado, a lista do Exchange oferece uma oportunidade de divulgar a extensão e sua empresa. Veja a seguir sugestões para melhorar a divulgação da extensão:
+   - **Ícone do aplicativo** - Verifique se o ícone da lista do Exchange tem as dimensões apropriadas, 512 x 512 para png ou proporção 1:1 para jpg.
 
       >[!NOTE]
       >
       >Esse é um formato de arquivo diferente daquele usado no código da extensão. A própria extensão conterá um arquivo svg como o [ícone](../manifest.md).
 
-   - **Imagem em destaque** - Obtenha atenção usando uma imagem que pode ser independente e mostrará sua marca e destacará seu aplicativo. A Imagem em destaque é aquela que aparece quando alguém compartilha o link de sua lista do Exchange ou posta sobre ela em redes sociais. Portanto, precisa ser uma boa representação de sua marca.
+   - **Imagem em destaque** - Chame atenção usando uma imagem que possa ser independente, mostre sua marca e destaque seu aplicativo. A Imagem em destaque é aquela que aparece quando alguém compartilha o link de sua lista do Exchange ou posta sobre ela em redes sociais. Portanto, precisa ser uma boa representação de sua marca.
    - **Logotipo do App Publisher** - este é o logotipo corporativo. Verifique se o ícone tem as dimensões apropriadas de 1280 x 720 ou 2560 x 1440 (16:9) em formato png ou jpg.
    - **Instruções de configuração** — informe aos clientes como configurar sua extensão da Adobe Experience Platform. Certifique-se de que eles entendam as configurações necessárias e as próximas etapas quando sua [visualização de configuração](../configuration.md) for exibida imediatamente após a instalação da extensão em uma propriedade.
    - **Tags** - na primeira página de edição da sua lista, inclua a palavra &quot;Launch&quot; no campo &quot;Tags personalizadas&quot;. Assim, sua lista será mostrada em pesquisas de tags no marketplace do Exchange:
@@ -74,4 +74,4 @@ Ao atualizar sua extensão ou se precisar apenas atualizar sua lista do Exchange
 
 ## Vincular o pacote de extensão à lista
 
-Depois que a lista for aprovada e estiver disponível publicamente, recomendamos que você forneça um link para a lista pública no campo `exchange_url` do arquivo `extension.json` em seu pacote de extensão.  Isso criará um link &quot;Mais informações&quot; no catálogo de extensões de tag para que os usuários no produto possam encontrar sua listagem e suas informações adicionais.
+Depois que a lista for aprovada e estiver disponível publicamente, recomendamos que você forneça um link para a lista pública no campo `exchange_url` do arquivo `extension.json` em seu pacote de extensão.  Isso criará um link &quot;Mais informações&quot; no catálogo de extensão de tag para que os usuários dentro do produto possam encontrar a lista e suas informações adicionais.

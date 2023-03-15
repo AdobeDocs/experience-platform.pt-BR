@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Salesforce Service Cloud, salesforce service cloud
+keywords: Experience Platform;página inicial;tópicos populares;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
-title: Criar uma conexão de origem da nuvem do Salesforce Service usando a API do Serviço de fluxo
+title: Criar uma conexão de origem do serviço Salesforce na nuvem usando a API do serviço de fluxo
 type: Tutorial
-description: Saiba como conectar o Adobe Experience Platform à Salesforce Service Cloud usando a API de Serviço de Fluxo.
+description: Saiba como conectar o Adobe Experience Platform à Salesforce Service Cloud usando a API do Flow Service.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,43 +12,43 @@ ht-degree: 2%
 
 ---
 
-# Crie um [!DNL Salesforce Service Cloud] conexão de origem usando o [!DNL Flow Service] API
+# Criar um [!DNL Salesforce Service Cloud] conexão de origem usando o [!DNL Flow Service] API
 
-Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
+Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Salesforce Service Cloud] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Salesforce Service Cloud] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Salesforce Service Cloud] usando o [!DNL Flow Service] API.
 
-### Obter credenciais necessárias
+### Coletar credenciais necessárias
 
-Para [!DNL Flow Service] para conectar-se com [!DNL Salesforce Service Cloud], você deve fornecer valores para as seguintes propriedades de conexão:
+A fim de [!DNL Flow Service] para se conectar com [!DNL Salesforce Service Cloud], você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `username` | O nome de usuário de seu [!DNL Salesforce Service Cloud] conta do usuário. |
-| `password` | A senha de seu [!DNL Salesforce Service Cloud] conta. |
-| `securityToken` | O token de segurança para seu [!DNL Salesforce Service Cloud] conta. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL Salesforce Service Cloud] é: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `username` | O nome de usuário do seu [!DNL Salesforce Service Cloud] conta de usuário. |
+| `password` | A senha do [!DNL Salesforce Service Cloud] conta. |
+| `securityToken` | O token de segurança do [!DNL Salesforce Service Cloud] conta. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Salesforce Service Cloud] é: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
-Para obter mais informações sobre a introdução, consulte [este documento da Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
+Para obter mais informações sobre a introdução, consulte [este documento do Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão base
+## Criar uma conexão básica
 
-Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
+Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação de POST para a variável `/connections` endpoint enquanto fornece seu [!DNL Salesforce Service Cloud] credenciais de autenticação como parte dos parâmetros da solicitação.
+Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Salesforce Service Cloud] credenciais de autenticação como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -58,7 +58,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL Salesforce Service Cloud]:
+A solicitação a seguir cria uma conexão básica para [!DNL Salesforce Service Cloud]:
 
 ```shell
 curl -X POST \
@@ -89,9 +89,9 @@ curl -X POST \
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `auth.params.username` | O nome de usuário associado à [!DNL Salesforce Service Cloud] conta. |
-| `auth.params.password` | A senha associada à sua [!DNL Salesforce Service Cloud] conta. |
-| `auth.params.securityToken` | O token de segurança associado à sua [!DNL Salesforce Service Cloud] conta. |
-| `connectionSpec.id` | O [!DNL Salesforce Service Cloud] ID de especificação de conexão: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `auth.params.password` | A senha associada ao seu [!DNL Salesforce Service Cloud] conta. |
+| `auth.params.securityToken` | O token de segurança associado à [!DNL Salesforce Service Cloud] conta. |
+| `connectionSpec.id` | A variável [!DNL Salesforce Service Cloud] ID da especificação de conexão: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Resposta**
 

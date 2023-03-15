@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, monitorar contas, monitorar fluxos de dados, fluxos de dados, destinos
-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+keywords: Experience Platform, página inicial, tópicos populares, contas de monitor, fluxos de dados de monitor, fluxos de dados, destinos
+description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 solution: Experience Platform
-title: Monitorar Fluxos de Dados
+title: Monitorar fluxos de dados
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 # Monitorar fluxos de dados
 
-[!UICONTROL Destinos] permitem ativar seus dados do Adobe Experience Platform para inúmeros parceiros externos.
+[!UICONTROL Destinos] O permite ativar seus dados do Adobe Experience Platform para inúmeros parceiros externos.
 
-Os fluxos de dados são uma representação dos trabalhos de dados que movem os dados [!DNL Platform]. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, onde são utilizados por [!DNL Identity Service] e[!DNL Real-Time Customer Profile] antes de ser ativado para destinos.
+Os fluxos de dados são uma representação de trabalhos de dados que movem os dados [!DNL Platform]. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para os conjuntos de dados de destino, onde são utilizados pelo [!DNL Identity Service] e[!DNL Real-Time Customer Profile] antes de serem ativados para destinos.
 
-Para saber mais sobre o monitoramento de fluxos de dados para destinos, leia o [Monitorar fluxos de dados para destinos na interface do usuário](../../dataflows/ui/monitor-destinations.md) tutorial.
+Para saber mais sobre monitoramento de fluxos de dados para destinos, leia o [Monitorar fluxos de dados para destinos na interface do](../../dataflows/ui/monitor-destinations.md) tutorial.

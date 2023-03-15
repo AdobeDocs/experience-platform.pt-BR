@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /bibliotecas 
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1521'
 ht-degree: 99%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que tem as bibliotecas. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ GET /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | O `id` da biblioteca que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -272,7 +272,7 @@ POST /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | O `id` da [propriedade](./properties.md) em que você está definindo a biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -300,7 +300,7 @@ curl -X POST \
 | `attributes.name` | **(Obrigatório)** Um nome legível para a biblioteca. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | A ID da biblioteca à qual você deseja adicionar recursos. |
 | `{RESOURCE_TYPE}` | O tipo de recurso que você está adicionando à biblioteca. Os seguintes valores são aceitos: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -456,7 +456,7 @@ curl -X POST \
 | `id` | A ID do recurso que você está adicionando à biblioteca. |
 | `type` | O tipo de recurso que você está adicionando à biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -496,7 +496,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | A ID da biblioteca cujos relacionamentos você deseja substituir. |
 | `{RESOURCE_TYPE}` | O tipo de recurso que você está substituindo. Os seguintes valores são aceitos: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 | `id` | A ID do recurso que você está adicionando à biblioteca. |
 | `type` | O tipo de recurso que você está adicionando à biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -561,7 +561,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | A ID da biblioteca cujos recursos você deseja remover. |
 | `{RESOURCE_TYPE}` | O tipo de recurso que você está removendo. Os seguintes valores são aceitos: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -590,7 +590,7 @@ curl -X DELETE \
 | `id` | A ID do recurso que você está removendo da biblioteca. |
 | `type` | O tipo de recurso que você está removendo da biblioteca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | A ID da biblioteca que você deseja atribuir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `id` | A ID do ambiente ao qual você atribui a biblioteca. |
 | `type` | Deve ser definido como `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | O `id` da biblioteca que você deseja fazer a transição. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -710,7 +710,7 @@ curl -X PATCH \
 | `id` | O `id` da biblioteca que você deseja atualizar. Ele deve corresponder ao valor `{LIBRARY_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -816,7 +816,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | O `id` da biblioteca que você deseja publicar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -927,7 +927,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 | --- | --- |
 | `{LIBRARY_ID}` | O `id` da biblioteca cujos elementos de dados você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1068,7 +1068,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 | --- | --- |
 | `{LIBRARY_ID}` | O `id` da biblioteca cujas extensões você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1199,7 +1199,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 | --- | --- |
 | `{LIBRARY_ID}` | O `id` da biblioteca cujas regras você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1312,7 +1312,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 | --- | --- |
 | `{LIBRARY_ID}` | O `id` da biblioteca cujo ambiente você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1424,7 +1424,7 @@ GET  /libraries/{LIBRARY_ID}/property
 | --- | --- |
 | `{LIBRARY_ID}` | O `id` da biblioteca cuja propriedade você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1547,7 +1547,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 | --- | --- |
 | `{LIBRARY_ID}` | O `id` da biblioteca cuja biblioteca upstream você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

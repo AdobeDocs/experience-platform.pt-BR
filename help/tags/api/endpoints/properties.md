@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /properties n
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1104'
 ht-degree: 99%
 
 ---
@@ -47,7 +47,7 @@ GET /companies/{COMPANY_ID}/properties
 | --- | --- |
 | `COMPANY_ID` | O `id` da empresa que detém as propriedades que você quer listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ GET /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -394,7 +394,7 @@ POST /company/{COMPANY_ID}/properties
 | --- | --- |
 | `COMPANY_ID` | O `id` da empresa na qual você está definindo a propriedade. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -437,7 +437,7 @@ curl -X POST \
 | `attributes.undefined_vars_return_empty` | Um booleano para determinar se variáveis indefinidas devem ser retornadas como vazias para essa propriedade. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -548,7 +548,7 @@ PATCH /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -581,7 +581,7 @@ curl -X PATCH \
 | `id` | O `id` da propriedade que você deseja atualizar. Ele deve corresponder ao valor `{PROPERTY_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -692,7 +692,7 @@ DELETE /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -732,7 +732,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujos retornos de chamada você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -807,7 +807,7 @@ GET  /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujos elementos de dados você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -948,7 +948,7 @@ GET  /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujos ambientes você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1068,7 +1068,7 @@ GET  /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujas extensões você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1199,7 +1199,7 @@ GET  /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujos hosts você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1277,7 +1277,7 @@ GET  /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cujas regras você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1390,7 +1390,7 @@ GET /properties/{PROPERTY_ID}/company
 | --- | --- |
 | `{PROPERTY_ID}` | O `id` da propriedade cuja empresa você deseja procurar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

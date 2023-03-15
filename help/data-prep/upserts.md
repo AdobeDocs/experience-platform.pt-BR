@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, preparação de dados, Preparação de dados, transmissão, upsert, atualização de fluxo
-title: Enviar Atualizações Parciais De Linha Para O Serviço De Perfil Usando A Preparação De Dados
-description: Este documento fornece informações sobre como enviar atualizações de linha parciais ao Serviço de perfil usando a Preparação de dados.
+keywords: Experience Platform;início;tópicos populares;preparação de dados;Preparação de dados;streaming;upsert;upsert de streaming
+title: Enviar Atualizações Parciais De Linha Para O Serviço De Perfil Usando O Preparo De Dados
+description: Este documento fornece informações sobre como enviar atualizações de linhas parciais para o Serviço de perfil usando o Preparo de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,51 +10,51 @@ ht-degree: 1%
 
 ---
 
-# Enviar atualizações de linha parciais para o [!DNL Profile Service] usar [!DNL Data Prep]
+# Enviar atualizações de linhas parciais para [!DNL Profile Service] usar [!DNL Data Prep]
 
-Streaming de upserts em [!DNL Data Prep] permite enviar atualizações de linha parciais para o [!DNL Profile Service] dados, além de criar e estabelecer novos links de identidade com uma única solicitação de API.
+Upserts de transmissão em [!DNL Data Prep] permite enviar atualizações parciais de linha para [!DNL Profile Service] enquanto também cria e estabelece novos links de identidade com uma única solicitação de API.
 
-Ao fazer o streaming de upserts, você pode manter o formato de seus dados e, ao mesmo tempo, traduzir esses dados para [!DNL Profile Service] Solicitações de PATCH durante a assimilação. Com base nas entradas fornecidas, [!DNL Data Prep] permite enviar uma única carga da API e traduzir os dados para ambos [!DNL Profile Service] PATCH e [!DNL Identity Service] CRIAR solicitações.
+Ao fazer a transmissão de upserts, você pode reter o formato dos dados enquanto os traduz para [!DNL Profile Service] solicitações PATCH durante a assimilação. Com base nas informações fornecidas, [!DNL Data Prep] permite enviar uma única carga de API e traduzir os dados para ambos [!DNL Profile Service] PATCH e [!DNL Identity Service] CRIAR solicitações.
 
-Este documento fornece informações sobre como fazer o stream de ascendentes em [!DNL Data Prep].
+Este documento fornece informações sobre como fazer stream de upserts no [!DNL Data Prep].
 
 ## Introdução
 
-Essa visão geral requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Esta visão geral requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] O permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
-* [[!DNL Identity Service]](../identity-service/home.md): Obtenha uma melhor visão de clientes individuais e seu comportamento ao unir identidades em dispositivos e sistemas.
-* [Perfil do cliente em tempo real](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-* [Fontes](../sources/home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [[!DNL Identity Service]](../identity-service/home.md): obtenha uma melhor visualização dos clientes individuais e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
+* [Perfil do cliente em tempo real](../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+* [Origens](../sources/home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 
-## Use upserts de transmissão em [!DNL Data Prep] {#streaming-upserts-in-data-prep}
+## Usar upserts de transmissão no [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
 >[!NOTE]
 >
->As seguintes fontes oferecem suporte para o uso de upserts de transmissão:<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
+>As seguintes fontes oferecem suporte ao uso de upserts de transmissão:<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
 
-### Fluxo de trabalho de alto nível otimiza o fluxo de trabalho
+### Streaming substitui o fluxo de trabalho de alto nível
 
-Streaming de upserts em [!DNL Data Prep] funciona da seguinte forma:
+Upserts de transmissão em [!DNL Data Prep] funciona da seguinte forma:
 
-* Primeiro, você deve criar e ativar um conjunto de dados para [!DNL Profile] consumo. Consulte o guia sobre [habilitar um conjunto de dados para [!DNL Profile]](../catalog/datasets/enable-for-profile.md) Para mais informações;
-* Se novas identidades precisarem ser vinculadas, você também deverá criar um conjunto de dados adicional **com o mesmo schema** como seu [!DNL Profile] Conjunto de dados;
-* Depois que seus conjuntos de dados estiverem preparados, você deverá criar um fluxo de dados para mapear sua solicitação de entrada para o [!DNL Profile] Conjunto de dados;
+* Primeiro, você deve criar e habilitar um conjunto de dados para [!DNL Profile] consumo. Consulte o guia sobre [habilitar um conjunto de dados para [!DNL Profile]](../catalog/datasets/enable-for-profile.md) para obter mais informações;
+* Se novas identidades precisarem ser vinculadas, você também deverá criar um conjunto de dados adicional **com o mesmo esquema** como seu [!DNL Profile] conjunto de dados;
+* Depois que os conjuntos de dados forem preparados, você deverá criar um fluxo de dados para mapear a solicitação recebida para o [!DNL Profile] conjunto de dados;
 * Em seguida, você deve atualizar a solicitação de entrada para incluir os cabeçalhos necessários. Esses cabeçalhos definem:
-   * A operação de dados que precisa ser executada com [!DNL Profile]: `create`, `merge`e `delete`;
-   * A operação de identidade opcional a efetuar com [!DNL Identity Service]: `create`.
+   * A operação de dados que precisa ser executada com [!DNL Profile]: `create`, `merge`, e `delete`;
+   * A operação de identidade opcional a ser executada com [!DNL Identity Service]: `create`.
 
 ### Configurar o conjunto de dados de identidade
 
-Se novas identidades precisarem ser vinculadas, você deverá criar e transmitir um conjunto de dados adicional na carga útil recebida. Ao criar um conjunto de dados de identidade, você deve garantir que os seguintes requisitos sejam atendidos:
+Se novas identidades precisarem ser vinculadas, você deverá criar e transmitir um conjunto de dados adicional na carga recebida. Ao criar um conjunto de dados de identidade, você deve garantir que os seguintes requisitos sejam atendidos:
 
-* O conjunto de dados de identidade deve ter seu esquema associado como [!DNL Profile] conjunto de dados. Uma incompatibilidade de esquemas pode levar a um comportamento inconsistente do sistema;
-* No entanto, você deve garantir que o conjunto de dados de identidade seja diferente do [!DNL Profile] conjunto de dados. Se os conjuntos de dados forem iguais, os dados serão substituídos em vez de atualizados;
-* Enquanto o conjunto de dados inicial deve ser ativado para [!DNL Profile], o conjunto de dados de identidade **não deve** estar habilitado para [!DNL Profile]. Caso contrário, os dados também serão substituídos em vez de atualizados.
+* O conjunto de dados de identidade deve ter seu esquema associado como o [!DNL Profile] conjunto de dados. Uma incompatibilidade de esquemas pode levar a um comportamento inconsistente do sistema;
+* No entanto, você deve garantir que o conjunto de dados de identidade seja diferente da variável [!DNL Profile] conjunto de dados. Se os conjuntos de dados forem os mesmos, os dados serão substituídos em vez de atualizados;
+* Embora o conjunto de dados inicial deva ser habilitado para [!DNL Profile], o conjunto de dados de identidade **não deve** ser ativado por [!DNL Profile]. Caso contrário, os dados também serão substituídos em vez de atualizados.
 
 #### Campos obrigatórios nos esquemas associados ao conjunto de dados de identidade {#identity-dataset-required-fileds}
 
-Se o esquema contiver campos obrigatórios, a validação do conjunto de dados deverá ser suprimida para ativar [!DNL Identity Service] para receber apenas as identidades. É possível suprimir a validação aplicando o `disabled` para `acp_validationContext` parâmetro. Veja o exemplo abaixo:
+Se o esquema contiver campos obrigatórios, a validação do conjunto de dados deverá ser suprimida para habilitar [!DNL Identity Service] para receber apenas as identidades. É possível suprimir a validação aplicando o `disabled` para o `acp_validationContext` parâmetro. Consulte o exemplo abaixo:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
@@ -72,11 +72,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 
 >[!TIP]
 >
->Não é necessário fazer nenhuma configuração adicional se o esquema associado ao conjunto de dados de identidade não tiver campos obrigatórios.
+>Não é necessário fazer qualquer configuração adicional se o esquema associado ao conjunto de dados de identidade não tiver campos obrigatórios.
 
 ## Estrutura de carga de entrada
 
-A seguir, um exemplo de uma estrutura de payload de entrada que estabelece novos links de identidade.
+A seguir é mostrado um exemplo de uma estrutura de payload de entrada que estabelece novos links de identidade.
 
 ### Carga com configuração de identidade
 
@@ -98,13 +98,13 @@ A seguir, um exemplo de uma estrutura de payload de entrada que estabelece novos
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `flowId` | Uma ID exclusiva para identificar um fluxo de dados. Essa ID de fluxo de dados deve corresponder à conexão de origem criada com o [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]ou [!DNL HTTP API]. Esse fluxo de dados também deve ter uma [!DNL Profile]Conjunto de dados habilitado para o Target como o conjunto de dados de destino. **Observação**: A ID do [!DNL Profile]O conjunto de dados de destino habilitado também é usado como `datasetId` parâmetro. |
-| `imsOrgId` | A ID que corresponde à organização. |
-| `datasetId` | A ID do [!DNL Profile]Conjunto de dados de destino habilitado para o seu fluxo de dados. **Observação**: Essa é a mesma ID da variável [!DNL Profile]ID do conjunto de dados de destino habilitado para o Target encontrada no seu fluxo de dados. |
-| `operations` | Esse parâmetro descreve as ações que [!DNL Data Prep] O será baseado na solicitação de entrada. |
+| `flowId` | Uma ID exclusiva para identificar um fluxo de dados. Essa ID de fluxo de dados deve corresponder à conexão de origem criada com [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]ou [!DNL HTTP API]. Esse fluxo de dados também deve ter uma [!DNL Profile]conjunto de dados habilitado para como o conjunto de dados de destino. **Nota**: A ID do [!DNL Profile]O conjunto de dados de destino habilitado para também é usado como `datasetId` parâmetro. |
+| `imsOrgId` | A ID que corresponde à sua organização. |
+| `datasetId` | A ID do [!DNL Profile]Conjunto de dados de destino habilitado para do seu fluxo de dados. **Nota**: Essa é a mesma ID da variável [!DNL Profile]ID do conjunto de dados de destino habilitada para foi encontrada em seu fluxo de dados. |
+| `operations` | Esse parâmetro descreve as ações que [!DNL Data Prep] terá com base na solicitação recebida. |
 | `operations.data` | Define as ações que devem ser executadas em [!DNL Profile Service]. |
 | `operations.identity` | Define as operações permitidas nos dados por [!DNL Identity Service]. |
-| `operations.identityDatasetId` | (Opcional) A ID do conjunto de dados de identidade que é necessária somente se novas identidades tiverem de ser vinculadas. |
+| `operations.identityDatasetId` | (Opcional) A ID do conjunto de dados de identidade que será necessária somente se novas identidades precisarem ser vinculadas. |
 
 #### Operações suportadas
 
@@ -120,11 +120,11 @@ As seguintes operações são suportadas pela [!DNL Identity Service]:
 
 | Operações | Descrições |
 | --- | --- |
-| `create` | A única operação permitida para este parâmetro. If `create` é passado como um valor para `operations.identity`, em seguida [!DNL Data Prep] gera uma solicitação de criação de entidade XDM para [!DNL Identity Service]. Se a identidade já existir, ela será ignorada. **Observação:** If `operations.identity` está definida como `create`, em seguida, o `identityDatasetId` também deve ser especificado. A mensagem de criação da entidade XDM gerada internamente por [!DNL Data Prep] será gerado para essa id de conjunto de dados. |
+| `create` | A única operação permitida para este parâmetro. Se `create` é transmitido como um valor para `operations.identity`, depois [!DNL Data Prep] gera uma solicitação de criação de entidade XDM para [!DNL Identity Service]. Se a identidade já existir, ela será ignorada. **Nota:** Se `operations.identity` está definida como `create`, depois o `identityDatasetId` também deve ser especificado. A entidade XDM cria a mensagem gerada internamente pelo [!DNL Data Prep] O componente será gerado para esta id de conjunto de dados. |
 
 ### Carga sem configuração de identidade
 
-Se novas identidades não precisarem ser vinculadas, é possível omitir a variável `identity` e `identityDatasetId` nas operações. Isso envia dados somente para [!DNL Profile Service] e ignora o [!DNL Identity Service]. Consulte a carga abaixo para obter um exemplo:
+Se novas identidades não precisarem ser vinculadas, você poderá omitir a variável `identity` e `identityDatasetId` nas operações. Isso envia dados somente para o [!DNL Profile Service] e ignora o [!DNL Identity Service]. Consulte a carga abaixo para obter um exemplo:
 
 ```shell
 {
@@ -140,16 +140,16 @@ Se novas identidades não precisarem ser vinculadas, é possível omitir a vari�
 }
 ```
 
-## Passar identidades primárias dinamicamente
+## Transmitir dinamicamente as identidades principais
 
-Para atualizações do XDM, o esquema deve ser ativado para [!DNL Profile] e contêm uma identidade primária. Você pode especificar a identidade primária de um esquema XDM de duas maneiras:
+Para atualizações do XDM, o esquema deve ser ativado para [!DNL Profile] e contêm uma identidade principal. Você pode especificar a identidade principal de um esquema XDM de duas maneiras:
 
-* Designar um campo estático como a identidade primária no esquema XDM;
-* Designe um dos campos de identidade como a identidade primária através do grupo de campos do mapa de identidade no esquema XDM.
+* Designar um campo estático como a identidade principal no esquema XDM;
+* Designe um dos campos de identidade como a identidade primária por meio do grupo de campos do mapa de identidade no esquema XDM.
 
-### Designar um campo estático como o campo de identidade primário no esquema XDM
+### Designar um campo estático como o campo de identidade principal no esquema XDM
 
-No exemplo abaixo, `state`, `homePhone.number` e outros atributos são atualizados com seus respectivos valores fornecidos na variável [!DNL Profile] com a principal identidade de `sampleEmail@gmail.com`. Uma mensagem de atualização de entidade XDM é gerada pelo streaming [!DNL Data Prep] componente. [!DNL Profile Service] em seguida, confirma essa mensagem de atualização do XDM para atualizar o registro do perfil.
+No exemplo abaixo, `state`, `homePhone.number` e outros atributos são substituídos por seus respectivos valores na variável [!DNL Profile] com a identidade principal de `sampleEmail@gmail.com`. Uma mensagem de atualização de entidade XDM é gerada pela transmissão [!DNL Data Prep] componente. [!DNL Profile Service] em seguida, confirma que a mensagem de atualização do XDM deve substituir o registro do perfil.
 
 >[!NOTE]
 >
@@ -196,9 +196,9 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 }'
 ```
 
-### Designar um dos campos de identidade como a identidade primária através do grupo de campos do mapa de identidade no esquema XDM
+### Designar um dos campos de identidade como a identidade primária por meio do grupo de campos do mapa de identidade no esquema XDM
 
-Neste exemplo, o cabeçalho contém a variável `operations` com o `identity` e `identityDatasetId` propriedades. Isso permite que os dados sejam mesclados com [!DNL Profile Service] e também para que as identidades sejam transmitidas para [!DNL Identity Service].
+Neste exemplo, o cabeçalho contém a variável `operations` atributo com o `identity` e `identityDatasetId` propriedades. Isso permite que os dados sejam mesclados com [!DNL Profile Service] e também para que as identidades sejam passadas para [!DNL Identity Service].
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -243,14 +243,14 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
  }'
 ```
 
-## Limitações conhecidas e considerações-chave
+## Limitações conhecidas e principais considerações
 
-A seguir, uma lista de limitações conhecidas a serem consideradas ao fazer o streaming de atualizações com [!DNL Data Prep]:
+A seguir, é apresentada uma lista de limitações conhecidas a serem consideradas ao transmitir upserts com [!DNL Data Prep]:
 
-* O método de atualização de fluxo só deve ser usado ao enviar atualizações de linha parciais para o [!DNL Profile Service]. Atualizações parciais de linha são **not** consumido pelo lago de dados.
-* O método streaming upserts não oferece suporte à atualização, substituição e remoção de identidades. Novas identidades são criadas se elas não existirem. Daí o `identity` deve ser sempre definida para criar. Se uma identidade já existir, a operação será inoperante.
-* O método de atualização de fluxo atualmente não é compatível [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=pt-BR) e [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+* O método de streaming upserts deve ser usado somente ao enviar atualizações de linhas parciais para o [!DNL Profile Service]. As atualizações de linha parcial são **não** consumido pelo data lake.
+* O método de upserts de transmissão não oferece suporte à atualização, substituição e remoção de identidades. Novas identidades serão criadas se não existirem. Por conseguinte, a `identity` a operação deve ser sempre definida como criar. Se uma identidade já existir, a operação será no-op.
+* O método de upserts de streaming não oferece suporte no momento [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=pt-BR) e [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## Próximas etapas
 
-Ao ler este documento, agora você deve entender como fazer o stream de ascendentes no [!DNL Data Prep] para enviar atualizações de linha parciais ao seu [!DNL Profile Service] , enquanto também cria e vincula identidades com uma única solicitação de API. Para obter mais informações sobre outros [!DNL Data Prep] recursos, leia o [[!DNL Data Prep] visão geral](./home.md). Para saber como usar conjuntos de mapeamentos no [!DNL Data Prep] Leia a API [[!DNL Data Prep] guia do desenvolvedor](./api/overview.md).
+Após a leitura deste documento, você deve entender como fazer streaming de upserts no [!DNL Data Prep] para enviar atualizações parciais de linha ao seu [!DNL Profile Service] ao mesmo tempo em que cria e vincula identidades com uma única solicitação de API. Para obter mais informações sobre outras [!DNL Data Prep] recursos, leia os [[!DNL Data Prep] visão geral](./home.md). Para saber como usar conjuntos de mapeamento na [!DNL Data Prep] API, leia as [[!DNL Data Prep] guia do desenvolvedor](./api/overview.md).

@@ -1,24 +1,25 @@
 ---
-title: Tipo de dados do par de valores-chave
-description: Este documento fornece uma visão geral do tipo de dados XDM (Key Value Pair Experience Data Model).
-source-git-commit: bf815eb014dc87f74ba3d42478eadcb1e8144c3c
+title: Tipo de Dados do Par de Valores de Chave
+description: Este documento fornece uma visão geral do tipo de dados Key Value Pair Experience Data Model (XDM).
+exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
+source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 5%
+source-wordcount: '118'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Par. Valor Chave] tipo de dados
+# [!UICONTROL Par de valores da chave] tipo de dados
 
-[!UICONTROL Par. Valor Chave] é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de um par de valores-chave genérico. Esse tipo de dados é usado na variável [[!UICONTROL Extensão completa do Adobe Analytics ExperienceEvent] grupo de campos](../field-groups/event/analytics-full-extension.md) para descrever os itens de matriz de uma variável de lista.
+[!UICONTROL Par de valores da chave] é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de um par de valores chave genérico. Esse tipo de dados é usado no [[!UICONTROL Extensão completa do Adobe Analytics ExperienceEvent] grupo de campos](../field-groups/event/analytics-full-extension.md) para descrever os itens de matriz de uma variável de lista.
 
-![Estrutura do par de valores-chave](../images/data-types/key-value-pair.png)
+![Estrutura do par de valores da chave](../images/data-types/key-value-pair.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `key` | String | Uma chave (nome) para uma variável genérica ou valor. |
+| `key` | String | Uma chave (nome) para uma variável ou valor genérico. |
 | `value` | String | O valor da variável. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Para obter mais detalhes sobre o tipo de dados, consulte [o repositório XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).
+Para obter mais informações sobre o tipo de dados, consulte [o repositório XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, ontrust, OneTrust
+keywords: Experience Platform;página inicial;tópicos populares;onetrust;OneTrust
 solution: Experience Platform
-title: (Beta) Criar uma Conexão de Fonte OneTrust na interface do usuário
+title: (Beta) Criar uma Conexão de Origem do OneTrust na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem do OneTrust usando a interface do usuário do Adobe Experience Platform.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
@@ -12,64 +12,64 @@ ht-degree: 0%
 
 ---
 
-# (Beta) Criar um [!DNL OneTrust Integration] conexão de origem na interface do usuário
+# (Beta) Criar um [!DNL OneTrust Integration] conexão de origem na interface
 
 >[!NOTE]
 >
->O [!DNL OneTrust Integration] A fonte está em beta. Seus recursos e documentação estão sujeitos a alterações. Para obter informações sobre o uso de fontes com rótulo beta, consulte o [visão geral das fontes](../../../../home.md#terms-and-conditions).
+>A variável [!DNL OneTrust Integration] a fonte está na versão beta. Seus recursos e documentação estão sujeitos a alterações. Para obter informações sobre o uso de fontes com rótulo beta, consulte [visão geral das origens](../../../../home.md#terms-and-conditions).
 
-Este tutorial fornece etapas para criar um [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) conexão de origem para assimilar dados de consentimento históricos e programados no Adobe Experience Platform usando a interface do usuário da plataforma.
+Este tutorial fornece etapas para a criação de um [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) conexão de origem para assimilar dados de consentimento históricos e programados na Adobe Experience Platform usando a interface do usuário da Platform.
 
 ## Pré-requisitos
 
 >[!IMPORTANT]
 >
->O [!DNL OneTrust Integration] o conector de origem e a documentação foram criados pelo [!DNL OneTrust Integration] equipe. Para quaisquer consultas ou solicitações de atualização, entre em contato com o [[!DNL OneTrust] equipe](https://my.onetrust.com/s/contactsupport?language=en_US) diretamente.
+>A variável [!DNL OneTrust Integration] o conector de origem e a documentação foram criados pela [!DNL OneTrust Integration] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato com o [[!DNL OneTrust] equipe](https://my.onetrust.com/s/contactsupport?language=en_US) diretamente.
 
-Antes de se conectar [!DNL OneTrust Integration] para o Platform, você deve primeiro recuperar o token de acesso. Para obter instruções detalhadas sobre como encontrar seu token de acesso, consulte o [[!DNL OneTrust Integration] Guia OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Antes de se conectar [!DNL OneTrust Integration] Para acessar a Platform, você deve primeiro recuperar o token de acesso. Para obter instruções detalhadas sobre como encontrar o token de acesso, consulte [[!DNL OneTrust Integration] Guia do OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-O token de acesso não é atualizado automaticamente depois de expirar porque os tokens de atualização do sistema para o sistema não são suportados por [!DNL OneTrust]. Portanto, é necessário garantir que o token de acesso seja atualizado na conexão antes de expirar. A duração máxima configurável para um token de acesso é de um ano. Para saber mais sobre como atualizar seu token de acesso, consulte o [[!DNL OneTrust] documento sobre como gerenciar suas credenciais de cliente do OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
+O token de acesso não é atualizado automaticamente após a expiração, pois os tokens de atualização de sistema para sistema não são compatíveis com o [!DNL OneTrust]. Portanto, é necessário garantir que seu token de acesso seja atualizado na conexão antes que ela expire. O tempo de vida máximo configurável para um token de acesso é de um ano. Para saber mais sobre como atualizar o token de acesso, consulte a [[!DNL OneTrust] documento sobre o gerenciamento de credenciais do cliente OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-### Obter credenciais necessárias
+### Coletar credenciais necessárias
 
-Para se conectar [!DNL OneTrust Integration] para o Platform, você deve fornecer valores para as seguintes credenciais de autenticação:
+Para se conectar [!DNL OneTrust Integration] Para o Platform, você deve fornecer valores para as seguintes credenciais de autenticação:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
-| Nome do host | O ambiente a partir do qual o [!DNL OneTrust Integration] Os dados do precisam ser obtidos do. | `https://uat.onetrust.com/` |
-| URL de teste de autorização | (Opcional) O URL do teste de autorização é usado para validar credenciais ao criar uma conexão base. Se não for fornecido, as credenciais serão verificadas automaticamente durante a etapa de criação da conexão de origem. |  |
+| Nome do host | O ambiente a partir do qual o [!DNL OneTrust Integration] Os dados do precisam ser obtidos de. | `https://uat.onetrust.com/` |
+| URL de teste de autorização | (Opcional) O URL de teste de autorização é usado para validar credenciais ao criar uma conexão base. Se não forem fornecidas, as credenciais serão automaticamente verificadas durante a etapa de criação da conexão de origem. |  |
 | Token de acesso | O token de acesso que corresponde ao seu [!DNL OneTrust Integration] conta. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
-Para obter mais informações sobre essas credenciais, consulte o [[!DNL OneTrust Integration] documentação de autenticação](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Para obter mais informações sobre essas credenciais, consulte a [[!DNL OneTrust Integration] documentação de autenticação](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 ## Conecte seu [!DNL OneTrust Integration] account
 
 >[!NOTE]
 >
->O [!DNL OneTrust Integration] As especificações da API estão sendo compartilhadas com o Adobe para assimilação de dados.
+>A variável [!DNL OneTrust Integration] As especificações da API estão sendo compartilhadas com o Adobe para assimilação de dados.
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Em *[!UICONTROL Consentimento e preferências]* categoria , selecione [!DNL OneTrust Integration]e selecione **[!UICONTROL Adicionar dados]**.
+No *[!UICONTROL Consentimento e preferências]* categoria, selecione [!DNL OneTrust Integration]e selecione **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/onetrust/catalog.png)
 
-O **[!UICONTROL Conta de Integração do Connect OneTrust]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+A variável **[!UICONTROL Conectar a conta de Integração do OneTrust]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para usar uma conta existente, selecione a [!DNL OneTrust Integration] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próximo]** para continuar.
+Para usar uma conta existente, selecione a variável [!DNL OneTrust Integration] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
 
 ![existente](../../../../images/tutorials/create/onetrust/existing.png)
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e, em seguida, forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e, em seguida, permitir que a nova conexão seja estabelecida.
+Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
 
 ![novo](../../../../images/tutorials/create/onetrust/new.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com seu [!DNL OneTrust Integration] conta. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados de consentimento para a plataforma](../../dataflow/consent-and-preferences.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL OneTrust Integration] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de consentimento para a Platform](../../dataflow/consent-and-preferences.md).

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Adobe Campaign Managed Cloud Services, campanha, serviços gerenciados de campanha
+keywords: Experience Platform;página inicial;tópicos populares;campanha;campanha;serviços gerenciados;;home;popular topics;Adobe Campaign Managed Cloud Services;campaign;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: Saiba como conectar o Campaign Managed Cloud Services à Platform usando a interface do usuário
+description: Saiba como conectar Cloud Services do Campaign Managed à Platform usando a interface do usuário
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -14,64 +14,64 @@ ht-degree: 0%
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Adobe Campaign Managed Cloud Services oferece uma plataforma Managed Services para projetar experiências de clientes entre canais e fornece um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. Visite o [Documentação do Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) para obter mais informações.
+O Adobe Campaign Managed Cloud Services fornece uma plataforma Managed Services para criação de experiências para clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. Visite o [Documentação do Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) para obter mais informações.
 
-A fonte do Adobe Campaign Managed Cloud Services permite trazer logs do delivery e dados de logs de rastreamento do Adobe Campaign v8 para o Adobe Experience Platform.
+A fonte do Adobe Campaign Managed Cloud Services permite trazer registros de entrega e dados de logs de rastreamento do Adobe Campaign v8 para a Adobe Experience Platform.
 
 ## Pré-requisitos
 
 Antes de criar uma conexão de origem para trazer seu Campaign v8 para o Experience Platform, primeiro complete os seguintes pré-requisitos:
 
-* [Configure sua importação de log de eventos usando o console do cliente do Adobe Campaign](#view-delivery-and-tracking-log-data)
+* [Configure a importação do log de eventos usando o console do cliente Adobe Campaign](#view-delivery-and-tracking-log-data)
 * [Criar um esquema XDM ExperienceEvent](#create-a-schema)
 * [Criar um conjunto de dados](#create-a-dataset)
 
-### Exibir dados de log de delivery e rastreamento {#view-delivery-and-tracking-log-data}
+### Exibir dados de log de rastreamento e entrega {#view-delivery-and-tracking-log-data}
 
 >[!IMPORTANT]
 >
->Você deve ter acesso ao Console do Cliente do Adobe Campaign v8 para visualizar seus dados de log no Campaign. Visite o [Documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) para obter informações sobre como baixar e instalar o console do cliente.
+>Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite o [Documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) para obter informações sobre como baixar e instalar o console do cliente.
 
-Faça logon na instância do Campaign v8 por meio do Console do cliente. Em [!DNL Explorer] guia , selecione [!DNL Administration] e depois selecione [!DNL Configuration]. Em seguida, selecione [!DNL Data schemas] e, em seguida, aplique a variável `broadLog` filtro para nome ou rótulo. Na lista exibida, selecione o schema de origem dos logs do delivery do recipient com o nome `broadLogRcp`.
+Faça logon na instância do Campaign v8 por meio do Console do cliente. No [!DNL Explorer] selecione [!DNL Administration] e selecione [!DNL Configuration]. Em seguida, selecione [!DNL Data schemas] e, em seguida, aplique o `broadLog` filtro para nome ou rótulo. Na lista exibida, selecione o schema de origem dos logs do delivery com o nome `broadLogRcp`.
 
-![O console do cliente Adobe Campaign v8 com a guia Explorer selecionada, os nós de schemas Administração, Configuração e Dados expandiram e a filtragem foi definida como &quot;ampla&quot;.](./images/campaign/explorer.png)
+![O console do cliente Adobe Campaign v8 com a guia Explorer selecionada, os nós Administração, Configuração e Esquemas de dados expandiram e a filtragem foi definida como &quot;ampla&quot;.](./images/campaign/explorer.png)
 
-Em seguida, selecione o **Dados** guia .
+Em seguida, selecione o **Dados** guia.
 
-![O console do cliente Adobe Campaign v8 com a guia de dados selecionada.](./images/campaign/data.png)
+![O console do cliente Adobe Campaign v8 com a guia Data selecionada.](./images/campaign/data.png)
 
-Clique com o botão direito/pressionamento de tecla no painel de dados para abrir o menu contextual. Aqui, selecione **Configurar lista...**
+Clique com o botão direito do mouse/toque com a tecla no painel de dados para abrir o menu contextual. Aqui, selecione **Configurar lista...**
 
 ![O console do cliente Adobe Campaign v8 com o menu contextual aberto e a opção Configure list selecionada.](./images/campaign/configure.png)
 
-A janela de configuração da lista é exibida, fornecendo uma interface onde é possível adicionar os campos desejados à lista preexistente para exibir os dados no painel de dados.
+A janela de configuração de lista é exibida, fornecendo uma interface na qual você pode adicionar os campos desejados à lista pré-existente para visualizar os dados no painel de dados.
 
-![Uma lista de configurações para logs de delivery de recipients que podem ser adicionadas para visualização.](./images/campaign/list-configuration.png)
+![Uma lista de configurações para logs do delivery do recipient que podem ser adicionadas para visualização.](./images/campaign/list-configuration.png)
 
 Agora é possível visualizar os logs do delivery do recipient, incluindo os campos de configuração adicionados na etapa anterior.
 
 >[!TIP]
 >
->Você pode repetir as mesmas etapas, mas filtrar por `tracking` para exibir seus dados de log de rastreamento.
+>Você pode repetir as mesmas etapas, mas filtrar por `tracking` para exibir os dados do log de rastreamento.
 
-![Os logs do delivery do recipient são exibidos com informações sobre seu sobrenome modificado, canal de delivery, nome do delivery interno e rótulo.](./images/campaign/recipient-delivery-logs.png)
+![Os logs do delivery do recipient são exibidos com informações sobre o nome da última modificação, canal de delivery, nome do delivery interno e rótulo.](./images/campaign/recipient-delivery-logs.png)
 
 ### Criar um esquema {#create-a-schema}
 
-Em seguida, crie um esquema XDM ExperienceEvent para logs de delivery e de rastreamento. Você deve aplicar o grupo de campos Campaign Delivery Logs ao schema de logs do delivery e ao grupo de campos Campaign Tracking Logs ao schema de logs de rastreamento. Você também deve definir a variável `externalID` como a identidade primária do esquema.
+Em seguida, crie um esquema XDM ExperienceEvent para logs do delivery e logs de rastreamento. Você deve aplicar o grupo de campos Logs de entrega da campanha ao esquema de logs de entrega e o grupo de campos Logs de rastreamento da campanha ao esquema de logs de rastreamento. Você também deve definir a variável `externalID` como a identidade principal do esquema.
 
 >[!NOTE]
 >
->O esquema XDM ExperienceEvent deve estar habilitado para o perfil para assimilar os dados do Campaign para [!DNL Real-Time Customer Profile].
+>Seu esquema XDM ExperienceEvent deve ser habilitado para perfil para assimilar os dados do Campaign no [!DNL Real-Time Customer Profile].
 
 Para obter instruções detalhadas sobre como criar um schema, leia o guia em [criação de um esquema XDM na interface do usuário](../../../xdm/tutorials/create-schema-ui.md).
 
 ### Criar um conjunto de dados {#create-a-dataset}
 
-Por fim, você deve criar um conjunto de dados para seus esquemas. Para obter instruções detalhadas sobre como criar um conjunto de dados, leia o guia em [criação de um conjunto de dados na interface do usuário](../../../catalog/datasets/user-guide.md).
+Por fim, você deve criar um conjunto de dados para seus esquemas. Para obter instruções detalhadas sobre como criar um conjunto de dados, leia o guia em [criação de um conjunto de dados na interface do](../../../catalog/datasets/user-guide.md).
 
-## Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma
+## Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário da Platform
 
-Agora que você acessou seus logs de dados no console do cliente Campaign, criou um esquema e um conjunto de dados, agora é possível continuar a criar uma conexão de origem para trazer seus dados do Campaign Managed Services para a Platform.
+Agora que você acessou os logs de dados no console do cliente do Campaign, criou um esquema e um conjunto de dados, é possível continuar a criar uma conexão de origem para trazer os dados do Campaign Managed Services para a Platform.
 
-Para obter instruções detalhadas sobre como trazer seus logs de delivery e dados de logs de rastreamento do Campaign v8 para a Experience Platform, leia o guia em [criação de uma conexão de origem Managed Services do Campaign na interface do usuário](../../tutorials/ui/create/adobe-applications/campaign.md).
+Para obter instruções detalhadas sobre como trazer os logs do delivery e os dados dos logs de rastreamento do Campaign v8 para a Experience Platform, leia o guia em [criação de uma conexão de origem do Campaign Managed Services na interface](../../tutorials/ui/create/adobe-applications/campaign.md).

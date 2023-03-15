@@ -9,37 +9,37 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1303'
 ht-degree: 5%
 
 ---
 
-# Visão geral da extensão de encaminhamento de eventos de mailchimp
+# Visão geral da extensão de encaminhamento de eventos do Mailchimp
 
 >[!NOTE]
 >  
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obter uma referência consolidada das alterações de terminologia.
 
-O Mailchimp [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) A extensão envia eventos para a API de marketing Mailchimp que pode acionar emails para campanhas de marketing, jornadas ou transações do Mailchimp.
+O Mailchimp [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) A extensão envia eventos para a API de marketing do Mailchimp que podem acionar emails para campanhas de marketing, jornadas ou transações do Mailchimp.
 
-Este documento aborda como configurar a extensão e configurar as regras usando a ação Adicionar evento.
+Este documento aborda como definir a extensão e configurar regras usando a ação Adicionar evento.
 
 ## Pré-requisitos
 
-Este documento pressupõe que você esteja familiarizado com os produtos relevantes do Mailchimp aproveitados pela extensão. Para obter mais informações, consulte a documentação de ajuda do Mailchimp para [campanhas](https://mailchimp.com/help/getting-started-with-campaigns/), [jornada](https://mailchimp.com/help/about-customer-journeys/)e [transações](https://mailchimp.com/help/transactional/).
+Este documento supõe que você esteja familiarizado com os produtos Mailchimp relevantes aproveitados pela extensão. Para obter mais informações, consulte a documentação de ajuda do Mailchimp para [campanhas](https://mailchimp.com/help/getting-started-with-campaigns/), [jornadas](https://mailchimp.com/help/about-customer-journeys/), e [transações](https://mailchimp.com/help/transactional/).
 
-É necessária uma conta Mailchimp para usar esta extensão. Você pode se inscrever em uma conta [here](https://login.mailchimp.com/signup/). No painel de conta Mailchimp, anote os seguintes valores para uso neste guia:
+Uma conta do Mailchimp é necessária para usar esta extensão. Você pode se inscrever para uma conta [aqui](https://login.mailchimp.com/signup/). No painel de contas do Mailchimp, anote os seguintes valores para uso neste guia:
 
-- Seu prefixo de domínio Mailchimp
+- Seu prefixo de domínio do Mailchimp
 - Sua chave de API
-- A ID de público-alvo
+- A ID do público-alvo
 - O endereço de email padrão &quot;de&quot;
 
-Dependendo do seu plano de conta Mailchimp, você pode ter acesso limitado às ferramentas de Jornada do cliente Mailchimp.
+Dependendo do seu plano de conta do Mailchimp, você pode ter acesso limitado às ferramentas de Jornada ao cliente do Mailchimp.
 
 >[!TIP]
 >  
->Se você estiver usando automações de Mailchimp, como emails transacionais ou Jornadas do cliente, as etapas e telas podem ser um pouco diferentes das listadas aqui. No entanto, você ainda precisa das mesmas informações para usar essa extensão, conforme descrito acima. Consulte a [Central de ajuda do Mailchimp](https://mailchimp.com/help/) para obter detalhes sobre cada um desses valores para sua conta e plano específicos.
+>Se você estiver usando automações do Mailchimp, como emails transacionais ou Jornadas do cliente, as etapas e telas poderão ser um pouco diferentes daquelas listadas aqui. No entanto, você ainda precisa das mesmas informações para usar essa extensão, conforme descrito acima. Consulte a [Centro de ajuda do Mailchimp](https://mailchimp.com/help/) para obter detalhes sobre cada um desses valores para sua conta e plano específicos.
 
 ### Prefixo do domínio
 
@@ -47,49 +47,49 @@ Depois de fazer logon no Mailchimp e acessar a exibição do Painel, a barra de 
 
 ### Chave de API
 
-Para encontrar a chave da API para sua conta, selecione o ícone do perfil na interface do usuário do Mailchimp e selecione **Perfil**. Você deve ver um URL como `https://us11.admin.mailchimp.com/account/profile/` mas com **your** prefixo em vez de `us11`.
+Para localizar a chave de API da sua conta, selecione o ícone do perfil na interface do usuário do Mailchimp e, em seguida, selecione **Perfil**. Você deve ver um URL como `https://us11.admin.mailchimp.com/account/profile/` mas com **seu** prefixo em vez de `us11`.
 
-Selecionar **Extras**, em seguida **Chaves da API**:
+Selecionar **Extras**, depois **Chaves de API**:
 
 ![Menu Extras, link de chaves de API](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
-Em **Suas chaves de API**, é possível escolher uma chave existente ou selecionar **Criar Uma Chave** para criar um novo. Você pode criar uma nova chave para usar especificamente com essa extensão. Copie a chave de API e salve-a para uma etapa posterior. Para obter mais detalhes, consulte a documentação do Mailchimp sobre como [gerar sua chave de API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Em **Suas chaves de API**, você pode escolher uma chave existente ou selecionar **Criar Uma Chave** para criar um novo. Você pode criar uma nova chave para usar especificamente com essa extensão. Copie a chave de API e salve-a para uma etapa posterior. Para obter mais detalhes, consulte a documentação do Mailchimp sobre como [gerar sua chave de API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
-### ID de público-alvo e endereço de origem
+### ID de público-alvo e endereço do remetente
 
-Selecionar **Público** na navegação à esquerda, em seguida **Painel de público**. Em seguida, selecione o público-alvo que pretende usar com esta extensão. Para saber mais, consulte o documento Mailchimp em [criação de um público-alvo](https://mailchimp.com/help/create-audience/).
+Selecionar **Público** na navegação à esquerda, **Painel de público-alvo**. Em seguida, selecione o público-alvo que deseja usar com essa extensão. Para saber mais, consulte o documento Mailchimp em [criação de um público](https://mailchimp.com/help/create-audience/).
 
-Com seu público-alvo criado e selecionado, selecione o **Gerenciar público-alvo** e escolha **Configurações**. Esta tela mostra várias configurações para seu público-alvo.
+Com seu público criado e selecionado, selecione **Gerenciar público-alvo** selecione **Configurações**. Esta tela mostra várias configurações para o seu público-alvo.
 
-Na parte inferior da tela Configurações, você deve ver `Unique id for audience [audience name]` em que `[audience name]` é o nome do público-alvo real. Copie a ID de público-alvo e salve-a para uma etapa posterior.
+Na parte inferior da tela Configurações, você deverá ver `Unique id for audience [audience name]` onde `[audience name]` é o nome do público-alvo real. Copie a ID de público-alvo e salve-a para uma etapa posterior.
 
-Selecionar **Nome e padrões do público-alvo** e confirme que **Padrão Do endereço de email** O tem o valor correto para suas campanhas. Observe que a ID de público-alvo também está listada na parte superior desta página e tem o mesmo valor copiado na última etapa.
+Selecionar **Nome e padrões do público-alvo** e confirmar que **Padrão do endereço de email** tem o valor correto para suas campanhas. Observe que a ID de público-alvo também está listada na parte superior desta página e tem o mesmo valor copiado na última etapa.
 
-## Automações de mailchimp
+## Automações do Mailchimp
 
-Dependendo do seu plano de Mailchimp e se você usa emails transacionais, Jornadas do cliente ou outros automatizamentos de Mailchimp, suas configurações de jornada específicas podem variar.
+Dependendo do seu plano do Mailchimp e se você usa emails transacionais, Jornadas do cliente ou outras automações do Mailchimp, suas configurações específicas de jornada podem variar.
 
 >[!IMPORTANT]
 >  
->O nome do evento escolhido para acionar a automação ou a jornada no Mailchimp é o mesmo nome de evento que você deve enviar com essa extensão. Observe o nome do evento na sua automação do Mailchimp e salve-o para uma etapa posterior.
+>O nome do evento que você escolheu para acionar sua automação ou jornada no Mailchimp é o mesmo nome de evento que deve ser enviado com essa extensão. Observe o nome do evento na automação do Mailchimp e salve-o para uma etapa posterior.
 
 ## Instalação e configuração
 
-Esta seção lista as etapas para instalar e configurar a extensão. Para salvar com segurança a chave da API Mailchimp, você deve usar o encaminhamento de eventos [segredos](../../../ui/event-forwarding/secrets.md).
+Esta seção lista as etapas para instalar e configurar a extensão. Para salvar com segurança a chave de API do Mailchimp, você deve usar o encaminhamento de eventos [segredos](../../../ui/event-forwarding/secrets.md).
 
 ### Criar um segredo e um elemento de dados
 
-Em uma propriedade de encaminhamento de evento, [crie um [!UICONTROL Token] segredo](../../../ui/event-forwarding/secrets.md#token) chamado `Mailchimp API Key`.
+Em uma propriedade de encaminhamento de eventos, [criar um [!UICONTROL Token] segredo](../../../ui/event-forwarding/secrets.md#token) chamado `Mailchimp API Key`.
 
-Em seguida, [criar um elemento de dados](../../../ui/managing-resources/data-elements.md#create-a-data-element) usando o [!UICONTROL Núcleo] e uma [!UICONTROL Segredo] tipo de elemento de dados para fazer referência ao `Mailchimp API Key` segredo que você acabou de criar. Enter `Mailchimp Token` como o nome do elemento de dados.
+Em seguida, [criar um elemento de dados](../../../ui/managing-resources/data-elements.md#create-a-data-element) usando o [!UICONTROL Núcleo] extensão e um [!UICONTROL Segredo] tipo de elemento de dados para fazer referência ao `Mailchimp API Key` segredo que acabou de criar. Enter `Mailchimp Token` como o nome do elemento de dados.
 
 ### Instalação e configuração da extensão do 
 
-Na mesma propriedade de encaminhamento de eventos, selecione **[!UICONTROL Extensões],** then **[!UICONTROL Catálogo]** para exibir as extensões disponíveis para instalação. Aqui, procure a extensão Mailchimp e selecione **[!UICONTROL Instalar]**.
+Na mesma propriedade de encaminhamento de eventos, selecione **[!UICONTROL Extensões],** depois **[!UICONTROL Catálogo]** para exibir as extensões disponíveis para instalação. Aqui, pesquise a extensão Mailchimp e selecione **[!UICONTROL Instalar]**.
 
-![Instalar extensão Mailchimp](../../../images/extensions/server/mailchimp/install.png)
+![Instalar extensão do Mailchimp](../../../images/extensions/server/mailchimp/install.png)
 
-A tela de configuração é exibida. Em **[!UICONTROL Nome de Domínio Prefixo do Servidor de Correio]**, insira o domínio que você copiou anteriormente de sua conta do Mailchimp, incluindo seu prefixo de domínio exclusivo.
+A tela de configuração é exibida. Em **[!UICONTROL Nome de Domínio de Prefixo do Servidor Mailchimp]**, insira o domínio que você copiou anteriormente da sua conta do Mailchimp, incluindo o prefixo de domínio exclusivo.
 
 >[!IMPORTANT]
 >
@@ -97,51 +97,51 @@ A tela de configuração é exibida. Em **[!UICONTROL Nome de Domínio Prefixo d
 
 ![Configuração de extensão](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-Em **[!UICONTROL Token de mailchimp]**, selecione o ícone do elemento de dados e escolha o `Mailchimp Token` elemento de dados criado anteriormente. Selecionar **[!UICONTROL Salvar]** para salvar as alterações.
+Em **[!UICONTROL Token do Mailchimp]**, selecione o ícone de elemento de dados e escolha o `Mailchimp Token` elemento de dados criado anteriormente. Selecionar **[!UICONTROL Salvar]** para salvar as alterações.
 
-A extensão agora é instalada e configurada para uso na propriedade.
+A extensão agora está instalada e configurada para uso na propriedade.
 
 ## Coleta de dados
 
-Ao usar essa extensão em um [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, você pode configurar a variável [Extensão do Adobe Experience Platform Web SDK](../../client/sdk/overview.md) para enviar esses dados para [!DNL Platform Edge Network] para uso pela extensão na propriedade de encaminhamento do evento.
+Ao usar essa extensão em uma [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, é possível configurar o [Extensão SDK da Web do Adobe Experience Platform](../../client/sdk/overview.md) para enviar esses dados ao [!DNL Platform Edge Network] para uso pela extensão na propriedade de encaminhamento de eventos.
 
-Os dados necessários para essa extensão podem ser enviados do SDK da Web como dados XDM ou não XDM. Consulte a documentação para saber mais sobre [envio de dados XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+Os dados necessários para essa extensão podem ser enviados do SDK da Web como dados XDM ou dados não XDM. Consulte a documentação para saber mais sobre [envio de dados XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
-Por exemplo, se um cliente fizer uma compra ou se registrar em um evento em seu site, você poderá enviar um email de confirmação por meio do Mailchimp com essa extensão. Depois de enviar as informações necessárias do SDK da Web para a Edge Network, a extensão aciona o email com o Mailchimp.
+Por exemplo, se um cliente fizer uma compra ou se registrar para um evento em seu site, você poderá enviar um email de confirmação por meio do Mailchimp com essa extensão. Depois de enviar as informações necessárias do SDK da Web para a Rede de borda, a extensão acionará o email com o Mailchimp.
 
-![Adicionar configuração de ação Evento](../../../images/extensions/server/mailchimp/action-configurations.png)
+![Adicionar configuração de ação de evento](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### Elementos de dados
 
-A captura de tela da seção anterior mostra os dados que você pode enviar com cada evento desta extensão para o Mailchimp. Depois de configurar o SDK da Web para enviar esses dados para a Edge Network, você pode criar elementos de dados na propriedade de encaminhamento do evento para que a extensão possa acessar esses valores.
+A captura de tela na seção anterior mostra os dados que você pode enviar com cada evento desta extensão para o Mailchimp. Depois de configurar o SDK da Web para enviar esses dados para a Rede de borda, você pode criar elementos de dados na propriedade de encaminhamento de eventos para que a extensão possa acessar esses valores.
 
 A tabela abaixo fornece mais detalhes para cada valor possível.
 
 | Nome | Exemplo de caminho | Tipo | Descrição | Obrigatório | Limites |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> ou<br /> `arc.event.data._tenant.emailId` | String | O endereço que recebe o email | **Sim** | Deve existir no público-alvo Mailchimp |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | String | ID de público-alvo | **Sim** | Deve corresponder a uma ID de público-alvo existente |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> ou<br /> `arc.event.data._tenant.emailId` | String | O endereço que recebe o email | **Sim** | Deve existir no Público do Mailchimp |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | String | ID de público | **Sim** | Deve corresponder a uma ID de público-alvo existente |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou<br /> `arc.event.data._tenant.name` | String | O nome do evento | **Sim** | 2-30 caracteres de comprimento |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> ou<br /> `arc.event.data._tenant.properties` | Objeto | Uma lista opcional de propriedades no formato JSON com detalhes sobre o evento | Não |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booleano | Eventos criados com `is_syncing` defina como `true` **não** acionar automações | Não |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booleano | Eventos criados com `is_syncing` definir como `true` **não** automações de acionador | Não |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> ou `arc.event.data._tenant.occuredAt` | String | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu | Não |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  
->O **Exemplo de caminho** os valores acima são apenas exemplos. Os nomes de campo e [caminhos](../../../ui/event-forwarding/overview.md#data-element-path) referenciados nesses elementos de dados podem ser diferentes em sua propriedade, dependendo de como você nomeou e configurou o SDK da Web nas etapas acima.
+>A variável **Exemplo de caminho** os valores acima são somente exemplos. Os nomes dos campos e [caminhos](../../../ui/event-forwarding/overview.md#data-element-path) as referências nesses elementos de dados podem ser diferentes na propriedade, dependendo de como você nomeou e configurou o SDK da Web nas etapas acima.
 
-Na propriedade de encaminhamento do evento, é possível criar um elemento de dados para cada um dos campos descritos acima. Depois de criados, você pode fazer referência aos elementos de dados no [!UICONTROL Adicionar evento] ação desta extensão.
+Na propriedade de encaminhamento de eventos, você pode criar um elemento de dados para cada um dos campos descritos acima. Depois de criado, você pode fazer referência aos elementos de dados na [!UICONTROL Adicionar evento] ação dessa extensão.
 
-![Adicionar configuração de ação Evento](../../../images/extensions/server/mailchimp/action-configurations.png)
+![Adicionar configuração de ação de evento](../../../images/extensions/server/mailchimp/action-configurations.png)
 
-Agora você pode usar essa extensão e a ação Adicionar evento para acionar emails de mailchimp para seus públicos-alvo.
+Agora você pode usar essa extensão e a ação Adicionar evento para acionar emails do Mailchimp para seus públicos.
 
 ## Validação de dados
 
-Ao trabalhar com extensões de encaminhamento de eventos, a variável [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) é muito útil. Na seção Logs , em Registros de borda , é possível ver as solicitações feitas pelas regras de encaminhamento de eventos depois de serem acionadas. As capturas de tela a seguir mostram uma solicitação que está sendo feita para a API Mailchimp pela extensão .
+Ao trabalhar com extensões de encaminhamento de eventos, a variável [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) é muito útil. Na seção Logs, em Logs de borda, você pode ver as solicitações feitas pelas regras de encaminhamento de eventos depois que elas são acionadas. As capturas de tela a seguir mostram uma solicitação que está sendo feita à API do Mailchimp pela extensão.
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
-No painel Mailchimp, na exibição Feed de atividade do seu Público-alvo ou Membro de público-alvo, é fornecida uma lista de eventos para esse Público-alvo ou Membro de público-alvo. Isso deve corresponder aos eventos enviados pela extensão e mostrar os dados opcionais enviados, juntamente com o email ou a campanha recebida. Consulte a [Guias de ajuda da Automação de mailchimp](https://mailchimp.com/help/automation/) para obter mais detalhes.
+No painel do Mailchimp, na exibição Feed de atividades do seu Público ou Membro de público, uma lista de eventos é fornecida para esse Público ou Membro de público. Ele deve corresponder aos eventos enviados pela extensão e mostrar todos os dados opcionais enviados, juntamente com o email ou a campanha recebida. Consulte a [Guias de ajuda do Mailchimp Automation](https://mailchimp.com/help/automation/) para obter mais detalhes.

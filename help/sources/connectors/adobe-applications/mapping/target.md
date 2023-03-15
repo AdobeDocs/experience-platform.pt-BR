@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform, home, tópicos populares, target mapping, Target mapping
+keywords: Experience Platform;início;tópicos populares;mapeamento de destino;mapeamento de destino
 solution: Experience Platform
-title: Mapeamento de dados de evento do Adobe Target para XDM
-description: Saiba como mapear campos de evento do Adobe Target para um esquema do Experience Data Model (XDM) para uso no Adobe Experience Platform.
+title: Mapeamento de dados de eventos do Adobe Target para o XDM
+description: Saiba como mapear campos de evento do Adobe Target para um esquema do Experience Data Model (XDM) para usar no Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 1%
+source-wordcount: '479'
+ht-degree: 0%
 
 ---
 
-# Mapeamento de campos de target
+# Mapeamentos de campo de target mapping
 
-O Adobe Experience Platform permite assimilar dados do Adobe Target por meio do conector de origem do Target. Ao usar o conector, todos os dados dos campos do Target devem ser mapeados para a variável [Experience Data Model (XDM)](../../../../xdm/home.md) campos associados à classe XDM ExperienceEvent.
+O Adobe Experience Platform permite assimilar dados do Adobe Target por meio do conector de origem do Target. Ao usar o conector, todos os dados dos campos do Target devem ser mapeados para o [Experience Data Model (XDM)](../../../../xdm/home.md) campos associados à classe XDM ExperienceEvent.
 
-A tabela a seguir descreve os campos de um esquema de Evento de experiência (*Campo ExperienceEvent XDM*) e os campos do Target correspondentes aos quais eles devem ser mapeados (*Campo Solicitação de direcionamento*). Também são fornecidas notas adicionais para alguns mapeamentos.
+A tabela a seguir descreve os campos de um esquema de Evento de experiência (*Campo XDM ExperienceEvent*) e os campos Target correspondentes aos quais eles devem ser mapeados (*Campo de solicitação do Target*). Observações adicionais para alguns mapeamentos também são fornecidas.
 
 >[!NOTE]
 >
->Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
+>Role a tela para a esquerda/direita para visualizar o conteúdo completo da tabela.
 
-| Campo ExperienceEvent XDM | Campo Solicitação de direcionamento | Notas |
+| Campo XDM ExperienceEvent | Campo de solicitação do Target | Notas |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Um identificador de solicitação exclusivo |
-| **`dataSource`** |  | Configurado para &quot;1&quot; para todos os clientes. |
-| `dataSource._id` | Um valor gerado pelo sistema que não pode ser transmitido com a solicitação. | A ID exclusiva dessa fonte de dados. Isso seria fornecido pelo indivíduo ou sistema que criou a fonte de dados. |
-| `dataSource.code` | Um valor gerado pelo sistema que não pode ser transmitido com a solicitação. | Um atalho para o @id completo. Pelo menos um do código ou @id pode ser usado. Às vezes, esse código é chamado de código de integração da fonte de dados. |
-| `dataSource.tags` | Um valor gerado pelo sistema que não pode ser transmitido com a solicitação. | As tags são usadas para indicar como os aliases representados por uma determinada fonte de dados devem ser interpretados por aplicativos que usam esses aliases.<br><br>Exemplos:<br><ul><li>`isAVID`: Fontes de dados que representam as IDs de visitante do Analytics.</li><li>`isCRSKey`: Fontes de dados que representam aliases que devem ser usados como chaves no CRS.</li></ul>Tags são definidas quando a fonte de dados é criada, mas também são incluídas em mensagens de pipeline ao referenciar uma determinada fonte de dados. |
+| **`dataSource`** |  | Configurado como &quot;1&quot; para todos os clientes. |
+| `dataSource._id` | Um valor gerado pelo sistema que não pode ser transmitido com a solicitação. | O identificador exclusivo desta fonte de dados. Isso seria fornecido pelo indivíduo ou sistema que criou a fonte de dados. |
+| `dataSource.code` | Um valor gerado pelo sistema que não pode ser transmitido com a solicitação. | Um atalho para o @id completo. Pelo menos um dos códigos ou @id pode ser usado. Às vezes, esse código é chamado de código de integração da fonte de dados. |
+| `dataSource.tags` | Um valor gerado pelo sistema que não pode ser transmitido com a solicitação. | As tags são usadas para indicar como os aliases representados por uma determinada fonte de dados devem ser interpretados pelos aplicativos que usam esses aliases.<br><br>Exemplos:<br><ul><li>`isAVID`: fontes de dados que representam IDs de visitante do Analytics.</li><li>`isCRSKey`: fontes de dados que representam aliases que devem ser usados como chaves no CRS.</li></ul>As tags são definidas quando a fonte de dados é criada, mas também são incluídas nas mensagens do pipeline ao fazer referência a uma determinada fonte de dados. |
 | **`timestamp`** | Carimbo de data e hora do evento |
-| **`channel`** | `context.channel` | Funciona somente com o delivery de exibição. As opções são &quot;web&quot; e &quot;móvel&quot;, com &quot;web&quot; sendo o padrão. |
+| **`channel`** | `context.channel` | Funciona somente com a entrega de visualização. As opções são &quot;web&quot; e &quot;mobile&quot;, e &quot;web&quot; é o padrão. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | A Experience Cloud ID (ECID) também é conhecida como MCID e continua a ser usada em namespaces. |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | A ID de Experience Cloud (ECID) também é conhecida como MCID e continua a ser usada em namespaces. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |
@@ -42,29 +42,29 @@ A tabela a seguir descreve os campos de um esquema de Evento de experiência (*C
 | `environment.viewportHeight` | `mboxRequest.screenHeight` |
 | `environment.viewportWidth` | `mboxRequest.screenWidth` |
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
-| `environment.carrier` | Nome da operadora de celular resolvido com base no endereço IP da solicitação. |
-| `environment.ipV4` | `mboxRequest.ipAddress` (se no formato V4) |
+| `environment.carrier` | O nome da operadora de celular foi resolvido com base no endereço IP da solicitação. |
+| `environment.ipV4` | `mboxRequest.ipAddress` (se estiver no formato V4) |
 | `environment.ipV6` | `mboxRequest.ipAddress` (se no formato V6) |
 | **`experience`** |
 | `experience.target.clientCode` | `mboxRequest.client` |
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Mapeamento interno do Target para ambientes definidos pelo cliente (como dev, qa ou prod). |
-| `experience.target.supplementalDataID` | Identificador usado para unir eventos do Target aos eventos do Analytics |
+| `experience.target.environmentID` | Mapeamento interno do Target para ambientes definidos pelo cliente (como desenvolvimento, controle de qualidade ou produção). |
+| `experience.target.supplementalDataID` | Identificador usado para compilar eventos do Target com eventos do Analytics |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Lista (matriz) de atividades para as quais o visitante se qualificou |
 | `experience.target.activities[i].activityID` | A ID de qualquer atividade para a qual o visitante se qualificou |
-| `experience.target.activities[i].version` | A versão de qualquer atividade específica para a qual o visitante se qualificou |
-| `experience.target.activities[i].activityEvents` | Inclui detalhes de eventos de atividade que o usuário acessou com este evento. |
+| `experience.target.activities[i].version` | A versão de qualquer atividade para a qual o visitante se qualificou |
+| `experience.target.activities[i].activityEvents` | Inclui os detalhes dos eventos de atividade que o usuário acessou com este evento. |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
 | `device.type` | Uma das seguintes propriedades de `deviceAtlas` (ou NULL): <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
-| `device.typeID` | (string vazia) |
+| `device.typeID` | (cadeia de caracteres vazia) |
 | `device.manufacturer` | `deviceAtlas.manufacturer` |
 | `device.model` | `deviceAtlas.model` |
-| `device.modelNumber` | (string vazia) |
+| `device.modelNumber` | (cadeia de caracteres vazia) |
 | `device.screenHeight` | `deviceAtlas.displayHeight` |
 | `device.screenWidth` | `deviceAtlas.displayWidth` |
 | `device.colorDepth` | `deviceAtlas.displayColorDepth` |
@@ -74,9 +74,9 @@ A tabela a seguir descreve os campos de um esquema de Evento de experiência (*C
 | `placeContext.geo.countryCode` | Código do país resolvido com base no endereço IP da solicitação. |
 | `placeContext.geo.dmaId` | Código de área de mercado designada resolvido com base no endereço IP da solicitação. |
 | `placeContext.geo.postalCode` | Código postal resolvido com base no endereço IP da solicitação. |
-| `placeContext.geo.stateProvince` | O estado ou província foi resolvido com base no endereço IP da solicitação. |
+| `placeContext.geo.stateProvince` | Estado resolvido com base no endereço IP da solicitação. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Defina somente se os detalhes do pedido estiverem presentes na solicitação. |
+| **`commerce`** |  | Definir somente se os detalhes do pedido estiverem presentes na solicitação. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
@@ -87,4 +87,4 @@ A tabela a seguir descreve os campos de um esquema de Evento de experiência (*C
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

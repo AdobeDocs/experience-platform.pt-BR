@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform, home, tópicos populares, fontes, fonte, coleta de dados
-title: Coleta de dados do Adobe
+keywords: Experience Platform;página inicial;tópicos populares;fontes;fonte;coleção de dados
+title: Coleta de dados Adobe
 description: Este documento fornece uma visão geral da fonte de coleta de dados do Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
@@ -10,30 +10,30 @@ ht-degree: 0%
 
 ---
 
-# Coleta de dados do Adobe
+# Coleta de dados Adobe
 
-O Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente de fontes do lado do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe em segundos.
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente de fontes do lado do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe em segundos.
 
-A integração das fontes da Coleta de dados da Adobe Experience Platform permite acessar seus dados na Rede de borda, incluindo Preparação de dados para coleta de dados, bem como suporte aprimorado para avisos, por meio do catálogo de fontes.
+A integração das fontes da Coleção de dados da Adobe Experience Platform permite acessar seus dados na rede de borda, incluindo o Preparo de dados para coleção de dados, bem como suporte aprimorado para avisos, por meio do catálogo de fontes.
 
-## Use o espaço de trabalho de fontes para acessar a Coleta de dados
+## Usar o espaço de trabalho de fontes para acessar a Coleção de dados
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Em [!UICONTROL Aplicativos Adobe] categoria , selecione **[!UICONTROL Coleta de dados do Adobe]** e selecione **[!UICONTROL Configurar]**.
+No [!UICONTROL aplicativos Adobe] categoria, selecione **[!UICONTROL Coleta de dados Adobe]** e selecione **[!UICONTROL Configurar]**.
 
-![coleta de dados](./images/data-collection/catalog.png)
+![coleção de dados](./images/data-collection/catalog.png)
 
-A interface do usuário da Coleta de dados é exibida no **[!UICONTROL Datastreams]** guia .
+A interface da Coleção de dados aparece na **[!UICONTROL Datastreams]** guia.
 
-Um armazenamento de dados é uma configuração que informa à Rede de borda onde deseja que seus dados sejam enviados. Especificamente, um armazenamento de dados especifica para quais produtos do Experience Cloud você deseja enviar os dados e como deseja que eles sejam manipulados e armazenados em cada produto.
+Uma sequência de dados é uma configuração que informa à Rede de borda para onde você deseja que seus dados sejam enviados. Especificamente, um fluxo de dados especifica para quais produtos do Experience Cloud você deseja enviar os dados e como você deseja que os dados sejam manipulados e armazenados em cada produto.
 
-![datastreams](./images/data-collection/datastreams.png)
+![sequências de dados](./images/data-collection/datastreams.png)
 
-Para obter etapas abrangentes sobre como configurar a coleta de dados na interface do usuário, consulte o [visão geral completa da coleta de dados](../../../collection/e2e.md).
+Para obter etapas abrangentes sobre como configurar a coleta de dados na interface do usuário, consulte a [visão geral completa da coleta de dados](../../../collection/e2e.md).
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a acessar a interface do usuário da coleta de dados usando o espaço de trabalho de fontes. Para obter mais informações sobre Coleção de dados, consulte [Visão geral da coleção de dados](../../../collection/e2e.md).
+Ao ler este documento, você aprendeu a acessar a interface da Coleção de dados usando o espaço de trabalho de fontes. Para obter mais informações sobre a Coleção de dados, consulte a [Visão geral da coleção de dados](../../../collection/e2e.md).

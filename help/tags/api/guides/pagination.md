@@ -1,16 +1,17 @@
 ---
-title: Paginação de respostas na API do reator
-description: Saiba como paginar resultados ao listar recursos na API de reator.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+title: Paginação de respostas na API do Reactor
+description: Saiba como paginar resultados ao listar recursos na API do Reactor.
+exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Paginação de respostas na API do reator
+# Paginação de respostas na API do Reactor
 
-As respostas retornadas pela API do Reator são paginadas. O tamanho padrão da página é de 25 elementos. Detalhes sobre a paginação são relatados na seção `meta.pagination `do objeto de resposta da API:
+As respostas retornadas pela API do Reactor são paginadas. O tamanho de página padrão é de 25 elementos. Há detalhes sobre a paginação na seção `meta.pagination `do objeto de resposta da API:
 
 ```json
 "meta": {

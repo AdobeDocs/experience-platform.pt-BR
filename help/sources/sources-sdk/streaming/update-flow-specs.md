@@ -1,6 +1,6 @@
 ---
-title: Atualizar especificações de fluxo para SDK de transmissão usando a API de Serviço de Fluxo
-description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de Serviço de Fluxo para Fontes de Autoatendimento (SDK de Streaming).
+title: Atualizar especificações de fluxo para SDK de streaming usando a API de serviço de fluxo
+description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de serviço de fluxo para fontes de autoatendimento (SDK de transmissão).
 hide: true
 hidefromtoc: true
 source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
@@ -10,21 +10,21 @@ ht-degree: 2%
 
 ---
 
-# Atualize as especificações de fluxo usando o [!DNL Flow Service] API
+# Atualizar especificações de fluxo usando o [!DNL Flow Service] API
 
 Depois de gerar uma nova ID de especificação de conexão, você deve adicionar essa ID a uma especificação de fluxo para criar um fluxo de dados.
 
-As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de agendamento necessários para gerar um fluxo. É possível editar as especificações de fluxo usando o `/flowSpecs` endpoint .
+As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de programação necessários para gerar um fluxo. É possível editar as especificações de fluxo usando a `/flowSpecs` terminal.
 
-O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando o [!DNL Flow Service] API para fontes de autoatendimento (SDK de streaming).
+O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando o [!DNL Flow Service] API para fontes de autoatendimento (SDK de transmissão).
 
 ## Introdução
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Pesquisar uma especificação de fluxo {#lookup}
 
-Fontes criadas com o `generic-streaming` usar o modelo `GenericStreamingAEP` especificação do fluxo. Essa especificação de fluxo pode ser recuperada fazendo uma solicitação de GET para o `/flowSpecs/` endpoint e fornecer a variável `flowSpec.id` de `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Fontes criadas com o `generic-streaming` todos os modelos usam o `GenericStreamingAEP` especificação de fluxo. Essa especificação de fluxo pode ser recuperada fazendo uma solicitação GET ao `/flowSpecs/` terminal, e fornecendo a `flowSpec.id` de `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **Formato da API**
 
@@ -34,7 +34,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Solicitação**
 
-A solicitação a seguir recupera o `e77fde5a-22a8-11ed-861d-0242ac120002` especificação do fluxo.
+A solicitação a seguir recupera o `e77fde5a-22a8-11ed-861d-0242ac120002` especificação de fluxo.
 
 ```shell
 curl -X GET \
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo consultado.
+Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo consultada.
 
 ```json
 {
@@ -146,11 +146,11 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo consul
 
 ## Atualizar uma especificação de fluxo {#update}
 
-Você pode atualizar os campos de uma especificação de fluxo por meio de uma operação PUT. Ao atualizar uma especificação de fluxo por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de fluxo em uma solicitação de POST.
+Você pode atualizar os campos de uma especificação de fluxo por meio de uma operação PUT. Ao atualizar uma especificação de fluxo por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de fluxo em uma solicitação POST.
 
 >[!IMPORTANT]
 >
->Ao criar uma especificação de conexão para uma nova fonte, é necessário adicionar sua ID de especificação ao `sourceConnectionSpecIds` matriz das especificações de fluxo que correspondem à sua origem. Isso garante que sua nova fonte seja compatível com uma especificação de fluxo existente, permitindo concluir o processo de criação do fluxo de dados com a nova fonte.
+>Ao criar uma especificação de conexão para uma nova origem, você deve adicionar sua ID de especificação à `sourceConnectionSpecIds` matriz das especificações de fluxo que correspondem à sua origem. Isso garante que a nova origem seja suportada por uma especificação de fluxo existente, permitindo que você conclua o processo de criação do fluxo de dados com a nova origem.
 
 **Formato da API**
 
@@ -160,7 +160,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Solicitação**
 
-A solicitação a seguir atualiza a especificação do fluxo de `e77fde5a-22a8-11ed-861d-0242ac120002` para incluir a ID da especificação de conexão `bdb5b792-451b-42de-acf8-15f3195821de`.
+A solicitação a seguir atualiza a especificação de fluxo de `e77fde5a-22a8-11ed-861d-0242ac120002` para incluir a ID de especificação de conexão `bdb5b792-451b-42de-acf8-15f3195821de`.
 
 ```shell
 PUT -X GET \
@@ -262,7 +262,7 @@ PUT -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo consultado, incluindo sua lista atualizada de `sourceConnectionSpecIds`.
+Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo consultada, incluindo sua lista atualizada de `sourceConnectionSpecIds`.
 
 ```json
 {
@@ -364,4 +364,4 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo consul
 
 ## Próximas etapas
 
-Com sua nova especificação de conexão adicionada à especificação de fluxo apropriada, agora você pode continuar testando e enviando sua nova fonte. Consulte o guia sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.
+Com a nova especificação de conexão adicionada à especificação de fluxo apropriada, você pode prosseguir com o teste e o envio da nova origem. Consulte o guia sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.

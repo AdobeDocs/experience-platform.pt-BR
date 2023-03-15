@@ -1,10 +1,11 @@
 ---
 title: Implementação de bibliotecas de terceiros
-description: Saiba mais sobre os diferentes métodos de hospedagem de bibliotecas de terceiros nas extensões de tags da Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre os diferentes métodos de hospedagem de bibliotecas de terceiros em suas extensões de tag da Adobe Experience Platform.
+exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1330'
-ht-degree: 67%
+ht-degree: 98%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Um dos principais objetivos das extensões de tags no Adobe Experience Platform é permitir que você implemente facilmente as tecnologias de marketing (bibliotecas) existentes no seu site. Usando extensões, você pode implementar bibliotecas fornecidas por redes de entrega de conteúdo (CDNs) de terceiros sem precisar editar manualmente o HTML do seu site.
+Uma das principais finalidades das extensões de tag na Adobe Experience Platform é permitir a fácil implementação das tecnologias de marketing existentes (bibliotecas) em seu site. Usando extensões, você pode implementar bibliotecas fornecidas por redes de entrega de conteúdo (CDNs) de terceiros sem precisar editar manualmente o HTML do seu site.
 
-Existem vários métodos para hospedar bibliotecas de terceiros (fornecedores) nas suas extensões. Este documento fornece uma visão geral desses diferentes métodos de implementação, incluindo os prós e contras de cada um.
+Existem vários métodos para hospedar bibliotecas de terceiros (fornecedores) em suas extensões. Este documento fornece uma visão geral desses diferentes métodos de implementação, incluindo os prós e contras de cada um.
 
 ## Pré-requisitos
 
@@ -32,13 +33,13 @@ Em geral, os códigos base para tecnologias de marketing executam alguma variant
 1. Carregar a biblioteca do fornecedor.
 1. Fazer uma série de chamadas iniciais em fila para a função global para fins de configuração e rastreamento.
 
-Quando a função global é configurada inicialmente, você ainda pode fazer chamadas para a função antes que a biblioteca termine de ser carregada. Todas as chamadas feitas são adicionadas ao mecanismo de enfileiramento do código base e, em seguida, são executadas em ordem sequencial quando a biblioteca é carregada.
+Quando a função global é configurada inicialmente, você ainda pode fazer chamadas para a função antes que a biblioteca termine de ser carregada. As chamadas feitas são adicionadas ao mecanismo de enfileiramento do código base e são executadas em ordem sequencial depois que a biblioteca é carregada.
 
 Quando a biblioteca terminar de ser carregada, a função global será substituída por uma nova que ignora a fila e, em vez disso, processa imediatamente quaisquer chamadas futuras para a função.
 
 ### Exemplo de código base
 
-O seguinte JavaScript é um exemplo de um código base não minificado para a [tag de conversão do Pinterest](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), que será referenciada posteriormente neste documento para demonstrar como o código base será adaptado para diferentes estratégias de implementação com tags:
+O JavaScript a seguir é um exemplo de um código base não minimificado para a [tag de conversão do Pinterest](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), que será mencionado posteriormente neste documento para demonstrar como o código base deve ser adaptado a diferentes estratégias de implementação com tags:
 
 ```js
 !function(scriptUrl) {
@@ -83,11 +84,11 @@ O código base cria um elemento de script, define-o para ser carregado de forma 
 
 ## Opções de implementação de tags
 
-As seções abaixo demonstram as diferentes maneiras de carregar bibliotecas de fornecedores em suas extensões, usando o código base do Pinterest mostrado anteriormente como exemplo. Cada um desses exemplos envolve a criação de um tipo de ação [para uma extensão da Web](./web/action-types.md) que carrega a biblioteca no seu site.
+As seções abaixo demonstram as diferentes maneiras de carregar bibliotecas de fornecedores em suas extensões, usando o código base do Pinterest mostrado anteriormente como exemplo. Cada um desses exemplos envolve a criação de um [tipo de ação para uma extensão da Web](./web/action-types.md) que carrega a biblioteca em seu site.
 
 >[!NOTE]
 >
->Embora os exemplos abaixo usem tipos de ação para fins de demonstração, você pode aplicar os mesmos princípios a qualquer função que carregue a biblioteca de tags no site.
+>Embora os exemplos abaixo utilizem tipos de ação para fins de demonstração, você pode aplicar os mesmos princípios a qualquer função que carregue a biblioteca de tags no seu site.
 
 
 Os métodos seguintes são abrangidos:
@@ -106,7 +107,7 @@ Os métodos seguintes são abrangidos:
 
 O método mais comum para a hospedagem da biblioteca do fornecedor é usar a CDN do fornecedor. Como o código base da maioria das bibliotecas de fornecedores já está configurado para carregar a biblioteca por meio da CDN do fornecedor, você pode configurar sua extensão para carregar a biblioteca do mesmo local.
 
-Essa abordagem geralmente é a mais fácil de manter, pois todas as atualizações feitas no arquivo no CDN serão carregadas automaticamente pela extensão.
+Essa abordagem geralmente é a mais fácil de manter, já que qualquer atualização feita no arquivo na CDN será carregada automaticamente pela extensão.
 
 Ao usar esse método, basta colar o código base inteiro diretamente em um tipo de ação como:
 
@@ -163,7 +164,7 @@ module.exports = function() {
 
 O uso de um CDN de fornecedor para hospedagem de biblioteca apresenta vários riscos: o CDN pode falhar, o arquivo pode ser atualizado com um erro crítico a qualquer momento ou o arquivo pode ser comprometido para fins prejudiciais.
 
-Para resolver essas preocupações, você pode optar por incluir a biblioteca do fornecedor como um arquivo separado na extensão. A extensão pode ser configurada para que o arquivo seja hospedado junto com a biblioteca principal de tags. No tempo de execução, a extensão carrega a biblioteca do fornecedor do mesmo servidor que entregou a biblioteca principal ao site.
+Para resolver essas preocupações, você pode optar por incluir a biblioteca do fornecedor como um arquivo separado na extensão. A extensão pode ser configurada para que o arquivo seja hospedado junto com a biblioteca de tags principal. No tempo de execução, a extensão carrega a biblioteca do fornecedor do mesmo servidor que entregou a biblioteca principal ao site.
 
 >[!IMPORTANT]
 >
@@ -171,7 +172,7 @@ Para resolver essas preocupações, você pode optar por incluir a biblioteca do
 
 Para implementar isso, você deve primeiro baixar a biblioteca de fornecedores em seu computador. No caso do Pinterest, a biblioteca de fornecedores é encontrada em [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js). Depois de baixar o arquivo, você deve colocá-lo no projeto de extensão. No exemplo abaixo, o arquivo é denominado `pinterest.js` e está localizado em uma pasta `vendor` no diretório do projeto.
 
-Depois que o arquivo de biblioteca estiver em seu projeto, você deverá atualizar seu [manifesto de extensão](./manifest.md) (`extension.json`) para indicar que a biblioteca do fornecedor deve ser entregue junto com a biblioteca principal de tags. Isso é feito adicionando o caminho ao arquivo de biblioteca a uma matriz `hostedLibFiles`:
+Assim que o arquivo de biblioteca estiver em seu projeto, você deverá atualizar o [manifesto de extensão](./manifest.md) (`extension.json`) para indicar que a biblioteca de fornecedores deve ser entregue juntamente com a biblioteca de tags principal. Isso é feito adicionando o caminho ao arquivo de biblioteca a uma matriz `hostedLibFiles`:
 
 ```json
 {
@@ -200,11 +201,11 @@ module.exports = function() {
 };
 ```
 
-É importante observar que, ao usar esse método, você deve atualizar manualmente o arquivo do fornecedor baixado sempre que a biblioteca for atualizada no CDN e liberar as alterações em uma nova versão da extensão.
+É importante observar que, ao usar esse método, você deverá atualizar manualmente o arquivo do fornecedor baixado sempre que a biblioteca for atualizada na CDN e liberar as alterações em uma nova versão da extensão.
 
 ### Incorporar a biblioteca diretamente
 
-Você pode ignorar a necessidade de carregar a biblioteca do fornecedor por completo, incorporando diretamente o código da biblioteca ao próprio código de ação, o que efetivamente o torna parte da biblioteca de tags principal. O uso desse método aumenta o tamanho da biblioteca principal, mas evita a necessidade de fazer uma solicitação HTTP adicional para recuperar um arquivo separado.
+Você pode ignorar a necessidade de carregar a biblioteca de fornecedores por completo, incorporando diretamente o código da biblioteca no próprio código de ação, o que de fato o torna parte da biblioteca de tags principal. O uso desse método aumenta o tamanho da biblioteca principal, mas evita a necessidade de fazer uma solicitação HTTP adicional para recuperar um arquivo separado.
 
 Usando o código de ação criado na [seção anterior](#vendor-host) como ponto de partida, você pode substituir a linha em que o script é carregado pelo conteúdo do próprio script:
 
@@ -227,6 +228,6 @@ module.exports = function() {
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral dos diferentes métodos de hospedagem de bibliotecas de terceiros nas extensões de tags. Embora os exemplos fornecidos tenham se concentrado nas bibliotecas, essas técnicas se aplicam a qualquer parte do código que sua extensão possa utilizar.
+Este documento forneceu uma visão geral dos diferentes métodos para hospedar bibliotecas de terceiros nas extensões de tags. Embora os exemplos fornecidos tenham se concentrado nas bibliotecas, essas técnicas se aplicam a qualquer parte do código que sua extensão possa utilizar.
 
 Consulte a documentação vinculada a este guia para saber mais sobre as ferramentas para configurar suas extensões, incluindo os tipos de ação, o manifesto da extensão, os módulos principais e o objeto turbine.

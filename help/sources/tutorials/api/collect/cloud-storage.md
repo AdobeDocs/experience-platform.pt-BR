@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, dados de armazenamento na nuvem
+keywords: Experience Platform;página inicial;tópicos populares;dados de armazenamento na nuvem
 solution: Experience Platform
-title: Criar um fluxo de dados para fontes de armazenamento em nuvem usando a API do serviço de fluxo
+title: Criar um fluxo de dados para fontes de armazenamento na nuvem usando a API do serviço de fluxo
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Platform usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,36 +12,36 @@ ht-degree: 2%
 
 ---
 
-# Crie um fluxo de dados para fontes de armazenamento em nuvem usando o [!DNL Flow Service] API
+# Crie um fluxo de dados para fontes de armazenamento na nuvem usando o [!DNL Flow Service] API
 
-Este tutorial aborda as etapas para recuperar dados de uma fonte de armazenamento em nuvem e trazê-los para a Platform usando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para recuperar dados de uma fonte de armazenamento na nuvem e trazê-los para a Platform usando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de armazenamento na nuvem. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#cloud-storage) para obter uma lista de fontes de armazenamento em nuvem com as quais você pode criar uma conexão básica.
+>Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de armazenamento na nuvem. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#cloud-storage) para obter uma lista de fontes de armazenamento na nuvem com as quais você pode criar uma conexão básica.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   - [Noções básicas da composição do schema](../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Guia do desenvolvedor do Registro de Schema](../../../../xdm/api/getting-started.md): Inclui informações importantes que você precisa saber para executar com sucesso chamadas para a API do Registro de Esquema. Isso inclui as `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+   - [Noções básicas da composição do esquema](../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+   - [Guia do desenvolvedor do Registro de esquema](../../../../xdm/api/getting-started.md): inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro de esquema. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Aceitar e seus valores possíveis).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no Experience Platform.
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): A API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
-- [Sandboxes](../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
+- [Sandboxes](../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../landing/api-guide.md).
 
 ## Criar uma conexão de origem {#source}
 
-Você pode criar uma conexão de origem fazendo uma solicitação de POST para o `sourceConnections` ponto final de [!DNL Flow Service] API ao fornecer a ID de conexão básica, o caminho para o arquivo de origem que você deseja assimilar e a ID de especificação de conexão correspondente da fonte.
+Você pode criar uma conexão de origem fazendo uma solicitação POST para o `sourceConnections` endpoint de [!DNL Flow Service] ao fornecer a ID de conexão básica, o caminho para o arquivo de origem que você deseja assimilar e a ID de especificação de conexão correspondente à origem.
 
-Ao criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
+Ao criar uma conexão de origem, você também deve definir um valor de enumeração para o atributo de formato de dados.
 
-Use os seguintes valores enum para fontes baseadas em arquivo:
+Use os seguintes valores de enumeração para fontes baseadas em arquivo:
 
 | Formato dos dados | Valor de enumeração |
 | ----------- | ---------- |
@@ -92,15 +92,15 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `baseConnectionId` | A ID de conexão básica da fonte de armazenamento em nuvem. |
-| `data.format` | O formato dos dados que você deseja trazer para a plataforma. Os valores compatíveis são: `delimited`, `JSON`e `parquet`. |
+| `baseConnectionId` | A ID de conexão básica da sua fonte de armazenamento na nuvem. |
+| `data.format` | O formato dos dados que você deseja trazer para a Platform. Os valores compatíveis são: `delimited`, `JSON`, e `parquet`. |
 | `data.properties` | (Opcional) Um conjunto de propriedades que você pode aplicar aos seus dados ao criar uma conexão de origem. |
-| `data.properties.columnDelimiter` | (Opcional) Um delimitador de coluna de caractere único que pode ser especificado ao coletar arquivos simples. Qualquer valor de caractere único é um delimitador de coluna permitido. Se não for fornecida, uma vírgula (`,`) é usada como o valor padrão. **Observação**: O `columnDelimiter` só pode ser usada ao assimilar arquivos delimitados. |
-| `data.properties.encoding` | (Opcional) Uma propriedade que define o tipo de codificação a ser usado ao assimilar seus dados na Platform. Os tipos de codificação compatíveis são: `UTF-8` e `ISO-8859-1`. **Observação**: O `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
-| `data.properties.compressionType` | (Opcional) Uma propriedade que define o tipo de arquivo compactado para assimilação. Os tipos de arquivos compactados compatíveis são: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`e `tar`. **Observação**: O `compressionType` A propriedade só pode ser usada ao assimilar arquivos delimitados ou JSON. |
-| `params.path` | O caminho do arquivo de origem que você está acessando. Esse parâmetro indica um arquivo individual ou uma pasta inteira.  **Observação**: Você pode usar um asterisco no lugar do nome do arquivo para especificar a assimilação de uma pasta inteira. Por exemplo: `/acme/summerCampaign/*.csv` ingerirá todo o `/acme/summerCampaign/` pasta. |
-| `params.type` | O tipo de arquivo do arquivo de dados de origem que você está assimilando. Tipo de uso `file` para assimilar um arquivo individual e usar o tipo `folder` para assimilar uma pasta inteira. |
-| `connectionSpec.id` | A ID da especificação de conexão associada à fonte de armazenamento em nuvem específica. Consulte a [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
+| `data.properties.columnDelimiter` | (Opcional) Um delimitador de coluna de caractere único que você pode especificar ao coletar arquivos simples. Qualquer valor de caractere único é um delimitador de coluna permitido. Se não for fornecido, uma vírgula (`,`) é usado como valor padrão. **Nota**: A variável `columnDelimiter` A propriedade só pode ser usada ao assimilar arquivos delimitados. |
+| `data.properties.encoding` | (Opcional) Uma propriedade que define o tipo de codificação a ser usado ao assimilar seus dados na Platform. Os tipos de codificação compatíveis são: `UTF-8` e `ISO-8859-1`. **Nota**: A variável `encoding` O parâmetro só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivo serão assimilados com a codificação padrão, `UTF-8`. |
+| `data.properties.compressionType` | (Opcional) Uma propriedade que define o tipo de arquivo compactado para assimilação. Os tipos de arquivos compactados compatíveis são: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, e `tar`. **Nota**: A variável `compressionType` A propriedade só pode ser usada ao assimilar arquivos delimitados ou JSON. |
+| `params.path` | O caminho do arquivo de origem que você está acessando. Esse parâmetro aponta para um arquivo individual ou uma pasta inteira.  **Nota**: Você pode usar um asterisco no lugar do nome do arquivo para especificar a assimilação de uma pasta inteira. Por exemplo: `/acme/summerCampaign/*.csv` assimilará todo o `/acme/summerCampaign/` pasta. |
+| `params.type` | O tipo do arquivo de dados de origem que você está assimilando. Tipo de uso `file` para assimilar um arquivo individual e usar o tipo `folder` para assimilar uma pasta inteira. |
+| `connectionSpec.id` | A ID de especificação de conexão associada à sua fonte de armazenamento em nuvem específica. Consulte a [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
 
 **Resposta**
 
@@ -113,9 +113,9 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 }
 ```
 
-### Use expressões regulares para selecionar um conjunto específico de arquivos para assimilação {#regex}
+### Usar expressões regulares para selecionar um conjunto específico de arquivos para assimilação {#regex}
 
-Você pode usar expressões regulares para assimilar um conjunto específico de arquivos da origem para a Plataforma ao criar uma conexão de origem.
+Você pode usar expressões regulares para assimilar um conjunto específico de arquivos da origem para a Platform ao criar uma conexão de origem.
 
 **Formato da API**
 
@@ -155,7 +155,7 @@ curl -X POST \
 
 ### Configurar uma conexão de origem para assimilar dados recursivamente
 
-Ao criar uma conexão de origem, você pode usar a variável `recursive` para assimilar dados de pastas profundamente aninhadas.
+Ao criar uma conexão de origem, você pode usar o `recursive` para assimilar dados de pastas profundamente aninhadas.
 
 **Formato da API**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **Solicitação**
 
-No exemplo abaixo, a variável `recursive: true` informa o parâmetro [!DNL Flow Service] para ler todas as subpastas recursivamente durante o processo de ingestão.
+No exemplo abaixo, a variável `recursive: true` informações do parâmetro [!DNL Flow Service] para ler todas as subpastas recursivamente durante o processo de assimilação.
 
 ```shell
 curl -X POST \
@@ -196,23 +196,23 @@ curl -X POST \
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de destino é usado para criar um conjunto de dados da plataforma no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
 
-Um esquema XDM de destino pode ser criado executando-se uma solicitação de POST para a [API do Registro de Schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial em [criação de um schema usando a API](../../../../xdm/api/schemas.md).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](../../../../xdm/api/schemas.md).
 
 ## Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação de POST para a [API do Serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema do target no payload.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
 
-Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial em [criação de um conjunto de dados usando a API](../../../../catalog/api/create-dataset.md).
+Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../catalog/api/create-dataset.md).
 
 ## Criar uma conexão de destino {#target-connection}
 
-Uma conexão target representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa associada ao Data Lake. Essa ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão de destino representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, você deve fornecer a ID de especificação da conexão fixa associada ao Data Lake. Esta ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Agora você tem os identificadores exclusivos em um esquema de destino em um conjunto de dados de destino e a ID de especificação de conexão no Data Lake. Usando esses identificadores, você pode criar uma conexão de target usando o [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação da conexão para o Data Lake. Usando esses identificadores, você pode criar uma conexão de destino usando o [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -251,14 +251,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `data.schema.id` | O `$id` do esquema XDM de destino. |
-| `data.schema.version` | A versão do schema. Este valor deve ser definido `application/vnd.adobe.xed-full+json;version=1`, que retorna a versão secundária mais recente do esquema. |
+| `data.schema.id` | A variável `$id` do esquema XDM do público-alvo. |
+| `data.schema.version` | A versão do esquema. Este valor deve ser definido `application/vnd.adobe.xed-full+json;version=1`, que retorna a versão secundária mais recente do esquema. |
 | `params.dataSetId` | A ID do conjunto de dados de destino. |
-| `connectionSpec.id` | A ID de especificação de conexão fixa para o Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | A ID de especificação da conexão fixa para o Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária em etapas posteriores.
+Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária nas etapas posteriores.
 
 ```json
 {
@@ -269,13 +269,13 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 
 ## Criar um mapeamento {#mapping}
 
-Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o schema de destino ao qual o conjunto de dados de destino adere.
+Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o esquema de destino ao qual o conjunto de dados de destino adere.
 
-Para criar um conjunto de mapeamento, faça uma solicitação de POST para a função `mappingSets` endpoint da variável [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) ao fornecer seu esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
+Para criar um conjunto de mapeamento, faça uma solicitação POST ao `mappingSets` endpoint do [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) ao fornecer o esquema XDM do público-alvo `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 >[!TIP]
 >
->Você pode mapear tipos de dados complexos, como matrizes em arquivos JSON, usando um conector de origem de armazenamento na nuvem.
+>Você pode mapear tipos de dados complexos, como matrizes em arquivos JSON, usando um conector de origem de armazenamento em nuvem.
 
 **Formato da API**
 
@@ -329,7 +329,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdmSchema` | A ID do esquema XDM de destino. |
+| `xdmSchema` | A ID do esquema XDM do público-alvo. |
 
 **Resposta**
 
@@ -346,9 +346,9 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 }
 ```
 
-## Recuperar especificações do fluxo de dados {#specs}
+## Recuperar especificações de fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a plataforma. Para criar um fluxo de dados, primeiro você deve obter as especificações do fluxo de dados responsáveis pela coleta de dados do armazenamento em nuvem.
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a Platform. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados responsáveis pela coleta dos dados de armazenamento na nuvem.
 
 **Formato da API**
 
@@ -368,13 +368,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->A carga de resposta JSON abaixo está oculta para brevidade. Selecione &quot;payload&quot; para ver a carga da resposta.
+>A carga de resposta JSON abaixo está oculta por brevidade. Selecione &quot;carga&quot; para ver a carga de resposta.
 
-+++ Exibir carga
++++ Exibir conteúdo
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados responsável por trazer os dados da fonte para a Plataforma. A resposta inclui as especificações exclusivas de fluxo `id` necessário para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dados responsáveis por trazer os dados de sua origem para a Platform. A resposta inclui a especificação de fluxo exclusiva `id` necessário para criar um novo fluxo de dados.
 
 ```json
 {
@@ -589,24 +589,24 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dad
 
 ## Criar um fluxo de dados
 
-A última etapa para coletar dados de armazenamento em nuvem é criar um fluxo de dados. Por enquanto, você terá os seguintes valores obrigatórios preparados:
+A última etapa para coletar dados de armazenamento na nuvem é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
-- [ID de conexão de origem](#source)
-- [ID de conexão do Target](#target)
-- [ID de mapeamento](#mapping)
-- [ID de especificação do fluxo de dados](#specs)
+- [ID da conexão de origem](#source)
+- [ID da conexão de destino](#target)
+- [ID do mapeamento](#mapping)
+- [ID da especificação do fluxo de dados](#specs)
 
-Um fluxo de dados é responsável por agendar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação de POST e, ao mesmo tempo, fornecendo os valores mencionados anteriormente dentro da carga útil.
+Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
 >[!NOTE]
 >
->Para assimilação em lote, cada fluxo de dados subsequente seleciona arquivos a serem assimilados da sua origem com base em seus **última modificação** timestamp. Isso significa que os fluxos de dados em lote selecionam arquivos da origem que são novos ou foram modificados desde a última execução do fluxo de dados.
+>Para assimilação em lote, cada fluxo de dados subsequente seleciona arquivos que serão assimilados de sua origem com base em seus **última modificação** carimbo de data e hora. Isso significa que os fluxos de dados em lote selecionam arquivos da origem que são novos ou que foram modificados desde a última execução do fluxo de dados.
 
-Para agendar uma assimilação, primeiro defina o valor de hora de início como época em segundos. Em seguida, você deve definir o valor de frequência para uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor de intervalo designa o período entre duas ingestões consecutivas e a criação de uma ingestão única não requer a definição de um intervalo. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou superior a `15`.
+Para agendar uma assimilação, primeiro defina o valor da hora inicial como a época em segundos. Em seguida, defina o valor de frequência como uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor do intervalo designa o período entre duas assimilações consecutivas e a criação de uma assimilação única não requer que um intervalo seja definido. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
 
 >[!IMPORTANT]
 >
->É altamente recomendável agendar seu fluxo de dados para uma ingestão única ao usar a variável [Conector FTP](../../../connectors/cloud-storage/ftp.md).
+>É altamente recomendável agendar seu fluxo de dados para assimilação única ao usar o [Conector FTP](../../../connectors/cloud-storage/ftp.md).
 
 **Formato da API**
 
@@ -655,13 +655,13 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `flowSpec.id` | O [ID de especificação de fluxo](#specs) recuperada na etapa anterior. |
-| `sourceConnectionIds` | O [ID de conexão de origem](#source) recuperada em uma etapa anterior. |
-| `targetConnectionIds` | O [target connection ID](#target-connection) recuperada em uma etapa anterior. |
-| `transformations.params.mappingId` | O [ID de mapeamento](#mapping) recuperada em uma etapa anterior. |
+| `flowSpec.id` | A variável [ID de especificação de fluxo](#specs) recuperado na etapa anterior. |
+| `sourceConnectionIds` | A variável [ID da conexão de origem](#source) recuperado em uma etapa anterior. |
+| `targetConnectionIds` | A variável [ID da conexão de destino](#target-connection) recuperado em uma etapa anterior. |
+| `transformations.params.mappingId` | A variável [ID do mapeamento](#mapping) recuperado em uma etapa anterior. |
 | `scheduleParams.startTime` | A hora de início do fluxo de dados em época. |
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
-| `scheduleParams.interval` | O intervalo designa o período entre duas execuções consecutivas de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero. O intervalo não é necessário quando a frequência é definida como `once` e deve ser maior que ou igual a `15` para outros valores de frequência. |
+| `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. O valor do intervalo deve ser um inteiro diferente de zero. O intervalo não é necessário quando a frequência está definida como `once` e deve ser maior ou igual a `15` para outros valores de frequência. |
 
 **Resposta**
 
@@ -674,30 +674,30 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 }
 ```
 
-## Monitorar o fluxo de dados
+## Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados tiver sido criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial em [monitoramento de fluxos de dados na API](../monitor.md)
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados na API](../monitor.md)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um conector de origem para coletar dados do armazenamento em nuvem de forma agendada. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você criou um conector de origem para coletar dados do armazenamento na nuvem de forma programada. Os dados de entrada agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-- [Visão geral do perfil do cliente em tempo real](../../../../profile/home.md)
-- [Visão geral do Data Science Workspace](../../../../data-science-workspace/home.md)
+- [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
+- [Visão geral do Espaço de trabalho de ciência de dados](../../../../data-science-workspace/home.md)
 
 ## Apêndice {#appendix}
 
-A seção a seguir lista os diferentes conectores de origem de armazenamento em nuvem e suas especificações de conexões.
+A seção a seguir lista os diferentes conectores de origem de armazenamento na nuvem e suas especificações de conexão.
 
 ### Especificação de conexão
 
-| Nome do conector | Especificação de conexão |
+| Nome do conector | Especificação da conexão |
 | -------------- | --------------- |
 | [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
 | [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | [!DNL Azure Blob] (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` |
-| [!DNL Azure Event Hubs] (Hubs de eventos) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| [!DNL Azure Event Hubs] (Hubs de Eventos) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |

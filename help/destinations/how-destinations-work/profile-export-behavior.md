@@ -3,7 +3,7 @@ title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos Experience Platform.
 source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2942'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Em relação aos dados exportados para um determinado perfil, é importante ente
 |---------|----------|
 | <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se qualquer segmento mapeado alterar os estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para destinos corporativos no momento, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>A variável `segmentMembership` objeto inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) como o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades na `identityMap` Os objetos também estão incluídos (no momento, o Experience Platform não oferece suporte ao mapeamento de identidade no destino corporativo).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -110,7 +110,7 @@ Em relação aos dados exportados para um determinado perfil, é importante ente
 |---------|----------|
 | <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se qualquer segmento mapeado alterar os estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Uma alteração no mapa de identidade é definida como uma identidade que é adicionada/removida para o [gráfico de identidade](/help/identity-service/ui/identity-graph-viewer.md) do perfil, para namespaces de identidade mapeados para exportação.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, para atributos que são mapeados para o destino.</li></ul> | <ul><li>Os segmentos mapeados para o destino e que foram alterados serão incluídos no `segmentMembership` objeto. Em alguns cenários, eles podem ser exportados usando várias chamadas. Além disso, em alguns cenários, alguns segmentos que não foram alterados também podem ser incluídos na chamada do. Em qualquer caso, somente os segmentos mapeados serão exportados.</li><li>Todas as identidades dos namespaces mapeadas para o destino na variável `identityMap` objetos também são incluídos.</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -175,7 +175,7 @@ A população ativa completa do segmento é exportada todos os dias.
 |---------|----------|
 | <ul><li>O agendamento de exportação definido na interface ou na API e a ação do usuário (seleção de [Exportar arquivo agora](/help/destinations/ui/export-file-now.md) na interface ou usando o [API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md)) determinar o início de uma exportação de destino.</li></ul> | Em exportações de arquivos completas, toda a população do perfil ativo de um segmento, com base na última avaliação de segmento, é incluída em cada exportação de arquivo. Os valores mais recentes para cada atributo XDM selecionado para exportação também são incluídos como colunas em cada arquivo. Observe que os perfis no status &quot;fechado&quot; não são incluídos na exportação de arquivos. |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 **Exportações incrementais de arquivos**
 
@@ -185,7 +185,7 @@ Na primeira exportação de arquivo após a configuração do fluxo de trabalho 
 |---------|----------|
 | <ul><li>O cronograma de exportação definido na interface ou na API determina o início de uma exportação de destino.</li><li>Quaisquer alterações na associação de segmento de um perfil, seja ele qualificado ou desqualificado do segmento, qualificam um perfil para ser incluído em exportações incrementais. Alterações nos atributos ou nos mapas de identidade de um perfil *não* qualifique um perfil para ser incluído em exportações incrementais.</li></ul> | <p>Os perfis para os quais a associação do segmento foi alterada, juntamente com as informações mais recentes para cada atributo XDM selecionado para exportação.</p><p>Perfis com o status de saída são incluídos em exportações de destino, se a variável `segmentMembership.status` O campo XDM é selecionado na etapa de mapeamento.</p> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!TIP]
 >

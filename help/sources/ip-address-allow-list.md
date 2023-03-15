@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, endereço ip, endereços ip, lista de permissões do endereço ip; lista de permissões
-description: Endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem.
+keywords: Experience Platform;página inicial;tópicos populares;endereço ip;endereços ip;lista de permissões de endereço ip; lista de permissões
+description: Os endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem.
 solution: Experience Platform
-title: LISTA DE PERMISSÕES de endereço IP para conexões de origem
+title: LISTA DE PERMISSÕES de Endereço IP para Conexões de Origem
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # LISTA DE PERMISSÕES de endereço IP
 
-Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o tráfego para o serviço de transferência de dados. Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes.
+Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, você pode permitir o tráfego para o serviço de transferência de dados. Os endereços IP a seguir devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens.
 
 ## VA7: América do Norte
 

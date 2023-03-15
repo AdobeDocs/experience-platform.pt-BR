@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, insights, api de aprendizado de máquina do sensei
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;tópicos populares;insights;api de aprendizado de máquina do sensei
 solution: Experience Platform
-title: Endpoint da API do Insights
-description: Os insights contêm métricas que são usadas para capacitar um cientista de dados a avaliar e escolher modelos de ML ideais ao exibir métricas de avaliação relevantes.
+title: Endpoint da API de Insights
+description: Os insights contêm métricas usadas para capacitar um cientista de dados a avaliar e escolher modelos de aprendizado de máquina ideais exibindo métricas de avaliação relevantes.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# Ponto de extremidade de insights
+# Endpoint do Insights
 
-Os insights contêm métricas que são usadas para capacitar um cientista de dados a avaliar e escolher modelos de ML ideais ao exibir métricas de avaliação relevantes.
+Os insights contêm métricas usadas para capacitar um cientista de dados a avaliar e escolher modelos de aprendizado de máquina ideais exibindo métricas de avaliação relevantes.
 
-## Recuperar uma lista de insights
+## Recuperar uma lista de Insights
 
-Você pode recuperar uma lista de Insights executando uma única solicitação de GET para o endpoint de insights.  Para ajudar a filtrar resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de queries disponíveis, consulte a seção Apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
+Você pode recuperar uma lista de Insights executando uma única solicitação do GET para o endpoint do Insights.  Para ajudar a filtrar os resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de consultas disponíveis, consulte a seção do apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -38,7 +38,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e cada insight tem um identificador exclusivo ( `id` ). Além disso, você receberá `context` que contém os identificadores exclusivos associados a esse insight específico, após os eventos e os dados de métricas do Insights.
+Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e cada insight tem um identificador exclusivo ( `id` ). Além disso, você receberá `context` que contém os identificadores exclusivos associados a esse insight específico após os eventos do Insights e os dados de métricas.
 
 ```json
 {
@@ -100,14 +100,14 @@ Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e c
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID correspondente ao Insight. |
-| `experimentId` | Uma ID de Experimento válida. |
-| `experimentRunId` | Uma ID de Execução de Experimento válida. |
+| `id` | A ID correspondente à Insight. |
+| `experimentId` | Uma ID de experimento válida. |
+| `experimentRunId` | Uma ID de execução de experimento válida. |
 | `modelId` | Uma ID de modelo válida. |
 
-## Recuperar um Insight específico
+## Recuperar uma Insight específica
 
-Para pesquisar um insight específico faça uma solicitação do GET e forneça um `{INSIGHT_ID}` no caminho da solicitação. Para ajudar a filtrar resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de queries disponíveis, consulte a seção Apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
+Para pesquisar um insight específico, faça uma solicitação do GET e forneça uma `{INSIGHT_ID}` no caminho da solicitação. Para ajudar a filtrar os resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de consultas disponíveis, consulte a seção do apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -132,7 +132,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo de insights (`id`). Além disso, você receberá `context` que contém os identificadores exclusivos associados ao insight específico após os eventos e dados de métricas do Insights.
+Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo de insights (`id`). Além disso, você receberá `context` que contém os identificadores exclusivos associados ao insight específico após os eventos do Insights e os dados de métricas.
 
 ```json
 {
@@ -163,14 +163,14 @@ Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID correspondente ao Insight. |
-| `experimentId` | Uma ID de Experimento válida. |
-| `experimentRunId` | Uma ID de Execução de Experimento válida. |
+| `id` | A ID correspondente à Insight. |
+| `experimentId` | Uma ID de experimento válida. |
+| `experimentRunId` | Uma ID de execução de experimento válida. |
 | `modelId` | Uma ID de modelo válida. |
 
-## Adicionar um novo insight de modelo
+## Adicionar um novo insight do modelo
 
-Você pode criar um novo Modelo de insight executando uma solicitação de POST e uma carga que fornece contexto, eventos e métricas para o novo Modelo de insight. O campo de contexto usado para criar um novo Model insight não é necessário para que os serviços existentes sejam anexados a ele, mas você pode optar por criar o novo Model insight com os serviços existentes fornecendo uma ou mais das IDs correspondentes:
+Você pode criar um novo insight do modelo executando uma solicitação POST e uma carga que fornece contexto, eventos e métricas para o novo insight do modelo. O campo de contexto usado para criar um novo modelo de insight não é necessário para ter serviços existentes anexados a ele, mas você pode optar por criar o novo modelo de insight com serviços existentes, fornecendo uma ou mais IDs correspondentes:
 
 ```json
 "context": {
@@ -228,7 +228,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retornará uma carga com um `{INSIGHT_ID}` e quaisquer parâmetros fornecidos na solicitação inicial.
+Uma resposta bem-sucedida retornará uma carga com uma `{INSIGHT_ID}` e quaisquer parâmetros fornecidos na solicitação inicial.
 
 ```json
 {
@@ -259,11 +259,11 @@ Uma resposta bem-sucedida retornará uma carga com um `{INSIGHT_ID}` e quaisquer
 
 | Propriedade | Descrição |
 | --- | --- |
-| `insightId` | A ID exclusiva que é criada para esse insight específico quando uma solicitação POST bem-sucedida é feita. |
+| `insightId` | A ID exclusiva criada para este insight específico quando uma solicitação POST bem-sucedida é feita. |
 
 ## Recuperar uma lista de métricas padrão para algoritmos
 
-Você pode recuperar uma lista de todas as métricas padrão e do algoritmo executando uma única solicitação do GET para o terminal de métricas. Para consultar uma métrica específica faça uma solicitação GET e forneça um valor de `{ALGORITHM}` no caminho da solicitação.
+É possível recuperar uma lista de todas as métricas padrão e de todos os algoritmos executando uma única solicitação do GET para o endpoint de métricas. Para consultar uma métrica específica, faça uma solicitação GET e forneça um parâmetro `{ALGORITHM}` no caminho da solicitação.
 
 **Formato da API**
 
@@ -291,7 +291,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui a variável `algorithm` identificador exclusivo e uma matriz de métricas padrão.
+Uma resposta bem-sucedida retorna uma carga que inclui a variável `algorithm` identificador exclusivo e uma série de métricas padrão.
 
 ```json
 {

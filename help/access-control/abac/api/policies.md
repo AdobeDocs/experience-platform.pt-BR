@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, Controle de acesso com base em atributos, controle de acesso com base em atributos
+keywords: Experience Platform;página inicial;tópicos populares;api;Controle de acesso baseado em atributo;controle de acesso baseado em atributo
 solution: Experience Platform
-title: Endpoint da API de políticas de controle de acesso
-description: O endpoint /Policies na API de Controle de acesso com base em atributo permite gerenciar programaticamente as políticas no Adobe Experience Platform.
+title: Ponto de Extremidade da API de Políticas de Controle de Acesso
+description: O ponto de extremidade /policies na API de controle de acesso baseado em atributo permite gerenciar programaticamente as políticas no Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -15,21 +15,21 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Se um token de usuário estiver sendo transmitido, o usuário do token deverá ter uma função &quot;org admin&quot; para a organização solicitada.
+>Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-As políticas de controle de acesso são instruções que unem atributos para estabelecer ações permitidas e não permitidas. Essas políticas podem ser locais ou globais e podem substituir outras políticas. O `/policies` O endpoint na API de controle de acesso baseada em atributos permite gerenciar políticas de forma programática, incluindo informações sobre as regras que as regem, bem como suas respectivas condições de assunto.
+As políticas de controle de acesso são declarações que reúnem atributos para estabelecer ações permitidas e inadmissíveis. Essas políticas podem ser locais ou globais e podem substituir outras políticas. A variável `/policies` O endpoint na API de controle de acesso baseado em atributos permite gerenciar políticas de forma programática, incluindo informações sobre as regras que as governam, bem como suas respectivas condições de assunto.
 
 >[!IMPORTANT]
 >
->Esse endpoint não deve ser confundido com a variável `/policies` endpoint no [API do serviço de política](../../../data-governance/api/policies.md), que é usada para gerenciar políticas de uso de dados.
+>Esse endpoint não deve ser confundido com o `/policies` endpoint na variável [API de serviço de política](../../../data-governance/api/policies.md), que é usado para gerenciar políticas de uso de dados.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de políticas {#list}
 
-Faça uma solicitação do GET para `/policies` endpoint para listar todas as políticas existentes na organização.
+Faça uma solicitação GET para o `/policies` endpoint para listar todas as políticas existentes em sua organização.
 
 **Formato da API**
 
@@ -133,24 +133,24 @@ Uma resposta bem-sucedida retorna uma lista de políticas existentes.
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID que corresponde a uma política. Esse identificador é gerado automaticamente e pode ser usado para pesquisar, atualizar e excluir uma política. |
-| `imsOrgId` | A organização na qual a política consultada está acessível. |
+| `imsOrgId` | A organização onde a política consultada está acessível. |
 | `createdBy` | A ID do usuário que criou a política. |
-| `createdAt` | A hora em que a política foi criada. O `createdAt` é exibida no carimbo de data e hora da época unix. |
+| `createdAt` | A hora em que a política foi criada. A variável `createdAt` é exibida no carimbo de data e hora unix epoch. |
 | `modifiedBy` | A ID do usuário que atualizou a política pela última vez. |
-| `modifiedAt` | A hora em que a política foi atualizada pela última vez. O `modifiedAt` é exibida no carimbo de data e hora da época unix. |
+| `modifiedAt` | A hora em que a política foi atualizada pela última vez. A variável `modifiedAt` é exibida no carimbo de data e hora unix epoch. |
 | `name` | O nome da política. |
 | `description` | (Opcional) Uma propriedade que pode ser adicionada para fornecer mais informações sobre uma política específica. |
-| `status` | O status atual de uma política. Esta propriedade define se uma política está atualmente `active` ou `inactive`. |
-| `subjectCondition` | As condições aplicadas a um assunto. Um assunto é um usuário com determinados atributos que solicita acesso a um recurso para executar uma ação. Nesse caso, `subjectCondition` são condições semelhantes a query aplicadas aos atributos de assunto. |
-| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o assunto execute com êxito uma ação no recurso. |
-| `rules.effect` | O efeito que resulta após considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
+| `status` | O status atual de uma política. Essa propriedade define se uma política está definida no momento `active` ou `inactive`. |
+| `subjectCondition` | As condições aplicadas a um assunto. Um sujeito é um usuário com determinados atributos que solicitam acesso a um recurso para executar uma ação. Nesse caso, `subjectCondition` são condições semelhantes a consultas aplicadas aos atributos do assunto. |
+| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o sujeito execute com êxito uma ação no recurso. |
+| `rules.effect` | O efeito que resulta depois de considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
 | `rules.resource` | O ativo ou objeto que um assunto pode ou não acessar.  Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
-| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um schema, um schema pode ter determinados rótulos aplicados a ele que contribuem para que uma ação contra esse schema seja permissível ou não. |
-| `rules.action` | A ação que um assunto tem permissão para fazer contra um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`e `delete`. |
+| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um esquema, um esquema poderá ter determinados rótulos aplicados que contribuem para determinar se uma ação contra esse esquema é permitida ou inadmissível. |
+| `rules.action` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`, e `delete`. |
 
 ## Pesquisar detalhes da política por ID {#lookup}
 
-Faça uma solicitação do GET para `/policies` endpoint ao fornecer uma ID de política no caminho da solicitação para recuperar informações sobre essa política individual.
+Faça uma solicitação GET para o `/policies` ao fornecer uma ID de política no caminho da solicitação para recuperar informações sobre essa política individual.
 
 **Formato da API**
 
@@ -215,25 +215,25 @@ Uma solicitação bem-sucedida retorna informações sobre a ID de política con
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID que corresponde a uma política. Esse identificador é gerado automaticamente e pode ser usado para pesquisar, atualizar e excluir uma política. |
-| `imsOrgId` | A organização na qual a política consultada está acessível. |
+| `imsOrgId` | A organização onde a política consultada está acessível. |
 | `createdBy` | A ID do usuário que criou a política. |
-| `createdAt` | A hora em que a política foi criada. O `createdAt` é exibida no carimbo de data e hora da época unix. |
+| `createdAt` | A hora em que a política foi criada. A variável `createdAt` é exibida no carimbo de data e hora unix epoch. |
 | `modifiedBy` | A ID do usuário que atualizou a política pela última vez. |
-| `modifiedAt` | A hora em que a política foi atualizada pela última vez. O `modifiedAt` é exibida no carimbo de data e hora da época unix. |
+| `modifiedAt` | A hora em que a política foi atualizada pela última vez. A variável `modifiedAt` é exibida no carimbo de data e hora unix epoch. |
 | `name` | O nome da política. |
 | `description` | (Opcional) Uma propriedade que pode ser adicionada para fornecer mais informações sobre uma política específica. |
-| `status` | O status atual de uma política. Esta propriedade define se uma política está atualmente `active` ou `inactive`. |
-| `subjectCondition` | As condições aplicadas a um assunto. Um assunto é um usuário com determinados atributos que solicita acesso a um recurso para executar uma ação. Nesse caso, `subjectCondition` são condições semelhantes a query aplicadas aos atributos de assunto. |
-| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o assunto execute com êxito uma ação no recurso. |
-| `rules.effect` | O efeito que resulta após considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
+| `status` | O status atual de uma política. Essa propriedade define se uma política está definida no momento `active` ou `inactive`. |
+| `subjectCondition` | As condições aplicadas a um assunto. Um sujeito é um usuário com determinados atributos que solicitam acesso a um recurso para executar uma ação. Nesse caso, `subjectCondition` são condições semelhantes a consultas aplicadas aos atributos do assunto. |
+| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o sujeito execute com êxito uma ação no recurso. |
+| `rules.effect` | O efeito que resulta depois de considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
 | `rules.resource` | O ativo ou objeto que um assunto pode ou não acessar.  Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
-| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um schema, um schema pode ter determinados rótulos aplicados a ele que contribuem para que uma ação contra esse schema seja permissível ou não. |
-| `rules.action` | A ação que um assunto tem permissão para fazer contra um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`e `delete`. |
+| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um esquema, um esquema poderá ter determinados rótulos aplicados que contribuem para determinar se uma ação contra esse esquema é permitida ou inadmissível. |
+| `rules.action` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`, e `delete`. |
 
 
 ## Criar uma política {#create}
 
-Para criar uma nova política, faça uma solicitação de POST para a `/policies` endpoint .
+Para criar uma nova regra, faça uma solicitação POST ao `/policies` terminal.
 
 **Formato da API**
 
@@ -273,15 +273,15 @@ curl -X POST \
 | `name` | O nome da política. |
 | `description` | (Opcional) Uma propriedade que pode ser adicionada para fornecer mais informações sobre uma política específica. |
 | `imsOrgId` | A organização que contém a política. |
-| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o assunto execute com êxito uma ação no recurso. |
-| `rules.effect` | O efeito que resulta após considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
+| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o sujeito execute com êxito uma ação no recurso. |
+| `rules.effect` | O efeito que resulta depois de considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
 | `rules.resource` | O ativo ou objeto que um assunto pode ou não acessar.  Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
-| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um schema, um schema pode ter determinados rótulos aplicados a ele que contribuem para que uma ação contra esse schema seja permissível ou não. |
-| `rules.action` | A ação que um assunto tem permissão para fazer contra um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`e `delete`. |
+| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um esquema, um esquema poderá ter determinados rótulos aplicados que contribuem para determinar se uma ação contra esse esquema é permitida ou inadmissível. |
+| `rules.action` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`, e `delete`. |
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna a política recém-criada, incluindo sua ID de política exclusiva e regras associadas.
+Uma solicitação bem-sucedida retorna a política recém-criada, incluindo sua ID de política exclusiva e as regras associadas.
 
 ```json
 {
@@ -313,16 +313,16 @@ Uma solicitação bem-sucedida retorna a política recém-criada, incluindo sua 
 | --- | --- |
 | `id` | A ID que corresponde a uma política. Esse identificador é gerado automaticamente e pode ser usado para pesquisar, atualizar e excluir uma política. |
 | `name` | O nome de uma política. |
-| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o assunto execute com êxito uma ação no recurso. |
-| `rules.effect` | O efeito que resulta após considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
+| `rules` | O conjunto de regras que define uma política. As regras definem quais combinações de atributos são autorizadas para que o sujeito execute com êxito uma ação no recurso. |
+| `rules.effect` | O efeito que resulta depois de considerar os valores para `action`, `condition` e `resource`. Os valores possíveis incluem: `permit`, `deny`ou `indeterminate`. |
 | `rules.resource` | O ativo ou objeto que um assunto pode ou não acessar.  Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
-| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um schema, um schema pode ter determinados rótulos aplicados a ele que contribuem para que uma ação contra esse schema seja permissível ou não. |
-| `rules.action` | A ação que um assunto tem permissão para fazer contra um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`e `delete`. |
+| `rules.condition` | As condições aplicadas a um recurso. Por exemplo, se um recurso for um esquema, um esquema poderá ter determinados rótulos aplicados que contribuem para determinar se uma ação contra esse esquema é permitida ou inadmissível. |
+| `rules.action` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `read`, `create`, `edit`, e `delete`. |
 
 
 ## Atualizar uma política por ID de política {#put}
 
-Para atualizar as regras de uma política individual, faça uma solicitação de PUT para a `/policies` endpoint ao fornecer a ID da política que você deseja atualizar no caminho da solicitação.
+Para atualizar as regras de uma política individual, faça uma solicitação PUT ao `/policies` ao fornecer a ID da política que você deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 
@@ -391,7 +391,7 @@ Uma resposta bem-sucedida retorna a política atualizada.
 
 ## Atualizar propriedades da política {#patch}
 
-Para atualizar as propriedades de uma política individual, faça uma solicitação de PATCH para a variável `/policies` endpoint ao fornecer a ID da política que você deseja atualizar no caminho da solicitação.
+Para atualizar as propriedades de uma política individual, faça uma solicitação PATCH ao `/policies` ao fornecer a ID da política que você deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 
@@ -426,13 +426,13 @@ curl -X PATCH \
 
 | Operações | Descrição |
 | --- | --- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID da política consultada com uma descrição atualizada.
+Uma resposta bem-sucedida retorna a ID da política consultada com a descrição atualizada.
 
 ```json
 {
@@ -462,7 +462,7 @@ Uma resposta bem-sucedida retorna a ID da política consultada com uma descriç�
 
 ## Excluir uma política {#delete}
 
-Para excluir uma política, faça uma solicitação de DELETE para a `/policies` endpoint ao fornecer a ID da política que deseja excluir.
+Para excluir uma política, faça uma solicitação DELETE ao `/policies` ao fornecer a ID da política que deseja excluir.
 
 **Formato da API**
 
@@ -472,7 +472,7 @@ DELETE /policies/{POLICY_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| {POLICY_ID} | A ID da política que deseja excluir. |
+| {POLICY_ID} | A ID da política que você deseja excluir. |
 
 **Solicitação**
 
@@ -490,4 +490,4 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
-Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para a política. Você receberá um status HTTP 404 (Not Found) porque a política foi removida da administração.
+Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para a política. Você receberá um status HTTP 404 (Não encontrado) porque a política foi removida da administração.

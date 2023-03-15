@@ -1,6 +1,6 @@
 ---
 description: Uso das guias Solução no Adobe Experience Platform Debugger
-keywords: depurador, extensão do Experience Platform Debugger, chrome, extensão, resumo, limpar, solicitações, soluções, solução, informações, analytics, target, audience manager, media otimizer, amo, serviço de id
+keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;resumo;limpar;solicitações;soluções;solução;informações;analytics;destino;audience manager;media otimizer;amo;id service
 seo-description: Using the Solution tabs in Adobe Experience Platform Debugger
 seo-title: Solution Tabs in Adobe Experience Platform Debugger
 title: Guias Solução
@@ -15,21 +15,21 @@ ht-degree: 29%
 
 # Soluções
 
-O Adobe Experience Platform Debugger fornece uma lista de **Soluções** no painel de navegação esquerdo. Selecione uma solução para ver os resultados de tecnologias Adobe Experience Cloud específicas.
+O Adobe Experience Platform Debugger fornece uma lista de **Soluções** no painel de navegação esquerdo. Selecione uma solução para ver os resultados de tecnologias específicas da Adobe Experience Cloud.
 
-![A lista de soluções disponíveis mostradas na interface do usuário do Debugger](../images/solutions/overview/left-nav.png)
+![A lista de soluções disponíveis mostrada na interface do usuário do Debugger](../images/solutions/overview/left-nav.png)
 
 ## SDK da Web da Adobe Experience Platform {#aep}
 
-A tela do SDK da Web da Adobe Experience Platform mostra informações sobre o SDK da Web da Adobe Experience Platform. Selecionar **[!UICONTROL Configurar]** para ativar ou desativar o registro de log do console.
+A tela do SDK da Web da Adobe Experience Platform mostra informações sobre o SDK da Web da Adobe Experience Platform. Selecionar **[!UICONTROL Configurar]** para ativar ou desativar o registro do console.
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-O [!UICONTROL Analytics] A guia fornece informações sobre [Implementação do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=pt-BR).
+A variável [!UICONTROL Analytics] A guia fornece informações sobre [Implementação do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=pt-BR).
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-Use o [!UICONTROL Target] tela a ser exibida [Adobe Target](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) solicitações ou [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) detalhes da resposta.
+Use o [!UICONTROL Target] tela para exibir [Adobe Target](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) solicitações ou [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) detalhes da resposta.
 
 Consulte o guia sobre [uso do Debugger para implementações do Target](./target.md) para obter mais informações.
 
@@ -39,12 +39,12 @@ Use o [[!UICONTROL Audience Manager]](https://docs.adobe.com/content/help/pt-BR/
 
 ## [!UICONTROL Tags do Adobe Experience Platform] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
-Use o [!UICONTROL Tags do Adobe Experience Platform] para exibir solicitações de tag. Você também pode selecionar **[!UICONTROL Configuração]** para configurar [códigos incorporados](../../tags/ui/publishing/environments.md#embed-code). Você pode editar, substituir ou adicionar mais códigos incorporados no Experience Platform Debugger. Se você fizer logon, será possível selecionar uma propriedade alternativa usando os menus suspensos.
+Use o [!UICONTROL Tags do Adobe Experience Platform] para exibir solicitações de tag. Também é possível selecionar **[!UICONTROL Configuração]** para configurar [códigos incorporados](../../tags/ui/publishing/environments.md#embed-code). Você pode editar, substituir ou adicionar mais códigos incorporados no Experience Platform Debugger. Se você fizer logon, será possível selecionar uma propriedade alternativa usando os menus suspensos.
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-Use o [!UICONTROL Experience Cloud ID] guia para exibir [Serviço de ID de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR) solicitações.
+Use o [!UICONTROL ID do Experience Cloud] guia para exibir [Serviço de ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR) solicitações.
 
 ## [!UICONTROL Dynamic Tag Management]
 
-Se você implementou anteriormente a versão antiga das tags no Experience Platform (referido como [!DNL Dynamic Tag Management (DTM)]), você pode usar essa guia para configurar os códigos incorporados e exibir detalhes da solicitação de rede.
+Se você implementou anteriormente a versão antiga das tags no Experience Platform (conhecida como [!DNL Dynamic Tag Management (DTM)]), você pode usar essa guia para configurar seus códigos incorporados e exibir os detalhes da solicitação de rede.

@@ -3,7 +3,7 @@ keywords: transmissão; destino HTTP
 title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
+source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
 workflow-type: tm+mt
 source-wordcount: '2436'
 ht-degree: 0%

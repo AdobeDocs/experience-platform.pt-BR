@@ -1,6 +1,6 @@
 ---
 title: Principais casos de uso do Experience Platform
-description: Este vídeo fornece uma visão geral dos quatro casos principais de uso do Adobe Experience Platform&mdash; plataforma de dados do cliente em tempo real, inteligência de jornada do cliente, experiência de delivery e entre canais e desenvolvimento de aplicativos da experiência do cliente.
+description: Este vídeo fornece uma visão geral dos quatro principais casos de uso do Adobe Experience Platform&mdash;plataforma de dados do cliente em tempo real, inteligência de jornada do cliente, entrega e experiência entre canais, e desenvolvimento de aplicativos de experiência do cliente.
 kt: 4337
 audience: all
 doc-type: video
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 ---
 
-# Principais casos de uso de Experience Platform
+# Principais casos de uso do Experience Platform
 
 Este vídeo fornece uma visão geral de quatro casos de uso principais do Experience Platform:
 
 * Adobe Real-time Customer Data Platform
-* Inteligência da jornada do cliente
+* Inteligência de jornada do cliente
 * Entrega e experiência entre canais
 * Desenvolvimento de aplicativos de experiência do cliente
 

@@ -1,107 +1,107 @@
 ---
-keywords: Experience Platform, home, tópicos populares, intervalo de datas
-title: Regras padrão de alerta
+keywords: Experience Platform;página inicial;tópicos populares;intervalo de datas
+title: Regras de alerta padrão
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
-# Regras padrão de alerta
+# Regras de alerta padrão
 
-O Adobe Experience Platform fornece várias regras de alerta predefinidas que podem ser ativadas para sua organização. Este documento aborda os detalhes dessas regras de alerta fornecidas por Adobe. Para obter informações mais gerais sobre alertas no Experience Platform, consulte o [visão geral dos alertas](./overview.md).
+A Adobe Experience Platform fornece várias regras de alerta predefinidas que você pode ativar para sua organização. Este documento aborda os detalhes dessas regras de alerta fornecidas por Adobe. Para obter informações mais gerais sobre alertas no Experience Platform, consulte [visão geral dos alertas](./overview.md).
 
-When [exibição de regras de alerta na interface do usuário da plataforma](./ui.md), é possível assinar cada regra individualmente. Ao assinar alertas por meio de [Notificações de Evento de E/S](./subscribe.md), no entanto, as regras de alerta são organizadas em pacotes de assinatura diferentes. Nas tabelas abaixo, cada regra é exibida com o nome de assinatura do Evento de E/S correspondente.
+Quando [exibição de regras de alerta na interface do usuário da Platform](./ui.md), você pode assinar cada regra individualmente. Ao assinar alertas por meio do [Notificações de Eventos de E/S](./subscribe.md)No entanto, as regras de alerta são organizadas em diferentes pacotes de assinatura. Nas tabelas abaixo, cada regra é mostrada com seu nome de inscrição de Evento de E/S correspondente.
 
 ## Assimilação de dados
 
-As seguintes regras de alerta são específicas para [Assimilação de dados](../../ingestion/home.md) e  [fontes](../../sources/home.md):
+As seguintes regras de alerta são específicas do [Assimilação de dados](../../ingestion/home.md) e  [origens](../../sources/home.md):
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações de Execução do Fluxo de Origem | Início da Execução de Fluxo de Fontes | Esse alerta é disparado quando uma conexão de origem inicia o processamento de dados. |
-| Informações de Execução do Fluxo de Origem | Êxito na Execução do Fluxo de Fontes | Esse alerta dispara quando os dados são assimilados com êxito de uma conexão de origem. |
-| Atrasos, falhas e erros de execução do fluxo de origem | Falha na Execução do Fluxo de Fontes | Esse alerta dispara quando ocorre um erro ao assimilar dados de uma conexão de origem. |
-| Atrasos, falhas e erros de execução do fluxo de origem | Atraso de assimilação | Esse alerta é disparado quando a execução de um fluxo de ingestão em lote demora mais de 150 minutos para ser processada. |
-| Atrasos, falhas e erros de execução do fluxo de origem | Falha de Assimilação | Esse alerta dispara quando a proporção de registros com falha para todos os registros excede um limite de 0,5%. |
+| Informações de execução do fluxo de origem | Início da execução do fluxo de fontes | Esse alerta é disparado quando uma conexão de origem inicia o processamento de dados. |
+| Informações de execução do fluxo de origem | Êxito na execução do fluxo de fontes | Esse alerta é disparado quando os dados são assimilados com êxito de uma conexão de origem. |
+| Atrasos, falhas e erros na execução do fluxo de origem | Falha na execução do fluxo de fontes | Esse alerta é disparado quando ocorre um erro ao assimilar dados de uma conexão de origem. |
+| Atrasos, falhas e erros na execução do fluxo de origem | Atraso de assimilação | Esse alerta é disparado quando uma execução de fluxo de assimilação de lote demora mais de 150 minutos para ser processada. |
+| Atrasos, falhas e erros na execução do fluxo de origem | Falha na assimilação | Esse alerta é disparado quando a proporção de registros com falha para todos os registros excede um limite de 0,5%. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Se você se inscreveu anteriormente no seguinte tipo de alerta, não receberá mais alertas, pois esse alerta foi substituído:
+Se você se inscreveu anteriormente no seguinte tipo de alerta, não receberá mais alertas, pois esse alerta foi descontinuado:
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Atrasos, falhas e erros de execução do fluxo de origem | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
+| Atrasos, falhas e erros na execução do fluxo de origem | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identity Service
 
-As seguintes regras de alerta são específicas para [Serviço de identidade](../../identity-service/home.md):
+As seguintes regras de alerta são específicas do [Serviço de identidade](../../identity-service/home.md):
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações de assimilação de identidade | Início da Execução do Fluxo do Serviço de Identidade | Esse alerta é disparado quando uma execução de fluxo do Serviço de identidade inicia o processamento de dados. Em outras palavras, dados assimilados estão sendo carregados do Data Lake para o Serviço de identidade. |
-| Informações de assimilação de identidade | Êxito na Execução do Fluxo do Serviço de Identidade | Esse alerta dispara quando os dados são carregados com êxito do Data Lake no Identity Service. |
-| Atrasos, falhas e erros da assimilação de identidade | Atraso na Execução do Fluxo do Serviço de Identidade | Esse alerta é disparado quando uma execução do fluxo do Serviço de identidade demora mais de 150 minutos para ser processada. |
-| Atrasos, falhas e erros da assimilação de identidade | Falha na Execução do Fluxo do Serviço de Identidade | Esse alerta dispara quando ocorre um erro ao assimilar dados no Serviço de identidade. |
+| Informações de assimilação de identidade | Início da execução do fluxo do serviço de identidade | Esse alerta é disparado quando uma execução do fluxo do Serviço de identidade inicia o processamento dos dados. Em outras palavras, os dados assimilados estão sendo carregados do Data Lake no Serviço de identidade. |
+| Informações de assimilação de identidade | Êxito na execução do fluxo do serviço de identidade | Esse alerta é disparado quando os dados são carregados com êxito do Data Lake no Serviço de identidade. |
+| Atrasos, falhas e erros na assimilação de identidade | Atraso na execução do fluxo do serviço de identidade | Esse alerta é disparado quando uma execução do fluxo do Serviço de identidade demora mais de 150 minutos para ser processada. |
+| Atrasos, falhas e erros na assimilação de identidade | Falha na execução do fluxo do serviço de identidade | Esse alerta é disparado quando ocorre um erro ao assimilar dados no Serviço de identidade. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Perfil do cliente em tempo real
 
-As seguintes regras de alerta são específicas para [Perfil do cliente em tempo real](../../profile/home.md):
+As seguintes regras de alerta são específicas do [Perfil do cliente em tempo real](../../profile/home.md):
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações de assimilação de perfil | Início da execução do fluxo de perfil | Esse alerta é disparado quando uma execução de fluxo de Perfil inicia o processamento de dados. |
-| Informações de assimilação de perfil | Êxito na Execução do Fluxo de Perfil | Esse alerta é disparado quando os dados são carregados com êxito no Perfil a partir do Data Lake. |
-| Atrasos, falhas e erros de assimilação de perfil | Atraso de execução do fluxo de perfil | Esse alerta é disparado ao carregar dados do Data Lake no Profile por mais de 150 minutos. |
-| Atrasos, falhas e erros de assimilação de perfil | Falha na execução do fluxo de perfil | Esse alerta dispara quando ocorre um erro ao assimilar dados no Perfil. |
+| Informações de assimilação de perfil | Início da execução do fluxo de perfil | Esse alerta é acionado quando uma execução do fluxo de perfil inicia o processamento dos dados. |
+| Informações de assimilação de perfil | Êxito na execução do fluxo de perfil | Esse alerta é disparado quando os dados são carregados com êxito no Perfil do Data Lake. |
+| Atrasos, falhas e erros na assimilação de perfis | Atraso na execução do fluxo de perfil | Esse alerta é acionado ao carregar dados do Data Lake no Perfil que leva mais de 150 minutos para ser processado. |
+| Atrasos, falhas e erros na assimilação de perfis | Falha na execução do fluxo de perfil | Esse alerta é disparado quando ocorre um erro ao assimilar dados no Perfil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Segmentação
 
-As seguintes regras de alerta são específicas para [Serviço de segmentação](../../segmentation/home.md):
+As seguintes regras de alerta são específicas do [Serviço de segmentação](../../segmentation/home.md):
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações do trabalho de avaliação de segmento | Início do trabalho de segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento inicia o processamento de dados. |
-| Informações do trabalho de avaliação de segmento | Êxito do trabalho de segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento é concluído com êxito. |
-| Atrasos, falhas e erros do trabalho de avaliação de segmentos | Atraso no trabalho do segmento | Esse alerta é disparado quando as tarefas de avaliação de segmento levam mais de 150 minutos para serem concluídas. <br> Um dos seguintes status será exibido: <br>- ACIONAMENTO - A condição para falha ou atraso foi atendida (Considere-a em um estado ATIVO). <br>- INATIVO - A condição não foi cumprida ou não foi resolvida (Considere-a em um estado RESOLVIDO). |
-| Atrasos, falhas e erros do trabalho de avaliação de segmentos | Falha no trabalho do segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento resulta em um erro. |
-| Atrasos, falhas e erros do trabalho de avaliação de segmentos | Definição de segmento desativada | Esse alerta dispara quando uma definição de segmento é desativada devido a um erro interno. Isso aciona automaticamente uma sala de guerra para uma equipe de engenharia de Adobe para investigar o problema. Este alerta destina-se apenas a ser informativo e não requer nenhuma ação da sua parte. |
+| Informações do trabalho de avaliação do segmento | Início do trabalho de segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento inicia o processamento de dados. |
+| Informações do trabalho de avaliação do segmento | Sucesso do trabalho do segmento | Esse alerta é disparado quando um trabalho de avaliação de segmento é concluído com sucesso. |
+| Atrasos, falhas e erros no trabalho de avaliação de segmento | Atraso no trabalho do segmento | Esse alerta é acionado quando os trabalhos de avaliação de um segmento levam mais de 150 minutos para serem concluídos. <br> Um dos seguintes status será exibido: <br>- ACIONAMENTO - A condição de falha ou atraso foi atendida (Considere-a em um estado ATIVO). <br>- INATIVO - A condição não foi atendida ou não foi resolvida (Considere-a em um estado RESOLVIDO). |
+| Atrasos, falhas e erros no trabalho de avaliação de segmento | Falha no trabalho do segmento | Esse alerta é acionado quando um trabalho de avaliação de segmento resulta em um erro. |
+| Atrasos, falhas e erros no trabalho de avaliação de segmento | Definição de segmento desativada | Esse alerta é disparado quando uma definição de segmento é desativada devido a um erro interno. Isso aciona automaticamente uma sala de guerra para que uma equipe de engenharia de Adobe investigue o problema. Este alerta é apenas informativo e não requer nenhuma ação sua. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Destinos
 
-As seguintes regras de alerta são específicas para [destinos](../../destinations/home.md):
+As seguintes regras de alerta são específicas do [destinos](../../destinations/home.md):
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações de execução do fluxo de destino | Início da Execução do Fluxo de Destino | Esse alerta é disparado quando uma execução de fluxo de destino inicia a ativação de um segmento. |
-| Informações de execução do fluxo de destino | Êxito na Execução do Fluxo de Destino | Esse alerta é disparado quando um segmento é ativado com êxito para um destino. |
-| Atrasos de execução, falhas e erros do fluxo de destino | Atraso de execução do fluxo de destino | Esse alerta é disparado quando uma execução de fluxo de destino demora mais de 150 minutos para ativar um segmento. |
-| Atrasos de execução, falhas e erros do fluxo de destino | Falha na Execução do Fluxo de Destino | Esse alerta dispara quando ocorre um erro ao ativar um segmento para um destino. |
-| Atrasos de execução, falhas e erros do fluxo de destino | A taxa de página ignorada excede o limite | Esse alerta é disparado quando a relação entre IDs ignoradas e IDs totais excede um limite. |
+| Informações de execução do fluxo de destino | Início da execução do fluxo de destino | Esse alerta é acionado quando uma execução de fluxo de destino começa a ativar um segmento. |
+| Informações de execução do fluxo de destino | Êxito na execução do fluxo de destino | Esse alerta é disparado quando um segmento é ativado com êxito para um destino. |
+| Atrasos, falhas e erros na execução do fluxo de destino | Atraso na execução do fluxo de destino | Esse alerta é acionado quando uma execução de fluxo de destino leva mais de 150 minutos para ativar um segmento. |
+| Atrasos, falhas e erros na execução do fluxo de destino | Falha na execução do fluxo de destino | Esse alerta é disparado quando ocorre um erro ao ativar um segmento para um destino. |
+| Atrasos, falhas e erros na execução do fluxo de destino | A taxa de salto excede o limite | Esse alerta é disparado quando a proporção de IDs ignoradas em relação ao total de IDs excede um limite. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Serviço de query
 
-As seguintes regras de alerta são específicas para [Serviço de query](../../query-service/home.md):
+As seguintes regras de alerta são específicas do [Serviço de consulta](../../query-service/home.md):
 
-| Assinatura de Evento de E/S | Regra de alerta | Descrição |
+| Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Informações de consulta agendada do Serviço de Consulta | Início da consulta agendada do Serviço de Consulta | Esse alerta dispara quando uma consulta agendada começa a ser executada. |
-| Informações de consulta agendada do Serviço de Consulta | Êxito na consulta agendada do Serviço de Consulta | Esse alerta dispara quando um trabalho de consulta agendado é concluído com êxito. |
-| Atrasos, falhas e erros da consulta agendada do Serviço de query | falha na consulta agendada do serviço de consulta | Esse alerta dispara quando um trabalho de consulta agendado falha. |
+| Informações de consulta agendada do serviço de consulta | Início da consulta agendada do Serviço de Consulta | Esse alerta é disparado quando uma consulta agendada começa a ser executada. |
+| Informações de consulta agendada do serviço de consulta | Êxito na consulta agendada do Serviço de consulta | Este alerta é disparado quando um trabalho de consulta agendado é concluído com sucesso. |
+| Atrasos, falhas e erros na consulta programada do Serviço de consulta | falha na consulta agendada do serviço de consulta | Esse alerta é disparado quando um trabalho de consulta agendado falha. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |

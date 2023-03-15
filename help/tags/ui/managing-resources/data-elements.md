@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 
@@ -137,7 +137,7 @@ Você pode usá-los nos scripts personalizados usando a `_satellite` sintaxe do 
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Ao usar porcentagem (`%`), é necessário especificar apenas o nome do elemento de dados. Você não precisa especificar `event`.
+Ao usar porcentagem (`%`), você só precisa especificar o nome do elemento de dados. Você não precisa especificar `event`.
 
 ```text
 %data element name%
@@ -161,7 +161,7 @@ Obtenha o valor de:
 
 Todo objeto ou variável disponíveis do JavaScript pode ser referido usando o campo de caminho.
 
-Se você quiser coletar variáveis do JavaScript ou propriedades de objeto na marcação e usá-las com qualquer uma das extensões ou regras, os elementos de dados poderão ser usados para capturar esses valores. Dessa forma, você pode consultar o elemento de dados em suas regras e, se a fonte de dados mudar, será necessário alterar apenas sua referência à fonte (o elemento de dados) em um local.
+Se você quiser coletar variáveis do JavaScript ou propriedades de objeto na marcação e usá-las com qualquer uma das extensões ou regras, os elementos de dados poderão ser usados para capturar esses valores. Assim, você pode consultar o elemento de dados em suas regras. Além disso, se a fonte de dados mudar, será necessário alterar apenas sua referência à fonte (o elemento de dados) em um local.
 
 Por exemplo, considere que a marcação contém uma variável de JavaScript chamada `Page_Name`, assim:
 
@@ -213,7 +213,7 @@ Somente a seção de nome é necessária e qualquer designador especial como “
 
 ### Número aleatório
 
-Use esse elemento de dados para gerar um número aleatório. Geralmente é usado para amostras de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
+Use esse elemento de dados para gerar um número aleatório. É usado frequentemente para amostra de dados ou para a criação de IDs, como uma ID de ocorrência. O número aleatório também pode ser usado para ofuscar ou eliminar dados confidenciais. Alguns exemplos podem incluir:
 
 * Gerar uma ID de ocorrência
 * Concatene o número para um token de usuário ou carimbo de data e hora para garantir exclusividade
@@ -257,7 +257,7 @@ Alguns casos de uso comuns incluem:
 
 ## Elementos de dados incorporados
 
-Você deve criar elementos de dados personalizados adicionais se tiver usado anteriormente um dos seguintes elementos de dados:
+Você deverá criar elementos de dados personalizados adicionais se tiver usado anteriormente qualquer um dos seguintes elementos de dados:
 
 * URI
 * Protocolo

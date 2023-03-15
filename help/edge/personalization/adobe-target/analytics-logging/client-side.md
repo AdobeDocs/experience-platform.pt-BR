@@ -1,9 +1,9 @@
 ---
-title: Registro do lado do cliente para dados A4T no SDK da Web da plataforma
-description: Saiba como habilitar o registro no lado do cliente para o Adobe Analytics for Target (A4T) usando o SDK da Web do Experience Platform.
+title: Logon do lado do cliente para dados do A4T no SDK da Web da plataforma
+description: Saiba como ativar o registro do lado do cliente para o Adobe Analytics for Target (A4T) usando o SDK da Web do Experience Platform.
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
-keywords: target; a4t; registro; web sdk; experiência; plataforma;
+keywords: target;a4t;registro;sdk da web;experiência;plataforma;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
 source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
@@ -12,49 +12,49 @@ ht-degree: 4%
 
 ---
 
-# Registro do lado do cliente para dados A4T no SDK da Web da plataforma
+# Logon do lado do cliente para dados do A4T no SDK da Web da plataforma
 
 ## Visão geral {#overview}
 
-O SDK da Web da Adobe Experience Platform permite coletar [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR) dados no lado do cliente do aplicativo da Web.
+O Adobe Experience Platform Web SDK permite coletar [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR) dados no lado do cliente do aplicativo web.
 
-O registro no lado do cliente significa que [!DNL Target] Os dados são retornados no lado do cliente, permitindo coletá-los e compartilhá-los com o Analytics. Essa opção deve ser ativada se você pretende enviar dados manualmente para o Analytics usando o [API de inserção de dados](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+O registro no lado do cliente significa que os registros [!DNL Target] Os dados do são retornados no lado do cliente, permitindo que você os colete e compartilhe com o Analytics. Essa opção deve estar ativada se você pretende enviar dados manualmente para o Analytics usando o [API de inserção de dados](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
 
 >[!NOTE]
 >
->Um método para executar isso usando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR) está atualmente em desenvolvimento e estará disponível num futuro próximo.
+>Um método para executar isso usando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR) O está atualmente em desenvolvimento e estará disponível em breve.
 
-Este documento aborda as etapas para configurar o registro do A4T no lado do cliente para o SDK da Web e fornece alguns exemplos de implementação para casos de uso comuns.
+Este documento aborda as etapas para configurar o registro A4T do lado do cliente para o SDK da Web e fornece alguns exemplos de implementação para casos de uso comuns.
 
 ## Pré-requisitos {#prerequisites}
 
-Este tutorial assume que você está familiarizado com os conceitos e processos fundamentais relacionados ao uso do SDK da Web para fins de personalização. Revise a seguinte documentação se você precisar de uma introdução:
+Este tutorial pressupõe que você esteja familiarizado com os conceitos e processos fundamentais relacionados ao uso do SDK da Web para fins de personalização. Consulte a documentação a seguir se precisar de uma introdução:
 
 * [Configuração do SDK da Web](../../../fundamentals/configuring-the-sdk.md)
 * [Envio de eventos](../../../fundamentals/tracking-events.md)
 * [Renderização do conteúdo de personalização](../../rendering-personalization-content.md)
 
-## Configurar o registro no lado do cliente do Analytics {#set-up-client-side-logging}
+## Configurar o registro do cliente no Analytics {#set-up-client-side-logging}
 
-As subseções a seguir descrevem como ativar o registro do lado do cliente do Analytics para sua implementação do SDK da Web.
+As subseções a seguir descrevem como habilitar o registro no lado do cliente do Analytics para a implementação do SDK da Web.
 
-### Ativar o registro no lado do cliente do Analytics {#enable-analytics-client-side-logging}
+### Habilitar o registro do cliente no Analytics {#enable-analytics-client-side-logging}
 
-Para considerar o registro do lado do cliente do Analytics habilitado para sua implementação, você deve desativar a configuração do Adobe Analytics em [datastream](../../../datastreams/overview.md).
+Para considerar o registro no lado do cliente do Analytics habilitado para sua implementação, você deve desabilitar a configuração do Adobe Analytics no [sequência de dados](../../../datastreams/overview.md).
 
-![Configuração de armazenamento de dados do Analytics desabilitada](../assets/disable-analytics-datastream.png)
+![Configuração de sequência de dados do Analytics desabilitada](../assets/disable-analytics-datastream.png)
 
-### Recuperar [!DNL A4T] dados do SDK e enviá-los para o Analytics {#a4t-to-analytics}
+### Recuperar [!DNL A4T] dados do SDK e envie-os para o Analytics {#a4t-to-analytics}
 
-Para que esse método de relatório funcione corretamente, é necessário enviar a variável [!DNL A4T] dados relacionados recuperados do [`sendEvent`](../../../fundamentals/tracking-events.md) na ocorrência do Analytics.
+Para que esse método de relatório funcione corretamente, você deve enviar o [!DNL A4T] dados relacionados recuperados do [`sendEvent`](../../../fundamentals/tracking-events.md) comando na ocorrência do Analytics.
 
-Quando o Target Edge calcula uma resposta de propostas, ele verifica se o registro do lado do cliente do Analytics está ativado (ou seja, se o Analytics está desativado no armazenamento de dados). Se o registro no lado do cliente estiver ativado, o sistema adicionará um token do Analytics a cada proposta na resposta.
+Quando o Target Edge calcula uma resposta de apresentações, ele verifica se o registro no lado do cliente do Analytics está ativado (ou seja, se o Analytics está desativado na sequência de dados). Se o registro no lado do cliente estiver ativado, o sistema adicionará um token do Analytics a cada proposta na resposta.
 
 O fluxo é semelhante a este:
 
-![Fluxo de registro do lado do cliente](../assets/analytics-client-side-logging.png)
+![Fluxo de log do lado do cliente](../assets/analytics-client-side-logging.png)
 
-Este é um exemplo de um `interact` resposta quando o registro do lado do cliente do Analytics estiver ativado. Se a proposta for para uma atividade que tem relatórios do Analytics, ela terá um `scopeDetails.characteristics.analyticsToken` propriedade.
+Veja a seguir um exemplo de `interact` resposta quando o registro no lado do cliente do Analytics estiver ativado. Se a proposta for para uma atividade com relatórios do Analytics, ela terá uma `scopeDetails.characteristics.analyticsToken` propriedade.
 
 ```json
 {
@@ -136,7 +136,7 @@ Este é um exemplo de um `interact` resposta quando o registro do lado do client
 }
 ```
 
-As propostas de atividades do Experience Composer baseadas em formulário podem conter itens de métrica de conteúdo e clique na mesma proposta. Assim, em vez de ter um único token de análise para a exibição de conteúdo em `scopeDetails.characteristics.analyticsToken` podem ter um token de análise de exibição e de clique especificado em `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` propriedades, de forma correspondente.
+As apresentações de atividades do Experience Composer baseadas em formulário podem conter itens de métrica de conteúdo e clique na mesma apresentação. Assim, em vez de ter um único token de análise para exibição de conteúdo no `scopeDetails.characteristics.analyticsToken` propriedade, eles podem ter um token de análise de exibição e um token de análise de clique especificados em `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` propriedades, correspondentemente.
 
 ```json
 {
@@ -204,13 +204,13 @@ As propostas de atividades do Experience Composer baseadas em formulário podem 
 }
 ```
 
-Todos os valores de `scopeDetails.characteristics.analyticsToken`, bem como `scopeDetails.characteristics.analyticsDisplayToken` (para conteúdo exibido) e `scopeDetails.characteristics.analyticsClickToken` (para métricas de cliques) são as cargas A4T que precisam ser coletadas e incluídas como `tnta` na [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) chame.
+Todos os valores de `scopeDetails.characteristics.analyticsToken`, bem como `scopeDetails.characteristics.analyticsDisplayToken` (para conteúdo exibido) e `scopeDetails.characteristics.analyticsClickToken` (para métricas de clique) são as cargas do A4T que precisam ser coletadas e incluídas como `tnta` na guia [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) chame.
 
 >[!IMPORTANT]
 >
->O `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` As propriedades podem conter vários tokens, concatenados como uma única string delimitada por vírgulas.
+>A variável `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` As propriedades do podem conter vários tokens, concatenados como uma única string delimitada por vírgulas.
 >
->Nos exemplos de implementação fornecidos na próxima seção, vários tokens do Analytics estão sendo coletados iterativamente. Para concatenar uma matriz de tokens do Analytics, use uma função semelhante a esta:
+>Nos exemplos de implementação fornecidos na próxima seção, vários tokens do Analytics são coletados interativamente. Para concatenar uma matriz de tokens do Analytics, use uma função semelhante a esta:
 >
 >
 ```javascript
@@ -226,13 +226,13 @@ Todos os valores de `scopeDetails.characteristics.analyticsToken`, bem como `sco
 
 As subseções a seguir demonstram como implementar o registro no lado do cliente do Analytics para casos de uso comuns.
 
-### Atividades do Experience Composer baseado em formulário {#form-based-composer}
+### Atividades do Experience Composer baseadas em formulário {#form-based-composer}
 
-Você pode usar o SDK da Web para controlar a execução de propostas de [Experience Composer baseado em formulário do Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) atividades.
+Você pode usar o SDK da Web para controlar a execução de apresentações de [Experience Composer baseado em formulário do Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) atividades.
 
-Quando você solicita propostas para um escopo de decisão específico, a proposta retornada contém o token adequado do Analytics. A prática recomendada é encadear o SDK da Web da plataforma `sendEvent` e percorra as apresentações retornadas para executá-las ao coletar os tokens do Analytics ao mesmo tempo.
+Quando você solicita apresentações para um escopo de decisão específico, a proposta retornada contém o token apropriado do Analytics. A prática recomendada é encadear o SDK da Web da plataforma `sendEvent` e repita as apresentações retornadas para executá-las enquanto coleta os tokens do Analytics ao mesmo tempo.
 
-Você pode acionar um `sendEvent` comando para um escopo de atividade do Experience Composer baseado em formulário como este:
+É possível acionar um `sendEvent` comando para um escopo de atividade do Experience Composer baseado em formulário como este:
 
 ```javascript
 alloy("sendEvent", {
@@ -252,7 +252,7 @@ alloy("sendEvent", {
 });
 ```
 
-A partir daqui, você deve implementar o código para executar as propostas e construir uma carga útil que será enviada para o Analytics. Este é um exemplo do que `results.propositions` pode conter:
+Aqui, você deve implementar o código para executar as apresentações e construir uma carga que será enviada para o Analytics. Este é um exemplo do que `results.propositions` pode conter:
 
 ```json
 [
@@ -377,7 +377,7 @@ A partir daqui, você deve implementar o código para executar as propostas e co
 ]
 ```
 
-Para extrair o token do Analytics de uma proposta com itens de conteúdo, é possível implementar uma função semelhante ao seguinte:
+Para extrair o token do Analytics de uma proposta com itens de conteúdo, é possível implementar uma função semelhante à seguinte:
 
 ```javascript
 function getDisplayAnalyticsPayload(proposition) {
@@ -392,7 +392,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-Uma proposta pode ter tipos diferentes de itens, conforme indicado pela variável `schema` propriedade do item em questão. Há quatro esquemas de item de proposta compatíveis com atividades do Experience Composer baseado em formulário:
+Uma proposta pode ter diferentes tipos de itens, conforme indicado pela variável `schema` propriedade do item em questão. Há quatro esquemas de item de proposta compatíveis com as atividades do Experience Composer baseado em formulário:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -403,9 +403,9 @@ var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item";
 
 `HTML_SCHEMA` e `JSON_SCHEMA` são os esquemas que refletem o tipo da oferta, enquanto `MEASUREMENT_SCHEMA` O reflete as métricas que devem ser anexadas a um elemento DOM.
 
-As cargas do Analytics para métricas de cliques devem ser coletadas e enviadas ao Analytics separadamente dos itens de conteúdo, no momento em que o visitante realmente clica no conteúdo exibido anteriormente.
+As cargas do Analytics para métricas de cliques devem ser coletadas e enviadas para o Analytics separadamente dos itens de conteúdo, no momento em que o visitante realmente clicar no conteúdo exibido anteriormente.
 
-A seguinte função auxiliar para obter as cargas da métrica de clique do A4T será útil neste caso:
+A seguinte função auxiliar para obter a métrica de cliques A4T payloads será útil neste caso:
 
 ```javascript
 function getClickAnalyticsPayload(proposition) {
@@ -422,16 +422,16 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Resumo da implementação {#implementation-summary}
 
-Em resumo, as etapas a seguir devem ser executadas ao aplicar atividades do Experience Composer baseado em formulário com o SDK da Web da plataforma:
+Em resumo, as seguintes etapas devem ser executadas ao aplicar atividades do Experience Composer com base em formulário com o SDK da Web da plataforma:
 
-1. Envie um evento que busque ofertas de atividade do Experience Composer baseadas em formulário;
+1. Enviar um evento que busque ofertas de atividades do Experience Composer baseadas em formulário;
 1. Aplicar as alterações de conteúdo à página;
-1. Envie o `decisioning.propositionDisplay` Evento de notificação;
+1. Envie o `decisioning.propositionDisplay` evento de notificação;
 1. Colete os tokens de exibição do Analytics da resposta do SDK e construa uma carga para a ocorrência do Analytics;
-1. Envie a carga para o Analytics usando o [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
-1. Se houver métricas de clique em apresentações entregues, os ouvintes de cliques devem ser configurados para que, quando um clique for executado, ele envie a variável `decisioning.propositionInteract` evento de notificação. O `onBeforeEventSend` O manipulador deve ser configurado de forma que, ao interceptar `decisioning.propositionInteract` , as seguintes ações ocorrem:
-   1. Coleta dos tokens do Analytics de cliques `xdm._experience.decisioning.propositions`
-   1. Enviar a ocorrência de clique do Analytics com a carga coletada do Analytics por [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+1. Envie o conteúdo para o Analytics usando o [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+1. Se houver métricas de clique em apresentações entregues, os ouvintes de cliques deverão ser configurados para que, quando um clique for executado, ele envie a mensagem `decisioning.propositionInteract` evento de notificação. A variável `onBeforeEventSend` o manipulador deve ser configurado de modo que, ao interceptar `decisioning.propositionInteract` eventos, as seguintes ações ocorrerão:
+   1. Coleta de tokens de clique do Analytics a partir de `xdm._experience.decisioning.propositions`
+   1. Envio da ocorrência click Analytics com a carga coletada do Analytics por meio de [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
 ```javascript
 alloy("sendEvent", {
@@ -468,13 +468,13 @@ alloy("sendEvent", {
 
 ### Atividades do Visual Experience Composer {#visual-experience-composer-acitivties}
 
-O SDK da Web permite manipular ofertas que foram criadas usando [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+O SDK da Web permite lidar com ofertas criadas com o [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 
 >[!NOTE]
 >
->As etapas para implementar esse caso de uso são muito semelhantes às etapas para [Atividades do Experience Composer baseado em formulário](#form-based-composer). Consulte a seção anterior para obter mais detalhes.
+>As etapas para implementar esse caso de uso são muito semelhantes às etapas para [Atividades do Experience Composer baseadas em formulário](#form-based-composer). Consulte a seção anterior para obter mais detalhes.
 
-Quando a renderização automática é ativada, é possível coletar os tokens do Analytics a partir das apresentações que foram executadas na página. A prática recomendada é encadear o SDK da Web da plataforma `sendEvent` e percorra as propostas retornadas para filtrar aquelas que o SDK da Web tentou renderizar.
+Quando a renderização automática está habilitada, é possível coletar os tokens do Analytics nas apresentações que foram executadas na página. A prática recomendada é encadear o SDK da Web da plataforma `sendEvent` e repita pelas apresentações retornadas para filtrar aquelas que o SDK da Web tentou renderizar.
 
 **Exemplo**
 
@@ -510,13 +510,13 @@ alloy("sendEvent", {
 });
 ```
 
-### Usando `onBeforeEventSend` para manipular métricas de página {#using-onbeforeeventsend}
+### Usar `onBeforeEventSend` para lidar com métricas de página {#using-onbeforeeventsend}
 
-Usando as atividades do Adobe Target, você pode configurar métricas diferentes na página, anexadas manualmente ao DOM ou anexadas automaticamente às Atividades de criação do DOM (VEC). Ambos os tipos são uma interação atrasada do usuário final na página da Web.
+Usando as atividades do Adobe Target, você pode configurar diferentes métricas na página, anexadas manualmente ao DOM ou anexadas automaticamente ao DOM (atividades criadas no VEC). Ambos os tipos são uma interação atrasada do usuário final na página da Web.
 
-Para levar isso em conta, a prática recomendada é coletar as cargas do Analytics usando o `onBeforeEventSend` Gancho do SDK da Web da Adobe Experience Platform. O `onBeforeEventSend` o gancho deve ser configurado usando o `configure` , e serão refletidas em todos os eventos enviados pelo conjunto de dados.
+Para levar em conta isso, a prática recomendada é coletar cargas do Analytics usando o `onBeforeEventSend` Gancho do Adobe Experience Platform Web SDK. A variável `onBeforeEventSend` o gancho deve ser configurado usando o `configure` e serão refletidos em todos os eventos enviados pelo fluxo de dados.
 
-Este é um exemplo de como `onBeforeEventSent` pode ser configurado para acionar ocorrências do Analytics:
+Veja a seguir um exemplo de como `onBeforeEventSent` O pode ser configurado para acionar ocorrências do Analytics:
 
 ```javascript
 alloy("configure", {
@@ -541,4 +541,4 @@ alloy("configure", {
 
 ## Próximas etapas {#next-steps}
 
-Este guia cobriu o registro do lado do cliente para dados A4T no SDK da Web. Consulte o guia sobre [registro no lado do servidor](server-side.md) para obter mais informações sobre como lidar com dados A4T na Edge Network.
+Este guia abordou o registro no lado do cliente para dados do A4T no SDK da Web. Consulte o guia sobre [registro do lado do servidor](server-side.md) para obter mais informações sobre como lidar com dados do A4T na rede de borda.

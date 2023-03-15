@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre as opções disponíveis ao usar esta extensão para criar uma regra.
 
@@ -31,7 +31,7 @@ Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a exten
 
 ### configurações do at.js
 
-Todas as suas configurações de at.js, com exceção do tempo limite, são automaticamente recuperadas da configuração de at.js na interface do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário se forem necessárias atualizações adicionais.
+Todas as suas configurações de at.js, com exceção do tempo limite, são automaticamente recuperadas da configuração de at.js na interface do Target. A extensão recupera apenas as configurações da interface do Target quando adicionada pela primeira vez. Se forem necessárias atualizações adicionais, as configurações serão gerenciadas na interface do usuário.
 
 As opções de configuração disponíveis são as seguintes:
 

@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform, home, tópicos populares, esquema, Esquema, XDM, ExperienceEvent, campos, esquemas, Esquemas, Design de esquema, grupo de campos, grupo de campos, enduserids, usuário final, usuário final, ids;
+keywords: Experience Platform;início;tópicos populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;enduserids;usuário final;usuário final;ids;
 solution: Experience Platform
-title: Grupo de Campos do Esquema Detalhes da ID do Usuário Final
-description: Este documento fornece uma visão geral do grupo de campos Detalhes da ID do usuário final.
+title: Grupo de Campos de Esquema de Detalhes do ID do Usuário Final
+description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes da ID do usuário final.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 5%
+source-wordcount: '223'
+ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Detalhes da ID de usuário final] grupo de campos de esquema
+# [!UICONTROL Detalhes da ID do usuário final] grupo de campos de esquema
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes da ID de usuário final] é um grupo de campos de esquema padrão para a variável [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usada para descrever as informações de identidade de um indivíduo em vários aplicativos de Adobe. O grupo de campos fornece um nível raiz `endUserIDs` objeto, que contém um somente leitura `_experience` , cujos valores são atualizados automaticamente à medida que os dados são assimilados.
+[!UICONTROL Detalhes da ID do usuário final] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usado para descrever as informações de identidade de um indivíduo em vários aplicativos Adobe. O grupo de campos fornece um nível raiz `endUserIDs` objeto, que contém um objeto somente leitura `_experience` campo cujos valores são atualizados automaticamente à medida que os dados são assimilados.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -33,9 +33,9 @@ ht-degree: 5%
 | `phonenumberid` | [Identidade](../../data-types/identity.md) | IDs de número de telefone. |
 | `tntid` | [Identidade](../../data-types/identity.md) | IDs de usuário final do Adobe Target. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

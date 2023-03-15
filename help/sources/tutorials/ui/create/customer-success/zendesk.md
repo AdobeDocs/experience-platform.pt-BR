@@ -1,118 +1,118 @@
 ---
-keywords: Experience Platform, Zendesk, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK, zendesk, Zendesk
-title: Criar uma conexão de origem do Zendesk na interface do usuário
-description: Saiba como criar uma conexão de origem do Zendesk usando a interface do usuário do Adobe Experience Platform.
+keywords: Experience Platform;Zendesk;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK;zendesk;Zendesk
+title: Criar uma conexão de origem do Zendesk na interface
+description: Saiba como criar uma conexão de origem do Zendesk usando a interface do Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '794'
 ht-degree: 6%
 
 ---
 
-# (Beta) Criar um [!DNL Zendesk] conexão de origem na interface do usuário
+# (Beta) Criar um [!DNL Zendesk] conexão de origem na interface
 
 >[!NOTE]
 >
->O [!DNL Zendesk] A fonte está em beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
+>A variável [!DNL Zendesk] a fonte está na versão beta. Consulte a [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
-Este tutorial fornece etapas para criar um [!DNL Zendesk] conexão de origem usando a interface do usuário do Adobe Experience Platform.
+Este tutorial fornece etapas para a criação de um [!DNL Zendesk] conexão de origem usando a interface do usuário do Adobe Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+   * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-### Obter credenciais necessárias
+### Coletar credenciais necessárias
 
-Para acessar o [!DNL Zendesk] na Platform, você deve fornecer valores para as seguintes credenciais:
+Para acessar seu [!DNL Zendesk] na Platform, você deve fornecer valores para as seguintes credenciais:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
 | Subdomain | O domínio exclusivo específico da sua conta criado durante o processo de registro. | `yoursubdomain` |
 | Token de acesso | Token da API do Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-Para obter mais informações sobre como autenticar seu [!DNL Zendesk] na fonte, consulte o [[!DNL Zendesk] visão geral da fonte](../../../../connectors/customer-success/zendesk.md).
+Para obter mais informações sobre a autenticação do [!DNL Zendesk] fonte, consulte o [[!DNL Zendesk] visão geral da origem](../../../../connectors/customer-success/zendesk.md).
 
 ![Token de API do Zendesk](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### Criar um esquema da Platform para [!DNL Zendesk]
 
-Antes de criar um [!DNL Zendesk] na conexão de origem, você também deve garantir que primeiro crie um esquema da plataforma para usar na origem. Veja o tutorial em [criação de um schema da plataforma](../../../../../xdm/schema/composition.md) para obter etapas abrangentes sobre como criar um schema.
+Antes de criar uma [!DNL Zendesk] conexão de origem, você também deve garantir que primeiro crie um esquema da Platform para usar em sua origem. Veja o tutorial sobre [criação de um schema do Platform](../../../../../xdm/schema/composition.md) para obter etapas abrangentes sobre como criar um schema.
 
-Para obter mais orientações sobre [!DNL Zendesk] schema necessário para o [!DNL Zendesk Search API], consulte o [limites](#limits) abaixo.
+Para obter orientação adicional sobre o [!DNL Zendesk] esquema necessário para o [!DNL Zendesk Search API], consulte o [limites](#limits) abaixo.
 
 ![Criar esquema](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## Conecte seu [!DNL Zendesk] account
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Em *Sucesso do cliente* categoria , selecione **[!UICONTROL Zendesk]** e selecione **[!UICONTROL Adicionar dados]**.
+No *Sucesso do cliente* categoria, selecione **[!UICONTROL Zendesk]** e selecione **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/zendesk/catalog.png)
 
-O **[!UICONTROL Conta do Zendesk]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+A variável **[!UICONTROL Conectar a conta do Zendesk]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para usar uma conta existente, selecione a *Zendesk* conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próximo]** para continuar.
+Para usar uma conta existente, selecione a variável *Zendesk* conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
 
 ![existente](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e, em seguida, forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e, em seguida, permitir que a nova conexão seja estabelecida.
+Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
 
 ![novo](../../../../images/tutorials/create/zendesk/new.png)
 
 ### Selecionar dados
 
-Depois que a origem é autenticada, a página é atualizada em uma árvore de esquema interativa que permite explorar e inspecionar a hierarquia de seus dados. Selecionar **[!UICONTROL Próximo]** para continuar.
+Depois que a fonte é autenticada, a página é atualizada em uma árvore de esquema interativa que permite explorar e inspecionar a hierarquia dos dados. Selecionar **[!UICONTROL Próxima]** para continuar.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você autenticou e criou uma conexão de origem entre os [!DNL Zendesk] conta e plataforma. Agora você pode continuar para o próximo tutorial e [criar um fluxo de dados para trazer os dados de sucesso do cliente para a Platform](../../dataflow/customer-success.md).
+Ao seguir este tutorial, você autenticou e criou uma conexão de origem entre [!DNL Zendesk] conta e plataforma. Agora você pode seguir para o próximo tutorial e [criar um fluxo de dados para trazer os dados de sucesso do cliente para a Platform](../../dataflow/customer-success.md).
 
 ## Recursos adicionais
 
-As seções abaixo fornecem recursos adicionais que você pode consultar ao usar o [!DNL Zendesk] fonte.
+As seções abaixo fornecem recursos adicionais que você pode consultar ao usar o [!DNL Zendesk] origem.
 
 ### Validação {#validation}
 
-As linhas gerais a seguir podem ser usadas para validar que você conectou seu [!DNL Zendesk] e que [!DNL Zendesk] Os perfis estão sendo assimilados no Platform.
+As etapas a seguir descrevem as etapas que você pode seguir para validar se conectou com êxito o [!DNL Zendesk] fonte e que [!DNL Zendesk] perfis estão sendo assimilados na Platform.
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para acessar o [!UICONTROL Conjuntos de dados] espaço de trabalho. O [!UICONTROL Atividade do conjunto de dados] exibe os detalhes das execuções.
+Na interface do usuário da Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda, para acessar a [!UICONTROL Conjuntos de dados] espaço de trabalho. A variável [!UICONTROL Atividade do conjunto de dados] exibe os detalhes das execuções.
 
 ![Página Atividade](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
-Em seguida, selecione a ID de execução do fluxo de dados que deseja visualizar para ver detalhes específicos sobre a execução do fluxo de dados.
+Em seguida, selecione a ID de execução do fluxo de dados que deseja exibir para ver detalhes específicos sobre essa execução do fluxo de dados.
 
 ![Página de fluxo de dados](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-Finalmente, selecione **[!UICONTROL Visualizar conjunto de dados]** para exibir os dados que foram assimilados.
+Finalmente, selecione **[!UICONTROL Visualizar conjunto de dados]** para exibir os dados assimilados.
 
 ![Conjunto de dados do Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-Você também pode verificar os dados da sua plataforma em relação aos dados da [!DNL Zendesk] > [!DNL Customers] página.
+Você também pode verificar seus dados da Platform em relação aos dados em sua [!DNL Zendesk] > [!DNL Customers] página.
 
-![clientes do zendesk](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
+![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 
 ### Esquema do Zendesk
 
-A tabela abaixo lista os mapeamentos compatíveis que devem ser configurados para o Zendesk.
+A tabela abaixo lista os mapeamentos suportados que devem ser configurados para o Zendesk.
 
 >[!TIP]
 >
->Consulte [API de pesquisa do Zendesk > Exportar resultados de pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) para obter mais informações sobre a API.
+>Consulte [API do Zendesk Search > Exportar resultados da pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) para obter mais informações sobre a API.
 
 | Fonte | Tipo |
 |---|---|
@@ -153,12 +153,12 @@ A tabela abaixo lista os mapeamentos compatíveis que devem ser configurados par
 | `results.url` | String |
 | `results.verified` | Booleano |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Limites {#limits}
 
-* O [API de pesquisa do Zendesk > Exportar resultados de pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) retorna no máximo 1000 registros por página.
-   * O valor da variável ``filter[type]`` é definido como ``user`` e, portanto, a conexão do Zendesk retorna somente os usuários.
-   * O número de resultados por página é gerenciado pela variável ``page[size]`` parâmetro. O valor é definido como ``100``. Isso é feito para reduzir o impacto das restrições de redução de velocidade definidas pelo Zendesk.
+* A variável [API do Zendesk Search > Exportar resultados da pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) retorna no máximo 1000 registros por página.
+   * O valor para a variável ``filter[type]`` está definido como ``user`` e, portanto, a conexão do Zendesk só retorna usuários.
+   * O número de resultados por página é gerenciado pelo ``page[size]`` parâmetro. O valor está definido como ``100``. Isso é feito para reduzir o impacto das restrições de redução de velocidade definidas pelo Zendesk.
    * Consulte [Limites](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) e [Paginação](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
-   * Também é possível fazer referência a [Paginação através de listas usando paginação de cursor](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+   * Também é possível consultar [Paginação em listas usando a paginação de cursor](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).

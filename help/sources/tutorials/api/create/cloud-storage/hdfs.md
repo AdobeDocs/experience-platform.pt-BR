@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Sistema de Arquivos Distribuído do Apache Hadoop, hadoop Apache, hdfs, HDFS
+keywords: Experience Platform;página inicial;tópicos populares;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
-title: Criar uma conexão base do Apache HDFS usando a API do Serviço de fluxo
+title: Criar uma conexão básica do Apache HDFS usando a API do serviço de fluxo
 type: Tutorial
-description: Saiba como conectar um sistema de arquivos distribuído do Apache Hadoop ao Adobe Experience Platform usando a API do Serviço de fluxo.
+description: Saiba como conectar um sistema de arquivos distribuídos do Apache Hadoop ao Adobe Experience Platform usando a API do serviço de fluxo.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,41 +12,41 @@ ht-degree: 2%
 
 ---
 
-# Crie um [!DNL Apache] Conexão base HDFS usando o [!DNL Flow Service] API
+# Criar um [!DNL Apache] Conexão de base HDFS usando o [!DNL Flow Service] API
 
 >[!NOTE]
 >
->O conector HDFS do Apache está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com rótulo beta.
+>O conector Apache HDFS está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
+Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Apache Hadoop Distributed File System] (a seguir designado por &quot;[!DNL HDFS]&quot;) usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Apache Hadoop Distributed File System] (a seguir designado por &quot;[!DNL HDFS]&quot;) usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL HDFS] usando o [!DNL Flow Service] API.
 
-### Obter credenciais necessárias
+### Coletar credenciais necessárias
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `url` | O URL define os parâmetros de autenticação necessários para a conexão com o [!DNL HDFS] anonimamente. Para obter mais informações sobre como obter esse valor, consulte [this [!DNL HDFS] documento](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL AdWords] é: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `url` | O URL define parâmetros de autenticação necessários para a conexão com o [!DNL HDFS] anonimamente. Para obter mais informações sobre como obter esse valor, consulte [este [!DNL HDFS] documento](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL AdWords] é: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão base
+## Criar uma conexão básica
 
-Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
+Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação de POST para a variável `/connections` endpoint enquanto fornece seu [!DNL HDFS] credenciais de autenticação como parte dos parâmetros da solicitação.
+Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL HDFS] credenciais de autenticação como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -56,7 +56,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL HDFS]:
+A solicitação a seguir cria uma conexão básica para [!DNL HDFS]:
 
 ```shell
 curl -X POST \
@@ -84,8 +84,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.url` | O URL que define os parâmetros de autenticação necessários para conexão com o [!DNL HDFS] anonimamente |
-| `connectionSpec.id` | O [!DNL HDFS] ID de especificação de conexão: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | O URL que define os parâmetros de autenticação necessários para a conexão com o [!DNL HDFS] anonimamente |
+| `connectionSpec.id` | A variável [!DNL HDFS] ID da especificação de conexão: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Resposta**
 
@@ -100,4 +100,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um [!DNL HDFS] conexão usando o [!DNL Flow Service] API e obtiveram o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial enquanto aprende a usar [explorar um armazenamento em nuvem de terceiros usando a API do Serviço de Fluxo](../../explore/cloud-storage.md).
+Ao seguir este tutorial, você criou um [!DNL HDFS] conexão usando o [!DNL Flow Service] e obtiveram o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial enquanto aprende a [explore um armazenamento em nuvem de terceiros usando a API do serviço de fluxo](../../explore/cloud-storage.md).

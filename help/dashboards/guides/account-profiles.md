@@ -1,6 +1,6 @@
 ---
-title: Guia do painel Perfis da conta
-description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os perfis da conta B2B de sua organização.
+title: Guia do Painel de Perfis de Conta
+description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 0%
 
 # [!UICONTROL Perfis de conta] painel
 
-A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre seus perfis de conta, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com a [!UICONTROL Perfis de conta] painel na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
+A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta, conforme capturados durante um instantâneo diário. Este guia descreve como acessar e trabalhar com a [!UICONTROL Perfis de conta] painel na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
 Para obter uma visão geral de todos os recursos na interface do usuário do perfil da conta, visite o [guia da interface do usuário do perfil da conta](../../rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Introdução
 
-Você deve ter direito a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para ter acesso ao B2B [!UICONTROL Perfis de conta] painel.
+Você deve ter direito a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acessar o B2B [!UICONTROL Perfis de conta] painel.
 
 ## Dados de perfis de conta
 
-O [!UICONTROL Perfis de conta] O painel exibe um instantâneo das informações de conta unificadas de várias fontes em seus canais de marketing e os diversos sistemas que sua organização usa atualmente para armazenar informações de conta do cliente.
+A variável [!UICONTROL Perfis de conta] o painel exibe um instantâneo das informações unificadas da conta de várias fontes em seus canais de marketing e dos diversos sistemas que sua organização usa atualmente para armazenar informações de conta do cliente.
 
-Os dados do perfil no instantâneo mostram os dados exatamente como aparecem no ponto específico do tempo em que o instantâneo foi tirado. Por outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o [!UICONTROL Perfis de conta] O painel não é atualizado em tempo real.
+Os dados do perfil no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou uma amostra dos dados, e o [!UICONTROL Perfis de conta] O painel do não é atualizado em tempo real.
 
 >[!NOTE]
 >
@@ -31,81 +31,81 @@ Os dados do perfil no instantâneo mostram os dados exatamente como aparecem no 
 
 ## Explore o [!UICONTROL Perfis de conta] painel
 
-Para navegar até o [!UICONTROL Perfis de conta] no painel da interface do usuário da plataforma, selecione **[!UICONTROL Perfis]** under [!UICONTROL Contas] no painel de navegação esquerdo.
+Para navegar até o [!UICONTROL Perfis de conta] no painel da interface do Platform, selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no painel de navegação esquerdo.
 
-![A interface do usuário da plataforma com perfis de conta na navegação à esquerda é realçada e a guia de visão geral é exibida.](../images/account-profiles/account-profiles-dashboard.png)
+![A interface do usuário da Platform com Perfis de conta na navegação à esquerda é realçada e a guia Visão geral é exibida.](../images/account-profiles/account-profiles-dashboard.png)
 
-No [!UICONTROL Perfis de conta] no painel você pode [navegue pelos perfis de conta assimilados em sua organização](#browse-account-profiles)ou [exibir todos os dados de perfil da conta imediatamente usando widgets](#standard-widgets) que visualizam aspectos dos dados.
+No [!UICONTROL Perfis de conta] painel que você pode [procure os perfis de conta assimilados em sua organização](#browse-account-profiles)ou [visualizar todos os dados do perfil da sua conta rapidamente usando widgets](#standard-widgets) que visualizam aspectos dos dados.
 
 ## Procurar perfis de conta {#browse-account-profiles}
 
-O [!UICONTROL Procurar] permite pesquisar e exibir os perfis de conta somente leitura assimilados em sua organização usando uma ID de conta de uma fonte corporativa conectada ou inserindo diretamente os detalhes da origem. Aqui você pode ver informações importantes pertencentes ao perfil da conta, incluindo o nome, o setor, a receita e o segmento, entre outros.
+A variável [!UICONTROL Procurar] A guia permite pesquisar e visualizar os perfis de conta somente leitura assimilados em sua organização usando uma ID de conta de uma origem corporativa conectada ou inserindo os detalhes da origem diretamente. Aqui você pode ver informações importantes pertencentes ao perfil da conta, incluindo nome, setor, receita e segmento, entre outros.
 
-Selecione o [!UICONTROL ID do perfil] dos resultados exibidos na [!UICONTROL Procurar] para abrir o [!UICONTROL Detalhes] para o perfil da conta.
+Selecione o [!UICONTROL ID do perfil] a partir dos resultados exibidos no [!UICONTROL Procurar] para abrir a guia [!UICONTROL Detalhes] para o perfil da conta.
 
-![Os Perfis de conta navegam na guia com os resultados exibidos e a ID de perfil é realçada.](../images/account-profiles/account-profiles-browse-tab.png)
+![A guia de navegação Perfis de conta com os resultados exibidos e a ID do perfil destacada.](../images/account-profiles/account-profiles-browse-tab.png)
 
-As informações do perfil da conta exibidas no [!UICONTROL Detalhes] A guia foi unida de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação em [navegar pelos perfis da conta no Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização do perfil da conta na interface do usuário da plataforma.
+As informações de perfil da conta exibidas na variável [!UICONTROL Detalhes] A guia foi mesclada de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação em [procurar perfis de conta no Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização de perfil da conta na interface do usuário da plataforma.
 
-## O [!UICONTROL Perfis de conta] [!UICONTROL Visão geral] {#overview}
+## A variável [!UICONTROL Perfis de conta] [!UICONTROL Visão geral] {#overview}
 
-O [!UICONTROL Visão geral] A guia é composta de widgets que fornecem métricas somente leitura para transmitir informações importantes sobre os perfis da sua conta. Selecionar **[!UICONTROL Modificar painel]** para alterar a aparência do [!UICONTROL Visão geral] movendo e redimensionando widgets.
+A variável [!UICONTROL Visão geral] A guia é composta de widgets que fornecem métricas somente leitura para transmitir informações importantes sobre os perfis da sua conta. Selecionar **[!UICONTROL Modificar painel]** para alterar a aparência da variável [!UICONTROL Visão geral] movendo e redimensionando widgets.
 
-![A guia Account Profiles overview com o painel Modificar é realçada.](../images/account-profiles/modify-dashboard.png)
+![A guia de visão geral Perfis de conta com o painel Modificar realçado.](../images/account-profiles/modify-dashboard.png)
 
-Consulte o documento em [modificação de painéis](../customize/modify.md) e [Visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
+Consulte o documento sobre [modificação de painéis](../customize/modify.md) e a variável [Visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
 
 ## Widgets padrão {#standard-widgets}
 
-O Adobe fornece widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos perfis de sua conta.
+O Adobe fornece widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus perfis de conta.
 
-Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
+Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
-* [Total das contas por ramo de atividade](#total-accounts-by-industry)
+* [Total de contas por setor](#total-accounts-by-industry)
 * [Perfis de conta adicionados](#account-profiles-added)
-* [Distribuição preditiva de pontuação](#predictive-scoring-distribution)
-* [Fatores influentes principais da pontuação preditiva](#predictive-scoring-top-influential-factors)
+* [Distribuição de pontuação preditiva](#predictive-scoring-distribution)
+* [Principais fatores influentes da pontuação preditiva](#predictive-scoring-top-influential-factors)
 
-### Total das contas por ramo de atividade {#total-accounts-by-industry}
+### Total de contas por setor {#total-accounts-by-industry}
 
-Esse widget exibe o número total de contas em uma única métrica e usa um gráfico de rosca para ilustrar os tamanhos proporcionais de contagens para os setores que compõem o número geral. A chave fornece informações de codificação de cores para os diferentes setores que compõem o gráfico de rosca.
+Este widget exibe o número total de contas em uma única métrica e usa um gráfico de rosca para ilustrar os tamanhos proporcionais das contagens para os setores que compõem o número geral. A chave fornece informações de codificação de cores para os diferentes setores que compõem o gráfico de rosca.
 
-As contagens individuais para os diferentes setores são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+As contagens individuais para os diferentes setores são exibidas em uma caixa de diálogo quando o cursor passa sobre a respectiva seção do gráfico de rosca.
 
-![O total de contas por widget do setor.](../images/account-profiles/total-accounts-by-industry-widget.png)
+![O widget do total de contas por setor.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ### Perfis de conta adicionados {#account-profiles-added}
 
-Esse widget usa um gráfico de barras codificadas por cores para ilustrar a contagem de perfis adicionados a uma conta em um determinado período e a proporção de setores diferentes que constituem esses perfis adicionados. Os setores são codificados por cores e uma tecla fornece as informações de codificação por cores para os diferentes setores que compõem o gráfico de barras. O período de análise é selecionado no menu suspenso do widget. O gráfico de barras pode ser visualizado em um período de 30 dias, 90 dias e 12 meses.
+Este widget usa um gráfico de barras codificado por cores para ilustrar a contagem de perfis adicionados a uma conta em um determinado período e a proporção de diferentes setores que constituem esses perfis adicionados. Os setores são codificados por cores, e uma tecla fornece as informações de codificação por cores para os diferentes setores que compõem o gráfico de barras. O período de análise é selecionado no menu suspenso widget. O gráfico de barras pode ser visualizado em um período de 30 dias, 90 dias e 12 meses.
 
 >[!NOTE]
 >
->Como os perfis são adicionados a uma conta e nunca são removidos, o número mais baixo possível de perfis adicionados durante um período é zero.
+>Como os perfis são adicionados somente a uma conta e nunca são removidos, o menor número possível de perfis adicionados em um período é zero.
 
-![Os perfis de conta adicionaram o widget.](../images/account-profiles/accounts-profiles-added-widget.png)
+![O widget Perfis de conta foram adicionados.](../images/account-profiles/accounts-profiles-added-widget.png)
 
-### Distribuição preditiva de pontuação {#predictive-scoring-distribution}
+### Distribuição de pontuação preditiva {#predictive-scoring-distribution}
 
-O [!UICONTROL Distribuição preditiva de pontuação] O widget mostra a distribuição de pontuação de todos os perfis da conta para ajudá-lo a entender imediatamente a integridade do pipeline de vendas. Os dados de pontuação são transmitidos por um gráfico de rosca e um gráfico de coluna.
+A variável [!UICONTROL Distribuição de pontuação preditiva] O widget mostra a distribuição de pontuação de todos os perfis de conta para ajudar você a entender rapidamente a integridade do pipeline de vendas. Os dados de pontuação são transmitidos por um gráfico de rosca e um gráfico de coluna.
 
-O gráfico de rosca ilustra a proporção do total de perfis de conta em cada um dos períodos de alta, média e baixa propensão a comprar buckets. A chave fornece mais detalhes sobre as seções com códigos de cores, incluindo os intervalos de pontuação e o número de perfis de conta nesse intervalo.
+O gráfico de rosca ilustra a proporção do total de perfis de conta em cada um dos segmentos de alta, média e baixa propensão para compra. A tecla fornece mais detalhes sobre as seções codificadas por cores, incluindo os intervalos do intervalo de classificação de pontuação e o número de perfis de conta nesse intervalo.
 
-O gráfico de colunas fornece um detalhamento de pontuação mais granular. Cada coluna mostra o número de perfis de conta em cada um dos intervalos de incremento de cinco pontos.
-
-O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
-
-![O widget de distribuição de pontuação preditiva.](../images/account-profiles/predictive-scoring-distribution.png)
-
-### Fatores influentes principais da pontuação preditiva {#predictive-scoring-top-influential-factors}
-
-O [!UICONTROL Fatores influentes principais da pontuação preditiva] O widget ajuda você a entender os fatores mais significativos que determinam as pontuações para cada bucket de propensão.
-
-Este widget mostra os principais fatores influentes para cada um dos compartimentos de alta, média e baixa propensão. Uma barra para cada fator influente indica a porcentagem dos perfis de conta nesse bucket de propensão que contém o fator influente específico.
+O gráfico de colunas fornece um detalhamento de pontuação mais granular. Cada coluna mostra o número de perfis de conta em cada um dos 20 intervalos de incremento de cinco pontos.
 
 O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 
-![O widget de Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+![O widget de distribuição Pontuação preditiva.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Principais fatores influentes da pontuação preditiva {#predictive-scoring-top-influential-factors}
+
+A variável [!UICONTROL Principais fatores influentes da pontuação preditiva] O widget ajuda você a entender os fatores mais significativos que determinam as pontuações para cada intervalo de propensão.
+
+Este widget mostra os principais fatores influentes para cada um dos intervalos de alta, média e baixa propensão. Uma barra para cada fator influente indica a porcentagem dos perfis de conta nesse intervalo de propensão que contém o fator influente específico.
+
+O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
+
+![O widget Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
 ## Próximas etapas
 
-Ao seguir este documento, você deve saber localizar a variável [!UICONTROL Perfis de conta] painel. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte dos dados B2B na interface do usuário do Experience Platform, consulte o [visão geral dos perfis da conta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B Edition.
+Ao seguir este documento, agora você deve saber como localizar o [!UICONTROL Perfis de conta] painel. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte de seus dados B2B na interface do usuário do Experience Platform, consulte o [visão geral dos perfis de conta](../../rtcdp/accounts/account-profile-overview.md) para o Adobe Real-Time CDP, B2B Edition.

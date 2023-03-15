@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Data Governance
 breadcrumb-title: Guia do Data Governance
-user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas de controle.
+user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas de governança.
 feature: Data Governance
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 23%
+ht-degree: 42%
 
 ---
 
@@ -19,17 +19,17 @@ ht-degree: 23%
 * Rótulos de uso de dados {#labels}
    * [Visão geral](labels/overview.md)
    * [Glossário de rótulos](labels/reference.md)
-   * [Gerenciar rótulos na interface do usuário](labels/user-guide.md)
-   * [Gerenciar rótulos de conjuntos de dados usando APIs](labels/dataset-api.md)
+   * [Gerenciar rótulos na interface](labels/user-guide.md)
+   * [Gerenciar rótulos para conjuntos de dados usando APIs](labels/dataset-api.md)
 * Políticas de uso de dados {#policies}
    * [Visão geral](policies/overview.md)
-   * [Gerenciar políticas na interface do usuário](policies/user-guide.md)
+   * [Gerenciar políticas na interface](policies/user-guide.md)
    * [Criar uma política na API](policies/create.md)
-* Aplicação da política {#enforcement}
+* Aplicação de política {#enforcement}
    * [Visão geral](enforcement/overview.md)
    * [Aplicação automática](enforcement/auto-enforcement.md)
-   * [Aplicação baseada em API](enforcement/api-enforcement.md)
-* API do serviço de política {#api}
+   * [Imposição com base em API](enforcement/api-enforcement.md)
+* API de serviço de política {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Rótulos](api/labels.md)
@@ -37,4 +37,4 @@ ht-degree: 23%
    * [Ações de marketing](api/marketing-actions.md)
    * [Avaliação](api/evaluation.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

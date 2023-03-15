@@ -6,14 +6,14 @@ user-guide-description: Saiba mais sobre as etapas gerais para criar conectores 
 source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '43'
-ht-degree: 48%
+ht-degree: 58%
 
 ---
 
 
-# Extrair, transformar e carregar procedimentos no Experience Platform {#etl}
+# Procedimentos de extração, transformação e carregamento no Experience Platform {#etl}
 
-- [Desenvolvimento de integrações de ETL](home.md)
-- [Transformação de ETL](transformations.md)
+- [Desenvolvimento de integrações ETL](home.md)
+- [Transformação ETL](transformations.md)
 - [Fluxo de trabalho ETL](workflow.md)
-- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

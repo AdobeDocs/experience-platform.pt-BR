@@ -263,7 +263,7 @@ Uma resposta bem-sucedida retorna os detalhes do retorno de chamada recém-criad
 
 ## Atualizar um retorno de chamada
 
-Você pode atualizar um retorno de chamada ao incluir sua ID no caminho de uma solicitação do PATCH.
+Você pode atualizar um retorno de chamada incluindo a respectiva ID no caminho de uma solicitação PATCH.
 
 **Formato da API**
 

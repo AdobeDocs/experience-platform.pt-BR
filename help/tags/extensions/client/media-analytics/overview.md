@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta documentação para obter informações sobre como instalar, configurar e implementar a extensão Adobe Media Analytics for Audio and Video (extensão do Media Analytics). Estão incluídas as opções disponíveis ao usar esta extensão para criar uma regra, juntamente com exemplos e links para amostras.
 
@@ -130,7 +130,7 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
 
       | Propriedade | Descrição | Obrigatório |
       | :--- | :--- | :--- |
-      | Provedor de Vídeo Online | Nome da plataforma de vídeo online pela qual o conteúdo é distribuído. | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
+      | Online Video Provider | Nome da plataforma de vídeo online pela qual o conteúdo é distribuído. | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
       | Nome do reprodutor | Nome do reprodutor de vídeo em uso (por exemplo, &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
       | Canal | Propriedade do nome do canal | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
    **Valor de retorno:** uma promessa que resolve uma instância do `MediaHeartbeat` ou a rejeita com uma mensagem de erro.

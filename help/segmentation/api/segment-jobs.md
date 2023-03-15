@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; trabalhos de segmento; trabalho de segmento; API; api;
+keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;trabalhos de segmento;trabalho de segmento;API;api;
 solution: Experience Platform
-title: Ponto de extremidade da API de tarefas de segmento
-description: O endpoint de tarefas de segmento na API do Serviço de segmentação da Adobe Experience Platform permite gerenciar programaticamente tarefas de segmento para sua organização.
+title: Ponto de extremidade da API de trabalhos de segmento
+description: O endpoint de trabalhos de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os trabalhos de segmento da sua organização.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,21 +13,21 @@ ht-degree: 3%
 
 # Ponto de extremidade de trabalhos de segmento
 
-Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a um [definição de segmento](./segment-definitions.md), bem como qualquer [políticas de mesclagem](../../profile/api/merge-policies.md) controlar como [!DNL Real-Time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
+Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Faz referência a uma [definição de segmento](./segment-definitions.md), bem como qualquer [políticas de mesclagem](../../profile/api/merge-policies.md) controlando como [!DNL Real-Time Customer Profile] O mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com sucesso, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho máximo do seu público-alvo.
 
-Este guia fornece informações para ajudá-lo a entender melhor as tarefas do segmento e inclui exemplos de chamadas de API para executar ações básicas usando a API.
+Este guia fornece informações para ajudar você a entender melhor os trabalhos de segmento e inclui chamadas de API de exemplo para executar ações básicas usando a API.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os endpoints usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
 
-## Recuperar uma lista de tarefas do segmento {#retrieve-list}
+## Recuperar uma lista de trabalhos do segmento {#retrieve-list}
 
-Você pode recuperar uma lista de todos os trabalhos de segmento para sua organização fazendo uma solicitação de GET para a `/segment/jobs` endpoint .
+Você pode recuperar uma lista de todos os cargos do segmento para sua organização fazendo uma solicitação GET para a `/segment/jobs` terminal.
 
 **Formato da API**
 
-O `/segment/jobs` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Efetuar uma chamada para esse endpoint sem parâmetros recuperará todos os trabalhos de exportação disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+A variável `/segment/jobs` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Fazer uma chamada para esse ponto de extremidade sem parâmetros recuperará todos os trabalhos de exportação disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /segment/jobs
@@ -40,9 +40,9 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | --------- | ----------- | ------- |
 | `start` | Especifica o deslocamento inicial dos trabalhos de segmento retornados. | `start=1` |
 | `limit` | Especifica o número de trabalhos de segmento retornados por página. | `limit=20` |
-| `status` | Filtra os resultados com base no status . Os valores suportados são NOVO, FILEIRADO, PROCESSAMENTO, BEM-SUCEDIDO, FALHA, CANCELAMENTO, CANCELADO | `status=NEW` |
-| `sort` | Encomende os trabalhos do segmento retornados. É gravado no formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
-| `property` | Filtra os trabalhos do segmento e obtém correspondências exatas para o filtro fornecido. Ele pode ser escrito em um dos seguintes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtragem na chave de objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtragem dentro da matriz</li></ul> | `property=segments~segmentId==workInUS` |
+| `status` | Filtra os resultados com base no status. Os valores compatíveis são NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELED | `status=NEW` |
+| `sort` | Ordena os trabalhos do segmento retornados. É gravado no formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filtra trabalhos de segmento e obtém correspondências exatas para o filtro fornecido. Ele pode ser escrito em um dos seguintes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtrando na chave do objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtragem dentro da matriz</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Solicitação**
 
@@ -56,15 +56,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de tarefas de segmento para a organização IMS especificada como JSON. No entanto, a resposta será diferente, dependendo do número de segmentos no trabalho do segmento.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos de segmento para a organização IMS especificada como JSON. No entanto, a resposta será diferente, dependendo do número de segmentos no trabalho de segmento.
 
-**Menor ou igual a 1500 segmentos no trabalho do segmento**
+**Menor que ou igual a 1500 segmentos no trabalho do segmento**
 
-Se você tiver menos de 1500 segmentos sendo executados em sua tarefa de segmento, uma lista completa de todos os segmentos será exibida na `children.segments` atributo.
+Se você tiver menos de 1500 segmentos em execução no seu trabalho de segmento, uma lista completa de todos os segmentos será exibida na `children.segments` atributo.
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada para espaço e mostrará apenas o primeiro trabalho retornado.
+>A resposta a seguir foi truncada por questões de espaço e mostrará apenas a primeira tarefa retornada.
 
 ```json
 {
@@ -169,11 +169,11 @@ Se você tiver menos de 1500 segmentos sendo executados em sua tarefa de segment
 
 **Mais de 1500 segmentos**
 
-Se você tiver mais de 1500 segmentos sendo executados em seu trabalho de segmento, a variável `children.segments` o atributo exibirá `*`, indicando que todos os segmentos estão sendo avaliados.
+Se você tiver mais de 1500 segmentos em execução no seu trabalho de segmento, a variável `children.segments` atributo será exibido `*`, indicando que todos os segmentos estão sendo avaliados.
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada para espaço e mostrará apenas o primeiro trabalho retornado.
+>A resposta a seguir foi truncada por questões de espaço e mostrará apenas a primeira tarefa retornada.
 
 ```json
 {
@@ -265,22 +265,22 @@ Se você tiver mais de 1500 segmentos sendo executados em seu trabalho de segmen
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho do segmento. |
-| `status` | O status atual do trabalho do segmento. Os valores potenciais para o status incluem &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CANCELAMENTO&quot;, &quot;CANCELADO&quot;, &quot;FALHADO&quot; e &quot;SUCEDIDO&quot;. |
+| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento. |
+| `status` | O status atual do trabalho do segmento. Os valores potenciais para o status incluem &quot;NOVO&quot;, &quot;PROCESSANDO&quot;, &quot;CANCELANDO&quot;, &quot;CANCELADO&quot;, &quot;FALHA&quot; e &quot;BEM-SUCEDIDO&quot;. |
 | `segments` | Um objeto que contém informações sobre as definições de segmento retornadas no trabalho de segmento. |
-| `segments.segment.id` | A ID da definição de segmento. |
+| `segments.segment.id` | A ID da definição do segmento. |
 | `segments.segment.expression` | Um objeto que contém informações sobre a expressão da definição de segmento, escrita em PQL. |
 | `metrics` | Um objeto que contém informações de diagnóstico sobre o trabalho do segmento. |
-| `metrics.totalTime` | Um objeto que contém informações sobre os horários em que o trabalho de segmentação foi iniciado e encerrado, bem como o tempo total gasto. |
-| `metrics.profileSegmentationTime` | Um objeto que contém informações sobre os horários em que a avaliação de segmentação foi iniciada e finalizada, bem como o tempo total gasto. |
+| `metrics.totalTime` | Um objeto que contém informações sobre os horários em que o trabalho de segmentação começou e terminou, bem como o tempo total gasto. |
+| `metrics.profileSegmentationTime` | Um objeto que contém informações sobre os horários em que a avaliação da segmentação começou e terminou, bem como o tempo total gasto. |
 | `metrics.segmentProfileCounter` | O número de perfis qualificados por segmento. |
-| `metrics.segmentedProfileByNamespaceCounter` | O número de perfis qualificados para cada namespace de identidade com base em segmento. |
-| `metrics.segmentProfileByStatusCounter` | A contagem de perfis para cada status. Os três status a seguir são suportados: <ul><li>&quot;percebido&quot; - o número de novos perfis que entraram no segmento.</li><li>&quot;existente&quot; - o número de perfis que continuam a existir no segmento.</li><li>&quot;encerrado&quot; - O número de segmentos de perfil que não existem mais no segmento.</li></ul> |
-| `metrics.totalProfilesByMergePolicy` | O número total de perfis mesclados com base em políticas de mesclagem. |
+| `metrics.segmentedProfileByNamespaceCounter` | O número de perfis qualificados para cada namespace de identidade com base no segmento. |
+| `metrics.segmentProfileByStatusCounter` | A contagem de perfis para cada status. Os três status a seguir são compatíveis: <ul><li>&quot;realizado&quot; - O número de novos perfis que entraram no segmento.</li><li>&quot;existente&quot; - o número de perfis que continuam a existir no segmento.</li><li>&quot;encerrado&quot; - o número de segmentos de perfil que não existem mais no segmento.</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | O número total de perfis mesclados por política de mesclagem. |
 
 ## Criar um novo trabalho de segmento {#create}
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação de POST para a variável `/segment/jobs` endpoint e incluir no corpo a ID da definição de segmento da qual deseja criar um novo público-alvo.
+Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o `/segment/jobs` e incluir no corpo a ID da definição de segmento a partir da qual você deseja criar um novo público-alvo.
 
 **Formato da API**
 
@@ -288,9 +288,9 @@ Você pode criar um novo trabalho de segmento fazendo uma solicitação de POST 
 POST /segment/jobs
 ```
 
-Ao criar um novo trabalho de segmento, a solicitação e a resposta serão diferentes dependendo do número de segmentos no trabalho do segmento.
+Ao criar um novo trabalho de segmento, a solicitação e a resposta serão diferentes dependendo do número de segmentos no trabalho de segmento.
 
-**Menor ou igual a 1500 segmentos no trabalho do segmento**
+**Menor que ou igual a 1500 segmentos no trabalho do segmento**
 
 **Solicitação**
 
@@ -310,7 +310,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. Mais informações sobre definições de segmento podem ser encontradas na seção [guia do endpoint de definição de segmento](./segment-definitions.md). |
+| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. Mais informações sobre definições de segmento podem ser encontradas no [guia de endpoint de definição de segmento](./segment-definitions.md). |
 
 **Resposta**
 
@@ -409,7 +409,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o tr
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento recém-criado. |
-| `status` | O status atual do trabalho do segmento. Como o trabalho do segmento é criado recentemente, o status sempre será &quot;NOVO&quot;. |
+| `status` | O status atual do trabalho do segmento. Como o trabalho do segmento é recém-criado, o status sempre será &quot;NOVO&quot;. |
 | `segments` | Um objeto que contém informações sobre as definições de segmento para as quais esse trabalho de segmento está sendo executado. |
 | `segments.segment.id` | A ID da definição de segmento fornecida. |
 | `segments.segment.expression` | Um objeto que contém informações sobre a expressão da definição de segmento, escrita em PQL. |
@@ -443,12 +443,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `schema.name` | O nome do schema para os segmentos. |
+| `schema.name` | O nome do esquema dos segmentos. |
 | `segments.segmentId` | Ao executar um trabalho de segmento com mais de 1500 segmentos, você precisará passar `*` como a ID do segmento para indicar que você deseja executar um trabalho de segmentação com todos os segmentos. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do seu trabalho de segmento recém-criado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de segmento recém-criado.
 
 ```json
 {
@@ -530,13 +530,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do seu trabalho
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento recém-criado. |
-| `status` | O status atual do trabalho do segmento. Como o trabalho do segmento é criado recentemente, o status sempre será `NEW`. |
+| `status` | O status atual do trabalho do segmento. Como o trabalho do segmento é recém-criado, o status sempre será `NEW`. |
 | `segments` | Um objeto que contém informações sobre as definições de segmento para as quais esse trabalho de segmento está sendo executado. |
-| `segments.segment.id` | O `*` significa que esse trabalho de segmento está em execução para todos os segmentos na organização. |
+| `segments.segment.id` | A variável `*` significa que esse trabalho de segmento está sendo executado para todos os segmentos na organização. |
 
 ## Recuperar um trabalho de segmento específico {#get}
 
-Você pode recuperar informações detalhadas sobre um trabalho de segmento específico, fazendo uma solicitação de GET para o `/segment/jobs` endpoint e fornecer a ID do trabalho do segmento que você deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um trabalho de segmento específico fazendo uma solicitação GET à `/segment/jobs` e forneça a ID do trabalho de segmento que você deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -546,7 +546,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | O `id` valor do trabalho de segmento que você deseja recuperar. |
+| `{SEGMENT_JOB_ID}` | A variável `id` valor do trabalho de segmento que você deseja recuperar. |
 
 **Solicitação**
 
@@ -560,11 +560,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho do segmento especificado.  No entanto, a resposta será diferente dependendo do número de segmentos no trabalho do segmento.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho de segmento especificado.  No entanto, a resposta será diferente dependendo do número de segmentos no trabalho de segmento.
 
-**Menor ou igual a 1500 segmentos no trabalho do segmento**
+**Menor que ou igual a 1500 segmentos no trabalho do segmento**
 
-Se você tiver menos de 1500 segmentos sendo executados em sua tarefa de segmento, uma lista completa de todos os segmentos será exibida na `children.segments` atributo.
+Se você tiver menos de 1500 segmentos em execução no seu trabalho de segmento, uma lista completa de todos os segmentos será exibida na `children.segments` atributo.
 
 ```json
 {
@@ -628,7 +628,7 @@ Se você tiver menos de 1500 segmentos sendo executados em sua tarefa de segment
 
 **Mais de 1500 segmentos**
 
-Se você tiver mais de 1500 segmentos sendo executados em seu trabalho de segmento, a variável `children.segments` o atributo exibirá `*`, indicando que todos os segmentos estão sendo avaliados.
+Se você tiver mais de 1500 segmentos em execução no seu trabalho de segmento, a variável `children.segments` atributo será exibido `*`, indicando que todos os segmentos estão sendo avaliados.
 
 ```json
 {
@@ -709,16 +709,16 @@ Se você tiver mais de 1500 segmentos sendo executados em seu trabalho de segmen
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho do segmento. |
-| `status` | O status atual do trabalho do segmento. Os valores potenciais para o status incluem &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CANCELAMENTO&quot;, &quot;CANCELADO&quot;, &quot;FALHADO&quot; e &quot;SUCEDIDO&quot;. |
+| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento. |
+| `status` | O status atual do trabalho do segmento. Os valores potenciais para o status incluem &quot;NOVO&quot;, &quot;PROCESSANDO&quot;, &quot;CANCELANDO&quot;, &quot;CANCELADO&quot;, &quot;FALHA&quot; e &quot;BEM-SUCEDIDO&quot;. |
 | `segments` | Um objeto que contém informações sobre as definições de segmento retornadas no trabalho de segmento. |
-| `segments.segment.id` | A ID da definição de segmento. |
+| `segments.segment.id` | A ID da definição do segmento. |
 | `segments.segment.expression` | Um objeto que contém informações sobre a expressão da definição de segmento, escrita em PQL. |
 | `metrics` | Um objeto que contém informações de diagnóstico sobre o trabalho do segmento. |
 
-## Recuperar trabalhos de segmento em massa {#bulk-get}
+## Trabalhos de recuperação de segmentos em massa {#bulk-get}
 
-Você pode recuperar informações detalhadas sobre vários trabalhos de segmento, fazendo uma solicitação de POST para o `/segment/jobs/bulk-get` endpoint e fornecer a variável  `id` valores dos trabalhos do segmento no corpo da solicitação.
+Você pode recuperar informações detalhadas sobre vários trabalhos de segmento fazendo uma solicitação POST para o `/segment/jobs/bulk-get` terminal e fornecendo a  `id` valores dos trabalhos de segmento no corpo da solicitação.
 
 **Formato da API**
 
@@ -749,11 +749,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados. No entanto, o valor da variável `children.segments` varia dependendo se o trabalho do segmento está em execução para mais de 1500 segmentos.
+Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados. No entanto, o valor da `children.segments` o atributo difere dependendo se o trabalho de segmento está em execução para mais de 1500 segmentos.
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada para o espaço, mostrando apenas detalhes parciais de cada tarefa de segmento. A resposta completa listará os detalhes completos dos trabalhos do segmento solicitados.
+>A resposta a seguir foi truncada por questões de espaço, mostrando apenas detalhes parciais de cada trabalho de segmento. A resposta completa listará os detalhes completos para os trabalhos do segmento solicitados.
 
 ```json
 {
@@ -803,19 +803,19 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho do segmento. |
-| `status` | O status atual do trabalho do segmento. Os valores potenciais para o status incluem &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CANCELAMENTO&quot;, &quot;CANCELADO&quot;, &quot;FALHADO&quot; e &quot;SUCEDIDO&quot;. |
+| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento. |
+| `status` | O status atual do trabalho do segmento. Os valores potenciais para o status incluem &quot;NOVO&quot;, &quot;PROCESSANDO&quot;, &quot;CANCELANDO&quot;, &quot;CANCELADO&quot;, &quot;FALHA&quot; e &quot;BEM-SUCEDIDO&quot;. |
 | `segments` | Um objeto que contém informações sobre as definições de segmento retornadas no trabalho de segmento. |
-| `segments.segment.id` | A ID da definição de segmento. |
+| `segments.segment.id` | A ID da definição do segmento. |
 | `segments.segment.expression` | Um objeto que contém informações sobre a expressão da definição de segmento, escrita em PQL. |
 
 ## Cancelar ou excluir um trabalho de segmento específico {#delete}
 
-Você pode excluir um trabalho de segmento específico fazendo uma solicitação de DELETE para a variável `/segment/jobs` endpoint e fornecer a ID do trabalho do segmento que você deseja excluir no caminho da solicitação.
+Você pode excluir um trabalho de segmento específico fazendo uma solicitação DELETE para o `/segment/jobs` e forneça a ID do trabalho de segmento que você deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >
->A resposta da API à solicitação de exclusão é imediata. No entanto, a exclusão real do trabalho do segmento é assíncrona. Em outras palavras, há uma diferença de tempo entre quando a solicitação de exclusão para o trabalho do segmento é feita e quando ela é aplicada.
+>A resposta da API à solicitação de exclusão é imediata. No entanto, a exclusão real do trabalho de segmento é assíncrona. Em outras palavras, há uma diferença de tempo entre quando a solicitação de exclusão para o trabalho do segmento é feita e quando é aplicada.
 
 **Formato da API**
 
@@ -825,7 +825,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | O `id` valor do trabalho de segmento que deseja excluir. |
+| `{SEGMENT_JOB_ID}` | A variável `id` valor do trabalho de segmento que você deseja excluir. |
 
 **Solicitação**
 
@@ -850,4 +850,4 @@ Uma resposta bem-sucedida retorna o status HTTP 204 com as seguintes informaçõ
 
 ## Próximas etapas
 
-Após a leitura deste guia, você tem uma melhor compreensão de como as tarefas do segmento funcionam.
+Após ler este guia, agora você tem uma melhor compreensão de como os trabalhos de segmento funcionam.

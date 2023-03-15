@@ -1,11 +1,11 @@
 ---
-keywords: móvel; brasa; Mensagens;
-title: Ligação de brasa
-description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
+keywords: mobile; braze; mensagens;
+title: Conexão Braze
+description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
@@ -14,35 +14,35 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-O [!DNL Braze] O destino ajuda a enviar dados de perfil para o [!DNL Braze].
+A variável [!DNL Braze] O destino ajuda a enviar dados de perfil para o [!DNL Braze].
 
-[!DNL Braze] é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
+[!DNL Braze] O é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 
-Para enviar dados de perfil para o [!DNL Braze], primeiro você deve se conectar ao destino.
+Para enviar dados de perfil para [!DNL Braze], você deve primeiro se conectar ao destino.
 
 ## Especificações do destino {#specifics}
 
-Observe os detalhes a seguir que são específicos da variável [!DNL Braze] destino:
+Observe os seguintes detalhes específicos do [!DNL Braze] destino:
 
-* [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] nos termos do `AdobeExperiencePlatformSegments` atributo.
+* [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
 
 >[!NOTE]
 >
->Lembre-se de enviar atributos personalizados adicionais para [!DNL Braze] pode causar aumento na [!DNL Braze] consumo de ponto de dados. Consulte seu [!DNL Braze] gerente de conta antes de enviar atributos personalizados adicionais.
+>Lembre-se de que enviar atributos personalizados adicionais para o [!DNL Braze] pode causar aumentos nas [!DNL Braze] consumo de ponto de dados. Consulte seu [!DNL Braze] gerente de conta antes de enviar atributos personalizados adicionais.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, desejo direcionar usuários em um destino de envolvimento móvel, com segmentos incorporados [!DNL Adobe Experience Platform]. Além disso, quero oferecer experiências personalizadas a elas, com base em atributos de seus [!DNL Adobe Experience Platform] assim que os segmentos e perfis forem atualizados em [!DNL Adobe Experience Platform].
+Como profissional de marketing, desejo direcionar usuários em um destino de engajamento móvel, com segmentos integrados [!DNL Adobe Experience Platform]. Além disso, desejo oferecer experiências personalizadas a eles, com base nos atributos de seus [!DNL Adobe Experience Platform] perfis, assim que os segmentos e perfis forem atualizados no [!DNL Adobe Experience Platform].
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Braze] O suporta a ativação de identidades descritas na tabela abaixo.
+[!DNL Braze] O oferece suporte à ativação das identidades descritas na tabela abaixo.
 
-| Identidade do Target | Descrição | Considerações |
+| Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| external_id | Personalizado [!DNL Braze] identificador que suporta o mapeamento de qualquer identidade. | Você pode enviar qualquer [identidade](../../../identity-service/namespaces.md) para [!DNL Braze] destino, desde que você o mapeie para a variável [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Personalizado [!DNL Braze] identificador que oferece suporte ao mapeamento de qualquer identidade. | Você pode enviar qualquer [identidade](../../../identity-service/namespaces.md) para o [!DNL Braze] destino, contanto que você o mapeie para a variável [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -50,109 +50,109 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campo.[!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] nos termos do `AdobeExperiencePlatformSegments` atributo. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campos.[!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Conecte-se ao destino {#connect}
+## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa da variável **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow para configurar destino , preencha os campos listados nas duas seções abaixo.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para destino {#authenticate}
 
-Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
-* **[!UICONTROL Token de conta do Brasil]**: Este é o seu [!DNL Braze] [!DNL API] chave. Você pode encontrar instruções detalhadas sobre como obter seu [!DNL API] Chave aqui: [Visão geral da chave de API REST](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Token da conta brasileira]**: Este é o seu [!DNL Braze] [!DNL API] chave. Você pode encontrar instruções detalhadas sobre como obter o seu [!DNL API] chave aqui: [Visão geral da chave REST API](https://www.braze.com/docs/api/api_key/).
 
-### Preencha os detalhes do destino {#destination-details}
+### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
+* **[!UICONTROL Nome]**: digite um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL Instância do ponto de extremidade]**: pergunte ao seu [!DNL Braze] representante de qual instância de ponto de extremidade você deve usar.
+* **[!UICONTROL Instância de Ponto de Extremidade]**: pergunte ao seu [!DNL Braze] representante qual instância de endpoint você deve usar.
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
 ## Ativar segmentos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
+Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
 ## Considerações de mapeamento {#mapping-considerations}
 
-Para enviar corretamente os dados de público-alvo do [!DNL Adobe Experience Platform] para [!DNL Braze] , é necessário percorrer a etapa de mapeamento de campo .
+Para enviar corretamente os dados do público-alvo de [!DNL Adobe Experience Platform] para o [!DNL Braze] destino, é necessário passar pela etapa de mapeamento de campos.
 
-O mapeamento consiste na criação de um link entre os [!DNL Experience Data Model] (XDM) campos do esquema no [!DNL Platform] e seus equivalentes correspondentes do destino-alvo.
+O mapeamento consiste na criação de um link entre as [!DNL Experience Data Model] Campos de esquema do (XDM) no [!DNL Platform] conta e seus equivalentes correspondentes no destino.
 
-Para mapear corretamente os campos XDM para a variável [!DNL Braze] campos de destino, siga estas etapas:
+Para mapear corretamente os campos XDM para o [!DNL Braze] campos de destino, siga estas etapas:
 
-No [!UICONTROL Mapeamento] etapa , clique em **[!UICONTROL Adicionar novo mapeamento]**.
+No [!UICONTROL Mapeamento] clique em **[!UICONTROL Adicionar novo mapeamento]**.
 
-![Mapeamento de adição de destino](../../assets/catalog/mobile-engagement/braze/mapping.png)
+![Adicionar mapeamento de destino brasileiro](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-No [!UICONTROL Campo de origem] , clique no botão de seta ao lado do campo vazio.
+No [!UICONTROL Campo de origem] clique no botão de seta ao lado do campo vazio.
 
-![Mapeamento de Origem de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Mapeamento de origem de destino do Brasil](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 No [!UICONTROL Selecionar campo de origem] você pode escolher entre duas categorias de campos XDM:
-* [!UICONTROL Selecionar atributos]: use esta opção para mapear um campo específico do esquema XDM para um [!DNL Braze] atributo.
+* [!UICONTROL Selecionar atributos]: use essa opção para mapear um campo específico do esquema XDM para um campo [!DNL Braze] atributo.
 
-![Atributo da Fonte de Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Atributos da Origem de Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Selecionar namespace de identidade]: Use esta opção para mapear uma [!DNL Platform] namespace de identidade para um [!DNL Braze] namespace.
+* [!UICONTROL Selecionar namespace de identidade]: use essa opção para mapear um [!DNL Platform] namespace de identidade para um [!DNL Braze] namespace.
 
-![Namespace da Fonte do Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Namespace de Origem do Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Escolha o campo de origem e clique em **[!UICONTROL Selecionar]**.
 
-No [!UICONTROL Campo de destino] , clique no ícone mapping à direita do campo .
+No [!UICONTROL Campo de destino] clique no ícone de mapeamento à direita do campo.
 
-![Mapeamento de Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
+![Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 No [!UICONTROL Selecionar campo de destino] você pode escolher entre duas categorias de campos de destino:
-* [!UICONTROL Selecionar namespace de identidade]: Usar esta opção para mapear [!DNL Platform] namespaces de identidade para [!DNL Braze] namespaces de identidade.
-* [!UICONTROL Selecionar atributos personalizados]: Use esta opção para mapear atributos XDM para personalizados [!DNL Braze] os atributos definidos na [!DNL Braze] conta. <br> Também é possível usar essa opção para renomear atributos XDM existentes para [!DNL Braze]. Por exemplo, mapear uma `lastName` Atributo XDM a um `Last_Name` atributo em [!DNL Braze], criará o `Last_Name` atributo em [!DNL Braze], se ainda não existir, e mapeie a variável `lastName` Atributo XDM a ele.
+* [!UICONTROL Selecionar namespace de identidade]: use esta opção para mapear [!DNL Platform] namespaces de identidade para [!DNL Braze] namespaces de identidade.
+* [!UICONTROL Selecionar atributos personalizados]: use essa opção para mapear atributos XDM para personalizados [!DNL Braze] atributos definidos no [!DNL Braze] conta. <br> Também é possível usar essa opção para renomear atributos XDM existentes em [!DNL Braze]. Por exemplo, mapear um `lastName` Atributo XDM para um personalizado `Last_Name` atributo em [!DNL Braze], criará o `Last_Name` atributo em [!DNL Braze], se ainda não existir, e mapear o `lastName` Atributo XDM a ele.
 
-![Campos de mapeamento de destino do site](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
+![Campos de Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
 Escolha o campo de destino e clique em **[!UICONTROL Selecionar]**.
 
-Agora, você deve ver o mapeamento de campo na lista.
+Agora você deve ver o mapeamento de campos na lista.
 
-![Mapeamento de Destino de Brasileira Concluído](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
+![Mapeamento de Destinos Brasileiros Concluído](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
 
 Para adicionar mais mapeamentos, repita as etapas anteriores.
 
 ## Exemplo de mapeamento {#mapping-example}
 
-Digamos que seu esquema de perfil XDM e seu [!DNL Braze] A instância contém os seguintes atributos e identidades:
+Digamos que seu esquema de perfil XDM e seu [!DNL Braze] instância contém os seguintes atributos e identidades:
 
-|  | Esquema de perfil do XDM | [!DNL Braze] Instância |
+|  | Esquema de perfil XDM | [!DNL Braze] Instância |
 |---|---|---|
-| Atributos | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>Número de telefone</code></li></ul> |
-| Identidades | <ul><li>Email</code></li><li>Google Ad ID (GAID)</code></li><li>Apple ID para anunciantes (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Atributos | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>Nome</code></li><li>Sobrenome</code></li><li>PhoneNumber</code></li></ul> |
+| Identidades | <ul><li>Email</code></li><li>ID de anúncio do Google (GAID)</code></li><li>Apple ID para anunciantes (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 O mapeamento correto seria semelhante a:
 
-![Exemplo de mapeamento de destino de site](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
+![Exemplo de mapeamento de destino brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
 
 ## Dados exportados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito para a [!DNL Braze] destino, verifique seu [!DNL Braze] conta. [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] nos termos do `AdobeExperiencePlatformSegments` atributo.
+Para verificar se os dados foram exportados com êxito para o [!DNL Braze] destino, verifique seu [!DNL Braze] conta. [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos [!DNL Adobe Experience Platform] Os destinos são compatíveis com as políticas de uso de dados ao manipular os dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte [Visão geral da governança de dados](../../../data-governance/home.md).
+Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, consulte [Visão geral da governança de dados](../../../data-governance/home.md).

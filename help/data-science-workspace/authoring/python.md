@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, acesso a dados, python sdk, api de acesso a dados, ler python, escrever python
+keywords: Experience Platform;página inicial;tópicos populares;acesso a dados;python sdk;api de acesso a dados;read python;write python
 solution: Experience Platform
 title: Acesso a dados usando o Python no Data Science Workspace
 type: Tutorial
-description: O documento a seguir contém exemplos de como acessar dados no Python para uso no Data Science Workspace.
+description: O documento a seguir contém exemplos sobre como acessar dados no Python para usar no Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 ---
 
-# Acesso a dados usando Python no Data Science Workspace
+# Acesso a dados usando o Python no Data Science Workspace
 
-O documento a seguir contém exemplos de como acessar dados usando o Python para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite o [Acesso aos dados dos notebooks JupyterLab](../jupyterlab/access-notebook-data.md) documentação.
+O documento a seguir contém exemplos de como acessar dados usando o Python para usar no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite o [Acesso aos dados de notebooks JupyterLab](../jupyterlab/access-notebook-data.md) documentação.
 
-## Leitura de um conjunto de dados
+## Ler um conjunto de dados
 
-Após definir as variáveis de ambiente e concluir a instalação, seu conjunto de dados agora pode ser lido no dataframe do painel.
+Depois de definir as variáveis de ambiente e concluir a instalação, seu conjunto de dados agora pode ser lido no quadro de dados pandas.
 
 ```python
 import pandas as pd
@@ -51,7 +51,7 @@ partitions = dataset.get_partitions_info()
 
 ### Cláusula DISTINCT
 
-A cláusula DISTINCT permite buscar todos os valores distintos em um nível de linha/coluna, removendo todos os valores duplicados da resposta.
+A cláusula DISTINCT permite buscar todos os valores distintos em nível de linha/coluna, removendo todos os valores duplicados da resposta.
 
 Um exemplo de uso da variável `distinct()` pode ser vista abaixo:
 
@@ -59,13 +59,13 @@ Um exemplo de uso da variável `distinct()` pode ser vista abaixo:
 df = dataset_reader.select(['column-a']).distinct().read()
 ```
 
-### cláusula WHERE
+### Cláusula WHERE
 
-Você pode usar determinados operadores no Python para ajudar a filtrar o conjunto de dados.
+Você pode usar determinados operadores no Python para ajudar a filtrar seu conjunto de dados.
 
 >[!NOTE]
 >
->As funções usadas para filtragem fazem distinção entre maiúsculas e minúsculas.
+>As funções usadas para filtragem diferenciam maiúsculas de minúsculas.
 
 ```python
 eq() = '='
@@ -85,7 +85,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Cláusula ORDER BY
 
-A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando a variável `sort()` .
+A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando o `sort()` função.
 
 Um exemplo de uso da variável `sort()` pode ser vista abaixo:
 
@@ -103,9 +103,9 @@ Um exemplo de uso da variável `limit()` pode ser vista abaixo:
 df = dataset_reader.limit(100).read()
 ```
 
-### Cláusula OFFSET
+### cláusula OFFSET
 
-A cláusula OFFSET permite ignorar linhas, desde o início, para começar a retornar linhas a partir de um ponto posterior. Em combinação com LIMIT, pode ser usado para iterar linhas em blocos.
+A cláusula OFFSET permite que você ignore linhas, desde o início, para começar a retornar linhas de um ponto posterior. Em combinação com LIMIT, pode ser usado para iterar linhas em blocos.
 
 Um exemplo de uso da variável `offset()` pode ser vista abaixo:
 
@@ -115,9 +115,9 @@ df = dataset_reader.offset(100).read()
 
 ## Gravação de um conjunto de dados
 
-Para gravar em um conjunto de dados, é necessário fornecer o dataframe do painel ao conjunto de dados.
+Para gravar em um conjunto de dados, você precisa fornecer o quadro de dados pandas ao seu conjunto de dados.
 
-### Escrever o pandas dataframe
+### Gravação do quadro de dados dos pandas
 
 ```python
 client_context = get_client_context(config_properties)
@@ -130,15 +130,15 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 ```
 
-## Diretório do espaço de usuário (Ponto de verificação)
+## Diretório do espaço de usuário (Checkpoint)
 
-Para tarefas em execução mais longa, talvez seja necessário armazenar etapas intermediárias. Em instâncias como essa, você pode ler e gravar em um espaço de usuário.
+Para jobs de execução mais longa, talvez seja necessário armazenar etapas intermediárias. Em instâncias como essa, você pode ler e gravar em um espaço de usuário.
 
 >[!NOTE]
 >
->Os caminhos para os dados são **not** armazenado. Você precisa armazenar o caminho correspondente para seus respectivos dados.
+>Os caminhos para os dados são **não** armazenados. Você precisa armazenar o caminho correspondente para seus respectivos dados.
 
-### Gravar no espaço do usuário
+### Gravar no espaço de usuário
 
 ```python
 client_context = get_client_context(config_properties)
@@ -158,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Próximas etapas
 
-O Adobe Experience Platform Data Science Workspace fornece uma amostra de receita que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, consulte o [Repositório do Data Science Workspace Python GitHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+O Espaço de trabalho de ciência de dados da Adobe Experience Platform fornece uma amostra de fórmula que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, reveja o [Repositório GitHub do Python do Espaço de trabalho de ciência de dados](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

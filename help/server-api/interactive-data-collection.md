@@ -1,6 +1,6 @@
 ---
 title: Coleta de dados interativa
-description: Saiba como a API do servidor de rede de borda do Adobe Experience Platform executa a coleta de dados interativa.
+description: Saiba como a API do servidor de rede de borda da Adobe Experience Platform realiza a coleta interativa de dados.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 7%
 
 ## Visão geral {#overview}
 
-Os endpoints interativos de coleta de dados recebem um único evento e são usados quando o cliente espera que uma resposta seja retornada pelo servidor da Rede de borda do Adobe Experience Platform. Esses endpoints também podem retornar conteúdo de outros serviços da Experience Edge, enquanto realizam a coleta de dados.
+Os pontos de extremidade de coleta de dados interativos recebem um único evento e são usados quando o cliente espera que uma resposta seja retornada pelo servidor da Rede de borda da Adobe Experience Platform. Esses endpoints também podem retornar conteúdo de outros serviços do Experience Edge enquanto executam a coleta de dados.
 
-A resposta do servidor inclui um ou mais `Handle` como mostrado abaixo.
+A resposta do servidor inclui um ou mais `Handle` objetos, conforme mostrado abaixo.
 
 ## Exemplo de chamada de API
 
@@ -62,12 +62,12 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sim. | ID do conjunto de dados. |
-| `requestId` | `String` | Não | Forneça uma ID aleatória do cliente para correlacionar solicitações internas do servidor. Se nenhum for fornecido, a Edge Network gerará um e o retornará na resposta. |
+| `dataStreamId` | `String` | Sim. | ID da sequência de dados. |
+| `requestId` | `String` | Não | Forneça uma ID aleatória do cliente para correlacionar solicitações internas do servidor. Se nenhum for fornecido, a rede de borda gerará um e o retornará na resposta. |
 
 ### Resposta {#response}
 
-Uma resposta bem-sucedida retorna o status HTTP `200 OK`com um ou mais `Handle` objetos, dependendo dos serviços de borda em tempo real habilitados na configuração do conjunto de dados.
+Uma resposta bem-sucedida retorna o status HTTP `200 OK`, com um ou mais `Handle` objetos, dependendo dos serviços de borda em tempo real ativados na configuração da sequência de dados.
 
 ```json
 {

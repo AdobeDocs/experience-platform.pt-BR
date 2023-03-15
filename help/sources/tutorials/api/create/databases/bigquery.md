@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, bigquery, Google, google, Google BigQuery
+keywords: Experience Platform;página inicial;tópicos populares;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: Criar uma conexão básica do Google BigQuery usando a API do Serviço de Fluxo
+title: Criar uma conexão básica do Google BigQuery usando a API do serviço de fluxo
 type: Tutorial
-description: Saiba como conectar o Adobe Experience Platform ao Google BigQuery usando a API de Serviço de Fluxo.
+description: Saiba como conectar o Adobe Experience Platform ao Google BigQuery usando a API de serviço de fluxo.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
@@ -12,45 +12,45 @@ ht-degree: 2%
 
 ---
 
-# Crie um [!DNL Google BigQuery] conexão básica usando o [!DNL Flow Service] API
+# Criar um [!DNL Google BigQuery] conexão básica usando o [!DNL Flow Service] API
 
-Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
+Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Google BigQuery] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Google BigQuery] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Google BigQuery] usando o [!DNL Flow Service] API.
 
-### Obter credenciais necessárias
+### Coletar credenciais necessárias
 
-Para [!DNL Flow Service] para conectar [!DNL Google BigQuery] para o Platform, você deve fornecer os seguintes valores de autenticação do OAuth 2.0:
+A fim de [!DNL Flow Service] para conectar [!DNL Google BigQuery] Para o Platform, você deve fornecer os seguintes valores de autenticação do OAuth 2.0:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `project` | A ID do projeto do padrão [!DNL Google BigQuery] projeto para consulta. |
-| `clientID` | O valor da ID usado para gerar o token de atualização. |
+| `project` | A ID de projeto do padrão [!DNL Google BigQuery] projeto para consulta. |
+| `clientID` | O valor de ID usado para gerar o token de atualização. |
 | `clientSecret` | O valor secreto usado para gerar o token de atualização. |
-| `refreshToken` | O token de atualização obtido de [!DNL Google] usada para autorizar o acesso ao [!DNL Google BigQuery]. |
-| `largeResultsDataSetId` | Os pré-criados  [!DNL Google BigQuery] ID do conjunto de dados necessária para habilitar o suporte para conjuntos de resultados grandes. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL Google BigQuery] é: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `refreshToken` | O token de atualização obtido de [!DNL Google] usado para autorizar o acesso a [!DNL Google BigQuery]. |
+| `largeResultsDataSetId` | O pré-criado  [!DNL Google BigQuery] a ID do conjunto de dados que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Google BigQuery] é: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
-Para obter mais informações sobre esses valores, consulte esta seção [[!DNL Google BigQuery] documento](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Para obter mais informações sobre esses valores, consulte esta [[!DNL Google BigQuery] documento](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão base
+## Criar uma conexão básica
 
-Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
+Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação de POST para a variável `/connections` endpoint enquanto fornece seu [!DNL Google BigQuery] credenciais de autenticação como parte dos parâmetros da solicitação.
+Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Google BigQuery] credenciais de autenticação como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -60,7 +60,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery]:
+A solicitação a seguir cria uma conexão básica para [!DNL Google BigQuery]:
 
 ```shell
 curl -X POST \
@@ -92,11 +92,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.project` | A ID do projeto do padrão [!DNL Google BigQuery] projeto a ser consultado. contra. |
-| `auth.params.clientId` | O valor da ID usado para gerar o token de atualização. |
+| `auth.params.project` | A ID de projeto do padrão [!DNL Google BigQuery] projeto a consultar. contra. |
+| `auth.params.clientId` | O valor de ID usado para gerar o token de atualização. |
 | `auth.params.clientSecret` | O valor do cliente usado para gerar o token de atualização. |
-| `auth.params.refreshToken` | O token de atualização obtido de [!DNL Google] usada para autorizar o acesso ao [!DNL Google BigQuery]. |
-| `connectionSpec.id` | O [!DNL Google BigQuery] ID de especificação de conexão: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `auth.params.refreshToken` | O token de atualização obtido de [!DNL Google] usado para autorizar o acesso a [!DNL Google BigQuery]. |
+| `connectionSpec.id` | A variável [!DNL Google BigQuery] ID da especificação de conexão: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **Resposta**
 

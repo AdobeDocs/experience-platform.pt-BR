@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
+keywords: Experience Platform;página inicial;tópicos populares;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: Criar uma IBM [!DNL IBM DB2] Conexão básica usando a API do Serviço de fluxo
+title: Criar uma IBM [!DNL IBM DB2] Conexão básica usando a API de serviço de fluxo
 type: Tutorial
-description: Saiba como conectar o IBM [!DNL IBM DB2] para a Adobe Experience Platform usando a API do Serviço de Fluxo.
+description: Saiba como conectar o IBM [!DNL IBM DB2] para o Adobe Experience Platform usando a API do Serviço de fluxo.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -16,40 +16,40 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->A IBM [!DNL IBM DB2] O conector está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com rótulo beta.
+>O IBM [!DNL IBM DB2] o conector está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
+Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL IBM DB2] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL IBM DB2] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL IBM DB2] usando o [!DNL Flow Service] API.
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `server` | O nome do [!DNL IBM DB2] servidor. Você pode especificar o número da porta seguindo o nome do servidor delimitado por dois pontos. Por exemplo: server:port. |
+| `server` | O nome do [!DNL IBM DB2] servidor. Você pode especificar o número da porta após o nome do servidor delimitado por dois pontos. Por exemplo: servidor:porta. |
 | `database` | O nome do [!DNL IBM DB2] banco de dados. |
 | `username` | O nome de usuário usado para se conectar ao [!DNL IBM DB2] banco de dados. |
 | `password` | A senha da conta de usuário especificada para o nome de usuário. |
-| `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL IBM DB2] é `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID da especificação de conexão para [!DNL IBM DB2] é `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
-Para obter mais informações sobre a introdução, consulte [this [!DNL IBM DB2] documento](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+Para obter mais informações sobre a introdução, consulte [este [!DNL IBM DB2] documento](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão base
+## Criar uma conexão básica
 
-Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
+Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação de POST para a variável `/connections` endpoint enquanto fornece seu [!DNL IBM DB2] credenciais de autenticação como parte dos parâmetros da solicitação.
+Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL IBM DB2] credenciais de autenticação como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -59,7 +59,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL IBM DB2]:
+A solicitação a seguir cria uma conexão básica para [!DNL IBM DB2]:
 
 ```shell
 curl -X POST \
@@ -91,8 +91,8 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `auth.params.connectionString` | A string de conexão associada à [!DNL IBM DB2] conta. |
-| `connectionSpec.id` | O [!DNL IBM DB2] ID de especificação de conexão: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `auth.params.connectionString` | A cadeia de conexão associada ao seu [!DNL IBM DB2] conta. |
+| `connectionSpec.id` | A variável [!DNL IBM DB2] ID da especificação de conexão: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **Resposta**
 

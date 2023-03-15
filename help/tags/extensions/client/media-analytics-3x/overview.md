@@ -1,5 +1,5 @@
 ---
-title: Visão geral da extensão Adobe Medium Analytics (3.x SDK) for Audio and Video
+title: Visão geral da extensão do Adobe Medium Analytics (SDK 3.x) para áudio e vídeo
 description: Saiba mais sobre o Adobe Media Analytics (3.x SDK) para a extensão de áudio e tag de vídeo na Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta documentação para obter informações sobre como instalar, configurar e implementar a extensão Adobe Media Analytics (3.x SDK) for Audio and Video (extensão do Media Analytics). Estão incluídas as opções disponíveis ao usar esta extensão para criar uma regra, juntamente com exemplos e links para amostras.
 
@@ -24,7 +24,7 @@ A extensão do Media Analytics (MA) adiciona a principal SDK de mídia JavaScrip
 
 >[!IMPORTANT]
 >
->Essa extensão é implantada com o SDK do Media 3.x, que não é compatível com o SDK do Media 2.x. Como a 2.x foi descontinuada, atualize para 3.x.
+>Essa extensão é implantada com o SDK do Media 3.x, que não é compatível com o SDK do Media 2.x. Como a 2.x foi descontinuada, atualize para a 3.x.
 
 Depois de incluir todas as três extensões mencionadas acima em seu projeto com tags habilitadas, você pode prosseguir de uma das duas seguintes formas:
 

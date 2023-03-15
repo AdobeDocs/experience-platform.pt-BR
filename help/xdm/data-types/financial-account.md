@@ -1,10 +1,11 @@
 ---
-title: Tipo de Dados da Conta Financeira
-description: Este documento fornece uma visão geral do tipo de dados XDM da Conta Financeira.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+title: Tipo de dados da conta financeira
+description: Este documento fornece uma visão geral do tipo de dados XDM da conta financeira.
+exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 8%
+source-wordcount: '103'
+ht-degree: 5%
 
 ---
 
@@ -16,11 +17,11 @@ ht-degree: 8%
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `currentAccountBalance` | [[!UICONTROL Moeda]](./currency.md) | O saldo corrente da conta. |
-| `financialAccountId` | [!UICONTROL String] | Uma ID exclusiva para a conta. |
+| `currentAccountBalance` | [[!UICONTROL Moeda]](./currency.md) | O saldo atual da conta. |
+| `financialAccountId` | [!UICONTROL String] | Um identificador exclusivo para a conta. |
 | `financialAccountName` | [!UICONTROL String] | O nome atribuído à conta. |
-| `financialAccountType` | [!UICONTROL String] | O tipo de conta financeira, como verificação, poupança ou aposentadoria. |
+| `financialAccountType` | [!UICONTROL String] | O tipo de conta financeira, como corrente, poupança ou baixa. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Para obter mais detalhes sobre o tipo de dados, consulte [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+Para obter mais informações sobre o tipo de dados, consulte a [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

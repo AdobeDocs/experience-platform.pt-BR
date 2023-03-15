@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /data_element
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1369'
 ht-degree: 99%
 
 ---
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que tem os elementos de dados. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | O `id` do elemento de dados que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -316,7 +316,7 @@ POST /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | O `id` da [propriedade](./properties.md) em que você está definindo o elemento de dados. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -364,7 +364,7 @@ curl -X POST \
 | `attributes.clean_text` | Um valor booleano que indica se os espaços em branco à esquerda e à direita devem ser removidos do valor do elemento de dados antes de serem armazenados. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -482,7 +482,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | O `id` do elemento de dados que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -512,7 +512,7 @@ curl -X PATCH \
 | `id` | O `id` do elemento de dados que você deseja atualizar. Ele deve corresponder ao valor `{DATA_ELEMENT_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -632,7 +632,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | O `id` do elemento de dados que você deseja revisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -664,7 +664,7 @@ curl -X PATCH \
 | `id` | O `id` do elemento de dados que você deseja revisar. Ele deve corresponder ao valor `{DATA_ELEMENT_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo revisado. Para esse endpoint, o valor deve ser `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -782,7 +782,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | O `id` do elemento de dados que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -822,7 +822,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | O `id` do elemento de dados cujas bibliotecas você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -944,7 +944,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | O `id` do elemento de dados cujas revisões você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1178,7 +1178,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | O `id` do elemento de dados cuja extensão você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1298,7 +1298,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | O `id` do elemento de dados cuja origem você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -1428,7 +1428,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | O `id` do elemento de dados cuja propriedade você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

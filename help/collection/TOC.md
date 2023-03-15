@@ -18,7 +18,7 @@ ht-degree: 60%
 - [Visão geral da coleção de dados](home.md)
 - [Visão geral completa](e2e.md)
 - [Gerenciamento de permissões](permissions.md)
-- [Gerenciamento do estado do cliente](client-state.md)
+- [Gerenciamento de estado do cliente](client-state.md)
 - Identificação do visitante {#visitor-identification}
    - [Visão geral](visitor-identification.md)
    - [Identificação do visitante via FPID](visitor-identification-fpid.md)

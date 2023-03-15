@@ -1,7 +1,7 @@
 ---
 title: Gerenciar cintilação para experiências personalizadas usando o SDK da Web da Adobe Experience Platform
-description: Saiba como usar o SDK da Web da Adobe Experience Platform para gerenciar a cintilação nas experiências do usuário.
-keywords: target; cintilação; pré-ocultaçãoStyle; assíncrono; assíncrono;
+description: Saiba como usar o Adobe Experience Platform Web SDK para gerenciar a cintilação nas experiências do usuário.
+keywords: destino;cintilação;estiloPré-ocultação;assíncrono;assíncrono;
 exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
 source-git-commit: e5d279397cab30e997103496beda5265520dca77
 workflow-type: tm+mt
@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # Gerenciar cintilação
 
-Ao tentar renderizar o conteúdo de personalização, o SDK deve garantir que não haja cintilação. A cintilação, também chamada de FOOC (Flash de Conteúdo Original), é quando um conteúdo original é exibido brevemente antes que a alternativa seja exibida durante o teste/personalização. O SDK tenta aplicar estilos de CSS a elementos da página para garantir que esses elementos estejam ocultos até que o conteúdo de personalização seja renderizado com êxito.
+Ao tentar renderizar o conteúdo de personalização, o SDK precisa garantir que não haja cintilação. A cintilação, também chamada de FOOC (Flash do conteúdo original), ocorre quando um conteúdo original é exibido brevemente antes de a alternativa aparecer durante o teste/personalização. O SDK tenta aplicar estilos CSS a elementos da página, a fim de garantir que esses elementos estejam ocultos até que o conteúdo de personalização seja renderizado com êxito.
 
 A funcionalidade de gerenciamento de cintilação tem algumas fases:
 
-1. Pré-ocultar
-1. Pré-processamento
+1. Pré-ocultação
+1. Pré-processando
 1. Renderização
 
-## Pré-ocultar
+## Pré-ocultação
 
-Durante a fase de pré-ocultação, o SDK usa o `prehidingStyle` opção de configuração para criar uma tag de estilo HTML e anexá-la ao DOM para garantir que grandes partes da página estejam ocultas. Se não tiver certeza de quais partes da página serão personalizadas, é recomendável definir `prehidingStyle` para `body { opacity: 0 !important }`. Isso garante que toda a página fique oculta. No entanto, isso tem o lado negativo de levar a um desempenho de renderização de página pior relatado por ferramentas como Lighthouse, Web Page Tests, etc. Para ter o melhor desempenho de renderização da página, é recomendável definir `prehidingStyle` para obter uma lista de elementos de contêiner que contêm as partes da página que serão personalizadas.
+Durante a fase de pré-ocultação, o SDK usa o `prehidingStyle` opção de configuração para criar uma tag de estilo HTML e anexá-la ao DOM para garantir que grandes partes da página estejam ocultas. Se não tiver certeza de quais partes da página serão personalizadas, é recomendável definir `prehidingStyle` para `body { opacity: 0 !important }`. Isso garante que a página inteira fique oculta. No entanto, isso tem o lado negativo de levar ao pior desempenho de renderização da página relatado por ferramentas como Lighthouse, Testes de página da Web etc. Para ter o melhor desempenho de renderização da página, é recomendável definir `prehidingStyle` para obter uma lista de elementos de contêiner que contêm as partes da página que serão personalizadas.
 
-Supondo que você tenha uma HTML page como a abaixo e saiba que somente `bar` e `bazz` os elementos do contêiner serão personalizados:
+Supondo que você tenha uma página de HTML como a abaixo e saiba que somente `bar` e `bazz` os elementos do contêiner serão sempre personalizados:
 
 ```html
 <html>
@@ -46,19 +46,19 @@ Supondo que você tenha uma HTML page como a abaixo e saiba que somente `bar` e 
 </html>
 ```
 
-Em seguida, `prehidingStyle` deve ser definido como algo como `#bar, #bazz { opacity: 0 !important }`.
+Em seguida, o `prehidingStyle` deve ser definido como algo como `#bar, #bazz { opacity: 0 !important }`.
 
-## Pré-processamento
+## Pré-processando
 
-A fase de pré-processamento é iniciada assim que o SDK recebe o conteúdo personalizado do servidor. Durante essa fase, a resposta é pré-processada, garantindo que os elementos que precisam conter conteúdo personalizado estejam ocultos. Depois que esses elementos são ocultos, a tag de estilo de HTML é criada com base na `prehidingStyle` a opção de configuração é removida e os elementos HTML body ou the hidden container são mostrados.
+A fase de pré-processamento é iniciada assim que o SDK recebe o conteúdo personalizado do servidor. Durante essa fase, a resposta é pré-processada, garantindo que os elementos que precisam conter conteúdo personalizado estejam ocultos. Depois que esses elementos estiverem ocultos, a tag de estilo HTML que foi criada com base no `prehidingStyle` a opção de configuração é removida e o corpo da HTML ou os elementos de contêiner ocultos são mostrados.
 
 ## Renderização
 
-Depois que todo o conteúdo de personalização tiver sido renderizado com êxito, ou se houver algum erro, todos os elementos ocultos anteriormente serão mostrados para garantir que não haja elementos ocultos na página que tenham sido ocultos pelo SDK.
+Depois que todo o conteúdo de personalização for renderizado com sucesso ou se houver algum erro, todos os elementos ocultos anteriormente serão mostrados para garantir que não haja elementos ocultos na página ocultos pelo SDK.
 
 ## Gerenciamento de cintilação quando o SDK é carregado de forma assíncrona
 
-A recomendação é sempre carregar o SDK de forma assíncrona para obter o melhor desempenho de renderização da página. No entanto, isso tem algumas implicações para a renderização do conteúdo personalizado. Quando o SDK é carregado de forma assíncrona, é necessário usar o trecho pré-ocultação. O trecho pré-ocultação deve ser adicionado antes do SDK na página do HTML. Este é um trecho de exemplo que oculta o corpo inteiro:
+A recomendação é sempre carregar o SDK de forma assíncrona para obter o melhor desempenho de renderização da página. No entanto, isso tem algumas implicações para a renderização de conteúdo personalizado. Quando o SDK é carregado de forma assíncrona, é necessário usar o trecho pré-ocultação. O trecho pré-ocultação deve ser adicionado antes do SDK na página do HTML. Este é um exemplo de trecho que oculta o corpo inteiro:
 
 ```html
 <script>
@@ -72,4 +72,4 @@ A recomendação é sempre carregar o SDK de forma assíncrona para obter o melh
 </script>
 ```
 
-Para garantir que o corpo do HTML ou os elementos do contêiner não estejam ocultos por um longo período de tempo, o trecho pré-ocultação usa um temporizador que, por padrão, remove o trecho após `3000` milissegundos. O `3000` milissegundos é o tempo máximo de espera. Se a resposta do servidor tiver sido recebida e processada antes, a tag HTML de pré-ocultação será removida assim que possível.
+Para garantir que o corpo da HTML ou os elementos do contêiner não fiquem ocultos por um longo período, o trecho pré-ocultação usa um cronômetro que, por padrão, remove o trecho após `3000` milissegundos. A variável `3000` milissegundos é o tempo máximo de espera. Se a resposta do servidor tiver sido recebida e processada antes, a tag de estilo HTML pré-ocultação será removida o mais rápido possível.

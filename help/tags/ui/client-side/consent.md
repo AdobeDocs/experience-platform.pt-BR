@@ -13,9 +13,9 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Regulamentos legais de privacidade como o Regulamento Geral sobre a Proteção de Dados (GDPR) exigem que as empresas consigam gerenciar o consentimento de seus usuários. Os clientes da Adobe podem exigir a aceitação dos visitantes antes que as soluções da Adobe sejam executadas para qualquer visitante. Os visitantes devem ter a capacidade de gerenciar seu status de participação e não participação.
+As regulamentações legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR), exigem que as empresas consigam gerenciar o consentimento de seus usuários. Os clientes da Adobe podem exigir a aceitação dos visitantes antes que as soluções da Adobe sejam executadas para qualquer visitante. Os visitantes devem ter a capacidade de gerenciar seu status de participação e não participação.
 
 Os clientes da Adobe Experience Cloud exigem uma variedade de implementações desses requisitos. Alguns usam os gerentes de consentimento de nível empresarial e outros criam os seus próprios.
 

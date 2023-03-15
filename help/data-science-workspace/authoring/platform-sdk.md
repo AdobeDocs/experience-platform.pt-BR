@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, guia do desenvolvedor, SDK, SDK de acesso a dados, Data Science Workspace, tópicos populares
+keywords: Experience Platform;guia do desenvolvedor;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Criação de modelos usando o SDK da plataforma Adobe Experience Platform
-description: Este tutorial fornece informações sobre a conversão de data_access_sdk_python para a nova plataforma Python_sdk em Python e R.
+title: Criação de modelo usando o SDK da plataforma Adobe Experience Platform
+description: Este tutorial fornece informações sobre a conversão de data_access_sdk_python para o novo Python platform_sdk no Python e no R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,25 +13,25 @@ ht-degree: 5%
 
 # Criação de modelo usando o Adobe Experience Platform [!DNL Platform] SDK
 
-Este tutorial fornece informações sobre conversão `data_access_sdk_python` ao novo Python `platform_sdk` em Python e R. Este tutorial fornece informações sobre as seguintes operações:
+Este tutorial fornece informações sobre a conversão `data_access_sdk_python` para o novo Python `platform_sdk` tanto em Python quanto em R. Este tutorial fornece informações sobre as seguintes operações:
 
-- [Autenticação de build](#build-authentication)
-- [Leitura básica dos dados](#basic-reading-of-data)
-- [Escrita básica de dados](#basic-writing-of-data)
+- [Compilar autenticação](#build-authentication)
+- [Leitura básica de dados](#basic-reading-of-data)
+- [Gravação básica de dados](#basic-writing-of-data)
 
-## Autenticação de build {#build-authentication}
+## Compilar autenticação {#build-authentication}
 
-A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform]e é composto por Chave da API, ID da Org do IMS, um token de usuário e um token de serviço.
+A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform], e é composto pela Chave da API, ID da Organização IMS, um token de usuário e um token de serviço.
 
 ### Python
 
-Se estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
+Se você estiver usando o Jupyter Notebook, use o código abaixo para criar o `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Se você não estiver usando o Jupyter Notebook ou precisar alterar a IMS Org, use a amostra de código abaixo:
+Se você não estiver usando o Jupyter Notebook ou precisar alterar a Organização IMS, use a amostra de código abaixo:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -43,7 +43,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Se estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
+Se você estiver usando o Jupyter Notebook, use o código abaixo para criar o `client_context`:
 
 ```r
 library(reticulate)
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Se você não estiver usando o Jupyter Notebook ou precisar alterar a IMS Org, use a amostra de código abaixo:
+Se você não estiver usando o Jupyter Notebook ou precisar alterar a Organização IMS, use a amostra de código abaixo:
 
 ```r
 library(reticulate)
@@ -66,20 +66,20 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Leitura básica dos dados {#basic-reading-of-data}
+## Leitura básica de dados {#basic-reading-of-data}
 
-Com o novo [!DNL Platform] SDK, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
+Com o novo [!DNL Platform] do SDK, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
 
-Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opções de filtragem:
+Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opções de filtro:
 
-- [Filtrar dados por deslocamento e limite](#filter-by-offset-and-limit)
+- [Filtragem de dados por deslocamento e limite](#filter-by-offset-and-limit)
 - [Filtrar dados por data](#filter-by-date)
 - [Filtrar dados por coluna](#filter-by-selected-columns)
-- [Obter resultados classificados](#get-sorted-results)
+- [Obtendo resultados classificados](#get-sorted-results)
 
 >[!NOTE]
 >
->A Organização IMS é definida na variável `client_context`.
+>A Organização IMS está definida no `client_context`.
 
 ### Python
 
@@ -105,7 +105,7 @@ df
 
 ## Filtrar por deslocamento e limite {#filter-by-offset-and-limit}
 
-Como a filtragem por ID de lote não é mais suportada, para escopo da leitura de dados, é necessário usar `offset` e `limit`.
+Como a filtragem por ID de lote não é mais suportada, para determinar o escopo da leitura de dados, é necessário usar `offset` e `limit`.
 
 ### Python
 
@@ -123,7 +123,7 @@ df
 
 ## Filtrar por data {#filter-by-date}
 
-A granularidade da filtragem de datas agora é definida pelo carimbo de data e hora, em vez de ser definida pelo dia.
+A granularidade da filtragem de data agora é definida pelo carimbo de data e hora, em vez de ser definida pelo dia.
 
 ### Python
 
@@ -177,7 +177,7 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 Os resultados recebidos podem ser classificados por colunas especificadas do conjunto de dados de destino e em sua ordem (asc/desc), respectivamente.
 
-No exemplo a seguir, o dataframe é classificado por &quot;coluna-a&quot; primeiro em ordem crescente. As linhas que têm os mesmos valores para &quot;coluna-a&quot; são classificadas por &quot;coluna-b&quot; em ordem decrescente.
+No exemplo a seguir, o quadro de dados é classificado pela &quot;coluna a&quot; primeiro em ordem crescente. As linhas com os mesmos valores para &quot;column-a&quot; são então classificadas por &quot;column-b&quot; em ordem decrescente.
 
 ### Python
 
@@ -191,13 +191,13 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Escrita básica de dados {#basic-writing-of-data}
+## Gravação básica de dados {#basic-writing-of-data}
 
 >[!NOTE]
 >
->A Organização IMS é definida na variável `client_context`.
+>A Organização IMS está definida no `client_context`.
 
-Para gravar dados em Python e R, use um dos seguintes exemplos:
+Para escrever dados em Python e R, use um dos seguintes exemplos abaixo:
 
 ### Python
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Próximas etapas
 
-Depois de configurar o `platform_sdk` carregador de dados, os dados são preparados e depois divididos em `train` e `val` conjuntos de dados. Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção em [preparação de dados e engenharia de recursos](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) no tutorial para criar uma receita usando [!DNL JupyterLab] notebooks.
+Depois de configurar o `platform_sdk` carregador de dados, os dados são preparados e depois divididos no `train` e `val` conjuntos de dados. Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção sobre [preparação de dados e engenharia de recursos](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) no tutorial para criar uma fórmula usando [!DNL JupyterLab] notebooks.

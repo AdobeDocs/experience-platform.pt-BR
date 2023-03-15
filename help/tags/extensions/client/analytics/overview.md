@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre como configurar a extensão do Adobe Analytics e as opções disponíveis ao usar esta extensão para criar uma regra.
 
@@ -330,13 +330,13 @@ Se desejar, configure hierarquias adicionais.
 
 #### Nome da página
 
-Esse valor se refere ao nome de uma determinada página e corresponde ao valor [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) no Analytics.
+Esse valor se refere ao nome de uma determinada página e corresponde ao [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) no Analytics.
 
 >[!IMPORTANT]
 >
->Em implementações do Adobe Experience Manager, essa variável informa AEM onde armazenar o relatório buscado do Analytics. Para garantir que os relatórios sejam mantidos corretamente, a cadeia de caracteres do nome da página deve ser formatada como um caminho separado por dois pontos para o site.
+>Em implementações do Adobe Experience Manager, essa variável informa ao AEM onde armazenar o relatório do Analytics buscado. Para garantir que os relatórios sejam mantidos corretamente, a cadeia de caracteres do nome da página deve ser formatada como um caminho para o site separado por dois pontos.
 >
->Por exemplo, uma página da Web em `content/we-retail/language-masters/en/men.html` deve ter o valor de nome de página de `content:we-retail:language-masters:en:men`.
+>Por exemplo, uma página da Web em `content/we-retail/language-masters/en/men.html` deve ter um valor de nome de página de `content:we-retail:language-masters:en:men`.
 
 #### Outras informações
 

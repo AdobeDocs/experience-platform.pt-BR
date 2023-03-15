@@ -1,10 +1,11 @@
 ---
 title: Atualizações de extensão
 description: Saiba como as atualizações de extensão são empacotadas e representadas no catálogo de extensões.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo de extensões como atualizações.
 

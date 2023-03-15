@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o endpoint /ambientes na API do Reac
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1002'
 ht-degree: 99%
 
 ---
@@ -26,7 +26,7 @@ Há três tipos (ou estágios) de ambientes. Cada tipo tem um limite diferente p
 | Armazenamento temporário | Um |
 | Produção | Um |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Esses tipos de ambiente têm comportamento semelhante, mas são usados em estágios diferentes do [fluxo de trabalho de publicação de tags](../../ui/publishing/publishing-flow.md).
 
@@ -52,7 +52,7 @@ GET /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade que possui os ambientes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ GET /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | O `id` do ambiente que você deseja visualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -285,7 +285,7 @@ POST /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | O `id` da [propriedade](./properties.md) em que você está definindo o ambiente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `id` | A `id` do ambiente que você deseja atualizar. Isso deve corresponder ao valor `{ENVIRONMENT_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -427,7 +427,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | O `id` do ambiente que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -457,7 +457,7 @@ curl -X PATCH \
 | `id` | A `id` do ambiente que você deseja atualizar. Isso deve corresponder ao valor `{ENVIRONMENT_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -554,7 +554,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | O `id` do ambiente que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -590,7 +590,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 | --- | --- |
 | `{ENVIRONMENT_ID}` | O `id` do ambiente cujos builds você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -707,7 +707,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 | --- | --- |
 | `{ENVIRONMENT_ID}` | O `id` do ambiente cujo host você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -774,7 +774,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 | --- | --- |
 | `{ENVIRONMENT_ID}` | O `id` do ambiente cuja biblioteca você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -889,7 +889,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 | --- | --- |
 | `{ENVIRONMENT_ID}` | O `id` do ambiente cuja propriedade você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

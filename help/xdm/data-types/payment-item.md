@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, esquema, item de pagamento, tipo de dados, tipo de dados, tipo de dados;
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;item de pagamento;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados do Item de Pagamento
-description: Este documento fornece uma visão geral do tipo de dados do Modelo de Dados de Experiência de Item de Pagamento (XDM).
+description: Este documento fornece uma visão geral do tipo de dados do Modelo de dados de experiência de item de pagamento (XDM).
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 7%
+source-wordcount: '161'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Item de Pagamento] tipo de dados
+# [!UICONTROL Item de pagamento] tipo de dados
 
-[!UICONTROL Item de Pagamento] é um tipo de dados padrão do Experience Data Model (XDM) que descreve um pagamento associado a uma ordem que define o tipo de pagamento, o valor e a moeda associada.
+[!UICONTROL Item de pagamento] é um tipo de dados padrão do Experience Data Model (XDM) que descreve um pagamento associado a um pedido que define o tipo de pagamento, o valor e a moeda associada.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `currencyCode` | String | O código monetário ISO 4217 usado para os totais de pedidos. Todas as instâncias devem estar em conformidade com a expressão regular `^[A-Z]{3}$`. Os exemplos incluem `USD` e `EUR`. |
+| `currencyCode` | String | O código de moeda ISO 4217 usado para os totais do pedido. Todas as instâncias devem estar em conformidade com a expressão regular `^[A-Z]{3}$`. Os exemplos incluem `USD` e `EUR`. |
 | `paymentAmount` | Duplo | O valor do pagamento. |
-| `paymentType` | String | O método de pagamento desta ordem. Os valores de enum aceitos incluem: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
-| `transactionID` | String | O identificador exclusivo de transação para este item de pagamento. |
+| `paymentType` | String | O método de pagamento deste pedido. Os valores de enumeração aceitos incluem: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
+| `transactionID` | String | O identificador de transação exclusivo para este item de pagamento. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)

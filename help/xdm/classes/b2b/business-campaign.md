@@ -1,36 +1,36 @@
 ---
-title: Classe de Campanha Comercial XDM
-description: Este documento fornece uma visão geral da classe de Campanha comercial XDM no Experience Data Model (XDM).
+title: Classe de campanha de negócios XDM
+description: Este documento fornece uma visão geral da classe de campanha de negócios XDM no Experience Data Model (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 4%
+source-wordcount: '237'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Campanha comercial XDM] classe
+# [!UICONTROL Campanha de negócios XDM] classe
 
 >[!IMPORTANT]
 >
->Esta classe destina-se a ser utilizada por organizações com acesso a [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso ao Real-Time CDP B2B Edition para que essa classe participe do [Perfil do cliente em tempo real](../../../profile/home.md).
+>Esta classe deve ser usada por organizações com acesso a [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso ao Real-Time CDP B2B Edition para que esta classe participe [Perfil do cliente em tempo real](../../../profile/home.md).
 
-[!UICONTROL Campanha comercial XDM] é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma campanha comercial.
+[!UICONTROL Campanha de negócios XDM] é uma classe padrão do Experience Data Model (XDM) que captura as propriedades mínimas necessárias de uma campanha de negócios.
 
-![A estrutura da classe de Campanha comercial XDM como ela aparece na interface do usuário](../../images/classes/b2b/business-campaign.png)
+![A estrutura da classe Campanha de negócios XDM como aparece na interface do usuário](../../images/classes/b2b/business-campaign.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `campaignKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de campanha. |
-| `extSourceSystemAudit` | [[!UICONTROL Atributos de Auditoria do Sistema de Origem Externa]](../../data-types/external-source-system-audit-attributes.md) | Se a campanha provém de um sistema de origem externo, esse objeto captura atributos de auditoria para esse sistema. |
-| `_id` | String | Um identificador exclusivo para o registro. Esse é um valor gerado pelo sistema separado da variável `campaignID`. |
+| `campaignKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto da entidade da campanha. |
+| `extSourceSystemAudit` | [[!UICONTROL Atributos de auditoria do sistema de origem externa]](../../data-types/external-source-system-audit-attributes.md) | Se a campanha vier de um sistema de origem externo, esse objeto capturará atributos de auditoria para esse sistema. |
+| `_id` | String | Um identificador exclusivo do registro. É um valor gerado pelo sistema separado da variável `campaignID`. |
 | `campaignDescription` | String | Uma descrição para a campanha. |
-| `campaignID` | String | Um identificador exclusivo para a entidade de campanha. |
+| `campaignID` | String | Um identificador exclusivo da entidade da campanha. |
 | `campaignName` | String | O nome da campanha. |
 | `campaignType` | String | O tipo de campanha ou público-alvo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Para saber como essa classe se relaciona conceitualmente com outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform, consulte o guia em [relações de esquema no Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
+Para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform, consulte o manual sobre [relacionamentos de esquema no Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 
-Para campos adicionais compatíveis com essa classe, consulte a referência de grupo de campos para [[!UICONTROL Detalhes da campanha comercial XDM]](../../field-groups/b2b-campaign/details.md).
+Para obter campos adicionais compatíveis com essa classe, consulte a referência do grupo de campos para [[!UICONTROL Detalhes da campanha de negócios XDM]](../../field-groups/b2b-campaign/details.md).

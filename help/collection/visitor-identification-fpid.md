@@ -1,8 +1,8 @@
 ---
 title: Identificação do visitante via FPID
-description: Saiba como identificar de forma consistente visitantes por meio da API do servidor, usando o FPID
+description: Saiba como identificar visitantes de maneira consistente por meio da API do servidor, usando o FPID
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
-keywords: rede de borda, gateway, api, visitante, identificação, fpid
+keywords: rede de borda;gateway;api;visitante;identificação;edge network;gateway;api;visitor;identification;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Identificação do visitante via FPID
 
-[!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas por clientes. Isso dá aos clientes controle sobre a identificação de dispositivos do usuário. Ao enviar `FPIDs`, a Edge Network não gera uma novidade `ECID` para uma solicitação que não contém uma.
+[!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas pelos clientes. Isso dá aos clientes controle sobre a identificação de dispositivos de usuário. Enviando `FPIDs`, a Edge Network não gera uma rede totalmente nova `ECID` para uma solicitação que não contém um.
 
-O `FPID` pode ser incluída no corpo da solicitação da API como parte do `identityMap` ou pode ser enviado como um cookie.
+A variável `FPID` pode ser incluído no corpo da solicitação de API como parte da variável `identityMap` ou ele pode ser enviado como um cookie.
 
-Um `FPID` pode ser convertido deterministicamente em um `ECID` pela Edge Network, assim `FPID` identidades são totalmente compatíveis com as soluções Experience Cloud. Obter um `ECID` de um `FPID` sempre gera o mesmo resultado, para que os usuários tenham uma experiência consistente.
+Um `FPID` podem ser traduzidas deterministicamente em um `ECID` pela Rede de borda, portanto `FPID` as identidades são totalmente compatíveis com as soluções Experience Cloud. Obter uma `ECID` de um `FPID` O sempre produz o mesmo resultado, de modo que os usuários terão uma experiência consistente.
 
-O `ECID` obtido dessa forma pode ser recuperado por meio de um `identity.fetch` query:
+A variável `ECID` obtidos dessa forma podem ser recuperados por meio de um `identity.fetch` consulta:
 
 ```json
 {
@@ -33,15 +33,15 @@ O `ECID` obtido dessa forma pode ser recuperado por meio de um `identity.fetch` 
 }
 ```
 
-Para solicitações que contêm um `FPID` e um `ECID`, o `ECID` já presente na solicitação terá precedência sobre a que pode ser gerada pelo `FPID`. Em outras palavras, a Rede de borda usa o `ECID` já fornecidos e `FPID` é ignorada. Um novo `ECID` é gerada somente quando um `FPID` é fornecida isoladamente.
+Para solicitações que contêm um `FPID` e uma `ECID`, o `ECID` presente no pedido terá precedência sobre a que poderia ser gerada a partir da data `FPID`. Em outras palavras, a rede de borda usa a variável `ECID` já fornecidos e a `FPID` é ignorado. Um novo `ECID` é gerado somente quando um `FPID` é fornecido por conta própria.
 
-Em termos de IDs de dispositivo, a variável `server` os datastreams devem usar `FPID` como ID do dispositivo. Outras identidades (ou seja `EMAIL`) também pode ser fornecida no corpo da solicitação, mas a Rede de borda requer que uma identidade primária seja explicitamente fornecida. A identidade primária é a identidade base na qual os dados de perfil serão armazenados.
+Em termos de IDs de dispositivo, a variável `server` as sequências de dados devem usar `FPID` como ID do dispositivo. Outras identidades (por exemplo, `EMAIL`) também podem ser fornecidos no corpo da solicitação, mas a Rede de borda exige que uma identidade primária seja fornecida explicitamente. A identidade principal é a identidade base na qual os dados do perfil serão armazenados.
 
 >[!NOTE]
 >
->As solicitações que não têm identidade, respectivamente nenhuma identidade primária definida explicitamente no corpo da solicitação, falharão.
+>As solicitações que não tiverem identidade, respectivamente, nenhuma identidade principal explicitamente definida no corpo da solicitação, falharão.
 
-O seguinte `identityMap` grupo de campos é formado corretamente para um `server` solicitação do datastream:
+As seguintes `identityMap` o grupo de campos está formado corretamente para um `server` solicitação de sequência de dados:
 
 ```json
 {
@@ -63,7 +63,7 @@ O seguinte `identityMap` grupo de campos é formado corretamente para um `server
 }
 ```
 
-O seguinte `identityMap` grupo de campos resultará em uma resposta de erro ao definir um `server` solicitação do datastream:
+As seguintes `identityMap` grupo de campos resultará em uma resposta de erro quando definido em um `server` solicitação de sequência de dados:
 
 ```json
 {
@@ -84,7 +84,7 @@ O seguinte `identityMap` grupo de campos resultará em uma resposta de erro ao d
 }
 ```
 
-Nesse caso, a resposta do erro retornada pela Edge Network é semelhante ao seguinte:
+A resposta de erro retornada pela Rede de borda nesse caso é semelhante ao seguinte:
 
 ```json
 {
@@ -102,7 +102,7 @@ Nesse caso, a resposta do erro retornada pela Edge Network é semelhante ao segu
 
 ## Identificação do visitante com `FPID`
 
-Para identificar usuários via `FPID`, assegure que `FPID` O cookie foi enviado antes de fazer qualquer solicitação à Edge Network. O `FPID` pode ser passado em um cookie ou como parte do `identityMap` no corpo do pedido.
+Para identificar usuários via `FPID`, assegurar que a `FPID` cookie foi enviado antes de fazer qualquer solicitação à Rede de borda. A variável `FPID` pode ser transmitido em um cookie ou como parte da `identityMap` no corpo da solicitação.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## Solicitação com `FPID` aprovado como `identityMap` campo
+## Solicitar com `FPID` passado como `identityMap` campo
 
-O exemplo abaixo passa a variável [!DNL FPID] como um `identityMap` parâmetro.
+O exemplo abaixo passa o [!DNL FPID] como um `identityMap` parâmetro.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

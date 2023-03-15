@@ -1,10 +1,11 @@
 ---
 title: Contexto em módulos de extensão de borda
-description: Saiba mais sobre o objeto de contexto e a função que ele desempenha ao interagir com módulos de biblioteca nas extensões de tag das propriedades de borda.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Saiba mais sobre o objeto de contexto e a função que ele desempenha ao interagir com módulos de biblioteca em extensões de tag de propriedades de borda.
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
-> A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+> O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Todos os módulos de biblioteca em extensões de borda recebem um objeto `context` quando são executados. Este documento aborda as propriedades fornecidas pelo objeto `context` e a função que desempenham nos módulos de biblioteca.
 
@@ -95,11 +96,11 @@ Na primeira vez que essa ação é executada, `ruleStash` é iniciado como `unde
 
 >[!NOTE]
 >
->Tenha sempre cuidado para retornar o estash completo da regra de extensão ao usar essa estratégia. Se, em vez disso, você retornar apenas um valor, ele substituirá quaisquer outras propriedades que você tenha definido.
+>Tenha cuidado para sempre retornar o stash completo da regra de extensão ao usar essa estratégia. Caso você retorne apenas um valor, ele substituirá quaisquer outras propriedades que você tenha definido.
 
 ## Utilitários
 
-A propriedade `utils` representa um objeto que fornece utilitários específicos para o tempo de execução da tag.
+A propriedade `utils` representa um objeto que fornece utilitários específicos ao tempo de execução da tag.
 
 ### [!DNL logger]
 
@@ -130,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-Esse utilitário retorna um objeto contendo informações sobre a build da biblioteca de tempo de execução de tag atual.
+Esse utilitário retorna um objeto que contém informações sobre o build da biblioteca de tempo de execução de tag atual.
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

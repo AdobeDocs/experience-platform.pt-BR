@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de consulta, guia de api, parâmetros de conexão, serviço de query;
+keywords: Experience Platform;início;tópicos populares;serviço de consulta;guia de api;parâmetros de conexão;Serviço de consulta;
 solution: Experience Platform
-title: Endpoint da API Parâmetros de conexão
-description: Você pode recuperar os parâmetros de conexão para usar o serviço interativo fazendo uma solicitação do GET para o endpoint /connection_parameters .
+title: Endpoint da API de Parâmetros de Conexão
+description: Você pode recuperar os parâmetros de conexão para usar o serviço interativo fazendo uma solicitação GET para o endpoint /connection_parameters.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# Ponto final de parâmetros de conexão
+# Ponto de extremidade de parâmetros de conexão
 
 ## Exemplo de chamada de API
 
-A seção a seguir o orienta pela chamada de API que você pode fazer usando o [!DNL Query Service] API. A chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+A seção a seguir orienta você pela chamada de API que pode ser feita usando o [!DNL Query Service] API. A chamada inclui o formato geral da API, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Solicitar parâmetros de conexão
 
-Você pode recuperar os parâmetros de conexão fazendo uma solicitação do GET para o `/connection_parameters` endpoint . Para obter mais informações sobre clientes que usam parâmetros de conexão para se conectar via serviço interativo, leia a documentação em [Clientes do Serviço de Consulta](../clients/overview.md).
+Você pode recuperar os parâmetros de conexão fazendo uma solicitação GET para o `/connection_parameters` terminal. Para obter mais informações sobre clientes que usam parâmetros de conexão para se conectar via serviço interativo, leia a documentação em [Clientes do Serviço de consulta](../clients/overview.md).
 
 **Formato da API**
 
@@ -39,7 +39,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameter
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com seus parâmetros de conexão.
+Uma resposta bem-sucedida retorna o status HTTP 200 com os parâmetros de conexão.
 
 ```json
 {

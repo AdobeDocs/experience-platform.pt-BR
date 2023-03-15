@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma extensão é um conjunto de código empacotado que estende as funcionalidades fornecidas por tags ou pelo encaminhamento de eventos.
 
@@ -27,7 +27,7 @@ As extensões determinam os elementos que estão disponíveis ao construir propr
 
 Use os links na parte superior da lista de extensões para exibir as extensões instaladas, o catálogo de extensões ou as atualizações.
 
-Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção em [adição de uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
+Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção sobre [adicionar uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
 
 >[!IMPORTANT]
 >

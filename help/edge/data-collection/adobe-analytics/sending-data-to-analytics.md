@@ -1,23 +1,22 @@
 ---
-title: Envio de dados para o Adobe Analytics usando o Adobe Experience Platform Web SDK
-description: Saiba como enviar dados para a Adobe Analytics usando o Adobe Experience Platform Web SDK.
-keywords: adobe analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;page visualização;link tracking;links;track links;click links;clickCollection;click collection;collection;click collection;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Envio de dados para a Adobe Analytics usando o SDK da Web da Adobe Experience Platform
+description: Saiba como enviar dados para a Adobe Analytics usando o SDK da Web da Adobe Experience Platform.
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;rastreamento de links;links;rastrear links;clickCollection;coleção de cliques;
+exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
+# Envio de dados para o Adobe Analytics
 
-# Envio de dados para a Adobe Analytics
+Enquanto no passado havia diferentes funções para distinguir entre uma exibição de página e um link (por exemplo, `s.t(), s.tl()`), no SDK da Web, há apenas a variável `sendEvent` comando. Os dados enviados com um evento determinam se ele deve ser uma exibição de página ou um link. [Saiba mais sobre links de rastreamento](../track-links.md).
 
-Enquanto no passado havia funções diferentes para distinguir entre uma visualização de página e um link (por exemplo, `s.t(), s.tl()`), no SDK da Web há apenas o comando `sendEvent`. Os dados enviados com um evento determinam se devem ser uma visualização de página ou um link. [Saiba mais sobre links](../track-links.md) de rastreamento.
+## Envio de uma exibição de página
 
-## Envio de uma visualização de página
-
-Você pode especificar uma visualização de página definindo a variável `web.webPageDetails.pageViews.value=1`.
+Você pode especificar uma visualização de página definindo o `web.webPageDetails.pageViews.value=1` variável.
 
 ```javascript
 alloy("sendEvent", {
@@ -33,4 +32,4 @@ alloy("sendEvent", {
 });
 ```
 
-Embora o Analytics registre tecnicamente uma visualização de página mesmo se essa variável não estiver definida, é uma prática recomendada definir essa variável sempre que você quiser registrar uma visualização de página para ser explícita nos seus dados e para prova futura da sua implementação.
+Embora o Analytics registre tecnicamente uma exibição de página, mesmo que essa variável não esteja definida, é uma prática recomendada defini-la sempre que você quiser registrar uma exibição de página para ser explícita em seus dados e para comprovar futuramente sua implementação.

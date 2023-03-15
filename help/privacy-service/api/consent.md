@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform, home, tópicos populares
+keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
-title: Ponto de extremidade da API de consentimento
-description: Saiba como gerenciar solicitações de consentimento do cliente para aplicativos Experience Cloud usando a API do Privacy Service.
+title: Endpoint da API de consentimento
+description: Saiba como gerenciar solicitações de consentimento do cliente para aplicativos Experience Cloud usando a API Privacy Service.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 3%
+source-wordcount: '244'
+ht-degree: 2%
 
 ---
 
-# Ponto de extremidade de consentimento
+# Endpoint de consentimento
 
-Determinadas regulamentações exigem consentimento explícito do cliente para que seus dados pessoais possam ser coletados. O `/consent` endpoint no [!DNL Privacy Service] A API permite processar solicitações de consentimento do cliente e integrá-las ao seu fluxo de trabalho de privacidade.
+Certos regulamentos exigem o consentimento explícito do cliente antes que seus dados pessoais possam ser coletados. A variável `/consent` endpoint na variável [!DNL Privacy Service] A API permite processar solicitações de consentimento do cliente e integrá-las ao seu fluxo de trabalho de privacidade.
 
 Antes de usar este guia, consulte o [introdução](./getting-started.md) guia para obter informações sobre os cabeçalhos de autenticação necessários apresentados na chamada de API de exemplo abaixo.
 
 ## Processar uma solicitação de consentimento do cliente
 
-As solicitações de consentimento são processadas fazendo uma solicitação POST para o `/consent` endpoint .
+As solicitações de consentimento são processadas fazendo uma solicitação POST ao `/consent` terminal.
 
 **Formato da API**
 
@@ -60,17 +60,17 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `optOutOfSale` | Quando definido como true, indica que os usuários fornecidos em `entities` Desejam recusar a venda ou o compartilhamento de seus dados pessoais. |
-| `entities` | Uma matriz de objetos que indica os usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma matriz de `values` para corresponder usuários individuais com esse namespace. |
-| `nameSpace` | Cada objeto na variável `entities` a matriz deve conter um dos [namespaces de identidade padrão](./appendix.md#standard-namespaces) reconhecido pela API do Privacy Service. |
-| `values` | Uma matriz de valores para cada usuário, correspondendo ao valor fornecido `nameSpace`. |
+| `optOutOfSale` | Quando definido como verdadeiro, indica que os usuários fornecidos em `entities` recusar a venda ou a partilha dos seus dados pessoais. |
+| `entities` | Uma matriz de objetos que indica os usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma série de `values` para corresponder usuários individuais a esse namespace. |
+| `nameSpace` | Cada objeto no `entities` a matriz deve conter um dos [namespaces de identidade padrão](./appendix.md#standard-namespaces) reconhecido pela API Privacy Service. |
+| `values` | Uma matriz de valores para cada usuário, correspondente à variável fornecida `nameSpace`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->Para obter mais informações sobre como determinar para quais valores de identidade do cliente enviar [!DNL Privacy Service], consulte o guia em [fornecimento de dados de identidade](../identity-data.md).
+>Para obter mais informações sobre como determinar para quais valores de identidade do cliente enviar [!DNL Privacy Service], consulte o guia sobre [fornecimento de dados de identidade](../identity-data.md).
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) sem carga, indicando que a solicitação foi aceita por [!DNL Privacy Service] e está em transformação.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) sem carga, indicando que a solicitação foi aceita por [!DNL Privacy Service] e está em processamento.

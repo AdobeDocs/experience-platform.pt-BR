@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Hosts gerenciados pela Adobe são a configuração padrão do host para implantar builds de biblioteca de tags na Adobe Experience Platform. Quando você cria uma nova propriedade por meio da interface da coleção de dados, um host padrão gerenciado pela Adobe é criado para você.
 
@@ -54,7 +54,7 @@ Depois que a build for implantada no host gerenciado pelo Adobe, a CDN distribui
 >
 >Para hosts gerenciados pela Adobe, a primeira biblioteca publicada em qualquer novo ambiente pode levar até cinco minutos para se propagar para a CDN global.
 
-Quando um nó de borda recebe uma solicitação de um arquivo específico (como a build da biblioteca), o nó verifica primeiro a hora de expiração no arquivo. Se o tempo não tiver expirado, o nó de borda fornecerá a versão em cache. Se o tempo tiver expirado, o nó de borda solicita uma nova cópia da origem mais próxima, fornece essa cópia atualizada e, em seguida, armazena em cache a cópia atualizada com um novo tempo de expiração.
+Quando um nó de borda recebe uma solicitação de um arquivo específico (como a build de biblioteca), o nó verifica primeiro a hora de expiração no arquivo. Se o tempo não tiver expirado, o nó de borda fornecerá a versão em cache. Se o tempo tiver expirado, o nó de borda solicitará uma nova cópia da origem mais próxima, enviará essa cópia atualizada e a armazenará em cache com um novo tempo de expiração.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Essas invalidações de cache escalonadas dão aos grupos de servidores de orige
 
 As builds de biblioteca também são armazenadas em cache no navegador por meio do uso do cabeçalho HTTP `cache-control`. Ao usar hosts gerenciados pela Adobe, você não tem controle sobre os cabeçalhos retornados nas respostas da API, portanto, o padrão da Adobe para cache é usado. Em outras palavras, não é possível utilizar cabeçalhos personalizados para hosts gerenciados pela Adobe. Se precisar de um cabeçalho `cache-control` personalizado, talvez você queira considerar a hospedagem [automática](self-hosting-libraries.md).
 
-O tempo de expiração da build de biblioteca em cache do navegador (determinado pela variável `cache-control` ) varia dependendo do ambiente de tags que você está usando:
+A hora de expiração da build da biblioteca em cache do navegador (determinada pela variável `cache-control` ) varia de acordo com o ambiente de tag que você está usando:
 
 | Ambiente | Valor de `cache-control` |
 | --- | --- |
@@ -90,7 +90,7 @@ Os cabeçalhos de controle de cache são aplicados apenas ao build da biblioteca
 
 ## Usar a hospedagem gerenciada pela Adobe na interface do usuário do 
 
-Ao criar uma propriedade na interface do usuário da plataforma ou na interface do usuário da coleta de dados pela primeira vez, um host gerenciado pelo Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
+Quando você cria pela primeira vez uma propriedade na interface da Platform ou na interface da Coleção de dados, um host gerenciado por Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
 
 >[!NOTE]
 >

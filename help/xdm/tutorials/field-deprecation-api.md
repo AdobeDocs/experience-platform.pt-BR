@@ -1,6 +1,6 @@
 ---
-title: Descontinuar um campo XDM na API
-description: Saiba como descontinuar os campos do Experience Data Model (XDM) na API do Registro de Schema.
+title: Substituir um campo XDM na API
+description: Saiba como descontinuar campos do Experience Data Model (XDM) na API do registro de esquema.
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 6%
 
 ---
 
-# Descontinuar um campo XDM na API
+# Substituir um campo XDM na API
 
-No Experience Data Model (XDM), é possível descontinuar um campo em um esquema ou recurso personalizado usando o [API do Registro de Schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). A desaprovação de um campo faz com que ele fique oculto das interfaces do usuário downstream, como o [!UICONTROL Perfis] espaço de trabalho e Customer Journey Analytics, mas é uma alteração sem quebra e não afeta negativamente os fluxos de dados existentes.
+No Experience Data Model (XDM), é possível descontinuar um campo em um esquema ou recurso personalizado usando o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). A desativação de um campo faz com que ele fique oculto nas interfaces downstream, como o [!UICONTROL Perfis] espaço de trabalho e Customer Journey Analytics, mas caso contrário, é uma alteração ininterrupta e não afeta negativamente os fluxos de dados existentes.
 
-Este documento aborda como descontinuar campos para diferentes recursos XDM. Para obter etapas sobre como descontinuar um campo XDM usando o Editor de esquema na interface do usuário do Experience Platform, consulte o tutorial em [substituição de um campo XDM na interface do usuário](./field-deprecation-ui.md).
+Este documento aborda como descontinuar campos para diferentes recursos XDM. Para obter etapas sobre como descontinuar um campo XDM usando o Editor de esquemas na interface do usuário do Experience Platform, consulte o tutorial em [substituição de um campo XDM na interface do](./field-deprecation-ui.md).
 
 ## Introdução
 
-Este tutorial requer fazer chamadas para a API do Registro de Schema. Revise o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer essas chamadas de API. Isso inclui as `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção para a `Accept` e seus possíveis valores).
+Este tutorial requer a realização de chamadas para a API do registro de esquema. Revise o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer essas chamadas de API. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção para os `Accept` e seus valores possíveis).
 
-## Descontinuar um campo personalizado {#custom}
+## Substituir um campo personalizado {#custom}
 
-Para descontinuar um campo em uma classe personalizada, grupo de campos ou tipo de dados, atualize o recurso personalizado por meio de uma solicitação PUT ou PATCH e adicione o atributo `meta:status: deprecated` para o campo em questão.
+Para descontinuar um campo em uma classe personalizada, grupo de campos ou tipo de dados, atualize o recurso personalizado por meio de uma solicitação PUT ou PATCH e adicione o atributo `meta:status: deprecated` ao campo em questão.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Para descontinuar um campo em uma classe personalizada, grupo de campos ou tipo 
 >* [Atualizar um tipo de dados](../api/data-types.md#patch)
 
 
-A chamada de API de exemplo abaixo descontinuará um campo em um tipo de dados personalizado.
+A chamada de API de exemplo abaixo substitui um campo em um tipo de dados personalizado.
 
 **Formato da API**
 
@@ -42,7 +42,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Solicitação**
 
-A solicitação a seguir descontinuará o `expansionArea` para um tipo de dados que descreve uma propriedade imobiliária.
+A solicitação a seguir substitui a `expansionArea` para um tipo de dados que descreve uma propriedade imobiliária.
 
 ```shell
 curl -X PATCH \
@@ -163,13 +163,13 @@ Uma resposta bem-sucedida retorna os detalhes de atualização do recurso person
 }
 ```
 
-## Descontinuar um campo padrão em um schema {#standard}
+## Substituir um campo padrão em um esquema {#standard}
 
-Os campos de classes padrão, grupos de campos e tipos de dados não podem ser preteridos diretamente. Em vez disso, você pode descontinuar o uso nos esquemas individuais que empregam esses recursos padrão usando um descritor.
+Campos de classes padrão, grupos de campos e tipos de dados não podem ser descontinuados diretamente. Em vez disso, você pode descontinuar o uso deles nos esquemas individuais que empregam esses recursos padrão usando um descritor.
 
 ### Criar um descritor de descontinuação de campo {#create-descriptor}
 
-Para criar um descritor para os campos de esquema que deseja descontinuar, faça uma solicitação de POST para a variável `/tenant/descriptors` endpoint .
+Para criar um descritor para os campos de esquema que deseja descontinuar, faça uma solicitação POST para o `/tenant/descriptors` terminal.
 
 **Formato da API**
 
@@ -199,8 +199,8 @@ curl -X POST \
 | --- | --- |
 | `@type` | O tipo de descritor. Para um descritor de descontinuação de campo, esse valor deve ser definido como `xdm:descriptorDeprecated`. |
 | `xdm:sourceSchema` | O URI `$id` do esquema ao qual você está aplicando o descritor. |
-| `xdm:sourceVersion` | A versão do esquema à qual você está aplicando o descritor. Deve ser definido como `1`. |
-| `xdm:sourceProperty` | O caminho para a propriedade no esquema ao qual você está aplicando o descritor. Se quiser aplicar o descritor a várias propriedades, é possível fornecer uma lista de caminhos na forma de uma matriz (por exemplo, `["/firstName", "/lastName"]`). |
+| `xdm:sourceVersion` | A versão do esquema ao qual você está aplicando o descritor. Deve ser definido como `1`. |
+| `xdm:sourceProperty` | O caminho para a propriedade no esquema ao qual você está aplicando o descritor. Se quiser aplicar o descritor a várias propriedades, você pode fornecer uma lista de caminhos na forma de uma matriz (por exemplo, `["/firstName", "/lastName"]`). |
 
 **Resposta**
 
@@ -221,11 +221,11 @@ curl -X POST \
 
 ### Verificar o campo obsoleto {#verify-deprecation}
 
-Após a aplicação do descritor, é possível verificar se o campo foi descontinuado, pesquisando o esquema em questão e usando o `Accept` cabeçalho.
+Após a aplicação do descritor, é possível verificar se o campo foi descontinuado, pesquisando o esquema em questão ao usar o método apropriado `Accept` cabeçalho.
 
 >[!NOTE]
 >
->No momento, não há suporte para a exibição de campos obsoletos ao listar schemas.
+>No momento, não há suporte para a exibição de campos obsoletos ao listar esquemas.
 
 **Formato da API**
 
@@ -235,7 +235,7 @@ GET /tenant/schemas
 
 **Solicitação**
 
-Para incluir informações sobre campos obsoletos na resposta da API, você deve definir a variável `Accept` cabeçalho para `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Para incluir informações sobre campos obsoletos na resposta da API, é necessário definir o `Accept` cabeçalho para `application/vnd.adobe.xed-deprecatefield+json; version=1`.
 
 ```shell
 curl -X GET \
@@ -249,7 +249,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do schema, com o campo obsoleto contendo um `meta:status` valor de `deprecated`. O exemplo de resposta a seguir foi truncado por questões de espaço.
+Uma resposta bem-sucedida retorna os detalhes do esquema, com o campo obsoleto contendo um `meta:status` valor de `deprecated`. O exemplo de resposta a seguir foi truncado por questões de espaço.
 
 ```json
 "faxPhone": {
@@ -266,4 +266,4 @@ Uma resposta bem-sucedida retorna os detalhes do schema, com o campo obsoleto co
 
 ## Próximas etapas
 
-Este documento cobriu como descontinuar campos XDM usando a API do Registro de Schema. Para obter mais informações sobre como configurar campos para recursos personalizados, consulte o guia sobre [definição de campos XDM na API](./custom-fields-api.md). Para obter mais informações sobre o gerenciamento de descritores, consulte o [guia do endpoint de descritores](../api/descriptors.md).
+Este documento abordou como descontinuar campos XDM usando a API do registro de esquema. Para obter mais informações sobre a configuração de campos para recursos personalizados, consulte o guia em [definição de campos XDM na API](./custom-fields-api.md). Para obter mais informações sobre o gerenciamento de descritores, consulte [guia de endpoint de descritores](../api/descriptors.md).

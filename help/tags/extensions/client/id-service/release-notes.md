@@ -13,15 +13,15 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Este documento aborda as notas de versão da extensão de tag do Adobe Experience Cloud Identity Service. Para obter as notas de versão sobre o próprio Experience Cloud Identity Service, consulte o [Documentação do Serviço de identidade](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=pt-BR).
+Este documento aborda as notas de versão da extensão de tag do Adobe Experience Cloud Identity Service. Para obter as notas de versão do Experience Cloud Identity Service em si, consulte [Documentação do Serviço de identidade](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=pt-BR).
 
 ## 17 de outubro de 2022
 
 ### Extensão da Experience Cloud ID 5.5.0
 
-* A extensão agora é compatível com a versão 5.5.0 do [Cliente JS do visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte a [Notas de versão do visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para atualizações específicas.
+* A extensão agora é compatível com a versão 5.5.0 do [Cliente JS do visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte a [Notas de versão do visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para obter atualizações específicas.
 
 ## 9 de março de 2022
 
@@ -29,8 +29,8 @@ Este documento aborda as notas de versão da extensão de tag do Adobe Experienc
 
 * Esta versão contém o Visitante 5.4.0 mais recente, com as seguintes atualizações:
 
-   * Capacidade de configurar a duração do `s_ecid` cookie usando configuração cookieLifetime
-   * Atualização de um problema do navegador Firefox que ocorre quando uma página é carregada em um iFrame secundário
+   * Capacidade de configurar o tempo de vida da `s_ecid` cookie usando a configuração cookieLifetime
+   * Atualização para um problema do navegador Firefox que ocorre quando uma página é carregada em um iFrame secundário
 
 ## 10 de outubro de 2021
 
@@ -38,9 +38,9 @@ Este documento aborda as notas de versão da extensão de tag do Adobe Experienc
 
 * Esta versão contém o Visitante 5.3.0 mais recente, com as seguintes novas atualizações:
 
-   * Algoritmo atualizado para gerar ECID local
-   * Aceitação mais recente com `Secure` e `SameSite` sinalizadores para o cookie de privacidade
-   * Correção de um problema no navegador Firefox quando uma página é carregada em um iFrame secundário
+   * Algoritmo atualizado para gerar o ECID local
+   * Última aceitação com `Secure` e `SameSite` sinalizadores para o cookie de privacidade
+   * Correção para um problema do navegador Firefox quando uma página é carregada em um iFrame secundário
 
 ## 12 de janeiro de 2021
 

@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para desenvolver extensões de tag na Adobe Experience Platform, é necessário registrar uma organização da Adobe Experience Cloud.
 
@@ -43,7 +43,7 @@ Este programa é para empresas de consultoria que ajudam os clientes da Adobe a 
 
 Assim que sua empresa estiver no programa de parceiro do Exchange, você poderá solicitar acesso às soluções da Adobe fazendo logon no [site do parceiro do Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) e seguindo as etapas abaixo.
 
-Se você tiver uma conta do Experience Cloud que exija acesso à interface do usuário da coleta de dados e à interface do usuário do Experience Platform, consulte o [guia de permissões de coleção de dados](../../../collection/permissions.md).
+Se você tiver uma conta Experience Cloud que exija acesso à interface da Coleção de dados e à interface do Experience Platform, consulte a [guia de permissões da coleção de dados](../../../collection/permissions.md).
 
 ## Para desenvolvedores independentes
 

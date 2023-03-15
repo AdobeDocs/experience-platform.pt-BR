@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, segmentação, serviço de segmentação, solução de problemas, API, seg, segmento, segmento, pesquisa, pesquisa de segmento;
+keywords: Experience Platform;segmentação;serviço de segmentação;solução de problemas;API;segmento;segmento;pesquisa;pesquisa de segmento;
 title: Endpoint da API de pesquisa de segmento
-description: Na API do Serviço de segmentação da Adobe Experience Platform, a Pesquisa de segmento é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real. Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmento e inclui exemplos de chamadas de API para executar ações básicas usando a API.
+description: Na API do Serviço de segmentação da Adobe Experience Platform, a Pesquisa de segmentos é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real. Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmentos e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -10,17 +10,17 @@ ht-degree: 2%
 
 ---
 
-# Ponto de extremidade de Pesquisa de Segmento
+# Endpoint da pesquisa de segmento
 
-A Pesquisa de segmento é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real.
+A Pesquisa de segmentos é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real.
 
-Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmento e inclui exemplos de chamadas de API para executar ações básicas usando a API.
+Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmentos e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os endpoints usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
 
-Além dos cabeçalhos necessários descritos na seção de introdução, todas as solicitações para o endpoint de Pesquisa de segmento exigem o seguinte cabeçalho adicional:
+Além dos cabeçalhos necessários descritos na seção introdução, todas as solicitações para o endpoint de Pesquisa de segmento exigem o seguinte cabeçalho adicional:
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -38,7 +38,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parâmetros | Descrição |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} representa o valor da classe de esquema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é compatível. |
-| `s={SEARCH_TERM}` | *(Opcional)* Onde {SEARCH_TERM} representa uma consulta que está em conformidade com a implementação Microsoft de [Sintaxe de pesquisa de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` será retornada. Uma explicação mais detalhada pode ser encontrada no [apêndice](#appendix) deste documento. |
+| `s={SEARCH_TERM}` | *(Opcional)* Microsoft Onde {SEARCH_TERM} representa uma consulta que está de acordo com a implementação de [Sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` serão retornados. Uma explicação mais detalhada pode ser encontrada na [apêndice](#appendix) deste documento. |
 
 **Solicitação**
 
@@ -85,7 +85,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com as seguintes informaçõ
 
 ### Pesquisar entidades individuais
 
-Esse endpoint de pesquisa pode ser usado para recuperar uma lista de todos os objetos indexados de texto completo dentro do namespace especificado. Vários parâmetros podem ser usados, separados por &quot;E&quot; comercial (&amp;).
+Esse ponto de extremidade de pesquisa pode ser usado para recuperar uma lista de todos os objetos indexados de texto completo no namespace especificado. Vários parâmetros podem ser usados, separados por &quot;E&quot; comercial (&amp;).
 
 **Formato da API**
 
@@ -99,10 +99,10 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe de esquema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é compatível. |
 | `namespace={NAMESPACE}` | **(Obrigatório)** Onde {NAMESPACE} contém o namespace no qual você deseja pesquisar. |
-| `s={SEARCH_TERM}` | *(Opcional)* Onde {SEARCH_TERM} contém uma consulta que está em conformidade com a implementação Microsoft de [Sintaxe de pesquisa de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` será retornada. Uma explicação mais detalhada pode ser encontrada no [apêndice](#appendix) deste documento. |
-| `entityId={ENTITY_ID}` | *(Opcional)* Limita sua pesquisa a na pasta designada, especificada com {ENTITY_ID}. |
+| `s={SEARCH_TERM}` | *(Opcional)* Microsoft Onde {SEARCH_TERM} contém uma consulta que está de acordo com a implementação de [Sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` serão retornados. Uma explicação mais detalhada pode ser encontrada na [apêndice](#appendix) deste documento. |
+| `entityId={ENTITY_ID}` | *(Opcional)* Limita sua pesquisa à pasta designada, especificada com {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Opcional)* Onde {LIMIT} representa o número de resultados de pesquisa a serem retornados. O valor padrão é 50. |
-| `page={PAGE}` | *(Opcional)* Onde {PAGE} representa o número de página usado para paginar resultados da consulta pesquisada. Observe que o número da página começa em **0**. |
+| `page={PAGE}` | *(Opcional)* Onde {PAGE} representa o número de página usado para paginar os resultados da consulta pesquisada. Observe que o número da página começa em **0**. |
 
 
 **Solicitação**
@@ -170,7 +170,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe de esquema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é compatível. |
 | `namespace={NAMESPACE}` | **(Obrigatório)** Onde {NAMESPACE} contém o namespace no qual você deseja pesquisar. |
-| `entityId={ENTITY_ID}` | **(Obrigatório)** A ID do objeto de pesquisa sobre o qual você deseja obter as informações estruturais, especificadas com {ENTITY_ID}. |
+| `entityId={ENTITY_ID}` | **(Obrigatório)** A ID do objeto de pesquisa sobre o qual você deseja obter as informações estruturais, especificada com {ENTITY_ID}. |
 
 **Solicitação**
 
@@ -219,45 +219,45 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações estruturai
 
 ## Próximas etapas
 
-Após a leitura deste guia, você tem uma melhor compreensão de como a Pesquisa de segmento funciona.
+Depois de ler este guia, você compreenderá melhor como a Pesquisa de segmento funciona.
 
 ## Apêndice {#appendix}
 
-As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. As consultas de pesquisa são gravadas da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para procurar um segmento chamado AAM ou [!DNL Platform], você usaria a seguinte consulta de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
+As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. As consultas de pesquisa são escritas da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, procurar um segmento chamado AAM ou [!DNL Platform], você usaria a seguinte consulta de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como o exemplo mostrado acima.
+> !![NOTE] Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como no exemplo mostrado acima.
 
-### Campos de pesquisa {#search-fields}
+### Pesquisar campos {#search-fields}
 
-A tabela a seguir lista os campos que podem ser pesquisados no parâmetro de consulta de pesquisa.
+A tabela a seguir lista os campos que podem ser pesquisados dentro do parâmetro de consulta de pesquisa.
 
 | Nome do campo | Descrição |
 | ---------- | ----------- |
-| folderId | A pasta ou pastas que têm a ID da pasta da pesquisa especificada. |
+| folderId | A(s) pasta(s) que tem(êm) a ID da pasta da pesquisa especificada. |
 | folderLocation | O local ou locais que têm o local da pasta da pesquisa especificada. |
-| parentFolderId | O segmento ou a pasta que tem a ID da pasta principal da pesquisa especificada. |
+| parentFolderId | O segmento ou pasta que tem a ID da pasta principal da pesquisa especificada. |
 | segmentId | O segmento corresponde à ID de segmento da pesquisa especificada. |
-| segmentName | O segmento corresponde ao nome do segmento de sua pesquisa especificada. |
-| segmentDescription | O segmento corresponde à descrição do segmento de sua pesquisa especificada. |
+| segmentName | O segmento corresponde ao nome do segmento da pesquisa especificada. |
+| segmentDescription | O segmento corresponde à descrição do segmento da pesquisa especificada. |
 
-### Expressão de pesquisa {#search-expression}
+### Pesquisar expressão {#search-expression}
 
-A tabela a seguir lista as especificações de como as consultas de pesquisa funcionam ao usar a API de pesquisa de segmento.
+A tabela a seguir lista as especificidades de como as consultas de pesquisa funcionam ao usar a API de pesquisa de segmento.
 
->!![NOTE] Os exemplos a seguir são mostrados em um formato não codificado em HTML para maior clareza. Para práticas recomendadas, codifique a expressão de pesquisa no HTML.
+>!![NOTE] Os exemplos a seguir são mostrados em um formato não codificado por HTML para maior clareza. Para obter as práticas recomendadas, HTML codifique a expressão de pesquisa.
 
 | Exemplo de expressão de pesquisa | Descrição |
 | ------------------------- | ----------- |
-| fofo | Procure qualquer palavra. Isso retornará resultados se a palavra &quot;foo&quot; for encontrada em qualquer um dos campos pesquisáveis. |
-| foo E barra | Uma pesquisa booleana. Isso retornará resultados se **both** as palavras &quot;foo&quot; e &quot;bar&quot; são encontradas em qualquer um dos campos pesquisáveis. |
-| barra OU rodapé | Uma pesquisa booleana. Isso retornará resultados se **ou** a palavra &quot;foo&quot; ou a palavra &quot;bar&quot; são encontradas em qualquer um dos campos pesquisáveis. |
-| barra FOTO NÃO | Uma pesquisa booleana. Isso retornará resultados se a palavra &quot;foo&quot; for encontrada, mas a palavra &quot;bar&quot; não for encontrada em nenhum dos campos pesquisáveis. |
-| name: foo E barra | Uma pesquisa booleana. Isso retornará resultados se **both** as palavras &quot;foo&quot; e &quot;bar&quot; são encontradas no campo &quot;name&quot;. |
-| executar* | Uma pesquisa curinga. Usar um asterisco (*) corresponde a 0 ou mais caracteres, o que significa que retornará resultados se o conteúdo de qualquer um dos campos pesquisáveis contiver uma palavra que começa com &quot;executar&quot;. Por exemplo, isso retornará resultados se as palavras &quot;executa&quot;, &quot;executando&quot;, &quot;runner&quot; ou &quot;runt&quot; forem exibidas. |
-| câmara? | Uma pesquisa curinga. Usar um ponto de interrogação (?) corresponde somente a um caractere, o que significa que retornará resultados se o conteúdo de qualquer um dos campos pesquisáveis começar com &quot;cam&quot; e uma letra adicional. Por exemplo, isso retornará resultados se as palavras &quot;camp&quot; ou &quot;cams&quot; forem exibidas, mas não retornará resultados se as palavras &quot;câmera&quot; ou &quot;campfire&quot; forem exibidas. |
-| &quot;guarda-chuva azul&quot; | Uma pesquisa de frase. Isso retornará resultados se o conteúdo de qualquer um dos campos pesquisáveis contiver a frase completa &quot;guarda-chuva azul&quot;. |
-| azul\~ | Uma busca difusa. Como opção, você pode colocar um número entre 0 e 2 após o til (~) para especificar a distância de edição. Por exemplo, &quot;blue\~1&quot; retornaria &quot;blue&quot;, &quot;blues&quot; ou &quot;cola&quot;. Pesquisa difusa **only** ser aplicada a termos, não frases. No entanto, é possível anexar til ao final de cada palavra em uma frase. Por exemplo, &quot;acampar\~ em\~ no\~ verão\~&quot; seria igual a &quot;acampar no verão&quot;. |
-| &quot;aeroporto de hotel&quot;\~5 | Uma pesquisa de proximidade. Esse tipo de pesquisa é usado para localizar termos próximos um do outro em um documento. Por exemplo, a frase `"hotel airport"~5` O encontrará os termos &quot;hotel&quot; e &quot;aeroporto&quot; em até 5 palavras de distância em um documento. |
-| `/a[0-9]+b$/` | Uma pesquisa de expressão regular. Esse tipo de pesquisa encontra uma correspondência com base no conteúdo entre barras para frente &quot;/&quot;, conforme documentado na classe RegExp. Por exemplo, para localizar documentos contendo &quot;motel&quot; ou &quot;hotel&quot;, especifique `/[mh]otel/`. Pesquisas de expressões regulares são comparadas com palavras únicas. |
+| foo | Procure qualquer palavra. Isso retornará resultados se a palavra &quot;foo&quot; for encontrada em qualquer um dos campos pesquisáveis. |
+| foo E barra | Uma pesquisa booleana. Isso retornará resultados se **ambos** as palavras &quot;foo&quot; e &quot;bar&quot; são encontradas em qualquer um dos campos pesquisáveis. |
+| foo OU barra | Uma pesquisa booleana. Isso retornará resultados se **ou** a palavra &quot;foo&quot; ou a palavra &quot;bar&quot; são encontradas em qualquer um dos campos pesquisáveis. |
+| barra FOO NOT | Uma pesquisa booleana. Isso retornará resultados se a palavra &quot;foo&quot; for encontrada, mas a palavra &quot;bar&quot; não for encontrada em nenhum dos campos pesquisáveis. |
+| name: foo E bar | Uma pesquisa booleana. Isso retornará resultados se **ambos** as palavras &quot;foo&quot; e &quot;bar&quot; são encontradas no campo &quot;name&quot;. |
+| executar* | Uma pesquisa com curinga. Usar um asterisco (*) corresponde a 0 ou mais caracteres, o que significa que ele retornará resultados se o conteúdo de qualquer um dos campos pesquisáveis contiver uma palavra que comece com &quot;executar&quot;. Por exemplo, retornará resultados se as palavras &quot;run&quot;, &quot;running&quot;, &quot;runner&quot; ou &quot;runt&quot; aparecerem. |
+| Cam? | Uma pesquisa com curinga. Uso de um ponto de interrogação (?) corresponde exatamente a um caractere, o que significa que retornará resultados se o conteúdo de qualquer um dos campos pesquisáveis começar com &quot;cam&quot; e uma letra adicional. Por exemplo, retornará resultados se as palavras &quot;camp&quot; ou &quot;cams&quot; aparecerem, mas não retornarão resultados se as palavras &quot;camera&quot; ou &quot;campfire&quot; aparecerem. |
+| &quot;guarda-chuva azul&quot; | Uma pesquisa de frase. Isso retornará resultados se o conteúdo de qualquer um dos campos pesquisáveis contiver a frase completa &quot;blue umbrella&quot;. |
+| azul\~ | Uma busca difusa. Como opção, você pode colocar um número entre 0 e 2 após o til (~) para especificar a distância de edição. Por exemplo, &quot;blue\~1&quot; seria retornado como &quot;blue&quot;, &quot;blues&quot; ou &quot;glue&quot;. A pesquisa difusa pode **somente** aplicado aos termos, não às frases. Entretanto, é possível anexar til ao final de cada palavra em uma frase. Assim, por exemplo, &quot;camping\~ in\~ the\~ summer\~&quot; corresponderia em &quot;camping in the summer&quot;. |
+| &quot;aeroporto do hotel&quot;\~5 | Uma pesquisa de proximidade. Esse tipo de pesquisa é usado para localizar termos próximos entre si em um documento. Por exemplo, a frase `"hotel airport"~5` encontrará os termos &quot;hotel&quot; e &quot;aeroporto&quot; dentro de 5 palavras uma da outra em um documento. |
+| `/a[0-9]+b$/` | Uma pesquisa de expressão regular. Esse tipo de pesquisa encontra uma correspondência com base no conteúdo entre barras &quot;/&quot;, conforme documentado na classe RegExp. Por exemplo, para encontrar documentos contendo &quot;motel&quot; ou &quot;hotel&quot;, especifique `/[mh]otel/`. Pesquisas de expressões regulares são comparadas com palavras únicas. |
 
-Para obter documentação mais detalhada sobre a sintaxe de consulta, leia a [Documentação da sintaxe de consulta do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Para obter a documentação mais detalhada sobre a sintaxe de consulta, leia o [Documentação da sintaxe de consulta Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).

@@ -7,7 +7,7 @@ user-guide-description: Reúna dados conhecidos e anônimos de várias fontes co
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 29%
+ht-degree: 31%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 29%
 # Ajuda do Real-time Customer Data Platform {#rtcdp}
 
 * [Visão geral do Real-Time CDP](overview.md)
-* [Visão geral do Real-Time CDP B2B Edition](b2b-overview.md)
+* [Visão geral da Real-Time CDP B2B Edition](b2b-overview.md)
 * Introdução {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Introdução ao Real-Time CDP](get-started.md)
@@ -23,7 +23,7 @@ ht-degree: 29%
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
       * [Exemplo de caso de uso](./b2b-use-case.md)
       * [Tutorial completo](./b2b-tutorial.md)
-      * [Medidas de proteção Real-Time CDP B2B Edition](b2b-guardrails.md)
+      * [Medidas de proteção do Real-Time CDP B2B Edition](b2b-guardrails.md)
 * Perfis de conta {#account}
    * [Visão geral do perfil da conta](accounts/account-profile-overview.md)
    * [Guia da interface do usuário do perfil da conta](accounts/account-profile-ui-guide.md)
@@ -34,33 +34,33 @@ ht-degree: 29%
    * [Qualidade dos dados na plataforma](datasets/data-quality.md)
 * Destinos {#destinations}
    * [Visão geral dos destinos](destinations/overview.md)
-   * [Destinos no Real-Time CDP B2B Edition](destinations/b2b.md)
+   * [Destinos na edição B2B do Real-Time CDP](destinations/b2b.md)
 * Identidades {#identity}
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
-* Mesclar políticas {#merge-policies}
+* Políticas de mesclagem {#merge-policies}
    * [Visão geral das políticas de mesclagem](profile/merge-policies.md)
 * Privacidade e governança de dados {#privacy}
    * [Visão geral de privacidade](privacy/privacy-overview.md)
    * [Visão geral da governança de dados](privacy/data-governance-overview.md)
 * Perfis {#profile}
    * [Visão geral do perfil](profile/profile-overview.md)
-   * [Navegação do perfil](profile/profile-browse.md)
-* Serviços de AI/ML Real-Time CDP B2B Edition {#b2b-cdp-ai-ml}
+   * [Procurar perfil](profile/profile-browse.md)
+* Serviços de IA/ML do Real-Time CDP B2B Edition {#b2b-cdp-ai-ml}
    * [Contas relacionadas](b2b-ai-ml-services/related-accounts.md)
-   * [Lead para correspondência da conta](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Lead preditivo e pontuação de conta {#predictive-lead-and-account-scoring-intro}
-      * [Visão geral de lead preditivo e pontuação de conta](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-      * [Gerenciar lead preditivo e pontuação de conta](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
+   * [Cliente potencial para correspondência de conta](b2b-ai-ml-services/lead-to-account-matching.md)
+   * Pontuação preditiva de leads e contas {#predictive-lead-and-account-scoring-intro}
+      * [Visão geral da pontuação preditiva de leads e contas](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Gerenciar leads preditivos e pontuação da conta](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Esquemas {#schemas}
-   * [Visão geral dos esquemas](schemas/overview.md)
+   * [Visão geral de esquemas](schemas/overview.md)
    * [Esquemas no Real-Time CDP B2B Edition](schemas/b2b.md)
 * Segmentos {#segmentation}
    * [Visão geral da segmentação](segmentation/segmentation-overview.md)
    * [Guia do construtor de segmentos](segmentation/segment-builder-guide.md)
    * [Segmentação no Real-Time CDP B2B Edition](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
+   * [IA do cliente](segmentation/customer-ai.md)
 * Fontes {#sources}
    * [Visão geral das fontes](sources/sources-overview.md)
-   * [Fontes no Real-Time CDP B2B Edition](sources/b2b.md)
-* [Notas de versão do Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
+   * [Fontes na edição B2B do Real-Time CDP](sources/b2b.md)
+* [Notas de versão do Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

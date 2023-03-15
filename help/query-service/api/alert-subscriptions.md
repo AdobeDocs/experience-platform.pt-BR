@@ -1,50 +1,50 @@
 ---
-keywords: Experience Platform; home; tópicos populares; serviço de consulta; serviço de consulta; alerta;
+keywords: Experience Platform;início;tópicos populares;serviço de consulta;Serviço de consulta;alerta;
 title: Ponto de Extremidade de Assinaturas de Alerta
-description: Este guia fornece exemplos de solicitações e respostas HTTP para as várias chamadas de API que podem ser feitas no endpoint de assinaturas de alerta com a API do Serviço de query.
+description: Este guia fornece exemplos de solicitações HTTP e respostas para as várias chamadas de API que você pode fazer para o endpoint de assinaturas de alerta com a API de serviço de consulta.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2661'
 ht-degree: 2%
 
 ---
 
-# Ponto de extremidade Assinaturas de Alerta
+# Endpoint de assinaturas de alerta
 
-O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da plataforma ou em ambos. O conteúdo da notificação é o mesmo para alertas na plataforma e de email. Atualmente, os alertas de consulta só podem ser subscritos usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da Platform, ou em ambos. O conteúdo da notificação é o mesmo para alertas na plataforma e alertas de email. Atualmente, alertas de consulta só podem ser inscritos usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >
->Para receber alertas de email, você deve primeiro habilitar essa configuração na interface do usuário do . Consulte a documentação para [instruções sobre como ativar alertas de email](../../observability/alerts/ui.md#enable-email-alerts).
+>Para receber alertas de email, primeiro você deve ativar essa configuração na interface do usuário. Consulte a documentação para [instruções sobre como ativar alertas de email](../../observability/alerts/ui.md#enable-email-alerts).
 
-A tabela abaixo explica os tipos de alertas suportados para diferentes tipos de queries:
+A tabela abaixo explica os tipos de alertas compatíveis com diferentes tipos de consultas:
 
-| Tipo de consulta | Tipos de alertas compatíveis |
+| Tipo de consulta | Tipos de alerta suportados |
 |---|---|
 | Consultas ad hoc | `success` ou `failed` execuções. |
-| Consultas agendadas | `start`, `success`ou `failed` execuções. |
+| Consultas programadas | `start`, `success`ou `failed` execuções. |
 
 >[!NOTE]
 >
->Todas as consultas não SELECT são compatíveis com assinaturas de alertas e você não precisa ser o criador de consultas para assinar um alerta. Outros usuários também podem se inscrever em alertas em uma consulta que não tenha sido criada.
+>Todas as consultas não SELECT suportam assinaturas de alerta e você não precisa ser o criador da consulta para assinar um alerta. Outros usuários também podem se inscrever em alertas em uma consulta que não tenha sido criada.
 
 Os seguintes alertas se aplicam sem uma assinatura de alerta:
 
 * Quando um trabalho de consulta em lote é concluído, os usuários recebem uma notificação.
-* Quando a duração de um trabalho de consulta em lote excede um limite, um alerta é disparado para a pessoa que agendou o query.
+* Quando a duração de um trabalho de consulta em lote excede um limite, um alerta é acionado para a pessoa que agendou a consulta.
 
 >[!NOTE]
 >
->As consultas usadas para testes podem ser excluídas desses alertas, se configuradas adequadamente.
+>As consultas usadas para teste podem ser excluídas desses alertas se configuradas adequadamente.
 
 ## Exemplos de chamadas de API
 
-As seções a seguir abordam as várias chamadas de API que podem ser feitas usando a API do serviço de consulta. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir abordam as várias chamadas de API que podem ser feitas usando a API do Serviço de consulta. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
-## Recuperar uma lista de todos os alertas de uma organização e de uma sandbox {#get-list-of-org-alert-subs}
+## Recuperar uma lista de todos os alertas de uma organização e uma sandbox {#get-list-of-org-alert-subs}
 
-Recupere uma lista de todos os alertas de uma sandbox da organização, fazendo uma solicitação do GET para a `/alert-subscriptions` endpoint .
+Recupere uma lista de todos os alertas para uma sandbox da organização fazendo uma solicitação GET para o `/alert-subscriptions` terminal.
 
 **Formato da API**
 
@@ -59,14 +59,14 @@ GET /alert-subscriptions?{QUERY_PARAMETERS}
 
 **Parâmetros de consulta**
 
-Veja a seguir uma lista de parâmetros de query disponíveis para listar queries. Todos esses parâmetros são opcionais. Fazer uma chamada para esse terminal sem parâmetros recuperará todas as consultas disponíveis para sua organização.
+Veja a seguir uma lista de parâmetros de consulta disponíveis para consultas de listagem. Todos esses parâmetros são opcionais. Fazer uma chamada para esse endpoint sem parâmetros recuperará todas as consultas disponíveis para sua organização.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | O campo que especifica a ordem dos resultados. Os campos compatíveis são `created` e `updated`. Inclua o nome da propriedade como `+` em ordem crescente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) deve ser evitada com `%2B`. Por exemplo `%2Bcreated` é o valor de uma ordem crescente criada. |
-| `pagesize` | Use esse parâmetro para controlar o número de registros que deseja obter da chamada da API por página. O limite padrão é definido para a quantidade máxima de 50 registros por página. |
-| `page` | Indique o número da página dos resultados retornados para os quais você deseja visualizar os registros. |
-| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem filtrar: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores compatíveis são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
+| `orderby` | O campo que especifica a ordem dos resultados. Os campos compatíveis são `created` e `updated`. Incluir o nome da propriedade como prefixo `+` para ascendente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) tem de ser evitada com `%2B`. Por exemplo `%2Bcreated` é o valor de uma ordem criada crescente. |
+| `pagesize` | Use esse parâmetro para controlar o número de registros que você deseja obter da chamada de API por página. O limite padrão é definido com a quantidade máxima de 50 registros por página. |
+| `page` | Indique o número da página dos resultados retornados para os quais você deseja ver os registros. |
+| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem a filtragem: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores compatíveis são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
 
 **Solicitação**
 
@@ -82,11 +82,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um status HTTP 200 e a variável `alerts` com informações de paginação e versão. O `alerts` contém detalhes de todos os alertas de uma organização e de uma sandbox específica. No máximo três alertas estão disponíveis por resposta, um alerta por cada tipo de alerta está contido no corpo da resposta.
+Uma resposta bem-sucedida retorna um status HTTP 200 e a variável `alerts` matriz com informações de paginação e versão. A variável `alerts` O array contém detalhes de todos os alertas para uma organização e uma sandbox específica. No máximo três alertas estão disponíveis por resposta. Um alerta para cada tipo de alerta está contido no corpo da resposta.
 
 >[!NOTE]
 >
->O `alerts._links` na `alerts` A matriz foi truncada por motivos de brevidade. Um exemplo completo da variável `alerts._links` O objeto pode ser encontrado na variável [resposta da solicitação POST](#subscribe-users).
+>A variável `alerts._links` objeto no `alerts` a matriz foi truncada por brevidade. Um exemplo completo da `alerts._links` o objeto pode ser encontrado no [resposta da solicitação POST](#subscribe-users).
 
 ```json
 {
@@ -152,16 +152,16 @@ Uma resposta bem-sucedida retorna um status HTTP 200 e a variável `alerts` com 
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `alerts.assetId` | A ID da consulta que associou o alerta a uma consulta específica. |
-| `alerts.id` | O nome do alerta. Esse nome é gerado pelo serviço Alerts e é usado no painel Alerts . O nome do alerta é composto pela pasta que armazena o alerta, a `alertType`e a ID do fluxo. As informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
-| `alerts.status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`e `disabling`. Um alerta está ouvindo ativamente os eventos, é pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou faz a transição entre esses estados. |
-| `alerts.alertType` | O tipo de alerta. Há três valores em potencial para um alerta: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
-| `alerts._links` | Fornece informações sobre os métodos e endpoints disponíveis que podem ser usados para recuperar, atualizar, editar ou excluir informações relacionadas a essa ID de alerta. |
+| `alerts.id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, a variável `alertType`e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel de Alertas da plataforma](../../observability/alerts/ui.md). |
+| `alerts.status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`, e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
+| `alerts.alertType` | O tipo de alerta. Há três valores possíveis para um alerta: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
+| `alerts._links` | Fornece informações sobre os métodos e endpoints disponíveis que podem ser usados para recuperar, atualizar, editar ou excluir informações relacionadas a esta ID de alerta. |
 | `_page` | O objeto contém propriedades para descrever a ordem, o tamanho, o número total de páginas e a página atual. |
-| `_links` | O objeto contém referências de URI que podem ser usadas para obter a página seguinte ou anterior dos recursos. |
+| `_links` | O objeto contém referências de URI que podem ser usadas para obter a página de recursos seguinte ou anterior. |
 
-## Recuperar as informações de subscrição de alerta para uma consulta ou ID de agenda específica {#retrieve-all-alert-subscriptions-by-id}
+## Recuperar as informações de assinatura de alerta para uma consulta específica ou ID de agendamento {#retrieve-all-alert-subscriptions-by-id}
 
-Recupere as informações da assinatura do alerta para uma ID de consulta específica ou ID de programação, fazendo uma solicitação GET para a `/alert-subscriptions/{QUERY_ID}` ou `/alert-subscriptions/{SCHEDULE_ID}` endpoint .
+Recupere as informações de assinatura de alerta para uma ID de consulta específica ou ID de agendamento fazendo uma solicitação GET para o `/alert-subscriptions/{QUERY_ID}` ou o `/alert-subscriptions/{SCHEDULE_ID}` terminal.
 
 **Formato da API**
 
@@ -189,7 +189,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um status HTTP 200 e a variável `alerts` matriz que contém informações de subscrição para a consulta ou ID de agenda fornecida.
+Uma resposta bem-sucedida retorna um status HTTP de 200 e a variável `alerts` matriz que contém informações de assinatura da consulta ou ID de agendamento fornecida.
 
 ```json
 {
@@ -280,16 +280,16 @@ Uma resposta bem-sucedida retorna um status HTTP 200 e a variável `alerts` matr
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de programação. |
-| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alerts e é usado no painel Alerts . O nome do alerta é composto pela pasta que armazena o alerta, a `alertType`e a ID do fluxo. As informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
-| `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`e `disabling`. Um alerta está ouvindo ativamente os eventos, é pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou faz a transição entre esses estados. |
-| `alertType` | Cada alerta pode ter três tipos diferentes de alerta. Eles são: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
-| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que se inscreveram para receber emails para o alerta. |
-| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
+| `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de agendamento. |
+| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, a variável `alertType`e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel de Alertas da plataforma](../../observability/alerts/ui.md). |
+| `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`, e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
+| `alertType` | Cada alerta pode ter três tipos diferentes. São eles: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
+| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que se inscreveram para receber emails do alerta. |
+| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
 
-## Recuperar informações da assinatura de alerta para uma consulta específica ou ID de programação e tipo de alerta {#get-alert-info-by-id-and-alert-type}
+## Recuperar informações de assinatura de alerta para uma determinada consulta ou ID de agendamento e tipo de alerta {#get-alert-info-by-id-and-alert-type}
 
-Recupere as informações da assinatura do alerta para uma ID específica e um tipo de alerta, fazendo uma solicitação GET para a `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` endpoint . Isso é aplicável a IDs de consulta ou programadas.
+Recupere as informações de assinatura do alerta para uma ID e um tipo de alerta específicos fazendo uma solicitação GET para o `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` terminal. Isso se aplica às IDs de consulta ou consulta programada.
 
 **Formato da API**
 
@@ -300,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `ALERT_TYPE` | Essa propriedade descreve o estado da execução da consulta que aciona um alerta. A resposta incluirá apenas informações de assinatura de alertas para alertas desse tipo. Cada alerta pode ter três tipos diferentes de alerta. Eles são: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
+| `ALERT_TYPE` | Essa propriedade descreve o estado de execução da consulta que aciona um alerta. A resposta só incluirá informações de assinatura de alerta para alertas desse tipo. Cada alerta pode ter três tipos diferentes. São eles: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
 | `QUERY_ID` | O identificador exclusivo da consulta a ser atualizada. |
 | `SCHEDULE_ID` | O identificador exclusivo da consulta agendada a ser atualizada. |
 
@@ -318,7 +318,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um status HTTP de 200 e todos os alertas inscritos. Isso inclui a ID de alerta, o tipo de alerta, as IDs de email registradas do Adobe do assinante e seu canal de notificação preferencial.
+Uma resposta bem-sucedida retorna um status HTTP 200 e todos os alertas nos quais você está inscrito. Isso inclui a ID do alerta, o tipo de alerta, as IDs de email registradas do Adobe do assinante e o canal de notificação preferido.
 
 ```json
 {
@@ -369,14 +369,14 @@ Uma resposta bem-sucedida retorna um status HTTP de 200 e todos os alertas inscr
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `assetId` | A ID da consulta que associou o alerta a uma consulta específica. |
-| `alertType` | O tipo de alerta. Há três valores em potencial para um alerta: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
+| `alertType` | O tipo de alerta. Há três valores possíveis para um alerta: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
 | `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e os canais nos quais os usuários receberão os alertas. |
-| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
-| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que se inscreveram para receber emails para o alerta. |
+| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
+| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que se inscreveram para receber emails do alerta. |
 
-## Recuperar uma lista de todos os alertas que um usuário assinou {#get-alert-subscription-list}
+## Recuperar uma lista de todos os alertas que um usuário assina {#get-alert-subscription-list}
 
-Recupere uma lista de todos os alertas aos quais um usuário se inscreveu, fazendo uma solicitação do GET para a `/alert-subscriptions/user-subscriptions/{EMAIL_ID}` endpoint . A resposta inclui o nome do alerta, as IDs, o status, o tipo de alerta e os canais de notificação.
+Recupere uma lista de todos os alertas que um usuário assina fazendo uma solicitação GET para o `/alert-subscriptions/user-subscriptions/{EMAIL_ID}` terminal. A resposta inclui o nome do alerta, as IDs, o status, o tipo de alerta e os canais de notificação.
 
 **Formato da API**
 
@@ -386,11 +386,11 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `{EMAIL_ID}` | Um endereço de email registrado em uma conta do Adobe é usado para identificar os usuários que assinaram alertas. |
-| `orderby` | O campo que especifica a ordem dos resultados. Os campos compatíveis são `created` e `updated`. Inclua o nome da propriedade como `+` em ordem crescente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) deve ser evitada com `%2B`. Por exemplo `%2Bcreated` é o valor de uma ordem crescente criada. |
-| `pagesize` | Use esse parâmetro para controlar o número de registros que deseja obter da chamada da API por página. O limite padrão é definido para a quantidade máxima de 50 registros por página. |
-| `page` | Indique o número da página dos resultados retornados para os quais você deseja visualizar os registros. |
-| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem filtrar: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores compatíveis são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
+| `{EMAIL_ID}` | Um endereço de email que está registrado em uma conta Adobe, é usado para identificar os usuários inscritos nos alertas. |
+| `orderby` | O campo que especifica a ordem dos resultados. Os campos compatíveis são `created` e `updated`. Incluir o nome da propriedade como prefixo `+` para ascendente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) tem de ser evitada com `%2B`. Por exemplo `%2Bcreated` é o valor de uma ordem criada crescente. |
+| `pagesize` | Use esse parâmetro para controlar o número de registros que você deseja obter da chamada de API por página. O limite padrão é definido com a quantidade máxima de 50 registros por página. |
+| `page` | Indique o número da página dos resultados retornados para os quais você deseja ver os registros. |
+| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem a filtragem: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores compatíveis são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
 
 **Solicitação**
 
@@ -406,7 +406,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 e a variável `items` matriz com detalhes dos alertas subscritos pelo `emailId` fornecido.
+Uma resposta bem-sucedida retorna o status HTTP 200 e a variável `items` com detalhes dos alertas assinados pelo `emailId` fornecidos.
 
 ```json
 {
@@ -499,21 +499,21 @@ Uma resposta bem-sucedida retorna o status HTTP 200 e a variável `items` matriz
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `name` | O nome do alerta. Esse nome é gerado pelo serviço Alerts e é usado no painel Alerts . O nome do alerta é composto pela pasta que armazena o alerta, a `alertType`e a ID do fluxo. As informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
+| `name` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, a variável `alertType`e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel de Alertas da plataforma](../../observability/alerts/ui.md). |
 | `assetId` | A ID da consulta que associou o alerta a uma consulta específica. |
-| `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`e `disabling`. Um alerta está ouvindo ativamente os eventos, é pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou faz a transição entre esses estados. |
-| `alertType` | O tipo de alerta. Há três valores em potencial para um alerta: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
+| `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`, e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
+| `alertType` | O tipo de alerta. Há três valores possíveis para um alerta: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
 | `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e os canais nos quais os usuários receberão os alertas. |
-| `subscriptions.inContextNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. A `true` O valor confirma que os alertas devem ser fornecidos por meio da interface do usuário do . A `false` garante que os usuários não sejam notificados por meio desse canal. |
+| `subscriptions.inContextNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. A `true` O valor confirma que os alertas devem ser fornecidos por meio da interface do usuário. A `false` garante que os usuários não sejam notificados por meio desse canal. |
 | `subscriptions.emailNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. A `true` O valor confirma que os alertas devem ser fornecidos por email. A `false` garante que os usuários não sejam notificados por meio desse canal. |
 
-## Criar um alerta e assinar usuários {#subscribe-users}
+## Criar um alerta e inscrever usuários {#subscribe-users}
 
-Para criar um alerta e assinar um usuário para recebê-lo, faça uma `POST` à `/alert-subscriptions` endpoint . Essa solicitação associa uma consulta a um alerta recém-criado usando um `assetId` e inscreve usuários em alertas para esse query usando `emailIds`.
+Para criar um alerta e assinar um usuário para recebê-lo, faça um `POST` solicitação à `/alert-subscriptions` terminal. Esta solicitação associa uma consulta a um alerta recém-criado usando um `assetId` propriedade e assina os usuários aos alertas para essa consulta por meio do uso de `emailIds`.
 
 >[!IMPORTANT]
 >
->Você pode passar até cinco IDs de email registradas do Adobe em uma única solicitação. Para inscrever mais de cinco usuários em um alerta, as solicitações subsequentes devem ser feitas.
+>Você pode enviar até cinco IDs de email registradas Adobe em uma única solicitação. Para inscrever mais de cinco usuários em um alerta, é necessário fazer solicitações subsequentes.
 
 **Formato da API**
 
@@ -546,18 +546,18 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de programação. |
-| `alertType` | O tipo de alerta. Há três valores em potencial para um alerta: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
+| `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de agendamento. |
+| `alertType` | O tipo de alerta. Há três valores possíveis para um alerta: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
 | `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e os canais nos quais os usuários receberão os alertas. |
-| `subscriptions.emailIds` | Uma matriz de endereços de email para identificar os usuários que devem receber os alertas. Os endereços de email **must** ser registrado em uma conta Adobe. |
-| `subscriptions.inContextNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. A `true` O valor confirma que os alertas devem ser fornecidos por meio da interface do usuário do . A `false` garante que os usuários não sejam notificados por meio desse canal. |
+| `subscriptions.emailIds` | Uma matriz de endereços de email para identificar os usuários que devem receber os alertas. Os endereços de email **deve** ser registrado em uma conta Adobe. |
+| `subscriptions.inContextNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. A `true` O valor confirma que os alertas devem ser fornecidos por meio da interface do usuário. A `false` garante que os usuários não sejam notificados por meio desse canal. |
 | `subscriptions.emailNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. A `true` O valor confirma que os alertas devem ser fornecidos por email. A `false` garante que os usuários não sejam notificados por meio desse canal. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com os detalhes do seu alerta recém-criado.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do alerta recém-criado.
 
 ```json
 {
@@ -600,12 +600,12 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com os detalhes d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alerts e é usado no painel Alerts . O nome do alerta é composto pela pasta que armazena o alerta, a `alertType`e a ID do fluxo. As informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
-| `_links` | Fornece informações sobre os métodos e endpoints disponíveis que podem ser usados para recuperar, atualizar, editar ou excluir informações relacionadas a essa ID de alerta. |
+| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, a variável `alertType`e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel de Alertas da plataforma](../../observability/alerts/ui.md). |
+| `_links` | Fornece informações sobre os métodos e endpoints disponíveis que podem ser usados para recuperar, atualizar, editar ou excluir informações relacionadas a esta ID de alerta. |
 
 ## Ativar ou desativar um alerta {#enable-or-disable-alert}
 
-Essa solicitação faz referência a um alerta específico usando uma ID de consulta ou de programação e um tipo de alerta e atualiza o status do alerta para `enable` ou `disable`. Você pode atualizar o status de um alerta criando um `PATCH` à `/alert-subscriptions/{queryId}/{alertType}` ou `/alert-subscriptions/{scheduleId}/{alertType}` endpoint .
+Esta solicitação faz referência a um alerta específico usando uma consulta ou ID de agendamento e um tipo de alerta e atualiza o status do alerta para `enable` ou `disable`. Você pode atualizar o status de um alerta fazendo uma `PATCH` solicitação à `/alert-subscriptions/{queryId}/{alertType}` ou `/alert-subscriptions/{scheduleId}/{alertType}` terminal.
 
 **Formato da API**
 
@@ -616,7 +616,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `ALERT_TYPE` | O tipo de alerta. Há três valores em potencial para um alerta: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul>Você deve especificar o tipo de alerta atual no namespace do ponto de extremidade para alterá-lo. |
+| `ALERT_TYPE` | O tipo de alerta. Há três valores possíveis para um alerta: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul>Você deve especificar o tipo de alerta atual no namespace do ponto de extremidade para alterá-lo. |
 | `QUERY_ID` | O identificador exclusivo da consulta a ser atualizada. |
 | `SCHEDULE_ID` | O identificador exclusivo da consulta agendada a ser atualizada. |
 
@@ -640,14 +640,14 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `op` | A operação a ser executada. Atualmente, o único valor aceito é `replace`. |
-| `path` | Esse valor está relacionado ao namespace no ponto de extremidade. Atualmente, o único valor aceito é `/status`. |
-| `value` | Em uma solicitação PATCH bem-sucedida, isso altera a variável `status` valor do alerta. Atualmente, os valores aceitos são `enable` ou `disable`. |
+| `path` | Esse valor está relacionado ao namespace no endpoint. Atualmente, o único valor aceito é `/status`. |
+| `value` | Em uma solicitação de PATCH bem-sucedida, isso altera o `status` valor do alerta. Atualmente, os valores aceitos são `enable` ou `disable`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do status do alerta, tipo e ID, bem como a consulta à qual está relacionada.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes sobre o status, o tipo e a ID do alerta, bem como a consulta à qual ele está relacionado.
 
 ```json
 {
@@ -660,14 +660,14 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do status do al
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alerts e é usado no painel Alerts . O nome do alerta é composto pela pasta que armazena o alerta, a `alertType`e a ID do fluxo. As informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
-| `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de programação. |
-| `alertType` | Cada alerta pode ter três tipos diferentes de alerta. Eles são: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> |
-| `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`e `disabling`. Um alerta está ouvindo ativamente os eventos, é pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou faz a transição entre esses estados. |
+| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, a variável `alertType`e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas no [Documentação do painel de Alertas da plataforma](../../observability/alerts/ui.md). |
+| `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de agendamento. |
+| `alertType` | Cada alerta pode ter três tipos diferentes. São eles: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
+| `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled`, e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
 
-## Excluir o alerta para um tipo de query e alerta específico {#delete-alert-info-by-id-and-alert-type}
+## Excluir o alerta para uma consulta e um tipo de alerta específicos {#delete-alert-info-by-id-and-alert-type}
 
-Exclua um alerta para uma consulta específica ou uma ID de programação e um tipo de alerta fazendo uma solicitação de DELETE para a `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` ou `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` endpoint .
+Exclua um alerta para uma consulta específica ou ID de programação e tipo de alerta fazendo uma solicitação DELETE para o `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` ou `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` terminal.
 
 ```http
 DELETE /alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}
@@ -676,7 +676,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `ALERT_TYPE` | O tipo de alerta. Há três valores em potencial para um alerta: <ul><li>`start`: Notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: Notifica o usuário se a consulta falhar.</li></ul> A solicitação de DELETE só se aplica ao tipo de alerta específico fornecido. |
+| `ALERT_TYPE` | O tipo de alerta. Há três valores possíveis para um alerta: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> A solicitação DELETE se aplica somente ao tipo de alerta específico fornecido. |
 | `QUERY_ID` | O identificador exclusivo da consulta a ser atualizada. |
 | `SCHEDULE_ID` | O identificador exclusivo da consulta agendada a ser atualizada. |
 
@@ -705,6 +705,6 @@ Uma resposta bem-sucedida retorna um status HTTP 200 e uma mensagem de confirma�
 
 ## Próximas etapas
 
-Este guia cobriu o uso do `/alert-subscriptions` endpoint na API do Serviço de query. Após a leitura deste guia, você tem uma melhor compreensão de como criar um alerta para um query, assinar usuários para o alerta, os tipos de alertas disponíveis e como as informações de assinatura de alertas podem ser recuperadas, atualizadas e excluídas.
+Este guia abordou o uso do `/alert-subscriptions` endpoint na API do Serviço de consulta. Depois de ler este guia, você compreenderá melhor como criar um alerta para uma consulta, inscrever usuários no alerta, os tipos de alertas disponíveis e como as informações de inscrição do alerta podem ser recuperadas, atualizadas e excluídas.
 
-Consulte a [Guia da API do Serviço de query](./getting-started.md) para saber mais sobre outros recursos e operações disponíveis.
+Consulte a [Guia da API do Serviço de consulta](./getting-started.md) para saber mais sobre outros recursos e operações disponíveis.

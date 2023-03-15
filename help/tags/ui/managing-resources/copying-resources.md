@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Às vezes, é conveniente criar um novo recurso usando as configurações de um recurso existente. Nesses casos, você pode fazer uma cópia.
 
@@ -35,7 +35,7 @@ Se estiver copiando uma regra ou um elemento de dados, na caixa de diálogo de c
 
 >[!NOTE]
 >
->Não é possível copiar recursos para outra propriedade se uma propriedade estiver configurada para desenvolvimento de extensão e a outra propriedade não estiver.
+>Não será possível copiar recursos para outra propriedade se uma propriedade estiver configurada para desenvolvimento de extensão e a outra propriedade não estiver.
 
 Depois de configurar o comportamento desejado, clique em **[!UICONTROL Copiar]**.
 

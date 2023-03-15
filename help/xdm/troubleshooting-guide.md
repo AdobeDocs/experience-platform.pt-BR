@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; tópicos populares; XDM; sistema XDM; perfil individual XDM; XDM ExperienceEvent; Evento de experiência XDM; experienceEvent; evento de experiência; Evento de experiência XDM; modelo de dados de experiência; modelo de dados de experiência; Modelo de dados de experiência; modelo de dados; modelo de dados; esquema; solução de problemas; perguntas frequentes; esquema de União; PROFIL DE UNIÃO; perfil de união; http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
+keywords: Experience Platform;tópicos populares;XDM;sistema XDM;perfil individual XDM;XDM ExperienceEvent;Evento de experiência XDM;evento experienceEvent;evento experienceExperience;Evento de experiência XDM;XDM ExperienceEvent;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;esquema;solução de problemas;perguntas frequentes;esquema de união;PERFIL DE UNIÃO;perfil de união;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
 solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
-description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns da API.
+description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
@@ -13,96 +13,96 @@ ht-degree: 0%
 
 # Guia de solução de problemas do sistema XDM
 
-Este documento fornece respostas para perguntas frequentes sobre [!DNL Experience Data Model] (XDM) e Sistema XDM na Adobe Experience Platform, incluindo um guia de solução de problemas para erros comuns. Para dúvidas e solução de problemas relacionados a outros serviços da plataforma, consulte o [Guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre [!DNL Experience Data Model] (XDM) e Sistema XDM no Adobe Experience Platform, incluindo um guia de solução de problemas para erros comuns. Para perguntas e solução de problemas relacionados a outros serviços da Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** é uma especificação de código aberto que define esquemas padronizados para o gerenciamento de experiência do cliente. A metodologia sobre a qual [!DNL Experience Platform] é construído, **Sistema XDM**, operacionaliza [!DNL Experience Data Model] esquemas a serem usados por [!DNL Platform] serviços. O **[!DNL Schema Registry]** fornece uma interface de usuário e uma RESTful API para acessar o **[!DNL Schema Library]** within [!DNL Experience Platform]. Consulte a [Documentação XDM](home.md) para obter mais informações.
+**[!DNL Experience Data Model](XDM)** é uma especificação de código aberto que define esquemas padronizados para o gerenciamento da experiência do cliente. A metodologia com base na qual [!DNL Experience Platform] é criado, **Sistema XDM**, operacionaliza [!DNL Experience Data Model] esquemas para uso por [!DNL Platform] serviços. A variável **[!DNL Schema Registry]** O fornece uma interface de usuário e uma API RESTful para acessar o **[!DNL Schema Library]** no prazo de [!DNL Experience Platform]. Consulte a [Documentação XDM](home.md) para obter mais informações.
 
 ## Perguntas frequentes
 
-Veja a seguir uma lista das respostas às perguntas mais frequentes sobre o Sistema XDM e o uso do [!DNL Schema Registry] API.
+Veja a seguir uma lista de respostas para perguntas frequentes sobre o Sistema XDM e o uso do [!DNL Schema Registry] API.
 
-### Como adiciono campos a um esquema?
+### Como adicionar campos a um esquema?
 
-É possível adicionar campos a um schema usando um grupo de campos de esquema. Cada grupo de campos é compatível com uma ou mais classes, permitindo que o grupo de campos seja usado em qualquer schema que implemente uma dessas classes compatíveis. Embora o Adobe Experience Platform forneça vários grupos de campos do setor com seus próprios campos predefinidos, é possível adicionar seus próprios campos a um schema criando grupos de campos personalizados usando a API ou a interface do usuário.
+Você pode adicionar campos a um esquema usando um grupo de campos de esquema. Cada grupo de campos é compatível com uma ou mais classes, permitindo que o grupo de campos seja usado em qualquer esquema que implemente uma dessas classes compatíveis. Embora a Adobe Experience Platform forneça vários grupos de campos do setor com seus próprios campos predefinidos, você pode adicionar seus próprios campos a um esquema criando grupos de campos personalizados usando a API ou a interface do usuário.
 
-Para obter detalhes sobre a criação de grupos de campos na [!DNL Schema Registry] API, consulte o [guia de endpoint de grupo de campos](api/field-groups.md#create). Se você estiver usando a interface do usuário do , consulte o [Tutorial do Editor de esquemas](./tutorials/create-schema-ui.md).
+Para obter detalhes sobre a criação de grupos de campos no [!DNL Schema Registry] , consulte a [guia de ponto de extremidade do grupo de campos](api/field-groups.md#create). Se estiver usando a interface do usuário, consulte a [Tutorial do Editor de esquemas](./tutorials/create-schema-ui.md).
 
-### Quais são os melhores usos para grupos de campos vs tipos de dados?
+### Quais são os melhores usos para grupos de campos em relação aos tipos de dados?
 
-[Grupos de campos](./schema/composition.md#field-group) são componentes que definem um ou mais campos em um schema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado por seus `meta:intendedToExtend` atributo.
+[Grupos de campos](./schema/composition.md#field-group) são componentes que definem um ou mais campos em um esquema. Os grupos de campos impõem como os campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado por seus `meta:intendedToExtend` atributo.
 
-[Tipos de dados](./schema/composition.md#data-type) também pode fornecer um ou mais campos para um schema. No entanto, ao contrário de grupos de campos, os tipos de dados não estão restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes.
+[Tipos de dados](./schema/composition.md#data-type) O também pode fornecer um ou mais campos para um esquema. No entanto, diferentemente dos grupos de campos, os tipos de dados não estão restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes.
 
-### Qual é a ID exclusiva para um esquema?
+### Qual é o identificador exclusivo de um esquema?
 
-Todos [!DNL Schema Registry] os recursos (esquemas, grupos de campos, tipos de dados, classes) têm um URI que atua como uma ID exclusiva para fins de referência e pesquisa. Ao visualizar um esquema na API, ele pode ser encontrado no nível superior `$id` e `meta:altId` atributos.
+Todos [!DNL Schema Registry] Os recursos do (esquemas, grupos de campos, tipos de dados, classes) têm um URI que atua como uma ID exclusiva para fins de referência e pesquisa. Ao visualizar um esquema na API, ele pode ser encontrado no painel `$id` e `meta:altId` atributos.
 
-Para obter mais informações, consulte o [identificação de recursos](api/getting-started.md#resource-identification) na seção [!DNL Schema Registry] Guia da API.
+Para obter mais informações, consulte [identificação de recursos](api/getting-started.md#resource-identification) na seção [!DNL Schema Registry] Guia da API.
 
-### Quando um esquema começa a impedir a quebra de alterações?
+### Quando um esquema começa a impedir alterações?
 
-As alterações de detalhamento podem ser feitas em um schema, desde que nunca tenha sido usado na criação de um conjunto de dados ou habilitado para uso em [[!DNL Real-Time Customer Profile]](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-Time Customer Profile], as regras de [Evolução do esquema](schema/composition.md#evolution) se torne estritamente aplicado pelo sistema.
+Alterações interruptivas podem ser feitas em um esquema, desde que ele nunca tenha sido usado na criação de um conjunto de dados ou esteja habilitado para uso no [[!DNL Real-Time Customer Profile]](../profile/home.md). Depois que um esquema tiver sido usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-Time Customer Profile], as regras de [Evolução do esquema](schema/composition.md#evolution) seja estritamente aplicado pelo sistema.
 
 ### Qual é o tamanho máximo de um tipo de campo longo?
 
-Um tipo de campo longo é um inteiro com um tamanho máximo de 53(+1) bits, fornecendo um intervalo potencial entre -9007199254740992 e 9007199254740992. Isso se deve a uma limitação de como as implementações JavaScript do JSON representam números inteiros longos.
+Um tipo de campo longo é um inteiro com um tamanho máximo de 53(+1) bits, dando a ele um intervalo potencial entre -9007199254740992 e 9007199254740992. Isso se deve a uma limitação de como as implementações JavaScript do JSON representam números inteiros longos.
 
-Para obter mais informações sobre tipos de campos, consulte o documento em [Restrições do tipo de campo XDM](./schema/field-constraints.md).
+Para obter mais informações sobre tipos de campo, consulte o documento sobre [Restrições de tipo de campo XDM](./schema/field-constraints.md).
 
-### Como defino identidades para meu esquema?
+### Como definir identidades para meu esquema?
 
-Em [!DNL Experience Platform], as identidades são usadas para identificar um assunto (normalmente uma pessoa individual) independentemente das fontes de dados que estão sendo interpretadas. Eles são definidos em esquemas, marcando os campos principais como &quot;Identidade&quot;. Os campos usados frequentemente para identidade incluem endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM e outros campos de ID exclusivos.
+Entrada [!DNL Experience Platform], as identidades são usadas para identificar um assunto (normalmente uma pessoa), independentemente das fontes de dados que estão sendo interpretadas. Eles são definidos em esquemas ao marcar campos principais como &quot;Identidade&quot;. Os campos comumente usados para identidade incluem endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM e outros campos de ID exclusiva.
 
 Os campos podem ser marcados como identidades usando a API ou a interface do usuário.
 
 #### Definição de identidades na API
 
-Na API, as identidades são estabelecidas criando descritores de identidade. Os descritores de identidade sinalizam que uma propriedade específica de um schema é um identificador exclusivo.
+Na API, as identidades são estabelecidas por meio da criação de descritores de identidade. Os descritores de identidade sinalizam que uma propriedade específica de um esquema é um identificador exclusivo.
 
-Os descritores de identidade são criados por uma solicitação POST para o endpoint /descriptors. Se bem-sucedido, você receberá um Status HTTP 201 (Criado) e um objeto de resposta contendo os detalhes do novo descritor.
+Os descritores de identidade são criados por uma solicitação POST para o endpoint /descriptors. Se for bem-sucedido, você receberá um Status HTTP 201 (Criado) e um objeto de resposta contendo os detalhes do novo descritor.
 
 Para obter mais detalhes sobre como criar descritores de identidade na API, consulte o documento em [descritores](api/descriptors.md) na seção [!DNL Schema Registry] guia do desenvolvedor.
 
-#### Definição de identidades na interface do usuário
+#### Definição de identidades na interface
 
-Com o esquema aberto no Editor de esquemas, selecione o campo no **[!UICONTROL Estrutura]** seção do editor que você deseja marcar como uma identidade. Em **[!UICONTROL Propriedades do campo]** no lado direito, selecione a opção **[!UICONTROL Identidade]** caixa de seleção.
+Com seu esquema aberto no Editor de esquemas, selecione o campo no **[!UICONTROL Estrutura]** seção do editor que você deseja marcar como uma identidade. Em **[!UICONTROL Propriedades do campo]** no lado direito, selecione o **[!UICONTROL Identidade]** caixa de seleção
 
 Para obter mais detalhes sobre o gerenciamento de identidades na interface do usuário, consulte a seção sobre [definição de campos de identidade](./tutorials/create-schema-ui.md#identity-field) no tutorial do Editor de esquemas.
 
-### Meu esquema precisa de uma identidade primária?
+### Meu esquema precisa de uma identidade principal?
 
-As identidades primárias são opcionais, uma vez que os esquemas podem ter zero ou um deles. No entanto, um schema deve ter uma identidade primária para que o schema seja ativado para uso em [!DNL Real-Time Customer Profile]. Consulte a [identidade](./tutorials/create-schema-ui.md#identity-field) seção do tutorial do Editor de esquemas para obter mais informações.
+As identidades primárias são opcionais, pois os esquemas podem ter zero ou uma delas. No entanto, um esquema deve ter uma identidade primária para que seja ativado para uso no [!DNL Real-Time Customer Profile]. Consulte a [identidade](./tutorials/create-schema-ui.md#identity-field) seção do tutorial Editor de esquemas para obter mais informações.
 
-### Como ativar um esquema para uso em [!DNL Real-Time Customer Profile]?
+### Como ativar um esquema para uso no [!DNL Real-Time Customer Profile]?
 
-Os esquemas são habilitados para uso em [[!DNL Real-Time Customer Profile]](../profile/home.md) por meio da adição de uma tag &quot;union&quot; no `meta:immutableTags` do schema. Ativação de um esquema para usar com [!DNL Profile] pode ser feito usando a API ou a interface do usuário.
+Os esquemas estão ativados para uso no [[!DNL Real-Time Customer Profile]](../profile/home.md) por meio da adição de uma tag de &quot;união&quot; no `meta:immutableTags` atributo do esquema. Ativar um esquema para uso com [!DNL Profile] pode ser feito usando a API ou a interface do usuário.
 
 #### Ativação de um esquema existente para [!DNL Profile] uso da API
 
-Faça uma solicitação do PATCH para atualizar o esquema e adicionar o `meta:immutableTags` como uma matriz contendo o valor &quot;union&quot;. Se a atualização for bem-sucedida, a resposta mostrará o schema atualizado que agora contém a tag de união.
+Faça uma solicitação PATCH para atualizar o esquema e adicionar o `meta:immutableTags` atributo como uma matriz contendo o valor &quot;union&quot;. Se a atualização for bem-sucedida, a resposta mostrará o esquema atualizado que agora contém a tag de união.
 
-Para obter mais informações sobre como usar a API para ativar um schema para uso em [!DNL Real-Time Customer Profile], consulte o [sindicatos](./api/unions.md) documento do [!DNL Schema Registry] guia do desenvolvedor.
+Para obter mais informações sobre como usar a API para ativar um esquema para uso no [!DNL Real-Time Customer Profile], consulte o [uniões](./api/unions.md) documento do [!DNL Schema Registry] guia do desenvolvedor.
 
-#### Ativação de um esquema existente para [!DNL Profile] uso da interface do usuário
+#### Ativação de um esquema existente para [!DNL Profile] uso da interface
 
-Em [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** no menu de navegação à esquerda e selecione o nome do schema que deseja ativar na lista de schemas. Em seguida, no lado direito do editor sob **[!UICONTROL Propriedades do esquema]**, selecione **[!UICONTROL Perfil]** para ativá-lo.
+Entrada [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** no menu de navegação esquerdo, e selecione o nome do schema que deseja ativar na lista de schemas. Em seguida, no lado direito do editor, em **[!UICONTROL Propriedades do esquema]**, selecione **[!UICONTROL Perfil]** para ativá-lo.
 
 
-Para obter mais informações, consulte a seção em [uso no Perfil do cliente em tempo real](./tutorials/create-schema-ui.md#profile) no [!UICONTROL Editor de esquema] tutorial.
+Para obter mais informações, consulte a seção sobre [usar no Perfil do cliente em tempo real](./tutorials/create-schema-ui.md#profile) no [!UICONTROL Editor de esquema] tutorial.
 
 ### Posso editar um esquema de união diretamente?
 
-Os esquemas de união são somente leitura e são gerados automaticamente pelo sistema. Eles não podem ser editados diretamente. Esquemas de união são criados para uma classe específica quando uma tag &quot;união&quot; é adicionada ao schema que implementa essa classe.
+Os esquemas de união são somente leitura e são gerados automaticamente pelo sistema. Eles não podem ser editados diretamente. Os esquemas de união são criados para uma classe específica quando uma tag de &quot;união&quot; é adicionada ao esquema que implementa essa classe.
 
-Para obter mais informações sobre uniões no XDM, consulte o [sindicatos](./api/unions.md) na seção [!DNL Schema Registry] Guia da API.
+Para obter mais informações sobre uniões no XDM, consulte o [uniões](./api/unions.md) na seção [!DNL Schema Registry] Guia da API.
 
-### Como devo formatar meu arquivo de dados para assimilar dados no esquema?
+### Como devo formatar meu arquivo de dados para assimilar dados no meu esquema?
 
-[!DNL Experience Platform] aceita arquivos de dados em [!DNL Parquet] ou formato JSON. O conteúdo desses arquivos deve estar em conformidade com o schema referenciado pelo conjunto de dados. Para obter detalhes sobre as práticas recomendadas para assimilação de arquivos de dados, consulte o [visão geral da ingestão em lote](../ingestion/home.md).
+[!DNL Experience Platform] aceita arquivos de dados em [!DNL Parquet] ou JSON. O conteúdo desses arquivos deve estar em conformidade com o esquema referenciado pelo conjunto de dados. Para obter detalhes sobre as práticas recomendadas para assimilação de arquivos de dados, consulte o [visão geral da assimilação em lote](../ingestion/home.md).
 
 ## Erros e solução de problemas
 
-Veja a seguir uma lista de mensagens de erro que podem ser encontradas ao trabalhar com o [!DNL Schema Registry] API.
+Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com o [!DNL Schema Registry] API.
 
 ### Recurso não encontrado
 
@@ -121,7 +121,7 @@ Veja a seguir uma lista de mensagens de erro que podem ser encontradas ao trabal
 }
 ```
 
-Esse erro é exibido quando o sistema não conseguiu encontrar um recurso específico. O recurso pode ter sido excluído ou o caminho na chamada da API é inválido. Certifique-se de ter inserido um caminho válido para sua chamada de API antes de tentar novamente. Você pode verificar se inseriu a ID correta para o recurso e se o caminho foi nomeado corretamente com o contêiner apropriado (global ou locatário).
+Esse erro é exibido quando o sistema não consegue encontrar um recurso específico. O recurso pode ter sido excluído ou o caminho na chamada à API é inválido. Verifique se você inseriu um caminho válido para a chamada de API antes de tentar novamente. Você pode verificar se inseriu a ID correta para o recurso e se o caminho foi namespace corretamente com o container apropriado (global ou locatário).
 
 >[!NOTE]
 >
@@ -137,7 +137,7 @@ Esse erro é exibido quando o sistema não conseguiu encontrar um recurso espec�
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 
-Para obter mais informações sobre a construção de caminhos de pesquisa na API, consulte o [container](./api/getting-started.md#container) e [identificação de recursos](api/getting-started.md#resource-identification) nas seções da [!DNL Schema Registry] guia do desenvolvedor.
+Para obter mais informações sobre como construir caminhos de pesquisa na API, consulte a [container](./api/getting-started.md#container) e [identificação de recursos](api/getting-started.md#resource-identification) seções na [!DNL Schema Registry] guia do desenvolvedor.
 
 ### Título não exclusivo
 
@@ -156,7 +156,7 @@ Para obter mais informações sobre a construção de caminhos de pesquisa na AP
 }
 ```
 
-Essa mensagem de erro é exibida ao tentar criar um recurso com um título que já está sendo usado por outro recurso. Os títulos devem ser exclusivos em todos os tipos de recursos. Por exemplo, se você tentar criar um grupo de campos com um título que já está sendo usado por um esquema, você receberá esse erro.
+Essa mensagem de erro é exibida quando você tenta criar um recurso com um título que já está sendo usado por outro recurso. Os títulos devem ser exclusivos em todos os tipos de recursos. Por exemplo, se você tentar criar um grupo de campos com um título que já está sendo usado por um esquema, você receberá esse erro.
 
 ### Erro de validação de namespace
 
@@ -175,13 +175,13 @@ Essa mensagem de erro é exibida ao tentar criar um recurso com um título que j
 }
 ```
 
-Essa mensagem de erro é exibida ao tentar criar um recurso com campos com nomes inadequados ou adicionar campos com nomes inadequados a um recurso existente.
+Essa mensagem de erro é exibida quando você tenta criar um recurso com campos com namespace incorretamente ou adicionar campos com namespace incorretamente a um recurso existente.
 
-Os recursos que são definidos pela organização IMS devem namespace dos campos sob a ID do locatário para evitar conflitos com outros recursos do setor e do fornecedor. Ao criar um esquema usando grupos de campos padrão, todos os campos personalizados adicionados dentro da estrutura desses grupos de campos também devem ser namespacados sob a ID do locatário.
+Os recursos definidos pela organização IMS devem incluir os campos no namespace sob a ID do locatário para evitar conflitos com outros recursos do setor e do fornecedor. Ao criar um esquema usando grupos de campos padrão, todos os campos personalizados adicionados na estrutura desses grupos de campos também devem ter o namespace sob a ID do locatário.
 
 >[!NOTE]
 >
->Dependendo da natureza específica do erro de namespace, esse erro pode usar qualquer um dos seguintes `type` URIs juntamente com diferentes detalhes de mensagem:
+>Dependendo da natureza específica do erro de namespace, esse erro pode usar qualquer um dos seguintes `type` URIs juntamente com diferentes detalhes da mensagem:
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1020-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1021-400`
@@ -190,13 +190,13 @@ Os recursos que são definidos pela organização IMS devem namespace dos campos
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 
-Exemplos detalhados de estruturas de dados adequadas para recursos XDM podem ser encontrados no guia da API do Registro de Schema:
+Exemplos detalhados de estruturas de dados adequadas para recursos XDM podem ser encontrados no guia da API do registro de esquema:
 
 * [Criar uma classe personalizada](./api/classes.md#create)
 * [Criar um grupo de campos personalizado](./api/field-groups.md#create)
 * [Criar um tipo de dados personalizado](./api/data-types.md#create)
 
-### Aceitar cabeçalho inválido
+### Cabeçalho Aceitar inválido
 
 ```json
 {
@@ -213,13 +213,13 @@ Exemplos detalhados de estruturas de dados adequadas para recursos XDM podem ser
 }
 ```
 
-As solicitações do GET na [!DNL Schema Registry] A API requer um `Accept` para que o sistema determine como formatar a resposta. Esse erro ocorre quando um `Accept` cabeçalho inválido ou ausente.
+solicitações do GET no [!DNL Schema Registry] A API exige um `Accept` para que o sistema determine como formatar a resposta. Esse erro ocorre quando uma solicitação `Accept` cabeçalho inválido ou ausente.
 
-Dependendo do terminal que você estiver usando, a variável `detailed-message` a propriedade indica o que é válido `Accept` deve ser semelhante a uma resposta bem-sucedida. Certifique-se de ter inserido corretamente uma `Accept` cabeçalho compatível com a solicitação da API que você está tentando fazer antes de tentar novamente.
+Dependendo do endpoint que você estiver usando, a variável `detailed-message` indica o que uma propriedade válida `Accept` O cabeçalho deve parecer com para uma resposta bem-sucedida. Verifique se você inseriu corretamente um `Accept` cabeçalho compatível com a solicitação de API que você está tentando fazer antes de tentar novamente.
 
 >[!NOTE]
 >
->Dependendo do ponto de extremidade que está sendo usado, esse erro pode usar qualquer um dos seguintes `type` URIs:
+>Dependendo do endpoint que está sendo usado, esse erro pode usar um dos seguintes `type` URIs:
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1006-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
@@ -227,11 +227,11 @@ Dependendo do terminal que você estiver usando, a variável `detailed-message` 
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 
-Para obter listas de cabeçalhos Accept compatíveis para diferentes solicitações de API, consulte as seções correspondentes na seção [Guia do desenvolvedor do Registro de Schema](./api/overview.md).
+Para obter listas de cabeçalhos Accept compatíveis para diferentes solicitações de API, consulte as seções correspondentes no [Guia do desenvolvedor do Registro de esquema](./api/overview.md).
 
 ### [!DNL Real-Time Customer Profile] erros
 
-As mensagens de erro a seguir estão associadas às operações envolvidas na ativação de schemas para o [!DNL Real-Time Customer Profile]. Consulte a [sindicatos](./api/unions.md) na seção [!DNL Schema Registry] Guia de API para obter mais informações.
+As seguintes mensagens de erro estão associadas às operações envolvidas na ativação de esquemas para [!DNL Real-Time Customer Profile]. Consulte a [uniões](./api/unions.md) na seção [!DNL Schema Registry] Guia de API para obter mais informações.
 
 #### Deve haver um descritor de identidade de referência
 
@@ -250,7 +250,7 @@ As mensagens de erro a seguir estão associadas às operações envolvidas na at
 }
 ```
 
-Essa mensagem de erro é exibida ao tentar ativar um esquema para [!DNL Profile] e uma de suas propriedades contém um descritor de relacionamento sem um descritor de identidade de referência. Adicione um descritor de identidade de referência ao campo de esquema em questão para resolver esse erro.
+Esta mensagem de erro é exibida quando você tenta ativar um esquema para [!DNL Profile] e uma de suas propriedades contém um descritor de relacionamento sem um descritor de identidade de referência. Adicione um descritor de identidade de referência ao campo de esquema em questão para resolver esse erro.
 
 #### Os namespaces do campo do descritor de identidade de referência e do esquema de destino devem corresponder
 
@@ -273,11 +273,11 @@ Essa mensagem de erro é exibida ao tentar ativar um esquema para [!DNL Profile]
 >
 >Para esse erro, o &quot;schema de destino&quot; se refere ao schema de referência no relacionamento.
 
-Para ativar schemas que contêm descritores de relacionamento para uso em [!DNL Profile], o namespace do campo de origem e o namespace primário do campo de referência devem ser iguais. Essa mensagem de erro é exibida ao tentar ativar um esquema que contém um namespace sem correspondência para seu descritor de identidade de referência.
+Para habilitar esquemas que contenham descritores de relacionamento para uso em [!DNL Profile], o namespace do campo de origem e o namespace primário do campo de referência devem ser os mesmos. Esta mensagem de erro é exibida quando você tenta ativar um esquema que contém um namespace sem correspondência para seu descritor de identidade de referência.
 
-Certifique-se de que `xdm:namespace` o valor do campo de identidade do schema de referência corresponde ao do `xdm:identityNamespace` no descritor de identidade de referência do campo de origem para resolver esse problema.
+Certifique-se de que o `xdm:namespace` valor do campo de identidade do esquema de referência corresponde ao do `xdm:identityNamespace` no descritor de identidade de referência do campo de origem para resolver esse problema.
 
-Para obter uma lista de códigos de namespace de identidade padrão, consulte a seção em [namespaces padrão](../identity-service/namespaces.md) na visão geral do namespace de identidade.
+Para obter uma lista de códigos de namespace de identidade padrão, consulte a seção sobre [namespaces padrão](../identity-service/namespaces.md) na visão geral do namespace de identidade.
 
 #### O esquema deve incluir um identityMap ou identidade primária
 
@@ -296,9 +296,9 @@ Para obter uma lista de códigos de namespace de identidade padrão, consulte a 
 }
 ```
 
-Antes de habilitar um esquema para o Perfil, primeiro você deve [criar um descritor de identidade primário](./api/descriptors.md#create) para o esquema ou inclua um campo de mapa de identidade para agir na identidade primária.
+Antes de habilitar um esquema para o Perfil, primeiro você deve [criar um descritor de identidade principal](./api/descriptors.md#create) para o esquema ou inclua um campo de mapa de identidade para agir na identidade principal.
 
-#### Não é possível unir tipos de dados incompatíveis
+#### Não é possível mesclar tipos de dados incompatíveis
 
 ```json
 {
@@ -315,6 +315,6 @@ Antes de habilitar um esquema para o Perfil, primeiro você deve [criar um descr
 }
 ```
 
-Todos os esquemas ativados por perfil pertencentes à mesma classe devem ser capazes de mesclar para construir o schema de união para essa classe. Esse erro é exibido quando você tenta adicionar um campo a um esquema cujo caminho é compartilhado por outro esquema habilitado para perfil e o tipo de dados é diferente do original. Como os esquemas são ativados por Perfil e contêm o mesmo caminho de campo, o Perfil tentaria mesclar esses dois campos em um ao construir o esquema de união. Como tipos de dados diferentes não podem ser mesclados, isso seria considerado um conflito de mesclagem e não seria permitido.
+Todos os esquemas habilitados para perfil pertencentes à mesma classe devem poder se mesclar para construir o esquema de união para essa classe. Esse erro aparece quando você tenta adicionar um campo a um esquema cujo caminho é compartilhado por outro esquema habilitado para perfil e o tipo de dados é diferente do original. Como os esquemas são habilitados para perfil e contêm o mesmo caminho de campo, o Perfil tentaria mesclar esses dois campos em um ao construir o esquema de união. Como tipos de dados diferentes não podem ser mesclados juntos, isso seria considerado um conflito de mesclagem e não é permitido.
 
-Para resolver o problema, escolha um nome diferente para o campo ou aninhe-o em um objeto com namespaced exclusivo para evitar conflitos de mesclagem com outros esquemas ativados por perfil na mesma classe com campos semelhantes.
+Para resolver o problema, escolha um nome diferente para o campo ou aninhe-o em um objeto com namespace exclusivo para evitar conflitos de mesclagem com outros esquemas habilitados para perfil na mesma classe com campos semelhantes.

@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform, home, tópicos populares, schema, esquema, xdm, modelo de dados de experiência, namespace, namespaces, modo de compatibilidade, xed;
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;xdm;modelo de dados de experiência;namespace;namespaces;modo de compatibilidade;xed;
 solution: Experience Platform
-title: Namespacing no Experience Data Model (XDM)
-description: Saiba como o namespacing no Experience Data Model (XDM) permite estender seus esquemas e evitar colisões de campo, pois diferentes componentes do esquema são reunidos.
+title: Namespace no Experience Data Model (XDM)
+description: Saiba como o namespace no Experience Data Model (XDM) permite estender seus esquemas e evitar colisões de campo enquanto diferentes componentes do esquema são trazidos juntos.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 1%
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
-# Namespacing no Experience Data Model (XDM)
+# Namespace no Experience Data Model (XDM)
 
-Todos os campos nos esquemas do Experience Data Model (XDM) têm um namespace associado. Esses namespaces permitem estender seus esquemas e evitar colisões de campo, pois diferentes componentes do schema são reunidos. Este documento fornece uma visão geral dos namespaces no XDM e como eles são representados na variável [API do Registro de Schema](../api/overview.md).
+Todos os campos nos esquemas do Experience Data Model (XDM) têm um namespace associado. Esses namespaces permitem estender seus esquemas e evitar colisões de campo à medida que diferentes componentes de esquema são reunidos. Este documento fornece uma visão geral dos namespaces no XDM e como eles são representados na variável [API do registro de esquema](../api/overview.md).
 
-O namespace permite definir um campo em um namespace, significando algo diferente do mesmo campo em um namespace diferente. Na prática, o namespace de um campo indica quem criou o campo (como XDM (Adobe) padrão, um fornecedor ou sua organização).
+O namespace permite definir um campo em um namespace como significando algo diferente do mesmo campo em um namespace diferente. Na prática, o namespace de um campo indica quem criou o campo (como o XDM padrão (Adobe), um fornecedor ou sua organização).
 
-Por exemplo, considere um esquema XDM que usa a variável [[!UICONTROL Detalhes de contato pessoal] grupo de campos](../field-groups/profile/demographic-details.md), que tem um padrão `mobilePhone` que existe na variável `xdm` namespace. No mesmo schema, você também pode criar um `mobilePhone` em um namespace diferente (seu [ID do locatário](../api/getting-started.md#know-your-tenant_id)). Ambos os campos podem coexistir enquanto têm significados ou restrições subjacentes diferentes.
+Por exemplo, considere um esquema XDM que usa o [[!UICONTROL Detalhes de contato pessoal] grupo de campos](../field-groups/profile/demographic-details.md), que tem um padrão `mobilePhone` campo que existe na variável `xdm` namespace. No mesmo esquema, você também pode criar uma `mobilePhone` em um namespace diferente (seu [ID do inquilino](../api/getting-started.md#know-your-tenant_id)). Ambos os campos podem coexistir enquanto têm diferentes significados ou restrições subjacentes.
 
-## Sintaxe de namespacing
+## Sintaxe de namespace
 
 As seções a seguir demonstram como os namespaces são atribuídos na sintaxe XDM.
 
 ### XDM padrão {#standard}
 
-A sintaxe XDM padrão fornece informações sobre como os namespaces são representados em schemas (incluindo [como eles são traduzidos no Adobe Experience Platform](#compatibility)).
+A sintaxe XDM padrão fornece informações sobre como os namespaces são representados em esquemas (incluindo [como são traduzidos no Adobe Experience Platform](#compatibility)).
 
-O XDM padrão usa [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintaxe para atribuir namespaces a campos. Este namespace vem na forma de um URI (como `https://ns.adobe.com/xdm` para `xdm` namespace) ou como um prefixo abreviado configurado no `@context` de um schema.
+Usos padrão do XDM [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintaxe para atribuir namespaces a campos. Esse namespace vem na forma de um URI (como `https://ns.adobe.com/xdm` para o `xdm` ou como um prefixo abreviado que é configurado na variável `@context` atributo de um esquema.
 
-Este é um exemplo de esquema para um produto na sintaxe XDM padrão. Com exceção de `@id` (o identificador exclusivo, conforme definido pela especificação JSON-LD), cada campo sob `properties` começa com um namespace e termina com o nome do campo. Se estiver usando um prefixo abreviado definido em `@context`, o namespace e o nome do campo são separados por dois pontos (`:`). Se não estiver usando um prefixo, o namespace e o nome do campo serão separados por uma barra (`/`).
+Veja a seguir um exemplo de esquema para um produto na sintaxe XDM padrão. Com exceção da `@id` (o identificador exclusivo conforme definido pela especificação JSON-LD), cada campo em `properties` começa com um namespace e termina com o nome do campo. Se estiver usando um prefixo abreviado definido em `@context`, o namespace e o nome do campo são separados por dois pontos (`:`). Se não estiver usando um prefixo, o namespace e o nome do campo serão separados por uma barra (`/`).
 
 ```json
 {
@@ -75,19 +75,19 @@ Este é um exemplo de esquema para um produto na sintaxe XDM padrão. Com exceç
 | Propriedade | Descrição |
 | --- | --- |
 | `@context` | Um objeto que define os prefixos abreviados que podem ser usados em vez de um URI de namespace completo em `properties`. |
-| `@id` | Um identificador exclusivo para o registro, conforme definido pela variável [Especificação JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
-| `xdm:sku` | Um exemplo de campo que usa um prefixo abreviado para indicar um namespace. Nesse caso, `xdm` é o namespace (`https://ns.adobe.com/xdm`), e `sku` é o nome do campo. |
-| `https://ns.adobe.com/xdm/channels/application` | Um exemplo de um campo que usa o URI completo do namespace. Nesse caso, `https://ns.adobe.com/xdm/channels` é o namespace e `application` é o nome do campo. |
+| `@id` | Um identificador exclusivo do registro, conforme definido pelo [Especificação JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
+| `xdm:sku` | Um exemplo de um campo que usa um prefixo abreviado para denotar um namespace. Nesse caso, `xdm` é o namespace (`https://ns.adobe.com/xdm`) e `sku` é o nome do campo. |
+| `https://ns.adobe.com/xdm/channels/application` | Um exemplo de um campo que usa o URI de namespace completo. Nesse caso, `https://ns.adobe.com/xdm/channels` é o namespace e `application` é o nome do campo. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Os campos fornecidos pelos recursos do fornecedor usam seus próprios namespaces exclusivos. Neste exemplo, `https://ns.adobe.com/vendorA/product` é o namespace do fornecedor e `stockNumber` é o nome do campo. |
-| `tenantId:internalSku` | Os campos definidos pela organização usam a ID de locatário exclusiva como namespace. Neste exemplo, `tenantId` é o namespace do locatário (`https://ns.adobe.com/tenantId`), e `internalSku` é o nome do campo. |
+| `tenantId:internalSku` | Os campos definidos pela organização usam a ID de locatário exclusiva como namespace. Neste exemplo, `tenantId` é o namespace do locatário (`https://ns.adobe.com/tenantId`) e `internalSku` é o nome do campo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Modo de compatibilidade {#compatibility}
 
-No Adobe Experience Platform, os esquemas XDM são representados em [Modo de compatibilidade](../api/appendix.md#compatibility) sintaxe, que não usa a sintaxe JSON-LD para representar namespaces. Em vez disso, a Platform converte o namespace em um campo pai (começando com um sublinhado) e aninha os campos sob ele.
+No Adobe Experience Platform, os esquemas XDM são representados em [Modo de compatibilidade](../api/appendix.md#compatibility) sintaxe, que não usa a sintaxe JSON-LD para representar namespaces. Em vez disso, o Platform converte o namespace em um campo principal (começando com um sublinhado) e aninha os campos sob ele.
 
-Por exemplo, o XDM padrão `repo:createdDate` é convertido em `_repo.createdDate` e apareceriam sob a seguinte estrutura no Modo de compatibilidade:
+Por exemplo, o padrão XDM `repo:createdDate` é convertido em `_repo.createdDate` e apareceriam sob a seguinte estrutura no Modo de compatibilidade:
 
 ```json
 "_repo": {
@@ -101,7 +101,7 @@ Por exemplo, o XDM padrão `repo:createdDate` é convertido em `_repo.createdDat
 }
 ```
 
-Campos que usam o `xdm` o namespace aparece como campos raiz em `properties` e solte o `xdm:` prefixo que apareceria em [sintaxe XDM padrão](#standard). Por exemplo, `xdm:sku` simplesmente listado como `sku` em vez disso.
+Campos que usam a variável `xdm` O namespace aparece como campos raiz em `properties` e solte a `xdm:` prefixo que apareceria em [sintaxe XDM padrão](#standard). Por exemplo, `xdm:sku` é simplesmente listado como `sku` em vez disso.
 
 O JSON a seguir representa como o exemplo de sintaxe XDM padrão mostrado acima é traduzido para o Modo de compatibilidade.
 
@@ -172,4 +172,4 @@ O JSON a seguir representa como o exemplo de sintaxe XDM padrão mostrado acima 
 
 ## Próximas etapas
 
-Este guia forneceu uma visão geral dos namespaces XDM e como eles são representados no JSON. Para obter mais informações sobre como configurar esquemas XDM usando a API, consulte o [Guia da API do Registro de Schema](../api/overview.md).
+Este guia forneceu uma visão geral dos namespaces XDM e como eles são representados no JSON. Para obter mais informações sobre como configurar esquemas XDM usando a API, consulte a [Guia da API do registro de esquema](../api/overview.md).

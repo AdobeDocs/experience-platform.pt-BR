@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, catálogo, api, substituir um objeto
+keywords: Experience Platform;página inicial;tópicos populares;catálogo;api;substituir um objeto
 solution: Experience Platform
 title: Substituir um objeto de catálogo
-description: Você pode substituir o conteúdo de um objeto de Catálogo usando uma solicitação de PUT, onde todo o recurso é substituído pela carga da solicitação.
+description: Você pode substituir o conteúdo de um objeto de Catálogo usando uma solicitação PUT, em que o recurso inteiro é substituído pela carga da solicitação.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Substituir um objeto de catálogo
 
-Você pode substituir o conteúdo de um [!DNL Catalog] objeto que usa uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
+É possível substituir o conteúdo de um [!DNL Catalog] objeto usando uma solicitação PUT, em que todo o recurso é substituído pela carga da solicitação.
 
 >[!NOTE]
 >
->Se você precisar apenas atualizar alguns campos específicos em um [!DNL Catalog] , o uso de uma solicitação PATCH pode ser mais eficiente.
+>Se você precisar apenas atualizar alguns campos específicos em um [!DNL Catalog] objeto, o uso de uma solicitação PATCH pode ser mais eficiente.
 
 **Formato da API**
 
@@ -32,7 +32,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 **Solicitação**
 
-A solicitação a seguir substitui um conjunto de dados pelos valores fornecidos no payload.
+A solicitação a seguir substitui um conjunto de dados pelos valores fornecidos na carga.
 
 ```shell
 curl -X PUT \
@@ -57,7 +57,7 @@ curl -X PUT \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz contendo a ID do objeto substituído. Essa ID deve corresponder à enviada na solicitação PUT. Executar uma solicitação de GET para esse objeto agora mostra que seus detalhes foram substituídos pelos fornecidos na carga da solicitação de PUT anterior.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do objeto substituído. Essa ID deve corresponder à enviada na solicitação PUT. A execução de uma solicitação GET para esse objeto agora mostra que seus detalhes foram substituídos pelos fornecidos na carga da solicitação PUT anterior.
 
 ```json
 [

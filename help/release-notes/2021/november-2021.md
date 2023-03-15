@@ -1,5 +1,5 @@
 ---
-title: Notas de versão da Adobe Experience Platform novembro de 2021
+title: Notas de versão da Adobe Experience Platform de novembro de 2021
 description: As notas de versão de novembro de 2021 para o Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 ## Novos recursos
 
-Novos recursos no Adobe Experience Platform:
+Novos recursos na Adobe Experience Platform:
 
 - [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [(Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc](#ad-hoc-activation)
@@ -25,48 +25,48 @@ Novos recursos no Adobe Experience Platform:
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [IA de atribuição](#attribution-ai)
-- [Customer AI](#customer-ai)
+- [IA do cliente](#customer-ai)
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+### Real-Time Customer Data Platform B2B Edition {#B2B}
 
 **Data de lançamento: 12 de novembro de 2021**
 
-Baseado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido para profissionais de marketing que operam em um modelo de serviço de empresa para empresa. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
+Criado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido especificamente para profissionais de marketing que operam em um modelo de serviço business-to-business. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem públicos específicos com precisão e envolvam esses públicos em todos os canais disponíveis.
 
-Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B Edition de sua contraparte B2C. Eles incluem aprimoramentos no Experience Data Model (XDM) para casos de uso B2B, atualizações na resolução de identidade e na segmentação de perfil, bem como um conector e destino personalizado para o Marketo Engage. O conector Marketo permite que marcas B2B conectem seus dados de envolvimento B2B líderes do setor com informações comportamentais para alimentar leads e aprimorar operações de marketing baseadas em conta.
+Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B Edition de seu equivalente B2C. Eles incluem melhorias no Experience Data Model (XDM) para casos de uso de B2B, atualizações na resolução de identidade e segmentação de perfil, bem como um conector e destino personalizados para Marketo Engage. O conector do Marketo permite que as marcas B2B conectem seus dados de engajamento B2B líderes do setor com informações comportamentais, a fim de nutrir clientes potenciais e aprimorar as operações de marketing baseadas em conta.
 
 -[Novas edições B2B e B2P](#editions)
--[Novas fontes de dados e conectores de destino do Marketo](#marketo)
+-[Novos conectores de origem e destino de dados do Marketo](#marketo)
 -[XDM B2B padrão](#XDM)
 
 ### Novas edições B2B e B2P {#editions}
 
 Novas edições B2B e B2P que trazem dados e funcionalidades B2B para os produtos Real-Time CDP e Platform Ativation estão disponíveis para compra.
 
-Para saber mais sobre o Real-Time CDP B2B Edition, consulte [visão geral](../../rtcdp/overview.md).
+Para saber mais sobre o Real-Time CDP B2B Edition, consulte a [visão geral](../../rtcdp/overview.md).
 
-### Novas fontes de dados e conectores de destino do Marketo {#marketo}
+### Novos conectores de origem e destino de dados do Marketo {#marketo}
 
-Os novos conectores de origem de dados e de destino da Marketo fazem o stream de dados da Marketo para públicos-alvo da plataforma e da plataforma de volta para a Marketo. Disponível para todos os usuários da plataforma.
+Novos conectores de origem e destino de dados do Marketo transmitem dados do Marketo para os públicos da Platform e do de volta para a Marketo. Disponível para todos os usuários da Platform.
 
 | Recurso | Descrição |
 |----------|-------------|
-| Conector de fonte Marketo Engage | O [Conector de fonte Marketo Engage](../../sources/connectors/adobe-applications/marketo/marketo.md) O permite que os profissionais de marketing assimilem dados de uma ou mais instâncias do Marketo em suas instâncias do Adobe Experience Platform e fornece uma solução completa para o gerenciamento de clientes potenciais e para os profissionais de marketing B2B. |
-| Destino de Marketo Engage | O [Destino do Marketo](../../destinations/catalog/adobe/marketo-engage.md) permite que os profissionais de marketing enviem segmentos criados no Adobe Experience Platform para o Marketo, onde serão exibidos como listas estáticas. |
+| conector de origem do Marketo Engage | A variável [conector de origem do Marketo Engage](../../sources/connectors/adobe-applications/marketo/marketo.md) O permite que os profissionais de marketing assimilem dados de uma ou mais instâncias do Marketo na instância do Adobe Experience Platform de maneira contínua e fornece uma solução completa para o gerenciamento de clientes potenciais e para os profissionais de marketing B2B. |
+| Destino do Marketo Engage | A variável [Destino do Marketo](../../destinations/catalog/adobe/marketo-engage.md) permite que os profissionais de marketing enviem segmentos criados no Adobe Experience Platform para o Marketo, onde serão exibidos como listas estáticas. |
 
 ### XDM B2B padrão {#XDM}
 
-As classes padrão B2B XDM, os grupos de campos e os tipos de dados estão disponíveis para todos os usuários da plataforma.
+Classes B2B XDM padrão, grupos de campos e tipos de dados estão disponíveis para todos os usuários da Platform.
 
 | Recurso | Descrição |
 |-----------|--------------|
-| Classes padrão B2B XDM | O Real-time Customer Data Platform B2B Edition fornece vários XDM padrão que capturam detalhes sobre entidades essenciais de dados B2B, como contas, oportunidades, campanhas e muito mais. |
+| Classes B2B XDM padrão | O Real-time Customer Data Platform B2B Edition fornece vários XDM padrão que capturam detalhes sobre entidades de dados B2B essenciais, como contas, oportunidades, campanhas e muito mais. |
 
-Consulte a [Esquemas no Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentação para saber mais sobre como capturar entidades de dados B2B.
+Consulte a [Esquemas no Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) para saber mais sobre captura de entidades de dados B2B.
 
 ### (Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc {#ad-hoc-activation}
 
-A API de ativação ad-hoc permite que os profissionais de marketing ativem programaticamente segmentos de público-alvo para destinos, de maneira rápida e eficiente, para situações em que a ativação imediata é necessária. A ativação ad-hoc de público-alvo é compatível somente com [destinos com base em arquivo em lote](../../destinations/destination-types.md#file-based) e está atualmente em beta. Para obter mais informações, consulte o [documentação da API de ativação ad-hoc](../../destinations/api/ad-hoc-activation-api.md).
+A API de ativação ad-hoc permite que os profissionais de marketing ativem programaticamente segmentos de público-alvo para destinos, de forma rápida e eficiente, para situações em que a ativação imediata é necessária. A ativação de público-alvo ad-hoc é suportada somente pelo [destinos baseados em arquivo em lote](../../destinations/destination-types.md#file-based) e está atualmente na versão beta. Para obter mais informações, consulte [documentação da API de ativação ad-hoc](../../destinations/api/ad-hoc-activation-api.md).
 
 ### IA de atribuição {#attribution-ai}
 
@@ -74,20 +74,20 @@ O Attribution AI é usado para atribuir créditos a pontos de contato que levam 
 
 | Recurso | Descrição |
 |-----------|---------------|
-| Suporte para vários conjuntos de dados | Agora, o Attribution AI pode assimilar vários conjuntos de dados facilmente diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Esse novo recurso de economia de tempo fornece pontuações mais potentes e precisas com dados mais ricos de vários conjuntos de dados. |
-| Mapeamento de canal de mídia e campo de campanha | O Attribution AI agora é compatível com o mapeamento de canais de mídia e campos de campanha. O mapeamento do canal de mídia entre conjuntos de dados melhora os insights derivados do Attribution AI e ajuda a fornecer resultados mais claros e fáceis de interpretar. |
+| Suporte para vários conjuntos de dados | O Attribution AI agora pode assimilar facilmente vários conjuntos de dados diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Esse novo recurso que economiza tempo fornece pontuações mais poderosas e precisas com dados mais avançados de vários conjuntos de dados. |
+| Canal de mídia e mapeamento de campo de campanha | O Attribution AI agora oferece suporte ao mapeamento de canais de mídia e campos de campanha. O mapeamento de canal de mídia entre conjuntos de dados melhora os insights derivados do Attribution AI e ajuda a fornecer resultados mais claros e fáceis de interpretar. |
 
-Para obter mais informações sobre o Attribution AI, consulte o [Documentação do Attribution AI](../../intelligent-services/attribution-ai/overview.md).
+Para obter mais informações sobre o Attribution AI, consulte [Documentação do Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
-### Customer AI {#customer-ai}
+### IA do cliente {#customer-ai}
 
-O Customer AI disponível no Real-time Customer Data Platform é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+A IA do cliente, disponível no Real-time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 |-----------|-------------|
-| Suporte para vários conjuntos de dados | O Customer AI agora pode assimilar facilmente vários conjuntos de dados diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Esse novo recurso de economia de tempo fornece pontuações mais potentes e precisas com dados mais ricos de vários conjuntos de dados. |
-| Atributos de perfil personalizados | O Customer AI agora é compatível com a definição de campos do conjunto de dados de perfil personalizado (com carimbos de data e hora) em seus dados, além de campos de evento padrão. Usar essa opção permite adicionar atributos de perfil adicionais que você considera influentes, o que pode melhorar a qualidade do modelo e fornecer resultados mais precisos. |
+| Suporte para vários conjuntos de dados | A IA do cliente agora pode assimilar facilmente vários conjuntos de dados diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Esse novo recurso que economiza tempo fornece pontuações mais poderosas e precisas com dados mais avançados de vários conjuntos de dados. |
+| Atributos de perfil personalizados | A IA do cliente agora é compatível com a definição de campos de conjunto de dados de perfil personalizado (com carimbos de data e hora) em seus dados, além de campos de evento padrão. Usar essa opção permite adicionar outros atributos de perfil que você considera influentes, o que pode melhorar a qualidade do seu modelo e fornecer resultados mais precisos. |
 
-Para obter mais informações sobre a API do cliente, consulte o [Documentação do Customer AI](../../intelligent-services/customer-ai/overview.md).
+Para obter mais informações sobre a IA do cliente, consulte [Documentação da IA do cliente](../../intelligent-services/customer-ai/overview.md).

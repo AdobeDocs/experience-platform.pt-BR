@@ -1,6 +1,6 @@
 ---
-title: Insights Do Analytics Para Interações Web E Móveis
-description: Este documento explica como usar o Serviço de query para criar insights acionáveis a partir de dados assimilados do Adobe Analytics.
+title: Insights do Analytics para interações da Web e móveis
+description: Este documento explica como usar o Serviço de consulta para criar insights acionáveis de dados assimilados do Adobe Analytics.
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 1%
 
 # Insights do Analytics para interações da Web e móveis
 
-O Adobe Experience Platform permite assimilar dados de conjuntos de relatórios do Adobe Analytics usando campos do Experience Data Model (XDM) para preencher conjuntos de dados. Esses dados de análise são modificados para estarem em conformidade com a [!DNL XDM ExperienceEvent] classe . O Serviço de query pode então usar esses dados executando consultas SQL para gerar informações valiosas do comportamento de um usuário sobre as plataformas digitais.
+O Adobe Experience Platform permite assimilar dados dos conjuntos de relatórios do Adobe Analytics usando campos do Experience Data Model (XDM) para preencher conjuntos de dados. Esses dados de análise foram modificados para estarem em conformidade com a [!DNL XDM ExperienceEvent] classe. O Serviço de consulta pode então usar esses dados executando consultas SQL para gerar insights valiosos do comportamento de um usuário nas plataformas digitais.
 
-Este documento fornece uma variedade de consultas SQL de amostra que demonstram casos de uso comuns ao criar insights de dados da Web e do Mobile Analytics.
+Este documento fornece uma variedade de exemplos de consultas SQL que demonstram casos de uso comuns ao criar insights de dados da Web e de dispositivos móveis do Analytics.
 
-Consulte a [Documentação de mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre assimilação e mapeamento de dados analíticos.
+Consulte a [Documentação de mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre assimilação e mapeamento de dados do analytics.
 
 ## Introdução
 
-Para cada um dos seguintes casos de uso, um exemplo de consulta SQL parametrizado é fornecido como um template para você personalizar. Forneça parâmetros onde você visualizar `{ }` nos exemplos de SQL para o conjunto de dados, eVar, evento ou período que você está interessado em avaliar.
+Para cada um dos seguintes casos de uso, um exemplo de consulta SQL parametrizada é fornecido como um template para você personalizar. Forneça parâmetros onde quer que você veja `{ }` nos exemplos SQL do conjunto de dados, eVar, evento ou intervalo de tempo que você está interessado em avaliar.
 
 ## Objetivos
 
-Os exemplos a seguir mostram consultas SQL para casos de uso comuns para analisar seus dados do Adobe Analytics.
+Os exemplos a seguir mostram consultas SQL para casos de uso comuns para analisar os dados do Adobe Analytics.
 
-### Gerar a contagem de visitantes para cada hora em um determinado dia
+### Gera a contagem de visitantes para cada hora em um determinado dia
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -61,7 +61,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Identifique as 10 cidades mais desejadas com base na atividade do usuário
+### Identificar as 10 cidades mais desejadas com base na atividade do usuário
 
 ```sql
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city,
@@ -73,7 +73,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Identifique os 10 produtos mais vistos
+### Identificar os 10 produtos mais visualizados
 
 ```sql
 SELECT Product_SKU,
@@ -88,7 +88,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-### Identificar as 10 receitas de pedidos mais altas
+### Identificar as 10 receitas mais altas de pedidos
 
 ```sql
 SELECT Purchase_ID,

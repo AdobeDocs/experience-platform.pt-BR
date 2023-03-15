@@ -1,5 +1,5 @@
 ---
-keywords: excluir destinos, como excluir destinos, excluir destino
+keywords: excluir destinos, como excluir destinos, excluir destinos
 title: Excluir destinos
 type: Tutorial
 description: Este tutorial lista as etapas para excluir um destino existente na interface do usuário do Adobe Experience Platform
@@ -15,24 +15,24 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Na interface do usuário do Adobe Experience Platform, é possível excluir conexões existentes para destinos.
+Na interface do usuário do Adobe Experience Platform, é possível excluir conexões existentes com destinos.
 
-A exclusão de um destino remove todos os fluxos de dados existentes para esse destino. Todos os segmentos ativados para os destinos excluídos são não mapeados antes da exclusão do fluxo de dados.
+A exclusão de um destino remove todos os fluxos de dados existentes para esse destino. Todos os segmentos ativados para os destinos excluídos são desmapeados antes da exclusão do fluxo de dados.
 
-Há duas maneiras de excluir destinos do [!DNL Platform] [!DNL UI]. É possível:
+Há duas maneiras de excluir destinos da lista [!DNL Platform] [!DNL UI]. É possível:
 
-* [Exclua destinos do [!UICONTROL Procurar] guia](#delete-browse-tab)
+* [Excluir destinos da [!UICONTROL Procurar] guia](#delete-browse-tab)
 * [Excluir destinos da página de detalhes do destino](#delete-destination-details-page)
 
-## Excluir destinos na guia Procurar{#delete-browse-tab}
+## Excluir destinos da guia Procurar{#delete-browse-tab}
 
-Siga as etapas abaixo para excluir um destino do [!UICONTROL Procurar] guia .
+Siga as etapas abaixo para excluir um destino da variável [!UICONTROL Procurar] guia.
 
-1. Faça logon no [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
+1. Faça logon no [IU DO EXPERIENCE PLATFORM](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
 
    ![Procurar destinos](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecione o ícone de filtro ![Ícone Filtro](../assets/ui/delete-destinations/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associada ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/delete-destinations/filter.png) na parte superior esquerda para iniciar o painel classificar. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -47,23 +47,23 @@ Siga as etapas abaixo para excluir um destino do [!UICONTROL Procurar] guia .
 
 Siga as etapas abaixo para excluir um destino da página de detalhes do destino.
 
-1. Faça logon no [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
+1. Faça logon no [IU DO EXPERIENCE PLATFORM](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
 
    ![Procurar destinos](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecione o ícone de filtro ![Ícone Filtro](../assets/ui/delete-destinations/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associada ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/delete-destinations/filter.png) na parte superior esquerda para iniciar o painel classificar. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecione o nome do destino que deseja excluir.
+3. Selecione o nome do destino que deseja deletar.
 
    ![Selecionar destino](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * Se o destino tiver fluxos de dados existentes, você será direcionado para o [!UICONTROL Execuções do fluxo de dados] guia .
+   * Se o destino tiver fluxos de dados existentes, você será levado para a [!UICONTROL O fluxo de dados é executado] guia.
 
-      ![Guia de execuções do fluxo de dados](../assets/ui/delete-destinations/destination-details-dataflows.png)
+      ![Guia Execuções de fluxo de dados](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
-   * Se o destino não tiver fluxos de dados existentes, você será direcionado para uma página vazia, onde poderá começar a ativar públicos-alvo.
+   * Se o destino não tiver fluxos de dados existentes, você será direcionado para uma página vazia onde poderá começar a ativar públicos.
 
       ![Detalhes do destino](../assets/ui/delete-destinations/destination-details-empty.png)
 

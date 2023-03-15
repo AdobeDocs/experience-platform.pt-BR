@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, políticas eficazes, api de controle de acesso
+keywords: Experience Platform;página inicial;tópicos populares;políticas efetivas;api de controle de acesso
 solution: Experience Platform
-title: Endpoint da API de políticas efetivas
-description: Saiba como visualizar políticas de acesso efetivas usando a API de controle de acesso do Adobe Experience Platform.
+title: Endpoint da API de Políticas Efetivas
+description: Saiba como visualizar políticas de acesso eficazes usando a API de controle de acesso para o Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 ---
 
-# Ponto final de políticas efetivas
+# Endpoint de políticas eficazes
 
 >[!NOTE]
 >
->Se um token de usuário estiver sendo transmitido, o usuário do token deverá ter uma função &quot;org admin&quot; para a organização solicitada.
+>Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-Para exibir políticas eficazes de controle de acesso para o usuário atual, faça uma solicitação de POST para a `/acl/effective-policies` endpoint no [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação no formato de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
+Para exibir políticas de controle de acesso eficazes para o usuário atual, faça uma solicitação POST ao `/acl/effective-policies` endpoint na variável [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação na forma de uma matriz. Isso é demonstrado na chamada de API de exemplo abaixo.
 
 **Formato da API**
 
@@ -27,7 +27,7 @@ POST /acl/effective-policies
 
 **Solicitação**
 
-As solicitações a seguir recuperam informações sobre o &quot;[!UICONTROL Gerenciar conjuntos de dados]&quot; e acesso ao &quot;[!UICONTROL esquemas]&quot; tipo de recurso para o usuário atual.
+As solicitações a seguir recuperam informações sobre o &quot;[!UICONTROL Gerenciar conjuntos de dados]Permissão &quot; e acesso à &quot;[!UICONTROL schemas]&quot; tipo de recurso para o usuário atual.
 
 ```shell
 curl -X POST \
@@ -45,11 +45,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Para obter uma lista completa de permissões e tipos de recursos que podem ser fornecidos na matriz de carga, consulte a seção Apêndice em [permissões e tipos de recursos aceitos](#accepted-permissions-and-resource-types).
+>Para obter uma lista completa de permissões e tipos de recursos que podem ser fornecidos na matriz de carga, consulte a seção do apêndice em [permissões aceitas e tipos de recursos](#accepted-permissions-and-resource-types).
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos de recursos fornecidos na solicitação. A resposta inclui as permissões ativas que o usuário atual tem para os tipos de recursos especificados na solicitação. Se qualquer permissão incluída no payload da solicitação estiver ativa para o usuário atual, a API retornará a permissão com um asterisco (`*`) para indicar que a permissão está ativa. Quaisquer permissões fornecidas na solicitação que não estejam ativas para o usuário são omitidas do payload da resposta.
+Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos de recursos fornecidos na solicitação. A resposta inclui as permissões ativas que o usuário atual tem para os tipos de recursos especificados na solicitação. Se qualquer permissão incluída na carga da solicitação estiver ativa para o usuário atual, a API retornará a permissão com um asterisco (`*`) para indicar que a permissão está ativa. Quaisquer permissões fornecidas na solicitação do que não estão ativas para o usuário são omitidas da carga de resposta.
 
 ```json
 {
@@ -68,15 +68,15 @@ Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos 
 
 ## Próximas etapas
 
-Este documento cobriu como fazer chamadas para o [!DNL Access Control] API para retornar informações sobre permissões ativas e políticas de acesso relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para [!DNL Experience Platform], consulte o [visão geral do controle de acesso](../home.md).
+Esse documento abordou como fazer chamadas para o [!DNL Access Control] API para retornar informações sobre permissões ativas e políticas de acesso relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso de [!DNL Experience Platform], consulte o [visão geral do controle de acesso](../home.md).
 
 ## Apêndice
 
-Esta seção fornece informações complementares para usar a variável [!DNL Access Control] API.
+Esta seção fornece informações adicionais para usar o [!DNL Access Control] API.
 
-### Permissões aceitas e tipos de recursos
+### Permissões e tipos de recursos aceitos
 
-Esta é uma lista de permissões e tipos de recursos que você pode incluir na carga de uma solicitação do POST para o `/acl/active-permissions` endpoint .
+Veja a seguir uma lista de permissões e tipos de recursos que você pode incluir na carga de uma solicitação POST para o `/acl/active-permissions` terminal.
 
 **Permissões**
 

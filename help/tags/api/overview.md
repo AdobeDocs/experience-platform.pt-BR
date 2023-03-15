@@ -117,7 +117,7 @@ O endpoint `/search` fornece uma maneira de encontrar recursos que correspondem 
 
 ## Segredos
 
-Um segredo contém credenciais que permitem o encaminhamento de eventos para autenticação em outro sistema para troca de dados segura. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos, e a variável [guia do endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
+Um segredo contém credenciais que permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca segura de dados. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos e a [manual de endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
 
 ## Próximas etapas
 

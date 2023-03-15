@@ -3,8 +3,8 @@ title: Notas de versão da Adobe Experience Platform de fevereiro de 2023
 description: As notas de versão de fevereiro de 2023 do Adobe Experience Platform.
 source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 6%
+source-wordcount: '1293'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ O Adobe Assurance permite inspecionar, testar, simular e validar como você cole
 | ------- | ----------- |
 | APIs públicas | As APIs do Adobe Assurance agora estão disponíveis. As APIs do Assurance são uma coleção de APIs que capacitam os usuários a testar e depurar seus próprios aplicativos móveis e da Web, quando equipados com a extensão Adobe Assurance com SDK móvel. Para saber mais sobre as APIs do Assurance, leia o [Visão geral da API do Assurance](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais informações sobre o Assurance, leia o [Documentação de garantia](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -49,7 +49,7 @@ Para obter mais informações sobre o Assurance, leia o [Documentação de garan
 | ----------- | ----------- |
 | [Aprimoramento da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) para integrações com a [destinos com base em arquivo (lote)](/help/destinations/destination-types.md#file-based) | <p> Quando os perfis não estão mais qualificados para uma política de consentimento, o Experience Platform agora comunica proativamente a saída da política para destinos baseados em arquivo. Segue-se a [lançamento em fevereiro de 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) da mesma funcionalidade para destinos de transmissão. </p> <p> <b>Nota</b>: essa funcionalidade está disponível somente para clientes do **[!UICONTROL Escudo de Proteção e Privacidade]** e as de **[!UICONTROL Healthcare Shield]**. </p> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Documentação nova ou atualizada** {#destinations-new-updated-documentation}
 
@@ -69,7 +69,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | --- | --- |
 | Descontinuação de campo por meio da interface | Agora você pode [descontinuar campos de seus esquemas após a assimilação de dados](../../xdm/tutorials/field-deprecation-ui.md). A desativação do campo XDM permite remover campos da visualização da interface do usuário, além de mantê-los para uso. Você pode revelar campos obsoletos novamente, se necessário, e quaisquer segmentos, consultas ou soluções downstream que referenciem os campos serão executados como de costume. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Novos componentes XDM**
 
@@ -77,7 +77,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | --- | --- | --- |
 | Classe | [[!UICONTROL Perfil de cliente potencial individual XDM]](https://github.com/adobe/xdm/pull/1669/files) | A classe Perfil de cliente potencial individual XDM traz IDs fornecidas pelo parceiro. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Componentes XDM atualizados**
 
@@ -89,7 +89,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent - Detalhes de interação de mensagens] | [O vazio `meta:enum` propriedade removida](https://github.com/adobe/xdm/pull/1668/files) do URL [!UICONTROL Tipo de rastreamento] campo. |
 | Tipo de dados | [!UICONTROL Informações da mídia] | [O padrão regex do `videoSegment` propriedade no [!UICONTROL Informações da mídia] o tipo de dados foi removido](https://github.com/adobe/xdm/pull/1667/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais informações sobre o XDM na Platform, leia o [Visão geral do sistema XDM](../../xdm/home.md)&#x200B;
 
@@ -106,7 +106,7 @@ O Serviço de consulta permite usar o SQL padrão para consultar dados no Adobe 
 | Alternar recurso de preenchimento automático | Eliminar determinados comandos de metadados e melhorar os tempos de processamento ao [alternar o recurso de preenchimento automático do Editor de consultas](../../query-service/ui/user-guide.md#auto-complete). Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que ela é gravada. |
 | Amostras de conjunto de dados | Especifique uma taxa de amostragem em seu query e [usar amostras de conjunto de dados para criar uma amostra aleatória uniforme](../../query-service/essential-concepts/dataset-samples.md)ou criar amostras condicionais com base em critérios específicos. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais informações sobre os Serviços de consulta, consulte [Visão geral do Serviço de consulta](../../query-service/home.md).
 
@@ -121,7 +121,7 @@ Criado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B 
 | --- | --- |
 | Habilitar serviço de contas relacionadas | A nova função de alternância permite habilitar o serviço de contas relacionadas na sua conta. Para obter mais informações, leia o guia em [habilitando o serviço de contas relacionado](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para saber mais sobre o Real-Time CDP B2B Edition, leia o [Visão geral da Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
@@ -139,6 +139,6 @@ O Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Assimilar dados de atividade personalizados do [!DNL Marketo] | Agora você pode trazer os dados de atividade personalizados de sua [!DNL Marketo] instância para Experience Platform. Para assimilar dados de atividades personalizadas, você deve configurar grupos de campos de atividades personalizadas no esquema Atividades B2B e criar um fluxo de dados usando o conjunto de dados de atividades. Quando o fluxo de dados for concluído, o conjunto de dados assimilado conterá atividades padrão e personalizadas do [!DNL Marketo] instância. Você pode então usar [Serviço de consulta](../../query-service/home.md) para acessar seus registros de atividade personalizados na Platform. Para obter mais informações, leia o guia em [criação de um fluxo de dados para dados de atividade personalizados](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Excluir contas não solicitadas de [!DNL Marketo] | Agora é possível configurar se deseja excluir ou incluir contas não solicitadas da assimilação ao criar um fluxo de dados para dados de empresas. Para obter mais informações, leia o guia em [criação de uma conexão de origem e fluxo de dados para [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).

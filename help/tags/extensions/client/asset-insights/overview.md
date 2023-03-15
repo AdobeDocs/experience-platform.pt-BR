@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Esta extensão deve ser usada juntamente com o [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR). Mais especificamente, ela substitui o processo “pageTracker” e o código incorporado. Quando configurada, essa extensão envia as métricas *Impressão* e *Clique* do ativo para o Adobe Analytics, depois elas são importadas para os relatórios do AEM Asset Insights. As métricas do ativo podem ser informadas usando o AEM Asset Insights ou o Adobe Analytics Project Workspaces.
 

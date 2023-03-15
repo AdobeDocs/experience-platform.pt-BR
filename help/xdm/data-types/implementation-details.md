@@ -1,10 +1,11 @@
 ---
 title: Tipo de dados de detalhes da implementação
-description: Este documento fornece uma visão geral dos detalhes de Implementação do tipo de dados do Experience Data Model (XDM).
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+description: Este documento fornece uma visão geral do tipo de dados Detalhes da implementação do Experience Data Model (XDM).
+exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 6%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
@@ -20,9 +21,9 @@ ht-degree: 6%
 | `name` | String | O identificador do SDK ou endpoint. Todos os SDKs ou endpoints são identificados por meio de um URI, incluindo extensões. |
 | `version` | String | A versão da API ou do SDK. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)

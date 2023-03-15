@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, acesso aos dados, python sdk, spark sdk, api de acesso aos dados, exportar, exportar
+keywords: Experience Platform;página inicial;tópicos populares;acesso a dados;python sdk;spark sdk;api de acesso a dados;exportar;Exportar
 solution: Experience Platform
 title: Guia da API de acesso a dados
-description: A API de acesso a dados oferece suporte ao Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na capacidade de descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
+description: A API de acesso a dados é compatível com o Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,26 +13,26 @@ ht-degree: 6%
 
 # Guia da API de acesso a dados
 
-A API de acesso a dados oferece suporte ao Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na capacidade de descoberta e acessibilidade de conjuntos de dados assimilados no [!DNL Experience Platform].
+A API de acesso a dados é compatível com o Adobe Experience Platform, fornecendo aos usuários uma interface RESTful com foco na descoberta e acessibilidade de conjuntos de dados assimilados no [!DNL Experience Platform].
 
 ![Acesso aos dados no Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Referência da especificação da API
 
-A documentação de referência da API do Swagger pode ser encontrada [here](https://www.adobe.io/experience-platform-apis/references/data-access/).
+A documentação de referência da API do Swagger pode ser encontrada [aqui](https://www.adobe.io/experience-platform-apis/references/data-access/).
 
 ## Terminologia
 
-Uma descrição de alguns termos comumente usados em todo este documento.
+Uma descrição de alguns termos usados com frequência neste documento.
 
 | Termo | Descrição |
 | ----- | ------------ |
 | Conjunto de dados | Uma coleção de dados que inclui esquema e campos. |
-| Lote | Um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. |
+| Lote | Um conjunto de dados coletados por um período e processados juntos como uma única unidade. |
 
-## Recuperar a lista de arquivos em um lote
+## Recuperar lista de arquivos em um lote
 
-Usando um identificador em lote (batchID), a API de Acesso a Dados pode recuperar uma lista de arquivos pertencentes a esse lote específico.
+Ao usar um identificador de lote (batchID), a API de acesso a dados pode recuperar uma lista de arquivos pertencentes a esse lote específico.
 
 **Formato da API**
 
@@ -93,16 +93,16 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-O `"data"` A matriz contém uma lista de todos os arquivos dentro do lote especificado. Cada arquivo retornado tem sua própria ID exclusiva (`{FILE_ID}`) contido na variável `"dataSetFileId"` campo. Essa ID exclusiva pode ser usada para acessar ou baixar o arquivo.
+A variável `"data"` contém uma lista de todos os arquivos do lote especificado. Cada arquivo retornado tem seu próprio identificador exclusivo (`{FILE_ID}`) contido na `"dataSetFileId"` campo. Esse identificador exclusivo pode ser usado para acessar ou baixar o arquivo.
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `data.dataSetFileId` | A ID de arquivo para cada arquivo no lote especificado. |
-| `data._links.self.href` | O url para acessar o arquivo. |
+| `data.dataSetFileId` | A ID de cada arquivo no lote especificado. |
+| `data._links.self.href` | O URL para acessar o arquivo. |
 
 ## Acessar e baixar arquivos em um lote
 
-Ao usar um identificador de arquivo (`{FILE_ID}`), a API de acesso a dados pode ser usada para acessar detalhes específicos de um arquivo, incluindo seu nome, tamanho em bytes e um link para download.
+Ao usar um identificador de arquivo (`{FILE_ID}`), a API de acesso a dados pode ser usada para acessar detalhes específicos de um arquivo, incluindo nome, tamanho em bytes e um link para baixar.
 
 A resposta conterá uma matriz de dados. Dependendo de o arquivo apontado pela ID ser um arquivo individual ou um diretório, a matriz de dados retornada pode conter uma única entrada ou uma lista de arquivos pertencentes a esse diretório. Cada elemento de arquivo incluirá os detalhes do arquivo.
 
@@ -114,7 +114,7 @@ GET /files/{FILE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{FILE_ID}` | Igual a `"dataSetFileId"`, a ID do arquivo a ser acessado. |
+| `{FILE_ID}` | Equal to the `"dataSetFileId"`, a ID do arquivo a ser acessado. |
 
 **Solicitação**
 
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 | `data.length` | Tamanho do arquivo (em bytes). |
 | `data._links.self.href` | O URL para baixar o arquivo. |
 
-**Resposta do diretório**
+**Resposta de diretório**
 
 ```JSON
 {
@@ -202,7 +202,7 @@ Quando um diretório é retornado, ele contém uma matriz de todos os arquivos d
 
 ## Acessar o conteúdo de um arquivo
 
-O [!DNL Data Access] A API também pode ser usada para acessar o conteúdo de um arquivo. Isso pode ser usado para baixar o conteúdo para uma fonte externa.
+A variável [!DNL Data Access] A API também pode ser usada para acessar o conteúdo de um arquivo. Isso pode ser usado para baixar o conteúdo para uma fonte externa.
 
 **Formato da API**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Amostras de código adicionais
 
-Para amostras adicionais, consulte o [tutorial de acesso a dados](tutorials/dataset-data.md).
+Para obter amostras adicionais, consulte o [tutorial sobre acesso a dados](tutorials/dataset-data.md).
 
 ## Assinar eventos de assimilação de dados
 
-[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio do [Console do Adobe Developer](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Veja o tutorial em [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio do [Console do Adobe Developer](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Veja o tutorial sobre [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.

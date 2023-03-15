@@ -1,6 +1,6 @@
 ---
 title: Monitorar atividades no encaminhamento de eventos
-description: Saiba como monitorar o uso, os erros e o tempo de computação nas propriedades de encaminhamento do evento.
+description: Saiba como monitorar uso, erros e tempo de computação nas propriedades do encaminhamento de eventos.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
 source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->No momento, esse recurso está na versão beta e sua organização pode não ter acesso a ele. A funcionalidade e a documentação estão sujeitas a alterações.
+>No momento, esse recurso está na versão beta e talvez sua organização ainda não tenha acesso a ele. A funcionalidade e a documentação estão sujeitas a alterações.
 
-O **[!UICONTROL Monitoramento]** na interface do usuário da Coleta de dados, é possível monitorar padrões de uso, erros e o tempo de computação das propriedades de encaminhamento do evento. Este guia fornece uma visão geral de alto nível de como visualizar e entender os relatórios mostrados na guia .
+A variável **[!UICONTROL Monitoramento]** A guia na interface da Coleção de dados permite monitorar padrões de uso, erros e tempo de computação das propriedades de encaminhamento de eventos. Este guia fornece uma visão geral de alto nível sobre como visualizar e entender os relatórios mostrados na guia.
 
-![Imagem que mostra a guia de monitoramento na interface do usuário da coleta de dados](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
+![Imagem mostrando a guia de monitoramento na interface da Coleção de dados](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
 
 ## Pré-requisitos
 
-Este guia presume que você tenha comprado o encaminhamento de eventos e que você tem uma compreensão funcional de como o encaminhamento de eventos funciona. Consulte a [visão geral do encaminhamento de eventos](./overview.md) para obter mais informações.
+Este guia pressupõe que você adquiriu o encaminhamento de eventos e que possui uma compreensão funcional de como funciona o encaminhamento de eventos. Consulte a [visão geral do encaminhamento de eventos](./overview.md) para obter mais informações.
 
 ## Vídeo de visão geral
 
@@ -32,37 +32,37 @@ Assista ao vídeo a seguir para obter uma visão geral de alto nível do recurso
 
 ## Seleção de propriedades e ambientes
 
-É possível visualizar métricas em um ambiente e propriedade individuais, ou em todas as propriedades e ambientes de sua organização.
+Você pode visualizar métricas em um ambiente e propriedade individuais ou em todas as propriedades e ambientes de propriedade de sua organização.
 
 Para mostrar métricas para uma única propriedade, selecione o menu suspenso de propriedades e escolha a propriedade de interesse na lista. Depois de escolher uma propriedade, você também pode usar a lista suspensa de ambientes para selecionar um ambiente de interesse.
 
-![Imagem que mostra os menus suspensos do ambiente de propriedade na interface do usuário](../../images/ui/event-forwarding/monitoring/property-environment.png)
+![Imagem mostrando os menus suspensos do ambiente de propriedade na interface do usuário](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL Uso]
 
-O **[!UICONTROL Uso]** mostra chamadas recebidas e enviadas para um determinado período de tempo. Chamadas recebidas representam dados enviados para o encaminhamento do evento. Chamadas de saída representam dados enviados do encaminhamento do evento. O **[!UICONTROL Total de eventos]** no painel esquerdo é a soma das chamadas recebidas e enviadas para o período de tempo especificado.
+A variável **[!UICONTROL Uso]** O relatório de mostra chamadas de entrada e saída para um determinado período. As chamadas de entrada representam dados enviados para o encaminhamento de eventos. Chamadas de saída representam dados enviados do encaminhamento de eventos. A variável **[!UICONTROL Total de eventos]** number no painel à esquerda é a soma das chamadas de entrada e saída para o período determinado.
 
 ## [!UICONTROL Eventos de erro]
 
-O **[!UICONTROL Eventos de erro]** mostra erros na agregação e divididos pelo código de resposta HTTP ao passar o cursor sobre o gráfico de linha. Os erros exibidos são de chamadas de saída e os códigos de resposta são do endpoint com o qual o encaminhamento de eventos está interagindo.
+A variável **[!UICONTROL Eventos de erro]** O relatório do mostra erros na agregação e divididos por código de resposta HTTP quando você passa o cursor sobre o gráfico de linhas. Os erros exibidos são de chamadas de saída e os códigos de resposta são do endpoint com o qual o encaminhamento de eventos está interagindo.
 
-Os erros são mostrados para um determinado período, que pode ser ajustado no menu suspenso fornecido.
+Os erros são mostrados por um determinado período, que pode ser ajustado no menu suspenso fornecido.
 
-![Imagem que mostra o menu suspenso de período de tempo do relatório Eventos de erro](../../images/ui/event-forwarding/monitoring/error-time.png)
+![Imagem mostrando o menu suspenso de período de tempo do relatório de Eventos de erro](../../images/ui/event-forwarding/monitoring/error-time.png)
 
-A caixa de pesquisa do evento de erro permite consultar o encaminhamento de eventos para compreender os erros de um determinado domínio de ponto de extremidade. Você deve inserir o domínio exato, pois o recurso de pesquisa não aceita aproximações ou correspondências &quot;difusas&quot;. Depois de fornecer um domínio exato para o qual há dados de erro de saída, pressione Enter e o relatório será atualizado para mostrar erros de saída para esse domínio. Por exemplo, para ver erros do ponto de extremidade da API de conversões do Facebook, o domínio deve ser gravado como `https://graph.facebook.com`.
+A caixa de pesquisa do evento de erro permite consultar o encaminhamento de eventos para entender os erros de um determinado domínio de endpoint. Você deve inserir o domínio exato, pois o recurso de pesquisa não aceita aproximações ou correspondências difusas. Depois de fornecer um domínio exato para o qual há dados de erro de saída, pressione Enter e o relatório é atualizado para mostrar erros de saída para esse domínio. Por exemplo, para ver erros do endpoint da API de conversões do Facebook, o domínio deve ser gravado como `https://graph.facebook.com`.
 
-## [!UICONTROL Tempo de computação]
+## [!UICONTROL Tempo de Computação]
 
-O **[!UICONTROL Tempo de computação]** mostra o tempo de computação de todas as regras em servidores de encaminhamento de eventos.
+A variável **[!UICONTROL Tempo de Computação]** O relatório mostra o tempo de computação de todas as regras nos servidores de encaminhamento de eventos.
 
 >[!NOTE]
 >
->Os horários exibidos não representam a latência de ponta a ponta. O encaminhamento de eventos tem uma limitação de tempo de computação de 50 milissegundos. Se esse limite for excedido, os dados relacionados serão descartados.
+>Os horários exibidos não representam a latência completa. O encaminhamento de eventos tem uma limitação de tempo de computação de 50 milissegundos. Se esse limite for excedido, os dados relacionados serão descartados.
 
 Os seguintes fatores afetam o tempo de computação:
 
 1. O número de regras
-2. A complexidade das regras, normalmente impulsionada pela quantidade de JavaScript personalizado que está sendo executado
+2. A complexidade das regras, geralmente impulsionada pela quantidade de JavaScript personalizado sendo executado
 
-Por exemplo, se uma ação no encaminhamento de eventos atingir um endpoint e esse endpoint levar dois segundos para responder, essa latência de dois segundos não contará em relação ao tempo de computação, pois o encaminhamento de eventos está aguardando e não está computando nada ativamente. O tempo de resposta não pode ser superior a 30 segundos; caso contrário, os dados serão descartados.
+Por exemplo, se uma ação no encaminhamento de eventos atingir um endpoint e esse endpoint levar dois segundos para responder, essa latência de dois segundos não contará no tempo de computação, pois o encaminhamento de eventos está apenas aguardando e não calculando nada ativamente. O tempo de resposta não pode ser superior a 30 segundos; caso contrário, os dados serão descartados.

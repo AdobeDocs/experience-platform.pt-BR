@@ -16,14 +16,14 @@ ht-degree: 52%
 # Documentação da API do servidor de rede de borda {#edge-network-server-api}
 
 
-* [Visão geral da API do Servidor de rede de borda](overview.md)
+* [Visão geral da API do servidor de rede de borda](overview.md)
 * [Medidas de proteção de desempenho para a API do Servidor de Rede de Borda](guardrails.md)
 * [Autenticação](authentication.md)
 * Coleta de dados {#data-collection}
    * [Coleta de dados de evento único](interactive-data-collection.md)
    * [Coleta de dados do evento em lote](non-interactive-data-collection.md)
-* Interação com outras soluções do Adobe {#interacting-other-adobe-solutions}
-   * [Interação com a Adobe Analytics](interacting-adobe-analytics.md)
+* Interação com outras soluções de Adobe {#interacting-other-adobe-solutions}
+   * [Interação com o Adobe Analytics](interacting-adobe-analytics.md)
 * Personalização {#personalization}
    * [Visão geral da personalização](personalization-overview.md)
    * [Personalização via Adobe Target](personalization-target.md)

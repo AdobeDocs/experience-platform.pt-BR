@@ -1,5 +1,5 @@
 ---
-keywords: destinos, destino, tipos de destino
+keywords: destinos;destino;destinos tipos;destinations;destination;destination types
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
@@ -16,30 +16,30 @@ Leia esta página para entender os diferentes tipos e categorias de destinos do 
 
 ## Tipos de destino {#destination-types}
 
-No Adobe Experience Platform, diferenciamos tipos de destino diferentes - conexões, exportações de conjunto de dados e extensões. Há vários tipos de destinos de conexão, permitindo exportar dados para destinos com base em API, .
+No Adobe Experience Platform, distinguimos entre diferentes tipos de destino - conexões, exportações de conjunto de dados e extensões. Há vários tipos de destinos de conexão, que permitem exportar dados para destinos baseados em API, .
 
-Por último, as conexões também podem ser distinguidas entre destinos públicos disponíveis em todas as organizações no catálogo de destinos e destinos privados que os clientes do Real-time CDP Ultimate podem criar para atender aos seus casos de uso de exportação específicos.
+Por fim, as conexões também podem ser diferenciadas entre destinos públicos disponíveis em todas as organizações no catálogo de destinos e destinos privados que os clientes da Real-time CDP Ultimate podem criar para atender aos seus casos de uso de exportação específicos.
 
 ![Tipos de diagrama de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Conexões {#connections}
 
-**[!UICONTROL Exportação de perfil]**, **[!UICONTROL Exportação de segmento de transmissão]** e **[!DNL Edge Personalization]** destinos no Adobe Experience Platform capturam dados de evento, combinam-nos com outras fontes de dados para formar a variável [Perfil do cliente em tempo real](../profile/home.md), aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportação de perfil]**, **[!UICONTROL Exportação do segmento de transmissão]**, e **[!DNL Edge Personalization]** destinos na Adobe Experience Platform capturam dados do evento, combinam-nos com outras fontes de dados para formar a [Perfil do cliente em tempo real](../profile/home.md), aplique a segmentação e exporte segmentos e perfis qualificados para destinos.
 
 ## Destinos de exportação de perfil {#profile-export}
 
-Os destinos de exportação de perfil recebem dados brutos, geralmente com o endereço de email como a chave primária. Atualmente, o Experience Platform suporta dois tipos de destinos de exportação de perfil:
+Os destinos de exportação de perfil recebem dados brutos, geralmente com o endereço de email como chave primária. Atualmente, o Experience Platform oferece suporte a dois tipos de destinos de exportação de perfis:
 
-* [Streaming de destinos de exportação de perfil (destinos corporativos)](#streaming-profile-export)
-* [Destinos em lote (com base em arquivo)](#file-based)
+* [Destinos de exportação de perfil de streaming (destinos corporativos)](#streaming-profile-export)
+* [Destinos em lote (baseados em arquivo)](#file-based)
 
-### Streaming de destinos de exportação de perfil (destinos corporativos) {#streaming-profile-export}
+### Destinos de exportação de perfil de streaming (destinos corporativos) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Os destinos corporativos ou os destinos de exportação de perfil de transmissão estão disponíveis para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) somente clientes.
+>Destinos corporativos ou destinos de exportação de perfil de streaming estão disponíveis para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) somente clientes.
 
-Use conectores de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
+Use os conectores de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
 
 Esses destinos recebem dados de segmento e perfil como fluxos de dados de Experience Platform.
 
@@ -49,21 +49,21 @@ Os destinos empresariais incluem:
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Hubs de Eventos do Azure](catalog/cloud-storage/azure-event-hubs.md)
 
-### Destinos em lote (com base em arquivo) {#file-based}
+### Destinos em lote (baseados em arquivo) {#file-based}
 
-Destinos baseados em arquivo recebem `.csv` arquivos contendo perfis e/ou atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) é um exemplo de destino onde é possível exportar arquivos contendo exportações de perfil.
+Os destinos baseados em arquivo recebem `.csv` arquivos contendo perfis e/ou atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) O é um exemplo de destino em que você pode exportar arquivos contendo exportações de perfil.
 
-## Destinos de exportação de segmento de fluxo {#streaming-destinations}
+## Destinos de exportação de segmento de transmissão {#streaming-destinations}
 
-Os destinos de exportação de segmento recebem dados de Experience Platform segment. Esses destinos usam IDs de segmento ou IDs de usuário. Publicidade e destinos sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
+Os destinos de exportação de segmento recebem dados de segmento de Experience Platform. Esses destinos usam IDs de segmento ou IDs de usuário. Destinos publicitários e sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
 
-## Destinos de personalização de borda {#edge-personalization-destinations}
+## Destinos de personalização da borda {#edge-personalization-destinations}
 
-Destinos de personalização de borda no Experience Platform include [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destino de personalização personalizado](/help/destinations/catalog/personalization/custom-personalization.md). Ao usar esses destinos, você pode ativar casos de uso de personalização de página e próxima para seus clientes.
+Os destinos de personalização de borda no Experience Platform incluem [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e a variável [Destino de personalização personalizado](/help/destinations/catalog/personalization/custom-personalization.md). Usando esses destinos, você pode ativar casos de uso de personalização de mesma página e próxima página para seus clientes.
 
-Leia mais sobre como [configurar destinos de personalização para a personalização da mesma página e da próxima página](/help/destinations/ui/configure-personalization-destinations.md).
+Leia mais sobre como [configurar destinos de personalização para personalização de mesma página e próxima página](/help/destinations/ui/configure-personalization-destinations.md).
 
-## Exportar perfis e exportar segmentos - visão geral do vídeo {#video}
+## Destinos de exportação de perfis e de segmentos - visão geral do vídeo {#video}
 
 O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
@@ -71,32 +71,32 @@ O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 ## (Beta) Destinos de exportação do conjunto de dados {#dataset-export-destinations}
 
-Alguns destinos de armazenamento em nuvem no catálogo de destinos suportam exportações de conjunto de dados. Use esses destinos para exportar conjuntos de dados brutos para locais de armazenamento na nuvem.
+Alguns destinos de armazenamento em nuvem no catálogo de destinos oferecem suporte a exportações de conjunto de dados. Use esses destinos para exportar conjuntos de dados brutos para locais de armazenamento na nuvem.
 
 Leia mais sobre como [exportar conjuntos de dados](/help/destinations/ui/export-datasets.md).
 
 ## Extensões {#extensions}
 
-A Platform aproveita o poder e a flexibilidade do gerenciamento de tags, permitindo configurar extensões de tags na interface do usuário.
+A Platform aproveita a eficiência e a flexibilidade do gerenciamento de tags, permitindo configurar extensões de tags na interface do usuário.
 
 >[!TIP]
 >
->Para obter informações detalhadas sobre extensões de tags, incluindo casos de uso e como encontrá-las na interface, consulte o [visão geral das extensões de tag](./catalog/launch-extensions/overview.md).
+>Para obter informações detalhadas sobre extensões de tag, incluindo casos de uso e como encontrá-las na interface, consulte a [visão geral das extensões de tag](./catalog/launch-extensions/overview.md).
 
-As extensões de tag encaminham os dados brutos do evento para vários tipos de destinos. Considere as extensões como uma **Encaminhamento de evento** tipo de destino. Esse é um tipo mais simples de integração com plataformas de destino, que só encaminha dados brutos do evento. Os exemplos são o [Extensão de personalização de Gainsight](./catalog/personalization/gainsight.md) ou [Confirmar voz da extensão do cliente](./catalog/voice/confirmit-digital-feedback.md).
+As extensões de tag encaminham dados de evento brutos para vários tipos de destinos. Pense nas extensões como uma **Encaminhamento de evento** tipo de destino. Esse é um tipo mais simples de integração com plataformas de destino, que apenas encaminha dados brutos do evento. Exemplos disso são a [Extensão de personalização do Gainsight](./catalog/personalization/gainsight.md) ou o [Confirmar voz da extensão do cliente](./catalog/voice/confirmit-digital-feedback.md).
 
-![Extensões de tag em comparação a outros destinos](./assets/common/launch-and-other-destinations.png)
+![Marcar extensões em comparação a outros destinos](./assets/common/launch-and-other-destinations.png)
 
 ## Quando usar conexões e extensões {#when-to-use}
 
-Como profissional de marketing, você pode usar uma combinação de conexões e extensões para tratar de seus casos de uso.
+Como profissional de marketing, você pode usar uma combinação de conexões e extensões para lidar com seus casos de uso.
 
-As conexões são úteis quando é necessário aproveitar um perfil completo de cliente centralizado ou um segmento de cliente para ativação. Por exemplo, use conexões se estiver unindo dados comportamentais de um sistema analítico com dados de CRM carregados para qualificar um usuário para um determinado segmento antes de fornecer uma mensagem personalizada a esse usuário.
+As conexões são úteis quando é necessário aproveitar um perfil de cliente centralizado completo ou um segmento de cliente para ativação. Por exemplo, use conexões se estiver unindo dados comportamentais de um sistema de análise com dados de CRM carregados para qualificar um usuário para um determinado segmento antes de enviar uma mensagem personalizada para esse usuário.
 
-As extensões são úteis quando os dados do evento são usados para acionar uma ação ou para realizar a segmentação em um ambiente externo. Por exemplo, se dados comportamentais precisarem ser encaminhados a um sistema externo sem serem unidos a outras fontes de dados no arquivo para um determinado usuário.
+As extensões são úteis quando os dados do evento são usados para acionar uma ação ou conduzir a segmentação em um ambiente externo. Por exemplo, se os dados comportamentais precisarem ser encaminhados a um sistema externo sem serem unidos a outras fontes de dados no arquivo para um determinado usuário.
 
 ## Categorias de destino {#categories}
 
-As conexões e extensões no [catálogo de destinos](https://platform.adobe.com/destination/catalog) são agrupadas por categoria de destino (**Publicidade**, **armazenamento na nuvem**, **Plataformas de pesquisa**, **Marketing por email**, etc.), dependendo da ação de marketing que ajudam a atingir. Para obter mais informações sobre cada categoria, bem como os destinos incluídos em cada categoria, consulte o [Documentação do catálogo de destinos](./catalog/overview.md).
+As conexões e extensões no [catálogo de destinos](https://platform.adobe.com/destination/catalog) são agrupados por categoria de destino (**Publicidade**, **armazenamento na nuvem**, **Plataformas de pesquisa**, **Marketing por email**, etc.), dependendo da ação de marketing que eles ajudam a realizar. Para obter mais informações sobre cada categoria, bem como os destinos incluídos em cada categoria, consulte [Documentação do catálogo de destinos](./catalog/overview.md).
 
-![Categorias de destino destacadas na página de catálogo.](./assets/destination-types/destination-categories-menu.png)
+![Categorias de destino destacadas na página do catálogo.](./assets/destination-types/destination-categories-menu.png)

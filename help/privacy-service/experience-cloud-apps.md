@@ -1,61 +1,61 @@
 ---
-keywords: Experience Platform, home, tópicos populares
+keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
-title: Aplicativos Privacy Service e Experience Cloud
-description: Este documento fornece uma referência para como configurar diferentes aplicativos Experience Cloud para operações relacionadas à privacidade.
+title: Aplicativos de Privacy Service e Experience Cloud
+description: Este documento fornece uma referência sobre como configurar diferentes aplicativos Experience Cloud para operações relacionadas à privacidade.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 11%
+source-wordcount: '882'
+ht-degree: 12%
 
 ---
 
 # [!DNL Privacy Service] e [!DNL Experience Cloud] aplicativos
 
-Adobe Experience Platform [!DNL Privacy Service] O foi criado para oferecer suporte a solicitações de privacidade para vários aplicativos Adobe Experience Cloud. Cada aplicativo oferece suporte a diferentes valores de produto e IDs para identificação de titulares de dados.
+Adobe Experience Platform [!DNL Privacy Service] O foi criado para atender a solicitações de privacidade de vários aplicativos da Adobe Experience Cloud. Cada aplicativo suporta diferentes valores de produto e IDs para identificar titulares de dados.
 
 Este documento serve como referência para [!DNL Experience Cloud] documentação do aplicativo que descreve como configurar esse aplicativo para operações relacionadas à privacidade. Isso inclui como formatar e rotular os dados. São abrangidas duas categorias de pedidos:
 
-* [Aplicativos integrados ao Privacy Service](#integrated): Aplicativos que podem enviar solicitações de acesso, exclusão ou recusa para [!DNL Privacy Service].
-* [Aplicativos autônomos](#self-serve): Aplicativos que devem gerenciar suas solicitações de privacidade internamente e não podem se comunicar com [!DNL Privacy Service] diretamente.
+* [Aplicativos integrados com o Privacy Service](#integrated): aplicativos que podem enviar solicitações de acesso, exclusão ou recusa para o [!DNL Privacy Service].
+* [Aplicativos de autoatendimento](#self-serve): aplicativos que devem gerenciar suas solicitações de privacidade internamente e não podem se comunicar com o [!DNL Privacy Service] diretamente.
 
 Revise a documentação de seu [!DNL Experience Cloud] aplicativos para saber como formatar suas solicitações de privacidade e quais valores são compatíveis com essas solicitações.
 
 ## Aplicativos integrados com [!DNL Privacy Service] {#integrated}
 
-Esta é uma lista de [!DNL Experience Cloud] aplicativos integrados com [!DNL Privacy Service], incluindo o [!DNL Privacy Service] recursos com os quais são compatíveis, seus protocolos para processar solicitações de exclusão e links para a documentação para obter mais informações.
+Veja a seguir uma lista de [!DNL Experience Cloud] aplicativos integrados com [!DNL Privacy Service], incluindo a [!DNL Privacy Service] recursos com os quais são compatíveis, seus protocolos para processar solicitações de exclusão e links para a documentação para obter mais informações.
 
 >[!NOTE]
 >
 >Todos os produtos integrados respondem às solicitações de privacidade em 30 dias ou menos.
 
-| Aplicativo | Acessar/excluir | Recusa de venda | Excluir comportamento | Documentação e outras considerações |
+| Aplicativo | Acessar/excluir | Recusar a venda | Excluir comportamento | Documentação e outras considerações |
 | --- | :---: | :---: | --- | --- |
-| Adobe Advertising Cloud | ✓ | ✓ | A ID de cookie ou ID de dispositivo do titular dos dados é excluída do sistema, juntamente com todos os dados de custo, clique e receita associados ao cookie. | <ul><li>[Documentação de acesso/exclusão do GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Documentação de acesso/exclusão para CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentação de cancelamento de venda da CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | If `analyticsDeleteMethod` é omitido ou definido como `anonymize` ao fazer a solicitação de privacidade, todos os dados referenciados pela coleção de IDs de usuário fornecida são tornados anônimos. If `analyticsDeleteMethod` está definida como `purge`, todos os dados serão removidos completamente. | <ul><li>[Documentação de acesso/exclusão](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=pt-BR)</li><li>[!DNL Analytics] lida com solicitações de recusa usando [variáveis de relatórios de privacidade](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=pt-BR)</li></ul> |
-| Adobe Audience Manager | ✓ | ✓ | Todas as características e segmentos associados ao identificador de Audience Manager incluído na solicitação são excluídos. Além disso, os respectivos identificadores do indivíduo são excluídos de qualquer coleta de dados e os respectivos mapeamentos de ID são removidos. | <ul><li>[Documentação de acesso/exclusão](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentação de rejeição](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | Os dados armazenados do titular dos dados são excluídos do sistema. | <ul><li>[Documentação de acesso/exclusão](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=pt-BR)</li><li>[Documentação de rejeição](../segmentation/consents.md)</li></ul> |
-| Atributos do cliente do Adobe (CRS) | ✓ | N/D | Os atributos do titular dos dados são excluídos do sistema. | <ul><li>[Documentação de acesso/exclusão do GDPR](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[Documentação de acesso/exclusão para CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>Os Atributos do cliente não têm a capacidade de transferir dados, portanto, as solicitações de recusa de venda não são aplicáveis.</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação para o Privacy Service de que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são removidos do Data Lake ou do armazenamento de Perfil após a conclusão do trabalho de privacidade. Antes da conclusão do trabalho, os dados são excluídos automaticamente e, portanto, não podem ser acessados por nenhum serviço da plataforma. | <ul><li>[Documentação de acesso/exclusão para o Data Lake](../catalog/privacy.md)</li><li>[Acessar/excluir documentação do Serviço de identidade](../identity-service/privacy.md)</li><li>[Documentação de acesso/exclusão para o Perfil do cliente em tempo real](../profile/privacy.md)</li><li>[!DNL Experience Platform] honras [solicitações de recusa para segmentos de público-alvo](../segmentation/consents.md).</li></ul> |
-| Autenticação Adobe Primetime | ✓ | N/D | Os dados armazenados do titular dos dados são excluídos do sistema. | <ul><li>[Documentação de acesso/exclusão](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] não tem a capacidade de transferir dados, portanto, as solicitações de recusa de venda não são aplicáveis.</li></ul> |
-| Adobe Target | ✓ | N/D | Todos os dados associados à ID do titular dos dados são excluídos do Perfil do visitante. Os dados agregados ou anônimos que não identificam o indivíduo ou que de outra forma não estão relacionados (como dados de conteúdo) não se aplicam a solicitações de exclusão. | <ul><li>[Documentação de acesso/exclusão](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=pt-BR)</li><li>[!DNL Target] não tem a capacidade de transferir dados, portanto, as solicitações de recusa de venda não são aplicáveis.</li></ul> |
-| Marketo Engage | ✓ | N/D | Os dados armazenados do titular dos dados são excluídos do sistema. | <ul><li>[Documentação de acesso/exclusão](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] não tem a capacidade de transferir dados, portanto, as solicitações de recusa de venda não são aplicáveis.</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | A ID do cookie ou a ID do dispositivo do titular dos dados é excluída do sistema, juntamente com todos os dados de custo, clique e receita associados ao cookie. | <ul><li>[Acessar/excluir a documentação do GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Acessar/excluir documentação da CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentação de cancelamento da venda para o CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
+| Adobe Analytics | ✓ | ✓ | Se `analyticsDeleteMethod` é omitido ou definido como `anonymize` ao fazer a solicitação de privacidade, todos os dados referenciados pela coleção fornecida de IDs de usuário se tornam anônimos. Se `analyticsDeleteMethod` está definida como `purge`, todos os dados serão removidos completamente. | <ul><li>[Acessar/excluir documentação](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=pt-BR)</li><li>[!DNL Analytics] lida com solicitações de recusa usando [variáveis de relatórios de privacidade](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=pt-BR)</li></ul> |
+| Adobe Audience Manager | ✓ | ✓ | Todas as características e segmentos associados ao identificador de Audience Manager incluído na solicitação são excluídos. Além disso, os respectivos identificadores do indivíduo são recusados na coleta de dados e os respectivos mapeamentos de ID são removidos. | <ul><li>[Acessar/excluir documentação](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentação de recusa](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | Os dados armazenados do titular dos dados são excluídos do sistema. | <ul><li>[Acessar/excluir documentação](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=pt-BR)</li><li>[Documentação de recusa](../segmentation/consents.md)</li></ul> |
+| Atributos do cliente do Adobe (CRS) | ✓ | N/D | Os atributos do titular dos dados são excluídos do sistema. | <ul><li>[Acessar/excluir a documentação do GDPR](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=pt-BR)</li><li>[Acessar/excluir documentação da CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=pt-BR)</li><li>Os atributos do cliente não têm a capacidade de transferir dados, portanto, as solicitações de cancelamento de venda não são aplicáveis.</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação para o Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. Os registros são removidos do Data Lake ou do Armazenamento de perfis após a conclusão do trabalho de privacidade. Antes que o trabalho seja concluído, os dados são excluídos por software e, portanto, não podem ser acessados por nenhum serviço da Platform. | <ul><li>[Acessar/excluir a documentação do Data Lake](../catalog/privacy.md)</li><li>[Acessar/excluir a documentação do Serviço de identidade](../identity-service/privacy.md)</li><li>[Acessar/excluir a documentação do Perfil do cliente em tempo real](../profile/privacy.md)</li><li>[!DNL Experience Platform] honras [solicitações de recusa para segmentos de público-alvo](../segmentation/consents.md).</li></ul> |
+| Autenticação Adobe Primetime | ✓ | N/D | Os dados armazenados do titular dos dados são excluídos do sistema. | <ul><li>[Acessar/excluir documentação](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] O não tem a capacidade de transferir dados, portanto, os pedidos de recusa de venda não são aplicáveis.</li></ul> |
+| Adobe Target | ✓ | N/D | Todos os dados associados à ID do titular dos dados são excluídos do Perfil do visitante. Dados agregados ou anônimos que não identificam o indivíduo ou que não estão relacionados (como dados de conteúdo) não se aplicam a solicitações de exclusão. | <ul><li>[Acessar/excluir documentação](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=pt-BR)</li><li>[!DNL Target] O não tem a capacidade de transferir dados, portanto, os pedidos de recusa de venda não são aplicáveis.</li></ul> |
+| Marketo Engage | ✓ | N/D | Os dados armazenados do titular dos dados são excluídos do sistema. | <ul><li>[Acessar/excluir documentação](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] O não tem a capacidade de transferir dados, portanto, os pedidos de recusa de venda não são aplicáveis.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Aplicativos autônomos {#self-serve}
+## Aplicativos de autoatendimento {#self-serve}
 
-Esta é uma lista de [!DNL Experience Cloud] aplicativos que não estejam integrados com [!DNL Privacy Service] e devem gerenciar suas preocupações de privacidade internamente. São fornecidos links para a documentação de cada aplicativo, juntamente com descrições do conteúdo da documentação.
+Veja a seguir uma lista de [!DNL Experience Cloud] aplicativos que não estão integrados com o [!DNL Privacy Service] e devem gerenciar internamente suas preocupações com a privacidade. São fornecidos links para a documentação de cada aplicativo, juntamente com descrições do conteúdo da documentação.
 
 | Aplicativo | Descrição da documentação |
 | ------- | ----------- |
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=pt-BR) | Uma visão geral das funcionalidades do GDPR para o Adobe Campaign Classic. |
-| [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Uma visão geral de como um administrador de privacidade do cliente ou AEM administrador pode lidar com solicitações do GDPR. |
-| [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Etapas para fazer com que o GDPR acesse e exclua solicitações usando o Livefyre. |
-| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Certifique-se de que as instalações do Magento Commerce estejam em conformidade com os requisitos de legislações específicas de privacidade. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Saiba como as regras de privacidade se aplicam ao Marketo. |
+| [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Uma visão geral de como um administrador de privacidade do cliente ou administrador de AEM pode lidar com solicitações do GDPR. |
+| [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Etapas para fazer solicitações de acesso e exclusão do GDPR usando o Livefyre. |
+| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Certifique-se de que suas instalações em Magento Commerce estejam em conformidade com os requisitos de legislações de privacidade específicas. |
+| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Saiba como os regulamentos de privacidade se aplicam ao Marketo. |
 | [Tags na Adobe Experience Platform](../tags/ui/client-side/consent.md) | Como desenvolvedores podem usar extensões e o construtor de regras para definir soluções de opt-in/opt-out. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Saiba como a Workfront coleta dados pessoais e como um titular de dados pode enviar uma solicitação de privacidade por meio de um formulário. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

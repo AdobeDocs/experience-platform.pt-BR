@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, identidade, identidade
+keywords: Experience Platform;página inicial;tópicos populares;identidade;Identidade
 solution: Experience Platform
-title: Mapeamentos de identidade da lista
-description: Um mapeamento é uma coleção de todas as identidades em um cluster, para um namespace especificado.
+title: Listar Mapeamentos de Identidade
+description: Um mapeamento é uma coleção de todas as identidades em um cluster para um namespace especificado.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Listar mapeamentos de identidade
 
-Um mapeamento é uma coleção de todas as identidades em um cluster, para um namespace especificado.
+Um mapeamento é uma coleção de todas as identidades em um cluster para um namespace especificado.
 
 ## Obter um mapeamento de identidade para uma única identidade
 
@@ -27,7 +27,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Solicitação**
 
-Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor da ID (`id`).
+Opção 1: fornecer a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -38,7 +38,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 2: Forneça a identidade como namespace (`ns`, por nome) e o valor da ID (`id`).
+Opção 2: fornecer a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda [obter o XID para uma identidade](./list-native-id.md).
+Opção 3: fornecer a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda [obter o XID de uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -62,11 +62,11 @@ curl -X GET \
 
 ### Obter mapeamentos de identidade para várias identidades
 
-Use o `POST` método como equivalente em lote do `GET` método descrito acima para recuperar mapeamentos de várias identidades.
+Use o `POST` como um lote equivalente ao `GET` método descrito acima para recuperar mapeamentos para várias identidades.
 
 >[!NOTE]
 >
->A solicitação deve indicar no máximo 1000 identidades. Solicitações que excedem 1000 identidades resultarão em um código de status 400.
+>A solicitação não deve indicar mais de 1000 identidades. Solicitações que excedem 1000 identidades resultarão em um código de status 400.
 
 **Formato da API**
 
@@ -76,7 +76,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **Corpo da solicitação**
 
-Opção 1: Forneça uma lista de XIDs para as quais recuperar mapeamentos.
+Opção 1: forneça uma lista de XIDs para os quais recuperar mapeamentos.
 
 ```shell
 {
@@ -85,7 +85,7 @@ Opção 1: Forneça uma lista de XIDs para as quais recuperar mapeamentos.
 }
 ```
 
-Opção 2: Forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra como usar esse método ao substituir o padrão `graph-type` de &quot;Gráfico privado&quot;.
+Opção 2: forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra o uso desse método ao substituir o padrão `graph-type` de &quot;Gráfico privado&quot;.
 
 ```shell
 {
@@ -144,7 +144,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, uma `HTTP 204` o código de resposta é retornado sem conteúdo.
+Se nenhuma identidade relacionada for encontrada com a entrada fornecida, uma `HTTP 204` o código de resposta é retornado sem conteúdo.
 
 **Resposta**
 
@@ -183,8 +183,8 @@ Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, uma `H
 ```
 
 - `lastAssociationTime`: O carimbo de data e hora quando a identidade de entrada foi associada pela última vez a essa identidade.
-- `regions`: Fornece o `regionId` e `lastAssociationTime` para onde a identidade foi vista.
+- `regions`: Fornece a `regionId` e `lastAssociationTime` para onde a identidade foi vista.
 
 ## Próximas etapas
 
-Acesse o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).
+Prosseguir para o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).

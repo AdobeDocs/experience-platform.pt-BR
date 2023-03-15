@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
+keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
 solution: Experience Platform
 title: Criar uma nova especificação de conexão usando a API do Serviço de fluxo
-description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API do Serviço de Fluxo e integrar uma nova fonte por meio de Fontes de Autoatendimento.
+description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API de Serviço de Fluxo e integrar uma nova origem por meio de Origens de Autoatendimento.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 2%
+source-wordcount: '797'
+ht-degree: 1%
 
 ---
 
 # Crie uma nova especificação de conexão usando o [!DNL Flow Service] API
 
-Uma especificação de conexão representa a estrutura de uma fonte. Ele contém informações sobre os requisitos de autenticação de uma fonte, define como os dados da fonte podem ser explorados e inspecionados e fornece informações sobre os atributos de uma fonte específica. O `/connectionSpecs` endpoint no [!DNL Flow Service] A API permite gerenciar programaticamente as especificações de conexão em sua organização.
+Uma especificação de conexão representa a estrutura de uma origem. Ele contém informações sobre os requisitos de autenticação de uma origem, define como os dados de origem podem ser explorados e inspecionados e fornece informações sobre os atributos de uma determinada origem. A variável `/connectionSpecs` endpoint na variável [!DNL Flow Service] A API permite gerenciar programaticamente as especificações de conexão em sua organização.
 
-O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando o [!DNL Flow Service] API e integre uma nova fonte por meio de Fontes de autoatendimento (SDK em lote).
+O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando o [!DNL Flow Service] e integre uma nova fonte por meio de Fontes de autoatendimento (SDK em lote).
 
 ## Introdução
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Coletar artefatos
 
-Para criar uma nova fonte de lote usando Fontes de Autoatendimento, você deve primeiro coordenar com o Adobe, solicitar um repositório Git privado e alinhar com o Adobe nos detalhes sobre o rótulo, descrição, categoria e ícone da sua fonte.
+Para criar uma nova origem em lote usando Fontes de autoatendimento, primeiro você deve coordenar com o Adobe, solicitar um repositório Git privado e alinhar com o Adobe nos detalhes relativos ao rótulo, descrição, categoria e ícone da origem.
 
 Depois de fornecido, você deve estruturar seu repositório Git privado da seguinte maneira:
 
@@ -38,26 +38,26 @@ Depois de fornecido, você deve estruturar seu repositório Git privado da segui
 
 | Artefatos (nomes de arquivo) | Descrição | Exemplo |
 | --- | --- | --- |
-| {your_source} | O nome da sua fonte. Essa pasta deve conter todos os artefatos relacionados à sua origem, dentro do repositório Git privado. | `mailchimp-members` |
-| {your_source}-category.txt | A categoria à qual a fonte pertence, formatada como um arquivo de texto. A lista de categorias de origem disponíveis suportadas pelas Fontes de Autoatendimento (SDK em lote) inclui: <ul><li>Advertising</li><li>Analytics</li><li>Consentimento e preferências</li><li>CRM</li><li>Sucesso do cliente</li><li>Banco de dados</li><li>comércio eletrônico</li><li>Automação de marketing</li><li>Pagamentos</li><li>Protocolos</li></ul> **Observação**: Se você achar que sua fonte não se encaixa em nenhuma das categorias acima, entre em contato com o representante do Adobe para discutir. | `mailchimp-members-category.txt` Dentro do arquivo, especifique a categoria da fonte, como: `marketingAutomation`. |
-| {your_source}-description.txt | Uma breve descrição da sua fonte. | [!DNL Mailchimp Members] é a fonte de automação de marketing que você pode usar para trazer [!DNL Mailchimp Members] dados para o Experience Platform. |
-| {your_source}-icon.svg | A imagem a ser usada para representar sua fonte no catálogo de fontes do Experience Platform. Este ícone deve ser um SVG file. |
-| {your_source}-label.txt | O nome da origem como deve aparecer no catálogo de fontes do Experience Platform. | Membros do Mailchimp |
-| {your_source}-connectionSpec.json | Um arquivo JSON que contém a especificação de conexão de sua fonte. Inicialmente, esse arquivo não é necessário, pois você preencherá a especificação da conexão ao concluir este guia. | `mailchimp-members-connectionSpec.json` |
+| {your_source} | O nome da fonte. Esta pasta deve conter todos os artefatos relacionados à sua origem, dentro do seu repositório Git privado. | `mailchimp-members` |
+| {your_source}-category.txt | A categoria à qual a origem pertence, formatada como um arquivo de texto. A lista de categorias de origem disponíveis compatíveis com Fontes de autoatendimento (SDK em lote) inclui: <ul><li>Advertising</li><li>Analytics</li><li>Consentimento e preferências</li><li>CRM</li><li>Sucesso do cliente</li><li>Banco de dados</li><li>comércio eletrônico</li><li>Automação de marketing</li><li>Pagamentos</li><li>Protocolos</li></ul> **Nota**: Se você acredita que sua fonte não se encaixa em nenhuma das categorias acima, entre em contato com o representante da Adobe para discutir. | `mailchimp-members-category.txt` Dentro do arquivo, especifique a categoria da sua origem, como: `marketingAutomation`. |
+| {your_source}-description.txt | Uma breve descrição da sua origem. | [!DNL Mailchimp Members] é uma fonte de automação de marketing que você pode usar para trazer [!DNL Mailchimp Members] dados para Experience Platform. |
+| {your_source}-icon.svg | A imagem a ser usada para representar sua fonte no catálogo de fontes de Experience Platform. Esse ícone deve ser um arquivo SVG. |
+| {your_source}-label.txt | O nome da fonte como deve aparecer no catálogo de fontes Experience Platform. | Membros do Mailchimp |
+| {your_source}-connectionSpec.json | Um arquivo JSON que contém a especificação de conexão da origem. Inicialmente, esse arquivo não é necessário, pois você preencherá a especificação de conexão ao concluir este guia. | `mailchimp-members-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >
->Durante o período de teste da especificação da conexão, em vez de valores-chave, você pode usar `text` na especificação da conexão.
+>Durante o período de teste de sua especificação de conexão, em vez de valores-chave, você pode usar `text` na especificação da conexão.
 
-Depois de ter adicionado os arquivos necessários ao repositório Git privado, você deve criar uma solicitação de pull (PR) para o Adobe ser revisado. Quando a PR for aprovada e mesclada, você receberá uma ID que poderá ser usada para a especificação da conexão se referir ao rótulo, descrição e ícone da fonte.
+Depois de adicionar os arquivos necessários ao repositório Git privado, você deve criar uma solicitação de pull (PR) para o Adobe revisar. Quando sua PR for aprovada e mesclada, você receberá uma ID que poderá ser usada para a especificação da conexão para consultar o rótulo, a descrição e o ícone da fonte.
 
-Em seguida, siga as etapas descritas abaixo para configurar sua especificação de conexão. Para obter orientação adicional sobre as diferentes funcionalidades que você pode adicionar à sua origem, como agendamento avançado, esquema personalizado ou tipos de paginação diferentes, consulte o guia em [configuração de especificações de origem](../config/sourcespec.md).
+Em seguida, siga as etapas descritas abaixo para configurar sua especificação de conexão. Para obter orientação adicional sobre as diferentes funcionalidades que podem ser adicionadas à sua origem, como agendamento avançado, esquema personalizado ou diferentes tipos de paginação, revise o guia em [configurando especificações de origem](../config/sourcespec.md).
 
 ## Copiar modelo de especificação de conexão
 
-Depois de coletar os artefatos necessários, copie e cole o modelo de especificação de conexão abaixo para o editor de texto de sua escolha e, em seguida, atualize os atributos entre colchetes `{}` com informações relevantes para sua fonte específica.
+Depois de coletar os artefatos necessários, copie e cole o modelo de especificação de conexão abaixo no editor de texto de sua escolha e atualize os atributos entre colchetes `{}` com informações relevantes para sua fonte específica.
 
 ```json
 {
@@ -442,17 +442,17 @@ Depois de coletar os artefatos necessários, copie e cole o modelo de especifica
 
 ## Criar uma especificação de conexão {#create}
 
-Depois de adquirir o modelo de especificação de conexão, agora é possível começar a criar uma nova especificação de conexão preenchendo os valores apropriados que correspondem à sua origem.
+Depois de adquirir o modelo de especificação de conexão, você pode começar a criar uma nova especificação de conexão preenchendo os valores apropriados que correspondem à sua origem.
 
 Uma especificação de conexão pode ser dividida em três partes distintas: as especificações de autenticação, as especificações de origem e as especificações de exploração.
 
 Consulte os seguintes documentos para obter instruções sobre como preencher os valores de cada parte de uma especificação de conexão:
 
-* [Configurar a especificação de autenticação](../config/authspec.md)
+* [Configurar sua especificação de autenticação](../config/authspec.md)
 * [Configurar a especificação de origem](../config/sourcespec.md)
-* [Configurar a especificação do explorador](../config/explorespec.md)
+* [Configurar a especificação de exploração](../config/explorespec.md)
 
-Com suas informações de especificação atualizadas, você pode enviar a nova especificação de conexão fazendo uma solicitação de POST para a `/connectionSpecs` endpoint da variável [!DNL Flow Service] API.
+Com as informações de especificação atualizadas, você pode submeter a nova especificação de conexão fazendo uma solicitação POST para o `/connectionSpecs` endpoint do [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -462,7 +462,7 @@ POST /connectionSpecs
 
 **Solicitação**
 
-A solicitação a seguir é um exemplo de uma especificação de conexão totalmente criada para um [!DNL MailChimp] fonte:
+A solicitação a seguir é um exemplo de uma especificação de conexão totalmente criada para um [!DNL MailChimp] origem:
 
 ```shell
 curl -X POST \
@@ -831,6 +831,6 @@ Uma resposta bem-sucedida retorna a especificação de conexão recém-criada, i
 
 ## Próximas etapas
 
-Depois de criar uma nova especificação de conexão, é necessário adicionar a ID de especificação de conexão correspondente a uma especificação de fluxo existente. Veja o tutorial em [atualização das especificações de fluxo](./update-flow-specs.md) para obter mais informações.
+Agora que você criou uma nova especificação de conexão, deverá adicionar seu ID de especificação de conexão correspondente a uma especificação de fluxo existente. Veja o tutorial sobre [atualização das especificações de fluxo](./update-flow-specs.md) para obter mais informações.
 
-Para fazer modificações na especificação de conexão criada, consulte o tutorial em [atualização das especificações de conexão](./update-connection-specs.md).
+Para fazer modificações na especificação de conexão criada, consulte o tutorial em [atualizando especificações de conexão](./update-connection-specs.md).

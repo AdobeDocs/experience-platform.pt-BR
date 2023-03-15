@@ -1,35 +1,35 @@
 ---
-description: Esta página lista e descreve todas as operações da API que podem ser realizadas usando o endpoint da API `/authoring/testing/template/render`, para renderizar dados exportados para seu destino, com base no modelo de transformação de mensagem.
-title: Renderizar operações da API do modelo
+description: Esta página lista e descreve todas as operações de API que você pode executar usando o endpoint da API `/authoring/testing/template/render` para renderizar os dados exportados para seu destino, com base no modelo de transformação de mensagem.
+title: Renderizar operações de API de modelo
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '803'
 ht-degree: 1%
 
 ---
 
-# Renderizar operações da API do modelo {#render-template-api-operations}
+# Renderizar operações de API de modelo {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
->**Ponto de extremidade da API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Ponto de acesso da API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/testing/template/render` Ponto de extremidade de API, para renderizar perfis exportados que correspondam ao formato esperado do seu destino, com base em seu [modelo de transformação de mensagem](./message-format.md#using-templating). Para obter uma descrição da funcionalidade suportada por este ponto de extremidade, leia [criar modelo](./create-template.md).
+Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/testing/template/render` endpoint da API, para renderizar perfis exportados que correspondam ao formato esperado do destino, com base na [template de transformação de mensagem](./message-format.md#using-templating). Para obter uma descrição da funcionalidade compatível com esse endpoint, leia [criar modelo](./create-template.md).
 
-## Introdução às operações da API do modelo de renderização {#get-started}
+## Introdução às operações de API de modelo de renderização {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
+Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Renderizar perfis exportados com base no modelo de transformação de mensagem {#render-exported-data}
 
-Você pode renderizar perfis exportados fazendo uma solicitação POST para a variável `authoring/testing/template/render` endpoint e fornecer a ID de destino da configuração de destino e o modelo criado usando o [exemplo de ponto de extremidade da API do modelo](./sample-template-api.md).
+Você pode renderizar perfis exportados fazendo uma solicitação POST para o `authoring/testing/template/render` e fornecer a ID de destino da configuração de destino e o modelo criado usando o [exemplo de endpoint de API de modelo](./sample-template-api.md).
 
-Você pode começar usando um modelo simples que exporta seus perfis brutos sem aplicar transformações e depois seguir para um modelo mais complexo, que aplica transformações a perfis. A sintaxe do modelo simples é: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+Você pode começar usando um modelo simples que exporte seus perfis brutos sem aplicar transformações e, em seguida, seguir para um modelo mais complexo, que aplique transformações aos perfis. A sintaxe do modelo simples é: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* A ID de destino que você deve usar aqui é a variável `instanceId` que corresponde a uma configuração de destino, criada usando o `/destinations` endpoint . Consulte a [operações da API de configuração de destino](./destination-configuration-api.md#retrieve-list).
+>* A ID de destino que você deve usar aqui é a `instanceId` que corresponde a uma configuração de destino, criada usando o `/destinations` terminal. Consulte a [operações da API de configuração de destino](./destination-configuration-api.md#retrieve-list).
 
 
 **Formato da API**
@@ -42,29 +42,29 @@ POST authoring/testing/template/render
 | Parâmetro de solicitação | Descrição |
 | -------- | ----------- |
 | `destinationId` | A ID da configuração de destino para a qual você está renderizando perfis exportados. |
-| `template` | A versão do modelo com escape de caracteres com base na qual você está renderizando perfis exportados. |
-| `profiles` | *Opcional*. Você pode adicionar perfis ao corpo da solicitação. Se você não adicionar nenhum perfil, o Experience Platform gerará e adicionará perfis automaticamente à solicitação. <br> Se você quiser adicionar perfis ao corpo da chamada, poderá gerar alguns usando a variável [Exemplo de API de geração de perfil](./sample-profile-generation-api.md). |
+| `template` | A versão com escape de caracteres do modelo com base na qual você está renderizando perfis exportados. |
+| `profiles` | *Opcional*. Você pode adicionar perfis ao corpo da solicitação. Se você não adicionar nenhum perfil, o Experience Platform gerará e adicionará perfis automaticamente à solicitação. <br> Se quiser adicionar perfis ao corpo da chamada, você poderá gerar alguns usando o [Amostra da API de geração de perfil](./sample-profile-generation-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Observe que a resposta retornada pelo endpoint da API do modelo de renderização é diferente com base na política de agregação de destino. Se o destino tiver uma política de agregação configurável, a chave de agregação que determina como os perfis são agregados também será retornada na resposta. Leia mais sobre [políticas de agregação](./destination-configuration.md#aggregation) no documento de configuração de destino.
 
 | Parâmetro de resposta | Descrição |
 | -------- | ----------- |
-| `aggregationKey` | Representa a política pela qual os perfis são agregados nas exportações para seu destino. Esse parâmetro é opcional e estará presente somente se a política de agregação de destino estiver definida como `CONFIGURABLE_AGGREGATION`. |
-| `profiles` | Exibe os perfis fornecidos na solicitação ou os perfis gerados automaticamente se nenhum perfil foi fornecido na solicitação. |
-| `output` | Perfil ou perfis renderizados como uma sequência de caracteres de escape, com base no modelo de transformação de mensagem fornecido |
+| `aggregationKey` | Representa a política pela qual os perfis são agregados em exportações para o seu destino. Esse parâmetro é opcional e estará presente somente se a política de agregação de destino estiver definida como `CONFIGURABLE_AGGREGATION`. |
+| `profiles` | Exibe os perfis fornecidos na solicitação ou os perfis gerados automaticamente se nenhum perfil tiver sido fornecido na solicitação. |
+| `output` | Perfil ou perfis renderizados, como uma sequência com escape, com base no modelo de transformação de mensagem fornecido |
 
 As seções abaixo fornecem solicitações e respostas detalhadas para ambos os casos descritos acima.
 
-* [Melhor agregação de esforço e um perfil incluído no corpo da solicitação](#best-effort)
+* [Agregação de melhor esforço e um perfil incluído no corpo da solicitação](#best-effort)
 * [Agregação configurável e perfis incluídos no corpo da solicitação](#configurable-aggregation)
 
-### Renderizar perfis exportados com a melhor agregação de esforço e um único perfil incluído no corpo da solicitação {#best-effort}
+### Renderizar perfis exportados com agregação de melhor esforço e um único perfil incluído no corpo da solicitação {#best-effort}
 
 **Solicitação**
 
-A solicitação a seguir renderiza um perfil exportado que corresponde ao formato esperado pelo seu destino. Neste exemplo, a ID de destino corresponde a uma configuração de destino com a melhor agregação de esforço, e um perfil de amostra é incluído no corpo da solicitação.
+A solicitação a seguir renderiza um perfil exportado que corresponde ao formato esperado pelo seu destino. Neste exemplo, a ID de destino corresponde a uma configuração de destino com agregação de melhor esforço, e uma amostra de perfil é incluída no corpo da solicitação.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -125,8 +125,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Resposta**
 
-A resposta retorna o resultado da renderização do template, ou qualquer erro encontrado.
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes dos dados exportados. Encontre o perfil exportado no `output` como uma sequência de escape.
+A resposta retorna o resultado da renderização do modelo ou qualquer erro encontrado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes dos dados exportados. Localize o perfil exportado no `output` como uma sequência de caracteres de escape.
 Uma resposta sem sucesso retorna o status HTTP 400 juntamente com descrições dos erros encontrados.
 
 ```json
@@ -186,7 +186,7 @@ Uma resposta sem sucesso retorna o status HTTP 400 juntamente com descrições d
 **Solicitação**
 
 
-A solicitação a seguir renderiza vários perfis exportados que correspondem ao formato esperado pelo seu destino. Neste exemplo, a ID de destino corresponde a uma configuração de destino com agregação configurável. Dois perfis são incluídos no corpo da solicitação, cada um com três qualificações de segmento e cinco identidades. Você pode gerar perfis para enviar na chamada usando o [exemplo de API de geração de perfil](./sample-profile-generation-api.md).
+A solicitação a seguir renderiza vários perfis exportados que correspondem ao formato esperado pelo seu destino. Neste exemplo, a ID de destino corresponde a uma configuração de destino com agregação configurável. Dois perfis estão incluídos no corpo da solicitação, cada um com três qualificações de segmento e cinco identidades. Você pode gerar perfis para enviar na chamada usando o [exemplo de API de geração de perfil](./sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -306,8 +306,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Resposta**
 
-A resposta retorna o resultado da renderização do template, ou qualquer erro encontrado.
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes dos dados exportados. Observe na resposta como os perfis são agregados com base na associação e nas identidades do segmento. Encontre os perfis exportados na `output` como uma sequência de escape.
+A resposta retorna o resultado da renderização do modelo ou qualquer erro encontrado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes dos dados exportados. Observe na resposta como os perfis são agregados com base na associação do segmento e nas identidades. Localize os perfis exportados na `output` como uma sequência de caracteres de escape.
 Uma resposta sem sucesso retorna o status HTTP 400 juntamente com descrições dos erros encontrados.
 
 ```json
@@ -1064,10 +1064,10 @@ Uma resposta sem sucesso retorna o status HTTP 400 juntamente com descrições d
 }
 ```
 
-## Tratamento de erros da API {#api-error-handling}
+## Manipulação de erros de API {#api-error-handling}
 
-Os pontos de extremidade da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, você agora sabe como usar o modelo de transformação de mensagem para gerar perfis exportados que correspondam ao formato de dados esperado do seu destino. Ler [como usar o Destination SDK para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, agora você sabe como usar o template de transformação de mensagem para gerar perfis exportados que correspondam ao formato de dados esperado do destino. Ler [como usar o Destination SDK para configurar seu destino](./configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do destino.

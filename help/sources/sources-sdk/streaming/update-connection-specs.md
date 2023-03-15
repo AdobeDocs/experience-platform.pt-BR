@@ -1,6 +1,6 @@
 ---
-title: Atualizar uma especificação de conexão para o SDK do Streaming usando a API do Serviço de Fluxo
-description: O documento a seguir fornece etapas sobre como fazer uma especificação de conexão usando a API de Serviço de Fluxo para Fontes de Autoatendimento (SDK de Streaming).
+title: Atualizar uma especificação de conexão para o SDK de streaming usando a API do Serviço de fluxo
+description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API de serviço de fluxo para fontes de autoatendimento (SDK de transmissão).
 hide: true
 hidefromtoc: true
 source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
@@ -10,9 +10,9 @@ ht-degree: 4%
 
 ---
 
-# Atualizar uma especificação de conexão usando a API do Serviço de Fluxo
+# Atualizar uma especificação de conexão usando a API de Serviço de Fluxo
 
-Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT. Ao atualizar uma especificação de conexão por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de conexão em uma solicitação de POST.
+Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT. Ao atualizar uma especificação de conexão por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de conexão em uma solicitação POST.
 
 **Formato da API**
 
@@ -106,7 +106,7 @@ PUT -X GET \
 
 **Resposta**
 
-Uma chamada bem-sucedida retorna os detalhes atualizados da especificação da conexão, incluindo o nome atualizado.
+Uma chamada bem-sucedida retorna os detalhes atualizados da especificação da conexão, incluindo seu nome atualizado.
 
 ```json
 {
@@ -192,4 +192,4 @@ Uma chamada bem-sucedida retorna os detalhes atualizados da especificação da c
 
 ## Próximas etapas
 
-Depois de concluir suas atualizações à especificação de conexão, você pode prosseguir para [teste e envie sua fonte para integração](./submit.md).
+Após concluir as atualizações na especificação da conexão, você pode prosseguir para [testar e enviar sua origem para integração](./submit.md).

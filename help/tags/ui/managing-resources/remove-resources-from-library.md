@@ -1,10 +1,11 @@
 ---
 title: Remover recursos de uma biblioteca
 description: Saiba como remover recursos de uma biblioteca de tags.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Caso não deseje mais que um recurso tenha um efeito em uma build, remova-o da biblioteca que contém esse recurso e crie uma nova build.
 

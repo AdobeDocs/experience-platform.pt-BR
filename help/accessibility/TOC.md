@@ -5,7 +5,7 @@ user-guide-description: Saiba mais sobre o compromisso da Experience Platform pa
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 50%
+ht-degree: 58%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 50%
 
 * [Visão geral de acessibilidade](home.md)
 * [Recursos de acessibilidade](features.md)
-* [Acessibilidade personalizada para a plataforma](custom.md)
+* [Acessibilidade personalizada para a Platform](custom.md)
 * [Documentação da plataforma](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [Visão geral da plataforma](https://www.adobe.com/go/platform-overview-en)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

@@ -1,5 +1,5 @@
 ---
-title: Exceções de acessibilidade e soluções alternativas para Experience Platform
+title: Exceções de acessibilidade e soluções alternativas para o Experience Platform
 type: Documentation
 description: A Adobe Experience Platform tem o compromisso de fornecer recursos acessíveis e inclusivos para todos os indivíduos.
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
@@ -10,6 +10,6 @@ ht-degree: 34%
 ---
 
 
-# Exceções de acessibilidade e soluções alternativas para Experience Platform
+# Exceções de acessibilidade e soluções alternativas para o Experience Platform
 
-No momento, não há exceções observadas com soluções alternativas no Experience Platform.
+No momento, não há exceções anotadas com soluções alternativas no Experience Platform.

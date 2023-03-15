@@ -13,7 +13,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O objeto `turbine` é uma &quot;variável livre&quot; no escopo dos módulos de biblioteca da extensão. Ela fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform e está sempre disponível para módulos de biblioteca sem usar `require()`.
 
@@ -47,7 +47,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 console.log(turbine.environment.stage);
 ```
 
-`turbine.environment` é um objeto que contém informações sobre o ambiente no qual a biblioteca é implantada.
+`turbine.environment` é um objeto que contém informações sobre o ambiente no qual a biblioteca está implantada.
 
 ```js
 {
@@ -59,13 +59,13 @@ console.log(turbine.environment.stage);
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID do ambiente. |
-| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`e `production`. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`, e `production`. |
 
 {style="table-layout:auto"}
 
 ## `debugEnabled`
 
-Um valor booleano indicando se a depuração de tag está atualmente ativada.
+Um valor booleano que indica se a depuração de tag está ativada no momento.
 
 Se você está apenas tentando registrar mensagens, é improvável que precise usar isso. Em vez disso, sempre registre mensagens usando `turbine.logger` para garantir que as mensagens só sejam impressas no console quando a depuração de tag estiver habilitada.
 
@@ -119,7 +119,7 @@ O utilitário de registro é usado para registrar mensagens no console. As mensa
 * `logger.warn(message: string)`: registra uma mensagem de aviso no console.
 * `logger.error(message: string)`: registra uma mensagem de erro no console.
 * `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver ativado no console do navegador.)
-* `logger.deprecation(message: string)`: Registra uma mensagem de aviso no console independentemente de a depuração de tag estar ou não habilitada pelo usuário.
+* `logger.deprecation(message: string)`: registra uma mensagem de aviso no console, independentemente de a depuração de tag ser ou não ativada pelo usuário.
 
 ## `onDebugChanged`
 

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, conformidade de uso de dados, impor, impor conformidade de uso de dados, Serviço de segmentação, segmentação, Segmentação,
+keywords: Experience Platform;página inicial;tópicos populares;conformidade com o uso de dados;impor;impor conformidade com o uso de dados;Serviço de segmentação;segmentação;Segmentação;
 solution: Experience Platform
-title: Reforçar a conformidade do uso de dados para um segmento de público-alvo usando APIs
+title: Impor a conformidade do uso de dados para um segmento de público-alvo usando APIs
 type: Tutorial
-description: Este tutorial aborda as etapas para impor a conformidade do uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real usando APIs.
+description: Este tutorial aborda as etapas para impor a conformidade com o uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real que usam APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,54 +12,54 @@ ht-degree: 2%
 
 ---
 
-# Impor conformidade de uso de dados para um segmento de público-alvo usando APIs
+# Impor a conformidade de uso de dados para um segmento de público-alvo usando APIs
 
-Este tutorial aborda as etapas para impor a conformidade do uso de dados para o [!DNL Real-Time Customer Profile] segmentos de público-alvo usando APIs.
+Este tutorial aborda as etapas para impor a conformidade do uso de dados para o [!DNL Real-Time Customer Profile] segmentos de público usando APIs.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
+Este tutorial requer um entendimento prático dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] é um armazenamento de entidade de pesquisa genérico e é usado para gerenciar [!DNL Experience Data Model (XDM)] dados no [!DNL Platform]. O perfil mescla dados em vários ativos de dados da empresa e fornece acesso a esses dados em uma apresentação unificada.
-   - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas por [!DNL Real-Time Customer Profile] para determinar quais dados podem ser mesclados em uma exibição unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para fins de Governança de dados.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divide um grande grupo de indivíduos contidos no armazenamento de perfil em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
-- [Governança de dados](../../data-governance/home.md): A Governança de dados fornece a infraestrutura para a rotulagem e aplicação do uso de dados, usando os seguintes componentes:
-   - [Rótulos de uso de dados](../../data-governance/labels/user-guide.md): Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.
-   - [Políticas de uso de dados](../../data-governance/policies/overview.md): Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos específicos de uso de dados.
-   - [Aplicação da política](../../data-governance/enforcement/overview.md): Permite aplicar políticas de uso de dados e impedir operações de dados que constituem violações de política.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] é um armazenamento de entidade de pesquisa genérico usado para gerenciar [!DNL Experience Data Model (XDM)] dados em [!DNL Platform]. O perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
+   - [Políticas de mesclagem](../../profile/api/merge-policies.md): regras usadas por [!DNL Real-Time Customer Profile] para determinar quais dados podem ser mesclados em uma visualização unificada em determinadas condições. As políticas de mesclagem podem ser configuradas para fins de governança de dados.
+- [[!DNL Segmentation]](../home.md): Como [!DNL Real-Time Customer Profile] O divide um grande grupo de indivíduos contidos no armazenamento de perfil em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
+- [Governança de dados](../../data-governance/home.md): a Governança de dados fornece a infraestrutura para rotulagem e aplicação do uso de dados, usando os seguintes componentes:
+   - [Rótulos de uso de dados](../../data-governance/labels/user-guide.md): rótulos usados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com o qual lidar com seus respectivos dados.
+   - [Políticas de uso de dados](../../data-governance/policies/overview.md): configurações que indicam quais ações de marketing são permitidas nos dados categorizados por rótulos de uso de dados específicos.
+   - [Aplicação de política](../../data-governance/enforcement/overview.md): permite impor políticas de uso de dados e impedir operações de dados que constituem violações de política.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas para o [!DNL Platform] APIs.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para o [!DNL Platform] APIs.
 
-### Lendo exemplos de chamadas de API
+### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
-Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
 ## Pesquisar uma política de mesclagem para uma definição de segmento {#merge-policy}
 
-Esse workflow começa acessando um segmento de público-alvo conhecido. Segmentos habilitados para uso em [!DNL Real-Time Customer Profile] contém uma ID de política de mesclagem na definição do segmento. Essa política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que, por sua vez, contêm quaisquer rótulos de uso de dados aplicáveis.
+Esse fluxo de trabalho começa acessando um segmento de público-alvo conhecido. Segmentos ativados para uso no [!DNL Real-Time Customer Profile] contêm uma ID de política de mesclagem na definição de segmento. Essa política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que por sua vez contém quaisquer rótulos de uso de dados aplicáveis.
 
-Usar o [!DNL Segmentation] Você pode pesquisar uma definição de segmento pela ID para encontrar a política de mesclagem associada.
+Usar o [!DNL Segmentation] , você pode pesquisar uma definição de segmento por sua ID para encontrar a política de mesclagem associada.
 
 **Formato da API**
 
@@ -122,11 +122,11 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento.
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `mergePolicyId` | A ID da política de mesclagem usada para a definição do segmento. Ele será usado na próxima etapa. |
+| `mergePolicyId` | A ID da política de mesclagem usada para a definição do segmento. Isso será usado na próxima etapa. |
 
-## Encontre os conjuntos de dados de origem da política de mesclagem {#datasets}
+## Localizar os conjuntos de dados de origem na política de mesclagem {#datasets}
 
-As políticas de mesclagem contêm informações sobre seus conjuntos de dados de origem, que, por sua vez, contêm rótulos de uso de dados. Você pode pesquisar os detalhes de uma política de mesclagem fornecendo a ID da política de mesclagem em uma solicitação GET para a variável [!DNL Profile] API. Mais informações sobre as políticas de mesclagem podem ser encontradas na seção [guia do ponto de extremidade de políticas de mesclagem](../../profile/api/merge-policies.md).
+As políticas de mesclagem contêm informações sobre os conjuntos de dados de origem, que por sua vez contêm rótulos de uso de dados. Você pode pesquisar os detalhes de uma política de mesclagem fornecendo a ID da política de mesclagem em uma solicitação do GET para o [!DNL Profile] API. Mais informações sobre políticas de mesclagem podem ser encontradas no [manual de ponto de extremidade das políticas de mesclagem](../../profile/api/merge-policies.md).
 
 **Formato da API**
 
@@ -136,7 +136,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | A ID da política de mesclagem obtida na variável [etapa anterior](#merge-policy). |
+| `{MERGE_POLICY_ID}` | A ID da política de mesclagem obtida no [etapa anterior](#merge-policy). |
 
 **Solicitação**
 
@@ -177,19 +177,19 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `schema.name` | O nome do schema associado à política de mesclagem. |
-| `attributeMerge.type` | O tipo de configuração de precedência de dados para a política de mesclagem. Se o valor for `dataSetPrecedence`, os conjuntos de dados associados a essa política de mesclagem são listados em `attributeMerge > data > order`. Se o valor for `timestampOrdered`, em seguida, todos os conjuntos de dados associados ao esquema referenciado em `schema.name` são usadas pela política de mesclagem. |
-| `attributeMerge.data.order` | Se a variável `attributeMerge.type` é `dataSetPrecedence`, esse atributo será uma matriz contendo as IDs dos conjuntos de dados usados por essa política de mesclagem. Essas IDs são usadas na próxima etapa. |
+| `schema.name` | O nome do esquema associado à política de mesclagem. |
+| `attributeMerge.type` | O tipo de configuração de precedência de dados para a política de mesclagem. Se o valor for `dataSetPrecedence`, os conjuntos de dados associados a esta política de mesclagem são listados em `attributeMerge > data > order`. Se o valor for `timestampOrdered`, todos os conjuntos de dados associados ao esquema referenciado no `schema.name` são usados pela política de mesclagem. |
+| `attributeMerge.data.order` | Se a variável `attributeMerge.type` é `dataSetPrecedence`, esse atributo será uma matriz que contém as IDs dos conjuntos de dados usados por essa política de mesclagem. Essas IDs são usadas na próxima etapa. |
 
 ## Avaliar conjuntos de dados para violações de política
 
 >[!NOTE]
 >
-> Essa etapa pressupõe que você tenha pelo menos uma política de uso de dados ativa que impede que ações de marketing específicas sejam executadas em dados que contenham determinados rótulos. Se você não tiver políticas de uso aplicáveis para os conjuntos de dados que estão sendo avaliados, siga as [tutorial de criação de política](../../data-governance/policies/create.md) para criar um antes de continuar com esta etapa.
+> Essa etapa pressupõe que você tenha pelo menos uma política de uso de dados ativa que impeça que ações de marketing específicas sejam executadas em dados que contenham determinados rótulos. Se você não tiver políticas de uso aplicáveis aos conjuntos de dados que estão sendo avaliados, siga as [tutorial de criação de política](../../data-governance/policies/create.md) para criar um antes de continuar com esta etapa.
 
-Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a variável [API do serviço de política](https://www.adobe.io/experience-platform-apis/references/policy-service/) para avaliar esses conjuntos de dados em relação a ações de marketing específicas, a fim de verificar violações da política de uso de dados.
+Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você poderá usar o [API de serviço de política](https://www.adobe.io/experience-platform-apis/references/policy-service/) avaliar esses conjuntos de dados em relação a ações de marketing específicas para verificar violações de política de uso de dados.
 
-Para avaliar os conjuntos de dados, você deve fornecer o nome da ação de marketing no caminho de uma solicitação do POST, enquanto fornece as IDs do conjunto de dados no corpo da solicitação, conforme mostrado no exemplo abaixo.
+Para avaliar os conjuntos de dados, você deve fornecer o nome da ação de marketing no caminho de uma solicitação POST, além de fornecer as IDs do conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
@@ -200,11 +200,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo de a política ter sido definida pelo Adobe ou por sua organização, você deve usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo se a política foi definida pelo Adobe ou por sua organização, é necessário usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
 
 **Solicitação**
 
-A solicitação a seguir testa o `exportToThirdParty` ação de marketing em relação aos conjuntos de dados obtidos no [etapa anterior](#datasets). A carga da solicitação é uma matriz que contém as IDs de cada conjunto de dados.
+A solicitação a seguir testa o `exportToThirdParty` ação de marketing contra conjuntos de dados obtidos no [etapa anterior](#datasets). A carga da solicitação é uma matriz que contém as IDs de cada conjunto de dados.
 
 ```shell
 curl -X POST \
@@ -228,12 +228,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `entityType` | Cada item na matriz de carga deve indicar o tipo de entidade que está sendo definida. Para esse caso de uso, o valor sempre será &quot;dataSet&quot;. |
+| `entityType` | Cada item na matriz de carga útil deve indicar o tipo de entidade que está sendo definido. Para esse caso de uso, o valor sempre será &quot;dataSet&quot;. |
 | `entityID` | Cada item na matriz de carga deve fornecer a ID exclusiva para um conjunto de dados. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o URI da ação de marketing, os rótulos de uso de dados coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas de uso de dados violadas como resultado do teste da ação em relação a esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada na variável `violatedPolicies` , indicando que a ação de marketing acionou uma violação de política.
+Uma resposta bem-sucedida retorna o URI da ação de marketing, os rótulos de uso de dados coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas de uso de dados que foram violadas como resultado do teste da ação com esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada na variável `violatedPolicies` , indicando que a ação de marketing acionou uma violação de política.
 
 ```json
 {
@@ -360,27 +360,27 @@ Uma resposta bem-sucedida retorna o URI da ação de marketing, os rótulos de u
 | Propriedade | Descrição |
 | --- | --- |
 | `duleLabels` | Uma lista de rótulos de uso de dados que foram extraídos dos conjuntos de dados fornecidos. |
-| `discoveredLabels` | Uma lista dos conjuntos de dados que foram fornecidos na carga da solicitação, exibindo os rótulos a nível do conjunto de dados e a nível de campo que foram encontrados em cada um. |
-| `violatedPolicies` | Uma matriz que lista quaisquer políticas de uso de dados que foram violadas pelo teste da ação de marketing (especificada em `marketingActionRef`) contra a `duleLabels`. |
+| `discoveredLabels` | Uma lista dos conjuntos de dados fornecidos na carga da solicitação, exibindo os rótulos de nível de conjunto de dados e de nível de campo encontrados em cada um. |
+| `violatedPolicies` | Uma matriz que lista quaisquer políticas de uso de dados que foram violadas ao testar a ação de marketing (especificada em `marketingActionRef`) em relação ao `duleLabels`. |
 
 Usando os dados retornados na resposta da API, você pode configurar protocolos no aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrerem.
 
 ## Filtrar campos de dados
 
-Se o segmento de público-alvo não passar na avaliação, você poderá ajustar os dados incluídos no segmento por meio de um dos dois métodos descritos abaixo.
+Se o seu segmento de público-alvo não passar na avaliação, você poderá ajustar os dados incluídos no segmento por meio de um dos dois métodos descritos abaixo.
 
-### Atualizar a política de mesclagem da definição de segmento
+### Atualizar a política de mesclagem da definição do segmento
 
-A atualização da política de mesclagem de uma definição de segmento ajusta os conjuntos de dados e os campos que serão incluídos quando o trabalho do segmento for executado. Consulte a seção sobre [atualização de uma política de mesclagem existente](../../profile/api/merge-policies.md#update) no tutorial de política de mesclagem de API para obter mais informações.
+Atualizar a política de mesclagem de uma definição de segmento ajustará os conjuntos de dados e campos que serão incluídos quando o trabalho do segmento for executado. Consulte a seção sobre [atualização de uma política de mesclagem existente](../../profile/api/merge-policies.md#update) no tutorial de política de mesclagem de API para obter mais informações.
 
 ### Restringir campos de dados específicos ao exportar o segmento
 
-Ao exportar um segmento para um conjunto de dados usando a variável [!DNL Segmentation] É possível filtrar os dados incluídos na exportação usando a variável `fields` parâmetro. Todos os campos de dados adicionados a esse parâmetro serão incluídos na exportação, enquanto todos os outros campos de dados serão excluídos.
+Ao exportar um segmento para um conjunto de dados usando o [!DNL Segmentation] você pode filtrar os dados incluídos na exportação usando a variável `fields` parâmetro. Quaisquer campos de dados adicionados a esse parâmetro serão incluídos na exportação, enquanto todos os outros campos de dados serão excluídos.
 
-Considere um segmento que tem campos de dados chamados &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se quiser exportar apenas o campo &quot;C&quot;, então a variável `fields` conteria somente o campo &quot;C&quot;. Ao fazer isso, os campos &quot;A&quot; e &quot;B&quot; seriam excluídos ao exportar o segmento.
+Considere um segmento que tenha campos de dados chamados &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se desejar exportar apenas o campo &quot;C&quot;, a variável `fields` O parâmetro conteria apenas o campo &quot;C&quot;. Ao fazer isso, os campos &quot;A&quot; e &quot;B&quot; seriam excluídos ao exportar o segmento.
 
-Consulte a seção sobre [exportar um segmento](./evaluate-a-segment.md#export) no tutorial de segmentação para obter mais informações.
+Consulte a seção sobre [exportação de um segmento](./evaluate-a-segment.md#export) no tutorial de segmentação para obter mais informações.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de público-alvo e os testou em busca de violações de política contra ações de marketing específicas. Para obter mais informações sobre a Governança de dados em [!DNL Experience Platform], leia a visão geral para [Governança de dados](../../data-governance/home.md).
+Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de público-alvo e os testou quanto a violações de política em relação a ações de marketing específicas. Para obter mais informações sobre a governança de dados em [!DNL Experience Platform], leia a visão geral para [Governança de dados](../../data-governance/home.md).

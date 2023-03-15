@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares, rótulos de uso de dados, serviço de catálogo
+keywords: Experience Platform;página inicial;tópicos populares;rótulos de uso de dados;serviço de catálogo;;home;popular topics;data usage labels;catalog service
 solution: Experience Platform
 title: Rótulos de uso de dados na API do serviço de conjunto de dados
 description: A API do serviço de conjunto de dados fornece endpoints para gerenciar rótulos de uso de dados para conjuntos de dados.
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Rótulos de uso de dados na API do serviço de conjunto de dados
 
-Separado da API do Serviço de catálogo, a variável [!DNL Dataset Service] A API fornece endpoints para gerenciar rótulos de uso de dados para conjuntos de dados. Para obter etapas sobre como fazer chamadas para esses endpoints, consulte o guia em [gerenciamento de rótulos de uso de dados usando a API](../../data-governance/labels/dataset-api.md) na documentação de Governança de dados do Adobe Experience Platform .
+Separado da API do Serviço de catálogo, a variável [!DNL Dataset Service] A API fornece endpoints para gerenciar rótulos de uso de dados para conjuntos de dados. Para obter etapas sobre como fazer chamadas para esses endpoints, consulte o manual em [gerenciamento de rótulos de uso de dados usando a API](../../data-governance/labels/dataset-api.md) na documentação de Governança de dados do Adobe Experience Platform.

@@ -1,7 +1,7 @@
 ---
-keywords: insights, ai de atribuição, insights do ai de atribuição, serviço de consulta AAI, consultas de atribuição, pontuações de atribuição; chaves gerenciadas pelo cliente na AAI
+keywords: insights;ia de atribuição;insights de ia de atribuição;serviço de consulta de AAI;consultas de atribuição;pontuações de atribuição; chaves gerenciadas pelo cliente na AAI
 title: Chaves gerenciadas pelo cliente
-description: Saiba como configurar Chaves gerenciadas pelo cliente para o Attribution AI.
+description: Saiba como configurar chaves gerenciadas pelo cliente no Attribution AI.
 source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
@@ -11,12 +11,12 @@ ht-degree: 24%
 
 # Chaves gerenciadas pelo cliente
 
-O Attribution AI fornece a opção para [Escudo da Saúde](https://www.adobe.com/trust/compliance/hipaa-ready.html) e clientes do Privacy &amp; Security Shield para utilizar o Azure Customer Managed Keys (CMK) para ser aplicado aos dados do Attribution AI. O processo de configuração é igual ao [Configuração do Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys.md) e você pode seguir as etapas descritas aqui.
+O Attribution AI oferece a opção de [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e os clientes do Privacy &amp; Security Shield para utilizar as Chaves gerenciadas pelo cliente do Azure (CMK) para serem aplicadas aos seus dados do Attribution AI. O processo de configuração é o mesmo que [Configuração do Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys.md) e você pode seguir as etapas descritas aqui.
 
-Você pode ler a documentação em [Chaves gerenciadas pelo cliente no Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) e siga as etapas descritas para passar pelo processo de configuração.
+Você pode ler a documentação em [Chaves gerenciadas pelo cliente no Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) e siga as etapas descritas para executar o processo de configuração.
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] estão disponíveis no momento somente para organizações que compraram a variável [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html%3Flang%3Den) oferta complementar.
+>[!DNL Customer Managed Keys] atualmente disponíveis apenas para organizações que compraram o [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=pt-BR) oferta complementar.
 
 Todos os dados utilizados pela Platform são criptografados em trânsito e em repouso para manter seus dados protegidos, com ou sem CMK. Para obter informações sobre criptografia do Adobe Experience Platform, leia a documentação em [Criptografia de dados](../../../landing/governance-privacy-security/encryption.md).

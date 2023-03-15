@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, Controle de acesso com base em atributos, controle de acesso com base em atributos
+keywords: Experience Platform;página inicial;tópicos populares;api;Controle de acesso baseado em atributo;controle de acesso baseado em atributo
 solution: Experience Platform
-title: Ponto de extremidade da API de produtos
-description: O endpoint /products na API de controle de acesso com base em atributo permite gerenciar programaticamente os produtos no Adobe Experience Platform.
+title: Endpoint da API de produtos
+description: O endpoint /products na API de controle de acesso baseado em atributos permite gerenciar programaticamente os produtos no Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 4%
 
 ---
 
-# Ponto de extremidade de produtos
+# Endpoint de produtos
 
 >[!NOTE]
 >
->Se um token de usuário estiver sendo transmitido, o usuário do token deverá ter uma função &quot;org admin&quot; para a organização solicitada.
+>Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-O `/products` O endpoint na API de controle de acesso baseada em atributos permite gerenciar programaticamente produtos, bem como categorias de permissão e conjuntos de permissões associados a produtos em sua organização.
+A variável `/products` O endpoint na API de controle de acesso baseada em atributos permite gerenciar de forma programática os produtos, bem como as categorias de permissões e os conjuntos de permissões associados aos produtos em sua organização.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de produtos autorizados {#list}
 
-Você pode recuperar uma lista de produtos autorizados fazendo uma solicitação do GET para o `/products` endpoint .
+Você pode recuperar uma lista de produtos autorizados fazendo uma solicitação GET para o `/products` terminal.
 
 **Formato da API**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de produtos autorizados pertencentes à sua organização.
+Uma resposta bem-sucedida retorna uma lista de produtos qualificados pertencentes à sua organização.
 
 ```json
 {
@@ -69,7 +69,7 @@ Uma resposta bem-sucedida retorna uma lista de produtos autorizados pertencentes
 
 ## Pesquisar categorias de permissão por ID de produto
 
-Você pode pesquisar categorias de permissão para um determinado produto, fazendo uma solicitação do GET para a variável `/products/{PRODUCT_ID}/categories` endpoint ao especificar a ID do produto.
+É possível pesquisar categorias de permissão para um determinado produto fazendo uma solicitação GET ao `/products/{PRODUCT_ID}/categories` ao especificar a ID do produto.
 
 **Formato da API**
 
@@ -79,7 +79,7 @@ GET /products/{PRODUCT_ID}/categories
 
 | Parâmetro | Descrição |
 | --- | --- |
-| {PRODUCT_ID} | A ID do produto associada às categorias de permissão que você deseja pesquisar. |
+| {PRODUCT_ID} | A ID do produto associado às categorias de permissão que você deseja pesquisar. |
 
 **Solicitação**
 
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna as categorias de permissão associadas à ID de produto que você consultou.
+Uma resposta bem-sucedida retorna as categorias de permissão associadas à ID do produto consultada.
 
 ```json
 {
@@ -139,12 +139,12 @@ Uma resposta bem-sucedida retorna as categorias de permissão associadas à ID d
 
 | Propriedade | Descrição |
 | --- | --- |
-| `category` | As categorias de permissão disponíveis na ID de produto consultada. |
+| `category` | As categorias de permissão disponíveis na ID do produto consultada. |
 | `name` | O nome da categoria de permissão. |
 
 ## Pesquisar conjuntos de permissões por ID de produto
 
-Você pode procurar conjuntos de permissões para um determinado produto, fazendo uma solicitação do GET para a `/products/{PRODUCT_ID}/permission-sets` endpoint ao especificar a ID do produto.
+Você pode pesquisar conjuntos de permissões para um determinado produto fazendo uma solicitação GET ao `/products/{PRODUCT_ID}/permission-sets` ao especificar a ID do produto.
 
 **Formato da API**
 
@@ -154,7 +154,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 | Parâmetro | Descrição |
 | --- | --- |
-| {PRODUCT_ID} | A ID do produto associada aos conjuntos de permissões que você deseja pesquisar. |
+| {PRODUCT_ID} | A ID do produto associado aos conjuntos de permissões que você deseja pesquisar. |
 
 **Solicitação**
 
@@ -170,7 +170,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os conjuntos de permissões associados à ID do produto que você consultou.
+Uma resposta bem-sucedida retorna os conjuntos de permissões associados à ID do produto consultada.
 
 ```json
 {
@@ -235,10 +235,10 @@ Uma resposta bem-sucedida retorna os conjuntos de permissões associados à ID d
 
 | Propriedade | Descrição |
 | --- | --- |
-| `permission-sets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas a partir de uma função predefinida que contém um grupo de permissões. |
+| `permission-sets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | `id` | A ID correspondente do conjunto de permissões consultado. |
 | `name` | O nome correspondente do conjunto de permissões consultado. |
 | `category` | A categoria de permissão disponível. |
-| `permissions` | As permissões incluem a capacidade de exibir e/ou usar recursos da plataforma, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
+| `permissions` | As permissões incluem a capacidade de visualizar e/ou usar recursos da Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
 | `permissions.resource` | O ativo ou objeto que um assunto pode ou não acessar. Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
-| `permissions.actions` | A ação que um assunto tem permissão para fazer contra um recurso consultado. Os valores possíveis incluem: `view`, `read`, `create`, `edit`e `delete` |
+| `permissions.actions` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `view`, `read`, `create`, `edit`, e `delete` |

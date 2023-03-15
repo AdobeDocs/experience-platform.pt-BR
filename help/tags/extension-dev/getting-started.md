@@ -1,10 +1,11 @@
 ---
 title: Introdução ao desenvolvimento de extensões
-description: Introdução ao desenvolvimento de suas próprias extensões de tag no Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Comece a desenvolver suas próprias extensões de tag na Adobe Experience Platform.
+exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '430'
-ht-degree: 90%
+ht-degree: 95%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para você poder começar a trabalhar e criar extensões, vamos usar a ferramenta de andaimes de código aberto, fornecida pelos engenheiros do Adobe para criar os arquivos necessários e a estrutura de arquivos para o pacote de extensão. Assim, tudo o que você ainda precisa fazer é a parte valiosa: na verdade, criar o código.
 

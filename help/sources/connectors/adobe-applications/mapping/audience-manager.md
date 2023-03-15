@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform, home, tópicos populares, mapeamento de Audience Manager, mapeamento do audience manager
+keywords: Experience Platform;página inicial;tópicos populares;mapeamento de Audience Manager;mapeamento do audience manager
 solution: Experience Platform
-title: Mapeamento de campos para o conector de origem do Adobe Audience Manager
-description: Saiba como mapear dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) para os campos correspondentes do Experience Data Model (XDM) do conector de origem do Audience Manager.
+title: Mapeamento de campos para o Conector de origem do Adobe Audience Manager
+description: Saiba como mapear dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) para campos correspondentes do Experience Data Model (XDM) para o conector de origem do Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 3%
+source-wordcount: '169'
+ht-degree: 0%
 
 ---
 
-# Mapeamentos de campo Audience Manager
+# mapeamentos de campo Audience Manager
 
 As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) e seus campos XDM correspondentes.
 
@@ -19,28 +19,28 @@ Consulte a [Dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md
 
 ## Dados em tempo real
 
-Tipo: Dados em tempo real
+Tipo: dados em tempo real
 
 | Campo de dados em tempo real | Campo XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *Somente para namespaces presentes em endUserIds e somente o primeiro valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente o primeiro valor.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |
 | `deviceMetadata` | `ExperienceEvent.device` <ul><li>primaryHardwareType → tipo</li><li>fabricante → fabricante</li><li>marketingName → modelo</li><li>modelNumber → modelo</li></ul> |
-| `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country → countryCode</li><li>d_state → stateProvincia</li><li>d_city → cidade</li><li>d_postal → CEP</li><li>d_lat → latitude</li><li>d_longitude → longitude</li></ul> |
+| `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country → countryCode</li><li>d_state → stateProvince</li><li>d_city → cidade</li><li>d_postal → postalCode</li><li>d_lat → latitude</li><li>d_longitude → longitude</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
-| `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → nome do sistema </li><li>d_os_version → os_version</li></ul> |
+| `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → nome do sistema operacional </li><li>d_os_version → os_version</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Dados do perfil
 
-Tipo: XDM de perfil
+Tipo: Perfil XDM
 
 | Campo de perfil | Campo XDM |
 | --- | --- |
@@ -48,4 +48,4 @@ Tipo: XDM de perfil
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares, greenplum, GreenPlum
+keywords: Experience Platform;página inicial;tópicos populares;greenplum;GreenPlum
 solution: Experience Platform
 title: Visão geral do conector de origem GreenPlum
 description: Saiba como conectar o GreenPlum ao Adobe Experience Platform usando APIs ou a interface do usuário.
@@ -15,21 +15,21 @@ ht-degree: 0%
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como [!DNL Microsoft], MySQL e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 
-Há suporte para diferentes tipos de bancos de dados de terceiros, incluindo depósitos relacionais, NoSQL ou de dados. O suporte para provedores de banco de dados inclui [!DNL GreenPlum].
+Há suporte para diferentes tipos de bancos de dados de terceiros, incluindo bancos de dados relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL GreenPlum].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL GreenPlum] para [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL GreenPlum] para [!DNL Platform] uso de APIs ou da interface do usuário:
 
-## Connect [!DNL GreenPlum] para [!DNL Platform] uso de APIs
+## Conectar [!DNL GreenPlum] para [!DNL Platform] uso de APIs
 
-- [Criar uma conexão base GreenPlum usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/greenplum.md)
-- [Explorar tabelas de dados usando a API do Serviço de fluxo](../../tutorials/api/explore/tabular.md)
-- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica GreenPlum usando a API do serviço de fluxo](../../tutorials/api/create/databases/greenplum.md)
+- [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL GreenPlum] para [!DNL Platform] uso da interface do usuário
+## Conectar [!DNL GreenPlum] para [!DNL Platform] uso da interface
 
-- [Criar uma conexão de origem GreenPlum na interface do usuário](../../tutorials/ui/create/databases/greenplum.md)
-- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar uma conexão de origem GreenPlum na interface](../../tutorials/ui/create/databases/greenplum.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)

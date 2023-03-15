@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform, home, tópicos populares, streaming, conector de armazenamento em nuvem, armazenamento em nuvem
+keywords: Experience Platform;página inicial;tópicos populares;streaming;conector de armazenamento em nuvem;armazenamento na nuvem
 solution: Experience Platform
-title: Crie um fluxo de dados para uma fonte de armazenamento em nuvem na interface do usuário do
+title: Criar um fluxo de dados de transmissão para uma fonte de armazenamento em nuvem na interface
 type: Tutorial
-description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector da base de armazenamento em nuvem.
+description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando seu conector da base de armazenamento na nuvem.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Crie um fluxo de dados para uma fonte de armazenamento em nuvem na interface do usuário do
+# Criar um fluxo de dados de transmissão para uma fonte de armazenamento em nuvem na interface
 
-Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma fonte para um conjunto de dados da Adobe Experience Platform. Este tutorial fornece etapas para criar um fluxo de dados de fluxo para uma fonte de armazenamento em nuvem na interface do usuário do .
+Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados do Adobe Experience Platform. Este tutorial fornece etapas para criar um fluxo de dados de transmissão para uma fonte de armazenamento em nuvem na interface do usuário.
 
-Antes de tentar este tutorial, primeiro você deve estabelecer uma conexão válida e autenticada entre sua conta de armazenamento em nuvem e a Plataforma. Se você ainda não tiver uma conexão autenticada, consulte um dos seguintes tutoriais para obter informações sobre como autenticar suas contas de armazenamento da nuvem de fluxo:
+Antes de tentar este tutorial, primeiro você deve estabelecer uma conexão válida e autenticada entre sua conta de armazenamento em nuvem e a Platform. Se você ainda não tiver uma conexão autenticada, consulte um dos seguintes tutoriais para obter informações sobre como autenticar suas contas de armazenamento da nuvem de transmissão:
 
 - [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
@@ -26,116 +26,116 @@ Antes de tentar este tutorial, primeiro você deve estabelecer uma conexão vál
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Fluxos de dados](../../../../../dataflows/home.md): Os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, de fontes a [!DNL Identity Service]para [!DNL Profile]e para [!DNL Destinations].
-- [Preparação de dados](../../../../../data-prep/home.md): A Preparação de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM). A Preparação de dados aparece como uma etapa &quot;Mapa&quot; nos processos de Assimilação de dados, incluindo o fluxo de trabalho de Assimilação CSV.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   - [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [Fluxos de dados](../../../../../dataflows/home.md): os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, de origens a [!DNL Identity Service], para [!DNL Profile], e para [!DNL Destinations].
+- [Preparação de dados](../../../../../data-prep/home.md): o Preparo de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM). O Preparo de dados é exibido como uma etapa de &quot;Mapa&quot; nos processos de Assimilação de dados, incluindo o fluxo de trabalho Assimilação de CSV.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   - [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+   - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ## Adicionar dados
 
-Depois de criar a autenticação da conta de armazenamento da nuvem de transmissão, o **[!UICONTROL Selecionar dados]** será exibida, fornecendo uma interface para selecionar qual fluxo de dados você trará para a plataforma.
+Depois de criar a sua conta de armazenamento em nuvem de streaming, a variável **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para você selecionar qual fluxo de dados trará para a Platform.
 
 - A parte esquerda da interface é um navegador que permite visualizar os fluxos de dados disponíveis em sua conta;
 - A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo JSON.
 
 ![interface](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
-Selecione o fluxo de dados que deseja usar e selecione **[!UICONTROL Escolher ficheiro]** para carregar um schema de amostra.
+Selecione o fluxo de dados que deseja usar e selecione **[!UICONTROL Escolher arquivo]** para fazer upload de um schema de amostra.
 
 >[!TIP]
 >
->Se os dados são compatíveis com XDM, é possível ignorar o upload de um esquema de amostra e selecionar **[!UICONTROL Próximo]** para continuar.
+>Se os dados forem compatíveis com XDM, você poderá ignorar o upload de um esquema de amostra e selecionar **[!UICONTROL Próxima]** para continuar.
 
-![sequência de seleção](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
+![select-stream](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
 
-Depois que o esquema é carregado, a interface de visualização é atualizada para exibir uma pré-visualização do esquema carregado. A interface de visualização permite inspecionar o conteúdo e a estrutura de um arquivo. Também é possível usar a variável [!UICONTROL Campo de pesquisa] para acessar itens específicos dentro do esquema.
+Depois que o esquema for carregado, a interface de visualização será atualizada para exibir uma visualização do esquema carregado. A interface de visualização permite inspecionar o conteúdo e a estrutura de um arquivo. Você também pode usar a variável [!UICONTROL Campo de pesquisa] para acessar itens específicos no esquema.
 
-Quando terminar, selecione **[!UICONTROL Próximo]**.
+Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 ![schema-preview](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
 
 ## Mapeamento
 
-O **[!UICONTROL Mapeamento]** é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da plataforma.
+A variável **[!UICONTROL Mapeamento]** é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da Platform.
 
 Escolha um conjunto de dados para os dados de entrada que serão assimilados. Você pode usar um conjunto de dados existente ou criar um novo.
 
 ### Novo conjunto de dados
 
-Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos. Para adicionar um schema, você pode inserir um nome de schema existente no **[!UICONTROL Selecionar esquema]** caixa de diálogo. Como alternativa, você pode selecionar **[!UICONTROL Pesquisa avançada do esquema]** para procurar um schema apropriado.
+Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos. Para adicionar um esquema, você pode inserir um nome de esquema existente na **[!UICONTROL Selecionar esquema]** caixa de diálogo. Como alternativa, você pode selecionar **[!UICONTROL Pesquisa avançada de esquema]** para procurar um esquema apropriado.
 
 ![novo conjunto de dados](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
-O [!UICONTROL Selecionar esquema] for exibida, fornecendo uma lista de schemas disponíveis para escolha. Selecione um schema na lista para atualizar o painel direito para exibir detalhes específicos do schema selecionado, incluindo informações sobre se o schema está ativado para [!DNL Profile].
+A variável [!UICONTROL Selecionar esquema] é exibida, fornecendo uma lista dos esquemas disponíveis para escolha. Selecione um esquema na lista para atualizar o painel direito para exibir detalhes específicos do esquema selecionado, incluindo informações sobre se o esquema está ativado para [!DNL Profile].
 
-Depois de identificar e selecionar o schema que deseja usar, selecione **[!UICONTROL Concluído]**.
+Depois de identificar e selecionar o esquema que deseja usar, selecione **[!UICONTROL Concluído]**.
 
 ![select-schema](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
 
-O [!UICONTROL Conjunto de dados do Target] atualizações de página com o esquema selecionado exibido como parte do conjunto de dados. Durante essa etapa, é possível ativar o conjunto de dados para [!DNL Profile] e criar uma visualização holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados ativados serão incluídos em [!DNL Profile] As alterações e são aplicadas quando você salva o fluxo de dados.
+A variável [!UICONTROL Conjunto de dados de destino] A página é atualizada com o esquema selecionado exibido como parte do conjunto de dados. Durante essa etapa, é possível habilitar o conjunto de dados para [!DNL Profile] e criar uma visualização integral dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados serão incluídos em [!DNL Profile] As alterações e são aplicadas quando você salva o fluxo de dados.
 
-Ative o **[!UICONTROL Conjunto de dados de perfil]** para ativar seu conjunto de dados de destino para [!DNL Profile].
+Alterne a **[!UICONTROL Conjunto de dados Perfil]** botão para ativar o conjunto de dados de destino para [!DNL Profile].
 
 ![novo perfil](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
 
 ### Conjunto de dados existente
 
-Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]** e selecione o ícone do conjunto de dados.
+Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]** e, em seguida, selecione o ícone do conjunto de dados.
 
 ![conjunto de dados existente](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
 
-O **[!UICONTROL Selecionar conjunto de dados]** será exibida, fornecendo uma lista dos conjuntos de dados disponíveis para escolha. Selecione um conjunto de dados na lista para atualizar o painel direito para exibir detalhes específicos do conjunto de dados selecionado, incluindo informações sobre se o conjunto de dados pode ser habilitado para [!DNL Profile].
+A variável **[!UICONTROL Selecionar conjunto de dados]** será exibida, fornecendo uma lista dos conjuntos de dados disponíveis para escolha. Selecione um conjunto de dados na lista para atualizar o painel direito para exibir detalhes específicos do conjunto de dados selecionado, incluindo informações sobre se o conjunto de dados pode ser ativado para [!DNL Profile].
 
 Depois de identificar e selecionar o conjunto de dados que deseja usar, selecione **[!UICONTROL Concluído]**.
 
 ![select-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-dataset.png)
 
-Depois de selecionar seu conjunto de dados, selecione o [!DNL Profile] alternar para ativar o conjunto de dados para [!DNL Profile].
+Depois de selecionar o conjunto de dados, selecione a variável [!DNL Profile] ativar ou desativar o conjunto de dados para [!DNL Profile].
 
 ![perfil existente](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-profile.png)
 
 ### Mapear campos padrão
 
-Com seu conjunto de dados e esquema estabelecidos, a variável **[!UICONTROL Mapear campos padrão]** for exibida, permitindo configurar manualmente campos de mapeamento para seus dados.
+Com seu conjunto de dados e esquema estabelecidos, a variável **[!UICONTROL Mapear campos padrão]** é exibida, permitindo configurar manualmente os campos de mapeamento para seus dados.
 
 >[!TIP]
 >
->A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema de destino ou conjunto de dados selecionado. Você pode ajustar manualmente as regras de mapeamento de acordo com seus casos de uso.
+>A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso.
 
-Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e dos campos calculados, consulte o [Guia da interface do usuário de preparação de dados](../../../../../data-prep/ui/mapping.md).
+Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
 
-Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Próximo]**.
+Após mapear os dados de origem, selecione **[!UICONTROL Próxima]**.
 
 ![mapeamento](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
 
 ## Detalhes do fluxo de dados
 
-O **[!UICONTROL Detalhes do fluxo de dados]** será exibida, permitindo nomear e fornecer uma breve descrição sobre o novo fluxo de dados.
+A variável **[!UICONTROL Detalhes do fluxo de dados]** é exibida, permitindo nomear e fornecer uma breve descrição sobre seu novo fluxo de dados.
 
-Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
+Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próxima]**.
 
-![detalhe do fluxo de dados](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
+![detalhes do fluxo de dados](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### Revisão
+### Consulte a seção
 
-O **[!UICONTROL Revisão]** é exibida, permitindo que você revise o novo fluxo de dados antes de criá-lo. Os detalhes são agrupados nas seguintes categorias:
+A variável **[!UICONTROL Revisão]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-- **[!UICONTROL Conexão]**: Exibe o nome da conta, o tipo de origem e outras informações diversas específicas da fonte de armazenamento da nuvem de transmissão que você está usando.
-- **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Exibe o conjunto de dados de destino e o esquema usado para o fluxo de dados.
+- **[!UICONTROL Conexão]**: exibe o nome da conta, o tipo de origem e outras informações diversas específicas da fonte de armazenamento na nuvem de streaming que você está usando.
+- **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: exibe o conjunto de dados e o esquema de destino que você está usando para o fluxo de dados.
 
-Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e permitir que o fluxo de dados seja criado.
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para criar o fluxo de dados.
 
 ![revisão](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
-## Monitorar e excluir o fluxo de dados
+## Monitorar e excluir seu fluxo de dados
 
-Depois que o fluxo de dados do armazenamento em nuvem de transmissão for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre monitoramento e exclusão de fluxos de dados de transmissão, consulte o tutorial em [monitoramento de fluxos de dados de transmissão](../../monitor-streaming.md).
+Depois que o fluxo de dados de armazenamento na nuvem de transmissão for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre monitoramento e exclusão de fluxos de dados de transmissão, consulte o tutorial em [monitoramento de fluxos de dados de transmissão](../../monitor-streaming.md).
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para transmitir dados de uma fonte de armazenamento em nuvem. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você criou com êxito um fluxo de dados para transmitir dados de uma fonte de armazenamento na nuvem. Os dados de entrada agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 - [Visão geral do [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

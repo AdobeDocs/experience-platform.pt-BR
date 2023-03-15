@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, conexão de transmissão, criar conexão de transmissão, guia da interface do usuário, tutorial, criar uma conexão de transmissão, assimilação de transmissão, ingestão;
+keywords: Experience Platform;início;tópicos populares;conexão de transmissão;criar conexão de transmissão;guia de interface do usuário;tutorial;criar uma conexão de transmissão;assimilação de transmissão;assimilação;
 solution: Experience Platform
-title: Criar uma conexão de transmissão da API HTTP usando a interface do usuário
+title: Criar uma conexão de transmissão da API HTTP usando a interface
 type: Tutorial
-description: Este guia da interface do usuário ajudará você a criar uma conexão de transmissão usando o Adobe Experience Platform.
+description: Este guia de interface ajudará você a criar uma conexão de transmissão usando o Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
@@ -13,131 +13,131 @@ ht-degree: 0%
 ---
 
 
-# Crie um [!DNL HTTP API] conexão de transmissão usando a interface do usuário
+# Criar um [!DNL HTTP API] conexão de transmissão usando a interface
 
-Este tutorial fornece etapas para criar uma conexão de origem de fluxo usando o [!UICONTROL Fontes] espaço de trabalho.
+Este tutorial fornece etapas para criar uma conexão de origem de transmissão usando o [!UICONTROL Origens] espaço de trabalho.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   - [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   - [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+   - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-## Criar uma conexão de transmissão
+## Criar uma conexão de streaming
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Em **[!UICONTROL Streaming]** categoria , selecione **[!UICONTROL API HTTP]** e depois selecione **[!UICONTROL Adicionar dados]**.
+No **[!UICONTROL Streaming]** categoria, selecione **[!UICONTROL API HTTP]** e selecione **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/http/catalog.png)
 
-O **[!UICONTROL Conexão da conta da API HTTP]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+A variável **[!UICONTROL Conectar conta de API HTTP]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para usar uma conta existente, selecione a conta da API HTTP com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próximo]** para continuar.
+Para usar uma conta existente, selecione a conta da API HTTP com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
 
 ![conta existente](../../../../images/tutorials/create/http/existing.png)
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome de conta e uma descrição opcional. Você também terá a opção de fornecer as seguintes propriedades de configuração:
+Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome de conta e uma descrição opcional. Você também terá a opção de fornecer as seguintes propriedades de configuração:
 
-- **[!UICONTROL Autenticação]:** Essa propriedade determina se a conexão de transmissão requer autenticação. A autenticação garante que os dados sejam coletados de fontes confiáveis. Se você estiver lidando com Informações pessoais identificáveis (PII), essa propriedade deve ser ativada. Por padrão, essa propriedade está desativada.
+- **[!UICONTROL Autenticação]:** Essa propriedade determina se a conexão de streaming requer ou não autenticação. A autenticação garante que os dados sejam coletados de fontes confiáveis. Se você estiver lidando com Informações de identificação pessoal (PII), essa propriedade deve ser ativada. Por padrão, essa propriedade está desativada.
 - **[!UICONTROL Compatível com XDM]:** Essa propriedade indica se essa conexão de transmissão enviará eventos compatíveis com esquemas XDM. Por padrão, essa propriedade está desativada.
 
-Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e depois selecione **[!UICONTROL Próximo]** para continuar.
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e selecione **[!UICONTROL Próxima]** para continuar.
 
 ![nova conta](../../../../images/tutorials/create/http/new.png)
 
 ## Selecionar dados
 
-Depois de criar a conexão da API HTTP, a variável **[!UICONTROL Selecionar dados]** será exibida, fornecendo uma interface para carregar e visualizar seus dados.
+Depois de criar a conexão da API HTTP, a variável **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para carregar e visualizar seus dados.
 
-Selecionar **[!UICONTROL Upload de arquivos]** para carregar seus dados. Como alternativa, você pode arrastar e soltar seus dados no [!UICONTROL Arrastar e soltar arquivos] da interface.
+Selecionar **[!UICONTROL Fazer upload de arquivos]** para carregar seus dados. Como alternativa, você pode arrastar e soltar seus dados na [!UICONTROL Arrastar e soltar arquivos] seção da interface.
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
-Com os dados carregados, você pode usar o lado direito da interface para visualizar a hierarquia do arquivo. Selecionar **[!UICONTROL Próximo]** para continuar.
+Com os dados carregados, você pode usar o lado direito da interface para visualizar a hierarquia de arquivos. Selecionar **[!UICONTROL Próxima]** para continuar.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 
 ## Mapear campos de dados para um esquema XDM
 
-O [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da plataforma.
+A variável [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da Platform.
 
-Os arquivos de parâmetro devem ser compatíveis com XDM e não exigem a configuração manual do mapeamento, enquanto os arquivos CSV exigem a configuração explícita do mapeamento, mas permitem que você escolha os campos de dados de origem a serem mapeados. Os arquivos JSON, se marcados como reclamação XDM, não exigem configuração manual. No entanto, se não estiver marcado como compatível com XDM, será necessário configurar explicitamente o mapeamento.
+Os arquivos Parquet devem ser compatíveis com XDM e não exigem que você configure manualmente o mapeamento, enquanto os arquivos CSV exigem que você configure explicitamente o mapeamento, mas permitem que você escolha quais campos de dados de origem mapear. Os arquivos JSON, se marcados como reclamação XDM, não exigem configuração manual. No entanto, se não estiver marcado como compatível com XDM, exigirá que você configure explicitamente o mapeamento.
 
 Escolha um conjunto de dados para os dados de entrada que serão assimilados. Você pode usar um conjunto de dados existente ou criar um novo.
 
 ### Criar um novo conjunto de dados
 
-Para criar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**. No formulário exibido, forneça o nome, uma descrição opcional e o esquema de destino do conjunto de dados. Se você selecionar uma [!DNL Profile]-enabled schema, você pode escolher se o conjunto de dados também deve ser [!DNL Profile]habilitado para .
+Para criar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**. No formulário exibido, forneça o nome, uma descrição opcional, bem como o schema de destino para o conjunto de dados. Se você selecionar um [!DNL Profile]esquema habilitado para, você pode escolher se o conjunto de dados também deve ser [!DNL Profile]-habilitado.
 
 ![novo conjunto de dados](../../../../images/tutorials/create/http/new-dataset.png)
 
 ### Usar um conjunto de dados existente
 
-Para usar um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. No formulário exibido, selecione o conjunto de dados que deseja usar. Depois de selecionar um conjunto de dados, você pode escolher se o conjunto de dados deve ser [!DNL Profile]habilitado para .
+Para usar um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. No formulário exibido, selecione o conjunto de dados que deseja usar. Após selecionar um conjunto de dados, você pode escolher se ele deve ser [!DNL Profile]-habilitado.
 
 ![conjunto de dados existente](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Mapear campos padrão
 
 
-Com base em suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem em valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e dos campos calculados, consulte o [Guia da interface do usuário de preparação de dados](../../../../../data-prep/ui/mapping.md).
+Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
 
 Para adicionar um novo campo de origem, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
 ![add-new-mapping](../../../../images/tutorials/create/http/add-new-mapping.png)
 
-Um novo campo de origem e o emparelhamento de campo de destino são exibidos. Para adicionar um novo campo de origem, selecione o ícone de seta ao lado do [!UICONTROL Selecionar campo de origem] barra de entrada.
+Um novo emparelhamento de campo de origem e campo de destino é exibido. Para adicionar um novo campo de origem, selecione o ícone de seta ao lado do [!UICONTROL Selecionar campo de origem] barra de entrada.
 
 ![select-source-field](../../../../images/tutorials/create/http/select-source-field.png)
 
-O [!UICONTROL Selecionar atributos] O painel permite explorar sua hierarquia de arquivos e selecionar um campo de origem específico para mapear para um campo XDM de destino. Após selecionar o campo de origem que deseja mapear, selecione **[!UICONTROL Selecionar]** para continuar.
+A variável [!UICONTROL Selecionar atributos] permite explorar a hierarquia de arquivos e selecionar um campo de origem específico para mapear para um campo XDM de destino. Depois de selecionar o campo de origem que deseja mapear, selecione **[!UICONTROL Selecionar]** para continuar.
 
 ![select-attributes](../../../../images/tutorials/create/http/select-attributes.png)
 
-Com um campo de origem selecionado, agora é possível identificar o campo XDM de destino apropriado para o qual mapear. Selecione o ícone de schema na seção target field .
+Com um campo de origem selecionado, agora é possível identificar o campo XDM de destino apropriado para o qual mapear. Selecione o ícone do schema na seção target field.
 
 ![select-target-field](../../../../images/tutorials/create/http/select-target-field.png)
 
-O [!UICONTROL Mapear campo de origem para campo de destino] for exibida, fornecendo uma interface para explorar o esquema do conjunto de dados do target. Selecione o campo de destino que corresponde ao campo de origem e selecione **[!UICONTROL Selecionar]** para continuar.
+A variável [!UICONTROL Mapear campo de origem para campo de destino] é exibida, fornecendo uma interface para explorar o esquema do conjunto de dados de destino. Selecione o campo de destino que corresponde ao campo de origem e selecione **[!UICONTROL Selecionar]** para continuar.
 
-![campo mapear para destino](../../../../images/tutorials/create/http/map-to-target-field.png)
+![mapear para campo de destino](../../../../images/tutorials/create/http/map-to-target-field.png)
 
-Depois que os campos de origem forem mapeados para os campos XDM de destino apropriados, selecione **[!UICONTROL Próximo]**
+Depois que todos os campos de origem forem mapeados para os campos XDM de destino apropriados, selecione **[!UICONTROL Próxima]**
 
 ![data-prep-complete](../../../../images/tutorials/create/http/data-prep-complete.png)
 
 ## Detalhes do fluxo de dados
 
-O **[!UICONTROL Detalhes do fluxo de dados]** será exibida. Nesta página, você pode fornecer detalhes para o fluxo de dados criado, fornecendo um nome e uma descrição opcional.
+A variável **[!UICONTROL Detalhes do fluxo de dados]** é exibida. Nesta página, você pode fornecer detalhes sobre o fluxo de dados criado fornecendo um nome e uma descrição opcional.
 
-Depois de fornecer os detalhes do fluxo de dados, selecione **[!UICONTROL Próximo]**.
+Depois de fornecer detalhes para o fluxo de dados, selecione **[!UICONTROL Próxima]**.
 
-![detalhe do fluxo de dados](../../../../images/tutorials/create/http/dataflow-detail.png)
+![detalhes do fluxo de dados](../../../../images/tutorials/create/http/dataflow-detail.png)
 
-## Revisão
+## Consulte a seção
 
-O **[!UICONTROL Revisão]** é exibida, permitindo que você revise os detalhes do fluxo de dados antes de criá-lo. Os detalhes são agrupados nas seguintes categorias:
+A variável **[!UICONTROL Revisão]** é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes estão agrupados nas seguintes categorias:
 
-- **[!UICONTROL Conexão]**: Mostra o nome da conta, a plataforma de origem e o nome de origem.
-- **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados adere.
+- **[!UICONTROL Conexão]**: mostra o nome da conta, a plataforma de origem e o nome da origem.
+- **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados pertence.
 
-Depois de confirmar se os detalhes estão corretos, selecione **[!UICONTROL Concluir]**.
+Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Concluir]**.
 
 ![revisão](../../../../images/tutorials/create/http/review.png)
 
-## Obter URL de ponto de extremidade de fluxo
+## Obter URL de ponto de extremidade de streaming
 
-Com a conexão criada, a página de detalhes das fontes é exibida. Esta página mostra detalhes da conexão recém-criada, incluindo fluxos de dados executados anteriormente, ID e URL do endpoint de transmissão.
+Com a conexão criada, a página de detalhes das origens é exibida. Esta página mostra detalhes da conexão recém-criada, incluindo fluxos de dados executados anteriormente, ID e URL do ponto de extremidade de streaming.
 
 ![endpoint](../../../../images/tutorials/create/http/endpoint.png)
 
@@ -145,4 +145,4 @@ Com a conexão criada, a página de detalhes das fontes é exibida. Esta página
 
 Ao seguir este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o endpoint de transmissão para acessar uma variedade de [!DNL Data Ingestion] APIs. Para obter instruções sobre como criar uma conexão de transmissão na API, leia o [tutorial de criação de uma conexão de transmissão](../../../api/create/streaming/http.md).
 
-Para saber como transmitir dados para a Platform, leia o tutorial em [dados da série de tempo de transmissão](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para saber como transmitir dados para a Platform, leia o tutorial sobre [transmissão de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).

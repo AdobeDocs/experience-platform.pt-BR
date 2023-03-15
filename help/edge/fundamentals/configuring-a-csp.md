@@ -1,27 +1,26 @@
 ---
-title: Configuração de um CSP
-seo-title: Configuração de um CSP para Adobe Experience Platform Web SDK
-description: Saiba como configurar um CSP para o SDK da Web do Experience Platform
-seo-description: Saiba como configurar um CSP para o SDK da Web do Experience Platform
-keywords: configuração;configuração;SDK;borda;Web SDK;configurar;contexto;web;dispositivo;ambiente;configurações do Web sdk;política de segurança de conteúdo;
-translation-type: tm+mt
-source-git-commit: 4f07d41197add406fbdd82caee5177a1ddaa7d7e
+title: Configurar uma CSP
+seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
+description: Saiba como configurar uma CSP para o SDK da Web do Experience Platform
+seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
+keywords: configurando;configuração;SDK;borda;SDK da Web;configurar;contexto;web;dispositivo;ambiente;configurações do sdk da web;política de segurança de conteúdo;
+exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '333'
 ht-degree: 2%
 
 ---
 
+# Configurar uma CSP
 
-# Configuração de um CSP
+A [Política de segurança de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) O (CSP) é usado para restringir os recursos que um navegador pode usar. A CSP também pode limitar a funcionalidade de recursos de script e estilo. O Adobe Experience Platform Web SDK não requer um CSP, mas adicionar um pode reduzir a superfície de ataque para impedir ataques mal-intencionados.
 
-Uma [Política de Segurança de Conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) é usada para restringir os recursos que um navegador está autorizado a usar. O CSP também pode limitar a funcionalidade dos recursos de script e estilo. O Adobe Experience Platform Web SDK não requer um CSP, mas adicionar um pode reduzir a superfície do ataque para evitar ataques mal-intencionados.
-
-O CSP precisa refletir como [!DNL Platform Web SDK] é implantado e configurado. O CSP a seguir mostra quais alterações podem ser necessárias para que o SDK funcione corretamente. Outras configurações de CSP provavelmente serão necessárias, dependendo do seu ambiente específico.
+O documento de estratégia por país deve [!DNL Platform Web SDK] é implantado e configurado. A CSP a seguir mostra quais alterações podem ser necessárias para que o SDK funcione corretamente. Configurações adicionais da CSP provavelmente serão necessárias, dependendo do seu ambiente específico.
 
 ## Exemplo de política de segurança de conteúdo
 
-Os exemplos a seguir mostram como configurar um CSP.
+Os exemplos a seguir mostram como configurar uma CSP.
 
 ### Permitir acesso ao domínio de borda
 
@@ -30,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-No exemplo acima, `EDGE-DOMAIN` deve ser substituído pelo domínio primário. O domínio primário está configurado para a configuração [edgeDomain](configuring-the-sdk.md#edge-domain). Se nenhum domínio primário tiver sido configurado, `EDGE-DOMAIN` deverá ser substituído por `*.adobedc.net`. Se a migração de visitantes estiver ativada usando [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), a diretiva `connect-src` também precisará incluir `*.demdex.net`.
+No exemplo acima, `EDGE-DOMAIN` deve ser substituído pelo domínio próprio. O domínio próprio é configurado para o [edgeDomain](configuring-the-sdk.md#edge-domain) configuração. Se nenhum domínio próprio tiver sido configurado, `EDGE-DOMAIN` deve ser substituída por `*.adobedc.net`. Se a migração do visitante estiver ativada usando [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), o `connect-src` a diretiva também deve incluir `*.demdex.net`.
 
-### Usar NONCE para permitir scripts e elementos de estilo em linha
+### Usar NONCE para permitir script incorporado e elementos de estilo
 
-[!DNL Platform Web SDK] pode modificar o conteúdo da página e deve ser aprovado para criar scripts em linha e tags de estilo. Para fazer isso, o Adobe recomenda usar um nonce para a diretiva CSP [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src). Um nonce é um token aleatório gerado pelo servidor e criptografado que é gerado uma vez por cada visualização de página exclusiva.
+[!DNL Platform Web SDK] O pode modificar o conteúdo da página e deve ser aprovado para criar tags de script e estilo em linha. Para fazer isso, o Adobe recomenda o uso de um nonce para o [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) Diretiva CSP. Um nonce é um token aleatório criptograficamente forte gerado pelo servidor gerado uma vez para cada exibição de página exclusiva.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Além disso, o CSP nonce precisa ser adicionado como um atributo à tag de script [!DNL Platform Web SDK] [base code](installing-the-sdk.md#adding-the-code). [!DNL Platform Web SDK] usará esse nonce ao adicionar script em linha ou tags de estilo à página:
+Além disso, o nonce CSP precisa ser adicionado como um atributo à variável [!DNL Platform Web SDK] [código base](installing-the-sdk.md#adding-the-code) tag de script. [!DNL Platform Web SDK] O usará esse nonce ao adicionar scripts incorporados ou tags de estilo à página:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -51,7 +50,7 @@ Além disso, o CSP nonce precisa ser adicionado como um atributo à tag de scrip
 </script>
 ```
 
-Se um nonce não for usado, a outra opção é adicionar `unsafe-inline` às diretivas CSP `script-src` e `style-src`:
+Se um nonce não for usado, a outra opção será adicionar `unsafe-inline` para o `script-src` e `style-src` Diretivas da CSP:
 
 ```
 script-src 'unsafe-inline'
@@ -60,4 +59,4 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->O Adobe **não** recomenda especificar `unsafe-inline` porque permite que qualquer script seja executado na página, o que limita os benefícios do CSP.
+>O Adobe faz **não** recomendar especificação `unsafe-inline` porque permite que qualquer script seja executado na página, o que limita os benefícios da CSP.

@@ -17,7 +17,7 @@ ht-degree: 93%
 
 #### Recursos
 
-* Plug-ins que definem cookies agora usam o sinalizador seguro
+* Os plug-ins que definem cookies agora usam o sinalizador seguro
 
 ## 23 de junho de 2021
 
@@ -25,7 +25,7 @@ ht-degree: 93%
 
 #### Correções de erros
 
-* Correção de um problema em que getPercentPageViewed quebrava ao usar caracteres especiais
+* Correção de um problema em que getPercentPageViewed era interrompido ao usar caracteres especiais
 
 ## 20 de maio de 2021
 

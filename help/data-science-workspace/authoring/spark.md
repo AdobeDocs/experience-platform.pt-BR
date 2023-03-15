@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, acesso a dados, spark sdk, api de acesso a dados, receita de faísca, ler faísca, gravação faísca
+keywords: Experience Platform;página inicial;tópicos populares;acesso a dados;spark sdk;api de acesso a dados;spark revenue;read spark;write spark
 solution: Experience Platform
-title: Acesso a dados usando o Spark no Data Science Workspace
+title: Acesso a dados usando o Spark no Espaço de trabalho de ciência de dados
 type: Tutorial
 description: O documento a seguir contém exemplos de como acessar dados usando o Spark para uso no Data Science Workspace.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 ---
 
-# Acesso a dados usando o Spark no Data Science Workspace
+# Acesso a dados usando o Spark no Espaço de trabalho de ciência de dados
 
-O documento a seguir contém exemplos de como acessar dados usando o Spark para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite o [Acesso aos dados dos notebooks JupyterLab](../jupyterlab/access-notebook-data.md) documentação.
+O documento a seguir contém exemplos de como acessar dados usando o Spark para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite o [Acesso aos dados de notebooks JupyterLab](../jupyterlab/access-notebook-data.md) documentação.
 
 ## Introdução
 
-Usando [!DNL Spark] requer otimizações de desempenho que precisam ser adicionadas ao `SparkSession`. Além disso, também é possível configurar `configProperties` para ler e gravar em conjuntos de dados posteriormente.
+Usar [!DNL Spark] O requer otimizações de desempenho que precisam ser adicionadas ao `SparkSession`. Além disso, você também pode configurar `configProperties` para ler e gravar posteriormente em conjuntos de dados.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -45,15 +45,15 @@ Class Helper {
 }
 ```
 
-## Leitura de um conjunto de dados
+## Ler um conjunto de dados
 
 Ao usar o Spark, você tem acesso a dois modos de leitura: interativo e em lote.
 
-O modo interativo cria uma conexão JDBC (Java Database Connectivity) para [!DNL Query Service] e obtém resultados por meio de um JDBC regular `ResultSet` que é traduzido automaticamente para uma `DataFrame`. Esse modo funciona de forma semelhante ao [!DNL Spark] método `spark.read.jdbc()`. Esse modo destina-se somente a conjuntos de dados pequenos. Se seu conjunto de dados exceder 5 milhões de linhas, sugerimos que você troque para o modo de lote.
+O modo interativo cria uma conexão Java Database Connectivity (JDBC) para [!DNL Query Service] e obtém resultados por meio de um JDBC comum `ResultSet` que é traduzido automaticamente para um `DataFrame`. Esse modo funciona de forma semelhante ao modo incorporado [!DNL Spark] método `spark.read.jdbc()`. Esse modo destina-se somente a conjuntos de dados pequenos. Se o conjunto de dados exceder 5 milhões de linhas, é recomendável alternar para o modo de lote.
 
-O modo de lote usa [!DNL Query Service]comando CÓPIA para gerar conjuntos de resultados do Parquet em um local compartilhado. Esses arquivos Parquet podem ser processados posteriormente.
+Usos do modo de lote [!DNL Query Service]O comando COPY do para gerar conjuntos de resultados do Parquet em um local compartilhado. Esses arquivos do Parquet podem ser processados posteriormente.
 
-Um exemplo da leitura de um conjunto de dados no modo interativo pode ser visto abaixo:
+Um exemplo de leitura de um conjunto de dados no modo interativo pode ser visto abaixo:
 
 ```scala
   // Read the configs
@@ -78,7 +78,7 @@ Um exemplo da leitura de um conjunto de dados no modo interativo pode ser visto 
   }
 ```
 
-Da mesma forma, um exemplo de leitura de um conjunto de dados no modo de lote pode ser visto abaixo:
+Da mesma forma, um exemplo de leitura de um conjunto de dados em modo de lote pode ser visto abaixo:
 
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
@@ -101,7 +101,7 @@ df = df.select("column-a", "column-b").show()
 
 ### Cláusula DISTINCT
 
-A cláusula DISTINCT permite buscar todos os valores distintos em um nível de linha/coluna, removendo todos os valores duplicados da resposta.
+A cláusula DISTINCT permite buscar todos os valores distintos em nível de linha/coluna, removendo todos os valores duplicados da resposta.
 
 Um exemplo de uso da variável `distinct()` pode ser vista abaixo:
 
@@ -109,9 +109,9 @@ Um exemplo de uso da variável `distinct()` pode ser vista abaixo:
 df = df.select("column-a", "column-b").distinct().show()
 ```
 
-### cláusula WHERE
+### Cláusula WHERE
 
-O [!DNL Spark] O SDK permite dois métodos de filtragem: Uso de uma expressão SQL ou filtragem por meio de condições.
+A variável [!DNL Spark] O SDK permite dois métodos de filtragem: usando uma expressão SQL ou filtrando por meio de condições.
 
 Um exemplo do uso dessas funções de filtragem pode ser visto abaixo:
 
@@ -121,7 +121,7 @@ Um exemplo do uso dessas funções de filtragem pode ser visto abaixo:
 df.where("age > 15")
 ```
 
-#### Condições do filtro
+#### Condições de filtragem
 
 ```scala
 df.where("age" > 15 || "name" = "Steve")
@@ -129,7 +129,7 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### Cláusula ORDER BY
 
-A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). No [!DNL Spark] SDK, isso é feito usando o `sort()` .
+A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). No [!DNL Spark] SDK, isso é feito usando o `sort()` função.
 
 Um exemplo de uso da variável `sort()` pode ser vista abaixo:
 
@@ -149,7 +149,7 @@ df = df.limit(100)
 
 ## Gravação em um conjunto de dados
 
-Usar seu `configProperties` mapeamento, você pode gravar em um conjunto de dados no Experience Platform usando `QSOption`.
+Usar seu `configProperties` mapeamento, é possível gravar em um conjunto de dados no Experience Platform usando `QSOption`.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -169,4 +169,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## Próximas etapas
 
-O Adobe Experience Platform Data Science Workspace fornece uma amostra de receita Scala (Spark) que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Spark para acessar seus dados, consulte o [Repositório GitHub Scala do Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
+O Espaço de trabalho de ciência de dados da Adobe Experience Platform fornece uma amostra de fórmula do Scala (Spark) que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Spark para acessar seus dados, reveja o [Repositório GitHub da Escala do Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).

@@ -1,7 +1,7 @@
 ---
-keywords: destinos do analytics, destino do analytics
+keywords: destinos do analytics;destino do analytics
 title: Visão geral dos destinos do Analytics
-description: Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento do público-alvo. Essas plataformas fornecem insights exclusivos sobre o envolvimento e a conversão de seus visitantes mais valiosos.
+description: Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento do público-alvo. Essas plataformas fornecem insights exclusivos sobre o engajamento e a conversão de seus visitantes mais valiosos.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
@@ -14,28 +14,28 @@ ht-degree: 6%
 
 ## Visão geral {#overview}
 
-Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento do público-alvo. Essas plataformas fornecem insights exclusivos sobre o envolvimento e a conversão de seus visitantes mais valiosos.
+Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento do público-alvo. Essas plataformas fornecem insights exclusivos sobre o engajamento e a conversão de seus visitantes mais valiosos.
 
-## Destinos do Analytics suportados {#supported-destinations}
+## Destinos de análise compatíveis {#supported-destinations}
 
-Atualmente, o Adobe Experience Platform é compatível com os destinos do Analytics listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, o Adobe Experience Platform é compatível com os destinos de análise listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
-* [Adicionar extensão de rastreamento de site](adform.md)
+* [Extensão de rastreamento de site do Adobe Platform](adform.md)
 * [Extensão do Adobe Analytics](adobe-analytics.md)
 * [Extensão Adobe Media Analytics for Audio and Video](adobe-video-analytics.md)
-* [Extensão Clicktale](clicktale.md)
-* [Extensão do Contentsquare](contentsquare.md)
+* [Extensão do Clicktale](clicktale.md)
+* [Extensão Contentsquare](contentsquare.md)
 * [Extensão Decibel](decibel.md)
-* [Extensão do Demandbase](demandbase.md)
-* [Extensão DialogTech](dialogtech.md)
-* [Extensão de análise de tag do site global do Google](gtag-analytics.md)
+* [Extensão Demandbase](demandbase.md)
+* [Extensão Dialogtech](dialogtech.md)
+* [Extensão do Google Global Site Tag Analytics](gtag-analytics.md)
 * [Extensão do Google Universal Analytics](google-universal-analytics.md)
 * [Extensão JW Player Analytics (Beta)](jw-player-analytics.md)
-* [Extensão BSDK da Nielsen](nielsen-bsdk.md)
-* [Extensão Nielsen IMA Handler](nielsen-ima.md)
-* [Extensão Nielsen VideoJS Player Handler](nielsen-videojs.md)
-* [Extensão do Parse.ly Analytics](parsely.md)
-* [Extensão de métrica quântica](quantum-metric.md)
+* [Extensão BSDK Nielsen](nielsen-bsdk.md)
+* [Extensão do Manipulador de IMA Nielsen](nielsen-ima.md)
+* [Extensão de Manipulador Nielsen VideoJS Player](nielsen-videojs.md)
+* [Extensão do Analytics Parse.ly](parsely.md)
+* [Extensão de métrica Quantum](quantum-metric.md)
 * [Extensão SessionCam](sessioncam.md)
 * [Extensão TMMData](tmmdata.md)
-* [Extensão de rastreamento de conversão de texto](yext.md)
+* [Extensão de rastreamento de conversão do Yext](yext.md)

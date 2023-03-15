@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, esquemas;
+keywords: Experience Platform;página inicial;tópicos populares;preparação de dados;guia de api;esquemas;
 title: Endpoint da API de funções
-description: Você pode usar o endpoint `/functions` na API da Preparação de dados para validar as expressões de mapeamento e listar as funções de conjunto de mapeamento disponíveis.
+description: Você pode usar o endpoint "/functions" na API de preparação de dados para validar as expressões de mapeamento e listar as funções de conjunto de mapeamento disponíveis.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
@@ -10,13 +10,13 @@ ht-degree: 5%
 
 ---
 
-# Pontos de extremidade de funções
+# Endpoints de funções
 
-As funções do conjunto de mapeamento permitem transformar seus dados entre os esquemas de origem e de destino. Você pode usar o `/languages/el` endpoint para validar suas expressões e obter uma lista de todas as funções disponíveis do conjunto de mapeamentos.
+As funções do conjunto de mapeamento permitem transformar seus dados entre esquemas de origem e de destino. Você pode usar o `/languages/el` para validar suas expressões, bem como obter uma lista de todas as funções do conjunto de mapeamento disponíveis.
 
 ## Validar expressões
 
-Você pode validar se a expressão atual é válida fazendo uma solicitação POST para a variável `/languages/el/validate` endpoint .
+Você pode validar se sua expressão atual é válida fazendo uma solicitação POST para o `/languages/el/validate` terminal.
 
 **Formato da API**
 
@@ -50,9 +50,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o status de validação 
 }
 ```
 
-## Listar funções do conjunto de mapeamento
+## Listar funções de conjunto de mapeamento
 
-Você pode recuperar uma lista de todas as funções do conjunto de mapeamento disponíveis para você, fazendo uma solicitação de GET para a `/languages/el/functions` endpoint .
+Você pode recuperar uma lista de todas as funções do conjunto de mapeamento disponíveis fazendo uma solicitação GET para o `/languages/el/functions` terminal.
 
 **Formato da API**
 
@@ -72,11 +72,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as funções do conjunto de mapeamentos disponíveis.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as funções do conjunto de mapeamento disponíveis.
 
 >[!NOTE]
 >
->Essa resposta foi truncada para espaço.
+>Esta resposta foi truncada por questões de espaço.
 
 ```json
 [
@@ -115,9 +115,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as fu
 ]
 ```
 
-## Listar operadores de conjunto de mapeamento
+## Operadores de conjunto de mapeamento de lista
 
-É possível recuperar uma lista de todos os operadores do conjunto de mapeamentos disponíveis para você, fazendo uma solicitação de GET para a `/languages/el/operators` endpoint .
+Você pode recuperar uma lista de todos os operadores de conjunto de mapeamento disponíveis fazendo uma solicitação GET para o `/languages/el/operators` terminal.
 
 **Formato da API**
 
@@ -137,11 +137,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todos os operadores disponíveis do conjunto de mapeamentos.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todos os operadores de conjunto de mapeamento disponíveis.
 
 >[!NOTE]
 >
->Essa resposta foi truncada para espaço.
+>Esta resposta foi truncada por questões de espaço.
 
 ```json
 [

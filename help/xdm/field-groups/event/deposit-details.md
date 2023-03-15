@@ -1,16 +1,17 @@
 ---
-title: Grupo de Campos do Esquema Detalhes do Depósito
-description: Este documento fornece uma visão geral do grupo de campos Detalhes do Depósito.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+title: Grupo de Campos de Esquema de Detalhes do Depósito
+description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes do depósito.
+exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 5%
+source-wordcount: '109'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Detalhes do Depósito] grupo de campos de esquema
+# [!UICONTROL Detalhes do depósito] grupo de campos de esquema
 
-[!UICONTROL Detalhes do Depósito] é um grupo de campos de esquema padrão para a variável [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único `personalFinances.deposits` para um schema, que captura detalhes sobre um depósito financeiro.
+[!UICONTROL Detalhes do depósito] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único `personalFinances.deposits` para um esquema, que captura detalhes sobre um depósito financeiro.
 
 ![](../../images/field-groups/deposit-details.png)
 
@@ -20,6 +21,6 @@ ht-degree: 5%
 | `transaction` | [[!UICONTROL Transação]](../../data-types/transaction.md) | Descreve a transação financeira associada ao depósito. |
 | `mobileDeposit` | [!UICONTROL Booleano] | Indica se o depósito foi feito por meio de uma plataforma móvel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Para obter mais detalhes sobre o grupo de campos, consulte [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).
+Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

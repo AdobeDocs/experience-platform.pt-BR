@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, OData, odata, oData, Generic OData, dados genéricos
+keywords: Experience Platform;página inicial;tópicos populares;OData;odata;oData;OData genérico;odata genérico
 solution: Experience Platform
-title: Visão geral da fonte de OData genérica
+title: Visão Geral da Fonte OData Genérica
 description: Saiba como conectar OData genérico ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -11,25 +11,25 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Generic OData] source
+# [!DNL Generic OData] origem
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[!DNL Experience Platform] O oferece suporte para assimilar dados de um aplicativo de protocolos de terceiros. O suporte para provedores de protocolos inclui [!DNL Generic OData].
+[!DNL Experience Platform] O fornece suporte para assimilação de dados de um aplicativo de protocolos de terceiros. O suporte para provedores de protocolos inclui [!DNL Generic OData].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Generic OData] para [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Generic OData] para [!DNL Platform] uso de APIs ou da interface do usuário:
 
-## Connect [!DNL Generic OData] para [!DNL Platform] uso de APIs
+## Conectar [!DNL Generic OData] para [!DNL Platform] uso de APIs
 
-- [Criar uma conexão básica OData genérica usando a API do Serviço de fluxo](../../tutorials/api/create/protocols/odata.md)
-- [Explorar tabelas de dados usando a API do Serviço de fluxo](../../tutorials/api/explore/tabular.md)
-- [Criar um fluxo de dados para uma fonte de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/collect/protocols.md)
+- [Criar uma conexão OData genérica usando a API do Serviço de fluxo](../../tutorials/api/create/protocols/odata.md)
+- [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
+- [Criar um fluxo de dados para uma origem de protocolos usando a API de Serviço de Fluxo](../../tutorials/api/collect/protocols.md)
 
-## Connect [!DNL Generic OData] para [!DNL Platform] uso da interface do usuário
+## Conectar [!DNL Generic OData] para [!DNL Platform] uso da interface
 
-- [Criar uma conexão de origem OData genérica na interface do usuário](../../tutorials/ui/create/protocols/odata.md)
-- [Criar um fluxo de dados para uma conexão de origem de protocolos na interface do usuário](../../tutorials/ui/dataflow/protocols.md)
+- [Criar uma conexão de fonte OData genérica na interface do usuário](../../tutorials/ui/create/protocols/odata.md)
+- [Criar um fluxo de dados para uma conexão de origem de protocolos na interface](../../tutorials/ui/dataflow/protocols.md)

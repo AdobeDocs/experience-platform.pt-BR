@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, lista de namespace, namespace de lista
+keywords: Experience Platform;página inicial;tópicos populares;lista de namespaces;listar namespace;;home;popular topics;namespace list namespace
 solution: Experience Platform
 title: Listar namespaces de identidade disponíveis
-description: Liste todos os namespaces disponíveis.
+description: Listar todos os namespaces disponíveis.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
@@ -32,11 +32,11 @@ curl -X GET \
 
 **Resposta**
 
-A resposta inclui uma matriz de objetos, com cada objeto representando um namespace disponível. Namespaces com um &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL false]&quot; são namespaces padrão, enquanto aqueles com um &quot;[!UICONTROL custom]&quot; valor de &quot;[!UICONTROL true]&quot; são namespaces criados por sua organização.
+A resposta inclui uma matriz de objetos, com cada objeto representando um namespace disponível. Namespaces com um &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL false]&quot; são namespaces padrão, enquanto aqueles com um &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL true]&quot; são namespaces criados por sua organização.
 
 >[!NOTE]
 >
->Essa resposta foi truncada para espaço.
+>Esta resposta foi truncada por questões de espaço.
 
 ```json
 [
@@ -78,4 +78,4 @@ A resposta inclui uma matriz de objetos, com cada objeto representando um namesp
 
 ## Próximas etapas
 
-Acesse o próximo tutorial para [criar um namespace personalizado](./create-custom-namespace.md)
+Prosseguir para o próximo tutorial para [criar um namespace personalizado](./create-custom-namespace.md)

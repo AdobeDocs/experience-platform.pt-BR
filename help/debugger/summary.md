@@ -1,7 +1,7 @@
 ---
 title: Guia Resumo
 description: Saiba como usar a guia Resumo no Adobe Experience Platform Debugger.
-keywords: depurador, extensão do Experience Platform Debugger, chrome, extensão, resumo, limpar, solicitações, tela resumo, solução, informações, analytics, target, dtm, audience manager, launch, serviço de id
+keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;resumo;limpar;solicitações;tela resumo;solução;informações;analytics;destino;dtm;audience manager;iniciar;serviço de id
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
@@ -15,7 +15,7 @@ ht-degree: 73%
 
 # Guia Resumo
 
-Para executar o Adobe Experience Platform Debugger, abra a página que deseja examinar no navegador e selecione o ícone (![](images/start-icon.jpg)) na barra do navegador. A extensão do é aberta no **Resumo** guia .
+Para executar o Adobe Experience Platform Debugger, abra a página que deseja examinar no navegador e selecione o ícone (![](images/start-icon.jpg)) na barra do navegador. A extensão é aberta no **Resumo** guia.
 
 ![](images/summary.jpg)
 
@@ -85,11 +85,11 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Data de build </p> </td> 
-   <td colname="col2"> <p>A tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> biblioteca</a> data de compilação </p> </td> 
+   <td colname="col2"> <p>A tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> biblioteca</a> data da compilação </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ambiente </p> </td> 
-   <td colname="col2"> <p>O <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> ambiente</a> usada pela biblioteca de tags </p> </td> 
+   <td colname="col2"> <p>A variável <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> ambiente</a> usado pela biblioteca de tags </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensões </p> </td> 
@@ -112,7 +112,7 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID da propriedade </p> </td> 
-   <td colname="col2"> <p>O nome da propriedade de tag especificada na extensão </p> </td> 
+   <td colname="col2"> <p>O nome da propriedade de tag especificado na extensão </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Domínio de borda </p> </td> 
@@ -139,7 +139,7 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versão </p> </td> 
-   <td colname="col2"> <p>A versão da biblioteca de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external">ID de visitante</a>. </p> </td> 
+   <td colname="col2"> <p>A versão da biblioteca de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=pt-BR" format="html" scope="external">ID de visitante</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>

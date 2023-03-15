@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, REST genérico, repouso genérico
+keywords: Experience Platform;página inicial;tópicos populares;REST genérico;rest genérico
 solution: Experience Platform
-title: Criar uma conexão básica da API REST genérica usando a API do Serviço de fluxo
+title: Criar uma conexão básica de API REST genérica usando a API do serviço de fluxo
 type: Tutorial
-description: Saiba como conectar a API REST genérica ao Adobe Experience Platform usando a API do Serviço de fluxo.
+description: Saiba como conectar a REST API genérica ao Adobe Experience Platform usando a API do serviço de fluxo.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -12,62 +12,62 @@ ht-degree: 1%
 
 ---
 
-# Crie uma conexão básica da API REST genérica usando o [!DNL Flow Service] API
+# Crie uma conexão básica de REST genérica usando o [!DNL Flow Service] API
 
 >[!NOTE]
 >
->O [!DNL Generic REST API] A fonte está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com rótulo beta.
+>A variável [!DNL Generic REST API] a fonte está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
+Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Generic REST API] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Generic REST API] usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-### Obter credenciais necessárias
+### Coletar credenciais necessárias
 
-Para [!DNL Flow Service] para conectar-se com [!DNL Generic REST API], você deve fornecer credenciais válidas para o tipo de autenticação de sua escolha. [!DNL Generic REST API] O suporta o código de atualização OAuth 2 e a autenticação básica. Consulte as tabelas a seguir para obter informações sobre as credenciais dos dois tipos de autenticação compatíveis.
+A fim de [!DNL Flow Service] para se conectar com [!DNL Generic REST API], você deve fornecer credenciais válidas para o tipo de autenticação de sua escolha. [!DNL Generic REST API] O oferece suporte ao código de atualização OAuth 2 e à autenticação básica. Consulte as tabelas a seguir para obter informações sobre as credenciais dos dois tipos de autenticação compatíveis.
 
 #### Código de atualização do OAuth 2
 
 | Credencial | Descrição |
 | --- | --- |
-| `host` | O URL do host da fonte para a qual você está fazendo sua solicitação. Este valor é necessário e não pode ser ignorado usando `requestParameterOverride`. |
-| `authorizationTestUrl` | (Opcional) O URL do teste de autorização é usado para validar credenciais ao criar uma conexão base. Se não for fornecido, as credenciais serão verificadas automaticamente durante a etapa de criação da conexão de origem. |
+| `host` | O URL do host da origem para a qual você está fazendo sua solicitação. Este valor é obrigatório e não pode ser ignorado usando `requestParameterOverride`. |
+| `authorizationTestUrl` | (Opcional) O URL de teste de autorização é usado para validar credenciais ao criar uma conexão base. Se não forem fornecidas, as credenciais serão automaticamente verificadas durante a etapa de criação da conexão de origem. |
 | `clientId` | (Opcional) A ID do cliente associada à sua conta de usuário. |
 | `clientSecret` | (Opcional) O segredo do cliente associado à sua conta de usuário. |
-| `accessToken` | A credencial de autenticação primária usada para acessar seu aplicativo. O token de acesso representa a autorização de seu aplicativo, para acessar aspectos específicos dos dados de um usuário. Este valor é necessário e não pode ser ignorado usando `requestParameterOverride`. |
-| `refreshToken` | (Opcional) Um token usado para gerar um novo token de acesso, quando o token de acesso tiver expirado. |
-| `expirationDate` | (Opcional) Um valor oculto que define a data de expiração do seu token de acesso. |
+| `accessToken` | A credencial de autenticação primária usada para acessar seu aplicativo. O token de acesso representa a autorização do aplicativo para acessar aspectos específicos dos dados de um usuário. Este valor é obrigatório e não pode ser ignorado usando `requestParameterOverride`. |
+| `refreshToken` | (Opcional) Um token usado para gerar um novo token de acesso, quando o token de acesso expirou. |
+| `expirationDate` | (Opcional) Um valor oculto que define a data de expiração do token de acesso. |
 | `accessTokenUrl` | (Opcional) O endpoint do URL usado para buscar seu token de acesso. |
-| `requestParameterOverride` | (Opcional) Uma propriedade que permite especificar quais parâmetros de credenciais serão substituídos. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL Generic REST API] é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `requestParameterOverride` | (Opcional) Uma propriedade que permite especificar quais parâmetros de credencial serão substituídos. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Generic REST API] é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
 #### Autenticação básica
 
 | Credencial | Descrição |
 | --- | --- |
-| `host` | O URL do host da fonte para a qual você está fazendo sua solicitação. |
+| `host` | O URL do host da origem para a qual você está fazendo sua solicitação. |
 | `username` | O nome de usuário que corresponde à sua conta de usuário. |
 | `password` | A senha que corresponde à sua conta de usuário. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL Generic REST API] é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Generic REST API] é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
-## Criar uma conexão base
+## Criar uma conexão básica
 
-Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
+Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-[!DNL Generic REST API] O suporta autenticação básica e código de atualização OAuth 2. Consulte os exemplos a seguir para obter orientação sobre como autenticar com qualquer um dos tipos de autenticação.
+[!DNL Generic REST API] O oferece suporte à autenticação básica e ao código de atualização do OAuth 2. Consulte os exemplos a seguir para obter orientação sobre como realizar a autenticação com qualquer um dos tipos de autenticação.
 
-### Crie um [!DNL Generic REST API] conexão base usando o código de atualização OAuth 2
+### Criar um [!DNL Generic REST API] conexão básica usando o código de atualização OAuth 2
 
-Para criar uma ID de conexão base usando o código de atualização do OAuth 2, faça uma solicitação de POST para a variável `/connections` endpoint ao fornecer suas credenciais do OAuth 2.
+Para criar uma ID de conexão base usando o código de atualização OAuth 2, faça uma solicitação POST para o `/connections` ao fornecer suas credenciais do OAuth 2.
 
 **Formato da API**
 
@@ -77,7 +77,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL Generic REST API]:
+A solicitação a seguir cria uma conexão básica para [!DNL Generic REST API]:
 
 ```shell
 curl -X POST \
@@ -106,12 +106,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão base seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão base. |
-| `description` | (Opcional) Uma propriedade que pode ser incluída para fornecer mais informações sobre a conexão básica. |
-| `connectionSpec.id` | A ID de especificação de conexão associada ao [!DNL Generic REST API]. Essa ID fixa é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Plataforma. |
-| `auth.params.host` | O URL raiz usado para se conectar ao seu [!DNL Generic REST API] fonte. |
-| `auth.params.accessToken` | O token de acesso correspondente usado para autenticar sua fonte. Isso é necessário para a autenticação baseada em OAuth. |
+| `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão básica seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão básica. |
+| `description` | (Opcional) Uma propriedade que você pode incluir para fornecer mais informações sobre sua conexão básica. |
+| `connectionSpec.id` | A ID de especificação de conexão associada a [!DNL Generic REST API]. Essa ID fixa é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Platform. |
+| `auth.params.host` | O URL raiz usado para se conectar ao [!DNL Generic REST API] origem. |
+| `auth.params.accessToken` | O token de acesso correspondente usado para autenticar sua origem. Isso é necessário para a autenticação baseada em OAuth. |
 
 **Resposta**
 
@@ -124,9 +124,9 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identi
 }
 ```
 
-### Crie um [!DNL Generic REST API] conexão básica usando autenticação básica
+### Criar um [!DNL Generic REST API] conexão básica usando autenticação básica
 
-Para criar um [!DNL Generic REST API] conexão básica usando autenticação básica, faça uma solicitação de POST para `/connections` ponto final de [!DNL Flow Service] API ao fornecer suas credenciais básicas de autenticação.
+Para criar um [!DNL Generic REST API] conexão básica usando autenticação básica, faça uma solicitação POST ao `/connections` endpoint de [!DNL Flow Service] ao fornecer suas credenciais básicas de autenticação.
 
 **Formato da API**
 
@@ -136,7 +136,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL Generic REST API]:
+A solicitação a seguir cria uma conexão básica para [!DNL Generic REST API]:
 
 ```shell
 curl -X POST \
@@ -166,17 +166,17 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão base seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão base. |
-| `description` | (Opcional) Uma propriedade que pode ser incluída para fornecer mais informações sobre a conexão básica. |
-| `connectionSpec.id` | A ID de especificação de conexão associada ao [!DNL Generic REST API]. Essa ID fixa é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | O tipo de autenticação que você está usando para conectar sua fonte à Platform. |
-| `auth.params.host` | O URL raiz usado para se conectar ao seu [!DNL Generic REST API] fonte. |
-| `auth.params.username` | O nome de usuário que corresponde a sua [!DNL Generic REST API] fonte. Isso é necessário para a autenticação básica. |
-| `auth.params.password` | A senha que corresponde ao seu [!DNL Generic REST API] fonte. Isso é necessário para a autenticação básica. |
+| `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão básica seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão básica. |
+| `description` | (Opcional) Uma propriedade que você pode incluir para fornecer mais informações sobre sua conexão básica. |
+| `connectionSpec.id` | A ID de especificação de conexão associada a [!DNL Generic REST API]. Essa ID fixa é: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `auth.specName` | O tipo de autenticação que você está usando para conectar sua origem à Platform. |
+| `auth.params.host` | O URL raiz usado para se conectar ao [!DNL Generic REST API] origem. |
+| `auth.params.username` | O nome de usuário que corresponde ao seu [!DNL Generic REST API] origem. Isso é necessário para a autenticação básica. |
+| `auth.params.password` | A senha que corresponde ao seu [!DNL Generic REST API] origem. Isso é necessário para a autenticação básica. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu identificador de conexão exclusivo (`id`). Essa ID é necessária para explorar a estrutura e o conteúdo do arquivo da sua origem na próxima etapa.
+Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu identificador de conexão exclusivo (`id`). Essa ID é necessária para explorar a estrutura de arquivos e o conteúdo da fonte na próxima etapa.
 
 ```json
 {
@@ -190,4 +190,4 @@ Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu i
 Ao seguir este tutorial, você criou um [!DNL Generic REST API] conexão básica usando o [!DNL Flow Service] API. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
 
 * [Explore a estrutura e o conteúdo das tabelas de dados usando o [!DNL Flow Service] API](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados de protocolos para a plataforma usando o [!DNL Flow Service] API](../../collect/protocols.md)
+* [Crie um fluxo de dados para trazer dados de protocolos para a Platform usando o [!DNL Flow Service] API](../../collect/protocols.md)

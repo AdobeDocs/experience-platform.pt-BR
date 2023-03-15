@@ -1,25 +1,25 @@
 ---
-title: Grupo de campos do esquema do catálogo de produtos
-description: Este documento fornece uma visão geral do grupo de campos Catálogo de Produtos .
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+title: Grupo de campos de esquema do catálogo de produtos
+description: Este documento fornece uma visão geral do grupo de campos de esquema do Catálogo de produtos.
+exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 8%
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
-
 # [!UICONTROL Catálogo de produtos] grupo de campos de esquema
 
-[!UICONTROL Catálogo de produtos] é um grupo de campos de esquema padrão para a variável [[!UICONTROL Produto] classe](../../classes/product.md) que captura propriedades relacionadas a um catálogo de produtos.
+[!UICONTROL Catálogo de produtos] é um grupo de campos de esquema padrão para o [[!UICONTROL Produto] classe](../../classes/product.md) que captura propriedades relacionadas a um catálogo de produtos.
 
 ![](../../images/field-groups/product/product-catalog.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `productCatalogDescription` | String | Uma descrição para o catálogo de produtos. |
+| `productCatalogDescription` | String | Uma descrição do catálogo de produtos. |
 | `productCatalogName` | String | O nome do catálogo de produtos. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Para obter mais detalhes sobre o grupo de campos, consulte [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

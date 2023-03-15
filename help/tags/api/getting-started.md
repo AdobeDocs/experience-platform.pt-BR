@@ -61,7 +61,7 @@ A próxima tela solicita que você selecione um ou mais perfis de produto para a
 
 >[!NOTE]
 >
->Os perfis de produtos são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto deve selecionar para a API, entre em contato com o administrador.
+>Os perfis de produto são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto deve selecionar para a API, entre em contato com o administrador.
 
 Selecione os perfis de produto desejados na lista e selecione **Salvar API configurada** para concluir o registro da API.
 

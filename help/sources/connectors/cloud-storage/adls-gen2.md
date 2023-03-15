@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Azure Data Lake Storage Gen2, ADLS-Gen2, adls gen2, ADLS Gen2
+keywords: Experience Platform;página inicial;tópicos populares;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
-title: Visão Geral do Conector de Origem Gen2 do Armazenamento Azure Data Lake
+title: Visão geral do Conector de origem Gen2 de armazenamento do Azure Data Lake
 description: Saiba como conectar o Azure Data Lake Storage Gen2 à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -11,42 +11,42 @@ ht-degree: 0%
 
 ---
 
-# Conector Gen2 do Armazenamento Azure Data Lake
+# Conector Gen2 do Azure Data Lake Storage
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como o AWS, [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como o AWS, [!DNL Google Cloud Platform], e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
-As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes . [!DNL Platform] permite trazer dados do [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) por lotes.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. [!DNL Platform] permite trazer dados do [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) em lotes.
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
 >[!IMPORTANT]
 >
->O [!DNL Azure Data Lake Storage Gen2] A origem não suporta conectividade de mesma região com o Experience Platform. Se a instância do Azure estiver usando a mesma região de rede que o Experience Platform, não será possível estabelecer uma conexão com fontes Experience Platform. Não use as regiões do Azure East US 2, Azure West Europe e Azure Austrália East ao configurar seu [!DNL Azure Data Lake Storage Gen2] fonte. Atualmente, somente a conectividade entre regiões é compatível.
+>A variável [!DNL Azure Data Lake Storage Gen2] a origem não oferece suporte à conectividade da mesma região com o Experience Platform. Se sua instância do Azure estiver usando a mesma região de rede que o Experience Platform, não será possível estabelecer uma conexão com as origens de Experience Platform. Não use as regiões Leste dos EUA 2 do Azure, Europa Ocidental do Azure e Leste da Austrália do Azure ao configurar seu [!DNL Azure Data Lake Storage Gen2] origem. Atualmente, somente a conectividade entre regiões é compatível.
 
 ## Restrições de nomenclatura para arquivos e diretórios
 
-Esta é uma lista de restrições que devem ser consideradas ao nomear seu arquivo ou diretório de armazenamento em nuvem.
+Veja a seguir uma lista de restrições que você deve considerar ao nomear seu arquivo ou diretório de armazenamento em nuvem.
 
-- Os nomes de componentes de diretório e arquivo não podem exceder 255 caracteres.
-- Os nomes de diretório e arquivo não podem terminar com uma barra (`/`). Se fornecido, ele será removido automaticamente.
-- Os seguintes caracteres de URL reservados devem ser evitados corretamente: `! ' ( ) ; @ & = + $ , % # [ ]`
+- Os nomes dos componentes de diretório e arquivo não podem exceder 255 caracteres.
+- Nomes de diretório e arquivo não podem terminar com uma barra (`/`). Se fornecido, ele será removido automaticamente.
+- Os seguintes caracteres de URL reservados devem ter escape adequado: `! ' ( ) ; @ & = + $ , % # [ ]`
 - Os seguintes caracteres não são permitidos: `" \ / : | < > * ?`.
-- Caracteres de caminho de URL inválidos não permitidos. Pontos de código como `\uE000`, embora válidas em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081, etc.), também não são permitidos. Para obter as regras que regem as cadeias de caracteres Unicode no HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (...) e dois caracteres de ponto (.).
+- Caracteres de caminho de URL inválidos não permitidos. Pontos de código como `\uE000`, embora sejam válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para obter as regras que regem strings Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: regras básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (.) e dois caracteres de ponto (..).
 
-## Connect [!DNL Azure Data Lake Storage Gen2] para [!DNL Platform]
+## Conectar [!DNL Azure Data Lake Storage Gen2] para [!DNL Platform]
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Azure Data Lake Storage Gen2] para [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Azure Data Lake Storage Gen2] para [!DNL Platform] uso de APIs ou da interface do usuário:
 
 ### Uso de APIs
 
-- [Criar uma conexão base ADLS-Gen2 usando a API do Serviço de Fluxo](../../tutorials/api/create/cloud-storage/adls-gen2.md)
-- [Explore a estrutura de dados e o conteúdo de uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
-- [Criar um fluxo de dados para uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
+- [Criar uma conexão base ADLS-Gen2 usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de armazenamento na nuvem usando a API do serviço de fluxo](../../tutorials/api/explore/cloud-storage.md)
+- [Criar um fluxo de dados para uma fonte de armazenamento na nuvem usando a API do Serviço de fluxo](../../tutorials/api/collect/cloud-storage.md)
 
-### Uso da interface do usuário
+### Uso da interface
 
-- [Criar uma conexão de origem ADLS-Gen2 na interface do usuário](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Criar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário do](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Criar uma conexão de origem ADLS-Gen2 na interface](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Criar um fluxo de dados para uma conexão de armazenamento na nuvem na interface](../../tutorials/ui/dataflow/batch/cloud-storage.md)

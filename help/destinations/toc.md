@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
+source-git-commit: 94f682487630867aff2d1cb1898d62980055cdb4
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1038'
 ht-degree: 6%
 
 ---
@@ -122,7 +122,6 @@ ht-degree: 6%
       * [Conexão com o Salesforce CRM](./catalog/crm/salesforce.md)
       * [Conexão com o Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexão de alcance](catalog/crm/outreach.md)
-      * [Conexão do Zendesk](catalog/crm/zendesk.md)
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
@@ -135,8 +134,7 @@ ht-degree: 6%
       * [Visão geral dos destinos de marketing por email](./catalog/email-marketing/overview.md)
       * [Conexão com o Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Conexão com o Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [(API) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua-api.md)
-      * [(Arquivos) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Oracle Conexão Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Conexão do Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Conexão do Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Arquivos) Conexão do Marketing Cloud do Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
@@ -151,7 +149,7 @@ ht-degree: 6%
       * [Conexão de linha](./catalog/mobile-engagement/line.md)
    * Destinos de personalização {#personalization}
       * [Visão geral dos destinos de personalização](./catalog/personalization/overview.md)
-      * [Conexão com o Adobe Commerce](./catalog/personalization/adobe-commerce.md)
+      * [(Beta) Conexão com o Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Conexão com o Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Extensão do Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extensão do Adobe Target v2](./catalog/personalization/adobe-target-v2.md)

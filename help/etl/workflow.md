@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, ETL, etl, fluxo de trabalho etl, fluxo de trabalho ETL
+keywords: Experience Platform;página inicial;tópicos populares;fluxo de trabalho de ETL;etl;etl;fluxo de trabalho de ETL
 solution: Experience Platform
-title: Fluxo de trabalho ETL
+title: Fluxo de Trabalho ETL
 description: Várias ferramentas de extração, transformação e carregamento (ETL) podem diferir no formato, mas a maioria expõe funcionalidades semelhantes para auxiliar na combinação de várias fontes de dados.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
@@ -17,27 +17,27 @@ Várias ferramentas de extração, transformação e carregamento (ETL) podem di
 
 ## Exemplo de ferramenta ETL
 
-Os diagramas a seguir fornecem modelos de ações ETL comuns e uma experiência de usuário genérica com base em interações padrão. Essas imagens poderiam ser facilmente adaptadas para uma experiência específica do usuário de ETL.
+Os diagramas a seguir fornecem modelos de ações ETL comuns e uma experiência do usuário genérica com base em interações padrão. Essas imagens podem ser facilmente adaptadas para uma experiência específica do usuário de ETL.
 
-As ações ilustradas abaixo são descritas nas etapas descritas na seção [Guia de integração do ETL](home.md). Algumas etapas fazem referência a &quot;Figuras&quot; específicas, outras descrevem ações semelhantes ao fluxo de trabalho mostrado aqui.
+As ações ilustradas abaixo são descritas nas etapas descritas no [Guia de Integração do ETL](home.md). Algumas etapas fazem referência a &quot;Figuras&quot; específicas, outras descrevem ações semelhantes ao fluxo de trabalho mostrado aqui.
 
-### Figura 1 - Configurar o novo conector do Adobe Experience Platform:
+### Figura 1 - Configurar novo conector do Adobe Experience Platform:
 
 ![](images/image2.png)
 
-### Figura 2 - [!DNL Experience Platform] Conector ativado:
+### Figura 2: [!DNL Experience Platform] Conector ativado:
 
 ![](images/image3.png)
 
-### Figura 3 - Interface do usuário do gerenciamento de transformação ETL:
+### Figura 3 - Interface do usuário do gerenciamento de transformação do ETL:
 
 ![](images/image4.png)
 
-### Figura 4 - Nova interface de usuário de transformação, selecionando [!DNL Experience Platform] Conexão:
+### Figura 4 - Nova interface de transformação, seleção [!DNL Experience Platform] Conexão:
 
 ![](images/image5.png)
 
-### Figura 5: Procurando fonte [!DNL Experience Platform] Conjuntos de dados:
+### Figura 5: Procurando a origem [!DNL Experience Platform] Conjuntos de dados:
 
 ![](images/image6.png)
 
@@ -45,11 +45,11 @@ As ações ilustradas abaixo são descritas nas etapas descritas na seção [Gui
 
 ![](images/image7.png)
 
-### Figura 7 - Exibição de informações do esquema de campo a partir dos conjuntos de dados:
+### Figura 7 - Exibição de informações do esquema de campo de conjuntos de dados:
 
 ![](images/image8.png)
 
-### Figura 8 - Visualização de dados de conjuntos de dados:
+### Figura 8 - Visualização de dados dos conjuntos de dados:
 
 ![](images/image9.png)
 
@@ -57,14 +57,14 @@ As ações ilustradas abaixo são descritas nas etapas descritas na seção [Gui
 
 ![](images/image10.png)
 
-### Figura 10 - Definição do [!DNL Experience Data Model] Conjunto de dados de destino (XDM):
+### Figura 10 - Definição do [!DNL Experience Data Model] Conjunto de dados de destino do (XDM):
 
 ![](images/image11.png)
 
-### Figura 11 - Visualização de esquemas e metadados hierárquicos XDM para suportar mapeamento/transformações:
+### Figura 11 - Visualização dos esquemas hierárquicos e metadados XDM para suportar mapeamento/transformações:
 
 ![](images/image12.png)
 
-### Figura 12 - Salvar e executar/agendar as transformações:
+### Figura 12 - Salvar e executar/agendar as Transformações:
 
 ![](images/image13.png)

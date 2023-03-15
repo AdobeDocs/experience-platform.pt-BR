@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, Registro de esquema, Registro de esquema, comportamento, comportamentos, comportamentos, comportamentos, comportamentos;
+keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;comportamento;comportamento;comportamentos;comportamentos;
 solution: Experience Platform
-title: Comportamento do ponto de extremidade da API
-description: O endpoint /comporors na API do Registro de Schema permite recuperar todos os comportamentos disponíveis no contêiner global.
+title: Endpoint da API de comportamentos
+description: O ponto de extremidade /behavior na API do Registro de esquema permite recuperar todos os comportamentos disponíveis no contêiner global.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 6%
+source-wordcount: '425'
+ht-degree: 5%
 
 ---
 
-# Ponto de extremidade de comportamentos
+# Endpoint de comportamentos
 
-No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve referenciar um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso na Platform, há dois comportamentos disponíveis:
+No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve fazer referência a um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso na Platform, há dois comportamentos disponíveis:
 
-* **[!UICONTROL Registro]**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
-* **[!UICONTROL Série cronológica]**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
+* **[!UICONTROL Gravar]**: fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
+* **[!UICONTROL Séries cronológicas]**: fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
 
 >[!NOTE]
 >
->Há alguns casos de uso na Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Nesses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Veja o tutorial em [criação de um schema ad hoc](../tutorials/ad-hoc.md) para obter mais informações.
+>Há alguns casos de uso na Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Para esses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Veja o tutorial sobre [criação de um schema ad-hoc](../tutorials/ad-hoc.md) para obter mais informações.
 >
->Para obter informações mais gerais sobre comportamentos de dados em termos de como eles afetam a composição do schema, consulte o guia no [noções básicas da composição do schema](../schema/composition.md).
+>Para obter informações mais gerais sobre os comportamentos de dados em termos de como eles afetam a composição do schema, consulte o manual na [noções básicas da composição do esquema](../schema/composition.md).
 
-O `/behaviors` endpoint no [!DNL Schema Registry] A API permite exibir os comportamentos disponíveis na variável `global` contêiner.
+A variável `/behaviors` endpoint na variável [!DNL Schema Registry] A API permite visualizar os comportamentos disponíveis no `global` recipiente.
 
 ## Introdução
 
-O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de comportamentos {#list}
 
-Você pode recuperar uma lista de todos os comportamentos disponíveis, fazendo uma solicitação do GET para o `/behaviors` endpoint .
+Você pode recuperar uma lista de todos os comportamentos disponíveis fazendo uma solicitação GET para a `/behaviors` terminal.
 
 **Formato da API**
 
@@ -89,7 +89,7 @@ curl -X GET \
 
 ## Pesquisar um comportamento {#lookup}
 
-Você pode pesquisar um comportamento específico fornecendo a ID no caminho de uma solicitação do GET para o `/behaviors` endpoint .
+Você pode pesquisar um comportamento específico fornecendo a respectiva ID no caminho de uma solicitação GET para o `/behaviors` terminal.
 
 **Formato da API**
 
@@ -99,13 +99,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BEHAVIOR_ID}` | O `meta:altId` ou codificado por URL `$id` do comportamento que você deseja procurar. |
+| `{BEHAVIOR_ID}` | A variável `meta:altId` ou codificado em URL `$id` do comportamento que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir recupera os detalhes do comportamento do registro fornecendo `meta:altId` no caminho da solicitação.
+A solicitação a seguir recupera os detalhes do comportamento do registro fornecendo suas `meta:altId` no caminho da solicitação.
 
 ```shell
 curl -X GET \
@@ -119,7 +119,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do comportamento, incluindo sua versão, descrição e os atributos que o comportamento fornece às classes que o utilizam.
+Uma resposta bem-sucedida retorna os detalhes do comportamento, incluindo sua versão, descrição e os atributos que o comportamento fornece às classes que o empregam.
 
 ```json
 {
@@ -172,4 +172,4 @@ Uma resposta bem-sucedida retorna os detalhes do comportamento, incluindo sua ve
 
 ## Próximas etapas
 
-Este guia cobriu o uso do `/behaviors` endpoint no [!DNL Schema Registry] API. Para saber como atribuir um comportamento a uma classe usando a API, consulte [guia de endpoint de classes](./classes.md).
+Este guia abordou o uso do `/behaviors` endpoint na variável [!DNL Schema Registry] API. Para saber como atribuir um comportamento a uma classe usando a API, consulte a [manual de endpoint de classes](./classes.md).

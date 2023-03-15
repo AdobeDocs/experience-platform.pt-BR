@@ -1,25 +1,26 @@
 ---
-title: Classe do Provedor
+title: Classe do provedor
 description: Este documento fornece uma visão geral da classe Provedor no Experience Data Model (XDM).
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 4%
+source-wordcount: '150'
+ht-degree: 2%
 
 ---
 
 # [!UICONTROL Provedor] classe
 
-No Experience Data Model (XDM), a variável [!UICONTROL Provedor] captura o conjunto mínimo de propriedades que definem uma entidade de negócios provedor (como um provedor de saúde ou um provedor de seguros).
+No Experience Data Model (XDM), a variável [!UICONTROL Provedor] a classe captura o conjunto mínimo de propriedades que definem uma entidade comercial do provedor (como um provedor de assistência médica ou de seguro).
 
-![Estrutura de classes](../images/classes/provider.png)
+![Estrutura de classe](../images/classes/provider.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `providerName` | [[!UICONTROL Nome da pessoa]](../data-types/person-name.md) | O nome do provedor. |
-| `_id` | [!UICONTROL String] | Um identificador de string exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, evitar a duplicação de dados e buscar esse registro em serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não recebe um valor explícito durante a assimilação de dados. No entanto, ainda é possível optar por fornecer seus próprios valores de ID exclusivos. |
-| `providerId` | [!UICONTROL String] | Um identificador exclusivo para o provedor. |
+| `_id` | [!UICONTROL String] | Um identificador de sequência de caracteres exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, impedir a duplicação de dados e pesquisar esse registro nos serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não recebe um valor explícito durante a assimilação de dados. No entanto, você ainda pode optar por fornecer seus próprios valores de ID exclusivos, se desejar. |
+| `providerId` | [!UICONTROL String] | Um identificador exclusivo do provedor. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-A classe pode ser estendida com a variável [[!UICONTROL Provedor de saúde] grupo de campos](../field-groups/provider/healthcare-provider.md) descrever mais detalhes sobre um prestador de cuidados de saúde.
+A classe pode ser estendida com a variável [[!UICONTROL Provedor de assistência médica] grupo de campos](../field-groups/provider/healthcare-provider.md) para descrever mais detalhes sobre um prestador de cuidados de saúde.

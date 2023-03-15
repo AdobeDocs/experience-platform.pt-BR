@@ -9,28 +9,28 @@ ht-degree: 51%
 
 ---
 
-# Tipos de elemento de dados em extensões de borda
+# Tipos de elementos de dados em extensões de borda
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Em tags, os elementos de dados são aliases de dados em uma página da Web ou móvel, independentemente de onde esses dados sejam encontrados no evento recebido pelo servidor. Um elemento de dados pode ser referenciado por regras e atua como uma abstração para acessar esses dados. Quando a localização dos dados for alterada no futuro (como alterar a chave de evento que contém o valor), um único elemento de dados poderá ser reconfigurado, enquanto todas as regras que fazem referência a esse elemento de dados poderão permanecer inalteradas.
+Nas tags, os elementos de dados são aliases de dados em uma página da Web ou móvel, independentemente de onde esses dados se encontrem no evento recebido pelo servidor. Um elemento de dados pode ser referenciado por regras e atua como uma abstração para acessar esses dados. Quando a localização dos dados for alterada no futuro (como a alteração da chave de evento que contém o valor), um único elemento de dados poderá ser reconfigurado, enquanto todas as regras que referenciam esse elemento de dados poderão permanecer inalteradas.
 
-Os tipos de elementos de dados são fornecidos por extensões, e o autor da extensão determina como esses dados são recuperados. Por exemplo, você pode usar um tipo de elemento de dados para permitir que os usuários do Adobe Experience Platform recuperem dados da camada XDM ou de sua camada de dados personalizada.
+Os tipos de elementos de dados são fornecidos por extensões e o autor da extensão determina como esses dados são recuperados. Por exemplo, você pode usar um tipo de elemento de dados para permitir que os usuários do Adobe Experience Platform recuperem dados da camada XDM ou de sua camada de dados personalizada.
 
 Este documento aborda como definir tipos de elementos de dados para uma extensão de borda no Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [tipos de elemento de dados para extensões da Web](../web/data-element-types.md) em vez disso.
+>Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [tipos de elementos de dados para extensões da web](../web/data-element-types.md) em vez disso.
 >
->Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões do Edge. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+>Este documento pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de borda. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
 
 Os tipos de elementos de dados normalmente consistem no seguinte:
 
-1. Uma exibição mostrada na interface do usuário do Experience Platform e na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
-2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e recuperar partes de dados.
+1. Uma visualização mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações do elemento de dados.
+2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e recuperar dados.
 
 Caso deseje permitir que os usuários recuperem dados da camada de dados personalizada, o módulo poderá ter a aparência deste exemplo.
 

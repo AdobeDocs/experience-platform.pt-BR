@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home; tópicos populares; esquema; esquema; XDM; perfil individual; campos; esquemas; esquemas; detalhes pessoais; design do esquema; grupo de campos; grupo de campos;
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;detalhes pessoais;Design de esquema;grupo de campos;Grupo de campos;
 solution: Experience Platform
-title: Grupo de Campos do Esquema Detalhes do Contato Pessoal
-description: Este documento fornece uma visão geral do grupo de campos Detalhes do contato pessoal .
+title: Grupo de Campos de Esquema de Detalhes de Contato Pessoal
+description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes de contato pessoal.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 7%
+source-wordcount: '166'
+ht-degree: 6%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes de contato pessoal] é um grupo de campos de esquema padrão para a variável [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve as informações de contato de uma pessoa.
+[!UICONTROL Detalhes de contato pessoal] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve as informações de contato de uma pessoa individual.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -30,9 +30,9 @@ ht-degree: 7%
 | `mobilePhone` | [Número de telefone](../../data-types/phone-number.md) | Descreve o número de telefone celular da pessoa. |
 | `personalEmail` | [Endereço de email](../../data-types/email-address.md) | Descreve o endereço de email da pessoa. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

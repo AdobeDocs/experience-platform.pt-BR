@@ -1,6 +1,6 @@
 ---
 description: Saiba como usar a guia Logs no Adobe Experience Platform Debugger.
-keywords: depurador, extensão do Experience Platform Debugger, chrome, extensão, logs
+keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;logs
 seo-description: Experience Platform Debugger Logs screen
 seo-title: Logs
 title: Guia Logs
@@ -15,13 +15,13 @@ ht-degree: 26%
 
 # Guia Logs
 
-O **Logs** A guia fornece informações específicas para tags e implementações do SDK da Web da Adobe Experience Platform. É possível filtrar pelas soluções implementadas por meio das ferramentas associadas.
+A variável **Logs** A guia fornece informações específicas para tags e implementações do Adobe Experience Platform Web SDK. É possível filtrar pelas soluções implementadas por meio das ferramentas associadas.
 
 ![](images/logs.jpg)
 
 A guia Logs mostra informações em quatro colunas:
 
-**[!UICONTROL Soluções]:** Exibe ícones da solução Experience Cloud afetados pelo item registrado. Passe o cursos sobre o ícone para obter uma descrição do texto.
+**[!UICONTROL Soluções]:** Exibe ícones da solução Experience Cloud afetada pelo item registrado. Passe o cursos sobre o ícone para obter uma descrição do texto.
 
 **[!UICONTROL Ocorreu em]:** Mostra quando o problema registrado ocorreu durante a sessão.
 
@@ -32,8 +32,8 @@ A guia Logs mostra informações em quatro colunas:
 * Avisos
 * Erros
 
-**[!UICONTROL Mensagem de registro]:** Descreve o problema.
+**[!UICONTROL Mensagem de log]:** Descreve o problema.
 
 Algumas mensagens de registro incluem uma opção Mostrar código. Selecionar **[!UICONTROL Mostrar código]** para exibir o código condicional que determina se uma regra deve ser acionada.
 
-Para limpar o registro, selecione **[!UICONTROL Remover registros]**.
+Para limpar o registro, selecione **[!UICONTROL Remover logs]**.

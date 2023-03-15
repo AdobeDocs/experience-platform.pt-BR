@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares
+keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Introdução ao Adobe Experience Platform
 description: Este vídeo fornece uma rápida introdução ao Experience Platform e descreve os desafios comerciais que ele soluciona.
@@ -13,6 +13,6 @@ ht-degree: 12%
 
 # Introdução ao Adobe Experience Platform
 
-Este vídeo fornece uma rápida introdução a [!DNL Experience Platform] e descreve alguns dos desafios de negócios que ele resolve.
+Este vídeo fornece uma rápida introdução ao [!DNL Experience Platform] e descreve alguns dos desafios de negócios que ela soluciona.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

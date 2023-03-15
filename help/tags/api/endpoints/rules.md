@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /rules na API
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '898'
 ht-degree: 97%
 
 ---
@@ -15,7 +15,7 @@ No contexto de tags de coleção de dados, as regras controlam o comportamento d
 
 >[!NOTE]
 >
->Este documento aborda como gerenciar regras na API do reator. Para obter informações sobre como interagir com as regras na interface do usuário, consulte [Guia da interface do usuário](../../ui/managing-resources/rules.md).
+>Este documento aborda como gerenciar regras na API do reator. Para obter informações sobre como interagir com as regras na interface do usuário, consulte o [Guia da interface do usuário](../../ui/managing-resources/rules.md).
 
 Uma regra pertence a exatamente uma [propriedade](./properties.md). Uma propriedade pode ter muitas regras.
 
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade cujos componentes você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ GET /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | O `id` da regra que você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -260,7 +260,7 @@ POST /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `PROPERTY_ID` | O `id` da propriedade em que você está definindo uma regra. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -288,7 +288,7 @@ curl -X POST \
 | `attributes.enabled` | Um valor booleano indicando se a regra está ativada. |
 | `type` | O tipo de recurso que está sendo criado. Para esse endpoint, o valor deve ser `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -382,7 +382,7 @@ PATCH /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | O `id` da regra que você deseja atualizar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -412,7 +412,7 @@ curl -X PATCH \
 | `id` | O `id` da regra que você deseja atualizar. Ele deve corresponder ao valor `{RULE_ID}` fornecido no caminho da solicitação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -502,7 +502,7 @@ DELETE /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | O `id` da regra que você deseja excluir. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -542,7 +542,7 @@ GET  /rules/{RULE_ID}/libraries
 | --- | --- |
 | `{RULE_ID}` | O `id` da regra cujas bibliotecas você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -664,7 +664,7 @@ GET  /rules/{RULE_ID}/revisions
 | --- | --- |
 | `{RULE_ID}` | O `id` da regra cujas revisões você deseja listar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -842,7 +842,7 @@ GET /rules/{RULE_ID}/origin
 | --- | --- |
 | `{RULE_ID}` | O `id` da regra cuja origem você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -944,7 +944,7 @@ GET /rules/{RULE_ID}/property
 | --- | --- |
 | `{RULE_ID}` | O `id` da regra cuja propriedade você deseja pesquisar. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Solicitação**
 

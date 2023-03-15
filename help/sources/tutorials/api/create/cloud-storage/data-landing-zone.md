@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; home; tópicos populares;
+keywords: Experience Platform;página inicial;tópicos populares;
 solution: Experience Platform
-title: Conectar a zona de aterrissagem de dados ao Adobe Experience Platform usando a API do Serviço de fluxo
+title: Conectar a zona de aterrissagem de dados à Adobe Experience Platform usando a API do serviço de fluxo
 type: Tutorial
-description: Saiba como conectar o Adobe Experience Platform à zona de aterrissagem de dados usando a API do Serviço de fluxo.
+description: Saiba como conectar o Adobe Experience Platform à Data Landing Zone usando a API do serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
@@ -12,30 +12,30 @@ ht-degree: 5%
 
 ---
 
-# Connect [!DNL Data Landing Zone] à Adobe Experience Platform usando a API do Serviço de Fluxo
+# Conectar [!DNL Data Landing Zone] para o Adobe Experience Platform usando a API do Serviço de fluxo
 
 >[!IMPORTANT]
 >
->Essa página é específica do [!DNL Data Landing Zone] *source* conector no Experience Platform. Para obter informações sobre como se conectar ao [!DNL Data Landing Zone] *destino* , consulte o [[!DNL Data Landing Zone] página da documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Esta página é específica do [!DNL Data Landing Zone] *origem* conector no Experience Platform. Para obter informações sobre como se conectar ao [!DNL Data Landing Zone] *destino* conector, consulte a [[!DNL Data Landing Zone] página da documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] O é um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para o Adobe Experience Platform. Os dados são excluídos automaticamente do [!DNL Data Landing Zone] após sete dias.
+[!DNL Data Landing Zone] O é um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Adobe Experience Platform. Os dados são excluídos automaticamente do [!DNL Data Landing Zone] após sete dias.
 
-Este tutorial o orienta pelas etapas sobre como criar um [!DNL Data Landing Zone] conexão de origem usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Este tutorial também fornece instruções sobre como recuperar [!DNL Data Landing Zone], bem como exibir e atualizar suas credenciais.
+Este tutorial o guiará pelas etapas sobre como criar um [!DNL Data Landing Zone] conexão de origem usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Este tutorial também fornece instruções sobre como recuperar os [!DNL Data Landing Zone], bem como exibir e atualizar suas credenciais.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para criar com sucesso um [!DNL Data Landing Zone] conexão de origem usando o [!DNL Flow Service] API.
+As seções a seguir fornecem as informações adicionais que você precisará saber para criar uma [!DNL Data Landing Zone] conexão de origem usando o [!DNL Flow Service] API.
 
-Este tutorial também requer a leitura do guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md) para saber como autenticar nas APIs da plataforma e interpretar os exemplos de chamadas fornecidos na documentação.
+Este tutorial também requer que você leia o guia em [introdução às APIs da Platform](../../../../../landing/api-guide.md) para saber como autenticar em APIs da Platform e interpretar as chamadas de exemplo fornecidas na documentação.
 
-## Recuperar uma zona de aterrissagem utilizável
+## Recuperar uma zona de destino utilizável
 
-A primeira etapa do uso de APIs para acessar o [!DNL Data Landing Zone] é fazer uma solicitação GET para `/landingzone` endpoint da variável [!DNL Connectors] API ao fornecer `type=user_drop_zone` como parte do cabeçalho da solicitação.
+A primeira etapa no uso de APIs para acessar o [!DNL Data Landing Zone] é fazer um pedido GET à `/landingzone` endpoint do [!DNL Connectors] API ao fornecer `type=user_drop_zone` como parte do cabeçalho da solicitação.
 
 **Formato da API**
 
@@ -45,7 +45,7 @@ GET /data/foundation/connectors/landingzone?type=user_drop_zone
 
 | Cabeçalhos | Descrição |
 | --- | --- |
-| `user_drop_zone` | O `user_drop_zone` permite que a API diferencie um contêiner de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
+| `user_drop_zone` | A variável `user_drop_zone` O tipo permite que a API diferencie um contêiner de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
 
 **Solicitação**
 
@@ -75,11 +75,11 @@ A resposta a seguir retorna informações sobre uma zona de aterrissagem, inclui
 | Propriedade | Descrição |
 | --- | --- |
 | `containerName` | O nome da zona de aterrissagem recuperada. |
-| `containerTTL` | O tempo de expiração (em dias) aplicado aos seus dados na zona de aterrissagem. Os produtos de uma determinada zona de aterrissagem são eliminados após sete dias. |
+| `containerTTL` | O tempo de expiração (em dias) aplicado aos seus dados na zona de aterrissagem. Qualquer item em uma determinada zona de aterrissagem é excluído após sete dias. |
 
 ## Recuperar [!DNL Data Landing Zone] credenciais
 
-Para recuperar credenciais para um [!DNL Data Landing Zone], faça uma solicitação GET para `/credentials` endpoint da variável [!DNL Connectors] API.
+Para recuperar credenciais para um [!DNL Data Landing Zone], faça uma solicitação ao GET `/credentials` endpoint do [!DNL Connectors] API.
 
 **Formato da API**
 
@@ -103,7 +103,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta a seguir retorna as informações de credenciais para a zona de aterrissagem, incluindo a `SASToken` e `SASUri`, bem como a `storageAccountName` que corresponde ao contêiner da zona de aterrissagem.
+A resposta a seguir retorna as informações de credencial da sua zona de aterrissagem, incluindo a atual `SASToken` e `SASUri`, bem como a `storageAccountName` que corresponde ao seu contêiner de zona de aterrissagem.
 
 ```json
 {
@@ -116,14 +116,14 @@ A resposta a seguir retorna as informações de credenciais para a zona de aterr
 
 | Propriedade | Descrição |
 | --- | --- |
-| `containerName` | O nome da sua zona de aterrissagem. |
-| `SASToken` | O token de assinatura de acesso compartilhado para sua zona de aterrissagem. Essa cadeia de caracteres contém todas as informações necessárias para autorizar uma solicitação. |
-| `SASUri` | O URI da assinatura de acesso compartilhado para sua zona de aterrissagem. Essa string é uma combinação do URI à zona de aterrissagem para a qual você está sendo autenticado e seu token SAS correspondente, |
+| `containerName` | O nome da sua zona de destino. |
+| `SASToken` | O token de assinatura de acesso compartilhado para sua zona de aterrissagem. Esta cadeia de caracteres contém todas as informações necessárias para autorizar uma solicitação. |
+| `SASUri` | O URI de assinatura de acesso compartilhado para sua zona de aterrissagem. Essa string é uma combinação do URI para a zona de aterrissagem para a qual você está sendo autenticado e seu token SAS correspondente, |
 
 
 ## Atualizar [!DNL Data Landing Zone] credenciais
 
-Você pode atualizar seu `SASToken` ao fazer uma solicitação de POST à `/credentials` endpoint da variável [!DNL Connectors] API.
+Você pode atualizar seu `SASToken` fazendo uma solicitação POST para o `/credentials` endpoint do [!DNL Connectors] API.
 
 **Formato da API**
 
@@ -133,12 +133,12 @@ POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&act
 
 | Cabeçalhos | Descrição |
 | --- | --- |
-| `user_drop_zone` | O `user_drop_zone` permite que a API diferencie um contêiner de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
-| `refresh` | O `refresh` permite redefinir as credenciais da zona de aterrissagem e gerar automaticamente um novo `SASToken`. |
+| `user_drop_zone` | A variável `user_drop_zone` O tipo permite que a API diferencie um contêiner de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
+| `refresh` | A variável `refresh` permite redefinir suas credenciais de zona de aterrissagem e gerar automaticamente uma nova `SASToken`. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza suas credenciais da zona de aterrissagem.
+A solicitação a seguir atualiza suas credenciais de zona de aterrissagem.
 
 ```shell
 curl -X POST \
@@ -152,7 +152,7 @@ curl -X POST \
 
 **Resposta**
 
-A resposta a seguir retorna valores atualizados para seu `SASToken` e `SASUri`.
+A resposta a seguir retorna os valores atualizados para o `SASToken` e `SASUri`.
 
 ```json
 {
@@ -163,9 +163,9 @@ A resposta a seguir retorna valores atualizados para seu `SASToken` e `SASUri`.
 }
 ```
 
-## Explorar a estrutura e o conteúdo do arquivo da zona de aterrissagem
+## Explorar a estrutura e o conteúdo do arquivo de zona de aterrissagem
 
-Você pode explorar a estrutura de arquivos e o conteúdo de sua zona de aterrissagem fazendo uma solicitação de GET para a `connectionSpecs` endpoint da variável [!DNL Flow Service] API.
+Você pode explorar a estrutura de arquivos e o conteúdo da sua zona de destino fazendo uma solicitação GET para o `connectionSpecs` endpoint do [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -175,7 +175,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=root
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONNECTION_SPEC_ID}` | A ID da especificação de conexão que corresponde a [!DNL Data Landing Zone]. Essa ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | A ID de especificação de conexão que corresponde a [!DNL Data Landing Zone]. Essa ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Solicitação**
 
@@ -190,7 +190,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no diretório consultado. Anote o `path` propriedade do arquivo que deseja fazer upload, pois é necessário fornecê-lo na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no diretório consultado. Anote as `path` propriedade do arquivo que você deseja fazer upload, pois é necessário fornecê-lo na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -218,9 +218,9 @@ Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no
 ]
 ```
 
-## Visualizar a estrutura e o conteúdo do arquivo da zona de aterrissagem
+## Visualizar estrutura e conteúdo do arquivo de zona de aterrissagem
 
-Para inspecionar a estrutura de um arquivo na zona de aterrissagem, execute uma solicitação de GET enquanto fornece o caminho do arquivo e digite como um parâmetro de consulta.
+Para inspecionar a estrutura de um arquivo na zona de destino, execute uma solicitação GET enquanto fornece o caminho e o tipo do arquivo como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -230,11 +230,11 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parâmetro | Descrição | Exemplo |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | A ID da especificação de conexão que corresponde a [!DNL Data Landing Zone]. Essa ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | A ID de especificação de conexão que corresponde a [!DNL Data Landing Zone]. Essa ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 | `{OBJECT_TYPE}` | O tipo do objeto que você deseja acessar. | `file` |
 | `{OBJECT}` | O caminho e o nome do objeto que você deseja acessar. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | O tipo do arquivo. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
-| `{PREVIEW}` | Um valor booleano que define se a visualização de arquivo é compatível. | </ul><li>`true`</li><li>`false`</li></ul> |
+| `{PREVIEW}` | Um valor booleano que define se a visualização do arquivo é suportada. | </ul><li>`true`</li><li>`false`</li></ul> |
 
 **Solicitação**
 
@@ -312,20 +312,20 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo n
 }
 ```
 
-### Use `determineProperties` para detectar automaticamente as informações de propriedade do arquivo de um [!DNL Data Landing Zone]
+### Uso `determineProperties` para detectar automaticamente as informações de propriedade do arquivo de um [!DNL Data Landing Zone]
 
-Você pode usar o `determineProperties` para detectar automaticamente as informações de propriedade do conteúdo do arquivo de sua [!DNL Data Landing Zone] ao fazer uma chamada GET para explorar o conteúdo e a estrutura de sua fonte.
+Você pode usar o `determineProperties` parâmetro para detectar automaticamente as informações de propriedade do conteúdo do arquivo do [!DNL Data Landing Zone] ao fazer uma chamada GET para explorar o conteúdo e a estrutura da fonte.
 
 #### `determineProperties` casos de uso
 
-A tabela a seguir descreve cenários diferentes que podem ser encontrados ao usar o `determineProperties` ou forneça manualmente informações sobre seu arquivo.
+A tabela a seguir descreve os diferentes cenários que podem ser encontrados ao usar o `determineProperties` parâmetro de consulta ou fornecer manualmente informações sobre o arquivo.
 
 | `determineProperties` | `queryParams` | Resposta |
 | --- | --- | --- |
-| Verdadeiro | N/D | If `determineProperties` é fornecido como um parâmetro de consulta, então a detecção de propriedades de arquivo ocorre e a resposta retorna um novo `properties` chave que inclui informações sobre tipo de arquivo, tipo de compactação e delimitador de coluna. |
-| N/D | Verdadeiro | Se os valores para tipo de arquivo, tipo de compactação e delimitador de coluna forem fornecidos manualmente como parte de `queryParams`, são usadas para gerar o schema e as mesmas propriedades são retornadas como parte da resposta. |
-| Verdadeiro | Verdadeiro | Se ambas as opções forem feitas simultaneamente, um erro será retornado. |
-| N/D | N/D | Se nenhuma das duas opções for fornecida, um erro será retornado porque não há como obter propriedades para a resposta. |
+| Verdadeiro | N/D | Se `determineProperties` for fornecido como um parâmetro de consulta, ocorrerá a detecção das propriedades do arquivo e a resposta retornará um novo `properties` chave que inclui informações sobre tipo de arquivo, tipo de compactação e delimitador de coluna. |
+| N/D | Verdadeiro | Se os valores de tipo de arquivo, tipo de compactação e delimitador de coluna forem fornecidos manualmente como parte de `queryParams`, elas serão usadas para gerar o esquema e as mesmas propriedades serão retornadas como parte da resposta. |
+| Verdadeiro | Verdadeiro | Se ambas as opções forem executadas simultaneamente, um erro será retornado. |
+| N/D | N/D | Se nenhuma das duas opções for fornecida, um erro será retornado, pois não há como obter propriedades para a resposta. |
 
 **Formato da API**
 
@@ -350,7 +350,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo nomes de arquivo e tipos de dados, bem como uma `properties` chave, contendo informações sobre `fileType`, `compressionType`e `columnDelimiter`.
+Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo nomes de arquivos e tipos de dados, bem como uma `properties` chave, contendo informações sobre `fileType`, `compressionType`, e `columnDelimiter`.
 
 +++Clique
 
@@ -445,16 +445,16 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo n
 
 | Propriedade | Descrição |
 | --- | --- |
-| `properties.fileType` | O tipo de arquivo correspondente do arquivo consultado. Os tipos de arquivos compatíveis são: `delimited`, `json`e `parquet`. |
+| `properties.fileType` | O tipo de arquivo correspondente do arquivo consultado. Os tipos de arquivos compatíveis são: `delimited`, `json`, e `parquet`. |
 | `properties.compressionType` | O tipo de compactação correspondente usado para o arquivo consultado. Os tipos de compactação compatíveis são: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 | `properties.columnDelimiter` | O delimitador de coluna correspondente usado para o arquivo consultado. Qualquer valor de caractere único é um delimitador de coluna permitido. O valor padrão é uma vírgula `(,)`. |
 
 
 ## Criar uma conexão de origem
 
-Uma conexão de origem cria e gerencia a conexão com a fonte externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e ID de conexão de origem necessárias para criar um fluxo de dados. Uma instância de conexão de origem é específica de um locatário e da Organização IMS.
+Uma conexão de origem cria e gerencia a conexão com a origem externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e a ID da conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica para um locatário e uma Organização IMS.
 
-Para criar uma conexão de origem, faça uma solicitação de POST para a variável `/sourceConnections` endpoint da variável [!DNL Flow Service] API.
+Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API.
 
 
 **Formato da API**
@@ -490,10 +490,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da sua [!DNL Data Landing Zone] conexão de origem. |
-| `data.format` | O formato dos dados que você deseja trazer para a plataforma. |
-| `params.path` | O caminho para o arquivo que você deseja trazer para a plataforma. |
-| `connectionSpec.id` | A ID da especificação de conexão que corresponde a [!DNL Data Landing Zone]. Essa ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `name` | O nome do seu [!DNL Data Landing Zone] conexão de origem. |
+| `data.format` | O formato dos dados que você deseja trazer para a Platform. |
+| `params.path` | O caminho para o arquivo que você deseja trazer para a Platform. |
+| `connectionSpec.id` | A ID de especificação de conexão que corresponde a [!DNL Data Landing Zone]. Essa ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Resposta**
 
@@ -508,4 +508,4 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você recuperou seu [!DNL Data Landing Zone] credenciais, explorou sua estrutura de arquivos para encontrar o arquivo que deseja trazer para a plataforma e criou uma conexão de origem para começar a trazer seus dados para a plataforma. Agora você pode prosseguir para o próximo tutorial, onde você aprenderá a usar [crie um fluxo de dados para trazer os dados de armazenamento em nuvem para a plataforma usando o [!DNL Flow Service] API](../../collect/cloud-storage.md).
+Ao seguir este tutorial, você recuperou seus [!DNL Data Landing Zone] , explorou sua estrutura de arquivo para encontrar o arquivo que deseja trazer para a Platform e criou uma conexão de origem para começar a trazer seus dados para a Platform. Agora você pode prosseguir para o próximo tutorial, onde aprenderá a [criar um fluxo de dados para trazer dados de armazenamento em nuvem para a Platform usando o [!DNL Flow Service] API](../../collect/cloud-storage.md).

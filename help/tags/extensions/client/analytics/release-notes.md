@@ -11,11 +11,11 @@ ht-degree: 90%
 
 # Notas de versão da extensão do Adobe Analytics
 
-Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics.
+Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analytics.
 
 >[!NOTE]
 >
->A extensão de tag do Analytics, se frequentemente atualizada em resposta a atualizações no [Biblioteca de JavaScript do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte a [Notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
+>A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [Biblioteca JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte a [Notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
 
 ## 23 de setembro de 2022
 
@@ -23,8 +23,8 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 **Recursos**:
 
-* Atualizado para AppMeasurement v2.23.0.
-* A extensão agora pode coletar alta entropia [dicas do cliente agente do usuário](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) conforme suportado pela versão mais recente do AppMeasurement.
+* Atualizado para o AppMeasurement v2.23.0.
+* A extensão agora pode coletar dados de alta entropia [user-agent client hints (dicas do cliente do user-agent)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) conforme suportado pela versão mais recente do AppMeasurement.
 
 ## 28 de fevereiro de 2022
 
@@ -32,7 +32,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 
 **Correções de erros**:
 
-* Remoção de algumas instruções de depuração no AppMeasurement.
+* Removidas algumas instruções de depuração no AppMeasurement.
 
 ## 29 de novembro de 2021
 
@@ -49,7 +49,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 **Correções de erros**:
 
 * AppMeasurement atualizado para v2.22.2.
-* Remoção de buildInfo.environment obsoleto
+* Remoção do buildInfo.environment obsoleto
 
 ## 24 de agosto de 2021
 
@@ -172,7 +172,7 @@ Esta é uma lista de notas de versão para a extensão de tag do Adobe Analytics
 * Atualização da extensão do Adobe Analytics para oferecer suporte à DIL 9.2 para o Audience Manager
 
 * Atualização da extensão para oferecer suporte ao [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR#version-2.15.0)
-* A seguinte caixa de seleção foi removida, pois não há mais suporte: &quot;Não anexe o IFRAME de publicação de destino aos destinos DOM ou fire&quot;
+* A caixa de seleção a seguir foi removida, pois não há mais suporte: &quot;Não anexe o IFRAME de publicação de destino aos destinos DOM ou fire&quot;
 
 ## 4 de junho de 2019
 

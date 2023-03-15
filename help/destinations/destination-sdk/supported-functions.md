@@ -1,58 +1,59 @@
 ---
-description: O Experience Platform Destination SDK usa modelos Pebble, permitindo transformar os dados exportados do Experience Platform no formato exigido pelo seu destino.
-title: Funções de transformação compatíveis no Destination SDK
-source-git-commit: 840404741da06ba1593b227c7d6ba459b5f43110
+description: O Experience Platform Destination SDK usa modelos Pebble, permitindo transformar os dados exportados do Experience Platform no formato exigido pelo destino.
+title: Funções de transformação compatíveis com o Destination SDK
+exl-id: 79bed9e4-5897-4c69-a4e9-a325a408302d
+source-git-commit: d18b662ba8a8415dd71ed89a806e770f3cfbe72a
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 3%
 
 ---
 
-# Funções de transformação compatíveis no Destination SDK
+# Funções de transformação compatíveis com o Destination SDK
 
 ## Visão geral {#overview}
 
-Experience Platform Destination SDK use [[!DNL Pebble] modelos](https://pebbletemplates.io/), permitindo transformar os dados exportados do Experience Platform no formato exigido pelo destino.
+Experience Platform Destination SDK usa [[!DNL Pebble] modelos](https://pebbletemplates.io/), permitindo transformar os dados exportados do Experience Platform no formato exigido pelo destino.
 
-O Experience Platform [!DNL Pebble] A implementação tem algumas alterações, em comparação com a versão predefinida fornecida pelo [!DNL Pebble]. Além disso, além das funções prontas para uso fornecidas pelo [!DNL Pebble], o Adobe criou algumas funções adicionais que podem ser usadas com o Destination SDK.
+O EXPERIENCE PLATFORM [!DNL Pebble] A implementação do tem algumas alterações, em comparação com a versão pronta para uso fornecida pelo [!DNL Pebble]. Além disso, além das funções prontas para uso fornecidas pelo [!DNL Pebble], o Adobe criou algumas funções adicionais que podem ser usadas com o Destination SDK.
 
 ## Onde usar {#where-to-use}
 
-Use as funções compatíveis listadas mais abaixo nesta página quando [criação de um template de transformação de mensagem](./create-template.md) para os dados exportados do Experience Platform para seu destino. O modelo de transformação de mensagem é usado na variável [configuração do servidor de destino](./server-and-template-configuration.md) para destinos de transmissão.
+Use as funções suportadas listadas mais abaixo nesta página quando [criação de um template de transformação de mensagem](./create-template.md) para os dados exportados do Experience Platform para o seu destino. O template de transformação de mensagem é usado no campo [configuração do servidor de destino](./server-and-template-configuration.md) para destinos de transmissão.
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender os conceitos e as funções nesta página de referência, leia o [formato de mensagem](/help/destinations/destination-sdk/message-format.md) documento primeiro. Você precisa entender o [estrutura de um perfil](/help/destinations/destination-sdk/message-format.md#profile-structure) no Experience Platform antes de usar [!DNL Pebble] modelos para transformar e os dados exportados.
+Para entender os conceitos e as funções nesta página de referência, leia a [formato da mensagem](/help/destinations/destination-sdk/message-format.md) documento primeiro. Você precisa entender o [estrutura de um perfil](/help/destinations/destination-sdk/message-format.md#profile-structure) no Experience Platform antes de poder usar [!DNL Pebble] modelos para transformar e exportar os dados.
 
-Antes de avançar para as funções documentadas abaixo, analise os exemplos de modelos na seção [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento](/help/destinations/destination-sdk/message-format.md#using-templating). Os exemplos lá começam muito simples e aumentam a complexidade.
+Antes de avançar para as funções documentadas abaixo, revise os exemplos de modelo na seção [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento](/help/destinations/destination-sdk/message-format.md#using-templating). Os exemplos aqui começam de forma muito simples e aumentam em complexidade.
 
-## Suportado [!DNL Pebble] funções {#supported-functions}
+## Compatível [!DNL Pebble] funções {#supported-functions}
 
 No [!DNL Pebble] seção de tags, o Destination SDK suporta apenas:
 * [filtro](https://pebbletemplates.io/wiki/tag/filter/)
 * [for](https://pebbletemplates.io/wiki/tag/for/)
-* [if](https://pebbletemplates.io/wiki/tag/if/)
+* [se](https://pebbletemplates.io/wiki/tag/if/)
 * [set](https://pebbletemplates.io/wiki/tag/set/)
 
 >[!TIP]
 >
->Usando `for` é diferente ao iterar por *array* ou *mapa* elementos em um template. Ao iterar por meio de uma matriz, você pode obter o elemento diretamente. Ao iterar por um mapa, você obtém cada entrada de mapa, que tem um par de valor chave.
+>Usar `for` é diferente ao iterar através *matriz* ou *mapa* elementos em um modelo. Ao iterar por meio de uma matriz, você pode obter o elemento diretamente. Ao percorrer um mapa, você obtém cada entrada de mapa, que tem um par de valores chave.
 >
-> * Para obter um exemplo de um elemento de matriz, pense nas identidades em um [identityMap](./message-format.md#identities) namespace, onde você pode iterar por meio de elementos como `identityMap.gaid`, `identityMap.email`ou semelhante.
+> * Para obter um exemplo de um elemento de matriz, pense nas identidades em um [identityMap](./message-format.md#identities) namespace, em que você pode iterar por meio de elementos como `identityMap.gaid`, `identityMap.email`, ou similar.
 > * Para obter um exemplo de um elemento de mapa, pense em [segmentMembership](./message-format.md#segment-membership).
 
 
-No [!DNL Pebble] seção de filtro, o Destination SDK suporta todas as funções. Um exemplo a seguir mostra como a função `date` pode ser usada dentro do Destination SDK.
+No [!DNL Pebble] seção de filtro, o Destination SDK suporta todas as funções. Um exemplo mais abaixo mostra como a `date` função pode ser usada dentro do Destination SDK.
 
-No [!DNL Pebble] seção funções, Adobe faz *not* apoiará [intervalo](https://pebbletemplates.io/wiki/function/range/) .
+No [!DNL Pebble] funções, o Adobe faz *não* apoiar a [intervalo](https://pebbletemplates.io/wiki/function/range/) função.
 
-## Exemplo de como a função `date` é usada {#date-function}
+## Exemplo de como a variável `date` é usada {#date-function}
 
-Para exemplificar como [!DNL Pebble] são usadas no Destination SDK, veja abaixo como a função de data ([link na documentação do Pebble](https://pebbletemplates.io/wiki/filter/date/)) é usada para transformar o formato de um carimbo de data e hora.
+Para exemplificar como [!DNL Pebble] são usadas no Destination SDK, veja abaixo como a função de data ([link na documentação do Pebble](https://pebbletemplates.io/wiki/filter/date/)) é usado para transformar o formato de um carimbo de data e hora.
 
 ### Caso de uso
 
-Você deseja alterar a variável `lastQualificationTime` carimbo de data e hora do padrão [ISO 8601](https://pt.wikipedia.org/wiki/ISO_8601) que o Experience Platform exporta para outro valor preferido pelo seu destino.
+Você deseja alterar o `lastQualificationTime` carimbo de data e hora do padrão [ISO 8601](https://pt.wikipedia.org/wiki/ISO_8601) que o Experience Platform exporta para outro valor preferido pelo seu destino.
 
 ### Exemplo
 
@@ -78,9 +79,9 @@ Você deseja alterar a variável `lastQualificationTime` carimbo de data e hora 
 }
 ```
 
-## Funções adicionadas por Adobe {#functions-added-by-adobe}
+## Funções adicionadas pelo Adobe {#functions-added-by-adobe}
 
-Além das funções prontas para uso fornecidas pelo [!DNL Pebble], consulte abaixo as funções adicionais criadas pelo Adobe que você pode usar nas exportações de dados.
+Além das funções prontas para uso fornecidas pela [!DNL Pebble], veja abaixo as funções adicionais criadas pelo Adobe que podem ser usadas nas exportações de dados.
 
 ### `addedSegments` e `removedSegments` funções {#addedsegments-removedsegments-functions}
 
@@ -194,7 +195,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## Próximas etapas {#next-steps}
 
-Agora você sabe qual [!DNL Pebble] As funções do são compatíveis com o Destination SDK, bem como como como usá-las para ajustar o formato dos dados exportados para atender às suas necessidades. Em seguida, você deve revisar as seguintes páginas:
+Agora você sabe qual [!DNL Pebble] As funções são compatíveis com o Destination SDK, bem como sobre como usá-las para ajustar o formato dos dados exportados para atender às suas necessidades. Em seguida, você deve revisar as seguintes páginas:
 
 * [Criar e testar um modelo de transformação de mensagem](/help/destinations/destination-sdk/create-template.md)
-* [Renderizar operações da API do modelo](/help/destinations/destination-sdk/render-template-api.md)
+* [Renderizar operações de API de modelo](/help/destinations/destination-sdk/render-template-api.md)

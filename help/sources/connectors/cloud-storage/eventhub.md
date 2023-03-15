@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Hubs de eventos do Azure, Hubs de eventos do azure, Hubs de eventos, Hubs de eventos
+keywords: Experience Platform;página inicial;tópicos populares;Hubs de Eventos do Azure;Hubs de Eventos do Azure;Hubs de Eventos;;popular topics;Azure Event Hubs;event hubs
 solution: Experience Platform
-title: Visão Geral do Conector de Origem dos Hubs de Eventos do Azure
-description: Saiba como conectar Hubs de Eventos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
+title: Visão geral do conector de origem dos Hubs de eventos do Azure
+description: Saiba como conectar os Hubs de Eventos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -14,37 +14,37 @@ ht-degree: 0%
 
 # [!DNL Azure Event Hubs] conector
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como o AWS, [!DNL Google Cloud Platform]e [!DNL Azure]. Você pode trazer seus dados desses sistemas para a Plataforma.
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como o AWS, [!DNL Google Cloud Platform], e [!DNL Azure]. Você pode trazer seus dados desses sistemas para a Platform.
 
-As fontes de armazenamento em nuvem podem trazer seus próprios dados para a plataforma sem precisar baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes . A Platform permite trazer dados do [!DNL Event Hubs] em tempo real.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. A Platform permite trazer dados de [!DNL Event Hubs] em tempo real.
 
 ## Dimensionamento com [!DNL Event Hubs]
 
-O fator de escala do [!DNL Event Hubs] A instância deve ser aumentada se você precisar assimilar dados de alto volume, aumentar o paralelismo ou aumentar a velocidade da plataforma de assimilação.
+O fator de escala do seu [!DNL Event Hubs] A instância do deve ser aumentada se for necessário assimilar dados de alto volume, aumentar o paralelismo ou aumentar a velocidade da plataforma de assimilação.
 
-### Assimilar dados de maior volume
+### Dados de maior volume de entrada
 
-Atualmente, o volume máximo de dados que você pode obter do [!DNL Event Hubs] A conta para a Platform é de 2000 registros por segundo. Para aumentar e assimilar dados de volume mais alto, entre em contato com o representante do Adobe.
+Atualmente, o volume máximo de dados que você pode trazer de sua [!DNL Event Hubs] para a Platform é de 2000 registros por segundo. Para aumentar e assimilar dados de volume maior, entre em contato com o representante da Adobe.
 
-### Aumentar o paralelismo em [!DNL Event Hubs] e Plataforma
+### Aumentar paralelismo em [!DNL Event Hubs] e Platform
 
-O paralelismo refere-se à execução simultânea das mesmas tarefas em várias unidades de processamento para aumentar a velocidade e o desempenho. Você pode aumentar o paralelismo no [!DNL Event Hubs] além disso, aumentando a partição ou adquirindo mais unidades de processamento para sua [!DNL Event Hubs] conta. Veja isso [[!DNL Event Hubs] documento sobre dimensionamento](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) para obter mais informações.
+Paralelismo refere-se à execução simultânea das mesmas tarefas em várias unidades de processamento para aumentar a velocidade e o desempenho. É possível aumentar o paralelismo no [!DNL Event Hubs] lado aumentando a partição ou adquirindo mais unidades de processamento para o seu [!DNL Event Hubs] conta. Veja isto [[!DNL Event Hubs] documento no dimensionamento](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) para obter mais informações.
 
-Para aumentar a taxa de velocidade de assimilação no lado da plataforma, a Platform deve aumentar o número de tarefas no conector de origem para ler em seu [!DNL Event Hubs] partições. Uma vez que tenha aumentado o paralelismo no [!DNL Event Hubs] além disso, entre em contato com o representante do Adobe para dimensionar as tarefas da Platform com base em sua nova partição. Atualmente, esse processo não é automatizado.
+Para aumentar a taxa de velocidade de assimilação no lado da Platform, a Platform deve aumentar o número de tarefas no conector de origem para ler do [!DNL Event Hubs] partições. Depois de aumentar o paralelismo no [!DNL Event Hubs] Por favor, entre em contato com seu representante da Adobe para escalar as tarefas da Platform com base em sua nova partição. Atualmente, esse processo não é automatizado.
 
-## Usar uma rede virtual à qual se conectar [!DNL Event Hubs] para a plataforma
+## Usar uma rede virtual para se conectar a [!DNL Event Hubs] para a Platform
 
 Você pode configurar uma rede virtual para se conectar [!DNL Event Hubs] para a Platform enquanto as medidas de firewall estão ativadas. Para configurar uma rede virtual, vá para [[!DNL Event Hubs] documento de conjunto de regras de rede](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) e siga as etapas listadas abaixo:
 
-* Selecionar **Experimente** do painel REST API;
+* Selecionar **Experimente** no painel REST API;
 * Autentique seu [!DNL Azure] conta usando suas credenciais no mesmo navegador;
-* Selecione o [!DNL Event Hubs] namespace, grupo de recursos e assinatura que você deseja trazer para a Platform e, em seguida, selecionar **EXECUTAR**;
-* No corpo JSON exibido, adicione a seguinte sub-rede da plataforma em `virtualNetworkRules` inside `properties`:
+* Selecione o [!DNL Event Hubs] namespace, grupo de recursos e assinatura que você deseja trazer para a Platform e, em seguida, selecionar **EXECUÇÃO**;
+* No corpo JSON exibido, adicione a seguinte sub-rede da plataforma em `virtualNetworkRules` dentro `properties`:
 
 
 >[!IMPORTANT]
 >
->Você deve fazer um backup do corpo JSON que recebe, antes de atualizar `virtualNetworkRules` com a sub-rede da plataforma , pois ela contém suas regras de filtragem de IP existentes. Caso contrário, as regras serão excluídas após a chamada .
+>Você deve fazer um backup do corpo JSON recebido antes da atualização `virtualNetworkRules` com a sub-rede da Platform, pois ela contém suas regras de filtragem de IP existentes. Caso contrário, as regras serão excluídas após a chamada.
 
 
 ```json
@@ -56,7 +56,7 @@ Você pode configurar uma rede virtual para se conectar [!DNL Event Hubs] para a
 }
 ```
 
-Consulte a lista abaixo para obter as diferentes regiões das sub-redes da plataforma:
+Consulte a lista abaixo para ver as diferentes regiões das sub-redes da Platform:
 
 ### VA7: América do Norte
 
@@ -115,18 +115,18 @@ Consulte a lista abaixo para obter as diferentes regiões das sub-redes da plata
 }
 ```
 
-Veja o seguinte [[!DNL Event Hubs] documento](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) para obter mais informações sobre conjuntos de regras de rede.
+Consulte o seguinte [[!DNL Event Hubs] documento](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) para obter mais informações sobre conjuntos de regras de rede.
 
-## Connect [!DNL Event Hubs] para a plataforma
+## Conectar [!DNL Event Hubs] para a Platform
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Event Hubs] para Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Event Hubs] para a Platform usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 
 * [Criar uma conexão de origem de Hubs de Eventos usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/eventhub.md)
-* [Coletar dados de fluxo usando a API do Serviço de fluxo](../../tutorials/api/collect/streaming.md)
+* [Coletar dados de transmissão usando a API de Serviço de Fluxo](../../tutorials/api/collect/streaming.md)
 
-### Uso da interface do usuário
+### Uso da interface
 
-* [Criar uma conexão de origem de Hubs de eventos na interface do usuário](../../tutorials/ui/create/cloud-storage/eventhub.md)
-* [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [Criar uma conexão de origem de Hubs de Eventos na interface](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

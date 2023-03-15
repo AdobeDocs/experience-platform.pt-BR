@@ -5,9 +5,9 @@ title: Expiração de dados do perfil pseudônimo
 description: Este documento fornece orientação geral sobre como configurar a expiração de dados para perfis pseudônimos no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ A expiração de dados de Perfil pseudônimo não pode ser configurada por meio 
 - Os namespaces de identidade a serem considerados para exclusão de perfil pseudônimo.
    - Por exemplo: `ECID` somente, `AAID` somente ou uma combinação de `ECID` e `AAID`.
 - O tempo de espera antes de excluir um perfil pseudônimo. A recomendação padrão para clientes é de 14 dias. No entanto, esse valor pode ser diferente com base no seu caso de uso.
-- A contagem de perfis atual em comparação à contagem de perfis de licença.
 
 ## Perguntas frequentes {#faq}
 

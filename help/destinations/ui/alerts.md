@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares; alertas;destinos
+keywords: Experience Platform; home; tópicos populares; alertas, destinos
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
-title: Assinar alertas de destino em contexto
+title: Assinar alertas de destino no contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
@@ -10,109 +10,109 @@ ht-degree: 0%
 
 ---
 
-# Assinar alertas de destino em contexto
+# Assinar alertas de destino no contexto
 
-O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar os [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se uma determinada etapa em um fluxo de trabalho foi atingida ou se ocorreram erros.
+O Adobe Experience Platform permite assinar alertas baseados em eventos sobre atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de pesquisar a variável [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se uma tarefa foi concluída, se um determinado marco em um workflow foi atingido ou se ocorreram erros.
 
 Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 
-Este documento fornece etapas sobre como assinar mensagens de alertas de recebimento para seus fluxos de dados de destino.
+Este documento fornece etapas sobre como assinar mensagens de alerta de recebimento para seus fluxos de dados de destino.
 
 ## Introdução
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
-* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] O permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
-   * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema viola um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles.
+* [Destinos](../home.md): Integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] O permite monitorar as atividades do Platform por meio do uso de métricas estatísticas e notificações de eventos.
+   * [Alertas](../../observability/alerts/overview.md): Quando um determinado conjunto de condições em suas operações da plataforma é atingido (como um possível problema quando o sistema viola um limite), a Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha se inscrito nelas.
 
-## Assinar alertas na interface do usuário {#subscribe-destination-alerts}
+## Inscrever-se em alertas na interface do usuário {#subscribe-destination-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
 >title="Assinar alertas de destino"
->abstract="Os alertas permitem receber notificações com base no status dos fluxos de dados de destino. É possível definir notificações de alerta para obter atualizações se o fluxo de dados tiver sido iniciado, tiver sido bem-sucedido, tiver falhado ou não tiver enviado dados para o destino."
+>abstract="Os alertas permitem receber notificações com base no status dos fluxos de dados de destino. É possível definir notificações de alerta para obter atualizações caso o fluxo de dados tenha sido iniciado, tenha sido bem-sucedido, tenha falhado ou não tenha enviado dados para o destino."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]
 >
->Você deve ativar notificações instantâneas de emails para sua conta da Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
+>Você deve ativar notificações instantâneas de emails para sua conta da plataforma para receber notificações de alerta por email para seus fluxos de dados.
 
-Você pode ativar alertas para seus fluxos de dados durante o [!UICONTROL Configurar novo destino] etapa do [conexão de destino](connect-destination.md) fluxo de trabalho.
+Você pode ativar alertas para seus fluxos de dados durante a [!UICONTROL Configurar novo destino] da [conexão de destino](connect-destination.md) fluxo de trabalho.
 
-![Imagem da interface do usuário mostrando a seção de alertas de destino.](../assets/ui/alerts/destination-alerts.png)
+![Imagem da interface do usuário que mostra a seção de alertas de destino.](../assets/ui/alerts/destination-alerts.png)
 
-Selecione os alertas que deseja assinar e selecione **[!UICONTROL Próxima]** para revisar e concluir o fluxo de dados.
+Selecione os alertas que deseja assinar e selecione **[!UICONTROL Próximo]** para revisar e finalizar o fluxo de dados.
 
-Os alertas disponíveis para fluxos de dados de destino são descritos na tabela abaixo.
+Os alertas disponíveis para os fluxos de dados de destino estão descritos na tabela abaixo.
 
-* Para destinos de transmissão, somente o [!DNL Activation Skipped Rate Exceeded] alerta está disponível.
-* Para destinos baseados em arquivo, todos os alertas estão disponíveis.
+* Para destinos de transmissão, somente a variável [!DNL Activation Skipped Rate Exceeded] estiver disponível.
+* Para destinos com base em arquivo, todos os alertas estão disponíveis.
 
 | Alertas | Descrição |
 | --- | --- |
-| Atraso na execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino demora mais de 150 minutos para ativar um segmento. |
-| Falha na execução do fluxo de destino | Esse alerta notifica quando ocorre um erro ao ativar um segmento para um destino. |
-| Êxito na execução do fluxo de destino | Esse alerta notifica quando um segmento é ativado com êxito para um destino. |
-| Início da execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino começa a ativar um segmento. |
-| Taxa de Ativação Ignorada Excedida | Este alerta notifica quando a taxa de ativação ignorada excede 1% do total de ativações. As identidades são ignoradas durante a ativação quando têm atributos ausentes ou violação de consentimento. |
+| Atraso de execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino demora mais de 150 minutos para ativar um segmento. |
+| Falha na Execução do Fluxo de Destino | Este alerta notifica quando ocorre um erro ao ativar um segmento para um destino. |
+| Êxito na Execução do Fluxo de Destino | Este alerta notifica quando um segmento é ativado com êxito para um destino. |
+| Início da Execução do Fluxo de Destino | Este alerta notifica quando uma execução de fluxo de destino inicia a ativação de um segmento. |
+| Taxa de Ativação Ignorada Excedida | Este alerta notifica quando a taxa de ignorar a ativação excedeu 1% do total de ativações. As identidades são ignoradas durante a ativação quando têm atributos ausentes ou violação de consentimento. |
 
-## Recebimento de alertas {#receiving-alerts}
+## Receber alertas {#receiving-alerts}
 
-Depois que o fluxo de dados de destino for executado, você poderá receber alertas por meio da interface ou por email.
+Depois que o fluxo de dados de destino for executado, você poderá receber alertas por meio da interface do usuário ou por email.
 
-### Recebimento de alertas na interface do {#receiving-alerts-in-ui}
+### Receber alertas na interface do usuário {#receiving-alerts-in-ui}
 
-Os alertas são representados na interface do usuário por um ícone de notificação no cabeçalho superior da interface do usuário da plataforma. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos fluxos de dados.
+Os alertas são representados na interface do usuário por um ícone de notificação no cabeçalho superior da interface do usuário da plataforma. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos seus fluxos de dados.
 
-![Imagem da interface do usuário mostrando o ícone de notificação no Experience Platform](../assets/ui/alerts/notification.png)
+![Imagem da interface do usuário que mostra o ícone de notificação no Experience Platform](../assets/ui/alerts/notification.png)
 
-O painel de notificações é exibido, exibindo uma lista de atualizações de status no fluxo de dados criado.
+O painel Notificações é exibido, exibindo uma lista de atualizações de status no fluxo de dados criado por você.
 
-![Imagem da interface do usuário mostrando o painel de notificação](../assets/ui/alerts/alert-window.png)
+![Imagem da interface do usuário que mostra o painel de notificação](../assets/ui/alerts/alert-window.png)
 
-Você pode passar o mouse em uma mensagem de alerta para marcá-las como lidas ou selecionar o ícone do relógio para definir lembretes futuros sobre o status do fluxo de dados.
+Você pode passar o mouse sobre uma mensagem de alerta para marcá-los como lidos ou selecionar o ícone do relógio para definir lembretes futuros sobre o status do seu fluxo de dados.
 
-![Imagem da interface mostrando as opções de lembrete de notificação](../assets/ui/alerts/remind-me.png)
+![Imagem da interface do usuário que mostra as opções de lembrete de notificação](../assets/ui/alerts/remind-me.png)
 
-Selecione a mensagem de alerta para ver informações específicas sobre o fluxo de dados.
+Selecione a mensagem de alerta para ver informações específicas no fluxo de dados.
 
-![Imagem da interface mostrando como selecionar uma notificação](../assets/ui/alerts/select-alert-message.png)
+![Imagem da interface do usuário que mostra como selecionar uma notificação](../assets/ui/alerts/select-alert-message.png)
 
-A variável [!UICONTROL Detalhes da execução do fluxo de dados] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
+O [!UICONTROL Detalhes da execução do fluxo de dados] será exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, ID de execução de fluxo de dados correspondente e resumo de erro de alto nível.
 
-![Imagem da interface mostrando a página de detalhes da execução do fluxo de dados.](../assets/ui/alerts/dataflow-overview.png)
+![Imagem da interface do usuário que mostra a página de detalhes de execução do fluxo de dados.](../assets/ui/alerts/dataflow-overview.png)
 
-A metade inferior da página exibe qualquer [!UICONTROL Erros de execução de fluxo de dados] que ocorreu durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar diagnósticos de erro ou usar o [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erro ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
+A metade inferior da página exibe qualquer [!UICONTROL Erros de execução do fluxo de dados] que ocorreu durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar o [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erro ou o manifesto do arquivo que corresponde ao seu fluxo de dados.
 
-![Imagem da interface mostrando a página de detalhes da execução do fluxo de dados, com destaque na seção de erros.](../assets/ui/alerts/dataflow-run-error.png)
+![Imagem da interface do usuário que mostra a página de detalhes de execução do fluxo de dados, com um destaque na seção erros.](../assets/ui/alerts/dataflow-run-error.png)
 
-Para obter mais informações sobre como manipular erros de fluxo de dados, consulte o manual no [monitoramento de fluxos de dados de destinos na interface do](../../dataflows/ui/monitor-destinations.md).
+Para obter mais informações sobre como lidar com erros de fluxo de dados, consulte o guia em [monitoramento de fluxos de dados de destinos na interface do usuário](../../dataflows/ui/monitor-destinations.md).
 
 ### Receber alertas por email {#receiving-alerts-by-email}
 
-Os alertas para seus fluxos de dados também são entregues a você por email. Selecione o nome do fluxo de dados no corpo do email para ver mais informações sobre o fluxo de dados.
+Os alertas dos seus fluxos de dados também são enviados por email. Selecione o nome do fluxo de dados no corpo do email para ver mais informações sobre o fluxo de dados.
 
 ![Captura de tela de um email de alerta](../assets/ui/alerts/email.png)
 
-Semelhante ao alerta da interface do usuário, o [!UICONTROL Visão geral da execução do fluxo de dados] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao fluxo de dados.
+Semelhante ao alerta da interface do usuário, a variável [!UICONTROL Visão geral da execução do fluxo de dados] for exibida, fornecendo uma interface para investigar todos os erros associados ao fluxo de dados.
 
-![fluxo de dados-visão geral](../assets/ui/alerts/dataflow-overview.png)
+![visão geral do fluxo de dados](../assets/ui/alerts/dataflow-overview.png)
 
-## Assinar e cancelar inscrição em alertas {#subscribe-and-unsubscribe}
+## Assinar e cancelar a assinatura de alertas {#subscribe-and-unsubscribe}
 
-Você pode assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados de destino existente nos destinos [!UICONTROL Procurar] página.
+É possível assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados de destino existente nos destinos [!UICONTROL Procurar] página.
 
-![Imagem da interface do usuário mostrando a página Navegação de destinos](../assets/ui/alerts/destination-list.png)
+![Imagem da interface do usuário que mostra a página Navegação de destinos](../assets/ui/alerts/destination-list.png)
 
-Localize a conexão de destino para a qual você deseja receber alertas e selecione as reticências (`...`) para ver um menu suspenso de opções. Em seguida, selecione **[!UICONTROL Assinar alertas]** para modificar as configurações de alerta do fluxo de dados de destino.
+Localize a conexão de destino para a qual você deseja receber alertas e selecione as reticências (`...`) para ver um menu suspenso de opções. Em seguida, selecione **[!UICONTROL Inscrever-se em alertas]** para modificar as configurações de alerta do seu fluxo de dados de destino.
 
-![Imagem da interface mostrando as opções de destino](../assets/ui/alerts/destination-alerts-subscribe.png)
+![Imagem da interface do usuário mostrando as opções de destino](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-Uma janela pop-up é exibida, fornecendo uma lista de alertas de destino. Selecione os alertas que deseja assinar ou desmarque os alertas dos quais deseja cancelar a assinatura. Quando terminar, selecione **[!UICONTROL Salvar]**.
+Uma janela pop-up é exibida, fornecendo uma lista de alertas de destino. Selecione os alertas dos quais deseja assinar ou desmarcar os alertas dos quais deseja cancelar a assinatura. Quando terminar, selecione **[!UICONTROL Salvar]**.
 
-![Imagem da interface do usuário mostrando a página de assinaturas de alertas de destino](../assets/ui/alerts/destination-alerts-list.png)
+![Imagem da interface do usuário que mostra a página de assinaturas de alertas de destino](../assets/ui/alerts/destination-alerts-list.png)
 
 ## Próximas etapas {#next-steps}
 
-Este documento forneceu um guia passo a passo sobre como assinar alertas em contexto para seus fluxos de dados de destino. Para obter mais informações, consulte [guia da interface de alertas](../../observability/alerts/ui.md).
+Este documento forneceu um guia passo a passo sobre como se inscrever em alertas de contexto para seus fluxos de dados de destino. Para obter mais informações, consulte o [guia da interface de usuário de alertas](../../observability/alerts/ui.md).

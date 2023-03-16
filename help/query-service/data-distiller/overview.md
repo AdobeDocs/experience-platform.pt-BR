@@ -3,8 +3,8 @@ title: Visão geral da Distiller de dados
 description: Um resumo dos limites de uso do Data Distiller para dados do Serviço de query em relação ao seu direito de licenciamento.
 source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '154'
+ht-degree: 1%
 
 ---
 

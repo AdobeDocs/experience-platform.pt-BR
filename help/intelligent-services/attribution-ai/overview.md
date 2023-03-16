@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;visão geral da ia de atribuição;tópicos populares;ia de atribuição;ia de atribuição
+keywords: Experience Platform, visão geral do Attribution ai, tópicos populares, atribuição ai, Atribuição ai
 feature: Attribution AI
 title: Visão geral do Attribution AI
 description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 landing-page-description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
+short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 36%
@@ -14,36 +15,36 @@ ht-degree: 36%
 
 # Visão geral do Attribution AI
 
-O Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de algoritmos de vários canais que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual com o cliente em cada fase das jornadas do cliente.
+O Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição algorítmica de vários canais que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual com o cliente em cada fase das jornadas do cliente.
 
 ## Noções básicas sobre o Attribution AI
 
 O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 
-As saídas do Attribution AI podem ser separadas em várias dimensões e podem ser usadas em diferentes estágios da jornada do cliente. Isso é feito sem a necessidade de traduzir as necessidades de negócios em problemas de aprendizado de máquina, algoritmos de escolha, treinamento ou implantação de modelos.
+As saídas de Attribution AI podem ser segregadas em várias dimensões e podem ser utilizadas em diferentes estágios da jornada do cliente. Isso é feito sem a necessidade de traduzir as necessidades dos negócios para problemas de aprendizado de máquina, escolher algoritmos, treinamento ou implantar modelos.
 
-Os dados do Attribution AI podem ser do Adobe (por exemplo, [!DNL Analytics]) ou fontes de dados não-Adobe.
+Os dados de Attribution AI podem ser do Adobe (por exemplo, [!DNL Analytics]) ou fontes de dados não Adobe.
 
-O Attribution AI é compatível com duas categorias de pontuações, algorítmica e baseada em regras. As pontuações algorítmicas incluem pontuações incrementais e influenciadas. As pontuações com base em regras incluem Primeiro toque, Último toque, Linear, Forma de U e Declínio de tempo.
+O Attribution AI suporta duas categorias de pontuações, algorítmicas e baseadas em regras. As pontuações algorítmicas incluem pontuações incrementais e influenciadas. As pontuações com base em regras incluem Primeiro toque, Último toque, Linear, Forma de U e Declínio de tempo.
 
-O vídeo a seguir foi criado para corroborar sua compreensão do Attribution AI.
+O vídeo a seguir foi criado para oferecer suporte à compreensão do Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
-## Exemplos de casos de uso de negócios
+## Exemplos de casos de uso comercial
 
-O Attribution AI pode ser usado para ajudar nos seguintes casos de uso de exemplo:
+O Attribution AI pode ser usado para auxiliar nos seguintes casos de uso de exemplo:
 
-- **Relatórios executivos**: permita que os executivos entendam o verdadeiro impacto incremental do marketing, tanto como um todo quanto por canal, região, SKU etc.
-- **Alocação de orçamento**: informe decisões de alocação de orçamento no canal de marketing.
-- **Otimização de campanha**: em cada canal, entenda quais campanhas, criações e palavras-chave estão funcionando melhor para quais SKUs ou Geos. Isso permite que você veja cada canal para que a equipe de marketing possa otimizar suas táticas.
-- **Atribuição de funil completo**: entenda o impacto do marketing na jornada do cliente inteiro. Por exemplo, assinatura de conta gratuita para conversão paga e muito além.
-- **Avaliações de parceiros**: avalie a eficácia de agências e parceiros com base nos resultados da atribuição.
+- **Relatórios executivos**: Permita que os executivos entendam o verdadeiro impacto incremental do marketing, tanto por canal, região, SKU etc.
+- **Dotação orçamental**: Informe as decisões de alocação de orçamento no canal de marketing.
+- **Otimização de campanha**: Em cada canal, entenda quais campanhas, criações e palavras-chave estão funcionando melhor para quais SKUs ou regiões. Isso permite que você veja cada canal para que a equipe de marketing possa otimizar suas táticas.
+- **Atribuição de funil completo**: Entenda o impacto do marketing em toda a jornada do cliente. Por exemplo, assinatura de conta gratuita para conversão paga e além dela.
+- **Avaliações dos parceiros**: Avalie a eficácia de agências e parceiros, com base nos resultados da atribuição.
 
 ### Recursos adicionais
 
-A Attribution AI também oferece integração com outras soluções de Adobe, como [!DNL Customer Journey Analytics]. Isso permite usar essas soluções para utilizar o modelo algorítmico personalizável a fim de avaliar o desempenho da mídia e fornecer insights analíticos.
+O Attribution AI também oferece integração com outras soluções do Adobe, como [!DNL Customer Journey Analytics]. Isso permite usar essas soluções para utilizar o modelo algorítmico personalizável para avaliar o desempenho da mídia e fornecer insights analíticos.
 
 ## Próximas etapas
 
-Você pode começar seguindo o [introdução](./getting-started.md) guia. Este guia orienta você na configuração de todas as pré-solicitações necessárias para o Attribution AI. Se você já tiver suas credenciais e dados prontos, visite o [Guia do usuário do Attribution AI](./user-guide.md). Este guia orienta você na criação de uma instância e no envio para treinamento e pontuação.
+Você pode começar seguindo a [introdução](./getting-started.md) guia. Este guia aborda a configuração de todas as pré-solicitações necessárias para o Attribution AI. Se você já tiver suas credenciais e dados prontos, visite a [Guia do usuário do Attribution AI](./user-guide.md). Este guia o orienta a criar uma instância e enviá-la para treinamento e pontuação.

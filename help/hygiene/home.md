@@ -1,10 +1,10 @@
 ---
-title: Visão geral da higiene de dados
-description: A Limpeza de dados da Adobe Experience Platform permite gerenciar o ciclo de vida dos dados, atualizando ou removendo registros desatualizados ou imprecisos.
+title: Visão geral da higiene dos dados
+description: A Higiene de dados do Adobe Experience Platform permite gerenciar o ciclo de vida de seus dados ao atualizar ou limpar registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '639'
 ht-degree: 1%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Atualmente, a higiene de dados está disponível apenas para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
+>Atualmente, a higiene de dados está disponível somente para organizações que compraram **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**. Esses recursos devem ser lançados de forma geral em breve. Para obter mais informações sobre a disponibilidade futura, entre em contato com o representante de serviço da Adobe. Você pode, no entanto, imediatamente [exclua conjuntos de dados por meio da [!UICONTROL Conjuntos de dados] interface](../catalog/datasets/user-guide.md#delete).
 
-O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas para orquestrar as experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme o esperado, sejam atualizados quando dados incorretos precisarem de correção e sejam excluídos quando as políticas organizacionais considerarem necessário.
+O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas a fim de orquestrar experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme esperado, atualizados quando for necessário corrigir dados incorretos e excluídos quando as políticas organizacionais o considerarem necessário.
 
 <!-- Platform's data hygiene capabilities allow you to manage your stored data through the following:
 
@@ -26,34 +26,34 @@ O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gere
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-Essas atividades podem ser realizadas usando o [[!UICONTROL Higiene de dados] Workspace da interface do usuário](#ui) ou o [API de higiene de dados](#api). Quando um trabalho de higiene de dados é executado, o sistema fornece atualizações de transparência em cada etapa do processo. Consulte a seção sobre [linhas do tempo e transparência](#timelines-and-transparency) para obter mais informações sobre como cada tipo de job é representado no sistema.
+Essas atividades podem ser executadas usando o [[!UICONTROL Higiene de dados] Espaço de trabalho da interface do usuário](#ui) ou [API de higiene de dados](#api). Quando um trabalho de higiene de dados é executado, o sistema fornece atualizações de transparência em cada etapa do processo. Consulte a seção sobre [prazos e transparência](#timelines-and-transparency) para obter mais informações sobre como cada tipo de trabalho é representado no sistema.
 
-## [!UICONTROL Higiene de dados] Workspace da interface do usuário {#ui}
+## [!UICONTROL Higiene de dados] Espaço de trabalho da interface do usuário {#ui}
 
-A variável [!UICONTROL Higiene de dados] O espaço de trabalho na interface do usuário da Platform permite configurar e agendar operações de higiene de dados, ajudando a garantir que seus registros sejam mantidos conforme esperado.
+O [!UICONTROL Higiene de dados] A área de trabalho na interface do usuário da plataforma permite configurar e agendar operações de higiene de dados, ajudando a garantir que seus registros sejam mantidos conforme o esperado.
 
-Para obter etapas detalhadas sobre como gerenciar tarefas de higiene de dados na interface do usuário, consulte a [Guia da interface de higiene de dados](./ui/overview.md).
+Para obter etapas detalhadas sobre o gerenciamento de tarefas de higiene de dados na interface do usuário, consulte o [Guia da interface do usuário da Higiene de dados](./ui/overview.md).
 
 ## API de higiene de dados {#api}
 
-A variável [!UICONTROL Higiene de dados] A interface do usuário é criada com base na API de higiene de dados, cujos endpoints estão disponíveis para você usar diretamente, caso prefira automatizar suas atividades de higiene de dados. Consulte a [Guia da API de higiene de dados](./api/overview.md) para obter mais informações.
+O [!UICONTROL Higiene de dados] A interface do usuário é criada sobre a API de higiene de dados, cujos endpoints estão disponíveis para você usar diretamente se preferir automatizar suas atividades de higiene de dados. Consulte a [Guia da API de higiene de dados](./api/overview.md) para obter mais informações.
 
 ## Linhas de tempo e transparência
 
-As solicitações de exclusão de registros e expiração de conjuntos de dados têm suas próprias linhas do tempo de processamento e fornecem atualizações de transparência em pontos-chave em seus respectivos fluxos de trabalho.
+Registrar solicitações de exclusão e expiração de conjunto de dados têm suas próprias linhas do tempo de processamento e fornecem atualizações de transparência em pontos-chave em seus respectivos fluxos de trabalho.
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados](./ui/dataset-expiration.md) é criado:
 
-| Fase | Tempo após a expiração programada | Descrição |
+| Fase | Tempo após a expiração agendada | Descrição |
 | --- | --- | --- |
-| A solicitação foi enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação para que um conjunto de dados expire em um determinado momento. A solicitação está visível no [!UICONTROL Interface de higiene de dados] após ser enviada, e permanece em um status pendente até o tempo de expiração programado, após o qual a solicitação será executada. |
-| Conjunto de dados descartado | 1 hora | O conjunto de dados é descartado da variável [página inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. Os dados no data lake são excluídos apenas por software e permanecerão assim até o final do processo, após o qual serão excluídos com dificuldade. |
-| Contagem de perfis atualizada | 30 horas | Dependendo do conteúdo do conjunto de dados que está sendo excluído, alguns perfis podem ser removidos do sistema se todos os atributos do componente estiverem vinculados a esse conjunto de dados. 30 horas após a exclusão do conjunto de dados, todas as alterações resultantes nas contagens gerais de perfis são refletidas no [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
-| Segmentos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [segmentos](../segmentation/home.md) são atualizadas para refletir seu novo tamanho. Dependendo do conjunto de dados que foi removido e dos atributos nos quais você está segmentando, o tamanho de cada segmento pode aumentar ou diminuir como resultado da exclusão. |
-| Jornadas e destinos atualizados | 50 horas | [Jornadas](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
-| Exclusão forçada concluída | 14 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake. A variável [status do trabalho de higiene](./ui/browse.md#view-details) que excluiu o conjunto de dados é atualizado para refletir isso. |
+| Solicitação enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação para que um conjunto de dados expire em um determinado momento. A solicitação está visível no [!UICONTROL Interface do usuário de hierarquia de dados] após o envio, e permanece em um status pendente até o tempo de expiração agendado, após o qual a solicitação será executada. |
+| O conjunto de dados é descartado | 1 hora | O conjunto de dados é descartado do [página de inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface do usuário do . Os dados no lago de dados são excluídos apenas de forma suave e permanecerão até o final do processo, após o que serão excluídos permanentemente. |
+| Contagem de perfis atualizada | 30 horas | Dependendo do conteúdo do conjunto de dados que está sendo excluído, alguns perfis poderão ser removidos do sistema se todos os atributos de componente estiverem vinculados a esse conjunto de dados. 30 horas após o conjunto de dados ser excluído, todas as alterações resultantes nas contagens gerais de perfil serão refletidas em [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
+| Segmentos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os perfis relacionados [segmentos](../segmentation/home.md) são atualizadas para refletir seu novo tamanho. Dependendo do conjunto de dados que foi removido e dos atributos que você está segmentando, o tamanho de cada segmento pode aumentar ou diminuir como resultado da exclusão. |
+| Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)e [destinos](../destinations/home.md) são atualizadas de acordo com as alterações em segmentos relacionados. |
+| Exclusão em disco concluída | 14 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do lago de dados. O [estatuto do trabalho de higiene](./ui/browse.md#view-details) que excluiu o conjunto de dados é atualizado para refletir isso. |
 
 {style="table-layout:auto"}
 
@@ -78,4 +78,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral dos recursos de higiene de dados da Platform. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte [Guia da interface do usuário](./ui/overview.md). Para saber como criar trabalhos de higiene de dados de forma programática, consulte o [Guia da API de higiene de dados](./api/overview.md)
+Este documento forneceu uma visão geral dos recursos de higiene de dados da Platform. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte o [Guia da interface do usuário](./ui/overview.md). Para saber como criar trabalhos de higiene de dados de forma programática, consulte [Guia da API de higiene de dados](./api/overview.md)

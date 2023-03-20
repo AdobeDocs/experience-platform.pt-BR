@@ -3,14 +3,18 @@ keywords: Experience Platform; home; tópicos populares; alertas
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas em contexto na interface do usuário
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
+source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
 
 # Assinar alertas de fluxos de dados de fontes na interface do usuário
+
+>[!NOTE]
+>
+>Os alertas não são compatíveis em sandboxes de não produção. Para se inscrever em alertas, é necessário garantir que esteja usando uma sandbox de produção.
 
 O Adobe Experience Platform permite assinar alertas baseados em eventos sobre atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de pesquisar a variável [[!DNL Observability Insights] API](../../../observability/api/overview.md) para verificar se uma tarefa foi concluída, se um determinado marco em um workflow foi atingido ou se ocorreram erros.
 

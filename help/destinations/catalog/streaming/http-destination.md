@@ -3,9 +3,9 @@ keywords: transmissão contínua; Destino HTTP
 title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil ao endpoint HTTP de terceiros para executar sua própria análise ou executar quaisquer outras operações necessárias nos dados de perfil exportados do Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
+source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2648'
 ht-degree: 0%
 
 ---
@@ -158,12 +158,12 @@ Se você selecionar a variável **[!UICONTROL Credenciais do Cliente OAuth 2]** 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada.**Monitorar atividades do usuário no Platform**<h2>Descrição</h2><p>Você pode monitorar a atividade do usuário para obter vários serviços e recursos da plataforma no formato de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>who</b> executado <b>what</b> ação e <b>when</b>. Os registros de auditoria podem ajudar na solução de problemas no Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.</p><h2>Instruções</h2><ul><li>Selecionar <b>Auditorias</b> no painel de navegação esquerdo. O espaço de trabalho Audits mostra uma lista de logs registrados, por padrão classificados do mais recente para o menos recente.</li>   <li> OBSERVAÇÃO: Os logs de auditoria são retidos por 365 dias após o que serão excluídos do sistema. Portanto, você só pode voltar por um período máximo de 365 dias. Se precisar retroceder dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos de política interna. </li><li>Selecione um evento na lista para exibir seus detalhes no painel direito. </li><li>Selecione o ícone de funil para exibir uma Lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1000 registros são exibidos, independentemente dos filtros selecionados. </li><li>Para exportar a lista atual de logs de auditoria, selecione **Baixar log**.</li><li>Para obter mais ajuda com esse recurso, consulte o <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=pt-BR">visão geral dos logs de auditoria</a> na Experience League.</li></ul>"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_queryparameters"
->title="Parâmetros de consulta"
->abstract="Opcionalmente, é possível adicionar parâmetros de consulta ao URL do ponto de extremidade HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`."
+[!CONTEXTUALHELP]
+id="platform_destinations_connect_http_queryparameters"
+title="Parâmetros de consulta"
+abstract="Opcionalmente, é possível adicionar parâmetros de consulta ao URL do ponto de extremidade HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
@@ -186,8 +186,7 @@ Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!U
 ## Ativar segmentos para este destino {#activate}
 
 >[!IMPORTANT]
-> 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil de fluxo](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 

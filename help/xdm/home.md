@@ -127,7 +127,7 @@ As [!UICONTROL Perfil individual XDM] e [!UICONTROL ExperiênciaEvento XDM] Os d
 
 Consulte a [Visão geral do perfil do cliente em tempo real](../profile/home.md) para obter mais informações.
 
-### Data Science Workspace
+### Espaço de trabalho do Data Science
 
 O Adobe Experience Platform Data Science Workspace usa aprendizagem de máquina e inteligência artificial para obter insights dos dados armazenados no Experience Platform. O Data Science Workspace permite que cientistas de dados criem receitas com base em [!UICONTROL Perfil individual XDM] e [!UICONTROL ExperiênciaEvento XDM] dados sobre clientes e suas atividades, facilitando previsões como comprar propensão e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
 

@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
->title="Esquema de referência"
+>title="esquema de referência"
 >abstract="Selecione o schema com o qual deseja estabelecer uma relação. Esse schema pode ser uma classe diferente do schema atual. Consulte a documentação para obter mais informações sobre relações de esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="Namespace da identidade de referência"
+>title="Namespace de identidade de referência"
 >abstract="O namespace (tipo) do campo de identidade principal do esquema de referência. O schema de referência deve ter um campo de identidade primário estabelecido para participar de um relacionamento. Consulte a documentação para obter mais informações sobre relações de esquema."
 
 A capacidade de entender os relacionamentos entre seus clientes e suas interações com a marca em vários canais é uma parte importante do Adobe Experience Platform. Definir esses relacionamentos dentro da estrutura de [!DNL Experience Data Model] Os esquemas (XDM) permitem que você obtenha insights complexos sobre os dados do cliente.
@@ -69,7 +69,7 @@ O schema de origem &quot;[!DNL Loyalty Members]&quot; se baseia no [!DNL XDM Ind
 
 O schema de referência &quot;[!DNL Hotels]&quot; se baseia em um &quot; personalizado[!DNL Hotels]&quot; e contém campos que descrevem um hotel. Para participar de um relacionamento, o schema de referência também deve ter uma identidade primária definida e estar habilitado para [!UICONTROL Perfil]. Nesse caso, `_tenantId.hotelId`atua como a identidade primária do esquema, usando um &quot; personalizado[!DNL Hotel ID]&quot; namespace de identidade.
 
-![Ativar para Perfil](../images/tutorials/relationship/hotels.png)
+![Ative para o Perfil](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >

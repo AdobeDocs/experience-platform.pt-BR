@@ -49,7 +49,7 @@ Os seguintes tipos de identidade estão disponíveis em [!DNL Platform]:
 | ID entre dispositivos | As IDs entre dispositivos identificam um indivíduo e geralmente vinculam outras IDs. Os exemplos incluem uma ID de logon, uma ID de CRM e uma ID de fidelidade. Isso é uma indicação para [!DNL Identity Service] para manipular o valor com sensibilidade. |
 | ID do dispositivo | As IDs de dispositivo identificam dispositivos de hardware, como IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e podem ser compartilhadas por várias pessoas em residências. |
 | Endereço de email | Os endereços de email geralmente são associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem informações de identificação pessoal (PII). Isso é uma indicação para [!DNL Identity Service] para manipular o valor com sensibilidade. |
-| Identificador de não pessoas | As IDs de não pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectadas a um cluster de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
+| Identificador não de pessoas | As IDs de não pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectadas a um cluster de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
 | Número de telefone | Os números de telefone geralmente são associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem PII. Isso é uma indicação para [!DNL Identity Service] para manipular o valor com sensibilidade. |
 
 ### Namespaces padrão {#standard}

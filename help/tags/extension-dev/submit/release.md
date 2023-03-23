@@ -2,9 +2,9 @@
 title: Lançar uma extensão
 description: Saiba como lançar de forma privada ou pública uma extensão de tag na Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '311'
 ht-degree: 92%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Quando os testes e a documentação estiverem concluídos, a extensão estará pronta para ser lançada. Atualmente, existem dois tipos de lançamentos que podem ser executados:
 
@@ -30,7 +30,7 @@ Você deve lançar sua extensão como uma extensão privada antes de lançá-la 
 
 A maneira mais fácil de lançar sua extensão com disponibilidade privada é usar o [lançador de extensão de tag](https://www.npmjs.com/package/@adobe/reactor-releaser). Mais instruções estão disponíveis na documentação.
 
-Se quiser lançar sua extensão com disponibilidade privada usando a API diretamente, veja o exemplo de chamada para [lançar de forma privada um pacote de extensão](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) na documentação da API para obter mais detalhes.
+Se quiser lançar sua extensão com disponibilidade privada usando a API diretamente, veja o exemplo de chamada para [lançar de forma privada um pacote de extensão](../../api/endpoints/extension-packages.md/#private-release) na documentação da API para obter mais detalhes.
 
 ## Lançamento público
 

@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: 80864c67bc80f3c2ef12e9571adc2c065512e61f
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,14 @@ ht-degree: 6%
    * [Comportamento de exportação de perfil para diferentes tipos de destino](./how-destinations-work/profile-export-behavior.md)
    * [Manuseio de identidade no fluxo de trabalho de ativação de destinos](./how-destinations-work/identity-handling.md)
 * Tutoriais da API {#api}
+   * [Guia de migração de API para destinos de armazenamento em nuvem](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Conecte-se a destinos de fluxo e ative dados usando a API do Serviço de fluxo](./api/streaming-destinations.md)
    * [Conecte-se ao armazenamento em nuvem em lote e aos destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/connect-activate-batch-destinations.md)
    * [(Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc](./api/ad-hoc-activation-api.md)
    * [Atualizar fluxos de dados de destino](./api/update-destination-dataflows.md)
    * [Excluir contas de destino](./api/delete-destination-account.md)
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
+   * [(Beta) Ativar dados para destinos com base em arquivo usando a API de Serviço de Fluxo](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta) Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
 * Guias da interface do usuário {#ui}
    * [Área de trabalho Destinos](./ui/destinations-workspace.md)

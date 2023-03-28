@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Ativar segmentos para destinos com base em arquivo usando a API de Serviço de Fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento em nuvem.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 3%
@@ -3645,6 +3645,8 @@ A ID na resposta representa o identificador exclusivo do schema de entrada criad
 
 Em seguida, você deve configurar o schema de saída para sua exportação. Primeiro, você precisa localizar e inspecionar o esquema do parceiro existente.
 
+>[!BEGINSHADEBOX]
+
 **Solicitação**
 
 +++Solicitação para obter o schema do parceiro para o schema de saída
@@ -3957,7 +3959,7 @@ Em seguida, é necessário criar um schema de saída. Copie a resposta JSON rece
 
 **Solicitação**
 
-+++ Criar um schema de saída - Solicitação
++++Criar um schema de saída - Solicitação
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Resposta**
 
-+++ Criar schema de saída - Resposta
++++Criar schema de saída - Resposta
 
 ```json
 {
@@ -4287,7 +4289,7 @@ A ID na resposta representa o identificador exclusivo do schema de entrada criad
 
 >[!ENDSHADEBOX]
 
-### Criar conjuntos de mapeamento
+### Criar conjunto de mapeamentos {#create-mapping-set}
 
 Em seguida, use o [API de preparação de dados](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) para criar o conjunto de mapeamento usando a ID do schema de entrada, a ID do schema de saída e os mapeamentos de campo desejados.
 
@@ -4295,7 +4297,7 @@ Em seguida, use o [API de preparação de dados](https://developer.adobe.com/exp
 
 **Solicitação**
 
-+++ Criar conjunto de mapeamento - Solicitação
++++Criar conjunto de mapeamento - Solicitação
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ Em seguida, use o [API de preparação de dados](https://developer.adobe.com/exp
 >* Observe também que, mesmo que a configuração de exemplo abaixo inclua `Email` e `Phone_E.164`, é possível exportar apenas um atributo de identidade por fluxo de dados.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \

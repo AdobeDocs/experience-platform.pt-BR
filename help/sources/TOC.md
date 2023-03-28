@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: c19982ad18b04a8fe039f90ff4ada1fbf5a2dee1
+source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '952'
 ht-degree: 12%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 12%
          - [Espaços de nomes e esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Conector do Google Ads](connectors/advertising/ads.md)
+      - [Anúncios do pinterest](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Conector Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -112,6 +113,7 @@ ht-degree: 12%
    - Criar uma conexão base {#create}
       - Advertising {#advertising}
          - [Anúncios do Google](tutorials/api/create/advertising/ads.md)
+         - [Anúncios do pinterest](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -227,6 +229,7 @@ ht-degree: 12%
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Anúncios do Google](tutorials/ui/create/advertising/ads.md)
+         - [Anúncios do pinterest](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)

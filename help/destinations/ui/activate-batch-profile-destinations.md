@@ -4,9 +4,9 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil em 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil em lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
+source-wordcount: '3629'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,12 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+> * Para ativar os dados e ativar o [etapa de mapeamento](#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+> * Para ativar dados sem passar pela variável [etapa de mapeamento](#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar segmento sem mapeamento]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+> 
+> Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 >
->Alguns clientes que participam do programa beta de funcionalidade de exportação de arquivos aprimorado estão vendo o novo **[!UICONTROL Mapeamento]** como parte de seu fluxo de trabalho de ativação para a [novos destinos de armazenamento na nuvem beta](/help/release-notes/2022/october-2022.md#destinations). Observe também a [limitações conhecidas](#known-limitations) como parte da versão.
+> Alguns clientes que participam do programa beta de funcionalidade de exportação de arquivos aprimorado estão vendo o novo **[!UICONTROL Mapeamento]** como parte de seu fluxo de trabalho de ativação para a [novos destinos de armazenamento na nuvem beta](/help/release-notes/2022/october-2022.md#destinations). Observe também a [limitações conhecidas](#known-limitations) como parte da versão.
 
 ## Visão geral {#overview}
 

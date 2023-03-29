@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform de março de 2023
 description: As notas de versão de março de 2023 para o Adobe Experience Platform.
-source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
+source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 5%
+source-wordcount: '1065'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Coleta de dados](#data-collection)
 - [Preparação de dados](#data-prep)
+- [Destinos](#destinations)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
 
@@ -45,6 +46,41 @@ A Preparação de dados permite que os engenheiros de dados mapeiem, transformem
 | Novas funções para codificação e decodificação de strings de URL | <ul><li>O `get_url_encoded` assume um URL como entrada e substitui ou codifica caracteres especiais com caracteres ASCII.</li><li>O `get_url_decoded` assume um URL como entrada e decodifica caracteres ASCII em caracteres especiais.</li></ul> Para obter mais informações, leia a [Guia de funções de Preparação de dados](../../data-prep/functions.md). Para obter uma lista abrangente de caracteres reservados e seus caracteres codificados correspondentes, leia o guia em [caracteres especiais](../../data-prep/functions.md#special-characters). |
 
 Para obter mais informações sobre Preparação de dados, leia a [Visão geral da preparação de dados](../../data-prep/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos destinos** {#new-destinations}
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL Adobe Commerce] conexão GA](../../destinations/catalog/personalization/adobe-commerce.md) | O [!DNL Adobe Commerce] o conector de destino (agora disponível geralmente) permite selecionar um ou mais públicos-alvo do Real-Time CDP para ativar em seu [!DNL Adobe Commerce] conta para fornecer uma experiência personalizada dinâmica para seus compradores. |
+| [[!DNL Snap Inc] conexão GA](../../destinations/catalog/advertising/snap-inc.md) | O [!DNL Snap Inc] o conector de destino (agora disponível no geral) permite que os profissionais de marketing importem segmentos de usuários criados no Experience Platform para [!DNL Snapchat Ads] e use-as para direcionar seus anúncios. |
+| [Conexão Eloqua do Oracle (API)](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Use a conexão baseada em API para [!DNL Oracle Eloqua] para planejar e executar campanhas, fornecendo uma experiência personalizada do cliente para seus prospetos em [!DNL Oracle Eloqua]. |
+| [(Beta) [!DNL Amazon Ads] conexão](../../destinations/catalog/advertising/amazon-ads.md) | O [!DNL Amazon Ads] a integração com o Adobe Experience Platform fornece integração completa para [!DNL Amazon Ads] , incluindo a [!DNL Amazon DSP (ADSP)]. Usar o [!DNL Amazon Ads] no Adobe Experience Platform, os usuários podem definir públicos do anunciante para direcionamento e ativação no [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] conexão](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anteriormente Bizible) fornece aos profissionais de marketing informações sobre quais esforços de marketing são os mais eficazes na geração de receita e na maximização do retorno sobre o investimento de sua empresa. O destino habilita os fluxos de dados B2B (B2B) de negócios para o Adobe Experience Platform [!DNL Marketo Measure]. O cartão só está disponível para [!DNL Marketo Measure Ultimate] clientes. |
+| [Conexão TikTok](../../destinations/catalog/social/tiktok.md) | Crie públicos personalizados no TikTok com seus dados para segmentação com suas campanhas de publicidade. |
+| [Conexão com o Zendesk](../../destinations/catalog/crm/zendesk.md) | Usar este destino para criar e atualizar identidades em um segmento como contatos dentro de [!DNL Zendesk]. |
+
+{style="table-layout:auto"}
+
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
+
+| Funcionalidade | Descrição |
+| ----------- | ----------- |
+| Nova permissão de controle de acesso para destinos: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | A nova permissão oferece aos usuários a capacidade de ativar segmentos para destinos existentes, sem exibir a variável [etapa de mapeamento](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Os usuários podem adicionar e remover segmentos em workflows de ativação, mas não podem adicionar ou remover atributos ou identidades mapeadas. |
+
+{style="table-layout:auto"}
+
+**Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
+
+Estamos lançando uma correção de erro para criptografia PGP/GPG em destinos com base em arquivo para CDP em tempo real. Com essa alteração, os destinos existentes baseados em arquivos que atualmente usam criptografia gerarão um nome de arquivo com uma extensão diferente de antes.
+
+- Extensão atual ao usar criptografia: `filename.csv`
+- Extensão futura ao usar criptografia: `filename.csv.gpg`
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Serviço de segmentação {#segmentation}
 

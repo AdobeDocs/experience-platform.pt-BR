@@ -1,10 +1,8 @@
 ---
-title: Visão geral da fonte do Customer.io
-description: Saiba como conectar o Customer.io ao Adobe Experience Platform usando APIs ou a interface do usuário utilizando webhooks
-hide: true
-hidefromtoc: true
+title: Visão geral da origem do Customer.io
+description: Saiba como conectar o Customer.io à Adobe Experience Platform usando APIs ou a interface do usuário, aproveitando webhooks
 badge: "Beta"
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -15,48 +13,48 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->A variável [!DNL Customer.io] a fonte está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>O [!DNL Customer.io] A fonte está em beta. Leia o [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece suporte para assimilação de dados de aplicativos de transmissão contínua. O suporte para provedores de transmissão inclui [!DNL Customer.io].
+O Experience Platform oferece suporte para assimilar dados de aplicativos de transmissão. O suporte para provedores de transmissão inclui [!DNL Customer.io].
 
-[[!DNL Customer.io]](https://customer.io/) O é uma plataforma de mensagens automatizada para profissionais de marketing que desejam mais controle e flexibilidade para criar e enviar emails orientados por dados, notificações por push, mensagens no aplicativo e SMS.
+[[!DNL Customer.io]](https://customer.io/) é uma plataforma de mensagens automatizadas para profissionais de marketing que desejam ter mais controle e flexibilidade para criar e enviar emails orientados por dados, notificações por push, mensagens no aplicativo e SMS.
 
-A variável [!DNL Customer.io] A fonte de permite assimilar esquemas de evento de webhook compatíveis e seus dados de evento associados de [!DNL Customer.io] usando o [[!DNL Customer.io] Webhooks de relatórios](https://customer.io/docs/api/webhooks/).
+O [!DNL Customer.io] A fonte permite assimilar esquemas de evento do webhook compatíveis e seus dados de evento associados a partir de [!DNL Customer.io] usando o [[!DNL Customer.io] Webhooks de relatórios](https://customer.io/docs/api/webhooks/).
 
-Os esquemas de evento de webhook compatíveis são:
+Os esquemas de evento do webhook compatíveis são:
 
-* Eventos para clientes
-* Eventos de e-mail
+* Eventos do cliente
+* Eventos de email
 * Eventos de SMS
 * Eventos de notificação por push
-* Eventos de mensagem no aplicativo
-* Eventos Slack
+* Eventos de mensagens no aplicativo
+* Slack Events
 * Eventos do Webhook
 
-Para obter uma lista de eventos que estão disponíveis por meio de webhooks, consulte [[!DNL Customer.io] Relatórios de eventos do Webhook](https://customer.io/docs/webhooks/#events) documentação.
+Para obter uma lista de eventos que estão disponíveis por meio de webhooks, consulte o [[!DNL Customer.io] Relatar eventos do Webhook](https://customer.io/docs/webhooks/#events) documentação.
 
 ## Pré-requisitos {#prerequisites}
 
 Antes de criar um [!DNL Customer.io] conexão de origem, você deve primeiro garantir que tenha o seguinte:
 
-* A [!DNL Customer.io] conta. Se você não tiver lido um dos [[!DNL Customer.io] página de inscrição](https://fly.customer.io/signup) para registrar e criar sua conta.
-* Depois de criar sua conta, também será necessário validá-la. Siga as etapas documentadas no [[!DNL Customer.io] Verificação de conta](https://customer.io/docs/account-verification/) página para concluir o processo.
+* A [!DNL Customer.io] conta. Se você não tiver um, leia o [[!DNL Customer.io] página de inscrição](https://fly.customer.io/signup) para registrar-se e criar sua conta.
+* Depois de criar a conta, também será necessário validar a conta. Siga as etapas documentadas na [[!DNL Customer.io] Verificação de conta](https://customer.io/docs/account-verification/) para concluir o processo.
 
 ### Configurar [!DNL Customer.io] Webhook {#set-up-webhook}
 
-Depois de criar o fluxo de dados com sucesso, você deve configurar um Webhook de relatórios para informar a Platform sobre [!DNL Customer.io] eventos. Os webhooks podem notificá-lo imediatamente quando os atributos do cliente mudarem ou quando as pessoas abrirem suas mensagens e enviar essas informações para o [!DNL Customer.io] origem. Para obter mais informações, leia os tutoriais no [obter o URL do ponto de extremidade de streaming](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) e [configurar um [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+Depois de criar seu fluxo de dados com sucesso, você deve configurar um Webhook de relatórios para informar a plataforma sobre [!DNL Customer.io] eventos. Os Webhooks podem notificá-lo imediatamente quando os atributos do cliente mudarem ou quando as pessoas abrirem suas mensagens e enviar essas informações para sua [!DNL Customer.io] fonte. Para obter mais informações, leia os tutoriais em [obter o URL do terminal de transmissão](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) e [configurar um [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
 
-## Conectando [!DNL Customer.io] para a Platform {#connect-to-platform}
+## Conexão [!DNL Customer.io] para a plataforma {#connect-to-platform}
 
-A documentação abaixo fornece informações sobre como criar um [!DNL Customer.io] conexão de transmissão para se conectar [!DNL Platform] uso de APIs ou da interface do usuário:
+A documentação abaixo fornece informações sobre como criar um [!DNL Customer.io] conexão de transmissão para conexão com [!DNL Platform] usando APIs ou a interface do usuário:
 
-### Conectar [!DNL Customer.io] para a Platform usando APIs {#connect-to-platform-using-api}
+### Connect [!DNL Customer.io] para Plataforma usando APIs {#connect-to-platform-using-api}
 
-* [Crie uma conexão de origem e um fluxo de dados para trazer [!DNL Customer.io] para a Platform usando APIs.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [Criar uma conexão de origem e um fluxo de dados para trazer [!DNL Customer.io] dados para a Platform usando APIs.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
-### Conectar [!DNL Customer.io] para a Platform usando a interface {#connect-to-platform-using-ui}
+### Connect [!DNL Customer.io] para Plataforma usando a interface do usuário {#connect-to-platform-using-ui}
 
-* [Crie uma conexão de origem e um fluxo de dados para trazer [!DNL Customer.io] dados para a Platform usando a interface do usuário](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
+* [Criar uma conexão de origem e um fluxo de dados para trazer [!DNL Customer.io] dados para a Platform usando a interface do usuário](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
 

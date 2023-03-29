@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
+source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 37%
+source-wordcount: '963'
+ht-degree: 38%
 
 ---
 
@@ -211,6 +211,8 @@ ht-degree: 37%
          * [Notas de versão](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
          * [Visão geral](./extensions/server/aws/overview.md)
+      * [!DNL Braze] {#braze}
+         * [Visão geral](./extensions/server/braze/overview.md)
       * [Conector do Cloud para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Núcleo {#core}
          * [Visão geral](./extensions/server/core/overview.md)

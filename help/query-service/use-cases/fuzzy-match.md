@@ -1,26 +1,26 @@
 ---
 title: Correspondência difusa no serviço de query
 description: Saiba como executar uma correspondência nos dados da plataforma que combina resultados de vários conjuntos de dados, correspondendo aproximadamente a uma string de sua escolha.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# Correspondência difusa
+# Correspondência difusa no serviço de query
 
-Use uma correspondência &quot;difusa&quot; nos dados da plataforma para retornar as correspondências mais prováveis e aproximadas sem a necessidade de pesquisar por sequências com caracteres idênticos. Isso permite uma pesquisa muito mais flexível de seus dados e torna seus dados mais acessíveis, economizando tempo e esforço.
+Use uma correspondência &quot;difusa&quot; em seus dados do Adobe Experience Platform para retornar as correspondências mais prováveis e aproximadas sem a necessidade de pesquisar por sequências com caracteres idênticos. Isso permite uma pesquisa muito mais flexível de seus dados e torna seus dados mais acessíveis, economizando tempo e esforço.
 
-Em vez de tentar reformatar as cadeias de caracteres de pesquisa para combiná-las, a correspondência difusa analisa a proporção de similaridade entre duas sequências e retorna a porcentagem de similaridade. [!DNL FuzzyWuzzy] é recomendado para esse processo, pois suas funções são mais adequadas para ajudar a corresponder strings em situações mais complexas em comparação ao [!DNL regex] ou [!DNL difflib].
+Em vez de tentar reformatar as cadeias de caracteres de pesquisa para combiná-las, a correspondência difusa analisa a proporção de similaridade entre duas sequências e retorna a porcentagem de similaridade. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) é recomendado para esse processo, pois suas funções são mais adequadas para ajudar a corresponder strings em situações mais complexas em comparação ao [!DNL regex] ou [!DNL difflib].
 
-O exemplo fornecido neste caso de uso foca na correspondência de atributos semelhantes de uma pesquisa de quarto de hotel em dois conjuntos de dados diferentes de agência de viagens. O documento demonstra como corresponder cadeias de caracteres por seu grau de semelhança de grandes fontes de dados separadas. Neste exemplo, a correspondência difusa compara os resultados da pesquisa pelos recursos de uma sala das agências de viagens Luma e Acme.
+O exemplo fornecido neste caso de uso foca em corresponder atributos semelhantes de uma pesquisa em quarto de hotel em dois conjuntos de dados diferentes de agência de viagens. O documento demonstra como corresponder cadeias de caracteres por seu grau de semelhança de grandes fontes de dados separadas. Neste exemplo, a correspondência difusa compara os resultados da pesquisa pelos recursos de uma sala das agências de viagens Luma e Acme.
 
 ## Introdução {#getting-started}
 
 Como parte desse processo requer o treinamento de um modelo de aprendizado de máquina, este documento assume um conhecimento funcional de um ou mais ambientes de aprendizado de máquina.
 
-Esse exemplo usa [!DNL Python] e [!DNL Jupyter Notebook] ambiente de desenvolvimento. Embora haja muitas opções disponíveis, [!DNL Jupyter Notebook] é recomendado porque é uma aplicação Web de código aberto que tem requisitos de computação baixos. Pode ser [baixado do site oficial de Júpiter](https://jupyter.org/).
+Esse exemplo usa [!DNL Python] e [!DNL Jupyter Notebook] ambiente de desenvolvimento. Embora haja muitas opções disponíveis, [!DNL Jupyter Notebook] é recomendado porque é uma aplicação Web de código aberto que tem requisitos de computação baixos. Ele pode ser baixado de [o sítio oficial de Jupyter](https://jupyter.org/).
 
 Antes de começar, você deve importar as bibliotecas necessárias. [!DNL FuzzyWuzzy] é um [!DNL Python] biblioteca incorporada sobre [!DNL difflib] biblioteca e usada para corresponder strings. Ele usa [!DNL Levenshtein Distance] para calcular as diferenças entre sequências e padrões. [!DNL FuzzyWuzzy] tem os seguintes requisitos:
 
@@ -43,7 +43,7 @@ Mais informações técnicas sobre [!DNL Fuzzywuzzy] podem ser encontradas em [d
 
 ### Conectar ao Serviço de Consulta
 
-Você deve conectar seu modelo de aprendizado de máquina ao Serviço de query fornecendo suas credenciais de conexão. Tanto as credenciais que expiram quanto as que não expiram podem ser fornecidas. Consulte a [guia de credenciais](../ui/credentials.md) para obter mais informações sobre como adquirir as credenciais necessárias. Se estiver usando [!DNL Jupyter Notebook], consulte o guia completo em [como se conectar ao Serviço de query](../clients/jupyter-notebook.md).
+Você deve conectar seu modelo de aprendizado de máquina ao Serviço de query fornecendo suas credenciais de conexão. Tanto as credenciais que expiram quanto as que não expiram podem ser fornecidas. Consulte a [guia de credenciais](../ui/credentials.md) para obter mais informações sobre como adquirir as credenciais necessárias. Se estiver usando [!DNL Jupyter Notebook], leia o guia completo sobre [como se conectar ao Serviço de query](../clients/jupyter-notebook.md).
 
 Além disso, certifique-se de importar a variável [!DNL numpy] pacote em seu [!DNL Python] para ativar a álgebra linear.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar trabalhos de privacidade na interface do usuário do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos do Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 0%
+source-wordcount: '1463'
+ht-degree: 1%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="Descrição"
->abstract=""
+>title="Respeitar solicitações de privacidade do titular de dados"
+>abstract="<h2>Descrição</h2><p>O Adobe Experience Platform Privacy Service permite criar e gerenciar solicitações de privacidade em nome de clientes que desejam acessar ou excluir seus dados pessoais de acordo com as regulamentações legais de privacidade.</p>"
 
 Este documento fornece etapas para criar e gerenciar solicitações de privacidade usando o [!DNL Privacy Service] interface do usuário.
 
@@ -109,7 +109,7 @@ Para baixar os dados completos do trabalho como um arquivo CSV, selecione **[!UI
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="Instruções"
->abstract=""
+>abstract="<ul><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">Solicitações</a> na navegação à esquerda para abrir o URL de privacidade e, em seguida, selecione <b>Criar solicitação</b>.</li><li>Aqui, você pode usar o construtor de solicitações ou fazer upload de um arquivo JSON de titulares de dados.</li><li>Se estiver usando o construtor de solicitações, selecione o tipo de tarefa (acesso e/ou exclusão) e escolha o tipo de identidade que você está fornecendo (email, ECID ou AAID) ou insira um namespace de identidade personalizado. Insira os valores de identidade apropriados para os clientes e selecione <b>Criar</b> quando terminar.</li><li>Se estiver carregando um arquivo JSON, selecione a seta ao lado de Criar solicitação. Na lista de opções, selecione <b>Upload de JSON</b> e faça upload do arquivo . Se não tiver um arquivo JSON para fazer upload, selecione <b>Baixar Adobe-GDPR-Request.json</b> para baixar um modelo que pode ser preenchido. Carregue o JSON e selecione <b>Criar</b> quando terminar.</li><li>Para obter mais ajuda com esse recurso, consulte o <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=pt-BR">Guia do usuário do Privacy Service</a> na Experience League.</li></ul>"
 
 >[!NOTE]
 >

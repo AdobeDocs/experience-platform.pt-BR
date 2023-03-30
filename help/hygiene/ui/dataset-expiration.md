@@ -2,9 +2,9 @@
 title: Gerenciar expirações do conjunto de dados
 description: Saiba como agendar uma expiração de conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Descrição"
->abstract=""
+>title="Excluir registros e conjuntos de dados de clientes indesejados ou expirados"
+>abstract="<h2>Descrição</h2><p>Para gerenciar o ciclo de vida dos dados do Experience Platform não relacionados à conformidade normativa, você pode excluir registros do consumidor e programar datas de expiração para os conjuntos de dados. Para criar ou gerenciar solicitações do titular dos dados, consulte o bloco de casos de uso &quot;Respeitar solicitações de privacidade do titular dos dados&quot;.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Este documento aborda como agendar e gerenciar as expirações do conjunto de da
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instruções"
->abstract=""
+>abstract="<ul><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Higiene de dados</a> na navegação à esquerda, selecione <b>Criar solicitação</b>.</li><li>Se quiser excluir registros:</li>   <li>Selecionar <b>Registro</b>.</li>   <li>Selecione um conjunto de dados específico do qual deseja excluir registros ou escolha a opção para excluí-los de todos os conjuntos de dados.</li>   <li>Indicar a identidade dos consumidores cujos registros devem ser suprimidos. Selecionar <b>Adicionar identidade</b> para fornecer as identidades, uma de cada vez ou selecione <b>Escolher arquivos</b> para carregar um arquivo JSON de identidades.</li>   <li>Se necessário, selecione <b>Modelo</b> para exibir o formato esperado do arquivo JSON.</li><li>Consulte a documentação para obter instruções se desejar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">datas de expiração do agendamento para conjuntos de dados</a>.</li></ul>"
 
 Para criar uma nova solicitação, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
 
@@ -54,8 +54,7 @@ Em seguida, em **[!UICONTROL Detalhes do conjunto de dados]**, selecione o ícon
 ![Imagem que mostra um conjunto de dados sendo selecionado](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->Somente os conjuntos de dados pertencentes à sandbox atual são mostrados.
+Somente os conjuntos de dados pertencentes à sandbox atual são mostrados.
 
 ### Enviar a solicitação
 
@@ -68,8 +67,7 @@ Você receberá uma solicitação para confirmar a data em que o conjunto de dad
 Depois que a solicitação é enviada, uma ordem de serviço é criada e aparece na guia principal do [!UICONTROL Higiene de dados] espaço de trabalho. A partir daqui, você pode monitorar o status da ordem de serviço enquanto ela processa a solicitação.
 
 >[!NOTE]
->
->Consulte a seção de visão geral em [prazos e transparência](../home.md#dataset-expiration-transparency) para obter detalhes sobre como as expirações do conjunto de dados são processadas depois de executadas.
+Consulte a seção de visão geral em [prazos e transparência](../home.md#dataset-expiration-transparency) para obter detalhes sobre como as expirações do conjunto de dados são processadas depois de executadas.
 
 ## Editar ou cancelar uma expiração de conjunto de dados
 

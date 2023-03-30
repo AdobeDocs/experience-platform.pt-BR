@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface do usuário
 description: Este guia aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1529'
 ht-degree: 2%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 2%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Descrição"
->abstract=""
+>title="Governar o uso de dados na plataforma"
+>abstract="<h2>Descrição</h2><p>A estrutura de Governança de dados no Experience Platform permite rotular atributos e conjuntos de dados de acordo com restrições de uso de dados e configurar políticas que identifiquem e honrem essas restrições para ações de marketing específicas.</p>"
 
 Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na [!DNL Experience Platform] interface do usuário.
 
@@ -87,7 +87,7 @@ O **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, o que pe
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instruções"
->abstract=""
+>abstract="<ul><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Conjuntos de dados</a> na navegação à esquerda, selecione o conjunto de dados cujos dados você deseja restringir.</li><li>Na visualização de detalhes do conjunto de dados, selecione o <b>Governança de dados</b> guia .</li><li>Selecione os campos do conjunto de dados que deseja restringir e selecione <b>Editar rótulos de governança</b> para rotular os dados com base em restrições de uso.</li><li>Depois de rotular os dados, selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=pt-BR">Políticas</a> na navegação à esquerda, selecione <b>Criar Política</b>.</li><li>Escolha criar um <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Política de governança de dados</a>, em seguida, selecione os rótulos de uso de dados que a política aplicará à política.</li><li>Selecione as ações de marketing que a política negará para quaisquer dados que contenham esses rótulos. Depois que a política for criada, selecione-a na lista e ative-a usando o botão no painel direito.</li><li>Para cada política ativada, a Platform impede que quaisquer dados contendo os rótulos especificados sejam usados para as ações de marketing definidas. Essa imposição ocorre automaticamente quando você tenta ativar dados rotulados para um destino com ações de marketing associadas (casos de uso).</li></ul>"
 
 >[!IMPORTANT]
 >

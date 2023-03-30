@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar políticas de uso de dados na interface do usuário
 description: A Governança de dados do Adobe Experience Platform fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que podem ser executadas no espaço de trabalho Políticas na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Descrição"
->abstract=""
+>title="Integrar e aplicar o consentimento do cliente nos dados do seu perfil"
+>abstract="<h2>Descrição</h2><p>A Platform permite integrar os dados de consentimento coletados dos clientes nos respectivos perfis. Em seguida, é possível configurar políticas de consentimento para determinar se esses dados podem ser incluídos em segmentos ativados para determinados destinos.</p>"
 
 Este documento aborda como usar o **[!UICONTROL Políticas]** na interface do usuário do Adobe Experience Platform para criar e gerenciar políticas de uso de dados.
 
@@ -92,7 +92,7 @@ O **[!UICONTROL Procurar]** A guia será exibida novamente, listando agora a pol
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instruções"
->abstract=""
+>abstract="<ul><li>Certifique-se de que está assimilando dados de preferência em seus esquemas de união por meio do conector de origem do OneTrust ou do esquema XDM padrão para consentimento.</li><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=pt-BR">Políticas</a> na navegação à esquerda, selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Criar Política</a>.</li><li>Em <b>If</b> descreva as condições ou ações que acionarão a verificação de política.</li><li>Em <b>Então</b> , insira os atributos de consentimento que devem estar presentes para que um perfil seja incluído na ação que acionou a política.</li><li>Selecionar <b>Salvar</b> para criar a política. Para ativar a política, selecione a <b>Status</b> alternar no painel direito.</li><li>O Experience Platform aplica automaticamente suas políticas de consentimento ativadas quando você ativa segmentos para destinos e fornece detalhes sobre como cada política afeta o tamanho do público-alvo.</li><li>Para obter mais ajuda com esse recurso, consulte o guia em <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">criação de políticas de consentimento</a> na Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >

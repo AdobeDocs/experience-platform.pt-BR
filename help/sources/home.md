@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 2%
 
 ---
@@ -189,7 +189,7 @@ O controle de acesso baseado em atributos no Adobe Experience Platform permite q
 
 Com o controle de acesso baseado em atributos, você pode aplicar configurações de mapeamento a campos aos quais tem permissões. Além disso, não será possível assimilar dados em um conjunto de dados se você não tiver acesso a todos os campos no conjunto de dados.
 
-#### Suporte para controle de acesso baseado em atributos em fontes [!BADGE Novo recurso]
+#### Suporte para controle de acesso baseado em atributos em fontes
 
 >[!TIP]
 >

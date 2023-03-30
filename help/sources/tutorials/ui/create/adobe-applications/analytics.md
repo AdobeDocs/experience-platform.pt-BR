@@ -5,10 +5,10 @@ title: Criar uma conexão de origem do Adobe Analytics na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
+source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 2%
+source-wordcount: '2365'
+ht-degree: 1%
 
 ---
 
@@ -159,16 +159,12 @@ A documentação a seguir fornece mais recursos para entender a Preparação de 
 * [Funções de mapeamento da preparação de dados](../../../../../data-prep/functions.md)
 * [Adicionar campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtragem para o perfil do cliente em tempo real (Beta) {#filtering-for-profile}
+### Filtragem para o perfil do cliente em tempo real {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Criar regras de filtro"
 >abstract="Defina as regras de filtragem em nível de linha e coluna ao enviar dados para o Perfil do cliente em tempo real. Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para assimilação de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para assimilação de perfil**. As regras de filtragem não se aplicam aos dados enviados para o lago de dados."
-
->[!IMPORTANT]
->
->Suporte para filtragem [!DNL Analytics] no momento, os dados estão em beta e não estão disponíveis para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Depois de concluir os mapeamentos para [!DNL Analytics] dados do conjunto de relatórios, você pode aplicar regras e condições de filtragem para incluir ou excluir seletivamente os dados da assimilação para o Perfil do cliente em tempo real. O suporte para filtragem só está disponível para [!DNL Analytics] os dados e dados são filtrados somente antes de inserir [!DNL Profile.] Todos os dados são assimilados no lago de dados.
 

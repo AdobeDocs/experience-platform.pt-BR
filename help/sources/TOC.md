@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '963'
 ht-degree: 12%
 
 ---
@@ -352,6 +352,9 @@ ht-degree: 12%
       - [Documente sua fonte (SDK de streaming)](sources-sdk/streaming/document-streaming.md)
       - [Modelo de fluxo de API de autoatendimento da documentação](sources-sdk/streaming/streaming-template-api.md)
       - [Modelo de transmissão da interface de usuário de autoatendimento da documentação](sources-sdk/streaming/streaming-template-ui.md)
+- Mensagens de erro {#errors}
+   - [Mensagens de erro em fontes](./errors/sources-errors.md)
+   - [Mensagens de erro no Serviço de fluxo](./errors/flow-service-errors.md)
 - [Notificações de execução de fluxo](notifications.md)
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)

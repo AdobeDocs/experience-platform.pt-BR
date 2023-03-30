@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de março de 2023 para o Adobe Experience Platform.
-source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
+source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1671'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,29 @@ ht-degree: 4%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [Painéis](#dashboards)
 - [Coleta de dados](#data-collection)
 - [Preparação de dados](#data-prep)
 - [Destinos](#destinations)
+- [Experience Data Model](#xdm)
+- [Serviço de query](#query-service)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
+
+## Painéis {#dashboards}
+
+O Adobe Experience Platform fornece vários painéis através dos quais você pode visualizar informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários.
+
+**Recursos novos ou atualizados** {#dashboards-new-updated-features}
+
+| Recurso | Descrição |
+| --- | --- |
+| Painéis definidos pelo usuário | Agora você pode **valores do atributo de amostra** antes de adicionar um atributo a um widget no compositor de widget de painéis definido pelo usuário. Alguns valores de exemplo dessa coluna de atributo estão disponíveis para atributos individuais ao criar um widget.<br>Agora você pode **trocar o eixo X e Y** no widget com o botão de eixo de troca. Isso economiza tempo e fornece uma experiência mais ergonômica ao adicionar atributos aos widgets. Isso salva a necessidade de localizar ambos os atributos novamente no painel de atributos.<br>Agora você pode **alterar a localização e o título da legenda** em seus widgets. Depois que uma legenda estiver presente em um widget, você poderá reposicionar a legenda em qualquer lugar do gráfico e também renomear o título da legenda, como pode fazer com rótulos de eixo e o título do widget. |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre painéis, incluindo como conceder permissões de acesso e criar widgets personalizados, comece lendo o [visão geral dos painéis](../../dashboards/home.md).
 
 ## Coleta de dados {#data-collection}
 
@@ -81,6 +99,48 @@ Estamos lançando uma correção de erro para criptografia PGP/GPG em destinos c
 - Extensão futura ao usar criptografia: `filename.csv.gpg`
 
 Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| CSV para recomendação de esquema | Agora é possível fazer upload de seus arquivos locais para criar esquemas gerados pelo aprendizado de máquina que eliminam a necessidade de criar manualmente um schema. No [!UICONTROL Fontes] espaço de trabalho, carregar um arquivo CSV de amostra e algoritmos de aprendizado de máquina do Adobe sugerirão um esquema para você com base nos campos de destino. Consulte a [documentação da](../../ingestion/tutorials/map-csv/recommendations.md) para obter mais informações.&quot; |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre o XDM na Platform, leia o [Visão geral do sistema XDM](../../xdm/home.md).
+
+## Serviço de query {#query-service}
+
+O Serviço de Consulta permite que você use o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. É possível unir qualquer conjunto de dados de data lake e capturar os resultados da consulta como um novo conjunto de dados para uso em relatórios, na Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Controle de acesso baseado em atributos no armazenamento acelerado | Use o Controle de acesso com base em atributos com o Data Distiller para definir o controle de acesso em todos os conjuntos de dados no armazenamento acelerado. Isso controla o acesso aos modelos de dados personalizados criados pelos usuários e armazenados em uma loja acelerada para potencializar painéis personalizados. |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre Serviços de query, consulte [Visão geral do Serviço de query](../../query-service/home.md).
+
+## Real-Time Customer Data Platform B2B Edition {#b2b}
+
+Baseado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido para profissionais de marketing que operam em um modelo de serviço de empresa para empresa. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem com precisão públicos-alvo específicos e os envolvam em todos os canais disponíveis.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Bugfix | Para fornecer uma representação mais precisa dos perfis em seu sistema, o sistema não inclui mais perfis internos na contagem total de perfis ou na métrica de público-alvo endereçável para o Real-time Customer Data Platform B2B Edition. A partir de hoje, você pode ver uma queda única na métrica de contagem de perfis/público-alvo endereçável total. Nenhum de seus dados foi apagado, isso é simplesmente uma alteração na contagem. Entre em contato com o executivo do Adobe se tiver dúvidas |
+
+{style="table-layout:auto"}
+
+Para saber mais sobre o Real-Time CDP B2B Edition, leia a [Visão geral do Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Serviço de segmentação {#segmentation}
 

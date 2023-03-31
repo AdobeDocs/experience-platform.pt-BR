@@ -1,51 +1,65 @@
 ---
-title: Tipos de elementos de dados na extensão SDK da Web do Adobe Experience Platform
-description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
+title: Tipos de elementos de dados na extensão do SDK da Web da Adobe Experience Platform
+description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão de tag Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
+source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 19%
+source-wordcount: '633'
+ht-degree: 8%
 
 ---
 
+
 # Tipos de elementos de dados
 
-Depois de definir o [tipos de ação](action-types.md) no [Extensão de tag do SDK da Web da Adobe Experience Platform](web-sdk-extension-configuration.md), configure os tipos de elementos de dados.
+Depois de definir o [tipos de ação](action-types.md) no [Extensão de tag do Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), você deve configurar os tipos de elemento de dados. Esta página descreve os tipos de elementos de dados disponíveis.
 
-Esta página descreve os tipos de elementos de dados disponíveis.
+## ID da mesclagem de eventos {#event-merge-id}
 
+Quando usado, esse elemento de dados fornece uma ID de mesclagem de eventos. Nenhuma configuração é necessária para esse elemento de dados. O elemento de dados fornecido permanece o mesmo até que o visitante saia da página ou até que a variável **[!UICONTROL Redefinir ID de mesclagem de eventos]** é usada.
 
-## ID de mesclagem de eventos
+## Mapa de identidade {#identity-map}
 
-Quando usado, esse elemento de dados fornece uma ID de mesclagem de eventos. Nenhuma configuração é necessária para esse elemento de dados. O elemento de dados fornecido permanece o mesmo até que o visitante saia da página ou até que o tipo de ação &quot;Redefinir ID de mesclagem de eventos&quot; seja usado.
-
-## Mapa de identidade
-
-Um mapa de identidade permite estabelecer identidades para o visitante da página da Web. Um mapa de identidade consiste em namespaces, como _telefone_ ou _email_, com cada namespace contendo um ou mais identificadores. Por exemplo, se o indivíduo em seu site tiver fornecido dois números de telefone, o namespace do telefone deverá conter dois identificadores.
+Um mapa de identidade permite estabelecer identidades para o visitante da sua página da Web. Um mapa de identidade consiste em namespaces, como _Telefone_ ou _email_, com cada namespace contendo um ou mais identificadores. Por exemplo, se o indivíduo em seu site tiver fornecido dois números de telefone, seu namespace de telefone deverá conter dois identificadores.
 
 No [!UICONTROL Mapa de identidade] elemento de dados, você fornecerá as seguintes informações para cada identificador:
 
-* **[!UICONTROL ID]**: o valor que identifica o visitante. Por exemplo, se o identificador pertencer à variável _telefone_ namespace, o [!UICONTROL ID] pode ser _555-555-5555_. Normalmente, esse valor é derivado de uma variável JavaScript ou de algum outro dado na página, portanto, é melhor criar um elemento de dados que faça referência aos dados da página e, em seguida, fazer referência ao elemento de dados na [!UICONTROL ID] campo dentro do [!UICONTROL Mapa de identidade] elemento de dados. Se, ao ser executado na página, o valor da ID for qualquer coisa menos uma string preenchida, o identificador será removido automaticamente do mapa de identidade.
-* **[!UICONTROL Estado autenticado]**: uma seleção que indica se o visitante está autenticado.
-* **[!UICONTROL Principal]**: uma seleção que indica se o identificador deve ser usado como o identificador principal do indivíduo. Se nenhum identificador for marcado como principal, a ECID será usada como o identificador principal.
+* **[!UICONTROL ID]**: O valor que identifica o visitante. Por exemplo, se o identificador pertencer à variável _Telefone_ namespace, o [!UICONTROL ID] pode ser _555-555-5555_. Normalmente, esse valor é derivado de uma variável JavaScript ou de algum outro dado na página, portanto, é melhor criar um elemento de dados que faça referência aos dados da página e, em seguida, faça referência ao elemento de dados no [!UICONTROL ID] no campo [!UICONTROL Mapa de identidade] elemento de dados. Se, ao executar em sua página, o valor da ID for qualquer coisa além de uma string preenchida, o identificador será removido automaticamente do mapa de identidade.
+* **[!UICONTROL Estado autenticado]**: Uma seleção que indica se o visitante está autenticado.
+* **[!UICONTROL Primário]**: Uma seleção que indica se o identificador deve ser usado como o identificador principal do indivíduo. Se nenhum identificador estiver marcado como primário, a ECID será usada como o identificador principal.
 
-Você não deve fornecer uma ECID ao criar um mapa de identidade. Ao usar o SDK, uma ECID é gerada automaticamente no servidor e incluída no mapa de identidade.
+![Imagem da interface do usuário que mostra a tela Editar elemento de dados .](./assets/identity-map-data-element.png)
 
-O elemento de dados do mapa de identidade é frequentemente usado em conjunto com a variável [[!UICONTROL Objeto XDM] tipo de elemento de dados](#xdm-object) e a variável [[!UICONTROL Definir consentimento] tipo de ação](action-types.md#set-consent).
+Você não deve fornecer um [!DNL ECID] ao criar um mapa de identidade. Ao usar o SDK, um [!DNL ECID] é gerado automaticamente no servidor e incluído no mapa de identidade.
 
-Leia mais sobre [Serviço de identidade da Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=pt-BR).
+O elemento de dados do mapa de identidade geralmente é usado em conjunto com a variável [[!UICONTROL Objeto XDM] tipo de elemento de dados](#xdm-object) e [[!UICONTROL Definir consentimento] tipo de ação](action-types.md#set-consent).
 
-![](./assets/identity-map-data-element.png)
+Leia mais sobre [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md).
 
 ## Objeto XDM {#xdm-object}
 
-Use o formato XDM para enviar dados ao Adobe Experience Platform Web SDK. A formatação dos dados é mais fácil com o elemento de dados do objeto XDM. Ao abrir esse elemento de dados pela primeira vez, selecione a sandbox e o esquema corretos da Adobe Experience Platform. Após selecionar o esquema, você verá a estrutura dele, que pode ser facilmente preenchida.
+Formatar seus dados para XDM é mais fácil com o elemento de dados do objeto XDM. Ao abrir esse elemento de dados pela primeira vez, selecione a sandbox e o esquema corretos da Adobe Experience Platform. Após selecionar o esquema, é possível ver a estrutura do esquema, que pode ser facilmente preenchida.
 
-![](./assets/XDM-object.png)
+![Imagem da interface do usuário que mostra a estrutura do objeto XDM.](assets/XDM-object.png)
 
-Observe que quando você abre determinados campos do esquema, como `web.webPageDetails.URL`, alguns itens são coletados automaticamente. Embora vários itens sejam coletados automaticamente, você pode substituir qualquer item, se necessário. Todos os valores podem ser preenchidos manualmente ou usando outros elementos de dados.
+Observe que, ao abrir determinados campos do esquema, como `web.webPageDetails.URL`, alguns itens são coletados automaticamente. Mesmo que vários itens sejam coletados automaticamente, você pode substituir qualquer item, se necessário. Todos os valores podem ser preenchidos manualmente ou usando outros elementos de dados.
 
 >[!NOTE]
 >
->Preencha apenas as informações que você está interessado em coletar. Tudo o que não for preenchido será omitido quando os dados forem enviados para as soluções.
+>Preencha apenas as informações que você está interessado em coletar. Qualquer coisa que não for preenchida é omitida quando os dados forem enviados para as soluções.
+
+## Variável (Beta) {#variable}
+
+>[!IMPORTANT]
+>
+>No momento, essa é uma funcionalidade beta e está sujeita a alterações. As versões futuras podem conter alterações de quebra.
+
+Outra maneira de criar objetos XDM é usar o **[!UICONTROL Variável]** elemento de dados. Enquanto o elemento de dados do objeto XDM é criado quando referenciado, como dentro de um `sendEvent` , o **[!UICONTROL Variável]** o elemento de dados pode ser atualizado por meio de [!UICONTROL Atualizar variável] ações. Para usar o elemento de dados, selecione a sandbox e o schema corretos do Adobe Experience Platform.
+
+![Imagem da interface do usuário que mostra a tela Criar elemento de dados .](assets/variable-data-element.png)
+
+Depois de criar esse elemento de dados, você pode usar [Atualizar variável](./action-types.md#update-variable) ações para modificar o elemento de dados. Em seguida, nas ações de evento de envio, use o elemento de dados variável para a opção XDM .
+
+## Próximas etapas {#next-steps}
+
+Saiba mais sobre casos de uso específicos, como [acesso à ECID](accessing-the-ecid.md).

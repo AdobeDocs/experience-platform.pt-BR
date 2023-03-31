@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do serviço de query
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 879f3eb1f6856470e8e2d87537ca12438ca25d22
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
@@ -123,13 +123,15 @@ A tabela abaixo descreve os parâmetros normalmente necessários para se conecta
 >Ao se conectar a um host usando credenciais que não estão expirando, ainda é necessário usar todos os parâmetros listados na variável [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] exceto por senha e nome de usuário.
 >O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como é visto neste exemplo `username:{your_username}` e `password:{password_string}`.
 
-| Parâmetro | Descrição |
-|---|---|
-| **Servidor/Host** | O nome do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e assume a forma de `server.adobe.io`. O valor é encontrado em **[!UICONTROL Host]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</ul></li> |
-| **Porta** | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e é encontrado em **[!UICONTROL Port]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. Um exemplo de valor para a porta seria `80`.</ul></li> |
-| **Banco de dados** | O banco de dados ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando e foi encontrado em **[!UICONTROL Banco de dados]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. Um exemplo de valor para o banco de dados seria `prod:all`.</ul></li> |
-| **Nome de usuário** | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando. Ele assume o formato de uma sequência alfanumérica antes de `@AdobeOrg`. Esse valor é encontrado em **[!UICONTROL Nome do usuário]**.</li></ul> |
-| **Senha** | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais que estão expirando, isso poderá ser encontrado em **[!UICONTROL Senha]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</li><li>Se você estiver usando credenciais que não estão expirando, esse valor será o argumento concatenado de technicalAccountID e a credencial obtida do arquivo JSON de configuração. O valor da senha assume o formulário: `{technicalAccountId}:{credential}`.</li></ul> |
+| Parâmetro | Descrição | Exemplo |
+|---|---|---|
+| **Servidor/Host** | O nome do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e assume a forma de `server.adobe.io`. O valor é encontrado em **[!UICONTROL Host]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</ul></li> | `acme.platform.adobe.io` |
+| **Porta** | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que expiram e credenciais que não expiram e é encontrado em **[!UICONTROL Port]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</ul></li> | `80` |
+| **Banco de dados** | O banco de dados ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando e foi encontrado em **[!UICONTROL Banco de dados]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção. </ul></li> | `prod:all` |
+| **Nome de usuário** | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais que estão expirando e credenciais que não estão expirando. Ele assume o formato de uma sequência alfanumérica antes de `@AdobeOrg`. Esse valor é encontrado em **[!UICONTROL Nome do usuário]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
+| **Senha** | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais que estão expirando, isso poderá ser encontrado em **[!UICONTROL Senha]** no [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO] seção.</li><li>Se você estiver usando credenciais que não estão expirando, esse valor será o argumento concatenado de technicalAccountID e a credencial obtida do arquivo JSON de configuração. O valor da senha assume o formulário: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Uma senha de credencial que expira é superior a mil caracteres alfanuméricos. Nenhum exemplo será dado.</li><li>Uma senha de credencial que não expira é a seguinte:`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Próximas etapas
 

@@ -2,9 +2,9 @@
 title: Notas de versão para Tags e Encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: f2f2f9abc50f2016e41fd23bfbb66553fadf6fce
+source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '720'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,8 @@ Acesse novos fluxos de trabalho de início rápido em &quot;Introdução&quot; n
 Novas extensões foram lançadas:
 
 * **[!DNL Braze]extensão de encaminhamento de eventos**: O [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) a extensão de encaminhamento de eventos permite aproveitar os dados capturados na Rede de borda do Adobe Experience Platform e enviá-los para [!DNL Braze] na forma de eventos do lado do servidor usando o [!DNL Braze] APIs de rastreamento de usuário.
-* **[!DNL Mixpanel]extensão de encaminhamento de eventos**: O [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) A extensão do permite aproveitar o encaminhamento do evento para capturar informações do evento na Rede de borda do Adobe Experience Platform e enviá-las para o Mixpanel usando a API de rastreamento de eventos.
+* **[API de Eventos Epsilon] extensão de encaminhamento de eventos**: O [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) A extensão permite aproveitar o encaminhamento do evento para capturar informações do evento na Rede de borda do Adobe Experience Platform e enviá-las para [!DNL Epsilon] usando o [!DNL Epsilon] API de evento.
+* **[!DNL Mixpanel]extensão de encaminhamento de eventos**: O [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) A extensão permite aproveitar o encaminhamento do evento para capturar informações do evento na Rede de borda do Adobe Experience Platform e enviá-las para [!DNL Mixpanel] usando a API de eventos de rastreamento.
 
 ## 25 de janeiro de 2023
 

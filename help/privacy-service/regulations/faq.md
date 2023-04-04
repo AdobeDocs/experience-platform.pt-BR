@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;FAQ;regulamento;regulamentos;Regulamentos;privacidade;Privacidade;
+keywords: Experience Platform; home; tópicos populares; GDPR; Gdpr; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; faq; perguntas frequentes; regulamento; regulamentos; regulamentos; privacidade; Privacidade;
 solution: Experience Platform
 title: Perguntas frequentes sobre regulamentos de privacidade
-description: Este documento fornece respostas a perguntas frequentes sobre as regulamentações legais de privacidade compatíveis e sua implementação no Adobe Experience Cloud.
+description: Este documento fornece respostas a perguntas frequentes sobre regulamentos de privacidade legais suportados e sua implementação no Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
 
-# Perguntas frequentes sobre regulamentos de privacidade
+# Perguntas frequentes sobre regras de privacidade
 
-Este documento fornece respostas a perguntas frequentes sobre as regulamentações legais de privacidade compatíveis e sua implementação no Adobe Experience Cloud.
+Este documento fornece respostas a perguntas frequentes sobre regulamentos de privacidade legais suportados e sua implementação no Adobe Experience Cloud.
 
 >[!NOTE]
 >
->As definições para os vários termos utilizados neste documento podem ser [terminologia do regulamento de privacidade](terminology.md) guia.
+>As definições para os vários termos usados neste documento podem ser encontradas no [terminologia do regulamento de privacidade](terminology.md) guia.
 
-## Perguntas gerais
+## Questões gerais
 
-As perguntas a seguir estão relacionadas a todos os regulamentos de privacidade aceitos pelo Experience Cloud.
+As perguntas a seguir estão relacionadas a todas as regras de privacidade suportadas pelo Experience Cloud.
 
-### Quem são afetados pelas regulamentações de privacidade aceitas?
+### Com quem as regras de privacidade aceitas afetam?
 
-A variável [regulamentos de privacidade compatíveis com o Experience Cloud](./overview.md) aplicam-se a todas as organizações que armazenam e processam dados pessoais de cidadãos nas respectivas jurisdições dos regulamentos, independentemente da localização geográfica da organização.
+O [regulamentos de privacidade compatíveis com o Experience Cloud](./overview.md) se aplicam a todas as organizações que armazenam e processam os dados pessoais dos cidadãos dentro das respectivas jurisdições, independentemente da localização geográfica da organização.
 
-### O que constituem dados pessoais?
+### O que constitui dados pessoais?
 
-Dados pessoais são qualquer informação relacionada a uma pessoa física ou titular de dados que possa ser usada para identificar direta ou indiretamente tal pessoa. Pode ser qualquer coisa, desde um nome, uma foto, um endereço de email, detalhes bancários, publicações em sites de redes sociais, informações médicas ou um endereço IP de computador.
+Dados pessoais: qualquer informação relacionada a uma pessoa singular ou a um titular de dados que possa ser usada para identificar direta ou indiretamente tal pessoa. Pode ser qualquer coisa de um nome, uma foto, um endereço de email, detalhes bancários, postagens em sites de redes sociais, informações médicas ou um endereço IP de computador.
 
-Os seguintes identificadores são comumente usados em aplicativos Experience Cloud e podem estar sujeitos a requisitos de regulamento de privacidade:
+Os seguintes identificadores são comumente usados em aplicativos Experience Cloud e podem estar sujeitos aos requisitos de regulamentação de privacidade:
 
 * Nome
 * Endereço postal
@@ -41,115 +41,119 @@ Os seguintes identificadores são comumente usados em aplicativos Experience Clo
 * Endereço de email
 * Nome da conta
 
-As informações pessoais também podem incluir informações de atividade da Internet ou de outra rede eletrônica. Isso inclui, mas não está limitado a:
+As informações pessoais também podem incluir a Internet ou outras informações sobre atividades da rede eletrônica. Isso inclui, mas não se limita a:
 
 * Histórico de navegação
-* Pesquisar histórico
+* Histórico de pesquisa
 * Informações sobre a interação do consumidor com um site, aplicativo ou anúncio
 
-Embora as regulamentações de privacidade cubram um amplo conjunto de informações pessoais, os termos contratuais padrão do Adobe determinam que informações pessoais confidenciais (como SSN, informações de carteira de motorista, informações de conta financeira e dados biométricos) sejam geralmente proibidas de serem importadas e usadas em aplicativos Experience Cloud.
+Embora as regras de privacidade abranjam um amplo conjunto de informações pessoais, os termos contratuais padrão Adobe exigem que as informações pessoais confidenciais (como SSN, informações sobre licenças de motorista, informações sobre contas financeiras e dados biométricos) sejam geralmente proibidas de importar e usar em aplicações Experience Cloud.
 
 ### Qual é a diferença entre um controlador de dados e um processador de dados?
 
-A **controlador de dados** é a entidade que determina as finalidades, as condições e os meios de tratamento dos dados pessoais, ao passo que **processador de dados** é uma entidade que processa dados pessoais em nome do controlador de dados.
+A **controlador de dados** é a entidade que determina as finalidades, as condições e os meios de tratamento dos dados pessoais, enquanto que **processador de dados** é uma entidade que processa dados pessoais em nome do controlador de dados.
 
-A **controlador de dados** é a pessoa ou organização que tem o poder e a responsabilidade de tomar decisões relacionadas à coleta, ao uso ou à divulgação de dados pessoais. A **processador de dados** é a pessoa ou organização que opera em relação à coleta, utilização ou divulgação dos dados pessoais e à direção do controlador de dados.
+A **controlador de dados** é a pessoa ou organização com poder e responsabilidade para tomar decisões relacionadas à coleta, utilização ou divulgação de dados pessoais. A **processador de dados** é a pessoa ou organização que opera em relação à coleta, utilização ou divulgação dos dados pessoais e à direção do controlador de dados.
 
 ### Qual é a diferença entre consentimento explícito e inequívoco do titular dos dados?
 
-**Consentimento explícito** refere-se a um padrão de consentimento que envolve uma indicação específica, informada e inequívoca dos desejos do titular dos dados, oralmente ou por escrito. Em termos simples, o titular dos dados deve dizer literalmente e explicitamente &quot;Eu concordo&quot; ou &quot;Eu concordo&quot; para que o consentimento seja considerado explícito. Além disso, deve ser tão fácil retirar o consentimento como o dar.
+**Consentimento explícito** Refere-se a uma norma de consentimento que implique uma indicação específica, informada e inequívoca dos desejos da pessoa em causa, oralmente ou por escrito. Em termos simples, o titular dos dados deve dizer literalmente e explicitamente &quot;Eu consentimento&quot; ou &quot;Eu concordo&quot; para que o consentimento seja considerado explícito. Além disso, deve ser tão fácil retirar o consentimento como é dar-lhe.
 
-**Consentimento inequívoco (implícito)** refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas é, no entanto, de natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento inequívoco.
+**Consentimento inequívoco (implícito)** refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas que é de natureza inequívoca. Por exemplo, durante o processo de inscrição de um site da empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consentiu em receber emails em ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada um consentimento inequívoco.
 
-Para muitos regulamentos como o GDPR, o consentimento explícito é necessário para processar dados pessoais confidenciais, onde nada menos que &quot;aceitar&quot; será suficiente. No entanto, para dados não confidenciais, o consentimento inequívoco (implícito) é aceitável.
+Para muitos regulamentos, como o GDPR, é necessário consentimento explícito para o processamento de dados pessoais confidenciais, onde nada menos que &quot;opt in&quot; será suficiente. No entanto, para dados não confidenciais, o consentimento inequívoco (implícito) é aceitável.
 
-### Os titulares de dados com menos de uma determinada idade podem consentir?
+### Os titulares de dados com menos de uma certa idade podem consentir?
 
-Muitas regulamentações de privacidade estipulam que, se um titular de dados tiver menos de uma determinada idade, não poderá legalmente fornecer consentimento para a coleta de seus dados pessoais. Alguns regulamentos permitem que o consentimento seja dado pelo titular da responsabilidade parental por esse titular de dados nesses casos, mas não em todos. A tabela a seguir lista a idade mínima para que os titulares de dados forneçam seu próprio consentimento para cada regulamento, com notas para obter mais informações:
+Muitas regulamentações de privacidade estipulam que, se um titular de dados tiver menos de uma certa idade, ele não poderá legalmente consentir com a coleta de seus dados pessoais. Alguns regulamentos permitem que, nestes casos, o titular da responsabilidade parental, mas não todos, dê o seu consentimento à pessoa em causa. A tabela a seguir apresenta a idade mínima para as pessoas em causa darem o seu próprio consentimento a cada regulamento, com notas para mais informações:
 
-| Regulação | Idade do consentimento | Notas |
+| Regulamento | Idade do consentimento | Notas |
 | --- | --- | --- |
-| CCPA (Califórnia) | 16 | <ul><li>O consentimento dos pais só pode ser fornecido para titulares de dados com 13 anos ou mais.</li><li>A coleta de dados pessoais de indivíduos com menos de 13 anos é estritamente proibida.</li></ul> |
-| GDPR (União Europeia) | 16 | <ul><li>Alguns Estados-Membros da UE podem prever uma lei para uma idade mais baixa para este efeito, mas não inferior a 13 anos.</li><li>O consentimento dos pais deve ser fornecido para todos os titulares de dados abaixo do limite de idade.</li></ul> |
-| LGPD (Brasil) | 13 | <ul><li>O consentimento dos pais deve ser fornecido para todos os titulares de dados abaixo do limite de idade.</li><li>O consentimento pode ser dado por uma pessoa singular de 13 a 18 anos, desde que o tratamento dos seus dados pessoais seja efetuado no seu interesse.</li></ul> |
-| PDPA (Tailândia) | 10 | <ul><li>O consentimento dos pais deve ser fornecido para todos os titulares de dados abaixo do limite de idade.</li></ul> |
+| CCPA (Califórnia) | 16 | <ul><li>O consentimento parental só pode ser fornecido para titulares de dados com idade igual ou superior a 13 anos.</li><li>É estritamente proibida a recolha de dados pessoais de pessoas com menos de 13 anos.</li></ul> |
+| GDPR (União Europeia) | 16 | <ul><li>Alguns Estados-Membros da UE podem prever uma lei para uma idade inferior para este efeito, mas não inferior a 13 anos.</li><li>Deve ser dado consentimento parental a todos os titulares de dados com idade inferior ao limite.</li></ul> |
+| LGPD (Brasil) | 13 | <ul><li>Deve ser dado consentimento parental a todos os titulares de dados com idade inferior ao limite.</li><li>O consentimento pode ser dado por uma pessoa singular de 13 a 18 anos, desde que o tratamento dos seus dados pessoais seja efetuado no seu interesse superior.</li></ul> |
+| PDPA (Tailândia) | 10 | <ul><li>Deve ser dado consentimento parental a todos os titulares de dados com idade inferior ao limite.</li></ul> |
 
 <!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
-### Quantos dias uma empresa tem para responder a uma solicitação do consumidor para acessar ou excluir informações pessoais?
+### Quantos dias uma empresa precisa responder a uma solicitação do consumidor para acessar ou excluir informações pessoais?
 
-Supondo que a empresa tenha coletado informações pessoais e possa autenticar ou verificar a identidade de um consumidor específico, as regulamentações de privacidade permitem que uma janela de tempo específica seja atendida para uma solicitação do consumidor. A tabela a seguir detalha as janelas de tempo aplicáveis para cada regulamento, com observações sobre algumas exceções:
+Supondo que a empresa tenha coletado informações pessoais e que possa autenticar ou verificar a identidade de um determinado consumidor, as regras de privacidade permitem que um período específico seja atendido por uma solicitação do consumidor. O quadro seguinte discrimina os períodos de tempo aplicáveis a cada regulamento, com notas sobre algumas exceções:
 
-| Regulação | Janela de conformidade | Notas |
+>[!NOTE]
+>
+>O prazo de resposta em &quot;dias&quot; reflete os prazos impostos por cada lei regulamentar para completar um pedido dos consumidores.
+
+| Regulamento | Período de tempo para responder | Notas |
 | --- | --- | --- |
 | CCPA (Califórnia) | 45 dias |  |
-| GDPR (União Europeia) | 30 dias | Se a solicitação for complexa ou se várias solicitações tiverem sido feitas pelo mesmo titular dos dados, ela poderá ser estendida para 60 dias. |
+| GDPR (União Europeia) | 30 dias | Se a solicitação for complexa ou várias solicitações tiverem sido feitas pelo mesmo titular de dados, a solicitação poderá ser estendida para 60 dias. |
 | LGPD (Brasil) | 15 dias |  |
-| PDPA (Tailândia) | 30 dias | Se uma empresa não puder responder a uma solicitação do titular dos dados dentro da janela de conformidade, a empresa terá 30 dias adicionais a partir da data em que não pôde atender à solicitação para responder por escrito ao titular dos dados. |
+| PDPA (Tailândia) | 30 dias | Se uma empresa não puder responder à solicitação de um titular de dados dentro da janela de conformidade, a empresa terá mais 30 dias a partir da data em que não pôde atender à solicitação para responder por escrito ao titular dos dados. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
-### Minha empresa precisa nomear um responsável pela proteção de dados?
+### Minha empresa precisa nomear um oficial de proteção de dados?
 
 Se as operações de dados da sua organização estiverem sob as jurisdições legais do GDPR, LGPD ou PDPA, você deverá nomear um responsável pela proteção de dados (DPO) nos seguintes casos:
 
 * Sua organização é uma autoridade pública
-* Sua organização se envolve em monitoramento sistemático em larga escala
-* Sua organização se envolve no processamento em larga escala de dados pessoais confidenciais.
+* Sua organização realiza um monitoramento sistemático em grande escala
+* Sua organização realiza um processamento em grande escala de dados pessoais confidenciais.
 
 >[!IMPORTANT]
 >
->Ao contrário de outros regulamentos, a CCPA estipula isso como um requisito. No entanto, geralmente recomenda-se que, para manter a conformidade com a privacidade, uma empresa tenha de ter atividades qualificadas de monitoramento de dados individuais e de armazenamento de dados do consumidor, bem como de resposta a consultas dos clientes.
+>Ao contrário de outros regulamentos, a CCPA estipula isso como um requisito. No entanto, é recomendável que, para manter a conformidade com a privacidade, uma empresa tenha atividades qualificadas de monitoramento individual de coleta de dados e armazenamento de dados do consumidor, além de responder a consultas do cliente.
 
-### Como posso aceitar solicitações de privacidade do consumidor se mantenho dados cobertos por regulamentos de privacidade?
+### Como posso oferecer suporte às solicitações de privacidade do consumidor se mantiver dados cobertos pelas regras de privacidade?
 
-Depois de tomar as medidas necessárias para autenticar consumidores que se enquadram nas jurisdições legais apropriadas, a Adobe Experience Platform Privacy Service permite enviar solicitações de privacidade do consumidor para aplicativos compatíveis com o Experience Cloud. Consulte a [[!DNL Privacy Service] visão geral](../home.md) para obter mais informações. Para obter informações sobre como seus aplicativos Experience Cloud específicos podem atender às solicitações de privacidade, consulte o manual no [aplicativos Privacy Service e Experience Cloud](../experience-cloud-apps.md).
+Depois de tomar as medidas necessárias para autenticar consumidores que estejam nas jurisdições legais apropriadas, o Adobe Experience Platform Privacy Service permite enviar solicitações de privacidade do consumidor para aplicativos Experience Cloud compatíveis. Consulte a [[!DNL Privacy Service] visão geral](../home.md) para obter mais informações. Para obter informações sobre como seus aplicativos Experience Cloud específicos podem atender às solicitações de privacidade, consulte o guia em [Aplicativos Privacy Service e Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
->Outras orientações do regulador da Califórnia ainda estão disponíveis sobre quais tipos de dados são elegíveis para solicitações de privacidade do consumidor.
+>Ainda há mais orientações do regulador da Califórnia sobre quais tipos de dados estão qualificados para solicitações de privacidade do consumidor.
 
-## Perguntas da CCPA
+## Perguntas sobre a CCPA
 
-As questões seguintes dizem especificamente respeito à CCPA.
+As seguintes questões estão especificamente relacionadas com a CCPA.
 
 ### Como as diferentes funções e responsabilidades da CCPA se aplicam ao Experience Cloud?
 
 Conforme definido pela CCPA, as seguintes funções se aplicam ao Adobe e seus clientes:
 
-* Adobe clientes (a parte que solicita a coleta e o uso de informações pessoais de residentes da Califórnia) seriam considerados uma **Empresas**.
-* Adobe, no seu papel de prestação do serviço, seria considerada uma **Provedor de serviços**.
+* Os clientes do Adobe (a parte que solicita a coleta e o uso de informações pessoais dos residentes da Califórnia) seriam considerados um **Negócios**.
+* A Adobe, na sua função de prestação do serviço, seria considerada uma **Provedor de serviços**.
 
-Como Provedor de Serviços, a Adobe coleta e processa informações pessoais em nome da Empresa e está contratualmente obrigada a usar essas informações apenas para os fins específicos estabelecidos no contrato.
+Como Provedor de serviços, a Adobe coleta e processa informações pessoais em nome da empresa e está contratualmente obrigada a usar essas informações apenas para os fins específicos estabelecidos no contrato.
 
-Dada esta relação e a linguagem do contrato de Adobe, as divulgações ao Adobe provavelmente não seriam consideradas uma &quot;venda&quot; para a qual as empresas precisariam de fornecer um aviso e solicitar consentimento.
+Tendo em conta esta relação e a linguagem do contrato de Adobe, as divulgações de informações não seriam provavelmente consideradas uma &quot;venda&quot; para a qual as empresas precisariam de informar e solicitar consentimento.
 
-No entanto, os serviços da Adobe podem ser usados para permitir determinado compartilhamento de dados e transferências para terceiros. Essas transferências de terceiros podem ser consideradas uma &quot;venda&quot; e exigem legalmente divulgação e consentimento. Os clientes devem trabalhar com seu departamento jurídico para avaliar casos de uso específicos e avaliar os requisitos aplicáveis.
+No entanto, os serviços da Adobe podem ser usados para permitir determinados compartilhamentos de dados e transferências para terceiros. Essas transferências de terceiros podem ser consideradas uma &quot;venda&quot; e exigem legalmente a divulgação e o consentimento. Os clientes devem trabalhar com seus advogados para avaliar casos de uso específicos, a fim de avaliar os requisitos aplicáveis.
 
-### O Adobe oferece outras ferramentas que podem ser úteis no atendimento dos requisitos da CCPA?
+### O Adobe oferece outras ferramentas que podem ser úteis para atender aos requisitos da CCPA?
 
-Os aplicativos da Adobe Experience Cloud fornecem funções de gerenciamento e governança de dados que podem ser úteis para as necessidades de privacidade das empresas. Entre essas ferramentas estão a rotulagem de uso de dados, controles de acesso com base em função, ofuscação de IP e recursos de hash.
+Os aplicativos Adobe Experience Cloud oferecem funções de gerenciamento e controle de dados que podem ser úteis para as necessidades de privacidade das empresas. Entre essas ferramentas estão a rotulagem de uso de dados, controles de acesso com base em funções, ofuscação de IP e recursos de hash.
 
-A Adobe recebeu várias certificações de suas práticas de privacidade e segurança, como uma certificação ISO 27001 e uma validação do GDPR TrustArc.
+A Adobe recebeu várias certificações de suas práticas de privacidade e segurança, como uma certificação ISO 27001 e uma validação TrustArc GDPR.
 
-## Perguntas sobre o GDPR
+## Perguntas sobre o RGPD
 
-As perguntas a seguir estão relacionadas especificamente ao GDPR.
+As perguntas a seguir estão relacionadas especificamente com o GDPR.
 
 ### Qual é a diferença entre um regulamento e uma diretiva?
 
-A **regulamento** é um ato legislativo vinculativo e deve ser aplicado na sua totalidade em toda a UE. A **diretiva** é um ato legislativo que estabelece um objetivo que todos os países da UE devem alcançar, mas cabe a cada país decidir como.
+A **regulamento** é um ato legislativo vinculativo e deve ser aplicado na sua totalidade em toda a UE. A **diretiva** Trata-se de um ato legislativo que define um objetivo que todos os países da UE devem alcançar, mas cabe a cada um deles decidir como.
 
-É importante observar que o GDPR é um regulamento, em contraste com a legislação anterior (a Diretiva de Proteção de Dados), que é uma diretiva.
+É importante observar que o GDPR é um regulamento, ao contrário da legislação anterior (a Diretiva Proteção de Dados), que é uma diretiva.
 
-### Como o GDPR afeta a política em relação às violações de dados?
+### Como o GDPR afeta as políticas relacionadas às violações de dados?
 
-As regulamentações propostas em relação às violações de dados estão relacionadas principalmente às políticas de notificação das empresas que foram violadas. As violações de dados que possam constituir um risco para as pessoas devem ser notificadas à autoridade responsável pela proteção de dados no prazo de 72 horas e às pessoas afetadas sem demora injustificada.
+Os regulamentos propostos relativos às violações de dados estão relacionados principalmente com as políticas de notificação das empresas que foram violadas. As violações de dados que possam constituir um risco para os indivíduos devem ser notificadas à autoridade responsável pela proteção de dados no prazo de 72 horas e às pessoas afetadas sem demora injustificada.
 
 ## Perguntas sobre PDPA
 
-As perguntas a seguir apresentadas referem-se especificamente ao PDPA.
+As seguintes questões estão especificamente relacionadas com o PDPA.
 
-### O que constituem dados pessoais confidenciais?
+### O que são dados pessoais confidenciais?
 
-O PDPA prevê requisitos rigorosos para a coleta e o armazenamento de dados pessoais sensíveis, que incluem dados pessoais relacionados a: origem racial ou étnica, opiniões políticas, crenças religiosas ou filosóficas, registros criminais, associações a sindicatos, dados genéticos, dados biométricos, registros de saúde e orientação ou preferências sexuais.
+O PDPA prevê requisitos rigorosos para a recolha e armazenamento de dados pessoais sensíveis, incluindo dados pessoais relativos a: origem racial ou étnica, opiniões políticas, crenças religiosas ou filosóficas, registros criminais, associações sindicais, dados genéticos, dados biométricos, registros de saúde e orientação ou preferências sexuais.

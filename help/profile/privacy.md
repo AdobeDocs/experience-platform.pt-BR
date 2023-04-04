@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
+source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -186,10 +186,6 @@ Para garantir que suas solicitações de privacidade processem todos os atributo
 ## Excluir processamento de solicitação {#delete}
 
 When [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Platform] envia confirmação para [!DNL Privacy Service] que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são removidos após a conclusão do trabalho de privacidade.
-
->[!IMPORTANT]
->
->As solicitações de exclusão de privacidade não são instantâneas e podem variar dependendo dos serviços envolvidos e de outros fatores de impacto, como a localização geográfica. O período para a conclusão de tarefas de privacidade pode variar de 15 a 45 dias, mas não é garantido.
 
 Dependendo de você também ter incluído o Serviço de identidade (`identity`) e o lago de dados (`aepDataLake`) como produtos em sua solicitação de privacidade para Perfil (`ProfileService`), conjuntos diferentes de dados relacionados ao perfil são removidos do sistema em momentos potencialmente diferentes:
 

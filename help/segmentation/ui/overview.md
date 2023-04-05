@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do serviço de segmentação
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2650'
 ht-degree: 1%
 
 ---
@@ -69,12 +69,11 @@ Essa exibição lista informações sobre a definição do segmento, incluindo a
 
 Você pode adicionar campos adicionais a essa exibição selecionando ![o ícone do atributo de filtro](../images/ui/overview/filter-attribute.png). Esses campos adicionais incluem detalhamento, método de avaliação e ID de trabalho.
 
-Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status de perfil calculados: [!UICONTROL Realizado], [!UICONTROL Existente]e [!UICONTROL Saindo]. Além disso, o detalhamento mostrado na variável [!UICONTROL Procurar] é o detalhamento mais preciso do status do segmento. Se este número diferir do que está indicado na variável [!UICONTROL Visão geral] use os números na guia [!UICONTROL Procurar] como a fonte correta de informações, já que [!UICONTROL Visão geral] os números de guia só são atualizados uma vez por dia.
+Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status de perfil calculados: [!UICONTROL Realizado] e [!UICONTROL Saindo]. Além disso, o detalhamento mostrado na variável [!UICONTROL Procurar] é o detalhamento mais preciso do status do segmento. Se este número diferir do que está indicado na variável [!UICONTROL Visão geral] use os números na guia [!UICONTROL Procurar] como a fonte correta de informações, já que [!UICONTROL Visão geral] os números de guia só são atualizados uma vez por dia.
 
 | Status | Descrição |
 | ------ | ----------- |
 | Realizado | A contagem de perfis qualificados para o segmento nas últimas 24 horas. Portanto, o número de perfis qualificados para o segmento desde a última vez que o trabalho de segmento em lote foi executado. |
-| Existente | A contagem de perfis que permaneceram qualificados para o segmento nas últimas 24 horas. Portanto, o número de perfis que permaneceram qualificados para o segmento desde a última execução do trabalho de segmento em lote. |
 | Saindo | A contagem de perfis que saiu do segmento nas últimas 24 horas. Portanto, o número de perfis que não se qualificam mais para o segmento desde a última vez que o trabalho do segmento em lote foi executado. |
 
 O método de avaliação pode ser streaming, lote ou borda. Segmentos de fluxo são constantemente avaliados à medida que os dados entram no sistema. Segmentos em lote são avaliados de acordo com uma programação definida. Segmentos de borda são avaliados em tempo real, o que permite casos de uso de personalização de página e próxima.

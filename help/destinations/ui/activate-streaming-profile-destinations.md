@@ -4,7 +4,7 @@ title: Ativar dados do público-alvo para destinos de exportação de perfil de 
 type: Tutorial
 description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform, enviando segmentos para destinos com base em perfil de transmissão.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Seu exportado [!DNL Experience Platform] Os dados chegam ao destino do target no
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

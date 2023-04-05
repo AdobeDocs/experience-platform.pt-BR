@@ -1,65 +1,65 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;públicos-alvo;público-alvo;API;api;
+keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, públicos-alvo, público-alvo, API, api;
 title: Endpoint da API de públicos-alvo
-description: O ponto de extremidade de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform permite gerenciar programaticamente os públicos-alvo da sua organização.
+description: O endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os públicos-alvo da organização.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 5%
 
 ---
 
-# Endpoint de públicos
+# Ponto de extremidade de públicos-alvo
 
 >[!IMPORTANT]
 >
->O endpoint do público-alvo está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+>No momento, o endpoint do público-alvo está em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Um público-alvo é uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essas coleções de pessoas podem ser geradas usando o Adobe Experience Platform ou de fontes externas. Você pode usar o `/audiences` endpoint na API de segmentação, que permite recuperar, criar, atualizar e excluir públicos de forma programática.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
 
 ## Recuperar uma lista de públicos {#list}
 
-Você pode recuperar uma lista de todos os públicos-alvo de sua organização fazendo uma solicitação GET para a `/audiences` terminal.
+Você pode recuperar uma lista de todos os públicos-alvo de sua organização, fazendo uma solicitação GET para a `/audiences` endpoint .
 
 **Formato da API**
 
-A variável `/audiences` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara ao listar recursos. Se você fizer uma chamada para esse endpoint sem parâmetros, todos os públicos-alvo disponíveis para sua organização serão recuperados. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+O `/audiences` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara ao listar recursos. Se você chamar esse terminal sem parâmetros, todos os públicos-alvo disponíveis para a organização serão recuperados. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
-Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de públicos-alvo:
+Os seguintes parâmetros de query podem ser usados ao recuperar uma lista de públicos-alvo:
 
 | Parâmetro de consulta | Descrição | Exemplo |
 | --------------- | ----------- | ------- |
-| `start` | Especifica o deslocamento inicial dos públicos-alvo retornados. | `start=5` |
+| `start` | Especifica o deslocamento inicial para os públicos-alvo retornados. | `start=5` |
 | `limit` | Especifica o número máximo de públicos-alvo retornados por página. | `limit=10` |
-| `sort` | Especifica a ordem de classificação dos resultados. Isso é gravado no formato `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
-| `property` | Um filtro que permite especificar públicos que **exatamente** corresponder a um valor de atributo. Isso é gravado no formato `property=` | `property=audienceId==test-audience-id` |
+| `sort` | Especifica a ordem pela qual classificar os resultados. Isso é gravado no formato `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
+| `property` | Um filtro que permite especificar públicos que **exatamente** corresponda ao valor de um atributo. Isso é gravado no formato `property=` | `property=audienceId==test-audience-id` |
 | `name` | Um filtro que permite especificar públicos cujos nomes **contain** o valor fornecido. Esse valor não diferencia maiúsculas de minúsculas. | `name=Sample` |
-| `description` | Um filtro que permite especificar públicos cujas descrições **contain** o valor fornecido. Esse valor não diferencia maiúsculas de minúsculas. | `description=Test Description` |
-| `withMetrics` | Um filtro que retorna as métricas, além dos públicos-alvo. | `property=withMetrics==true` |
+| `description` | Um filtro que permite especificar públicos-alvo cujas descrições **contain** o valor fornecido. Esse valor não diferencia maiúsculas de minúsculas. | `description=Test Description` |
+| `withMetrics` | Um filtro que retorna as métricas além dos públicos-alvo. | `property=withMetrics==true` |
 
 >[!IMPORTANT]
 >
->Para públicos-alvo, as métricas são retornadas em `metrics` e contém informações sobre contagens de perfis, criação e carimbos de data e hora de atualização.
+>Para públicos-alvo, as métricas são retornadas na variável `metrics` e contém informações sobre contagens de perfil, criação e atualização de carimbos de data e hora.
 
 **Nenhuma métrica**
 
-O seguinte par de solicitação/resposta é usado quando o `withMetrics` parâmetro de consulta ausente.
+O seguinte par de solicitação/resposta é usado quando a variável `withMetrics` parâmetro de consulta não está presente.
 
 **Solicitação**
 
-A solicitação a seguir recupera os últimos cinco públicos-alvo criados em sua organização.
+A solicitação a seguir recupera os cinco últimos públicos-alvo criados em sua organização.
 
 ```shell
 curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
@@ -75,7 +75,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada por questões de espaço e mostra apenas o primeiro público-alvo retornado.
+>A resposta a seguir foi truncada para espaço e mostra apenas o primeiro público-alvo retornado.
 
 ```json
 {
@@ -145,33 +145,33 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 }
 ```
 
-| Propriedade | Tipo de público | Descrição |
+| Propriedade | Tipo de público-alvo | Descrição |
 | -------- | ------------- | ----------- | 
 | `id` | Ambos | Um identificador somente leitura gerado pelo sistema para o público-alvo. |
-| `audienceId` | Ambos | Se o público-alvo for gerado pela Platform, ele terá o mesmo valor que o `id`. Se o público-alvo for gerado externamente, esse valor será fornecido pelo cliente. |
-| `schema` | Ambos | O esquema do Experience Data Model (XDM) do público-alvo. |
-| `imsOrgId` | Ambos | A ID da organização à qual o público pertence. |
+| `audienceId` | Ambos | Se o público-alvo for um público-alvo gerado pela plataforma, esse será o mesmo valor da variável `id`. Se o público-alvo for gerado externamente, esse valor será fornecido pelo cliente. |
+| `schema` | Ambos | O esquema Experience Data Model (XDM) do público-alvo. |
+| `imsOrgId` | Ambos | A ID da organização à qual o público-alvo pertence. |
 | `sandbox` | Ambos | Informações sobre a sandbox à qual o público-alvo pertence. Mais informações sobre sandboxes podem ser encontradas no [visão geral das sandboxes](../../sandboxes/home.md). |
 | `name` | Ambos | O nome do público-alvo. |
-| `description` | Ambos | Uma descrição do público. |
-| `expression` | Gerado pela plataforma | A expressão Profile Query Language (PQL) do público-alvo. Mais informações sobre expressões PQL podem ser encontradas no [Guia de expressões PQL](../pql/overview.md). |
-| `mergePolicyId` | Gerado pela plataforma | A ID da política de mesclagem à qual o público-alvo está associado. Mais informações sobre políticas de mesclagem podem ser encontradas no [guia de políticas de mesclagem](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Gerado pela plataforma | Mostra como o público-alvo será avaliado. Os possíveis métodos de avaliação incluem batch, streaming ou edge. Mais informações sobre os métodos de avaliação podem ser encontradas no [visão geral da segmentação](../home.md) |
+| `description` | Ambos | Uma descrição do público-alvo. |
+| `expression` | Gerado por plataforma | A expressão Linguagem de consulta de perfil (PQL) do público-alvo. Mais informações sobre expressões PQL podem ser encontradas na seção [Guia de expressões PQL](../pql/overview.md). |
+| `mergePolicyId` | Gerado por plataforma | A ID da política de mesclagem à qual o público-alvo está associado. Mais informações sobre as políticas de mesclagem podem ser encontradas na seção [guia de políticas de mesclagem](../../profile/api/merge-policies.md). |
+| `evaluationInfo` | Gerado por plataforma | Mostra como o público-alvo será avaliado. Os possíveis métodos de avaliação incluem lote, streaming ou borda. Mais informações sobre os métodos de avaliação podem ser encontradas no [visão geral da segmentação](../home.md) |
 | `dependents` | Ambos | Uma matriz de IDs de público-alvo que dependem do público-alvo atual. Isso seria usado se você estivesse criando um público-alvo que é um segmento de um segmento. |
 | `dependencies` | Ambos | Uma matriz de IDs de público-alvo das quais o público-alvo depende. Isso seria usado se você estivesse criando um público-alvo que é um segmento de um segmento. |
-| `type` | Ambos | Um campo gerado pelo sistema que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
+| `type` | Ambos | Um campo gerado pelo sistema que exibe se o público-alvo é gerado pela plataforma ou se é um público gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` se refere a um público-alvo que foi gerado na Platform, enquanto uma `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
 | `createdBy` | Ambos | A ID do usuário que criou o público-alvo. |
-| `labels` | Ambos | Uso de dados no nível do objeto e rótulos de controle de acesso baseados em atributos que são relevantes para o público-alvo. |
-| `namespace` | Ambos | O namespace ao qual o público-alvo pertence. Os valores possíveis incluem `AAM`, `AAMSegments`, `AAMTraits`, e `AEPSegments`. |
-| `audienceMeta` | Externo | Metadados criados externamente do público criado externamente. |
+| `labels` | Ambos | Uso de dados no nível do objeto e rótulos de controle de acesso com base em atributo que são relevantes para o público-alvo. |
+| `namespace` | Ambos | O namespace ao qual o público-alvo pertence. Os valores possíveis incluem `AAM`, `AAMSegments`, `AAMTraits`e `AEPSegments`. |
+| `audienceMeta` | Externo | Metadados criados externamente do público-alvo criado externamente. |
 
 **Com métricas**
 
-O seguinte par de solicitação/resposta é usado quando o `withMetrics` parâmetro de consulta está presente.
+O seguinte par de solicitação/resposta é usado quando a variável `withMetrics` parâmetro de consulta está presente.
 
 **Solicitação**
 
-A solicitação a seguir recupera os últimos cinco públicos-alvo, com métricas, criados em sua organização.
+A solicitação a seguir recupera os cinco últimos públicos-alvo, com métricas, criadas em sua organização.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetrics==true&limit=5&sort=totalProfiles:desc \
@@ -187,7 +187,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada por questões de espaço e mostra apenas o primeiro público-alvo retornado.
+>A resposta a seguir foi truncada para espaço e mostra apenas o primeiro público-alvo retornado.
 
 ```json
 {
@@ -254,7 +254,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
                         "crmid": 11400769
                     },
                     "totalProfilesByStatus": {
-                        "existing": 11400769
+                        "realized": 11400769
                     }
                 },
                 "createEpoch": 1653583927,
@@ -283,22 +283,22 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 }
 ```
 
-As propriedades da lista a seguir **exclusivo** para o `withMetrics` resposta. Se quiser saber as propriedades padrão do público-alvo, leia a [seção anterior](#no-metrics).
+Abaixo encontram-se as propriedades da lista **exclusiva** para `withMetrics` resposta. Se você deseja conhecer as propriedades padrão do público-alvo, leia a [seção anterior](#no-metrics).
 
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `metrics.imsOrgId` | A ID da organização do público-alvo. |
-| `metrics.sandbox` | As informações de sandbox relacionadas ao público-alvo. |
-| `metrics.jobId` | A ID do trabalho de segmento que está processando o público. |
+| `metrics.sandbox` | As informações da sandbox relacionadas ao público-alvo. |
+| `metrics.jobId` | A ID do trabalho do segmento que está processando o público-alvo. |
 | `metrics.type` | O tipo de trabalho do segmento. Isso pode ser `export` ou `batch_segmentation`. |
-| `metrics.id` | A ID do público. |
-| `metrics.data` | Métricas relacionadas ao público-alvo. Isso inclui informações como o número total de perfis incluídos no público-alvo, o número total de perfis por namespace e o número total de perfis por status. |
-| `metrics.createEpoch` | Uma marca de data e hora que mostra quando o público-alvo foi criado. |
-| `metrics.updateEpoch` | Um carimbo de data e hora que mostra quando o público foi atualizado pela última vez. |
+| `metrics.id` | A ID do público-alvo. |
+| `metrics.data` | Métricas relacionadas ao público-alvo. Isso inclui informações como o número total de perfis incluídos no público-alvo, o número total de perfis com base em namespace e o número total de perfis com base em status. |
+| `metrics.createEpoch` | Um carimbo de data e hora que aparece quando o público-alvo foi criado. |
+| `metrics.updateEpoch` | Um carimbo de data e hora que aparece quando o público-alvo foi atualizado pela última vez. |
 
 ## Crie um novo público-alvo {#create}
 
-Você pode criar um novo público-alvo fazendo uma solicitação POST para a `/audiences` terminal.
+Você pode criar um novo público-alvo fazendo uma solicitação de POST para a `/audiences` endpoint .
 
 **Formato da API**
 
@@ -337,11 +337,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | Propriedade | Descrição |
 | -------- | ----------- | 
 | `name` | O nome do público-alvo. |
-| `description` | Uma descrição do público. |
-| `type` | Um campo que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
-| `expression` | A expressão Profile Query Language (PQL) do público-alvo. Mais informações sobre expressões PQL podem ser encontradas no [Guia de expressões PQL](../pql/overview.md). |
-| `schema` | O esquema do Experience Data Model (XDM) do público-alvo. |
-| `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso baseados em atributos que são relevantes para o público-alvo. |
+| `description` | Uma descrição do público-alvo. |
+| `type` | Um campo que exibe se o público-alvo é gerado pela plataforma ou é um público gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` se refere a um público-alvo que foi gerado na Platform, enquanto uma `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
+| `expression` | A expressão Linguagem de consulta de perfil (PQL) do público-alvo. Mais informações sobre expressões PQL podem ser encontradas na seção [Guia de expressões PQL](../pql/overview.md). |
+| `schema` | O esquema Experience Data Model (XDM) do público-alvo. |
+| `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso com base em atributo que são relevantes para o público-alvo. |
 
 **Resposta**
 
@@ -411,7 +411,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 ## Pesquisar um público-alvo especificado {#get}
 
-Você pode pesquisar informações detalhadas sobre um público-alvo específico fazendo uma solicitação GET ao `/audiences` e fornecendo a ID do público-alvo que você deseja recuperar no caminho da solicitação.
+Você pode pesquisar informações detalhadas sobre um público-alvo específico fazendo uma solicitação do GET para a `/audiences` endpoint e fornecer a ID do público que você deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -422,8 +422,8 @@ GET /audiences/{AUDIENCE_ID}?property=withmetrics==true
 
 | Parâmetro | Descrição |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | A ID do público-alvo que você está tentando recuperar. |
-| `property=withmetrics==true` | Um parâmetro de consulta opcional que você pode usar se quiser recuperar um público especificado com as métricas de público. |
+| `{AUDIENCE_ID}` | A ID do público que você está tentando recuperar. |
+| `property=withmetrics==true` | Um parâmetro de consulta opcional que pode ser usado caso deseje recuperar um público-alvo especificado com as métricas de público-alvo. |
 
 **Solicitação**
 
@@ -439,7 +439,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público-alvo especificado. A resposta será diferente dependendo se o público-alvo for gerado com o Adobe Experience Platform ou fontes externas.
 
-**Gerado pela plataforma**
+**Gerado por plataforma**
 
 ```json
 {
@@ -539,7 +539,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 ## Atualizar um campo em um público {#update-field}
 
-Você pode atualizar os campos de público-alvo específico fazendo uma solicitação PATCH para o `/audiences` e fornecendo a ID do público-alvo que você deseja atualizar no caminho da solicitação.
+Você pode atualizar os campos de um público-alvo específico fazendo uma solicitação de PATCH para a variável `/audiences` endpoint e fornecer a ID do público-alvo que você deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 
@@ -549,7 +549,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | A ID do público que você deseja atualizar. |
+| `{AUDIENCE_ID}` | A ID do público-alvo que você deseja atualizar. |
 
 **Solicitação**
 
@@ -582,7 +582,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público recém-atualizado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre seu público recém-atualizado.
 
 ```json
 {
@@ -649,7 +649,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 ## Atualizar um público {#put}
 
-Você pode atualizar (substituir) um público-alvo específico fazendo uma solicitação PUT para o `/audiences` e fornecendo a ID do público-alvo que você deseja atualizar no caminho da solicitação.
+Você pode atualizar (substituir) um público-alvo específico fazendo uma solicitação de PUT para o `/audiences` endpoint e fornecer a ID do público-alvo que você deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 
@@ -682,18 +682,18 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `audienceId` | A ID da audiência. Isso é usado por públicos externos |
+| `audienceId` | A ID do público-alvo. Isso é usado por públicos externos |
 | `name` | O nome do público-alvo. |
 | `namespace` |  |
-| `description` | Uma descrição do público. |
-| `type` | Um campo gerado pelo sistema que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
-| `lifecycle` | O status do público. Os valores possíveis incluem `draft`, `published`, `inactive`, e `archived`. `draft` representa quando o público é criado, `published` quando o público é publicado, `inactive` quando o público-alvo não estiver mais ativo e `archived` se o público for excluído. |
-| `datasetId` | A ID do conjunto de dados em que os dados de público-alvo podem ser encontrados. |
-| `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso baseados em atributos que são relevantes para o público-alvo. |
+| `description` | Uma descrição do público-alvo. |
+| `type` | Um campo gerado pelo sistema que exibe se o público-alvo é gerado pela plataforma ou se é um público gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` se refere a um público-alvo que foi gerado na Platform, enquanto uma `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
+| `lifecycle` | O status do público-alvo. Os valores possíveis incluem `draft`, `published`, `inactive`e `archived`. `draft` representa quando o público-alvo é criado, `published` quando o público-alvo é publicado, `inactive` quando o público-alvo não estiver mais ativo, e `archived` se o público-alvo for excluído. |
+| `datasetId` | A ID do conjunto de dados em que os dados do público-alvo podem ser encontrados. |
+| `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso com base em atributo que são relevantes para o público-alvo. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público recém-atualizado. Observe que os detalhes do seu público-alvo serão diferentes dependendo se for um público-alvo gerado pela Platform ou um público gerado externamente.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público recém-atualizado. Observe que os detalhes do seu público-alvo serão diferentes dependendo se for um público-alvo gerado pela plataforma ou um público gerado externamente.
 
 ```json
 {
@@ -723,7 +723,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público rec
 
 ## Excluir um público {#delete}
 
-Você pode excluir um público-alvo específico fazendo uma solicitação DELETE para a `/audiences` e fornecendo a ID do público-alvo que você deseja excluir no caminho da solicitação.
+Você pode excluir um público-alvo específico fazendo uma solicitação de DELETE para o `/audiences` endpoint e fornecer a ID do público que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -733,7 +733,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | A ID do público-alvo que você deseja excluir. |
+| `{AUDIENCE_ID}` | A ID do público que você deseja excluir. |
 
 **Solicitação**
 

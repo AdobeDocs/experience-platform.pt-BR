@@ -3,9 +3,9 @@ keywords: transmissão contínua; Destino HTTP
 title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil ao endpoint HTTP de terceiros para executar sua própria análise ou executar quaisquer outras operações necessárias nos dados de perfil exportados do Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2431'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e segmentos mapeados servem como a dica para uma exportação de destino. Isso significa que, se qualquer segmento mapeado alterar estados (de nulo para realizado ou de realizado/existente para existente) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas no momento para destinos da API HTTP, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou de saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem ao mesmo [política de mesclagem](/help/profile/merge-policies/overview.md) como o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade no destino da API HTTP).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como a dica para uma exportação de destino. Isso significa que se qualquer segmento mapeado alterar estados (de `null` para `realized` ou de `realized` para `exiting`) ou qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas no momento para destinos da API HTTP, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração para um atributo é definida como qualquer atualização no atributo, independentemente de ser ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou de saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem ao mesmo [política de mesclagem](/help/profile/merge-policies/overview.md) como o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades na `identityMap` também são incluídos (no momento, o Experience Platform não suporta mapeamento de identidade no destino da API HTTP).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -253,11 +253,11 @@ Seu exportado [!DNL Experience Platform] os dados chegam ao seu [!DNL HTTP] dest
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -295,7 +295,7 @@ Abaixo estão outros exemplos de dados exportados, dependendo das configuraçõe
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -315,7 +315,7 @@ Abaixo estão outros exemplos de dados exportados, dependendo das configuraçõe
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,

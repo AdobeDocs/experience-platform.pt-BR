@@ -1,14 +1,18 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de março de 2023 para o Adobe Experience Platform.
-source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
+source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
 workflow-type: tm+mt
-source-wordcount: '2153'
+source-wordcount: '2345'
 ht-degree: 4%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>A partir de 5 de abril de 2023, a variável `Existing` será descontinuado do mapa de associação de segmentos para remover a redundância no ciclo de vida de associação de segmentos. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão sendo representados como `Exited`. Para obter mais detalhes sobre esta alteração, leia o [Seção Serviço de segmentação](#segmentation).
 
 **Data de lançamento: 29 de março de 2023**
 
@@ -182,8 +186,9 @@ Para saber mais sobre o Real-Time CDP B2B Edition, leia a [Visão geral do Real-
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
-| --- | --- |
+| ------- | ----------- |
 | Métricas de perfil | Para fornecer uma representação mais precisa das métricas de perfil, o detalhamento da associação e as métricas de rotatividade estão sendo combinados e agora são calculadas por um período de 24 horas. Mais informações estão disponíveis na [Guia da interface do usuário de segmentação](../../segmentation/ui/overview.md#browse) |
+| Mapa de associação de segmento | Como seguimento ao anúncio anterior em fevereiro, em 5 de abril de 2023, o `Existing` será descontinuado do mapa de associação de segmentos para remover a redundância no ciclo de vida de associação de segmentos. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão sendo representados como `Exited`.<br/><br/> Essa alteração pode afetar você se, você estiver usando [destinos corporativos](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Hubs de eventos do Azure, API HTTP) e pode ter processos downstream automatizados em vigor com base no `Existing` status. Revise suas integrações downstream, se for o caso. Se estiver interessado em identificar perfis recém-qualificados além de um determinado tempo, considere usar uma combinação do `Realized` e o `lastQualificationTime` no mapa de associação de segmentos. Para obter mais informações, entre em contato com o representante do Adobe. |
 
 {style="table-layout:auto"}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da correspondência de segmentos
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Você deve fornecer uma configuração de consentimento e definir seu valor padr
 
 A verificação de consentimento de aceitação e recusa determina se você pode operar com o consentimento para compartilhar dados do usuário por padrão. Se o padrão de configuração de consentimento estiver definido como `opt-out`, os dados do usuário podem ser compartilhados, a menos que um usuário recuse explicitamente a adesão. Se o padrão estiver definido como `opt-in`, os dados do usuário não podem ser compartilhados, a menos que um usuário faça a aceitação explícita.
 
-A configuração de consentimento padrão para o [!DNL Segment Match] está definida como `opt-out`. Para aplicar um modelo de aceitação aos seus dados, envie uma solicitação por email para seu Gerente de conta do Adobe.
+A configuração de consentimento padrão para o [!DNL Segment Match] está definida como `opt-out`. Para impor um modelo de aceitação para seus dados, envie uma solicitação de email para sua equipe de conta do Adobe.
 
 Para obter mais informações sobre o `share` atributo usado para definir o valor de consentimento de compartilhamento de dados, consulte a seguinte documentação em [grupo de campos privacidade e consentimento](../../../xdm/field-groups/profile/consents.md). Para obter informações sobre o grupo de campos específico usado para capturar o consentimento do consumidor para a coleta e o uso de dados relacionados à privacidade, personalização e preferências de marketing, consulte o seguinte [Exemplo de GitHub de consentimento para privacidade, personalização e preferências de marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

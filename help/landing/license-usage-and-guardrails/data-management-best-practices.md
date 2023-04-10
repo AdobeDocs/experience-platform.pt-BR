@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, gerenciamento de dados,
 title: Práticas recomendadas de direito à licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,7 @@ A tabela a seguir descreve a lista de recursos disponíveis no momento à sua di
 | Recurso | Descrição |
 | --- | --- |
 | [Ativar/desativar conjuntos de dados para o perfil](../../catalog/datasets/user-guide.md) | Ative ou desative a assimilação do conjunto de dados no Perfil do cliente em tempo real. |
-| [Expirações de evento de experiência](../../profile/event-expirations.md) | Aplique um tempo de expiração para todos os eventos assimilados em um conjunto de dados habilitado para perfil. Entre em contato com o representante de suporte do Adobe para ativar esse recurso. |
+| [Expirações de evento de experiência](../../profile/event-expirations.md) | Aplique um tempo de expiração para todos os eventos assimilados em um conjunto de dados habilitado para perfil. Entre em contato com a equipe de conta do Adobe ou com o Atendimento ao cliente para ativar esse recurso. |
 | [Filtros de preparação de dados do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar [!DNL Kafka] filtros para excluir dados desnecessários da assimilação |
 | [Filtros do conector de origem do Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplique filtros de conexão de origem de Audience Manager para excluir dados desnecessários da assimilação |
 | [Ativar filtros de dados do SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Aplicar filtros de Alloy para excluir dados desnecessários da assimilação |

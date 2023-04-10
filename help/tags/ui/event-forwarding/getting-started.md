@@ -3,10 +3,10 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 80%
+source-wordcount: '873'
+ht-degree: 79%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da rede da Adobe Experience Platform usando uma ou mais das três seguintes opções:
 
@@ -29,7 +29,7 @@ Depois de enviar dados para a rede de borda, você pode alternar entre as soluç
 
 ## Pré-requisitos
 
-* Adobe Experience Platform Collection Enterprise (Entre em contato com seu gerente de conta para obter preços)
+* Adobe Experience Platform Collection Enterprise (Entre em contato com a equipe de conta do Adobe para obter preços)
 * Encaminhamento de eventos na Adobe Experience Platform
 * SDK da Web ou móvel da Adobe Experience Platform, configurado para enviar dados para a rede de borda
 * Mapear dados para o Experience Data Model (XDM) (esse mapeamento pode ser feito usando tags)
@@ -42,7 +42,7 @@ Na Adobe Experience Platform, crie seu esquema.
 
 1. Dê um nome e uma breve descrição ao esquema.
 
-1. Você pode adicionar o campo &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos de campos]**.
+1. Você pode adicionar o grupo de campos &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos de campos]**.
 
    >[!NOTE]
    >
@@ -60,12 +60,12 @@ No **[!UICONTROL Tags]** espaço de trabalho, crie uma propriedade do tipo **[!U
 
 1. Nomeie a propriedade.
 
-1. Escolha o tipo de plataforma &quot;Borda&quot;.
+1. Escolha o tipo de plataforma &quot;Edge&quot;.
 
 1. Selecione **[!UICONTROL Salvar]**.
 
 Depois de criar a propriedade, vá para a guia **[!UICONTROL Ambientes]** da nova propriedade e
-anote as IDs de ambiente. Se a Organização de Adobe usada no fluxo de dados for diferente da Organização de Adobe usada no encaminhamento de eventos, será possível copiar a ID do ambiente da **[!UICONTROL Ambientes]** e cole-a ao criar um fluxo de dados. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
+anote as IDs de ambiente. Se a Organização do Adobe usada no conjunto de dados for diferente da Organização do Adobe usada no encaminhamento de eventos, você poderá copiar a ID do ambiente do **[!UICONTROL Ambientes]** e cole-o ao criar um armazenamento de dados. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
 
 ## Criar um fluxo de dados
 
@@ -82,7 +82,7 @@ A descrição ajuda a identificar configurações em uma lista de várias config
 
 Em seguida, configure o Edge Network para enviar dados ao encaminhamento de eventos e a outros produtos da Adobe.
 
-1. No **[!UICONTROL Datastreams]** selecione a propriedade que você criou.
+1. No **[!UICONTROL Datastreams]** , selecione a propriedade criada.
 
 1. Selecione Desenvolvimento, Produção ou Ambiente de preparo.
 
@@ -96,11 +96,11 @@ Em seguida, configure o Edge Network para enviar dados ao encaminhamento de even
 
 Depois de configurar, anote as IDs de ambiente para a nova propriedade.
 
-## Configure a extensão SDK da Web da Platform para enviar dados ao fluxo de dados criado anteriormente
+## Configure a extensão SDK da Web da plataforma para enviar dados para o armazenamento de dados criado anteriormente
 
-Crie sua propriedade no **[!UICONTROL Tags]** espaço de trabalho e navegue até **[!UICONTROL Extensões]** e selecione a extensão SDK da Web do Experience Platform no catálogo para configurá-la e instalá-la.
+Crie sua propriedade no **[!UICONTROL Tags]** espaço de trabalho e navegue até **[!UICONTROL Extensões]** e selecione a extensão Experience Platform Web SDK no catálogo para configurá-la e instalá-la.
 
-Consulte a [Documentação da extensão SDK da Web](../../extensions/client/sdk/overview.md) para obter detalhes sobre as opções de configuração.
+Consulte a [Documentação de extensão do SDK da Web](../../extensions/client/sdk/overview.md) para obter detalhes sobre as opções de configuração.
 
 ## Criar uma regra de tag para enviar dados ao SDK da Web da Platform
 

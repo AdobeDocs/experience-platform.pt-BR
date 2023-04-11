@@ -2,9 +2,9 @@
 keywords: extensão de encaminhamento de eventos; criar; extensão de encaminhamento de eventos do braze
 title: Extensão de Encaminhamento de Evento Brasileiro
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos de rede do Adobe Experience Edge para o Brasil.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1863'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 - Direcione usuários específicos para campanhas de marketing e promocionais para aumentar o número de clientes recorrentes.
 - Estude o comportamento e os padrões do usuário para direcionar públicos-alvo específicos com mensagens personalizadas, o que pode ajudar a aumentar a receita.
 
-O [!DNL Braze Track Events API] [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) A extensão permite aproveitar os dados capturados na Rede de borda do Adobe Experience Platform e enviá-los para [!DNL Braze] na forma de eventos do lado do servidor usando o [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) e [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) APIs.
+O [!DNL Braze Track Events API] [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) A extensão permite aproveitar os dados capturados na Rede de borda do Adobe Experience Platform e enviá-los para [!DNL Braze] na forma de eventos do lado do servidor usando o [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 Este documento aborda os casos de uso da extensão, como instalá-la nas bibliotecas de encaminhamento de eventos e como empregar seus recursos em um encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md).
 

@@ -2,10 +2,10 @@
 title: Visão geral das tags
 description: As tags no Adobe Experience Platform são a última palavra em gerenciamento de tags da Adobe. As tags oferecem aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 4f31c77fd3efe06797055ca04a30ae5ff4872b4e
+source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 96%
+source-wordcount: '585'
+ht-degree: 92%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](./term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O encaminhamento de eventos é um recurso pago incluído como parte das ofertas Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
+
+>[!NOTE]
+>
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](./term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags no Adobe Experience Platform são a última palavra em gerenciamento de tags da Adobe. As tags oferecem aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 

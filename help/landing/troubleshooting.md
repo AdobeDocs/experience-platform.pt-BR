@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Guia de solução de problemas e perguntas frequentes do Adobe Experience Platform
 description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 landing-page-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
-short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
+short-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 4%
+source-wordcount: '1877'
+ht-degree: 5%
 
 ---
 
@@ -92,7 +92,7 @@ Os seguintes códigos de status podem ser encontrados em qualquer [!DNL Experien
 | 401 | Falha na autenticação | A solicitação não passou uma verificação de autenticação. O token de acesso pode estar ausente ou ser inválido. Consulte a [Erros de token OAuth](#oauth-token-is-missing) para obter mais detalhes. |
 | 403 | Proibido | O recurso foi encontrado, mas você não tem as credenciais corretas para exibi-lo. |
 | 404 | Não encontrado | Não foi possível localizar o recurso solicitado no servidor. O recurso pode ter sido excluído ou o caminho solicitado foi inserido incorretamente. |
-| 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisar filtrar os resultados. (Consulte o [!DNL Catalog Service] Subguia do guia do desenvolvedor de API em [filtragem de dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar sua solicitação novamente e entre em contato com o administrador se o problema persistir. |
+| 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisa filtrar os resultados. (Consulte o [!DNL Catalog Service] Subguia do guia do desenvolvedor de API em [filtragem de dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar sua solicitação novamente e entre em contato com o administrador se o problema persistir. |
 
 ## Erros do cabeçalho da solicitação {#request-header-errors}
 

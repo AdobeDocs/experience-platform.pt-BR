@@ -4,12 +4,12 @@ feature: Attribution AI
 title: Visão geral do Attribution AI
 description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 landing-page-description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
-short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+short-description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 36%
+source-wordcount: '532'
+ht-degree: 40%
 
 ---
 

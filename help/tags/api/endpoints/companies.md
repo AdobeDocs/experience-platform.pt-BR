@@ -2,16 +2,16 @@
 title: Ponto de extremidade de empresas
 description: Saiba como fazer chamadas para o ponto de extremidade /company na API do reator.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 97%
+source-wordcount: '239'
+ht-degree: 93%
 
 ---
 
 # Ponto de extremidade de empresas
 
-Uma empresa representa uma organização de cliente, geralmente um negócio. Na API do Reactor, essas empresas correspondem 1:1 à ID de organização IMS. Os usuários da API só têm visibilidade das empresas às quais têm acesso. Uma empresa pode conter muitas [propriedades](./properties.md). Uma propriedade pertence a exatamente uma empresa.
+Uma empresa representa uma organização de cliente, geralmente um negócio. Na API do reator, essas empresas correspondem 1:1 com a ID da organização. Os usuários da API só têm visibilidade das empresas às quais têm acesso. Uma empresa pode conter muitas [propriedades](./properties.md). Uma propriedade pertence a exatamente uma empresa.
 
 O ponto de extremidade `/companies` na API do reator permite recuperar programaticamente as empresas às quais você tem acesso no aplicativo de experiência.
 

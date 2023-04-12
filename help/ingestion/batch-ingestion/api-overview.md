@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da API de assimilação em lote
 description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
+source-wordcount: '2411'
 ht-degree: 5%
 
 ---
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{TENANT_ID}` | Essa ID é usada para garantir que os recursos criados sejam namespacados corretamente e estejam contidos na Organização IMS. |
+| `{TENANT_ID}` | Essa ID é usada para garantir que os recursos criados sejam nomeados corretamente e estejam contidos na organização. |
 | `{SCHEMA_ID}` | A ID do esquema criado. |
 
 ### Criar lote

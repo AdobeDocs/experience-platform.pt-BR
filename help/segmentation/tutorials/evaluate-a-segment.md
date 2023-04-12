@@ -5,9 +5,9 @@ title: Avaliar e acessar os resultados do segmento
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Se você ainda não tiver concluído o [criar um segmento usando a API de segmen
 
 ## Avaliação programada {#scheduled-evaluation}
 
-Por meio da avaliação agendada, a Organização IMS pode criar um agendamento recorrente para executar automaticamente tarefas de exportação.
+Por meio da avaliação agendada, sua organização pode criar uma programação recorrente para executar automaticamente tarefas de exportação.
 
 >[!NOTE]
 >

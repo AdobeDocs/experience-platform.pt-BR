@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas de sandboxes
 description: Este documento fornece respostas a perguntas frequentes sobre sandboxes no Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ As sandboxes são partições isoladas de uma única instância da Platform, com
 
 ## Qual é a sandbox de produção padrão?
 
-A sandbox de produção padrão é a primeira sandbox de produção criada quando uma Organização IMS é provisionada pela primeira vez. A sandbox de produção padrão permite assimilar ou consumir dados da Platform, bem como aceitar solicitações que não incluem valores para um nome de sandbox ou ID de sandbox. A sandbox de produção padrão pode ser redefinida, mas não excluída.
+A sandbox de produção padrão é a primeira sandbox de produção criada quando uma organização é provisionada pela primeira vez. A sandbox de produção padrão permite assimilar ou consumir dados da Platform, bem como aceitar solicitações que não incluem valores para um nome de sandbox ou ID de sandbox. A sandbox de produção padrão pode ser redefinida, mas não excluída.
 
 ## Quantas sandboxes de produção posso ter?
 
@@ -63,7 +63,7 @@ Você pode atualizar o título de uma sandbox de produção. No entanto, uma san
 
 ## Quantas sandboxes de desenvolvimento posso ter?
 
-Atualmente, o Experience Platform permite que no máximo 75 sandboxes (produção e desenvolvimento) estejam ativas em uma única Organização IMS.
+Atualmente, o Experience Platform permite que no máximo 75 sandboxes (produção e desenvolvimento) estejam ativas em uma única organização.
 
 As sandboxes de desenvolvimento são compatíveis com as funcionalidades de redefinição e exclusão.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ponto de extremidade da API de tarefas de exportação de segmentos
 description: Os trabalhos de exportação são processos assíncronos usados para manter os membros do segmento do público-alvo em conjuntos de dados. Você pode usar o endpoint /export/jobs na API do Serviço de Segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Os endpoints usados neste guia fazem parte do [!DNL Adobe Experience Platform Se
 
 ## Recuperar uma lista de trabalhos de exportação {#retrieve-list}
 
-Você pode recuperar uma lista de todos os trabalhos de exportação para sua Organização IMS fazendo uma solicitação de GET para a `/export/jobs` endpoint .
+Você pode recuperar uma lista de todos os trabalhos de exportação para sua organização, fazendo uma solicitação do GET para a `/export/jobs` endpoint .
 
 **Formato da API**
 
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **Solicitação**
 
-A solicitação a seguir recuperará os dois últimos trabalhos de exportação na organização IMS.
+A solicitação a seguir recuperará os dois últimos trabalhos de exportação em sua organização.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

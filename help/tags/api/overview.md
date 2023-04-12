@@ -2,10 +2,10 @@
 title: Manual da API do Reactor
 description: A API do Reactor permite que os desenvolvedores gerenciem de forma programática todos os recursos de tags na Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 95%
+source-wordcount: '1081'
+ht-degree: 94%
 
 ---
 
@@ -19,7 +19,7 @@ Para exibir todos os endpoints e operações CRUD disponíveis, acesse a página
 
 ## Empresas
 
-Uma empresa representa a organização de um usuário de tags, geralmente um negócio. Essas empresas correspondem inteiramente às IDs de organização IMS. Os usuários da API só terão visibilidade das empresas às quais tiverem acesso.
+Uma empresa representa a organização de um usuário de tags, geralmente um negócio. Essas empresas correspondem a 1:1 com IDs de organização. Os usuários da API só terão visibilidade das empresas às quais tiverem acesso.
 
 Consulte o [manual de endpoint de empresas](./endpoints/companies.md) para saber como visualizar as empresas disponíveis na API.
 
@@ -117,7 +117,7 @@ O endpoint `/search` fornece uma maneira de encontrar recursos que correspondem 
 
 ## Segredos
 
-Um segredo contém credenciais que permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca segura de dados. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos e a [manual de endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
+Um segredo contém credenciais que permitem o encaminhamento de eventos para autenticação em outro sistema para troca de dados segura. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos, e a variável [guia do endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
 
 ## Próximas etapas
 

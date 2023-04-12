@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2176'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Esta mensagem de erro é exibida quando uma `graph-type` O parâmetro de consult
 }
 ```
 
-Essa mensagem de erro é exibida quando a Organização IMS não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
+Essa mensagem de erro é exibida quando sua organização não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
 
 ### O token de serviço de gateway não é válido
 
@@ -264,7 +264,7 @@ When [!DNL Identity Service] persiste uma identidade, a ID da identidade e a ID 
 }
 ```
 
-Essa mensagem de erro é exibida quando a Organização IMS não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
+Essa mensagem de erro é exibida quando sua organização não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
 
 ### Erro interno do servidor
 
@@ -330,7 +330,7 @@ Esse erro é exibido quando as primeiras 100 linhas de um lote não apresentaram
 }
 ```
 
-Esse erro é exibido quando um registro assimilado apresenta uma identidade cujo namespace associado não existe ou está inacessível pela Organização IMS.
+Esse erro é exibido quando um registro assimilado apresenta uma identidade cujo namespace associado não existe ou está inacessível para sua organização.
 
 ### Ignorar a assimilação em lote, pois a Organização IMS não está provisionada para o Gráfico de identidade privada
 
@@ -342,7 +342,7 @@ Esse erro é exibido quando um registro assimilado apresenta uma identidade cujo
 }
 ```
 
-Ao assimilar dados em lote, essa mensagem de erro é exibida quando a Organização IMS não tiver sido provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
+Ao assimilar dados em lote, essa mensagem de erro é exibida quando sua organização não tiver sido provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
 
 ### Erro interno
 

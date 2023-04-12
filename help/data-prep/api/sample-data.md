@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;preparação de dados;guia de api;dados de amostra;
+keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, dados de amostra;
 solution: Experience Platform
-title: Endpoint da API de dados de amostra
-description: Você pode usar o endpoint "/samples" na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os dados de amostra do mapeamento.
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+title: Endpoint da API de dados de exemplo
+description: Você pode usar o terminal `/samples na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os dados de amostra do mapeamento.
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 6%
+source-wordcount: '399'
+ht-degree: 7%
 
 ---
 
 
-# Endpoint de dados de exemplo
+# Ponto de extremidade de dados de amostra
 
-Os dados de amostra podem ser usados ao criar um esquema para seu conjunto de mapeamento. Você pode usar o `/samples` ponto de extremidade na API de Preparo de dados para recuperar, criar e atualizar programaticamente dados de amostra.
+Dados de amostra podem ser usados ao criar um esquema para seu conjunto de mapeamento. Você pode usar o `/samples` endpoint na API de preparação de dados para recuperar, criar e atualizar programaticamente os dados de amostra.
 
 ## Listar dados de amostra
 
-Você pode recuperar uma lista de todos os dados de amostra de mapeamento para sua Organização IMS fazendo uma solicitação GET para a `/samples` terminal.
+Você pode recuperar uma lista de todos os dados de amostra de mapeamento de sua organização fazendo uma solicitação de GET para a `/samples` endpoint .
 
 **Formato da API**
 
-A variável `/samples` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Atualmente, você deve incluir os `start` e `limit` parâmetros como parte da solicitação.
+O `/samples` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Atualmente, você deve incluir a variável `start` e `limit` parâmetros como parte da solicitação.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **Solicitação**
 
-A solicitação a seguir recuperará os dois últimos dados de amostra de mapeamento em sua Organização IMS.
+A solicitação a seguir recuperará os dois últimos dados de amostra de mapeamento na organização.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
@@ -86,7 +86,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 ## Criar dados de amostra
 
-Você pode criar dados de amostra fazendo uma solicitação POST para o `/samples` terminal.
+É possível criar dados de amostra fazendo uma solicitação de POST para a variável `/samples` endpoint .
 
 ```http
 POST /samples
@@ -110,7 +110,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os dados de amostra recém-criados.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre seus dados de amostra recém-criados.
 
 ```json
 {
@@ -127,7 +127,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 ## Criar dados de amostra fazendo upload de um arquivo
 
-Você pode criar dados de amostra usando um arquivo fazendo uma solicitação POST para o `/samples/upload` terminal.
+É possível criar dados de amostra usando um arquivo, fazendo uma solicitação de POST para a `/samples/upload` endpoint .
 
 **Formato da API**
 
@@ -149,7 +149,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os dados de amostra recém-criados.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre seus dados de amostra recém-criados.
 
 ```json
 {
@@ -166,7 +166,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 ## Pesquisar um objeto de dados de amostra específico
 
-Você pode pesquisar um objeto específico de dados de amostra fornecendo a respectiva ID no caminho de uma solicitação GET para o `/samples` terminal.
+Você pode pesquisar um objeto específico de dados de amostra fornecendo a ID no caminho de uma solicitação do GET para a variável `/samples` endpoint .
 
 **Formato da API**
 
@@ -207,7 +207,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações do objeto 
 
 ## Atualizar dados de amostra
 
-Você pode atualizar um objeto de dados de amostra específico fornecendo a respectiva ID no caminho de uma solicitação PUT para o `/samples` terminal.
+É possível atualizar um objeto de dados de amostra específico fornecendo a ID no caminho de uma solicitação de PUT para a variável `/samples` endpoint .
 
 **Formato da API**
 

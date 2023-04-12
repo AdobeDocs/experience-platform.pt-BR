@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da correspondência de segmentos
 description: Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da plataforma troquem dados de segmento de maneira segura, regida e amigável à privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '1997'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Há duas permissões associadas ao [!DNL Segment Match]:
 
 | Permissão | Descrição |
 | --- | --- |
-| Gerenciar conexões de compartilhamento de público-alvo | Essa permissão permite concluir o processo de handshake do parceiro, que conecta duas Organizações IMS para ativar [!DNL Segment Match] fluxos. |
+| Gerenciar conexões de compartilhamento de público-alvo | Essa permissão permite concluir o processo de handshake do parceiro, que conecta duas organizações para habilitar [!DNL Segment Match] fluxos. |
 | Gerenciar compartilhamentos de público-alvo | Essa permissão permite criar, editar e publicar feeds (o pacote de dados usado para [!DNL Segment Match]) com parceiros ativos (parceiros que foram conectados pelo usuário administrador com **[!UICONTROL Conexões de compartilhamento de público]** acesso). |
 
 Consulte a [visão geral do controle de acesso](../../../access-control/home.md) para obter mais informações sobre controle de acesso e permissões.

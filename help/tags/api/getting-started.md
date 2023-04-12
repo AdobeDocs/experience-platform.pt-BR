@@ -2,10 +2,10 @@
 title: Introdução à API do Reactor
 description: Saiba como começar a usar a API do Reactor, incluindo etapas para gerar as credenciais de acesso necessárias.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 94%
+source-wordcount: '1049'
+ht-degree: 92%
 
 ---
 
@@ -31,7 +31,7 @@ Usando o Adobe Developer Console, você deve gerar as três credenciais de acess
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Sua ID de organização IMS (`{ORG_ID}`) e a chave da API (`{API_KEY}`) podem ser reutilizadas em chamadas de API futuras depois de terem sido geradas. No entanto, seu token de acesso (`{ACCESS_TOKEN}`) é temporário e deve ser gerado novamente a cada 24 horas.
+A ID da sua organização (`{ORG_ID}`) e a chave de API (`{API_KEY}`) pode ser reutilizada em chamadas de API futuras depois de terem sido geradas inicialmente. No entanto, seu token de acesso (`{ACCESS_TOKEN}`) é temporário e deve ser gerado novamente a cada 24 horas.
 
 As etapas de geração desses valores são descritas em detalhes abaixo.
 

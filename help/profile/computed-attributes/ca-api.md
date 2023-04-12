@@ -6,9 +6,9 @@ description: No Adobe Experience Platform, os atributos calculados são funçõe
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2274'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | O nome do campo de atributo calculado, como uma string. |
 | `path` | O caminho para o campo que contém o atributo calculado. Esse caminho é encontrado dentro do `properties` do schema e NÃO deve incluir o nome do campo no caminho. Ao gravar o caminho, omita os vários níveis de `properties` atributos. |
 | `{TENANT_ID}` | Se você não estiver familiarizado com a ID do locatário, consulte as etapas para encontrar a ID do locatário no [Guia do desenvolvedor do Registro de Schema](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Uma descrição do atributo calculado. Isso é especialmente útil depois que vários atributos calculados tiverem sido definidos, pois ajudará outros na organização IMS a determinar o atributo calculado correto a ser usado. |
+| `description` | Uma descrição do atributo calculado. Isso é especialmente útil depois que vários atributos calculados tiverem sido definidos, pois ajudará outros na organização a determinar o atributo calculado correto a ser usado. |
 | `expression.value` | Um [!DNL Profile Query Language] Expressão (PQL). Os atributos calculados atualmente suportam as seguintes funções: soma, contagem, mín, máx e booleano. Para obter uma lista de expressões de amostra, consulte [exemplos de expressões PQL](expressions.md) documentação. |
 | `schema.name` | A classe na qual o schema que contém o campo de atributo calculado é baseado. Exemplo: `_xdm.context.experienceevent` para um esquema com base na classe XDM ExperienceEvent. |
 

@@ -1,53 +1,53 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;hub de eventos;hub de eventos do Azure;hub de eventos
+keywords: Experience Platform, home, tópicos populares, hub de eventos, hub de eventos do Azure, Hub de eventos
 solution: Experience Platform
-title: Criar uma conexão de origem dos Hubs de eventos do Azure usando a API do Serviço de fluxo
+title: Criar uma conexão de origem de Hubs de Eventos do Azure usando a API do Serviço de Fluxo
 type: Tutorial
-description: Saiba como conectar o Adobe Experience Platform a uma conta do Azure Event Hubs usando a API do Serviço de fluxo.
+description: Saiba como conectar o Adobe Experience Platform a uma conta de Hubs de Eventos do Azure usando a API do Serviço de Fluxo.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '736'
 ht-degree: 2%
 
 ---
 
 
-# Criar um [!DNL Azure Event Hubs] conexão de origem usando o [!DNL Flow Service] API
+# Crie um [!DNL Azure Event Hubs] conexão de origem usando o [!DNL Flow Service] API
 
-Este tutorial guiará você pelas etapas para se conectar [!DNL Azure Event Hubs] (a seguir designado por &quot;[!DNL Event Hubs]&quot;) para Experience Platform, usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial o orienta pelas etapas para se conectar [!DNL Azure Event Hubs] (a seguir designado por &quot;[!DNL Event Hubs]&quot;) para Experience Platform, usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL Event Hubs] para a Platform usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL Event Hubs] para a plataforma usando a [!DNL Flow Service] API.
 
-### Coletar credenciais necessárias
+### Obter credenciais necessárias
 
-A fim de [!DNL Flow Service] para se conectar com o seu [!DNL Event Hubs] você deve fornecer valores para as seguintes propriedades de conexão:
+Para [!DNL Flow Service] para se conectar com seu [!DNL Event Hubs] , você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `sasKeyName` | O nome da regra de autorização, que também é conhecido como o nome da chave SAS. |
-| `sasKey` | A chave primária do [!DNL Event Hubs] namespace. A variável `sasPolicy` que o `sasKey` corresponde a deve ter `manage` direitos configurados para a variável [!DNL Event Hubs] lista a ser preenchida. |
-| `namespace` | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKeyName` | O nome da regra de autorização, que também é conhecida como o nome da chave SAS. |
+| `sasKey` | A chave primária do [!DNL Event Hubs] namespace. O `sasPolicy` que `sasKey` corresponde a deve ter `manage` direitos configurados para [!DNL Event Hubs] lista a ser preenchida. |
+| `namespace` | O namespace do [!DNL Event Hubs] você está acessando. Um [!DNL Event Hubs] o namespace fornece um contêiner de escopo exclusivo, no qual é possível criar um ou mais [!DNL Event Hubs]. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. O [!DNL Event Hubs] a ID de especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 Para obter mais informações sobre esses valores, consulte [este documento de Hubs de Eventos](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão básica
+## Criar uma conexão base
 
-A primeira etapa na criação de uma conexão de origem é autenticar seu [!DNL Event Hubs] origem e gere uma ID de conexão básica. Uma ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
+A primeira etapa na criação de uma conexão de origem é autenticar seu [!DNL Event Hubs] e gerar uma ID de conexão básica. Uma ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Event Hubs] credenciais de autenticação como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação de POST para a variável `/connections` endpoint enquanto fornece seu [!DNL Event Hubs] credenciais de autenticação como parte dos parâmetros da solicitação.
 
 **Formato da API**
 
@@ -85,10 +85,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.sasKeyName` | O nome da regra de autorização, que também é conhecido como o nome da chave SAS. |
+| `auth.params.sasKeyName` | O nome da regra de autorização, que também é conhecida como o nome da chave SAS. |
 | `auth.params.sasKey` | A assinatura de acesso compartilhado gerada. |
-| `auth.params.namespace` | O namespace do [!DNL Event Hubs] que você está acessando. |
-| `connectionSpec.id` | A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | O namespace do [!DNL Event Hubs] você está acessando. |
+| `connectionSpec.id` | O [!DNL Event Hubs] a ID de especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Resposta**
 
@@ -103,9 +103,9 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 ## Criar uma conexão de origem
 
-Uma conexão de origem cria e gerencia a conexão com a origem externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e uma ID de conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica para um locatário e uma Organização IMS.
+Uma conexão de origem cria e gerencia a conexão com a fonte externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e uma ID de conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica de um locatário e de uma organização.
 
-Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API.
+Para criar uma conexão de origem, faça uma solicitação de POST para a variável `/sourceConnections` endpoint da variável [!DNL Flow Service] API.
 
 **Formato da API**
 
@@ -147,13 +147,13 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome da sua conexão de origem. Certifique-se de que o nome da conexão de origem seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de origem. |
 | `description` | Um valor opcional que pode ser fornecido para incluir mais informações sobre a conexão de origem. |
-| `baseConnectionId` | A ID da conexão do [!DNL Event Hubs] que foi gerado na etapa anterior. |
+| `baseConnectionId` | A ID de conexão do [!DNL Event Hubs] fonte gerada na etapa anterior. |
 | `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Event Hubs]. Essa ID é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | O formato do [!DNL Event Hubs] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
-| `params.eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
+| `data.format` | O formato do [!DNL Event Hubs] dados que você deseja assimilar. Atualmente, o único formato de dados compatível é `json`. |
+| `params.eventHubName` | O nome da sua [!DNL Event Hubs] fonte. |
 | `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados compatíveis incluem: `raw` e `xdm`. |
-| `params.reset` | Esse parâmetro define como os dados serão lidos. Uso `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. Esse parâmetro é opcional e assume como padrão `earliest` se não fornecido. |
-| `params.consumerGroup` | O mecanismo de publicação ou subscrição a ser usado para [!DNL Event Hubs]. Esse parâmetro é opcional e assume como padrão `$Default` se não fornecido. Consulte esta [[!DNL Event Hubs] guia sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. |
+| `params.reset` | Esse parâmetro define como os dados serão lidos. Use `latest` para começar a ler a partir dos dados mais recentes, e use `earliest` para começar a ler a partir dos primeiros dados disponíveis no fluxo. Esse parâmetro é opcional e o padrão é `earliest` se não fornecido. |
+| `params.consumerGroup` | O mecanismo de publicação ou assinatura a ser usado para [!DNL Event Hubs]. Esse parâmetro é opcional e o padrão é `$Default` se não fornecido. Consulte esta [[!DNL Event Hubs] guia dos consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. |
 
 ## Próximas etapas
 

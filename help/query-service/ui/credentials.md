@@ -2,11 +2,11 @@
 keywords: Experience Platform, home, tópicos populares, serviço de consultas, serviço de consultas, consulta, editor de consultas, Editor de consultas, Editor de consultas, Editor de consultas;
 solution: Experience Platform
 title: Guia de credenciais do serviço de query
-description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua Organização IMS.
+description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas pelos usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: d86e1118fc8886f3a55b0224a2e065b33d96daf2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1337'
 ht-degree: 1%
 
 ---

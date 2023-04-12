@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do usuário
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 0%
 
 ---
@@ -289,7 +289,7 @@ Para ver mais detalhes sobre uma execução específica do fluxo de dados, selec
 A página de detalhes de execução do fluxo de dados, além dos detalhes mostrados na lista de execuções do fluxo de dados, exibe informações mais específicas sobre o fluxo de dados:
 
 - **[!UICONTROL ID de execução do fluxo de dados]**: A ID do fluxo de dados.
-- **[!UICONTROL ID da organização IMS]**: A organização IMS à qual o fluxo de dados pertence.
+- **[!UICONTROL ID da organização IMS]**: A organização à qual o fluxo de dados pertence.
 - **[!UICONTROL Última atualização]**: A hora em que a execução do fluxo de dados foi atualizada pela última vez.
 
 A página de detalhes também tem um botão para alternar entre erros e segmentos de execução de fluxo de dados. Essa opção só está disponível para execuções de fluxo de dados em destinos em lote.

@@ -1,32 +1,32 @@
 ---
-title: Importar endpoint de API
-description: O endpoint /import na API do Registro de esquema permite compartilhar recursos XDM entre organizações IMS e sandboxes.
+title: Importar Ponto de Extremidade da API
+description: O endpoint /import na API do Registro de Schema permite compartilhar recursos XDM entre organizações e sandboxes.
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
-source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 2%
 
 ---
 
 # Importar ponto de extremidade
 
-A variável `/rpc/import` endpoint na variável [!DNL Schema Registry] A API permite criar recursos do Experience Data Model (XDM) a partir de cargas de exportação geradas. As cargas úteis de exportação podem ser criadas a partir de duas fontes:
+O `/rpc/import` endpoint no [!DNL Schema Registry] A API permite criar recursos do Experience Data Model (XDM) a partir de cargas de exportação geradas. As cargas de exportação podem ser criadas a partir de duas fontes:
 
-* A variável [`/rpc/export` endpoint](./export.md) O cria cargas de exportação de recursos XDM existentes, permitindo que você compartilhe recursos entre sandboxes.
-* A variável [`/rpc/csv2schema` endpoint](./csv-to-schema.md) O cria cargas de exportação de modelos CSV.
+* O [`/rpc/export` endpoint](./export.md) O cria cargas de exportação a partir de recursos XDM existentes, permitindo que você compartilhe recursos entre sandboxes.
+* O [`/rpc/csv2schema` endpoint](./csv-to-schema.md) cria cargas de exportação a partir de modelos CSV.
 
-Depois de criar uma carga útil de exportação, você pode usar o `/rpc/import` endpoint para gerar o recurso (e todos os recursos dependentes) na sandbox de sua escolha.
+Depois de criar uma carga de exportação, você pode usar a variável `/rpc/import` endpoint para gerar o recurso (e todo o recurso dependente) na sandbox de sua escolha.
 
 ## Introdução
 
-A variável `/rpc/import` o endpoint faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O `/rpc/import` o ponto de extremidade é parte do [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
-A variável `/rpc/import` O ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints no [!DNL Schema Registry] API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`, e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` conforme demonstrado nas chamadas de API abaixo.
+O `/rpc/import` o ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Diferente de outros endpoints no [!DNL Schema Registry] A API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` namespace, conforme demonstrado nas chamadas de API abaixo.
 
 ## Importar um recurso {#import}
 
-Depois de gerar uma carga de exportação para um recurso XDM, você pode usar essa carga em uma solicitação POST para o `/import` endpoint para importar esse recurso para uma organização de destino e uma sandbox.
+Depois de gerar uma carga de exportação para um recurso XDM, você pode usar essa carga em uma solicitação POST para a `/import` endpoint para importar esse recurso para uma organização de destino e uma sandbox.
 
 **Formato da API**
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Solicitação**
 
-A solicitação a seguir pega a carga retornada de uma chamada para o [`/rpc/export` endpoint](./export.md) para importar um grupo de campos (`Restaurant`) em uma nova organização e sandbox, conforme determinado pela `x-gw-ims-org-id` e `x-sandbox-name` cabeçalhos, respectivamente.
+A solicitação a seguir pega a carga retornada de uma chamada para a [`/rpc/export` endpoint](./export.md) para importar um grupo de campos (`Restaurant`) em uma nova organização e sandbox, conforme determinado pela variável `x-gw-ims-org-id` e `x-sandbox-name` cabeçalhos, respectivamente.
 
 ```shell
 curl -X POST \
@@ -187,7 +187,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista dos recursos importados, com os valores apropriados de ID de locatário e Organização IMS aplicados.
+Uma resposta bem-sucedida retorna uma lista dos recursos importados, com a ID do locatário apropriada e os valores da organização aplicados.
 
 ```json
 [

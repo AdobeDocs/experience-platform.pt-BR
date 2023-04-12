@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas de Privacy Service
 description: Este documento fornece respostas a perguntas frequentes sobre o Privacy Service, bem como informações sobre erros comumente encontrados na API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ A tabela a seguir descreve alguns erros comuns em [!DNL Privacy Service], com de
 | Namespace Inválido | Um namespace de identidade fornecido para uma ID de usuário era inválido. Consulte a seção sobre [namespaces de identidade padrão](./api/appendix.md#standard-namespaces) no [!DNL Privacy Service] Apêndice do guia de API para obter uma lista de namespaces aceitos. Se estiver usando um namespace personalizado, certifique-se de configurar as IDs `type` para &quot;personalizado&quot;. |
 | Parcialmente Concluído | O trabalho foi concluído com êxito, mas alguns dados não eram aplicáveis à solicitação e foram ignorados. |
 | Os dados não estão no formato necessário. | Um ou mais valores de dados para o aplicativo especificado foram formatados incorretamente. Verifique os detalhes do trabalho para obter mais informações. |
-| A Organização IMS não foi provisionada. | Essa mensagem ocorre quando a sua Organização IMS não foi provisionada para [!DNL Privacy Service]. Entre em contato com o administrador para obter mais informações. |
+| A Organização IMS não foi provisionada. | Essa mensagem ocorre quando sua organização não foi provisionada para [!DNL Privacy Service]. Entre em contato com o administrador para obter mais informações. |
 | O acesso e as permissões são necessários. | O acesso e as permissões são necessários para usar [!DNL Privacy Service]. Entre em contato com o administrador para obter acesso. |
 | Ocorreu um problema ao carregar e arquivar os dados de acesso. | Quando este erro ocorrer, faça novamente o upload dos dados de acesso e tente novamente. |
 | A carga de trabalho foi excedida para o limite de taxa de documentos atual. | Quando este erro ocorrer, reduza a taxa de envio e tente novamente. |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ponto de extremidade da API de tarefas de segmento
 description: O endpoint de tarefas de segmento na API do Serviço de segmentação da Adobe Experience Platform permite gerenciar programaticamente tarefas de segmento para sua organização.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1497'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de tarefas de segmento para a organização IMS especificada como JSON. No entanto, a resposta será diferente, dependendo do número de segmentos no trabalho do segmento.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de tarefas de segmento para a organização especificada como JSON. No entanto, a resposta será diferente, dependendo do número de segmentos no trabalho do segmento.
 
 **Menor ou igual a 1500 segmentos no trabalho do segmento**
 

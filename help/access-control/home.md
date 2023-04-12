@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade utiliza perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1540'
 ht-degree: 3%
 
 ---
@@ -55,7 +55,7 @@ No [!DNL Admin Console], as permissões do são atribuídas aos usuários por me
 
 ## Sandboxes e permissões
 
-As sandboxes de não-produção são uma forma de virtualização de dados que permite isolar dados de outras sandboxes e geralmente são usadas para experimentos de desenvolvimento, testes ou testes. As permissões de um perfil de produto dão aos usuários do perfil acesso a [!DNL Platform] recursos nos ambientes do sandbox aos quais eles receberam acesso. Uma licença padrão do Experience Platform concede cinco sandboxes (uma produção e quatro não produção). É possível adicionar pacotes de dez sandboxes de não produção até um máximo de 75 sandboxes no total. Entre em contato com o administrador de organização IMS ou o representante de vendas de Adobe para obter mais detalhes.
+As sandboxes de não-produção são uma forma de virtualização de dados que permite isolar dados de outras sandboxes e geralmente são usadas para experimentos de desenvolvimento, testes ou testes. As permissões de um perfil de produto dão aos usuários do perfil acesso a [!DNL Platform] recursos nos ambientes do sandbox aos quais eles receberam acesso. Uma licença padrão do Experience Platform concede cinco sandboxes (uma produção e quatro não produção). É possível adicionar pacotes de dez sandboxes de não produção até um máximo de 75 sandboxes no total. Entre em contato com o administrador da organização ou o representante de vendas de Adobe para obter mais detalhes.
 
 Para obter mais informações sobre sandboxes no [!DNL Experience Platform]consulte o [visão geral das sandboxes](../sandboxes/home.md).
 
@@ -114,7 +114,7 @@ A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Pla
 | [!DNL Destinations] | [!UICONTROL Criação de destinos] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
 | [!DNL Data Ingestion] | [!UICONTROL Exibir fontes] | Acesso somente leitura a fontes disponíveis no **[!UICONTROL Catálogo]** e fontes autenticadas na **[!UICONTROL Procurar]** guia . |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas Organizações de IMS e habilitar [!DNL Segment Match] fluxos. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas organizações e ativar [!DNL Segment Match] fluxos. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Acesso para ler, criar, editar e publicar [!DNL Segment Match] feeds com parceiros ativos. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gerenciar o Data Science Workspace] | Acesso para ler, criar, editar e excluir em [!DNL Data Science Workspace]. |
 | Governança de dados | [!UICONTROL Aplicar rótulos de uso de dados] | Acesso para ler, criar e excluir rótulos de uso. |

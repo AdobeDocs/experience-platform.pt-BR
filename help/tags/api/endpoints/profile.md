@@ -2,10 +2,10 @@
 title: Ponto de extremidade de perfis
 description: Saiba como fazer chamadas para o ponto de extremidade /profiles na API do reator.
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 97%
+source-wordcount: '169'
+ht-degree: 75%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 Na API do Reactor, um perfil representa um usuário da Adobe Experience Platform. A API do Reactor não mantém seu próprio banco de dados de usuários e permissões. Em vez disso, depende de Adobe IDs gerenciadas pelo [Sistema de gerenciamento de identidades (IMS) da Adobe](https://helpx.adobe.com/br/enterprise/using/identity.html).
 
-Um perfil contém todas as informações sobre o usuário conectado, incluindo todas as Organizações IMS às quais ele pertence, os perfis de produto aos quais ele pertence em cada Organização e os direitos que eles têm de cada perfil de produto.
+Um perfil contém todas as informações sobre o usuário conectado, incluindo todas as organizações às quais ele pertence, os perfis de produtos aos quais ele pertence em cada organização e os direitos que ele tem de cada perfil de produto.
 
 ## Introdução
 
@@ -51,14 +51,14 @@ Uma resposta bem-sucedida retorna os detalhes do perfil.
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -73,8 +73,8 @@ Uma resposta bem-sucedida retorna os detalhes do perfil.
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [

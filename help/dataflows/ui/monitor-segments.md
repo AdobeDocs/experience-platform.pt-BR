@@ -4,9 +4,9 @@ description: A segmentação permite criar segmentos e públicos-alvo a partir d
 title: Monitorar fluxos de dados para segmentos na interface do usuário
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1919'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmentos"
->abstract="A visualização de segmentos contém informações sobre todos os segmentos da Organização IMS, com mais informações sobre os trabalhos de ativação e avaliação."
+>abstract="A visualização de segmentos contém informações sobre todos os segmentos da organização, com mais informações sobre as tarefas de ativação e avaliação."
 
 Para acessar o **[!UICONTROL Segmentos]** painel, selecione **[!UICONTROL Monitoramento]** no painel de navegação esquerdo. Uma vez no **[!UICONTROL Monitoramento]** selecione o **[!UICONTROL Segmentos]** cartão.
 
@@ -48,7 +48,7 @@ O próprio painel contém métricas para segmentos e tarefas de segmentos. Por p
 >
 >Atualmente, somente os segmentos que estão ativados para [destinos em lote (com base em arquivo)](../../destinations/destination-types.md#file-based) são compatíveis com o painel de segmentos de monitoramento.
 
-![O painel de segmentos. São exibidas informações sobre os diferentes segmentos na organização IMS e na sandbox.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![O painel de segmentos. São exibidas informações sobre os diferentes segmentos na organização e na sandbox.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 As métricas a seguir estão disponíveis para esta exibição de painel:
 
@@ -109,7 +109,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | **[!UICONTROL Início da execução do fluxo de dados]** | A data e a hora em que o trabalho de ativação começou. |
 | **[!UICONTROL Fim da execução do fluxo de dados]** | A data e a hora em que o trabalho de ativação terminou. |
 | **[!UICONTROL ID de execução do fluxo de dados]** | A ID do trabalho de ativação atual. |
-| **[!UICONTROL ID da organização IMS]** | A ID da organização IMS à qual o trabalho de ativação pertence. |
+| **[!UICONTROL ID da organização IMS]** | A ID da organização à qual o trabalho de ativação pertence. |
 | **[!UICONTROL Nome do destino]** | O nome do destino para o qual os dados estão sendo ativados. |
 
 Sob as métricas, um botão para selecionar entre os erros de execução do fluxo de dados e os segmentos é exibido.
@@ -151,7 +151,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | **[!UICONTROL Tipo de tarefa]** | O tipo de trabalho do segmento. Nesse caso, sempre será um trabalho de avaliação de segmento. |
 | **[!UICONTROL Tipo de avaliação]** | O tipo de avaliação que está sendo feita. Pode ser **[!UICONTROL Em lote]** ou **[!UICONTROL Streaming]**. |
 | **[!UICONTROL ID da tarefa]** | A ID do trabalho de avaliação. |
-| **[!UICONTROL ID da organização IMS]** | A ID da organização IMS à qual o trabalho de avaliação pertence. |
+| **[!UICONTROL ID da organização IMS]** | A ID da organização à qual o trabalho de avaliação pertence. |
 | **[!UICONTROL Nome do segmento]** | O nome do segmento que está sendo avaliado. |
 | **[!UICONTROL ID do segmento]** | A ID do segmento que está sendo avaliado. |
 

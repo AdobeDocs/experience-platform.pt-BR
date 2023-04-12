@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de tarefas de privacidade
 description: Saiba como gerenciar tarefas de privacidade para aplicativos Experience Cloud usando a API do Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1547'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 **Solicitação**
 
-A solicitação a seguir recupera uma lista paginada de todas as tarefas em uma Organização IMS, começando na terceira página com um tamanho de página de 50.
+A solicitação a seguir recupera uma lista paginada de todas as tarefas em uma organização, começando na terceira página com um tamanho de página de 50.
 
 ```shell
 curl -X GET \
@@ -159,7 +159,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `companyContexts` **(Obrigatório)** | Uma matriz contendo informações de autenticação para sua organização. Cada identificador listado inclui os seguintes atributos: <ul><li>`namespace`: O namespace de um identificador.</li><li>`value`: O valor do identificador.</li></ul>É **obrigatório** que um dos identificadores usa `imsOrgId` como `namespace`, com `value` contendo a ID exclusiva para sua organização IMS. <br/><br/>Identificadores adicionais podem ser qualificadores de empresa específicos do produto (por exemplo, `Campaign`), que identificam uma integração com um aplicativo Adobe pertencente à sua organização. Os valores potenciais incluem nomes de conta, códigos de cliente, IDs de locatário ou outros identificadores de aplicativos. |
+| `companyContexts` **(Obrigatório)** | Uma matriz contendo informações de autenticação para sua organização. Cada identificador listado inclui os seguintes atributos: <ul><li>`namespace`: O namespace de um identificador.</li><li>`value`: O valor do identificador.</li></ul>É **obrigatório** que um dos identificadores usa `imsOrgId` como `namespace`, com `value` contendo a ID exclusiva da sua organização. <br/><br/>Identificadores adicionais podem ser qualificadores de empresa específicos do produto (por exemplo, `Campaign`), que identificam uma integração com um aplicativo Adobe pertencente à sua organização. Os valores potenciais incluem nomes de conta, códigos de cliente, IDs de locatário ou outros identificadores de aplicativos. |
 | `users` **(Obrigatório)** | Uma matriz contendo uma coleção de pelo menos um usuário cujas informações você gostaria de acessar ou excluir. Um máximo de 1000 IDs de usuário pode ser fornecido em uma única solicitação. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: Um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É prática recomendada escolher uma string exclusiva e facilmente identificável para esse valor, para que possa ser facilmente referenciada ou pesquisada posteriormente.</li><li>`action`: Uma matriz que lista as ações desejadas para executar nos dados do usuário. Dependendo das ações que deseja realizar, essa matriz deve incluir `access`, `delete`ou ambos.</li><li>`userIDs`: Uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade consiste em um `namespace`, a `value`e um qualificador de namespace (`type`). Consulte a [apêndice](appendix.md) para obter mais detalhes sobre essas propriedades necessárias.</li></ul> Para obter uma explicação mais detalhada do `users` e `userIDs`, consulte o [guia de solução de problemas](../troubleshooting-guide.md#user-ids). |
 | `include` **(Obrigatório)** | Uma matriz de produtos de Adobe para incluir no seu processamento. Se esse valor estiver ausente ou vazio, a solicitação será rejeitada. Inclua somente produtos com os quais sua organização tenha uma integração. Consulte a seção sobre [valores de produto aceitos](appendix.md) no apêndice para mais informações. |
 | `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento das IDs nos aplicativos (atualmente, há suporte apenas para [!DNL Analytics]). Se for omitido, esse valor assumirá como padrão `false`. |

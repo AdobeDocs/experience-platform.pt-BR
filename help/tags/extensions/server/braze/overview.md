@@ -2,7 +2,8 @@
 keywords: extensão de encaminhamento de eventos; criar; extensão de encaminhamento de eventos do braze
 title: Extensão de Encaminhamento de Evento Brasileiro
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos de rede do Adobe Experience Edge para o Brasil.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%
@@ -132,7 +133,7 @@ Os atributos de usuário podem ser um objeto JSON contendo campos que criarão o
 | [!UICONTROL País] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como uma sequência de caracteres em [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
-| [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados do Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, ’América/Nova_Iorque’ ou ’Hora de Leste (EUA e Canadá)’). |
+| [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados do Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, &#39;America/New_York&#39; ou &#39;Eastern Time (US &amp; Canada)&#39;). |
 | [!UICONTROL Facebook] | Hash contendo qualquer id (string), curtidas (matriz de strings), num_friends (número inteiro). |
 | [!UICONTROL Twitter] | Hash contendo qualquer um dos id (número inteiro), nome_da_tela (sequência, identificador de Twitter), seguers_count (número inteiro), friends_count (número inteiro), status_count(número inteiro). |
 
@@ -191,7 +192,7 @@ Os atributos de usuário podem ser um objeto JSON contendo campos que criarão o
 | [!UICONTROL País] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como uma sequência de caracteres em [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
-| [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados do Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, ’América/Nova_Iorque’ ou ’Hora de Leste (EUA e Canadá)’). |
+| [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados do Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, &#39;America/New_York&#39; ou &#39;Eastern Time (US &amp; Canada)&#39;). |
 | [!UICONTROL Facebook] | Hash contendo qualquer id (string), curtidas (matriz de strings), num_friends (número inteiro). |
 | [!UICONTROL Twitter] | Hash contendo qualquer um dos id (número inteiro), nome_da_tela (sequência, identificador de Twitter), seguers_count (número inteiro), friends_count (número inteiro), status_count(número inteiro). |
 

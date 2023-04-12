@@ -2,7 +2,8 @@
 keywords: extensão de encaminhamento de eventos, mixpanel, extensão de encaminhamento de eventos mixpanel
 title: Extensão de Encaminhamento de Eventos de API de Rastreamento de Mixpanel
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos de rede do Adobe Experience Edge para o Mixpanel.
-source-git-commit: 8538e3a2899c3e2451519996cabeffc4b42d706c
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%

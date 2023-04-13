@@ -2,7 +2,7 @@
 title: Referência de extensões de encaminhamento de eventos
 description: Encontre a documentação para extensões de encaminhamento de eventos no Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 17%
@@ -14,6 +14,13 @@ ht-degree: 17%
 >[!NOTE]
 >
 >A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 Veja a seguir uma lista da documentação para extensões de encaminhamento de eventos do lado do servidor. Para obter uma lista de extensões disponíveis no lado do cliente, consulte [referência de extensões de tag](../client/overview.md) em vez disso.
 

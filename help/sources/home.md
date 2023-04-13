@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 2%
@@ -18,6 +18,13 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Platform. O serviço fornece uma interface de usuário e uma RESTful API que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 Com o Experience Platform, você pode centralizar dados coletados de fontes diferentes e usar os insights obtidos com ele para fazer mais.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Tipos de fontes
 

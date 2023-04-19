@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '270'
 ht-degree: 18%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 18%
       - [Criar atributos derivados com base em decis](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Casos de uso {#use-cases}
    - [Navegador abandonado](use-cases/abandoned-browse.md)
-   - [Análise de atividade com o Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Análise de atribuição](use-cases/attribution-analysis.md)
    - [Filtragem de bot](use-cases/bot-filtering.md)
    - [Criar um relatório de tendências de eventos](use-cases/trended-report-of-events.md)

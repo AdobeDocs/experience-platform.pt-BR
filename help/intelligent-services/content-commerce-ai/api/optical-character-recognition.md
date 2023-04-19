@@ -1,23 +1,23 @@
 ---
-keywords: OCR;presença de texto;reconhecimento ótico de caracteres
+keywords: OCR; presença de texto; reconhecimento óptico de caracteres
 solution: Experience Platform
-title: Presença de Texto e Reconhecimento Óptico de Caracteres
-description: Na API de marcação de conteúdo, o serviço de Presença de texto/Reconhecimento ótico de caracteres (OCR) pode indicar se o texto está presente em uma determinada imagem. Se houver texto, o OCR poderá retornar o texto.
+title: Presença de texto e reconhecimento óptico de caracteres
+description: Na API de marcação de conteúdo, o serviço de presença de texto/reconhecimento óptico de caracteres (OCR) pode indicar se o texto está presente em uma determinada imagem. Se o texto estiver presente, o OCR poderá retornar o texto.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 4%
 
 ---
 
-# Presença de Texto e Reconhecimento Óptico de Caracteres
+# Presença de texto e reconhecimento óptico de caracteres
 
-O serviço de Presença de Texto/OCR (reconhecimento ótico de caracteres), quando recebe uma imagem, pode indicar se o texto está presente na imagem. Se houver texto, o OCR poderá retornar o texto.
+O serviço de presença de texto/reconhecimento ótico de caracteres (OCR), ao fornecer uma imagem, pode indicar se o texto está presente na imagem. Se o texto estiver presente, o OCR poderá retornar o texto.
 
-A imagem a seguir foi usada no exemplo de solicitação mostrado neste documento:
+A imagem a seguir foi usada na solicitação de exemplo mostrada neste documento:
 
-![Imagem de exemplo](../images/sample_image.png)
+![Exemplo de imagem](../images/sample_image.png)
 
 **Formato da API**
 
@@ -27,9 +27,9 @@ POST /services/v2/predict
 
 **Solicitação**
 
-A solicitação a seguir verifica se o texto está presente com base na imagem de entrada fornecida na carga. Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre os parâmetros de entrada mostrados.
+A solicitação a seguir verifica se o texto está presente com base na imagem de entrada fornecida no payload. Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre os parâmetros de entrada mostrados.
 
-Execução com imagem integrada:
+Execução com imagem em linha:
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -74,13 +74,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o texto que foi detectado na variável `tags` para cada imagem transmitida na solicitação. Se não houver texto em uma determinada imagem, `is_text_present` é 0 e `tags` é uma lista vazia.
+Uma resposta bem-sucedida retorna o texto que foi detectado no `tags` para cada imagem que foi passada na solicitação. Se não houver texto em uma determinada imagem, `is_text_present` é 0 e `tags` é uma lista vazia.
 
-[resultado0, resultado1, ...]: lista de respostas para cada documento de entrada. Cada resultado é um diretório com chaves:
+[result0, result1, ...]: lista de respostas para cada documento de entrada. Cada resultado é um dict com chaves:
 
-1. request_element_id: índice correspondente ao arquivo de entrada para essa resposta, 0 para a primeira imagem na lista de documentos da solicitação, 1 para a próxima e assim por diante.
-2. tags: lista de dicionários, cada dicionário tem duas chaves: texto, que é uma palavra reconhecida da imagem, e relevância, que é calculada como a fração da área da caixa delimitadora do texto extraído em comparação com a imagem completa. 0,01 seria traduzido como um texto que ocupa pelo menos 1% da imagem.
-3. is_text_present: 0 ou 1 dependendo se o texto está presente na imagem. Se as tags forem 0, a lista estará vazia.
+1. request_element_id: índice correspondente ao arquivo de entrada para esta resposta, 0 para a primeira imagem na lista de documentos da solicitação, 1 para a próxima e assim por diante.
+2. tags: lista de dicionários, cada dicionário tem duas chaves: texto, que é uma palavra reconhecida da imagem, e relevância, que é calculada como a fração da área da caixa delimitadora do texto extraído em comparação à imagem completa. 0,01 traduziria para um texto que ocuparia pelo menos 1% da imagem.
+3. is_text_present: 0 ou 1, dependendo se o texto estiver presente na imagem. Se as tags forem 0, a lista ficará vazia.
 
 ```json
 {
@@ -110,7 +110,7 @@ Uma resposta bem-sucedida retorna o texto que foi detectado na variável `tags` 
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0
@@ -121,7 +121,7 @@ Uma resposta bem-sucedida retorna o texto que foi detectado na variável `tags` 
 
 **Solicitação**
 
-A solicitação a seguir verifica se o texto está presente com base na imagem de entrada fornecida na carga. Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre os parâmetros de entrada mostrados.
+A solicitação a seguir verifica se o texto está presente com base na imagem de entrada fornecida no payload. Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre os parâmetros de entrada mostrados.
 
 Execução com URL:
 
@@ -197,19 +197,19 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Propriedade | Descrição | Obrigatório |
 | --- | --- | --- |
-| `documents` | Lista de elementos JSON com cada item na lista representando uma imagem. Todos os parâmetros transmitidos como parte dessa lista substituem o parâmetro global especificado fora da lista para o elemento de lista correspondente. | Sim |
-| `sensei:multipart_field_name` | field_name do qual ler o caminho do arquivo de entrada. | Sim |
-| `repo:path` | URL pré-assinado para ativo de imagem. | Sim |
+| `documents` | Lista de elementos JSON com cada item na lista representando uma imagem. Quaisquer parâmetros transmitidos como parte dessa lista, substitua o parâmetro global especificado fora da lista para o elemento de lista correspondente. | Sim |
+| `sensei:multipart_field_name` | field_name para ler o caminho do arquivo de entrada. | Sim |
+| `repo:path` | Url pré-assinado para ativo de imagem. | Sim |
 | `sensei:repoType` | &quot;HTTP&quot; (para url pré-assinado). | Não |
-| `dc:format` | Formato codificado da imagem de entrada. Somente formatos de imagem como jpeg, jpg, png e tiff são permitidos para codificação de imagem. O dc:format corresponde aos formatos permitidos. | Não |
-| `correct_with_dictionary` | Corrigir as palavras com um dicionário de inglês? Se essa opção não estiver ativada, você poderá ter palavras que não estejam em inglês reconhecidas. O padrão é True: ativado.) Observe que quando o dicionário está ativado, não é necessário que você sempre receba uma palavra em inglês. Tentamos corrigi-la, mas se não for possível em uma certa distância de edição, retornamos a palavra original. | Não |
-| `filter_with_dictionary` | Se as palavras devem ser filtradas para conter somente as palavras do dicionário de inglês? Se essa opção estiver ativada, as palavras retornadas sempre pertencerão ao inglês grande , que compreende 470 mil palavras. | Não |
-| `min_probability` | Qual é a probabilidade mínima para as palavras reconhecidas? Somente as palavras extraídas da imagem e com uma probabilidade maior que min_probability são retornadas pelo serviço. O valor padrão é definido como 0,2. | Não |
-| `min_relevance` | Qual é a relevância mínima para as palavras reconhecidas? Somente as palavras extraídas da imagem e que têm relevância maior que min_importance são retornadas pelo serviço. O valor padrão é definido em 0,01. A relevância é calculada como a fração da área da caixa delimitadora do texto extraído em comparação com a imagem completa. 0,01 seria traduzido como um texto que ocupa pelo menos 1% da imagem. | Não |
+| `dc:format` | Formato codificado da imagem de entrada. Somente formatos de imagem como jpeg, jpg, png e tiff são permitidos para a codificação de imagem. O dc:format é comparado com os formatos permitidos. | Não |
+| `correct_with_dictionary` | Corrija as palavras com um dicionário de inglês? Se isso não for ativado, você poderia potencialmente ter palavras que não fossem em inglês reconhecidas. O padrão é Verdadeiro: ativado.) Observe que quando o dicionário é ativado, não é necessário que você sempre receba uma palavra em inglês. Tentamos corrigi-la, mas se não for possível dentro de uma certa distância de edição, retornamos a palavra original. | Não |
+| `filter_with_dictionary` | Filtre as palavras para conter apenas as palavras do dicionário de inglês? Se isso for ativado, as palavras retornadas sempre pertencerão ao grande inglês , que compreende 470k palavras. | Não |
+| `min_probability` | Qual é a probabilidade mínima para as palavras reconhecidas? Somente as palavras que são extraídas da imagem e têm uma probabilidade maior que min_probabilidade são retornadas pelo serviço. O valor padrão é definido em 0.2. | Não |
+| `min_relevance` | Qual é a mínima relevância para as palavras reconhecidas? Somente as palavras extraídas da imagem e com maior relevância que min_relevant são retornadas pelo serviço. O valor padrão é definido como 0,01. A relevância é calculada como a fração da área da caixa delimitadora do texto extraído em comparação à imagem completa. 0,01 traduziria para um texto que ocuparia pelo menos 1% da imagem. | Não |
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL pré-assinado da imagem da qual o texto precisa ser extraído. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositório onde a imagem está sendo armazenada. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar a imagem como um argumento de várias partes em vez de usar urls pré-assinados. |
+| `repo:path` | string | - | - | - | Url pré-assinado da imagem da qual o texto precisa ser extraído. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo de acordo de recompra onde a imagem está sendo armazenada. |
+| `sensei:multipart_field_name` | string | - | - | - | Use isso ao transmitir a imagem como um argumento multiparte, em vez de usar urls pré-assinados. |
 | `dc:format` | string | Sim | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |

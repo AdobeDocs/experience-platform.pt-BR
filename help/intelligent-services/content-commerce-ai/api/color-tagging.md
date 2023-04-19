@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marcação de cores na API de marcação de conteúdo
 description: O serviço de Marcação de cores, quando recebe uma imagem, pode calcular o histograma de cores de pixels e classificá-las por cores dominantes em compartimentos.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 5%
+source-wordcount: '653'
+ht-degree: 6%
 
 ---
 
@@ -21,11 +21,11 @@ Esse método extrai um histograma de cores na imagem inteira.
 
 **Marcação de cores (com máscara)**
 
-Esse método usa um extrator de primeiro plano baseado em aprendizado profundo para identificar objetos em primeiro plano. Uma vez extraídos os objetos em primeiro plano, um histograma é calculado sobre as cores dominantes das regiões em primeiro e segundo plano, juntamente com toda a imagem.
+Esse método usa um extrator de primeiro plano baseado em aprendizado profundo para identificar objetos em primeiro plano. Quando os objetos de primeiro plano são extraídos, um histograma é calculado sobre as cores dominantes das regiões de primeiro e segundo plano, juntamente com toda a imagem.
 
 **Extração de tons**
 
-Além das variantes mencionadas acima, é possível configurar o serviço para recuperar um histograma de tons para:
+Além das variantes mencionadas acima, você pode configurar o serviço para recuperar um histograma de tons para:
 
 - A imagem geral (ao usar a variante de imagem completa)
 - A imagem geral e as regiões de primeiro e segundo plano (ao usar a variante com máscara)
@@ -161,7 +161,7 @@ Observe que o resultado aqui tem cor extraída na região da imagem &quot;geral&
 
 **Solicitação - variante de imagem mascarada**
 
-A solicitação de exemplo a seguir usa o método de mascaramento para marcação de cores. Habilitamos isso definindo a variável `enable_mask` para `true` na solicitação.
+A solicitação de exemplo a seguir usa o método de mascaramento para marcação de cores. Isso é ativado ao configurar a variável `enable_mask` para `true` na solicitação.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Observação: Além disso, também definimos a variável `retrieve_tone` para `true` no pedido acima referido. Isso nos permite recuperar um histograma de distribuição de tons sobre tons quentes, neutros e frios nas regiões geral, de primeiro e de plano de fundo da imagem.
+>[!NOTE]
+>
+>Além disso, a variável `retrieve_tone` também é definido como `true` no pedido acima referido. Isso nos permite recuperar um histograma de distribuição de tons sobre tons quentes, neutros e frios nas regiões geral, de primeiro e plano de fundo da imagem.
 
 **Resposta - variante de imagem mascarada**
 
@@ -352,16 +354,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-Além das cores da imagem geral, você também pode ver as cores das regiões de primeiro e segundo plano agora. Como habilitamos a recuperação de tons para cada uma das regiões acima, também podemos recuperar um histograma de tons.
+Além das cores da imagem geral, você também pode ver as cores das regiões de primeiro e segundo plano agora. Como a recuperação de tom está ativada para cada uma das regiões acima, você também pode recuperar o histograma de um tom.
 
 **Parâmetros de entrada**
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Sim | - | Consulte abaixo | Lista de elementos json com cada item na lista representando um documento. |
+| `documents` | array (Document-Object) | Sim | - | Consulte abaixo | Lista de elementos JSON com cada item na lista representando um documento. |
 | `top_n` | number | Não | 0 | Número inteiro não negativo | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor de qualquer um dos limites. |
 | `min_coverage` | number | Não | 0.05 | Número real | Limite de cobertura acima do qual os resultados devem ser devolvidos. Excluir parâmetro para retornar todos os resultados. |
-| `resize_image` | number | Não | Verdadeiro | Verdadeiro/Falso | Redimensionar ou não a imagem de entrada. Por padrão, as imagens são redimensionadas para 320*320 pixels antes da extração de cores ser executada. Para fins de depuração, também podemos permitir que o código seja executado em imagens completas, definindo isso como Falso. |
+| `resize_image` | number | Não | Verdadeiro | Verdadeiro/Falso | Redimensionar ou não a imagem de entrada. Por padrão, as imagens são redimensionadas para 320*320 pixels antes da extração de cores ser executada. Para fins de depuração, também podemos permitir que o código seja executado em imagens completas, definindo isso como `False`. |
 | `enable_mask` | number | Não | Falso | Verdadeiro/Falso | Ativa/desativa a extração de cores |
 | `retrieve_tone` | number | Não | Falso | Verdadeiro/Falso | Ativa/desativa a extração de tons |
 
@@ -369,7 +371,7 @@ Além das cores da imagem geral, você também pode ver as cores das regiões de
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Url pré-assinado do documento a partir do qual as frases-chave devem ser extraídas. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de acordo de recompra onde o documento está sendo armazenado. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar o documento como um argumento multiparte, em vez de usar urls pré-assinados. |
-| `dc:format` | string | Sim | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | A codificação de documento é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
+| `repo:path` | string | - | - | - | URL pré-assinado do documento. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo de acordo de recompra onde a imagem está sendo armazenada. |
+| `sensei:multipart_field_name` | string | - | - | - | Use isso ao transmitir o arquivo de imagem como um argumento multipart em vez de usar URLs pré-assinados. |
+| `dc:format` | string | Sim | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |

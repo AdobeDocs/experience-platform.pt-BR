@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform, home, tópicos populares, conector de origem do Analytics, conector do Analytics, fonte do Analytics, analytics
-solution: Experience Platform
+keywords: Experience Platform, home, tópicos populares, conector de origem do Analytics, conector do Analytics, fonte do Analytics, análise, filtragem, filtragem para perfil, perfil do cliente em tempo real, filtro, filtrar dados do perfil, filtragem em nível de linha, filtragem em nível de coluna
 title: Criar uma conexão de origem do Adobe Analytics na interface do usuário
-type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
+source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
 workflow-type: tm+mt
-source-wordcount: '2365'
+source-wordcount: '2380'
 ht-degree: 1%
 
 ---
@@ -281,7 +279,7 @@ Você pode visualizar os rótulos herdados de um fluxo de conjunto de dados da v
 
 Para excluir um fluxo de dados, direcione para [!UICONTROL Fluxos de dados] e, em seguida, selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione [!UICONTROL Excluir].
 
-![excluir](../../../../images/tutorials/create/analytics/delete.png)
+![delete](../../../../images/tutorials/create/analytics/delete.png)
 
 ## Próximas etapas e recursos adicionais
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform, home, tópicos populares, conector de origem do Analytics, conector do Analytics, fonte do Analytics, análise, filtragem, filtragem para perfil, perfil do cliente em tempo real, filtro, filtrar dados do perfil, filtragem em nível de linha, filtragem em nível de coluna
 title: Criar uma conexão de origem do Adobe Analytics na interface do usuário
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
+source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
 workflow-type: tm+mt
-source-wordcount: '2380'
+source-wordcount: '2352'
 ht-degree: 1%
 
 ---

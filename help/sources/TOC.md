@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '968'
 ht-degree: 12%
 
 ---
@@ -90,7 +90,8 @@ ht-degree: 12%
       - [conector Snowflake](connectors/databases/snowflake.md)
       - [Conector Teradata Vantage](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
-      - [Conector Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify](connectors/ecommerce/shopify.md)
+      - [Comprar fluxo](connectors/ecommerce/shopify-streaming.md)
    - Sistema local {#local-system}
       - [Conector de upload de arquivo local](connectors/local-system/local-file-upload.md)
    - Automação de marketing {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 12%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Comprar fluxo](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automação de marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 12%
          - [Vantagem do teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Comprar fluxo](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema local {#local-system}
          - [Upload de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automação de marketing {#marketing-automation}

@@ -1,11 +1,11 @@
 ---
-keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager; DFP
+keywords: google ad manager, google ad, doubleclick, DoubleClick AdX, DoubleClick, Google Ad Manager, Google ad manager; DFP
 title: Conexão com o Google Ad Manager
-description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que fornece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
+description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '911'
 ht-degree: 2%
 
 ---
@@ -14,30 +14,30 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-[!DNL Google Ad Manager], anteriormente conhecido como [!DNL DoubleClick for Publishers] (DFP) [!DNL DoubleClick AdX], é uma plataforma de veiculação de anúncios do [!DNL Google] que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeo e em aplicativos móveis.
+[!DNL Google Ad Manager], anteriormente conhecida como [!DNL DoubleClick for Publishers] (DFP) ou [!DNL DoubleClick AdX], é uma plataforma de veiculação de anúncios do [!DNL Google] que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 
 ## Especificações do destino {#specifics}
 
-Observe os seguintes detalhes, específicos do [!DNL Google Ad Manager] Destinos:
+Observe os detalhes a seguir que são específicos para [!DNL Google Ad Manager] Destinos:
 
-* Os públicos ativados são criados programaticamente no [!DNL Google] plataforma.
-* [!DNL Platform] no momento, o não inclui uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público no Google para validar a integração e entender o tamanho do direcionamento de público.
-* Depois de mapear um segmento para um [!DNL Google Ad Manager] destino, o nome do segmento aparece imediatamente no campo [!DNL Google Ad Manager] interface do usuário.
-* A população do segmento precisa de 24 a 48 horas para ser exibida no [!DNL Google Ad Manager]. Além disso, os segmentos devem ter um público-alvo de pelo menos 50 perfis para serem exibidos no [!DNL Google Ad Manager]. Segmentos com tamanhos de público menores que 50 perfis não serão preenchidos em [!DNL Google Ad Manager].
+* Os públicos-alvo ativados são criados de forma programática no [!DNL Google] plataforma.
+* [!DNL Platform] atualmente não inclui uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público-alvo no Google para validar a integração e entender o tamanho do direcionamento de público-alvo.
+* Depois de mapear um segmento para um [!DNL Google Ad Manager] de destino, o nome do segmento aparece imediatamente na [!DNL Google Ad Manager] interface do usuário.
+* A população do segmento precisa de 24 a 48 horas para aparecer em [!DNL Google Ad Manager]. Além disso, os segmentos devem ter um tamanho de público-alvo de pelo menos 50 perfis para serem exibidos em [!DNL Google Ad Manager]. Segmentos com tamanhos de público-alvo menores que 50 perfis não serão preenchidos em [!DNL Google Ad Manager].
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Google Ad Manager] O oferece suporte à ativação das identidades descritas na tabela abaixo.
+[!DNL Google Ad Manager] O suporta a ativação de identidades descritas na tabela abaixo.
 
-| Identidade de destino | Descrição | Considerações |
+| Identidade do Target | Descrição | Considerações |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Selecione essa identidade de destino quando a identidade de origem for um namespace GAID. |
+| GAID | [!DNL Google Advertising ID] | Selecione essa identidade de destino quando sua identidade de origem for um namespace GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), também conhecido como [!DNL Device ID]. Uma ID numérica de dispositivo de 38 dígitos que o Audience Manager associa a cada dispositivo com o qual interage. | O Google usa [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=pt-BR) para direcionar usuários na Califórnia e a Google Cookie ID para todos os outros usuários. |
+| UUID do AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)também conhecido como [!DNL Device ID]. Uma ID de dispositivo numérica de 38 dígitos que o Audience Manager associa a cada dispositivo com o qual ele interage. | O Google usa [UUID do AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=pt-BR) para direcionar usuários na Califórnia e a ID do cookie da Google para todos os outros usuários. |
 | [!DNL Google] ID do cookie | [!DNL Google] ID do cookie | [!DNL Google] O usa essa ID para direcionar usuários fora da Califórnia. |
 | RIDA | ID do Roku para publicidade. Essa ID identifica exclusivamente dispositivos Roku. |  |
-| EMPREGADA | ID de publicidade da Microsoft. Esta ID identifica exclusivamente os dispositivos que executam o Windows 10. |  |
-| ID do Amazon Fire TV | Esta ID identifica exclusivamente as TVs Amazon Fire. |  |
+| MAID | Microsoft Advertising ID. Esta ID identifica exclusivamente dispositivos que executam o Windows 10. |  |
+| Amazon Fire TV ID | Essa ID identifica exclusivamente Amazon Fire TVs. |  |
 
 {style="table-layout:auto"}
 
@@ -47,69 +47,79 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público) para o destino do Google. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) para o destino do Google. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões &quot;sempre ativas&quot; baseadas em API. Assim que um perfil é atualizado no Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Pré-requisitos {#prerequisites}
 
-Se você deseja criar seu primeiro destino com o [!DNL Google Ad Manager] e não ativaram o [Funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de ID de Experience Cloud anterior (com Audience Manager ou outros aplicativos), entre em contato com a Consultoria de Adobe ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já configurou o [!DNL Google] integrações no Audience Manager, as sincronizações de ID configuradas para serem transferidas para a Platform.
+Se você deseja criar seu primeiro destino com [!DNL Google Ad Manager] e não ativou a variável [Funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de Experience Cloud ID no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já havia configurado [!DNL Google] integrações no Audience Manager, as sincronizações de ID que você configurou continuam para a Platform.
 
-### Incluir na lista de permissões {#allow-listing}
+### Lista de permissões {#allow-listing}
 
-A inclusão na lista de permissões é obrigatória antes de configurar o primeiro [!DNL Google Ad Manager] destino na Platform. Conclua o processo de inclusão na lista de permissões descrito abaixo antes de criar seu destino.
+A lista de permissões é obrigatória antes da configuração da primeira [!DNL Google Ad Manager] no Platform. Conclua o processo de lista de permissões descrito abaixo, antes de criar seu destino.
 
-1. Siga as etapas descritas na seção [Documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de gerenciamento de dados (DMP) vinculada.
-2. No [!DNL Google Ad Manager] , vá para **[!UICONTROL Admin]** > **[!UICONTROL Configurações globais]** > **[!UICONTROL Configurações de rede]** e habilite o **[!UICONTROL Acesso à API]** controle deslizante.
+1. Siga as etapas descritas em [Documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de gerenciamento de dados vinculada (DMP).
+2. No [!DNL Google Ad Manager] interface, vá para **[!UICONTROL Administrador]** > **[!UICONTROL Configurações globais]** > **[!UICONTROL Configurações de rede]** e ative a **[!UICONTROL Acesso à API]** controle deslizante.
 
-## Conectar ao destino {#connect}
+## Conecte-se ao destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, é necessário **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a esse destino, siga as etapas descritas na [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam_appendSegmentID"
+>title="Anexar ID de segmento ao nome do segmento"
+>abstract="Selecione essa opção para que o nome do segmento no Google Ad Manager inclua a ID do segmento no Experience Platform, assim: `Segment Name (Segment ID)`"
 
-* **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
+Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve fornecer as seguintes informações:
+
+* **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL ID da conta]**: Insira seu [!DNL Audience Link ID] do seu [!DNL Google] conta. Esse é um identificador específico associado à [!DNL Google Ad Manager] rede (não a sua [!DNL Network code]). Você pode encontrar isso em **[!UICONTROL Administração > Configurações globais]** no [!DNL Google Ad Manager] interface.
-* **[!UICONTROL Tipo de conta]**: selecione uma opção, dependendo da sua conta com o Google:
-   * Uso `DFP by Google` para [!DNL DoubleClick] para editores
-   * Uso `AdX buyer` para [!DNL Google AdX]
+* **[!UICONTROL ID da conta]**: Insira seu [!DNL Audience Link ID] do [!DNL Google] conta. Esse é um identificador específico associado ao [!DNL Google Ad Manager] rede (não sua [!DNL Network code]). Você pode encontrar isso em **[!UICONTROL Administração > Configurações globais]** no [!DNL Google Ad Manager] interface.
+* **[!UICONTROL Tipo de conta]**: Selecione uma opção, dependendo da sua conta com o Google:
+   * Use `DFP by Google` para [!DNL DoubleClick] para editores
+   * Use `AdX buyer` para [!DNL Google AdX]
 
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 >[!NOTE]
 >
->Ao configurar um [!DNL Google Ad Manager] destino, trabalhe com seu [!DNL Google Account Manager] ou representante da Adobe para saber qual tipo de conta você tem.
+>Ao configurar um [!DNL Google Ad Manager] destino, trabalhe com seu [!DNL Google Account Manager] ou representante de Adobe para entender qual tipo de conta você tem.
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o guia sobre [inscrever-se em alertas de destinos usando a interface do usuário](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!UICONTROL Próximo]**.
 
 ## Ativar segmentos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para este destino.
 
 ## Dados exportados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito para o [!DNL Google Ad Manager] destino, verifique seu [!DNL Google Ad Manager] conta. Se a ativação for bem-sucedida, os públicos-alvo serão preenchidos na conta.
+Para verificar se os dados foram exportados com êxito para a [!DNL Google Ad Manager] destino, verifique seu [!DNL Google Ad Manager] conta. Se a ativação foi bem-sucedida, os públicos-alvo são preenchidos na sua conta.
 
 ## Solução de problemas {#troubleshooting}
 
-Caso encontre erros ao usar esse destino e precise entrar em contato com o Adobe ou o Google, mantenha as seguintes IDs à mão.
+Caso encontre erros ao usar esse destino e precise entrar em contato com o Adobe ou Google, mantenha as seguintes IDs em mãos.
 
-Estas são as IDs de conta do Adobe Google:
+Estas são IDs de conta Google do Adobe:
 
 * **[!UICONTROL ID da conta]**: 87933855
-* **[!UICONTROL ID do cliente]**: 89690775
+* **[!UICONTROL Customer ID]**: 89690775

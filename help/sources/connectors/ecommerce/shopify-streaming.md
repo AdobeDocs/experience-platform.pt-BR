@@ -4,7 +4,7 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badge: "Beta"
 hidefromtoc: y
 hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+source-git-commit: 97e6cda8fa7a40542de5a34a9f4dfcaeb715edbf
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 2%
@@ -97,7 +97,7 @@ Uma resposta bem-sucedida retorna o token de acesso e os escopos de permissão.
 
 ```json
 {
-  "access_token": "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",
+  "access_token": "shpca_wjhifwfc91psjtldysxd6rqli371tx54",
   "scope": "write_orders,read_customers"
 }
 ```

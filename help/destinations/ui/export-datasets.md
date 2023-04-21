@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
 source-wordcount: '1359'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -88,7 +88,7 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Opções de exportação de arquivo para conjuntos de dados"
->abstract="Selecionar **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação."
+>abstract="Selecione **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação."
 
 No **[!UICONTROL Agendamento]** , é possível definir uma data de início e uma cadência de exportação para as exportações do conjunto de dados.
 

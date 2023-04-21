@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -35,7 +35,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Assinar alertas de origens"
->abstract="Os alertas permitem receber notificações com base no status dos fluxos de dados de fontes. É possível definir notificações de alerta para obter atualizações caso o fluxo de dados tenha sido iniciado, tenha sido bem-sucedido, tenha falhado ou não tenha assimilado dados."
+>abstract="Os alertas permitem receber notificações com base no status dos fluxos de dados de cada origem. É possível definir notificações de alerta para obter atualizações caso o fluxo de dados tenha sido iniciado, bem-sucedido, tenha falhado ou não tenha assimilado dados."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

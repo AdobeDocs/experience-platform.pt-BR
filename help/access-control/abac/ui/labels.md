@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -18,8 +18,8 @@ Rótulos permitem categorizar os conjuntos de dados e campos de acordo com as po
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
->title="Uso de etiqueta"
->abstract="Você pode usar rótulos personalizados para aplicar configurações de controle de acesso e de acesso a seus dados."
+>title="Uso de rótulos"
+>abstract="Você pode usar rótulos personalizados para aplicar configurações de governança de dados e controle de acesso aos seus dados."
 
 >[!NOTE]
 >

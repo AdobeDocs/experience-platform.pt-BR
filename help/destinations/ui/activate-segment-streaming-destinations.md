@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
 source-wordcount: '972'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -85,7 +85,7 @@ Alguns destinos de transmissão de segmento exigem que você selecione atributos
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformação"
->abstract="Marque essa opção ao usar campos de origem sem hash para que o Adobe Experience Platform os faça automaticamente com hash na ativação."
+>abstract="Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experience Platform faça o hash automaticamente na ativação."
 
 Quando você está mapeando atributos de origem sem hash para atributos de destino que o destino espera ter hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform faça o hash automático dos atributos de origem na ativação.
 
@@ -96,7 +96,7 @@ Quando você está mapeando atributos de origem sem hash para atributos de desti
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Data de término"
->abstract="A adição de uma data de término para a programação de segmentos não está disponível."
+>abstract="A adição de uma data final para a programação de segmentos não está disponível."
 
 Por padrão, a variável [!UICONTROL Agendamento do segmento] mostra somente os segmentos recém-selecionados que você escolheu no fluxo de ativação atual.
 
@@ -132,7 +132,7 @@ No **[!UICONTROL Revisão]** você pode ver um resumo da sua seleção. Selecion
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-Se sua organização comprou **Blindagem do Adobe Healthcare** ou **Privacidade e proteção de segurança do Adobe**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
+Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 
 ### Verificações da política de uso de dados {#data-usage-policy-checks}
 

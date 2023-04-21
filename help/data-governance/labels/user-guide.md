@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
 source-wordcount: '1529'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -128,7 +128,7 @@ Veja o tutorial em [gerenciamento de rótulos de nível de esquema](../../xdm/tu
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Criar rótulos"
->abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece um conjunto padrão de rótulos para você usar, mas também é possível criar rótulos personalizados específicos à sua organização."
+>abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece um conjunto padrão de rótulos para você usar, mas também é possível criar rótulos personalizados específicos da sua organização."
 
 Você pode criar seus próprios rótulos de uso personalizados na **[!UICONTROL Políticas]** na área de trabalho do [!DNL Experience Platform] IU. Selecionar **[!UICONTROL Políticas]** na navegação à esquerda, selecione **[!UICONTROL Rótulos]** para exibir uma lista de rótulos existentes. Aqui, selecione **[!UICONTROL Criar rótulo]**.
 

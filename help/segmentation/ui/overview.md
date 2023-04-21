@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
 source-wordcount: '2650'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -49,17 +49,17 @@ Para saber mais, visite o [guia do painel de segmentos](../../dashboards/guides/
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Churn"
->abstract="O churn representa a porcentagem de perfis que estão mudando em uma definição de segmento em comparação à última vez que o trabalho do segmento foi executado."
+>abstract="O churn representa a porcentagem de perfis que estão mudando em uma definição de segmento em comparação à última vez que o processo do segmento foi executado."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de avaliação"
->abstract="Os métodos de avaliação para segmentos incluem lote, streaming e borda."
+>abstract="Os métodos de avaliação de segmentos incluem lote, transmissão e borda."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Adicionar todos os segmentos para agendar"
->abstract="Ative para incluir todos os segmentos de avaliação de lote na atualização agendada diária. Desative para remover todos os segmentos da atualização agendada."
+>abstract="Habilite para incluir todos os segmentos de avaliação em lote na atualização agendada diária. Desabilite para remover todos os segmentos da atualização agendada."
 
 Selecione o **[!UICONTROL Procurar]** para ver uma lista de todas as definições de segmento da sua organização.
 

@@ -5,7 +5,7 @@ exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 92%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Implantação assíncrona"
->abstract="Se essa opção estiver ativada, quando essa tag de script for analisada, o navegador começará a carregar o arquivo JavaScript, mas em vez de esperar que a biblioteca seja carregada e executada, ele continuará a analisar e renderizar o restante do documento. Isso pode melhorar o desempenho da página da Web, mas tem implicações importantes sobre como determinadas regras são executadas. Consulte a documentação para obter mais detalhes."
+>abstract="Se essa opção estiver habilitada, quando esta tag de script for analisada, o navegador começará a carregar o arquivo JavaScript, mas em vez de esperar que a biblioteca seja carregada e executada, ele continuará a analisar e renderizar o restante do documento. Isso pode melhorar o desempenho da página da Web, mas tem implicações importantes sobre como determinadas regras são executadas. Consulte a documentação para obter mais detalhes."
 
 >[!NOTE]
 >

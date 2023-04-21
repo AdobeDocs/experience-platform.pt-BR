@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -53,7 +53,7 @@ Para obter mais informações sobre como gerenciar e interagir com schemas no Pl
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamentos de dados"
->abstract="Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento: registro, série de tempo e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de séries de tempo capturam um instantâneo do sistema no momento em que uma ação foi tomada. Os esquemas ad hoc capturam campos que são namespaces para uso somente por um único conjunto de dados. Consulte a documentação para obter mais informações sobre comportamentos de dados no Platform."
+>abstract="Os dados destinados ao uso na Experience Platform são agrupados em três tipos de comportamento: registro, série de tempo e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de séries de tempo capturam um instantâneo do sistema no momento em que uma ação foi tomada. Os esquemas ad hoc capturam campos que são namespaces para uso somente por um único conjunto de dados. Consulte a documentação para obter mais informações sobre comportamentos de dados na Platform."
 
 Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento:
 

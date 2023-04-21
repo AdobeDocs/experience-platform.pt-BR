@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
 workflow-type: tm+mt
 source-wordcount: '4140'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -52,8 +52,8 @@ Os esquemas de registro e de série de tempo contêm um mapa de identidades (`xd
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
->title="Identidades em schemas"
->abstract="Identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade de cada indivíduo e criar perfis de cliente. Consulte a documentação para obter mais informações sobre identidades em schemas."
+>title="Identidades em esquemas"
+>abstract="Identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade de cada pessoa e criar perfis de cliente. Consulte a documentação para obter mais informações sobre identidades em esquemas."
 
 Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma única visualização unificada de uma entidade individual. Portanto, é importante pensar em schemas pensar nas identidades do cliente e quais campos podem ser usados para identificar um assunto, independentemente de onde os dados possam vir.
 
@@ -170,7 +170,7 @@ Os esquemas são compostos usando a seguinte fórmula:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Classe"
->abstract="Cada schema é baseado em uma única classe. A classe define o comportamento do schema e as propriedades comuns que todos os schemas baseados nessa classe devem conter. Consulte a documentação para saber mais sobre como as classes estão envolvidas na composição do schema."
+>abstract="Cada esquema se baseia em uma única classe. A classe define o comportamento do esquema e as propriedades comuns que todos os esquemas baseados nessa classe devem conter. Consulte a documentação para saber mais sobre como as classes estão envolvidas na composição do esquema."
 
 A composição de um schema começa pela atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o schema conterá (registro ou série de tempo). Além disso, as classes descrevem o menor número de propriedades comuns que todos os esquemas baseados nessa classe precisariam incluir e fornecer uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 
@@ -189,7 +189,7 @@ Para obter a lista mais atualizada das classes XDM padrão disponíveis, consult
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Grupo de campos"
->abstract="Os grupos de campos são componentes reutilizáveis que permitem estender esquemas com atributos adicionais. A maioria dos grupos de campos é compatível somente com determinadas classes. Você pode usar grupos de campos padrão definidos pelo Adobe ou pode definir manualmente seus próprios grupos de campos personalizados. Consulte a documentação para saber mais sobre como os grupos de campos estão envolvidos na composição do schema."
+>abstract="Os grupos de campos são componentes reutilizáveis que permitem estender esquemas com atributos adicionais. A maioria dos grupos de campos é compatível somente com determinadas classes. Você pode usar grupos de campos padrão definidos pela Adobe ou pode definir manualmente seus próprios grupos de campos personalizados. Consulte a documentação para saber mais sobre como os grupos de campos estão envolvidos na composição do esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"

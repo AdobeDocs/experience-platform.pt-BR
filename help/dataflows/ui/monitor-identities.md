@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -29,12 +29,12 @@ O painel de monitoramento fornece uma representação visual da atividade dos da
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Processamento de identidade"
->abstract="A exibição de processamento de identidade contém informações sobre registros assimilados ao serviço de identidade, incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>abstract="A visualização do processamento de identidade contém informações sobre registros assimilados ao serviço de identidade, incluindo o número de identidades adicionadas, gráficos criados e gráficos atualizados. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
->title="Detalhes da execução do fluxo de dados"
+>title="Detalhes de execução do fluxo de dados"
 >abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados de identidade, incluindo a ID da organização e a ID de execução do fluxo de dados."
 
 Para acessar o **[!UICONTROL Identidades]** painel, selecione **[!UICONTROL Monitoramento]** no painel de navegação esquerdo. Uma vez no **[!UICONTROL Monitoramento]** selecione o **[!UICONTROL Identidades]** cartão.
@@ -54,7 +54,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | Métricas de identidade | Descrição |
 | ---------------- | ----------- |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do lago de dados. |
-| **[!UICONTROL Falha nos registros]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
 | **[!UICONTROL Registros ignorados]** | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | **[!UICONTROL Registros assimilados]** | O número de registros assimilados em [!DNL Identity Service]. |
 | **[!UICONTROL Identidades adicionadas]** | O número de novos identificadores líquidos adicionados a [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | **[!UICONTROL Conjunto de dados]** | O nome do conjunto de dados ao qual o fluxo de dados está sendo inserido. |
 | **[!UICONTROL Nome da origem]** | O nome da origem à qual o fluxo de dados pertence. |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do lago de dados. |
-| **[!UICONTROL Falha nos registros]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
 | **[!UICONTROL Registros ignorados]** | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | **[!UICONTROL Registros assimilados]** | O número de registros assimilados em [!DNL Identity Service]. |
 | **[!UICONTROL Total de registros]** | A contagem total de todos os registros, incluindo registros com falha, registros ignorados, identidades adicionadas e registros duplicados. |
@@ -100,7 +100,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | Métrica | Descrição |
 | -------| ----------- |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do lago de dados. |
-| **[!UICONTROL Falha nos registros]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
 | **[!UICONTROL Registros ignorados]** | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | **[!UICONTROL Registros assimilados]** | O número de registros assimilados em [!DNL Identity Service]. |
 | **[!UICONTROL Identidades adicionadas]** | O número de novos identificadores líquidos adicionados a [!DNL Identity Service]. |

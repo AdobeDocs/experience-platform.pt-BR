@@ -6,7 +6,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
 source-wordcount: '1944'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -112,12 +112,12 @@ Insira os campos abaixo e selecione **[!UICONTROL Ligar ao destino]**:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Alterne se deseja que a exportação de dados inclua os nomes dos segmentos que você está exportando. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos segmentos que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

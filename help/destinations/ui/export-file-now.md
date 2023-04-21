@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="Exportar arquivo agora"
->abstract="Selecione esse controle para fornecer uma exportação de arquivo completa, além de qualquer exportação agendada anteriormente. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação de Experience Platform."
+>abstract="Selecione esse controle para fornecer uma exportação de arquivo completa, além de qualquer exportação agendada anteriormente. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform."
 
 Este artigo explica como usar a interface do usuário do Experience Platform para exportar arquivos sob demanda para destinos em lote, como [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md) destinos.
 
-O **[!UICONTROL Exportar arquivo agora]** O controle permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um segmento agendado anteriormente. Essa exportação acontece além das exportações previamente agendadas e não altera a frequência de exportação do segmento. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação de Experience Platform.
+O **[!UICONTROL Exportar arquivo agora]** O controle permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um segmento agendado anteriormente. Essa exportação acontece além das exportações previamente agendadas e não altera a frequência de exportação do segmento. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform.
 
 Também é possível usar as APIs do Experience Platform para essa finalidade. Leia como [ativar segmentos de público-alvo sob demanda para destinos em lote por meio da API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md).
 

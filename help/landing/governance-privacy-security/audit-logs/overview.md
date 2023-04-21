@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 23%
+ht-degree: 29%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Principais ações"
->abstract="Este widget mostra os principais tipos de ações que foram realizadas no Experience Platform dentro do período de tempo selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
+>abstract="Esse widget mostra os principais tipos de ações que foram realizadas na Experience Platform no período selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Principais usuários"
->abstract="Este widget mostra os usuários que executaram mais ações no Experience Platform dentro do período de tempo selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
+>abstract="Esse widget mostra os usuários que executaram mais ações na Experience Platform no período selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"

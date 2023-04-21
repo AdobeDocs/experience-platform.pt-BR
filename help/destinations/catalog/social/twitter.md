@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
 source-wordcount: '806'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -71,8 +71,8 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
->title="ID da Conta"
->abstract="Sua ID de conta do Twitter Ads. Isso pode ser encontrado nas configurações dos anúncios do Twitter."
+>title="ID da conta"
+>abstract="Sua ID da conta do Twitter Ads. Pode ser encontrada nas configurações do Twitter Ads."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

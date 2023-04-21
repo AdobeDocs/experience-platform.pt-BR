@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -75,9 +75,9 @@ No dia seguinte, o usuário retorna ao mesmo site do cliente. Os segmentos para 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Sobre IDs de fluxo de dados"
->abstract="Essa opção determina em qual conjunto de dados de coleta os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Você deve configurar um armazenamento de dados antes de configurar seu destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Saiba como configurar um armazenamento de dados"
+>title="Sobre IDs de sequência de dados"
+>abstract="Essa opção determina em qual sequência de coleção de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=br" text="Saiba como configurar uma sequência de dados"
 
 >[!IMPORTANT]
 > 
@@ -92,7 +92,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
 * **[!UICONTROL Descrição]**: Insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
 * **[!UICONTROL Alias de integração]**: Esse valor é enviado para o SDK da Web do Experience Platform como um nome de objeto JSON.
-* **[!UICONTROL ID do fluxo de dados]**: Isso determina em qual conjunto de dados da Coleta de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas os conjuntos de dados com a configuração de destino ativada. Consulte [Configurar um conjunto de dados](../../../edge/datastreams/overview.md) para obter mais detalhes.
+* **[!UICONTROL ID do fluxo de dados]**: Isso determina em qual conjunto de dados da Coleta de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurar um conjunto de dados](../../../edge/datastreams/overview.md) para obter mais detalhes.
 
 ### Ativar alertas {#enable-alerts}
 

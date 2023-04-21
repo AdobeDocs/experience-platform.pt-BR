@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
 >title="Tipos de rótulos"
->abstract="Há várias categorias de rótulos de uso de dados. Os rótulos definidos por Adobe incluem rótulos de contrato, rótulos de identidade e rótulos confidenciais. Rótulos definidos pela sua organização são categorizados como rótulos personalizados."
+>abstract="Há várias categorias de rótulos de uso de dados. Os rótulos definidos pela Adobe incluem rótulos de contrato, rótulos de identidade e rótulos sensíveis. Rótulos definidos pela sua organização são categorizados como rótulos personalizados."
 >text="See the data usage labels glossary for more information on these label types."
 
 Os rótulos de uso de dados permitem categorizar os conjuntos de dados e campos de acordo com [políticas de governança](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/overview.md) que se aplicam a esses dados. O Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que você pode usar para começar a categorizar seus dados.

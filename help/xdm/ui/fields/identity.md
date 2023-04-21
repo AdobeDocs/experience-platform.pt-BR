@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -27,8 +27,8 @@ Os campos de identidade são um componente essencial na forma como os gráficos 
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
->title="Restrições à identidade primária"
->abstract="Esse esquema usa um grupo de campos destinado ao uso em uma conexão de origem específica. A conexão requer que o identityMap seja usado como identidade primária e o definiu automaticamente."
+>title="Restrições à identidade principal"
+>abstract="Esse esquema usa um grupo de campos destinado ao uso em uma conexão de origem específica. A conexão requer que o identityMap seja usado como identidade principal e o define automaticamente."
 
 When [definição de um novo campo](./overview.md#define) na interface do usuário, você pode defini-la como um campo de identidade selecionando o **[!UICONTROL Identidade]** caixa de seleção no painel direito.
 

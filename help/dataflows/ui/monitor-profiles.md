@@ -7,7 +7,7 @@ exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
@@ -31,12 +31,12 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Processamento de perfil"
->abstract="A visualização Processamento de perfil contém informações sobre registros assimilados ao serviço de perfil, incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil."
+>abstract="A visualização do processamento de perfil contém informações sobre registros assimilados ao serviço de perfil, incluindo o número de fragmentos de perfil criados, fragmentos de perfil atualizados e o número total de fragmentos de perfil."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
->title="Detalhes da execução do fluxo de dados"
+>title="Detalhes de execução do fluxo de dados"
 >abstract="A página Detalhes de execução do fluxo de dados exibe mais informações sobre a execução do fluxo de dados do Perfil, incluindo a ID da organização e a ID de execução do fluxo de dados."
 
 Para acessar o **[!UICONTROL Perfis]** painel, selecione **[!UICONTROL Monitoramento]** no painel de navegação esquerdo. Uma vez no **[!UICONTROL Monitoramento]** selecione o **[!UICONTROL Perfis]** cartão.
@@ -57,7 +57,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | -------| ----------- |
 | **[!UICONTROL Nome da origem]** | O nome da origem. |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do lago de dados. |
-| **[!UICONTROL Falha nos registros]** | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
+| **[!UICONTROL Registros com falha]** | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
 | **[!UICONTROL Fragmentos de perfil criados]** | O número líquido de [!DNL Profile] fragmentos adicionados. |
 | **[!UICONTROL Fragmentos de perfil atualizados]** | O número de [!DNL Profile] fragmentos atualizados. |
 | **[!UICONTROL Total de fragmentos de perfil]** | O número total de registros gravados em [!DNL Profile], incluindo todos os [!DNL Profile] fragmentos atualizados e novos [!DNL Profile] fragmentos criados. |
@@ -79,7 +79,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | **[!UICONTROL Conjunto de dados]** | O nome do conjunto de dados ao qual o fluxo de dados está sendo inserido. |
 | **[!UICONTROL Nome da origem]** | O nome da origem à qual o fluxo de dados pertence. |
 | **[!UICONTROL Registros recebidos**] | O número de registros recebidos do lago de dados. |
-| **[!UICONTROL Falha nos registros]** | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
+| **[!UICONTROL Registros com falha]** | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
 | **[!UICONTROL Fragmentos de perfil criados]** | O número líquido de [!DNL Profile] fragmentos adicionados. |
 | **[!UICONTROL Fragmentos de perfil atualizados]** | O número de [!DNL Profile] fragmentos atualizados |
 | **[!UICONTROL Total de fragmentos de perfil]** | O número total de registros gravados em [!DNL Profile], incluindo todos os [!DNL Profile] fragmentos atualizados e novos [!DNL Profile] fragmentos criados. |
@@ -99,7 +99,7 @@ As métricas a seguir estão disponíveis para esta exibição de painel:
 | Métrica | Descrição |
 | -------| ----------- |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do lago de dados. |
-| **[!UICONTROL Falha nos registros]** | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
+| **[!UICONTROL Registros com falha]** | O número de registros que foram assimilados, mas não em [!DNL Profile] devido a erros. |
 | **[!UICONTROL Fragmentos de perfil criados]** | O número líquido de [!DNL Profile] fragmentos adicionados. |
 | **[!UICONTROL Fragmentos de perfil atualizados]** | O número de [!DNL Profile] fragmentos atualizados. |
 | **[!UICONTROL Status]** | Define o status geral de um fluxo de dados. Os valores de status possíveis são: <ul><li>`Success`: Indica que um fluxo de dados está ativo e está assimilando dados de acordo com o cronograma que foi fornecido.</li><li>`Failed`: Indica que o processo de ativação de um fluxo de dados foi interrompido devido a erros. </li><li>`Processing`: Indica que o fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados.</li></ul> |

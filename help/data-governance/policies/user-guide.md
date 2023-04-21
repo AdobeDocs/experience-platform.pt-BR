@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -113,7 +113,7 @@ As políticas de consentimento são compostas por dois componentes lógicos:
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condição If"
+>title="Condição “Se”"
 >abstract="Comece definindo as condições que acionarão a verificação de política. As condições podem incluir determinadas ações de marketing que estão sendo executadas, determinados rótulos de governança de dados que estão presentes ou uma combinação de ambos."
 
 Em **[!UICONTROL If]** selecione as ações de marketing e/ou rótulos de uso de dados que devem acionar essa política. Selecionar **[!UICONTROL Exibir tudo]** e **[!UICONTROL Selecionar rótulos]** para visualizar as listas completas de ações e rótulos de marketing disponíveis, respectivamente.
@@ -130,8 +130,8 @@ Se você selecionar mais de uma condição, poderá usar o ícone que aparece en
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Condição Then"
->abstract="Depois que sua condição &#39;If&#39; tiver sido definida, use a seção &#39;Then&#39; para selecionar pelo menos um atributo de consentimento do schema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política."
+>title="Condição “Então”"
+>abstract="Depois que a condição “Se” for definida, use a seção “Então” para selecionar pelo menos um atributo de consentimento do esquema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política."
 
 Em **[!UICONTROL Então]** selecione pelo menos um atributo de consentimento do schema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política. Você pode escolher uma das opções fornecidas na lista ou selecionar **[!UICONTROL Exibir tudo]** para escolher o atributo diretamente do schema de união.
 

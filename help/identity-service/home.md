@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ Antes de entrar nos detalhes da [!DNL Identity Service], veja um breve resumo do
 | --- | --- |
 | Identidade | Uma identidade são dados exclusivos de uma entidade, normalmente uma pessoa individual. Uma identidade, como uma ID de logon, ECID ou ID de fidelidade, também é chamada de &quot;identidade conhecida&quot;. |
 | ECID | Experience Cloud ID (ECID) é um namespace de identidade compartilhada usado em aplicativos Experience Platform e Adobe Experience Cloud. A ECID fornece uma base para a identidade do cliente e é usada como a ID primária para dispositivos e como um nó base para gráficos de identidade. Consulte a [Visão geral da ECID](./ecid.md) para obter mais informações. |
-| Namespace de identidade | Um namespace de identidade serve para distinguir o contexto ou o tipo de uma identidade. Por exemplo, uma identidade distingue &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica. Os namespaces de identidade são usados para buscar identidades individuais e fornecer o contexto para valores de identidade. Isso permite determinar que dois [!DNL Profile] fragmentos que contêm IDs primárias diferentes, mas compartilham o mesmo valor para a variável `email` namespace de identidade, são, de fato, o mesmo indivíduo. Consulte a [visão geral do namespace de identidade](./namespaces.md) para obter mais informações. |
+| Namespace de identidade | Um namespace de identidade serve para distinguir o contexto ou o tipo de uma identidade. Por exemplo, uma identidade distingue “name<span>@email.com” como um endereço de email ou “443522” como uma ID de CRM numérica. Os namespaces de identidade são usados para buscar identidades individuais e fornecer o contexto para valores de identidade. Isso permite determinar que dois [!DNL Profile] fragmentos que contêm IDs primárias diferentes, mas compartilham o mesmo valor para a variável `email` namespace de identidade, são, de fato, o mesmo indivíduo. Consulte a [visão geral do namespace de identidade](./namespaces.md) para obter mais informações. |
 | Gráfico de identidade | Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades, permitindo visualizar e entender melhor quais identidades de cliente são unidas e como. Veja o tutorial em [usando o visualizador de gráfico de identidade](./ui/identity-graph-viewer.md) para obter mais informações. |
 | Informações pessoais identificáveis (PII) | PII são informações que podem identificar diretamente um cliente, como um endereço de email ou um número de telefone. Os valores de PII geralmente são usados para corresponder. várias identidades de um cliente em diferentes sistemas. |
 | Identidades desconhecidas ou anônimas | Identidades desconhecidas ou anônimas são indicadores que isolam dispositivos sem identificar a pessoa real que usa o dispositivo. Identidades desconhecidas e anônimas incluem informações como o endereço IP de um visitante e a ID do cookie. Embora identidades desconhecidas e anônimas possam fornecer dados comportamentais, elas são limitadas até que um cliente forneça suas PII. |
@@ -67,13 +67,13 @@ Exemplos de [!DNL Identity Service] as implementações incluem:
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Namespaces de identidade"
->abstract="Um namespace de identidade serve para distinguir o contexto ou o tipo de uma identidade. Por exemplo, uma identidade distingue &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica."
+>abstract="Um namespace de identidade serve para distinguir o contexto ou o tipo de uma identidade. Por exemplo, uma identidade distingue “name<span>@email.com” como um endereço de email ou “443522” como uma ID de CRM numérica."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Valores de identidade"
->abstract="Um valor de identidade é um identificador que representa um indivíduo, uma organização ou um ativo exclusivo. O contexto ou tipo de identidade que o valor representa é definido por um namespace de identidade correspondente. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder."
+>abstract="Um valor de identidade é um identificador que representa uma pessoa, uma organização ou um ativo exclusivo. O contexto ou tipo de identidade que o valor representa é definido por um namespace de identidade correspondente. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder."
 >text="Learn more in documentation"
 
 Se você perguntou a uma pessoa &quot;Qual é sua ID?&quot; sem qualquer outro contexto, seria difícil para eles dar uma resposta útil. Pela mesma lógica, um valor de string que representa um valor de identidade, seja um ID gerado pelo sistema ou um endereço de email, só é concluído quando fornecido com um qualificador que fornece o contexto do valor da string: o namespace de identidade.

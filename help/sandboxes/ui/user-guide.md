@@ -7,7 +7,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -45,7 +45,7 @@ Depois que uma sandbox é selecionada, a tela é atualizada e atualizada para a 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="Título da sandbox"
->abstract="O título da sandbox é o nome de exibição que representará a sandbox em menus e menus e detalhamentos na interface do usuário do Experience Platform."
+>abstract="O título da sandbox é o nome de exibição que representará a sandbox em menus e menus suspensos na interface da Experience Platform."
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ A exclusão de uma sandbox de produção ou desenvolvimento remove permanentemen
 
 Selecione a sandbox que deseja excluir da lista de sandboxes. No painel de navegação direito exibido, selecione **[!UICONTROL Excluir]**.
 
-![excluir](../images/ui/delete.png)
+![delete](../images/ui/delete.png)
 
 Uma caixa de diálogo é exibida, solicitando que você confirme sua escolha. Selecionar **[!UICONTROL Continuar]** para continuar.
 

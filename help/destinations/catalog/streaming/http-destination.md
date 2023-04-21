@@ -6,7 +6,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
 source-wordcount: '2431'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -95,7 +95,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Tipo de credenciais do cliente"
->abstract="Selecionar **Formulário de corpo codificado** para incluir a ID do cliente e o segredo do cliente no corpo da solicitação ou **Autorização básica** para incluir a ID do cliente e o segredo do cliente em um cabeçalho de autorização. Veja exemplos na documentação."
+>abstract="Selecione **Corpo codificado em formato** para incluir a ID do cliente e o segredo do cliente no corpo da solicitação ou **Autorização básica** para incluir a ID do cliente e o segredo do cliente em um cabeçalho de autorização. Veja exemplos na documentação."
 
 #### Autenticação de token portador {#bearer-token-authentication}
 
@@ -143,27 +143,27 @@ Se você selecionar a variável **[!UICONTROL Credenciais do Cliente OAuth 2]** 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="Cabeçalhos"
->abstract="Insira quaisquer cabeçalhos personalizados que você deseja incluir nas chamadas de destino, seguindo este formato: `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="Insira os cabeçalhos personalizados que você deseja incluir nas chamadas de destino, seguindo este formato: `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
->title="Endpoint HTTP"
->abstract="O URL do endpoint HTTP para o qual você deseja enviar os dados do perfil."
+>title="Ponto de acesso HTTP"
+>abstract="O URL do ponto de acesso HTTP para o qual você deseja enviar os dados do perfil."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Alterne se deseja que a exportação de dados inclua os nomes dos segmentos que você está exportando. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos segmentos que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Alterne se deseja que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Visualize a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua o carimbo de data e hora UNIX quando os segmentos foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os segmentos foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
 >title="Parâmetros de consulta"
->abstract="Opcionalmente, é possível adicionar parâmetros de consulta ao URL do ponto de extremidade HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`."
+>abstract="Opcionalmente, é possível adicionar parâmetros de consulta ao URL do ponto de acesso HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

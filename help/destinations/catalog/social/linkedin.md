@@ -6,7 +6,7 @@ exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
 source-wordcount: '1035'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -112,8 +112,8 @@ O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Ma
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_linkedin_accountid"
->title="ID da Conta"
->abstract="Sua ID de conta do LinkedIn Campaign Manager. Você pode encontrar essa ID na conta do LinkedIn Campaign Manager."
+>title="ID da conta"
+>abstract="Sua ID da conta do Campaign Manager no LinkedIn. Você pode encontrar essa ID na conta do Campaign Manager do LinkedIn."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

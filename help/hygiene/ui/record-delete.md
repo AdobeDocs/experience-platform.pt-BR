@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -64,13 +64,13 @@ Se quiser excluir registros de todos os conjuntos de dados, selecione **[!UICONT
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identidade primária"
->abstract="Uma identidade primária é um atributo que vincula um registro ao perfil do consumidor no Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nesta coluna, você deve fornecer o tipo (ou namespace) da identidade primária do registro, como `email` para endereços de email e `ecid` para Experience Cloud IDs. Para saber mais, consulte o guia da interface do usuário da Higiene de Dados ."
+>title="Identidade principal"
+>abstract="Uma identidade principal é um atributo que vincula um registro ao perfil do consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, você deve fornecer o tipo (ou namespace) da identidade principal do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface de higiene de dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidade"
->abstract="Nesta coluna, você deve fornecer o valor da identidade primária do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="Nessa coluna, você deve fornecer o valor da identidade principal do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface de higiene de dados."
 
 Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Platform, os registros são excluídos com base na variável **identidade primária** que é definido pelo esquema do conjunto de dados.
 

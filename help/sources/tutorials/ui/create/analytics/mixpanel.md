@@ -6,7 +6,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -68,8 +68,8 @@ Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e, em s
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="Definir um fuso horário para a assimilação do Mixpanel"
->abstract="O fuso horário deve ser o mesmo que a configuração de fuso horário do perfil do Mixpanel, pois o Platform usa o fuso horário designado do projeto para assimilar dados relevantes do Mixpanel. O Mixpanel ajustará o fuso horário para coordenar com o fuso horário do projeto antes de gravar o evento em um armazenamento de dados do Mixpanel."
+>title="Definir um fuso horário para a ingestão do Mixpanel"
+>abstract="O fuso horário deve ser o mesmo que a configuração de fuso horário do perfil do Mixpanel, pois a Platform usa o fuso horário designado do projeto para assimilar dados relevantes do Mixpanel. O Mixpanel ajustará o fuso horário para coordenar com o fuso horário do projeto antes de gravar o evento em um armazenamento de dados do Mixpanel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Saiba mais na documentação"
 
 Depois que a fonte for autenticada, forneça a ID do projeto e o fuso horário e selecione **[!UICONTROL Selecionar]**.

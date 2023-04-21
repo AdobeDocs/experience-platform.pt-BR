@@ -8,11 +8,11 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
-# Monitorar fluxos de dados para fontes na interface do usuário
+# Monitorar fluxos de dados para fontes na interface
 
 >[!IMPORTANT]
 >
@@ -39,13 +39,13 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
->title="Assimilação de origem"
->abstract="A exibição de assimilação de origem contém informações sobre o status e as métricas da atividade de dados no serviço de lago de dados, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
+>title="Ingestão de origem"
+>abstract="A visualização da ingestão de origem contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
->title="Detalhes da execução do fluxo de dados"
+>title="Detalhes de execução do fluxo de dados"
 >abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
@@ -67,10 +67,10 @@ Os gráficos são ativados por padrão e você pode desativá-los para expandir 
 
 ![métricas e gráficos](../assets/ui/monitor-sources/metrics-graphs.png)
 
-| Assimilação de origem | Descrição |
+| Ingestão de origem | Descrição |
 | ---------------- | ----------- |
 | [!UICONTROL Registros assimilados ] | O número total de registros assimilados. |
-| [!UICONTROL Falha nos registros] | O número total de registros que não foram assimilados devido a erros nos dados. |
+| [!UICONTROL Registros com falha] | O número total de registros que não foram assimilados devido a erros nos dados. |
 | [!UICONTROL Total de fluxos de dados com falha] | O número total de fluxos de dados com um `failed` status. |
 
 A lista de assimilação de origem exibe todas as fontes que contêm pelo menos uma conta existente. A lista também inclui informações sobre a taxa de ingestão de cada fonte, o número de registros com falha e o número total de fluxos de dados com falha com base no período aplicado.

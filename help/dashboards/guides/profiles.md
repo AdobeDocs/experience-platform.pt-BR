@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
 source-wordcount: '3385'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -130,7 +130,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Contagem de perfis"
->abstract="Este widget exibe o número total de perfis mesclados na Loja de perfis no momento em que o instantâneo foi tirado. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados do perfil."
+>abstract="Esse widget exibe o número total de perfis mesclados no Armazenamento de perfis no momento em que o instantâneo foi tirado. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
 
 O **[!UICONTROL Contagem de perfis]** O widget exibe o número total de perfis mesclados na Loja de perfis no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
@@ -155,7 +155,7 @@ O [!UICONTROL Tendência da contagem de perfis] O widget usa um gráfico de linh
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Alteração na contagem de perfis"
->abstract="Este widget exibe o número total de perfis mesclados **adicionado** para a Loja de perfis no momento do último instantâneo. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados do perfil."
+>abstract="Esse widget exibe o número total de perfis mesclados **adicionados** ao Armazenamento de perfis no momento do último instantâneo. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
 
 O **[!UICONTROL Alteração na contagem de perfis]** O widget exibe o número de perfis mesclados adicionados à Loja de perfis desde o instantâneo anterior. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir o número de perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
 
@@ -170,7 +170,7 @@ O **[!UICONTROL Alteração na contagem de perfis]** O widget exibe o número de
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Tendência da alteração da contagem de perfis"
->abstract="Este widget exibe o número de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada ser aplicada aos dados do perfil."
+>abstract="Esse widget exibe o número de perfis mesclados que foram adicionados ao Armazenamento de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
 
 O **[!UICONTROL Tendência da alteração da contagem de perfis]** O widget exibe o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
@@ -199,7 +199,7 @@ Este widget ajuda você a gerenciar suas necessidades de ativação de destino d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Perfis por identidade"
->abstract="Este widget exibe o detalhamento de todos os perfis mesclados na Loja de perfis por identidades."
+>abstract="Esse widget exibe o detalhamento de todos os perfis mesclados no Armazenamento de perfis por identidades."
 
 O **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em todos os perfis mesclados na Loja de perfis. O número total de perfis por identidade (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
@@ -220,7 +220,7 @@ Para saber mais sobre identidades, visite o [Documentação do Adobe Experience 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Sobreposição de identidade"
->abstract="Esse widget usa um diagrama Venn para exibir a sobreposição de perfis na Loja de perfis que contém as duas identidades selecionadas."
+>abstract="Esse widget usa um diagrama Venn para exibir a sobreposição de perfis no Armazenamento de perfis que contém as duas identidades selecionadas."
 
 O **[!UICONTROL Sobreposição de identidade]** O widget usa um diagrama Venn ou um diagrama de conjunto para exibir a sobreposição de perfis na Loja de perfis que contém as duas identidades selecionadas.
 
@@ -256,7 +256,7 @@ Passe o mouse sobre barras individuais para ver uma caixa de diálogo que detalh
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfis não segmentados"
->abstract="Este widget fornece o número total de perfis não anexados a nenhum segmento e representa a oportunidade para a ativação de perfil em sua organização."
+>abstract="Esse widget fornece o número total de perfis não anexados a nenhum segmento e representa a oportunidade para a ativação de perfis em sua organização."
 
 O [!UICONTROL Perfis não segmentados] O widget fornece o número total de perfis não anexados a nenhum segmento. O número gerado é preciso a partir do último instantâneo e representa a oportunidade para a ativação do perfil em toda a organização. Também indica a oportunidade de explorar perfis que não fornecem ROI adequado.
 
@@ -267,7 +267,7 @@ O [!UICONTROL Perfis não segmentados] O widget fornece o número total de perfi
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendência de perfis não segmentados"
->abstract="Este widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período de tempo. A tendência dos perfis não anexados a nenhum segmento pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses."
+>abstract="Esse widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência dos perfis não anexados a nenhum segmento pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses."
 
 O [!UICONTROL Tendência de alteração de perfis não segmentados] O widget usa um gráfico de linhas para ilustrar o número de perfis adicionados desde o último instantâneo diário que não estão anexados a nenhum segmento. A tendência de alteração de perfis não anexados a nenhum segmento pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. A contagem de perfis é refletida no eixo y e no tempo no eixo x.
 

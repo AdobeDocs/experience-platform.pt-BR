@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 25%
 
 ---
 
@@ -69,17 +69,17 @@ Os seguintes filtros se aplicam às solicitações de expiração do conjunto de
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status por serviço"
->abstract="As solicitações de higiene de dados são processadas de maneira independente por vários serviços de Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="As solicitações de higiene de dados são processadas de maneira independente por vários serviços da Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o guia da interface de higiene de dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte desta ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte dessa ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface de higiene de dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Registrar resposta de exclusão"
->abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na guia **[!UICONTROL Resultado]** seção. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nesta seção para ajudá-lo a solucionar o problema. Para saber mais, consulte o guia da interface do usuário de higiene de dados."
+>abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Resultado]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o guia da interface de higiene de dados."
 
 Selecione a ID de um pedido de trabalho listado para exibir seus detalhes.
 

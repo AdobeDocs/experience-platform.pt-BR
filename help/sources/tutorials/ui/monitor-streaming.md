@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -72,19 +72,19 @@ A metade inferior da página exibe informações sobre o número de registros re
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
 >title="Registros assimilados"
->abstract="A métrica Registros assimilados indica a contagem total de registros assimilados no lago de dados."
+>abstract="A métrica Registros assimilados indica a contagem total de registros assimilados no data lake."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
->title="Falha nos registros"
->abstract="A métrica Registros com falha indica a contagem total de registros que não foram assimilados no lago de dados devido a erros nos dados."
+>title="Registros com falha"
+>abstract="A métrica Registros com falha indica a contagem total de registros que não foram assimilados no data lake devido a erros nos dados."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
 >title="Registros com avisos"
->abstract="Os Registros com Avisos indicam a contagem total de registros assimilados com avisos de transformação do mapeador. Todos os erros de transformação do mapeador são relatados como avisos e linhas que são parcialmente assimiladas são consideradas bem-sucedidas com um aviso"
+>abstract="Os Registros com avisos indicam a contagem total de registros assimilados com avisos de transformação do mapeador. Todos os erros de transformação do mapeador são relatados como avisos e linhas que são parcialmente assimiladas são consideradas bem-sucedidas com um aviso"
 >text="Learn more in documentation"
 
 Cada execução de fluxo de dados individual mostra os seguintes detalhes:

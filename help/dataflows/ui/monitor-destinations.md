@@ -8,7 +8,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '3227'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -48,8 +48,8 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
->title="Detalhes da execução do fluxo de dados"
->abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métricas."
+>title="Detalhes de execução do fluxo de dados"
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -111,8 +111,8 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
->title="Detalhes da execução do fluxo de dados"
->abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métricas."
+>title="Detalhes de execução do fluxo de dados"
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métricas."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="O fluxo de dados é executado para destinos de transmissão"
 
 >[!CONTEXTUALHELP]
@@ -176,7 +176,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="A exibição de ativação de destino contém informações sobre o status de ativação do segmento e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
+>abstract="A visualização da ativação de destino contém informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas."
 
 Para acessar o [!UICONTROL Monitoramento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione [!UICONTROL Destinos]. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre as tarefas de execução de destino.
 

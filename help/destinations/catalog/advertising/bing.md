@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -82,7 +82,7 @@ Quando terminar de fornecer detalhes para a conexão de destino, selecione **[!U
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID de mapeamento"
->abstract="Insira a ID de segmento numérica do Bing para a qual deseja mapear o segmento selecionado. Se o [!UICONTROL ID de mapeamento] não corresponde a uma ID de segmento no destino do Bing, você não verá os dados de público-alvo esperados em sua conta do Bing."
+>abstract="Insira a ID de segmento numérica do Bing para a qual deseja mapear o segmento selecionado. Se a [!UICONTROL ID de mapeamento] fornecida não corresponde a uma ID de segmento no destino do Bing, você não verá os dados de público esperados na conta do Bing."
 
 >[!IMPORTANT]
 > 

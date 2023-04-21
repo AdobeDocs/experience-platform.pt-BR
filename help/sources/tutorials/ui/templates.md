@@ -8,7 +8,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -46,9 +46,9 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
->title="Selecionar tipo de negócio"
->abstract="Selecione o tipo de negócio apropriado para seu caso de uso. O acesso pode variar dependendo da conta de assinatura da Real-time Customer Data Platform."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=pt-BR" text="Visão geral do Real-Time CDP"
+>title="Selecionar tipo de empresa"
+>abstract="Selecione o tipo de empresa apropriado para seu caso de uso. O acesso pode variar dependendo da conta de assinatura da Real-time Customer Data Platform."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=pt-BR" text="Visão geral da Real-Time CDP"
 
 Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o [!UICONTROL Fontes] e veja um catálogo de fontes disponível no Experience Platform.
 

@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ O Adobe Experience Platform Query Service permite conectar-se com clientes exter
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
 >title="Modo SSL do cliente"
->abstract="O SSL deve ser habilitado nos clientes conectados ao Serviço de query. Certifique-se de que o modo SSL esteja definido como &quot;obrigatório&quot;."
+>abstract="O SSL deve ser habilitado nos clientes conectados ao Query Service. Verifique se o modo SSL está definido como “obrigatório”."
 
 Você pode usar as credenciais que estão expirando para configurar rapidamente uma conexão com um cliente externo.
 

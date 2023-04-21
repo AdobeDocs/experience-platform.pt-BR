@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 1%
+ht-degree: 10%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="esquema de referência"
->abstract="Selecione o schema com o qual deseja estabelecer uma relação. Esse schema pode ser uma classe diferente do schema atual. Consulte a documentação para obter mais informações sobre relações de esquema."
+>abstract="Selecione o esquema com o qual deseja estabelecer uma relação. Esse esquema pode ser uma classe diferente do esquema atual. Consulte a documentação para obter mais informações sobre relações de esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Namespace de identidade de referência"
->abstract="O namespace (tipo) do campo de identidade principal do esquema de referência. O schema de referência deve ter um campo de identidade primário estabelecido para participar de um relacionamento. Consulte a documentação para obter mais informações sobre relações de esquema."
+>abstract="O namespace (tipo) do campo de identidade principal do esquema de referência. O esquema de referência deve ter um campo de identidade principal estabelecido para participar de um relacionamento. Consulte a documentação para obter mais informações sobre relações de esquema."
 
 A capacidade de entender os relacionamentos entre seus clientes e suas interações com a marca em vários canais é uma parte importante do Adobe Experience Platform. Definir esses relacionamentos dentro da estrutura de [!DNL Experience Data Model] Os esquemas (XDM) permitem que você obtenha insights complexos sobre os dados do cliente.
 

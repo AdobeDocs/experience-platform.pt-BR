@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -38,14 +38,14 @@ Em **[!UICONTROL Aplicativos Adobe]** categoria , selecione **[!UICONTROL Adobe 
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Instância do ambiente Adobe Campaign"
->abstract="O nome do ambiente Adobe Campaign que você deseja usar."
+>title="Instância de ambiente do Adobe Campaign"
+>abstract="O nome do ambiente do Adobe Campaign que você deseja usar."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
 >title="Target mapping"
->abstract="Os target mappings são objetos técnicos usados pelo Campaign para entregar mensagens e contêm todas as configurações técnicas necessárias para enviar deliveries (endereços, números de telefone, indicadores de aceitação, identificadores adicionais...)."
+>abstract="Os target mappings são objetos técnicos usados pelo Campaign para entregar mensagens e contêm todas as configurações técnicas necessárias para enviar entregas (endereços, números de telefone, indicadores de aceitação, identificadores adicionais...)."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

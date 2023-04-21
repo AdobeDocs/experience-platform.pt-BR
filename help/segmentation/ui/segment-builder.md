@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
->abstract="Os três tipos de campo que compõem um segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos-alvo permitem usar públicos importados de fontes externas."
+>abstract="Os três tipos de campo que compõem um segmento são atributos, eventos e públicos. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos permitem usar públicos importados de fontes externas."
 
 Os elementos básicos das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes podem ser usados como componentes para novas definições.
 
@@ -235,13 +235,13 @@ Para selecionar uma política de mesclagem para a definição do seu segmento, s
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propriedades do segmento"
->abstract="A seção de propriedades do segmento exibe uma estimativa do tamanho do segmento resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o próprio público-alvo."
+>abstract="A seção de propriedades do segmento exibe uma estimativa do tamanho do segmento resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Atualizar estimativas"
->abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma pré-visualização de quantos perfis se qualificariam para o segmento proposto. As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Estimar e visualizar um público-alvo"
+>abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma pré-visualização de quantos perfis se qualificariam para o segmento proposto. As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Estimar e visualizar um público"
 
 Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** A seção no lado direito do espaço de trabalho exibe uma estimativa do tamanho do segmento resultante, permitindo ajustar a definição do segmento, conforme necessário, antes de criar o próprio público-alvo.
 
@@ -253,7 +253,7 @@ O **[!UICONTROL Propriedades do segmento]** também é onde você pode especific
 
 >[!NOTE]
 >
->As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em seu armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmento podem ser encontradas na seção [seção de geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de segmentos.
+>As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em seu armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmento podem ser encontradas na seção [seção de geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de segmentos.
 
 Você também pode selecionar seu método de avaliação. Se você sabe qual método de avaliação deseja usar, é possível selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para que tipos de avaliação este segmento se qualifica, você pode selecionar o ícone Procurar ![ícone de pasta com uma lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver uma lista dos métodos de avaliação de segmento disponíveis.
 

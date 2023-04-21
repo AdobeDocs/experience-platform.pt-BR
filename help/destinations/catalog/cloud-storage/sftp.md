@@ -6,7 +6,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -69,7 +69,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Chave SSH privada"
->abstract="A chave SSH privada deve ser formatada como uma cadeia de caracteres codificada em Base64 e não deve ser protegida por senha."
+>abstract="A chave SSH privada deve ser formatada como uma string codificada em Base64 e não deve ser protegida por senha."
 
 Se você selecionar a variável **[!UICONTROL Autenticação básica]** digite para se conectar ao local do SFTP:
 
@@ -90,7 +90,7 @@ Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de aute
 * **[!UICONTROL Domínio]**: Preencha o endereço IP ou o nome de domínio de sua conta SFTP
 * **[!UICONTROL Port]**: A porta usada pelo local de armazenamento SFTP;
 * **[!UICONTROL Nome do usuário]**: O nome de usuário para fazer logon no local de armazenamento SFTP;
-* **[!UICONTROL Chave SSH]**: A chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada deve ser formatada como uma cadeia de caracteres codificada em Base64 e não deve ser protegida por senha.
+* **[!UICONTROL Chave SSH]**: A chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada deve ser formatada como uma string codificada em Base64 e não deve ser protegida por senha.
 * **[!UICONTROL Chave de criptografia]**: Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Exiba um exemplo de uma chave de criptografia corretamente formatada na imagem abaixo.
 
    ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface do usuário](../../assets/catalog/cloud-storage/sftp/pgp-key.png)

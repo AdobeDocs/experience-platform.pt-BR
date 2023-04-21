@@ -5,7 +5,7 @@ exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
 workflow-type: tm+mt
 source-wordcount: '2352'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -161,7 +161,7 @@ A documentação a seguir fornece mais recursos para entender a Preparação de 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Criar regras de filtro"
->abstract="Defina as regras de filtragem em nível de linha e coluna ao enviar dados para o Perfil do cliente em tempo real. Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para assimilação de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para assimilação de perfil**. As regras de filtragem não se aplicam aos dados enviados para o lago de dados."
+>abstract="Defina as regras de filtragem em nível de linha e coluna ao enviar dados para o perfil do cliente em tempo real. Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para ingestão de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para ingestão de perfil**. As regras de filtragem não se aplicam aos dados enviados para o data lake."
 
 Depois de concluir os mapeamentos para [!DNL Analytics] dados do conjunto de relatórios, você pode aplicar regras e condições de filtragem para incluir ou excluir seletivamente os dados da assimilação para o Perfil do cliente em tempo real. O suporte para filtragem só está disponível para [!DNL Analytics] os dados e dados são filtrados somente antes de inserir [!DNL Profile.] Todos os dados são assimilados no lago de dados.
 
@@ -169,7 +169,7 @@ Depois de concluir os mapeamentos para [!DNL Analytics] dados do conjunto de rel
 
 >[!IMPORTANT]
 >
->Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para assimilação de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para assimilação de perfil**.
+>Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para ingestão de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para ingestão de perfil**.
 
 Você pode filtrar dados para [!DNL Profile] assimilação no nível da linha e da coluna. A filtragem em nível de linha permite definir critérios, como a string contém, é igual a, começa ou termina com. Você também pode usar a filtragem em nível de linha para unir condições usando `AND` bem como `OR`e negar as condições usando `NOT`.
 

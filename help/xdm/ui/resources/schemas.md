@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -251,8 +251,8 @@ Depois de aplicar as alterações, o novo campo aparece sob o namespace da ID do
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="Ativar um esquema para o Perfil"
->abstract="Quando um esquema é ativado para o Perfil, qualquer conjunto de dados criado a partir desse esquema participa do Perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um schema é usado para assimilar dados no Perfil, ele não pode ser desativado. Consulte a documentação da para obter mais informações."
+>title="Habilitar um esquema para o perfil"
+>abstract="Quando um esquema é ativado para o perfil, qualquer conjunto de dados criado a partir desse esquema participa do perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um esquema é usado para assimilar dados no perfil, ele não pode ser desabilitado. Consulte a documentação da para obter mais informações."
 
 [Perfil do cliente em tempo real](../../../profile/home.md) mescla dados de fontes diferentes para criar uma visualização completa de cada cliente individual. Se desejar que os dados capturados por um schema participem neste processo, é necessário habilitar o schema para uso em [!DNL Profile].
 

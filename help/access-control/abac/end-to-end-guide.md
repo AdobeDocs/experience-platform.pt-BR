@@ -66,8 +66,8 @@ O espaço de trabalho Permissões da interface do usuário da plataforma é exib
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="O que são rótulos?"
->abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece vários rótulos de uso de dados “principais” definidos pela Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sigilosos “S”, como RHD (Regulated Health Data, dados de saúde regulamentados), permitem categorizar dados que se referem a PHI (Protected Health Information, informações de saúde protegidas). Também é possível definir seus próprios rótulos personalizados que atendam às necessidades de sua organização."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#no%C3%A7%C3%B5es-b%C3%A1sicas-sobre-r%C3%B3tulos-de-uso-de-dados" text="Visão geral dos rótulos de uso de dados"
+>abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece vários rótulos de uso de dados “principais” definidos pela Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis “S”, como RHD (Regulated Health Data, dados de saúde regulamentados), permitem categorizar dados que se referem a PHI (Protected Health Information, informações de saúde protegidas). Também é possível definir seus próprios rótulos personalizados que atendam às necessidades de sua organização."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=br#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
@@ -78,19 +78,19 @@ O espaço de trabalho Permissões da interface do usuário da plataforma é exib
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="O que são funções?"
->abstract="Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform e blocos fundamentais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de visualização ou acesso de gravação de que precisam."
+>abstract="Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform. São os pilares das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
 >abstract="É possível criar uma nova função para categorizar melhor os usuários que estão acessando sua instância da Platform. Por exemplo, você pode criar uma função para uma equipe interna de marketing e aplicar o rótulo RHD a essa função, permitindo que sua equipe interna de marketing acesse as informações de saúde protegidas (PHI). Como alternativa, você também pode criar uma função para uma agência externa e negar acesso a essa função para dados PHI ao não aplicar o rótulo RHD a essa função."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR#criar-uma-nova-fun%C3%A7%C3%A3o" text="Criar uma nova função"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=br#create-a-new-role" text="Criar uma nova função"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Visão geral da função"
->abstract="A caixa de diálogo de visão geral da função exibe os recursos e as sandboxes que uma determinada função tem permissão para acessar."
+>abstract="A caixa de diálogo de visão geral da função exibe os recursos e as sandbox que uma determinada função tem permissão para acessar."
 
 As funções são formas de categorizar os tipos de usuários que interagem com sua instância da plataforma e são blocos fundamentais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso necessário.
 

@@ -7,7 +7,7 @@ exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 0%
+ht-degree: 20%
 
 ---
 
@@ -71,12 +71,12 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Destinos criados recentemente]](#recently-created-destinations)
 * [[!UICONTROL Segmentos ativados recentemente]](#recently-activated-segments)
 * [[!UICONTROL Segmentos ativados recentemente por destino]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)
+* [[!UICONTROL Tendência de tamanho do público]](#audience-size-trend)
 * [[!UICONTROL Segmentos não mapeados por identidade]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
-* [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
+* [[!UICONTROL Públicos comuns]](#common-audiences)
 * [[!UICONTROL Públicos-alvo mapeados]](#mapped-audiences)
-* [[!UICONTROL Estado de funcionamento do público-alvo mapeado]](#mapped-audience-health)
+* [[!UICONTROL Integridade do público mapeado]](#mapped-audience-health)
 * [[!UICONTROL Contagem de destinos]](#destinations-count)
 * [[!UICONTROL Status do destino]](#destination-status)
 * [[!UICONTROL Destinos ativos por plataforma de destino]](#active-destinations-by-destination-platform)
@@ -88,7 +88,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Destinos mais usados"
->abstract="Esse widget exibe os destinos mais ativos de sua organização pelo número de segmentos mapeados. Esses números são precisos no momento do último instantâneo. Essa classificação fornece informações sobre quais destinos são mais usados atualmente, destacando os que podem ser subutilizados."
+>abstract="Esse widget exibe os destinos mais ativos da sua organização pelo número de segmentos mapeados. Esses números são precisos no momento do último instantâneo. Essa classificação fornece informações sobre quais destinos são mais usados atualmente, destacando os que podem ser subutilizados."
 
 O **[!UICONTROL Destinos mais usados]** O widget exibe os principais destinos de sua organização pelo número de segmentos mapeados a partir do último instantâneo. Essa classificação fornece informações sobre quais destinos estão sendo utilizados, além de mostrar potencialmente aqueles que podem ser subutilizados.
 
@@ -105,7 +105,7 @@ Selecionar o nome de um destino na lista mostrada no widget levará você aos de
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlycreateddestinations"
 >title="Destinos criados recentemente"
->abstract="Este widget exibe uma lista dos destinos configurados mais recentemente em sua organização."
+>abstract="Esse widget exibe uma lista dos destinos configurados mais recentemente em sua organização."
 
 O **[!UICONTROL Destinos criados recentemente]** O widget permite que você veja uma lista dos destinos configurados mais recentemente de sua organização.
 
@@ -122,7 +122,7 @@ Para saber mais sobre como configurar tipos específicos de destinos, visite o [
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
 >title="Segmentos ativados recentemente"
->abstract="Este widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos."
+>abstract="Esse widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos."
 
 O **[!UICONTROL Segmentos ativados recentemente]** fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos.
 
@@ -151,12 +151,12 @@ Você pode visualizar os detalhes de um segmento selecionando o nome de um segme
 
 Consulte a seção pré-requisitos para [definições dos termos utilizados](#prerequisites) nesta descrição.
 
-### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
+### [!UICONTROL Tendência de tamanho do público] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Tendência do tamanho do público-alvo"
->abstract="Este widget ilustra o número de perfis contidos no segmento, que está sendo enviado para a conta de destino diariamente. O primeiro menu suspenso ajusta o período de tempo da tendência do público-alvo. O segundo menu suspenso do widget seleciona o segmento para análise. O destino é escolhido na lista suspensa de visão geral."
+>title="Tendência de tamanho do público"
+>abstract="Esse widget ilustra o número de perfis contidos no segmento, que está sendo enviado para a conta de destino diariamente. O primeiro menu suspenso ajusta o período da tendência do público. O segundo menu suspenso do dispositivo seleciona o segmento para análise. O destino é escolhido na lista suspensa de visão geral."
 
 O **[!UICONTROL Tendência do tamanho do público-alvo]** O widget descreve o relacionamento da contagem de perfis ao longo de um período de tempo para um segmento que foi mapeado para essa conta de destino. O widget usa um gráfico de linhas para ilustrar o número de perfis contidos no segmento, que estão sendo enviados para a conta de destino diariamente.
 
@@ -175,7 +175,7 @@ O **[!UICONTROL Tendência do tamanho do público-alvo]** o widget fornece um [!
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="Segmentos não mapeados por identidade"
->abstract="Este widget lista as cinco principais **não mapeado** segmentos classificados por contagem de identidade decrescente para um determinado destino e identidade. As IDs de filtro listadas na lista suspensa do widget mudam, dependendo da conta de destino selecionada na parte superior da página de visão geral."
+>abstract="Esse widget lista os cinco principais segmentos **não mapeados** classificados por contagem de identidade decrescente para um determinado destino e identidade. As IDs de filtro listadas na lista suspensa do dispositivo mudam dependendo da conta de destino selecionada na parte superior da página de visão geral."
 
 O **[!UICONTROL Segmentos não mapeados por identidade]** o widget lista os cinco principais **não mapeado** segmentos classificados por contagem de identidade decrescente para um determinado destino e identidade. Ele destaca os segmentos que são os mais benéficos para mapear para a conta de destino escolhida com base na ID escolhida.
 
@@ -192,22 +192,22 @@ Consulte a seção pré-requisitos para [definições dos termos utilizados](#pr
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Segmentos mapeados por identidade"
->abstract="Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget dependem do destino escolhido na parte superior do painel de visão geral."
+>abstract="Esse widget fornece uma lista dos cinco principais segmentos **mapeados**. A lista é ordenada de mais alto a mais baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget dependem do destino escolhido na parte superior do painel de visão geral."
 
-Este widget fornece uma lista das cinco principais **mapeado** segmentos. A lista é ordenada de alto a baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso no widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
+Esse widget fornece uma lista dos cinco principais segmentos **mapeados**. A lista é ordenada de mais alto a mais baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso no widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
 
 ![Os segmentos mapeados por widget de identidade.](../images/destinations/mapped-segments-by-identity.png)
 
 O **[!UICONTROL Segmentos mapeados por identidade]** O widget destaca rapidamente a probabilidade de direcionar oportunidades de perfil com êxito para uma campanha dentro do destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas com as IDs de destino para fornecer dados úteis e acionáveis.
 
-### Públicos-alvo comuns {#common-audiences}
+### Públicos comuns {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="Públicos-alvo comuns"
->abstract="Este widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a recentemente com que foram ativados. O segmento ativado mais recentemente é exibido na parte superior."
+>title="Públicos comuns"
+>abstract="Esse widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a data mais recente de ativação. O segmento ativado mais recentemente é exibido na parte superior."
 
-O **[!UICONTROL Públicos-alvo comuns]** O widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a recentemente com que foram ativados. O segmento ativado mais recentemente é exibido na parte superior.
+O **[!UICONTROL Públicos-alvo comuns]** O widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a data mais recente de ativação. O segmento ativado mais recentemente é exibido na parte superior.
 
 O [!UICONTROL TAMANHO DO PÚBLICO-ALVO] fornece a contagem total de perfis de cada segmento listado.
 
@@ -221,12 +221,12 @@ Selecionar **[!UICONTROL Segmentos]** para navegar até o painel Segmentos [!UIC
 
 ![O widget Mapped audiences .](../images/destinations/mapped-audiences.png)
 
-### Estado de funcionamento do público-alvo mapeado {#mapped-audience-health}
+### Integridade do público mapeado {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="Estado de funcionamento do público-alvo mapeado"
->abstract="Este widget fornece uma lista de até 20 segmentos mapeados cujas contagens totais de perfil se desviam por um fator de pelo menos um desvio padrão do tamanho médio de público-alvo de 30 dias mapeado para esse destino. Ela fornece uma métrica calculada para a dispersão dos tamanhos do público-alvo da média nos últimos 30 dias. Os tamanhos do público são classificados de alto para baixo."
+>title="Integridade do público mapeado"
+>abstract="Esse widget fornece uma lista de até 20 segmentos mapeados cujas contagens totais de perfil se desviam por um fator de pelo menos um desvio padrão do tamanho médio de público de 30 dias mapeado para esse destino. Ele fornece uma métrica calculada para a dispersão dos tamanhos do público da média nos últimos 30 dias. Os tamanhos do público são classificados do maior ao menor."
 
 O widget fornece uma lista de até 20 segmentos mapeados cujo perfil total, a partir do último instantâneo diário, varia por um fator de pelo menos um desvio padrão do tamanho médio de público-alvo de 30 dias mapeado para esse destino.
 
@@ -249,7 +249,7 @@ Se um segmento na [!UICONTROL Estado de funcionamento do público-alvo mapeado] 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="Contagem de destinos"
->abstract="Este widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos."
+>abstract="Esse widget fornece o número total de pontos de acesso disponíveis, onde um público pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos."
 
 O [!UICONTROL Contagem de destinos] O widget fornece o número total de endpoints disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos.
 

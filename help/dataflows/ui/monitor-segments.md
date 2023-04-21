@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -172,8 +172,8 @@ Para a seção segmentos , as seguintes métricas estão disponíveis:
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Trabalhos de segmento"
->abstract="A exibição de trabalhos de segmento contém informações sobre os trabalhos de avaliação e exportação para todos os seus segmentos."
+>title="Processos de segmento"
+>abstract="A visualização de processos de segmento contém informações sobre os processos de avaliação e exportação para todos os seus segmentos."
 
 Para acessar o **[!UICONTROL Trabalhos de segmento]** painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) no painel de navegação esquerdo. Uma vez no [!UICONTROL Monitoramento] página, selecione **[!UICONTROL Trabalhos de segmento]**. O [!UICONTROL Monitoramento] o painel contém métricas e informações sobre a avaliação de segmentos e as tarefas de exportação.
 

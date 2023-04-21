@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ Este guia do usuário fornece etapas sobre como monitorar seus dados na interfac
 >title="Taxa de ingestão"
 >abstract="O número de eventos processados com êxito por segundo."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitorar fluxos de dados para fontes na interface do usuário"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitorar fluxos de dados para fontes na interface"
 
 >[!TIP]
 >

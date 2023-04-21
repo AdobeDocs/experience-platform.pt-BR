@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -69,9 +69,9 @@ Uma empresa de aluguel e vendas da casa deseja personalizar sua página inicial 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="Sobre IDs de fluxo de dados"
->abstract="Essa opção determina em qual conjunto de dados de coleta os segmentos serão incluídos. O menu suspenso mostra apenas os conjuntos de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de armazenamento de dados. Selecionar Nenhum desativa todos os casos de uso que usam segmentação de borda."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de conjuntos de dados"
+>title="Sobre IDs de sequência de dados"
+>abstract="Essa opção determina em qual sequência de dados de coleção de dados os segmentos serão incluídos. O menu suspenso mostra apenas as sequências de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de sequência de dados. Selecionar Nenhum desabilita todos os casos de uso que usam segmentação de borda."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de sequências de dados"
 
 >[!IMPORTANT]
 > 

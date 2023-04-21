@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -31,7 +31,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
 >title="Assinar alertas de destino"
->abstract="Os alertas permitem receber notificações com base no status dos fluxos de dados de destino. É possível definir notificações de alerta para obter atualizações caso o fluxo de dados tenha sido iniciado, tenha sido bem-sucedido, tenha falhado ou não tenha enviado dados para o destino."
+>abstract="Os alertas permitem receber notificações com base no status dos fluxos de dados de destino. É possível definir notificações de alerta para obter atualizações caso o fluxo de dados tenha sido iniciado, bem-sucedido, tenha falhado ou não tenha enviado dados para o destino."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

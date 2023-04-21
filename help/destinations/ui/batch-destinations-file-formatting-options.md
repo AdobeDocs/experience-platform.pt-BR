@@ -2,10 +2,10 @@
 description: Saiba como configurar as opções de formatação de arquivo ao ativar dados em destinos com base em arquivo
 title: (Beta) Configurar opções de formatação de arquivo para destinos com base em arquivo
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
+source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '1214'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Você pode configurar várias opções de formatação de arquivos para arquivos
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## Configuração de formatação de arquivo {#file-configuration}
+## Configuração de formatação de arquivo para arquivos CSV {#file-configuration}
 
 Para exibir as opções de formatação de arquivo, inicie o [conectar-se ao destino](/help/destinations/ui/connect-destination.md) fluxo de trabalho. Selecionar **Tipo de dados: Segmentos** e **Tipo de arquivo: CSV** para exibir as configurações de formatação de arquivo disponíveis para o arquivo exportado `CSV` arquivos.
 
@@ -41,7 +41,12 @@ Para exibir as opções de formatação de arquivo, inicie o [conectar-se ao des
 
 ### Delimitador {#delimiter}
 
-Define um separador para cada campo e valor. As opções disponíveis são:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="Delimitador"
+>abstract="Use esse controle para definir um separador para cada campo e valor. Consulte a documentação para ver exemplos de cada seleção."
+
+Use esse controle para definir um separador para cada campo e valor nos arquivos CSV exportados. As opções disponíveis são:
 
 * Dois-pontos `(:)`
 * Vírgula `(,)`
@@ -49,29 +54,108 @@ Define um separador para cada campo e valor. As opções disponíveis são:
 * Ponto e vírgula `(;)`
 * Guia `(\t)`
 
-### Caractere de citação
+#### Exemplos
 
-Define um caractere único usado para escapar de valores entre aspas, onde o separador pode fazer parte do valor.
+Visualize os exemplos abaixo do conteúdo nos arquivos CSV exportados com cada uma das seleções na interface do usuário.
 
-### Caractere de escape
+* Exemplo de saída com **[!UICONTROL Dois`(:)`]** selecionado: `male:John:Doe`
+* Exemplo de saída com **[!UICONTROL Vírgula`(,)`]** selecionado: `male,John,Doe`
+* Exemplo de saída com **[!UICONTROL Pipe`(|)`]** selecionado: `male|John|Doe`
+* Exemplo de saída com **[!UICONTROL Ponto e vírgula`(;)`]** selecionado: `male;John;Doe`
+* Exemplo de saída com **[!UICONTROL Tabulação`(\t)`]** selecionado: `male \t John \t Doe`
 
-Define um caractere único usado para evitar aspas dentro de um valor já citado.
+### Caractere de citação {#quote-character}
 
-### Saída de valor vazio
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="Caractere de citação"
+>abstract="Use essa opção se desejar remover aspas duplas das cadeias de caracteres exportadas. Consulte a documentação para ver exemplos de cada seleção."
 
-Define a representação da string de um valor vazio.
+Use essa opção se desejar remover aspas duplas das cadeias de caracteres exportadas. As opções disponíveis são:
 
-### Saída de valor nulo
+* **[!UICONTROL Caractere Nulo (\0000)]**. Use essa opção para remover aspas duplas de arquivos CSV exportados.
+* **[!UICONTROL Aspas duplas (&quot;)]**. Use essa opção para manter aspas duplas em seus arquivos CSV exportados.
 
-Define a representação da string de um valor nulo nos arquivos exportados.
+#### Exemplos
 
-Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`
-Exemplo de saída com **&quot;&quot;** selecionado: `male,"",TestLastName`
-Exemplo de saída com **[!UICONTROL Sequência de caracteres vazia]** selecionado: `male,,TestLastName`
+Visualize os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface do usuário.
 
-### Formato de compactação
+* Exemplo de saída com **[!UICONTROL Caractere Nulo (\0000)]** selecionado: `Test,John,LastName`
+* Exemplo de saída com **[!UICONTROL Aspas duplas (&quot;)]** selecionado: `"Test","John","LastName"`
 
-Define qual codec de compactação usar ao salvar dados no arquivo. As opções compatíveis são GZIP e NONE.
+### Caractere de escape {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="Caractere de escape"
+>abstract="Define um caractere único usado para evitar aspas dentro de um valor já citado. Consulte a documentação para ver exemplos de cada seleção."
+
+Use essa opção para definir um caractere único para evitar aspas dentro de um valor já citado. Por exemplo, essa opção é útil quando há uma string entre aspas duplas, na qual parte da string já está entre aspas duplas. Essa opção determina por qual caractere substituir as aspas duplas internas. As opções disponíveis são:
+
+* Barra invertida `(\)`
+* Cotação única `(')`
+
+#### Exemplos
+
+Visualize os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface do usuário.
+
+* Exemplo de saída com **[!UICONTROL Barra invertida`(\)`]** selecionado: `"Test,\"John\",LastName"`
+* Exemplo de saída com **[!UICONTROL Cotação única`(')`]** selecionado: `"Test,'"John'",LastName"`
+
+### Saída de valor vazio {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="Saída de valor vazio"
+>abstract="Use essa opção para definir como os valores vazios devem ser representados nos arquivos CSV exportados. Consulte a documentação para ver exemplos de cada seleção."
+
+Use esse controle para definir a representação da string de um valor vazio. Essa opção determina como os valores vazios são representados em seus arquivos CSV exportados. As opções disponíveis são:
+
+* **[!UICONTROL nulo]**
+* **&quot;&quot;**
+* **[!UICONTROL Sequência de caracteres vazia]**
+
+#### Exemplos
+
+Visualize os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface do usuário.
+
+* Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, Experience Platform transforma o valor vazio em um valor nulo.
+* Exemplo de saída com **&quot;&quot;** selecionado: `male,"",TestLastName`. Nesse caso, o Experience Platform transforma o valor vazio em um par de aspas duplas.
+* Exemplo de saída com **[!UICONTROL Sequência de caracteres vazia]** selecionado: `male,,TestLastName`. Nesse caso, o Experience Platform mantém o valor vazio e o exporta como está (sem aspas duplas).
+
+>[!TIP]
+>
+>A diferença entre a saída do valor vazio e a saída do valor nulo na seção abaixo é que um valor vazio tem um valor real que está vazio. O valor NULL não tem nenhum valor. Considere o valor vazio como um vidro vazio na tabela e o valor nulo como não tendo o vidro na tabela.
+
+### Saída de valor nulo {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Saída de valor nulo"
+>abstract="Use esse controle para definir a representação da string de um valor nulo nos arquivos exportados. Consulte a documentação para ver exemplos de cada seleção."
+
+Use esse controle para definir a representação da string de um valor nulo nos arquivos exportados. Essa opção determina como os valores nulos são representados nos arquivos CSV exportados. As opções disponíveis são:
+
+* **[!UICONTROL nulo]**
+* **&quot;&quot;**
+* **[!UICONTROL Sequência de caracteres vazia]**
+
+#### Exemplos
+
+Visualize os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface do usuário.
+
+* Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, nenhuma transformação ocorre e o arquivo CSV contém o valor nulo.
+* Exemplo de saída com **&quot;&quot;** selecionado: `male,"",TestLastName`. Nesse caso, Experience Platform substitui o valor nulo por aspas duplas em torno de uma string vazia.
+* Exemplo de saída com **[!UICONTROL Sequência de caracteres vazia]** selecionado: `male,,TestLastName`. Nesse caso, Experience Platform substitui o valor nulo por uma string vazia (sem aspas duplas).
+
+### Formato de compactação {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="Formato de compactação"
+>abstract="Define o tipo de compactação a ser usado ao salvar dados no arquivo. As opções compatíveis são GZIP e NONE. Consulte a documentação para ver exemplos de cada seleção."
+
+Define o tipo de compactação a ser usado ao salvar dados no arquivo. As opções compatíveis são GZIP e NONE. Essa opção determina se você exportará ou não arquivos compactados.
 
 ### Codificação
 

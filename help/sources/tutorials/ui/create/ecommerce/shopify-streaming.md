@@ -1,10 +1,9 @@
 ---
 title: Criar Uma Conexão De Transmissão Do Shopify E Um Fluxo De Dados Na Interface Do Usuário
 description: Saiba como criar uma conexão de origem e fluxo de dados do Shopify Streaming usando a interface do usuário da plataforma
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -95,4 +94,3 @@ Para recuperar o terminal de transmissão, acesse [!UICONTROL Atividade do fluxo
 ## Próximas etapas
 
 Ao seguir este tutorial, você estabeleceu uma conexão de origem e um fluxo de dados para seu [!DNL Shopify Streaming] conta. Para obter instruções sobre como conectar seu [!DNL Shopify Streaming] leia o tutorial em [criar uma conexão de origem e um fluxo de dados para fluxo [!DNL Shopify] dados usando a API do Serviço de Fluxo](../../../api/create/ecommerce/shopify-streaming.md).
-

@@ -2,9 +2,9 @@
 title: Criar uma conexão de origem do Adobe Analytics na interface do usuário
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
+source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2406'
 ht-degree: 5%
 
 ---
@@ -31,6 +31,14 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 * **Nomes amigáveis**: Nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em um [!DNL Analytics] implementação. Veja o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre nomes amigáveis.
 
 ## Criar uma conexão de origem com o Adobe Analytics
+
+>[!NOTE]
+>
+>Ao criar um fluxo de dados de origem do Analytics em uma sandbox de produção, dois fluxos de dados são criados:
+>
+>* Um fluxo de dados que faz um preenchimento retroativo de 13 meses dos dados históricos do conjunto de relatórios no lago de dados. Esse fluxo de dados termina quando o preenchimento retroativo é concluído.
+>* Um fluxo de fluxo de fluxo de dados que envia dados ao vivo para o lago de dados e para o [!DNL Real-Time Customer Profile]. Esse fluxo de dados é executado continuamente.
+
 
 Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 

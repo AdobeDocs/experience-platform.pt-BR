@@ -2,9 +2,9 @@
 title: Conector de origem do Adobe Analytics para dados do conjunto de relatórios
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
+source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1112'
 ht-degree: 7%
 
 ---
@@ -54,7 +54,12 @@ A latência esperada de dados do Analytics na plataforma é descrita na tabela a
 | Novos dados para o Data Lake | &lt; 90 minutos |
 | Preenchimento retroativo de menos de 10 bilhões de eventos | &lt; 4 semanas |
 
-Por padrão, os preenchimentos retroativos do Analytics são de 13 meses. O limite de 10 mil milhões de eventos mencionado no quadro acima é estritamente relativo à latência esperada.
+O padrão de preenchimento retroativo do Analytics para sandboxes de produção é 13 meses. Para dados do Analytics em sandboxes de não produção, o preenchimento retroativo é definido para três meses. O limite de 10 mil milhões de eventos mencionado no quadro acima é estritamente relativo à latência esperada.
+
+Ao criar um fluxo de dados de origem do Analytics em uma sandbox de produção, dois fluxos de dados são criados:
+
+* Um fluxo de dados que faz um preenchimento retroativo de 13 meses dos dados históricos do conjunto de relatórios no lago de dados. Esse fluxo de dados termina quando o preenchimento retroativo é concluído.
+* Um fluxo de fluxo de fluxo de dados que envia dados ao vivo para o lago de dados e para o [!DNL Real-Time Customer Profile]. Esse fluxo de dados é executado continuamente.
 
 >[!NOTE]
 >

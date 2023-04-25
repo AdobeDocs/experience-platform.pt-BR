@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de fluxo;API de serviço de fluxo;fontes;Fontes
-title: Filtrar Dados Em Nível De Linha Para Uma Origem Usando A API Do Serviço De Fluxo
-description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
+keywords: Experience Platform, home, tópicos populares, serviço de fluxo, API de Serviço de fluxo, fontes, fontes
+title: Filtrar dados no nível da linha para uma fonte usando a API do Serviço de fluxo
+description: Este tutorial aborda as etapas sobre como filtrar dados no nível da fonte usando a API do Serviço de Fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '785'
 ht-degree: 3%
 
 ---
@@ -14,30 +14,37 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->A compatibilidade com a filtragem de dados em nível de linha para uma origem está disponível no momento apenas para o [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) e [[!DNL Snowflake]](../../connectors/databases/snowflake.md) fontes.
+>Atualmente, o suporte para filtrar dados em nível de linha está disponível apenas para as seguintes fontes:
+>
+>* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
+>* [Salesforce](../../connectors/crm/salesforce.md)
+>* [Marketing Cloud Salesforce](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
+>* [Snowflake](../../connectors/databases/snowflake.md)
 
-Este tutorial fornece etapas sobre como filtrar dados no nível de linha de uma origem usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+Este tutorial fornece etapas sobre como filtrar dados em nível de linha para uma fonte usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
 
 ## Filtrar dados de origem
 
-As etapas a seguir descrevem as etapas a serem seguidas para filtrar os dados no nível de linha para sua origem.
+O seguinte descreve as etapas a serem seguidas para filtrar dados no nível da linha para sua origem.
 
 ### Pesquisar especificações de conexão
 
-Antes de usar a API para filtrar dados em nível de linha para uma origem, primeiro você deve recuperar os detalhes de especificação da conexão da origem para determinar os operadores e o idioma compatíveis com uma origem específica.
+Antes de usar a API para filtrar dados a nível de linha para uma fonte, primeiro recupere os detalhes da especificação de conexão da fonte para determinar os operadores e o idioma aceitos por uma fonte específica.
 
-Para recuperar a especificação de conexão de uma determinada origem, faça uma solicitação GET ao `/connectionSpecs` endpoint do [!DNL Flow Service] ao fornecer o nome da propriedade da fonte como parte dos parâmetros de consulta.
+Para recuperar uma especificação de conexão de uma fonte específica, faça uma solicitação do GET para a variável `/connectionSpecs` endpoint da variável [!DNL Flow Service] API enquanto fornece o nome da propriedade da sua origem como parte dos parâmetros de consulta.
 
 **Formato da API**
 
@@ -47,7 +54,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMS}` | Os parâmetros de consulta opcionais para filtrar os resultados. Você pode recuperar a variável [!DNL Google BigQuery] especificação de conexão aplicando o `name` propriedade e especificação `"google-big-query"` em sua pesquisa. |
+| `{QUERY_PARAMS}` | Os parâmetros de consulta opcionais para filtrar os resultados por. Você pode recuperar o [!DNL Google BigQuery] especificação de conexão aplicando `name` propriedade e especificação `"google-big-query"` em sua pesquisa. |
 
 **Solicitação**
 
@@ -68,7 +75,7 @@ Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL Goo
 
 >[!NOTE]
 >
->A resposta da API abaixo está truncada por motivos de brevidade.
+>A resposta da API abaixo é truncada por brevidade.
 
 ```json
 "attributes": {
@@ -97,12 +104,12 @@ Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL Goo
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes.filterAtSource.enabled` | Determina se a origem consultada oferece suporte à filtragem de dados em nível de linha. |
-| `attributes.filterAtSource.queryLanguage` | Determina o idioma da consulta que a fonte consultada aceita. |
-| `attributes.filterAtSource.logicalOperators` | Determina os operadores lógicos que você pode usar para filtrar dados em nível de linha para a origem. |
-| `attributes.filterAtSource.comparisonOperators` | Determina operadores de comparação que você pode usar para filtrar dados em nível de linha para sua origem. Consulte a tabela abaixo para obter mais informações sobre operadores de comparação. |
-| `attributes.filterAtSource.columnNameEscapeChar` | Determina o caractere a ser usado para colunas de escape. |
-| `attributes.filterAtSource.valueEscapeChar` | Determina como os valores serão cercados ao gravar uma consulta SQL. |
+| `attributes.filterAtSource.enabled` | Determina se a origem consultada suporta a filtragem de dados no nível da linha. |
+| `attributes.filterAtSource.queryLanguage` | Determina o idioma da consulta que a origem consultada suporta. |
+| `attributes.filterAtSource.logicalOperators` | Determina os operadores lógicos que podem ser usados para filtrar dados em nível de linha para sua origem. |
+| `attributes.filterAtSource.comparisonOperators` | Determina operadores de comparação que podem ser usados para filtrar dados em nível de linha para sua origem. Consulte a tabela abaixo para obter mais informações sobre operadores de comparação. |
+| `attributes.filterAtSource.columnNameEscapeChar` | Determina o caractere a ser usado para evitar colunas. |
+| `attributes.filterAtSource.valueEscapeChar` | Determina como os valores serão arredondados ao gravar uma consulta SQL. |
 
 {style="table-layout:auto"}
 
@@ -110,22 +117,22 @@ Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL Goo
 
 | Operador | Descrição |
 | --- | --- |
-| `==` | Define se a propriedade é igual ao valor fornecido. |
-| `!=` | Define se a propriedade não é igual ao valor fornecido. |
-| `<` | Define se a propriedade é menor que o valor fornecido. |
-| `>` | Filtra especificando se a propriedade é maior que o valor fornecido. |
+| `==` | Filtra se a propriedade é igual ao valor fornecido. |
+| `!=` | Filtra se a propriedade não é igual ao valor fornecido. |
+| `<` | Filtra se a propriedade é menor que o valor fornecido. |
+| `>` | Filtra se a propriedade é maior que o valor fornecido. |
 | `<=` | Filtra se a propriedade é menor ou igual ao valor fornecido. |
 | `>=` | Filtra se a propriedade é maior ou igual ao valor fornecido. |
 | `like` | Filtros sendo usados em um `WHERE` para procurar um padrão especificado. |
-| `in` | Define se a propriedade está dentro de um intervalo especificado. |
+| `in` | Filtra se a propriedade está dentro de um intervalo especificado. |
 
 {style="table-layout:auto"}
 
 ### Especificar condições de filtragem para assimilação
 
-Depois de identificar os operadores lógicos e o idioma de consulta que sua origem aceita, você pode usar o Idioma de consulta de perfil (PQL) para especificar as condições de filtragem que deseja aplicar aos dados de origem.
+Depois de identificar os operadores lógicos e o idioma de consulta aceitos pela origem, você pode usar a Linguagem de consulta de perfil (PQL) para especificar as condições de filtragem que deseja aplicar aos dados de origem.
 
-No exemplo abaixo, as condições são aplicadas apenas a dados de seleção que sejam iguais aos valores fornecidos para os tipos de nó listados como parâmetros.
+No exemplo abaixo, as condições são aplicadas para selecionar apenas dados que sejam iguais aos valores fornecidos para os tipos de nó listados como parâmetros.
 
 ```json
 {
@@ -148,9 +155,9 @@ No exemplo abaixo, as condições são aplicadas apenas a dados de seleção que
 }
 ```
 
-### Pré-visualizar seus dados
+### Visualizar seus dados
 
-Você pode visualizar seus dados fazendo uma solicitação GET para o `/explore` endpoint do [!DNL Flow Service] API ao fornecer `filters` como parte dos parâmetros de consulta e especificando as condições de entrada de PQL em [!DNL Base64].
+É possível visualizar seus dados fazendo uma solicitação do GET para a `/explore` endpoint da variável [!DNL Flow Service] API ao fornecer `filters` como parte dos parâmetros de consulta e especificando as condições de entrada PQL em [!DNL Base64].
 
 **Formato da API**
 
@@ -161,8 +168,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | Parâmetro | Descrição |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | A ID de conexão básica da sua origem. |
-| `{TABLE_PATH}` | A propriedade de caminho da tabela que você deseja inspecionar. |
-| `{FILTERS}` | As condições do filtro PQL estão codificadas em [!DNL Base64]. |
+| `{TABLE_PATH}` | A propriedade path da tabela que você deseja inspecionar. |
+| `{FILTERS}` | Suas condições de filtragem PQL codificadas em [!DNL Base64]. |
 
 **Solicitação**
 
@@ -325,7 +332,7 @@ Uma solicitação bem-sucedida retorna a seguinte resposta.
 
 ### Criar uma conexão de origem para dados filtrados
 
-Para criar uma conexão de origem e assimilar dados filtrados, faça uma solicitação POST para o `/sourceConnections` ao fornecer as condições de filtragem como parte dos parâmetros do corpo.
+Para criar uma conexão de origem e assimilar dados filtrados, faça uma solicitação de POST para a `/sourceConnections` endpoint , ao fornecer as condições de filtragem como parte dos parâmetros do corpo.
 
 **Formato da API**
 
@@ -335,7 +342,7 @@ POST /sourceConnections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão de origem para assimilar dados de `test1.fasTestTable` onde `city` = `DDN`.
+A solicitação a seguir cria uma conexão de origem para assimilar dados de `test1.fasTestTable` em que `city` = `DDN`.
 
 ```shell
 curl -X POST \
@@ -393,11 +400,11 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Apêndice
 
-Esta seção fornece mais exemplos de diferentes payloads para filtragem.
+Esta seção fornece mais exemplos de diferentes cargas para filtragem.
 
-### Condições peculiares
+### Condições singulares
 
-É possível omitir o `fnApply` para cenários que exigem apenas uma condição.
+Você pode omitir a `fnApply` para cenários que exigem apenas uma condição.
 
 ```json
 {

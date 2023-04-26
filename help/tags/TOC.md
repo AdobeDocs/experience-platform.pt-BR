@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
+source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '983'
 ht-degree: 37%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 37%
          * [Visão geral](./extensions/client/product-string/overview.md)
          * [Notas de versão](./extensions/client/product-string/release-notes.md)
       * [Construtor de string do produto Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
+      * [Adobe Analytics por meio do Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Visão geral](./extensions/client/audience-manager/overview.md)
       * Camada de dados de clientes Adobe {#client-data-layer}

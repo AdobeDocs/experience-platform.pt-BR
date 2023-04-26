@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar esquemas na interface do usuário do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,18 @@ Para editar um esquema existente, selecione o **[!UICONTROL Procurar]** e seleci
 
 Depois de selecionar um schema, a variável [!DNL Schema Editor] é exibido com a estrutura do esquema mostrada na tela. Agora você pode [adicionar grupos de campos](#add-field-groups) ao schema (ou [adicionar campos individuais](#add-individual-fields) desses grupos), [editar nomes de exibição de campo](#display-names)ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o schema empregar algum.
 
+## Ativar alternância de nome {#display-name-toggle}
+
+Para sua conveniência, o Editor de esquemas fornece um botão para alterar os nomes dos campos originais e os nomes de exibição mais legíveis para uso humano. Essa flexibilidade permite uma melhor descoberta de campo e edição de seus esquemas. A alternância é encontrada na parte superior direita da visualização do Editor de esquemas.
+
+>[!NOTE]
+>
+>A alteração de nomes de campo para nomes de exibição é meramente superficial e não altera recursos downstream.
+
+![O Editor de Esquema com [!UICONTROL Mostrar nomes de exibição para campos] destacado.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+Os nomes de exibição para grupos de campos padrão são gerados pelo sistema, mas podem ser personalizados, conforme descrito na [nomes para exibição](#display-names) seção. Os nomes de exibição são refletidos em várias exibições da interface do usuário, incluindo mapeamento e visualizações de conjunto de dados. A configuração padrão está desativada e mostra nomes de campo de acordo com seus valores originais.
+
 ## Adicionar grupos de campos a um schema {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ Depois de selecionar um schema, a variável [!DNL Schema Editor] é exibido com 
 
 Depois de abrir um schema na [!DNL Schema Editor], é possível adicionar campos ao schema por meio do uso de grupos de campos. Para iniciar, selecione **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos de campos]** no painel esquerdo.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![O Editor de esquemas com o [!UICONTROL Adicionar] do [!UICONTROL Grupos de campos] seção realçada.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 Uma caixa de diálogo é exibida mostrando uma lista de grupos de campos que você pode selecionar para o esquema. Como os grupos de campos são compatíveis apenas com uma classe, somente os grupos de campos associados à classe selecionada do esquema serão listados. Por padrão, os grupos de campos listados são classificados com base em sua popularidade de uso em sua organização.
 

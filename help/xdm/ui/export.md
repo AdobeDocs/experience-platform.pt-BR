@@ -4,9 +4,9 @@ title: Exportar esquemas XDM na interface do usuário
 description: Saiba como exportar um esquema existente para uma sandbox ou organização diferente na interface do usuário do Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ Para atender a essa necessidade, o [!UICONTROL Esquemas] Na interface do usuári
 
 Embora a interface do usuário da plataforma permita exportar recursos do XDM, você deve usar a API do Registro de Schema para importar esses recursos para outras sandboxes ou organizações para concluir o fluxo de trabalho. Consulte o guia sobre [introdução à API do Registro de Schema](../api/getting-started.md) para obter informações importantes sobre cabeçalhos de autenticação necessários antes de seguir este guia.
 
-## Gerar uma carga de exportação
+## Gerar uma carga de exportação {#generate-export-payload}
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. No [!UICONTROL Esquemas] , localize o schema que deseja exportar e abra-o no [!DNL Schema Editor].
+Na interface do usuário da plataforma, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. No [!UICONTROL Esquemas] na área de trabalho, selecione a linha do schema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
 
 >[!TIP]
 >
 >Consulte o guia sobre [exploração de recursos XDM](./explore.md) para obter detalhes sobre como encontrar o recurso XDM que você está procurando.
 
-Depois de abrir o schema, selecione o **[!UICONTROL Copiar JSON]** ícone (![Ícone Copiar](../images/ui/export/icon.png)) na parte superior direita da tela.
+Em seguida, selecione o **[!UICONTROL Copiar JSON]** ícone (![Ícone Copiar](../images/ui/export/icon.png)) nas opções disponíveis.
 
-![](../images/ui/export/copy-json.png)
+![O espaço de trabalho Esquemas com uma linha de esquema e [!UICONTROL Copiar para JSON] destacado.](../images/ui/export/copy-json.png)
 
 Isso copia uma carga JSON para a área de transferência, gerada com base na estrutura do esquema. Para o &quot;[!DNL Loyalty Members]&quot; schema mostrado acima, o seguinte JSON é gerado:
 

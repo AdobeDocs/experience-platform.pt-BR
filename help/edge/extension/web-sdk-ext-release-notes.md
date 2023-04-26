@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 39%
+source-wordcount: '1654'
+ht-degree: 38%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 39%
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
 Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte o [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR).
+
+## Versão 2.17.0 - 25 de abril de 2023
+
+**Novos recursos**
+
+* Adição de suporte para substituições de configuração de armazenamento de dados.
+* Adicione o aviso de desativação à `datasetId` na `sendEvent` comando.
+
+**Correções e melhorias**
+
+* Correção de um problema em que a rolagem no Safari fechava o seletor de conjunto de dados.
 
 ## Versão 2.16.1 - 14 de abril de 2023
 

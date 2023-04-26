@@ -2,10 +2,10 @@
 title: Painéis definidos pelo usuário
 description: Saiba como criar e gerenciar painéis personalizados, onde você pode criar, adicionar e editar widgets de contexto para visualizar métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 4%
+source-wordcount: '1608'
+ht-degree: 3%
 
 ---
 
@@ -112,6 +112,20 @@ Ao adicionar um atributo como filtro, é possível selecionar quais valores incl
 
 ![A caixa de diálogo de filtro para filtrar valores do seu widget.](./images/user-defined-dashboards/filter-dialog.png)
 
+#### Filtrar dados históricos {#filter-historical-data}
+
+Para filtrar os dados históricos dos insights gerados pelo seu widget, adicione o `date_key` como filtro e selecione **[!UICONTROL Data recente]** seguida de **[!UICONTROL Aplicar]**. Esse filtro garante que os dados usados para obter insights sejam obtidos do instantâneo mais recente do sistema.
+
+![O [!UICONTROL Filtro: date_key] diálogo com [!UICONTROL Data recente] e [!UICONTROL Aplicar] destacado.](./images/user-defined-dashboards/recent-date.png)
+
+Como alternativa, você pode criar um período personalizado para filtrar os dados por. Selecionar **[!UICONTROL Selecionar datas]** para estender a caixa de diálogo com uma lista de datas disponíveis. Use o **[!UICONTROL Selecionar tudo]** caixa de seleção para ativar ou desativar todas as opções disponíveis, ou marque a caixa de seleção para cada dia individualmente. Finalmente, selecione **[!UICONTROL Aplicar]** para confirmar suas opções.
+
+>[!NOTE]
+>
+>Se a variável `date_key` já foi adicionado como filtro, selecione as reticências seguidas por **[!UICONTROL Editar]** nas opções suspensas para alterar o período do filtro.
+
+![O [!UICONTROL Filtro: date_key] com caixas de seleção de dia individuais marcadas e desmarcadas.](./images/user-defined-dashboards/select-dates.png)
+
 ### Propriedades do widget
 
 Selecione o ícone de propriedades (![O ícone de propriedades.](./images/user-defined-dashboards/properties-icon.png)) no painel direito para abrir o painel de propriedades. No [!UICONTROL Propriedades] , digite um nome para o widget no painel [!UICONTROL Título do widget] campo de texto.
@@ -135,6 +149,22 @@ Os widgets podem ser reorganizados e redimensionados enquanto estiverem nesse es
 ![O painel definido pelo usuário com um widget personalizado e o botão Salvar realçado.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Para garantir que cada query de um painel do Adobe Real-time Customer Data Platform Insights tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso dos recursos atribuindo slots de simultaneidade a cada query. O sistema pode processar até quatro queries simultâneos e, portanto, quatro slots de query simultâneos estão disponíveis em um determinado momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que haja slots de simultaneidade suficientes disponíveis.
+
+### Duplicar um widget
+
+Depois de criar um widget, você pode duplicar o widget inteiro e personalizar seus atributos para criar um widget exclusivo sem precisar começar do zero. Para duplicar um widget, primeiro navegue até o inventário do painel. Em seguida, selecione o nome do painel na lista de inventário. Seu painel personalizado é exibido.
+
+![A interface do usuário da plataforma com painéis e um nome de painel personalizado são destacados.](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+Selecione o ícone de lápis (![Um ícone de lápis.](./images/user-defined-dashboards/edit-icon.png)) na parte superior direita do painel personalizado para entrar no modo de edição.
+
+![Um painel personalizado com o ícone de lápis realçado.](./images/user-defined-dashboards/edit-mode.png)
+
+Em seguida, selecione os elipses na parte superior direita do widget que você deseja copiar, seguido por **[!UICONTROL Duplicar]** na lista de opções disponíveis.
+
+![Um widget em um painel definido pelo usuário com os elipses e o widget Duplicado destacados.](./images/user-defined-dashboards/duplicate.png)
+
+Um widget duplicado é exibido no painel definido pelo usuário. Selecione as reticências do novo widget, seguidas por **[!UICONTROL Editar]**, para personalizar o novo widget.
 
 ## Próximas etapas e recursos adicionais
 

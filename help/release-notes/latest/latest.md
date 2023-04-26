@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e29bff2b8c576f92d239bb6c855710142df8db57
+source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 6%
+source-wordcount: '1274'
+ht-degree: 4%
 
 ---
 
@@ -17,6 +17,8 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Painéis](#dashboards)
 - [Preparação de dados](#data-prep)
+- [Coleção de dados](#data-collection)
+- [Destinos](#destinations)
 - [Experience Data Model](#xdm)
 - [Perfil do cliente em tempo real](#profile)
 - [Fontes](#sources)
@@ -49,6 +51,60 @@ A Preparação de dados permite que os engenheiros de dados mapeiem, transformem
 {style="table-layout:auto"}
 
 Para obter mais informações sobre Preparação de dados, leia a [Visão geral da preparação de dados](../../data-prep/home.md).
+
+## Coleção de dados {#data-collection}
+
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los para a Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não-Adobe.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Ofuscação de endereço IP para datastreams | Agora é possível definir opções de ofuscação de IP no nível do conjunto de dados parcial ou completo na variável [interface do usuário de configuração do datastream](../../edge/datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível do conjunto de dados tem prioridade sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para a Adobe Analytics não são afetados pelo nível do conjunto de dados [!UICONTROL Ofuscação de IP] configuração. No momento, a Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, é necessário configurar a ofuscação de IP separadamente, no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre ofuscação de IP e instruções sobre como configurá-lo, consulte o [documentação de configuração do datastream](../../edge/datastreams/configure.md#advanced-options). |
+| Substituições de configuração do fluxo de dados | Agora é possível definir opções de configuração adicionais para conjuntos de dados, que podem ser usadas para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, contêineres de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações do conjunto de dados é um processo de duas etapas. Primeiro, você deve definir as substituições de configuração do conjunto de dados na interface do usuário dos conjuntos de dados. Em seguida, você deve enviar as substituições para a Edge Network por meio de um comando do SDK da Web. |
+
+{style="table-layout:auto"}
+
+## Destinos {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos destinos** {#new-destinations}
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL Salesforce Marketing Cloud Account Engagement] conexão](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Use o destino Envolvimento da conta do Marketing Cloud do Salesforce (antigo Pardot) para capturar, rastrear, pontuar e classificar leads. Use esse destino para casos de uso B2B envolvendo vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. |
+
+{style="table-layout:auto"}
+
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
+
+| Funcionalidade | Descrição |
+| ----------- | ----------- |
+| Monitoramento de fluxo de dados para [!DNL Custom Personalization] e [!DNL Adobe Commerce] destinos | <p> Agora você pode ver as métricas de ativação do [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md) e [Personalização Personalizada Com Atributos](../../destinations/catalog/personalization/custom-personalization.md) conexões. </p> <p>![Imagem Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas do Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorar fluxos de dados no espaço de trabalho Destinos](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obter mais detalhes. |
+| Novo **[!UICONTROL Anexar ID de segmento ao nome do segmento]** para o campo [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] destinos | Agora você pode ter o nome do segmento em [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) inclua a ID de segmento do Experience Platform, desta forma: `Segment Name (Segment ID)`. |
+
+{style="table-layout:auto"}
+
+<!--
+
+| New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`. |
+| Scheduled audience backfills | <p>For the [!DNL Google Display & Video 360] destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
+
+-->
+
+
+**Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
+
+- Corrigimos um problema no **Identidades excluídas** métricas de relatório para exportações de destino baseadas em arquivo. Os clientes recebiam todas as IDs exportadas da exportação ativada, conforme esperado. No entanto, a variável **Identidades excluídas** a métrica de relatórios na interface do usuário exibia incorretamente números altos de identidades excluídas devido a identidades de contagem incorretas que nunca deveriam ser exportadas. (PLAT-149774)
+- Corrigimos um problema na etapa Agendamento do fluxo de trabalho de ativação. Para destinos que exigem uma ID de mapeamento, os clientes não conseguiram adicionar uma ID de mapeamento para segmentos adicionados às conexões de destino existentes. (PLAT-148808)
+
+<!--
+- We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
+
+-->
+
+Para obter informações mais gerais sobre destinos, consulte [visão geral dos destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

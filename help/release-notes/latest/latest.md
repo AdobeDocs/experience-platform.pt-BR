@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1284'
 ht-degree: 4%
 
 ---
@@ -61,7 +61,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Recurso | Descrição |
 | --- | --- |
 | Ofuscação de endereço IP para datastreams | Agora é possível definir opções de ofuscação de IP no nível do conjunto de dados parcial ou completo na variável [interface do usuário de configuração do datastream](../../edge/datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível do conjunto de dados tem prioridade sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para a Adobe Analytics não são afetados pelo nível do conjunto de dados [!UICONTROL Ofuscação de IP] configuração. No momento, a Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, é necessário configurar a ofuscação de IP separadamente, no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre ofuscação de IP e instruções sobre como configurá-lo, consulte o [documentação de configuração do datastream](../../edge/datastreams/configure.md#advanced-options). |
-| Substituições de configuração do fluxo de dados | Agora é possível definir opções de configuração adicionais para conjuntos de dados, que podem ser usadas para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, contêineres de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações do conjunto de dados é um processo de duas etapas. Primeiro, você deve definir as substituições de configuração do conjunto de dados na interface do usuário dos conjuntos de dados. Em seguida, você deve enviar as substituições para a Edge Network por meio de um comando do SDK da Web. |
+| [Substituições de configuração do fluxo de dados](../../edge/datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para conjuntos de dados, que podem ser usadas para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, contêineres de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>A substituição das configurações do conjunto de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração do conjunto de dados na variável [página de configuração do datastream](../../edge/datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a Edge Network por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
 
 {style="table-layout:auto"}
 

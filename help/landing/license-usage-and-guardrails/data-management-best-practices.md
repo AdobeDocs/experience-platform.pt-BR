@@ -3,9 +3,9 @@ keywords: Experience Platform, home, tópicos populares, gerenciamento de dados,
 title: Práticas recomendadas de direito à licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2169'
 ht-degree: 2%
 
 ---
@@ -122,8 +122,6 @@ A Loja de perfis é composta pelos seguintes componentes:
 
 {style="table-layout:auto"}
 
-
-
 #### Relatórios de composição do armazenamento de perfis
 
 Há vários relatórios disponíveis para ajudá-lo a entender a composição da loja de perfis. Esses relatórios ajudam você a tomar decisões informadas sobre como e onde definir as expirações do evento de experiência para otimizar melhor o uso da licença:
@@ -132,6 +130,10 @@ Há vários relatórios disponíveis para ajudá-lo a entender a composição da
 * **API de relatório de sobreposição de identidade**: Expõe os namespaces de identidade que mais contribuem para o seu público-alvo endereçável. Veja o tutorial em [geração do relatório de sobreposição de identidade](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) para obter mais informações.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Expirações de dados de perfil pseudônimo {#pseudonymous-profile-expirations}
+
+Esse recurso permite remover automaticamente perfis pseudônimos obsoletos da Loja de perfis. Para obter mais informações sobre este recurso, leia o [Visão geral da expiração de dados de perfil pseudônimo](../../profile/pseudonymous-profiles.md).
 
 #### Expirações de evento de experiência {#event-expirations}
 
@@ -144,7 +146,7 @@ Esta é uma lista de algumas práticas recomendadas que você pode seguir para g
 * Use o [painel de uso de licença](../../dashboards/guides/license-usage.md) para rastrear e monitorar as tendências de uso do cliente. Isso permite que você se antecipe a possíveis excedentes que possam ocorrer.
 * Configurar [filtros de ingestão](#ingestion-filters) ao identificar os eventos necessários para os casos de uso de segmentação e personalização. Isso permite enviar somente eventos importantes necessários para seus casos de uso.
 * Certifique-se de que você tenha somente [conjuntos de dados habilitados para perfil](#ingestion-filters) necessárias para os casos de uso de segmentação e personalização.
-* Configure um [Expiração de evento de experiência](#event-expirations) para dados de alta frequência, como dados da Web.
+* Configurar [Expirações de evento de experiência](#event-expirations) e [Expirações de dados de perfil pseudônimo](#pseudonymous-profile-expirations) para dados de alta frequência, como dados da Web.
 * Verifique periodicamente a [Relatórios de composição de perfil](#profile-store-composition-reports) para entender a composição da loja de perfis. Isso permite compreender as fontes de dados que mais contribuem para seu consumo de licença.
 
 ## Resumo e disponibilidade dos recursos {#feature-summary}

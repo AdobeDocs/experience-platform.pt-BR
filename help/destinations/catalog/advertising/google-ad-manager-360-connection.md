@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que oferece aos editores meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
+source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '974'
 ht-degree: 1%
 
 ---
@@ -98,12 +98,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Tipo de conta]**: Selecione uma opção, dependendo do [!DNL Google] conta:
    * Use `AdX buyer` para [!DNL Google AdX]
    * Use `DFP by Google` para [!DNL DoubleClick] para editores
-
-<!--
-
-*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
-
--->
+* **[!UICONTROL Anexar ID de segmento ao nome do segmento]**: Selecione essa opção para que o nome do segmento no Google Ad Manager 360 inclua a ID do segmento no Experience Platform, assim: `Segment Name (Segment ID)`.
 
 ### Ativar alertas {#enable-alerts}
 

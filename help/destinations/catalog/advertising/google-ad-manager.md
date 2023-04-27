@@ -3,9 +3,9 @@ keywords: google ad manager, google ad, doubleclick, DoubleClick AdX, DoubleClic
 title: Conexão com o Google Ad Manager
 description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
+source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '938'
 ht-degree: 2%
 
 ---
@@ -86,12 +86,7 @@ Ao [configuração](../../ui/connect-destination.md) nesse destino, você deve f
 * **[!UICONTROL Tipo de conta]**: Selecione uma opção, dependendo da sua conta com o Google:
    * Use `DFP by Google` para [!DNL DoubleClick] para editores
    * Use `AdX buyer` para [!DNL Google AdX]
-
-<!--
-
-*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
-
--->
+* **[!UICONTROL Anexar ID de segmento ao nome do segmento]**: Selecione essa opção para que o nome do segmento no Google Ad Manager inclua a ID do segmento no Experience Platform, assim: `Segment Name (Segment ID)`.
 
 >[!NOTE]
 >

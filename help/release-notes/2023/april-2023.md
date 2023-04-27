@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2023
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
+source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1373'
 ht-degree: 4%
 
 ---
@@ -83,16 +83,9 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | ----------- | ----------- |
 | Monitoramento de fluxo de dados para [!DNL Custom Personalization] e [!DNL Adobe Commerce] destinos | <p> Agora você pode ver as métricas de ativação do [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md) e [Personalização Personalizada Com Atributos](../../destinations/catalog/personalization/custom-personalization.md) conexões. </p> <p>![Imagem Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas do Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorar fluxos de dados no espaço de trabalho Destinos](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obter mais detalhes. |
 | Novo **[!UICONTROL Anexar ID de segmento ao nome do segmento]** para o campo [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] destinos | <p>Agora você pode ter o nome do segmento em [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) inclua a ID de segmento do Experience Platform, desta forma: `Segment Name (Segment ID)`.</p><p>![Anexar imagem da ID de segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Novo Anexar ID de segmento ao campo de nome de segmento "){width="100" zoomable="yes"}</p> |
+| Preenchimentos retroativos do público-alvo agendados | <p>Para o [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) no destino, a ativação dos preenchimentos retroativos do público-alvo no destino está programada para ocorrer de 24 a 48 horas após um segmento ser mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de esperar 24 horas até assimilar dados e melhorará as taxas de correspondência entre a CDP em tempo real e a [!DNL Google Display & Video 360].</p> <p>Observe que essa é uma configuração de backend aplicável somente a esse destino e que não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface do usuário.</p> |
 
 {style="table-layout:auto"}
-
-<!--
-
-| New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`. |
-| Scheduled audience backfills | <p>For the [!DNL Google Display & Video 360] destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
-
--->
-
 
 **Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
 

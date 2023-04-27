@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -82,7 +82,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
 | Monitoramento de fluxo de dados para [!DNL Custom Personalization] e [!DNL Adobe Commerce] destinos | <p> Agora você pode ver as métricas de ativação do [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md) e [Personalização Personalizada Com Atributos](../../destinations/catalog/personalization/custom-personalization.md) conexões. </p> <p>![Imagem Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas do Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorar fluxos de dados no espaço de trabalho Destinos](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obter mais detalhes. |
-| Novo **[!UICONTROL Anexar ID de segmento ao nome do segmento]** para o campo [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] destinos | Agora você pode ter o nome do segmento em [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) inclua a ID de segmento do Experience Platform, desta forma: `Segment Name (Segment ID)`. |
+| Novo **[!UICONTROL Anexar ID de segmento ao nome do segmento]** para o campo [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] destinos | <p>Agora você pode ter o nome do segmento em [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) inclua a ID de segmento do Experience Platform, desta forma: `Segment Name (Segment ID)`.</p><p>![Anexar imagem da ID de segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Novo Anexar ID de segmento ao campo de nome de segmento "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 **Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
 
 - Corrigimos um problema no **Identidades excluídas** métricas de relatório para exportações de destino baseadas em arquivo. Os clientes recebiam todas as IDs exportadas da exportação ativada, conforme esperado. No entanto, a variável **Identidades excluídas** a métrica de relatórios na interface do usuário exibia incorretamente números altos de identidades excluídas devido a identidades de contagem incorretas que nunca deveriam ser exportadas. (PLAT-149774)
-- Corrigimos um problema na etapa Agendamento do fluxo de trabalho de ativação. Para destinos que exigem uma ID de mapeamento, os clientes não conseguiram adicionar uma ID de mapeamento para segmentos adicionados às conexões de destino existentes. (PLAT-148808)
+- Corrigimos um problema no **Agendamento** etapa do fluxo de trabalho de ativação. Para destinos que exigem uma ID de mapeamento, os clientes não conseguiram adicionar uma ID de mapeamento para segmentos adicionados às conexões de destino existentes. (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 

@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1421'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ O Adobe Experience Platform fornece vários painéis através dos quais você po
 
 | Recurso | Descrição |
 | --- | --- |
-| Painéis definidos pelo usuário | Agora você pode **filtrar dados históricos** dos seus insights de widget e use dados recentes ou um período de análise personalizado.<br>Você também pode **duplicar os widgets existentes**. Ao personalizar uma duplicata e editar seus atributos, você pode evitar a reinicialização a partir do início ao criar um novo widget exclusivo. |
+| Painéis definidos pelo usuário | Agora você pode **filtrar dados históricos** dos seus insights de widget e use dados recentes ou um período de análise personalizado. Consulte a [guia de painéis definidos pelo usuário](../../dashboards/user-defined-dashboards.md#filter-historical-data) para obter mais informações.<br>Você também pode **duplicar os widgets existentes**. Ao personalizar uma duplicata e editar seus atributos, você pode evitar a reinicialização a partir do início ao criar um novo widget exclusivo. Leia o [guia de duplicação de widgets](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) para saber mais. |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Recurso | Descrição |
 | --- | --- |
-| Alternar nomes para exibição | O Editor de esquema agora oferece um botão para alterar os nomes dos campos originais e os nomes de exibição legíveis em humanos. Essa flexibilidade permite uma melhor descoberta de campo e edição de seus esquemas. Os nomes de exibição para grupos de campos padrão são gerados pelo sistema, mas também podem ser personalizados por meio da interface do usuário, se necessário. |
+| Alternar nomes para exibição | O Editor de esquema agora oferece um botão para alterar os nomes dos campos originais e os nomes de exibição legíveis em humanos.<br>![O Editor de esquema com o botão de opção de nome de exibição é realçado.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Alternar nome de exibição do Editor de esquemas"){width="100" zoomable="yes"}<br>Essa flexibilidade permite uma melhor descoberta de campo e edição de seus esquemas. Os nomes de exibição para grupos de campos padrão são gerados pelo sistema, mas também podem ser personalizados por meio da interface do usuário, se necessário. Leia o [exibir a documentação de alternância de nome](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) para saber mais. |
 
 {style="table-layout:auto"}
 

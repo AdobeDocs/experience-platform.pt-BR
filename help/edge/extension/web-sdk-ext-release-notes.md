@@ -2,7 +2,7 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 38%
@@ -18,7 +18,7 @@ Este documento aborda as notas de versão da extensão de tag Adobe Experience P
 
 **Novos recursos**
 
-* Adição de suporte para substituições de configuração de armazenamento de dados.
+* Suporte adicionado para [substituições de configuração do datastream](../datastreams/overrides.md).
 * Adicione o aviso de desativação à `datasetId` na `sendEvent` comando.
 
 **Correções e melhorias**

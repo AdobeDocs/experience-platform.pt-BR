@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2023
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 3%
+source-wordcount: '1662'
+ht-degree: 4%
 
 ---
 
@@ -110,6 +110,26 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Recurso | Descrição |
 | --- | --- |
 | Alternar nomes para exibição | O Editor de esquema agora oferece um botão para alterar os nomes dos campos originais e os nomes de exibição legíveis em humanos.<br>![O Editor de esquema com o botão de opção de nome de exibição é realçado.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Alternar nome de exibição do Editor de esquemas"){width="100" zoomable="yes"}<br>Essa flexibilidade permite uma melhor descoberta de campo e edição de seus esquemas. Os nomes de exibição para grupos de campos padrão são gerados pelo sistema, mas também podem ser personalizados por meio da interface do usuário, se necessário. Leia o [exibir a documentação de alternância de nome](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) para saber mais. |
+
+{style="table-layout:auto"}
+
+**Novos componentes XDM**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Esquema | [[!UICONTROL Campos de classificação Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Um novo esquema XDM para conjuntos de dados de Classificação do Target contendo um conjunto de campos de metadados para classificar atividades e experiências do Target. |
+
+{style="table-layout:auto"}
+
+**Componentes XDM atualizados**
+
+| Tipo de componente | Nome | Descrição |
+| --- | --- | --- |
+| Grupo de campos | [[!UICONTROL Extensão de União de Conta do Serviço de Perfil Unificado do Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Adição de um grupo de campos de extensão de conta para Perfil do cliente em tempo real que permite que os usuários adicionem associação de segmento à união de contas. |
+| Esquema | [[!UICONTROL Esquema do Sistema de Atributos Calculados]](https://github.com/adobe/xdm/pull/1696/files) | O grupo de campos Atributos calculados usado pelo Perfil do cliente em tempo real foi atualizado para um esquema global somente leitura do sistema. |
+| Grupo de campos | Vários | Adição de vários eventos como campos para [[!UICONTROL Esquema da série cronológica]](https://github.com/adobe/xdm/pull/1718/files). |
+| Grupo de campos | Detalhes de fidelidade do perfil | [Correção do título](https://github.com/adobe/xdm/pull/1717/files) para `xdm:upgradeDate` de &quot;Nome do programa&quot; para &quot;Data de atualização&quot;. |
+| Grupo de campos | Vários | Vários campos de [[!UICONTROL Item de decisão]](https://github.com/adobe/xdm/pull/1714/files) foram atualizadas para remover a hierarquia aninhada dupla. |
 
 {style="table-layout:auto"}
 

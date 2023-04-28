@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2023
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 4%
@@ -122,6 +122,8 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 | Recurso | Descrição |
 | ------- | ----------- |
 | Expiração de dados de perfil pseudônimo | O prazo de validade dos dados de perfil pseudônimo está agora disponível! Esta versão removerá continuamente perfis pseudônimos obsoletos da sua instância do Experience Platform depois de ativados. Para saber mais sobre esse recurso e Perfis pseudônimos, leia o [Guia de expiração de dados de perfil pseudônimo](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Fontes {#sources}
 

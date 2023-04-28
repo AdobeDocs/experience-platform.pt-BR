@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1491'
 ht-degree: 4%
 
 ---
@@ -62,6 +62,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | --- | --- |
 | Ofuscação de endereço IP para datastreams | Agora é possível definir opções de ofuscação de IP no nível do conjunto de dados parcial ou completo na variável [interface do usuário de configuração do datastream](../../edge/datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível do conjunto de dados tem prioridade sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para a Adobe Analytics não são afetados pelo nível do conjunto de dados [!UICONTROL Ofuscação de IP] configuração. No momento, a Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, é necessário configurar a ofuscação de IP separadamente, no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre ofuscação de IP e instruções sobre como configurá-lo, consulte o [documentação de configuração do datastream](../../edge/datastreams/configure.md#advanced-options). |
 | [Substituições de configuração do fluxo de dados](../../edge/datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para conjuntos de dados, que podem ser usadas para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, contêineres de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>A substituição das configurações do conjunto de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração do conjunto de dados na variável [página de configuração do datastream](../../edge/datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a Edge Network por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| Segredo JWT OAuth | O [Segredo JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permite que os clientes usem tokens do Adobe e do Google Service para suportar interações servidor a servidor no encaminhamento de eventos. |
+| [!DNL Pinterest Conversions API] extensão | O [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) a extensão de encaminhamento de eventos permite aproveitar os dados capturados na Rede de borda do Adobe Experience Platform e enviá-los para [!DNL Pinterest] na forma de eventos do lado do servidor usando o [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 

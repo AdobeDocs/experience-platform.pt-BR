@@ -2,14 +2,22 @@
 title: Notas de versão para Tags e Encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '798'
 ht-degree: 4%
 
 ---
 
 # Notas de versão para tags e encaminhamento de eventos
+
+## 26 de abril de 2023
+
+* **Segredo JWT OAuth**: O [Segredo JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permite que os clientes usem tokens do Adobe e do Google Service para suportar interações servidor a servidor no encaminhamento de eventos.
+
+A nova extensão a seguir foi lançada:
+
+* **[!DNL Pinterest Conversions API]extensão**: O [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) a extensão de encaminhamento de eventos permite aproveitar os dados capturados na Rede de borda do Adobe Experience Platform e enviá-los para [!DNL Pinterest] na forma de eventos do lado do servidor usando o [!DNL Pinterest Conversions API].
 
 ## 29 de março de 2023
 

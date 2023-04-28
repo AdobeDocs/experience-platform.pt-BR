@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '984'
 ht-degree: 37%
 
 ---
@@ -229,6 +229,8 @@ ht-degree: 37%
       * [!DNL Mixpanel] {#mixpanel}
          * [Visão geral](./extensions/server/mixpanel/overview.md)
       * [Hub de decisão do cliente Pega](https://exchange.adobe.com/apps/ec/107597)
+      * [!DNL Pinterest] {#pinterest}
+         * [Visão geral](./extensions/server/pinterest/overview.md)
       * [API de Conversões de Ajuste](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Visão geral](./extensions/server/splunk/overview.md)

@@ -4,10 +4,10 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
+source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1074'
+ht-degree: 6%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 0%
    * [Conecte-se a destinos de fluxo e ative dados usando a API do Serviço de fluxo](./api/streaming-destinations.md)
    * [Conecte-se ao armazenamento em nuvem em lote e aos destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/connect-activate-batch-destinations.md)
    * [(Beta) Ativar segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc](./api/ad-hoc-activation-api.md)
+   * [Editar destino](./api/edit-destination.md)
    * [Atualizar fluxos de dados de destino](./api/update-destination-dataflows.md)
    * [Excluir contas de destino](./api/delete-destination-account.md)
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
@@ -204,7 +205,7 @@ ht-degree: 0%
       * [Destinos baseados em arquivo e especificações de arquivo](./destination-sdk/server-and-file-configuration.md)
       * [Formato de mensagem](./destination-sdk/message-format.md)
       * [Gerenciamento de metadados do público-alvo](./destination-sdk/audience-metadata-management.md)
-      * Autenticação {#authentication}
+      * Autenticação do {#authentication}
          * [Configuração de autenticação](./destination-sdk/authentication-configuration.md)
          * [Autenticação OAuth 2](./destination-sdk/oauth2-authentication.md)
       * Ferramentas do desenvolvedor {#developer-tools}

@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '974'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -85,8 +85,8 @@ Para obter mais informações sobre esses valores, consulte o [Chaves HMAC do Go
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Anexar ID de segmento ao nome do segmento"
->abstract="Selecione essa opção para que o nome do segmento no Google Ad Manager 360 inclua a ID do segmento no Experience Platform, assim: `Segment Name (Segment ID)`"
+>title="Anexar a ID do segmento ao nome do segmento"
+>abstract="Selecione essa opção para que o nome do segmento no Google Ad Manager 360 inclua a ID do segmento na Experience Platform, assim: `Segment Name (Segment ID)`"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

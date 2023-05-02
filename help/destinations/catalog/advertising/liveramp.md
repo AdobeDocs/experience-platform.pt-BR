@@ -3,13 +3,13 @@ title: (Alfa) [!DNL LiveRamp SFTP] conexão
 description: Saiba como usar o conector LiveRamp para públicos-alvo integrados do Adobe Real-time Customer Data Platform para o LiveRamp Connect.
 hidefromtoc: true
 hide: true
-source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
+exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
+source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
 workflow-type: tm+mt
 source-wordcount: '1738'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
-
 
 # (Alfa) [!DNL LiveRamp - SFTP] conexão {#liveramp-destination}
 
@@ -89,8 +89,8 @@ Para autenticar para o destino, preencha os campos obrigatórios e selecione **[
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_subkey"
->title="ID de subchave de criptografia"
->abstract="O ID de subchave usado para criptografia, com base na chave de criptografia pública do LiveRamp. Esse campo será necessário se você tiver fornecido uma chave de criptografia na etapa de autenticação."
+>title="ID da subchave de criptografia"
+>abstract="A ID da subchave usada para criptografia, com base na chave de criptografia pública do LiveRamp. Esse campo será necessário se você tiver fornecido uma chave de criptografia na etapa de autenticação."
 >additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Saiba como obter a ID da subchave"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.

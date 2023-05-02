@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmentos"
->abstract="A visualização de segmentos contém informações sobre todos os segmentos da organização, com mais informações sobre as tarefas de ativação e avaliação."
+>abstract="A visualização de segmentos contém informações sobre todos os segmentos da sua Organização, com mais informações sobre os processos de ativação e avaliação."
 
 Para acessar o **[!UICONTROL Segmentos]** painel, selecione **[!UICONTROL Monitoramento]** no painel de navegação esquerdo. Uma vez no **[!UICONTROL Monitoramento]** selecione o **[!UICONTROL Segmentos]** cartão.
 

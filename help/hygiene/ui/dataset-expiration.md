@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 0%
+ht-degree: 22%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="Excluir registros e conjuntos de dados de clientes indesejados ou expirados"
->abstract="<h2>Descrição</h2><p>Para gerenciar o ciclo de vida dos dados do Experience Platform não relacionados à conformidade normativa, você pode excluir registros do consumidor e programar datas de expiração para os conjuntos de dados. Para criar ou gerenciar solicitações do titular dos dados, consulte o bloco de casos de uso &quot;Respeitar solicitações de privacidade do titular dos dados&quot;.</p>"
+>abstract="<h2>Descrição</h2><p>Para gerenciar o ciclo de vida dos dados da Experience Platform não relacionados à conformidade regulatória, você pode excluir registros do consumidor e programar datas de expiração para os conjuntos de dados. Para criar ou gerenciar solicitações do titular dos dados, consulte o bloco de casos de uso &quot;Respeitar solicitações de privacidade do titular dos dados&quot;.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Este documento aborda como agendar e gerenciar as expirações do conjunto de da
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instruções"
->abstract="<ul><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Higiene de dados</a> na navegação à esquerda, selecione <b>Criar solicitação</b>.</li><li>Se quiser excluir registros:</li>   <li>Selecionar <b>Registro</b>.</li>   <li>Selecione um conjunto de dados específico do qual deseja excluir registros ou escolha a opção para excluí-los de todos os conjuntos de dados.</li>   <li>Indicar a identidade dos consumidores cujos registros devem ser suprimidos. Selecionar <b>Adicionar identidade</b> para fornecer as identidades, uma de cada vez ou selecione <b>Escolher arquivos</b> para carregar um arquivo JSON de identidades.</li>   <li>Se necessário, selecione <b>Modelo</b> para exibir o formato esperado do arquivo JSON.</li><li>Consulte a documentação para obter instruções se desejar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">datas de expiração do agendamento para conjuntos de dados</a>.</li></ul>"
+>abstract="<ul><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=pt-BR">Higiene de dados</a> na navegação à esquerda, e depois <b>Criar solicitação</b>.</li><li>Se quiser excluir registros:</li>   <li>Selecione <b>Registro</b>.</li>   <li>Selecione um conjunto de dados específico do qual deseja excluir registros ou escolha a opção para excluí-los de todos os conjuntos de dados.</li>   <li>Forneça a identidade dos consumidores cujos registros devem ser excluídos. Selecionar <b>Adicionar identidade</b> para fornecer as identidades, uma de cada vez ou selecione <b>Escolher arquivos</b> para carregar um arquivo JSON de identidades.</li>   <li>Se necessário, selecione <b>Modelo</b> para exibir o formato esperado do arquivo JSON.</li><li>Consulte a documentação para obter instruções se desejar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">programar datas de expiração para conjuntos de dados</a>.</li></ul>"
 
 Para criar uma nova solicitação, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
 

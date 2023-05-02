@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
 >title="Controle o acesso a dados confidenciais e protegidos"
->abstract="<h2>Descrição</h2><p>Controle o acesso a atributos de dados e/ou segmentos específicos, permitindo projetar fluxos de trabalho flexíveis para várias personas e equipes em casos de uso de Experience Platform.</p>"
+>abstract="<h2>Descrição</h2><p>Controle o acesso a atributos de dados e/ou segmentos específicos, permitindo projetar fluxos de trabalho flexíveis para as várias personas e equipes que operam em casos de uso da Experience Platform.</p>"
 
 O Adobe Experience Platform permite aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com os campos relacionados [políticas de governança de dados](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/ui/policies.md).
 
@@ -51,7 +51,7 @@ Para obter uma referência sobre como os Controles da exportação de dados espe
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instruções"
->abstract="<ul><li>Rotule campos e segmentos XDM para classificar os campos e ou segmentos aos quais você deseja restringir o acesso.</li><li>Funções de rótulo, adicionar rótulos a uma função permite que você defina os rótulos nos quais os membros dessa função devem ter restrições.</li><li>Criar políticas, uma política cria uma relação entre os rótulos em objetos rotulados, como campos e segmentos XDM, e os rótulos em funções. Se os rótulos corresponderem, uma permissão ou um acesso restrito poderão ser definidos.</li></ul>"
+>abstract="<ul><li>Rotule campos e segmentos XDM para classificar os campos e ou segmentos aos quais você deseja restringir o acesso.</li><li>Funções de rótulo: adicionar rótulos a uma função permite que você defina os rótulos nos quais os membros dessa função devem ter restrições.</li><li>Criar políticas: uma política cria uma relação entre os rótulos em objetos rotulados, como campos e segmentos XDM e os rótulos em funções. Se os rótulos corresponderem, uma permissão ou um acesso restrito poderão ser definidos.</li></ul>"
 
 Você pode gerenciar rótulos de uso de dados usando [!DNL Experience Platform] APIs ou a interface do usuário. Consulte as subseções abaixo para obter detalhes sobre cada uma.
 

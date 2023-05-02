@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 29%
+ht-degree: 50%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 29%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorar atividades do usuário no Platform"
->abstract="<h2>Descrição</h2><p>Você pode monitorar a atividade do usuário para obter vários serviços e recursos da plataforma no formato de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>who</b> executado <b>what</b> ação e <b>when</b>. Os registros de auditoria podem ajudar na solução de problemas no Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.</p>"
+>title="Monitorar atividades do usuário na Platform"
+>abstract="<h2>Descrição</h2><p>Você pode monitorar a atividade do usuário em vários serviços e recursos da Platform no formato de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>quem</b> executou <b>que</b> ação e <b>quando</b>. Os logs de auditoria podem ajudar na solução de problemas na Platform e auxiliar sua empresa a cumprir efetivamente com as políticas corporativas de gerenciamento de dados e os requisitos regulatórios.</p>"
 
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário para vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas na plataforma e ajudar sua empresa a cumprir com eficácia as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 
@@ -75,7 +75,7 @@ Para visualizar e exportar logs de auditoria, é necessário ter o **[!UICONTROL
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Instruções"
->abstract="<ul><li>Selecionar <b>Auditorias</b> no painel de navegação esquerdo. O espaço de trabalho Audits mostra uma lista de logs registrados, por padrão classificados do mais recente para o menos recente.</li>   <li> OBSERVAÇÃO: Os logs de auditoria são retidos por 365 dias após o que serão excluídos do sistema. Portanto, você só pode voltar por um período máximo de 365 dias. Se precisar retroceder dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos de política interna. </li><li>Selecione um evento na lista para exibir seus detalhes no painel direito. </li><li>Selecione o ícone de funil para exibir uma Lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1000 registros são exibidos, independentemente dos filtros selecionados. </li><li>Para exportar a lista atual de logs de auditoria, selecione **Baixar log**.</li><li>Para obter mais ajuda com esse recurso, consulte o <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=pt-BR">visão geral dos logs de auditoria</a> na Experience League.</li></ul>"
+>abstract="<ul><li>Selecione <b>Auditorias</b> no painel de navegação esquerdo. O espaço de trabalho Auditorias mostra uma lista de logs registrados e por padrão classificados do mais recente para o menos recente.</li>   <li> OBSERVAÇÃO: Os logs de auditoria são retidos por 365 dias após o que serão excluídos do sistema. Portanto, você só pode voltar por um período máximo de 365 dias. Se precisar consultar dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos de política interna. </li><li>Selecione um evento na lista para exibir seus detalhes no painel direito. </li><li>Selecione o ícone de funil para exibir uma lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1.000 registros são exibidos, independentemente dos filtros selecionados. </li><li>Para exportar a lista atual de logs de auditoria, selecione **Baixar log**.</li><li>Para obter mais ajuda com esse recurso, consulte <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=pt-BR">visão geral dos logs de auditoria</a> na Experience League.</li></ul>"
 
 Você pode visualizar logs de auditoria para diferentes recursos do Experience Platform na **[!UICONTROL Auditorias]** na interface do usuário da plataforma. O espaço de trabalho mostra uma lista de logs registrados, por padrão classificados do mais recente para o menos recente.
 

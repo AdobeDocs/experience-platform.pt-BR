@@ -14,89 +14,89 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de eventos coletados para um destino para processamento no lado do servidor. O encaminhamento de eventos diminui o peso da página da Web e do aplicativo usando a Rede de borda da Adobe Experience Platform para executar tarefas normalmente realizadas no cliente. Implementadas de maneira semelhante às tags, as regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos, mas em vez de enviar esses dados de um aplicativo cliente como um navegador da Web, eles são enviados de servidores Adobe.
+O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de eventos coletados para um destino para processamento no servidor. O encaminhamento de eventos diminui o peso da página da Web e do aplicativo usando a Rede de Borda da Adobe Experience Platform para executar tarefas normalmente realizadas no cliente. Implementado de maneira semelhante às tags, as regras de encaminhamento do evento podem transformar e enviar dados para novos destinos, mas em vez de enviar esses dados de um aplicativo cliente, como um navegador da Web, é enviado dos servidores Adobe.
 
-Este documento fornece uma visão geral de alto nível do encaminhamento de eventos na Platform.
+Este documento fornece uma visão geral de alto nível do encaminhamento de eventos no Platform.
 
 ![Encaminhamento de eventos no ecossistema de coleta de dados](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Platform, consulte o [visão geral da coleção de dados](../../../collection/home.md).
+>Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados no Platform, consulte o [visão geral da coleta de dados](../../../collection/home.md).
 
-Encaminhamento de eventos combinado com o Adobe Experience Platform [SDK da Web](../../../edge/home.md) e [SDK móvel](https://aep-sdks.gitbook.io/docs/) oferece os seguintes benefícios:
+Encaminhamento de eventos combinado à Adobe Experience Platform [Web SDK](../../../edge/home.md) e [SDK móvel](https://aep-sdks.gitbook.io/docs/) oferece os seguintes benefícios:
 
 **Desempenho**:
 
-* Fazer uma única chamada de uma página que contém uma carga de dados que é federada no lado do servidor para reduzir o tráfego de rede do lado do cliente e fornecer uma experiência mais rápida aos clientes.
-* Diminuir o tempo de carregamento das páginas da Web para melhorar o desempenho do site.
-* Diminua o número de tecnologias necessárias do lado do cliente para fornecer sua experiência e enviar dados para muitos destinos.
+* Faça uma única chamada em uma página que contenha uma carga de dados que se federe no lado do servidor para reduzir o tráfego de rede do lado do cliente e fornecer uma experiência mais rápida para os clientes.
+* Diminua o tempo que leva para páginas da Web serem carregadas para melhorar o desempenho do site.
+* Diminua o número de tecnologias necessárias do lado do cliente para fornecer sua experiência e enviar dados para vários destinos.
 
 **Governança de dados**:
 
-* Aumentar a transparência e o controle sobre quais dados são enviados e para onde, em todas as propriedades.
+* Aumente a transparência e o controle sobre quais dados são enviados em todas as propriedades.
 
 ## Diferenças entre o encaminhamento de eventos e as tags {#differences-from-tags}
 
-Em termos de configuração, o encaminhamento de eventos usa muitos dos mesmos conceitos que as tags, como [regras](../managing-resources/rules.md), [elementos de dados](../managing-resources/data-elements.md), e [extensões](../managing-resources/extensions/overview.md). A principal diferença entre os dois pode ser resumida da seguinte forma:
+Em termos de configuração, o encaminhamento de eventos usa muitos dos mesmos conceitos que as tags, como [regras](../managing-resources/rules.md), [elementos de dados](../managing-resources/data-elements.md)e [extensões](../managing-resources/extensions/overview.md). A principal diferença entre as duas pode ser resumida da seguinte forma:
 
-* Tags **coleta** dados do evento de um site ou aplicativo móvel nativo e os envia para a Platform Edge Network.
-* Encaminhamento de eventos **envia** dados de evento de entrada da Platform Edge Network para um endpoint que representa um destino final ou um endpoint que fornece dados com os quais você deseja enriquecer a carga original.
+* Tags **coleções** dados de evento de um site ou aplicativo móvel nativo e os envia para a Rede de borda da plataforma.
+* Encaminhamento de evento **envios** dados de evento de entrada da Rede de borda da plataforma para um terminal que representa um destino final ou um terminal que fornece dados com os quais você deseja enriquecer a carga original.
 
-Embora as tags coletem dados do evento diretamente do seu site ou aplicativo móvel nativo usando os SDKs da Web e móvel da Platform, o encaminhamento de eventos exige que os dados do evento já sejam enviados pela Rede de borda da Platform para encaminhá-los aos destinos. Em outras palavras, você deve implementar o SDK da Web ou móvel da Platform na sua propriedade digital (por meio de tags ou usando código bruto) para usar o encaminhamento de eventos.
+Enquanto as tags coletam dados de evento diretamente do seu site ou aplicativo móvel nativo usando SDKs da Web da plataforma e móveis, o encaminhamento de eventos requer que os dados de eventos já sejam enviados pela Rede de borda da plataforma para encaminhá-los para destinos. Em outras palavras, você deve implementar o SDK móvel ou da Web da plataforma em sua propriedade digital (por meio de tags ou usando código bruto) para usar o encaminhamento do evento.
 
 ### Propriedades {#properties}
 
-O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separadas das tags, que podem ser visualizadas na interface do usuário do Experience Platform ou na interface da Coleção de dados ao selecionar **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo.
+O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separado das tags, que podem ser exibidas na interface do usuário do Experience Platform ou na interface do usuário da coleta de dados ao selecionar **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo.
 
-![Propriedades de encaminhamento de eventos na interface da Coleção de dados](../../images/ui/event-forwarding/overview/properties.png)
+![Propriedades de encaminhamento de eventos na interface do usuário da coleção de dados](../../images/ui/event-forwarding/overview/properties.png)
 
-Lista de propriedades de todo o encaminhamento de eventos **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos da Platform Edge Network, que pode receber dados do evento de plataformas da Web e móveis.
+Toda a lista de propriedades de encaminhamento de eventos **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos da Rede de Borda da Plataforma, que pode receber dados de evento das plataformas da Web e móvel.
 
 ### Extensões {#extensions}
 
-O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como o [Núcleo](../../extensions/server/core/overview.md) extensão e [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) extensão. É possível visualizar as extensões disponíveis para as propriedades do encaminhamento de eventos na interface do usuário selecionando **[!UICONTROL Extensões]** na navegação à esquerda, seguido por **[!UICONTROL Catálogo]**.
+O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como o [Núcleo](../../extensions/server/core/overview.md) extensão e [Conector da nuvem do Adobe](../../extensions/server/cloud-connector/overview.md) extensão. Você pode exibir as extensões disponíveis para as propriedades de encaminhamento de eventos na interface do usuário selecionando **[!UICONTROL Extensões]** no painel de navegação esquerdo, seguido de **[!UICONTROL Catálogo]**.
 
-![Extensões de encaminhamento de eventos na interface da Coleção de dados](../../images/ui/event-forwarding/overview/extensions.png)
+![Extensões de encaminhamento de eventos na interface do usuário da coleção de dados](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Elementos de dados {#data-elements}
 
-Os tipos de elementos de dados disponíveis no encaminhamento de eventos estão limitados ao catálogo de [extensões](#extensions) que os fornecem.
+Os tipos de elementos de dados que estão disponíveis no encaminhamento de eventos são limitados ao catálogo de [extensões](#extensions) que os fornecem.
 
-Embora os elementos de dados em si sejam criados e configurados da mesma forma no encaminhamento de eventos que para tags, há algumas diferenças de sintaxe importantes quando se trata de como eles fazem referência a dados da Rede de borda da Platform.
+Embora os elementos de dados em si sejam criados e configurados da mesma maneira no encaminhamento do evento que são para as tags, há algumas diferenças importantes na sintaxe quando se trata de como eles fazem referência aos dados da Rede de borda da plataforma.
 
-#### Fazendo referência a dados da Platform Edge Network {#data-element-path}
+#### Referência de dados da rede de borda da plataforma {#data-element-path}
 
-Para referenciar dados da Platform Edge Network, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Núcleo]** para a extensão e **[!UICONTROL Caminho]** para o tipo.
+Para fazer referência aos dados da Rede de Borda da Plataforma, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Núcleo]** para a extensão e **[!UICONTROL Caminho]** para o tipo .
 
-A variável **[!UICONTROL Caminho]** O valor do elemento de dados deve seguir o padrão `arc.event.{ELEMENT}` (por exemplo: `arc.event.xdm.web.webPageDetails.URL`). Esse caminho deve ser especificado corretamente para que os dados sejam enviados.
+O **[!UICONTROL Caminho]** o valor do elemento de dados deve seguir o padrão `arc.event.{ELEMENT}` (por exemplo: `arc.event.xdm.web.webPageDetails.URL`). Esse caminho deve ser especificado corretamente para que os dados sejam enviados.
 
-![Exemplo de um elemento de dados de tipo de caminho para encaminhamento de eventos](../../images/ui/event-forwarding/overview/data-reference.png)
+![Exemplo de um elemento de dados do tipo de caminho para o encaminhamento de eventos](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Regras {#rules}
 
-A criação de regras nas propriedades do encaminhamento de eventos funciona de maneira semelhante às tags, com a principal diferença sendo que não é possível selecionar eventos como componentes de regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da [sequência de dados](../../../edge/datastreams/overview.md) e encaminhará esses eventos para destinos se determinadas condições forem atendidas.
+A criação de regras no encaminhamento de eventos das propriedades funciona de maneira semelhante às tags, sendo que não é possível selecionar eventos como componentes da regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da variável [datastream](../../../edge/datastreams/overview.md) e encaminhar esses eventos para destinos, se determinadas condições forem satisfeitas.
 
-Além disso, há um tempo limite de 30 segundos que se aplica a um único evento, pois ele é processado em todas as regras (e, portanto, todas as ações) em uma propriedade de encaminhamento de eventos. Isso significa que todas as regras e ações para um único evento devem ser concluídas nesse período.
+Além disso, há um tempo limite de 30 segundos que se aplica a um único evento, pois ele é processado em todas as regras (e, portanto, em todas as ações) em uma propriedade de encaminhamento de evento. Isso significa que todas as regras e ações de um único evento devem ser concluídas nesse período.
 
-![Regras de encaminhamento de eventos na interface da Coleção de dados](../../images/ui/event-forwarding/overview/rules.png)
+![Regras de encaminhamento de eventos na interface do usuário da coleção de dados](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Tokenização do elemento de dados {#tokenization}
 
 Nas regras de tags, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados (por exemplo: `%viewportHeight%`). Nas regras de encaminhamento de eventos, os elementos de dados são tokenizados com `{{` no início e `}}` no final do nome do elemento de dados (por exemplo: `{{viewportHeight}}`).
 
-![Exemplo de um elemento de dados de tipo de caminho para encaminhamento de eventos](../../images/ui/event-forwarding/overview/tokenization.png)
+![Exemplo de um elemento de dados do tipo de caminho para o encaminhamento de eventos](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Sequência de ações de regras {#action-sequencing}
 
-A variável [!UICONTROL Ações] de uma regra de encaminhamento de eventos é sempre executada sequencialmente. Por exemplo, se uma regra tiver duas ações, a segunda ação não iniciará a execução até que a ação anterior seja concluída (e nos casos em que uma resposta é esperada de um endpoint, esse endpoint respondeu). Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser executada de forma assíncrona como com as regras de tag.
+O [!UICONTROL Ações] A seção de uma regra de encaminhamento de evento é sempre executada sequencialmente. Por exemplo, se uma regra tiver duas ações, a segunda ação não iniciará a execução até que a ação anterior seja concluída (e nos casos em que uma resposta é esperada de um endpoint, esse endpoint respondeu). Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser executada de forma assíncrona como pode com regras de tags.
 
 ## Segredos {#secrets}
 
-O encaminhamento de eventos permite criar, gerenciar e armazenar segredos que podem ser usados para autenticação nos servidores para os quais você está enviando dados. Consulte o guia sobre [segredos](./secrets.md) sobre os diferentes tipos de tipos de segredos disponíveis e como eles são implementados na interface do usuário do.
+O encaminhamento de eventos permite criar, gerenciar e armazenar segredos que podem ser usados para autenticar nos servidores para os quais você está enviando dados. Consulte o guia sobre [segredos](./secrets.md) sobre os diferentes tipos de segredo disponíveis e como eles são implementados na interface do usuário do .
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução de alto nível ao encaminhamento de eventos. Para obter mais informações sobre como configurar esse recurso para sua organização, consulte [guia de introdução](./getting-started.md).
+Este documento forneceu uma introdução de alto nível ao encaminhamento de eventos. Para obter mais informações sobre como configurar esse recurso para sua organização, consulte o [guia de introdução](./getting-started.md).

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
-ht-degree: 4%
+source-wordcount: '4916'
+ht-degree: 3%
 
 ---
 
@@ -246,6 +246,8 @@ Qualquer uma das funções do agente do usuário contidas na tabela abaixo pode 
 * Telefone - Um dispositivo móvel com uma tela pequena (geralmente &lt; 7&quot;)
 * Móvel - Um dispositivo móvel que ainda não foi identificado. Este dispositivo móvel pode ser um eReader, um tablet, um telefone, um relógio, etc.
 
+Para obter mais informações sobre valores de campo de dispositivo, leia a [lista de valores de campo do dispositivo](#device-field-values) no apêndice do presente documento.
+
 >[!NOTE]
 >
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
@@ -343,5 +345,36 @@ A tabela abaixo descreve uma lista de caracteres reservados e seus caracteres co
 | ^ | %5E |
 | ` | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Valores de campo do dispositivo {#device-field-values}
+
+A tabela abaixo descreve uma lista de valores de campo do dispositivo e suas descrições correspondentes.
+
+| Dispositivo | Descrição |
+| --- | --- |
+| Área de trabalho | Um dispositivo desktop ou laptop. |
+| Anônimo | Um dispositivo anônimo. Em alguns casos, `useragents` que tenham sido alteradas por um software de anonimização. |
+| Desconhecido | Um dispositivo desconhecido. Estes são normalmente `useragents` que não contêm informações sobre o dispositivo. |
+| Dispositivo móvel | Um dispositivo móvel que ainda não foi identificado. Este dispositivo móvel pode ser um eReader, um tablet, um telefone, um relógio, etc. |
+| Comprimido | Um dispositivo móvel com uma tela grande (geralmente > 7&quot;). |
+| Telefone | Um dispositivo móvel com uma tela pequena (geralmente &lt; 7&quot;). |
+| Observar | Um dispositivo móvel com uma tela pequena (geralmente &lt; 2&quot;). Esses dispositivos normalmente operam como uma tela adicional para um tipo de dispositivo de telefone/tablet. |
+| Realidade aumentada | Um dispositivo móvel com recursos AR. |
+| Realidade virtual | Um dispositivo móvel com recursos VR. |
+| eReader | Um dispositivo semelhante a um tablet, mas geralmente com um [!DNL eInk] tela. |
+| Caixa de decodificação | Um dispositivo conectado que permite interação por meio de uma tela do tamanho da TV. |
+| TV | Um dispositivo semelhante ao decodificador de sinais, mas integrado à TV. |
+| Home Appliance | Um aparelho doméstico (geralmente grande), como uma geladeira. |
+| Console de jogos | Um sistema fixo de jogos como um [!DNL Playstation] ou [!DNL XBox]. |
+| Console de jogo portátil | Um sistema de jogos móvel como um [!DNL Nintendo Switch]. |
+| Voz | Um dispositivo vocal como um [!DNL Amazon Alexa] ou [!DNL Google Home]. |
+| Carro | Um navegador baseado em veículo. |
+| Robô | Robôs que visitam um site. |
+| Robô móvel | Robôs que visitam um site, mas indicam que desejam ser vistos como um visitante móvel. |
+| Imitador Robô | Robôs que visitam um site, fingindo que são robôs como [!DNL Google], mas não o são. **Observação**: Na maioria dos casos, os Imitadores Robôs são realmente robôs. |
+| Cloud | Um aplicativo baseado em nuvem. Não são robôs nem hackers, mas são aplicativos que precisam se conectar. Isso inclui [!DNL Mastodon] servidores. |
+| Hacker | Esse valor de dispositivo é usado caso o script seja detectado na variável `useragent` string. |
 
 {style="table-layout:auto"}

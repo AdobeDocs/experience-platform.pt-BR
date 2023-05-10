@@ -5,7 +5,7 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 2%
+ht-degree: 19%
 
 ---
 
@@ -64,14 +64,14 @@ Visualize os exemplos abaixo do conteúdo nos arquivos CSV exportados com cada u
 * Exemplo de saída com **[!UICONTROL Ponto e vírgula`(;)`]** selecionado: `male;John;Doe`
 * Exemplo de saída com **[!UICONTROL Tabulação`(\t)`]** selecionado: `male \t John \t Doe`
 
-### Caractere de citação {#quote-character}
+### Caractere de aspas {#quote-character}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
->title="Caractere de citação"
->abstract="Use essa opção se desejar remover aspas duplas das cadeias de caracteres exportadas. Consulte a documentação para ver exemplos de cada seleção."
+>title="Caractere de aspas"
+>abstract="Use essa opção se desejar remover as aspas duplas das strings exportadas. Consulte a documentação para ver exemplos de cada seleção."
 
-Use essa opção se desejar remover aspas duplas das cadeias de caracteres exportadas. As opções disponíveis são:
+Use essa opção se desejar remover as aspas duplas das strings exportadas. As opções disponíveis são:
 
 * **[!UICONTROL Caractere Nulo (\0000)]**. Use essa opção para remover aspas duplas de arquivos CSV exportados.
 * **[!UICONTROL Aspas duplas (&quot;)]**. Use essa opção para manter aspas duplas em seus arquivos CSV exportados.
@@ -88,7 +88,7 @@ Visualize os exemplos abaixo do conteúdo de arquivos CSV exportados com cada um
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_escapeCharacter"
 >title="Caractere de escape"
->abstract="Define um caractere único usado para evitar aspas dentro de um valor já citado. Consulte a documentação para ver exemplos de cada seleção."
+>abstract="Define um caractere único usado para “escapar” citações dentro de um valor já citado. Consulte a documentação para ver exemplos de cada seleção."
 
 Use essa opção para definir um caractere único para evitar aspas dentro de um valor já citado. Por exemplo, essa opção é útil quando há uma string entre aspas duplas, na qual parte da string já está entre aspas duplas. Essa opção determina por qual caractere substituir as aspas duplas internas. As opções disponíveis são:
 
@@ -132,9 +132,9 @@ Visualize os exemplos abaixo do conteúdo de arquivos CSV exportados com cada um
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_nullValueOutput"
 >title="Saída de valor nulo"
->abstract="Use esse controle para definir a representação da string de um valor nulo nos arquivos exportados. Consulte a documentação para ver exemplos de cada seleção."
+>abstract="Use esse controle para definir como as strings de valor nulo devem ser representadas nos arquivos exportados. Consulte a documentação para ver exemplos de cada seleção."
 
-Use esse controle para definir a representação da string de um valor nulo nos arquivos exportados. Essa opção determina como os valores nulos são representados nos arquivos CSV exportados. As opções disponíveis são:
+Use esse controle para definir como as strings de valor nulo devem ser representadas nos arquivos exportados. Essa opção determina como os valores nulos são representados nos arquivos CSV exportados. As opções disponíveis são:
 
 * **[!UICONTROL nulo]**
 * **&quot;&quot;**

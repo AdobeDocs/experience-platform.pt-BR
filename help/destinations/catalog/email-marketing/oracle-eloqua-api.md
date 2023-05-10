@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -97,8 +97,8 @@ Within **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** pesquisar por [!DN
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
->title="Nome da empresa\Nome de usuário"
->abstract="Preencha este campo com o nome de empresa e nome de usuário do Oracle Eloqua no formulário `{COMPANY_NAME}\{USERNAME}`"
+>title="Nome da empresa\nome de usuário"
+>abstract="Preencha este campo com o nome da empresa e o nome de usuário do Oracle Eloqua no formulário `{COMPANY_NAME}\{USERNAME}`"
 
 Preencha os campos obrigatórios abaixo. Consulte a [Colete [!DNL Oracle Eloqua] credenciais](#gather-credentials) para quaisquer orientações.
 * **[!UICONTROL Senha]**: A senha de seu [!DNL Oracle Eloqua] conta.
@@ -114,8 +114,8 @@ Se os detalhes fornecidos forem válidos, a interface do usuário exibirá uma *
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Para encontrar o número do seu pod, faça logon no Oracle Eloqua. Observe o URL no seu navegador após ter feito logon com êxito. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Base de conhecimento do Oracle - descubra o número do seu pod"
+>abstract="Para encontrar o número do seu pod, faça logon no Oracle Eloqua. Observe o URL no seu navegador após relizar o logon com sucesso. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Knowledge base do Oracle - Descubra o número do seu pod"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 ![Captura de tela da interface do usuário da plataforma que mostra os detalhes do destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)

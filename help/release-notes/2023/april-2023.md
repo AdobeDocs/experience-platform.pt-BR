@@ -2,14 +2,18 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2023
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2095'
 ht-degree: 4%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>A partir de 15 de maio de 2023, a `Existing` será descontinuado do mapa de associação de segmentos para remover a redundância no ciclo de vida de associação de segmentos. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão sendo representados como `Exited`. Para obter mais detalhes sobre esta alteração, leia o [Seção Serviço de segmentação](#segmentation).
 
 **Data de lançamento: 26 de abril de 2023**
 
@@ -22,6 +26,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [Experience Data Model](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Perfil do cliente em tempo real](#profile)
+- [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
 
 ## Painéis {#dashboards}
@@ -160,6 +165,20 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 | Expiração de dados de perfil pseudônimo | O prazo de validade dos dados de perfil pseudônimo está agora disponível! Esta versão removerá continuamente perfis pseudônimos obsoletos da sua instância do Experience Platform depois de ativados. Para saber mais sobre esse recurso e Perfis pseudônimos, leia o [Guia de expiração de dados de perfil pseudônimo](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
+
+## Serviço de segmentação {#segmentation}
+
+[!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Mapa de associação de segmento | Como seguimento ao anúncio anterior em fevereiro, em 15 de maio de 2023, o `Existing` será descontinuado do mapa de associação de segmentos para remover a redundância no ciclo de vida de associação de segmentos. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão sendo representados como `Exited`.<br/><br/> Essa alteração pode afetar você se, você estiver usando [destinos corporativos](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Hubs de eventos do Azure, API HTTP) e pode ter processos downstream automatizados em vigor com base no `Existing` status. Se esse for o caso, reveja suas integrações downstream. Se estiver interessado em identificar perfis recém-qualificados além de um determinado tempo, considere usar uma combinação do `Realized` e o `lastQualificationTime` no mapa de associação de segmentos. Para obter mais informações, entre em contato com o representante do Adobe. |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre [!DNL Segmentation Service]consulte o [Visão geral da segmentação](../../segmentation/home.md).
 
 ## Fontes {#sources}
 

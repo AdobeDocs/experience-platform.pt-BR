@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 5%
@@ -126,7 +126,7 @@ Para obter mais informações sobre a coleta de dados no Platform, consulte o [v
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| SDK de destino | O Destination SDK agora oferece suporte total para parceiros e clientes que criam destinos em lote (ou baseados em arquivos) produzidos ou privados. Leia as seguintes páginas de documentação para obter mais informações: <ul><li>[Visão geral do Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configurar um destino com base em arquivo](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurar opções de formatação de arquivo para destinos com base em arquivo](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Teste os destinos com base em arquivo](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| SDK de destino | O Destination SDK agora oferece suporte total para parceiros e clientes que criam destinos em lote (ou baseados em arquivos) produzidos ou privados. Leia as seguintes páginas de documentação para obter mais informações: <ul><li>[Visão geral do Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configurar um destino com base em arquivo](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurar opções de formatação de arquivo para destinos com base em arquivo](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Teste os destinos com base em arquivo](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 

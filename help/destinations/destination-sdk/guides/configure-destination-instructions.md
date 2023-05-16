@@ -1,0 +1,303 @@
+---
+description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
+title: Use o Destination SDK para configurar um destino de transmissão
+exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
+source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+workflow-type: tm+mt
+source-wordcount: '820'
+ht-degree: 0%
+
+---
+
+# Use o Destination SDK para configurar um destino de transmissão
+
+## Visão geral {#overview}
+
+Esta página descreve como usar as informações em [Opções de configuração no SDK de destinos](../functionality/configuration-options.md) e em outros documentos de referência de API e funcionalidade do Destination SDK para configurar um [destino de transmissão](../../destination-types.md#streaming-destinations). As etapas são apresentadas na ordem sequencial abaixo.
+
+## Pré-requisitos {#prerequisites}
+
+Antes de avançar para as etapas ilustradas abaixo, leia o [Introdução ao Destination SDK](../getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O e outros pré-requisitos necessários para funcionar com as APIs do Destination SDK. Isso pressupõe que você tenha concluído os pré-requisitos de parceria e permissão e esteja pronto para começar a desenvolver seu destino.
+
+## Etapas para usar as opções de configuração no Destination SDK para configurar o destino {#steps}
+
+![Etapas ilustradas do uso de pontos de extremidade de Destination SDK](../assets/guides/destination-sdk-steps.png)
+
+## Etapa 1: Criar um servidor e uma configuração de modelo {#create-server-template-configuration}
+
+Comece por [criação de uma configuração de servidor e modelo](../authoring-api/destination-server/create-destination-server.md) usando o `/destinations-server` endpoint .
+
+Veja abaixo um exemplo de configuração. Observe que o modelo de transformação de mensagem no `requestBody.value` é abordado na etapa 3, [Criar modelo de transformação](#create-transformation-template).
+
+```shell
+POST platform.adobe.io/data/core/activation/authoring/destination-servers
+```
+
+```json {line-numbers="true" highlight="14"}
+{
+   "name":"Moviestar destination server",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"POST",
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"insert after you create a template in step 3"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+## Etapa 2: Criar configuração de destino {#create-destination-configuration}
+
+Veja abaixo um exemplo de configuração para um modelo de destino, criado usando o `/destinations` Ponto de extremidade da API. Consulte [criar uma configuração de destino](../authoring-api/destination-configuration/create-destination-configuration.md) para obter mais informações.
+
+Para conectar o servidor e a configuração do modelo na etapa 1 a essa configuração de destino, adicione a ID da instância da configuração do servidor e do modelo como `destinationServerId` aqui.
+
+>[!IMPORTANT]
+>
+>Para criar um destino em tempo real (streaming) configurado corretamente, você *must* adicionar pelo menos uma identidade de destino em `identityNamespaces`, conforme mostrado abaixo. Se nenhuma identidade de destino estiver configurada, os usuários não poderão continuar após a [Etapa de mapeamento](../../ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação.
+
+```shell
+POST platform.adobe.io/data/core/activation/authoring/destinations
+```
+
+```json {line-numbers="true" highlight="74"}
+{
+   "name":"Moviestar",
+   "description":"Moviestar is a fictional destination, used for this example.",
+   "status":"TEST",
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"BEARER"
+      }
+   ],
+   "customerDataFields":[
+      {
+         "name":"endpointsInstance",
+         "type":"string",
+         "title":"Select Endpoint",
+         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
+         "isRequired":true,
+         "enum":[
+            "US",
+            "EU",
+            "APAC",
+            "NZ"
+         ]
+      },
+      {
+         "name":"customerID",
+         "type":"string",
+         "title":"Moviestar Customer ID",
+         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
+         "isRequired":true,
+         "pattern":""
+      }
+   ],
+   "uiAttributes":{
+      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "category":"mobile",
+      "connectionType":"Server-to-server",
+      "frequency":"Streaming"
+   },
+   "identityNamespaces":{
+      "external_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      },
+      "another_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   },
+   "audienceMetadataConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
+   "aggregation":{
+      "aggregationType":"CONFIGURABLE_AGGREGATION",
+      "configurableAggregation":{
+         "aggregationPolicyId":null,
+         "aggregationKey":{
+            "includeSegmentId":true,
+            "includeSegmentStatus":true,
+            "includeIdentity":true,
+            "oneIdentityPerGroup":true,
+            "groups":null
+         },
+         "splitUserById":true,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
+      }
+   },
+   "destinationDelivery":[
+      {
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
+      }
+   ]
+}
+```
+
+## Etapa 3: Criar modelo de transformação de mensagem - use a linguagem de modelo para especificar o formato de saída da mensagem {#create-transformation-template}
+
+Com base nas cargas que seu destino suporta, você deve criar um modelo que transforma o formato dos dados exportados do formato Adobe XDM em um formato compatível com seu destino. Consulte exemplos de modelo na seção [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento](../functionality/destination-server/message-format.md#using-templating) e use o [ferramenta de criação de modelo](../testing-api/streaming-destinations/create-template.md) fornecido pelo Adobe.
+
+Depois de criar um template de transformação de mensagem que funcione para você, adicione-o à configuração de servidor e modelo criada na etapa 1.
+
+```json {line-numbers="true" highlight="13-14"}
+{
+   "name":"Moviestar destination server",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+      }
+   },
+   "httpTemplate":{
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{\n    \"users\": [\n        {% for profile in input.profiles %}\n            {{profile|raw}}{% if not loop.last %},{% endif %}\n        {% endfor %}\n    ]\n}"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+## Etapa 4: Criar configuração de metadados de público-alvo {#create-audience-metadata-configuration}
+
+Para alguns destinos, o Destination SDK requer a configuração de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo de forma programática no destino. Consulte [Gerenciamento de metadados do público-alvo](../functionality/audience-metadata-management.md) para obter informações sobre quando você precisa configurar essa configuração e como fazer isso.
+
+Se você usar uma configuração de metadados de público-alvo, é necessário conectá-los à configuração de destino criada na etapa 2. Adicione a ID da instância da configuração de metadados do público-alvo à configuração de destino como `audienceTemplateId`.
+
+```json {line-numbers="true" highlight="53"}
+{
+   "name":"Moviestar",
+   "description":"Moviestar is a fictional destination, used for this example.",
+   "status":"TEST",
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"BEARER"
+      }
+   ],
+   "customerDataFields":[
+      {
+         "name":"endpointsInstance",
+         "type":"string",
+         "title":"Select Endpoint",
+         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
+         "isRequired":true,
+         "enum":[
+            "US",
+            "EU",
+            "APAC",
+            "NZ"
+         ]
+      },
+      {
+         "name":"customerID",
+         "type":"string",
+         "title":"Moviestar Customer ID",
+         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
+         "isRequired":true,
+         "pattern":""
+      }
+   ],
+   "uiAttributes":{
+      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "category":"mobile",
+      "connectionType":"Server-to-server",
+      "frequency":"Streaming"
+   },
+   "identityNamespaces":{
+      "external_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      },
+      "another_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   },
+   "audienceMetadataConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
+   "aggregation":{
+      "aggregationType":"CONFIGURABLE_AGGREGATION",
+      "configurableAggregation":{
+         "aggregationPolicyId":null,
+         "aggregationKey":{
+            "includeSegmentId":true,
+            "includeSegmentStatus":true,
+            "includeIdentity":true,
+            "oneIdentityPerGroup":true,
+            "groups":null
+         },
+         "splitUserById":true,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
+      }
+   },
+   "destinationDelivery":[
+      {
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
+      }
+   ]
+}
+```
+
+
+## Etapa 5: Configurar autenticação {#set-up-authentication}
+
+Dependendo de você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` na configuração de destino acima, você pode configurar a autenticação para seu destino usando o `/destination` ou `/credentials` endpoint .
+
+Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino e seu destino oferece suporte ao método de autenticação OAuth 2, leia [Autenticação OAuth 2](../functionality/destination-configuration/oauth2-authentication.md).
+
+Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, você deve criar um [configuração de credenciais](../credentials-api/create-credential-configuration.md).
+
+## Etapa 6: Teste seu destino {#test-destination}
+
+Depois de configurar seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar a variável [ferramenta de teste de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para testar a integração entre o Adobe Experience Platform e seu destino.
+
+Como parte do processo para testar seu destino, você deve usar a interface do usuário do Experience Platform para criar segmentos, que você ativará no seu destino. Consulte os dois recursos abaixo para obter instruções sobre como criar segmentos no Experience Platform:
+
+* [Criar uma página de documentação do segmento](/help/segmentation/ui/overview.md#create-segment)
+* [Criar uma apresentação de vídeo de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+
+## Etapa 7: Publicar o destino {#publish-destination}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
+Após configurar e testar seu destino, use o [API de publicação de destino](../publishing-api/create-publishing-request.md) para enviar sua configuração ao Adobe para revisão.
+
+## Etapa 8: Documente seu destino {#document-destination}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
+Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](../overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](../docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md).
+
+## Etapa 9: Enviar destino para revisão do Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
+Finalmente, o destino pode ser publicado no catálogo de Experience Platform e visível para todos os clientes do Experience Platform, é necessário enviar oficialmente o destino para revisão do Adobe. Encontre informações completas sobre como [enviar para análise um destino produzido criado no Destination SDK](../guides/submit-destination.md).

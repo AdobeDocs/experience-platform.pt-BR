@@ -1,7 +1,8 @@
 ---
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos de Experience Platform.
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -26,16 +27,16 @@ Os destinos do Experience Platform exportam dados para integrações baseadas em
 
 O processo pelo qual os perfis são agregados em mensagens HTTPS antes de serem enviados para pontos de extremidade da API de destino é chamado *microlotes*.
 
-Pegue o [Destino do facebook](/help/destinations/catalog/social/facebook.md) com um *[agregação configurável](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* política como exemplo - os dados são enviados de forma agregada, onde o serviço de destinos pega todos os dados recebidos do serviço de perfil upstream e os agrega por um dos seguintes, antes de enviá-los para o Facebook:
+Pegue o [Destino do facebook](/help/destinations/catalog/social/facebook.md) com um *[agregação configurável](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* política como exemplo - os dados são enviados de forma agregada, onde o serviço de destinos pega todos os dados recebidos do serviço de perfil upstream e os agrega por um dos seguintes, antes de enviá-los para o Facebook:
 
 * Número de registros (máximo de 10.000) ou
 * Intervalo da janela de tempo (30 minutos)
 
 Qualquer um dos limites acima é atingido primeiro e inicia uma exportação para o Facebook. Assim, no [!DNL Facebook Custom Audiences] no painel, você pode ver públicos-alvo vindos do Experience Platform em incrementos de registros 10.000. Você pode estar vendo 10.000 registros a cada 10-15 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 30 minutos, e são enviados mais rápido, aproximadamente a cada 10-15 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para formar um lote 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também poderá ver lotes menores enviados para a Facebook.
 
-Como outro exemplo, considere a variável [Destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md), que tem um *[melhor agregação de esforço](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* , com `maxUsersPerRequest: 10`. Isso significa que no máximo dez perfis serão agregados antes que uma chamada HTTP seja acionada para esse destino, mas o Experience Platform tenta despachar perfis para o destino assim que o serviço de destinos recebe informações atualizadas de reavaliação de um serviço upstream.
+Como outro exemplo, considere a variável [Destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md), que tem um *[melhor agregação de esforço](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* , com `maxUsersPerRequest: 10`. Isso significa que no máximo dez perfis serão agregados antes que uma chamada HTTP seja acionada para esse destino, mas o Experience Platform tenta despachar perfis para o destino assim que o serviço de destinos recebe informações atualizadas de reavaliação de um serviço upstream.
 
-A política de agregação é configurável e os desenvolvedores de destino podem decidir como configurar a política de agregação para melhor atender às limitações de taxa dos pontos de extremidade da API downstream. Leia mais sobre [política de agregação](/help/destinations/destination-sdk/destination-configuration.md#aggregation) na documentação do Destination SDK.
+A política de agregação é configurável e os desenvolvedores de destino podem decidir como configurar a política de agregação para melhor atender às limitações de taxa dos pontos de extremidade da API downstream. Leia mais sobre [política de agregação](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) na documentação do Destination SDK.
 
 ## Destinos de exportação de perfil de transmissão (enterprise) {#streaming-profile-destinations}
 

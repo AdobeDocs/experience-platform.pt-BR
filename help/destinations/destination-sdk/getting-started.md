@@ -2,9 +2,9 @@
 description: Esta página descreve como autenticar e começar a usar o Adobe Experience Platform Destination SDK. Ele inclui instruções sobre como obter credenciais de autenticação do Adobe I/O, um nome de sandbox e a permissão de controle de acesso de criação de destino.
 title: Introdução ao Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '627'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ A equipe do Adobe Exchange fornece o nome da sandbox, que deve ser usado em cham
 
 ## Controle de acesso baseado em funções (RBAC) {#rbac}
 
-Para usar os endpoints da API do Destination SDK descritos na [documentação de referência](./configuration-options.md), você precisa do **[!UICONTROL Criação de destinos]** permissão de controle de acesso. Trabalhe com a equipe do Adobe Exchange para obter essa permissão atribuída a você em [Adobe Admin Console](https://adminconsole.adobe.com/).
+Para usar os endpoints da API do Destination SDK descritos na [documentação de referência](functionality/configuration-options.md), você precisa do **[!UICONTROL Criação de destinos]** permissão de controle de acesso. Trabalhe com a equipe do Adobe Exchange para obter essa permissão atribuída a você em [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Permissão de criação de destino](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Para obter mais informações, leia os seguintes documentos de Controle de Acess
 
 ## Considerações adicionais {#additional-considerations}
 
-* Quaisquer alterações feitas nas configurações de destino, sejam você criar ou editar uma configuração de destino, precisam ser revisadas e aprovadas pelo Adobe. Suas alterações são refletidas em seus destinos somente após a revisão ser feita.
+* Para destinos produzidos/públicos, qualquer alteração feita nas configurações de destino, seja você criar ou editar uma configuração de destino, precisará ser revisada e aprovada pelo Adobe. Suas alterações são refletidas em seus destinos somente após a revisão ser feita. Isso não se aplica a destinos privados que estão disponíveis somente para você.
 * Somente os usuários que pertencem à mesma organização e têm acesso à sandbox podem editar a configuração de destino.
 
 ## Próximas etapas {#next-steps}
@@ -77,8 +77,8 @@ Seguindo as etapas deste artigo, você obteve credenciais de autenticação para
 
 * Leia os seguintes guias de configuração, dependendo do tipo de destino:
 
-   * [Use o Destination SDK para configurar um destino de transmissão](./configure-destination-instructions.md)
-   * [Use o Destination SDK para configurar um destino baseado em arquivo](./configure-file-based-destination-instructions.md)
+   * [Use o Destination SDK para configurar um destino de transmissão](guides/configure-destination-instructions.md)
+   * [Use o Destination SDK para configurar um destino baseado em arquivo](guides/configure-file-based-destination-instructions.md)
 
 * Para todas as operações, consulte a [Documentação da API de criação de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Use o [Coleção Postman da API de criação de destino](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar seu destino usando os endpoints da API do Destination SDK. Para começar a usar o Postman, consulte o [etapas para importar ambientes e coleções](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) e [guia de vídeo para criar o ambiente Postman](https://video.tv.adobe.com/v/28832).

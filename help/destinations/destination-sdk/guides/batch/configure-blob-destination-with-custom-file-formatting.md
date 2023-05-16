@@ -1,29 +1,31 @@
 ---
-description: Saiba como usar o Destination SDK para configurar um destino do Armazenamento de Blobs do Azure com opções personalizadas de formatação de arquivo e configuração personalizada de nome de arquivo.
-title: Configure um destino do Armazenamento de Azure Blob com opções de formatação de arquivo personalizadas e configuração de nome de arquivo personalizado.
+description: Saiba como usar o Destination SDK para configurar um destino de Armazenamento Azure Blob com opções personalizadas de formatação de arquivo e configuração personalizada de nome de arquivo.
+title: Configure um destino do Armazenamento Azure Blob com opções personalizadas de formatação de arquivos e configuração personalizada de nome de arquivo.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
 
-# Configurar um [!DNL Azure Blob Storage] destino com opções personalizadas de formatação de arquivo e configuração personalizada de nome de arquivo
+# Configure um [!DNL Azure Blob Storage] destino com opções de formatação de arquivo personalizadas e configuração de nome de arquivo personalizado
 
 ## Visão geral {#overview}
 
-Esta página descreve como usar o Destination SDK para configurar um [!DNL Azure Blob Storage] destino com personalizado [opções de formatação de arquivo](../../server-and-file-configuration.md#file-configuration) e um personalizado [configuração do nome do arquivo](../../file-based-destination-configuration.md#file-name-configuration).
+Esta página descreve como usar o Destination SDK para configurar um [!DNL Azure Blob Storage] destino com personalizado [opções de formatação de arquivo](configure-file-formatting-options.md) e um [configuração do nome do arquivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
-Esta página mostra todas as opções de configuração disponíveis para destinos do Armazenamento Azure Blob. Você pode editar as configurações mostradas nas etapas abaixo ou excluir determinadas partes das configurações, conforme necessário.
+Esta página mostra todas as opções de configuração disponíveis para os destinos de Armazenamento do Azure Blob. Você pode editar as configurações mostradas nas etapas abaixo ou excluir determinadas partes das configurações, conforme necessário.
+
+Para obter descrições detalhadas dos parâmetros usados abaixo, consulte [opções de configuração no SDK de destinos](../../functionality/configuration-options.md).
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de seguir para as etapas descritas abaixo, leia o [introdução ao Destination SDK](../../getting-started.md) página para obter informações sobre como obter as credenciais de autenticação de Adobe I/O e outros pré-requisitos necessários para trabalhar com as APIs de Destination SDK.
+Antes de seguir para as etapas descritas abaixo, leia o [Introdução ao Destination SDK](../../getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O e outros pré-requisitos necessários para funcionar com as APIs do Destination SDK.
 
-## Etapa 1: criar uma configuração de servidor e arquivo {#create-server-file-configuration}
+## Etapa 1: Criar um servidor e uma configuração de arquivo {#create-server-file-configuration}
 
-Comece usando o `/destination-server` para criar uma configuração de servidor e arquivo. Para obter descrições detalhadas dos parâmetros na solicitação HTTP, leia as [especificações de configuração de servidor e arquivo para destinos baseados em arquivo](../../server-and-file-configuration.md#blob-example) e o associado [configurações de formatação de arquivo](../../server-and-file-configuration.md#file-configuration).
+Comece usando o `/destination-server` endpoint para [criar uma configuração de servidor e arquivo](../../authoring-api/destination-server/create-destination-server.md).
 
 **Formato da API**
 
@@ -33,8 +35,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova configuração do servidor de destino, configurada pelos parâmetros fornecidos na carga.
-A carga abaixo inclui uma configuração genérica do Azure Blob, com personalização [Formatação de arquivo CSV](../../server-and-file-configuration.md#file-configuration) parâmetros de configuração que os usuários podem definir na interface do usuário do Experience Platform.
+A solicitação a seguir cria uma nova configuração de servidor de destino, configurada pelos parâmetros fornecidos no payload.
+A carga abaixo inclui uma configuração genérica do Azure Blob, com personalização [Formatação de arquivo CSV](../../functionality/destination-server/file-formatting.md) parâmetros de configuração que os usuários podem definir na interface do usuário do Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -47,7 +49,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Azure Blob server with custom file formatting options and custom file name configuration",
    "description":"Azure Blob server with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Blob server with custom file formatting options and custom file name configuration",
    "destinationServerType":"FILE_BASED_AZURE_BLOB",
    "fileBasedAzureBlobDestination":{
       "path":{
@@ -122,19 +123,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Uma resposta bem-sucedida retorna a nova configuração do servidor de destino, incluindo o identificador exclusivo (`instanceId`) da configuração. Armazene esse valor conforme necessário na próxima etapa.
+Uma resposta bem-sucedida retorna a nova configuração do servidor de destino, incluindo o identificador exclusivo (`instanceId`) da configuração. Armazene esse valor conforme for necessário na próxima etapa.
 
 ## Etapa 2: Criar configuração de destino {#create-destination-configuration}
 
-Depois de criar o servidor de destino e a configuração de formatação de arquivo na etapa anterior, você pode usar o `/destinations` Endpoint da API para criar uma configuração de destino.
+Depois de criar a configuração do servidor de destino e da formatação de arquivos na etapa anterior, agora é possível usar o `/destinations` Ponto de extremidade da API para criar uma configuração de destino.
 
-Para conectar a configuração do servidor no [etapa 1](#create-server-file-configuration) para essa configuração de destino, substitua o `destinationServerId` na solicitação de API abaixo com o valor obtido ao criar o servidor de destino no [etapa 1](#create-server-file-configuration).
-
-Para obter descrições detalhadas dos parâmetros usados abaixo, consulte as seguintes páginas:
-
-* [Configuração de autenticação](../../authentication-configuration.md#blob)
-* [Configuração de destino de lote](../../file-based-destination-configuration.md#batch-configuration)
-* [Operações da API de configuração de destino baseadas em arquivo](../../destination-configuration-api.md#create-file-based)
+Para conectar a configuração do servidor em [etapa 1](#create-server-file-configuration) para essa configuração de destino, substitua o `destinationServerId` na solicitação de API abaixo com o valor obtido ao criar o servidor de destino em [etapa 1](#create-server-file-configuration).
 
 **Formato da API**
 
@@ -154,7 +149,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d ' {
    "name":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
    "description":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -410,48 +404,48 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Uma resposta bem-sucedida retorna a nova configuração de destino, incluindo o identificador exclusivo (`instanceId`) da configuração. Armazene esse valor como ele é necessário se você precisar fazer mais solicitações HTTP para atualizar sua configuração de destino.
+Uma resposta bem-sucedida retorna a nova configuração de destino, incluindo o identificador exclusivo (`instanceId`) da configuração. Armazene esse valor como é necessário se você precisar fazer mais solicitações HTTP para atualizar a configuração de destino.
 
-## Etapa 3: verificar a interface do usuário do Experience Platform {#verify-ui}
+## Etapa 3: Verificar a interface do usuário do Experience Platform {#verify-ui}
 
-Com base nas configurações acima, o catálogo de Experience Platform agora exibirá um novo cartão de destino privado para você usar.
+Com base nas configurações acima, o catálogo de Experience Platform agora exibirá uma nova placa de destino privada para você usar.
 
-![Gravação de tela mostrando a página do catálogo de destinos com um cartão de destino selecionado.](../../assets/blob-destination-card.gif)
+![Gravação de tela mostrando a página de catálogo de destinos com um cartão de destino selecionado.](../../assets/guides/batch/blob-destination-card.gif)
 
-Nas imagens e gravações abaixo, observe como as opções na variável [fluxo de trabalho de ativação para destinos baseados em arquivo](/help/destinations/ui/activate-batch-profile-destinations.md) corresponder às opções selecionadas na configuração de destino.
+Nas imagens e gravações abaixo, observe como as opções no [fluxo de trabalho de ativação para destinos com base em arquivo](/help/destinations/ui/activate-batch-profile-destinations.md) corresponda às opções selecionadas na configuração de destino.
 
-Ao preencher detalhes sobre o destino, observe como os campos exibidos são os campos de dados personalizados configurados na configuração do.
+Ao preencher os detalhes sobre o destino, observe como os campos são revelados são os campos de dados personalizados que você configurou na configuração.
 
 >[!TIP]
 >
->A ordem em que você adiciona os campos de dados personalizados à configuração de destino não é refletida na interface do usuário do. Os campos de dados personalizados são sempre exibidos na ordem exibida na gravação de tela abaixo.
+>A ordem na qual você adiciona os campos de dados personalizados à configuração de destino não é refletida na interface do usuário. Os campos de dados personalizados são sempre exibidos na ordem exibida na gravação de tela abaixo.
 
-![preencher detalhes do destino](../../assets/file-configuration-options.gif)
+![preencher os detalhes do destino](../../assets/guides/batch/file-configuration-options.gif)
 
-Ao programar intervalos de exportação, observe como os campos exibidos são os campos configurados no `batchConfig` configuração.
-![exportar opções de agendamento](../../assets/file-export-scheduling.png)
+Ao agendar intervalos de exportação, observe como os campos são revelados nos campos que você configurou na `batchConfig` configuração.
+![opções de agendamento de exportação](../../assets/guides/batch/file-export-scheduling.png)
 
-Ao visualizar as opções de configuração do nome de arquivo, observe como os campos exibidos representam os `filenameConfig` que você configura na configuração do.
-![opções de configuração do nome do arquivo](../../assets/file-naming-options.gif)
+Ao visualizar as opções de configuração do nome de arquivo, observe como os campos surdos representam a variável `filenameConfig` opções configuradas na configuração.
+![opções de configuração do nome do arquivo](../../assets/guides/batch/file-naming-options.gif)
 
-Se quiser ajustar qualquer um dos campos mencionados acima, repita [etapas um](#create-server-file-configuration) e [dois](#create-destination-configuration) para modificar as configurações de acordo com suas necessidades.
+Se quiser ajustar qualquer um dos campos mencionados acima, repita [passo um](#create-server-file-configuration) e [two](#create-destination-configuration) para modificar as configurações de acordo com suas necessidades.
 
-## Etapa 4: (opcional) publicar seu destino {#publish-destination}
-
->[!NOTE]
->
->Esta etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para que outros clientes usem.
-
-Após configurar seu destino, use o [API de publicação de destino](../../destination-publish-api.md) para enviar sua configuração ao Adobe para revisão.
-
-## Etapa 5: (opcional) documentar seu destino {#document-destination}
+## Etapa 4: (Opcional) Publicar o destino {#publish-destination}
 
 >[!NOTE]
 >
->Esta etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para que outros clientes usem.
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
 
-Se você for um ISV (Independent Software Vendor, Fornecedor independente de software) ou um SI (System Integrator, integrador de sistemas), crie um [integração produtiva](../../overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](../../docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino na [catálogo de destinos Experience Platform](../../../catalog/overview.md).
+Após configurar seu destino, use a variável [API de publicação de destino](../../publishing-api/create-publishing-request.md) para enviar sua configuração ao Adobe para revisão.
+
+## Etapa 5: (Opcional) Documente seu destino {#document-destination}
+
+>[!NOTE]
+>
+>Essa etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para outros clientes usarem.
+
+Se você for um Fornecedor Independente de Software (ISV) ou um Integrador de Sistema (SI) criando um [integração produzida](../../overview.md#productized-custom-integrations), use o [processo de documentação de autoatendimento](../../docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para seu destino no [Catálogo de destinos Experience Platform](../../../catalog/overview.md).
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este artigo, agora você sabe como criar um [!DNL Azure Blob Storage] destino usando Destination SDK. Em seguida, sua equipe pode usar o [fluxo de trabalho de ativação para destinos baseados em arquivo](../../../ui/activate-batch-profile-destinations.md) para exportar dados para o destino.
+Ao ler este artigo, agora você sabe criar um [!DNL Azure Blob Storage] ao usar Destination SDK. Em seguida, sua equipe pode usar o [fluxo de trabalho de ativação para destinos com base em arquivo](../../../ui/activate-batch-profile-destinations.md) para exportar dados para o destino.

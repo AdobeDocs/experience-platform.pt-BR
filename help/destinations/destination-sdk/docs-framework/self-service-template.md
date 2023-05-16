@@ -2,7 +2,7 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do seu destino
 description: Use este modelo para criar documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substitua pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* Preencha todas as seções neste template, na ordem em que são descritas no template.
->* Este modelo é atualizado com pouca frequência, com base no feedback do parceiro. Antes de começar a criar a documentação para o seu destino, baixe o [versão mais recente do modelo](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Este modelo é atualizado com pouca frequência, com base no feedback do parceiro. Antes de começar a criar a documentação para o seu destino, baixe o [versão mais recente do modelo](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## Visão geral {#overview}
@@ -103,7 +103,7 @@ Para se conectar a esse destino, siga as etapas descritas na [tutorial de config
 
 Para autenticar para o destino, preencha os campos obrigatórios e selecione **[!UICONTROL Ligar ao destino]**.
 
-![Exemplo de captura de tela mostrando como autenticar no destino](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Exemplo de captura de tela mostrando como autenticar no destino](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Token de portador]**: Preencha o token portador para autenticar para o destino.
 
@@ -113,7 +113,7 @@ Para autenticar para o destino, preencha os campos obrigatórios e selecione **[
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Exemplo de captura de tela mostrando como preencher os detalhes do seu destino](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Exemplo de captura de tela mostrando como preencher os detalhes do seu destino](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.

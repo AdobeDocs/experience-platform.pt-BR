@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Glossário do Adobe Experience Platform
-description: Um glossário de terminologia importante na Experience Platform.
+description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt

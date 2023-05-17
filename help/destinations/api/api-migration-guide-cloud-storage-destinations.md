@@ -3,9 +3,10 @@ solution: Experience Platform
 title: Guia de migração de API para destinos de armazenamento em nuvem
 description: Saiba mais sobre as alterações no workflow para ativar destinos de armazenamento em nuvem como parte da migração para os novos cartões de destino de armazenamento em nuvem com funcionalidade adicional.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
+source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1444'
 ht-degree: 1%
 
 ---
@@ -82,7 +83,7 @@ As alterações retroativas incompatíveis para os usuários da API são uma atu
 
 | [!DNL Amazon S3] | Herdado | Novo |
 |---------|----------|---------|
-| Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | Especificação de conexão | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 Veja os exemplos completos de conexão herdada e nova base e de conexão de destino para [!DNL Amazon S3] nas guias abaixo. Os parâmetros necessários para criar conexões básicas para [!DNL Amazon S3] os destinos não são alterados.
@@ -254,7 +255,7 @@ As alterações retroativas incompatíveis para os usuários da API são uma atu
 
 | [!DNL Azure Blob] | Herdado | Novo |
 |---------|----------|---------|
-| Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Especificação de conexão | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 Veja os exemplos completos de conexão herdada e nova base e de conexão de destino para [!DNL Azure Blob] nas guias abaixo. Os parâmetros necessários para criar conexões básicas para destinos do Azure Blob não são alterados.
@@ -426,7 +427,7 @@ As alterações retroativas incompatíveis para os usuários da API são uma atu
 
 | SFTP | Herdado | Novo |
 |---------|----------|---------|
-| Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeb799 |
 | Especificação de conexão | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 Além da especificação de fluxo e conexão atualizada acima, há alterações nos parâmetros necessários ao criar conexões base SFTP.

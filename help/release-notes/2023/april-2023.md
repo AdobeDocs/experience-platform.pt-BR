@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform, abril de 2023
 description: As notas de versão de abril de 2023 para o Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2084'
 ht-degree: 4%
 
 ---
@@ -190,7 +190,7 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte a API para filtrar dados em nível de linha para Microsoft Dynamics, Salesforce CRM e Salesforce Marketing Cloud | Use operadores lógicos e de comparação para filtrar dados no nível da linha para as fontes de Marketing Cloud do Microsoft Dynamics, Salesforce CRM e Salesforce. Leia o guia em [filtragem de dados de uma fonte usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
+| Suporte a API para filtrar dados no nível da linha para a fonte do Salesforce CRM. | Use operadores lógicos e de comparação para filtrar dados no nível da linha para a origem do CRM do Salesforce. Leia o guia em [filtragem de dados de uma fonte usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
 | Disponibilidade beta do Shopify Streaming | O [Comprar fonte de transmissão](../../sources/connectors/ecommerce/shopify-streaming.md) O agora está disponível em beta. Use a fonte de transmissão Shopify para transmitir dados da sua conta de parceiros Shopify para o Experience Platform. |
 | Disponibilidade geral da integração do OneTrust | O [Origem de Integração do OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) agora está pronta. Use a fonte de integração do OneTrust para trazer os dados de consentimento e preferências da sua conta de Integração do OneTrust para o Experience Platform. |
 | Disponibilidade geral da Oracle Service Cloud | O [Origem da nuvem do Oracle Service](../../sources/connectors/customer-success/oracle-service-cloud.md) agora está pronta. Use a fonte da nuvem do Oracle Service para trazer seus dados da nuvem do Oracle Service para o Experience Platform. |

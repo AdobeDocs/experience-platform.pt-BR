@@ -1,16 +1,16 @@
 ---
 keywords: email;Email;e-mail;destinos de e-mail;oracle eloqua;oracle;email;Email;e-mail;email destinations;eloqua;
-title: Oracle Conexão Eloqua
+title: (Arquivos) Conexão Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pelo Oracle, que tem como objetivo ajudar profissionais e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: e986fd9479ca2258fc9aab752e2d0376c608554b
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 1%
 
 ---
 
-# [!DNL Oracle Eloqua] conexão
+# [!DNL (Files) Oracle Eloqua] conexão
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pela [!DNL Oracle] que tem como objetivo ajudar profissionais de marketing e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 

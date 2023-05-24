@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da API do Serviço de política
 description: A API de serviço de política permite que os desenvolvedores gerenciem rótulos e políticas de uso de dados no Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Para exibir todos os endpoints e operações CRUD disponíveis, visite o [[!DNL 
 
 ## Rótulos
 
-Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles são assimilados na [!DNL Experience Platform]ou assim que os dados estiverem disponíveis para uso no [!DNL Platform]. É possível criar, exibir, editar e excluir rótulos usando a `/labels` terminal. Para saber como usar este endpoint, visite o [guia de endpoint de rótulos](./labels.md).
+Aplicar rótulos de uso de dados a esquemas para categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles são assimilados na [!DNL Experience Platform]ou assim que os dados estiverem disponíveis para uso no [!DNL Platform]. É possível criar, exibir, editar e excluir rótulos usando a `/labels` terminal. Para saber como usar este endpoint, visite o [guia de endpoint de rótulos](./labels.md).
 
 ## Ações de marketing
 
@@ -44,7 +44,7 @@ Para saber como gerenciar políticas na API, consulte a [manual de endpoint de p
 
 ## Avaliação
 
-Depois que os rótulos de uso de dados forem aplicados a [!DNL Platform] Os recursos de Governança de dados permitem aplicar essas políticas e impedir operações de dados que constituem violações de política.
+Depois que os rótulos de uso de dados tiverem sido aplicados aos esquemas da plataforma e as políticas de uso de dados tiverem sido definidas para ações de marketing com relação a esses rótulos, os recursos de Governança de dados permitirão aplicar essas políticas e impedir operações de dados que constituem violações de política.
 
 A variável [!DNL Policy Service] A API fornece endpoints que permitem testar ações de marketing em relação a conjuntos de dados ou combinações arbitrárias de rótulos de uso de dados para verificar se ocorrem violações de política. Com base na resposta da API, é possível configurar protocolos no aplicativo de experiência para aplicar adequadamente a conformidade com a política de uso de dados. Consulte a [guia de endpoints de avaliação](./evaluation.md) para obter mais informações.
 

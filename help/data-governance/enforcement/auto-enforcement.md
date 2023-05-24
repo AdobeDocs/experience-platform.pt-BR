@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicação automática de política
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica 
 
 A linhagem de dados desempenha um papel fundamental na forma como as políticas são aplicadas na plataforma. Em termos gerais, a linhagem de dados se refere à origem de um conjunto de dados e ao que acontece com ela (ou onde ela se move) ao longo do tempo.
 
-No contexto da Governança de dados, a linhagem permite que os rótulos de uso de dados se propaguem de conjuntos de dados para serviços downstream que consomem seus dados, como o Perfil do cliente em tempo real e os destinos. Isso permite que as políticas sejam avaliadas e aplicadas em vários pontos-chave da jornada de dados por meio da Plataforma, e fornece contexto aos consumidores de dados sobre por que ocorreu uma violação de política.
+No contexto da Governança de dados, a linhagem permite que os rótulos de uso de dados se propaguem de esquemas para serviços downstream que consomem seus dados, como Perfil do cliente em tempo real e Destinos. Isso permite que as políticas sejam avaliadas e aplicadas em vários pontos-chave da jornada de dados por meio da Plataforma, e fornece contexto aos consumidores de dados sobre por que ocorreu uma violação de política.
 
 No Experience Platform, a aplicação de políticas está preocupada com a seguinte linhagem:
 
@@ -69,7 +69,7 @@ Cada etapa da linha do tempo acima representa uma entidade que pode contribuir p
 
 | Estágio de linhagem de dados | Função na aplicação da política |
 | --- | --- |
-| Conjunto de dados | Os conjuntos de dados contêm rótulos de uso de dados (aplicados no nível do conjunto de dados ou do campo) que definem para quais casos de uso o conjunto de dados inteiro ou campos específicos podem ser usados. Violações de política ocorrerão se um conjunto de dados ou campo contendo determinados rótulos for usado para uma finalidade restrita por uma política.<br><br>Todos os atributos de consentimento coletados dos clientes também são armazenados em conjuntos de dados. Se você tiver acesso às políticas de consentimento, todos os perfis que não atenderem aos requisitos de atributo de consentimento de suas políticas serão excluídos dos segmentos ativados para um destino. |
+| Conjunto de dados | Os conjuntos de dados contêm rótulos de uso de dados (aplicados no nível de campo do esquema ou no nível de conjunto de dados inteiro) que definem para quais casos de uso o conjunto de dados inteiro ou campos específicos podem ser usados. Violações de política ocorrerão se um conjunto de dados ou campo contendo determinados rótulos for usado para uma finalidade restrita por uma política.<br><br>Todos os atributos de consentimento coletados dos clientes também são armazenados em conjuntos de dados. Se você tiver acesso às políticas de consentimento, todos os perfis que não atenderem aos requisitos de atributo de consentimento de suas políticas serão excluídos dos segmentos ativados para um destino. |
 | Política de mesclagem | As políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados ao mesclar fragmentos de vários conjuntos de dados. Violações de política ocorrerão se suas políticas de mesclagem forem configuradas para que os conjuntos de dados com rótulos restritos sejam ativados para um destino. Consulte a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md) para obter mais informações. |
 | Segmento | As regras de segmento definem quais atributos devem ser incluídos nos perfis do cliente. Dependendo dos campos incluídos por uma definição de segmento, o segmento herdará os rótulos de uso aplicados para esses campos. As violações de política ocorrerão se você ativar um segmento cujos rótulos herdados são restritos pelas políticas aplicáveis do destino, com base no caso de uso de marketing. |
 | Destino | Ao configurar um destino, uma ação de marketing (às vezes chamada de caso de uso de marketing) pode ser definida. Esse caso de uso correlaciona-se a uma ação de marketing conforme definido em uma política. Em outras palavras, a ação de marketing que você define para um destino determina quais políticas de uso de dados e de consentimento são aplicáveis a esse destino.<br><br>As violações de política de uso de dados ocorrem se você ativar um segmento cujos rótulos de uso são restritos para a ação de marketing do destino.<br><br>(Beta) Quando um segmento é ativado, todos os perfis que não contêm os atributos de consentimento necessários para a ação de marketing (conforme definido por suas políticas de consentimento) são excluídos do público-alvo ativado. |

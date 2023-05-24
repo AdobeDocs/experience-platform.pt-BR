@@ -2,9 +2,9 @@
 title: Guia completo de governança de dados
 description: Siga o processo completo para impor restrições de uso de dados para campos e conjuntos de dados na Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Para controlar quais ações de marketing podem ser executadas em determinados conjuntos de dados e campos no Adobe Experience Platform, você deve configurar o seguinte:
 
-1. [Aplicar rótulos](#labels) aos conjuntos de dados e campos cujo uso você deseja restringir.
+1. [Aplicar rótulos](#labels) aos campos de esquemas ou conjuntos de dados inteiros, cujo uso você deseja restringir.
 1. [Configurar e ativar políticas de governança de dados](#policy) que determinam quais tipos de dados rotulados podem ser usados para determinadas ações de marketing.
 1. [Aplicar ações de marketing aos seus destinos](#destinations) para indicar quais políticas se aplicam aos dados enviados para esses destinos.
 
@@ -32,6 +32,12 @@ Este guia aborda todo o processo de configuração e aplicação de uma polític
 
 ## Aplicar rótulos {#labels}
 
+>[!IMPORTANT]
+>
+>Os rótulos não podem mais ser aplicados a campos individuais no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. No entanto, ainda é possível rotular um conjunto de dados inteiro. Quaisquer rótulos aplicados anteriormente a campos de conjuntos de dados individuais ainda serão compatíveis por meio da interface do usuário da plataforma até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migração de rótulos aplicados anteriormente](#migrate-labels) para obter instruções sobre como fazer isso.
+
+Você pode [aplicar rótulos a um esquema](#schema-labels) para que todos os conjuntos de dados baseados nesse esquema herdem os mesmos rótulos. Isso permite gerenciar os rótulos para governança de dados, consentimento e controle de acesso em um único local. Ao impor restrições de uso de dados no nível do esquema, o efeito se propaga downstream para todos os conjuntos de dados baseados nesse esquema. Os rótulos aplicados no nível do campo de esquema são compatíveis com casos de uso de Governança de dados e podem ser detectados no espaço de trabalho Conjuntos de dados [!UICONTROL Governança de dados] na guia [!UICONTROL Nome do campo] como rótulos somente leitura.
+
 Se houver um conjunto de dados específico no qual você deseja aplicar restrições de uso de dados, é possível [aplicar rótulos diretamente a esse conjunto de dados](#dataset-labels) ou campos específicos nesse conjunto de dados.
 
 Como alternativa, você pode [aplicar rótulos a um esquema](#schema-labels) para que todos os conjuntos de dados baseados nesse esquema herdem os mesmos rótulos.
@@ -40,27 +46,19 @@ Como alternativa, você pode [aplicar rótulos a um esquema](#schema-labels) par
 >
 >Para obter mais informações sobre os diferentes rótulos de uso de dados e seu uso pretendido, consulte a [referência de rótulos de uso de dados](./labels/reference.md). Se as etiquetas principais disponíveis não cobrirem todos os casos de uso desejados, você pode [definir seus próprios rótulos personalizados](./labels/user-guide.md#manage-custom-labels) também.
 
-### Aplicar rótulos a um conjunto de dados {#dataset-labels}
+### Aplicar rótulos a um conjunto de dados inteiro {#dataset-labels}
 
 Selecionar **[!UICONTROL Conjuntos de dados]** na navegação à esquerda, selecione o nome do conjunto de dados ao qual deseja aplicar rótulos. Opcionalmente, é possível usar o campo de pesquisa para restringir a lista de conjuntos de dados exibidos.
 
-![Imagem mostrando um conjunto de dados que está sendo selecionado na interface do usuário da plataforma](./images/e2e/select-dataset.png)
+![A guia Procurar do espaço de trabalho Conjuntos de dados com os Conjuntos de dados e uma linha de conjunto de dados realçada.](./images/e2e/select-dataset.png)
 
-A visualização de detalhes do conjunto de dados é exibida. Selecione o **[!UICONTROL Governança de dados]** para exibir uma lista dos campos do conjunto de dados e quaisquer rótulos que já foram aplicados a eles. Marque as caixas de seleção ao lado dos campos aos quais você deseja adicionar rótulos e selecione **[!UICONTROL Editar rótulos de governança]** no painel direito.
+A visualização de detalhes do conjunto de dados é exibida. Selecione o **[!UICONTROL Governança de dados]** para exibir uma lista dos campos do conjunto de dados e quaisquer rótulos que já foram aplicados a eles. Selecione o ícone de lápis para editar os rótulos dos conjuntos de dados.
 
-![Imagem mostrando vários campos do conjunto de dados selecionados para rotulagem](./images/e2e/dataset-field-label.png)
+![A guia Governança de dados do conjunto de dados Membros de Fidelidade com o ícone de lápis destacado.](./images/e2e/edit-dataset-labels.png)
 
->[!NOTE]
->
->Se quiser adicionar rótulos a todo o conjunto de dados, marque a caixa de seleção ao lado de **[!UICONTROL Nome do campo]** para realçar todos os campos antes de selecionar **[!UICONTROL Editar rótulos de governança]**.
->
->![Imagem mostrando todos os campos destacados para um conjunto de dados](./images/e2e/label-whole-dataset.png)
+A variável [!UICONTROL Editar rótulos de governança] será exibida. Selecione o rótulo de governança apropriado e selecione **[!UICONTROL Salvar]**.
 
-Na próxima caixa de diálogo, selecione os rótulos que deseja aplicar aos campos do conjunto de dados escolhidos anteriormente. Quando terminar, selecione **[!UICONTROL Salvar alterações]**.
-
-![Imagem mostrando todos os campos destacados para um conjunto de dados](./images/e2e/save-dataset-labels.png)
-
-Continue seguindo as etapas acima para aplicar rótulos a campos diferentes (ou conjuntos de dados diferentes), conforme necessário. Quando terminar, você poderá continuar com a próxima etapa do [ativação de políticas de governança de dados](#policy).
+![A caixa de diálogo Editar rótulos de governança com a caixa de seleção de rótulo e Salvar realçado.](./images/e2e/edit-dataset-governance-labels.png)
 
 ### Aplicar rótulos a um esquema {#schema-labels}
 
@@ -72,9 +70,9 @@ Selecionar **[!UICONTROL Esquemas]** na navegação à esquerda, selecione o sch
 >
 >![Imagem mostrando um link para o esquema de um conjunto de dados](./images/e2e/schema-from-dataset.png)
 
-A estrutura do schema aparece no Editor de esquemas. Aqui, selecione a variável **[!UICONTROL Rótulos]** para mostrar uma visualização de lista dos campos do esquema e dos rótulos que já foram aplicados a eles. Marque as caixas de seleção ao lado dos campos aos quais você deseja adicionar rótulos e selecione **[!UICONTROL Editar rótulos de governança]** no painel direito.
+A estrutura do schema aparece no Editor de esquemas. Aqui, selecione a variável **[!UICONTROL Rótulos]** para mostrar uma visualização de lista dos campos do esquema e dos rótulos que já foram aplicados a eles. Marque as caixas de seleção ao lado dos campos aos quais você deseja adicionar rótulos e selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]** no painel direito.
 
-![Imagem mostrando um único campo de esquema sendo selecionado para rótulos de governança](./images/e2e/schema-field-label.png)
+![A guia Rótulos do espaço de trabalho Esquema com um único campo de esquema selecionado e rótulos Aplicar acesso e governança de dados destacados.](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -82,11 +80,30 @@ A estrutura do schema aparece no Editor de esquemas. Aqui, selecione a variável
 >
 >![Imagem mostrando o ícone de lápis que está sendo selecionado na visualização de rótulos de esquema](./images/e2e/label-whole-schema.png)
 
-Na próxima caixa de diálogo, selecione os rótulos que deseja aplicar aos campos de esquema escolhidos anteriormente. Quando terminar, selecione **[!UICONTROL Salvar]**.
+A variável [!UICONTROL Aplicar rótulos de acesso e governança de dados] será exibida. Selecione os rótulos que deseja aplicar ao campo de esquema escolhido. Quando terminar, selecione **[!UICONTROL Salvar]**.
 
-![Imagem mostrando vários rótulos sendo adicionados a um campo de esquema](./images/e2e/save-schema-labels.png)
+![A caixa de diálogo Aplicar rótulos de acesso e governança de dados mostrando vários rótulos sendo adicionados a um campo de esquema.](./images/e2e/save-schema-labels.png)
 
 Continue seguindo as etapas acima para aplicar rótulos a campos diferentes (ou esquemas diferentes), conforme necessário. Quando terminar, você poderá continuar com a próxima etapa do [ativação de políticas de governança de dados](#policy).
+
+### Migrar rótulos aplicados anteriormente no nível do conjunto de dados {#migrate-labels}
+
+Selecionar **[!UICONTROL Conjunto de dados]** na navegação à esquerda, selecione o nome do conjunto de dados do qual deseja migrar rótulos. Opcionalmente, é possível usar o campo de pesquisa para restringir a lista de conjuntos de dados exibidos.
+
+![A guia Procurar do espaço de trabalho Conjuntos de dados com o Conjunto de dados Membros de fidelidade realçado.](./images/e2e/select-dataset.png)
+
+A visualização de detalhes do conjunto de dados é exibida. Selecione o **[!UICONTROL Governança de dados]** para exibir uma lista dos campos do conjunto de dados e quaisquer rótulos que já foram aplicados a eles. Selecione o ícone de cancelamento ao lado de qualquer rótulo que você deseja remover de um campo. Uma caixa de diálogo de confirmação é exibida, selecione [!UICONTROL Remover rótulo] para confirmar suas escolhas.
+
+![A guia Governança de dados do espaço de trabalho Conjuntos de dados com um rótulo para um campo destacado para remoção.](./images/e2e/remove-label.png)
+
+Depois de remover o rótulo do campo do conjunto de dados, navegue até o Editor de esquemas para adicionar o rótulo ao esquema. As instruções sobre como fazer isso podem ser encontradas no [seção sobre aplicação de rótulos a um schema](#schema-labels).
+
+>[!TIP]
+>
+>Você pode selecionar o nome do esquema no painel direito, seguido pelo link na caixa de diálogo exibida para navegar até o esquema apropriado.
+>![A guia Governança de dados do espaço de trabalho Conjuntos de dados com o nome do esquema na barra lateral e no link de diálogo destacados.](./images/e2e/navigate-to-schema.png)
+
+Depois de migrar os rótulos necessários, certifique-se de ter os rótulos [políticas de governança de dados ativadas](#policy).
 
 ## Habilitar políticas de governança de dados {#policy}
 

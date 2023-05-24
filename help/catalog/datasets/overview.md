@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conjuntos de dados
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '843'
 ht-degree: 9%
 
 ---
@@ -37,15 +37,13 @@ A assimilação de dados do Adobe Experience Platform representa os vários mét
 
 Consulte a [Visão geral da assimilação de dados](../../ingestion/home.md) para obter mais informações.
 
-## Aplicação de rótulos de uso a conjuntos de dados
+## Rótulos aplicados a conjuntos de dados de esquemas
 
-O Adobe Experience Platform Data Governance permite gerenciar dados de clientes para garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. A estrutura de governança de dados permite aplicar rótulos de uso para categorizar os dados de acordo com as políticas de uso que se aplicam a esses dados.
+O Adobe Experience Platform Data Governance permite gerenciar dados de clientes para garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. A estrutura de governança de dados permite aplicar rótulos de uso para categorizar os dados de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a esquemas individuais, campos nesses esquemas e conjuntos de dados individuais inteiros. Quando os rótulos são aplicados diretamente a um esquema, eles são propagados para todos os conjuntos de dados existentes e futuros baseados nesse esquema.
 
 >[!IMPORTANT]
 >
->A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se estiver tentando criar políticas de acesso para os dados, você deverá [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
-
-Os rótulos de uso de dados podem ser aplicados a conjuntos de dados inteiros ou campos de conjuntos de dados individuais. Os rótulos adicionados no nível do conjunto de dados são herdados por todos os campos nesse conjunto de dados.
+>Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário da plataforma até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migração de rótulos aplicados anteriormente](../../data-governance/e2e.md#migrate-labels) para obter instruções sobre como fazer isso.
 
 Consulte a [Visão geral da governança de dados](../../data-governance/home.md) para obter mais informações sobre o serviço. Para obter etapas sobre como trabalhar com rótulos de uso no [!DNL Platform], consulte os seguintes guias:
 

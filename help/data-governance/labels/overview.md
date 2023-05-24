@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 description: Saiba como os rótulos de uso de dados são usados para ajudar a impor a conformidade da governança de dados no Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 15%
+source-wordcount: '802'
+ht-degree: 14%
 
 ---
 
@@ -57,21 +57,17 @@ Para obter uma referência sobre como os Controles de exportação de dados espe
 
 ### Uso da interface
 
-A variável **[!UICONTROL Políticas]** espaço de trabalho no [!DNL Experience Platform] A interface do usuário permite visualizar e gerenciar rótulos principais e personalizados para sua organização. Você pode usar o **[!UICONTROL Esquemas]** espaço de trabalho [aplicar rótulos aos esquemas do Experience Data Model (XDM)](../../xdm/tutorials/labels.md)ou você pode usar o **[!DNL Datasets]** espaço de trabalho [aplicar rótulos a conjuntos de dados](./user-guide.md) em vez disso.
+A variável **[!UICONTROL Políticas]** espaço de trabalho no [!DNL Experience Platform] A interface do usuário permite visualizar e gerenciar rótulos principais e personalizados para sua organização. Você pode usar o **[!UICONTROL Esquemas]** espaço de trabalho [aplicar rótulos aos esquemas do Experience Data Model (XDM)](../../xdm/tutorials/labels.md)ou saiba como [criar e gerenciar rótulos personalizados no **[!UICONTROL Políticas] IU](./user-guide.md) lendo o guia do usuário rótulos de uso de dados.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se você estiver tentando criar políticas de acesso para os dados, será necessário aplicar rótulos ao esquema no qual o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
+>Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário da plataforma até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migração de rótulos aplicados anteriormente](../e2e.md#migrate-labels) para obter instruções sobre como fazer isso.
 
 ### Uso de APIs
 
 A variável `/labels` endpoint na variável [API de serviço de política](https://www.adobe.io/experience-platform-apis/references/policy-service/) O permite gerenciar de forma programática os rótulos de uso de dados, incluindo a criação de rótulos personalizados. Consulte a [guia de endpoint de rótulos](../api/labels.md) para obter mais informações.
 
 A variável [API do serviço de conjunto de dados](https://www.adobe.io/experience-platform-apis/references/dataset-service/) é usado para gerenciar rótulos para conjuntos de dados e campos. Consulte o guia sobre [gerenciamento de rótulos de conjunto de dados](./dataset-api.md) para obter mais informações.
-
->[!NOTE]
->
->A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se estiver tentando criar políticas de acesso para os dados, você deverá [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
 
 ## Próximas etapas
 

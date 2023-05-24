@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da governança de dados
 description: O Adobe Experience Platform Data Governance permite gerenciar dados de clientes e garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ela desempenha uma função essencial na Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1495'
 ht-degree: 5%
 
 ---
@@ -57,7 +57,7 @@ Há três elementos-chave na estrutura de governança de dados: rótulos, polít
 
 ## Rótulos de uso de dados
 
-A Governança de dados permite que os administradores de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para categorizar os dados de acordo com o tipo de políticas aplicáveis.
+A Governança de dados permite que os administradores de dados apliquem rótulos de uso no nível de campo do esquema e no nível de conjunto de dados para categorizar os dados de acordo com o tipo de políticas aplicáveis.
 
 A estrutura de Governança de dados inclui rótulos de uso de dados predefinidos que podem ser usados para categorizar dados de três maneiras:
 
@@ -75,11 +75,11 @@ Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade
 
 Consulte a visão geral em [rótulos de uso de dados](./labels/overview.md) para obter mais informações.
 
-## Políticas de uso de dados
+## Políticas de uso de dados {#data-usage-policies}
 
 Para que os rótulos de uso de dados estejam de acordo com a conformidade de dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro da [!DNL Experience Platform].
 
-Um exemplo de ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor informando que as Informações de identificação pessoal (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) foi aplicado ao conjunto de dados, [!DNL Policy Service] impede qualquer ação que exporte esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas ocorrer, o Serviço de política envia uma mensagem informando que uma política de uso de dados foi violada.
+Um exemplo de ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor declarando que as Informações de identificação pessoal (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) foi aplicado ao conjunto de dados, [!DNL Policy Service] impede qualquer ação que exporte esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas ocorrer, o Serviço de política envia uma mensagem informando que uma política de uso de dados foi violada.
 
 Há dois tipos de políticas disponíveis:
 
@@ -100,7 +100,7 @@ Este documento forneceu uma introdução de alto nível à Governança de dados 
 
 A seção a seguir fornece informações adicionais sobre a governança de dados.
 
-### Terminologia de governança de dados
+### Terminologia de governança de dados {#data-governance-terminology}
 
 A tabela a seguir descreve os termos principais relacionados à Governança de dados e à Estrutura de governança de dados.
 
@@ -111,13 +111,14 @@ A tabela a seguir descreve os termos principais relacionados à Governança de d
 | **Governança de dados** | A governança de dados abrange as estratégias e tecnologias usadas para garantir que os dados estejam em conformidade com as regulamentações e as políticas corporativas em relação ao uso de dados. |
 | **Administrador de dados** | O administrador de dados é a pessoa responsável pelo gerenciamento, supervisão e aplicação dos ativos de dados de uma organização. Um administrador de dados também garante que as políticas de governança de dados sejam protegidas e mantidas para estar em conformidade com as regulamentações governamentais e as políticas da organização. |
 | **Rótulos de uso de dados** | Os rótulos de uso de dados oferecem aos usuários a capacidade de categorizar dados que refletem considerações relacionadas à privacidade e às condições contratuais para estar em conformidade com os regulamentos e as políticas corporativas. |
-| **Rótulos do conjunto de dados** | Rótulos podem ser adicionados a um conjunto de dados. Todos os campos em um conjunto de dados herdam os rótulos desse conjunto. |
-| **Rótulos de campo** | Os rótulos de campo são rótulos de governança de dados herdados de um conjunto de dados ou aplicados diretamente a um campo.  Os rótulos de governança de dados aplicados a um campo não são herdados até um conjunto de dados. |
+| **Rótulos do conjunto de dados** | Rótulos podem ser adicionados a um esquema. Todos os campos em um conjunto de dados herdam os rótulos do esquema. |
+| **Rótulos de campo** | Os rótulos de campo são rótulos de governança de dados herdados de um esquema ou aplicados diretamente a um campo. Os rótulos de governança de dados aplicados a um campo não são herdados até o nível do esquema. |
 | **Geofence** | Uma geofence é um limite geográfico virtual, definido pela tecnologia GPS ou RFID, que permite ao software acionar uma resposta quando um dispositivo móvel entra ou sai de uma área específica. |
 | **Rótulos de identidade** | Os rótulos de identidade (I) são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica. |
 | **Segmentação baseada em interesses** | O direcionamento baseado em interesses, também conhecido como personalização, ocorre se as três condições a seguir forem atendidas: os dados coletados no site são, usados para fazer deduções sobre o interesse de um usuário, são usados em outro contexto, como em outro site ou aplicativo (fora do site) e são usados para selecionar qual conteúdo ou anúncios são veiculados com base nessas deduções. |
 | **Ação de marketing** | Uma ação de marketing, no contexto do framework de governança de dados, é uma ação que [!DNL Experience Platform] o consumidor de dados utiliza, para o qual há necessidade de verificar violações das políticas de uso de dados |
 | **Política** | No framework de governança de dados, uma política é uma regra que descreve que tipo de ações de marketing são permitidas ou não serem tomadas em dados específicos. |
+| **Rótulos de esquema** | Gerencie os rótulos para governança de dados, consentimento e controle de acesso no nível do esquema. Isso propaga os rótulos para cada conjunto de dados que usa esse esquema. |
 | **Rótulos sensíveis** | Os rótulos de sensibilidade (S) são usados para categorizar dados que você e sua organização consideram sensíveis. |
 
 ## Recursos adicionais
@@ -126,6 +127,8 @@ O vídeo a seguir é destinado a apoiar a sua compreensão da estrutura de gover
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-O vídeo a seguir fornece uma introdução a vários recursos de Governança de dados no Experience Platform.
+<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
 
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
+The following video provides an introduction to various Data Governance features in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->

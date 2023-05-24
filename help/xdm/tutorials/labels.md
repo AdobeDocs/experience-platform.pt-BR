@@ -2,10 +2,10 @@
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 6%
+source-wordcount: '795'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ Todos os dados trazidos para a Adobe Experience Platform são restritos pelos es
 
 Um rótulo aplicado a um campo de esquema indica as políticas de uso que se aplicam aos dados contidos nesse campo específico.
 
-Embora os rótulos possam ser aplicados a conjuntos de dados individuais (e campos nesses conjuntos de dados), você também pode aplicar rótulos no nível do esquema. Quando os rótulos são aplicados diretamente a um esquema, eles são propagados para todos os conjuntos de dados existentes e futuros baseados nesse esquema.
+Os rótulos podem ser aplicados a esquemas individuais e campos dentro desses esquemas. Quando os rótulos são aplicados diretamente a um esquema, eles são propagados para todos os conjuntos de dados existentes e futuros baseados nesse esquema.
 
 Além disso, qualquer rótulo de campo adicionado em um esquema se propaga para todos os outros esquemas que empregam o mesmo campo de uma classe compartilhada ou grupo de campos. Isso ajuda a garantir que as regras de uso para campos semelhantes sejam consistentes em todo o modelo de dados.
 
@@ -46,11 +46,11 @@ Para editar os rótulos de um campo individual, você pode selecionar o campo na
 
 ![Selecione um campo na tela Editor de esquemas](../images/tutorials/labels/manage-access.png)
 
-Você também pode selecionar a variável **[!UICONTROL Rótulos]** escolha o campo desejado na lista e selecione **[!UICONTROL Editar rótulos de governança]** no painel direito.
+Você também pode selecionar a variável **[!UICONTROL Rótulos]** escolha o campo desejado na lista e selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]** no painel direito.
 
 ![Selecione um campo na [!UICONTROL Rótulos] guia](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Para editar os rótulos para todo o esquema, selecione o ícone de lápis (![](../images/tutorials/labels/pencil-icon.png)) ao lado do nome do esquema sob o **[!UICONTROL Rótulos]** guia.
+Para editar os rótulos para todo o esquema, na variável **[!UICONTROL Rótulos]** selecione a caixa de seleção no ícone filtro. Isso seleciona todos os campos disponíveis no esquema. Em seguida, selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]** no painel direito.
 
 ![Selecione o nome do esquema na caixa [!UICONTROL Rótulos] guia](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -60,11 +60,11 @@ Para editar os rótulos para todo o esquema, selecione o ícone de lápis (![](.
 >
 >![Isenção de responsabilidade sobre o uso de rótulo](../images/tutorials/labels/disclaimer.png)
 
-## Editar os rótulos do esquema ou campo
+## Editar os rótulos do esquema ou campo {#edit-labels}
 
 Uma caixa de diálogo é exibida, permitindo editar os rótulos do campo selecionado. Se você selecionou um campo de tipo de objeto individual, o painel direito listará os subcampos para os quais os rótulos aplicados serão propagados.
 
-![Campos selecionados exibidos](../images/tutorials/labels/edit-labels.png)
+![A caixa de diálogo Aplicar rótulos de acesso e governança de dados com os campos selecionados destacados.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -72,19 +72,19 @@ Uma caixa de diálogo é exibida, permitindo editar os rótulos do campo selecio
 
 Use a lista exibida para selecionar os rótulos que deseja adicionar ao esquema ou campo. Como os rótulos são escolhidos, a variável **[!UICONTROL Rótulos aplicados]** A seção é atualizada para mostrar os rótulos que foram selecionados até o momento.
 
-![Rótulos aplicados exibidos](../images/tutorials/labels/applied-labels.png)
+![A caixa de diálogo Aplicar rótulos de acesso e governança de dados com os rótulos aplicados destacados.](../images/tutorials/labels/applied-labels.png)
 
 Para filtrar os rótulos exibidos por tipo, selecione a categoria desejada no painel esquerdo. Para criar um novo rótulo personalizado, selecione **[!UICONTROL Criar rótulo]**.
 
-![Filtrar rótulos exibidos ou criar um novo rótulo](../images/tutorials/labels/filter-and-create-custom.png)
+![A caixa de diálogo Aplicar rótulos de acesso e governança de dados com um filtro de tipo de rótulo aplicado e Criar rótulo destacado.](../images/tutorials/labels/filter-and-create-custom.png)
 
 Quando estiver satisfeito com os rótulos escolhidos, selecione **[!UICONTROL Salvar]** para aplicá-los ao campo ou esquema.
 
-![Salvar os rótulos selecionados](../images/tutorials/labels/save-labels.png)
+![A caixa de diálogo Aplicar rótulos de acesso e governança de dados com Salvar foi realçada.](../images/tutorials/labels/save-labels.png)
 
 A variável **[!UICONTROL Rótulos]** reaparecerá, mostrando os rótulos aplicados para o esquema.
 
-![Rótulos de campo aplicados](../images/tutorials/labels/field-labels-added.png)
+![A guia Rótulos do espaço de trabalho de esquemas com os rótulos de campo aplicados destacados.](../images/tutorials/labels/field-labels-added.png)
 
 ## Próximas etapas
 

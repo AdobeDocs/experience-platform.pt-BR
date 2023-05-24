@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '273'
 ht-degree: 18%
 
 ---
@@ -89,6 +89,7 @@ ht-degree: 18%
    - [Carregamento incremental](essential-concepts/incremental-load.md)
    - [Desduplicação de dados](essential-concepts/deduplication.md)
    - [Amostras de conjunto de dados](essential-concepts/dataset-samples.md)
+   - [Cálculo das estatísticas do conjunto de dados](essential-concepts/dataset-statistics.md)
 - Referência SQL {#sql}
    - [Visão geral de SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)

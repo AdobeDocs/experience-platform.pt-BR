@@ -2,7 +2,7 @@
 title: Amostras de conjunto de dados
 description: Os conjuntos de dados de amostra do Serviço de consulta permitem realizar consultas exploratórias em grandes volumes de dados com tempo de processamento bastante reduzido, à custa da precisão da consulta. Este guia fornece informações sobre como gerenciar suas amostras para o processamento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
+source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 0%
@@ -63,9 +63,9 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 Exemplos práticos desse tipo de conjunto de dados de amostra filtrado são os seguintes:
 
 ```sql
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
 Nos exemplos fornecidos, o nome da tabela é `large_table`, a condição do filtro na tabela original é `month(to_timestamp(timestamp)) in ('8', '9')`, e a taxa de amostragem é (X% dos dados filtrados), neste caso, `10`.

@@ -6,7 +6,7 @@ exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 source-git-commit: 74e9774009d086a04351c8ff04cde29348c90c09
 workflow-type: tm+mt
 source-wordcount: '2134'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -449,7 +449,7 @@ O último passo para trazer dados de *SUA FONTE* para a Platform é criar um flu
 
 * [ID da conexão de origem](#source-connection)
 * [ID da conexão de destino](#target-connection)
-* [ID do mapeamento](#mapping)
+* [ID de mapeamento](#mapping)
 
 Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 

@@ -5,7 +5,7 @@ exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
 source-wordcount: '1362'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -46,7 +46,7 @@ Depois que as mensagens forem enviadas, eles desejam aprimorar o perfil do clien
 
 O resultado são campanhas entre canais mais consistentes em todo o ecossistema da Adobe Experience Cloud e um perfil do cliente avançado que está se adaptando e aprendendo rapidamente.
 
-[Saiba mais sobre a integração do Adobe Campaign com o Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+[Saiba mais sobre a integração do Adobe Campaign com o Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=pt-BR)
 
 ## Identidades suportadas {#supported-identities}
 

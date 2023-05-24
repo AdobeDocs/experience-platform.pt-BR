@@ -47,7 +47,7 @@ Um menu suspenso é exibido, fornecendo opções para editar a programação do 
 
 Selecionar **[!UICONTROL Excluir]** para excluir o fluxo de dados.
 
-![excluir](../../images/tutorials/delete/delete.png)
+![delete](../../images/tutorials/delete/delete.png)
 
 Uma caixa de diálogo de confirmação final é exibida. Selecionar **[!UICONTROL Excluir]** para concluir o processo.
 

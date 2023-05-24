@@ -16,19 +16,19 @@ ht-degree: 2%
 >
 >**Ponto de acesso da API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/testing/template/sample` endpoint da API, para gerar um [modelo de transformação de mensagem](../../functionality/destination-server/message-format.md#using-templating) para o seu destino. Para obter uma descrição da funcionalidade suportada por este ponto de extremidade, leia [criar modelo](create-template.md).
+Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/testing/template/sample` Endpoint da API, para gerar um [template de transformação de mensagem](../../functionality/destination-server/message-format.md#using-templating) para o seu destino. Para obter uma descrição da funcionalidade compatível com esse endpoint, leia [criar modelo](create-template.md).
 
-## Introdução às operações da API do modelo de amostra {#get-started}
+## Introdução às operações de amostra de API de modelo {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
+Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Obter modelo de amostra {#generate-sample-template}
 
-Você pode obter um modelo de amostra fazendo uma solicitação do GET para a variável `authoring/testing/template/sample/` endpoint e fornecer a ID de destino da configuração de destino com base na qual você está criando o modelo.
+Você pode obter um modelo de amostra fazendo uma solicitação GET para a `authoring/testing/template/sample/` e fornecer a ID de destino da configuração de destino com base na qual você está criando seu template.
 
 >[!TIP]
 >
->* A ID de destino que você deve usar aqui é a variável `instanceId` que corresponde a uma configuração de destino, criada usando o `/destinations` endpoint . Consulte a [recuperar uma configuração de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obter mais detalhes.
+>* A ID de destino que você deve usar aqui é a `instanceId` que corresponde a uma configuração de destino, criada usando o `/destinations` terminal. Consulte a [recuperar uma configuração de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obter mais detalhes.
 
 
 **Formato da API**
@@ -39,11 +39,11 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 
 | Parâmetro | Descrição |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | A ID da configuração de destino para a qual você está gerando um template de transformação de mensagem. |
+| `{DESTINATION_ID}` | A ID da configuração de destino para a qual você está gerando um modelo de transformação de mensagem. |
 
 **Solicitação**
 
-A solicitação a seguir gera um novo modelo de amostra, configurado pelos parâmetros fornecidos no payload.
+A solicitação a seguir gera um novo modelo de amostra, configurado pelos parâmetros fornecidos na carga.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/template/sample/5114d758-ce71-43ba-b53e-e2a91d67b67f' \
@@ -57,9 +57,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com um modelo de amostra que pode ser editado para corresponder ao formato de dados esperado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com um modelo de amostra que você pode editar para corresponder ao formato de dados esperado.
 
-Se a ID de destino fornecida corresponder a uma configuração de destino com [melhor agregação de esforço](../../functionality/destination-configuration/aggregation-policy.md) e `maxUsersPerRequest=1` na política de agregação, a solicitação retorna um template de amostra semelhante a este:
+Se a ID de destino fornecida corresponder a uma configuração de destino com [agregação de melhor esforço](../../functionality/destination-configuration/aggregation-policy.md) e `maxUsersPerRequest=1` na política de agregação, a solicitação retorna um template de amostra semelhante a este:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -92,7 +92,7 @@ Se a ID de destino fornecida corresponder a uma configuração de destino com [m
 }
 ```
 
-Se a ID de destino fornecida corresponder a um modelo de servidor de destino com [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) ou [melhor agregação de esforço](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) com `maxUsersPerRequest` maior que um, a solicitação retorna um template de amostra semelhante a este:
+Se a ID de destino fornecida corresponder a um modelo de servidor de destino com [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) ou [agregação de melhor esforço](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) com `maxUsersPerRequest` maior que um, a solicitação retorna um modelo de amostra semelhante a este:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -131,10 +131,10 @@ Se a ID de destino fornecida corresponder a um modelo de servidor de destino com
 }
 ```
 
-## Tratamento de erros da API {#api-error-handling}
+## Manipulação de erros de API {#api-error-handling}
 
-Os pontos de extremidade da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, você agora sabe gerar um template de transformação de mensagem usando o `/authoring/testing/template/sample` Ponto de extremidade da API. Em seguida, você pode usar o [Ponto de extremidade da API do modelo de renderização](render-template-api.md) para gerar perfis exportados com base no modelo e compará-los com o formato de dados esperado do destino.
+Depois de ler este documento, agora você sabe como gerar um modelo de transformação de mensagem usando o `/authoring/testing/template/sample` Endpoint da API. Em seguida, você pode usar o [Renderizar ponto de extremidade de API de modelo](render-template-api.md) para gerar perfis exportados com base no modelo e compará-los com o formato de dados esperado do destino.

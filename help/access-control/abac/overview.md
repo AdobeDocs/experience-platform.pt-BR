@@ -6,7 +6,7 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1826'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -29,12 +29,12 @@ O controle de acesso baseado em atributos envolve os seguintes componentes:
 | Terminologia | Definição |
 | --- | --- |
 | Atributos | Atributos são os identificadores que indicam a correlação entre um usuário e os recursos da Platform aos quais ele tem acesso. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário. |
-| Rótulos | Rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulação de dados assim que eles forem assimilados na Platform ou assim que os dados estiverem disponíveis para uso na Platform. |
+| Rótulos | Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulação de dados assim que eles forem assimilados na Platform ou assim que os dados estiverem disponíveis para uso na Platform. |
 | Permissões | As permissões incluem a capacidade de visualizar e/ou usar recursos da Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
 | Conjuntos de permissões | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
-| Políticas | As políticas são declarações que reúnem atributos para estabelecer ações permitidas e inadmissíveis. As políticas podem ser locais ou globais e podem substituir outras políticas. |
+| Políticas | Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. As políticas podem ser locais ou globais e podem substituir outras políticas. |
 | Recurso | Um recurso é o ativo ou objeto que um assunto pode ou não acessar. Os recursos podem ser segmentos ou campos de esquema. |
-| Funções | Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform e são blocos fundamentais das políticas de controle de acesso. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de visualização ou acesso de gravação de que precisam. |
+| Funções | Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform. São os pilares das políticas de controle de acesso. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário. |
 | Assunto | Um assunto é o usuário que solicita acesso a um recurso para executar uma ação. |
 | Grupos de usuários | Os grupos de usuários são vários usuários que foram agrupados e têm acesso para executar as mesmas funções. |
 

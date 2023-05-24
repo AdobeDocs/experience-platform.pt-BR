@@ -1,6 +1,6 @@
 ---
-title: Criar uma conexão de origem de fluxo e um fluxo de dados para dados de compra usando a API do serviço de fluxo
-description: Saiba como criar uma conexão de origem de fluxo e um fluxo de dados para dados do Shopify usando a API do Serviço de fluxo.
+title: Crie uma conexão de origem de transmissão e um fluxo de dados para dados do Shopify usando a API do serviço de fluxo
+description: Saiba como criar uma conexão de origem de transmissão e fluxo de dados para dados do Shopify usando a API do Serviço de fluxo.
 badge: Beta
 exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
 source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
@@ -10,32 +10,32 @@ ht-degree: 2%
 
 ---
 
-# Crie uma conexão de origem de fluxo e um fluxo de dados para [!DNL Shopify] dados usando a API do Serviço de Fluxo
+# Criar uma conexão de origem de transmissão e fluxo de dados para [!DNL Shopify] dados usando a API do Serviço de fluxo
 
 >[!NOTE]
 >
->O [!DNL Shopify] a fonte de transmissão está em beta. Leia o [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
+>A variável [!DNL Shopify] a fonte da transmissão está na versão beta. Leia as [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
-O tutorial a seguir fornece etapas sobre como criar uma conexão de origem de fluxo e um fluxo de dados para fluxo de dados do [[!DNL Shopify]](https://www.shopify.com/) para a Adobe Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+O tutorial a seguir fornece etapas sobre como criar uma conexão de origem de transmissão e fluxo de dados do qual transmitir dados [[!DNL Shopify]](https://www.shopify.com/) para o Adobe Experience Platform usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução {#getting-started}
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Fluxo [!DNL Shopify] dados para a plataforma usando a API do Serviço de fluxo
+## Fluxo [!DNL Shopify] dados para a Platform usando a API do Serviço de fluxo
 
-O seguinte descreve as etapas necessárias para criar uma conexão de origem e um fluxo de dados para transmitir [!DNL Shopify] para a plataforma.
+A seguir, são descritas as etapas que você precisa realizar para criar uma conexão de origem e um fluxo de dados para transmitir seus dados [!DNL Shopify] dados para a Platform.
 
 ### Criar uma conexão de origem {#source-connection}
 
-Crie uma conexão de origem fazendo uma solicitação de POST para a [!DNL Flow Service] API, enquanto fornece a ID de especificação de conexão de sua fonte, detalhes como nome e descrição e o formato de seus dados.
+Crie uma conexão de origem fazendo uma solicitação POST para o [!DNL Flow Service] Ao fornecer a ID de especificação de conexão da origem, os detalhes como nome e descrição e o formato dos dados.
 
 **Formato da API**
 
@@ -73,8 +73,8 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome da sua conexão de origem. Certifique-se de que o nome da conexão de origem seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de origem. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de origem. |
-| `connectionSpec.id` | A ID da especificação de conexão que corresponde à sua origem. |
-| `data.format` | O formato do [!DNL Shopify] dados que você deseja assimilar. Atualmente, o único formato de dados compatível é `json`. |
+| `connectionSpec.id` | A ID de especificação de conexão que corresponde à sua origem. |
+| `data.format` | O formato do [!DNL Shopify] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
 
 **Resposta**
 
@@ -89,23 +89,23 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ### Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de destino é usado para criar um conjunto de dados da plataforma no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
 
-Um esquema XDM de destino pode ser criado executando-se uma solicitação de POST para a [API do Registro de Schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial em [criação de um schema usando a API](../../../../../xdm/api/schemas.md).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](../../../../../xdm/api/schemas.md).
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação de POST para a [API do Serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema do target no payload.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
 
-Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial em [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
+Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 
 ### Criar uma conexão de destino {#target-connection}
 
-Uma conexão de destino representa a conexão com o destino onde os dados assimilados devem ser armazenados. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa que corresponde ao lago de dados. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão de destino representa a conexão com o destino em que os dados assimilados devem ser armazenados. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa que corresponde ao data lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação de conexão para o lago de dados. Usando esses identificadores, você pode criar uma conexão de target usando o [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação da conexão para o data lake. Usando esses identificadores, você pode criar uma conexão de destino usando o [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -149,16 +149,16 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `name` | O nome da conexão de destino. Certifique-se de que o nome da conexão de destino seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de destino. |
+| `name` | O nome da sua conexão de destino. Certifique-se de que o nome da conexão de destino seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de destino. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de destino. |
-| `connectionSpec.id` | A ID da especificação de conexão que corresponde ao lago de dados. Essa ID fixa é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | O formato do [!DNL Shopify] dados que você deseja trazer para a plataforma. |
+| `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Essa ID fixa é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | O formato do [!DNL Shopify] que você deseja trazer para a Platform. |
 | `params.dataSetId` | A ID do conjunto de dados de destino recuperada em uma etapa anterior. |
 
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária em etapas posteriores.
+Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária nas etapas posteriores.
 
 ```json
 {
@@ -169,7 +169,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 
 ### Criar um mapeamento {#mapping}
 
-Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o schema de destino ao qual o conjunto de dados de destino adere. Isso é feito executando uma solicitação POST para [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) com mapeamentos de dados definidos na carga da solicitação.
+Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o esquema de destino ao qual o conjunto de dados de destino adere. Isso é feito executando uma solicitação POST para [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) com mapeamentos de dados definidos na carga da solicitação.
 
 **Formato da API**
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdmSchema` | A ID do [esquema XDM de destino](#target-schema) gerado em uma etapa anterior. |
+| `xdmSchema` | A ID do [esquema XDM do público-alvo](#target-schema) gerada em uma etapa anterior. |
 | `mappings.destinationXdmPath` | O caminho XDM de destino para o qual o atributo de origem está sendo mapeado. |
 | `mappings.sourceAttribute` | O atributo de origem que precisa ser mapeado para um caminho XDM de destino. |
 | `mappings.identity` | Um valor booleano que designa se o conjunto de mapeamento será marcado para [!DNL Identity Service]. |
@@ -232,13 +232,13 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ### Criar um fluxo {#flow}
 
-O último passo para trazer dados do [!DNL Shopify] para Platform é criar um fluxo de dados. Por enquanto, você terá os seguintes valores obrigatórios preparados:
+O último passo para trazer dados de [!DNL Shopify] para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
-* [ID de conexão de origem](#source-connection)
-* [ID de conexão do Target](#target-connection)
+* [ID da conexão de origem](#source-connection)
+* [ID da conexão de destino](#target-connection)
 * [ID de mapeamento](#mapping)
 
-Um fluxo de dados é responsável por agendar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação de POST e, ao mesmo tempo, fornecendo os valores mencionados anteriormente dentro da carga útil.
+Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
 **Formato da API**
 
@@ -282,16 +282,16 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome do seu fluxo de dados. Certifique-se de que o nome do seu fluxo de dados seja descritivo, pois você pode usá-lo para pesquisar informações no seu fluxo de dados. |
+| `name` | O nome do fluxo de dados. Verifique se o nome do fluxo de dados é descritivo, pois você pode usá-lo para pesquisar informações sobre o fluxo de dados. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre o fluxo de dados. |
 | `flowSpec.id` | A ID de especificação de fluxo necessária para criar um fluxo de dados. Essa ID fixa é: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
-| `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. Esse valor assume como padrão `1.0`. |
-| `sourceConnectionIds` | O [ID de conexão de origem](#source-connection) gerado em uma etapa anterior. |
-| `targetConnectionIds` | O [target connection ID](#target-connection) gerado em uma etapa anterior. |
-| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a plataforma. |
+| `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. Esse valor é padronizado como `1.0`. |
+| `sourceConnectionIds` | A variável [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
+| `targetConnectionIds` | A variável [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
+| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Platform. |
 | `transformations.name` | O nome atribuído à transformação. |
-| `transformations.params.mappingId` | O [ID de mapeamento](#mapping) gerado em uma etapa anterior. |
-| `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. Esse valor assume como padrão `0`. |
+| `transformations.params.mappingId` | A variável [ID do mapeamento](#mapping) gerada em uma etapa anterior. |
+| `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. Esse valor é padronizado como `0`. |
 
 **Resposta**
 
@@ -304,11 +304,11 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado. V
 }
 ```
 
-### Obter o URL do terminal de transmissão
+### Obter o URL do ponto de extremidade de streaming
 
-Com o fluxo de dados criado, agora é possível recuperar o URL do terminal de transmissão. Você usará esse URL de ponto de extremidade para assinar sua fonte para um webhook, permitindo que sua fonte se comunique com o Experience Platform.
+Com o fluxo de dados criado, agora é possível recuperar o URL do ponto de extremidade de transmissão. Você usará esse URL de ponto de extremidade para inscrever sua origem em um webhook, permitindo que a origem se comunique com o Experience Platform.
 
-Para recuperar o URL do endpoint de transmissão, faça uma solicitação do GET para a variável `/flows` e forneça a ID do seu fluxo de dados.
+Para recuperar o URL do ponto de extremidade de streaming, faça uma solicitação GET ao `/flows` e forneça a ID do seu fluxo de dados.
 
 **Formato da API**
 
@@ -329,7 +329,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna informações sobre o fluxo de dados, incluindo o URL do terminal, marcado como `inletUrl`.
+Uma resposta bem-sucedida retorna informações sobre o fluxo de dados, incluindo a URL do ponto de extremidade, marcado como `inletUrl`.
 
 ```json
 {
@@ -651,24 +651,24 @@ Uma resposta bem-sucedida retorna informações sobre o fluxo de dados, incluind
 
 ## Apêndice
 
-A seção a seguir fornece informações sobre as etapas que você pode seguir para monitorar, atualizar e excluir seu fluxo de dados.
+A seção a seguir fornece informações sobre as etapas que podem ser executadas para monitorar, atualizar e excluir seu fluxo de dados.
 
-### Monitorar o fluxo de dados
+### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados tiver sido criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter exemplos completos da API, leia o guia em [monitorar os fluxos de dados de fontes usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter exemplos completos de API, leia o guia em [monitoramento de fluxos de dados de origens usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
-### Atualizar o fluxo de dados
+### Atualizar seu fluxo de dados
 
-Atualize os detalhes do seu fluxo de dados, como seu nome e descrição, bem como o cronograma de execução e conjuntos de mapeamento associados, fazendo uma solicitação de PATCH para a `/flows` endpoint da variável [!DNL Flow Service] API, enquanto fornece a ID do fluxo de dados. Ao fazer uma solicitação do PATCH, você deve fornecer dados exclusivos de seu fluxo de dados `etag` no `If-Match` cabeçalho. Para obter exemplos completos da API, leia o guia em [atualização de fluxos de dados de fontes usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Atualize os detalhes do seu fluxo de dados, como nome e descrição, bem como o agendamento de execução e os conjuntos de mapeamento associados, fazendo uma solicitação PATCH para o `/flows` endpoint do [!DNL Flow Service] ao fornecer a ID do fluxo de dados. Ao fazer uma solicitação PATCH, você deve fornecer os atributos exclusivos de seu fluxo de dados `etag` no `If-Match` cabeçalho. Para obter exemplos completos de API, leia o guia em [atualização de fluxos de dados de origens usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
-### Atualize sua conta
+### Atualizar sua conta
 
-Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação de PATCH para a [!DNL Flow Service] API ao fornecer a ID de conexão básica como parâmetro de consulta. Ao fazer uma solicitação de PATCH, você deve fornecer a conta de origem exclusiva `etag` no `If-Match` cabeçalho. Para obter exemplos completos da API, leia o guia em [atualização da conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Atualize o nome, a descrição e as credenciais da sua conta de origem executando uma solicitação PATCH para a [!DNL Flow Service] ao fornecer a ID de conexão básica como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer as informações exclusivas de sua conta de origem `etag` no `If-Match` cabeçalho. Para obter exemplos completos de API, leia o guia em [atualização da conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Excluir seu fluxo de dados
 
-Exclua seu fluxo de dados executando uma solicitação de DELETE para [!DNL Flow Service] Ao fornecer a ID do fluxo de dados que você deseja excluir como parte do parâmetro de consulta. Para obter exemplos completos da API, leia o guia em [excluir seus fluxos de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Exclua seu fluxo de dados executando uma solicitação DELETE para o [!DNL Flow Service] ao fornecer a ID do fluxo de dados que você deseja excluir como parte do parâmetro de consulta. Para obter exemplos completos de API, leia o guia em [exclusão de fluxos de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Excluir sua conta
 
-Exclua sua conta executando uma solicitação de DELETE para [!DNL Flow Service] API ao fornecer a ID de conexão básica da conta que você deseja excluir. Para obter exemplos completos da API, leia o guia em [excluir sua conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Exclua sua conta executando uma solicitação DELETE para o [!DNL Flow Service] ao fornecer a ID de conexão básica da conta que você deseja excluir. Para obter exemplos completos de API, leia o guia em [exclusão da conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

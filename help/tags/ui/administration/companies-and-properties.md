@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 ## Propriedades da Web
 
@@ -25,7 +25,7 @@ O tipo de propriedade para dispositivo móvel pode conter vários aplicativos. P
 
 ## Práticas recomendadas para o planejamento de propriedades {#best-practices-for-planning-properties}
 
-Cada implementação de tag na Adobe Experience Platform pode ser muito diferente. Elas têm diversas necessidades de coleção de dados, uso de variáveis, extensões, tags de terceiros, outros sistemas e tecnologias, pessoas, equipes, áreas geográficas etc. Você deve estruturar suas propriedades de uma maneira que corresponda ao fluxo de trabalho e processos de sua organização.
+Cada implementação de tag na Adobe Experience Platform pode ser muito diferente. Elas têm diversas necessidades de coleção de dados, uso de variáveis, extensões, tags de terceiros, outros sistemas e tecnologias, pessoas, equipes, áreas geográficas etc. Você deve estruturar suas propriedades de forma que corresponda ao fluxo de trabalho e aos processos de sua organização.
 
 Considere os itens a seguir ao planejar propriedades:
 
@@ -67,7 +67,7 @@ Por exemplo, se estiver implantando o [!DNL Adobe Analytics], o [!DNL Target] e 
 
 Os indivíduos, as equipes e as organizações que trabalham na Adobe Experience Platform precisarão acessar todos os sites e aplicativos, alguns deles ou apenas um?
 
-Os recursos do Gerenciamento de usuários permitem que você atribua funções diferentes a pessoas diferentes para todas as propriedades da ou de acordo com cada uma. Se alguém tiver as permissões necessárias, essa pessoa poderá executar ações administrativas em todas as propriedades dessa organização da plataforma. Todas as demais funções podem ser atribuídas de acordo com propriedades. Você pode ocultar uma propriedade de determinados usuários (que não sejam administradores) não atribuindo a eles nenhuma função na propriedade.
+Os recursos do Gerenciamento de usuários permitem que você atribua funções diferentes a pessoas diferentes para todas as propriedades da ou de acordo com cada uma. Se alguém tiver as permissões necessárias, essa pessoa poderá executar ações administrativas em todas as propriedades nessa organização da Platform. Todas as demais funções podem ser atribuídas de acordo com propriedades. Você pode ocultar uma propriedade de determinados usuários (que não sejam administradores) não atribuindo a eles nenhuma função na propriedade.
 
 ## Página Propriedades
 

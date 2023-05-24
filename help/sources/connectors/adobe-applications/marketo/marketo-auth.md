@@ -83,7 +83,7 @@ A variável **[!DNL Installed services]** contém uma lista de serviços existen
 
 Forneça um nome de exibição descritivo ao novo serviço e selecione **[!DNL Custom]** do **[!DNL Service]** menu suspenso. Forneça uma descrição apropriada e selecione o usuário que deseja provisionar na **[!DNL API Only User]** menu suspenso. Depois de preencher os detalhes necessários, selecione **[!DNL Create]** para criar seu novo serviço personalizado.
 
-![criar](../images/marketo/create.png)
+![create](../images/marketo/create.png)
 
 ## Obter a ID do cliente e o segredo do cliente
 

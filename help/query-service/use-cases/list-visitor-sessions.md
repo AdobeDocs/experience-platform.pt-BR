@@ -2,7 +2,8 @@
 keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;consultas experienceevent;consulta experienceevent;consulta Experience Event;
 title: Listar as exibições de página de um usuário
 description: Saiba como gravar consultas que usam Eventos de experiência para criar uma lista das últimas 100 páginas que um usuário especificado usou.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 1%

@@ -21,7 +21,7 @@ Este guia mostra como usar o Adobe Developer Console a fim de coletar os valores
 
 ## Obter acesso de desenvolvedor à Adobe Experience Platform
 
-A fim de gerar valores de autenticação para a API do reator, você deve ter acesso de desenvolvedor à Experience Platform. Para obter acesso de desenvolvedor, siga as etapas iniciais no [tutorial de autenticação da Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Depois de concluir a etapa &quot;Obter acesso do usuário&quot;, retorne a este tutorial para gerar as credenciais específicas para a API do reator.
+A fim de gerar valores de autenticação para a API do reator, você deve ter acesso de desenvolvedor à Experience Platform. Para obter acesso de desenvolvedor, siga as etapas iniciais no [tutorial de autenticação da Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Depois de concluir a etapa &quot;Obter acesso do usuário&quot;, retorne a este tutorial para gerar as credenciais específicas da API do Reator.
 
 ## Gerar credenciais de acesso
 
@@ -31,7 +31,7 @@ Usando o Adobe Developer Console, você deve gerar as três credenciais de acess
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-A ID da sua organização (`{ORG_ID}`) e a chave de API (`{API_KEY}`) pode ser reutilizada em chamadas de API futuras depois de terem sido geradas inicialmente. No entanto, seu token de acesso (`{ACCESS_TOKEN}`) é temporário e deve ser gerado novamente a cada 24 horas.
+A ID da sua organização (`{ORG_ID}`) e a chave de API (`{API_KEY}`) podem ser reutilizadas em chamadas de API futuras depois de terem sido geradas inicialmente. No entanto, seu token de acesso (`{ACCESS_TOKEN}`) é temporário e deve ser gerado novamente a cada 24 horas.
 
 As etapas de geração desses valores são descritas em detalhes abaixo.
 
@@ -61,7 +61,7 @@ A próxima tela solicita que você selecione um ou mais perfis de produto para a
 
 >[!NOTE]
 >
->Os perfis de produtos são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto deve selecionar para a API, entre em contato com o administrador.
+>Os perfis de produto são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto deve selecionar para a API, entre em contato com o administrador.
 
 Selecione os perfis de produto desejados na lista e selecione **Salvar API configurada** para concluir o registro da API.
 

@@ -102,7 +102,7 @@ Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão gera
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) O é uma Plataforma de execução de vendas com a maioria dos dados de interação comprador-vendedor B2B no mundo e investimentos significativos em tecnologias de IA proprietárias para traduzir dados de vendas em inteligência. [!DNL Outreach] O ajuda as organizações a automatizar o envolvimento de vendas e agir com base na inteligência de receita para melhorar a eficiência, a previsibilidade e o crescimento. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) O é uma Plataforma de execução de vendas com a maioria dos dados de interação comprador-vendedor B2B no mundo e investimentos significativos em tecnologias de IA proprietárias para traduzir dados de vendas em inteligência. [!DNL Outreach] O ajuda as organizações a automatizar o engajamento de vendas e agir com base na inteligência de receita para melhorar a eficiência, a previsibilidade e o crescimento. |
 
 {style="table-layout:auto"}
 

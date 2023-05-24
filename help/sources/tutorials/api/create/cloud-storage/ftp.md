@@ -29,7 +29,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 * [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem as informações adicionais que você precisará saber para se conectar com êxito a um [!DNL FTP] servidor usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um [!DNL FTP] servidor usando o [!DNL Flow Service] API.
 
 ### Coletar credenciais necessárias
 

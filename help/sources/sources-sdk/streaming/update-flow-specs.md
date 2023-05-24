@@ -3,7 +3,8 @@ title: Atualizar especificações de fluxo para SDK de streaming usando a API de
 description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de serviço de fluxo para fontes de autoatendimento (SDK de transmissão).
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 2%

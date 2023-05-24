@@ -1,7 +1,8 @@
 ---
 title: Notas de versão da Adobe Experience Platform de fevereiro de 2023
 description: As notas de versão de fevereiro de 2023 do Adobe Experience Platform.
-source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
+exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 4%

@@ -1,7 +1,8 @@
 ---
 title: Retornar e usar variáveis de merchandising dos dados de análise
 description: Saiba como fornecer campos XDM e consultas de exemplo para acessar as variáveis de merchandising em seus conjuntos de dados do Analytics.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 4%

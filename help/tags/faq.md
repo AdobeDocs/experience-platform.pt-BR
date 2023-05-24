@@ -13,7 +13,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](./term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](./term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento fornece respostas a perguntas frequentes sobre tags na Adobe Experience Platform.
 
@@ -45,7 +45,7 @@ As tags abriram um portal de autoatendimento virtual, que os desenvolvedores de 
 
 Temos muitos clientes que também optam por criar suas próprias extensões privadas para usar somente em suas próprias empresas usando os mesmos métodos de desenvolvimento de extensão.
 
-Para desenvolver uma extensão, verifique o [Visão geral de desenvolvimento de extensão](./extension-dev/overview.md) página.
+Para desenvolver uma extensão, verifique o [Visão geral do desenvolvimento de extensões](./extension-dev/overview.md) página.
 
 ## As tags atendem aos padrões de segurança de minha empresa?
 
@@ -73,7 +73,7 @@ As tags foram criadas para fornecer e executar tecnologias de marketing e public
 
 ## Quais navegadores são compatíveis com as tags?
 
-Consulte os navegadores compatíveis [here](./extension-dev/browsers.md).
+Consulte os navegadores compatíveis [aqui](./extension-dev/browsers.md).
 
 Agora a maioria dos clientes da Adobe aproveita os recursos mais modernos da plataforma da Web nos navegadores atuais para criar melhores experiências de usuário, incluindo aplicativos de página única, bem como páginas e sites interativos com grande uso de Ajax. À medida que a maioria dos clientes muda para abordagens mais modernas em seus sites, eles buscam uma solução como tags, para viabilizar essas abordagens.
 
@@ -83,14 +83,14 @@ Sim! Agora as tags oferecem suporte a propriedades e configuração para disposi
 
 ## Por que a interface do usuário está dizendo que houve um erro ao carregar minha conta?
 
-Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que sua conta não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso aos recursos da Coleta de dados na interface do usuário do .
+Se você receber uma mensagem informando que ocorreu um erro ao carregar sua conta, significa que ela não pertence a nenhum perfil de produto para tags. Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder acesso aos recursos da Coleção de dados na interface do usuário.
 
-## Por que não posso adicionar nenhuma propriedade na interface do usuário do ?
+## Por que não consigo adicionar nenhuma propriedade na interface do usuário?
 
-Se não for possível criar novas propriedades quando conectado à interface do usuário, significa que a conta não pertence a um perfil de produto com o direito de Gerenciar propriedades.
+Se você não conseguir criar novas propriedades quando conectado à interface do usuário, significa que sua conta não pertence a um perfil de produto com o direito de Gerenciar propriedades.
 
-Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder o direito de Gerenciar propriedades. Para obter mais informações sobre os diferentes direitos das tags, consulte a visão geral em [permissões do usuário para tags](./ui/administration/user-permissions.md).
+Consulte o guia sobre [gerenciamento de permissões](../collection/permissions.md) para saber como configurar um perfil de produto no Adobe Admin Console para conceder o direito de Gerenciar propriedades. Para obter mais informações sobre os diferentes direitos para tags, consulte a visão geral em [permissões de usuário para tags](./ui/administration/user-permissions.md).
 
 ## E se eu tiver outras dúvidas?
 
-Se você tiver outras perguntas, poderá fazer uma pergunta no [Página da comunidade da Coleção de dados do Adobe Experience Platform](https://adobe.com/go/launchme) no Experience League ou participe da [espaço de trabalho Slack da comunidade](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desenvolvedores e tópicos de implementação técnica.
+Se você tiver outras dúvidas, poderá perguntar no [Página da comunidade de coleta de dados do Adobe Experience Platform](https://adobe.com/go/launchme) no Experience League ou associe-se à [espaço de trabalho do Slack da comunidade](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desenvolvedores e tópicos de implementação técnica.

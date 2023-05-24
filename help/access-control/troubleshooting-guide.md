@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares, solução de problemas, controle de acesso
+keywords: Experience Platform;página inicial;tópicos populares;solução de problemas;controle de acesso
 solution: Experience Platform
 title: Guia de solução de problemas de controle de acesso
 description: Este documento fornece respostas a perguntas frequentes sobre o controle de acesso no Adobe Experience Platform.
@@ -13,26 +13,26 @@ ht-degree: 0%
 
 # Guia de solução de problemas de controle de acesso
 
-Este documento fornece respostas a perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para perguntas e solução de problemas relacionados a outros [!DNL Platform] consulte os [Guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para perguntas e solução de problemas relacionados a outros [!DNL Platform] serviços, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] utiliza perfis de produto no [Adobe Admin Console](https://adminconsole.adobe.com) para fornecer controle de acesso baseado em funções, vinculando usuários com permissões e sandboxes.  Consulte a [visão geral do controle de acesso](home.md) para obter mais informações.
+[!DNL Experience Platform] utiliza perfis de produto no [Adobe Admin Console](https://adminconsole.adobe.com) para fornecer controle de acesso com base em funções, vinculando usuários com permissões e sandboxes.  Consulte a [visão geral do controle de acesso](home.md) para obter mais informações.
 
 ## Onde posso encontrar minhas permissões de acesso atuais?
 
-Se você for um administrador de sistema, administrador de produto ou administrador de perfil de produto da organização, poderá visualizar o perfil de produto atribuído e as permissões fornecidas na Adobe Admin Console. Consulte a [guia do usuário de controle de acesso](./ui/overview.md) para obter instruções sobre como navegar no [!DNL Admin Console] para exibir as permissões de um perfil de produto.
+Se você for um administrador de sistema, administrador de produto ou administrador de perfil de produto da organização, poderá exibir o perfil de produto atribuído e as permissões fornecidas na Adobe Admin Console. Consulte a [guia do usuário de controle de acesso](./ui/overview.md) para obter instruções sobre como navegar no [!DNL Admin Console] para exibir as permissões de um perfil de produto.
 
-Se você não for um administrador, ainda poderá visualizar suas permissões de acesso atuais enviando uma solicitação para a `/acl/effective-policies` endpoint na API de controle de acesso. Consulte a seção &quot;Exibir políticas eficazes&quot; em [guia do desenvolvedor do controle de acesso](./api/effective-policies.md) para obter mais informações.
+Se você não for um administrador, ainda poderá visualizar suas permissões de acesso atuais enviando uma solicitação para o `/acl/effective-policies` ponto de extremidade na API de controle de acesso. Consulte a seção &quot;Exibir políticas efetivas&quot; em [guia do desenvolvedor de controle de acesso](./api/effective-policies.md) para obter mais informações.
 
 ## Alguns recursos na [!DNL Platform] A interface do usuário não está disponível. Como o acesso a esses recursos é controlado por permissões?
 
-Se você não tiver permissões de acesso para um [!DNL Platform] , esse recurso será oculto ou esmaecido na variável [!DNL Experience Platform] IU. Por exemplo, para visualizar o &quot;[!UICONTROL Perfis]&quot;, você deve ter o &quot;[!UICONTROL Exibir perfis]&quot; ou &quot;[!UICONTROL Gerenciar perfis]&quot; permissões. Entre em contato com o administrador se precisar de permissões adicionais para [!DNL Experience Platform] recursos.
+Se você não tiver permissões de acesso para um [!DNL Platform] recurso, esse recurso ficará oculto ou esmaecido na [!DNL Experience Platform] IU. Por exemplo, para visualizar o &quot;[!UICONTROL Perfis]&quot;, você deve ter a tag &quot;[!UICONTROL Exibir perfis]&quot; ou &quot;[!UICONTROL Gerenciar perfis]&quot;. Entre em contato com o administrador se precisar de permissões adicionais para [!DNL Experience Platform] recursos.
 
-## Como as permissões são agrupadas e qual grupo contém a permissão que deseja usar?
+## Como as permissões são agrupadas e qual grupo contém a permissão que desejo usar?
 
-As permissões são agrupadas e categorizadas pela variável [!DNL Platform] recursos aos quais elas se aplicam (como [!DNL Data Management] e [!DNL Profile Management]). Para obter uma lista completa das permissões disponíveis e os grupos aos quais pertencem, consulte o [seção de permissões](home.md#permissions) na visão geral do controle de acesso.
+As permissões são agrupadas e categorizadas pelo [!DNL Platform] recursos aos quais se aplicam (como [!DNL Data Management] e [!DNL Profile Management]). Para obter uma lista completa das permissões disponíveis e os grupos aos quais elas pertencem, consulte a [seção de permissões](home.md#permissions) na visão geral do controle de acesso.
 
-Consulte a [visão geral do controle de acesso](home.md) para obter mais informações sobre como fornecer controle de acesso com base em funções.
+Consulte a [visão geral do controle de acesso](home.md) para obter mais informações sobre como fornecer controle de acesso baseado em função.
 
-## O que acontece com as permissões após a migração do Adobe IO para a ID de negócios?
+## O que acontece com as permissões após a migração do Adobe IO para a Business ID?
 
-O controle de acesso usa a ID de usuário (uma id exclusiva interna atribuída a um usuário) para conceder permissões. Quando uma organização é migrada do Adobe ID para a ID de negócios, todas as permissões definidas para seus usuários são perdidas, pois a ID do usuário é alterada e o controle de acesso usa a ID do usuário recém-gerada. Se sua organização estiver migrada para a ID de negócios, entre em contato com o representante do Adobe para migrar a ID de usuário do Adobe ID para a ID de negócios.
+O controle de acesso usa a ID do usuário (uma ID exclusiva interna atribuída a um usuário) para conceder permissões. Quando uma organização for migrada do Adobe ID para a Business ID, todas as permissões definidas para os usuários serão perdidas, pois as alterações na ID do usuário e o controle de acesso usarão a ID do usuário recém-gerada. Se sua organização migrou para a Business ID, entre em contato com o representante da Adobe para migrar sua ID de usuário da Adobe ID para a Business ID.

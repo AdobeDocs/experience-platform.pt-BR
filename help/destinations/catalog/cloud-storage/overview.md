@@ -6,7 +6,7 @@ exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -36,7 +36,7 @@ O Adobe Experience Platform é compatível com os seguintes destinos de armazena
 Para enviar segmentos para destinos de armazenamento em nuvem para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
 
 
-## Usar macros para criar uma pasta no local de armazenamento {#use-macros}
+## Use macros para criar uma pasta no seu local de armazenamento {#use-macros}
 
 >[!NOTE]
 >

@@ -236,7 +236,7 @@ Desde que a configuração de consentimento `gdprApplies` está definida como `t
 Os clientes devem consentir com os seguintes objetivos (conforme descrito pelo [Políticas do TCF 2.0](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) para que seus perfis sejam incluídos em segmentos exportados para destinos:
 
 * **Finalidade 1**: armazenar e/ou acessar informações em um dispositivo
-* **Finalidade 10**: desenvolver e melhorar produtos
+* **Propósito 10**: desenvolver e melhorar produtos
 
 O TCF 2.0 também exige que a fonte de dados verifique a permissão do fornecedor do destino antes de enviar os dados para esse destino. Dessa forma, a Platform verifica se a permissão do fornecedor do destino é aceita para todas as IDs no cluster antes de incluir dados vinculados a esse destino.
 

@@ -120,7 +120,7 @@ A tabela abaixo fornece mais detalhes para cada valor possível.
 | Nome | Exemplo de caminho | Tipo | Descrição | Obrigatório | Limites |
 |:---|:---:|:---:|:---|:---:|:---|
 | `email` | `arc.event.xdm._tenant.emailId`<br /> ou<br /> `arc.event.data._tenant.emailId` | String | O endereço que recebe o email | **Sim** | Deve existir no Público do Mailchimp |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | String | ID de público | **Sim** | Deve corresponder a uma ID de público-alvo existente |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | String | ID de público-alvo | **Sim** | Deve corresponder a uma ID de público-alvo existente |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou<br /> `arc.event.data._tenant.name` | String | O nome do evento | **Sim** | 2-30 caracteres de comprimento |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> ou<br /> `arc.event.data._tenant.properties` | Objeto | Uma lista opcional de propriedades no formato JSON com detalhes sobre o evento | Não |  |
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booleano | Eventos criados com `is_syncing` definir como `true` **não** automações de acionador | Não |  |

@@ -1,7 +1,8 @@
 ---
-title: Visão geral da Distiller de dados
-description: Um resumo dos limites de uso do Data Distiller para dados do Serviço de query em relação ao seu direito de licenciamento.
-source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
+title: Visão geral do Data Distiller
+description: Um resumo dos limites de uso do Data Distiller para dados do Serviço de consulta em relação ao seu direito de licenciamento.
+exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # Visão geral do Data Distiller
 
-O Data Distiller é uma oferta de pacote que inclui um subconjunto das funcionalidades do Adobe Experience Platform. Com o Data Distiller, você pode executar a preparação de dados pós-ingestão (como limpeza, modelagem e manipulação) para o perfil do cliente em tempo real ou casos de uso analítico executando consultas em lote no Serviço de query. O uso do Data Distiller depende de sua qualificação para aplicativos baseados na plataforma.
+O Data Distiller é uma oferta de pacote que inclui um subconjunto das funcionalidades do Adobe Experience Platform. Com o Data Distiller, você pode executar a preparação de dados após a assimilação (como limpeza, modelagem e manipulação) para o perfil do cliente em tempo real ou casos de uso analíticos, executando consultas em lote no Serviço de consulta. Seu uso do Data Distiller depende de seus direitos para aplicativos baseados em plataforma.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -34,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Medidas de proteção
 
-Consulte a [Medidas de proteção do serviço de consulta](../guardrails.md) documento sobre limites de uso padrão para dados do Serviço de query em relação ao seu direito de licenciamento.
+Consulte a [Proteções do serviço de consulta](../guardrails.md) documento sobre limites de uso padrão para dados do Serviço de consulta em relação ao seu direito de licenciamento.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits
@@ -49,4 +50,3 @@ A static limit is the usage limit that relates to the functional boundaries of A
     * To generate meaningful insights from your data.
 * **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 -->
-

@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -109,7 +109,7 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 | Propriedade | Descrição |
 | --- | --- |
 | `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para consultar o status da exclusão posteriormente. |
-| `orgId` | Sua ID da organização. |
+| `orgId` | Sua ID de organização. |
 | `bundleId` | A ID do pacote ao qual esta ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
 | `action` | A ação que está sendo executada pela ordem de serviço. Para exclusões de registro, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
@@ -187,7 +187,7 @@ Uma resposta bem-sucedida retorna os detalhes da operação de exclusão, inclui
 | Propriedade | Descrição |
 | --- | --- |
 | `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para consultar o status da exclusão posteriormente. |
-| `orgId` | Sua ID da organização. |
+| `orgId` | Sua ID de organização. |
 | `bundleId` | A ID do pacote ao qual esta ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
 | `action` | A ação que está sendo executada pela ordem de serviço. Para exclusões de registro, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |
@@ -275,7 +275,7 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 | Propriedade | Descrição |
 | --- | --- |
 | `workorderId` | A ID da ordem de exclusão. Isso pode ser usado para consultar o status da exclusão posteriormente. |
-| `orgId` | Sua ID da organização. |
+| `orgId` | Sua ID de organização. |
 | `bundleId` | A ID do pacote ao qual esta ordem de exclusão está associada, usada para fins de depuração. Várias ordens de exclusão são agrupadas para serem processadas pelos serviços downstream. |
 | `action` | A ação que está sendo executada pela ordem de serviço. Para exclusões de registro, o valor é `identity-delete`. |
 | `createdAt` | Um carimbo de data e hora de quando a ordem de exclusão foi criada. |

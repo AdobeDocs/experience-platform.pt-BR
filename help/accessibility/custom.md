@@ -128,7 +128,7 @@ A interface do Editor de esquemas é acessível pela seguinte funcionalidade:
 
 Ao usar a interface do Construtor de segmentos para criar, editar e interagir com segmentos no Experience Platform, os seguintes recursos melhoram a acessibilidade:
 
-* A interface do usuário do Construtor de segmentos pode ser acessada por meio da navegação pelo teclado.
+* A interface do usuário do Construtor de segmentos pode ser acessada pela navegação pelo teclado.
 * Os leitores de tela devem reconhecer as tags de marcação para cabeçalhos e podem anunciar o cabeçalho junto com seu nível.
 * Outras tecnologias de assistência podem alterar a exibição visual de uma página, usando cabeçalhos codificados corretamente para exibir um outline ou uma exibição alternativa.
 

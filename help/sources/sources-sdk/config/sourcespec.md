@@ -503,7 +503,7 @@ Depois de configurar o agendamento avançado, consulte o `scheduleParams` na se�
 
 Você pode incluir um esquema personalizado em seu `sourceSpec` para definir todos os atributos necessários para sua origem, incluindo todos os atributos dinâmicos que você possa precisar. Você pode atualizar a especificação de conexão correspondente da sua origem fazendo uma solicitação PUT para o `/connectionSpecs` endpoint do [!DNL Flow Service] API, além de fornecer o esquema personalizado no `sourceSpec` seção da sua especificação de conexão.
 
-Este é um exemplo de esquema personalizado que você pode adicionar à especificação de conexão da origem:
+Este é um exemplo de um esquema personalizado que você pode adicionar à especificação de conexão da origem:
 
 ```json
       "schema": {

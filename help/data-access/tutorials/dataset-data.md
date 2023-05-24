@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform, home, tópicos populares, acesso aos dados, api de acesso aos dados, acesso aos dados da consulta
+keywords: Experience Platform;início;tópicos populares;acesso a dados;api de acesso a dados;acesso a dados de consulta;;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
-title: Visualizar dados do conjunto de dados usando a API de acesso a dados
+title: Exibir dados do conjunto de dados usando a API de acesso a dados
 type: Tutorial
-description: Saiba como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API de acesso a dados no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da API de acesso a dados, como paginação e downloads parciais.
+description: Saiba como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API de acesso a dados no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da API de acesso a dados, como downloads parciais e de paginação.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -14,35 +14,35 @@ ht-degree: 4%
 
 # Exibir dados do conjunto de dados usando [!DNL Data Access] API
 
-Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando o [!DNL Data Access] API no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos do [!DNL Data Access] API, como paginação e downloads parciais.
+Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando o [!DNL Data Access] API no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos do [!DNL Data Access] API, como downloads de paginação e parciais.
 
 ## Introdução
 
-Este tutorial requer um entendimento prático sobre como criar e preencher um conjunto de dados. Consulte a [tutorial de criação de conjunto de dados](../../catalog/datasets/create.md) para obter mais informações.
+Este tutorial requer entendimento prático sobre como criar e preencher um conjunto de dados. Consulte a [tutorial de criação de conjunto de dados](../../catalog/datasets/create.md) para obter mais informações.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da plataforma.
+As seções a seguir fornecem as informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da plataforma.
 
-### Lendo exemplos de chamadas de API
+### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
-Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
@@ -51,20 +51,20 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 Este tutorial segue as etapas descritas no diagrama de sequência abaixo, destacando a funcionalidade principal do [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-O [!DNL Catalog] A API permite recuperar informações relacionadas a lotes e arquivos. O [!DNL Data Access] A API permite acessar e baixar esses arquivos via HTTP como downloads completos ou parciais, dependendo do tamanho do arquivo.
+A variável [!DNL Catalog] A API permite recuperar informações relacionadas a lotes e arquivos. A variável [!DNL Data Access] A API permite acessar e baixar esses arquivos por HTTP como downloads completos ou parciais, dependendo do tamanho do arquivo.
 
-## Localizar os dados
+## Localize os dados
 
-Antes de começar a usar a variável [!DNL Data Access] , é necessário identificar o local dos dados que deseja acessar. No [!DNL Catalog] Na API, há dois endpoints que você pode usar para navegar pelos metadados de uma organização e recuperar a ID de um lote ou arquivo que você deseja acessar:
+Antes de começar a usar o [!DNL Data Access] , é necessário identificar o local dos dados que você deseja acessar. No [!DNL Catalog] , há dois endpoints que você pode usar para navegar pelos metadados de uma organização e recuperar a ID de um lote ou arquivo que deseja acessar:
 
-- `GET /batches`: Retorna uma lista de lotes em sua organização
-- `GET /dataSetFiles`: Retorna uma lista de arquivos em sua organização
+- `GET /batches`: retorna uma lista de lotes em sua organização
+- `GET /dataSetFiles`: retorna uma lista de arquivos em sua organização
 
-Para obter uma lista abrangente de endpoints no [!DNL Catalog] Consulte a API [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Para obter uma lista abrangente de endpoints no [!DNL Catalog] API, consulte a [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## Recupere uma lista de lotes em sua organização
+## Recuperar uma lista de lotes em sua organização
 
-Usar o [!DNL Catalog] Você pode retornar uma lista de lotes em sua organização:
+Usar o [!DNL Catalog] , você poderá retornar uma lista de lotes em sua organização:
 
 **Formato da API**
 
@@ -84,7 +84,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Resposta**
 
-A resposta inclui um objeto que lista todos os lotes relacionados à organização, com cada valor de nível superior representando um lote. Os objetos de lote individuais contêm os detalhes para esse lote específico. A resposta abaixo foi minimizada para espaço.
+A resposta inclui um objeto que lista todos os lotes relacionados à organização, com cada valor de nível superior representando um lote. Os objetos de lote individuais contêm os detalhes desse lote específico. A resposta abaixo foi minimizada por questões de espaço.
 
 ```json
 {
@@ -107,7 +107,7 @@ A resposta inclui um objeto que lista todos os lotes relacionados à organizaç�
 
 ### Filtrar a lista de lotes
 
-Geralmente, os filtros são solicitados a localizar um determinado lote para recuperar dados relevantes para um caso de uso específico. Os parâmetros podem ser adicionados a um `GET /batches` para filtrar a resposta retornada. A solicitação abaixo retornará todos os lotes criados após um tempo especificado, em um conjunto de dados específico, classificados por quando foram criados.
+Os filtros geralmente são necessários para encontrar um lote específico e recuperar dados relevantes para um caso de uso específico. Os parâmetros podem ser adicionados a um `GET /batches` para filtrar a resposta retornada. A solicitação abaixo retornará todos os lotes criados após um tempo especificado, em um conjunto de dados específico, classificado por quando foram criados.
 
 **Formato da API**
 
@@ -117,9 +117,9 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{START_TIMESTAMP}` | O carimbo de data e hora de início em milissegundos (por exemplo, 1514836799000). |
+| `{START_TIMESTAMP}` | O carimbo de data e hora inicial em milissegundos (por exemplo, 1514836799000). |
 | `{DATASET_ID}` | O identificador do conjunto de dados. |
-| `{SORT_BY}` | Classifica a resposta pelo valor fornecido. Por exemplo, `desc:created` classifica os objetos por data de criação em ordem decrescente. |
+| `{SORT_BY}` | Classifica a resposta pelo valor fornecido. Por exemplo, `desc:created` classifica os objetos pela data de criação em ordem decrescente. |
 
 **Solicitação**
 
@@ -191,11 +191,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Uma lista completa de parâmetros e filtros pode ser encontrada no [Referência da API do catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Uma lista completa de parâmetros e filtros pode ser encontrada na [Referência da API do catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## Recuperar uma lista de todos os arquivos pertencentes a um determinado lote
+## Recuperar uma lista de todos os arquivos pertencentes a um lote específico
 
-Agora que você tem a ID do lote que deseja acessar, é possível usar a variável [!DNL Data Access] API para obter uma lista de arquivos pertencentes a esse lote.
+Agora que você tem a ID do lote que deseja acessar, é possível usar a variável [!DNL Data Access] para obter uma lista de arquivos pertencentes a esse lote.
 
 **Formato da API**
 
@@ -205,7 +205,7 @@ GET /batches/{BATCH_ID}/files
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{BATCH_ID}` | Identificador de lote do lote que você está tentando acessar. |
+| `{BATCH_ID}` | Identificador do lote que você está tentando acessar. |
 
 **Solicitação**
 
@@ -246,13 +246,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `data._links.self.href` | O URL para acessar esse arquivo. |
+| `data._links.self.href` | O URL para acessar este arquivo. |
 
-A resposta contém uma matriz de dados que lista todos os arquivos dentro do lote especificado. Os arquivos são referenciados pela ID do arquivo, que é encontrada na variável `dataSetFileId` campo.
+A resposta contém uma matriz de dados que lista todos os arquivos dentro do lote especificado. Os arquivos são referenciados por sua ID de arquivo, encontrada no `dataSetFileId` campo.
 
 ## Acessar um arquivo usando uma ID de arquivo
 
-Depois de ter uma ID de arquivo exclusiva, você pode usar a variável [!DNL Data Access] API para acessar os detalhes específicos sobre o arquivo, incluindo seu nome, tamanho em bytes e um link para baixá-lo.
+Depois de ter uma ID de arquivo exclusiva, você pode usar o [!DNL Data Access] API para acessar os detalhes específicos do arquivo, incluindo nome, tamanho em bytes e um link para baixá-lo.
 
 **Formato da API**
 
@@ -274,9 +274,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Dependendo de a ID de arquivo apontar para um arquivo individual ou um diretório, a matriz de dados retornada pode conter uma única entrada ou uma lista de arquivos pertencentes a esse diretório. Cada elemento de arquivo conterá detalhes como o nome do arquivo, o tamanho em bytes e um link para baixar o arquivo.
+Dependendo de a ID do arquivo apontar para um arquivo individual ou um diretório, a matriz de dados retornada pode conter uma única entrada ou uma lista de arquivos pertencentes a esse diretório. Cada elemento do arquivo conterá detalhes como o nome do arquivo, tamanho em bytes e um link para baixar o arquivo.
 
-**Caso 1: A ID de arquivo aponta para um único arquivo**
+**Caso 1: a ID de arquivo aponta para um único arquivo**
 
 **Resposta**
 
@@ -305,7 +305,7 @@ Dependendo de a ID de arquivo apontar para um arquivo individual ou um diretóri
 | `{FILE_NAME}.parquet` | O nome do arquivo. |
 | `_links.self.href` | O URL para baixar o arquivo. |
 
-**Caso 2: A ID de arquivo aponta para um diretório**
+**Caso 2: a ID de arquivo aponta para um diretório**
 
 **Resposta**
 
@@ -350,11 +350,11 @@ Dependendo de a ID de arquivo apontar para um arquivo individual ou um diretóri
 | -------- | ----------- | 
 | `data._links.self.href` | O URL para baixar o arquivo associado. |
 
-Essa resposta retorna um diretório contendo dois arquivos separados, com IDs `{FILE_ID_2}` e `{FILE_ID_3}`. Nesse cenário, é necessário seguir o URL de cada arquivo para acessar o arquivo.
+Esta resposta retorna um diretório contendo dois arquivos separados, com IDs `{FILE_ID_2}` e `{FILE_ID_3}`. Nesse cenário, é necessário seguir o URL de cada arquivo para acessar o arquivo.
 
 ## Recuperar os metadados de um arquivo
 
-Você pode recuperar os metadados de um arquivo fazendo uma solicitação de HEAD. Isso retorna os cabeçalhos de metadados do arquivo, incluindo seu tamanho em bytes e formato de arquivo.
+Você pode recuperar os metadados de um arquivo fazendo uma solicitação HEAD. Isso retorna os cabeçalhos de metadados do arquivo, incluindo o tamanho em bytes e o formato de arquivo.
 
 **Formato da API**
 
@@ -380,12 +380,12 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **Resposta**
 
 Os cabeçalhos de resposta contêm os metadados do arquivo consultado, incluindo:
-- `Content-Length`: Indica o tamanho da carga em bytes
-- `Content-Type`: Indica o tipo de arquivo.
+- `Content-Length`: indica o tamanho do conteúdo em bytes
+- `Content-Type`: indica o tipo de arquivo.
 
 ## Acessar o conteúdo de um arquivo
 
-Você também pode acessar o conteúdo de um arquivo usando a variável [!DNL Data Access] API.
+Também é possível acessar o conteúdo de um arquivo usando o [!DNL Data Access] API.
 
 **Formato da API**
 
@@ -414,9 +414,9 @@ Uma resposta bem-sucedida retorna o conteúdo do arquivo.
 
 ## Baixar conteúdo parcial de um arquivo
 
-O [!DNL Data Access] A API permite baixar arquivos em partes. É possível especificar um cabeçalho de intervalo durante uma `GET /files/{FILE_ID}` solicitação para baixar um intervalo específico de bytes de um arquivo. Se o intervalo não for especificado, a API baixará o arquivo inteiro por padrão.
+A variável [!DNL Data Access] A API permite baixar arquivos em partes. Um cabeçalho de intervalo pode ser especificado durante um `GET /files/{FILE_ID}` solicitação para baixar um intervalo específico de bytes de um arquivo. Se o intervalo não for especificado, a API baixará o arquivo inteiro por padrão.
 
-O exemplo de HEAD no [seção anterior](#retrieve-the-metadata-of-a-file) O fornece o tamanho de um arquivo específico em bytes.
+O exemplo de HEAD na variável [seção anterior](#retrieve-the-metadata-of-a-file) fornece o tamanho de um arquivo específico em bytes.
 
 **Formato da API**
 
@@ -442,22 +442,22 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `Range: bytes=0-99` | Especifica o intervalo de bytes a serem baixados. Se isso não for especificado, a API baixará o arquivo inteiro. Neste exemplo, os primeiros 100 bytes serão baixados. |
+| `Range: bytes=0-99` | Especifica o intervalo de bytes para download. Se isso não for especificado, a API baixará o arquivo inteiro. Neste exemplo, os primeiros 100 bytes serão baixados. |
 
 **Resposta**
 
-O corpo da resposta inclui os primeiros 100 bytes do arquivo (conforme especificado pelo cabeçalho &quot;Intervalo&quot; na solicitação) junto com o Status HTTP 206 (Conteúdo Parcial). A resposta também inclui os seguintes cabeçalhos:
+O corpo da resposta inclui os primeiros 100 bytes do arquivo (conforme especificado pelo cabeçalho &quot;Intervalo&quot; na solicitação), juntamente com o Status HTTP 206 (Conteúdo parcial). A resposta também inclui os seguintes cabeçalhos:
 
-- Duração do conteúdo: 100 (o número de bytes retornados)
+- Content-Length: 100 (o número de bytes retornados)
 - Tipo de conteúdo: application/parquet (um arquivo Parquet foi solicitado, portanto, o tipo de conteúdo da resposta é `parquet`)
-- Intervalo de conteúdo: bytes 0-99/249058 (o intervalo solicitado (0-99) do número total de bytes (249058))
+- Content-Range: bytes 0-99/249058 (o intervalo solicitado (0-99) do número total de bytes (249058))
 
-## Configurar a paginação de resposta da API
+## Configurar paginação de resposta da API
 
-Respostas no [!DNL Data Access] As APIs são paginadas. Por padrão, o número máximo de entradas por página é 100. Parâmetros de paginação podem ser usados para modificar o comportamento padrão.
+Respostas no [!DNL Data Access] As APIs do são paginadas. Por padrão, o número máximo de entradas por página é 100. Os parâmetros de paginação podem ser usados para modificar o comportamento padrão.
 
-- `limit`: Você pode especificar o número de entradas por página de acordo com seus requisitos usando o parâmetro &quot;limit&quot;.
-- `start`: O deslocamento pode ser definido pelo parâmetro de consulta &quot;start&quot;.
+- `limit`: você pode especificar o número de entradas por página de acordo com seus requisitos usando o parâmetro &quot;limit&quot;.
+- `start`: o deslocamento pode ser definido pelo parâmetro de consulta &quot;start&quot;.
 - `&`: Você pode usar um E comercial para combinar vários parâmetros em uma única chamada.
 
 **Formato da API**
@@ -470,7 +470,7 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{BATCH_ID}` | Identificador de lote do lote que você está tentando acessar. |
+| `{BATCH_ID}` | Identificador do lote que você está tentando acessar. |
 | `{OFFSET}` | O índice especificado para iniciar a matriz de resultados (por exemplo, start=0) |
 | `{LIMIT}` | Controla quantos resultados são retornados na matriz de resultados (por exemplo, limit=1) |
 
@@ -486,9 +486,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
 
 **Resposta**:
 
-A resposta contém um `"data"` matriz com um único elemento, conforme especificado pelo parâmetro de solicitação `limit=1`. Esse elemento é um objeto que contém os detalhes do primeiro arquivo disponível, conforme especificado pela variável `start=0` na solicitação (lembre-se de que na numeração baseada em zero, o primeiro elemento é &quot;0&quot;).
+A resposta contém uma `"data"` matriz com um único elemento, conforme especificado pelo parâmetro de solicitação `limit=1`. Esse elemento é um objeto que contém os detalhes do primeiro arquivo disponível, conforme especificado pelo `start=0` parâmetro na solicitação (lembre-se de que, na numeração com base em zero, o primeiro elemento é &quot;0&quot;).
 
-O `_links.next.href` contém o link para a próxima página de respostas, onde você pode ver que a variável `start` O parâmetro foi avançado para `start=1`.
+A variável `_links.next.href` contém o link para a próxima página de respostas, em que você pode ver que a variável `start` O parâmetro do avançou para `start=1`.
 
 ```json
 {

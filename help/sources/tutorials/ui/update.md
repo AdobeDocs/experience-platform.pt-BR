@@ -8,7 +8,7 @@ exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ Selecione a fonte com a qual deseja trabalhar para ver uma lista de suas contas 
 
 Um menu suspenso é exibido, fornecendo opções para **[!UICONTROL Adicionar dados]**, **[!UICONTROL Editar detalhes]**, e **[!UICONTROL Excluir]**. Selecionar **[!UICONTROL Editar detalhes]** no menu para atualizar sua conta.
 
-![atualizar](../../images/tutorials/update/update.png)
+![update](../../images/tutorials/update/update.png)
 
 A variável **[!UICONTROL Editar detalhes da conta]** permite atualizar o nome, a descrição e as credenciais de autenticação de uma conta. Depois de atualizar as informações desejadas, selecione **[!UICONTROL Salvar]**.
 

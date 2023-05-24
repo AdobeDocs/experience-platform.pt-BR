@@ -11,7 +11,7 @@ ht-degree: 93%
 
 # Ponto de extremidade de empresas
 
-Uma empresa representa uma organização de cliente, geralmente um negócio. Na API do reator, essas empresas correspondem 1:1 com a ID da organização. Os usuários da API só têm visibilidade das empresas às quais têm acesso. Uma empresa pode conter muitas [propriedades](./properties.md). Uma propriedade pertence a exatamente uma empresa.
+Uma empresa representa uma organização de cliente, geralmente um negócio. Na API do Reator, essas empresas correspondem 1:1 à ID da organização. Os usuários da API só têm visibilidade das empresas às quais têm acesso. Uma empresa pode conter muitas [propriedades](./properties.md). Uma propriedade pertence a exatamente uma empresa.
 
 O ponto de extremidade `/companies` na API do reator permite recuperar programaticamente as empresas às quais você tem acesso no aplicativo de experiência.
 

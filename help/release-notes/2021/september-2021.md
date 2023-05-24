@@ -5,7 +5,7 @@ exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '377'
-ht-degree: 8%
+ht-degree: 13%
 
 ---
 
@@ -51,8 +51,8 @@ O Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| [!DNL Data Landing Zone] | Agora você pode criar um [!DNL Data Landing Zone] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) ou o [interface do usuário](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] é um [!DNL Azure Blob] interface de armazenamento de dados provisionada pela Platform, permitindo que você acesse um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Platform. Consulte a [[!DNL Data Landing Zone] visão geral](../../sources/connectors/cloud-storage/data-landing-zone.md) para obter mais informações. |
-| [!DNL Snowflake] | Agora você pode criar um [!DNL Snowflake] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) ou o [interface do usuário](../../sources/tutorials/ui/create/databases/snowflake.md) para trazer dados de seu [!DNL Snowflake] banco de dados para a Platform. Consulte a [[!DNL Snowflake] visão geral](../../sources/connectors/databases/snowflake.md) para obter mais informações. |
-| [!DNL SFTP] aprimoramentos na origem | Você pode definir manualmente um número de porta personalizado ao criar uma [!DNL SFTP] conexão de origem. Consulte a [[!DNL SFTP] visão geral](../../sources/connectors/cloud-storage/sftp.md) para obter mais informações. |
+| [!DNL Data Landing Zone] | Agora você pode criar um [!DNL Data Landing Zone] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) ou o [interface do usuário](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] é um [!DNL Azure Blob] interface de armazenamento de dados provisionada pela Platform, permitindo que você acesse um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Platform. Consulte a [[!DNL Data Landing Zone] visão geral das ](../../sources/connectors/cloud-storage/data-landing-zone.md) para obter mais informações. |
+| [!DNL Snowflake] | Agora você pode criar um [!DNL Snowflake] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) ou o [interface do usuário](../../sources/tutorials/ui/create/databases/snowflake.md) para trazer dados de seu [!DNL Snowflake] banco de dados para a Platform. Consulte a [[!DNL Snowflake] visão geral das ](../../sources/connectors/databases/snowflake.md) para obter mais informações. |
+| [!DNL SFTP] aprimoramentos na origem | Você pode definir manualmente um número de porta personalizado ao criar uma [!DNL SFTP] conexão de origem. Consulte a [[!DNL SFTP] visão geral das ](../../sources/connectors/cloud-storage/sftp.md) para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a [visão geral das origens](../../sources/home.md).

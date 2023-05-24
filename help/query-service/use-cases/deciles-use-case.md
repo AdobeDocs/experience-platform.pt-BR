@@ -98,7 +98,7 @@ O Serviço de consulta também permite definir uma identidade ou uma identidade 
 
 O exemplo a seguir demonstra a consulta SQL para calcular um decil em um período de lookback.
 
-Um modelo pode ser feito usando o Editor de consultas na interface ou por meio do [API do serviço de consulta](../api/query-templates.md#create-a-query-template).
+Um modelo pode ser feito usando o Editor de consultas na interface ou por meio da [API do serviço de consulta](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 

@@ -1,13 +1,13 @@
 ---
-keywords: email; Email; email; destinos de email
+keywords: email;Email;e-mail;destinos de e-mail;email;Email;e-mail;email destinations
 title: Visão geral dos destinos de marketing por email
 type: Tutorial
-description: Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como para enviar campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos de Experience Platform.
+description: Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '371'
+ht-degree: 4%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como enviar campanhas de email promocionais. O Adobe Experience Platform integra-se com ESPs permitindo ativar segmentos para destinos de marketing por email.
+Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. O Adobe Experience Platform integra-se aos ESPs permitindo ativar segmentos para destinos de marketing por email.
 
-## Destinos de marketing por email suportados {#supported-destinations}
+## Destinos de marketing por email compatíveis {#supported-destinations}
 
-O Adobe Experience Platform oferece suporte para os seguintes destinos de marketing por email:
+O Adobe Experience Platform é compatível com os seguintes destinos de marketing por email:
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
@@ -33,13 +33,13 @@ O Adobe Experience Platform oferece suporte para os seguintes destinos de market
 
 ## Conectar-se a um novo destino de marketing por email {#connect-destination}
 
-Para enviar segmentos para destinos de marketing por email para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar segmentos para destinos de marketing por email para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
 
-## Práticas recomendadas ao ativar públicos-alvo para destinos de marketing por email {#best-practices}
+## Práticas recomendadas ao ativar públicos para destinos de marketing por email {#best-practices}
 
 ### Seleção de identidade {#identity}
 
-O Adobe recomenda selecionar um identificador exclusivo de [schema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Geralmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no schema.
+O Adobe recomenda que você selecione um identificador exclusivo de sua [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no esquema.
 
 | Identificador exclusivo | Campo XDM no esquema unificado |
 |----------------- | ---------------------------|
@@ -51,7 +51,7 @@ O Adobe recomenda selecionar um identificador exclusivo de [schema de união](..
 
 ### Outros atributos de destino {#other-destination-attributes}
 
-No seletor de campo Schema , escolha outros campos que deseja exportar para o destino do email. Algumas opções recomendadas são:
+No seletor de campo Esquema, escolha quais outros campos você deseja exportar para o destino de email. Algumas opções recomendadas são:
 
 | Esquema | Campo XDM |
 |------ | ---------|
@@ -59,8 +59,8 @@ No seletor de campo Schema , escolha outros campos que deseja exportar para o de
 | Sobrenome | `person.name.lastName` |
 | Telefone | `mobilePhone.number` |
 | Cidade do Endereço | `homeAddress.city` |
-| Estado do Endereço | `homeAddress.stateProvince` |
-| Código postal do endereço | `homeAddress.postalCode` |
+| Estado do endereço | `homeAddress.stateProvince` |
+| CEP do endereço | `homeAddress.postalCode` |
 | Aniversário | `person.birthDayAndMonth` |
 | Segmento de afiliação | `segmentMembership.status` |
 
@@ -68,11 +68,11 @@ No seletor de campo Schema , escolha outros campos que deseja exportar para o de
 
 ## Ativar segmentos para destinos de marketing por email {#activate}
 
-Alguns destinos de marketing por email no catálogo exportam perfis de maneira contínua por meio de uma integração da API com o destino.
+Alguns destinos de marketing por email no catálogo exportam perfis de maneira contínua por meio de uma integração de API com o destino.
 
-Outros destinos exportam arquivos para um local de armazenamento em nuvem. Após a conclusão da exportação, é necessário importar os dados do local de armazenamento na nuvem para o destino de marketing por email.
+Outros destinos exportam arquivos para um local de armazenamento na nuvem. Após concluir a exportação, é necessário importar os dados do local de armazenamento na nuvem para o destino de marketing por email.
 
-Siga os links no [destinos de marketing por email aceitos](#supported-destinations) para saber como ativar segmentos em cada destino de marketing por email.
+Siga os links no [destinos de marketing por email compatíveis](#supported-destinations) para saber como ativar segmentos para cada destino de marketing por email.
 
 ## Recursos adicionais {#additional-resources}
 

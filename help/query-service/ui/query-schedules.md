@@ -1,7 +1,8 @@
 ---
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -67,5 +68,3 @@ Selecione um agendamento nas linhas de agendamentos disponíveis. Você pode usa
 Selecionar **[!UICONTROL Excluir um agendamento]** para excluir a programação desativada.
 
 ![O espaço de trabalho de agendamentos com Desativar agendamento e Excluir agendamento realçado.](../images/ui/query-schedules/delete-schedule.png)
-
-

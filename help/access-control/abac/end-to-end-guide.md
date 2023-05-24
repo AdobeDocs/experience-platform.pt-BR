@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; tópicos populares; controle de acesso; controle de acesso baseado em atributos;
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;
 title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
@@ -12,54 +12,54 @@ ht-degree: 19%
 
 # Guia completo do controle de acesso baseado em atributos
 
-O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece aos clientes com várias marcas e privacidade maior flexibilidade para gerenciar o acesso dos usuários. O acesso a objetos individuais, como campos de esquema e segmentos, pode ser concedido/negado com políticas com base nos atributos e na função do objeto. Esse recurso permite que você conceda ou revogue o acesso a objetos individuais para usuários específicos da Plataforma em sua organização.
+O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece a clientes com várias marcas e preocupados com a privacidade maior flexibilidade para gerenciar o acesso dos usuários. O acesso a objetos individuais, como campos de esquema e segmentos, pode ser concedido/negado com políticas baseadas nos atributos e na função do objeto. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
 
-Essa funcionalidade permite categorizar campos de esquema, segmentos e assim por diante com rótulos que definem escopos organizacionais ou de uso de dados. É possível aplicar esses mesmos rótulos a jornadas, Ofertas e outros objetos no Adobe Journey Optimizer. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos de esquema do Experience Data Model (XDM) e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
+Essa funcionalidade permite categorizar campos de esquema, segmentos e outros com rótulos que definem escopos organizacionais ou de uso de dados. Você pode aplicar esses mesmos rótulos a jornadas, Ofertas e outros objetos no Adobe Journey Optimizer. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos de esquema do Experience Data Model (XDM) e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
 
 >[!NOTE]
 >
->Este documento foca no caso de uso das políticas de controle de acesso. Se você estiver tentando configurar políticas para administrar a variável **use** de dados em vez de quais usuários da Platform têm acesso a eles, consulte o guia completo sobre [governança de dados](../../data-governance/e2e.md) em vez disso.
+>Este documento se concentra no caso de uso de políticas de controle de acesso. Se você estiver tentando configurar políticas para controlar a **use** de dados em vez de quais usuários da Platform têm acesso a eles, consulte o manual completo sobre [governança de dados](../../data-governance/e2e.md) em vez disso.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da plataforma:
+Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do schema](../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial do Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md): O mecanismo de segmentação em [!DNL Platform] usado para criar segmentos de público-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+   * [Noções básicas da composição do esquema](../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+   * [Tutorial do Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+* [Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md): o mecanismo de segmentação dentro do [!DNL Platform] usado para criar segmentos de público-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
 
 ### Visão geral do caso de uso
 
-Você passará por um exemplo de fluxo de trabalho de controle de acesso baseado em atributos, onde criará e atribuirá funções, rótulos e políticas para configurar se os usuários podem ou não acessar recursos específicos em sua organização. Este guia usa um exemplo de restrição de acesso a dados confidenciais para demonstrar o fluxo de trabalho. Este caso de uso é descrito abaixo:
+Você passará por um exemplo de fluxo de trabalho de controle de acesso baseado em atributos, em que você criará e atribuirá funções, rótulos e políticas para configurar se os usuários podem ou não acessar recursos específicos na organização. Este guia usa um exemplo de restrição de acesso a dados confidenciais para demonstrar o fluxo de trabalho. Este caso de uso é descrito abaixo:
 
 Você é um provedor de assistência médica e deseja configurar o acesso aos recursos em sua organização.
 
-* Sua equipe interna de marketing deve poder acessar o **[!UICONTROL PHI/ Dados de integridade regulamentados]** dados.
-* Sua agência externa não deve poder acessar **[!UICONTROL PHI/ Dados de integridade regulamentados]** dados.
+* Sua equipe interna de marketing deve poder acessar **[!UICONTROL PHI/ Dados de saúde regulamentados]** dados.
+* Sua agência externa não deve poder acessar **[!UICONTROL PHI/ Dados de saúde regulamentados]** dados.
 
 Para fazer isso, você deve configurar funções, recursos e políticas.
 
-Você irá:
+Você vai:
 
-* [Rotular as funções para seus usuários](#label-roles): Use o exemplo de um provedor de saúde (ACME Business Group) cujo grupo de marketing trabalha com agências externas.
-* [Rotular os recursos (campos de esquema e segmentos)](#label-resources): Atribua o **[!UICONTROL PHI/ Dados de integridade regulamentados]** para recursos e segmentos do schema.
+* [Rotular as funções para seus usuários](#label-roles): Use o exemplo de um provedor de serviços de saúde (ACME Business Group) cujo grupo de marketing trabalha com agências externas.
+* [Rotular os recursos (campos e segmentos de esquema)](#label-resources): atribua a **[!UICONTROL PHI/ Dados de saúde regulamentados]** rótulo para recursos e segmentos de esquema.
 * 
-   * [Ative a política que os vinculará: ](#policy): Ative a política padrão para impedir o acesso a campos e segmentos de esquema ao conectar os rótulos em seus recursos aos rótulos em sua função. Os usuários com rótulos correspondentes receberão acesso ao campo de esquema e ao segmento em todas as sandboxes.
+   * [Ative a política que os vinculará: ](#policy): ative a política padrão para impedir o acesso a campos e segmentos de esquema conectando os rótulos dos seus recursos aos rótulos na sua função. Os usuários com rótulos correspondentes receberão acesso ao campo de esquema e ao segmento em todas as sandboxes.
 
 ## Permissões
 
-[!UICONTROL Permissões] é a área do Experience Cloud, onde os administradores podem definir funções de usuário e políticas para gerenciar permissões para recursos e objetos em um aplicativo de produto.
+[!UICONTROL Permissões] é a área do Experience Cloud em que os administradores podem definir funções e políticas de usuário para gerenciar permissões de recursos e objetos em um aplicativo de produto do.
 
-Através de [!UICONTROL Permissões], é possível criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções. [!UICONTROL As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.]
+Até [!UICONTROL Permissões], você pode criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções. [!UICONTROL As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.]
 
 Entre em contato com o administrador do sistema para obter acesso se você não tiver privilégios de administrador.
 
-Depois de ter privilégios de administrador, acesse [Adobe Experience Cloud](https://experience.adobe.com/) e faça logon usando suas credenciais do Adobe. Depois de conectado, a variável **[!UICONTROL Visão geral]** for exibida para sua organização, para a qual você tem privilégios de administrador. Esta página mostra os produtos aos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecionar **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com a plataforma.
+Quando tiver privilégios de administrador, acesse [Adobe Experience Cloud](https://experience.adobe.com/) e faça logon usando suas credenciais de Adobe. Depois de conectado, a variável **[!UICONTROL Visão geral]** é exibida para sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecionar **[!UICONTROL Permissões]** para abrir o espaço de trabalho para sua integração com a Platform.
 
-![Imagem que mostra o produto Permissões sendo selecionado no Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
+![Imagem mostrando o produto de Permissões que está sendo selecionado no Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-O espaço de trabalho Permissões da interface do usuário da plataforma é exibido, abrindo no **[!UICONTROL Funções]** página.
+O espaço de trabalho de Permissões para a interface do usuário da Platform é exibido, abrindo na **[!UICONTROL Funções]** página.
 
 ## Aplicar rótulos a uma função {#label-roles}
 
@@ -92,86 +92,86 @@ O espaço de trabalho Permissões da interface do usuário da plataforma é exib
 >title="Visão geral da função"
 >abstract="A caixa de diálogo de visão geral da função exibe os recursos e as sandbox que uma determinada função tem permissão para acessar."
 
-As funções são formas de categorizar os tipos de usuários que interagem com sua instância da plataforma e são blocos fundamentais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso necessário.
+Funções são maneiras de categorizar os tipos de usuários que interagem com sua instância da Platform e são blocos fundamentais das políticas de controle de acesso. Uma função tem determinado conjunto de permissões, e os membros da sua organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de que precisam.
 
-Para começar, selecione **[!UICONTROL Grupo Funcional ACME]** do **[!UICONTROL Funções]** página.
+Para começar, selecione **[!UICONTROL Grupo Funcional ACME]** do do **[!UICONTROL Funções]** página.
 
-![Imagem mostrando a função comercial ACME selecionada nas funções](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![Imagem mostrando a Função comercial ACME que está sendo selecionada nas Funções](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-Em seguida, selecione **[!UICONTROL Rótulos]** e depois selecione **[!UICONTROL Adicionar rótulos]**.
+Em seguida, selecione **[!UICONTROL Rótulos]** e selecione **[!UICONTROL Adicionar rótulos]**.
 
-![Imagem que mostra Adicionar rótulos sendo selecionado na guia Rótulos](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Imagem mostrando Adicionar rótulos sendo selecionados na guia Rótulos](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Uma lista de todos os rótulos em sua organização é exibida. Selecionar **[!UICONTROL RHD]** para adicionar o rótulo de **[!UICONTROL PHI/Dados de saúde regulamentados]**. Aguarde alguns instantes até que uma marca de seleção azul apareça ao lado do rótulo e selecione **[!UICONTROL Salvar]**.
+Uma lista de todos os rótulos na sua organização é exibida. Selecionar **[!UICONTROL RHD]** para adicionar o rótulo a **[!UICONTROL PHI/Dados de saúde regulamentados]**. Aguarde alguns momentos para que uma marca de seleção azul apareça ao lado do rótulo e selecione **[!UICONTROL Salvar]**.
 
-![Imagem que mostra o rótulo RHD que está sendo selecionado e salvo](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![Imagem que mostra o rótulo RHD selecionado e salvo](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
->Ao adicionar um grupo de organizações a uma função, todos os usuários desse grupo serão adicionados à função . Quaisquer alterações no grupo da organização (usuários removidos ou adicionados) serão automaticamente atualizadas na função.
+>Ao adicionar um grupo de organizações a uma função, todos os usuários nesse grupo serão adicionados à função. Quaisquer alterações no grupo de organizações (usuários removidos ou adicionados) serão automaticamente atualizadas na função.
 
 ## Aplicar rótulos a campos de esquema {#label-resources}
 
-Agora que você configurou uma função de usuário com o [!UICONTROL RHD] , a próxima etapa é adicionar esse mesmo rótulo aos recursos que você deseja controlar para essa função.
+Agora que você configurou uma função de usuário com o [!UICONTROL RHD] rótulo, a próxima etapa é adicionar esse mesmo rótulo aos recursos que você deseja controlar para essa função.
 
-Selecionar **[!UICONTROL Esquemas]** no menu de navegação esquerdo e selecione **[!UICONTROL Assistência médica ACME]** na lista de schemas que são exibidos.
+Selecionar **[!UICONTROL Esquemas]** na navegação à esquerda e selecione **[!UICONTROL ACME Healthcare]** na lista de schemas exibidos.
 
-![Imagem que mostra o esquema ACME Healthcare que está sendo selecionado na guia Schemas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Imagem mostrando o esquema do ACME Healthcare que está sendo selecionado na guia Esquemas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Em seguida, selecione **[!UICONTROL Rótulos]** para ver uma lista que exibe os campos associados ao esquema. Aqui, é possível atribuir rótulos a um ou vários campos ao mesmo tempo. Selecione o **[!UICONTROL Glicose no sangue]** e **[!UICONTROL InsulinLevel]** e selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]**.
+Em seguida, selecione **[!UICONTROL Rótulos]** para ver uma lista que exibe os campos associados ao esquema. Aqui, é possível atribuir rótulos a um ou vários campos de uma só vez. Selecione o **[!UICONTROL Glicose no sangue]** e **[!UICONTROL Nível de insulina]** e selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]**.
 
-![Imagem que mostra o BloodGlicose e o InsulinLevel selecionados e que aplica rótulos de acesso e de governança de dados selecionados](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Imagem que mostra os rótulos BloodGlucose e InsulinLevel sendo selecionados e aplicar acesso e governança de dados sendo selecionados](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-O **[!UICONTROL Editar rótulos]** for exibida, permitindo escolher os rótulos que deseja aplicar aos campos de esquema. Para esse caso de uso, selecione a variável **[!UICONTROL PHI/ Dados de integridade regulamentados]** rótulo, depois selecione **[!UICONTROL Salvar]**.
+A variável **[!UICONTROL Editar rótulos]** será exibida, permitindo que você escolha os rótulos que deseja aplicar aos campos do esquema. Para esse caso de uso, selecione a variável **[!UICONTROL PHI/ Dados de saúde regulamentados]** rótulo e selecione **[!UICONTROL Salvar]**.
 
-![Imagem que mostra o rótulo RHD que está sendo selecionado e salvo](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
+![Imagem que mostra o rótulo RHD selecionado e salvo](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
->Quando um rótulo é adicionado a um campo, esse rótulo é aplicado ao recurso pai desse campo (uma classe ou um grupo de campos). Se a classe pai ou o grupo de campos for empregado por outros schemas, esses schemas herdarão o mesmo rótulo.
+>Quando um rótulo é adicionado a um campo, esse rótulo é aplicado ao recurso principal desse campo (uma classe ou um grupo de campos). Se a classe pai ou o grupo de campos for empregado por outros esquemas, esses esquemas herdarão o mesmo rótulo.
 
 ## Aplicar rótulos a segmentos
 
-Após concluir a rotulagem dos campos de esquema, você pode começar a rotular os segmentos.
+Depois de concluir a rotulagem dos campos de esquema, você pode começar a rotular os segmentos.
 
-Selecionar **[!UICONTROL Segmentos]** no painel de navegação esquerdo. Uma lista de segmentos disponíveis na organização é exibida. Neste exemplo, os dois segmentos a seguir devem ser rotulados, pois contêm dados confidenciais de integridade:
+Selecionar **[!UICONTROL Segmentos]** no painel de navegação esquerdo. Uma lista de segmentos disponíveis em sua organização é exibida. Neste exemplo, os dois segmentos a seguir devem ser rotulados como se contivessem dados confidenciais de integridade:
 
-* Glicose no sangue >100
+* Glicose no Sangue >100
 * Insulina &lt;50
 
-Selecionar **[!UICONTROL Glicose no sangue >100]** para começar a rotular o segmento.
+Selecionar **[!UICONTROL Glicose no Sangue >100]** para começar a rotular o segmento.
 
-![Imagem que mostra a seleção de glucose no sangue >100 na guia Segmentos](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![Imagem mostrando a glicose >100 sendo selecionada na guia Segmentos](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
-O segmento **[!UICONTROL Detalhes]** será exibida. Selecionar **[!UICONTROL Gerenciar acesso]**.
+O segmento **[!UICONTROL Detalhes]** é exibida. Selecionar **[!UICONTROL Gerenciar acesso]**.
 
-![Imagem que mostra a seleção do acesso Gerenciar](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![Imagem mostrando a seleção do acesso Gerencia](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-O **[!UICONTROL Editar rótulos]** for exibida, permitindo escolher os rótulos que deseja aplicar ao segmento. Para esse caso de uso, selecione a variável **[!UICONTROL PHI/ Dados de integridade regulamentados]** rótulo, depois selecione **[!UICONTROL Salvar]**.
+A variável **[!UICONTROL Editar rótulos]** será exibida, permitindo que você escolha os rótulos que deseja aplicar ao segmento. Para esse caso de uso, selecione a variável **[!UICONTROL PHI/ Dados de saúde regulamentados]** rótulo e selecione **[!UICONTROL Salvar]**.
 
-![Imagem que mostra a seleção do rótulo RHD e salvamento selecionado](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Imagem mostrando a seleção do rótulo RHD e salvando a seleção](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Repita as etapas acima com **[!UICONTROL Insulina &lt;50]**.
 
 ## Ativar a política de controle de acesso {#policy}
 
-A política de controle de acesso padrão usará rótulos para definir quais funções de usuário têm acesso a recursos específicos da Plataforma. Neste exemplo, o acesso aos campos e segmentos do esquema será negado em todas as sandboxes para usuários que não estejam em uma função que tenha os rótulos correspondentes no campo Esquema .
+A política de controle de acesso padrão aproveitará os rótulos para definir quais funções de usuário têm acesso a recursos específicos da plataforma. Neste exemplo, o acesso a campos e segmentos de esquema será negado em todas as sandboxes para usuários que não estejam em uma função que tenha os rótulos correspondentes no campo de esquema.
 
-Para ativar a política de controle de acesso, selecione [!UICONTROL Permissões] no menu de navegação esquerdo e selecione **[!UICONTROL Políticas]**.
+Para ativar a política de controle de acesso, selecione [!UICONTROL Permissões] na navegação à esquerda e selecione **[!UICONTROL Políticas]**.
 
 ![Lista de políticas exibidas](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Em seguida, selecione as reticências (`...`) ao lado do nome das políticas e uma lista suspensa exibe controles para editar, ativar, excluir ou duplicar a função. Selecionar **[!UICONTROL Ativar]** na lista suspensa.
+Em seguida, selecione as reticências (`...`) ao lado do nome das políticas, e uma lista suspensa exibe controles para editar, ativar, excluir ou duplicar a função. Selecionar **[!UICONTROL Ativar]** na lista suspensa.
 
-![Menu suspenso para ativar a política](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![Lista suspensa para ativar a política](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-A caixa de diálogo ativar política é exibida, solicitando que você confirme a ativação. Selecionar **[!UICONTROL Confirmar]**.
+A caixa de diálogo ativar política é exibida, solicitando que você confirme a ativação. Selecionar **[!UICONTROL Confirmar o]**.
 
-![Ativar caixa de diálogo de política](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![Caixa de diálogo Ativar política](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-A confirmação da ativação da política é recebida e você é retornado ao [!UICONTROL Políticas] página.
+A confirmação da ativação da política é recebida e você retorna ao [!UICONTROL Políticas] página.
 
-![Ativar confirmação da política](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![Ativar confirmação de política](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 <!-- ## Create an access control policy {#policy}
 
@@ -252,6 +252,6 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Próximas etapas
 
-Você concluiu a aplicação de rótulos a uma função, campos de esquema e segmentos. A agência externa atribuída a essas funções é restrita de visualizar esses rótulos e seus valores no esquema, conjunto de dados e exibição de perfil. Esses campos também não podem ser usados na definição do segmento ao usar o Construtor de segmentos.
+Você concluiu a aplicação de rótulos a uma função, campos de esquema e segmentos. A agência externa atribuída a essas funções tem restrições para visualizar esses rótulos e seus valores no esquema, conjunto de dados e exibição de perfil. Esses campos também não podem ser usados na definição do segmento ao usar o Construtor de segmentos.
 
-Para obter mais informações sobre o controle de acesso baseado em atributos, consulte o [visão geral do controle de acesso baseado em atributos](./overview.md).
+Para obter mais informações sobre o controle de acesso baseado em atributos, consulte [visão geral do controle de acesso baseado em atributos](./overview.md).

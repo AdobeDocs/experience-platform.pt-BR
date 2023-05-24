@@ -9,7 +9,7 @@ ht-degree: 86%
 
 ---
 
-# Notas de versão da extensão de cadeia de caracteres de produtos do Adobe Analytics
+# Notas de versão da extensão de string de produtos do Adobe Analytics
 
 >[!NOTE]
 >
@@ -37,4 +37,4 @@ ht-degree: 86%
 
 **Correções de erros**
 
-* Correção de um erro em que a cadeia de caracteres de produtos não estava incluída em algumas versões da extensão [!DNL Adobe Analytics].
+* Correção de um erro em que a string de produtos não estava incluída em algumas versões da extensão [!DNL Adobe Analytics].

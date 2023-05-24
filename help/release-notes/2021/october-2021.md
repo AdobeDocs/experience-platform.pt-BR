@@ -5,7 +5,7 @@ exl-id: 8f8bcb24-6478-4281-9362-9559158384af
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -58,7 +58,7 @@ O Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | [!DNL Amazon S3] aprimoramentos na origem | Agora você pode usar o `s3SessionToken` parâmetro para conectar seu [!DNL Amazon S3] para a Platform usando credenciais de segurança temporárias. Esse token permite fornecer acesso temporário a curto prazo aos [!DNL Amazon S3] recursos para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação da](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
-| [!DNL Generic REST API] (Beta) | Agora você pode criar um [!DNL Generic REST API] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a Platform. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
-| [!DNL Zoho CRM] (Beta) | Agora você pode criar um [!DNL Zoho CRM] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou o [interface do usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados de seu [!DNL Zoho CRM] para a Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
+| [!DNL Generic REST API] (Beta) | Agora você pode criar um [!DNL Generic REST API] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a Platform. Consulte a [[!DNL Generic REST API] visão geral das ](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
+| [!DNL Zoho CRM] (Beta) | Agora você pode criar um [!DNL Zoho CRM] conexão de origem usando o [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou o [interface do usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados de seu [!DNL Zoho CRM] para a Platform. Consulte a [[!DNL Zoho CRM] visão geral das ](../../sources/connectors/crm/zoho.md) para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a [visão geral das origens](../../sources/home.md).

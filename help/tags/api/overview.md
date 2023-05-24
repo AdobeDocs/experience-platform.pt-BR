@@ -19,7 +19,7 @@ Para exibir todos os endpoints e operações CRUD disponíveis, acesse a página
 
 ## Empresas
 
-Uma empresa representa a organização de um usuário de tags, geralmente um negócio. Essas empresas correspondem a 1:1 com IDs de organização. Os usuários da API só terão visibilidade das empresas às quais tiverem acesso.
+Uma empresa representa a organização de um usuário de tags, geralmente um negócio. Essas empresas correspondem inteiramente às IDs de organização. Os usuários da API só terão visibilidade das empresas às quais tiverem acesso.
 
 Consulte o [manual de endpoint de empresas](./endpoints/companies.md) para saber como visualizar as empresas disponíveis na API.
 
@@ -117,7 +117,7 @@ O endpoint `/search` fornece uma maneira de encontrar recursos que correspondem 
 
 ## Segredos
 
-Um segredo contém credenciais que permitem o encaminhamento de eventos para autenticação em outro sistema para troca de dados segura. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos, e a variável [guia do endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
+Um segredo contém credenciais que permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca segura de dados. Consulte a [guia de segredos](./guides/secrets.md) para obter uma visão geral sobre como os segredos funcionam no encaminhamento de eventos e a [manual de endpoint de segredos](./endpoints/secrets.md) para saber como gerenciá-los na API do Reator.
 
 ## Próximas etapas
 

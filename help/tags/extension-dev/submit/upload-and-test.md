@@ -13,9 +13,9 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Para testar extensões de tags na Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface do usuário da plataforma ou a interface do usuário da coleção de dados para instalar o pacote de extensão em uma propriedade e exercer seus recursos dentro de uma biblioteca de tags e criar.
+Para testar extensões de tags na Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface da Platform ou a interface da Coleção de dados para instalar o pacote de extensão em uma propriedade e usar seus recursos em uma build e uma biblioteca de tags.
 
 Este documento aborda como implementar testes completos para sua extensão.
 
@@ -39,7 +39,7 @@ Um exemplo específico é o arquivo de logotipo: Adicione uma linha `"iconPath":
 
 Para usar a API ou as ferramentas de linha de comando, é necessário ter uma conta técnica do Adobe I/O. Você deve criar a conta técnica no console do I/O e usar a ferramenta Uploader para fazer upload do pacote de extensão.
 
-Para obter informações sobre como criar uma conta técnica para uso com tags no Adobe Experience Platform, consulte [Introdução à API do reator](../../api/getting-started.md) guia.
+Para obter informações sobre como criar uma conta técnica para usar com tags na Adobe Experience Platform, consulte o [Introdução à API do Reator](../../api/getting-started.md) guia.
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ Seu pacote de extensão será carregado e o carregador fornecerá a ID do extens
 
 >[!NOTE]
 >
->Observação: ao fazer upload ou aplicar patches, os pacotes de extensão são colocados em um estado pendente enquanto o sistema extrai o pacote de forma assíncrona e faz a implantação. Enquanto esse processo estiver em andamento, você poderá pesquisar a variável `extension_package` ID do status usando a API e na interface do usuário. Você verá um cartão de extensão no catálogo marcado como Pendente.
+>Observação: ao fazer upload ou aplicar patches, os pacotes de extensão são colocados em um estado pendente enquanto o sistema extrai o pacote de forma assíncrona e faz a implantação. Enquanto esse processo está em andamento, você pode pesquisar o `extension_package` ID do seu status usando a API e na interface do usuário. Você verá um cartão de extensão no catálogo marcado como Pendente.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Seu pacote de extensão será carregado e o carregador fornecerá a ID do extens
 
 ## Criar uma propriedade de desenvolvimento {#property}
 
-Depois de fazer logon na interface do usuário e selecione **[!UICONTROL Tags]** na navegação à esquerda, a variável [!UICONTROL Propriedades] será exibida. Uma propriedade é um container para as tags que você deseja implantar e pode ser usada em um ou vários sites.
+Depois de fazer logon na interface do usuário e selecionar **[!UICONTROL Tags]** na navegação à esquerda, a variável [!UICONTROL Propriedades] é exibida. Uma propriedade é um container para as tags que você deseja implantar e pode ser usada em um ou vários sites.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -112,7 +112,7 @@ Para adicionar a extensão, selecione a guia **Catálogo**.
 
 O catálogo exibe ícones de cartão para cada extensão disponível. Se a extensão não for exibida no catálogo, verifique se você concluiu as etapas acima nas seções Configuração do console de administração da Adobe e Criação do pacote de extensão. O pacote de extensão também poderá ser mostrado como Pendente se a Platform não tiver concluído o processamento inicial.
 
-Se você tiver seguido as etapas anteriores e ainda não vir um pacote de extensão Pendente ou Falha no catálogo, deverá verificar o status do seu pacote de extensão diretamente usando a API. Para obter informações sobre como fazer a chamada de API apropriada, leia [Buscar um ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) na documentação da API.
+Se tiver seguido as etapas anteriores e ainda não vir um pacote de extensão Pendente ou com Falha no catálogo, você deverá verificar o status do pacote de extensão diretamente usando a API. Para obter informações sobre como fazer a chamada de API apropriada, leia [Buscar um ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) na documentação da API.
 
 Após concluir o processamento do pacote de extensão, selecione **Instalar** na parte inferior do cartão.
 
@@ -142,7 +142,7 @@ As extensões podem definir tipos de elementos de dados, se necessário, para qu
 
 Quando um usuário seleciona sua extensão na lista suspensa **Extensão**, a lista suspensa **Tipo de elemento de dados** é preenchida com quaisquer tipos de elementos fornecidos pela extensão. O usuário pode mapear cada elemento de dados para seu valor de origem. Os elementos de dados podem ser usados ao criar regras no Evento de alteração de elemento de dados ou no Evento de código personalizado para acionar a execução de uma regra. Um elemento de dados também pode ser usado na Condição do elemento de dados ou em outras Condições, Exceções ou Ações em uma regra.
 
-Depois que o elemento de dados é criado (o mapeamento é configurado), os usuários podem fazer referência aos dados de origem simplesmente referenciando o elemento de dados. Se a origem do valor mudar (novos projetos de site etc.) os usuários só precisam atualizar o mapeamento uma vez na interface do usuário e todos os elementos de dados receberão automaticamente o novo valor de fonte.
+Depois que o elemento de dados é criado (o mapeamento é configurado), os usuários podem fazer referência aos dados de origem simplesmente referenciando o elemento de dados. Se a origem do valor mudar (novos projetos de site etc.) os usuários só precisam atualizar o mapeamento uma vez na interface do usuário e todos os elementos de dados receberão automaticamente o novo valor de origem.
 
 ### Regras
 
@@ -200,7 +200,7 @@ As instruções de instalação estão disponíveis na guia Ambientes. Essa pág
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-O **Instruções de instalação da Web** para o ambiente de desenvolvimento é exibida. Marque o ícone de cópia para copiar toda a tag `<script>`.
+A variável **Instruções de instalação da Web** para o ambiente de desenvolvimento será exibida. Marque o ícone de cópia para copiar toda a tag `<script>`.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
@@ -226,6 +226,6 @@ Quando você descobre alterações que precisam ser feitas no pacote de extensã
    >
    >Argumentos podem ser passados na linha de comando para economizar tempo, evitando a inserção repetida de credenciais. Para obter mais informações sobre isso, leia a [documentação do carregador do Reactor](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. A etapa de instalação pode ser ignorada ao ser atualizado um pacote existente.
-1. Modificar recursos - se a configuração de qualquer um dos componentes da extensão tiver sido alterada, será necessário atualizar esses recursos na interface do usuário.
+1. Modificar recursos: se a configuração de qualquer um dos componentes da extensão tiver sido alterada, será necessário atualizar esses recursos na interface do usuário.
 1. Adicione as alterações mais recentes à biblioteca e crie novamente.
 1. Realize outra rodada de testes.

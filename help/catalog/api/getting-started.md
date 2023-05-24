@@ -7,13 +7,13 @@ exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 # [!DNL Catalog Service] Manual da API
 
-O [!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados na Adobe Experience Platform. [!DNL Catalog] O atua como um armazenamento de metadados ou &quot;catálogo&quot;, onde você pode encontrar informações sobre seus dados na [!DNL Experience Platform], sem precisar acessar os dados propriamente ditos. Consulte a [[!DNL Catalog] visão geral](../home.md) para obter mais informações.
+O [!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados na Adobe Experience Platform. [!DNL Catalog] O atua como um armazenamento de metadados ou &quot;catálogo&quot;, onde você pode encontrar informações sobre seus dados na [!DNL Experience Platform], sem precisar acessar os dados propriamente ditos. Consulte a [[!DNL Catalog] visão geral das ](../home.md) para obter mais informações.
 
 Este guia do desenvolvedor fornece etapas para ajudar você a começar a usar o [!DNL Catalog] API. O guia fornece chamadas de API de exemplo para executar operações importantes usando [!DNL Catalog].
 

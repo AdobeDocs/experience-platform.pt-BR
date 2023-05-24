@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, introdução, conteúdo, marcação de conteúdo ai, marcação de palavra-chave, marcação de palavra-chave
+keywords: Experience Platform;introdução;conteúdo;marcação de conteúdo ai;marcação de palavra-chave;marcação de palavra-chave
 solution: Experience Platform
-title: Marcação de palavra-chave na API de marcação de conteúdo
-description: O serviço de Marcação de palavra-chave, ao receber um documento de texto, extrai automaticamente palavras-chave ou frases-chave que melhor descrevem o assunto do documento. Para extrair palavras-chave, é usada uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada.
+title: Marcação de palavras-chave na API de marcação de conteúdo
+description: O serviço de marcação de palavra-chave, quando recebe um documento de texto, extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada é usada.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
@@ -13,21 +13,21 @@ ht-degree: 6%
 
 # Marcação de palavra-chave
 
-Ao fornecer um documento de texto, o serviço de marcação de palavra-chave extrai automaticamente palavras-chave ou frases-chave que melhor descrevem o assunto do documento. Para extrair palavras-chave, é usada uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada.
+Quando lhe é fornecido um documento de texto, o serviço de marcação de palavras-chave extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada é usada.
 
-A tabela a seguir lista as entidades nomeadas que [!DNL Content Tagging] pode identificar:
+A tabela a seguir lista as entidades nomeadas que [!DNL Content Tagging] podem identificar:
 
 | Nome da entidade | Descrição |
 | --- | --- |
-| PESSOA | Pessoas, incluindo ficcionais. |
+| PERSON | Pessoas, incluindo as fictícias. |
 | GPE | Países, cidades e estados. |
-| LOC | Locais sem GPE, cadeias montanhosas e massas de água. |
+| LOC | Localizações não GPE, cadeias montanhosas e massas de água. |
 | FAC | Edifícios, aeroportos, autoestradas, pontes, etc. |
-| ORG | Empresas, agências, instituições, etc. |
+| ORG | Empresas, agências, instituições etc. |
 | PRODUTO | Objetos, veículos, alimentos, etc. (Não serviços.) |
-| EVENTO | Furacões, batalhas, guerras, eventos esportivos etc. |
-| WORK_OF_ART | Títulos de livros, canções, etc. |
-| LEI | Documentos nomeados em leis. |
+| EVENTO | Nomeados furacões, batalhas, guerras, eventos esportivos etc. |
+| TRABALHO_DE_ARTE | Títulos de livros, músicas, etc. |
+| LEI | Documentos nomeados transformados em leis. |
 | IDIOMA | Qualquer idioma nomeado. |
 
 **Formato da API**
@@ -38,11 +38,11 @@ POST /services/v2/predict
 
 **Solicitação**
 
-A solicitação a seguir extrai palavras-chave de um documento com base nos parâmetros de entrada fornecidos no payload.
+A solicitação a seguir extrai palavras-chave de um documento com base nos parâmetros de entrada fornecidos na carga.
 
 Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre os parâmetros de entrada mostrados.
 
-Essa [exemplo de pdf](../pdf-files/simple-text.pdf) foi usado no exemplo mostrado neste documento.
+Este [pdf de exemplo](../pdf-files/simple-text.pdf) arquivo foi usado no exemplo mostrado neste documento.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -90,25 +90,25 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Propriedade | Descrição | Obrigatório |
 | --- | --- | --- |
-| `top_n` | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor que qualquer um dos limites. | Não |
+| `top_n` | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor que qualquer limite. | Não |
 | `min_relevance` | Limite de pontuação abaixo do qual os resultados devem ser retornados. Exclua o parâmetro para retornar todos os resultados. | Não |
-| `min_key_phrase_length` | Número mínimo de palavras necessárias nas frases-chave. | Não |
-| `max_key_phrase_length` | Número máximo de palavras necessárias nas frases-chave. | Não |
+| `min_key_phrase_length` | Número mínimo de palavras necessárias nas frases principais. | Não |
+| `max_key_phrase_length` | Número máximo de palavras necessárias nas frases principais. | Não |
 | `last_semantic_unit_type` | Retorna apenas unidades semânticas até o nível especificado na resposta hierárquica. &quot;key_phrase&quot; retorna somente frases-chave, &quot;linked_entity&quot; retorna somente frases-chave e suas entidades vinculadas correspondentes, e &quot;concept&quot; retorna frases-chave, entidades vinculadas e conceitos. | Não |
 | `entity_types` | Tipos de entidades a serem retornadas como frases-chave. | Não |
 
-**Objeto Documento**
+**Objeto do documento**
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Url pré-assinado do documento a partir do qual as frases-chave devem ser extraídas. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de acordo de recompra onde o documento está sendo armazenado. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar o documento como um argumento multiparte, em vez de usar urls pré-assinados. |
-| `dc:format` | string | Sim | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | A codificação de documento é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
+| `repo:path` | string | - | - | - | URL pré-assinado do documento do qual as frases-chave serão extraídas. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositório onde o documento está sendo armazenado. |
+| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar o documento como um argumento multiparte em vez de usar urls pré-assinados. |
+| `dc:format` | string | Sim | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | A codificação de documentos é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um objeto JSON contendo palavras-chave extraídas no `response` matriz.
+Uma resposta bem-sucedida retorna um objeto JSON que contém palavras-chave extraídas no `response` matriz.
 
 ```json
 {

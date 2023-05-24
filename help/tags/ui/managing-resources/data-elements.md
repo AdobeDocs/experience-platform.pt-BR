@@ -54,7 +54,7 @@ Você pode usar elementos de dados em scripts personalizados usando a `_satellit
 
 ## Criar um elemento de dados {#create-a-data-element}
 
-Os elementos de dados são os blocos de construção das regras. Os elementos de dados permitem criar um dicionário de dados (ou mapa de dados) dos itens usados comumente em uma página, independentemente da sua origem (cadeias de caracteres de consulta, URLs ou valores de cookie) para qualquer objeto contido no seu site.
+Os elementos de dados são os blocos de construção das regras. Os elementos de dados permitem criar um dicionário de dados (ou mapa de dados) dos itens usados comumente em uma página, independentemente da sua origem (strings de consulta, URLs ou valores de cookie) para qualquer objeto contido no seu site.
 
 1. Em uma página Propriedade, abra a guia [!UICONTROL Elementos de dados] e selecione **[!UICONTROL Criar novo elemento de dados]**.
 1. Nomeie o elemento de dados.
@@ -240,7 +240,7 @@ De forma semelhante às Informações da página, esse elemento de dados usa tip
 
 Selecione um dos seguintes atributos de comportamento do visitante:
 
-* Landing page
+* Página de destino
 * Traffic source
 * Minutes on site
 * Session count
@@ -251,7 +251,7 @@ Selecione um dos seguintes atributos de comportamento do visitante:
 Alguns casos de uso comuns incluem:
 
 * Mostrar uma pesquisa depois que um visitante estiver no site por cinco minutos
-* Se esta for a página de aterrissagem da visita, preencha uma métrica [!DNL Analytics]
+* Se esta for a página de destino da visita, preencha uma métrica [!DNL Analytics]
 * Mostrar uma nova oferta ao visitante depois do número X de Contagens de sessão
 * Exibir um cadastro de informativo se for a primeira visita
 

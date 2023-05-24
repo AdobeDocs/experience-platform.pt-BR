@@ -323,11 +323,11 @@ Especifique o nome e o valor da variável do JavaScript que deve existir para um
 
 ### Envolvimento
 
-#### Landing Page
+#### Página de destino
 
 Especifique a página que o usuário deve ser direcionado para acionar o evento.
 
-1. Especifique a página de aterrissagem.
+1. Especifique a página de destino.
 1. (Opcional) Ative o Regex se esta for uma expressão regular.
 
 #### New/Returning Visitor
@@ -842,7 +842,7 @@ De forma semelhante às informações da página, esse elemento de dados usa tip
 
 Selecione um dos seguintes atributos de comportamento do visitante:
 
-* Landing page
+* Página de destino
 * Traffic source
 * Minutes on site
 * Session count
@@ -853,7 +853,7 @@ Selecione um dos seguintes atributos de comportamento do visitante:
 Alguns casos de uso comuns incluem:
 
 * Mostrar uma pesquisa depois que um visitante estiver no site por cinco minutos
-* Se esta for a landing page para a visita, preencher uma métrica do Analytics
+* Se esta for a página de destino para a visita, preencher uma métrica do Analytics
 * Mostrar uma nova oferta ao visitante depois do número X de Contagens de sessão
 * Exibir um cadastro de informativo se for uma primeira visita
 

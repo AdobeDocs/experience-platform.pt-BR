@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform, home, tópicos populares, recuperar lotes com falha, lotes com falha, assimilação em lote, assimilação em lote, lotes com falha, obter lotes com falha, obter lotes com falha, baixar lotes com falha, baixar lotes com falha, baixar lotes com falha;
+keywords: Experience Platform;página inicial;tópicos populares;recuperar lotes com falha;lotes com falha;assimilação em lote;Assimilação em lote;Lotes com falha;Obter lotes com falha;obter lotes com falha;Baixar lotes com falha;baixar lotes com falha;
 solution: Experience Platform
-title: Recuperação de Lotes com Falha Usando a API de Acesso a Dados
+title: Recuperação de lotes com falha usando a API de acesso a dados
 type: Tutorial
 description: Este tutorial aborda etapas para recuperar informações sobre um lote com falha usando APIs de assimilação de dados.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Recuperação de lotes com falha usando a API de acesso a dados
 
-O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir os dados usando vários tipos de arquivo (como CSVs), ou a assimilação de streaming, que permite inserir os dados no [!DNL Platform] uso de endpoints de transmissão em tempo real.
+O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir os dados usando vários tipos de arquivos (como CSVs), ou a assimilação por streaming, que permite inserir os dados no [!DNL Platform] usar endpoints de transmissão em tempo real.
 
 Este tutorial aborda etapas para recuperar informações sobre um lote com falha usando [!DNL Data Ingestion] APIs.
 
@@ -22,36 +22,36 @@ Este tutorial aborda etapas para recuperar informações sobre um lote com falha
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): O quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados para [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Data Ingestion]](../home.md): os métodos pelos quais os dados podem ser enviados para o [!DNL Experience Platform].
 
-### Lendo exemplos de chamadas de API
+### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler exemplos de chamadas de API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
-Para fazer chamadas para [!DNL Platform] As APIs devem ser concluídas primeiro [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes ao [!DNL Schema Registry], são isoladas em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo as que pertencem à [!DNL Schema Registry], são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - `Content-Type: application/json`
 
-### Exemplo de lote com falha
+### Lote com falha de amostra
 
-Este tutorial usará dados de amostra com um carimbo de data e hora formatado incorretamente que define o valor do mês como **00**, conforme mostrado abaixo:
+Este tutorial usará dados de amostra com um carimbo de data e hora formatado incorretamente que define o valor do mês a ser **00**, como se vê a seguir:
 
 ```json
 {
@@ -76,7 +76,7 @@ Este tutorial usará dados de amostra com um carimbo de data e hora formatado in
 }
 ```
 
-A carga acima não será validada corretamente em relação ao esquema XDM devido ao carimbo de data e hora mal formado.
+A carga acima não será validada corretamente no esquema XDM devido ao carimbo de data e hora malformado.
 
 ## Recuperar o lote com falha
 
@@ -88,7 +88,7 @@ GET /batches/{BATCH_ID}/failed
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{BATCH_ID}` | A ID do lote que você está pesquisando. |
+| `{BATCH_ID}` | A ID do lote que você está procurando. |
 
 **Solicitação**
 
@@ -133,9 +133,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Com a resposta acima, você pode ver quais partes do lote tiveram êxito e falharam. Nessa resposta, você pode ver que o arquivo `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contém o lote com falha.
+Com a resposta acima, você pode ver quais partes do lote tiveram êxito e falharam. Nessa resposta, é possível ver que o arquivo `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contém o lote com falha.
 
-## Baixe o lote com falha
+## Baixar o lote com falha
 
 Depois de saber qual arquivo no lote falhou, você pode baixar o arquivo com falha e ver qual é a mensagem de erro.
 
@@ -152,7 +152,7 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 **Solicitação**
 
-A solicitação a seguir permite baixar o arquivo com erros de assimilação.
+A solicitação a seguir permite baixar o arquivo que continha erros de assimilação.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 **Resposta**
 
-Como o lote assimilado anterior tinha uma data e hora inválida, o seguinte erro de validação será exibido.
+Como o lote assimilado anterior tinha uma data-hora inválida, o seguinte erro de validação será mostrado.
 
 ```json
 {
@@ -184,19 +184,19 @@ Como o lote assimilado anterior tinha uma data e hora inválida, o seguinte erro
 
 ## Próximas etapas
 
-Após ler este tutorial, você aprendeu a recuperar erros de lotes com falha. Para mais informações sobre a ingestão em lote, leia o [guia do desenvolvedor de ingestão em lote](../batch-ingestion/overview.md). Para obter mais informações sobre a assimilação de streaming, leia o [tutorial de criação de uma conexão de transmissão](../tutorials/create-streaming-connection.md).
+Depois de ler este tutorial, você aprendeu a recuperar erros de lotes com falha. Para obter mais informações sobre a assimilação em lote, leia o [guia do desenvolvedor de assimilação em lote](../batch-ingestion/overview.md). Para obter mais informações sobre a assimilação por transmissão, leia o [tutorial de criação de uma conexão de transmissão](../tutorials/create-streaming-connection.md).
 
 ## Apêndice
 
-Esta seção contém informações sobre outros tipos de erros de assimilação que podem ocorrer.
+Esta seção contém informações sobre outros tipos de erro de assimilação que podem ocorrer.
 
 ### XDM formatado incorretamente
 
-Como o erro de carimbo de data e hora no fluxo de exemplo anterior, esses erros se devem a um XDM formatado incorretamente. Essas mensagens de erro variam, dependendo da natureza do problema. Como resultado, nenhum exemplo de erro específico pode ser exibido.
+Assim como o erro de carimbo de data e hora no fluxo de exemplo anterior, esses erros se devem ao XDM formatado incorretamente. Essas mensagens de erro variam de acordo com a natureza do problema. Como resultado, nenhum exemplo de erro específico pode ser mostrado.
 
-### ID de organização ausente ou inválido
+### ID de organização ausente ou inválida
 
-Esse erro é mostrado se a ID da organização estiver ausente no payload for inválida.
+Esse erro será exibido se a ID da organização estiver ausente na carga for inválida.
 
 ```json
 {
@@ -211,7 +211,7 @@ Esse erro é mostrado se a ID da organização estiver ausente no payload for in
 
 ### Esquema XDM ausente
 
-Esse erro será mostrado se a variável `schemaRef` para `xdmMeta` está ausente.
+Esse erro é exibido se a variável `schemaRef` para o `xdmMeta` está ausente.
 
 ```json
 {
@@ -226,7 +226,7 @@ Esse erro será mostrado se a variável `schemaRef` para `xdmMeta` está ausente
 
 ### Nome de origem ausente
 
-Esse erro será mostrado se a variável `source` no cabeçalho está faltando seu `name`.
+Esse erro é exibido se a variável `source` o cabeçalho não tem o respectivo `name`.
 
 ```json
 {
@@ -242,7 +242,7 @@ Esse erro será mostrado se a variável `source` no cabeçalho está faltando se
 
 ### Entidade XDM ausente
 
-Esse erro será mostrado se não houver `xdmEntity` presente.
+Esse erro é exibido se não houver `xdmEntity` presente.
 
 ```json
 {

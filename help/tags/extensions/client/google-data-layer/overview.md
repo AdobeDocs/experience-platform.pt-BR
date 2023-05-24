@@ -1,6 +1,6 @@
 ---
-title: Extensão de camada de dados da Google
-description: Saiba mais sobre a extensão de tag da Camada de dados do cliente da Google no Adobe Experience Platform.
+title: Extensão da camada de dados do Google
+description: Saiba mais sobre a extensão de tag da Camada de dados do cliente da Google na Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
 source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
 workflow-type: tm+mt
@@ -13,52 +13,52 @@ ht-degree: 13%
 
 A extensão Camada de dados da Google permite usar uma camada de dados da Google na implementação de tags. A extensão pode ser usada de forma independente ou simultânea com as soluções da Google e com o código aberto da Google [Biblioteca de ajuda da camada de dados](https://github.com/google/data-layer-helper).
 
-A Biblioteca do Auxiliar fornece funcionalidade semelhante orientada por eventos ao Adobe Client Data Dayer (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de dados da Google oferecem funcionalidade semelhante àquelas no [Extensão ACDL](../client-data-layer/overview.md).
+A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para o Adobe Client Data Day (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de dados do Google fornecem funcionalidade semelhante àqueles na [Extensão ACDL](../client-data-layer/overview.md).
 
-## Prazo
+## Maturidade
 
-A versão 1.2.x é um beta atrasado que está em uso na produção.
+A versão 1.2.x é um beta tardio que está em uso de produção.
 
 ## Instalação
 
-Para instalar a extensão, navegue até o catálogo de extensões na interface do usuário da Coleta de dados e selecione **[!UICONTROL Camada de dados da Google]**.
+Para instalar a extensão, navegue até o catálogo de extensões na interface da Coleção de dados e selecione **[!UICONTROL Camada de dados Google]**.
 
-Depois de instalada, a extensão cria ou acessa uma camada de dados em cada carregamento da biblioteca de Tags do Adobe Experience Platform.
+Depois de instalada, a extensão cria ou acessa uma camada de dados em cada carregamento da biblioteca de tags do Adobe Experience Platform.
 
 ## Exibição de extensão
 
-A configuração da extensão pode ser usada para definir o nome da camada de dados consumida pela extensão. Se nenhuma camada de dados com o nome configurado estiver presente quando as Tags do Adobe Experience Platform forem carregadas, a extensão criará uma.
+A configuração de extensão pode ser usada para definir o nome da camada de dados que a extensão consome. Se nenhuma camada de dados com o nome configurado estiver presente quando as Tags do Adobe Experience Platform forem carregadas, a extensão criará uma.
 
-O padrão do nome da camada de dados é o nome padrão do Google `dataLayer`.
+O nome padrão da camada de dados é o nome padrão do Google `dataLayer`.
 
 >[!NOTE]
 >
->Não importa se o código Google ou Adobe é carregado primeiro e cria a camada de dados. Ambos os sistemas se comportam da mesma forma - crie a camada de dados se ela não estiver presente ou use a camada de dados existente.
+>Não importa se o código Google ou Adobe é carregado primeiro e cria a camada de dados. Ambos os sistemas se comportam da mesma forma: crie a camada de dados se ela não estiver presente ou use a camada de dados existente.
 
 ## Eventos
 
 >[!NOTE]
 >
->A palavra _evento_ é sobrecarregada quando uma camada de dados orientada por evento é usada nas Tags do Adobe Experience Platform. _Eventos_ pode ser:
-> - Eventos de Tags do Adobe Experience Platform (Biblioteca carregada e assim por diante).
+>A palavra _evento_ é sobrecarregado quando uma camada de dados orientada por eventos é usada em Tags do Adobe Experience Platform. _Eventos_ pode ser:
+> - Eventos de tags do Adobe Experience Platform (biblioteca carregada e assim por diante).
 > - Eventos JavaScript.
-> - Dados enviados para a camada de dados com a _evento_ palavra-chave.
+> - Os dados enviados para a camada de dados com o _evento_ palavra-chave.
 
 
 A extensão oferece a possibilidade de acompanhar as alterações na camada de dados.
 
 >[!NOTE]
 >
->É importante compreender o uso da variável _evento_ palavra-chave quando os dados são enviados para uma camada de dados da Google, de forma semelhante à Camada de dados do cliente do Adobe. O _evento_ A palavra-chave altera o comportamento da camada de dados do Google e, portanto, dessa extensão.\
-> Leia a documentação do Google ou pesquise se não tiver certeza sobre esse ponto.
+>É importante compreender a utilização do _evento_ palavra-chave quando os dados são enviados para uma camada de dados do Google, de forma semelhante à Camada de dados do cliente Adobe. A variável _evento_ Essa palavra-chave altera o comportamento da camada de dados do Google e, portanto, dessa extensão.\
+> Leia a documentação do Google ou faça uma pesquisa se não tiver certeza sobre esse ponto.
 
-### Analisar todos os envios para a camada de dados
+### Analise todos os envios para a camada de dados
 
 Se você selecionar essa opção, seu ouvinte de eventos ouvirá qualquer alteração feita na camada de dados.
 
-### Analisar os envios excluindo eventos
+### Analise os eventos de push, exceto
 
-Se você selecionar essa opção, o ouvinte do evento ouvirá qualquer push de dados para a camada de dados, excluindo eventos.
+Se você selecionar essa opção, o ouvinte do evento ouvirá qualquer envio de dados para a camada de dados, excluindo eventos.
 
 O exemplo de eventos de push a seguir seria rastreado pelo ouvinte:
 
@@ -73,7 +73,7 @@ dataLayer.push({"event":"myevent"})
 dataLayer.push({"event":"myevent","data":"something"})
 ```
 
-### Analisar todos os eventos
+### Ouvir todos os eventos
 
 Se você selecionar essa opção, o ouvinte do evento ouvirá qualquer evento enviado para a camada de dados.
 
@@ -90,7 +90,7 @@ O exemplo de evento de push a seguir não seria rastreado pelo ouvinte:
 dataLayer.push({"data":"something"})
 ```
 
-### Acompanhamento de evento específico
+### Ouvir um evento específico
 
 No caso de você especificar um evento, o ouvinte do evento rastreia todos os eventos que correspondem a uma string específica.
 
@@ -100,7 +100,7 @@ Por exemplo, definir `myEvent` ao usar essa configuração faz com que o ouvinte
 dataLayer.push({"event":"myEvent"})
 ```
 
-Um regex (ECMAScript / JavaScript) pode ser usado para corresponder a nomes de evento.
+Um regex (ECMAScript / JavaScript) pode ser usado para corresponder nomes de eventos.
 
 Por exemplo, definir &#39;myEvent\d&#39; rastrearia `myEvent` com um dígito (\d):
 
@@ -113,11 +113,11 @@ dataLayer.push({"event":"myEvent2"})
 
 ### Encaminhar para a camada de dados {#push-to-data-layer}
 
-A extensão fornece duas ações para encaminhar o JSON para a camada de dados; um campo de texto livre para criar manualmente o JSON a ser enviado e, da versão 1.2.0, uma caixa de diálogo de vários campos de valor chave.
+A extensão fornece duas ações para enviar JSON para a camada de dados: um campo de texto livre para criar manualmente o JSON a ser enviado e, da versão 1.2.0, uma caixa de diálogo de vários campos com valores-chave.
 
 #### JSON de texto livre
 
-A ação de texto livre possibilita o uso de elementos de dados diretamente no JSON. No editor JSON, os elementos de dados devem ser referenciados usando a notação de porcentagem. Por exemplo, `%dataElementName%`.
+A ação de texto livre permite usar elementos de dados diretamente no JSON. No editor de JSON, os elementos de dados devem ser referenciados usando a notação de porcentagem. Por exemplo, `%dataElementName%`.
 
 ```json
 {
@@ -129,27 +129,27 @@ A ação de texto livre possibilita o uso de elementos de dados diretamente no J
 }
 ```
 
-#### Multifield de valor-chave
+#### Chave-Valor multicampo
 
-A caixa de diálogo de vários campos de valor-chave mais recente é uma interface mais fácil de usar que permite que um push seja configurado sem gravar manualmente o JSON.
+A caixa de diálogo de vários campos de valor-chave mais recente é uma interface mais amigável que permite a configuração de um push sem gravar manualmente o JSON.
 
-### Google DL Redefinir para Estado Calculado
+### Google DL Redefinido para Estado Calculado
 
-A extensão fornece uma ação para redefinir a camada de dados. Se usada em uma regra que processa uma alteração na camada de dados do Google, a camada de dados é redefinida para o estado calculado da camada de dados no momento em que a regra foi acionada. Se a ação for usada em uma regra que não processa uma alteração de camada de dados do Google, a ação esvaziará a camada de dados.
+A extensão fornece uma ação para redefinir a camada de dados. Se usada em uma regra que processa uma alteração de camada de dados do Google, a camada de dados é redefinida para o estado calculado da camada de dados no momento em que a regra foi acionada. Se a ação for usada em uma regra que não processa uma alteração na camada de dados do Google, a ação esvazia a camada de dados.
 
 ## Elementos de dados
 
 O elemento de dados fornecido pode ser usado durante a execução de uma regra acionada por uma alteração na camada de dados do Google (evento de push) ou em uma regra não relacionada, como Biblioteca carregada. No primeiro caso, o elemento de dados retorna um valor obtido do estado calculado no momento da alteração da camada de dados. No último caso, o estado calculado no momento da execução da regra é usado.
 
-Um alternador de alternância permite selecionar se o elemento de dados deve retornar valores de todo o estado calculado ou apenas das informações do evento (se usado em uma regra acionada por uma alteração na camada de dados).
+Um switch de alternância permite selecionar se o elemento de dados deve retornar valores de todo o estado calculado ou somente de informações do evento (se usado em uma regra acionada por uma alteração de camada de dados).
 
-O elemento de dados pode retornar:
+O elemento de dados pode, portanto, retornar:
 
 - Campo vazio: estado calculado da camada de dados.
-- Campo com chave (como page.previous_url no exemplo acima): valor da chave no objeto de evento ou no estado calculado.
+- Campo com a chave (como page.previous_url no exemplo acima): valor da chave no objeto do evento ou estado calculado.
 
 ## Informações adicionais 
 
-O elemento de dados e as caixas de diálogo de evento da extensão contêm informações e exemplos detalhados de uso.
+O elemento de dados da extensão e as caixas de diálogo do evento contêm informações de uso detalhadas e exemplos.
 
-Informações gerais adicionais estão na seção [LEITURA DO projeto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+Informações gerais adicionais estão na [LEIAME do projeto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

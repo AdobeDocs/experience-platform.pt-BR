@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Conector de origem de classificações Adobe Analytics
+keywords: Experience Platform;início;tópicos populares;Conector de origem de classificações do Adobe Analytics
 solution: Experience Platform
 title: Conector de origem do Adobe Analytics para dados de classificações
 description: Saiba como conectar Classificações do Analytics à Platform usando a interface do usuário
@@ -13,14 +13,14 @@ ht-degree: 0%
 
 # Conector de origem do Adobe Analytics para dados de classificações
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[!DNL Experience Platform] O oferece suporte para assimilar dados de Classificações do Analytics no Adobe Experience Platform.
+[!DNL Experience Platform] O fornece suporte para assimilação de dados de Classificações do Analytics na Adobe Experience Platform.
 
-As classificações permitem que os dados de variáveis do Analytics sejam categorizados e exibidos de maneiras diferentes quando os relatórios são gerados. O Conector de dados de classificações do Analytics requer que os dados tenham sido migrados para o novo [!DNL Classifications] infraestrutura do Adobe Analytics antes do uso. Para confirmar o status de migração de seus dados, entre em contato com a equipe de conta do Adobe.
+As classificações permitem que os dados de variáveis do Analytics sejam categorizados e exibidos de diferentes maneiras quando os relatórios são gerados. O Conector de dados de classificações do Analytics requer que seus dados tenham sido migrados para a nova [!DNL Classifications] infraestrutura da Adobe Analytics antes do uso. Para confirmar o status de migração dos dados, entre em contato com a equipe de conta do Adobe.
 
-A documentação abaixo fornece informações sobre como conectar Classificações do Analytics à Plataforma usando a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar as Classificações do Analytics à Platform usando a interface do usuário:
 
-## Conectar classificações do Analytics à plataforma usando a interface do usuário
+## Conectar classificações do Analytics à Platform usando a interface do usuário
 
-- [Criar uma conexão de dados de classificações do Analytics na interface do usuário](../../tutorials/ui/create/adobe-applications/classifications.md)
+- [Criar uma conexão de dados de classificações do Analytics na interface](../../tutorials/ui/create/adobe-applications/classifications.md)

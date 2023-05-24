@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, conjuntos de mapeamento;
+keywords: Experience Platform;página inicial;tópicos populares;preparação de dados;guia de api;conjuntos de mapeamento;
 solution: Experience Platform
-title: Ponto de extremidade da API de conjuntos de mapeamento
-description: Você pode usar o terminal `/mappingSets` na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os conjuntos de mapeamento.
+title: Mapeamento Define o Ponto de Extremidade da API
+description: Você pode usar o endpoint `/mappingSets` na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente conjuntos de mapeamento.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 5%
 
 ---
 
-# Ponto de extremidade de conjuntos de mapeamento
+# Ponto final dos conjuntos de mapeamento
 
-Conjuntos de mapeamento podem ser usados para definir como os dados em um schema de origem mapeiam para o de um schema de destino. Você pode usar o `/mappingSets` endpoint na API de preparação de dados para recuperar, criar, atualizar e validar programaticamente os conjuntos de mapeamento.
+Os conjuntos de mapeamento podem ser usados para definir como os dados em um esquema de origem são mapeados para o de um esquema de destino. Você pode usar o `/mappingSets` endpoint na API de Preparo de dados para recuperar, criar, atualizar e validar conjuntos de mapeamento de forma programática.
 
 ## Listar conjuntos de mapeamento
 
-Você pode recuperar uma lista de todos os conjuntos de mapeamento para sua organização fazendo uma solicitação de GET para a `/mappingSets` endpoint .
+Você pode recuperar uma lista de todos os conjuntos de mapeamentos para sua organização fazendo uma solicitação GET para `/mappingSets` terminal.
 
 **Formato da API**
 
-O `/mappingSets` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora a maioria desses parâmetros seja opcional, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. No entanto, você deve incluir a variável `start` e `limit` parâmetros como parte da solicitação. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+A variável `/mappingSets` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora a maioria desses parâmetros seja opcional, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. No entanto, você deve incluir os `start` e `limit` parâmetros como parte da solicitação. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -35,12 +35,12 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | `{LIMIT}` | (**Obrigatório**) Especifica o número de conjuntos de mapeamento retornados. |
 | `{START}` | (**Obrigatório**) Especifica o deslocamento das páginas de resultados. Para obter a primeira página de resultados, defina o valor como `start=0`. |
 | `{NAME}` | Filtra os conjuntos de mapeamento por nome. |
-| `{ORDER_BY}` | Classifica a ordem dos resultados. Os únicos campos compatíveis são `createdDate` e `updatedDate`. Você pode anexar a propriedade como prefixo `+` ou `-` para classificá-la em ordem crescente ou decrescente, respectivamente. |
-| `{EXPAND_SCHEMA}` | Um booleano que determina se o schema de saída completo é retornado como parte da resposta. |
+| `{ORDER_BY}` | Classifica a ordem dos resultados. Os únicos campos compatíveis são `createdDate` e `updatedDate`. Você pode anexar a propriedade ao `+` ou `-` para classificá-la por ordem crescente ou decrescente, respectivamente. |
+| `{EXPAND_SCHEMA}` | Um booleano que determina se o esquema de saída completo é retornado como parte da resposta. |
 
 **Solicitação**
 
-A solicitação a seguir recuperará os dois últimos conjuntos de mapeamento na organização.
+A solicitação a seguir recuperará os dois últimos conjuntos de mapeamento em sua organização.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -165,7 +165,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Criar um conjunto de mapeamento
 
-Você pode criar um novo conjunto de mapeamento fazendo uma solicitação de POST para a variável `/mappingSets` endpoint .
+Você pode criar um novo conjunto de mapeamento fazendo uma solicitação POST para o `/mappingSets` terminal.
 
 **Formato da API**
 
@@ -175,7 +175,7 @@ POST /mappingSets
 
 **Solicitação**
 
-A solicitação a seguir cria um novo conjunto de mapeamento, configurado pelos parâmetros fornecidos no payload.
+A solicitação a seguir cria um novo conjunto de mapeamento, configurado pelos parâmetros fornecidos na carga.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
@@ -217,14 +217,14 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | A ID do esquema XDM que você está referenciando. |
-| `outputSchema.schemaRef.contentType` | Determina o formato de resposta do schema referenciado. Mais informações sobre esse campo podem ser encontradas no [Guia do desenvolvedor do Registro de Schema](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | O tipo de origem descreve como o valor será extraído da origem para o destino. O tipo de origem suporta dois valores possíveis: <ul><li>`ATTRIBUTE`: O tipo de origem `ATTRIBUTE` é usado quando o atributo de entrada é de um schema de origem.</li><li>`EXPRESSION`: O tipo de origem `EXPRESSION` é usada quando o mapeamento é concluído usando um campo calculado.</li></ul> **AVISO**: Definir incorretamente os valores do tipo de origem pode tornar os conjuntos de mapeamento ineditáveis. |
-| `mappings.source` | O local de onde deseja que os dados sejam mapeados. |
-| `mappings.destination` | O local para onde deseja que os dados sejam mapeados. |
+| `outputSchema.schemaRef.contentType` | Determina o formato de resposta do esquema referenciado. Mais informações sobre esse campo podem ser encontradas no [Guia do desenvolvedor do Registro de esquema](../../xdm/api/schemas.md#lookup). |
+| `mappings.sourceType` | O tipo de origem descreve como o valor será extraído da origem para o destino. O tipo de origem suporta dois valores possíveis: <ul><li>`ATTRIBUTE`: o tipo de origem `ATTRIBUTE` é usado quando o atributo de entrada é de um schema de origem.</li><li>`EXPRESSION`: o tipo de origem `EXPRESSION` é usado quando o mapeamento é concluído usando um campo calculado.</li></ul> **AVISO**: definir incorretamente os valores do tipo de origem pode tornar os conjuntos de mapeamento não editáveis. |
+| `mappings.source` | O local de onde você deseja mapear os dados. |
+| `mappings.destination` | O local para onde você deseja mapear os dados. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o conjunto de mapeamento recém-criado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o conjunto de mapeamentos recém-criado.
 
 ```json
 {
@@ -239,7 +239,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o co
 
 ## Validar mapeamentos
 
-Você pode validar se os mapeamentos funcionam corretamente, fazendo uma solicitação de POST para a variável `/mappingSets/validate` endpoint .
+Você pode validar se seus mapeamentos funcionam corretamente fazendo uma solicitação POST para o `/mappingSets/validate` terminal.
 
 **Formato da API**
 
@@ -249,7 +249,7 @@ POST /mappingSets/validate
 
 **Solicitação**
 
-A solicitação a seguir valida os mapeamentos fornecidos no payload.
+A solicitação a seguir valida os mapeamentos fornecidos na carga.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
@@ -311,9 +311,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações de valida�
 }
 ```
 
-## Visualizar dados para mapeamentos
+## Visualizar dados de mapeamentos
 
-Você pode visualizar para que seus dados serão mapeados fazendo uma solicitação de POST para a variável `/mappingSets/preview` endpoint .
+Você pode visualizar para que seus dados serão mapeados fazendo uma solicitação POST para o `/mappingSets/preview` terminal.
 
 **Formato da API**
 
@@ -371,7 +371,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma visualização dos dados mapeados.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma visualização de seus dados mapeados.
 
 ```json
 [
@@ -392,7 +392,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma visualização dos d
 
 ## Pesquisar um conjunto de mapeamento
 
-Você pode recuperar um conjunto de mapeamentos específico fornecendo sua ID no caminho de uma solicitação do GET para a `/mappingSets` endpoint . Esse terminal também oferece suporte a vários parâmetros de consulta para ajudar você a recuperar detalhes sobre a versão do conjunto de mapeamento especificado.
+Você pode recuperar um conjunto de mapeamentos específico fornecendo a respectiva ID no caminho de uma solicitação GET para o `/mappingSets` terminal. Esse endpoint também oferece suporte a vários parâmetros de consulta para ajudar você a recuperar detalhes sobre a versão do conjunto de mapeamentos especificada.
 
 **Formato da API**
 
@@ -405,7 +405,7 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{MAPPING_SET_ID}` | (**Obrigatório**) A ID do conjunto de mapeamento que você deseja recuperar. |
-| `{EXPAND_SCHEMA}` | Um parâmetro de consulta booleano que determina se deve retornar o schema de saída como parte da resposta. |
+| `{EXPAND_SCHEMA}` | Um parâmetro de consulta booleano que determina se o esquema de saída deve ser retornado como parte da resposta. |
 | `{VERSION}` | Um parâmetro de consulta de número inteiro que determina qual versão do conjunto de mapeamento deve ser recuperada. |
 
 **Solicitação**
@@ -426,7 +426,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada para espaço.
+>A resposta a seguir foi truncada por questões de espaço.
 
 ```json
 {
@@ -583,7 +583,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Atualizar um conjunto de mapeamento
 
-Você pode atualizar um conjunto de mapeamentos fornecendo sua ID no caminho de um `PUT` à `mappingSets` endpoint .
+É possível atualizar um conjunto de mapeamento fornecendo a respectiva ID no caminho de um `PUT` solicitação à `mappingSets` terminal.
 
 **Formato da API**
 
@@ -641,11 +641,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre seu conjunto de mapeamento recém-atualizado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o conjunto de mapeamento recém-atualizado.
 
 >[!NOTE]
 >
->A resposta a seguir foi truncada para espaço.
+>A resposta a seguir foi truncada por questões de espaço.
 
 ```json
 {
@@ -808,9 +808,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 }
 ```
 
-## Listar os mapeamentos de um conjunto de mapeamentos
+## Listar os mapeamentos de um conjunto de mapeamento
 
-Você pode exibir todos os mapeamentos que pertencem a um conjunto de mapeamento específico, fornecendo sua ID no caminho de uma solicitação do GET para o seguinte endpoint.
+Você pode exibir todos os mapeamentos que pertencem a um conjunto de mapeamentos específico fornecendo a respectiva ID no caminho de uma solicitação GET para o endpoint seguinte.
 
 **Formato da API**
 
@@ -820,11 +820,11 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | A ID do conjunto de mapeamentos para o qual você deseja recuperar os mapeamentos. |
+| `{MAPPING_SET_ID}` | A ID do conjunto de mapeamento para o qual você deseja recuperar mapeamentos. |
 
 **Solicitação**
 
-A solicitação a seguir retorna todos os mapeamentos no conjunto de mapeamentos especificado.
+A solicitação a seguir retorna todos os mapeamentos do conjunto de mapeamentos especificado.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
@@ -913,7 +913,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 ## Pesquisar um mapeamento em um conjunto de mapeamento
 
-Você pode recuperar um mapeamento específico para um conjunto de mapeamento fornecendo suas IDs no caminho de uma solicitação do GET para o seguinte endpoint.
+Você pode recuperar um mapeamento específico para um conjunto de mapeamentos, fornecendo as IDs no caminho de uma solicitação GET para o endpoint seguinte.
 
 **Formato da API**
 

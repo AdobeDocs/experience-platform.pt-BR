@@ -3,7 +3,8 @@ title: Introdução a fontes de autoatendimento (SDK de transmissão)
 description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova fonte usando Fontes de autoatendimento (SDK de transmissão).
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%

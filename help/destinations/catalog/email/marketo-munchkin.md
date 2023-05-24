@@ -16,7 +16,7 @@ ht-degree: 9%
 
 Do gerenciamento de clientes potenciais ao marketing baseado em conta, [!DNL Marketo Engagement Platform] O simplifica a maneira como você planeja, coordena e avalia o envolvimento com clientes atuais e potenciais em cada estágio da experiência.
 
-O JavaScript [!DNL Marketo’s Munchkin][!DNL Marketo] permite rastrear as visitas da página do usuário final e os cliques nas páginas de aterrissagem do e páginas da Web externas.
+O JavaScript [!DNL Marketo’s Munchkin][!DNL Marketo] permite rastrear as visitas da página do usuário final e os cliques nas páginas de destino do e páginas da Web externas.
 
 [!DNL Marketo Munchkin] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre o Marketo Munchkin, leia [Rastreamento de leads](https://developers.marketo.com/javascript-api/lead-tracking/) na documentação do Marketo.
 

@@ -1,13 +1,13 @@
 ---
 title: Exibições no dispositivo
-description: Este guia mostra como são as diferentes exibições em um dispositivo usando o Adobe Experience Platform Assurance.
-source-git-commit: e054c8a605557a8c78d89c1a9bf562b9298cc260
+description: Este guia mostra como as diferentes visualizações são exibidas em um dispositivo usando o Adobe Experience Platform Assurance.
+exl-id: aa0b09e6-88e0-4f06-be57-df7536a9fa2f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
-
 
 # Exibições no dispositivo
 
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 ![](./images/on-device-views/connected.png)
 
-## Abrir painel de logs
+## Abrir o painel de logs
 
 ![](./images/on-device-views/logs-panel.png)
 
-## Limpar painel de registros
+## Limpar painel de logs
 
 ![](./images/on-device-views/clear-logs-panel.png)
 

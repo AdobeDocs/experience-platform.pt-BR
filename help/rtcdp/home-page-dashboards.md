@@ -1,5 +1,5 @@
 ---
-keywords: visão geral das métricas; visão geral das métricas do rtcdp
+keywords: visão geral de métricas; visão geral de métricas do rtcdp
 title: Página inicial e painéis do Real-time Customer Data Platform
 description: Painéis, página inicial e experiência do usuário iniciante da Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
@@ -10,63 +10,63 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Real-Time Customer Data Platform] página inicial
+# [!DNL Real-Time Customer Data Platform] home page
 
-A página inicial do Adobe Real-time Customer Data Platform (Real-Time CDP) é a primeira página exibida após fazer logon no Real-Time CDP.
+A página inicial do Adobe Real-time Customer Data Platform (Real-Time CDP) é a primeira página exibida após o logon no Real-Time CDP.
 
-A página inicial do Real-Time CDP inclui um widget de introdução que permite acessar rapidamente vários recursos diferentes e uma seção de métricas que exibe informações atualizadas sobre dados em sua organização.
+A página inicial do Real-Time CDP inclui um widget de introdução que permite acessar rapidamente vários recursos diferentes e uma seção de métricas que exibe informações atualizadas sobre os dados na organização.
 
-Este documento fornece uma visão geral da página inicial do Real-Time CDP e do painel de métricas.
+Este documento fornece uma visão geral da página inicial da Real-Time CDP e do painel de métricas.
 
-![A página inicial da interface do usuário da plataforma.](assets/platform-home/home.png)
+![A página inicial da Interface do usuário da plataforma.](assets/platform-home/home.png)
 
-## Dispositivo de introdução
+## Widget de introdução
 
-O [!UICONTROL Introdução ao perfil do cliente em tempo real] o widget é dividido em quatro seções:
+A variável [!UICONTROL Introdução ao Perfil de cliente em tempo real] O widget está dividido em quatro seções:
 
-* **Assimilar dados na plataforma**: Este widget direciona você ao catálogo de fontes. Use o catálogo de fontes para selecionar uma fonte e assimilar seus dados no Experience Platform. Para obter mais informações, leia a [visão geral das fontes](../sources/home.md)
-* **Estruturas de dados do modelo**: Este widget direciona você à visão geral dos schemas. Use a visão geral dos esquemas para procurar esquemas existentes ou criar blocos de construção que descrevam a estrutura de seus dados. Para obter mais informações, leia a [visão geral dos schemas](../xdm/home.md).
-* **Segmentar públicos**: Este widget direciona você ao [!DNL Segment Builder] na interface do usuário do . Use o [!DNL Segment Builder] para interagir com os elementos de dados do perfil e definir regras para seus segmentos. Para obter mais informações, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
-* **Enviar dados para destinos**: Este widget direciona você ao catálogo de destinos. Use o catálogo de destinos para selecionar um destino ao qual você pode se conectar e enviar segmentos. Para obter mais informações, leia a [visão geral dos destinos](../destinations/home.md)
+* **Assimilar dados na plataforma**: este widget direciona você para o catálogo de códigos-fonte. Use o catálogo de fontes para selecionar uma fonte e assimilar seus dados no Experience Platform. Para obter mais informações, leia a [visão geral das origens](../sources/home.md)
+* **Estruturas de dados do modelo**: este widget direciona você para a visão geral dos esquemas. Use a visão geral de esquemas para procurar esquemas existentes ou criar blocos de construção que descrevam a estrutura dos dados. Para obter mais informações, leia a [visão geral de esquemas](../xdm/home.md).
+* **Segmentar públicos**: esse widget direciona você para a [!DNL Segment Builder] na interface. Use o [!DNL Segment Builder] para interagir com elementos de dados do perfil e definir regras para seus segmentos. Para obter mais informações, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
+* **Enviar dados para destinos**: esse widget direciona você para o catálogo de destinos. Use o catálogo de destinos para selecionar um destino ao qual você possa se conectar e enviar segmentos. Para obter mais informações, leia a [visão geral dos destinos](../destinations/home.md)
 
-![A página inicial da interface do usuário da plataforma que exibe o widget de introdução](assets/platform-home/getting-started-widget.png)
+![A página inicial da Interface do usuário do Platform que exibe o widget de introdução](assets/platform-home/getting-started-widget.png)
 
 ## Painel de métricas
 
 O painel de métricas exibe informações atualizadas sobre seus dados de Experience Platform. O painel é dividido em duas seções:
 
-### O Quadro de Liderança
+### O quadro de classificação
 
-O Quadro de líderes mostra o número total atual de esquemas, conjuntos de dados, perfis e segmentos em sua organização, bem como a data de atualização mais recente.
+O quadro de classificação mostra o número total atual de esquemas, conjuntos de dados, perfis e segmentos em sua organização, bem como a data de atualização mais recente.
 
-![A seção do quadro de líderes na página inicial da interface do usuário da plataforma.](assets/platform-home/leaderboard.png)
+![A seção de quadro de classificação na página inicial da interface do usuário da plataforma.](assets/platform-home/leaderboard.png)
 
-* **Total de schemas**: O **Total de esquemas** O contador exibe o número de esquemas no sistema. Esse contador é atualizado quando um schema é criado. Para obter mais informações, leia a [visão geral dos schemas](../xdm/home.md).
-* **Total de conjuntos de dados**: O **Total de conjuntos de dados** O contador mostra o número de conjuntos de dados no sistema e a quantidade de dados em [!DNL Platform]. Esse contador é atualizado quando um conjunto de dados é criado. Para obter mais informações sobre conjuntos de dados, leia a [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
-* **Total de perfis**: O **Perfis** contagem mostra o número total de pessoas com perfis na [!DNL Real-Time Customer Profile]. Ela não inclui fragmentos de perfil. Esse é seu público-alvo totalmente endereçável. Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil unificado. O número de perfis é atualizado uma vez a cada 24 horas. Para obter mais informações sobre perfis, leia a [Visão geral do perfil do cliente em tempo real](../profile/home.md).
+* **Total de esquemas**: A variável **Total de esquemas** O contador exibe o número de schemas no sistema. Esse contador é atualizado quando um esquema é criado. Para obter mais informações, leia a [visão geral de esquemas](../xdm/home.md).
+* **Total de conjuntos de dados**: A variável **Total de conjuntos de dados** contador mostra o número de conjuntos de dados no sistema e a quantidade de dados em [!DNL Platform]. Esse contador é atualizado quando um conjunto de dados é criado. Para obter mais informações sobre conjuntos de dados, leia a [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
+* **Total de perfis**: A variável **Perfis** count mostra o número total de pessoas com perfis no [!DNL Real-Time Customer Profile]. Ela não inclui fragmentos de perfil. Este é o seu público endereçável total. Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil unificado. O número de perfis é atualizado uma vez a cada 24 horas. Para obter mais informações sobre perfis, leia a [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
 * **Total de segmentos**: **Segmentos** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados. Para obter mais informações sobre segmentos, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
 
 ### Itens recentes
 
-Os itens recentes listam as alterações mais recentes em sua organização. No exemplo abaixo, as alterações mais recentes pertencem a conjuntos de dados, fontes, segmentos e destinos.
+Itens recentes lista as alterações mais recentes em sua organização. No exemplo abaixo, as alterações mais recentes pertencem a conjuntos de dados, fontes, segmentos e destinos.
 
 ![A seção de itens recentes na página inicial da interface do usuário da plataforma.](assets/platform-home/recent-items.png)
 
-* **Conjuntos de dados recentes**: O **[!UICONTROL Conjuntos de dados recentes]** cartão mostra os cinco conjuntos de dados mais recentes criados na organização. Essa lista é atualizada quando um novo conjunto de dados é criado. Selecione um conjunto de dados para ver os detalhes para esse item ou selecione **[!UICONTROL Exibir tudo]** para obter uma lista de conjuntos de dados. A partir daí, é possível selecionar uma fonte específica para obter detalhes. Para obter mais informações sobre conjuntos de dados, consulte o [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
-* **Fontes recentes**: O **[!UICONTROL Fontes recentes]** cartão de métrica mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova fonte é criada. Selecione uma fonte para exibir os detalhes do item ou selecione **[!UICONTROL Exibir tudo]** para obter uma lista de fontes. A partir daí, é possível selecionar uma fonte específica para obter detalhes. Para obter mais informações sobre fontes, consulte [Visão geral das fontes](../sources/home.md).
-* **Segmentos recentes**: O **[!UICONTROL Segmentos recentes]** cartão de métrica mostra os cinco segmentos mais recentes criados na organização. Essa lista é atualizada quando um novo segmento é criado. Selecione um segmento para ver os detalhes do item ou selecione **[!UICONTROL Exibir tudo]** para obter uma lista de segmentos. Para obter mais informações sobre segmentos, consulte [Visão geral do serviço de segmentação](../segmentation/home.md).
-* **Destinos recentes**: O **[!UICONTROL Destinos recentes]** cartão de métrica mostra os cinco destinos mais recentes criados na organização. Essa lista é atualizada quando um novo destino é criado. Selecione um destino para ver os detalhes do item ou selecione **[!UICONTROL Exibir tudo]** para obter uma lista de destinos. Para obter mais informações, leia a [visão geral dos destinos](../destinations/home.md).
+* **Conjuntos de dados recentes**: A variável **[!UICONTROL Conjuntos de dados recentes]** mostra os cinco conjuntos de dados mais recentes criados na organização. Essa lista é atualizada quando um novo conjunto de dados é criado. Selecione um conjunto de dados para exibir os detalhes desse item ou selecione **[!UICONTROL Exibir todos]** para obter uma lista de conjuntos de dados. A partir daí, você pode selecionar uma origem específica para obter detalhes. Para obter mais informações sobre conjuntos de dados, consulte a [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
+* **Origens recentes**: A variável **[!UICONTROL Origens recentes]** o cartão de métrica mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova origem é criada. Selecione uma origem para exibir os detalhes desse item ou selecione **[!UICONTROL Exibir todos]** para obter uma lista de fontes. A partir daí, você pode selecionar uma origem específica para obter detalhes. Para obter mais informações sobre origens, consulte [Visão geral das fontes](../sources/home.md).
+* **Segmentos recentes**: A variável **[!UICONTROL Segmentos recentes]** o cartão de métrica mostra os cinco segmentos mais recentes criados na organização. Essa lista é atualizada quando um novo segmento é criado. Selecione um segmento para exibir os detalhes desse item ou selecione **[!UICONTROL Exibir todos]** para obter uma lista de segmentos. Para obter mais informações sobre segmentos, consulte [Visão geral do serviço de segmentação](../segmentation/home.md).
+* **Destinos recentes**: A variável **[!UICONTROL Destinos recentes]** o cartão de métrica mostra os cinco destinos mais recentes criados na organização. Essa lista é atualizada quando um novo destino é criado. Selecione um destino para exibir os detalhes desse item ou selecione **[!UICONTROL Exibir todos]** para obter uma lista de destinos. Para obter mais informações, leia a [visão geral dos destinos](../destinations/home.md).
 
 ## Recursos
 
-Por fim, o widget de recursos fornece recursos de documentação adicionais que você pode consultar. As melhorias incluem:
+Por fim, o widget recursos fornece recursos adicionais de documentação que você pode consultar. As melhorias incluem:
 
-![A seção recursos na página inicial da interface do usuário da plataforma.](assets/platform-home/resources.png)
+![A seção de recursos na página inicial da interface do usuário da plataforma.](assets/platform-home/resources.png)
 
-* [Noções básicas sobre schemas](../xdm/schema/composition.md)
+* [Noções básicas sobre esquemas](../xdm/schema/composition.md)
 * [Conectando fontes](../sources/home.md)
-* [Como preencher o perfil do cliente em tempo real](../profile/home.md)
-* [Conexão de destinos](../destinations/home.md)
+* [Como preencher seu Perfil de cliente em tempo real](../profile/home.md)
+* [Conectar destinos](../destinations/home.md)
 * [Gerenciar acesso](../access-control/abac/overview.md)
 
 <!-- ### Successful profile records

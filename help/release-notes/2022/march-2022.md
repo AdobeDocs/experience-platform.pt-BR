@@ -5,7 +5,7 @@ exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -84,8 +84,8 @@ O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua o
 | Recurso | Descrição |
 | --- | --- |
 | Widget de Perfis não segmentados | O widget fornece o número total de todos os perfis não anexados a nenhum segmento. O número gerado é preciso desde o último instantâneo e representa a oportunidade de ativação de perfil em sua organização. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
-| Widget de Tendência de perfis não segmentados | Este widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
-| Widget Perfis não segmentados por identidade | Este widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
+| Widget de Tendência de perfis não segmentados | Esse widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
+| Widget Perfis não segmentados por identidade | Esse widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
 | Widget de perfis de identidade únicos | Esse widget fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria a identidade, seja um email ou ECID. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
 
 {style="table-layout:auto"}

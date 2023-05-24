@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para você poder começar a trabalhar e criar extensões, vamos usar a ferramenta de andaimes de código aberto, fornecida pelos engenheiros do Adobe para criar os arquivos necessários e a estrutura de arquivos para o pacote de extensão. Assim, tudo o que você ainda precisa fazer é a parte valiosa: na verdade, criar o código.
 
@@ -64,4 +64,4 @@ Por exemplo, isso pode retornar se o navegador do usuário é o Chrome, se ele e
 
 ## Próximas etapas
 
-* Siga as [Visão geral do processo de envio](./submit/overview.md) e preparar [validate](./submit/upload-and-test.md#validate) e [fazer upload](./submit/upload-and-test.md#integration) sua extensão para testes no ecossistema de tags.
+* Siga as [Visão Geral do Processo de Envio](./submit/overview.md) e preparar para [validar](./submit/upload-and-test.md#validate) e [upload](./submit/upload-and-test.md#integration) sua extensão para testes no ecossistema de tags.

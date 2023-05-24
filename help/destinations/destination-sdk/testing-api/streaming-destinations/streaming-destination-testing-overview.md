@@ -1,6 +1,6 @@
 ---
-description: Saiba como usar a API de teste de destino para testar sua configuração de destino de transmissão antes de publicá-la.
-title: Visão geral da API de teste de destino de transmissão
+description: Saiba como usar a API de teste de destino para testar a configuração de destino de transmissão antes de publicá-la.
+title: Visão geral da API de teste de destino de streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
@@ -10,48 +10,48 @@ ht-degree: 1%
 ---
 
 
-# Visão geral da API de teste de destino de transmissão
+# Visão geral da API de teste de destino de streaming
 
-Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino. Para obter informações sobre como criar um modelo de transformação de mensagem, leia [Criar e testar um modelo de transformação de mensagem](../../testing-api/streaming-destinations/create-template.md).
+Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino. Para obter informações sobre como criar um template de transformação de mensagem, leia [Criar e testar um modelo de transformação de mensagem](../../testing-api/streaming-destinations/create-template.md).
 
-Para **teste se o destino está configurado corretamente e para verificar a integridade dos fluxos de dados para o destino configurado**, use o *Ferramenta de teste de destino*. Com essa ferramenta, você pode testar a configuração de destino enviando mensagens para o terminal REST API.
+Para **teste se o destino está configurado corretamente e verifique a integridade dos fluxos de dados para o destino configurado**, use o *Ferramenta de teste de destino*. Com essa ferramenta, você pode testar a configuração de destino enviando mensagens para o endpoint da API REST.
 
-A ilustração abaixo mostra como o teste do seu destino se encaixa na variável [fluxo de trabalho de configuração de destino](../../guides/configure-destination-instructions.md) No Destination SDK:
+Ilustrado abaixo é como testar seu destino se encaixa no [fluxo de trabalho de configuração de destino](../../guides/configure-destination-instructions.md) em Destination SDK:
 
 ![Gráfico de onde a etapa de teste de destino se encaixa no fluxo de trabalho de configuração de destino](../../assets/testing-api/test-destination-step.png)
 
-## Ferramenta de teste de destino - Finalidade e pré-requisitos {#destination-testing-tool}
+## Ferramenta de teste de destino - finalidade e pré-requisitos {#destination-testing-tool}
 
-Use a ferramenta de teste de destino para testar a configuração de destino, enviando mensagens para o terminal do parceiro fornecido na [configuração do servidor](../../authoring-api/destination-server/create-destination-server.md).
+Use a ferramenta de teste de destino para testar a configuração de destino enviando mensagens para o endpoint do parceiro fornecido na [configuração do servidor](../../authoring-api/destination-server/create-destination-server.md).
 
-Antes de usar a ferramenta, verifique se:
-* Configure seu destino seguindo as etapas descritas na [fluxo de trabalho de configuração de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) e
+Antes de usar a ferramenta, verifique se você:
+* Configure seu destino seguindo as etapas descritas no [fluxo de trabalho de configuração de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) e
 * Estabeleça uma conexão com seu destino, conforme detalhado em [Como obter a ID da instância de destino](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
-Com essa ferramenta, depois de ter configurado seu destino, você pode:
-* Teste se o destino está configurado corretamente;
+Com essa ferramenta, após configurar seu destino, é possível:
+* Testar se o destino está configurado corretamente;
 * Verifique a integridade dos fluxos de dados para o destino configurado.
 
 ### Como usar {#how-to-use}
 
 >[!NOTE]
 >
->Para obter a documentação completa de referência da API, leia [Operações da API de teste de destino](../../testing-api/streaming-destinations/destination-testing-api.md).
+>Para obter a documentação de referência completa da API, leia [Operações da API de teste de destino](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 Você pode fazer chamadas para o endpoint da API de teste de destino com ou sem adicionar perfis na solicitação.
 
-Se você não adicionar perfis na solicitação, o Adobe gerará esses perfis internamente para você e os adicionará à solicitação. Se desejar gerar perfis para usar nessa solicitação, consulte [Referência da API de geração de perfil de amostra](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado no [Referência da API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o schema de origem é o [schema de união](../../../../profile/ui/union-schema.md) da sandbox que você está usando.
+Se você não adicionar nenhum perfil na solicitação, o Adobe os gerará internamente e os adicionará à solicitação. Se quiser gerar perfis para usar nesta solicitação, consulte o [Exemplo de referência da API de geração de perfil](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado na [Referência da API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o esquema de origem é o [esquema de união](../../../../profile/ui/union-schema.md) da sandbox que você está usando.
 
 A resposta contém o resultado do processamento da solicitação de destino. A solicitação inclui três seções principais:
 * A solicitação gerada pelo Adobe para o destino.
 * A resposta recebida do seu destino.
-* A lista de perfis enviados na solicitação, se os perfis foram [adicionado por você na solicitação](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)ou gerada por Adobe if [o corpo da solicitação de teste de destino estava vazio](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* A lista de perfis enviados na solicitação, se os perfis foram [adicionado por você na solicitação](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), ou gerado por Adobe se [o corpo da solicitação de teste de destino estava vazio](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->O Adobe pode gerar vários pares de solicitação e resposta. Por exemplo, se você enviar 10 perfis para um destino que tenha um `maxUsersPerRequest` valor de 7, haverá uma solicitação com 7 perfis e outra solicitação com 3 perfis.
+>O Adobe pode gerar vários pares de solicitação e resposta. Por exemplo, se você enviar 10 perfis para um destino que tenha uma `maxUsersPerRequest` valor de 7, haverá uma solicitação com 7 perfis e outra solicitação com 3 perfis.
 
-**Solicitação de exemplo com parâmetro de perfis no corpo**
+**Exemplo de solicitação com parâmetro de perfis no corpo**
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/3e0ac39c-ef14-4101-9fd9-cf0909814510' \
@@ -108,7 +108,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }'
 ```
 
-**Solicitação de exemplo sem parâmetro de perfis no corpo**
+**Exemplo de solicitação sem parâmetro de perfis no corpo**
 
 
 ```shell
@@ -124,7 +124,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Resposta de exemplo**
 
-Observe que o conteúdo da variável `results.httpCalls` é específico para sua REST API.
+Observe que o conteúdo do `results.httpCalls` é específico para sua API REST.
 
 ```json
 {
@@ -232,4 +232,4 @@ Para obter descrições dos parâmetros de solicitação e resposta, consulte [O
 
 ## Próximas etapas
 
-Depois de testar seu destino e confirmar que ele está configurado corretamente, use a [API de publicação de destino](../../publishing-api/create-publishing-request.md) para enviar sua configuração ao Adobe para revisão.
+Depois de testar o destino e confirmar que ele está configurado corretamente, use o [API de publicação de destino](../../publishing-api/create-publishing-request.md) para enviar sua configuração ao Adobe para revisão.

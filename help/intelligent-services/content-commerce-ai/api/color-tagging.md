@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; introdução; conteúdo; marcação de conteúdo; marcação de cores; extração de cores;
+keywords: Experience Platform;introdução;conteúdo;marcação de conteúdo;marcação de cores;extração de cores;
 solution: Experience Platform
 title: Marcação de cores na API de marcação de conteúdo
 description: O serviço de Marcação de cores, quando recebe uma imagem, pode calcular o histograma de cores de pixels e classificá-las por cores dominantes em compartimentos.
@@ -13,22 +13,22 @@ ht-degree: 6%
 
 # Marcação de cores
 
-O serviço de marcação de cores, quando recebe uma imagem, pode computar um histograma de cores de pixels e classificá-las por cores dominantes em compartimentos. As cores nos pixels da imagem são agrupadas em 40 cores predominantes que são representativas do espectro de cores. Um histograma de valores de cor é então calculado entre essas 40 cores. O serviço tem duas variantes:
+O serviço de marcação de cores, quando recebe uma imagem, pode calcular um histograma de cores de pixels e classificá-las por cores dominantes em compartimentos. As cores nos pixels da imagem são classificadas em 40 cores predominantes, que são representativas do espectro de cores. Um histograma de valores de cor é então calculado entre essas 40 cores. O serviço tem duas variantes:
 
 **Marcação de cores (imagem completa)**
 
-Esse método extrai um histograma de cores na imagem inteira.
+Este método extrai um histograma de cores pela imagem inteira.
 
 **Marcação de cores (com máscara)**
 
-Esse método usa um extrator de primeiro plano baseado em aprendizado profundo para identificar objetos em primeiro plano. Quando os objetos de primeiro plano são extraídos, um histograma é calculado sobre as cores dominantes das regiões de primeiro e segundo plano, juntamente com toda a imagem.
+Esse método usa um extrator de primeiro plano baseado em aprendizagem profunda para identificar objetos em primeiro plano. Depois que os objetos de primeiro plano são extraídos, um histograma é calculado sobre as cores dominantes para as regiões de primeiro plano e plano de fundo, juntamente com a imagem inteira.
 
-**Extração de tons**
+**Extração de tom**
 
 Além das variantes mencionadas acima, você pode configurar o serviço para recuperar um histograma de tons para:
 
 - A imagem geral (ao usar a variante de imagem completa)
-- A imagem geral e as regiões de primeiro e segundo plano (ao usar a variante com máscara)
+- A imagem geral e as regiões de primeiro e segundo plano (ao usar a variante com mascaramento)
 
 A imagem a seguir foi usada no exemplo mostrado neste documento:
 
@@ -83,13 +83,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Resposta - variante de imagem completa**
 
-Uma resposta bem-sucedida retorna os detalhes das cores extraídas. Cada cor é representada por um `feature_value` , que contém as seguintes informações:
+Uma resposta bem-sucedida retorna os detalhes das cores extraídas. Cada cor é representada por um `feature_value` que contém as seguintes informações:
 
 - Um nome de cor
-- A porcentagem que essa cor aparece em relação à imagem
+- A porcentagem de exibição dessa cor em relação à imagem
 - O valor de RGB da cor
 
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`significa que a cor encontrada é branca, que se encontra em 58,34% da imagem, e tem um valor RGB médio de 254, 254, 243.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`significa que a cor encontrada é branca, encontrada em 58,34% da imagem, e tem um valor médio de RGB de 254, 254, 243.
 
 ```json
 {
@@ -157,11 +157,11 @@ Uma resposta bem-sucedida retorna os detalhes das cores extraídas. Cada cor é 
 }]
 ```
 
-Observe que o resultado aqui tem cor extraída na região da imagem &quot;geral&quot;.
+Observe que o resultado aqui tem cores extraídas na região de imagem &quot;geral&quot;.
 
 **Solicitação - variante de imagem mascarada**
 
-A solicitação de exemplo a seguir usa o método de mascaramento para marcação de cores. Isso é ativado ao configurar a variável `enable_mask` para `true` na solicitação.
+O exemplo de solicitação a seguir usa o método de mascaramento para a marcação de cores. Isso é ativado ao configurar o `enable_mask` parâmetro para `true` na solicitação.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,7 +204,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->Além disso, a variável `retrieve_tone` também é definido como `true` no pedido acima referido. Isso nos permite recuperar um histograma de distribuição de tons sobre tons quentes, neutros e frios nas regiões geral, de primeiro e plano de fundo da imagem.
+>Além disso, a `retrieve_tone` também está definido como `true` no pedido acima. Isso nos permite recuperar um histograma de distribuição de tons quentes, neutros e frios nas regiões geral, de primeiro plano e plano de fundo da imagem.
 
 **Resposta - variante de imagem mascarada**
 
@@ -354,24 +354,24 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-Além das cores da imagem geral, você também pode ver as cores das regiões de primeiro e segundo plano agora. Como a recuperação de tom está ativada para cada uma das regiões acima, você também pode recuperar o histograma de um tom.
+Além das cores da imagem geral, agora também é possível ver as cores das regiões do primeiro plano e do plano de fundo. Como a recuperação de tons está habilitada para cada uma das regiões acima, você também pode recuperar o histograma de tons.
 
 **Parâmetros de entrada**
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Sim | - | Consulte abaixo | Lista de elementos JSON com cada item na lista representando um documento. |
-| `top_n` | number | Não | 0 | Número inteiro não negativo | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor de qualquer um dos limites. |
-| `min_coverage` | number | Não | 0.05 | Número real | Limite de cobertura acima do qual os resultados devem ser devolvidos. Excluir parâmetro para retornar todos os resultados. |
-| `resize_image` | number | Não | Verdadeiro | Verdadeiro/Falso | Redimensionar ou não a imagem de entrada. Por padrão, as imagens são redimensionadas para 320*320 pixels antes da extração de cores ser executada. Para fins de depuração, também podemos permitir que o código seja executado em imagens completas, definindo isso como `False`. |
-| `enable_mask` | number | Não | Falso | Verdadeiro/Falso | Ativa/desativa a extração de cores |
-| `retrieve_tone` | number | Não | Falso | Verdadeiro/Falso | Ativa/desativa a extração de tons |
+| `documents` | matriz (Document-Object) | Sim | - | Consulte abaixo | Lista de elementos JSON com cada item na lista representando um documento. |
+| `top_n` | number | Não | 0 | Inteiro não negativo | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor de ambos os limites. |
+| `min_coverage` | number | Não | 0.05 | Número real | Limite de cobertura acima do qual os resultados precisam ser retornados. Excluir parâmetro para retornar todos os resultados. |
+| `resize_image` | number | Não | Verdadeiro | Verdadeiro/falso | Se a imagem de entrada deve ser redimensionada ou não. Por padrão, as imagens são redimensionadas para 320*320 pixels antes da extração de cores. Para fins de depuração, também podemos permitir que o código seja executado na imagem completa, definindo isso como `False`. |
+| `enable_mask` | number | Não | Falso | Verdadeiro/falso | Ativa/desativa a extração de cores |
+| `retrieve_tone` | number | Não | Falso | Verdadeiro/falso | Ativa/desativa a extração de tons |
 
-**Objeto Documento**
+**Objeto do documento**
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | URL pré-assinado do documento. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de acordo de recompra onde a imagem está sendo armazenada. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao transmitir o arquivo de imagem como um argumento multipart em vez de usar URLs pré-assinados. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositório onde a imagem está sendo armazenada. |
+| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar o arquivo de imagem como um argumento em várias partes, em vez de usar URLs pré-assinados. |
 | `dc:format` | string | Sim | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |

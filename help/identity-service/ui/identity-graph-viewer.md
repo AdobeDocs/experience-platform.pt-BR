@@ -5,15 +5,15 @@ exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
 # Visualizador de gráficos de identidade
 
-Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo Adobe Experience Platform Identity Service em tempo quase real, em resposta à atividade do cliente.
+Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo Serviço de identidade da Adobe Experience Platform em tempo quase real, em resposta à atividade do cliente.
 
-O visualizador de gráficos de identidade na interface do usuário da Platform permite visualizar e entender melhor quais identidades do cliente são unidas e de que maneiras. O visualizador permite que você arraste e interaja com diferentes partes do gráfico, permitindo examinar relações de identidade complexas, depurar com mais eficiência e se beneficiar de maior transparência com a forma como as informações estão sendo usadas.
+O visualizador de gráficos de identidade na interface do usuário da Platform permite visualizar e entender melhor quais identidades do cliente são unidas e de que maneiras. O visualizador permite que você arraste e interaja com diferentes partes do gráfico, possibilitando examinar relacionamentos de identidade complexos, depurar com mais eficiência e aproveitar o aumento da transparência com a forma como as informações estão sendo utilizadas.
 
 O documento a seguir fornece etapas sobre como acessar e usar o visualizador de gráficos de identidade na interface do usuário da Platform.
 

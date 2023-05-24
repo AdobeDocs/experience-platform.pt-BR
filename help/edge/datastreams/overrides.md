@@ -1,119 +1,119 @@
 ---
-title: Configurar substituições do datastream
-description: Saiba como configurar substituições de conjunto de dados na interface do usuário do Datastreams e ativá-las por meio do SDK da Web.
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+title: Configurar substituições de fluxo de dados
+description: Saiba como configurar substituições de sequência de dados na interface do usuário de sequências de dados e ativá-las por meio do SDK da Web.
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
+# Configurar substituições de fluxo de dados
 
-# Configurar substituições do datastream
+As substituições de sequência de dados permitem definir configurações adicionais para suas sequências de dados, que são transmitidas para a Rede de borda por meio do SDK da Web.
 
-As substituições de conjunto de dados permitem definir configurações adicionais para seus conjuntos de dados, que são passados para a Rede de borda por meio do SDK da Web.
+Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrão, sem criar uma nova sequência de dados ou modificar as configurações existentes.
 
-Isso ajuda você a acionar diferentes comportamentos do conjunto de dados do que os padrão, sem criar um novo conjunto de dados ou modificar as configurações existentes.
+A substituição da configuração da sequência de dados é um processo de duas etapas:
 
-A substituição da configuração do conjunto de dados é um processo de duas etapas:
+1. Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](configure.md).
+2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../extension/web-sdk-extension-configuration.md).
 
-1. Primeiro, você deve definir as substituições de configuração do conjunto de dados na variável [página de configuração do datastream](configure.md).
-2. Em seguida, você deve enviar as substituições para a Edge Network por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../extension/web-sdk-extension-configuration.md).
+Este artigo explica o processo completo de substituição de configuração de sequência de dados para cada tipo de substituição compatível.
 
-Este artigo explica o processo completo de substituição da configuração do conjunto de dados para cada tipo de substituição suportada.
+## Configurar substituições de fluxo de dados na interface dos fluxos de dados {#configure-overrides}
 
-## Configurar substituições do datastream na interface do usuário do Datastreams {#configure-overrides}
+As substituições de configuração de sequência de dados permitem modificar as seguintes configurações de sequência de dados:
 
-As substituições de configuração do conjunto de dados permitem modificar as seguintes configurações do conjunto de dados:
-
-* Conjuntos de dados de evento Experience Platform
-* Tokens de propriedade do Adobe Target
-* Contêineres de sincronização de ID do Audience Manager
+* Conjuntos de dados do evento Experience Platform
+* tokens de propriedade do Adobe Target
+* Contêineres de sincronização de ID de Audience Manager
 * Conjuntos de relatórios do Adobe Analytics
 
-### Substituições de fluxo de dados para o Adobe Target {#target-overrides}
+### Substituições de sequência de dados para o Adobe Target {#target-overrides}
 
-Para configurar substituições do datastream para um datastreamento Adobe Target, primeiro você deve ter um datastreamento Adobe Target criado. Siga as instruções para [configurar um conjunto de dados](configure.md) com o [Adobe Target](configure.md#target) serviço.
+Para configurar substituições de sequência de dados para uma sequência de dados do Adobe Target, primeiro você deve criar uma sequência de dados do Adobe Target. Siga as instruções para [configurar um fluxo de dados](configure.md) com o [Adobe Target](configure.md#target) serviço.
 
-Depois de criar o armazenamento de dados, edite o [Adobe Target](configure.md#target) que você adicionou e usa o **[!UICONTROL Substituições de token de propriedade]** para adicionar as substituições do conjunto de dados desejadas, conforme mostrado na imagem abaixo. Adicione um token de propriedade por linha.
+Depois de criar o fluxo de dados, edite o [Adobe Target](configure.md#target) serviço que você adicionou e usar o **[!UICONTROL Substituições do token de propriedade]** para adicionar as substituições de fluxo de dados desejadas, conforme mostrado na imagem abaixo. Adicione um token de propriedade por linha.
 
-![Captura de tela da interface do usuário do Datastreams mostrando as configurações do serviço Adobe Target, com as substituições do token de propriedade realçadas.](../assets/datastreams/overrides/override-target.png)
+![Captura de tela da interface do usuário de fluxos de dados mostrando as configurações de serviço do Adobe Target, com as substituições de token de propriedade realçadas.](../assets/datastreams/overrides/override-target.png)
 
-Depois de ter adicionado as substituições desejadas, salve as configurações do armazenamento de dados.
+Depois de adicionar as substituições desejadas, salve as configurações de fluxo de dados.
 
-Agora, você deve ter as substituições do armazenamento de dados do Adobe Target configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do SDK da Web](#send-overrides).
+Agora você deve configurar as substituições da sequência de dados do Adobe Target. Agora é possível [enviar as substituições para a Rede de borda por meio do SDK da Web](#send-overrides).
 
-### Substituições de fluxo de dados para o Adobe Analytics {#analytics-overrides}
+### Substituições de sequência de dados para o Adobe Analytics {#analytics-overrides}
 
-Para configurar substituições do datastream para um datastreamento Adobe Analytics, primeiro você deve ter um [Adobe Analytics](configure.md#analytics) datastream criado. Siga as instruções para [configurar um conjunto de dados](configure.md) com o [Adobe Analytics](configure.md#analytics) serviço.
+Para configurar substituições de sequência de dados para uma sequência de dados do Adobe Analytics, primeiro você deve ter uma [Adobe Analytics](configure.md#analytics) sequência de dados criada. Siga as instruções para [configurar um fluxo de dados](configure.md) com o [Adobe Analytics](configure.md#analytics) serviço.
 
-Depois de criar o armazenamento de dados, edite o [Adobe Analytics](configure.md#target) que você adicionou e usa o **[!UICONTROL Substituições do conjunto de relatórios]** para adicionar as substituições do conjunto de dados desejadas, conforme mostrado na imagem abaixo.
+Depois de criar o fluxo de dados, edite o [Adobe Analytics](configure.md#target) serviço que você adicionou e usar o **[!UICONTROL Substituições do conjunto de relatórios]** para adicionar as substituições de fluxo de dados desejadas, conforme mostrado na imagem abaixo.
 
-Selecionar **[!UICONTROL Mostrar Modo de Lote]** para ativar a edição em lote das substituições do conjunto de relatórios. Você pode copiar e colar uma lista de substituições do conjunto de relatórios, inserindo um conjunto de relatórios por linha.
+Selecionar **[!UICONTROL Mostrar modo de lote]** para ativar a edição em lote de substituições do conjunto de relatórios. Você pode copiar e colar uma lista de sobreposições do conjunto de relatórios, inserindo um conjunto de relatórios por linha.
 
-![Captura de tela da interface do usuário do Datastreams mostrando as configurações do serviço Adobe Analytics, com as substituições do conjunto de relatórios realçadas.](../assets/datastreams/overrides/override-analytics.png)
+![Captura de tela da interface do usuário de fluxos de dados mostrando as configurações de serviço do Adobe Analytics, com as substituições do conjunto de relatórios destacadas.](../assets/datastreams/overrides/override-analytics.png)
 
-Depois de ter adicionado as substituições desejadas, salve as configurações do armazenamento de dados.
+Depois de adicionar as substituições desejadas, salve as configurações de fluxo de dados.
 
-Agora, você deve ter as substituições do armazenamento de dados do Adobe Analytics configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do SDK da Web](#send-overrides).
+Agora você deve configurar as substituições da sequência de dados do Adobe Analytics. Agora é possível [enviar as substituições para a Rede de borda por meio do SDK da Web](#send-overrides).
 
-### Substituições de fluxo de dados para conjuntos de dados de evento do Experience Platform {#event-dataset-overrides}
+### Substituições de fluxo de dados para conjuntos de dados de eventos do Experience Platform {#event-dataset-overrides}
 
-Para configurar substituições do datastream para conjuntos de dados de evento do Experience Platform, primeiro você deve ter um [Adobe Experience Platform](configure.md#aep) datastream criado. Siga as instruções para [configurar um conjunto de dados](configure.md) com o [Adobe Experience Platform](configure.md#aep) serviço.
+Para configurar sobreposições de sequência de dados para conjuntos de dados de evento Experience Platform, primeiro você deve ter um [Adobe Experience Platform](configure.md#aep) sequência de dados criada. Siga as instruções para [configurar um fluxo de dados](configure.md) com o [Adobe Experience Platform](configure.md#aep) serviço.
 
-Depois de criar o armazenamento de dados, edite o [Adobe Experience Platform](configure.md#aep) que você adicionou e selecione o **[!UICONTROL Adicionar conjunto de dados de evento]** opção para adicionar um ou mais conjuntos de dados de evento de substituição, conforme mostrado na imagem abaixo.
+Depois de criar o fluxo de dados, edite o [Adobe Experience Platform](configure.md#aep) serviço que você adicionou e selecione o **[!UICONTROL Adicionar conjunto de dados do evento]** opção para adicionar um ou mais conjuntos de dados do evento de substituição, conforme mostrado na imagem abaixo.
 
-![Captura de tela da interface do usuário do Datastreams mostrando as configurações do serviço Adobe Experience Platform, com as substituições do conjunto de dados do evento realçadas.](../assets/datastreams/overrides/override-aep.png)
+![Captura de tela da interface do usuário de fluxos de dados mostrando as configurações de serviço do Adobe Experience Platform, com as substituições do conjunto de dados do evento realçadas.](../assets/datastreams/overrides/override-aep.png)
 
-Depois de ter adicionado as substituições desejadas, salve as configurações do armazenamento de dados.
+Depois de adicionar as substituições desejadas, salve as configurações de fluxo de dados.
 
-Agora, você deve ter as substituições do armazenamento de dados do Adobe Experience Platform configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do SDK da Web](#send-overrides).
+Agora você deve configurar as substituições da sequência de dados do Adobe Experience Platform. Agora é possível [enviar as substituições para a Rede de borda por meio do SDK da Web](#send-overrides).
 
-### Substituições de fluxo de dados para contêineres de sincronização de ID de terceiros {#container-overrides}
+### Substituições de sequência de dados para contêineres de sincronização de ID de terceiros {#container-overrides}
 
-Para configurar substituições de armazenamento de dados para contêineres de sincronização de ID de terceiros, primeiro é necessário criar um conjunto de dados. Siga as instruções para [configurar um conjunto de dados](configure.md) para criar um.
+Para configurar substituições de sequência de dados para contêineres de sincronização de ID de terceiros, primeiro você deve criar uma sequência de dados. Siga as instruções para [configurar um fluxo de dados](configure.md) para criar um.
 
-Depois de criar o armazenamento de dados, acesse **[!UICONTROL Opções avançadas]** e ativar **[!UICONTROL Sincronização de ID de terceiros]** opção.
+Depois de criar o fluxo de dados, acesse **[!UICONTROL Opções avançadas]** e habilite o **[!UICONTROL Sincronização de ID de terceiros]** opção.
 
-Em seguida, use o **[!UICONTROL Substituições da ID do contêiner]** para adicionar as IDs do contêiner que você deseja substituir a configuração padrão, conforme mostrado na imagem abaixo.
+Em seguida, use o **[!UICONTROL Substituições de ID de contêiner]** para adicionar as IDs de contêiner nas quais você deseja substituir a configuração padrão, conforme mostrado na imagem abaixo.
 
 >[!IMPORTANT]
 >
->As IDs de contêiner devem ser valores numéricos, como `1234567`e não cadeias de caracteres, como `"1234567"`. Se você enviar um valor de string por meio do SDK da Web como uma substituição de ID de container, você receberá um erro.
+>As IDs de contêineres devem ser valores numéricos, como `1234567`, e não strings, como `"1234567"`. Se você enviar um valor de sequência por meio do SDK da Web como uma substituição de ID de contêiner, receberá um erro.
 
-![Captura de tela da interface do usuário do Datastreams mostrando as configurações do datastream, com as substituições do contêiner de sincronização de ID de terceiros destacadas.](../assets/datastreams/overrides/override-container.png)
+![Captura de tela da interface do usuário de fluxos de dados mostrando as configurações de fluxo de dados, com as substituições do contêiner de sincronização de ID de terceiros destacadas.](../assets/datastreams/overrides/override-container.png)
 
-Depois de ter adicionado as substituições desejadas, salve as configurações do armazenamento de dados.
+Depois de adicionar as substituições desejadas, salve as configurações de fluxo de dados.
 
-Agora, você deve ter as substituições do contêiner de sincronização de ID configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do SDK da Web](#send-overrides).
+Agora, você deve configurar as substituições do contêiner de sincronização de ID. Agora é possível [enviar as substituições para a Rede de borda por meio do SDK da Web](#send-overrides).
 
-## Enviar as substituições para a Edge Network por meio do SDK da Web {#send-overrides}
+## Enviar as substituições para a Rede de borda por meio do SDK da Web {#send-overrides}
 
 >[!NOTE]
 >
->Como alternativa ao envio das substituições de configuração por meio de comandos do SDK da Web, é possível adicionar as substituições de configuração ao SDK da Web [extensão de tag](../extension/web-sdk-extension-configuration.md).
+>Como alternativa ao envio de substituições de configuração por meio de comandos do SDK da Web, você pode adicionar as substituições de configuração ao SDK da Web [extensão de tag](../extension/web-sdk-extension-configuration.md).
 
-Depois [configuração das substituições do datastream](#configure-overrides) na interface do usuário da Coleta de dados, agora é possível enviar as substituições para a Edge Network, por meio do SDK da Web.
+Depois [configurar as substituições do fluxo de dados](#configure-overrides) na interface da Coleção de dados, agora é possível enviar as substituições para a Rede de borda, por meio do SDK da Web.
 
-Enviar as substituições para a Edge Network por meio do SDK da Web é a segunda e última etapa da ativação das substituições de configuração do conjunto de dados.
+Enviar as substituições para a Rede de borda por meio do SDK da Web é a segunda e última etapa da ativação das substituições de configuração da sequência de dados.
 
-As substituições de configuração do armazenamento de dados são enviadas para a Rede de borda por meio do `edgeConfigOverrides` comando SDK da Web. Esse comando cria substituições do datastream que são passadas para o [!DNL Edge Network] no comando seguinte ou, no caso de `configure` , para cada solicitação.
+As substituições de configuração da sequência de dados são enviadas para a Rede de borda por meio do `edgeConfigOverrides` Comando do SDK da Web. Esse comando cria substituições de sequência de dados que são passadas para o [!DNL Edge Network] no comando seguinte, ou, no caso do comando `configure` para cada solicitação.
 
-O `edgeConfigOverrides` cria substituições do datastream que são passadas para o [!DNL Edge Network] no comando seguinte ou, no caso de `configure`, para cada solicitação.
+A variável `edgeConfigOverrides` cria substituições de fluxo de dados que são passadas para o [!DNL Edge Network] no comando seguinte ou, no caso de `configure`, para cada solicitação.
 
-Quando uma substituição de configuração é enviada com a variável `configure` , ele é incluído nos seguintes comandos compatíveis.
+Quando uma substituição de configuração é enviada com o `configure` está incluído nos seguintes comandos suportados.
 
 * [sendEvent](../fundamentals/tracking-events.md)
 * [setConsent](../consent/iab-tcf/overview.md)
 * [getIdentity](../identity/overview.md)
 * [appendIdentityToUrl](../identity/id-sharing.md#cross-domain-sharing)
-* [configure](../fundamentals/configuring-the-sdk.md)
+* [configurar](../fundamentals/configuring-the-sdk.md)
 
 As opções especificadas globalmente podem ser substituídas pela opção de configuração em comandos individuais.
 
-### Enviar substituições de configuração por meio do `sendEvent` comando {#send-event}
+### Envio de substituições de configuração por meio do `sendEvent` comando {#send-event}
 
-O exemplo abaixo mostra como uma substituição de configuração pode ser em um `sendEvent` comando.
+O exemplo abaixo mostra como seria uma substituição de configuração em uma `sendEvent` comando.
 
 ```js {line-numbers="true" highlight="5-25"}
 alloy("sendEvent", {
@@ -148,9 +148,9 @@ alloy("sendEvent", {
 });
 ```
 
-### Enviar substituições de configuração por meio do `configure` comando {#send-configure}
+### Envio de substituições de configuração por meio do `configure` comando {#send-configure}
 
-O exemplo abaixo mostra como uma substituição de configuração pode ser em um `configure` comando.
+O exemplo abaixo mostra como seria uma substituição de configuração em uma `configure` comando.
 
 ```js {line-numbers="true" highlight="8-30"}
 alloy("configure", {
@@ -189,9 +189,9 @@ alloy("configure", {
 };
 ```
 
-### Exemplo de carga útil {#payload-example}
+### Exemplo de carga {#payload-example}
 
-Os exemplos acima geram um [!DNL Edge Network] carga com esta aparência:
+Os exemplos acima geram uma [!DNL Edge Network] carga com esta aparência:
 
 ```json
 {
@@ -233,4 +233,3 @@ Os exemplos acima geram um [!DNL Edge Network] carga com esta aparência:
   }
 }
 ```
-

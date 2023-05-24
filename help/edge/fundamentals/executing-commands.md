@@ -53,7 +53,7 @@ alloy("commandName", options)
   });
 ```
 
-Da mesma forma, se saber quando o comando falha não for importante para você, remova a variável `catch` chame.
+Da mesma forma, se não for importante saber quando o comando falhará, você poderá remover a variável `catch` chame.
 
 ```javascript
 alloy("commandName", options)

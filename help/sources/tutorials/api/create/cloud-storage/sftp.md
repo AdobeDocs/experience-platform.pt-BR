@@ -26,7 +26,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 >
 >É recomendável evitar novas linhas ou retornos de carro ao assimilar objetos JSON com um [!DNL SFTP] conexão de origem. Para contornar a limitação, use um único objeto JSON por linha e use várias linhas para os arquivos subsequentes.
 
-As seções a seguir fornecem as informações adicionais que você precisará saber para se conectar com êxito a um [!DNL SFTP] servidor usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um [!DNL SFTP] servidor usando o [!DNL Flow Service] API.
 
 ### Coletar credenciais necessárias
 

@@ -1,5 +1,5 @@
 ---
-description: Esta página exemplifica a chamada da API usada para atualizar uma configuração de credencial existente por meio do Adobe Experience Platform Destination SDK.
+description: Esta página exemplifica a chamada à API usada para atualizar uma configuração de credencial existente por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar uma configuração de credencial
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
@@ -15,33 +15,33 @@ ht-degree: 8%
 >
 >**Ponto de acesso da API**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Esta página exemplifica a solicitação da API e a carga útil que você pode usar para atualizar uma configuração de credencial existente, usando o `/authoring/credentials` Ponto de extremidade da API.
+Esta página exemplifica a solicitação de API e a carga que você pode usar para atualizar uma configuração de credencial existente, usando o `/authoring/credentials` Endpoint da API.
 
-## Quando usar a variável `/credentials` Ponto de extremidade da API {#when-to-use}
+## Quando usar a variável `/credentials` Endpoint da API {#when-to-use}
 
 >[!IMPORTANT]
 >
->Na maioria dos casos, você ***não*** precisam usar o `/credentials` Ponto de extremidade da API. Em vez disso, você pode configurar as informações de autenticação para o seu destino por meio do `customerAuthenticationConfigurations` parâmetros da `/destinations` endpoint .
+>Na maioria dos casos, você ***não*** necessidade de usar o `/credentials` Endpoint da API. Em vez disso, você poderá configurar as informações de autenticação para seu destino por meio da `customerAuthenticationConfigurations` parâmetros do `/destinations` terminal.
 > 
->Ler [Configuração de autenticação do cliente](../functionality/destination-configuration/customer-authentication.md) para obter informações detalhadas sobre os tipos de autenticação suportados.
+>Ler [Configuração de autenticação do cliente](../functionality/destination-configuration/customer-authentication.md) para obter informações detalhadas sobre os tipos de autenticação compatíveis.
 
-Use esse ponto de extremidade de API para criar uma configuração de credencial somente se houver um sistema de autenticação global entre o Adobe e a plataforma de destino, e [!DNL Platform] o cliente não precisa fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar uma configuração de credencial usando o `/credentials` Ponto de extremidade da API.
+Use esse endpoint de API para criar uma configuração de credencial somente se houver um sistema de autenticação global entre o Adobe e sua plataforma de destino e o [!DNL Platform] O cliente não precisa fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar uma configuração de credencial usando o `/credentials` Endpoint da API.
 
 Ao usar um sistema de autenticação global, você deve definir `"authenticationRule":"PLATFORM_AUTHENTICATION"` no [entrega de destino](../functionality/destination-configuration/destination-delivery.md) configuração, quando [criação de uma nova configuração de destino](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 >[!IMPORTANT]
 >
->Todos os nomes de parâmetros e valores suportados pelo Destination SDK são **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros compatíveis com o Destination SDK são **diferencia maiúsculas de minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
-## Introdução às operações da API de credenciais {#get-started}
+## Introdução às operações de API de credenciais {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API com sucesso, incluindo como obter a permissão de criação de destino necessária e os cabeçalhos necessários.
+Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Atualizar uma configuração de credencial {#update}
 
-Você pode atualizar um [existente](create-credential-configuration.md) configuração de credencial ao criar uma `PUT` à `/authoring/credentials` endpoint com a carga útil atualizada.
+Você pode atualizar um [existente](create-credential-configuration.md) configuração de credencial fazendo um `PUT` solicitação à `/authoring/credentials` terminal com a carga atualizada.
 
-Para obter uma configuração de credencial existente e sua correspondente `{INSTANCE_ID}`, consulte o artigo sobre [recuperar uma configuração de credencial](retrieve-credential-configuration.md).
+Para obter uma configuração de credencial existente e sua configuração correspondente `{INSTANCE_ID}`, consulte o artigo sobre [recuperação de uma configuração de credencial](retrieve-credential-configuration.md).
 
 **Formato da API**
 
@@ -51,11 +51,11 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 | Parâmetro | Descrição |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | A ID da configuração da credencial que você deseja atualizar. Para obter uma configuração de credencial existente e sua correspondente `{INSTANCE_ID}`, consulte [Recuperar uma configuração de credencial](retrieve-credential-configuration.md). |
+| `{INSTANCE_ID}` | A ID da configuração de credencial que você deseja atualizar. Para obter uma configuração de credencial existente e sua configuração correspondente `{INSTANCE_ID}`, consulte [Recuperar uma configuração de credencial](retrieve-credential-configuration.md). |
 
-As solicitações a seguir atualizam as configurações de credenciais existentes, definidas pelos parâmetros fornecidos no payload.
+As solicitações a seguir atualizam as configurações de credencial existentes, definidas pelos parâmetros fornecidos na carga.
 
-Selecione cada guia abaixo para visualizar a carga correspondente.
+Selecione cada guia abaixo para visualizar o conteúdo correspondente.
 
 >[!BEGINTABS]
 
@@ -84,8 +84,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
-| `url` | String | URL do fornecedor de autorização |
-| `username` | String | Nome de usuário de logon da configuração de credenciais |
+| `url` | String | URL do provedor de autorização |
+| `username` | String | Nome de usuário para logon na configuração de credenciais |
 | `password` | String | Senha de logon da configuração de credenciais |
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 >[!TAB Amazon S3]
 
-**Atualize um [!DNL Amazon S3] configuração de credencial**
+**Atualizar um [!DNL Amazon S3] configuração de credencial**
 
 +++Solicitação
 
@@ -137,7 +137,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 >[!TAB SSH]
 
-**Atualize um [!DNL SSH] configuração de credencial**
+**Atualizar um [!DNL SSH] configuração de credencial**
 
 +++Solicitação
 
@@ -159,7 +159,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
-| `username` | String | Nome de usuário de logon da configuração de credenciais |
+| `username` | String | Nome de usuário para logon na configuração de credenciais |
 | `sshKey` | String | [!DNL SSH] chave para [!DNL SFTP] com [!DNL SSH] autenticação |
 
 {style="table-layout:auto"}
@@ -174,7 +174,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 >[!TAB Armazenamento Azure Data Lake]
 
-**Atualize um [!DNL Azure Data Lake Storage] configuração de credencial**
+**Atualizar um [!DNL Azure Data Lake Storage] configuração de credencial**
 
 +++Solicitação
 
@@ -198,8 +198,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
-| `url` | String | URL do fornecedor de autorização |
-| `tenant` | String | Alocador do Armazenamento Azure Data Lake |
+| `url` | String | URL do provedor de autorização |
+| `tenant` | String | Locatário do Armazenamento Azure Data Lake |
 | `servicePrincipalId` | String | [!DNL Azure Service Principal] ID para [!DNL Azure Data Lake Storage] |
 | `servicePrincipalKey` | String | [!DNL Azure Service Principal Key] for [!DNL Azure Data Lake Storage] |
 
@@ -215,7 +215,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 >[!TAB Armazenamento Azure Blob]
 
-**Atualize um [!DNL Azure Blob] configuração de credencial**
+**Atualizar um [!DNL Azure Blob] configuração de credencial**
 
 +++Solicitação
 
@@ -236,7 +236,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
-| `connectionString` | String | [!DNL Azure Blob Storage] string de conexão |
+| `connectionString` | String | [!DNL Azure Blob Storage] cadeia de conexão |
 
 {style="table-layout:auto"}
 
@@ -250,10 +250,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 >[!ENDTABS]
 
-## Tratamento de erros da API {#error-handling}
+## Manipulação de erros de API {#error-handling}
 
-Os pontos de extremidade da API do Destination SDK seguem os princípios gerais da mensagem de erro da API do Experience Platform. Consulte [Códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros do cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da plataforma.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, você agora sabe como atualizar uma configuração de credencial usando o `/authoring/credentials` Ponto de extremidade da API. Ler [como usar o Destination SDK para configurar seu destino](../guides/configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, agora você sabe como atualizar uma configuração de credencial usando o `/authoring/credentials` Endpoint da API. Ler [como usar o Destination SDK para configurar seu destino](../guides/configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do destino.

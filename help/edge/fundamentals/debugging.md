@@ -37,7 +37,7 @@ alloy("configure", {
 
 >[!TIP]
 >
->Isso permite a depuração para todos os usuários da página da Web, em vez de somente para o seu navegador pessoal.
+>Isso habilita a depuração para todos os usuários da página da Web, em vez de somente para o seu navegador pessoal.
 
 ## Alternar a depuração com o comando Depurar
 

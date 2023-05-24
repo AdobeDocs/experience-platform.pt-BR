@@ -166,7 +166,7 @@ Nesta seção, abordaremos rapidamente algumas vantagens do uso de cada bibliote
 
 [Pandas](https://pandas.pydata.org/) O é usado principalmente para seu objeto DataFrame, que permite a manipulação de dados com indexação integrada. No entanto, pandas também inclui uma funcionalidade de plotagem incorporada que é baseada em matplotlib.
 
-[seaborn](https://seaborn.pydata.org/) é uma build de pacote sobre o matplotlib. Seu objetivo principal é tornar os gráficos padrão mais visualmente atraentes e simplificar a criação de gráficos complicados.
+[seaborn](https://seaborn.pydata.org/) é uma build de pacote sobre o matplotlib. Seu principal objetivo é tornar os gráficos padrão mais visualmente atraentes e simplificar a criação de gráficos complicados.
 
 [ggplot](https://ggplot2.tidyverse.org/) O é um pacote criado sobre o matplotlib. No entanto, a principal diferença é que a ferramenta é uma porta de gplot2 para R. Semelhante a seaborn, o objetivo é melhorar em matplotlib. Os usuários familiarizados com o ggplot2 para R devem considerar essa biblioteca.
 

@@ -5,7 +5,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -38,7 +38,7 @@ Este documento aborda as notas de versão da extensão de tag do Adobe Experienc
 
 * Esta versão contém o Visitante 5.3.0 mais recente, com as seguintes novas atualizações:
 
-   * Algoritmo atualizado para gerar o ECID local
+   * Algoritmo atualizado para gerar ECID local
    * Última aceitação com `Secure` e `SameSite` sinalizadores para o cookie de privacidade
    * Correção para um problema do navegador Firefox quando uma página é carregada em um iFrame secundário
 

@@ -252,7 +252,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 * Atualização da extensão do Adobe Analytics para oferecer suporte à DIL 8.0 no Audience Manager
 * Separação do campo &quot;Serializar do valor&quot; em dois, &quot;ID do evento&quot; e &quot;Valor do evento&quot;. Isso corrigirá o problema que atribuía um valor em vez de serializar um evento
-   * Observação: se estiver usando o campo atual para adicionar uma ID usando uma cadeia de caracteres (ex.: Event7=3:abc123) será necessário atualizar sua entrada para refletir a ID no campo &quot;ID do evento&quot;
+   * Observação: se estiver usando o campo atual para adicionar uma ID usando uma string (ex.: Event7=3:abc123) será necessário atualizar sua entrada para refletir a ID no campo &quot;ID do evento&quot;
 
 **Correções de erros**:
 

@@ -3,10 +3,11 @@ title: Modelo de autoatendimento de documentação para API do SDK de transmiss�
 description: Saiba como trazer dados de transmissão de uma origem para a Adobe Experience Platform usando a API do serviço de fluxo.
 hide: true
 hidefromtoc: true
-source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -256,7 +257,7 @@ O último passo para trazer dados de *SUA FONTE* para a Platform é criar um flu
 
 * [ID da conexão de origem](#source-connection)
 * [ID da conexão de destino](#target-connection)
-* [ID do mapeamento](#mapping)
+* [ID de mapeamento](#mapping)
 
 Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 

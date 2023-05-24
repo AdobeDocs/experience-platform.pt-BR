@@ -679,7 +679,7 @@ O último passo para trazer dados do Zendesk para a Platform é criar um fluxo d
 
 * [ID da conexão de origem](#source-connection)
 * [ID da conexão de destino](#target-connection)
-* [ID do mapeamento](#mapping)
+* [ID de mapeamento](#mapping)
 
 Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 

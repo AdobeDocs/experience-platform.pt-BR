@@ -1,151 +1,152 @@
 ---
-keywords: Experience Platform, home, tópicos populares, fontes, conectores, conectores de origem, sdk de fontes, sdk, SDK
-title: Criar uma conexão de origem do Pinterest Ads na interface do usuário
+keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
+title: Criar uma conexão de origem do Pinterest Ads na interface
 description: Saiba como criar uma conexão de origem do Pinterest Ads usando a interface do usuário do Adobe Experience Platform.
-badge: "Beta"
+badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 2%
 
 ---
 
-# Crie um [!DNL Pinterest Ads] conexão de origem na interface do usuário
+# Criar um [!DNL Pinterest Ads] conexão de origem na interface
 
 >[!NOTE]
 >
->O [!DNL Pinterest Ads] A fonte está em beta. Leia o [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
+>A variável [!DNL Pinterest Ads] a fonte está na versão beta. Leia o [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
-Este tutorial fornece etapas para criar um [!DNL Pinterest Ads] conector de origem usando a interface do usuário do Adobe Experience Platform.
+Este tutorial fornece etapas para a criação de um [!DNL Pinterest Ads] conector de origem usando a interface do usuário do Adobe Experience Platform.
 
 ## Introdução {#getting-started}
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
+Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do schema](../../../../../xdm/schema/composition.md): Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
+   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+   * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ## Pré-requisitos {#prerequisites}
 
-Para se conectar [!DNL Pinterest Ads] para o Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para se conectar [!DNL Pinterest Ads] para Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
-* O [!DNL Pinterest] token de acesso.
-* O [!DNL Pinterest] ID da conta do anúncio.
-* Um de [!DNL Pinterest] campanha, grupo de anúncios ou IDs de anúncios, conforme necessário.
+* A variável [!DNL Pinterest] token de acesso.
+* A variável [!DNL Pinterest] ID da conta de publicidade.
+* Um de [!DNL Pinterest] campanha, grupo de publicidade ou IDs de anúncio, conforme necessário.
 
-Para obter mais informações sobre essas propriedades de conexão, leia o [[!DNL Pinterest Ads] visão geral](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
+Para obter mais informações sobre essas propriedades de conexão, leia a [[!DNL Pinterest Ads] visão geral](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-### Criar um esquema da plataforma {#create-platform-schema}
+### Criar um esquema da Platform {#create-platform-schema}
 
-Você também deve garantir que primeiro crie um esquema da plataforma para usar em [!DNL Pinterst Ads] fonte. Leia o tutorial em [criação de um schema da plataforma](../../../../../xdm/schema/composition.md) para obter etapas abrangentes sobre como criar um schema.
+Você também deve garantir que primeiro crie um esquema da Platform para usar em sua [!DNL Pinterst Ads] origem. Leia o tutorial sobre [criação de um schema do Platform](../../../../../xdm/schema/composition.md) para obter etapas abrangentes sobre como criar um schema.
 
-![Um exemplo de schema da plataforma para anúncios do Pinterest](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![Um exemplo de esquema de plataforma para o Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
-Para obter uma lista dos campos compatíveis com o [!DNL Pinterest] campanha, grupo de anúncios e APIs de anúncios, consulte [[!DNL Pinterest] campos](#pinterest-fields) seção.
+Para obter uma lista dos campos compatíveis com o [!DNL Pinterest] campaign, grupo de publicidade e APIs de publicidade, consulte [[!DNL Pinterest] campos](#pinterest-fields) seção.
 
 ## Conecte seu [!DNL Pinterest Ads] account {#connect-account}
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o [!UICONTROL Fontes] espaço de trabalho. O [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Em *Publicidade* categoria , selecione **[!UICONTROL Anúncios do pinterest]** e selecione **[!UICONTROL Adicionar dados]**.
+No *Publicidade* categoria, selecione **[!UICONTROL Anúncios do pinterest]** e selecione **[!UICONTROL Adicionar dados]**.
 
 ![O catálogo de fontes no Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
-O **[!UICONTROL Conta do Connect Pinterest Ads]** será exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+A variável **[!UICONTROL Conectar a conta do Pinterest Ads]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente {#existing-account}
 
-Para usar uma conta existente, selecione a [!DNL Pinterest Ads] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próximo]** para continuar.
+Para usar uma conta existente, selecione a variável [!DNL Pinterest Ads] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
 
-![A etapa da conta existente do fluxo de trabalho de origens.](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
+![A etapa existente da conta do fluxo de trabalho de códigos-fonte.](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
 
 ### Nova conta {#new-account}
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e, em seguida, forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar-se à origem]** e, em seguida, permitir que a nova conexão seja estabelecida.
+Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
 
-![A nova etapa de conta do fluxo de trabalho de origens.](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
+![A nova etapa da conta do fluxo de trabalho de códigos-fonte.](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
 
 
 
 ## Selecionar dados {#select-data}
 
-O **[!UICONTROL Selecionar dados]** for exibida, fornecendo uma interface para que você insira as informações que seriam passadas para as APIs para trazer os dados que deseja para a Platform.
+A variável **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para que você insira as informações que seriam passadas para as APIs para trazer os dados que deseja para a Platform.
 
 | Campo | Descrição |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Seu [!DNL Pinterest Ads] ID da conta do anúncio. Consulte a [[!DNL Pinterest] guia sobre encontrar IDs no Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) se precisar de orientação. |
-| [!UICONTROL tipo_de_objeto] | Selecione um de **campanhas**, **grupos de anúncios** ou **anúncios** dependendo de qual [!DNL Pinterest] APIs do Analytics das quais deseja obter informações. |
-| [!UICONTROL object_ids] | As IDs do objeto selecionado. Navegue até o [!DNL Pinterest] página para **Hub de negócios da pinterest** > **Resumo da conta do anúncio** > **Campanhas** / **Grupos de anúncios** / **Anúncios** e copie as IDs necessárias mencionadas logo abaixo de cada um de seus nomes. |
+| [!UICONTROL ad_account_id] | Seu [!DNL Pinterest Ads] ID da conta de publicidade. Consulte a [[!DNL Pinterest] guia sobre como encontrar IDs no Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) se precisar de orientação. |
+| [!UICONTROL tipo_objeto] | Selecione um de **campanhas**, **grupos de publicidade** ou **anúncios** dependendo de qual das opções [!DNL Pinterest] APIs do Analytics das quais você deseja obter informações. |
+| [!UICONTROL object_ids] | As IDs do objeto selecionado. Navegue até a [!DNL Pinterest] página para **Hub de negócios pinterest** > **Resumo da conta de anúncio** > **Campanhas** / **Grupos de anúncios** / **Anúncios** e copie as IDs necessárias mencionadas logo abaixo de cada um de seus nomes. |
 
 >[!TIP]
 >
->Você pode fornecer vários `object_ids` transmitindo valores separados por vírgula. O número máximo de IDs que você pode transmitir em uma única solicitação é 100. Se valores incorretos forem passados, a Platform exibirá a seguinte mensagem: `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>É possível fornecer vários `object_ids` transmitindo valores separados por vírgula. O número máximo de IDs que você pode passar em uma única solicitação é 100. Se valores incorretos forem transmitidos, a Platform exibirá a seguinte mensagem: `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 Depois de fornecer os valores, selecione **[!UICONTROL Selecionar]**. Se os valores fornecidos forem válidos, a parte direita da interface, visualizar dados, será preenchida.
 
-![A etapa selecionar dados do fluxo de trabalho de fontes.](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
+![A etapa de seleção de dados do fluxo de trabalho de origens.](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você estabeleceu uma conexão com seu [!DNL Pinterest Ads] conta. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados de publicidade para a plataforma](../../dataflow/advertising.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Pinterest Ads] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de publicidade para a Platform](../../dataflow/advertising.md).
 
 ## Recursos adicionais {#additional-resources}
 
-As seções abaixo fornecem recursos adicionais que você pode consultar ao usar o [!DNL Pinterest Ads] fonte.
+As seções abaixo fornecem recursos adicionais que você pode consultar ao usar o [!DNL Pinterest Ads] origem.
 
 ## Programação {#scheduling}
 
-Ao programar seu [!DNL Pinterest Ads] fluxo de dados para assimilação, você deve selecionar uma das seguintes configurações de frequência e intervalo:
+Ao agendar sua [!DNL Pinterest Ads] fluxo de dados para assimilação, você deve selecionar uma das seguintes configurações de frequência e intervalo:
 
-| Frequência | Intervalo |
+| Frequência | Interval |
 | --- | --- |
 | `Day` | 1 |
 | `Hour` | 24 |
 
-Para obter mais informações sobre como programar seu [!DNL Pinterest Ads] fluxo de dados, leia o [seção de medidas de proteção [!DNL Pinterest Ads] visão geral](../../../../connectors/advertising/pinterest-ads.md#guardrails).
+Para obter mais informações sobre como agendar sua [!DNL Pinterest Ads] fluxo de dados, leia o [seção de medidas de proteção do [!DNL Pinterest Ads] visão geral](../../../../connectors/advertising/pinterest-ads.md#guardrails).
 
-Depois de fornecer os valores para a programação, selecione **[!UICONTROL Próximo]**.
+Depois de fornecer os valores para o cronograma, selecione **[!UICONTROL Próxima]**.
 
 ![A etapa de agendamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/advertising/pinterest-ads/scheduling.png)
 
 ### Validação {#validation}
 
-Para validar se você configurou a origem corretamente e [!DNL Pinterest Ads] Os dados estão sendo assimilados, siga as etapas abaixo:
+Para validar se você configurou corretamente a origem e [!DNL Pinterest Ads] Os dados do estão sendo assimilados, siga as etapas abaixo:
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Exibir Fluxos de Dados]** ao lado do [!DNL Pinterest Ads] menu de cartão na página de catálogo. Em seguida, você pode selecionar [!UICONTROL Visualizar conjunto de dados] para verificar os dados assimilados.
+Na interface do usuário da Platform, selecione **[!UICONTROL Exibir fluxos de dados]** ao lado da variável [!DNL Pinterest Ads] menu de cartão na página do catálogo. É possível selecionar [!UICONTROL Visualizar conjunto de dados] para verificar os dados assimilados.
 
 ![Captura de tela da interface do usuário da plataforma para o conjunto de dados de visualização do Pinterest Ads.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
-Você pode verificar os dados em relação às contagens visíveis na variável [!DNL Pinterest] interface
+Você pode verificar os dados em relação às contagens visíveis na [!DNL Pinterest] IU
 
 >[!BEGINTABS]
 
 >[!TAB Campanhas]
 
-![página Campanhas do pinterest.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
+![Campanhas do pinterest.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
 
 >[!TAB Grupos de anúncios]
 
-![página Grupos de anúncios do pinterest.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
+![Página de grupos de anúncio do pinterest.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 
 >[!TAB Anúncios]
 
-![página Anúncios do pinterest.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png)
+![Pinterest Ads.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png)
 
 >[!ENDTABS]
 
 
 ### [!DNL Pinterest] Campos {#pinterest-fields}
 
-Os campos compatíveis com o [!DNL Pinterest] as APIs de campanha, grupo de anúncios e anúncios estão abaixo:
+Os campos compatíveis com o [!DNL Pinterest] APIs de campanha, grupo de publicidade e anúncios estão abaixo:
 
-+++ Exibir carga
++++ Exibir conteúdo
 
 ```json
 {

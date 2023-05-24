@@ -15,7 +15,7 @@ ht-degree: 91%
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Use essa extensão para integrar o código de rastreamento JavaScript [!DNL Marketo Munchkin] com sua propriedade. O JavaScript [!DNL Marketo Munchkin] permite rastrear as visitas da página do usuário final e os cliques nas páginas de aterrissagem do Marketo e páginas da Web externas.
+Use essa extensão para integrar o código de rastreamento JavaScript [!DNL Marketo Munchkin] com sua propriedade. O JavaScript [!DNL Marketo Munchkin] permite rastrear as visitas da página do usuário final e os cliques nas páginas de destino do Marketo e páginas da Web externas.
 
 ## Instalar a extensão do Marketo Munchkin
 

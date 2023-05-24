@@ -1,50 +1,51 @@
 ---
-keywords: Experience Platform; home; tópicos populares; serviço de fluxo;
-title: Fluxos de dados de rascunho usando a API do serviço de fluxo
+keywords: Experience Platform;página inicial;tópicos populares;serviço de fluxo;
+title: Rascunho de fluxos de dados usando a API do serviço de fluxo
 description: Saiba como definir seus fluxos de dados em um estado de rascunho usando a API do Serviço de fluxo.
 badge: label="Novo recurso" type="Positivo"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 3%
 
 ---
 
-# Fluxos de dados de rascunho usando a API do Serviço de fluxo
+# Rascunhos de fluxos de dados usando a API de serviço de fluxo
 
-Salve seus fluxos de dados como rascunhos ao usar a API do Serviço de fluxo fornecendo o `mode=draft` parâmetro de consulta durante a chamada de criação de fluxo. Os rascunhos podem ser atualizados posteriormente com novas informações e depois publicados assim que estiverem prontos. Este tutorial aborda as etapas para definir seus fluxos de dados em um estado de rascunho usando a API do Serviço de Fluxo.
+Salve seus fluxos de dados como rascunhos ao usar a API de serviço de fluxo fornecendo a `mode=draft` parâmetro de consulta durante a chamada de criação do fluxo. Os rascunhos podem ser atualizados posteriormente com novas informações e publicados quando estiverem prontos. Este tutorial aborda as etapas para definir seus fluxos de dados em um estado de rascunho usando a API de serviço de fluxo.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Pré-requisitos
 
 Este tutorial requer que você já tenha gerado os ativos necessários para criar um fluxo de dados. Isso inclui o seguinte:
 
-* Uma conexão base autenticada
+* Uma conexão de base autenticada
 * Uma conexão de origem
-* Um esquema XDM de destino
+* Um esquema XDM do Target
 * Um conjunto de dados de destino
 * Uma conexão de destino
 * Um mapeamento
 
-Se você ainda não tiver esses valores, selecione uma fonte de [o catálogo na visão geral das fontes](../../home.md). Em seguida, siga as instruções dessa fonte específica para gerar os ativos necessários para projetar um fluxo de dados.
+Se você ainda não tiver esses valores, selecione uma origem em [o catálogo na visão geral das origens](../../home.md). Em seguida, siga as instruções dessa fonte para gerar os ativos necessários para elaborar um fluxo de dados.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia em [introdução às APIs do Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
 
-## Definir um fluxo de dados para um estado de rascunho
+## Definir um fluxo de dados para o estado de rascunho
 
-As seções a seguir descrevem o processo para definir um fluxo de dados como rascunho, atualizar o fluxo de dados, publicar o fluxo de dados e, eventualmente, excluir o fluxo de dados.
+As seções a seguir descrevem o processo para definir um fluxo de dados como rascunho, atualizar o fluxo de dados, publicar o fluxo de dados e, por fim, excluir o fluxo de dados.
 
-### Rascunho de um fluxo de dados
+### Rascunhar um fluxo de dados
 
-Para definir um fluxo de dados como rascunho, faça uma solicitação de POST para a `/flows` endpoint ao adicionar o `mode=draft` como parâmetro de consulta. Isso permite criar um fluxo de dados e salvá-lo como rascunho.
+Para definir um fluxo de dados como rascunho, faça uma solicitação POST à `/flows` ao adicionar o `mode=draft` como parâmetro de consulta. Isso permite criar um fluxo de dados e salvá-lo como rascunho.
 
 **Formato da API**
 
@@ -84,7 +85,7 @@ A solicitação a seguir cria um fluxo de dados de rascunho.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a variável `id` e os `etag` do seu fluxo de dados.
+Uma resposta bem-sucedida retorna a variável `id` e as correspondentes `etag` do seu fluxo de dados.
 
 ```json
 {
@@ -95,7 +96,7 @@ Uma resposta bem-sucedida retorna a variável `id` e os `etag` do seu fluxo de d
 
 ### Atualizar um fluxo de dados
 
-Para atualizar seu rascunho, faça uma solicitação de PATCH para a `/flows` endpoint ao fornecer a ID do fluxo de dados que deseja atualizar. Durante essa etapa, você também deve fornecer um `If-Match` parâmetro header , que corresponde ao `etag` do fluxo de dados que você deseja atualizar.
+Para atualizar o rascunho, faça uma solicitação PATCH ao `/flows` ao fornecer a ID do fluxo de dados que você deseja atualizar. Durante essa etapa, você também deve fornecer um `If-Match` parâmetro de cabeçalho, que corresponde ao `etag` do fluxo de dados que você deseja atualizar.
 
 **Formato da API**
 
@@ -105,7 +106,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitação**
 
-As solicitações a seguir adicionam transformações de mapeamento ao fluxo de dados rascunhado.
+As solicitações a seguir adicionam transformações de mapeamento ao fluxo de dados de rascunho.
 
 ```shell
 curl -X PATCH \
@@ -134,7 +135,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID do fluxo e `etag`. Para verificar a alteração, você pode fazer uma solicitação do GET para o `/flows` endpoint ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e `etag`. Para verificar a alteração, você pode fazer uma solicitação GET para a `/flows` ao fornecer a ID do fluxo.
 
 ```json
 {
@@ -145,7 +146,7 @@ Uma resposta bem-sucedida retorna a ID do fluxo e `etag`. Para verificar a alter
 
 ### Publicar um fluxo de dados
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação de POST para a variável `/flows` endpoint ao fornecer a ID do fluxo de dados de rascunho que deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao `/flows` ao fornecer a ID do fluxo de dados de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -172,7 +173,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID e a `etag` do seu fluxo de dados.
+Uma resposta bem-sucedida retorna a ID e a variável `etag` do seu fluxo de dados.
 
 ```json
 {
@@ -183,4 +184,4 @@ Uma resposta bem-sucedida retorna a ID e a `etag` do seu fluxo de dados.
 
 ### Excluir um fluxo de dados
 
-Para excluir seu fluxo de dados, faça uma solicitação de DELETE para o `/flows` endpoint ao fornecer a ID do fluxo de dados que deseja excluir. Para obter etapas detalhadas sobre como excluir um fluxo de dados usando a API do Serviço de fluxo, leia o guia em [exclusão de um fluxo de dados na API](./delete-dataflows.md).
+Para excluir o fluxo de dados, faça uma solicitação DELETE ao `/flows` ao fornecer a ID do fluxo de dados que você deseja excluir. Para obter etapas detalhadas sobre como excluir um fluxo de dados usando a API de Serviço de fluxo, leia o guia em [exclusão de um fluxo de dados na API](./delete-dataflows.md).

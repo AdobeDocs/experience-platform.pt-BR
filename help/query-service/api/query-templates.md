@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de consulta, modelos de consulta, guia de api, modelos, serviço de query;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;modelos de consulta;guia de api;modelos;Serviço de consulta;
 solution: Experience Platform
-title: Ponto de extremidade da API de modelos de consulta
-description: Este guia detalha as várias chamadas de API de modelo de consulta que podem ser feitas usando a API do serviço de consulta.
+title: Endpoint da API de Modelos de Consulta
+description: Este guia detalha as várias chamadas de API do modelo de consulta que você pode fazer usando a API do Serviço de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 4%
 
 ---
 
-# Ponto de extremidade de modelos de consulta
+# Endpoint de modelos de consulta
 
 ## Exemplos de chamadas de API
 
-As seções a seguir descrevem as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir descrevem as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
-Consulte a [Documentação dos modelos de consulta da interface do usuário](../ui/query-templates.md) para obter informações sobre como criar modelos por meio da interface do usuário do Experience Platform.
+Consulte a [Documentação de modelos de consulta de interface do usuário](../ui/query-templates.md) para obter informações sobre como criar modelos por meio da interface do usuário do Experience Platform.
 
-### Recuperar uma lista de templates de query
+### Recuperar uma lista de modelos de consulta
 
-Você pode recuperar uma lista de todos os modelos de consulta para sua organização fazendo uma solicitação do GET para a `/query-templates` endpoint .
+Você pode recuperar uma lista de todos os modelos de consulta para sua organização fazendo uma solicitação GET à `/query-templates` terminal.
 
 **Formato da API**
 
@@ -36,14 +36,14 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 **Parâmetros de consulta**
 
-Esta é uma lista de parâmetros de consulta disponíveis para listar templates de query. Todos esses parâmetros são opcionais. Fazer uma chamada para esse terminal sem parâmetros recuperará todos os modelos de consulta disponíveis para sua organização.
+Veja a seguir uma lista de parâmetros de consulta disponíveis para listar modelos de consulta. Todos esses parâmetros são opcionais. Fazer uma chamada para esse endpoint sem parâmetros recuperará todos os modelos de consulta disponíveis para sua organização.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20º*) |
-| `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
-| `property` | Filtre os resultados com base nos campos. Os filtros **must** ser HTML escapado. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `name` e `userId`. O único operador suportado é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
+| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira consulta listada. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `name` e `userId`. O único operador compatível é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
 
 **Solicitação**
 
@@ -112,7 +112,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
 
 ### Criar um modelo de consulta
 
-Você pode criar um template de query fazendo uma solicitação POST para a variável `/query-templates` endpoint .
+Você pode criar um template de query fazendo uma solicitação POST para o `/query-templates` terminal.
 
 **Formato da API**
 
@@ -139,13 +139,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sql` | A consulta SQL que você deseja criar. Você pode usar o SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar a chave de parâmetro com um `$`. Por exemplo, `$key`e fornecer os parâmetros usados no SQL como pares de valores-chave JSON no `queryParameters` campo. Os valores passados aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deve substituí-los na solicitação do POST. |
-| `name` | O nome do template de query. |
-| `queryParameters` | Um emparelhamento de valor principal para substituir quaisquer valores parametrizados na instrução SQL. Só é necessário **if** você está usando substituições de parâmetros dentro do SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores chave. |
+| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar a chave de parâmetro a uma `$`. Por exemplo, `$key`e fornecem os parâmetros usados no SQL como pares de valores-chave JSON no `queryParameters` campo. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
+| `name` | O nome do modelo de consulta. |
+| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. É apenas obrigatório **se** você está usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes do modelo de consulta recém-criado.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do modelo de consulta recém-criado.
 
 ```json
 {
@@ -179,7 +179,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes do m
 
 ### Recuperar um modelo de consulta especificado
 
-Você pode recuperar um template de query específico fazendo uma solicitação do GET para o `/query-templates/{TEMPLATE_ID}` e fornecer a ID do modelo de consulta no caminho da solicitação.
+Você pode recuperar um template de query específico fazendo uma solicitação GET para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | O `id` valor do template de query que deseja recuperar. |
+| `{TEMPLATE_ID}` | A variável `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
 
@@ -237,7 +237,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de co
 
 ### Atualizar um modelo de consulta especificado
 
-Você pode atualizar um template de query específico fazendo uma solicitação de PUT para a variável `/query-templates/{TEMPLATE_ID}` e fornecer a ID do modelo de consulta no caminho da solicitação.
+Você pode atualizar um template de query específico fazendo uma solicitação PUT para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -247,13 +247,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | O `id` valor do template de query que deseja recuperar. |
+| `{TEMPLATE_ID}` | A variável `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
 
 >[!NOTE]
 >
->A solicitação de PUT requer que o sql e o campo de nome sejam preenchidos e o **substituir** o conteúdo atual desse template de query.
+>A solicitação PUT exige que os campos sql e name sejam preenchidos, e **substituir** o conteúdo atual desse modelo de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -272,13 +272,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sql` | A consulta SQL que você deseja criar. Você pode usar o SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar a chave de parâmetro com um `$`. Por exemplo, `$key`e fornecer os parâmetros usados no SQL como pares de valores-chave JSON no `queryParameters` campo. Os valores passados aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deve substituí-los na solicitação do POST. |
-| `name` | O nome do template de query. |
-| `queryParameters` | Um emparelhamento de valor principal para substituir quaisquer valores parametrizados na instrução SQL. Só é necessário **if** você está usando substituições de parâmetros dentro do SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores chave. |
+| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar a chave de parâmetro a uma `$`. Por exemplo, `$key`e fornecem os parâmetros usados no SQL como pares de valores-chave JSON no `queryParameters` campo. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
+| `name` | O nome do modelo de consulta. |
+| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. É apenas obrigatório **se** você está usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com as informações atualizadas para seu template de query especificado.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com as informações atualizadas para o modelo de consulta especificado.
 
 ```json
 {
@@ -313,7 +313,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com as informaç�
 
 ### Excluir um modelo de consulta especificado
 
-Você pode excluir um modelo de consulta específico fazendo uma solicitação DELETE para a variável `/query-templates/{TEMPLATE_ID}` e fornecer a ID do modelo de consulta no caminho da solicitação.
+É possível excluir um template de query específico fazendo uma solicitação DELETE para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -323,7 +323,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | O `id` valor do template de query que deseja recuperar. |
+| `{TEMPLATE_ID}` | A variável `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
 
@@ -337,7 +337,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem.
 
 ```json
 {

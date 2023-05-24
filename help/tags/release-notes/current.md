@@ -2,18 +2,14 @@
 title: Notas de versão para tags e encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '798'
+ht-degree: 4%
 
 ---
 
 # Notas de versão de tags e encaminhamento de eventos
-
->[!IMPORTANT]
->
->A movimentação das tags e das notas de versão do encaminhamento de eventos não será mais fornecida nesta página. Consulte a versão mais recente [Notas de versão do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) para obter tags detalhadas e atualizações de encaminhamento de eventos.
 
 ## 26 de abril de 2023
 

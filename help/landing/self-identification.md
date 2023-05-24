@@ -1,8 +1,9 @@
 ---
-title: Use a pesquisa de autoidentificação para criar seu perfil pessoal do Experience Platform
-description: Saiba como usar a interface de usuário da pesquisa de autoidentificação para receber conteúdo relevante com base em suas funções de trabalho e objetivos relacionados.
-badge: "Beta"
-source-git-commit: 30fdad7f84a49a8e0db6fdf6571d1742de53ac2d
+title: Use a pesquisa de autoidentificação para criar seu perfil pessoal de Experience Platform
+description: Saiba como usar a interface de pesquisa de autoidentificação para receber conteúdo relevante com base em suas funções de trabalho e objetivos relacionados.
+badge: Beta
+exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 1%
@@ -13,21 +14,21 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->A pesquisa de autoidentificação está em beta. Seus recursos e documentação estão sujeitos a alterações.
+>A pesquisa de autoidentificação está na versão beta. Seus recursos e documentação estão sujeitos a alterações.
 
-A pesquisa de autoidentificação é um breve questionário apresentado na página inicial da interface do usuário do Adobe Experience Platform. Você pode preencher a pesquisa para fornecer informações sobre suas funções de cargo e objetivos gerais. Essas informações são usadas para alinhar melhor os guias no produto e, eventualmente, fornecer conteúdo mais relevante para seus objetivos.
+A pesquisa de autoidentificação é um pequeno questionário apresentado na página inicial da interface do usuário do Adobe Experience Platform. Você pode preencher a pesquisa para fornecer informações sobre suas funções de trabalho e objetivos gerais. Essas informações são usadas para alinhar melhor os guias no produto e, eventualmente, fornecer conteúdo mais relevante para seus objetivos.
 
-Este documento fornece informações sobre como você pode usar a pesquisa de autoidentificação na interface do usuário da plataforma para receber conteúdo relevante com base em suas metas e tarefas, bem como reconfigurar seus atributos de perfil pessoal usando a interface do usuário.
+Este documento fornece informações sobre como usar a pesquisa de autoidentificação na interface do usuário da Platform para receber conteúdo relevante com base em suas metas e tarefas, bem como sobre como reconfigurar os atributos de perfil pessoal usando a interface do usuário.
 
-Para saber mais sobre o Adobe Experience Platform, leia o [Visão geral do Experience Platform](home.md).
+Para saber mais sobre o Adobe Experience Platform, leia o [visão geral do Experience Platform](home.md).
 
-## Pesquisa de autoidentificação na interface do usuário da plataforma
+## Pesquisa de autoidentificação na interface do usuário da Platform
 
-O prompt de pesquisa de autoidentificação é exibido na parte inferior direita da página inicial da interface do usuário da plataforma ao fazer logon.
+O prompt de pesquisa de autoidentificação é exibido na parte inferior direita da página inicial da interface do usuário da Platform ao fazer logon.
 
-Para iniciar a pesquisa, selecione **[!UICONTROL Iniciar]**.
+Para iniciar a pesquisa, selecione **[!UICONTROL Início]**.
 
-![A página inicial da interface do usuário da plataforma com a mensagem do brinde solicitando que você inicie a pesquisa de autoidentificação.](./images/survey/survey-prompt.png)
+![A página inicial da interface do usuário da Platform com a mensagem em caixa de informações solicitando que você inicie a pesquisa de autoidentificação.](./images/survey/survey-prompt.png)
 
 Para a primeira pergunta da pesquisa, selecione a função que melhor descreve seu trabalho.
 
@@ -41,11 +42,11 @@ As opções disponíveis são:
 
 >[!NOTE]
 >
->É possível selecionar mais de uma função na lista de opções. Se você selecionar [!UICONTROL Outras], você será solicitado a fornecer detalhes sobre seu objetivo.
+>É possível selecionar mais de uma função na lista de opções. Se você selecionar [!UICONTROL Outro], será solicitado que você forneça detalhes sobre o seu objetivo.
 
-Para continuar, selecione as funções que melhor descrevem seu trabalho atual e selecione **[!UICONTROL Próximo]**.
+Para continuar, selecione as funções que melhor descrevem o trabalho atual e selecione **[!UICONTROL Próxima]**.
 
-![A pesquisa de autoidentificação com duas funções de cargo selecionadas.](./images/survey/select-functions.png)
+![A pesquisa de autoidentificação com duas funções de trabalho selecionadas.](./images/survey/select-functions.png)
 
 Em seguida, selecione os objetivos específicos que melhor se aplicam ao seu trabalho.
 
@@ -55,41 +56,41 @@ A lista de objetivos disponíveis inclui:
 * Atribuir funções, permissões e perfis de produto
 * Gerenciar uso de licença, sandboxes e alertas
 * Configurar o sistema para assimilação de dados
-* Modelo da estrutura de dados da minha organização
+* Modelar a estrutura de dados da minha organização
 * Consultar, filtrar e otimizar dados para gerar insights
-* Configurar políticas de consentimento e dados
+* Configurar políticas de dados e consentimento
 * Governança de dados e conformidade com a privacidade
 * Desenvolver estratégias de marketing
 * Criar, gerenciar e segmentar públicos
 * Configurar painéis para analisar o impacto nos negócios
-* Ativar dados para destinos para segmentação de downstream
+* Ativar dados para destinos de direcionamento downstream
 
 Quando terminar, selecione **[!UICONTROL Enviar]**.
 
-![A pesquisa de autoidentificação que exibe uma lista de objetivos que você pode selecionar.](./images/survey/select-objectives.png)
+![A pesquisa de autoidentificação exibindo uma lista de objetivos que você pode selecionar.](./images/survey/select-objectives.png)
 
-Com sua pesquisa de autoidentificação concluída, selecione **[!UICONTROL Concluído]**.
+Com a pesquisa de autoidentificação concluída, selecione **[!UICONTROL Concluído]**.
 
 ![A etapa final de confirmação da pesquisa de autoidentificação.](./images/survey/survey-complete.png)
 
 >[!NOTE]
 >
->Objetivos e recomendações (se presentes) serão alterados com base nas funções selecionadas do trabalho.
+>Os objetivos e as recomendações (se presentes) serão alterados com base nas funções de trabalho selecionadas.
 
 ## Atualize suas respostas de pesquisa
 
-Atualize suas funções e objetos de trabalho usando o menu de preferências Experience Cloud. Para acessar o menu de preferências, selecione o ícone de perfil na navegação superior e selecione **[!UICONTROL Preferências]**.
+Atualize suas funções de trabalho e objetos usando o menu de preferências de Experience Cloud. Para acessar o menu de preferências, selecione o ícone de perfil na navegação superior e selecione **[!UICONTROL Preferências]**.
 
-![A página inicial da interface do usuário da plataforma com o ícone de perfil e os botões de preferências selecionados.](./images/survey/preferences.png)
+![A página inicial da Interface do usuário da Platform com o ícone de perfil e os botões de preferências selecionados.](./images/survey/preferences.png)
 
-Em seguida, no [!UICONTROL Geral] no menu de preferências do perfil, selecione **[!UICONTROL Atualize suas funções e objetivos do trabalho]**.
+Em seguida, no [!UICONTROL Geral] do menu de preferências do perfil, selecione **[!UICONTROL Atualize suas funções de trabalho e objetivos]**.
 
-![A seção geral da página de preferências do perfil da interface do usuário da plataforma](./images/survey/update.png)
+![A seção geral da página Preferências de perfil da interface do usuário da plataforma](./images/survey/update.png)
 
-A pesquisa de autoidentificação é exibida, permitindo que você reconfigure suas respostas e atualize seu perfil.
+A pesquisa de autoidentificação é exibida, permitindo reconfigurar as respostas e atualizar o perfil.
 
-![A página de preferências de perfil da interface do usuário da plataforma que exibe a pesquisa de autoidentificação para permitir que um usuário atualize seu perfil pessoal.](./images/survey/new-survey.png)
+![A página Preferências de perfil da interface do usuário da plataforma exibe a pesquisa de autoidentificação para permitir que um usuário atualize seu perfil pessoal.](./images/survey/new-survey.png)
 
 ## Próximas etapas
 
-Ao ler este documento, você já enviou e atualizou informações sobre suas funções e objetivos de trabalho para receber conteúdo mais relevante ao usar a interface do usuário da plataforma. Para obter mais informações sobre a interface do usuário da plataforma, leia o [Visão geral do Experience Platform](home.md).
+Após a leitura deste documento, você envia e atualiza as informações sobre suas funções de trabalho e objetivos para receber conteúdo mais relevante ao usar a interface do usuário da Platform. Para obter mais informações sobre a interface do usuário da Platform, leia o [visão geral do Experience Platform](home.md).

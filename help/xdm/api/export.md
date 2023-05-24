@@ -1,6 +1,6 @@
 ---
-title: Exportar ponto de extremidade da API
-description: O endpoint /export na API do Registro de Schema permite compartilhar recursos XDM entre sandboxes.
+title: Exportar endpoint de API
+description: O ponto de extremidade /export na API do Registro de esquema permite compartilhar recursos XDM entre sandboxes.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 1%
 
 ---
 
-# Exportar ponto de extremidade
+# Exportar endpoint
 
-Todos os recursos da [!DNL Schema Library] estão contidos em uma sandbox específica no Adobe Experience Platform. Em alguns casos, você pode compartilhar os recursos do Experience Data Model (XDM) entre sandboxes e organizações. O `/rpc/export` endpoint no [!DNL Schema Registry] A API permite gerar uma carga de exportação para qualquer esquema, grupo de campos de esquema ou tipo de dados no [!DNL Schema Library]e, em seguida, use essa carga para importar esse recurso (e todos os recursos dependentes) para uma sandbox e organização de destino por meio do [`/rpc/import` endpoint](./import.md).
+Todos os recursos dentro do [!DNL Schema Library] estão contidos em uma sandbox específica no Adobe Experience Platform. Em alguns casos, é possível compartilhar recursos do Experience Data Model (XDM) entre sandboxes e organizações. A variável `/rpc/export` endpoint na variável [!DNL Schema Registry] A API permite gerar uma carga de exportação para qualquer esquema, grupo de campos de esquema ou tipo de dados na [!DNL Schema Library]e, em seguida, use essa carga para importar esse recurso (e todos os recursos dependentes) para uma sandbox e uma organização de destino por meio do [`/rpc/import` endpoint](./import.md).
 
 ## Introdução
 
-O `/rpc/export` o ponto de extremidade é parte do [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+A variável `/rpc/export` o endpoint faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
-O `/rpc/export` o ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Diferente de outros endpoints no [!DNL Schema Registry] A API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` namespace, conforme demonstrado nas chamadas de API abaixo.
+A variável `/rpc/export` O ponto de extremidade faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints no [!DNL Schema Registry] API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`, e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` conforme demonstrado nas chamadas de API abaixo.
 
 ## Gerar uma carga de exportação para um recurso {#export}
 
-Para qualquer esquema, grupo de campos ou tipo de dados existente na [!DNL Schema Library], você pode gerar uma carga de exportação fazendo uma solicitação GET para a variável `/export` endpoint, fornecendo a ID do recurso no caminho.
+Para qualquer esquema, grupo de campos ou tipo de dados existente no [!DNL Schema Library], você pode gerar uma carga de exportação fazendo uma solicitação GET para o `/export` endpoint, fornecendo a ID do recurso no caminho.
 
 **Formato da API**
 
@@ -31,7 +31,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RESOURCE_ID}` | O `meta:altId` ou codificado por URL `$id` do recurso XDM que você deseja exportar. |
+| `{RESOURCE_ID}` | A variável `meta:altId` ou codificado em URL `$id` do recurso XDM que você deseja exportar. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de objetos, que representam o recurso XDM de destino e todos os seus recursos dependentes. Neste exemplo, o primeiro objeto na matriz é um locatário criado `Property` tipo de dados que a variável `Restaurant` grupo de campos emprega, enquanto o segundo objeto é o `Restaurant` grupo de campos. Essa carga pode ser usada para [importar o recurso](#import) em uma sandbox ou organização diferente.
+Uma resposta bem-sucedida retorna uma matriz de objetos, que representa o recurso XDM de destino e todos os recursos dependentes. Neste exemplo, o primeiro objeto na matriz é um objeto criado pelo locatário `Property` tipo de dados que o `Restaurant` grupo de campos emprega, enquanto o segundo objeto é o `Restaurant` próprio grupo de campos. Essa carga pode ser usada para [importar o recurso](#import) em uma sandbox ou organização diferente.
 
 Observe que todas as instâncias da ID de locatário do recurso são substituídas por `<XDM_TENANTID_PLACEHOLDER>`. Isso permite que o Registro de esquema aplique automaticamente a ID de locatário correta aos recursos, dependendo de onde eles são enviados na chamada de importação subsequente.
 
@@ -195,6 +195,6 @@ Observe que todas as instâncias da ID de locatário do recurso são substituíd
 
 ## Importar o recurso {#import}
 
-Depois de gerar a carga de exportação do arquivo CSV, você pode enviar essa carga para o `/rpc/import` endpoint para gerar o schema .
+Depois de gerar a carga de exportação do arquivo CSV, você pode enviar essa carga para o `/rpc/import` endpoint para gerar o esquema.
 
-Consulte a [guia de endpoint de importação](./import.md) para obter detalhes sobre como gerar schemas a partir de cargas de exportação.
+Consulte a [guia de endpoint de importação](./import.md) para obter detalhes sobre como gerar esquemas a partir de cargas úteis de exportação.

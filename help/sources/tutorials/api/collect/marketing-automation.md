@@ -564,7 +564,7 @@ A última etapa para coletar dados de automação de marketing é criar um fluxo
 
 * [ID da conexão de origem](#source)
 * [ID da conexão de destino](#target)
-* [ID do mapeamento](#mapping)
+* [ID de mapeamento](#mapping)
 * [ID da especificação do fluxo de dados](#specs)
 
 Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.

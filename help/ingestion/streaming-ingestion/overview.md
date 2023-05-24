@@ -7,11 +7,11 @@ exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '348'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# Visão geral da assimilação de streaming
+# Visão geral da ingestão de streaming
 
 A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos no lado do cliente e do servidor para o [!DNL Experience Platform] em tempo real.
 

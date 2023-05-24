@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform, home, tópicos populares, exportar, exportar
+keywords: Experience Platform;início;tópicos populares;exportar;Exportar;;home;popular topics;export;Export
 solution: Experience Platform
-title: Gerenciar trabalhos de privacidade na interface do usuário do Privacy Service
-description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos do Experience Cloud.
+title: Gerenciar processos de privacidade na interface do Privacy Service
+description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 14%
 
 ---
 
-# Gerenciar tarefas de privacidade na interface do usuário do Privacy Service {#user-guide}
+# Gerenciar processos de privacidade na interface do Privacy Service {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -22,29 +22,29 @@ Este documento fornece etapas para criar e gerenciar solicitações de privacida
 
 >[!IMPORTANT]
 >
->O Privacy Service destina-se somente ao titular dos dados e às solicitações de direitos do consumidor. Qualquer outro uso do Privacy Service para limpeza ou manutenção de dados não é suportado ou permitido. A Adobe tem a obrigação legal de as cumprir atempadamente. Dessa forma, o teste de carga no Privacy Service não é permitido, pois é um ambiente somente produção e cria um backlog desnecessário de solicitações de privacidade válidas.
+>O Privacy Service se destina apenas a solicitações de titulares de dados e de direitos do consumidor. Qualquer outro uso do Privacy Service para limpeza ou manutenção de dados não é suportado ou permitido. A Adobe tem a obrigação legal de os cumprir em tempo útil. Dessa forma, o teste de carga no Privacy Service não é permitido, pois é um ambiente somente de produção e cria um backlog desnecessário de solicitações de privacidade válidas.
 >
->Um limite diário de upload rígido está agora em vigor para ajudar a evitar o abuso do serviço. Os usuários considerados abusivos do sistema terão seu acesso ao serviço desativado. Em seguida, realizar-se-á uma reunião com eles para abordar as suas ações e discutir o uso aceitável do Privacy Service.
+>Um limite rígido de upload diário está em vigor para ajudar a evitar o abuso do serviço. Os usuários que abusam do sistema terão o acesso ao serviço desativado. Uma reunião subsequente será realizada com eles para abordar suas ações e discutir o uso aceitável do Privacy Service.
 
 ## Navegue pelo [!DNL Privacy Service] Painel da interface do usuário
 
-O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widgets que permitem visualizar o status de seus trabalhos de privacidade: &quot;[!UICONTROL Relatório de status]&quot; e &quot;[!UICONTROL Solicitações de trabalho]&quot;. O painel também exibe o regulamento selecionado atual para as tarefas exibidas.
+O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widgets que permitem visualizar o status dos seus trabalhos de privacidade: &quot;[!UICONTROL Relatório de Status]&quot; e &quot;[!UICONTROL Solicitações de tarefa]&quot;. O painel também exibe o regulamento selecionado atual para os trabalhos exibidos.
 
 ![Painel da interface do usuário](../images/user-guide/dashboard.png)
 
 ### Tipo de regulamento
 
-[!DNL Privacy Service] O suporta solicitações de trabalho para várias regras de privacidade. A tabela a seguir lista os regulamentos suportados e seu rótulo correspondente, como representado na interface do usuário:
+[!DNL Privacy Service] O oferece suporte a solicitações de trabalho para vários regulamentos de privacidade. A tabela a seguir lista os regulamentos compatíveis e seus rótulos correspondentes, conforme representados na interface do usuário:
 
-| Rótulo da interface do usuário | Regulamento |
+| Rótulo da interface | Regulação |
 | --- | --- |
 | [!UICONTROL CCPA] | As seleções de menu [!DNL California Consumer Privacy Act] |
-| [!UICONTROL GDPR] | A União Europeia [!DNL General Data Protection Regulation] |
+| [!UICONTROL GDPR] | A política da União Europeia [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | da Tailândia [!DNL Personal Data Protection Act] |
-| [!UICONTROL LGPD_BRA] | Brasil [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL LGPD_BRA] | O do Brasil [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Nova Zelândia [!DNL Privacy Act] |
-| [!UICONTROL VCDPA_EUA] | As seleções de menu [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | As seleções de menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL VCDPA_USA] | As seleções de menu [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_EUA] | As seleções de menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL APA_AUS] | As seleções de menu [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | As seleções de menu [!DNL Health Insurance Portability and Accountability Act] |
 
@@ -52,57 +52,57 @@ O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widg
 
 >[!NOTE]
 >
->Consulte a visão geral em [regras de privacidade compatíveis](../regulations/overview.md) para mais informações sobre o contexto jurídico de cada regulamento.
+>Consulte a visão geral em [regulamentos de privacidade compatíveis](../regulations/overview.md) para obter mais informações sobre o contexto jurídico de cada regulamento.
 
-As tarefas para cada tipo de regulamento são rastreadas separadamente. Para alternar entre tipos de regulamento, selecione o **[!UICONTROL Tipo de regulamento]** e selecione a regulamentação desejada na lista.
+As ordens de produção para cada tipo de regulamento são rastreadas separadamente. Para alternar entre tipos de regulamentos, selecione o **[!UICONTROL Tipo de regulamento]** e selecione a regulação desejada na lista.
 
-![Lista suspensa Tipo de regulamento](../images/user-guide/regulation.png)
+![Lista suspensa Tipo de regulação](../images/user-guide/regulation.png)
 
-Ao alterar o tipo de regulamento, o painel é atualizado para mostrar todas as operações, filtros, widgets e caixas de diálogo de criação de emprego que se aplicam ao regulamento selecionado.
+Ao alterar o tipo de regulamento, o painel é atualizado para mostrar todas as operações, filtros, widgets e caixas de diálogo de criação de trabalho que se aplicam ao regulamento selecionado.
 
 ![Painel atualizado](../images/user-guide/dashboard-update.png)
 
-### Relatório de status
+### Relatório de Status
 
-O gráfico no lado esquerdo do widget Relatório de status rastreia os trabalhos enviados em relação a quaisquer trabalhos que possam ter relatado com erros. O gráfico no lado direito rastreia trabalhos próximos ao final da janela de conformidade de 30 dias.
+O gráfico no lado esquerdo do widget Relatório de status rastreia as tarefas enviadas em relação às tarefas que foram relatadas com erros. O gráfico no lado direito rastreia os trabalhos próximos ao final da janela de conformidade de 30 dias.
 
 Selecione um dos dois botões de alternância acima do gráfico para mostrar ou ocultar suas respectivas métricas.
 
 ![](../images/user-guide/hide-errors.png)
 
-Você pode visualizar o número exato de tarefas associadas a qualquer ponto de dados nos gráficos ao passar o mouse sobre o ponto de dados em questão.
+Você pode visualizar o número exato de tarefas associadas a qualquer ponto de dados nos gráficos, passando o mouse sobre o ponto de dados em questão.
 
-![Pontos de dados do mouse sobre](../images/user-guide/mouse-over.png)
+![Passe o mouse sobre os pontos de dados](../images/user-guide/mouse-over.png)
 
-Para exibir mais detalhes sobre um determinado ponto de dados, selecione o ponto de dados em questão para exibir os trabalhos associados no widget Solicitações de trabalho . Anote o filtro que é aplicado logo acima da lista de tarefas.
+Para exibir mais detalhes sobre determinado ponto de dados, selecione o ponto de dados em questão para exibir as tarefas associadas no widget Solicitações de trabalho. Anote o filtro que é aplicado logo acima da lista de tarefas.
 
-![Filtro aplicado do widget](../images/user-guide/apply-filter.png)
+![Filtro do widget aplicado](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
->Quando um filtro tiver sido aplicado ao widget Solicitações de trabalho , você poderá remover o filtro selecionando o **X** no comprimido do filtro. Solicitações de trabalho e retornar à lista de rastreamento padrão.
+>Quando um filtro é aplicado ao widget Solicitações de tarefa, é possível removê-lo selecionando o **X** na pílula de filtro. As solicitações de tarefa retornam à lista de rastreamento padrão.
 
-### Solicitações de trabalho
+### Solicitações de tarefa
 
 O widget Solicitações de trabalho lista todas as solicitações de trabalho disponíveis em sua organização, incluindo detalhes como tipo de solicitação, status atual, data de vencimento e email do solicitante.
 
 >[!NOTE]
 >
->Os dados para trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
+>Os dados de trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
 
-Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título Solicitações de trabalho . A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores que correspondem aos seus termos de pesquisa. Também é possível usar a variável **[!UICONTROL Solicitado em]** menu suspenso para selecionar um intervalo de tempo para as tarefas listadas.
+Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título Solicitações de tarefa. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. Você também pode usar a variável **[!UICONTROL Solicitado em]** para selecionar um intervalo de tempo para os trabalhos listados.
 
-![Opções de pesquisa de solicitação de trabalho](../images/user-guide/job-search.png)
+![Opções de pesquisa da Solicitação de trabalho](../images/user-guide/job-search.png)
 
-Para exibir os detalhes de uma solicitação de trabalho específica, selecione a ID de trabalho da solicitação na lista para abrir o **[!UICONTROL Detalhes da tarefa]** página.
+Para exibir os detalhes de uma solicitação de trabalho específica, selecione a ID do trabalho da solicitação na lista para abrir a **[!UICONTROL Detalhes do trabalho]** página.
 
-![Detalhes do trabalho da interface do usuário do RGPD](../images/user-guide/job-details.png)
+![Detalhes do trabalho da interface do GDPR](../images/user-guide/job-details.png)
 
-Esta caixa de diálogo contém informações de status sobre cada [!DNL Experience Cloud] e seu estado atual em relação ao trabalho geral. Como cada trabalho de privacidade é assíncrono, a página exibe a data e a hora de comunicação mais recentes (GMT) de cada solução, pois algumas exigem mais tempo do que outras para processar a solicitação.
+Esta caixa de diálogo contém informações de status sobre cada [!DNL Experience Cloud] e seu estado atual em relação ao trabalho geral. Como cada trabalho de privacidade é assíncrono, a página exibe a data e a hora da comunicação mais recente (GMT) de cada solução, pois algumas exigem mais tempo do que outras para processar a solicitação.
 
-Se uma solução tiver fornecido dados adicionais, ela poderá ser visualizada nessa caixa de diálogo. É possível visualizar esses dados selecionando linhas de produto individuais.
+Se uma solução tiver fornecido dados adicionais, ela será exibida nessa caixa de diálogo. Você pode visualizar esses dados selecionando linhas de produto individuais.
 
-Para baixar os dados completos do trabalho como um arquivo CSV, selecione **[!UICONTROL Exportar para CSV]** no canto superior direito da caixa de diálogo.
+Para baixar os dados completos do processo como um arquivo CSV, selecione **[!UICONTROL Exportar para CSV]** na parte superior direita da caixa de diálogo.
 
 ## Criar uma nova solicitação de trabalho de privacidade {#create-a-new-privacy-job-request}
 
@@ -113,32 +113,32 @@ Para baixar os dados completos do trabalho como um arquivo CSV, selecione **[!UI
 
 >[!NOTE]
 >
->Para criar uma solicitação de trabalho de privacidade, você deve fornecer informações de identidade para os clientes específicos cujos dados devem ser acessados ou excluídos. Revise o documento em [dados de identidade para solicitações de privacidade](../identity-data.md) antes de continuar com esta seção.
+>Para criar uma solicitação de acesso a dados pessoais, você deve fornecer informações de identidade para os clientes específicos cujos dados devem ser acessados ou excluídos. Revise o documento em [dados de identidade para solicitações de privacidade](../identity-data.md) antes de continuar com esta seção.
 
-O [!DNL Privacy Service] A interface do usuário fornece dois métodos para criar novas solicitações de trabalho:
+A variável [!DNL Privacy Service] A interface do usuário do fornece dois métodos para criar novas solicitações de trabalho:
 
-* [Usar o Construtor de solicitações](#request-builder)
+* [Usar o Criador de solicitações](#request-builder)
 * [Fazer upload de um arquivo JSON](#json)
 
 As etapas para usar cada um desses métodos são fornecidas nas seções a seguir.
 
-### Usar o Construtor de solicitações {#request-builder}
+### Usar o Criador de solicitações {#request-builder}
 
-Usando o Construtor de solicitações, você pode criar manualmente uma nova solicitação de trabalho de privacidade na interface do usuário. O Construtor de solicitações é melhor usado para conjuntos mais simples e menores de solicitações, pois o Construtor de solicitações limita as solicitações a ter somente o tipo de ID por usuário. Para solicitações mais complicadas, é melhor [fazer upload de um arquivo JSON](#json) em vez disso.
+Usando o Construtor de solicitações, você pode criar manualmente uma nova solicitação de trabalho de privacidade na interface do usuário. O Construtor de solicitações é mais adequado para conjuntos de solicitações mais simples e menores, pois o Construtor de solicitações limita as solicitações a terem somente o tipo de ID por usuário. Para solicitações mais complicadas, talvez seja melhor [carregar um arquivo JSON](#json) em vez disso.
 
-Para começar a usar o Construtor de solicitações, selecione **[!UICONTROL Criar solicitação]** abaixo do widget Relatório de status no lado direito da tela.
+Para começar a usar o construtor de solicitações, selecione **[!UICONTROL Criar solicitação]** abaixo do widget Relatório de status no lado direito da tela.
 
-![Selecionar Criar solicitação](../images/user-guide/create-request.png)
+![Selecione Criar solicitação](../images/user-guide/create-request.png)
 
-O **[!UICONTROL Criar solicitação]** será aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento atualmente selecionado.
+A variável **[!UICONTROL Criar solicitação]** será aberta, exibindo as opções disponíveis para enviar uma solicitação de job de privacidade para o tipo de regulamento selecionado no momento.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selecione o **[!UICONTROL Tipo de Trabalho]** da solicitação (&quot;Excluir&quot; ou &quot;Acesso&quot;) e um ou mais produtos disponíveis na lista.
+Selecione o **[!UICONTROL Tipo de tarefa]** (&quot;Excluir&quot; ou &quot;Acessar&quot;) e um ou mais produtos disponíveis na lista.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Em **[!UICONTROL Tipo de namespace]**, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas para o [!DNL Privacy Service].
+Em **[!UICONTROL Tipo de namespace]**, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -146,7 +146,7 @@ Ao usar o tipo de namespace padrão, selecione um namespace no menu suspenso (em
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Ao usar o tipo de namespace personalizado, você deve digitar manualmente no namespace antes de fornecer os valores de ID abaixo.
+Ao usar o tipo de namespace personalizado, você deve digitar manualmente o namespace antes de fornecer os valores de ID abaixo.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -154,32 +154,32 @@ Quando terminar, selecione **[!UICONTROL Criar]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
-A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações de trabalho junto com seu status de processamento atual.
+A caixa de diálogo desaparece e a nova tarefa (ou tarefas) é listada no widget Solicitações de tarefa junto com seu status de processamento atual.
 
 ### Fazer upload de um arquivo JSON {#json}
 
-Ao criar solicitações mais complicadas, como aquelas que usam vários tipos de ID para cada titular de dados processado, é possível criar uma solicitação carregando um arquivo JSON.
+Ao criar solicitações mais complicadas, como as que usam vários tipos de ID para cada titular de dados que está sendo processado, é possível criar uma solicitação carregando um arquivo JSON.
 
-Selecione a seta ao lado de **[!UICONTROL Criar solicitação]**, abaixo do widget Relatório de status no lado direito da tela. Na lista de opções exibidas, selecione **[!UICONTROL Upload de JSON]**.
+Selecione a seta ao lado de **[!UICONTROL Criar solicitação]**, abaixo do widget Relatório de status no lado direito da tela. Na lista de opções exibida, selecione **[!UICONTROL Fazer upload de JSON]**.
 
 ![Opções de criação de solicitação](../images/user-guide/create-options.png)
 
-O **[!UICONTROL Upload de JSON]** for exibida, fornecendo uma janela para arrastar e soltar o arquivo JSON no.
+A variável **[!UICONTROL Fazer upload de JSON]** será exibida, fornecendo uma janela para que você arraste e solte o arquivo JSON.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Se você não tiver um arquivo JSON para fazer upload, selecione **[!UICONTROL Baixar Adobe-GDPR-Request.json]** para baixar um modelo que pode ser preenchido de acordo com os valores coletados de seus titulares de dados.
+Se não tiver um arquivo JSON para fazer upload, selecione **[!UICONTROL Baixar Adobe-GDPR-Request.json]** para baixar um modelo que pode ser preenchido de acordo com os valores coletados dos titulares de dados.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
-Localize o arquivo JSON em seu computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo será exibido na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando e soltando-os na caixa de diálogo.
+Localize o arquivo JSON no computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo aparecerá na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando-os e soltando-os na caixa de diálogo.
 
-Quando terminar, selecione **[!UICONTROL Criar]**. A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações de trabalho junto com seu status de processamento atual.
+Quando terminar, selecione **[!UICONTROL Criar]**. A caixa de diálogo desaparece e a nova tarefa (ou tarefas) é listada no widget Solicitações de tarefa junto com seu status de processamento atual.
 
 ### Próximas etapas
 
-Ao ler este documento, você aprendeu a usar o [!DNL Privacy Service] Interface do usuário para criar um trabalho de privacidade, exibir os detalhes de um trabalho e monitorar seu status de processamento, além de baixar os resultados após sua conclusão.
+Ao ler este documento, você aprendeu a usar o [!DNL Privacy Service] Interface para criar um trabalho de privacidade, exibir os detalhes de um trabalho e monitorar o status do processamento, além de baixar os resultados após a conclusão.
 
-Para obter etapas sobre como executar essas operações de forma programática usando o [!DNL Privacy Service] Consulte a API [Guia da API](../api/overview.md).
+Para obter etapas sobre como executar essas operações de forma programática usando o [!DNL Privacy Service] API, consulte a [Guia da API](../api/overview.md).

@@ -1,7 +1,8 @@
 ---
 title: Substituir um campo XDM na interface do usuário
 description: Saiba como descontinuar campos do Experience Data Model (XDM) usando o Editor de esquemas no Experience Platform.
-source-git-commit: f791d32ae38dffe82723800aa9fb5b44bb4f0109
+exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%

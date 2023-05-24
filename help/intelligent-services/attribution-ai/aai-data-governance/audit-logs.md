@@ -2,7 +2,8 @@
 keywords: insights;ia de atribuição;insights de ia de atribuição;serviço de consulta de AAI;consultas de atribuição;pontuações de atribuição
 title: Visão geral dos logs de auditoria no Attribution AI
 description: Saiba como visualizar e gerenciar logs de auditoria no Attribution AI.
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 38%
@@ -22,4 +23,3 @@ Basicamente, um log de auditoria informa quem executou qual ação e quando. Cad
 Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleção de log.
 
 Para visualizar e exportar logs de auditoria, você deve ter recebido a permissão de controle Acesso aos logs de auditoria no console da Adobe. Para saber como gerenciar permissões individuais para recursos do Attribution AI, consulte a [documentação de controle de acesso](../aai-data-governance/access-controls.md).
-

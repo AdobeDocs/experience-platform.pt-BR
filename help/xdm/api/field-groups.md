@@ -215,7 +215,7 @@ Uma resposta bem-sucedida retorna os detalhes do grupo de campos. Os campos reto
 }
 ```
 
-## Criar um grupo de campos {#create}
+## Crie um grupo de campos {#create}
 
 Você pode definir um grupo de campos personalizado em `tenant` fazendo uma solicitação POST.
 

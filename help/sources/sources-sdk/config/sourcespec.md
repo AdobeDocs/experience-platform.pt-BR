@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Configurar especificações de origem para Origens de Autoatendimento (SDK em Lote)
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 0%
 
 ---
 
@@ -439,9 +439,11 @@ A variável `PAGE` O tipo de paginação permite percorrer os dados de retorno p
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ A variável `PAGE` O tipo de paginação permite percorrer os dados de retorno p
 | `type` | O tipo de paginação usado para retornar dados. |
 | `limitName` | O nome do limite pelo qual a API pode especificar o número de registros a serem buscados em uma página. |
 | `limitValue` | O número de registros a serem buscados em uma página. |
+| `initialPageIndex` | (Opcional) O índice da página inicial define o número da página a partir da qual a paginação iniciará. Esse campo pode ser usado para fontes nas quais a paginação não começa em 0. Se não for fornecido, o índice da página inicial será padrão de 0. Este campo espera um número inteiro. |
+| `endPageIndex` | (Opcional) O índice da página final permite estabelecer uma condição final e parar a paginação. Esse campo pode ser usado quando as condições finais padrão para interromper a paginação não estiverem disponíveis. Esse campo também pode ser usado se o número de páginas que serão assimiladas ou o número da última página for fornecido por meio do cabeçalho de resposta, que é comum ao usar `PAGE` digite paginação. O valor do índice da página final pode ser o número da última página ou um valor de expressão do tipo string do cabeçalho de resposta. Por exemplo, você pode usar `headers.x-pagecount` para atribuir o índice da página final à variável `x-pagecount` valor dos cabeçalhos de resposta. **Nota**: `x-pagecount` é um cabeçalho de resposta obrigatório para algumas fontes e contém o número de valor das páginas que serão assimiladas. |
 | `pageParamName` | O nome do parâmetro que você deve anexar aos parâmetros de consulta para percorrer diferentes páginas dos dados de retorno. Por exemplo, `https://abc.com?pageIndex=1` retornaria a segunda página de uma carga de retorno da API. |
 | `maximumRequest` | O número máximo de solicitações que uma origem pode fazer para uma determinada execução incremental. O limite padrão atual é 10000. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 

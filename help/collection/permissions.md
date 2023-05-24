@@ -2,9 +2,9 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 6%
 
 ---
@@ -54,6 +54,7 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 | --- | --- | --- |
 | Plataformas | Web | Concede acesso a [propriedades da web](../tags/ui/administration/companies-and-properties.md) quando combinado com outros direitos de propriedade. |
 | Plataformas | Dispositivo móvel | Concede acesso a [propriedades móveis](../tags/ui/administration/companies-and-properties.md) quando combinado com outros direitos de propriedade. |
+| Plataformas | Edge | Concede acesso a [Propriedades da borda de encaminhamento de eventos](../tags/ui/event-forwarding/getting-started.md) quando combinado com outros direitos de propriedade. |
 | Propriedades | (N/D) | Dependendo das propriedades que foram criadas em sua organização, você pode controlar o acesso a cada uma delas por meio desta categoria de permissão no Admin Console.<br><br>Os direitos de propriedade atribuídos de um usuário se aplicam apenas às propriedades às quais ele recebeu acesso por meio desta categoria de permissão. |
 | Direitos de propriedade | Aprovar | Concede a capacidade de aprovar um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos de propriedade | Desenvolver | Concede a capacidade de desenvolver um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |

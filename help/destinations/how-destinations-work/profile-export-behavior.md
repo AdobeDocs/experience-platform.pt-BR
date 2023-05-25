@@ -2,7 +2,7 @@
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Pegue o [Destino do facebook](/help/destinations/catalog/social/facebook.md) com
 * Número de registros (máximo de 10.000) ou
 * Intervalo da janela de tempo (30 minutos)
 
-Qualquer que seja o limite acima atingido primeiro aciona uma exportação para o Facebook. Assim, no [!DNL Facebook Custom Audiences] , você poderá ver públicos-alvo vindos do Experience Platform em incrementos de 10.000 registros. Você pode ver 10.000 registros a cada 10-15 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 30 minutos e são enviados mais rapidamente, portanto, aproximadamente a cada 10-15 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para compor um lote de 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também poderá ver lotes menores enviados para o Facebook.
+Qualquer que seja o limite acima atingido primeiro aciona uma exportação para o Facebook. Assim, no [!DNL Facebook Custom Audiences] , você poderá ver públicos-alvo vindos do Experience Platform em incrementos de 10.000 registros. Você pode estar vendo 10.000 registros a cada 10-15 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 30 minutos e são enviados mais rapidamente, portanto, aproximadamente a cada 10-15 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para compor um lote de 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também poderá ver lotes menores enviados para o Facebook.
 
 Como outro exemplo, considere [Destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md), que tem um *[agregação de melhor esforço](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* política, com `maxUsersPerRequest: 10`. Isso significa que no máximo dez perfis serão agregados antes que uma chamada HTTP seja disparada para esse destino, mas o Experience Platform tenta despachar perfis para o destino assim que o serviço de destinos recebe informações de reavaliação atualizadas de um serviço upstream.
 

@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;namespace;Namespace;Namespaces;namespaces;namespace de identidade;namespace de identidade;identidade;identidade;serviço de identidade;serviço de identidade
-solution: Experience Platform
 title: Visão geral do namespace de identidade
 description: Os namespaces de identidade são um componente do Serviço de identidade que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
+source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 9%
+source-wordcount: '1718'
+ht-degree: 8%
 
 ---
 
@@ -50,6 +48,7 @@ Os seguintes tipos de identidade estão disponíveis no [!DNL Platform]:
 | ID do dispositivo | As IDs de dispositivo identificam dispositivos de hardware, como IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e podem ser compartilhadas por várias pessoas no domicílio. |
 | Endereço de email | Os endereços de email são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem informações de identificação pessoal (PII). Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
 | Identificador não de pessoas | IDs que não sejam de pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectados a um cluster de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
+| ID do Parceiro | IDs de parceiros são identificadores usados por parceiros de dados para representar pessoas. As IDs de parceiros geralmente são pseudônimas para não revelar a verdadeira identidade de uma pessoa e podem ser probabilísticas. No Real-time Customer Data Platform, as IDs de parceiros são usadas principalmente para ativação expandida do público-alvo e enriquecimento de dados, e não para criar vinculações determinísticas de gráficos de identidade. |
 | Número de telefone | Os números de telefone são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. As identidades desse tipo incluem PII. Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
 
 ### Namespaces padrão {#standard}

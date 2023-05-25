@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1462'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ A variável **[!UICONTROL Credenciais que expiram]** fornece as seguintes inform
 
 Você pode usar credenciais sem expiração para configurar uma conexão mais permanente com um cliente externo.
 
+>[!NOTE]
+>
+>As credenciais sem expiração têm as seguintes limitações:<br><ul><li>Os usuários devem fazer logon com seu nome de usuário e senha compostos por `{technicalAccountId}:{credential}`. Mais informações podem ser encontradas no [Gerar credenciais](#generate-credentials) seção.</li><li>Após a criação de credenciais que estão expirando, uma nova função com um conjunto de permissões básicas é criada e permite que os usuários visualizem esquemas e conjuntos de dados. A permissão &quot;gerenciar consultas&quot; também é atribuída a essa função para uso com o Serviço de consulta.</li><li>Os clientes de terceiros podem ter um desempenho diferente do esperado ao listar objetos de consulta. Por exemplo, alguns clientes de terceiros, como [!DNL DB Visualizer] não exibirá o nome da visualização no painel esquerdo. No entanto, o nome da exibição pode ser acessado se for chamado em uma consulta SELECT. Da mesma forma, [!DNL PowerUI] não pode listar as exibições temporárias criadas por meio do SQL a serem selecionadas para criação do painel.</li></ul>
+
 ### Pré-requisitos
 
 Antes de gerar credenciais sem expiração, você deve concluir as seguintes etapas no Adobe Admin Console:
@@ -63,7 +67,7 @@ Para saber mais sobre como atribuir permissões, leia a documentação em [contr
 
 Todas as permissões necessárias agora estão configuradas no Console do Adobe Developer para que o usuário use o recurso de credenciais que estão expirando.
 
-### Gerar credenciais
+### Gerar credenciais {#generate-credentials}
 
 Para criar um conjunto de credenciais sem expiração, retorne à interface do usuário da Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda, para acessar a [!UICONTROL Consultas] espaço de trabalho. Em seguida, selecione o **[!UICONTROL Credenciais]** guia seguida por **[!UICONTROL Gerar credenciais]**.
 

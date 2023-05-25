@@ -2,7 +2,7 @@
 title: Práticas recomendadas para a organização de ativos de dados no serviço de consulta
 description: Este documento descreve um meio lógico de organizar os dados para facilitar o uso com o Serviço de consulta.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -45,13 +45,13 @@ Depois que um esquema é criado para atuar como um container dos ativos de dados
 O exemplo a seguir adiciona `dataset1`, `dataset2`, `dataset3` e `v1` para o `databaseA.schema1` container criado no exemplo anterior.
 
 ```SQL
-ALTER TABLE dataset1 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset2 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset2 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset3 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset3 ADD SCHEMA databaseA.schema1;
  
-ALTER VIEW v1  SET SCHEMA databaseA.schema1;
+ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 ```
 
 ## Acessar ativos de dados do container de dados

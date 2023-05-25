@@ -1,9 +1,9 @@
 ---
 title: Computação de estatísticas do conjunto de dados
-description: Este documento descreve como calcular estatísticas em nível de coluna em conjuntos de dados do Azure Data Lake Storage (ADLS) com comandos SQL.
-source-git-commit: b063bcf7b3d2079715ac18fde55f47cea078b609
+description: Este documento descreve como calcular estatísticas em nível de coluna nos conjuntos de dados do Azure Data Lake Storage (ADLS) com comandos SQL.
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 Você pode combinar o limite de coluna e o filtro para criar consultas computacionais altamente específicas para suas colunas de conjunto de dados. Por exemplo, a consulta a seguir calcula estatísticas nas colunas `commerce`, `id`, e `timestamp` para o conjunto de dados `tableName`, em que o carimbo de data e hora da coluna tem valores entre o intervalo especificado de `2023-04-01 00:00:00` e `2023-04-05 00:00:00`.
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
 <!-- ## Create an alias name {#alias-name}
@@ -125,7 +125,6 @@ Uma saída pode ser semelhante ao exemplo abaixo.
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
  web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
@@ -137,9 +136,9 @@ Uma saída pode ser semelhante ao exemplo abaixo.
  _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
  environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(13 rows)
+(12 rows)
 ```
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este documento, agora você tem uma melhor compreensão de como gerar estatísticas em nível de coluna de um conjunto de dados ADLS usando uma consulta SQL. É recomendável ler a [Guia de sintaxe SQl](../sql/syntax.md) para conhecer mais recursos do Adobe Experience Platform Query Service.
+Ao ler este documento, agora você tem uma melhor compreensão de como gerar estatísticas em nível de coluna a partir de um conjunto de dados ADLS usando uma consulta SQL. É recomendável ler a [Guia de sintaxe SQl](../sql/syntax.md) para conhecer mais recursos do Adobe Experience Platform Query Service.

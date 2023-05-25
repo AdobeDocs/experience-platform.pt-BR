@@ -2,7 +2,7 @@
 title: Guia completo de governança de dados
 description: Siga o processo completo para impor restrições de uso de dados para campos e conjuntos de dados na Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
 source-wordcount: '1881'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Selecionar **[!UICONTROL Conjuntos de dados]** na navegação à esquerda, selec
 
 A visualização de detalhes do conjunto de dados é exibida. Selecione o **[!UICONTROL Governança de dados]** para exibir uma lista dos campos do conjunto de dados e quaisquer rótulos que já foram aplicados a eles. Selecione o ícone de lápis para editar os rótulos dos conjuntos de dados.
 
-![A guia Governança de dados do conjunto de dados Membros de Fidelidade com o ícone de lápis destacado.](./images/e2e/edit-dataset-labels.png)
+![A guia Governança de dados do conjunto de dados Membros de Fidelidade com o ícone de lápis realçado.](./images/e2e/edit-dataset-labels.png)
 
 A variável [!UICONTROL Editar rótulos de governança] será exibida. Selecione o rótulo de governança apropriado e selecione **[!UICONTROL Salvar]**.
 

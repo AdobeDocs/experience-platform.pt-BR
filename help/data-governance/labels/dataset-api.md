@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 description: A API de serviço do conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API de serviço de catálogo que gerencia metadados do conjunto de dados.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -103,7 +103,7 @@ O exemplo de solicitação POST abaixo atualiza todo o conjunto de dados com um 
 
 >[!NOTE]
 >
->Se houver rótulos para o conjunto de dados em questão, novos rótulos só poderão ser adicionados por meio de uma solicitação PUT, o que requer um `If-Match` cabeçalho. Depois que os rótulos forem adicionados a um conjunto de dados, uma variável `etag` é atribuído um valor que pode ser usado para atualizar ou remover os rótulos posteriormente.
+>Se houver rótulos para o conjunto de dados em questão, novos rótulos só poderão ser adicionados por meio de uma solicitação PUT, o que requer um `If-Match` cabeçalho. Depois que os rótulos são adicionados a um conjunto de dados, o mais recente `etag` O valor de é necessário para atualizar ou remover os rótulos posteriormente.
 
 Para recuperar a versão mais recente da entidade de rótulo do conjunto de dados, faça uma [solicitação GET](#look-up) para o `/datasets/{DATASET_ID}/labels` terminal. O valor atual é retornado na resposta sob um `etag` cabeçalho. Ao atualizar rótulos de conjuntos de dados existentes, a prática recomendada é executar primeiro uma solicitação de pesquisa para o conjunto de dados para buscar o mais recente `etag` antes de usar esse valor na variável `If-Match` cabeçalho da solicitação PUT subsequente.
 

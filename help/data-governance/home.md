@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da governança de dados
 description: O Adobe Experience Platform Data Governance permite gerenciar dados de clientes e garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ela desempenha uma função essencial na Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1498'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Consulte a visão geral em [rótulos de uso de dados](./labels/overview.md) para
 
 Para que os rótulos de uso de dados estejam de acordo com a conformidade de dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro da [!DNL Experience Platform].
 
-Um exemplo de ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor declarando que as Informações de identificação pessoal (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) foi aplicado ao conjunto de dados, [!DNL Policy Service] impede qualquer ação que exporte esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas ocorrer, o Serviço de política envia uma mensagem informando que uma política de uso de dados foi violada.
+Um exemplo de ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor declarando que as Informações de identificação pessoal (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) foi aplicado ao nível do campo ou conjunto de dados, [!DNL Policy Service] impede qualquer ação que exporte esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas ocorrer, o Serviço de política envia uma mensagem informando que uma política de uso de dados foi violada.
 
 Há dois tipos de políticas disponíveis:
 

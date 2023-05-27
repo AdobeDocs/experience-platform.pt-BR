@@ -2,9 +2,9 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1274'
 ht-degree: 6%
 
 ---
@@ -41,11 +41,6 @@ As permissões no Adobe Experience Platform incluem acesso a sequências de dado
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Permissões de coleção de dados do Adobe Experience Platform
 
 As permissões em Coleta de dados da Adobe Experience Platform controlam o acesso a recursos de encaminhamento de tags e eventos, incluindo propriedades, extensões e ambientes. Para obter etapas sobre como configurar permissões de Coleta de dados do Adobe Experience Platform, consulte a [seção abaixo](#manage).
@@ -54,6 +49,7 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 | --- | --- | --- |
 | Plataformas | Web | Concede acesso a [propriedades da web](../tags/ui/administration/companies-and-properties.md) quando combinado com outros direitos de propriedade. |
 | Plataformas | Dispositivo móvel | Concede acesso a [propriedades móveis](../tags/ui/administration/companies-and-properties.md) quando combinado com outros direitos de propriedade. |
+| Plataformas | Edge | Concede acesso a [Propriedades da borda de encaminhamento de eventos](../tags/ui/event-forwarding/getting-started.md) quando combinado com outros direitos de propriedade. |
 | Propriedades | (N/D) | Dependendo das propriedades que foram criadas em sua organização, você pode controlar o acesso a cada uma delas por meio desta categoria de permissão no Admin Console.<br><br>Os direitos de propriedade atribuídos de um usuário se aplicam apenas às propriedades às quais ele recebeu acesso por meio desta categoria de permissão. |
 | Direitos de propriedade | Aprovar | Concede a capacidade de aprovar um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos de propriedade | Desenvolver | Concede a capacidade de desenvolver um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
@@ -72,16 +68,16 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 
 ## Gerenciar permissões {#manage}
 
-Conforme descrito na seção anterior, as permissões para coleta de dados são gerenciadas por meio de duas designações de produto no Admin Console: **Adobe Experience Platform** e **Coleta de dados do Adobe Experience Platform**.
+As permissões para coleta de dados são gerenciadas por meio de duas designações de produto: **Adobe Experience Platform** e **Coleta de dados do Adobe Experience Platform**.
 
-Para gerenciar essas permissões, faça logon no [Admin Console](https://adminconsole.adobe.com/) e selecione **[!UICONTROL Produtos]** no início da navegação. Aqui, selecione o cartão do produto com as permissões que deseja configurar. Consulte as subseções abaixo para ver as etapas sobre como gerenciar as permissões relevantes em cada produto do Admin Console:
+Consulte as subseções abaixo para ver as etapas sobre como gerenciar as permissões relevantes em cada produto do Admin Console:
 
 * [Permissões do Adobe Experience Platform](#manage-platform)
 * [Permissões de coleção de dados do Adobe Experience Platform](#manage-collection)
 
 ### Gerenciar permissões no Adobe Experience Platform {#manage-platform}
 
-No **[!UICONTROL Produtos]** exibir no Admin Console, selecione **[!UICONTROL Coleta de dados do Adobe Experience Platform]**. Selecione o perfil de produto para o qual deseja editar permissões e navegue até o **[!UICONTROL Permissões]** guia.
+No **[!UICONTROL Permissões]** no Adobe Experience Platform selecione a função que deseja editar.
 
 Para acessar os recursos de coleção de dados, é necessário habilitar todas as permissões no **[!UICONTROL Sandboxes]**, **[!UICONTROL Modelagem de dados]**, **[!UICONTROL Identity Management]**, e **[!UICONTROL Coleta de dados]** categorias.
 
@@ -95,7 +91,7 @@ Consulte a [guia da interface do usuário de controle de acesso](../access-contr
 
 ### Gerenciar permissões na Coleção de dados da Adobe Experience Platform {#manage-collection}
 
-No **[!UICONTROL Produtos]** exibir no Admin Console, selecione **[!UICONTROL Coleta de dados do Adobe Experience Platform]**.
+Para gerenciar essas permissões, faça logon no Admin Console e selecione **[!UICONTROL Produtos]** no início da navegação, selecione **[!UICONTROL Coleta de dados do Adobe Experience Platform]**.
 
 ![Imagem mostrando o cartão de produto Coleta de dados no Admin Console](./images/permissions/data-collection-card.png)
 

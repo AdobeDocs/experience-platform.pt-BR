@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '985'
 ht-degree: 37%
 
 ---
@@ -234,6 +234,8 @@ ht-degree: 37%
       * [API de conversões de snap](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Visão geral](./extensions/server/splunk/overview.md)
+      * [!DNL Twitter] {#twitter}
+         * [Visão geral](./extensions/server/twitter/overview.md)
       * [!DNL Zendesk] API de eventos {#zendesk}
          * [Visão geral](./extensions/server/zendesk/overview.md)
 * Desenvolvimento de extensão {#extension-dev}

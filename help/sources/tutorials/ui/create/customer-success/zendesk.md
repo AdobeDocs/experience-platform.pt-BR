@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;fontes;conectores;conectores de origem;fon
 title: Criar uma conexão de origem do Zendesk na interface
 description: Saiba como criar uma conexão de origem do Zendesk usando a interface do Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 6%

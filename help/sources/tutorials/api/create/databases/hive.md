@@ -5,7 +5,7 @@ title: Criar uma conexão básica do Apache Hive no Azure HDInsights usando a AP
 type: Tutorial
 description: Saiba como conectar o Apache Hive no Azure HDInsights ao Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 2%

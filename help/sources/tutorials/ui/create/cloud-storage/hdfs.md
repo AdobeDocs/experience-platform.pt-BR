@@ -5,7 +5,7 @@ title: Criar uma conexão de origem Apache HDFS na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Apache Hadoop Distributed File System usando a interface do usuário do Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%

@@ -2,7 +2,7 @@
 title: Crie uma conexão de origem e um fluxo de dados para eventos do SugarCRM usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform a eventos do SugarCRM usando a API do Serviço de fluxo.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 2%

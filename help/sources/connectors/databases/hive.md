@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do Apache Hive no Conector de origem do Azure HDInsights
 description: Saiba como conectar o Apache Hive no Azure HDInsights ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 0%

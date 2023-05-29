@@ -5,7 +5,7 @@ title: Criar uma conexão de origem do Apache Spark no Azure HDInsights na inter
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Apache Spark no Azure HDInsights usando a interface do Adobe Experience Platform.
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 1%

@@ -3,7 +3,7 @@ title: Criar uma conexão de origem do Pendo na interface
 description: Saiba como criar uma conexão de origem do Pendo usando a interface do Adobe Experience Platform.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 1%

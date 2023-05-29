@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: (Beta) Crie uma conexão de origem e um fluxo de dados para Mixpanel usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Mixpanel usando a API do serviço de fluxo.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 2%

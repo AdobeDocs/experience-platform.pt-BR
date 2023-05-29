@@ -3,7 +3,7 @@ title: Visão geral da fonte do Customer.io
 description: Saiba como conectar o Customer.io ao Adobe Experience Platform usando APIs ou a interface do usuário utilizando webhooks
 badge: Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%

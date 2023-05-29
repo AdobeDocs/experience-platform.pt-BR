@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;Vantagem de Ter
 title: Criar uma Conexão de Origem do Teradata Vantage na interface do usuário
 description: Saiba como criar uma conexão de origem do Teradata Vantage usando a interface do usuário do Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%

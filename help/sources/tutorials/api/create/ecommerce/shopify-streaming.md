@@ -3,7 +3,7 @@ title: Crie uma conexão de origem de transmissão e um fluxo de dados para dado
 description: Saiba como criar uma conexão de origem de transmissão e fluxo de dados para dados do Shopify usando a API do Serviço de fluxo.
 badge: Beta
 exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 2%

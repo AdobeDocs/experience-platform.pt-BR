@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de maio de 2023 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
+source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1565'
 ht-degree: 4%
 
 ---
@@ -121,7 +121,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | --- | --- | --- |
 | Grupo de campos | (Múltiplos) | Vários campos para [Item de oferta](https://github.com/adobe/xdm/pull/1720/files) foram atualizadas para remover uma hierarquia dupla do esquema. |
 | Grupo de campos | [[!UICONTROL Perfil de cliente potencial individual XDM]](https://github.com/adobe/xdm/pull/1721/files) | A variável `partnerProspect` A opção para tags de metadados foi adicionada à variável [!UICONTROL Perfil de cliente potencial individual XDM] classe. |
-| Tipo de dados | (Múltiplos) | Vários campos foram adicionados para o [!UICONTROL Informações de detalhes de mídia] tipo de dados. |
+| Tipo de dados | (Múltiplos) | Vários campos foram adicionados para o [[!UICONTROL Informações de detalhes de mídia]](https://github.com/adobe/xdm/pull/1716/files) tipo de dados. |
 | Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/pull/1716/files) | Um novo campo foi adicionado para indicar se um redirecionamento ocorreu. |
 | Grupo de campos | [[!UICONTROL Detalhes de interação do MediaAnalytics]](https://github.com/adobe/xdm/pull/1716/files) | Um novo campo relacionado aos relatórios de mídia foi adicionado. |
 

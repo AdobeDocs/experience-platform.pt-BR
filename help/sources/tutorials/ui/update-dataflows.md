@@ -60,7 +60,7 @@ A variável [!UICONTROL Adicionar dados] é exibida. Selecione o formato de dado
 
 ### Detalhes do fluxo de dados
 
-No [!UICONTROL Detalhes do fluxo de dados] você pode fornecer um nome e uma descrição atualizados para o fluxo de dados, bem como reconfigurar o limite de erros do fluxo de dados. Durante essa etapa, você também pode definir ou modificar as configurações de sua assinatura de alertas.
+No [!UICONTROL Detalhes do fluxo de dados] você pode fornecer um nome e uma descrição atualizados para o fluxo de dados, bem como reconfigurar o limite de erros do fluxo de dados. Durante essa etapa, você também pode definir ou modificar as configurações da sua assinatura de alertas.
 
 Depois de fornecer os valores atualizados, selecione **[!UICONTROL Próxima]**.
 

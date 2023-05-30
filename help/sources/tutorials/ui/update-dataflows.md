@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Atualizar um fluxo de dados de conexão de origem na interface
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,12 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Origens](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Atualizar fluxos de dados
+## Atualizar fluxos de dados {#update-dataflows}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="Expiração do conjunto de dados"
+>abstract="Essa coluna indica o número de dias que o conjunto de dados de destino deixou antes de expirar automaticamente.<br>Um fluxo de dados falhará se o conjunto de dados de destino expirar. Para evitar que um fluxo de dados falhe, verifique se um conjunto de dados de destino está definido para expirar na data correta. Consulte a documentação para saber como atualizar datas de expiração."
 
 Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Selecionar **[!UICONTROL Fluxos de dados]** no cabeçalho superior para exibir uma lista de fluxos de dados existentes.
 
@@ -55,7 +60,7 @@ A variável [!UICONTROL Adicionar dados] é exibida. Selecione o formato de dado
 
 ### Detalhes do fluxo de dados
 
-No [!UICONTROL Detalhes do fluxo de dados] você pode fornecer um nome e uma descrição atualizados para o fluxo de dados, bem como reconfigurar o limite de erros do fluxo de dados. Durante essa etapa, você também pode definir ou modificar as configurações da sua assinatura de alertas.
+No [!UICONTROL Detalhes do fluxo de dados] você pode fornecer um nome e uma descrição atualizados para o fluxo de dados, bem como reconfigurar o limite de erros do fluxo de dados. Durante essa etapa, você também pode definir ou modificar as configurações de sua assinatura de alertas.
 
 Depois de fornecer os valores atualizados, selecione **[!UICONTROL Próxima]**.
 

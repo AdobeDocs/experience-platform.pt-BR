@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos XDM na interface do
 description: Saiba como definir campos XDM na interface do usuário do Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Ao definir um novo campo, opções adicionais de configuração podem aparecer n
 
 | Propriedade do campo | Tipos compatíveis | Descrição |
 | --- | --- | --- |
-| [!UICONTROL Valor padrão] | [!UICONTROL String], [!UICONTROL Duplo], [!UICONTROL Longo], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Booleano] | Um valor padrão que será atribuído a esse campo se nenhum outro valor for fornecido durante a assimilação. Esse valor deve estar em conformidade com o tipo selecionado no campo. |
+| [!UICONTROL Valor padrão] | [!UICONTROL String], [!UICONTROL Duplo], [!UICONTROL Longo], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Booleano] | Um valor padrão atribuído a esse campo se nenhum outro valor for fornecido durante a assimilação. Esse valor deve estar em conformidade com o tipo selecionado no campo.<br><br>Os valores padrão não são salvos no conjunto de dados no momento da assimilação, pois podem mudar com o tempo. Os valores padrão definidos no esquema são inferidos pelos serviços e aplicativos downstream da Platform quando leem os dados do conjunto de dados. Por exemplo, ao consultar os dados usando o Serviço de consulta, se o atributo tiver um valor NULL, mas o padrão for definido como `5` no nível do esquema, espera-se que o Serviço de consulta retorne `5` em vez de NULL. No momento, esse comportamento não é uniforme em todos os serviços da AEP. |
 | [!UICONTROL Padrão] | [!UICONTROL String] | A [expressão regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) que o valor desse campo deve estar em conformidade para ser aceito durante a assimilação. |
 | [!UICONTROL Formato] | [!UICONTROL String] | Selecione em uma lista de formatos predefinidos para cadeias de caracteres às quais o valor deve estar em conformidade. Os formatos disponíveis são: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Comprimento mínimo] | [!UICONTROL String] | O número mínimo de caracteres que a cadeia de caracteres deve conter para que o valor seja aceito durante a assimilação. |

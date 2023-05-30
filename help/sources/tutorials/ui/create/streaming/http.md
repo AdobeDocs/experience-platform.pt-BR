@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;início;tópicos populares;conexão de transmissão;criar conexão de transmissão;guia de interface do usuário;tutorial;criar uma conexão de transmissão;assimilação de transmissão;assimilação;
-solution: Experience Platform
 title: Criar uma conexão de transmissão da API HTTP usando a interface
-type: Tutorial
 description: Este guia de interface ajudará você a criar uma conexão de transmissão usando o Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -71,7 +68,7 @@ Com os dados carregados, você pode usar o lado direito da interface para visual
 
 A variável [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da Platform.
 
-Os arquivos Parquet devem ser compatíveis com XDM e não exigem que você configure manualmente o mapeamento, enquanto os arquivos CSV exigem que você configure explicitamente o mapeamento, mas permitem que você escolha quais campos de dados de origem mapear. Os arquivos JSON, se marcados como reclamação XDM, não exigem configuração manual. No entanto, se não estiver marcado como compatível com XDM, exigirá que você configure explicitamente o mapeamento.
+A variável [!DNL HTTP API] A fonte oferece suporte à assimilação de arquivos JSON. Os arquivos JSON não exigem configuração manual se estiverem marcados como reclamação XDM. Caso contrário, você deve configurar explicitamente o mapeamento.
 
 Escolha um conjunto de dados para os dados de entrada que serão assimilados. Você pode usar um conjunto de dados existente ou criar um novo.
 
@@ -88,7 +85,6 @@ Para usar um conjunto de dados existente, selecione **[!UICONTROL Conjunto de da
 ![conjunto de dados existente](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Mapear campos padrão
-
 
 Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
 

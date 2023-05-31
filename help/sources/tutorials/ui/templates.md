@@ -3,10 +3,10 @@ description: Saiba como usar modelos na interface do usuário do Adobe Experienc
 title: Criar um fluxo de dados de fontes usando modelos na interface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
+source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 8%
+source-wordcount: '2258'
+ht-degree: 6%
 
 ---
 
@@ -91,6 +91,83 @@ Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça os d
 >[!ENDTABS]
 
 ### Selecionar modelos
+
+Com sua conta autenticada, agora é possível selecionar o modelo que deseja usar para o fluxo de dados.
+
++++[!DNL Marketo Engage] modelos A tabela a seguir descreve os modelos disponíveis para a [!DNL Marketo Engage] origem.
+
+| [!DNL Marketo Engage] modelos | Descrição |
+| --- | --- |
+| Atividades | O modelo de Atividades captura instantâneos baseados em eventos de atividades, como interações por email, interações de site e chamadas de vendas. |
+| Empresas | O modelo Empresas captura detalhes da conta comercial, como informações firmográficas, localização e informações de faturamento da empresa. |
+| Contas Nomeadas | O modelo Contas Nomeadas captura detalhes de contas que foram determinadas como contas de destino a serem seguidas. |
+| Oportunidades | O modelo de Oportunidades captura detalhes da oportunidade comercial, como tipo, estágio de vendas e contas relacionadas. |
+| Funções do contato da oportunidade | O modelo Funções de contato da oportunidade captura detalhes sobre as funções para clientes potenciais associadas a uma oportunidade específica. |
+| Pessoas | O modelo Pessoas captura atributos de pessoas individuais, como detalhes demográficos, informações de contato e preferências de consentimento. |
+| Associações ao programa | O modelo de Associações de programa captura detalhes para contatos associados a uma campanha comercial, incluindo cadências de criação e respostas de contato. |
+| Programas | O modelo Programas captura detalhes da campanha comercial como status, canais, linhas do tempo e custos. |
+| Associações de Lista Estáticas | O modelo Associações de lista estática captura as relações entre as pessoas e suas associações em listas estáticas. |
+| Listas Estáticas | O modelo Lista estática captura listas instanciadas de pessoas para casos de uso específicos. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Modelos B2B A tabela a seguir descreve os modelos B2B disponíveis para o [!DNL Salesforce] origem.
+
+| [!DNL Salesforce] Modelos B2B | Descrição |
+| --- | --- |
+| Relação de contato da conta | O modelo de Relação de Contato de Conta captura a relação entre um contato e uma ou mais contas. |
+| Contas | O modelo de Conta captura detalhes da conta comercial, como informações firmográficas, locais e informações de faturamento da empresa. |
+| Membros da campanha | O modelo Membros da campanha captura a relação entre um lead ou contato individual e um perfil [!DNL Salesforce] campanha. |
+| Campanhas | O modelo Campanhas captura detalhes da conta de negócios, como informações firmográficas, localização e informações de faturamento da empresa. |
+| Contatos | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Clientes potenciais | O modelo de Clientes potenciais captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Oportunidades | O modelo de Oportunidades captura detalhes da oportunidade comercial, como tipo, estágio de vendas e conta relacionada. |
+| Funções do contato da oportunidade | O modelo Funções de contato da oportunidade captura detalhes sobre as funções para clientes potenciais associadas a uma oportunidade específica. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Modelos B2C A tabela a seguir descreve os modelos B2C disponíveis para o [!DNL Salesforce] origem.
+
+| [!DNL Salesforce] Modelos B2C | Descrição |
+| --- | --- |
+| Contato | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Cliente potencial | O modelo de cliente potencial captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Modelos B2B A tabela a seguir descreve os modelos B2B disponíveis para o [!DNL Microsoft Dynamics] origem.
+
+| [!DNL Microsoft Dynamics] Modelos B2B | Descrição |
+| --- | --- |
+| Contas | O modelo de Conta captura detalhes da conta comercial, como informações firmográficas, locais e informações de faturamento da empresa. |
+| Campanhas | O modelo Campanhas captura detalhes da conta de negócios, como informações firmográficas, localização e informações de faturamento da empresa. |
+| Contatos | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Clientes potenciais | O modelo de Clientes potenciais captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Lista de marketing | O modelo de Lista de marketing captura um grupo de clientes existentes ou em potencial criado para uma campanha de marketing ou outros fins de vendas. |
+| Membros da lista de marketing | Os Membros da Lista de marketing capturam os detalhes de qualquer tipo de registro de cliente, como clientes potenciais, contas ou contatos, em uma lista de marketing. |
+| Oportunidades | O modelo de Oportunidades captura detalhes da oportunidade comercial, como tipo, estágio de vendas e conta relacionada. |
+| Funções do contato da oportunidade | O modelo Funções de contato da oportunidade captura detalhes sobre as funções para clientes potenciais associadas a uma oportunidade específica. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Modelos B2C A tabela a seguir descreve os modelos B2C disponíveis para o [!DNL Microsoft Dynamics] origem.
+
+| [!DNL Microsoft Dynamics] Modelos B2C | Descrição |
+| --- | --- |
+| Contato | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Cliente potencial | O modelo de cliente potencial captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+
+{style="table-layout:auto"}
+
++++
 
 Dependendo do tipo de negócio selecionado, uma lista de modelos é exibida. Selecione o ícone de visualização ![ícone de visualização](../../images/tutorials/templates/preview-icon.png) ao lado de um nome de template para visualizar dados de amostra do template.
 

@@ -3,10 +3,10 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 4%
+source-wordcount: '1364'
+ht-degree: 3%
 
 ---
 
@@ -104,3 +104,53 @@ Para obter explicações detalhadas sobre os requisitos de correspondência de I
 **Em que tipo de identidades posso ativar [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] O é compatível com a ativação das seguintes identidades: emails com hash, [!DNL GAID], e [!DNL IDFA].
+
+## Personalização de mesma página e próxima página por meio da Adobe Target e destinos de Personalização personalizada {#same-next-page-personalization}
+
+**Preciso usar o SDK da Web do Experience Platform para enviar públicos-alvo e atributos para a Adobe Target?**
+
+Não, [SDK da Web](../edge/home.md) não é necessário ativar públicos para [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) é usada em vez do SDK da Web, somente a personalização da próxima sessão é compatível.
+
+Para [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md) casos de uso, você deve usar [SDK da Web](../edge/home.md) ou o [API do servidor de rede de borda](../server-api/overview.md). Consulte a documentação em [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes sobre a implementação.
+
+**Há um limite no número de atributos que posso enviar do Real-time Customer Data Platform para o Adobe Target ou um destino de Personalização personalizada?**
+
+Sim, casos de uso de personalização de mesma página e próxima página aceitam no máximo 30 atributos por sandbox ao ativar públicos para destinos do Adobe Target ou de Personalização personalizada. Consulte mais informações sobre medidas de proteção de ativação na [documentação das medidas de proteção](guardrails.md#edge-destinations-activation).
+
+**Que tipos de atributos são aceitos para ativação (por exemplo, arrays, mapas etc.)?**
+
+No momento, somente atributos de nível folha são compatíveis com a ativação.
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**Depois de criar um público-alvo no Experience Platform, quanto tempo levará para que esse público-alvo fique disponível para casos de uso de segmentação de borda?**
+
+As definições de público-alvo são propagadas para o [Rede de borda](../edge/home.md) em até uma hora. No entanto, se um público-alvo for ativado dentro dessa primeira hora, alguns visitantes que se qualificariam para o público-alvo poderão ser perdidos.
+
+**Onde posso ver os atributos ativados no Adobe Target?**
+
+Os atributos estarão disponíveis para uso no Target no [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=pt-BR) ofertas.
+
+**Posso criar um destino sem um fluxo de dados e, em seguida, adicionar um fluxo de dados ao mesmo destino em um ponto posterior?**
+
+No momento, isso não é compatível com a interface de Destinos. Se precisar de assistência neste caso, entre em contato com o representante da Adobe.
+
+**O que acontece se eu excluir um destino do Adobe Target?**
+
+Quando você exclui um destino, todos os públicos-alvo e atributos mapeados no destino são excluídos da Adobe Target e também são removidos da Rede de borda.
+
+**A integração funciona usando a API do servidor de rede de borda?**
+
+Sim, a API do Servidor de rede de borda funciona com o destino de Personalização personalizada. Como os atributos de perfil podem conter dados confidenciais, para protegê-los, o destino da Personalização personalizada exige que você use a API do servidor de rede de borda para a coleta de dados. Além disso, todas as chamadas de API devem ser feitas em um [contexto autenticado](../server-api/authentication.md).
+
+**Só posso ter uma política de mesclagem que esteja ativa no edge. Posso criar públicos-alvo que usem uma política de mesclagem diferente e ainda enviá-los para a Adobe Target como segmentos de transmissão?**
+
+Não. Todos os públicos-alvo que você deseja ativar para o Adobe Target devem usar uma interface ativa na borda [política de mesclagem](../profile/merge-policies/ui-guide.md).
+
+**As DULE (Label Usage Labeling and Enforcement, Rotulagem e aplicação de uso de dados) e as políticas de consentimento são aplicadas?**
+
+Sim. A variável [Políticas de consentimento e governança de dados](../data-governance/home.md) criado e associado às ações de marketing selecionadas controlará a ativação dos atributos selecionados.

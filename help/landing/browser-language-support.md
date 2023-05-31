@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;CJA;análise de jornada;análise de jornada do cliente;orquestração de campanhas;orquestração;jornada do cliente;jornada;orquestração de jornadas;capacidade;região
 solution: Experience Platform
 title: Suporte de navegador e idioma para a interface do Experience Platform
 description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para criar e gerenciar soluções completas que impulsionam a experiência do cliente. A Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
+source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 21%
+source-wordcount: '236'
+ht-degree: 24%
 
 ---
 
@@ -42,9 +41,9 @@ A interface do usuário da Platform está disponível atualmente nos seguintes i
 * Japonês
 * Italiano
 * Coreano
-* Chinês (Taiwan)
+* Chinês (simplificado)
 * Chinês (tradicional)
-* Brasileiro
+* Português do Brasil
 
 ### Alterar idioma padrão
 

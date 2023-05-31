@@ -1,10 +1,10 @@
 ---
 description: Saiba como definir as configurações de exportação de arquivo para destinos criados com o Destination SDK.
 title: Configuração em lote
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 5%
+source-wordcount: '1073'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Use as opções de configuração em lote no Destination SDK para permitir que os usuários personalizem os nomes dos arquivos exportados e configurem o agendamento de exportação de acordo com suas preferências.
 
-Ao criar destinos baseados em arquivo por meio do Destination SDK, você pode configurar a nomenclatura de arquivo padrão e os agendamentos de exportação ou pode dar aos usuários a opção de definir essas configurações na interface do usuário da Platform. Por exemplo, é possível configurar comportamentos como:
+Ao criar destinos baseados em arquivo por meio do Destination SDK, você pode configurar a nomenclatura de arquivo padrão e os agendamentos de exportação ou pode dar aos usuários a opção de definir essas configurações na interface do usuário da Platform. Por exemplo, você pode configurar comportamentos como:
 
 * Incluindo informações específicas no nome do arquivo, como IDs de segmento, IDs de destino ou informações personalizadas.
 * Permitir que os usuários personalizem a nomeação de arquivos na interface do usuário da Platform.
@@ -82,6 +82,7 @@ Os valores configurados aqui são exibidos na variável [Agendar exportação de
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -97,6 +98,7 @@ Os valores configurados aqui são exibidos na variável [Agendar exportação de
 | `filenameConfig.allowedFilenameAppendOptions` | String | *Obrigatório*. Lista de macros de nome de arquivo disponíveis para os usuários escolherem. Isso determina quais itens são anexados a nomes de arquivo exportados (ID de segmento, nome da organização, data e hora da exportação e outros). Ao definir `defaultFilename`, evite a duplicação de macros. <br><br>Valores compatíveis: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Independentemente da ordem em que você define as macros, a interface do Experience Platform sempre as exibirá na ordem apresentada aqui. <br><br> Se `defaultFilename` estiver vazio, a variável `allowedFilenameAppendOptions` a lista deve conter pelo menos uma macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | String | *Obrigatório*. Macros de nome de arquivo padrão pré-selecionadas que os usuários podem desmarcar.<br><br> As macros desta lista são um subconjunto das definidas em `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | String | *Opcional*. Define as macros de nome de arquivo padrão para os arquivos exportados. Eles não podem ser substituídos por usuários. <br><br>Qualquer macro definida por `allowedFilenameAppendOptions` será anexado após a variável `defaultFilename` macros. <br><br>Se `defaultFilename` estiver vazio, você deve definir pelo menos uma macro em `allowedFilenameAppendOptions`. |
+| `segmentGroupingEnabled` | Booleano | Define se os públicos ativados devem ser exportados em um único arquivo ou em vários arquivos, com base no público [política de mesclagem](../../../../profile/merge-policies/overview.md). Valores compatíveis: <ul><li>`true`: exporta um arquivo por política de mesclagem.</li><li>`false`: exporta um arquivo por público-alvo, independentemente da política de mesclagem. Esse é o comportamento padrão. Você pode obter o mesmo resultado omitindo esse parâmetro totalmente.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,6 +122,8 @@ Use macros de configuração de nome de arquivo para definir o que os nomes de a
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Data e hora] | `DATETIME` e `TIMESTAMP` ambos definem quando o arquivo foi gerado, mas em formatos diferentes. <br><br><ul><li>`DATETIME` O usa o seguinte formato: AAAAMMDD_HHMMSS.</li><li>`TIMESTAMP` O usa o formato Unix de 10 dígitos. </li></ul> `DATETIME` e `TIMESTAMP` são mutuamente exclusivas e não podem ser usadas simultaneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Texto personalizado] | Texto personalizado definido pelo usuário a ser incluído no nome do arquivo. Não pode ser usado em `defaultFilename`. | Meu_Texto_Personalizado |
 | `TIMESTAMP` | [!UICONTROL Data e hora] | Carimbo de data e hora de 10 dígitos da hora em que o arquivo foi gerado, no formato Unix. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL ID da política de mesclagem] | A ID do [política de mesclagem](../../../../profile/merge-policies/overview.md) usado para gerar o público exportado. Use essa macro quando estiver agrupando segmentos exportados em arquivos, com base na política de mesclagem. Use esta macro juntamente com `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Nome da política de mesclagem] | O nome do [política de mesclagem](../../../../profile/merge-policies/overview.md) usado para gerar o público exportado. Use essa macro quando estiver agrupando segmentos exportados em arquivos, com base na política de mesclagem. Use esta macro juntamente com `segmentGroupingEnabled:true`. | Minha política de mesclagem personalizada |
 
 {style="table-layout:auto"}
 

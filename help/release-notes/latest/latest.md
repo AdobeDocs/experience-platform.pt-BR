@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de maio de 2023 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
+source-git-commit: 09d8014eea2d31649eed3814ad07172027b2c435
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 4%
+source-wordcount: '1776'
+ht-degree: 6%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Em preparação para a disponibilidade geral do recurso Portal de público-alvo, o Adobe Experience Platform está atualizando o uso de &quot;públicos-alvo&quot; e &quot;segmentos&quot; no sistema e na documentação.
+>Em preparação para a disponibilidade geral do recurso Portal de público-alvo, a Adobe Experience Platform está atualizando o uso de “públicos-alvo” e “segmentos” no sistema e na documentação.
 >
 >- **Público**: um conjunto de pessoas, contas, famílias ou outras entidades que compartilham características e comportamentos comuns.
 >
->- **Definição de segmento**: no Adobe Experience Platform, as regras usadas para descrever as principais características ou comportamento de um público-alvo. Esse termo era anteriormente conhecido como &quot;segmento&quot;.
+>- **Definição de segmento**: no Adobe Experience Platform, as regras usadas para descrever as principais características ou comportamento de um público-alvo. Esse termo era anteriormente conhecido apenas como “segmento”.
 >
 >- **Segmento**: o ato de separar perfis em públicos. O termo &quot;segmento&quot; agora é usado exclusivamente como verbo.
 >
@@ -80,7 +80,7 @@ O Adobe Experience Platform fornece um conjunto avançado de recursos para assim
 
 Para saber mais sobre a assimilação de dados, leia o [visão geral da assimilação de dados](../../ingestion/home.md).
 
-## Destinos {#destinations}
+## Destinos (atualizado em 31 de maio) {#destinations}
 
 [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 
@@ -92,18 +92,15 @@ Para saber mais sobre a assimilação de dados, leia o [visão geral da assimila
 
 {style="table-layout:auto"}
 
-<!--
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| Funcionalidade | Descrição |
 | ----------- | ----------- |
-| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
-| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+| Disponibilidade geral da personalização baseada em atributos por meio do [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md) destinos. | Aproveite os atributos de perfil em tempo real para fornecer personalização da Web e móvel individualizada, por meio do Adobe Target ou de outros destinos de personalização personalizados no Experience Platform. Leia o [documentação dedicada](../../destinations/ui/activate-edge-personalization-destinations.md) e a variável [Perguntas frequentes](/help/destinations/destinations-faq.md#same-next-page-personalization) para obter mais detalhes. |
+| Suporte para Destination SDK para agrupar públicos exportados com base na política de mesclagem. | Ao criar um destino baseado em arquivos com o Destination SDK, agora é possível configurar o agrupamento de públicos-alvo exportados em um ou vários arquivos, com base na política de mesclagem. <br><br> Além disso, agora você pode incluir a ID da política de mesclagem e o nome da política de mesclagem nos nomes de arquivo exportados usando as macros de modelo dedicadas. <br><br>Consulte a [documentação de configuração do lote](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) para obter mais detalhes sobre como usar o `segmentGroupingEnabled` e as novas macros de modelo de nome de arquivo. |
+| Incluir arquivo de manifesto em exportações para destinos de armazenamento na nuvem beta | Agora é possível incluir um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais, ao exportar dados para os seis destinos beta do armazenamento na nuvem - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Armazenamento do Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Zona de aterrissagem de dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Armazenamento em nuvem do Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br><br> Obtenha mais informações no **[!UICONTROL Detalhes do destino]** das páginas vinculadas acima. |
 
 {style="table-layout:auto"}
-
--->
 
 **Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
 

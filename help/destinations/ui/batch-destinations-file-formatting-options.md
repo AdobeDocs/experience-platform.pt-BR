@@ -2,9 +2,9 @@
 description: Saiba como configurar opções de formatação de arquivo ao ativar dados para destinos baseados em arquivo
 title: (Beta) Configurar opções de formatação de arquivo para destinos baseados em arquivo
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1226'
 ht-degree: 19%
 
 ---
@@ -111,8 +111,8 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 Use este controle para definir a representação da sequência de caracteres de um valor vazio. Essa opção determina como os valores vazios são representados nos arquivos CSV exportados. As opções disponíveis são:
 
-* **[!UICONTROL nulo]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **String vazia entre aspas duplas (&quot;&quot;)**
 * **[!UICONTROL String vazia]**
 
 #### Exemplos
@@ -136,8 +136,8 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 Use esse controle para definir como as strings de valor nulo devem ser representadas nos arquivos exportados. Essa opção determina como os valores nulos são representados nos arquivos CSV exportados. As opções disponíveis são:
 
-* **[!UICONTROL nulo]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **String vazia entre aspas duplas (&quot;&quot;)**
 * **[!UICONTROL String vazia]**
 
 #### Exemplos

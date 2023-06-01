@@ -4,9 +4,9 @@ title: Guia de migração de API para destinos de armazenamento em nuvem
 description: Saiba mais sobre as alterações no fluxo de trabalho para ativar destinos de armazenamento em nuvem como parte da migração para os novos cartões de destino de armazenamento em nuvem com funcionalidade adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 1%
 
 ---
@@ -433,7 +433,6 @@ As alterações incompatíveis com versões anteriores para os usuários da API 
 Além da especificação atualizada de fluxo e conexão acima, há alterações nos parâmetros necessários ao criar conexões básicas SFTP.
 
 * Anteriormente, a conexão básica para destinos SFTP exigia uma `host` parâmetro. Este parâmetro foi renomeado para `domain`.
-* Para a opção de autenticação com chave SSH, os parâmetros de autenticação na conexão base exigiam um `port` opção. Esse parâmetro agora está obsoleto e não é mais necessário.
 
 Veja os exemplos completos de conexões base e de destino herdados e novos para SFTP nas guias abaixo, com as linhas que mudam realçadas. Os parâmetros necessários para criar conexões de destino para destinos SFTP não são alterados.
 
@@ -567,7 +566,8 @@ Veja os exemplos completos de conexões base e de destino herdados e novos para 
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

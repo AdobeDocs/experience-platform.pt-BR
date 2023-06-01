@@ -4,9 +4,9 @@ title: Ative segmentos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4442'
 ht-degree: 3%
 
 ---
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Propriedade | Descrição |
+| --------- | ----------- |
+| `specName` | Use `SFTP with Password`. |
+| `domain` | O endereço IP ou o nome de domínio do local de armazenamento SFTP. |
+| `username` | O nome de usuário para fazer logon no local de armazenamento SFTP. |
+| `password` | A senha para fazer logon no local de armazenamento SFTP. |
+| `port` | A porta usada pelo local de armazenamento SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Propriedade | Descrição |
+| --------- | ----------- |
+| `specName` | Use `SFTP with Password`. |
+| `domain` | O endereço IP ou o nome de domínio do local de armazenamento SFTP. |
+| `username` | O nome de usuário para fazer logon no local de armazenamento SFTP. |
+| `sshKey` | A chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada deve ser formatada como uma string codificada em Base64 e não deve ser protegida por senha. |
+| `port` | A porta usada pelo local de armazenamento SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 

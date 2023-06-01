@@ -2,7 +2,7 @@
 title: Conector de destino do Adobe Commerce
 description: Saiba como os comerciantes do Adobe Commerce e do Real-Time CDP podem personalizar a experiência de compra fornecendo promoções e conteúdo de site altamente relevantes, personalizados para públicos-alvo de clientes criados e gerenciados no Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 813a564eb02a5366945468ee689b2744e31baaa8
+source-git-commit: 276224303c7a65a53ff859bcbf47f64a6925bf77
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -67,7 +67,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de solicitação de perfil](../../ui/activate-profile-request-destinations.md) para obter instruções sobre como ativar públicos-alvo para a [!DNL Commerce] destino.
+Ler [Ativar perfis e segmentos para destinos de solicitação de perfil](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar públicos-alvo para a [!DNL Commerce] destino.
 
 ## Próximas etapas em [!DNL Adobe Commerce]
 

@@ -3,9 +3,9 @@ title: (Beta) Públicos-Alvo Do Experience Cloud
 description: Saiba como compartilhar segmentos do Experience Platform para várias soluções de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1576'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,14 @@ Observe as seguintes limitações conhecidas e chamadas importantes na versão b
 * Ao se conectar ao destino, você pode ver uma opção para [ativar alertas de fluxo de dados](#enable-alerts). Embora visível na interface do usuário, a variável **a opção ativar alertas não é suportada** na versão beta.
 * **Preenchimentos retroativos não são suportados**. A primeira exportação para Audience Manager ou outras soluções de Experience Cloud não inclui uma população histórica dos segmentos.
 * Na versão beta, é possível criar **uma única conexão de destino com o destino do Experience Cloud Audiences**, em todas as sandboxes pertencentes à sua organização do Experience Platform.
-* Existe uma **latência de quatro horas** entre o momento em que os dados são ativados no Experience Platform e o momento em que os dados estão prontos para serem usados no Audience Manager e em outras soluções de Experience Cloud.
+
+### Latência ao ativar públicos {#audience-activation-latency}
+
+Há uma latência de quatro horas entre o momento em que os públicos-alvo são ativados pela primeira vez no Experience Platform e o momento em que estão prontos para serem usados no Audience Manager e em outras soluções de Experience Cloud para determinados casos de uso.
+
+Pode levar até 24 horas para que os públicos-alvo estejam totalmente disponíveis em Audience Manager para todos os casos de uso e até 48 horas para que os públicos-alvo dos públicos-alvo de Experience Cloud apareçam nos relatórios de Audience Manager.
+
+Os metadados, como nomes de segmentos, estão disponíveis no Audience Manager em minutos após a configuração da exportação para o destino do Experience Cloud Audiences.
 
 ## Identidades suportadas {#supported-identities}
 

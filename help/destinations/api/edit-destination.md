@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Editar conexões de destino usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como editar vários componentes de uma conexão de destino usando a API de serviço de fluxo.
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -329,11 +329,11 @@ Uma resposta bem-sucedida retorna a ID de conexão de destino e uma tag atualiza
 
 ## Editar componentes de conexão base (parâmetros de autenticação e outros componentes) {#patch-base-connection}
 
-Os componentes de uma conexão base diferem por destino. Por exemplo, para [!DNL Amazon S3] destinos, você poderá atualizar a chave de acesso e a chave secreta para o [!DNL Amazon S3] localização.
+Edite a conexão básica quando quiser atualizar as credenciais de um destino. Os componentes de uma conexão base diferem por destino. Por exemplo, para [!DNL Amazon S3] destinos, você poderá atualizar a chave de acesso e a chave secreta para o [!DNL Amazon S3] localização.
 
 Para atualizar componentes de uma conexão base, execute uma solicitação PATCH para o `/connections` ao fornecer a ID de conexão básica, a versão e os novos valores que deseja usar.
 
-Lembre-se de que você obteve a ID de conexão básica em uma etapa anterior, ao inspecionar um fluxo de dados existente para o destino desejado.
+Lembre-se de que você recebeu a ID de conexão básica em um [etapa anterior](#look-up-dataflow-details), quando você inspecionou um fluxo de dados existente para o destino desejado referente ao parâmetro `baseConnection`.
 
 >[!IMPORTANT]
 >

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface
 description: Este guia aborda etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 17%
+source-wordcount: '1462'
+ht-degree: 18%
 
 ---
 
@@ -16,11 +16,19 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Governar o uso de dados na plataforma"
->abstract="<h2>Descrição</h2><p>A estrutura de governança de dados no Experience Platform permite rotular atributos e esquemas de acordo com restrições de uso de dados e configurar políticas que identifiquem e honrem essas restrições para ações de marketing específicas.</p>"
+>abstract="<h2>Descrição</h2><p>A estrutura de Governança de dados na Experience Platform permite rotular atributos e esquemas de acordo com restrições de uso de dados e configurar políticas que identifiquem e respeitem essas restrições para ações de marketing específicas.</p>"
 
 Este guia do usuário aborda etapas para trabalhar com rótulos de uso de dados na [!DNL Experience Platform] interface do usuário.
 
+## Gerenciar rótulos {#manage-labels}
+
+Para aplicar rótulos aos seus dados, é necessário **[!UICONTROL Gerenciar rótulos de uso]** permissão para uso na sandbox de produção. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis e, no momento, não há suporte para a exclusão de rótulos.
+
+Consulte o guia sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou o [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso ao Admin Console da sua organização, entre em contato com o administrador da organização.
+
 ## Gerenciar rótulos no nível do esquema
+
+Você pode adicionar rótulos diretamente a um esquema ou campos dentro desse esquema. Quaisquer campos aplicados no nível do esquema serão propagados para todos os conjuntos de dados baseados nesse esquema.
 
 Para gerenciar rótulos de uso de dados no nível do esquema, você deve selecionar um esquema existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo para abrir a **[!UICONTROL Esquemas]** espaço de trabalho. Essa página lista todos os esquemas criados que pertencem à sua organização, juntamente com detalhes úteis relacionados a cada esquema.
 
@@ -32,7 +40,7 @@ A próxima seção fornece etapas para criar um novo esquema ao qual aplicar ró
 
 Para criar um novo esquema, selecione **[!UICONTROL Criar esquema]** no canto superior direito da **[!UICONTROL Esquemas]** espaço de trabalho. Consulte o guia sobre [como criar um esquema usando o Editor de esquemas](../../xdm/tutorials/create-schema-ui.md#create) para obter instruções completas. Como alternativa, você pode [criar um esquema usando a API do Registro de esquema](../../xdm/tutorials/create-schema-api.md) se necessário.
 
-### Adicionar rótulos de uso de dados ao esquema {#add-labels-to-schema}
+### Adicionar rótulos de uso de dados a um esquema {#add-labels-to-schema}
 
 Depois de criar um novo esquema ou selecionar um esquema existente na lista da [!UICONTROL Procurar] guia do [!UICONTROL Esquemas] selecione um campo do esquema no Editor de esquemas. No [!UICONTROL Propriedades do campo] barra lateral, selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]**.
 
@@ -98,12 +106,6 @@ A variável **[!UICONTROL Mostrar rótulos herdados]** a opção está ativada p
 >Os rótulos aplicados antes da desativação do recurso de rotulagem do conjunto de dados podem ser removidos do conjunto de dados localizando o conjunto de dados relevante e selecionando o ícone de cancelamento no rótulo.
 >![A guia Governança de dados do espaço de trabalho Conjuntos de dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
 >Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível do esquema](../e2e.md#migrate-labels).
-
-## Gerenciar rótulos no nível do esquema
-
-Você pode adicionar rótulos diretamente a um esquema ou campos dentro desse esquema. Quaisquer campos aplicados no nível do esquema serão propagados para todos os conjuntos de dados baseados nesse esquema.
-
-Veja o tutorial sobre [gerenciamento de rótulos em nível de esquema](../../xdm/tutorials/labels.md) para obter mais informações.
 
 ## Gerenciar rótulos personalizados {#manage-custom-labels}
 

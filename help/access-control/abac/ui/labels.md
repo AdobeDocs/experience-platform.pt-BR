@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Rótulos do gerenciador de controle de acesso baseado em atributos
 description: Este documento fornece informações sobre como gerenciar rótulos por meio da interface de Permissões na Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 10%
+source-wordcount: '190'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ Rótulos permitem categorizar conjuntos de dados e campos de acordo com as polí
 
 >[!NOTE]
 >
->Você deve ter direitos administrativos para criar um rótulo personalizado. No momento, a exclusão de rótulos não é permitida.
+>Há uma única lista de rótulos para toda a organização. Para criar um rótulo personalizado, você precisará **[!UICONTROL Gerenciar rótulos de uso]** permissões na sandbox de produção. No momento, não há suporte para exclusão de rótulo.
 
 Para criar um novo rótulo, selecione a variável **[!UICONTROL Rótulos]** na barra lateral e selecione **[!UICONTROL Criar etiqueta]**.
 

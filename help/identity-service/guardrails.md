@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 60bab17d2ecb2e68bf500aea2d68587a125b35bb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '520'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 
 | Grade de Proteção | Limite | Notas |
 | --- | --- | --- |
-| Número de identidades em um gráfico | 150 | O limite é aplicado no nível da sandbox. O gráfico de identidade não será atualizado quando o limite for atingido. **Nota**: o número máximo de identidades em um gráfico de identidade **para um perfil mesclado individual** é 50. Os perfis mesclados baseados em gráficos de identidade com mais de 50 identidades são excluídos do Perfil do cliente em tempo real. Para obter mais informações, leia o guia em [medidas de proteção para dados do Perfil](../profile/guardrails.md). |
+| Número de identidades em um gráfico | 150 | O limite é aplicado no nível da sandbox. Quando o número de identidades atingir 150 ou mais, nenhuma nova identidade será adicionada e o gráfico de identidade não será atualizado. Os gráficos podem mostrar identidades maiores que 150 como resultado da vinculação de um ou mais gráficos com menos de 150 identidades. **Nota**: o número máximo de identidades em um gráfico de identidade **para um perfil mesclado individual** é 50. Os perfis mesclados baseados em gráficos de identidade com mais de 50 identidades são excluídos do Perfil do cliente em tempo real. Para obter mais informações, leia o guia em [medidas de proteção para dados do Perfil](../profile/guardrails.md). |
 | Número de identidades em um registro XDM | 20 | O número mínimo de registros XDM necessários é dois. |
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que você pode criar. |
 | Número de gráficos | None | Não há limites para o número de gráficos de identidade que podem ser criados. |

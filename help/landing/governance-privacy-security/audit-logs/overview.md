@@ -2,10 +2,10 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 50%
+source-wordcount: '1294'
+ht-degree: 45%
 
 ---
 
@@ -79,13 +79,13 @@ Para visualizar e exportar logs de auditoria, você deve ter o **[!UICONTROL Exi
 
 Você pode visualizar logs de auditoria para diferentes recursos de Experience Platform no **[!UICONTROL Auditorias]** espaço de trabalho na interface do usuário da Platform. O espaço de trabalho mostra uma lista de logs registrados, por padrão, classificados do mais recente ao menos recente.
 
-![Painel de logs de auditoria](../../images/audit-logs/audits.png)
+![O painel Auditorias realçando Auditorias no menu à esquerda.](../../images/audit-logs/audits.png)
 
 Os logs de auditoria são retidos por 365 dias após os quais serão excluídos do sistema. Portanto, você só pode voltar por um período máximo de 365 dias. Se você precisar de dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos da política interna.
 
 Selecione um evento na lista para exibir seus detalhes no painel direito.
 
-![Detalhes do evento](../../images/audit-logs/select-event.png)
+![Painel de auditorias Guia Log de atividade com o painel Detalhes do evento realçado.](../../images/audit-logs/select-event.png)
 
 ### Filtrar logs de auditoria
 
@@ -95,31 +95,43 @@ Como esse é um novo recurso, os dados exibidos só retornam a março de 2022. D
 
 Selecione o ícone de funil (![Ícone Filtrar](../../images/audit-logs/icon.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1000 registros são exibidos independentemente dos vários filtros selecionados.
 
-![Filtros](../../images/audit-logs/filters.png)
+![O painel Auditorias com o log de atividades filtrado realçado.](../../images/audit-logs/filters.png)
 
 Os seguintes filtros estão disponíveis para eventos de auditoria na interface do usuário:
 
 | Filtro | Descrição |
 | --- | --- |
 | [!UICONTROL Categoria] | Use o menu suspenso para filtrar os resultados exibidos por [categoria](#category). |
-| [!UICONTROL Ação] | Filtrar por ação. Somente no momento [!UICONTROL Criar] e [!UICONTROL Excluir] as ações podem ser filtradas. |
+| [!UICONTROL Ação] | Filtrar por ação. As ações disponíveis para cada serviço podem ser vistas na tabela de recursos acima. |
 | [!UICONTROL Usuário] | Insira a ID de usuário completa (por exemplo, `johndoe@acme.com`) para filtrar por usuário. |
 | [!UICONTROL Status] | Filtrar se a ação foi permitida (concluída) ou negada devido à falta de [controle de acesso](../../../access-control/home.md) permissões. |
 | [!UICONTROL Data] | Selecione uma data inicial e/ou final para definir um intervalo de datas para filtrar os resultados. Os dados podem ser exportados com um período de lookback de 90 dias (por exemplo, 2021-12-15 para 2022-03-15). Isso pode diferir por tipo de evento. |
 
 Para remover um filtro, selecione o &quot;X&quot; no ícone de preenchimento do filtro em questão ou selecione **[!UICONTROL Limpar tudo]** para remover todos os filtros.
 
-![Limpar filtros](../../images/audit-logs/clear-filters.png)
+![O painel Auditorias com filtro limpo é realçado.](../../images/audit-logs/clear-filters.png)
+
+Os dados do log de auditoria retornados contêm as seguintes informações em todas as consultas que atendem aos critérios de filtro escolhidos.
+
+| Nome da coluna | Descrição |
+|---|---|
+| [!UICONTROL Carimbo de data e hora] | A data e a hora exatas da ação executada em um `month/day/year hour:minute AM/PM` formato. |
+| [!UICONTROL Nome do ativo] | O valor para a variável [!UICONTROL Nome do ativo] depende da categoria escolhida como filtro. |
+| [!UICONTROL Categoria] | Este campo corresponde à categoria selecionada na lista suspensa de filtros. |
+| [!UICONTROL Ação] | As ações disponíveis dependem da categoria escolhida como filtro. |
+| [!UICONTROL Usuário] | Esse campo fornece a ID do usuário que executou a consulta. |
+
+![O painel Auditorias com o log de atividades filtrado realçado.](../../images/audit-logs/filtered.png)
 
 ### Exportar logs de auditoria
 
 Para exportar a lista atual de logs de auditoria, selecione **[!UICONTROL Baixar log]**.
 
-![Baixar log](../../images/audit-logs/download.png)
+![O painel Auditorias com a [!UICONTROL Baixar log] destacado.](../../images/audit-logs/download.png)
 
 Na caixa de diálogo exibida, selecione o formato preferido ( **[!UICONTROL CSV]** ou **[!UICONTROL JSON]**) e selecione **[!UICONTROL Baixar]**. O navegador baixa o arquivo gerado e o salva em seu computador.
 
-![Selecionar formato de download](../../images/audit-logs/select-download-format.png)
+![A janela de seleção do formato de arquivo com [!UICONTROL Baixar] destacado.](../../images/audit-logs/select-download-format.png)
 
 ## Gerenciamento de logs de auditoria na API
 

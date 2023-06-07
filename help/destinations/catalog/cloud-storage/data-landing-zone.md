@@ -2,9 +2,9 @@
 title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar segmentos e exportar conjuntos de dados.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1265'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 1%
 
 A Platform impõe um TTL (time-to-live) rigoroso de sete dias em todos os arquivos carregados em um [!DNL Data Landing Zone] recipiente. Todos os arquivos são excluídos após sete dias.
 
+## Conecte-se ao seu [!UICONTROL Data Landing Zone] armazenamento por meio da API ou da interface {#connect-api-or-ui}
+
+* Para se conectar ao seu [!UICONTROL Data Landing Zone] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar segmentos para este destino](#activate) abaixo.
+* Para se conectar ao seu [!UICONTROL Data Landing Zone] local de armazenamento de dados de forma programática, leia as [Ative segmentos para destinos baseados em arquivo usando o tutorial da API do serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
@@ -43,7 +48,7 @@ Observe os seguintes pré-requisitos que devem ser atendidos antes de usar o [!D
 
 ### Conecte seu [!DNL Data Landing Zone] contêiner para [!DNL Azure Storage Explorer]
 
-Você pode usar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) para gerenciar o conteúdo do [!DNL Data Landing Zone] recipiente. Para começar a usar o [!DNL Data Landing Zone], primeiro é necessário recuperar as credenciais, inseri-las em [!DNL Azure Storage Explorer]e conecte seu [!DNL Data Landing Zone] contêiner para [!DNL Azure Storage Explorer].
+Você pode usar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) para gerenciar o conteúdo do [!DNL Data Landing Zone] recipiente. Para começar a usar o [!DNL Data Landing Zone], você deve primeiro recuperar suas credenciais e inseri-las em [!DNL Azure Storage Explorer]e conecte seu [!DNL Data Landing Zone] contêiner para [!DNL Azure Storage Explorer].
 
 No [!DNL Azure Storage Explorer] Selecione o ícone de conexão na barra de navegação esquerda. A variável **Selecionar recurso** é exibida, fornecendo opções para conexão. Selecionar **[!DNL Blob container]** para se conectar ao seu [!DNL Data Landing Zone] armazenamento.
 
@@ -83,7 +88,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta a seguir retorna as informações de credencial da sua zona de aterrissagem, incluindo a atual `SASToken` e `SASUri`, bem como a `storageAccountName` que corresponde ao seu contêiner de zona de aterrissagem.
+A resposta a seguir retorna as informações de credencial da sua zona de aterrissagem, incluindo a atual `SASToken` e `SASUri`, e o `storageAccountName` que corresponde ao seu contêiner de zona de aterrissagem.
 
 ```json
 {
@@ -163,7 +168,10 @@ No **[!UICONTROL Mapeamento]** etapa, você pode selecionar quais campos de atri
 
 ## (Beta) Exportar conjuntos de dados {#export-datasets}
 
-Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia o [exportar tutorial de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
+
+* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
+* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
 
 ## Validar exportação de dados bem-sucedida {#exported-data}
 

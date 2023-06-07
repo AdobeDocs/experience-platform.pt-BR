@@ -2,9 +2,9 @@
 title: (Beta) Conexão do Google Cloud Storage
 description: Saiba como se conectar ao Google Cloud Storage e ativar segmentos ou exportar conjuntos de dados.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 ## Visão geral {#overview}
 
 Criar uma conexão de saída ativa com o [!DNL Google Cloud Storage] para exportar arquivos de dados do Adobe Experience Platform periodicamente para seus próprios buckets.
+
+## Conecte-se ao seu [!DNL Google Cloud Storage] armazenamento por meio da API ou da interface {#connect-api-or-ui}
+
+* Para se conectar ao seu [!DNL Google Cloud Storage] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar segmentos para este destino](#activate) abaixo.
+* Para se conectar ao seu [!DNL Google Cloud Storage] local de armazenamento de dados de forma programática, leia as [Ative segmentos para destinos baseados em arquivo usando o tutorial da API do serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -102,7 +107,10 @@ No **[!UICONTROL Mapeamento]** etapa, você pode selecionar quais campos de atri
 
 ## (Beta) Exportar conjuntos de dados {#export-datasets}
 
-Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia o [exportar tutorial de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
+
+* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
+* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
 
 ## Validar exportação de dados bem-sucedida {#exported-data}
 

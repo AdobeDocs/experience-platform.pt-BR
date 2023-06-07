@@ -2,9 +2,9 @@
 title: Conexão SFTP
 description: Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de dados delimitados da Adobe Experience Platform periodicamente.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '987'
 ht-degree: 7%
 
 ---
@@ -36,6 +36,11 @@ Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de 
 >[!IMPORTANT]
 >
 > Embora o Experience Platform seja compatível com exportações de dados para servidores SFTP, os locais de armazenamento em nuvem recomendados para a exportação de dados são [!DNL Amazon S3] e [!DNL SFTP].
+
+## Conectar-se ao SFTP por meio da API ou da interface {#connect-api-or-ui}
+
+* Para se conectar ao local de armazenamento SFTP usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar segmentos para este destino](#activate) abaixo.
+* Para se conectar ao local de armazenamento SFTP de forma programática, leia o [Ative segmentos para destinos baseados em arquivo usando o tutorial da API do serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -70,12 +75,13 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 >title="Chave SSH privada"
 >abstract="A chave SSH privada deve ser formatada como uma string codificada em Base64 e não deve ser protegida por senha."
 
-Se você selecionar a variável **[!UICONTROL Autenticação básica]** Digite para se conectar ao local SFTP:
+Se você selecionar a variável **[!UICONTROL SFTP com senha]** tipo de autenticação para se conectar ao local SFTP:
 
 ![Autenticação básica de destino SFTP](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Host]**: o endereço do local de armazenamento SFTP;
+* **[!UICONTROL Domínio]**: o endereço do local de armazenamento SFTP;
 * **[!UICONTROL Nome de usuário]**: o nome de usuário para fazer logon no local de armazenamento SFTP;
+* **[!UICONTROL Porta]**: a porta usada pelo local de armazenamento SFTP;
 * **[!UICONTROL Senha]**: a senha para fazer logon no local de armazenamento SFTP.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
@@ -100,7 +106,7 @@ Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as
 
 ![Detalhes de destino disponíveis para destino SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nome]**: digite um nome que ajudará a identificar esse destino na interface do usuário do Experience Platform;
+* **[!UICONTROL Nome]**: digite um nome que ajude a identificar esse destino na interface do usuário do Experience Platform;
 * **[!UICONTROL Descrição]**: digite uma descrição para esse destino;
 * **[!UICONTROL Caminho da pasta]**: digite o caminho para a pasta no local SFTP onde os arquivos serão exportados.
 * **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para o **[!UICONTROL Beta do SFTP]** destino. Ao selecionar a variável [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
@@ -117,12 +123,15 @@ Consulte [Ativar dados do público-alvo para destinos de exportação de perfil 
 
 ## (Beta) Exportar conjuntos de dados {#export-datasets}
 
-Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia o [exportar tutorial de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
+
+* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
+* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
 
 ## Dados exportados {#exported-data}
 
 Para [!DNL SFTP] destinos, a Platform cria uma `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de segmentos.
 
-## LISTA DE PERMISSÕES de endereço IP
+## LISTA DE PERMISSÕES de endereço IP {#ip-address-allow-list}
 
 Consulte [LISTA DE PERMISSÕES de endereço IP para destinos SFTP](ip-address-allow-list.md) se precisar adicionar IPs de Adobe a uma lista de permissões.

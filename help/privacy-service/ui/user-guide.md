@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1473'
 ht-degree: 14%
 
 ---
@@ -58,7 +58,7 @@ O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widg
 
 As ordens de produção para cada tipo de regulamento são rastreadas separadamente. Para alternar entre tipos de regulamentos, selecione o **[!UICONTROL Tipo de regulamento]** e selecione a regulação desejada na lista.
 
-![Lista suspensa Tipo de regulação](../images/user-guide/regulation.png)
+![O console Privacy Service com a lista suspensa Tipo de regulamento.](../images/user-guide/regulation.png)
 
 Ao alterar o tipo de regulamento, o painel é atualizado para mostrar todas as operações, filtros, widgets e caixas de diálogo de criação de trabalho que se aplicam ao regulamento selecionado.
 

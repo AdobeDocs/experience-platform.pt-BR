@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar políticas de uso de dados na interface
 description: O Adobe Experience Platform Data Governance fornece uma interface que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar no espaço de trabalho Políticas, na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 19%
+source-wordcount: '1788'
+ht-degree: 17%
 
 ---
 
@@ -59,7 +59,19 @@ Dependendo de você fazer parte da versão beta para políticas de consentimento
 
 * Se você não fizer parte da versão beta, será imediatamente direcionado ao fluxo de trabalho para [criação de uma política de governança de dados](#create-governance-policy).
 * Se você fizer parte da versão beta, uma caixa de diálogo fornecerá uma opção extra para [criar uma política de consentimento](#consent-policy).
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### Usar políticas de consentimento e governança de dados em conjunto {#combine-policies}
+
+>[!NOTE]
+>
+>Atualmente, as políticas de consentimento estão disponíveis apenas para organizações que compraram o Adobe Healthcare Shield ou o Adobe Privacy &amp; Security Shield.
+
+As políticas de governança e consentimento podem ser usadas em conjunto para criar regras robustas para governar públicos mapeados para um destino. As políticas de consentimento são de natureza inclusiva, o que significa que elas determinam quais perfis podem ser incluídos em cada experiência de marketing. Por outro lado, as políticas de governança excluem o uso de atributos específicos rotulados de serem configurados para ativação.
+
+Usando esse comportamento, você pode configurar uma combinação de políticas e regras de consentimento que incluam os perfis corretos, mas o impede de incluir dados que vão contra as regras organizacionais definidas. Um exemplo seria quando você deseja excluir dados confidenciais da inclusão, mas ainda pode direcionar usuários consentidos para marketing via redes sociais. As etapas necessárias para esse cenário estão descritas no infográfico abaixo.
+
+![Um infográfico descrevendo as etapas para usar políticas de governança e consentimento em conjunto para criar regras robustas para governar públicos.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Criar uma política de governança de dados {#create-governance-policy}
 

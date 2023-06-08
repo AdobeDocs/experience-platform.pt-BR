@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Origem da zona de aterrissagem de dados
 description: Saiba como conectar a Data Landing Zone ao Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Veja a seguir uma lista de restrições que você deve considerar ao nomear seus
 - Caracteres de caminho de URL inválidos não permitidos. Pontos de código como `\uE000`, embora sejam válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (como `0x00` para `0x1F`, `\u0081`e assim por diante), também não são permitidos. Para obter as regras que regem strings Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: regras básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (.) e dois caracteres de ponto (..).
 
-## Gerencie o conteúdo do seu [!DNL Data Landing Zone]
+## Gerenciar o conteúdo da Data Landing Zone{#manage-the-contents-of-your-data-landing-zone}
 
 Você pode usar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) para gerenciar o conteúdo do [!DNL Data Landing Zone] recipiente.
 
@@ -162,3 +162,8 @@ A documentação abaixo fornece informações sobre como trazer dados de seu [!D
 
 - [Conectar [!DNL Data Landing Zone] para a Platform usando a interface](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Criar um fluxo de dados para uma conexão de armazenamento na nuvem na interface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>No momento, os links privados não são compatíveis ao conectar-se ao Experience Platform usando o [!DNL Data Landing Zone]. Os únicos métodos compatíveis de acesso são os métodos listados [aqui](#manage-the-contents-of-your-data-landing-zone).
+

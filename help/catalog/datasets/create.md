@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conjunto de dados usando APIs
 description: Este documento fornece etapas gerais para criar um conjunto de dados usando APIs do Adobe Experience Platform e preencher o conjunto de dados usando um arquivo.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1303'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtu
 >
 >Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
-
-* Tipo de conteúdo: application/json
+Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem uma `Content-Type: application/json` cabeçalho. Para solicitações JSON+PATCH, a variável `Content-Type` deve ser `application/json-patch+json`.
 
 ## Tutorial
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta contendo detalhes do lote recém-criado, incluindo seu `id`, uma sequência de caracteres gerada pelo sistema somente leitura.
+Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta. O objeto de resposta consiste em uma matriz contendo a ID do lote recém-criado no formato `"@/batches/{BATCH_ID}"`. A ID do lote é uma string somente leitura gerada pelo sistema usada para fazer referência ao lote em chamadas de API.
 
 ```JSON
 {
@@ -355,12 +353,12 @@ Um lote concluído com êxito retorna um corpo de resposta em branco e um Status
 
 ## Monitorar assimilação
 
-Dependendo do tamanho dos dados, os lotes levam vários períodos de tempo para serem assimilados. Você pode monitorar o status de um lote anexando um `batch` parâmetro de solicitação que contém a ID do lote para um `GET /batches` solicitação. A API pesquisa o conjunto de dados quanto ao status do lote, desde a assimilação até a `status` na resposta, indica conclusão (&quot;sucesso&quot; ou &quot;falha&quot;).
+Dependendo do tamanho dos dados, os lotes levam vários períodos de tempo para serem assimilados. Você pode monitorar o status de um lote anexando a ID de um lote a um `GET /batches` solicitação.
 
 **Formato da API**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parâmetro | Descrição |

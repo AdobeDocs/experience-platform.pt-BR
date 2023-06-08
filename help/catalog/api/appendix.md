@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apêndice do Guia da API do Serviço de catálogo
 description: Este documento contém informações adicionais para ajudar você a trabalhar com a API do catálogo no Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '458'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Este documento contém informações adicionais para ajudar você a trabalhar co
 
 Alguns [!DNL Catalog] objetos podem ser inter-relacionados com outros [!DNL Catalog] objetos. Todos os campos que recebem o prefixo `@` em resposta, as cargas indicam objetos relacionados. Os valores desses campos tomam a forma de um URI, que pode ser usado em uma solicitação do GET separada para recuperar os objetos relacionados que representam.
 
-O conjunto de dados de exemplo retornado no documento em [pesquisa de um conjunto de dados específico](look-up-object.md) contém um `files` com o seguinte valor de URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. O conteúdo do `files` pode ser visualizado usando esse URI como o caminho para uma nova solicitação GET.
+O conjunto de dados de exemplo retornado no documento em [pesquisa de um conjunto de dados específico](look-up-object.md) contém um `files` com o seguinte valor de URI: `"@/datasetFiles?datasetId={DATASET_ID}"`. O conteúdo do `files` pode ser visualizado usando esse URI como o caminho para uma nova solicitação GET.
 
 **Formato da API**
 
@@ -37,7 +37,7 @@ A solicitação a seguir usa o URI fornecido com o conjunto de dados de exemplo 
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/datasetFiles?datasetId={DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -88,90 +88,6 @@ Uma resposta bem-sucedida retorna uma lista de objetos relacionados. Neste exemp
     }
 }
 ```
-
-## Fazer várias solicitações em uma única chamada
-
-O ponto de extremidade raiz do [!DNL Catalog] A API permite que várias solicitações sejam feitas em uma única chamada. A carga da solicitação contém uma matriz de objetos que representa o que normalmente seriam solicitações individuais, que são executadas em ordem.
-
-Se essas solicitações forem modificações ou adições a [!DNL Catalog] e qualquer uma das alterações falhar, todas as alterações serão revertidas.
-
-**Formato da API**
-
-```http
-POST /
-```
-
-**Solicitação**
-
-A solicitação a seguir cria um novo conjunto de dados e, em seguida, cria exibições relacionadas para esse conjunto de dados. Este exemplo demonstra o uso da linguagem de modelo para acessar valores retornados em chamadas anteriores para uso em chamadas subsequentes.
-
-Por exemplo, se você quiser fazer referência a um valor que foi retornado de uma subsolicitação anterior, crie uma referência no formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, conforme demonstrado abaixo). Você pode fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de uma subsolicitação anterior usando esses templates.
-
->[!NOTE]
->
->Quando uma subsolicitação executada retorna somente a referência a um objeto (como é o padrão para a maioria das solicitações POST e PUT na API do catálogo), essa referência recebe um alias para o valor `id` e podem ser utilizados como  `<<{OBJECT_ID}.id>>`.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '[
-    {
-      "id": "firstObjectId",
-      "resource": "/dataSets",
-      "method": "post",
-      "body": {
-        "type": "raw",
-        "name": "First Dataset"
-      }
-    }, 
-    {
-      "id": "secondObjectId",
-      "resource": "/datasetViews",
-      "method": "post",
-      "body": {
-        "status": "enabled",
-        "dataSetId": "<<firstObjectId.id>>"
-      }
-    }
-  ]'
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `id` | ID fornecida pelo usuário que é anexada ao objeto de resposta para que você possa corresponder solicitações a respostas. [!DNL Catalog] O não armazena esse valor e simplesmente o retorna na resposta para fins de referência. |
-| `resource` | O caminho do recurso relativo à raiz da variável [!DNL Catalog] API. O protocolo e o domínio não devem fazer parte desse valor e devem receber o prefixo &quot;/&quot;. <br/><br/> Ao usar PATCH ou DELETE como o da sub-solicitação `method`, inclua a ID do objeto no caminho do recurso. Não deve ser confundido com o `id`, o caminho do recurso usa a ID do [!DNL Catalog] objeto em si (por exemplo, `resource: "/dataSets/1234567890"`). |
-| `method` | O nome do método (GET, PUT, POST, PATCH ou DELETE) relacionado à ação que ocorre na solicitação. |
-| `body` | O documento JSON que normalmente seria passado como a carga em uma solicitação POST, PUT ou PATCH. Essa propriedade não é necessária para solicitações GET ou DELETE. |
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna uma matriz de objetos que contém o `id` que você atribuiu a cada solicitação, o código do status HTTP para a solicitação individual e a resposta `body`. Como as três solicitações de amostra eram todas para criar novos objetos, a variável `body` de cada objeto é uma matriz que contém somente a ID do objeto recém-criado, como é o padrão com respostas de POST mais bem-sucedidas em [!DNL Catalog].
-
-```json
-[
-    {
-        "id": "firstObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSets/5be230aef5b02914cd52dbfa"
-        ]
-    },
-    {
-        "id": "secondObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSetViews/5be230aef5b02914cd52dbfb"
-        ]
-    }
-]
-```
-
-Tenha cuidado ao inspecionar a resposta a uma solicitação múltipla, pois será necessário verificar o código de cada subsolicitação individual e não depender exclusivamente do código do status HTTP para a solicitação POST principal.  É possível que uma única subsolicitação retorne um 404 (como uma solicitação GET em um recurso inválido), enquanto a solicitação geral retorna 200.
 
 ## Cabeçalhos de solicitação adicionais
 

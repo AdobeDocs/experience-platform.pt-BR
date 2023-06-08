@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da API do Serviço de catálogo
 description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem metadados do conjunto de dados na Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 6%
 
 ---
@@ -63,6 +63,6 @@ Como alguns queries podem colocar uma carga pesada sobre a API, limites globais 
 
 Este documento cobriu os conhecimentos necessários para fazer chamadas para o [!DNL Catalog] API. Agora você pode prosseguir para as chamadas de amostra fornecidas neste guia do desenvolvedor e seguir junto com as instruções.
 
-A maioria dos exemplos neste guia usa o `/dataSets` endpoint, mas os princípios podem ser aplicados a outros endpoints dentro [!DNL Catalog] (como `/batches` e `/accounts`). Consulte a [Referência da API do serviço de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/) para obter uma lista completa de todas as chamadas e operações disponíveis para cada endpoint.
+A maioria dos exemplos neste guia usa o `/dataSets` endpoint, mas os princípios podem ser aplicados a outros endpoints dentro [!DNL Catalog] (como `/batches`). Consulte a [Referência da API do serviço de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/) para obter uma lista completa de todas as chamadas e operações disponíveis para cada endpoint.
 
 Para um fluxo de trabalho passo a passo que demonstra como a [!DNL Catalog] A API está envolvida com a assimilação de dados, consulte o tutorial sobre [criação de um conjunto de dados](../datasets/create.md).

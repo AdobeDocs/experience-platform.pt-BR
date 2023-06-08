@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de catálogo
 description: O Serviço de catálogo é o sistema de registro para localização e linhagem de dados na Adobe Experience Platform. Embora todos os dados assimilados na Experience Platform sejam armazenados no Data Lake como arquivos e diretórios, o Catálogo retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa e monitoramento.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '694'
 ht-degree: 100%
 
 ---
@@ -53,10 +53,7 @@ A tabela a seguir descreve os diferentes tipos de objetos aceitos pelo [!DNL Cat
 
 | Objeto | Ponto de acesso da API | Definição |
 |---|---|---|
-| Conta | `/accounts` | Ao criar conexões de origem, as credenciais de autenticação devem ser fornecidas. Uma conta representa uma coleção de credenciais de autenticação que foram usadas para criar uma conexão de um tipo específico. Cada conexão tem um conjunto de parâmetros exclusivos que são mantidos pelo [!DNL Catalog] e protegidos em um [!DNL Azure Key Vault]. |
 | Lote | `/batches` | Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade. Um objeto em lote no [!DNL Catalog] descreve as métricas de assimilação do lote (como o número de registros processados ou o tamanho no disco) e também pode incluir links para conjuntos de dados, visualizações e outros recursos que foram afetados pela operação em lote. |
-| Conexão | `/connections` | Uma conexão é uma única instância de um conector de origem. Ela é exclusiva da sua organização e configurada usando as credenciais de autenticação apropriadas para o tipo de conector. |
-| Conector  | `/connectors` | Os conectores definem como as conexões de origem deverão coletar dados de outros aplicativos da Adobe (como o Adobe Analytics e Adobe Audience Manager), fontes de armazenamento na nuvem de terceiros (como o [!DNL Azure Blob], [!DNL Amazon S3], servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como o [!DNL Microsoft Dynamics] e [!DNL Salesforce]). |
 | Conjunto de dados | `/dataSets` | Um conjunto de dados é uma construção de armazenamento e gerenciamento usada para a coleta de dados (normalmente uma tabela) que contenham um esquema (colunas) e campos (linhas). Consulte a [visão geral dos conjuntos de dados](./datasets/overview.md) para obter mais informações. |
 | Arquivo de conjunto de dados | `/datasetFiles` | Os arquivos de conjunto de dados representam blocos de dados que foram salvos na [!DNL Platform]. Como registros de arquivos literais, eles contém informações sobre o tamanho do arquivo, o número de registros que ele contém e uma referência ao lote que assimilou o arquivo. |
 

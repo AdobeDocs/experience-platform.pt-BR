@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Visão geral dos manuais
+title: Visão geral dos manuais de caso de uso
 description: Saiba como usar o recurso de manuais de caso de uso no Experience Platform para começar a usar vários casos de uso de marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 O que você encontrará neste guia de documentação:
 
 * **[Visão geral dos manuais de caso de uso](#overview)**
-* [Exibir um manual e gerar ativos](ui-guide.md#view-playbook-generate-assets)
-* [Ativar, usar e reutilizar uma ocorrência de um manual ](ui-guide.md#enable-playbook)
+* [Descubra o manual correto](/help/use-case-playbooks/playbooks/discover.md)
+* [Criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Solução de problemas e limitações conhecidas](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -46,9 +46,9 @@ Crie uma instância de um manual para gerar ativos específicos, como esquemas, 
 
 Alguns [!UICONTROL Playbooks de caso de uso] são adaptados para casos de uso da Real-time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso.
 
-## Guia da interface do usuário
+## Guias de interface do usuário
 
-Depois de decidir sobre o manual que deseja usar, selecione-o na interface e comece a usá-lo. Leia o guia da interface do usuário em [como ativar e reutilizar manuais](/help/use-case-playbooks/playbooks/ui-guide.md) para obter informações completas sobre como criar instâncias e aproveitar ao máximo um manual.
+Depois de decidir sobre o manual que deseja usar, selecione-o na interface e comece a usá-lo. Leia os guias de interface do usuário no [como descobrir o manual correto](/help/use-case-playbooks/playbooks/discover.md) para você e [como criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter informações completas sobre como criar instâncias e aproveitar ao máximo um manual.
 
 ## Solução de problemas e limitações conhecidas
 

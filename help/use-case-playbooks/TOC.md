@@ -5,10 +5,10 @@ breadcrumb-title: Playbooks de caso de uso do Adobe Experience Platform
 user-guide-description: Use os manuais no Adobe Experience Platform para gerar ativos e começar a usar vários casos de uso de marketing.
 feature: Playbooks
 hide: true
-source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 4%
+source-wordcount: '52'
+ht-degree: 1%
 
 ---
 
@@ -17,5 +17,6 @@ ht-degree: 4%
 
 * Playbooks {#playbooks}
    * [Visão geral](/help/use-case-playbooks/playbooks/overview.md)
-   * [Como ativar e reutilizar manuais](/help/use-case-playbooks/playbooks/ui-guide.md)
-   * [Solução de problemas](/help/use-case-playbooks/playbooks/troubleshooting.md)
+   * [Descubra o manual correto](/help/use-case-playbooks/playbooks/discover.md)
+   * [Criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md)
+   * [Solução de problemas e limitações conhecidas](/help/use-case-playbooks/playbooks/troubleshooting.md)

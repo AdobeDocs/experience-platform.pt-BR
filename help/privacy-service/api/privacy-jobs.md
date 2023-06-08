@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ponto de extremidade da API de trabalhos de privacidade
 description: Saiba como gerenciar processos de privacidade para aplicativos Experience Cloud usando a API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 2%
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
+| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `1` e o máximo é `100`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 

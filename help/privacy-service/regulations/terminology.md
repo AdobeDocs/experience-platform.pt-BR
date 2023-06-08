@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições de termos principais relacionados às regulamentações de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
 workflow-type: tm+mt
-source-wordcount: '1513'
-ht-degree: 3%
+source-wordcount: '1752'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 3%
 Este documento fornece definições de termos principais relacionados às regulamentações de privacidade compatíveis com o Adobe Experience Cloud.
 
 ## A
+
+**[!DNL Australia Privacy Act (Privacy Act)]**: um ato que promove e protege a privacidade dos indivíduos e regula como as agências e organizações do governo australiano lidam com as informações pessoais. A Lei de Privacidade inclui princípios que se aplicam a organizações do setor privado. Por exemplo, as pessoas têm o direito de entender por que as informações pessoais estão sendo coletadas e como serão usadas, a capacidade de acessar, apagar seus dados e corrigir informações pessoais.
 
 ## B
 
@@ -27,7 +29,11 @@ Este documento fornece definições de termos principais relacionados às regula
 
 **CCPA**: A variável [!DNL California Consumer Privacy Act] (CCPA) oferece aos residentes da Califórnia mais controle sobre as informações pessoais que as empresas coletam a partir daí. A lei prevê vários novos direitos para os consumidores, incluindo o direito de acesso e as informações pessoais coletadas deles, e o direito de recusar a venda de suas informações pessoais a terceiros.
 
-**Consentimento**: Consentimento dado de forma livre, específico, informado e explícito por declaração ou ação que signifique o consentimento para o tratamento dos seus dados pessoais.
+**CPA**: A variável [!DNL Colorado Privacy Act] O (CPA) fornece aos consumidores do Colorado insights adicionais sobre o que os controladores de dados pessoais coletam, compartilham e vendem e como esses dados são usados. A CPA protege os dados pessoais dos residentes do Colorado quando eles agem em um contexto individual ou doméstico. Essas regras detalham as especificações técnicas de um ou mais mecanismos de recusa universais. Estes mecanismos comunicam claramente a escolha afirmativa, livre e inequívoca do consumidor de não participar no tratamento de dados pessoais para efeitos de publicidade direcionada ou de venda de dados pessoais.
+
+**CTDPA**: A variável [!DNL Connecticut Data Privacy Act] A (CTDPA) concede aos residentes de Connecticut certos direitos sobre seus dados pessoais e estabelece responsabilidades e padrões de proteção de privacidade para controladores de dados que processam seus dados pessoais. A CTDPA concede a eles os seguintes direitos: acessar, corrigir, excluir, obter uma cópia ou recusar a venda, o processamento ou a definição de perfil de seus dados pessoais. A CTDPA protege um residente de Connecticut agindo como indivíduo ou em um contexto familiar.
+
+**Consentimento**: consentimento dado de forma livre, específico, informado e explícito por declaração ou ação que significa concordar com o processamento de seus dados pessoais.
 
 ## D
 
@@ -35,7 +41,7 @@ Este documento fornece definições de termos principais relacionados às regula
 
 **Controlador de dados**: a entidade que determina os objetivos, as condições e os meios de tratamento dos dados pessoais.
 
-**Eliminação de dados**: Também conhecido como Direito ao esquecimento, ele autoriza o titular dos dados a fazer com que o controlador de dados apague seus dados pessoais, interrompa a divulgação dos dados e possivelmente o processamento dos dados por parte de terceiros.
+**Eliminação de dados**: também conhecido como Direito ao esquecimento. Ela autoriza o titular dos dados a fazer com que o controlador de dados apague seus dados pessoais, interrompa a divulgação dos dados e possivelmente o processamento dos dados por parte de terceiros.
 
 **Portabilidade de dados**: o requisito de os controladores fornecerem ao titular dos dados uma cópia dos seus dados num formato que permita a sua fácil utilização por outro controlador.
 
@@ -43,11 +49,11 @@ Este documento fornece definições de termos principais relacionados às regula
 
 **Autoridade de proteção de dados**: Autoridades nacionais responsáveis pela proteção dos dados e da privacidade, bem como pelo controlo e aplicação da regulamentação em matéria de proteção de dados na União.
 
-**Responsável pela proteção de dados**: um especialista em privacidade de dados que trabalha de forma independente para garantir que uma entidade esteja seguindo as políticas e os procedimentos estabelecidos no GDPR.
+**Responsável pela proteção de dados**: um especialista em privacidade de dados que trabalha de forma independente para garantir que uma entidade esteja seguindo as políticas e os procedimentos detalhados no GDPR.
 
 **Titular dos dados**: Uma pessoa singular cujos dados pessoais são tratados por um responsável pelo tratamento ou um subcontratante.
 
-**Atos delegados**: atos não legislativos adotados a fim de complementar a legislação existente e estabelecer critérios de clareza.
+**Atos delegados**: atos não legislativos adotados para complementar a legislação em vigor e estabelecer critérios de clareza.
 
 **Derrogação**: uma isenção de uma lei.
 
@@ -55,11 +61,11 @@ Este documento fornece definições de termos principais relacionados às regula
 
 ## E
 
-**Dados codificados**: dados pessoais protegidos por medidas tecnológicas para garantir que os dados só sejam acessíveis/legíveis por aqueles com acesso especificado.
+**Dados codificados**: dados pessoais protegidos por medidas tecnológicas destinadas a garantir que os dados só sejam acessíveis/legíveis por pessoas com acesso especificado.
 
 **Enterprise**: Qualquer entidade que exerça uma atividade econômica, independentemente da forma jurídica, incluindo pessoas, parcerias, associações, etc.
 
-**Consentimento explícito**: um padrão de consentimento que envolve uma indicação específica, informada e inequívoca dos desejos do titular dos dados, em forma oral ou escrita. Em termos simples, o titular dos dados deve dizer literalmente e explicitamente &quot;Eu concordo&quot; ou &quot;Eu concordo&quot; para que o consentimento seja considerado explícito. Além disso, deve ser tão fácil retirar o consentimento como o dar.
+**Consentimento explícito**: um padrão de consentimento que envolve uma indicação específica, informada e inequívoca dos desejos do titular dos dados, em forma oral ou escrita. Em termos simples, o titular dos dados deve dizer literalmente, e explicitamente, &quot;Eu concordo&quot; ou &quot;Eu concordo&quot; para que o consentimento seja considerado explícito. Além disso, deve ser tão fácil retirar o consentimento como o dar.
 
 ## F
 
@@ -77,9 +83,9 @@ Este documento fornece definições de termos principais relacionados às regula
 
 ## I
 
-**Serviços da Identity Management (IMS)**: a implementação Adobe do Federated ID e OAuth 2.0 para autenticação de usuários do Adobe ID e autorização para recursos Adobe. É necessário integrar o IMS ao seu aplicativo ou serviço da Adobe para permitir que os usuários façam logon e acessem os serviços da Adobe. Os usuários podem fazer logon diretamente com o Renga (o provedor de serviços de identidade da Adobe) ou por meio de um domínio de autenticação confiável de terceiros (como o [!DNL Google], [!DNL Facebook]ou um LDAP corporativo/da organização).
+**Serviços da Identity Management (IMS)**: a implementação Adobe do Federated ID e OAuth 2.0 para autenticação de usuários do Adobe ID e autorização para recursos Adobe. Integre o IMS ao seu aplicativo ou serviço Adobe para permitir que os usuários façam logon e acessem os serviços da Adobe. Os usuários podem fazer logon diretamente com o Renga (o provedor de serviços de identidade da Adobe) ou por meio de um domínio de autenticação confiável de terceiros (como o [!DNL Google], [!DNL Facebook]ou um LDAP corporativo/da organização).
 
-**Consentimento implícito**: Também conhecido como consentimento inequívoco, refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas, no entanto, tem natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento implícito.
+**Consentimento implícito**: também conhecido como consentimento inequívoco. Consentimento implícito refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas, no entanto, é de natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento implícito.
 
 **ID organizacional IMS**: refere-se a um token de autorização Adobe para autenticação de serviço para serviço, que não requer logon do usuário. Ele é emitido para um cliente IMS e não tem um usuário associado. Um cliente IMS precisa de um token de serviço para autorizar solicitações de canal de retorno entre os serviços. (O termo “token do sistema” é usado ocasionalmente para significar token de serviço).
 
@@ -105,13 +111,13 @@ Este documento fornece definições de termos principais relacionados às regula
 
 **Dados pessoais**: qualquer informação relacionada a uma pessoa física ou &quot;Titular de dados&quot;, que possa ser usada para identificar direta ou indiretamente tal pessoa.
 
-**Violação de dados pessoais**: uma violação da segurança que leva ao acesso acidental ou ilegal, destruição, uso indevido, etc. de dados pessoais.
+**Violação de dados pessoais**: Uma violação da segurança que leva ao acesso acidental ou ilegal, à destruição, ao uso indevido, etc., de dados pessoais.
 
 **Privacidade por design**: um princípio que exige a inclusão da proteção de dados desde o início da concepção dos sistemas, em vez de um aditamento.
 
 **Avaliação de impacto da privacidade**: uma ferramenta usada para identificar e reduzir os riscos de privacidade das entidades, analisando os dados pessoais processados e as políticas em vigor para proteger os dados.
 
-**Processando**: Qualquer operação executada em dados pessoais, por meios automatizados ou não, incluindo coleta, uso, gravação etc.
+**Processando**: Qualquer operação executada em dados pessoais, por meios automatizados, incluindo coleta, uso, gravação etc.
 
 **Criação de perfil**: qualquer processamento automatizado de dados pessoais destinado a avaliar, analisar ou prever o comportamento do titular dos dados.
 
@@ -127,13 +133,13 @@ Este documento fornece definições de termos principais relacionados às regula
 
 **Representante**: Qualquer pessoa na União explicitamente designada pelo responsável pelo tratamento a dirigir pelas autoridades de controlo.
 
-**Direito ao esquecimento**: Também conhecida como eliminação de dados, ela autoriza o titular dos dados a fazer com que o controlador de dados apague seus dados pessoais, interrompa a divulgação dos dados e possivelmente o processamento dos dados por parte de terceiros.
+**Direito ao esquecimento**: também conhecida como eliminação de dados. Ela autoriza o titular dos dados a fazer com que o controlador de dados apague seus dados pessoais, interrompa a divulgação dos dados e possivelmente o processamento dos dados por parte de terceiros.
 
 **Direito de acesso**: Também conhecido como Direito de acesso do titular, ele permite que o titular dos dados tenha acesso e informações sobre os dados pessoais que um controlador tem a respeito.
 
 ## S
 
-**Dados sensíveis**: Quaisquer dados pessoais relativos à origem racial ou étnica, opiniões políticas, religiões ou crenças filosóficas, comportamento sexual, registros criminais, dados de saúde, deficiência, informações sindicais, dados genéticos, dados biométricos ou quaisquer dados que possam afetar o titular dos dados.
+**Dados sensíveis**: Dados confidenciais são quaisquer dados pessoais que possam afetar o titular dos dados. Mais especificamente, diz respeito a dados de origem racial ou étnica, opiniões políticas, religiões ou crenças filosóficas, comportamento sexual, antecedentes criminais, dados de saúde, deficiência, informações sindicais, dados genéticos, dados biométricos.
 
 **Direito de acesso do assunto**: Também conhecido como Direito de acesso, ele autoriza o titular dos dados a ter acesso e informações sobre os dados pessoais que um controlador tem a respeito.
 
@@ -141,11 +147,12 @@ Este documento fornece definições de termos principais relacionados às regula
 
 ## T
 
-**Trílogos**: As negociações informais entre a Comissão Europeia, o Parlamento Europeu e o Conselho da União Europeia realizaram-se geralmente após as primeiras leituras da legislação proposta, a fim de chegar mais rapidamente a acordo sobre um texto de compromisso a adotar.
+**Trílogos**: Os trílogos são negociações informais entre a Comissão Europeia, o Parlamento Europeu e o Conselho da União Europeia. Estas negociações são geralmente realizadas após as primeiras leituras da legislação proposta, para chegar mais rapidamente a acordo sobre um texto de compromisso a adotar.
+chegar mais rapidamente a acordo sobre a adoção de um texto de compromisso.
 
 ## U
 
-**Consentimento inequívoco**: Também conhecido como consentimento implícito, refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas, no entanto, tem natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento inequívoco.
+**Consentimento inequívoco**: O consentimento inequívoco também é conhecido como consentimento implícito. Consentimento inequívoco refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas, no entanto, é de natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento inequívoco.
 
 ## V
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Introdução às APIs do Media Edge
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 7%
 
 ---
@@ -206,6 +206,8 @@ No exemplo de solicitação acima, o mesmo `sessionId` que é retornado na chama
 
 Para obter mais informações sobre os parâmetros de ponto final de Início do buffer e exemplos, consulte o arquivo Media Edge Swagger.
 
+A resposta bem-sucedida indica um status 200 e não inclui conteúdo.
+
 ## Reproduzir solicitação de evento
 
 O evento Reproduzir é enviado quando o reprodutor de mídia altera seu estado para &quot;reproduzindo&quot; a partir de outro estado, como &quot;buffering&quot;, &quot;pausado&quot; ou &quot;erro&quot;. Para fazer uma solicitação de evento Play, use `sessionId` na carga de uma chamada para o seguinte endpoint:
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+A resposta bem-sucedida indica um status 200 e não inclui conteúdo.
 
 Para obter mais informações sobre parâmetros de endpoint de reprodução e exemplos, consulte o arquivo Media Edge Swagger.
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-Para obter mais informações sobre parâmetros de ponto de extremidade de Sessão concluída e exemplos, consulte o arquivo do Media Edge Swagger.
+A resposta bem-sucedida indica um status 200 e não inclui conteúdo.
 
 ## Códigos de resposta
 

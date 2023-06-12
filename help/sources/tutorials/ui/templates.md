@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
 source-wordcount: '2258'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Modelos para fontes na interface do Platform"
->abstract="Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma origem para o Experience Platform. Você pode atualizar ativos gerados automaticamente para personalização de acordo com seus casos de uso."
+>title="Modelos para fontes na interface da Platform"
+>abstract="Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para a Experience Platform. É possível atualizar ativos gerados automaticamente para personalização de acordo com seus casos de uso."
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 6%
 >
 >A documentação e as funcionalidades estão sujeitas a alterações.
 
-A Adobe Experience Platform fornece modelos pré-configurados que você pode usar para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma origem para o Experience Platform.
+A Adobe Experience Platform fornece modelos pré-configurados que você pode usar para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para a Experience Platform.
 
 Com os modelos, é possível:
 

@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
 source-wordcount: '1504'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -37,7 +37,7 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
 >title="Expiração do conjunto de dados"
->abstract="Essa coluna indica o número de dias que o conjunto de dados de destino deixou antes de expirar automaticamente."
+>abstract="Esta coluna indica o número de dias que o conjunto de dados de destino tem antes de expirar automaticamente."
 
 No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo para abrir a **[!UICONTROL Conjuntos de dados]** painel. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 

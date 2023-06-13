@@ -4,9 +4,9 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, criar segmentos de público-alvo a partir desses perfis e ativar esses segmentos para destinos de terceiros.
-source-git-commit: 4e4e4cad03bc23d8d25aadf54d7bebf97794a869
+source-git-commit: 8f885181f8ec06f719e4a82b2cb5f13641f65607
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '223'
 ht-degree: 31%
 
 ---
@@ -64,5 +64,8 @@ ht-degree: 31%
 * Fontes {#sources}
    * [Visão geral das fontes](sources/sources-overview.md)
    * [Fontes na edição B2B do Real-Time CDP](sources/b2b.md)
+* Casos de uso {#use-cases}
+   * Casos de uso de dados de parceiros {#partner-data}
+      * [Suplementar perfis primários](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Notas de versão do Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

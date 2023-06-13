@@ -4,10 +4,10 @@ solution: Experience Platform
 title: APIs do Media Edge
 description: Visão geral das APIs do Media Edge.
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 5%
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ As APIs do Media Edge são criadas na Adobe Experience Platform (AEP) para forne
 
 ## Otimização dos fluxos de dados de rastreamento de mídia
 
-Ambos [Coleção de mídia](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) As APIs do e as APIs do Media Edge fornecem dados de rastreamento de mídia como serviços RESTful. Mas o uso do serviço Media Edge tem as seguintes vantagens:
+Ambos [APIs da coleção de mídia](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) As APIs do Media Edge e do fornecem dados de rastreamento de mídia como serviços RESTful. Mas o uso do serviço Media Edge tem as seguintes vantagens:
 
 * É a maneira mais fácil de incorporar esquemas XDM no fluxo de dados.
 
@@ -33,14 +33,14 @@ Ambos [Coleção de mídia](https://experienceleague.adobe.com/docs/media-analyt
 
 * Ele rastreia os eventos de mídia com mais eficiência.
 
-A tabela a seguir apresenta o melhor serviço de API do Adobe para vários casos de análise de mídia:
+A tabela a seguir mostra um possível serviço de API de Adobe para vários casos de análise de mídia:
 
-| Caso de uso | Plataforma | Serviço de API |
-| -------- | ------ | ---------- |
-| CJA | AEP | Media Edge |
-| CDP + CJA | AEP | Media Edge |
-| Analytics + CJA | AEP | Media Edge |
-| Análises herdadas | N/D | Coleção de mídia |
+| Caso de uso | Serviço de API |
+| -------- | ------ |
+| Solução da AEP (CJA, RTDCP, AJO etc.) | Media Edge |
+| CDP + CJA | Media Edge |
+| Solução Adobe Analytics + AEP | Media Edge |
+| Somente Adobe Analytics (já está rastreando) | Coleção de mídia |
 
 >[!NOTE]
 >

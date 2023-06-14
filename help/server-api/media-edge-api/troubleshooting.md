@@ -3,9 +3,9 @@ keywords: Experience Platform;borda da mídia;tópicos populares;intervalo de da
 solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Guia de solução de problemas de APIs do Media Edge
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -110,17 +110,17 @@ A tabela a seguir fornece instruções para tratar erros de resposta de status:
 
 | Código de erro | Descrição |
 | ---------- | --------- |
-| 4xx Solicitação incorreta | A maioria dos erros 4xx (por exemplo, 400, 403, 404) não deve ser repetida pelo usuário. Tentar novamente a solicitação não resultará em uma resposta bem-sucedida. O usuário deve corrigir o erro antes de tentar novamente a solicitação. Eventos que resultam em códigos de status 4xx não são rastreados, o que pode afetar a precisão dos dados em sessões que receberam respostas 4xx. |
-| 410 Não existe mais | Indica que a sessão destinada ao rastreamento não está mais sendo calculada no lado do servidor. O motivo mais comum para isso é que a sessão tem mais de 24 horas. Depois de receber 410, tente iniciar uma nova sessão e rastreie-a. |
+| 4xx Solicitação incorreta | A maioria dos erros 4xx (por exemplo, `400`, `403`, `404`) não deve ser repetido pelo usuário. Tentar novamente a solicitação não resultará em uma resposta bem-sucedida. O usuário deve corrigir o erro antes de tentar novamente a solicitação. Eventos que resultam em códigos de status 4xx não são rastreados, o que pode afetar a precisão dos dados em sessões que receberam respostas 4xx. |
+| 410 Não existe mais | Indica que a sessão destinada ao rastreamento não está mais sendo calculada no lado do servidor. O motivo mais comum para isso é que a sessão tem mais de 24 horas. Depois de receber um `410`, tente iniciar uma nova sessão e rastreie-a. |
 | 429 Muitas solicitações | Esse código de resposta indica que a taxa do servidor está limitando as solicitações. Siga as **Repetir-após** instruções no cabeçalho de resposta com cuidado. Qualquer resposta que flua de volta deve ter o código de resposta HTTP com um código de erro específico de domínio. |
-| Erro interno de servidor 500 | Os erros 500 são genéricos, erros &quot;catch-all&quot;. Os erros 500 não devem ser repetidos, exceto para 502, 503 e 504. |
-| 502 Gateway incorreto | Este código de erro indica que o servidor, ao atuar como um gateway, recebeu uma resposta inválida dos servidores upstream. Isso pode ocorrer devido a problemas de rede entre servidores. O problema de rede temporário pode se resolver sozinho, portanto, tentar novamente a solicitação pode resolver o problema. |
-| Serviço indisponível | Este código de erro indica que o serviço está temporariamente indisponível. Isso pode ocorrer durante os períodos de manutenção. Os recipients com erros 503 podem tentar novamente a solicitação, mas também devem seguir o **Repetir-após** instruções do cabeçalho. |
+| Erro interno de servidor 500 | `500` os erros são genéricos, erros &quot;catch-all&quot;. `500` os erros não devem ser repetidos, exceto por `502`, `503` e `504`. |
+| 502 Gateway incorreto | Este código de erro indica que o servidor, ao atuar como um gateway, recebeu uma resposta inválida dos servidores upstream. Isso pode ocorrer devido a problemas de rede entre servidores. O problema temporário da rede pode se resolver sozinho, portanto, tentar novamente a solicitação pode resolver o problema. |
+| 503 Serviço indisponível | Este código de erro indica que o serviço está temporariamente indisponível. Isso pode ocorrer durante os períodos de manutenção. Destinatários de `503` erros podem repetir a solicitação, mas também devem seguir a variável **Repetir-após** instruções do cabeçalho. |
 
 
-Enfileirar eventos quando as respostas da sessão forem lentas
+## Enfileirar eventos quando as respostas da sessão forem lentas
 
-Após iniciar uma sessão de rastreamento de mídia, o reprodutor de mídia pode ser acionado antes que a resposta do Início da sessão retorne (com o parâmetro da ID de sessão) do back-end. Se isso ocorrer, o aplicativo deve colocar em fila todos os eventos de rastreamento que chegam entre a solicitação de sessão e a resposta. Quando a resposta das sessões for recebida, primeiro você deve processar todos os eventos na fila, e depois começar a processar os eventos em tempo real.
+Após iniciar uma sessão de rastreamento de mídia, o reprodutor de mídia pode ser acionado antes que a resposta do Início da sessão retorne (com o parâmetro da ID de sessão) do back-end. Se isso ocorrer, o aplicativo deve colocar em fila todos os eventos de rastreamento que chegam entre a solicitação de início de sessão e a resposta. Quando a resposta das sessões for recebida, primeiro você deve processar todos os eventos na fila, e depois começar a processar os eventos em tempo real.
 
 Para obter melhores resultados, verifique o reprodutor de referência na distribuição para obter instruções sobre como processar eventos antes de receber uma ID de sessão.
 

@@ -1,17 +1,17 @@
 ---
-title: (Beta) Complementar perfis primários com atributos fornecidos pelo parceiro
-description: Saiba como complementar perfis primários com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e melhorar a otimização do público-alvo
+title: (Beta) Complementar perfis próprios com atributos fornecidos pelo parceiro
+description: Saiba como complementar perfis primários com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e melhorar a otimização do público-alvo.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
 
-# Suplemente perfis primários com atributos fornecidos pelo parceiro
+# Suplemente perfis próprios com atributos fornecidos pelo parceiro
 
 >[!AVAILABILITY]
 >
@@ -40,7 +40,7 @@ Ao considerar complementar seus próprios perfis primários com atributos de par
 
 1. Como um **cliente**, os atributos de licença do **parceiro de dados**.
 2. Como um **cliente**, você pode estender os dados do seu perfil e o modelo de governança para acomodar **parceiro** atributos fornecidos pelo.
-3. Como um **cliente**, você integra os públicos-alvo que deseja enriquecer para o parceiro de dados. Geralmente, esses públicos-alvo são destacados por identificadores de entrada como elementos de Informações de identificação pessoal (PII), como email, nome, endereço ou outros.
+3. Como um **cliente**, você integra os públicos que deseja enriquecer com o parceiro de dados. Geralmente, esses públicos-alvo são destacados por identificadores de entrada como elementos de Informações de identificação pessoal (PII), como email, nome, endereço ou outros.
 4. A variável **parceiro** anexa atributos licenciados para os perfis que podem ser correspondidos. Opcionalmente, um [ID do Parceiro](/help/identity-service/namespaces.md) podem ser incluídos e assimilados no namespace da ID com escopo de parceiro.
 5. Como um **cliente**, você carrega atributos do parceiro de dados nos perfis do cliente na Real-Time CDP.
 
@@ -50,7 +50,7 @@ Leia as seções abaixo, que incluem links para documentação adicional, para c
 
 ### Atributos de licença do parceiro {#license-attributes-from-partner}
 
-Essa etapa é abordada nos pré-requisitos e o Adobe presume que você tenha os contratos certos em vigor com fornecedores de dados confiáveis para aumentar seus perfis originais.
+Esta etapa é abordada na seção [pré-requisitos](#prerequisites-and-planning) O e o Adobe pressupõe que você tenha os contratos certos em vigor com fornecedores de dados confiáveis para aumentar seus perfis primários.
 
 ### Estenda seus dados de perfil e o modelo de governança para acomodar os atributos fornecidos pelo parceiro. {#extend-governance-model}
 
@@ -58,7 +58,7 @@ Neste ponto, você está estendendo sua estrutura de gerenciamento de dados no R
 
 Você tem a opção de criar um novo schema do **[!UICONTROL Perfil individual XDM]** ou estenda um esquema existente do mesmo tipo para incluir atributos fornecidos pelo parceiro. A Adobe recomenda que você crie um novo esquema com um novo conjunto de grupos de campos que melhor representem os atributos adicionais do fornecedor de dados. Isso garante que seus esquemas de dados estejam limpos e possam evoluir independentemente uns dos outros.
 
-Para incluir atributos fornecidos pelo parceiro em um esquema, você pode criar um novo grupo de campos com os atributos esperados ou usar um dos grupos de campos prontos para uso fornecidos pelo Adobe.
+Para incluir atributos fornecidos pelo parceiro em um esquema, você pode criar um novo grupo de campos com os atributos esperados ou usar um dos grupos de campos pré-configurados fornecidos pelo Adobe.
 
 Leia as páginas de documentação abaixo para obter mais informações:
 
@@ -79,7 +79,7 @@ Commenting out links for now
 Além disso, nesta etapa, pense em como seu modelo de governança de dados muda à medida que você expande sua estratégia de gerenciamento de dados para incluir dados de terceiros fornecidos pelo parceiro. Explore as considerações nos links de documentação abaixo:
 
 * (**Em breve**) Mantenha os dados de terceiros em um conjunto de dados separado para que seja fácil excluí-los e desfazer integrações.
-* (**Em breve**) Usar o TTL (Time-to-live) no conjunto de dados para clientes que compraram o complemento de higiene de dados.
+* (**Em breve**) Uso [Tempo de vida (TTL)](/help/hygiene/ui/dataset-expiration.md) no conjunto de dados para clientes que compraram o complemento de higiene de dados.
 * (**Em breve**) Tenha cuidado ao criar conjuntos de dados derivados que extraem dados de terceiros, pois uma vez misturados, a única solução para remover os dados de terceiros é excluir todo o conjunto de dados derivado.
 
 >[!TIP]
@@ -87,10 +87,9 @@ Além disso, nesta etapa, pense em como seu modelo de governança de dados muda 
 >Se você optar por complementar os perfis do cliente com um identificador com base em pessoas do fornecedor de dados, será possível criar um novo tipo de identidade do tipo **[[!UICONTROL ID do Parceiro]](/help/identity-service/namespaces.md)**.
 >
 >Leia mais sobre a ID de parceiro na [seção de tipos de identidade](/help/identity-service/namespaces.md).
-> Ler sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface do usuário do Experience Platform.
+>Ler sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface do usuário do Experience Platform.
 
-
-### Exporte públicos-alvo que você deseja enriquecidos com PII (Informações Pessoais Identificáveis) ou PII com hash {#export-audiences}
+### Exportar públicos que você deseja que sejam enriquecidos ao serem digitados em Informações pessoais identificáveis (PII) ou PII com hash {#export-audiences}
 
 Exporte os públicos que você deseja que o parceiro enriqueça. Use os destinos de armazenamento em nuvem fornecidos pela Real-time CDP, como Amazon S3 ou SFTP. Leia as seguintes páginas de documentação para concluir esta etapa:
 
@@ -99,10 +98,9 @@ Exporte os públicos que você deseja que o parceiro enriqueça. Use os destinos
 * Como [conectar-se a um destino](/help/destinations/ui/connect-destination.md)
 * Como [exportar dados para um destino de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### Seu parceiro de dados anexa atributos licenciados aos perfis com os quais ele pode fazer correspondência {#partner-appends-attributes}
 
-### O parceiro anexa atributos licenciados aos perfis que podem ser correspondidos {#partner-appends-attributes}
-
-Nesta etapa, o parceiro anexa atributos licenciados para o público-alvo exportado. A saída geralmente está disponível como um arquivo simples que pode ser assimilado de volta no Real-Time CDP.
+Nesta etapa, seu parceiro de dados anexa atributos licenciados para o público-alvo exportado. A saída geralmente está disponível como um arquivo simples que pode ser assimilado de volta no Real-Time CDP. Leia mais sobre [assimilação de arquivos no Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### O Real-Time CDP anexa atributos enriquecidos ao perfil do cliente {#ingest-data}
 
@@ -117,7 +115,7 @@ Alguns conectores de origem recomendados para essa finalidade podem ser:
 
 Observe as seguintes limitações ao explorar o caso de uso descrito nesta página:
 
-Se você optar por usar IDs de parceiro, saiba que essas IDs não são usadas ao criar o [gráfico de identidade](/help/identity-service/ui/identity-graph-viewer.md).
+* Se você optar por usar IDs de parceiro, saiba que essas IDs não são usadas ao criar o [gráfico de identidade](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Outros casos de uso obtidos por meio do suporte a dados de parceiros {#other-use-cases}
 

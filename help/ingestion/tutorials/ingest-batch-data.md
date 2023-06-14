@@ -5,7 +5,7 @@ title: Assimilar Dados No Experience Platform
 type: Tutorial
 description: O Adobe Experience Platform permite importar dados facilmente como arquivos em lote na forma de arquivos do Parquet ou dados que estejam em conformidade com um esquema conhecido do Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 1%
@@ -110,7 +110,7 @@ Para começar a adicionar dados ao conjunto de dados, clique no link **[!UICONTR
 
 ![Guia Adicionar dados](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## Carregar um arquivo
+## Carregar um arquivo {#upload-file}
 
 Depois de arrastar e soltar (ou navegar e selecionar) um arquivo Parquet ou JSON que você deseja fazer upload, [!DNL Platform] começará imediatamente a processar o arquivo e uma **[!UICONTROL Fazendo upload]** aparecerá na janela **[!UICONTROL Adicionar dados]** mostrando o progresso do upload do arquivo.
 

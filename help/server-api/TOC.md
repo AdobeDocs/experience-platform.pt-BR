@@ -5,10 +5,10 @@ user-guide-title: Documentação da API do servidor de rede de borda
 breadcrumb-title: Documentação da API do servidor de rede de borda
 user-guide-description: Use a API do Edge Network Server para coleção de dados, personalização, publicidade e casos de uso de marketing com serviços da Experience Cloud ou do Experience Platform Edge.
 feature: Data Collection
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: be073dcc62f0cf5b94f94082348442e2526604a7
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 52%
+source-wordcount: '108'
+ht-degree: 41%
 
 ---
 
@@ -31,3 +31,8 @@ ht-degree: 52%
 * [Dicas de localização](location-hints.md)
 * [Tratamento de erros](error-handling.md)
 * [Solução de problemas](troubleshooting.md)
+* APIs do Media Edge {#media-edge-apis}
+   * [Visão geral da API do Media Edge](media-edge-api/overview.md)
+   * [Introdução à API do Media Edge](media-edge-api/getting-started.md)
+   * [Solução de problemas da API do Media Edge](media-edge-api/troubleshooting.md)
+   * [Recurso de especificação da API aberta do Media Edge](media-edge-api/swagger.md)

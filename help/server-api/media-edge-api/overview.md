@@ -3,8 +3,7 @@ keywords: Experience Platform;borda da mídia;tópicos populares;intervalo de da
 solution: Experience Platform
 title: APIs do Media Edge
 description: Visão geral das APIs do Media Edge.
-exl-id: null
-source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
+source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 4%

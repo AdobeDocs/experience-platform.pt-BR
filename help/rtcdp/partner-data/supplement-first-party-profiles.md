@@ -1,12 +1,12 @@
 ---
-title: (Beta) Complementar perfis próprios com atributos fornecidos pelo parceiro
+title: (Beta) Complementar perfis primários com atributos fornecidos pelo parceiro
 description: Saiba como complementar perfis primários com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e melhorar a otimização do público-alvo.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 Além disso, nesta etapa, pense em como seu modelo de governança de dados muda à medida que você expande sua estratégia de gerenciamento de dados para incluir dados de terceiros fornecidos pelo parceiro. Explore as considerações nos links de documentação abaixo:
 
 * (**Em breve**) Mantenha os dados de terceiros em um conjunto de dados separado para que seja fácil excluí-los e desfazer integrações.
-* (**Em breve**) Uso [Tempo de vida (TTL)](/help/hygiene/ui/dataset-expiration.md) no conjunto de dados para clientes que compraram o complemento de higiene de dados.
+* (**Em breve**) Use o [expiração do conjunto de dados](/help/hygiene/ui/dataset-expiration.md) no conjunto de dados para clientes que compraram o complemento de higiene de dados.
 * (**Em breve**) Tenha cuidado ao criar conjuntos de dados derivados que extraem dados de terceiros, pois uma vez misturados, a única solução para remover os dados de terceiros é excluir todo o conjunto de dados derivado.
 
 >[!TIP]

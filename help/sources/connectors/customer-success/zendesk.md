@@ -1,21 +1,16 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Zendesk;zendesk
-solution: Experience Platform
 title: Visão geral do Conector de origem do Zendesk
 description: Saiba como conectar o Zendesk ao Adobe Experience Platform usando APIs ou a interface do usuário.
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '367'
 ht-degree: 2%
 
 ---
 
-# (Beta) [!DNL Zendesk]
-
->[!NOTE]
->
->A variável [!DNL Zendesk] a fonte está na versão beta. Consulte a [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+# [!DNL Zendesk]
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
@@ -40,7 +35,7 @@ Esta seção descreve as etapas de pré-requisito a serem concluídas para auten
 
 ![Token de API do Zendesk](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-Consulte a [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) para obter informações sobre como recuperar o subdomínio. Para obter informações sobre como gerar o token da API, consulte a [[!DNL Zendesk] guia sobre a geração de um novo token de API](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+Consulte a [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) para obter informações sobre como recuperar o subdomínio. Para obter informações sobre como gerar o token da API, consulte a [[!DNL Zendesk] guia sobre a geração de um novo token de API](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 A documentação abaixo fornece informações sobre como se conectar [!DNL Zendesk] para a Platform usando APIs ou a interface do usuário:
 

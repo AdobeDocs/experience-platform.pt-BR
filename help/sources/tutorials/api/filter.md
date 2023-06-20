@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de flu
 title: Filtrar Dados Em Nível De Linha Para Uma Origem Usando A API Do Serviço De Fluxo
 description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 >Atualmente, o suporte para filtragem de dados em nível de linha está disponível apenas para as seguintes fontes:
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 Este tutorial fornece etapas sobre como filtrar dados no nível de linha de uma origem usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

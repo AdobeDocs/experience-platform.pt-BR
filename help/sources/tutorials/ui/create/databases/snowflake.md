@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Snowflake
 title: Criar uma conexão de origem de Snowflake na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem de Snowflake usando a interface do usuário do Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
 
 # Criar um [!DNL Snowflake] conexão de origem na interface
+
+>[!IMPORTANT]
+>
+>A variável [!DNL Snowflake] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
 Este tutorial fornece etapas para a criação de um [!DNL Snowflake] conector de origem usando a interface do usuário do Adobe Experience Platform.
 
@@ -33,9 +37,14 @@ Para acessar sua conta Snowflake em [!DNL Platform], você deve fornecer o segui
 | Banco de dados | A variável [!DNL Snowflake] contém os dados que você deseja trazer para a Platform. |
 | Nome de usuário | O nome de usuário para o [!DNL Snowflake] conta. |
 | Senha | A senha para o [!DNL Snowflake] conta de usuário. |
+| Função | A função de controle de acesso padrão a ser usada na [!DNL Snowflake] sessão. A função deve ser uma função existente que já foi atribuída ao usuário especificado. A função padrão é `PUBLIC`. |
 | String de conexão | A cadeia de conexão usada para se conectar ao [!DNL Snowflake] instância. O padrão da cadeia de conexão para [!DNL Snowflake] é `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Para obter mais informações sobre esses valores, consulte [este documento Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>Você deve definir o `PREVENT_UNLOAD_TO_INLINE_URL` sinalizador para `FALSE` para permitir o descarregamento de dados do [!DNL Snowflake] banco de dados para Experience Platform.
 
 ## Conectar sua conta Snowflake
 

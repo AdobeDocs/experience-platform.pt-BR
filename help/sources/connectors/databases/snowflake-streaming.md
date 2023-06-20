@@ -4,9 +4,9 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '686'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* A variável [!DNL Snowflake] a fonte da transmissão está na versão beta. Leia as [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
->* A variável [!DNL Snowflake] a fonte de transmissão está disponível na API para clientes que compraram o Real-Time CDP Ultimate.
-
+>* A variável [!DNL Snowflake] a fonte de transmissão está disponível na API para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

@@ -1,20 +1,22 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Análise de Azures synapse;Sinapse;sinapse;análise de azures synapse
-solution: Experience Platform
 title: Criar uma conexão de origem do Azure synapse Analytics na interface
-type: Tutorial
 description: Saiba como criar uma conexão de origem do Azure synapse Analytics (doravante "Synapse") usando a interface do usuário do Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '449'
 ht-degree: 1%
 
 ---
 
 # Criar um [!DNL Azure Synapse Analytics] conexão de origem na interface
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados originados externamente de forma programada. Este tutorial fornece etapas para a criação de um [!DNL Azure Synapse Analytics] (a seguir designado por &quot;[!DNL Synapse]&quot;) conector de origem usando o [!DNL Platform] interface do usuário.
+>[!IMPORTANT]
+>
+>A variável [!DNL Azure Synapse Analytics] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+
+Este tutorial fornece etapas para a criação de um [!DNL Azure Synapse Analytics] (a seguir designado por &quot;[!DNL Synapse]&quot;) conector de origem usando o [!DNL Platform] interface do usuário.
 
 ## Introdução
 

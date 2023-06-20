@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
-solution: Experience Platform
 title: Criar uma conexão de origem do Amazon Kinesis na interface
-type: Tutorial
 description: Saiba como criar uma conexão de origem do Amazon Kinesis usando a interface do usuário do Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # Criar um [!DNL Amazon Kinesis] conexão de origem na interface
+
+>[!IMPORTANT]
+>
+>A variável [!DNL Amazon Kinesis] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
 Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados originados externamente de forma programada. Este tutorial fornece etapas para autenticar um [!DNL Amazon Kinesis] (a seguir designado [!DNL "Kinesis"]) de origem usando o [!DNL Platform] interface do usuário.
 

@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Amazon Redshift;Amazon redshift;redshift;Redshift;popular topics;Redshift;redshift;Redshift;Redshift
-solution: Experience Platform
 title: Visão geral do conector de origem do Amazon Redshift
 description: Saiba como conectar o Amazon Redshift ao Adobe Experience Platform usando APIs ou a interface do usuário.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon Redshift] conector
+# [!DNL Amazon Redshift] origem
+
+>[!IMPORTANT]
+>
+>A variável [!DNL Amazon Redshift] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

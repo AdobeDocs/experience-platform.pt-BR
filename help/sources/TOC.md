@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
+source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '988'
 ht-degree: 12%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 12%
    - Analytics {#analytics}
       - [Conector Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
+      - [RainFocus](connectors/analytics/rainfocus.md)
    - armazenamento na nuvem {#cloud-storage}
       - [Conector do Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Amazon S3](connectors/cloud-storage/s3.md)
@@ -60,6 +61,7 @@ ht-degree: 12%
       - [Integração com o OneTrust](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
+      - [Conector SAP Hybris](connectors/crm/sap-hybris.md)
       - [Conector do Salesforce](connectors/crm/salesforce.md)
       - [Conector SugarCRM](connectors/crm/sugarcrm.md)
       - [Conector Veeva CRM](connectors/crm/veeva.md)
@@ -137,6 +139,7 @@ ht-degree: 12%
          - [Integração com o OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Contas e Contatos do SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
@@ -237,6 +240,7 @@ ht-degree: 12%
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+         - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
       - armazenamento na nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -256,6 +260,7 @@ ht-degree: 12%
          - [Integração com o OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Contas e Contatos do SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)

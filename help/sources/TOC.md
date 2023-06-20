@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '991'
 ht-degree: 12%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 12%
       - [Fonte do Analytics](connectors/adobe-applications/analytics.md)
       - [origem do Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Origem do Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+      - [Origem do Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origem de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fonte da coleção de dados](connectors/adobe-applications/data-collection.md)
       - [Origem do Workfront](connectors/adobe-applications/workfront.md)

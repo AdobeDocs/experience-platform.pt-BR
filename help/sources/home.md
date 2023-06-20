@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1324'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
    - [Criar uma conexão de origem do Adobe Analytics na interface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Visão geral da origem do Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Criar uma conexão de origem do Adobe Campaign Managed Cloud Services na interface](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Visão geral da origem do Adobe Commerce](connectors/adobe-applications/commerce.md)
 - [Visão geral da fonte de coleta de dados do Adobe](connectors/adobe-applications/data-collection.md)
    - [Criar uma conexão de origem de atributos do cliente na interface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] visão geral da origem](connectors/adobe-applications/marketo/marketo.md)

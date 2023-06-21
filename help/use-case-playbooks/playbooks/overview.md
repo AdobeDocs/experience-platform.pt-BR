@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Visão geral dos manuais de caso de uso
 description: Saiba como usar o recurso de manuais de caso de uso no Experience Platform para começar a usar vários casos de uso de marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 2%
 O que você encontrará neste guia de documentação:
 
 * **[Visão geral dos manuais de caso de uso](#overview)**
+* [Introdução](/help/use-case-playbooks/playbooks/get-started.md)
 * [Descubra o manual correto](/help/use-case-playbooks/playbooks/discover.md)
 * [Criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Solução de problemas e limitações conhecidas](troubleshooting.md)

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Criar, compartilhar e reutilizar instâncias do manual
 description: Saiba como criar, compartilhar e reutilizar instâncias do manual para concluir seu caso de uso de marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -64,11 +64,11 @@ O comportamento descrito acima é verdadeiro para todos os ativos criados, excet
 >
 >Depois que os objetos forem gerados, você poderá continuar o teste nas sandboxes de desenvolvimento adicionando dados. Você pode testar os ativos conforme desejar na sandbox de desenvolvimento e pode replicar a lógica do ativo (definições de segmento, jornadas, esquemas e assim por diante) na sandbox de produção quando estiver pronto.
 
-### Reutilizar manuais {#reuse-playbooks}
+## Reutilizar manuais {#reuse-playbooks}
 
 Ao criar várias instâncias do mesmo manual, é possível implementar o mesmo caso de uso posteriormente, sem modificar os detalhes da implementação anterior do caso de uso.
 
-### Compartilhar o manual e os ativos gerados com outros membros da equipe {#share-playbook}
+## Compartilhar o manual e os ativos gerados com outros membros da equipe {#share-playbook}
 
 Você pode compartilhar a instância gerada e os ativos com outros membros da equipe. Para fazer isso, copie o link do URL do navegador e compartilhe-o com sua equipe para fornecer uma visão geral dos ativos gerados.
 

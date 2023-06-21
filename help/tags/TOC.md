@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1002'
 ht-degree: 37%
 
 ---
@@ -221,6 +221,8 @@ ht-degree: 37%
       * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)
       * Conversões aprimoradas do Google Ads {#google-ads-enhanced-conversions}
          * [Visão geral](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * Google Cloud Platform {#google-cloud-platform}
+         * [Visão geral](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Visão geral](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
@@ -233,6 +235,8 @@ ht-degree: 37%
       * [!DNL Pinterest] {#pinterest}
          * [Visão geral](./extensions/server/pinterest/overview.md)
       * [API de conversões de snap](https://exchange.adobe.com/apps/ec/108550)
+      * [Snowflake] {#snowflake}
+         * [Visão geral](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Visão geral](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}

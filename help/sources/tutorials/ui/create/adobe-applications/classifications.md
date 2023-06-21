@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Criar uma conexão de origem do Adobe Analytics para dados de classificações na interface
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 6%
+source-wordcount: '628'
+ht-degree: 2%
 
 ---
 
@@ -72,12 +72,7 @@ Selecione o **[!UICONTROL Conjunto de dados de destino]** que deseja acessar.
 
 A variável **[!UICONTROL Atividade do conjunto de dados]** A página exibe informações sobre o conjunto de dados de destino selecionado, incluindo detalhes sobre o status do lote, a ID do conjunto de dados e o esquema.
 
->[!IMPORTANT]
->
->Embora a exclusão de conjuntos de dados seja possível para outros conectores de origem, no momento não há suporte para o Conector de dados de classificações do Analytics. Se você excluir um conjunto de dados por engano, entre em contato com o Atendimento ao cliente da Adobe.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## Próximas etapas
 

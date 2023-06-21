@@ -2,10 +2,10 @@
 title: Configurando segredos no encaminhamento de eventos
 description: Saiba como configurar segredos na interface do usuário para autenticar em pontos de extremidade usados nas propriedades de encaminhamento de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 5%
+source-wordcount: '2182'
+ht-degree: 4%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 5%
 
 No encaminhamento de eventos, um segredo é um recurso que representa uma credencial de autenticação para outro sistema, permitindo a troca segura de dados. Segredos só podem ser criados nas propriedades de encaminhamento de eventos.
 
-Atualmente, há três tipos secretos compatíveis:
+Os seguintes tipos secretos são suportados no momento:
 
 | Tipo secreto | Descrição |
 | --- | --- |
-| [!UICONTROL Token] | Uma única cadeia de caracteres que representa um valor de token de autenticação conhecido e compreendido por ambos os sistemas. |
+| [!UICONTROL Google OAuth 2] | Contém vários atributos para suportar [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificação de autenticação para uso no [API do Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
 | [!UICONTROL HTTP] | Contém dois atributos de string para um nome de usuário e senha, respectivamente. |
 | [!UICONTROL OAuth 2] | Contém vários atributos para suportar [tipo de concessão de credenciais do cliente](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) para o [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificação de autenticação. O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
-| [!UICONTROL Google OAuth 2] | Contém vários atributos para suportar [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificação de autenticação para uso no [API do Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
+| [!UICONTROL JWT do OAuth 2] | Contém vários atributos para o suporte ao perfil JSON Web Token (JWT) para [Autorização OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subvenções. O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
+| [!UICONTROL Token] | Uma única cadeia de caracteres que representa um valor de token de autenticação conhecido e compreendido por ambos os sistemas. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ Aqui, as etapas para criar o segredo diferem dependendo do tipo de segredo que e
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL JWT do OAuth 2]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -116,6 +118,40 @@ Por exemplo, se o deslocamento de atualização estiver definido como o valor pa
 Quando terminar, selecione **[!UICONTROL Criar Segredo]** para salvar o segredo.
 
 ![Salvar deslocamento do OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL JWT do OAuth 2] {#oauth2jwt}
+
+Para criar um segredo JWT do OAuth 2, selecione **[!UICONTROL JWT do OAuth 2]** do **[!UICONTROL Tipo]** lista suspensa.
+
+![A variável [!UICONTROL Criar Segredo] com o segredo JWT do OAuth 2 destacado na guia [!UICONTROL Tipo] lista suspensa.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>O único [!UICONTROL Algoritmo] atualmente compatível com a assinatura do JWT é RS256.
+
+Nos campos exibidos abaixo, forneça as [!UICONTROL Emissor], [!UICONTROL Assunto], [!UICONTROL Público], [!UICONTROL Reivindicações Personalizadas], [!UICONTROL TTL], em seguida, selecione a [!UICONTROL Algoritmo] na lista suspensa. Em seguida, insira o [!UICONTROL ID da chave de privacidade], bem como o seu [[!UICONTROL URL do token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para a integração OAuth. A variável [!UICONTROL URL do token] o campo não é obrigatório. Se um valor for fornecido, o JWT será trocado com um token de acesso. O segredo será atualizado de acordo com a `expires_in` atributo da resposta e do [!UICONTROL Atualizar Deslocamento] valor. Se um valor não for fornecido, o segredo enviado para a borda será o JWT. O JWT será atualizado de acordo com as [!UICONTROL TTL] e [!UICONTROL Atualizar Deslocamento] valores.
+
+![A variável [!UICONTROL Criar Segredo] com uma seleção de campos de entrada realçados.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+Em **[!UICONTROL Opções de credencial]**, você pode fornecer outras opções de credencial, como `jwt_param` na forma de pares de valores chave. Para adicionar mais pares de valor-chave, selecione **[!UICONTROL Adicionar outro]**.
+
+![A variável [!UICONTROL Criar Segredo] guia destacando o [!UICONTROL Opções de credencial] campos.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Por fim, você pode configurar as opções **[!UICONTROL Atualizar Deslocamento]** para o segredo. Representa o número de segundos antes da expiração do token em que o sistema executará uma atualização automática. O tempo equivalente em horas e minutos é exibido à direita do campo e é atualizado automaticamente à medida que você digita.
+
+![A variável [!UICONTROL Criar Segredo] guia destacando o [!UICONTROL Atualizar Deslocamento] campo.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+Por exemplo, se o deslocamento de atualização estiver definido como o valor padrão de `1800` (30 minutos) e o token de acesso tiver uma `expires_in` valor de `3600` (uma hora), o sistema atualizará automaticamente o segredo em uma hora.
+
+>[!IMPORTANT]
+>
+>Um segredo JWT do OAuth 2 requer pelo menos 30 minutos entre as atualizações e também deve ser válido por no mínimo uma hora. Essa restrição oferece um mínimo de 30 minutos para você intervir se surgirem problemas com o token gerado.
+>
+>Por exemplo, se o deslocamento estiver definido como `1800` (30 minutos) e o token de acesso tiver uma `expires_in` de `2700` (45 minutos), a troca falharia devido à diferença resultante ser inferior a 30 minutos.
+
+Quando terminar, selecione **[!UICONTROL Criar Segredo]** para salvar o segredo.
+
+![A variável [!UICONTROL Criar Segredo] realce da guia [!UICONTROL Criar Segredo]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 

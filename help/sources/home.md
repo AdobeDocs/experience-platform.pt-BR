@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
+source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 2%
@@ -63,6 +63,7 @@ O Experience Platform fornece suporte para assimilação de dados de uma platafo
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
 
 ### Armazenamento na nuvem {#cloud-storage}
 
@@ -128,7 +129,7 @@ O Experience Platform fornece suporte para assimilação de dados de um banco de
 - [[!DNL Oracle]](connectors/databases/oracle.md)
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
-- [[!DNL Snowflake Streaming]](connectors/databases//snowflake-streaming.md)
+- [[!DNL Snowflake (Streaming)]](connectors/databases//snowflake-streaming.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
@@ -137,7 +138,7 @@ O Experience Platform fornece suporte para assimilação de dados de um banco de
 O Experience Platform fornece suporte para assimilação de dados de um sistema de comércio eletrônico de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
+- [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
 ### Sistema local {#local-system}
 

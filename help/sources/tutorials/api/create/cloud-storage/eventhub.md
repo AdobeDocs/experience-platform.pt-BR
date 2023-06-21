@@ -3,9 +3,9 @@ title: Criar uma conexão de origem dos Hubs de eventos do Azure usando a API do
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Azure Event Hubs usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
@@ -104,6 +104,10 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 ## Criar uma conexão de origem
 
+>[!TIP]
+>
+>Um [!DNL Event Hubs] o grupo de consumidores só pode ser usado para um único fluxo em um determinado momento.
+
 Uma conexão de origem cria e gerencia a conexão com a origem externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e uma ID de conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica para um locatário e uma organização.
 
 Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API.
@@ -154,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
 | `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados compatíveis incluem: `raw` e `xdm`. |
 | `params.reset` | Esse parâmetro define como os dados serão lidos. Uso `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. Esse parâmetro é opcional e assume como padrão `earliest` se não fornecido. |
-| `params.consumerGroup` | O mecanismo de publicação ou subscrição a ser usado para [!DNL Event Hubs]. Esse parâmetro é opcional e assume como padrão `$Default` se não fornecido. Consulte esta [[!DNL Event Hubs] guia sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. |
+| `params.consumerGroup` | O mecanismo de publicação ou subscrição a ser usado para [!DNL Event Hubs]. Esse parâmetro é opcional e assume como padrão `$Default` se não fornecido. Consulte esta [[!DNL Event Hubs] guia sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. **Nota**: Um [!DNL Event Hubs] o grupo de consumidores só pode ser usado para um único fluxo em um determinado momento. |
 
 ## Próximas etapas
 

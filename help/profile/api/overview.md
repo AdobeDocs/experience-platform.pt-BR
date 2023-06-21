@@ -3,10 +3,10 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da API do Perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo a visualização de perfis, a criação e a atualização de políticas de mesclagem, a exportação ou a amostragem de dados de perfil e a exclusão de dados de perfil que não são mais necessários ou que foram adicionados por engano. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 2%
+source-wordcount: '963'
+ht-degree: 1%
 
 ---
 
@@ -20,17 +20,17 @@ Para exibir todos os endpoints e operações CRUD disponíveis, visite o [Swagge
 
 Para obter um guia para trabalhar com [!DNL Real-Time Customer Profile] dados no [!DNL Experience Platform] Interface do usuário do, consulte a [Guia do usuário do perfil](../ui/user-guide.md).
 
-<!-- ## (Alpha) Computed attributes {#computed-attributes}
+## [!BADGE Beta]{type=Informative} atributos computados {#computed-attributes}
 
 >[!IMPORTANT]
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>A funcionalidade de atributo computado está na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+Os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil. Esses cálculos ajudam a responder facilmente a perguntas relacionadas a coisas como valor de compra vitalício, tempo entre compras ou número de aberturas de aplicativo, sem exigir que você realize cálculos complexos manualmente sempre que as informações forem necessárias. Esses valores de atributos calculados podem ser exibidos em um perfil, usados para criar um segmento ou acessados por meio de vários padrões de acesso diferentes.
 
-You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
+É possível criar, exibir, editar e excluir atributos calculados usando a `ca/attributes/` terminal. Para saber como usar atributos calculados, consulte a [visão geral dos atributos computados](../computed-attributes/overview.md). Para operações de API, visite o [manual de endpoint da API de atributos computados](../computed-attributes/api.md).
 
 ## Projeções de borda {#edge-projections}
 

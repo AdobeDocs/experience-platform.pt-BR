@@ -5,7 +5,7 @@ description: O ponto de extremidade de públicos-alvo na API do serviço de segm
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 5%
@@ -62,7 +62,7 @@ O seguinte par de solicitação/resposta é usado quando o `withMetrics` parâme
 A solicitação a seguir recupera os últimos cinco públicos-alvo criados em sua organização.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | A ID da audiência. Isso é usado por públicos externos |
 | `name` | O nome do público-alvo. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | Uma descrição do público. |
 | `type` | Um campo gerado pelo sistema que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalAudience` refere-se a um público-alvo que não foi gerado na Platform. |
 | `lifecycle` | O status do público. Os valores possíveis incluem `draft`, `published`, `inactive`, e `archived`. `draft` representa quando o público é criado, `published` quando o público é publicado, `inactive` quando o público-alvo não estiver mais ativo e `archived` se o público for excluído. |

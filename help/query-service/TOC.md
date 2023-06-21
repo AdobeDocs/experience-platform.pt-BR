@@ -4,9 +4,9 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '278'
 ht-degree: 18%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 18%
    - [Visão geral da interface](ui/overview.md)
    - [Guia do usuário do Editor de consultas](ui/user-guide.md)
    - [Modelos de consulta](ui/query-templates.md)
+   - [Consultas com parâmetros (limit.)](ui/parameterized-queries.md)
    - [Agendamentos de consulta](ui/query-schedules.md)
    - [Logs de consulta](ui/query-logs.md)
    - [Monitorar consultas programadas](ui/monitor-queries.md)
@@ -86,6 +87,7 @@ ht-degree: 18%
    - [Trabalho com estruturas de dados aninhadas](essential-concepts/nested-data-structures.md)
    - [Nivelar estruturas de dados aninhadas](essential-concepts/flatten-nested-data.md)
    - [Bloqueio anônimo](essential-concepts/anonymous-block.md)
+   - [Modelo embutido](essential-concepts/inline-templates.md)
    - [Carregamento incremental](essential-concepts/incremental-load.md)
    - [Desduplicação de dados](essential-concepts/deduplication.md)
    - [Amostras de conjunto de dados](essential-concepts/dataset-samples.md)

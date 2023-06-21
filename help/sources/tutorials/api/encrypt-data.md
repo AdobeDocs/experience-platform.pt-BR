@@ -1,12 +1,12 @@
 ---
 title: Assimilação de dados criptografados
-description: O Adobe Experience Platform permite assimilar arquivos criptografados por meio de fontes em lote de armazenamento na nuvem.
+description: Saiba como assimilar arquivos criptografados por meio de fontes de lote de armazenamento na nuvem usando a API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,29 @@ Este tutorial requer que você tenha uma compreensão funcional dos seguintes co
 ### Uso de APIs da plataforma
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+
+### Extensões de arquivo compatíveis com arquivos criptografados
+
+A lista de extensões de arquivo compatíveis com arquivos criptografados é a seguinte:
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>A assimilação de arquivos criptografados em fontes do Adobe Experience Platform suporta o openPGP e não qualquer versão proprietária específica do PGP.
 
 ## Criar par de chaves de criptografia {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ Depois de criar uma conexão básica, siga as etapas descritas no tutorial para 
 >[!NOTE]
 >
 >Você deve ter o seguinte para criar um fluxo de dados para assimilação de dados criptografados:
+>
 >* [ID da chave pública](#create-encryption-key-pair)
 >* [ID da conexão de origem](../api/collect/cloud-storage.md#source)
 >* [ID da conexão de destino](../api/collect/cloud-storage.md#target)
 >* [ID de mapeamento](../api/collect/cloud-storage.md#mapping)
-
 
 Para criar um fluxo de dados, faça uma solicitação POST ao `/flows` endpoint do [!DNL Flow Service] API. Para assimilar dados criptografados, é necessário adicionar um `encryption` para a `transformations` propriedade e incluir a `publicKeyId` criado em uma etapa anterior.
 

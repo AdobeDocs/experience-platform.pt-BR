@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Você pode automatizar as execuções de consulta criando programações de cons
 
 >[!IMPORTANT]
 >
->Veja a seguir uma lista de limitações para consultas programadas ao usar o Editor de consultas. Não se aplicam à [!DNL Query Service] API:<br/>Você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada.<br/>Você **não é possível** adicione uma programação a uma consulta com parâmetros.<br/>Consultas programadas **não é possível** contém um bloco anônimo.
+>Você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada.
 
 Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consultas programadas] guia. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas programadas] guia, você pode encontrar informações importantes sobre as execuções de consulta e assinar alertas. As informações disponíveis incluem o status, os detalhes da programação e as mensagens/códigos de erro em caso de falha na execução. Consulte a [Monitorar documento de consultas programadas](./monitor-queries.md) para obter mais informações.
 
@@ -51,13 +51,27 @@ Para o conjunto de dados de saída, você tem a opção de usar um conjunto de d
 >
 > Como você está usando um conjunto de dados existente ou criando um novo, **não** é necessário incluir `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte da query, já que os conjuntos de dados já estão definidos. Incluindo `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte das consultas programadas resultará em um erro.
 
+Se você não tiver acesso a consultas parametrizadas, continue na [excluir ou desativar um agendamento](#delete-schedule) seção.
+
+### Definir parâmetros para uma consulta parametrizada programada {#set-parameters}
+
+>[!IMPORTANT]
+>
+>O recurso de interface de consulta parametrizada está disponível atualmente em um **somente versão limitada** e não está disponível para todos os clientes.
+
+Se você estiver criando uma consulta programada para uma consulta parametrizada, deverá definir os valores de parâmetro para essas execuções de consulta.
+
+![A seção Schedule details do workflow de criação do agendamento com a seção Query parameters destacada.](../images/ui/query-schedules/scheduled-query-parameter.png)
+
 Após confirmar todos esses detalhes, selecione **[!UICONTROL Salvar]** para criar um agendamento. Você retorna ao espaço de trabalho de agendamentos que exibe detalhes do agendamento recém-criado, incluindo a ID do agendamento, o próprio agendamento e o conjunto de dados de saída do agendamento. Você pode usar a ID de agendamento para pesquisar mais informações sobre as execuções da própria consulta agendada. Para saber mais, leia o [guia de endpoints de execução de consulta agendada](../api/runs-scheduled-queries.md).
 
 ![O espaço de trabalho de agendamentos com o agendamento recém-criado destacado.](../images/ui/query-schedules/schedules-workspace.png)
 
 ## Excluir ou desabilitar um agendamento {#delete-schedule}
 
-Você pode excluir ou desativar um agendamento no espaço de trabalho de agendamentos. Você deve selecionar um modelo de consulta entre as opções [!UICONTROL Modelos] ou na guia [!UICONTROL Consultas programadas] para navegar até o Editor de consultas e selecionar **[!UICONTROL Agendar]** para acessar o espaço de trabalho de agendamentos.
+Você pode excluir ou desativar um agendamento no espaço de trabalho de agendamentos de uma consulta específica ou no [!UICONTROL Consultas programadas] espaço de trabalho que lista todas as consultas programadas.
+
+Para acessar o [!UICONTROL Agendamentos] da consulta escolhida, você deve selecionar o nome de um modelo de consulta no campo [!UICONTROL Modelos] ou na guia [!UICONTROL Consultas programadas] guia. Isso navega até o Editor de consultas para essa consulta. No Editor de consultas, selecione **[!UICONTROL Agendamentos]** para acessar o espaço de trabalho de agendamentos.
 
 Selecione um agendamento nas linhas de agendamentos disponíveis. Você pode usar o botão para desativar ou ativar a consulta programada.
 
@@ -68,3 +82,5 @@ Selecione um agendamento nas linhas de agendamentos disponíveis. Você pode usa
 Selecionar **[!UICONTROL Excluir um agendamento]** para excluir a programação desativada.
 
 ![O espaço de trabalho de agendamentos com Desativar agendamento e Excluir agendamento realçado.](../images/ui/query-schedules/delete-schedule.png)
+
+Em alternativa, a [!UICONTROL Consultas programadas] A guia oferece uma coleção de ações integradas para cada consulta programada. As ações em linha disponíveis incluem [!UICONTROL Desativar programação] ou [!UICONTROL Ativar programação], [!UICONTROL Excluir programação], e [!UICONTROL Assinar] para alertas para a consulta agendada. Para obter instruções completas sobre como excluir ou desativar uma consulta agendada por meio da guia Consultas agendadas, consulte a [guia consultado agendado do monitor](./monitor-queries.md#inline-actions).

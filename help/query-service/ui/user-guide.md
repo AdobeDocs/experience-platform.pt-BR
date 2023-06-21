@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -113,11 +113,7 @@ Esse painel também mostra metadados úteis, como a última vez que a consulta f
 
 As consultas que foram salvas como um modelo podem ser agendadas no Editor de consultas. Isso permite automatizar as execuções de consulta em uma cadência personalizada. Você pode agendar consultas com base na frequência, data e hora e também escolher um conjunto de dados de saída para seus resultados, se necessário. Os agendamentos de query também podem ser desativados ou excluídos por meio da interface do usuário.
 
-Os cronogramas são definidos no Editor de consultas. Veja a seguir uma lista de limitações para consultas programadas ao usar o Editor de consultas. Não se aplicam à [!DNL Query Service] API:
-
-- Você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada.
-- Você **não é possível** adicione uma programação a uma consulta com parâmetros.
-- Consultas programadas **não é possível** contém um bloco anônimo.
+Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. Isso não se aplica à [!DNL Query Service] API:
 
 Consulte a documentação dos cronogramas de consulta para saber como [criar agendamentos de consulta na interface](./query-schedules.md). Como alternativa, para saber como adicionar agendas usando a API, leia o [guia de endpoint de consultas programadas](../api/scheduled-queries.md).
 

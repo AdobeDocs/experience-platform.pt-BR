@@ -1,9 +1,9 @@
 ---
 title: Modelos integrados
 description: Saiba como reutilizar várias condições em várias consultas com modelos em linha.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Você pode usar modelos para armazenar uma ou várias condições. Eles não pre
 
 >
 >
->Na interface do usuário do Adobe Experience Platform, os modelos em linha na forma de consultas parametrizadas só são suportados no nível principal. Isso significa que as consultas parametrizadas só funcionam quando usadas no template original. O modelo filho deve ser um modelo estático e não pode ter parâmetros dinâmicos.
+>Na interface do usuário do Adobe Experience Platform, os modelos em linha na forma de consultas parametrizadas só são suportados no nível principal. Isso significa que as consultas parametrizadas só funcionam quando usadas no template original. O modelo filho deve ser um modelo estático e não pode ter parâmetros dinâmicos. Consulte a [documentação de consultas parametrizadas](../ui/parameterized-queries.md) para saber mais.
 
 ## Próximas etapas
 

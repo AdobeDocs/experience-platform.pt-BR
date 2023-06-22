@@ -1,9 +1,9 @@
 ---
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ O Serviço de consulta suporta o uso de consultas parametrizadas no Editor de co
 
 Antes de continuar com este guia, leia o [Guia da interface do Editor de consultas](./user-guide.md). O guia do Editor de consultas fornece informações detalhadas sobre como gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform.
 
+>[!NOTE]
 >
->
->Não há suporte para consultas parametrizadas em modelos embutidos além de seu nível primário imediato. Consultas com parâmetros funcionam somente quando usadas no modelo original ou em um modelo em linha filho direto.
+>Na interface do usuário do Adobe Experience Platform, as consultas parametrizadas só são suportadas no nível principal dos modelos em linha. Isso significa que as consultas parametrizadas só funcionam quando usadas no template original. Os modelos filho devem ser um modelo estático e não podem ter parâmetros dinâmicos. Consulte a [documentação de modelos em linha](../essential-concepts/inline-templates.md) para saber mais.
 
 ## Sintaxe de consulta com parâmetros {#syntax}
 

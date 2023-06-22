@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Perguntas frequentes
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
+source-wordcount: '4309'
 ht-degree: 1%
 
 ---
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 Você também deve consultar a documentação para obter orientação sobre como executar o [consultas agendadas na interface do](./ui/user-guide.md#scheduled-queries) e até [a API](./api/scheduled-queries.md).
 
-Veja a seguir uma lista de considerações para consultas agendadas ao usar o [!DNL Query Editor]. Não se aplicam à [!DNL Query Service] API:<br/>Você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada.<br/>Você **não é possível** adicione uma programação a uma consulta com parâmetros.<br/>Consultas programadas **não é possível** contém um bloco anônimo.<br/>Você só pode programar **um** modelo de consulta usando a interface do usuário. Se quiser adicionar agendamentos extras a um template de query, você precisará usar a API. Se uma programação já tiver sido adicionada usando a API do, você não poderá adicionar programações adicionais usando a interface do.
+Esteja ciente de que, ao usar [!DNL Query Editor] você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. Isso não se aplica à [!DNL Query Service] API.
 +++
 
 ### O que significa o erro &quot;Limite de sessão atingido&quot;?

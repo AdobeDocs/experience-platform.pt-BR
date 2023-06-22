@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 4%
@@ -101,7 +101,7 @@ Para remover um usuário de uma função, selecione a **X** ícone ao lado do no
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## Gerenciar credenciais de API para a função
+## Gerenciar credenciais de API para a função {#manage-api-credentials-for-role}
 
 Selecione o **[!UICONTROL Credenciais da API]** para abrir a página credenciais da API de funções e selecione **[!UICONTROL Adicionar credenciais de API]** para atribuir credenciais de API à função.
 

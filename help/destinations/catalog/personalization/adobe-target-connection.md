@@ -3,10 +3,10 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
+source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 8%
+source-wordcount: '1079'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 8%
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
+| Junho de 2023 | Atualização de funcionalidade e documentação | A partir de junho de 2023, você poderá selecionar o espaço de trabalho do Adobe Target para o qual deseja compartilhar públicos ao configurar uma nova conexão de destino do Adobe Target. Consulte a [parâmetros de conexão](#parameters) para obter mais informações. Além disso, consulte o tutorial sobre [configurar espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) no Adobe Target para obter mais informações sobre espaços de trabalho. |
 | Maio de 2023 | Atualização de funcionalidade e documentação | A partir de maio de 2023, a **[!UICONTROL Adobe Target]** suporte para conexão [personalização baseada em atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) e está disponível para todos os clientes. |
 
 {style="table-layout:auto"}
@@ -80,12 +81,19 @@ O Adobe Experience Platform se conecta automaticamente à instância Adobe Targe
 
 ### Parâmetros de conexão {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_workspace"
+>title="Sobre o Adobe Target Workspaces"
+>abstract="Selecione o espaço de trabalho do Adobe Target para o qual os públicos-alvo serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão do Adobe Target. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado, seguindo os rótulos de uso de dados de Experience Platform aplicáveis."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Saiba mais sobre os espaços de trabalho do Adobe Target"
+
 Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
 
 * **Nome**: Preencha o nome preferencial para este destino.
 * **Descrição**: digite uma descrição para o destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
 * **ID da sequência de dados**: determina em qual sequência de dados de Coleção de dados os segmentos serão incluídos. O menu suspenso mostra somente os fluxos de dados que têm os serviços Target e Adobe Experience Platform ativados. Consulte [configurar um fluxo de dados](../../../edge/datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar um fluxo de dados para o Adobe Experience Platform e o Adobe Target.
    * **[!UICONTROL Nenhum]**: selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os segmentos exportados do Experience Platform para o Target suportam apenas a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela abaixo para obter mais informações.
+* **Workspace**: selecione a Adobe Target [espaço de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) para os quais os públicos-alvo serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão do Adobe Target. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado enquanto seguem o caminho [rótulos de uso de dados do Experience Platform](../../../data-governance/labels/overview.md).
 
 | Nenhum fluxo de dados selecionado | Sequência de dados selecionada |
 |---|---|

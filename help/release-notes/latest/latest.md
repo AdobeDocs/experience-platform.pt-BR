@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de junho de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
+source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1055'
 ht-degree: 5%
 
 ---
@@ -58,17 +58,13 @@ Para saber mais sobre a coleta de dados, leia a [visão geral da coleção de da
 
 {style="table-layout:auto"}
 
-<!-- 
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+| Suporte do Workspace para [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinos. | Agora é possível selecionar o espaço de trabalho do Adobe Target para o qual deseja compartilhar públicos ao configurar uma nova conexão de destino do Adobe Target. Consulte a [parâmetros de conexão](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) para obter mais informações. Além disso, consulte o tutorial sobre [configurar espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) no Adobe Target para obter mais informações sobre espaços de trabalho. |
 
 {style="table-layout:auto"}
-
--->
 
 <!--
 

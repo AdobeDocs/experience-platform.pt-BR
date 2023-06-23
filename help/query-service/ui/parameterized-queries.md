@@ -1,9 +1,9 @@
 ---
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ Use o `'$'` prefácio para inserir um parâmetro de consulta na sua consulta no 
 
 Se você remover um parâmetro e tentar executar a consulta novamente após ela já ter sido executada, uma mensagem de erro será exibida na [!UICONTROL Parâmetros de consulta] seção para alertá-lo.
 
+>[!NOTE]
+>
+>Se a consulta não usar parâmetros, você ainda poderá inserir parâmetros desnecessários no Editor de consultas. O Editor de consultas ignora todos os pares de valores chave desnecessários e não têm efeito na execução ou nos resultados da consulta.
+
 ![O Editor de consultas com um campo de valor vazio e o erro nos parâmetros de consulta foi realçado.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Usar detalhes de logs de consulta para verificar valores de parâmetros {#check-parameter-values}
@@ -77,4 +81,4 @@ Os valores de parâmetro são salvos quando você agenda uma consulta com parâm
 
 Ao ler este documento, você aprendeu a parametrizar consultas na interface do usuário do Adobe Experience Platform e usá-las em execuções de consultas programadas. O documento também destacou como verificar os logs para os valores de parâmetro usados nas execuções de consulta.
 
-Caso ainda não o tenha feito, é recomendável que você leia o guia em [monitoramento de consultas programadas](./monitor-queries.md) para obter uma melhor compreensão do status de todos os trabalhos de consulta por meio da interface do usuário da Platform.
+Em seguida, é recomendável ler o guia em [monitoramento de consultas programadas](./monitor-queries.md) para obter uma melhor compreensão do status de todos os trabalhos de consulta por meio da interface do usuário da Platform.

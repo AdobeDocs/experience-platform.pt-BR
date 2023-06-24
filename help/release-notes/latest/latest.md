@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de junho de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 5%
@@ -124,10 +124,11 @@ O Serviço de consulta permite usar o SQL padrão para consultar dados no data l
 
 | Recurso | Descrição |
 | --- | --- |
-| Modelos integrados | O Serviço de consulta agora oferece suporte ao uso de modelos que fazem referência a outros modelos no seu SQL. Reduza a carga de trabalho e evite erros aproveitando modelos em linha em suas consultas. Você pode reutilizar instruções ou condições e fazer referência a modelos aninhados para obter maior flexibilidade no SQL. Não há limite no tamanho das consultas que podem ser armazenadas como modelos ou no número de modelos que podem ser referenciados da sua consulta original. Para obter mais informações, leia a [guia de modelo em linha](../../query-service/essential-concepts/inline-templates.md). |
-| Atualizações da interface de consulta programada | Gerencie todas as consultas agendadas de um local na interface do usuário com o [[!UICONTROL Guia Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). A variável [!UICONTROL Consultas programadas] A interface do usuário foi aprimorada com a adição de ações de consulta em linha e da nova coluna de status de consulta. As adições recentes incluem a capacidade de ativar, desativar e excluir um agendamento ou assinar alertas para execuções de consultas futuras diretamente da [!UICONTROL Consultas programadas] exibição. <p>![As ações em linha destacadas no [!UICONTROL Consultas programadas] exibição.](../../query-service/images/ui/monitor-queries/disable-inline.png "As ações em linha destacadas no [!UICONTROL Consultas programadas] exibição."){width="100" zoomable="yes"}</p> |
+| Modelos integrados | O Serviço de consulta agora oferece suporte ao uso de modelos que fazem referência a outros modelos no SQL. Reduza a carga de trabalho e evite erros aproveitando modelos em linha em suas consultas. Você pode reutilizar instruções ou condições e fazer referência a modelos aninhados para obter maior flexibilidade no SQL. Não há limite no tamanho das consultas que podem ser armazenadas como modelos ou no número de modelos que podem ser referenciados da sua consulta original. Para obter mais informações, leia a [guia de modelo em linha](../../query-service/essential-concepts/inline-templates.md). |
+| Atualizações da interface de consulta programada | Gerencie todas as consultas programadas de um local na interface do usuário com o [[!UICONTROL Guia Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). A variável [!UICONTROL Consultas programadas] A interface do usuário foi aprimorada com a adição de ações de consulta em linha e da nova coluna de status de consulta. As adições recentes incluem a capacidade de ativar, desativar e excluir um agendamento ou assinar alertas para execuções de consultas futuras diretamente da [!UICONTROL Consultas programadas] exibição. <p>![As ações em linha destacadas no [!UICONTROL Consultas programadas] exibição.](../../query-service/images/ui/monitor-queries/disable-inline.png "As ações em linha destacadas no [!UICONTROL Consultas programadas] exibição."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
+
 Para obter mais informações sobre o Serviço de consulta, consulte [Visão geral do Serviço de consulta](../../query-service/home.md).
 
 ## Fontes {#sources}

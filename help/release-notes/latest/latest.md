@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de junho de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
+source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1538'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,6 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Extensão | [!DNL Google Cloud Platform] extensão de encaminhamento de eventos | A variável [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) a extensão de encaminhamento de eventos permite encaminhar dados do evento para a Google para ativação via [!DNL Google Pub/Sub]. |
 | Extensão | [!DNL Cloud connector for Google Analytics 4 (ga4)] extensão | A variável [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) a extensão de encaminhamento de eventos permite rastrear a análise por meio da nova [!DNL Google Analytics 4 (ga4)] padrão. |
 | Segredo | Segredo JWT do OAuth 2 | A variável [Segredo JWT do OAuth 2](../../tags/ui/event-forwarding/secrets.md) permite usar o Adobe e [!DNL Google] Tokens de serviço para suportar interações servidor-servidor no encaminhamento de eventos. |
-| Tags e encaminhamento de eventos | Atribuição de usuário | A atribuição de usuário fornece dados essenciais de atividade em toda a [Tags](../../tags/home.md) e [Encaminhamento de evento](../../tags/ui/event-forwarding/overview.md) IU.<br><br>Os dados incluem quem fez quais alterações e em que momento. Esses dados estão visíveis na interface do usuário de Tags e Encaminhamento de eventos nas seguintes telas:<br><ul><li> Visão geral das propriedades</li><li> Extensões instaladas</li><li>Comparação e revisão de regras</li><li>Revisão de comparação dos Elementos de dados</li><li>Análise de comparação de extensões</li><li>Alterações no recurso da biblioteca</li><li>Última criação e publicação da biblioteca</li></ul> |
 
 {style="table-layout:auto"}
 

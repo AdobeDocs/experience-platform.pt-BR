@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Serviço de privacidade da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de privacidade
 user-guide-description: Gerencie solicitações de dados do cliente para cumprir com as normas legais de privacidade, como o GDPR e o CCPA.
 feature: Privacy
-source-git-commit: 5cb229b4b7609a566298d4ed8bf630447ff62700
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 52%
+source-wordcount: '93'
+ht-degree: 47%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 52%
 * [Visão geral da biblioteca JS de privacidade](./js-library.md)
 * API PRIVACY SERVICE {#api}
    * [Visão geral](./api/overview.md)
-   * [Introdução](./api/getting-started.md)
+   * [Autentique e acesse a API do Privacy Service](./api/getting-started.md)
    * [Trabalhos de privacidade](./api/privacy-jobs.md)
    * [Consentimento](./api/consent.md)
    * [Apêndice](./api/appendix.md)

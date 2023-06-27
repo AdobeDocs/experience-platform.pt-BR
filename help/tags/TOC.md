@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1005'
 ht-degree: 37%
 
 ---
@@ -189,7 +189,7 @@ ht-degree: 37%
       * [Pesquisa SDI](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [Evento de Alteração de Exibição SPA](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [Evento de Alteração de Exibição SPA](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [Spanner de armazenamento](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS por horizonte de loop](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -215,7 +215,7 @@ ht-degree: 37%
       * [!DNL Braze] {#braze}
          * [Visão geral](./extensions/server/braze/overview.md)
       * [Conector de nuvem do Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Conector de nuvem do Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
+      * [Conector de nuvem do Google Analytics 4](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Núcleo {#core}
          * [Visão geral](./extensions/server/core/overview.md)
       * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)
@@ -279,7 +279,7 @@ ht-degree: 37%
    * [Padrão de compatibilidade com versões anteriores](./extension-dev/backwards-compatibility.md)
 * API Reactor {#api}
    * [Visão geral](./api/overview.md)
-   * [Introdução](./api/getting-started.md)
+   * [Autenticar e acessar a API do Reator](./api/getting-started.md)
    * Pontos de extremidade {#endpoints}
       * [Empresas](./api/endpoints/companies.md)
       * [Propriedades](./api/endpoints/properties.md)

@@ -3,9 +3,9 @@ title: (Beta) Exportar conjuntos de dados para destinos de armazenamento na nuve
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1425'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 5%
 >* A funcionalidade para exportar conjuntos de dados está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 >* Essa funcionalidade beta suporta a exportação de dados da primeira geração, conforme definido na Real-time Customer Data Platform [descrição do produto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
-
 
 Este artigo explica o workflow necessário para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage] usando a interface de usuário do Experience Platform.
 
@@ -90,7 +89,7 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >title="Opções de exportação de arquivo para conjuntos de dados"
 >abstract="Selecione **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação."
 
-No **[!UICONTROL Agendamento]** etapa, você pode definir uma data de início, bem como uma cadência de exportação para suas exportações do conjunto de dados.
+No **[!UICONTROL Agendamento]** etapa, é possível definir uma data de início e uma cadência de exportação para suas exportações do conjunto de dados.
 
 A variável **[!UICONTROL Exportar arquivos incrementais]** é selecionada automaticamente. Isso aciona uma exportação em que o primeiro arquivo é um instantâneo completo do conjunto de dados, e os arquivos subsequentes são adições incrementais ao conjunto de dados desde a exportação anterior.
 
@@ -135,11 +134,22 @@ O nome de arquivo padrão é gerado aleatoriamente e garante que os nomes de arq
 
 A presença desses arquivos no local de armazenamento é a confirmação de uma exportação bem-sucedida. Para entender como os arquivos exportados são estruturados, é possível baixar uma amostra [arquivo .parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou [arquivo .json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### Arquivos de conjunto de dados compactados {#compressed-dataset-files}
+
+No [conectar ao fluxo de trabalho de destino](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), você pode selecionar os arquivos do conjunto de dados exportados a serem compactados, conforme mostrado abaixo:
+
+![Seleção de compactação e tipo de arquivo ao conectar-se a um destino para exportar conjuntos de dados.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Observe a diferença no formato de arquivo entre os dois tipos de arquivo, quando compactados:
+
+* Ao exportar arquivos JSON compactados, o formato de arquivo exportado é `json.gz`
+* Ao exportar arquivos parquet compactados, o formato de arquivo exportado é `gz.parquet`
+
 ## Remover conjunto de dados do destino {#remove-dataset}
 
 Para remover um conjunto de dados de um fluxo de dados existente, siga as etapas abaixo:
 
-1. Faça logon no [IU DO EXPERIENCE PLATFORM](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecionar **[!UICONTROL Procurar]** no cabeçalho superior para exibir os fluxos de dados de destino existentes.
+1. Faça logon no [IU DO EXPERIENCE PLATFORM](https://experience.adobe.com/platform/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecionar **[!UICONTROL Procurar]** no cabeçalho superior para exibir os fluxos de dados de destino existentes.
 
    ![Exibição de navegação de destino com uma conexão de destino mostrada e o restante desfocado.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

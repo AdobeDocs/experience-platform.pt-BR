@@ -4,9 +4,9 @@ user-guide-title: Notas de versão da Adobe Experience Platform
 breadcrumb-title: Notas de versão da Platform
 user-guide-description: Encontre notas de versão mensais da Adobe Experience Platform.
 source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '76'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 

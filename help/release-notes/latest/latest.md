@@ -1,11 +1,11 @@
 ---
 title: Notas de versão da Adobe Experience Platform
-description: As notas de versão de junho de 2023 para o Adobe Experience Platform.
+description: As notas de versão de junho de 2023 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 5%
+ht-degree: 60%
 
 ---
 
@@ -13,56 +13,56 @@ ht-degree: 5%
 
 **Data de lançamento: 21 de junho de 2023**
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
-- [Autenticação para APIs Experience Platform](#authentication-platform-apis)
-- [Coleta de dados](#data-collection)
+- [Autenticação para APIs da Experience Platform](#authentication-platform-apis)
+- [Coleção de dados](#data-collection)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Serviço de query](#query-service)
+- [Query Service](#query-service)
 - [Fontes](#sources)
 
-## Autenticação para APIs Experience Platform {#authentication-platform-apis}
+## Autenticação para APIs da Experience Platform {#authentication-platform-apis}
 
-Para usuários da API Experience Platform, o método para obter os tokens de acesso necessários para autenticar e fazer chamadas para endpoints da API agora está simplificado. O método JWT para obter tokens de acesso está obsoleto e foi substituído por um método de autenticação de servidor para servidor OAuth mais simples.<p>![Novo método de autenticação OAuth para obter tokens de acesso destacados.](/help/landing/images/api-authentication/oauth-authentication-method.png "Novo método de autenticação OAuth para obter tokens de acesso destacados."){width="100" zoomable="yes"}</p>
+Para usuários da API da Experience Platform, o método para obter os tokens de acesso necessários para autenticar e fazer chamadas para os pontos de acesso da API foi simplificado. O método JWT para obter tokens de acesso está obsoleto e foi substituído por um método de autenticação de servidor para servidor OAuth mais simples.<p>![Novo método de autenticação OAuth para realçar tokens de acesso.](/help/landing/images/api-authentication/oauth-authentication-method.png "Novo método de autenticação OAuth para realçar tokens de acesso."){width="100" zoomable="yes"}</p>
 
-Embora as integrações de API existentes que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método servidor para servidor OAuth antes dessa data. Leia o guia em [migração da credencial de conta de serviço (JWT) para a credencial de servidor para servidor do OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+Embora as integrações de API já existentes que usam o método de autenticação JWT continuem funcionando até 1º de janeiro de 2025, a Adobe recomenda fortemente que você migre essas integrações para o novo método servidor para servidor OAuth antes dessa data. Leia o manual em [migração da credencial de conta de serviço (JWT) para a credencial de servidor para servidor do OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
-Leia o atualizado [Tutorial de autenticação Experience Platform](/help/landing/api-authentication.md) para obter mais informações.
+Leia o [Tutorial de autenticação da Experience Platform](/help/landing/api-authentication.md) atualizado para obter mais informações.
 
-## Coleta de dados {#data-collection}
+## Coleção de dados {#data-collection}
 
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
 
 **Recursos novos ou atualizados**
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Extensão | [!DNL Google Cloud Platform] extensão de encaminhamento de eventos | A variável [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) a extensão de encaminhamento de eventos permite encaminhar dados do evento para a Google para ativação via [!DNL Google Pub/Sub]. |
-| Extensão | [!DNL Cloud connector for Google Analytics 4 (ga4)] extensão | A variável [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) a extensão de encaminhamento de eventos permite rastrear a análise por meio da nova [!DNL Google Analytics 4 (ga4)] padrão. |
-| Segredo | Segredo JWT do OAuth 2 | A variável [Segredo JWT do OAuth 2](../../tags/ui/event-forwarding/secrets.md) permite usar o Adobe e [!DNL Google] Tokens de serviço para suportar interações servidor-servidor no encaminhamento de eventos. |
+| Extensão | Extensão de encaminhamento de eventos da [!DNL Google Cloud Platform] | A extensão de encaminhamento de eventos da [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) permite encaminhar dados de eventos para o Google para ativação via [!DNL Google Pub/Sub]. |
+| Extensão | [!DNL Cloud connector for Google Analytics 4 (ga4)] extensão | A extensão de encaminhamento de eventos do [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.109820.html) permite acompanhar a análise por meio do novo padrão [!DNL Google Analytics 4 (ga4)]. |
+| Segredo | Segredo JWT do OAuth 2 | O [Segredo JWT do OAuth 2](../../tags/ui/event-forwarding/secrets.md) permite usar tokens de serviço da Adobe e do [!DNL Google] para oferecer suporte a interações de servidor-servidor no encaminhamento de eventos. |
 
 {style="table-layout:auto"}
 
-Para saber mais sobre a coleta de dados, leia a [visão geral da coleção de dados](../../tags/home.md).
+Para saber mais sobre coleção de dados, leia a [visão geral da coleção de dados](../../tags/home.md).
 
 ## Destinos {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Destinos novos ou atualizados** {#new-updated-destinations}
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] conexão](../../destinations/catalog/advertising/amazon-ads.md) | A variável [!DNL Amazon Ads] integração com o Adobe Experience Platform agora oferece suporte ao roteamento regional para os vários [!DNL Amazon Ads] mercados. Leia mais na seção [changelog de destino](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] conexão](../../destinations/catalog/advertising/amazon-ads.md) | A integração do [!DNL Amazon Ads] com a Adobe Experience Platform agora é compatível com o roteamento regional a vários marketplaces do [!DNL Amazon Ads]. Leia mais no [changelog de destino](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
 
 {style="table-layout:auto"}
 
-**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
+**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Suporte do Workspace para [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinos. | Agora é possível selecionar o espaço de trabalho do Adobe Target para o qual deseja compartilhar públicos ao configurar uma nova conexão de destino do Adobe Target. Consulte a [parâmetros de conexão](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) para obter mais informações. Além disso, consulte o tutorial sobre [configurar espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) no Adobe Target para obter mais informações sobre espaços de trabalho. |
+| Compatibilidade do espaço de trabalho com os destinos do [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md). | Agora é possível selecionar o espaço de trabalho do Adobe Target para o qual você deseja compartilhar públicos-alvo ao configurar uma nova conexão de destino do Adobe Target. Consulte a seção [parâmetros de conexão](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) para obter mais informações. Além disso, consulte o tutorial sobre a [configuração de espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR) no Adobe Target para obter mais informações sobre espaços de trabalho. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Para saber mais sobre a coleta de dados, leia a [visão geral da coleção de da
 
 -->
 
-Para obter informações mais gerais sobre destinos, consulte o [visão geral dos destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -115,16 +115,16 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md)
 
-## Serviço de query {#query-service}
+## Query Service {#query-service}
 
-O Serviço de consulta permite usar o SQL padrão para consultar dados no data lake da Adobe Experience Platform. Você pode unir qualquer conjunto de dados do data lake e capturar os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+O Query Service permite usar o SQL padrão para consultar dados no data lake da Adobe Experience Platform. Você pode unir qualquer conjunto de dados do data lake e capturar os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Modelos integrados | O Serviço de consulta agora oferece suporte ao uso de modelos que fazem referência a outros modelos no SQL. Reduza a carga de trabalho e evite erros aproveitando modelos em linha em suas consultas. Você pode reutilizar instruções ou condições e fazer referência a modelos aninhados para obter maior flexibilidade no SQL. Não há limite no tamanho das consultas que podem ser armazenadas como modelos ou no número de modelos que podem ser referenciados da sua consulta original. Para obter mais informações, leia a [guia de modelo em linha](../../query-service/essential-concepts/inline-templates.md). |
-| Atualizações da interface de consulta programada | Gerencie todas as consultas programadas de um local na interface do usuário com o [[!UICONTROL Guia Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). A variável [!UICONTROL Consultas programadas] A interface do usuário foi aprimorada com a adição de ações de consulta em linha e da nova coluna de status de consulta. As adições recentes incluem a capacidade de ativar, desativar e excluir um agendamento ou assinar alertas para execuções de consultas futuras diretamente da [!UICONTROL Consultas programadas] exibição. <p>![As ações em linha destacadas no [!UICONTROL Consultas programadas] exibição.](../../query-service/images/ui/monitor-queries/disable-inline.png "As ações em linha destacadas no [!UICONTROL Consultas programadas] exibição."){width="100" zoomable="yes"}</p> |
+| Modelos integrados | O Serviço de consulta agora oferece suporte ao uso de modelos que fazem referência a outros modelos no SQL. Reduza a carga de trabalho e evite erros aproveitando os modelos em linha em suas consultas. É possível reutilizar instruções ou condições e fazer referência a modelos aninhados para obter maior flexibilidade no SQL. Não há limite no tamanho das consultas que podem ser armazenadas como modelos ou no número de modelos que podem ser referenciados a partir da consulta original. Para obter mais informações, leia o [manual de modelo em linha](../../query-service/essential-concepts/inline-templates.md). |
+| Atualizações da interface de consulta programada | Gerencie todas as consultas programadas de um local na interface do usuário com o [[!UICONTROL Guia Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). A interface [!UICONTROL Consultas programadas] foi aprimorada com a adição de ações de consulta em linha e a nova coluna Status de consulta. As adições recentes incluem a capacidade de habilitar, desabilitar e excluir uma programação ou assinar os alertas de execuções de consultas futuras diretamente da visualização [!UICONTROL Consultas programadas]. <p>![Ações em linha destacadas na visualização [!UICONTROL Consultas programadas].](../../query-service/images/ui/monitor-queries/disable-inline.png "Ações em linha destacadas na visualização [!UICONTROL Consultas programadas]."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -132,21 +132,21 @@ Para obter mais informações sobre o Serviço de consulta, consulte [Visão ger
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento na nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte à exclusão de fluxos de dados de origem de classificação do Adobe Analytics | Agora é possível excluir fluxos de dados de origem que usam classificações do Adobe Analytics como origem. Em **[!UICONTROL Origens]** > **[!UICONTROL Fluxos de dados]**, selecione o fluxo de dados desejado e selecione excluir. Para obter mais informações, leia o guia em [criação de uma conexão de origem para dados de classificações do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
-| Suporte à filtragem para [!DNL Microsoft Dynamics] uso da API | Usar operadores lógicos e de comparação para filtrar dados no nível da linha para a variável [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) origem. Para obter mais informações, leia o guia em [filtragem de dados de uma origem usando a API](../../sources/tutorials/api/filter.md). |
-| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Agora você pode usar o [!DNL RainFocus] integração de fontes para trazer dados de análise e gerenciamento de eventos de sua [!DNL RainFocus] conta para Experience Platform. Para obter mais informações, leia a [[!DNL RainFocus] visão geral da origem](../../sources/connectors/analytics/rainfocus.md). |
-| Suporte para Adobe Commerce | Agora você pode usar a integração de fontes da Adobe Commerce para trazer dados de sua conta da Adobe Commerce para o Experience Platform. Para obter mais informações, leia a [Visão geral da origem do Adobe Commerce](../../sources/connectors/adobe-applications/commerce.md). |
-| Suporte para [!DNL Mixpanel] | Agora você pode usar o [!DNL Mixpanel] integração de fontes para trazer dados do analytics de sua [!DNL Mixpanel] para Experience Platform usando APIs ou a interface do usuário. Para obter mais informações, leia a [[!DNL Mixpanel] visão geral da origem](../../sources/connectors/analytics/mixpanel.md). |
-| Suporte para [!DNL Zendesk] | Agora você pode usar o [!DNL Zendesk] integração de fontes para trazer os dados de sucesso do cliente de sua [!DNL Zendesk] para Experience Platform usando APIs ou a interface do usuário. Para obter mais informações, leia a [[!DNL Zendesk] visão geral da origem](../../sources/connectors/customer-success/zendesk.md). |
+| Suporte à exclusão de fluxos de dados de origem de classificação do Adobe Analytics | Agora é possível excluir fluxos de dados de origem que usam classificações do Adobe Analytics como sua origem. Em **[!UICONTROL Origens]** > **[!UICONTROL Fluxos de dados]**, selecione o fluxo de dados desejado e clique em excluir. Para obter mais informações, leia o manual sobre a [criação de uma conexão de origem para dados de classificações do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
+| Suporte à filtragem para o [!DNL Microsoft Dynamics] usando a API | Use operadores lógicos e de comparação para filtrar dados no nível da linha para a origem do [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md). Para obter mais informações, leia o manual sobre a [filtragem de dados de uma origem usando a API](../../sources/tutorials/api/filter.md). |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Agora é possível usar a integração de origens do [!DNL RainFocus] para trazer dados de análise e gerenciamento de eventos da sua conta do [!DNL RainFocus] para a Experience Platform. Para obter mais informações, leia a [[!DNL RainFocus] visão geral de origem](../../sources/connectors/analytics/rainfocus.md). |
+| Compatibilidade com o Adobe Commerce | Agora você pode usar a integração de origens do Adobe Commerce para trazer dados da sua conta do Adobe Commerce para a Experience Platform. Para obter mais informações, leia a [Visão geral de origem do Adobe Commerce](../../sources/connectors/adobe-applications/commerce.md). |
+| Compatibilidade com o [!DNL Mixpanel] | Agora é possível usar a integração de origens do [!DNL Mixpanel] para trazer dados de análise da sua conta do [!DNL Mixpanel] para a Experience Platform usando APIs ou a interface. Para obter mais informações, leia a [[!DNL Mixpanel] visão geral de origem](../../sources/connectors/analytics/mixpanel.md). |
+| Compatibilidade com o [!DNL Zendesk] | Agora você pode usar a integração de origens do [!DNL Zendesk] para trazer os dados de sucesso do cliente da sua conta do [!DNL Zendesk] para a Experience Platform usando APIs ou a interface. Para obter mais informações, leia a [[!DNL Zendesk] visão geral de origem](../../sources/connectors/customer-success/zendesk.md). |
 
 {style="table-layout:auto"}
 
-Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).
+Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

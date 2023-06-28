@@ -3,9 +3,9 @@ title: Tipos de ação na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Nesta ação, você também recebe um campo opcional para incluir um Mapa de ide
 
 Se você deseja redefinir sua ID de mesclagem de eventos na página, é possível fazer isso com esta ação. Para redefinir sua ID, selecione a ID de mesclagem que deseja redefinir e acione a ação conforme necessário.
 
-## (Beta) Atualizar variável {#update-variable}
+## Atualizar variável {#update-variable}
 
 >[!IMPORTANT]
 >

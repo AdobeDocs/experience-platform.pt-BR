@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral das políticas de uso de dados
 description: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro do Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -94,6 +94,7 @@ A tabela abaixo descreve as principais ações de marketing fornecidas prontamen
 | Combinar com dados diretamente identificáveis | Uma ação que combina Informações de identificação pessoal (PII) com dados anônimos. Os contratos para dados obtidos de redes de publicidade, servidores de publicidade e provedores de dados de terceiros geralmente incluem proibições contratuais específicas sobre o uso desses dados com dados diretamente identificáveis. |
 | Direcionamento entre sites | Uma ação que usa dados para o direcionamento de anúncios entre sites. A combinação de dados de vários sites, incluindo uma combinação de dados internos e externos ou uma combinação de dados de várias fontes externas, é chamada de dados entre sites. Normalmente, os dados entre sites são coletados e processados para deduzir os interesses dos usuários. |
 | Ciência de dados | Uma ação que usa dados para fluxos de trabalho de ciência de dados. Alguns contratos incluem proibições explícitas sobre o uso de dados para ciência de dados. Às vezes, esses termos são redigidos em termos que proíbem o uso de dados para Inteligência artificial (IA), aprendizado de máquina (ML) ou modelagem. |
+| Exportação de dados | Uma ação que exporta dados para qualquer local ou destino fora de produtos e serviços Adobe. Por exemplo, baixar dados para o computador local, copiar dados da tela, agendar a entrega de dados para um local fora do Adobe, Customer Journey Analytics Projetos agendados, Baixar relatórios, API de relatórios e assim por diante. |
 | Direcionamento de email | Uma ação que usa dados em campanhas de direcionamento por email. |
 | Exportar para terceiros | Uma ação que exporta dados para processadores e entidades que não têm relacionamento direto com os clientes. Muitos provedores de dados têm termos nos contratos que proíbem a exportação de dados de onde foram originalmente coletados. Por exemplo, os contratos de redes sociais geralmente restringem a transferência de dados recebidos deles. |
 | Publicidade no local | Uma ação que usa dados para a adição de anúncios no site, incluindo a seleção e a entrega de anúncios nos sites ou aplicativos da organização, ou para medir a entrega e a eficácia desses anúncios. |

@@ -4,9 +4,9 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "substituição" a fim de fazer atualizações nos dados do Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Este tutorial aborda o processo de habilitação de um conjunto de dados com rec
 
 >[!NOTE]
 >
->O fluxo de trabalho de substituição só funciona para assimilação em lote. A assimilação de streaming é **não** compatível.
+>O fluxo de trabalho descrito neste tutorial funciona somente para assimilação em lote. Para obter os upserts de assimilação por transmissão, consulte o manual no [envio de atualizações de linhas parciais ao Perfil de cliente em tempo real usando o Preparo de dados](../../data-prep/upserts.md).
 
 ## Introdução
 

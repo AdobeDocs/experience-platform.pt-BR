@@ -2,7 +2,7 @@
 title: Visão geral da extensão de demonstração da Adobe Experience Platform
 description: Saiba mais sobre a extensão de demonstração da Adobe Experience Platform no Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 98%
@@ -17,7 +17,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Essa extensão será substituída pelo [SDK da Web da Adobe Experience Platform](../sdk/overview.md).
+>Essa extensão será substituída pelo [SDK da Web da Adobe Experience Platform](../web-sdk/overview.md).
 
 Os recursos desta extensão estão sendo transmitidos para uma nova extensão. Veja uma rápida comparação dos recursos atuais.
 
@@ -26,11 +26,11 @@ Os recursos desta extensão estão sendo transmitidos para uma nova extensão. V
 | Suporte para IDs personalizadas do cliente | Suporte para IDs personalizadas do cliente |
 | Interface de mapeamento do lado do cliente para XDM | Criar NA ECID (não é necessário para visitor.js) |
 | Capacidade de criar uma conexão de streaming | Suporte para aceitação |
-|  | Suporte XDM como um elemento de dados |
-|  | Suporte para domínio próprio |
-|  | Ferramentas de depuração integradas |
-|  | Coletar automaticamente o contexto do navegador |
-|  | Fonte totalmente aberta |
+| | Suporte XDM como um elemento de dados |
+| | Suporte para domínio próprio |
+| | Ferramentas de depuração integradas |
+| | Coletar automaticamente o contexto do navegador |
+| | Fonte totalmente aberta |
 
 
 ## Configurar a extensão da Adobe Experience Platform

@@ -2,7 +2,7 @@
 title: Configurar substituições de fluxo de dados
 description: Saiba como configurar substituições de sequência de dados na interface do usuário de sequências de dados e ativá-las por meio do SDK da Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrã
 A substituição da configuração da sequência de dados é um processo de duas etapas:
 
 1. Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](configure.md).
-2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../extension/web-sdk-extension-configuration.md).
+2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Este artigo explica o processo completo de substituição de configuração de sequência de dados para cada tipo de substituição compatível.
 
@@ -91,7 +91,7 @@ Agora, você deve configurar as substituições do contêiner de sincronização
 
 >[!NOTE]
 >
->Como alternativa ao envio de substituições de configuração por meio de comandos do SDK da Web, você pode adicionar as substituições de configuração ao SDK da Web [extensão de tag](../extension/web-sdk-extension-configuration.md).
+>Como alternativa ao envio de substituições de configuração por meio de comandos do SDK da Web, você pode adicionar as substituições de configuração ao SDK da Web [extensão de tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Depois [configurar as substituições do fluxo de dados](#configure-overrides) na interface da Coleção de dados, agora é possível enviar as substituições para a Rede de borda, por meio do SDK da Web.
 

@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de abril de 2023
 description: As notas de versão de abril de 2023 do Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 **Data de lançamento: 26 de abril de 2023**
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 - [Painéis](#dashboards)
 - [Preparação de dados](#data-prep)
@@ -60,22 +60,22 @@ Para obter mais informações sobre o Preparo de dados, leia o [Visão geral do 
 
 ## Coleção de dados {#data-collection}
 
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
 | Ofuscação de endereço IP para sequências de dados | Agora é possível definir opções de ofuscação de IP no nível de fluxo de dados parcial ou completo na [interface de configuração de sequência de dados](../../edge/datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível de fluxo de dados tem precedência sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para a Adobe Analytics não são afetados pelo nível de fluxo de dados [!UICONTROL Ofuscação de IP] configuração. Atualmente, o Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, você deve configurar a ofuscação de IP separadamente no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre a ofuscação de IP e instruções sobre como configurá-la, consulte o [documentação de configuração da sequência de dados](../../edge/datastreams/configure.md#advanced-options). |
-| [Substituições de configuração da sequência de dados](../../edge/datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para fluxos de dados, que você pode usar para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, contêineres de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações de sequência de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](../../edge/datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
-| Segredo JWT do OAuth | A variável [Segredo JWT do OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) O permite que os clientes usem os tokens de serviço do Adobe e do Google para oferecer suporte às interações servidor a servidor no encaminhamento de eventos. |
+| [Substituições de configuração da sequência de dados](../../edge/datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para fluxos de dados, que você pode usar para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, contêineres de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações de sequência de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](../../edge/datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
+| Segredo JWT do OAuth  | A variável [Segredo JWT do OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) O permite que os clientes usem os tokens de serviço do Adobe e do Google para oferecer suporte às interações servidor a servidor no encaminhamento de eventos. |
 | [!DNL Pinterest Conversions API] extensão | A variável [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) a extensão de encaminhamento de eventos permite aproveitar os dados capturados na rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Pinterest] na forma de eventos do lado do servidor usando o [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
 ## Destinos {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Novos destinos** {#new-destinations}
 
@@ -85,7 +85,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 {style="table-layout:auto"}
 
-**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
+**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
@@ -105,7 +105,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 -->
 
-Para obter informações mais gerais sobre destinos, consulte o [visão geral dos destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -182,9 +182,9 @@ Para obter mais informações sobre [!DNL Segmentation Service], consulte o [Vis
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Recursos atualizados**
 
@@ -197,4 +197,4 @@ O Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 {style="table-layout:auto"}
 
-Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).
+Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

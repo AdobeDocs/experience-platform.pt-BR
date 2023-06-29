@@ -2,7 +2,7 @@
 title: Referência a extensões de tag
 description: Encontre a documentação de extensões de tag na Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 10%
@@ -39,7 +39,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Serviço da Adobe Experience Cloud ID](./id-service/overview.md)
 * [Demonstração do Adobe Experience Platform](./platform-demo/overview.md)
-* [SDK da Web da Adobe Experience Platform](./sdk/overview.md)
+* [SDK da Web da Adobe Experience Platform](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Medium Analytics para áudio e vídeo](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [Experiências do Cheetah](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Plug-ins comuns do Analytics](./plugins/overview.md)
-* [Plug-ins comuns do SDK da Web](./web-sdk-plugins/overview.md)
+* [Plug-ins comuns do SDK da Web](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Gerenciamento de consentimento de cookie pelo Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)
@@ -106,7 +106,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [Pesquisa SDI](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [Evento de Alteração de Exibição SPA](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+* [Evento de Alteração de Exibição SPA](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.105867.html)
 * [Spanner de armazenamento](https://exchange.adobe.com/apps/ec/102990)*
 * [TAGS por horizonte de loop](https://exchange.adobe.com/apps/ec/106092)*
 * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)*

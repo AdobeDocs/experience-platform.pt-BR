@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 5%
@@ -101,9 +101,9 @@ Em **[!UICONTROL Token do Mailchimp]**, selecione o ícone de elemento de dados 
 
 A extensão agora está instalada e configurada para uso na propriedade.
 
-## Coleta de dados
+## Coleção de dados
 
-Ao usar essa extensão em uma [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, é possível configurar o [Extensão SDK da Web do Adobe Experience Platform](../../client/sdk/overview.md) para enviar esses dados ao [!DNL Platform Edge Network] para uso pela extensão na propriedade de encaminhamento de eventos.
+Ao usar essa extensão em uma [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, é possível configurar o [Extensão SDK da Web do Adobe Experience Platform](../../client/web-sdk/overview.md) para enviar esses dados ao [!DNL Platform Edge Network] para uso pela extensão na propriedade de encaminhamento de eventos.
 
 Os dados necessários para essa extensão podem ser enviados do SDK da Web como dados XDM ou dados não XDM. Consulte a documentação para saber mais sobre [envio de dados XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
@@ -120,7 +120,7 @@ A tabela abaixo fornece mais detalhes para cada valor possível.
 | Nome | Exemplo de caminho | Tipo | Descrição | Obrigatório | Limites |
 |:---|:---:|:---:|:---|:---:|:---|
 | `email` | `arc.event.xdm._tenant.emailId`<br /> ou<br /> `arc.event.data._tenant.emailId` | String | O endereço que recebe o email | **Sim** | Deve existir no Público do Mailchimp |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | String | ID de público-alvo | **Sim** | Deve corresponder a uma ID de público-alvo existente |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | String | ID de público | **Sim** | Deve corresponder a uma ID de público-alvo existente |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou<br /> `arc.event.data._tenant.name` | String | O nome do evento | **Sim** | 2-30 caracteres de comprimento |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> ou<br /> `arc.event.data._tenant.properties` | Objeto | Uma lista opcional de propriedades no formato JSON com detalhes sobre o evento | Não |  |
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booleano | Eventos criados com `is_syncing` definir como `true` **não** automações de acionador | Não |  |

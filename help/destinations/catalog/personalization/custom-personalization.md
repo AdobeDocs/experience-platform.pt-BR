@@ -3,7 +3,7 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do segmento do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 9%
@@ -87,7 +87,7 @@ Ler [Ativar perfis e destinos de personalização de borda de segmentos](../../u
 
 ## Dados exportados {#exported-data}
 
-Se você estiver usando [Tags no Adobe Experience Platform](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [evento de envio concluído](../../../edge/extension/event-types.md) e sua ação de código personalizado terá uma `event.destinations` que você pode usar para ver os dados exportados.
+Se você estiver usando [Tags no Adobe Experience Platform](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [evento de envio concluído](../../../tags/extensions/client/web-sdk/event-types.md) e sua ação de código personalizado terá uma `event.destinations` que você pode usar para ver os dados exportados.
 
 Este é um exemplo de valor para a variável `event.destinations` Variável:
 

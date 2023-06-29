@@ -5,10 +5,10 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 33%
+source-wordcount: '190'
+ht-degree: 32%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 33%
    * [Visão geral](identity/overview.md)
    * [IDs de dispositivo próprio](identity/first-party-device-ids.md)
    * [Compartilhamento de ID de dispositivo móvel para Web e entre domínios](identity/id-sharing.md)
-* Coleta de dados {#data-collection}
+* Coleção de dados {#data-collection}
    * [Informações coletadas automaticamente](data-collection/automatic-information.md)
    * [Rastrear links](data-collection/track-links.md)
    * [Coletar dados de comércio e produtos](data-collection/collect-commerce-data.md)
@@ -72,13 +72,6 @@ ht-degree: 33%
       * [Visão geral](consent/iab-tcf/overview.md)
       * [Integrar a tags](consent/iab-tcf/with-launch.md)
       * [Integrar sem tags](consent/iab-tcf/without-launch.md)
-* Extensão de tag do SDK da Web {#extension}
-   * [Extensão do SDK da Web](extension/web-sdk-extension-configuration.md)
-   * [Tipos de evento](extension/event-types.md)
-   * [Tipos de ação](extension/action-types.md)
-   * [Tipos de elementos de dados](extension/data-element-types.md)
-   * [Acessar a ECID](extension/accessing-the-ecid.md)
-   * [Notas de versão da extensão SDK da Web](extension/web-sdk-ext-release-notes.md)
 * [Notas de versão](release-notes.md)
 * [Perguntas frequentes](web-sdk-faq.md)
 * [Recursos](resources.md)

@@ -2,10 +2,10 @@
 title: Tipos de elementos de dados na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 5%
+source-wordcount: '568'
+ht-degree: 6%
 
 ---
 
@@ -45,10 +45,6 @@ Observe que quando você abre determinados campos do esquema, como `web.webPageD
 >Preencha apenas as informações que você está interessado em coletar. Tudo o que não for preenchido será omitido quando os dados forem enviados para as soluções.
 
 ## Variable {#variable}
-
->[!IMPORTANT]
->
->No momento, essa é uma funcionalidade beta e está sujeita a alterações. As versões futuras podem conter alterações importantes.
 
 Outra maneira de criar objetos XDM é usar o **[!UICONTROL Variável]** elemento de dados. Embora o elemento de dados do objeto XDM seja criado quando referenciado, como dentro de um `sendEvent` , o **[!UICONTROL Variável]** o elemento de dados pode ser atualizado via [!UICONTROL Atualizar variável] ações. Para usar o elemento de dados, selecione a sandbox e o esquema corretos do Adobe Experience Platform.
 

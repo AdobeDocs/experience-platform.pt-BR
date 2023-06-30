@@ -2,7 +2,7 @@
 title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar segmentos e exportar conjuntos de dados.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
+source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 1%
@@ -61,7 +61,7 @@ Depois de selecionar o método de conexão, você deve fornecer um **nome de exi
 
 >[!BEGINSHADEBOX]
 
-### Recupere as credenciais para o seu [!DNL Data Landing Zone]
+### Recupere as credenciais para o seu [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 Você deve usar as APIs da plataforma para recuperar seus [!DNL Data Landing Zone] credenciais. A chamada à API para recuperar suas credenciais é descrita abaixo. Para obter informações sobre como obter os valores necessários para seus cabeçalhos, consulte [Introdução às APIs do Adobe Experience Platform](/help/landing/api-guide.md) guia.
 
@@ -112,7 +112,7 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 
 {style="table-layout:auto"}
 
-## Atualizar [!DNL Data Landing Zone] credenciais
+### Atualizar [!DNL Data Landing Zone] credenciais {#update-dlz-credentials}
 
 Você também pode atualizar suas credenciais quando desejar. Você pode atualizar seu `SASToken` fazendo uma solicitação POST para o `/credentials` endpoint do [!DNL Connectors] API.
 

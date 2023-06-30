@@ -4,7 +4,7 @@ title: Guia de migração de API para destinos de armazenamento em nuvem
 description: Saiba mais sobre as alterações no fluxo de trabalho para ativar destinos de armazenamento em nuvem como parte da migração para os novos cartões de destino de armazenamento em nuvem com funcionalidade adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 1%
@@ -16,7 +16,6 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* A funcionalidade descrita nesta página está disponível para clientes que compraram os pacotes do Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
-
 
 ## Contexto de migração {#migration-context}
 
@@ -43,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Observe que, atualmente na interface do usuário do Experience Platform, você pode ver dois cartões de destino lado a lado dos três destinos. Abaixo estão mostrados os [!DNL Amazon S3] destinos antigos e novos. Em todos os casos, os cartões marcados com **Beta** são os novos cartões de destino.
+Observe que, atualmente na interface do usuário do Experience Platform, você pode ver dois cartões de destino lado a lado dos três destinos. Abaixo estão mostrados os [!DNL Amazon S3] destinos antigos e novos. Em todos os casos, os cartões **Beta** são os novos cartões de destino.
 
 ![Imagem dos dois cartões de destino do Amazon S3 em uma visualização lado a lado.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -783,7 +782,7 @@ Observe no exemplo de configuração abaixo como `profileSelectors` Os campos fo
 
 ## Linha do tempo de migração e itens de ação {#timeline-and-action-items}
 
-A migração de fluxos de dados herdados para os novos cartões de destino do [!DNL Amazon S3], [!DNL Azure Blob]e os destinos SFTP ocorrerão assim que sua organização estiver pronta para migração e, o mais tardar, **30 de junho de 2023**.
+A migração de fluxos de dados herdados para os novos cartões de destino do [!DNL Amazon S3], [!DNL Azure Blob]e os destinos SFTP ocorrerão assim que sua organização estiver pronta para migração e, o mais tardar, **26 de julho de 2023**.
 
 Você receberá emails de lembrete do Adobe à medida que a data da migração se aproximar. Em preparação, leia a seção Itens de ação abaixo para se preparar para a migração.
 
@@ -791,11 +790,11 @@ Você receberá emails de lembrete do Adobe à medida que a data da migração s
 
 Em preparação para a migração do [!DNL Amazon S3], [!DNL Azure Blob]e destinos de armazenamento na nuvem SFTP para os novos cartões, prepare-se para atualizar seus scripts e chamadas de API automatizadas, conforme sugerido abaixo.
 
-1. Atualizar scripts ou chamadas de API automatizadas para qualquer script existente [!DNL Amazon S3], [!DNL Azure Blob], ou destinos de armazenamento em nuvem SFTP até 30 de junho de 2023. Quaisquer chamadas ou scripts de API automatizados que utilizam as especificações de conexão ou as especificações de fluxo herdadas precisam ser atualizados para as novas especificações de conexão ou especificações de fluxo.
-2. Entre em contato com o representante de conta Adobe quando seus scripts forem atualizados antes de 30 de junho.
+1. Atualizar scripts ou chamadas de API automatizadas para qualquer script existente [!DNL Amazon S3], [!DNL Azure Blob], ou destinos de armazenamento em nuvem SFTP até 26 de julho de 2023. Quaisquer chamadas ou scripts de API automatizados que utilizam as especificações de conexão ou as especificações de fluxo herdadas precisam ser atualizados para as novas especificações de conexão ou especificações de fluxo.
+2. Entre em contato com o representante de conta Adobe quando seus scripts forem atualizados antes de 26 de julho.
 3. Por exemplo, a variável `targetConnectionSpecId` pode ser usado como um sinalizador para determinar se o fluxo de dados foi migrado para o novo cartão de destino. Você pode atualizar seus scripts com um `if` condição para consultar as especificações de conexão de destino herdadas e atualizadas no `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` e determinar se o fluxo de dados foi migrado. Você pode ver as IDs de especificação de conexão novas e herdadas nas seções específicas desta página para cada destino.
 4. Sua equipe de conta do Adobe entrará em contato com mais informações sobre quando seus fluxos de dados serão migrados.
-5. Após 30 de junho, todos os fluxos de dados serão migrados. Todos os fluxos de dados existentes agora terão novas entidades de fluxo (especificações de conexão, especificações de fluxo, conexões de base e conexões de destino). Qualquer script ou chamada de API do seu lado que use as entidades de fluxo herdadas deixará de funcionar.
+5. Após 26 de julho, todos os fluxos de dados serão migrados. Todos os fluxos de dados existentes agora terão novas entidades de fluxo (especificações de conexão, especificações de fluxo, conexões de base e conexões de destino). Qualquer script ou chamada de API do seu lado que use as entidades de fluxo herdadas deixará de funcionar.
 
 ## Outras considerações de migração {#other-considerations}
 

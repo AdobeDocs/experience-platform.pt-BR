@@ -2,9 +2,9 @@
 title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar segmentos e exportar conjuntos de dados.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1378'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 1%
 >
 >* No momento, esse destino está na versão beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Data Landing Zone] conexão, entre em contato com o representante da Adobe e forneça [!DNL Organization ID].
 >* Esta página de documentação se refere ao [!DNL Data Landing Zone] *destino*. Existe também uma [!DNL Data Landing Zone] *origem* no catálogo de origens. Para obter mais informações, leia a [[!DNL Data Landing Zone] origem](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentação.
-
 
 
 ## Visão geral {#overview}
@@ -72,6 +71,12 @@ Você deve usar as APIs da plataforma para recuperar seus [!DNL Data Landing Zon
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| Parâmetros de consulta | Descrição |
+| --- | --- |
+| `dlz_destination` | A variável `dlz_destination` O tipo permite que a API diferencie um contêiner de destino de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
+
+{style="table-layout:auto"}
+
 **Solicitação**
 
 O exemplo de solicitação a seguir recupera credenciais para uma zona de aterrissagem existente.
@@ -104,6 +109,52 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 | `containerName` | O nome da sua zona de destino. |
 | `SASToken` | O token de assinatura de acesso compartilhado para sua zona de aterrissagem. Esta cadeia de caracteres contém todas as informações necessárias para autorizar uma solicitação. |
 | `SASUri` | O URI de assinatura de acesso compartilhado para sua zona de aterrissagem. Essa string é uma combinação do URI para a zona de aterrissagem para a qual você está sendo autenticado e seu token SAS correspondente, |
+
+{style="table-layout:auto"}
+
+## Atualizar [!DNL Data Landing Zone] credenciais
+
+Você também pode atualizar suas credenciais quando desejar. Você pode atualizar seu `SASToken` fazendo uma solicitação POST para o `/credentials` endpoint do [!DNL Connectors] API.
+
+**Formato da API**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Parâmetros de consulta | Descrição |
+| --- | --- |
+| `dlz_destination` | A variável `dlz_destination` O tipo permite que a API diferencie um contêiner de destino de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
+| `refresh` | A variável `refresh` permite redefinir suas credenciais de zona de aterrissagem e gerar automaticamente uma nova `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Solicitação**
+
+A solicitação a seguir atualiza suas credenciais de zona de aterrissagem.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Resposta**
+
+A resposta a seguir retorna os valores atualizados para o `SASToken` e `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 

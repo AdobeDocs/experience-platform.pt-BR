@@ -2,14 +2,14 @@
 title: Extensão de encaminhamento de eventos da Google Cloud Platform
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda do Adobe Experience para a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 1%
+source-wordcount: '570'
+ht-degree: 2%
 
 ---
 
-# [!DNL Google Cloud Platform] extensão de encaminhamento de eventos
+# Extensão de encaminhamento de eventos da [!DNL Google Cloud Platform]
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) O é uma plataforma de computação em nuvem que oferece uma grande variedade de serviços, como computação distribuída, armazenamento de banco de dados, entrega de conteúdo e serviços de integração de software como um serviço (SaaS) para gerenciamento de relacionamento com o cliente (CRM) e planejamento de recursos corporativos (ERP).
 
@@ -17,7 +17,7 @@ A variável [!DNL Google Cloud Platform] [encaminhamento de eventos](../../../ui
 
 ## Pré-requisitos
 
-Para usar essa extensão, você deve ter um [!DNL Google Cloud Platform] conta com um existente [!DNL Cloud Pub/Sub] tópico. Se você não tiver um fluxo de dados pré-existente, consulte a [!DNL AWS] documentação sobre [criação de um novo fluxo de dados usando o [!DNL AWS] Console de gerenciamento](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Para usar essa extensão, você deve ter um [!DNL Google Cloud Platform] conta com um existente [!DNL Cloud Pub/Sub] tópico. Se você não tiver um tópico pré-existente, consulte o [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentação sobre criação e gerenciamento de tópicos.
 
 ### Criar um segredo e um elemento de dados
 

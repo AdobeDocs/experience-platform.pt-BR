@@ -3,9 +3,9 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '875'
 ht-degree: 79%
 
 ---
@@ -29,7 +29,7 @@ Depois de enviar dados para a rede de borda, você pode alternar entre as soluç
 
 ## Pré-requisitos
 
-* Adobe Experience Platform Collection Enterprise (Entre em contato com a equipe de conta do Adobe para obter preços)
+* Adobe Real-Time CDP Connections, Prime ou Ultimate (Entre em contato com a equipe de conta do Adobe para obter preços)
 * Encaminhamento de eventos na Adobe Experience Platform
 * SDK da Web ou móvel da Adobe Experience Platform, configurado para enviar dados para a rede de borda
 * Mapear dados para o Experience Data Model (XDM) (esse mapeamento pode ser feito usando tags)

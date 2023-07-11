@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 71%
+source-wordcount: '1644'
+ht-degree: 62%
 
 ---
 
@@ -123,7 +123,7 @@ v2.0.4
 
 v1.9.0
 
-* **Nova ação &quot;Acionar chamada direta&quot;** - a extensão principal agora inclui um novo tipo de ação chamado `Trigger Direct Call`. Isso pode ser usado quando você deseja acionar uma regra de chamada direta por meio de uma ação de uma regra diferente. Ela é mapeada diretamente para o método `_satellite.track()`. Muito obrigado a [Jan Exner](https://twitter.com/jexner) por esta contribuição.
+* **Nova Ação &quot;Acionar Chamada Direta&quot;** - A extensão Principal agora inclui um novo tipo de ação chamado `Trigger Direct Call`.  Isso pode ser usado quando você deseja acionar uma regra de chamada direta por meio de uma ação de uma regra diferente. Ela é mapeada diretamente para o método `_satellite.track()`. Muito obrigado a Jan Exner por esta contribuição.
 
 ## 8 de dezembro de 2020
 
@@ -169,13 +169,13 @@ v1.7.3
 
 v1.7.0
 
-* **Acesso à `event` Variável dentro do elemento de dados Custom Code** - agora você pode fazer referência ao evento a partir de um elemento de dados de código personalizado quando executado no contexto de uma regra. O objeto conterá informações úteis sobre o evento que acionou a regra. Muito obrigado a [Stewart Schilling](https://twitter.com/sdi_stewart) pela sua contribuição.
+* **Acesso à `event` Variável dentro do elemento de dados Custom Code** - agora você pode fazer referência ao evento a partir de um elemento de dados de código personalizado quando executado no contexto de uma regra. O objeto conterá informações úteis sobre o evento que acionou a regra. Muito obrigado a Stewart Schilling pela sua contribuição.
 
 ## 7 de outubro de 2019
 
 v1.6.2
 
-* **Novo tipo de elemento de dados “constante”** - A extensão principal agora inclui um novo elemento de dados chamado `Constant`. Isso pode ser usado quando você precisa armazenar um valor constante que será referenciado em várias condições, ações ou códigos personalizados. Muito obrigado a [Jan Exner](https://twitter.com/jexner) por esta contribuição.
+* **Novo tipo de elemento de dados &quot;constante&quot;** - A extensão principal agora inclui um novo elemento de dados chamado `Constant`.  Isso pode ser usado quando você precisa armazenar um valor constante que será referenciado em várias condições, ações ou códigos personalizados. Muito obrigado a Jan Exner por esta contribuição.
 
 ## 11 de setembro de 2019
 
@@ -194,8 +194,8 @@ v1.5.0
 v1.4.3
 
 * **Campos de entrada** - Os campos de entrada agora são muito maiores!
-* **Custom Event** - O tipo de evento personalizado agora pode ser usado com eventos despachados fora da janela.
-* **Correção de erros** - Corrigido um erro no qual a condição Value Comparison não possuía um valor 0.
+* **Evento personalizado** - O tipo de evento personalizado agora pode ser usado com eventos despachados fora da janela.
+* **Correção de erros** - Corrigido um erro no qual a condição de comparação de valores não possuía um valor 0.
 * **Correção de erros** - O campo exchange\_url foi atualizado para que você possa ver a listagem da extensão principal no Adobe Exchange.
 
 ## 8 de janeiro de 2019
@@ -208,9 +208,9 @@ v1.4.2
 
 ## 8 de novembro de 2018
 
-* **Opção Persisti Cohort** - A opção para persistir uma cohort foi adicionada à condição de amostragem. Essa opção tem o efeito de manter um usuário dentro ou fora da coorte de amostra nas sessões. Por exemplo, se a caixa de seleção “persist cohort” estiver marcada e a condição retornar &quot;true&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;true&quot; em todas as execuções subsequentes da condição para o mesmo visitante. Da mesma forma, se a caixa de seleção “persist cohort” estiver marcada e a condição retornar &quot;false&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;false&quot; em todas as execuções subsequentes da condição para o mesmo visitante.
+* **Opção Persisti Cohort** - A opção para persistir uma cohort foi adicionada à condição de amostragem. Essa opção tem o efeito de manter um usuário dentro ou fora da coorte de amostra nas sessões. Por exemplo, se a caixa de seleção &quot;persist cohort&quot; estiver marcada e a condição retornar &quot;true&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;true&quot; em todas as execuções subsequentes da condição para o mesmo visitante. Da mesma forma, se a caixa de seleção &quot;persist cohort&quot; estiver marcada e a condição retornar &quot;false&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;false&quot; em todas as execuções subsequentes da condição para o mesmo visitante.
 * **Correção de erros** — foi corrigido um problema em que uma regra que usava um evento Page Bottom e uma ação de código personalizado em uma página em que tags estavam sendo carregadas sincronicamente, mas estavam incorretamente instaladas (sem chamada para `_satellite.pageBottom()`) limpava o conteúdo do site.
-* **Correção de erros** — foi corrigido um problema em que a opção Enters Viewport não funcionava se a biblioteca de tags fosse carregada de forma assíncrona e terminasse de ser carregada após o evento DOMContentLoaded do navegador ser disparado.
+* **Correção de erros** - Correção de um problema em que Enters Viewport não funcionava se a biblioteca de tags fosse carregada de forma assíncrona e terminasse de ser carregada após o evento DOMContentLoaded do navegador ser disparado.
 
 ## 24 de maio de 2018
 

@@ -4,9 +4,9 @@ title: Extensão de encaminhamento de eventos da API de rastreamento do Mixpanel
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda do Adobe Experience para o Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ As equipes de análise podem aproveitar [!DNL Mixpanel's] recursos para processa
 
 Para obter mais informações sobre casos de uso específicos do [!DNL Mixpanel], consulte a seguinte documentação:
 
-* [Novo para [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Novo para [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [O que é [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
 * [12 tentativas [!DNL Mixpanel] recursos](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Comece a criar uma nova regra na propriedade de encaminhamento de eventos. Em **
 | --- | --- | --- |
 | [!UICONTROL Token do projeto] | Este campo deve ser mapeado para o token de projeto associado à [!DNL Mixpanel] conta. | Sim |
 | [!UICONTROL Tipo de evento] | O nome do evento. | Sim |
-| [!UICONTROL Hora do Evento] | A hora do evento. |  |
-| [!UICONTROL ID distinta do Mixpanel] | O identificador exclusivo do usuário que executou o evento. |  |
-| [!UICONTROL Inserir ID] | Um identificador exclusivo do evento, usado para desduplicação. |  |
-| [!UICONTROL Propriedades do evento] | Um objeto JSON que contém propriedades personalizadas do evento. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. |  |
+| [!UICONTROL Hora do Evento] | A hora do evento. | |
+| [!UICONTROL ID distinta do Mixpanel] | O identificador exclusivo do usuário que executou o evento. | |
+| [!UICONTROL Inserir ID] | Um identificador exclusivo do evento, usado para desduplicação. | |
+| [!UICONTROL Propriedades do evento] | Um objeto JSON que contém propriedades personalizadas do evento. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. | |
 
 >[!NOTE]
 >

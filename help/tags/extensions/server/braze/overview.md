@@ -4,14 +4,14 @@ title: Extensão Braze Event Forwarding
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda do Adobe Experience para o Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%
 
 ---
 
-# [!DNL Braze Track Events API] extensão de encaminhamento de eventos
+# Extensão de encaminhamento de eventos da [!DNL Braze Track Events API]
 
 [[!DNL Braze]](https://www.braze.com) O é uma plataforma de engajamento do cliente que promove interações centradas no cliente entre consumidores e marcas em tempo real. Usar [!DNL Braze], você pode fazer o seguinte:
 
@@ -59,7 +59,7 @@ Para conectar a rede de borda ao [!DNL Braze], as seguintes entradas são necess
 
 | Tipo de chave | Descrição | Exemplo |
 | --- | --- | --- |
-| [!DNL Braze] Instância | O endpoint REST associado à variável [!DNL Braze] conta. Consulte a [!DNL Braze] documentação sobre [instâncias](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) para obter orientação. | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] Instância | O endpoint REST associado à variável [!DNL Braze] conta. Consulte a [!DNL Braze] documentação sobre [instâncias](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) para obter orientação. | `https://rest.iad-03.braze.com` |
 | Chave de API | A variável [!DNL Braze] Chave de API associada à [!DNL Braze] conta. <br/>Consulte a [!DNL Braze] documentação sobre o [Chave de API REST](https://www.braze.com/docs/api/basics/#rest-api-key) para obter orientação. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Criar um segredo
@@ -108,8 +108,8 @@ Depois de instalar a extensão, crie um novo encaminhamento de eventos [regra](.
 | Entrada | Descrição | Obrigatório |
 | --- | --- | --- |
 | [!UICONTROL Nome do evento &#x200B;] | Nome do evento. | Sim |
-| [!UICONTROL Hora do Evento ] | Data e hora como string em ISO 8601 ou em `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sim |
-| [!UICONTROL Identificador do aplicativo] | O Identificador do Aplicativo ou <strong>app_id</strong> é um parâmetro que associa uma atividade a um aplicativo específico no seu grupo de aplicativos. Ele designa com qual aplicativo do grupo de aplicativos você está interagindo. Saiba mais sobre o [Tipos de identificador de API](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Hora do Evento] | Data e hora como string em ISO 8601 ou em `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sim |
+| [!UICONTROL Identificador do aplicativo] | O Identificador do Aplicativo ou <strong>app_id</strong> é um parâmetro que associa uma atividade a um aplicativo específico no seu grupo de aplicativos. Ele designa com qual aplicativo do grupo de aplicativos você está interagindo. Saiba mais sobre o [Tipos de identificador de API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL &#x200B; Propriedades do evento] | Um objeto JSON que contém propriedades personalizadas do evento. |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ Os atributos do usuário podem ser um objeto JSON que contém campos que criarã
 
 | Atributo do usuário | Descrição |
 | --- | --- |
-| [!UICONTROL Nome] |  |
-| [!UICONTROL Sobrenome] |  |
-| [!UICONTROL Telefone] |  |
-| [!UICONTROL Email] |  |
+| [!UICONTROL Nome] | |
+| [!UICONTROL Sobrenome] | |
+| [!UICONTROL Telefone] | |
+| [!UICONTROL Email] | |
 | [!UICONTROL Gênero] | Uma das seguintes sequências de caracteres: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (outro), &quot;N&quot; (não aplicável), &quot;P&quot; (prefere não dizer). |
-| [!UICONTROL Cidade] |  |
+| [!UICONTROL Cidade] | |
 | [!UICONTROL País] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como uma cadeia de caracteres em [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
@@ -164,11 +164,11 @@ Depois de instalar a extensão, crie um novo encaminhamento de eventos [regra](.
 | Entrada | Descrição | Obrigatório |
 | --- | --- | --- |
 | [!UICONTROL Identificação do produto &#x200B;] | Identificador da compra. (por exemplo, Nome do produto ou Categoria do produto) | Sim |
-| [!UICONTROL Tempo de Compra ] | Data e hora como string em ISO 8601 ou em `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sim |
+| [!UICONTROL Tempo de Compra] | Data e hora como string em ISO 8601 ou em `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sim |
 | [!UICONTROL Moeda &#x200B;] | Moeda como sequência de caracteres em [ISO 4217](https://pt.wikipedia.org/wiki/ISO_4217) Formato alfabético de código monetário. | Sim |
 | [!UICONTROL Preço &#x200B;] | Preço. | Sim |
-| [!UICONTROL Quantidade &#x200B;] | Se não for fornecido, o valor padrão será 1. O valor máximo deve ser inferior a 100. |  |
-| [!UICONTROL Identificador do aplicativo] | O Identificador do Aplicativo ou <strong>app_id</strong> é um parâmetro que associa uma atividade a um aplicativo específico no seu grupo de aplicativos. Ele designa com qual aplicativo do grupo de aplicativos você está interagindo. Saiba mais sobre o [Tipos de identificador de API](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Quantidade &#x200B;] | Se não for fornecido, o valor padrão será 1. O valor máximo deve ser inferior a 100. | |
+| [!UICONTROL Identificador do aplicativo] | O Identificador do Aplicativo ou <strong>app_id</strong> é um parâmetro que associa uma atividade a um aplicativo específico no seu grupo de aplicativos. Ele designa com qual aplicativo do grupo de aplicativos você está interagindo. Saiba mais sobre o [Tipos de identificador de API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propriedades de compra &#x200B;] | Um objeto JSON que contém propriedades personalizadas da compra. |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ Os atributos do usuário podem ser um objeto JSON que contém campos que criarã
 
 | Atributo do usuário | Descrição |
 | --- | --- |
-| [!UICONTROL Nome] |  |
-| [!UICONTROL Sobrenome] |  |
-| [!UICONTROL Telefone] |  |
-| [!UICONTROL Email] |  |
+| [!UICONTROL Nome] | |
+| [!UICONTROL Sobrenome] | |
+| [!UICONTROL Telefone] | |
+| [!UICONTROL Email] | |
 | [!UICONTROL Gênero] | Uma das seguintes sequências de caracteres: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (outro), &quot;N&quot; (não aplicável), &quot;P&quot; (prefere não dizer). |
-| [!UICONTROL Cidade] |  |
+| [!UICONTROL Cidade] | |
 | [!UICONTROL País] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como uma cadeia de caracteres em [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |

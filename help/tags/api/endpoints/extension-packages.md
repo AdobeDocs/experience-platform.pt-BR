@@ -2,7 +2,7 @@
 title: Endpoint dos pacotes de extensão
 description: Saiba como fazer chamadas para o endpoint /extension_packages na API do Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 70%
@@ -944,7 +944,7 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão atualizado.
 
 Depois de concluir o teste do pacote de extensão, você pode liberá-lo de forma privada. Isso o torna disponível para qualquer propriedade na empresa.
 
-Depois de liberá-lo de forma privada, é possível iniciar o processo de liberação pública preenchendo o [formulário de solicitação de liberação pública](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+Depois de liberá-lo de forma privada, é possível iniciar o processo de liberação pública preenchendo o [formulário de solicitação de liberação pública](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **Formato da API**
 

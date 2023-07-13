@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;visualizações;estimativas;visualizações e estimativas;estimativas e visualizações;api;API;
 solution: Experience Platform
 title: Visualizações e estimativas de endpoints de API
 description: À medida que a definição de segmento é desenvolvida, é possível usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para exibir informações em nível de resumo e ajudar a garantir que você esteja isolando o público-alvo esperado.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---

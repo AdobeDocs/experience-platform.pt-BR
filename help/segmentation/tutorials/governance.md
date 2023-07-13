@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;conformidade com o uso de dados;impor;impor conformidade com o uso de dados;Serviço de segmentação;segmentação;Segmentação;
 solution: Experience Platform
 title: Impor a conformidade do uso de dados para um segmento de público-alvo usando APIs
 type: Tutorial
-description: Este tutorial aborda as etapas para impor a conformidade com o uso de dados para segmentos de público-alvo do Perfil do cliente em tempo real que usam APIs.
+description: Este tutorial aborda as etapas para aplicar definições de segmento de conformidade de uso de dados usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1355'
 ht-degree: 2%
 
 ---
 
-# Impor a conformidade de uso de dados para um segmento de público-alvo usando APIs
+# Impor a conformidade de uso de dados para uma definição de segmento usando APIs
 
-Este tutorial aborda as etapas para impor a conformidade do uso de dados para o [!DNL Real-Time Customer Profile] segmentos de público usando APIs.
+Este tutorial aborda as etapas para impor a conformidade do uso de dados para definições de segmento usando APIs.
 
 ## Introdução
 
@@ -57,7 +56,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Pesquisar uma política de mesclagem para uma definição de segmento {#merge-policy}
 
-Esse fluxo de trabalho começa acessando um segmento de público-alvo conhecido. Segmentos ativados para uso no [!DNL Real-Time Customer Profile] contêm uma ID de política de mesclagem na definição de segmento. Essa política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que por sua vez contém quaisquer rótulos de uso de dados aplicáveis.
+Esse fluxo de trabalho começa acessando uma definição de segmento conhecida. Definições de segmento habilitadas para uso no [!DNL Real-Time Customer Profile] contêm uma ID de política de mesclagem na definição de segmento. Essa política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos na definição do segmento, que por sua vez contém quaisquer rótulos de uso de dados aplicáveis.
 
 Usar o [!DNL Segmentation] , você pode pesquisar uma definição de segmento por sua ID para encontrar a política de mesclagem associada.
 
@@ -367,20 +366,20 @@ Usando os dados retornados na resposta da API, você pode configurar protocolos 
 
 ## Filtrar campos de dados
 
-Se o seu segmento de público-alvo não passar na avaliação, você poderá ajustar os dados incluídos no segmento por meio de um dos dois métodos descritos abaixo.
+Se a definição de segmento não passar na avaliação, você poderá ajustar os dados incluídos na definição de segmento por meio de um dos dois métodos descritos abaixo.
 
 ### Atualizar a política de mesclagem da definição do segmento
 
 Atualizar a política de mesclagem de uma definição de segmento ajustará os conjuntos de dados e campos que serão incluídos quando o trabalho do segmento for executado. Consulte a seção sobre [atualização de uma política de mesclagem existente](../../profile/api/merge-policies.md#update) no tutorial de política de mesclagem de API para obter mais informações.
 
-### Restringir campos de dados específicos ao exportar o segmento
+### Restringir campos de dados específicos ao exportar a definição de segmento
 
-Ao exportar um segmento para um conjunto de dados usando o [!DNL Segmentation] você pode filtrar os dados incluídos na exportação usando a variável `fields` parâmetro. Quaisquer campos de dados adicionados a esse parâmetro serão incluídos na exportação, enquanto todos os outros campos de dados serão excluídos.
+Ao exportar uma definição de segmento para um conjunto de dados usando o [!DNL Segmentation] você pode filtrar os dados incluídos na exportação usando a variável `fields` parâmetro. Quaisquer campos de dados adicionados a esse parâmetro serão incluídos na exportação, enquanto todos os outros campos de dados serão excluídos.
 
-Considere um segmento que tenha campos de dados chamados &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se desejar exportar apenas o campo &quot;C&quot;, a variável `fields` O parâmetro conteria apenas o campo &quot;C&quot;. Ao fazer isso, os campos &quot;A&quot; e &quot;B&quot; seriam excluídos ao exportar o segmento.
+Considere uma definição de segmento que tenha campos de dados chamados &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se desejar exportar apenas o campo &quot;C&quot;, a variável `fields` O parâmetro conteria apenas o campo &quot;C&quot;. Ao fazer isso, os campos &quot;A&quot; e &quot;B&quot; seriam excluídos ao exportar a definição do segmento.
 
-Consulte a seção sobre [exportação de um segmento](./evaluate-a-segment.md#export) no tutorial de segmentação para obter mais informações.
+Consulte a seção sobre [exportação de uma definição de segmento](./evaluate-a-segment.md#export) no tutorial de segmentação para obter mais informações.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de público-alvo e os testou quanto a violações de política em relação a ações de marketing específicas. Para obter mais informações sobre a governança de dados em [!DNL Experience Platform], leia a visão geral para [Governança de dados](../../data-governance/home.md).
+Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a uma definição de segmento e os testou quanto a violações de política em relação a ações de marketing específicas. Para obter mais informações sobre a governança de dados em [!DNL Experience Platform], leia a visão geral para [Governança de dados](../../data-governance/home.md).

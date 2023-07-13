@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;serviço de segmento;segmento;Segmento;Segmentos;segmentos
 solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1629'
 ht-degree: 11%
 
 ---
 
 # Visão geral do [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] O fornece uma interface de usuário e uma API RESTful que permite criar segmentos e gerar públicos-alvo a partir da [!DNL Real-Time Customer Profile] dados. Esses segmentos são configurados e mantidos de forma centralizada [!DNL Platform]e são prontamente acessíveis por qualquer solução Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] O fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes da [!DNL Real-Time Customer Profile] dados. Esses públicos-alvo são configurados e mantidos de forma centralizada em [!DNL Platform]e são prontamente acessíveis por qualquer solução Adobe.
 
 Este documento fornece uma visão geral de [!DNL Segmentation Service] e o papel que desempenha no Adobe Experience Platform.
 
 ## Introdução ao [!DNL Segmentation Service]
 
-É importante entender os seguintes termos principais usados neste documento:
+Você deve entender os seguintes termos principais usados neste documento:
 
 - **Segmentação**: dividir um grande grupo de indivíduos (como clientes, prospetos, usuários ou organizações) em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
-- **Definição de segmento**: o conjunto de regras usado para descrever as principais características ou o comportamento de um público-alvo. Depois de conceitualizadas, as regras descritas em uma definição de segmento são usadas para determinar os membros do público-alvo qualificados para um segmento.
-- **Público**: o conjunto de perfis que atendem aos critérios de uma definição de segmento.
+- **Público**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Platform) ou de fontes externas (público-alvo gerado externamente).
+- **Definição de segmento**: o conjunto de regras que a Adobe Experience Platform usa para descrever as principais características ou o comportamento de um público-alvo.
 
 ## Como a segmentação funciona
 

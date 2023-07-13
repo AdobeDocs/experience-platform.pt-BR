@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação de borda;Segmentação;Serviço de segmentação;serviço de segmentação;guia de interface do usuário;borda de transmissão;
 solution: Experience Platform
 title: Guia da interface de segmentação de borda
-description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
+description: Saiba como usar a segmentação de borda para avaliar definições de segmento na Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->A segmentação de borda agora está disponível para todos os usuários da Platform. Se você criou segmentos de borda durante a versão beta, esses segmentos continuarão operacionais.
+>A segmentação de borda agora está disponível para todos os usuários da Platform. Se você tiver criado definições de segmento de borda durante a versão beta, essas definições de segmento continuarão operacionais.
 
 A segmentação de borda é a capacidade de avaliar segmentos no Adobe Experience Platform instantaneamente [na borda](../../edge/home.md), permitindo casos de uso de personalização da mesma página e da próxima página.
 
@@ -52,19 +51,19 @@ Uma consulta pode ser avaliada com segmentação de borda se atender a qualquer 
 | Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. | Pessoas que vivem nos EUA e estão no segmento &quot;segmento existente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Consulta que se refere a um mapa | Qualquer definição de segmento que se refira a um mapa de propriedades. | Pessoas que foram adicionadas ao carrinho com base em dados de segmentos externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Uma definição de segmento **não** ser ativado para segmentação de borda nos seguintes cenários:
+Uma definição de segmento **não** ser ativado para segmentação de borda no seguinte cenário:
 
 - A definição de segmento inclui uma combinação de um único evento e uma `inSegment` evento.
-   - No entanto, se o segmento contido na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação de borda.
+   - No entanto, se a definição de segmento contida na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação de borda.
 
 ## Próximas etapas
 
-Este guia explica como avaliar segmentos com segmentação de borda no Adobe Experience Platform. Para saber mais sobre como usar a interface do usuário do Experience Platform, leia o [Guia do usuário de segmentação](./overview.md). Para saber como executar ações semelhantes e trabalhar com segmentos usando APIs Experience Platform, visite o [guia da API de segmentação de borda](../api/edge-segmentation.md).
+Este guia explica como avaliar definições de segmento com segmentação de borda no Adobe Experience Platform. Para saber mais sobre como usar a interface do usuário do Experience Platform, leia o [Guia do usuário de segmentação](./overview.md). Para saber como executar ações semelhantes e trabalhar com definições de segmento usando APIs Experience Platform, visite o [guia da API de segmentação de borda](../api/edge-segmentation.md).
 
 ## Apêndice
 
 A seção a seguir lista as perguntas frequentes sobre a segmentação de borda:
 
-### Quanto tempo leva para um segmento ficar disponível na Rede de borda?
+### Quanto tempo leva para uma definição de segmento ficar disponível na Rede de borda?
 
-Leva até uma hora para um segmento estar disponível na Rede de borda.
+Demora até uma hora para uma definição de segmento estar disponível na rede de borda.

@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Serviço de segmentação;segmentação;serviço de segmentação;guia do usuário;guia da interface do usuário;guia da interface do usuário de segmentação;construtor de segmentos;Construtor de segmentos;
 solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
+source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 6%
+source-wordcount: '3308'
+ht-degree: 4%
 
 ---
 
@@ -15,14 +14,14 @@ ht-degree: 6%
 
 [!DNL Segment Builder] O fornece um espaço de trabalho avançado que permite a você interagir com o [!DNL Profile] elementos de dados. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 
-![A interface do construtor de segmentos é exibida.](../images/ui/segment-builder/segment-builder.png)
+![A interface do usuário do Construtor de segmentos é exibida.](../images/ui/segment-builder/segment-builder.png)
 
 ## Blocos de construção de definição de segmento {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
->abstract="Os três tipos de campo que compõem um segmento são atributos, eventos e públicos. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos permitem usar públicos importados de fontes externas."
+>abstract="Os três tipos de campo que compõem uma definição de segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos permitem usar públicos importados de fontes externas."
 
 Os blocos fundamentais das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes podem ser usados como componentes para novas definições.
 
@@ -38,7 +37,7 @@ A variável **[!UICONTROL Atributos]** permite navegar [!DNL Profile] atributos 
 
 ### Eventos
 
-A variável **[!UICONTROL Eventos]** permite criar um público-alvo com base em eventos ou ações que ocorreram usando [!DNL XDM ExperienceEvent] elementos de dados. Você também pode encontrar Tipos de evento na **[!UICONTROL Eventos]** , que são uma coleção de eventos comumente usados para permitir que você crie seus segmentos mais rapidamente.
+A variável **[!UICONTROL Eventos]** permite criar um público-alvo com base em eventos ou ações que ocorreram usando [!DNL XDM ExperienceEvent] elementos de dados. Você também pode encontrar Tipos de evento na **[!UICONTROL Eventos]** , que são uma coleção de eventos comumente usados para permitir que você crie suas definições de segmento mais rapidamente.
 
 Além de poder navegar por [!DNL ExperienceEvent] elementos, você também pode pesquisar por Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação que [!DNL ExperienceEvents], sem exigir que você pesquise no [!DNL XDM ExperienceEvent] classe procurando o evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL Remover carrinho]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmento.
 
@@ -116,7 +115,7 @@ Para adicionar uma nova regra à definição do segmento, arraste um bloco da **
 
 >[!IMPORTANT]
 >
->As alterações mais recentes no Adobe Experience Platform atualizaram o uso do `OR` e `AND` operadores lógicos entre eventos. Essas atualizações não afetarão os segmentos existentes. No entanto, todas as atualizações subsequentes em segmentos existentes e novas criações de segmentos serão afetadas por essas alterações. Leia as [atualização das constantes de tempo](./segment-refactoring.md) para obter mais informações.
+>As alterações mais recentes no Adobe Experience Platform atualizaram o uso do `OR` e `AND` operadores lógicos entre eventos. Essas atualizações não afetarão as definições de segmento existentes. No entanto, todas as atualizações subsequentes nas definições de segmento existentes e nas definições de segmento recém-criadas serão afetadas por essas alterações. Leia as [atualização das constantes de tempo](./segment-refactoring.md) para obter mais informações.
 
 Ao selecionar um valor para o atributo, você verá uma lista de valores de enumeração que o atributo pode ser.
 
@@ -144,7 +143,7 @@ Observe que há um máximo de 250 valores permitidos. Se você exceder esse valo
 
 ### Adição de públicos
 
-Você pode arrastar e soltar um público-alvo da **[!UICONTROL Público]** acesse a tela construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo na nova regra de segmento.
+Você pode arrastar e soltar um público-alvo da **[!UICONTROL Público]** acesse a tela construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo nas novas regras de definição de segmento.
 
 Para [!DNL Platform] públicos-alvo criados usando [!DNL Segment Builder], você tem a opção de converter o público-alvo no conjunto de regras que foram usadas na definição de segmento desse público-alvo. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo as alterações recentes na definição do segmento antes de convertê-lo na lógica da regra.
 
@@ -158,11 +157,11 @@ Se surgirem conflitos ao converter públicos-alvo em regras, [!DNL Segment Build
 
 ### Visualização de código
 
-Como alternativa, é possível exibir uma versão baseada em código de uma regra criada no [!DNL Segment Builder]. Depois de criar a regra na tela do construtor de regras, você pode selecionar **[!UICONTROL Visualização de código]** para ver seu segmento como PQL.
+Como alternativa, é possível exibir uma versão baseada em código de uma regra criada no [!DNL Segment Builder]. Depois de criar a regra na tela do construtor de regras, você pode selecionar **[!UICONTROL Visualização de código]** para ver a definição do segmento como PQL.
 
-![O botão de visualização de código é realçado, permitindo que você veja o segmento como PQL.](../images/ui/segment-builder/code-view.png)
+![O botão de visualização de código é realçado, permitindo que você veja a definição do segmento como PQL.](../images/ui/segment-builder/code-view.png)
 
-A visualização Código fornece um botão que permite copiar o valor do segmento para usar em chamadas de API. Para obter a versão mais recente do segmento, salve as alterações mais recentes no segmento.
+A visualização de código fornece um botão que permite copiar o valor da definição de segmento para usar em chamadas de API. Para obter a versão mais recente da definição de segmento, salve as alterações mais recentes na definição de segmento.
 
 ![O botão copiar código é realçado, o que permite ](../images/ui/segment-builder/copy-code.png)
 
@@ -178,7 +177,7 @@ Depois de colocar o evento no contêiner Eventos, selecione o ícone de reticên
 
 ![O texto agregado é destacado. Selecionar essa opção permite selecionar funções de agregação.](../images/ui/segment-builder/add-aggregation.png)
 
-A agregação agora é adicionada. Agora você pode selecionar a função de agregação, escolher qual atributo agregar, a função de igualdade, e o valor. No exemplo abaixo, esse segmento qualificaria qualquer perfil que tenha uma soma de valores comprados superior a US$ 100, mesmo se cada compra individual for inferior a US$ 100.
+A agregação agora é adicionada. Agora você pode selecionar a função de agregação, escolher qual atributo agregar, a função de igualdade, e o valor. No exemplo abaixo, essa definição de segmento qualificaria qualquer perfil que tenha uma soma de valores comprados superior a US$ 100, mesmo se cada compra individual for inferior a US$ 100.
 
 ![As regras de evento, que exibem uma função de agregação.](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -222,6 +221,11 @@ Depois de selecionar **[!UICONTROL Decodificar contêiner]** o contêiner filho 
 
 ## Políticas de mesclagem
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
+>title="Políticas de mesclagem"
+>abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Platform forneceu uma política de mesclagem padrão ou você pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
+
 [!DNL Experience Platform] O permite reunir dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] O usa o para determinar como os dados serão priorizados e quais dados serão combinados para criar um perfil.
 
 Você pode selecionar uma política de mesclagem que corresponda à sua finalidade de marketing para este público ou usar a política de mesclagem padrão fornecida por [!DNL Platform]. É possível criar várias políticas de mesclagem exclusivas para sua organização, incluindo a criação de sua própria política de mesclagem padrão. Para obter instruções passo a passo sobre como criar políticas de mesclagem para sua organização, comece lendo o [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
@@ -230,40 +234,40 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 
 ![O seletor de política de mesclagem é realçado. Isso permite escolher qual política de mesclagem selecionar para a definição de segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriedades do segmento {#segment-properties}
+## Propriedades de definição de segmento {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Propriedades do segmento"
->abstract="A seção de propriedades do segmento exibe uma estimativa do tamanho do segmento resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o público."
+>title="Propriedades de definição de segmento"
+>abstract="A seção de propriedades da definição de segmento exibe uma estimativa do tamanho da definição de segmento resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Atualizar estimativas"
->abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma pré-visualização de quantos perfis se qualificariam para o segmento proposto. As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia."
+>abstract="É possível atualizar as estimativas da definição de segmento para visualizar imediatamente quantos perfis se qualificariam para a definição de segmento proposta. As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Estimar e visualizar um público"
 
-Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho do segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
+Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
-A variável **[!UICONTROL Propriedades do segmento]** é também onde você pode especificar informações importantes sobre a definição do segmento, incluindo nome, descrição e tipo de avaliação. Os nomes de definição de segmento são usados para identificar seu segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
+A variável **[!UICONTROL Propriedades do segmento]** é também onde você pode especificar informações importantes sobre a definição do segmento, incluindo nome, descrição e tipo de avaliação. Os nomes de definição de segmento são usados para identificar sua definição de segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
 
 À medida que você continua a criar a definição do segmento, pode visualizar uma visualização paginada do público-alvo selecionando **[!UICONTROL Exibir perfis]**.
 
-![A seção de propriedades da definição de segmento é realçada. As propriedades do segmento incluem, mas não estão limitadas a, o nome do segmento, a descrição e o método de avaliação.](../images/ui/segment-builder/segment-properties.png)
+![A seção de propriedades da definição de segmento é realçada. As propriedades de definição de segmento incluem, mas não estão limitadas a, o nome da definição de segmento, a descrição e o método de avaliação.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas de segmentos podem ser encontradas no [seção geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de segmento.
+>As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre como gerar estimativas para definições de segmento podem ser encontradas no [seção geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de definição de segmento.
 
-Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação esse segmento se qualifica, é possível selecionar o ícone procurar ![ícone de pasta com uma lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver uma lista de métodos de avaliação de segmento disponíveis.
+Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, é possível selecionar o ícone procurar ![ícone de pasta com uma lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
 
 A variável [!UICONTROL Elegibilidade do método de avaliação] popover é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia a [segmentação por transmissão](./streaming-segmentation.md#query-types) ou o [segmentação de borda](./edge-segmentation.md#query-types) visões gerais.
 
-![A janela pop-up de elegibilidade do método de avaliação é exibida. Isso mostra quais métodos de avaliação de segmento são elegíveis e inelegíveis para o segmento.](../images/ui/segment-builder/select-evaluation-method.png)
+![A janela pop-up de elegibilidade do método de avaliação é exibida. Isso mostra quais métodos de avaliação são elegíveis e inelegíveis para a definição do segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Se você selecionar um método de avaliação inválido, será solicitado a alterar as regras de definição de segmento ou o método de avaliação.
 
-![O método de avaliação aparece. Se um método de avaliação de segmento inelegível for selecionado, a janela pop-up explicará por que ele é inelegível.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![O método de avaliação aparece. Se um método de avaliação inelegível for selecionado, a janela pop-up explicará por que ele é inelegível.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 Mais informações sobre os diferentes métodos de avaliação de definição de segmento podem ser encontradas na [visão geral da segmentação](../home.md#evaluate-segments).
 

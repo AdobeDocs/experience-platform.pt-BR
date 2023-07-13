@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;avaliação de segmentos;Serviço de segmentação;segmentação;segmentação;avaliar um segmento;resultados de segmentos de acesso;avaliar e acessar segmento;
 solution: Experience Platform
 title: Avaliar e acessar resultados do segmento
 type: Tutorial
-description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do serviço de segmentação do Adobe Experience Platform.
+description: Siga este tutorial para saber como avaliar definições de segmento e acessar resultados da segmentação usando a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
 
-# Avaliar e acessar resultados do segmento
+# Avaliar e acessar resultados de definição de segmento
 
-Este documento fornece um tutorial para avaliar segmentos e acessar resultados de segmentos usando o [[!DNL Segmentation API]](../api/getting-started.md).
+Este documento fornece um tutorial para avaliar as definições de segmento e acessar esses resultados usando o [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de público-alvo. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
+Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de públicos. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite criar segmentos de público-alvo a partir do [!DNL Real-Time Customer Profile] dados.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite criar públicos-alvo a partir do [!DNL Real-Time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
@@ -45,13 +44,13 @@ Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
-## Avaliar um segmento {#evaluate-a-segment}
+## Avaliar uma definição de segmento {#evaluate-a-segment}
 
-Depois de desenvolver, testar e salvar a definição do segmento, é possível avaliá-lo por meio da avaliação programada ou por meio da avaliação sob demanda.
+Depois de desenvolver, testar e salvar a definição do segmento, é possível avaliá-la por meio da avaliação programada ou por meio da avaliação sob demanda.
 
 [Avaliação programada](#scheduled-evaluation) (também conhecida como &quot;segmentação programada&quot;) permite criar uma programação recorrente para executar um trabalho de exportação em um horário específico, enquanto [avaliação sob demanda](#on-demand-evaluation) envolve a criação de um trabalho de segmento para criar o público-alvo imediatamente. As etapas para cada um são descritas abaixo.
 
-Se você ainda não tiver concluído a [criar um segmento usando a API de segmentação](./create-a-segment.md) tutorial ou criou uma definição de segmento usando [Construtor de segmentos](../ui/overview.md), faça isso antes de prosseguir com este tutorial.
+Se você ainda não tiver concluído a [criar uma definição de segmento usando a API de segmentação](./create-a-segment.md) tutorial ou criou uma definição de segmento usando [Construtor de segmentos](../ui/overview.md), faça isso antes de prosseguir com este tutorial.
 
 ## Avaliação programada {#scheduled-evaluation}
 
@@ -81,11 +80,11 @@ Informações mais detalhadas sobre como usar este endpoint podem ser encontrada
 
 ## Avaliação sob demanda
 
-A avaliação sob demanda permite criar um trabalho de segmento para gerar um segmento de público-alvo sempre que você precisar. Ao contrário da avaliação agendada, isso ocorrerá somente quando solicitado e não é recorrente.
+A avaliação sob demanda permite criar um trabalho de segmento para gerar um público-alvo sempre que você precisar. Ao contrário da avaliação agendada, isso ocorrerá somente quando solicitado e não é recorrente.
 
 ### Criar um trabalho de segmento
 
-Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a uma definição de segmento, bem como a quaisquer políticas de mesclagem que controlam como [!DNL Real-Time Customer Profile] O mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com sucesso, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho máximo do seu público-alvo. Um trabalho de segmento precisa ser executado sempre que você quiser atualizar o público-alvo que está qualificado para a definição do segmento no momento.
+Um trabalho de segmento é um processo assíncrono que cria um segmento de público-alvo sob demanda. Ele faz referência a uma definição de segmento, bem como a quaisquer políticas de mesclagem que controlam como [!DNL Real-Time Customer Profile] O mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com sucesso, você pode coletar várias informações sobre a definição do segmento, como erros que possam ter ocorrido durante o processamento e o tamanho máximo do seu público-alvo. Um trabalho de segmento precisa ser executado sempre que você quiser atualizar o público-alvo que a definição de segmento qualifica atualmente.
 
 Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o `/segment/jobs` endpoint na variável [!DNL Real-Time Customer Profile] API.
 
@@ -97,9 +96,9 @@ Você pode usar o `id` para um job de segmento específico, execute uma solicita
 
 Informações mais detalhadas sobre como usar este endpoint podem ser encontradas na [manual de endpoint de trabalhos de segmento](../api/segment-jobs.md#get)
 
-## Interpretar resultados do segmento
+## Interpretar resultados do trabalho do segmento
 
-Quando os trabalhos de segmento são executados com sucesso, a variável `segmentMembership` O mapa é atualizado para cada perfil incluído no segmento. `segmentMembership` O também armazena quaisquer segmentos de público-alvo pré-avaliados que são assimilados na [!DNL Platform], permitindo a integração com outras soluções, como [!DNL Adobe Audience Manager].
+Quando os trabalhos de segmento são executados com sucesso, a variável `segmentMembership` O mapa é atualizado para cada perfil incluído na definição do segmento. `segmentMembership` O também armazena quaisquer públicos-alvo pré-avaliados que são assimilados na [!DNL Platform], permitindo a integração com outras soluções, como [!DNL Adobe Audience Manager].
 
 O exemplo a seguir mostra o que `segmentMembership` O atributo é semelhante a para cada registro de perfil individual:
 
@@ -128,14 +127,14 @@ O exemplo a seguir mostra o que `segmentMembership` O atributo é semelhante a p
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `lastQualificationTime` | O carimbo de data e hora quando a declaração de associação do segmento foi feita e o perfil entrou ou saiu do segmento. |
-| `status` | O status da participação do segmento como parte da solicitação atual. Deve ser igual a um dos seguintes valores conhecidos: <ul><li>`realized`: a entidade se qualifica para o segmento.</li><li>`exited`: a entidade está saindo do segmento.</li></ul> |
+| `lastQualificationTime` | O carimbo de data e hora quando a declaração de associação do segmento foi feita e o perfil entrou ou saiu da definição do segmento. |
+| `status` | O status de participação da definição de segmento como parte da solicitação atual. Deve ser igual a um dos seguintes valores conhecidos: <ul><li>`realized`: a entidade se qualifica para a definição do segmento.</li><li>`exited`: a entidade está saindo da definição do segmento.</li></ul> |
 
 >[!NOTE]
 >
 >Qualquer associação de segmento que esteja no `exited` por mais de 30 dias, com base na `lastQualificationTime`, estará sujeita a exclusão.
 
-## Acessar resultados de segmento
+## Acessar resultados de trabalho do segmento
 
 Os resultados de um trabalho de segmento podem ser acessados de uma das duas formas a seguir: você pode acessar perfis individuais ou exportar um público-alvo inteiro para um conjunto de dados.
 
@@ -160,7 +159,7 @@ As seguintes etapas são necessárias para exportar seu público-alvo:
 
 Ao exportar um público-alvo, um conjunto de dados de destino deve ser criado primeiro. É importante que o conjunto de dados seja configurado corretamente para garantir que a exportação seja bem-sucedida.
 
-Uma das principais considerações é o esquema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar um segmento, o conjunto de dados deve ser baseado na variável [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Um esquema de união é um esquema somente leitura gerado pelo sistema que agrega os campos de esquemas que compartilham a mesma classe, neste caso, a classe Perfil individual XDM. Para obter mais informações sobre esquemas de visualização de união, consulte a [Seção Perfil do cliente em tempo real do guia do desenvolvedor do Registro de esquema](../../xdm/api/getting-started.md).
+Uma das principais considerações é o esquema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar uma definição de segmento, o conjunto de dados deve ser baseado na variável [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Um esquema de união é um esquema somente leitura gerado pelo sistema que agrega os campos de esquemas que compartilham a mesma classe, neste caso, a classe Perfil individual XDM. Para obter mais informações sobre esquemas de visualização de união, consulte a [Seção Perfil do cliente em tempo real do guia do desenvolvedor do Registro de esquema](../../xdm/api/getting-started.md).
 
 Há duas maneiras de criar o conjunto de dados necessário:
 
@@ -213,7 +212,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID exclusiva gerada p
 
 ### Gerar perfis para membros do público {#generate-profiles}
 
-Depois de ter um conjunto de dados persistente em união, você pode criar um trabalho de exportação para persistir os membros do público-alvo para o conjunto de dados fazendo uma solicitação POST para o `/export/jobs` endpoint na variável [!DNL Real-Time Customer Profile] e fornecendo a ID do conjunto de dados e as informações de segmento dos segmentos que você deseja exportar.
+Depois de ter um conjunto de dados persistente em união, você pode criar um trabalho de exportação para persistir os membros do público-alvo para o conjunto de dados fazendo uma solicitação POST para o `/export/jobs` endpoint na variável [!DNL Real-Time Customer Profile] e fornecendo a ID do conjunto de dados e as informações de definição de segmento para as definições de segmento que você deseja exportar.
 
 Informações mais detalhadas sobre como usar este endpoint podem ser encontradas na [guia de endpoint de trabalhos de exportação](../api/export-jobs.md#create)
 
@@ -225,10 +224,10 @@ Informações mais detalhadas sobre como usar este endpoint podem ser encontrada
 
 ## Próximas etapas
 
-Após a exportação ser concluída com êxito, os dados estarão disponíveis na [!DNL Data Lake] in [!DNL Experience Platform]. Em seguida, você pode usar o [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) para acessar os dados usando o `batchId` associada à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
+Após a exportação ser concluída com êxito, os dados estarão disponíveis na [!DNL Data Lake] in [!DNL Experience Platform]. Em seguida, você pode usar o [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) para acessar os dados usando o `batchId` associada à exportação. Dependendo do tamanho da definição do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar o [!DNL Data Access] para acessar e baixar arquivos em lote, siga as [Tutorial de acesso a dados](../../data-access/tutorials/dataset-data.md).
 
-Você também pode acessar dados de segmento exportados com sucesso usando [!DNL Adobe Experience Platform Query Service]. Usando a IU ou a API RESTful, [!DNL Query Service] permite gravar, validar e executar consultas em dados no [!DNL Data Lake].
+Você também pode acessar dados de definição de segmento exportados com sucesso usando [!DNL Adobe Experience Platform Query Service]. Usando a IU ou a API RESTful, [!DNL Query Service] permite gravar, validar e executar consultas em dados no [!DNL Data Lake].
 
 Para obter mais informações sobre como consultar dados de público, consulte a documentação em [[!DNL Query Service]](../../query-service/home.md).

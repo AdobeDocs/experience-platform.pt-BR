@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Serviço de segmentação da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de segmentação
-user-guide-description: Crie segmentos e gere públicos a partir dos dados do Perfil do cliente em tempo real.
+user-guide-description: Crie públicos a partir dos dados do Perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 31%
+source-wordcount: '176'
+ht-degree: 25%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 31%
    - [Segmentação de transmissão](api/streaming-segmentation.md)
 - Interface de segmentação {#ui}
    - [Visão geral](ui/overview.md)
-   - [Audience Builder](ui/audience-builder.md)
+   - [Composição de público](ui/audience-composition.md)
    - [Painel do segmento](ui/segment-dashboard.md)
    - [Construtor de segmentos](ui/segment-builder.md)
    - [Segmentação de borda](ui/edge-segmentation.md)
@@ -65,5 +65,6 @@ ht-degree: 31%
    - [Importação e uso de públicos externos](tutorials/using-external-audiences.md)
    - [Criar um conjunto de dados para exportar dados](tutorials/create-dataset-export-segment.md)
    - [Impor a conformidade de uso de dados para segmentos](tutorials/governance.md)
+- [Perguntas frequentes](./faq.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Idioma de consulta de perfil;funções aritméticas;aritmético;
 solution: Experience Platform
 title: Funções aritméticas PAL
 description: As funções aritméticas são usadas para realizar cálculos básicos em valores na Linguagem de consulta de perfil (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 5%
+source-wordcount: '243'
+ht-degree: 6%
 
 ---
 

@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmento;Segmento;criar segmento;segmentação;criar um segmento;Serviço de segmentação;
 solution: Experience Platform
-title: Criar um segmento usando a API do serviço de segmentação
+title: Criar uma definição de segmento usando a API do serviço de segmentação
 type: Tutorial
 description: Siga este tutorial para saber como desenvolver, testar, visualizar e salvar uma definição de segmento usando a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
 
-# Criar um segmento usando a API do serviço de segmentação
+# Criar uma definição de segmento usando a API do serviço de segmentação
 
 Este documento fornece um tutorial para desenvolver, testar, visualizar e salvar uma definição de segmento usando o [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Para obter informações sobre como criar segmentos usando a interface do usuário, consulte a [Guia do Construtor de segmentos](../ui/overview.md).
+Para obter informações sobre como criar definições de segmento usando a interface do usuário, consulte o [Guia do Construtor de segmentos](../ui/overview.md).
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de público-alvo. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
+Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de definições de segmento. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite criar segmentos de público-alvo a partir dos dados do Perfil do cliente em tempo real.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite criar públicos-alvo usando definições de segmento ou outras fontes externas dos dados do Perfil do cliente em tempo real.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para o [!DNL Platform] APIs.
@@ -54,11 +53,11 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Desenvolver uma definição de segmento
 
-A primeira etapa na segmentação é definir um segmento, representado em uma construção chamada de definição de segmento. Uma definição de segmento é um objeto que encapsula uma consulta gravada em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado PQL. Os predicados de PQL definem as regras para o segmento com base nas condições relacionadas a qualquer registro ou dados de série de tempo fornecidos a [!DNL Real-Time Customer Profile]. Consulte a [Guia de PQL](../pql/overview.md) para obter mais informações sobre como gravar consultas PQL.
+A primeira etapa na segmentação é definir uma definição de segmento. Uma definição de segmento é um objeto que encapsula uma consulta gravada em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado PQL. Os predicados de PQL definem as regras para a definição de segmento com base nas condições relacionadas a qualquer registro ou dados de série de tempo fornecidos a [!DNL Real-Time Customer Profile]. Consulte a [Guia de PQL](../pql/overview.md) para obter mais informações sobre como gravar consultas PQL.
 
-Você pode criar uma nova definição de segmento fazendo uma solicitação POST para o `/segment/definitions` endpoint na variável [!DNL Segmentation] API. O exemplo a seguir descreve como formatar uma solicitação de definição, incluindo quais informações são necessárias para que um segmento seja definido com sucesso.
+Você pode criar uma nova definição de segmento fazendo uma solicitação POST para o `/segment/definitions` endpoint na variável [!DNL Segmentation] API. O exemplo a seguir descreve como formatar uma solicitação de definição, incluindo quais informações são necessárias para que uma definição de segmento seja definida com sucesso.
 
-Para obter uma explicação detalhada sobre como definir um segmento, leia o [guia do desenvolvedor de definição de segmento](../api/segment-definitions.md#create).
+Para obter uma explicação detalhada sobre como definir uma definição de segmento, leia o [guia do desenvolvedor de definição de segmento](../api/segment-definitions.md#create).
 
 ## Estimar e visualizar um público {#estimate-and-preview-an-audience}
 
@@ -66,14 +65,14 @@ Para obter uma explicação detalhada sobre como definir um segmento, leia o [gu
 
 Ao estimar e visualizar seu público-alvo, você pode testar e otimizar seus predicados de PQL até que eles produzam um resultado desejado, em que possam ser usados em uma definição de segmento atualizada.
 
-Há duas etapas necessárias para visualizar ou obter uma estimativa do seu segmento:
+Há duas etapas necessárias para visualizar ou obter uma estimativa da definição do segmento:
 
 1. [Criar um trabalho de visualização](#create-a-preview-job)
 2. [Exibir estimativa ou visualização](#view-an-estimate-or-preview) usar a ID do trabalho de visualização
 
 ### Como as estimativas são geradas
 
-As amostras de dados são usadas para avaliar segmentos e estimar o número de perfis qualificados. Novos dados são carregados na memória a cada manhã (entre 12AM-2AM PT, que é 7-9AM UTC) e todas as consultas de segmentação são estimadas usando os dados de amostra desse dia. Consequentemente, quaisquer novos campos adicionados ou dados adicionais coletados serão refletidos em estimativas no dia seguinte.
+As amostras de dados são usadas para avaliar as definições de segmentos e estimar o número de perfis qualificados. Novos dados são carregados na memória a cada manhã (entre 12AM-2AM PT, que é 7-9AM UTC) e todas as consultas de segmentação são estimadas usando os dados de amostra desse dia. Consequentemente, quaisquer novos campos adicionados ou dados adicionais coletados serão refletidos em estimativas no dia seguinte.
 
 O tamanho da amostra depende do número geral de entidades no armazenamento de perfis. Esses tamanhos de amostra são representados na tabela a seguir:
 

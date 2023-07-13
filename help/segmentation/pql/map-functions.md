@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Profile Query Language;map functions;map;
 solution: Experience Platform
 title: Funções de Mapa PQL
 description: A Linguagem de consulta de perfil (PQL) oferece funções para facilitar a interação com mapas.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 6%
+source-wordcount: '156'
+ht-degree: 7%
 
 ---
 

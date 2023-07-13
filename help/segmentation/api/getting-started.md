@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Introdução à API do serviço de segmentação
 description: A documentação a seguir fornece informações adicionais que você precisa saber para trabalhar com êxito com a API de segmentação.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '355'
 ht-degree: 1%
 
 ---
 
 # Introdução à API do serviço de segmentação {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] O permite criar segmentos e gerar públicos no Adobe Experience Platform a partir de seus [!DNL Real-Time Customer Profile] dados.
+Adobe Experience Platform [!DNL Segmentation Service] O permite criar públicos-alvo por meio de definições de segmento ou outras fontes no Adobe Experience Platform a partir do [!DNL Real-Time Customer Profile] dados.
 
 O guia do desenvolvedor requer uma compreensão funcional dos vários [!DNL Experience Platform] serviços envolvidos na utilização [!DNL Segmentation Service].
 
-- [[!DNL Segmentation]](../home.md): permite criar segmentos de público-alvo a partir do [!DNL Real-Time Customer Profile] dados.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite criar públicos-alvo a partir do [!DNL Real-Time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.

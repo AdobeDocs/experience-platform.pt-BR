@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;segmentação;serviço de segmentação;solução de problemas;API;segmento;segmento;pesquisa;pesquisa de segmento;
 title: Endpoint da API de pesquisa de segmento
 description: Na API do Serviço de segmentação da Adobe Experience Platform, a Pesquisa de segmentos é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real. Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmentos e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
@@ -38,7 +37,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parâmetros | Descrição |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} representa o valor da classe de esquema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é compatível. |
-| `s={SEARCH_TERM}` | *(Opcional)* Microsoft Onde {SEARCH_TERM} representa uma consulta que está de acordo com a implementação de [Sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` serão retornados. Uma explicação mais detalhada pode ser encontrada na [apêndice](#appendix) deste documento. |
+| `s={SEARCH_TERM}` | *(Opcional)* Onde {SEARCH_TERM} representa uma consulta que está em conformidade com a implementação do Microsoft de [Sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` serão retornados. Uma explicação mais detalhada pode ser encontrada na [apêndice](#appendix) deste documento. |
 
 **Solicitação**
 
@@ -99,9 +98,9 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe de esquema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é compatível. |
 | `namespace={NAMESPACE}` | **(Obrigatório)** Onde {NAMESPACE} contém o namespace no qual você deseja pesquisar. |
-| `s={SEARCH_TERM}` | *(Opcional)* Microsoft Onde {SEARCH_TERM} contém uma consulta que está de acordo com a implementação de [Sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` serão retornados. Uma explicação mais detalhada pode ser encontrada na [apêndice](#appendix) deste documento. |
-| `entityId={ENTITY_ID}` | *(Opcional)* Limita sua pesquisa à pasta designada, especificada com {ENTITY_ID}. |
-| `limit={LIMIT}` | *(Opcional)* Onde {LIMIT} representa o número de resultados de pesquisa a serem retornados. O valor padrão é 50. |
+| `s={SEARCH_TERM}` | *(Opcional)* Onde {SEARCH_TERM} contém uma query que está de acordo com a implementação de Microsoft do [Sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se nenhum termo de pesquisa for especificado, todos os registros associados a `schema.name` serão retornados. Uma explicação mais detalhada pode ser encontrada na [apêndice](#appendix) deste documento. |
+| `entityId={ENTITY_ID}` | *(Opcional)* Limita a pesquisa à na pasta designada, especificada com {ENTITY_ID}. |
+| `limit={LIMIT}` | *(Opcional)* Onde {LIMIT} representa o número de resultados da pesquisa a serem retornados. O valor padrão é 50. |
 | `page={PAGE}` | *(Opcional)* Onde {PAGE} representa o número de página usado para paginar os resultados da consulta pesquisada. Observe que o número da página começa em **0**. |
 
 
@@ -223,9 +222,9 @@ Depois de ler este guia, você compreenderá melhor como a Pesquisa de segmento 
 
 ## Apêndice {#appendix}
 
-As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. As consultas de pesquisa são escritas da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, procurar um segmento chamado AAM ou [!DNL Platform], você usaria a seguinte consulta de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
+As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. As consultas de pesquisa são escritas da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para pesquisar uma definição de segmento chamada AAM ou [!DNL Platform], você usaria a seguinte consulta de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como no exemplo mostrado acima.
+>  Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como no exemplo mostrado acima.
 
 ### Pesquisar campos {#search-fields}
 
@@ -235,16 +234,16 @@ A tabela a seguir lista os campos que podem ser pesquisados dentro do parâmetro
 | ---------- | ----------- |
 | folderId | A(s) pasta(s) que tem(êm) a ID da pasta da pesquisa especificada. |
 | folderLocation | O local ou locais que têm o local da pasta da pesquisa especificada. |
-| parentFolderId | O segmento ou pasta que tem a ID da pasta principal da pesquisa especificada. |
-| segmentId | O segmento corresponde à ID de segmento da pesquisa especificada. |
-| segmentName | O segmento corresponde ao nome do segmento da pesquisa especificada. |
-| segmentDescription | O segmento corresponde à descrição do segmento da pesquisa especificada. |
+| parentFolderId | A definição de segmento ou pasta que tem a ID da pasta principal da pesquisa especificada. |
+| segmentId | A definição de segmento que corresponde à ID de segmento da pesquisa especificada. |
+| segmentName | A definição de segmento que corresponde ao nome do segmento da pesquisa especificada. |
+| segmentDescription | A definição de segmento que corresponde à descrição de segmento da pesquisa especificada. |
 
 ### Pesquisar expressão {#search-expression}
 
 A tabela a seguir lista as especificidades de como as consultas de pesquisa funcionam ao usar a API de pesquisa de segmento.
 
->!![NOTE] Os exemplos a seguir são mostrados em um formato não codificado por HTML para maior clareza. Para obter as práticas recomendadas, HTML codifique a expressão de pesquisa.
+>  Os exemplos a seguir são mostrados em um formato não codificado por HTML para maior clareza. Para obter as práticas recomendadas, HTML codifique a expressão de pesquisa.
 
 | Exemplo de expressão de pesquisa | Descrição |
 | ------------------------- | ----------- |

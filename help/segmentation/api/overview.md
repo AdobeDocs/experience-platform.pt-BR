@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;API;api;
 title: Guia da API do Serviço de segmentação
 description: A API do Serviço de segmentação permite que os desenvolvedores gerenciem programaticamente as operações de segmentação no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 3%
+source-wordcount: '560'
+ht-degree: 2%
 
 ---
 
 # Guia da API do Serviço de segmentação
 
-[!DNL Adobe Experience Platform Segmentation Service] O permite criar segmentos e gerar públicos-alvo no [!DNL Adobe Experience Platform] do seu [!DNL Real-Time Customer Profile] dados.
+Adobe Experience Platform [!DNL Segmentation Service] O permite criar públicos-alvo por meio de definições de segmento ou outras fontes no Adobe Experience Platform a partir do [!DNL Real-Time Customer Profile] dados.
 
 A variável [!DNL Segmentation Service] A API fornece vários endpoints que permitem gerenciar programaticamente as operações de segmentação no [!DNL Experience Platform]. Este documento de visão geral fornece apresentações de alto nível a cada um desses endpoints, além de links para os guias de endpoint associados para obter detalhes. Antes de ler os manuais de endpoint individuais, consulte os [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, ler chamadas de API de exemplo e muito mais.
 
 Para exibir todos os endpoints e operações CRUD disponíveis, consulte o [Referência da API do serviço de segmentação](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-<!-- ## Audiences
+## Públicos-alvo
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Os públicos-alvo são uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Eles podem ser gerados usando a Platform ou de fontes externas. Você pode usar o `/audiences` endpoint para recuperar todos os públicos, criar um novo público, recuperar detalhes de um público específico, atualizar um público específico ou excluir um público específico.
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
+Para obter mais informações sobre como usar este endpoint, leia a [manual de endpoint de públicos](./audiences.md).
 
 ## Exportar trabalhos
 
@@ -46,13 +45,13 @@ Para obter mais informações sobre como usar este endpoint, leia a [guia de end
 
 ## Definições de segmento
 
-As definições de segmento definem quais perfis farão parte de quais segmentos de público-alvo. Você pode usar o `/segment/definitions` ponto de extremidade para gerenciar definições de segmento.
+As definições de segmento definem quais perfis farão parte de qual público-alvo. Você pode usar o `/segment/definitions` ponto de extremidade para gerenciar definições de segmento.
 
 Para obter mais informações sobre como usar este endpoint, leia a [guia de endpoint de definições de segmento](./segment-definitions.md).
 
 ## Trabalhos do segmento
 
-Os trabalhos de segmento processam definições de segmento estabelecidas anteriormente para gerar um segmento de público-alvo. Você pode usar o `/segment/jobs` endpoint para gerenciar trabalhos do segmento.
+Os trabalhos de segmento processam definições de segmento estabelecidas anteriormente para gerar um público-alvo. Você pode usar o `/segment/jobs` endpoint para gerenciar trabalhos do segmento.
 
 Para obter mais informações sobre como usar este endpoint, leia a [manual de endpoint de trabalhos de segmento](./segment-jobs.md).
 

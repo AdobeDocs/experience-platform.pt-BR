@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;segmentação por transmissão;Segmentação por transmissão;Avaliação contínua;
 solution: Experience Platform
 title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1992'
 ht-degree: 2%
 
 ---
@@ -25,14 +24,14 @@ Segmentação de transmissão ativada [!DNL Adobe Experience Platform] O permite
 >
 >A segmentação de streaming funciona em todos os dados que foram assimilados usando uma fonte de streaming. Os segmentos assimilados usando uma origem em lote serão avaliados à noite, mesmo que se qualifiquem para segmentação por transmissão.
 >
->Além disso, os segmentos avaliados com segmentação por transmissão podem variar entre a associação ideal e real se o segmento se basear em outro segmento avaliado usando segmentação em lote. Por exemplo, se o Segmento A se basear no Segmento B, e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B é atualizado apenas a cada 24 horas, o Segmento A se afastará dos dados reais até ressincronizar com a atualização do Segmento B.
+>Além disso, as definições de segmento avaliadas com a segmentação por transmissão podem variar entre a associação ideal e real se a definição do segmento se basear em outra definição de segmento que é avaliada usando a segmentação em lote. Por exemplo, se o Segmento A se basear no Segmento B, e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B é atualizado apenas a cada 24 horas, o Segmento A se afastará dos dados reais até ressincronizar com a atualização do Segmento B.
 
 ## Introdução
 
 Este guia do desenvolvedor requer uma compreensão funcional dos vários [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação por transmissão. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
-- [[!DNL Segmentation]](../home.md): oferece a capacidade de criar segmentos e públicos-alvo a partir do [!DNL Real-Time Customer Profile] dados.
+- [[!DNL Segmentation]](../home.md): oferece a capacidade de criar públicos-alvo usando definições de segmento e outras fontes externas da [!DNL Real-Time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para o [!DNL Platform] APIs.
@@ -69,7 +68,7 @@ Cabeçalhos adicionais podem ser necessários para concluir solicitações espec
 >
 >Você precisará ativar a segmentação programada para a organização para que a segmentação por transmissão funcione. Informações sobre como ativar a segmentação agendada podem ser encontradas no [ativar seção de segmentação programada](#enable-scheduled-segmentation)
 
-Para que um segmento seja avaliado usando a segmentação por transmissão, o query deve estar em conformidade com as diretrizes a seguir.
+Para que uma definição de segmento seja avaliada usando a segmentação por transmissão, o query deve estar em conformidade com as diretrizes a seguir.
 
 | Tipo de consulta | Detalhes |
 | ---------- | ------- |
@@ -98,15 +97,15 @@ Observe que as seguintes diretrizes se aplicam ao fazer a segmentação por tran
 
 Se uma definição de segmento for modificada para não atender mais aos critérios de segmentação por transmissão, a definição de segmento mudará automaticamente de &quot;Transmissão&quot; para &quot;Lote&quot;.
 
-Além disso, a desqualificação de segmentos, semelhante à qualificação de segmentos, acontece em tempo real. Como resultado, se um público-alvo não se qualificar mais para um segmento, ele será imediatamente desqualificado. Por exemplo, se a definição do segmento solicitar &quot;Todos os usuários que compraram sapatos vermelhos nas últimas três horas&quot;, após três horas, todos os perfis que se qualificaram inicialmente para a definição do segmento serão desqualificados.
+Além disso, a desqualificação de segmentos, semelhante à qualificação de segmentos, acontece em tempo real. Como resultado, se um perfil não se qualificar mais para uma definição de segmento, ele será imediatamente desqualificado. Por exemplo, se a definição do segmento solicitar &quot;Todos os usuários que compraram sapatos vermelhos nas últimas três horas&quot;, após três horas, todos os perfis que se qualificaram inicialmente para a definição do segmento serão desqualificados.
 
-## Recuperar todos os segmentos ativados para segmentação por transmissão
+## Recuperar todas as definições de segmento habilitadas para segmentação por transmissão
 
-Você pode recuperar uma lista de todos os segmentos que estão ativados para segmentação por transmissão na organização fazendo uma solicitação GET para o `/segment/definitions` terminal.
+É possível recuperar uma lista de todas as definições de segmento que estão habilitadas para segmentação por transmissão na organização fazendo uma solicitação GET para a `/segment/definitions` terminal.
 
 **Formato da API**
 
-Para recuperar segmentos habilitados para streaming, você deve incluir o parâmetro de consulta `evaluationInfo.continuous.enabled=true` no caminho da solicitação.
+Para recuperar definições de segmento com transmissão ativada, você deve incluir o parâmetro de consulta `evaluationInfo.continuous.enabled=true` no caminho da solicitação.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -126,7 +125,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de segmentos em sua organização que estão habilitados para segmentação por transmissão.
+Uma resposta bem-sucedida retorna uma matriz de definições de segmento na organização que estão habilitadas para segmentação por transmissão.
 
 ```json
 {
@@ -213,9 +212,9 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos em sua organização q
 }
 ```
 
-## Criar um segmento habilitado para transmissão
+## Criar uma definição de segmento habilitado para streaming
 
-Um segmento será ativado automaticamente para transmissão se corresponder a um dos [tipos de segmentação de transmissão listados acima](#query-types).
+Uma definição de segmento será ativada automaticamente por transmissão se corresponder a uma das [tipos de segmentação de transmissão listados acima](#query-types).
 
 **Formato da API**
 
@@ -261,7 +260,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Esta é uma solicitação padrão de &quot;criar um segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial em [criação de um segmento](../tutorials/create-a-segment.md).
+>Esta é uma solicitação padrão para &quot;criar uma definição de segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial em [criação de uma definição de segmento](../tutorials/create-a-segment.md).
 
 **Resposta**
 
@@ -307,7 +306,7 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento habilit
 
 ## Ativar avaliação programada {#enable-scheduled-segmentation}
 
-Quando a avaliação de transmissão tiver sido habilitada, uma linha de base deverá ser criada (depois disso, o segmento sempre estará atualizado). A avaliação programada (também conhecida como segmentação programada) deve ser ativada primeiro para que o sistema execute automaticamente a linha de base. Com a segmentação programada, sua organização pode seguir uma programação recorrente para executar automaticamente trabalhos de exportação para avaliar segmentos.
+Quando a avaliação de transmissão tiver sido habilitada, uma linha de base deverá ser criada (depois disso, a definição do segmento sempre estará atualizada). A avaliação programada (também conhecida como segmentação programada) deve ser ativada primeiro para que o sistema execute automaticamente a linha de base. Com a segmentação programada, sua organização pode seguir uma programação recorrente para executar automaticamente trabalhos de exportação para avaliar as definições de segmento.
 
 >[!NOTE]
 >
@@ -351,7 +350,7 @@ curl -X POST \
 | `name` | **(Obrigatório)** O nome da programação. Deve ser uma sequência de caracteres. |
 | `type` | **(Obrigatório)** O tipo de processo em formato de sequência. Os tipos compatíveis são `batch_segmentation` e `export`. |
 | `properties` | **(Obrigatório)** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | **(Obrigatório quando `type` igual a `batch_segmentation`)** Usar `["*"]` A garante que todos os segmentos sejam incluídos. |
+| `properties.segments` | **(Obrigatório quando `type` igual a `batch_segmentation`)** Usar `["*"]` garante que todas as definições de segmento sejam incluídas. |
 | `schedule` | **(Obrigatório)** Uma string contendo o agendamento do job. As ordens de produção só podem ser programadas para serem executadas uma vez por dia, o que significa que não é possível programar uma ordem de produção para ser executada mais de uma vez durante um período de 24 horas. O exemplo mostrado (`0 0 1 * * ?`) significa que a tarefa é acionada todos os dias às 1:00:00 UTC Para obter mais informações, consulte o apêndice na [formato de expressão do cron](./schedules.md#appendix) na documentação sobre agendamentos na segmentação. |
 | `state` | *(Opcional)* Sequência de caracteres contendo o estado do agendamento. Valores disponíveis: `active` e `inactive`. O valor padrão é `inactive`. Uma organização só pode criar um agendamento. As etapas para atualizar o agendamento estão disponíveis posteriormente neste tutorial. |
 
@@ -422,9 +421,9 @@ A mesma operação pode ser usada para desativar um agendamento substituindo o &
 
 ## Próximas etapas
 
-Agora que você ativou segmentos novos e existentes para segmentação por transmissão e ativou a segmentação programada para desenvolver uma linha de base e executar avaliações recorrentes, é possível começar a criar segmentos com transmissão ativada para sua organização.
+Agora que você ativou definições de segmento novas e existentes para segmentação por transmissão e ativou a segmentação agendada para desenvolver uma linha de base e executar avaliações recorrentes, é possível começar a criar definições de segmento com transmissão ativada para sua organização.
 
-Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).
+Para saber como executar ações semelhantes e trabalhar com definições de segmento usando a interface do usuário do Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).
 
 ## Apêndice
 
@@ -432,26 +431,26 @@ A seção a seguir lista as perguntas frequentes relacionadas à segmentação d
 
 ### A &quot;desqualificação&quot; da segmentação por transmissão também ocorre em tempo real?
 
-Para a maioria das instâncias, a desqualificação da segmentação por transmissão ocorre em tempo real. No entanto, os segmentos de transmissão que usam segmentos de segmentos não **não** desqualificar em tempo real, em vez de desqualificar após 24 horas.
+Para a maioria das instâncias, a desqualificação da segmentação por transmissão ocorre em tempo real. No entanto, as definições de segmento de transmissão que usam segmentos de segmentos não **não** desqualificar em tempo real, em vez de desqualificar após 24 horas.
 
 ### Em quais dados a segmentação por transmissão funciona?
 
 A segmentação de streaming funciona em todos os dados que foram assimilados usando uma fonte de streaming. Os segmentos assimilados usando uma origem em lote serão avaliados à noite, mesmo que se qualifiquem para segmentação por transmissão. Os eventos transmitidos para o sistema com um carimbo de data e hora com mais de 24 horas serão processados na tarefa em lote subsequente.
 
-### Como os segmentos são definidos como segmentação em lote ou por transmissão?
+### Como as definições de segmento são definidas como segmentação em lote ou por transmissão?
 
-Um segmento é definido como segmentação em lote ou por transmissão com base em uma combinação de tipo de consulta e duração do histórico do evento. Uma lista de quais segmentos serão avaliados como um segmento de transmissão pode ser encontrada na [seção tipos de consulta de segmentação de transmissão](#query-types).
+Uma definição de segmento é definida como segmentação em lote ou por transmissão com base em uma combinação de tipo de consulta e duração do histórico de eventos. Uma lista de quais definições de segmento serão avaliadas como um segmento de transmissão pode ser encontrada na [seção tipos de consulta de segmentação de transmissão](#query-types).
 
-Observe que se um segmento contiver **ambos** um `inSegment` e uma cadeia direta de evento único, não pode se qualificar para segmentação por transmissão. Se quiser que esse segmento se qualifique para a segmentação por transmissão, transforme a cadeia direta de eventos únicos em seu próprio segmento.
+Observe que se um segmento contiver **ambos** um `inSegment` e uma cadeia direta de evento único, não pode se qualificar para segmentação por transmissão. Se quiser que essa definição de segmento se qualifique para segmentação por transmissão, você deve tornar a cadeia de evento único direta sua própria definição de segmento.
 
-### Por que o número de segmentos &quot;total qualificado&quot; continua aumentando, enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes do segmento?
+### Por que o número de definições de segmento &quot;total qualificado&quot; continua aumentando, enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes de definição do segmento?
 
-O número total de segmentos qualificados é retirado do trabalho diário de segmentação, que inclui públicos qualificados para segmentos em lote e de fluxo. Esse valor é mostrado para segmentos em lote e de transmissão.
+O número total de definições de segmento qualificado é obtido do trabalho diário de segmentação, que inclui públicos qualificados para definições de segmento em lote e de transmissão. Esse valor é mostrado para definições de segmento em lote e de transmissão.
 
-O número abaixo de &quot;Últimos X dias&quot; **somente** inclui públicos qualificados na segmentação por transmissão e **somente** aumenta se você tiver transmitido dados para o sistema e contar para essa definição de transmissão. Este valor é **somente** exibido para segmentos de transmissão. Como resultado, esse valor **maio** exibir como 0 para segmentos em lote.
+O número abaixo de &quot;Últimos X dias&quot; **somente** inclui públicos qualificados na segmentação por transmissão e **somente** aumenta se você tiver transmitido dados para o sistema e contar para essa definição de transmissão. Este valor é **somente** exibido para definições de segmento de transmissão. Como resultado, esse valor **maio** exibir como 0 para definições de segmento em lote.
 
-Como resultado, se você vir que o número em &quot;Últimos X dias&quot; é zero e o gráfico de linhas também está relatando zero, você **não** todos os perfis transmitidos para o sistema que se qualificariam para esse segmento.
+Como resultado, se você vir que o número em &quot;Últimos X dias&quot; é zero e o gráfico de linhas também está relatando zero, você **não** todos os perfis transmitidos para o sistema que se qualificariam para essa definição de segmento.
 
-### Quanto tempo leva para um segmento ficar disponível?
+### Quanto tempo leva para uma definição de segmento ficar disponível?
 
-Leva até uma hora para um segmento estar disponível.
+Leva até uma hora para uma definição de segmento estar disponível.

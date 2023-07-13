@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;trabalhos de segmento;trabalho de segmento;API;api;
 solution: Experience Platform
 title: Ponto de extremidade da API de trabalhos de segmento
 description: O endpoint de trabalhos de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os trabalhos de segmento da sua organização.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 3%
 
 ---
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos de segmento para a organização especificada como JSON. No entanto, a resposta será diferente, dependendo do número de segmentos no trabalho de segmento.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos de segmento para a organização especificada como JSON. No entanto, a resposta será diferente, dependendo do número de definições de segmento no trabalho de segmento.
 
-**Menor que ou igual a 1500 segmentos no trabalho do segmento**
+**Menor que ou igual a 1.500 definições de segmento no trabalho de segmento**
 
-Se você tiver menos de 1500 segmentos em execução no seu trabalho de segmento, uma lista completa de todos os segmentos será exibida na `children.segments` atributo.
+Se você tiver menos de 1500 definições de segmento em execução no seu trabalho de segmento, uma lista completa de todas as definições de segmento será exibida no `children.segments` atributo.
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ Se você tiver menos de 1500 segmentos em execução no seu trabalho de segmento
 }
 ```
 
-**Mais de 1500 segmentos**
+**Mais de 1500 definições de segmento**
 
-Se você tiver mais de 1500 segmentos em execução no seu trabalho de segmento, a variável `children.segments` atributo será exibido `*`, indicando que todos os segmentos estão sendo avaliados.
+Se você tiver mais de 1500 definições de segmento sendo executadas no seu job de segmento, a variável `children.segments` atributo será exibido `*`, indicando que todas as definições de segmento estão sendo avaliadas.
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ Se você tiver mais de 1500 segmentos em execução no seu trabalho de segmento,
 | `metrics.totalTime` | Um objeto que contém informações sobre os horários em que o trabalho de segmentação começou e terminou, bem como o tempo total gasto. |
 | `metrics.profileSegmentationTime` | Um objeto que contém informações sobre os horários em que a avaliação da segmentação começou e terminou, bem como o tempo total gasto. |
 | `metrics.segmentProfileCounter` | O número de perfis qualificados por segmento. |
-| `metrics.segmentedProfileByNamespaceCounter` | O número de perfis qualificados para cada namespace de identidade com base no segmento. |
-| `metrics.segmentProfileByStatusCounter` | A contagem de perfis para cada status. Os três status a seguir são compatíveis: <ul><li>&quot;realizado&quot; - O número de perfis qualificados para o segmento.</li><li>&quot;encerrado&quot; - o número de segmentos de perfil que não existem mais no segmento.</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | O número de perfis qualificados para cada namespace de identidade com base na definição de cada segmento. |
+| `metrics.segmentProfileByStatusCounter` | A contagem de perfis para cada status. Os três status a seguir são compatíveis: <ul><li>&quot;realizado&quot; - o número de perfis qualificados para a definição do segmento.</li><li>&quot;encerrado&quot; - o número de perfis que não existem mais na definição do segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | O número total de perfis mesclados por política de mesclagem. |
 
 ## Criar um novo trabalho de segmento {#create}
@@ -286,9 +285,9 @@ Você pode criar um novo trabalho de segmento fazendo uma solicitação POST par
 POST /segment/jobs
 ```
 
-Ao criar um novo trabalho de segmento, a solicitação e a resposta serão diferentes dependendo do número de segmentos no trabalho de segmento.
+Ao criar um novo trabalho de segmento, a solicitação e a resposta serão diferentes dependendo do número de definições de segmento no trabalho de segmento.
 
-**Menor que ou igual a 1500 segmentos no trabalho do segmento**
+**Menor que ou igual a 1.500 definições de segmento no trabalho de segmento**
 
 **Solicitação**
 
@@ -411,13 +410,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o tr
 | `segments.segment.id` | A ID da definição de segmento fornecida. |
 | `segments.segment.expression` | Um objeto que contém informações sobre a expressão da definição de segmento, escrita em PQL. |
 
-**Mais de 1500 segmentos**
+**Mais de 1500 definições de segmento**
 
 **Solicitação**
 
 >[!NOTE]
 >
->Embora você possa criar um trabalho de segmento com mais de 1500 segmentos, isso é **altamente não recomendado**.
+>Embora você possa criar um trabalho de segmento com mais de 1500 definições de segmento, isso é **altamente não recomendado**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `schema.name` | O nome do esquema dos segmentos. |
+| `schema.name` | O nome do esquema para as definições de segmento. |
 | `segments.segmentId` | Ao executar um trabalho de segmento com mais de 1500 segmentos, você precisará passar `*` como a ID do segmento para indicar que você deseja executar um trabalho de segmentação com todos os segmentos. |
 
 **Resposta**
@@ -528,7 +527,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 | `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento recém-criado. |
 | `status` | O status atual do trabalho do segmento. Como o trabalho do segmento é recém-criado, o status sempre será `NEW`. |
 | `segments` | Um objeto que contém informações sobre as definições de segmento para as quais esse trabalho de segmento está sendo executado. |
-| `segments.segment.id` | A variável `*` significa que esse trabalho de segmento está sendo executado para todos os segmentos na organização. |
+| `segments.segment.id` | A variável `*` significa que esse trabalho de segmento está sendo executado para todas as definições de segmento na organização. |
 
 ## Recuperar um trabalho de segmento específico {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho de segmento especificado.  No entanto, a resposta será diferente dependendo do número de segmentos no trabalho de segmento.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho de segmento especificado.  No entanto, a resposta será diferente dependendo do número de definições de segmento no trabalho de segmento.
 
-**Menor que ou igual a 1500 segmentos no trabalho do segmento**
+**Menor que ou igual a 1.500 definições de segmento no trabalho de segmento**
 
-Se você tiver menos de 1500 segmentos em execução no seu trabalho de segmento, uma lista completa de todos os segmentos será exibida na `children.segments` atributo.
+Se você tiver menos de 1500 definições de segmento em execução no seu trabalho de segmento, uma lista completa de todas as definições de segmento será exibida no `children.segments` atributo.
 
 ```json
 {
@@ -622,9 +621,9 @@ Se você tiver menos de 1500 segmentos em execução no seu trabalho de segmento
 }
 ```
 
-**Mais de 1500 segmentos**
+**Mais de 1500 definições de segmento**
 
-Se você tiver mais de 1500 segmentos em execução no seu trabalho de segmento, a variável `children.segments` atributo será exibido `*`, indicando que todos os segmentos estão sendo avaliados.
+Se você tiver mais de 1500 definições de segmento sendo executadas no seu job de segmento, a variável `children.segments` atributo será exibido `*`, indicando que todas as definições de segmento estão sendo avaliadas.
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados. No entanto, o valor da `children.segments` o atributo difere dependendo se o trabalho de segmento está em execução para mais de 1500 segmentos.
+Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados. No entanto, o valor da `children.segments` o atributo difere dependendo se o trabalho de segmento está em execução para mais de 1500 definições de segmento.
 
 >[!NOTE]
 >

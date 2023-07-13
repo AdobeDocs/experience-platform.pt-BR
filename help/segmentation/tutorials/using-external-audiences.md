@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Importação e uso de públicos externos
 description: Siga este tutorial para saber como usar públicos externos com o Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
 
 # Importação e uso de públicos externos
 
-O Adobe Experience Platform oferece suporte à capacidade de importar público externo, que pode ser usado posteriormente como componentes para uma nova definição de segmento. Este documento fornece um tutorial para configurar o Experience Platform para importar e usar públicos externos.
+>[!IMPORTANT]
+>
+>Esta documentação contém informações de uma versão anterior da documentação de Públicos-alvo e, como resultado, está desatualizada.
+
+O Adobe Experience Platform oferece suporte à capacidade de importar público externo, que pode ser usado posteriormente como componentes para um novo público. Este documento fornece um tutorial para configurar o Experience Platform para importar e usar públicos externos.
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de público-alvo. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
+Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de públicos. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [Serviço de segmentação](../home.md): permite criar segmentos de público-alvo a partir dos dados do Perfil do cliente em tempo real.
+- [Serviço de segmentação](../home.md): permite criar públicos-alvo a partir dos dados do Perfil do cliente em tempo real.
 - [Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 - [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 - [Conjuntos de dados](../../catalog/datasets/overview.md): a construção de armazenamento e gerenciamento para a persistência de dados no Experience Platform.
 - [Assimilação por transmissão](../../ingestion/streaming-ingestion/overview.md): como o Experience Platform assimila e armazena dados de dispositivos do lado do cliente e do lado do servidor em tempo real.
 
-### Dados de segmento versus metadados de segmento
+### Definições de públicos versus segmentos
 
-Antes de começar a importar e usar públicos externos, é importante entender a diferença entre os dados de segmento e os metadados de segmento.
+Antes de começar a importar e usar públicos externos, é importante entender a diferença entre públicos e definições de segmento.
 
-Os dados de segmento se referem aos perfis que atendem aos critérios de qualificação de segmento e, portanto, fazem parte do público-alvo.
+Os públicos-alvo se referem ao grupo de perfis no qual você está tentando filtrar. Ao usar definições de segmento, você pode criar um público-alvo criando uma definição de segmento que filtre seus perfis para o subconjunto que atende aos critérios de qualificação de segmento.
 
-Os metadados do segmento são informações sobre o próprio segmento, que incluem o nome, a descrição, a expressão (se aplicável), a data de criação, a data da última modificação e uma ID. A ID vincula os metadados do segmento aos perfis individuais que atendem à qualificação do segmento e fazem parte do público-alvo resultante.
+As definições de segmento incluem informações como nome, descrição, expressão (se aplicável), data de criação, data da última modificação e uma ID. A ID vincula os metadados do segmento aos perfis individuais que atendem à qualificação do segmento e fazem parte do público-alvo resultante.
 
-| Segmentar dados | Metadados do segmento |
-| ------------ | ---------------- |
-| Perfis que atendem à qualificação de segmento | Informações sobre o próprio segmento |
+| Públicos-alvo | Definição de segmento |
+| --------- | ---------------- |
+| O grupo de perfis que você está tentando encontrar. Ao usar definições de segmento, significa que será o grupo de perfis que atenderá à qualificação de segmento. | O grupo de regras usado para segmentar o público que você está procurando. |
 
 ## Criar um namespace de identidade para o público externo
 
-A primeira etapa para usar públicos-alvo externos é criar um namespace de identidade. Os namespaces de identidade permitem que a Platform associe de onde um segmento se origina.
+A primeira etapa para usar públicos-alvo externos é criar um namespace de identidade. Os namespaces de identidade permitem que a Platform associe de onde um público-alvo se origina.
 
 Para criar um namespace de identidade, siga as instruções na [guia de namespace de identidade](../../identity-service/namespaces.md#manage-namespaces). Ao criar o namespace de identidade, adicione os detalhes de origem ao namespace de identidade e marque sua [!UICONTROL Tipo] as a **[!UICONTROL Identificador não pessoal]**.
 

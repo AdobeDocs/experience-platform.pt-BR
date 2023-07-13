@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;tipo de dados;tipos de dados;tipos de dados;tipos de dados de segmentação;Segmentação;segmentação;Serviço de segmentação;tipos de dados do serviço de segmentação;
 solution: Experience Platform
 title: Tipos de dados compatíveis no serviço de segmentação
 description: Todos os tipos de dados do Experience Data Model (XDM) são compatíveis com o Serviço de segmentação de Adobe. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 3%
+source-wordcount: '490'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +16,7 @@ Todos os tipos de dados do Experience Data Model (XDM) são compatíveis com o A
 
 ## Dados de string
 
-As definições de segmento usam dados de sequência para definir restrições não numéricas para públicos do segmento, como &quot;nome do país&quot; ou &quot;nível do programa de fidelidade&quot;.
+As definições de segmento usam dados de sequência para definir restrições não numéricas para públicos, como &quot;nome do país&quot; ou &quot;nível do programa de fidelidade&quot;.
 
 Os dados de string são incluídos nas definições de segmento usando instruções lógicas, inclusivas/exclusivas e de comparação. Depois que um atributo de string é adicionado à definição do segmento, é possível usar instruções relevantes para string para avaliá-lo em relação a outros campos de string.
 
@@ -33,7 +32,7 @@ Dados de data permitem atribuir contexto baseado em tempo às definições de se
 
 | Exemplo de campo | Demonstrativos relevantes à data | Linha do tempo |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevante para o dia em que o segmento foi criado. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevante para o dia em que a definição do segmento foi criada. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevante em uma determinada semana/mês. |
 
 ## Eventos de experiência
@@ -45,19 +44,19 @@ Como visto na tabela abaixo, os dados do evento são renderizados usando palavra
 | Palavra-chave | Use  |
 | ------- | --- |
 | Incluir/excluir | Descreve o comportamento do evento por meio da inclusão ou omissão de dados. |
-| Qualquer/todos | Ajuda a determinar o número de segmentos qualificados. |
+| Qualquer/todos | Ajuda a determinar o número de definições de segmento qualificado. |
 | Botão de alternância &quot;Aplicar regra de tempo&quot; | Incorpora dados de data. |
 | É igual a, não é igual, começa com, não começa com, termina com, não termina com, contém, não contém, existe, não existe | Incorpora dados de sequência de caracteres. |
 
 ### Compartilhamento de público
 
-Públicos externos também podem ser usados como componentes de uma nova definição de segmento, adicionando suas regras de atributo ao novo segmento.
+Públicos-alvo externos também podem ser usados como componentes de uma nova definição de segmento, adicionando suas regras de atributo às novas definições de segmento.
 
 Atualmente, somente o Adobe Audience Manager é compatível como público-alvo externo, com fontes adicionais sendo ativadas no futuro. Mais informações sobre o uso dos públicos-alvo da Adobe Audience Manager com a Platform podem ser encontradas na [guia de compartilhamento de público-alvo na documentação do Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
-### Compartilhamento de segmentos
+### Compartilhamento de definição de segmento
 
-Os segmentos criados na Platform podem ser usados em outros [Serviços principais da Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR). Para ativar esse recurso, entre em contato com seu arquiteto de soluções ou consultor.
+As definições de segmento criadas na Platform podem ser usadas em outros [Serviços principais da Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR). Para ativar esse recurso, entre em contato com seu arquiteto de soluções ou consultor.
 
 ## Outros tipos de dados
 

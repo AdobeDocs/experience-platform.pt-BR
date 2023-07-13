@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Profile Query Language;object functions;object;
 solution: Experience Platform
 title: Funções do objeto PQL
 description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com objetos.
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 5%
+source-wordcount: '121'
+ht-degree: 6%
 
 ---
 

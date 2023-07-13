@@ -1,10 +1,9 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;segmentação por transmissão;Segmentação;Serviço de segmentação;serviço de segmentação;guia da interface do usuário;
 solution: Experience Platform
 title: Guia da interface de segmentação de streaming
 description: A segmentação por transmissão no Adobe Experience Platform permite fazer a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação por transmissão, a qualificação de segmentos agora acontece à medida que os dados chegam à Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Platform, o que significa que a associação do segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1490'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Segmentação de transmissão ativada [!DNL Adobe Experience Platform] O permite
 >
 >A segmentação de streaming funciona em todos os dados que foram assimilados usando uma fonte de streaming. Os dados assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para segmentação por transmissão.
 >
->Além disso, os segmentos avaliados com segmentação por transmissão podem variar entre a associação ideal e real se o segmento se basear em outro segmento avaliado usando segmentação em lote. Por exemplo, se o Segmento A se basear no Segmento B, e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B é atualizado apenas a cada 24 horas, o Segmento A se afastará dos dados reais até ressincronizar com a atualização do Segmento B.
+>Além disso, os segmentos avaliados com segmentação por transmissão podem variar entre a associação ideal e real se a definição do segmento se basear em outra definição de segmento que é avaliada usando segmentação em lote. Por exemplo, se o Segmento A se basear no Segmento B, e o Segmento B for avaliado usando a segmentação em lote, já que o Segmento B é atualizado apenas a cada 24 horas, o Segmento A se afastará dos dados reais até ressincronizar com a atualização do Segmento B.
 
 ## Tipos de consulta de segmentação de transmissão {#query-types}
 
@@ -38,7 +37,7 @@ Uma consulta será avaliada automaticamente com a segmentação por transmissão
 | Evento único | Qualquer definição de segmento que se refere a um único evento recebido sem restrição de tempo. | ![Um exemplo de um único evento é mostrado.](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Evento único em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. | ![Um exemplo de um único evento em uma janela de tempo relativa é mostrado.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Evento único com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento recebido com uma janela de tempo. | ![Um exemplo de um único evento com uma janela de tempo é mostrado.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |  |
+| Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. | |
 | Evento único com um atributo de perfil | Qualquer definição de segmento que se refere a um único evento recebido, sem restrição de tempo e um ou mais atributos de perfil. **Nota:** A query é avaliada imediatamente quando o evento chega. No caso de um evento de perfil, no entanto, ele deve aguardar 24 horas para ser incorporado. | ![Um exemplo de um único evento com um atributo de perfil é mostrado.](../images/ui/streaming-segmentation/profile-hit.png) |
 | Evento único com um atributo de perfil em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada e um ou mais atributos de perfil. | ![Um exemplo de um único evento com um atributo de perfil em uma janela de tempo relativa é mostrado.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Nota:** Se um segmento de segmentos for usado, ocorrerá a desqualificação do perfil **a cada 24 horas**. | ![Um exemplo de segmento de segmentos é mostrado.](../images/ui/streaming-segmentation/two-batches.png) |
@@ -49,7 +48,7 @@ Uma definição de segmento **não** ser ativado para segmentação por transmis
 - A definição do segmento inclui segmentos ou características do Adobe Audience Manager (AAM).
 - A definição do segmento inclui várias entidades (consultas de várias entidades).
 - A definição de segmento inclui uma combinação de um único evento e uma `inSegment` evento.
-   - No entanto, se o segmento contido na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação por transmissão.
+   - No entanto, se a definição de segmento contida na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação por transmissão.
 
 Observe que as seguintes diretrizes se aplicam ao fazer a segmentação por transmissão:
 
@@ -62,11 +61,11 @@ Se uma definição de segmento for modificada para não atender mais aos critér
 
 Além disso, a desqualificação de segmentos, semelhante à qualificação de segmentos, acontece em tempo real. Como resultado, se um público-alvo não se qualificar mais para um segmento, ele será imediatamente desqualificado. Por exemplo, se a definição do segmento solicitar &quot;Todos os usuários que compraram sapatos vermelhos nas últimas três horas&quot;, após três horas, todos os perfis que se qualificaram inicialmente para a definição do segmento serão desqualificados.
 
-## Detalhes do segmento de segmentação de transmissão
+## Detalhes de definição do segmento de segmentação de transmissão
 
 Depois de criar um segmento ativado para transmissão, você pode visualizar os detalhes desse segmento.
 
-![A página de detalhes do segmento é exibida.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![A página de detalhes da definição de segmento é exibida.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 Especificamente, o **[!UICONTROL Total qualificado]** será exibida, mostrando o número total de públicos qualificados, com base nas avaliações em lote e em fluxo para esse segmento.
 
@@ -74,7 +73,7 @@ Abaixo está um gráfico de linhas que mostra o número de novos públicos-alvo 
 
 >[!NOTE]
 >
->Um segmento é considerado qualificado se passar de sem status para realizado ou se passar de encerrado para realizado. Um segmento é considerado não qualificado se passar de realizado para encerrado.
+>Uma definição de segmento é considerada qualificada se passar de sem status para realizado ou se passar de encerrado para realizado. Uma definição de segmento é considerada não qualificada se for da realização à saída.
 >
 >Mais informações sobre esses status podem ser encontradas na tabela de status dentro do [visão geral da segmentação](./overview.md#browse).
 
@@ -106,11 +105,11 @@ A segmentação de streaming funciona em todos os dados que foram assimilados us
 
 ### Como os segmentos são definidos como segmentação em lote ou por transmissão?
 
-Um segmento é definido como segmentação em lote ou por transmissão com base em uma combinação de tipo de consulta e duração do histórico do evento. Uma lista de quais segmentos serão avaliados como um segmento de transmissão pode ser encontrada na [seção tipos de consulta de segmentação de transmissão](#query-types).
+Uma definição de segmento é definida como segmentação de lote, fluxo ou borda com base em uma combinação de tipo de consulta e duração do histórico de eventos. Uma lista de quais segmentos serão avaliados como uma definição de segmento de transmissão pode ser encontrada na [seção tipos de consulta de segmentação de transmissão](#query-types).
 
-Observe que se um segmento contiver **ambos** um `inSegment` e uma cadeia direta de evento único, não pode se qualificar para segmentação por transmissão. Se quiser que esse segmento se qualifique para a segmentação por transmissão, transforme a cadeia direta de eventos únicos em seu próprio segmento.
+Observe que, se uma definição de segmento contiver **ambos** um `inSegment` e uma cadeia direta de evento único, não pode se qualificar para segmentação por transmissão. Se você quiser que essa definição de segmento se qualifique para a segmentação por transmissão, transforme a cadeia direta de evento único em seu próprio segmento.
 
-### Por que o número de segmentos &quot;total qualificado&quot; continua aumentando, enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes do segmento?
+### Por que o número de segmentos &quot;total qualificado&quot; continua aumentando, enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes de definição do segmento?
 
 O número total de segmentos qualificados é retirado do trabalho diário de segmentação, que inclui públicos qualificados para segmentos em lote e de fluxo. Esse valor é mostrado para segmentos em lote e de transmissão.
 
@@ -118,6 +117,6 @@ O número abaixo de &quot;Últimos X dias&quot; **somente** inclui públicos qua
 
 Como resultado, se você vir que o número em &quot;Últimos X dias&quot; é zero e o gráfico de linhas também está relatando zero, você **não** todos os perfis transmitidos para o sistema que se qualificariam para esse segmento.
 
-### Quanto tempo leva para um segmento ficar disponível?
+### Quanto tempo leva para uma definição de segmento ficar disponível?
 
-Leva até uma hora para um segmento estar disponível.
+Leva até uma hora para uma definição de segmento estar disponível.

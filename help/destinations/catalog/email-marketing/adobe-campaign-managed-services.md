@@ -2,9 +2,9 @@
 title: Conexão com o Adobe Campaign Managed Cloud Services
 description: O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
+source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1548'
 ht-degree: 4%
 
 ---
@@ -33,18 +33,24 @@ Use o Campaign para:
 >* Retenção de dados na Zona de aterrissagem de dados (DLZ) do armazenamento Azure Blob: 7 dias,
 >* A frequência de ativação é de no mínimo 3 horas.
 
-
 ## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino do Adobe Campaign Manage Service, este é um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-O Adobe Experience Platform cria um perfil do cliente que incorpora informações como o gráfico de identidade, dados comportamentais do analytics, mescla dados offline e online etc. Com essa integração, é possível aumentar os recursos de segmentação já existentes no Adobe Campaign com esses públicos-alvo habilitados pela Adobe Experience Platform e, portanto, ativar esses dados no Campaign.
+* O Adobe Experience Platform cria um perfil do cliente que incorpora informações como o gráfico de identidade, dados comportamentais do analytics, mescla dados offline e online etc. Com essa integração, é possível aumentar os recursos de segmentação já existentes no Adobe Campaign com esses públicos-alvo habilitados pela Adobe Experience Platform e, portanto, ativar esses dados no Campaign.
 
-Por exemplo, uma empresa de roupas esportivas quer aproveitar os segmentos inteligentes alimentados pela Adobe Experience Platform e ativá-los usando o Adobe Campaign para alcançar sua base de clientes nos diferentes canais compatíveis com o Adobe Campaign.
+  Por exemplo, uma empresa de roupas esportivas quer aproveitar os segmentos inteligentes alimentados pela Adobe Experience Platform e ativá-los usando o Adobe Campaign para alcançar sua base de clientes nos diferentes canais compatíveis com o Adobe Campaign. Depois que as mensagens forem enviadas, eles desejam aprimorar o perfil do cliente na Adobe Experience Platform com dados de experiência da Adobe Campaign, como envios, aberturas e cliques.
 
-Depois que as mensagens forem enviadas, eles desejam aprimorar o perfil do cliente na Adobe Experience Platform com dados de experiência da Adobe Campaign, como envios, aberturas e cliques.
+  O resultado são campanhas entre canais mais consistentes em todo o ecossistema da Adobe Experience Cloud e um perfil do cliente avançado que está se adaptando e aprendendo rapidamente.
 
-O resultado são campanhas entre canais mais consistentes em todo o ecossistema da Adobe Experience Cloud e um perfil do cliente avançado que está se adaptando e aprendendo rapidamente.
+
+* Além da ativação de segmentos no Campaign, você pode aproveitar o destino do Adobe Campaign Managed Services para trazer atributos de perfil adicionais, que estão vinculados a um perfil no Adobe Experience Platform e têm um processo de sincronização em vigor para que sejam atualizados no banco de dados do Adobe Campaign.
+
+  Por exemplo, digamos que você esteja capturando valores de aceitação e recusa no Adobe Experience Platform. Com essa conexão, você pode trazer esses valores para o Adobe Campaign e ter um processo de sincronização em vigor para que eles sejam atualizados regularmente.
+
+  >[!NOTE]
+  >
+  >A sincronização de atributos de perfil está disponível para perfis que já estão presentes no banco de dados do Adobe Campaign.
 
 [Saiba mais sobre a integração do Adobe Campaign com o Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=pt-BR)
 
@@ -92,6 +98,10 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
 * **[!UICONTROL Selecionar instância]**: Seu **[!DNL Campaign]** instância de marketing.
 * **[!UICONTROL Target mapping]**: selecione o target mapping que está usando no **[!DNL Adobe Campaign]** para enviar deliveries. [Saiba mais](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Selecionar tipo de sincronização]**:
+
+   * **[!UICONTROL Sincronização de público]**: use essa opção para enviar os públicos-alvo da Adobe Experience Platform para a Adobe Campaign.
+   * **[!UICONTROL Sincronização de perfil (somente atualização)]**: use essa opção para trazer os atributos de perfil do Adobe Experience Platform para a Adobe Campaign e ter um processo de sincronização em vigor para que eles possam ser atualizados regularmente.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -122,6 +132,7 @@ Selecione campos XDM para exportar com os perfis e mapeá-los para os campos cor
    * Selecione um **identificador** (Por exemplo: o campo de email) como identidade de origem que identifica exclusivamente um perfil no Adobe Experience Platform e no Adobe Campaign.
 
    * Selecionar todos os outros **Atributos do perfil de origem XDM** que precisam ser exportados para o Adobe Campaign.
+
    >[!NOTE]
    >
    >O campo &quot;segmentMembershipStatus&quot; é um mapeamento necessário para refletir o status segmentMembership. Este campo é adicionado por padrão e não pode ser modificado ou removido.
@@ -133,9 +144,10 @@ Selecione campos XDM para exportar com os perfis e mapeá-los para os campos cor
    * [Atributos obrigatórios](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) verifique se todos os registros de perfil contêm os atributos selecionados. Por exemplo: todos os perfis exportados contêm um endereço de email. A recomendação é definir como obrigatório o campo de identidade e o campo usado como chave de desduplicação.
    * [Uma chave de desduplicação](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) é uma chave primária que determina a identidade pela qual os usuários desejam que seus perfis sejam desduplicados.
 
-      >[!IMPORTANT]
-      >
-      >Verifique se o nome do atributo de chave de desduplicação corresponde a um nome de coluna do target mapping selecionado.
+     >[!IMPORTANT]
+     >
+     >Verifique se o nome do atributo de chave de desduplicação corresponde a um nome de coluna do target mapping selecionado.
+
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. Depois que o mapeamento for executado, você poderá revisar e concluir a configuração de destino para começar a enviar dados para o **[!DNL Campaign]**.
@@ -153,9 +165,11 @@ Navegue até a **[!UICONTROL Administração]** > **[!UICONTROL Auditoria]** > *
 
 ### Acessar dados exportados {#data}
 
-Navegue até a **[!UICONTROL Perfil e público alvo]** > **[!UICONTROL Lista]** > **[!UICONTROL Públicos da AEP]** para acessar públicos-alvo criados após ativar um destino.
+Para **[!UICONTROL Sincronização de público]**, você pode verificar o público-alvo exportado navegando até o **[!UICONTROL Perfil e público alvo]** > **[!UICONTROL Lista]** > **[!UICONTROL Públicos da AEP]** menu.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+
+Para **[!UICONTROL Sincronização de perfil (somente atualização)]**, os dados são atualizados automaticamente no banco de dados do Campaign para cada perfil direcionado pelo segmento ativado no destino.
 
 ## Uso e governança de dados {#data-usage-governance}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do serviço de consulta
 description: Este documento fornece uma visão geral da função do Serviço de consulta no Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] O usa aprendizagem de m�
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] O permite que os usuários dividam seus clientes em grupos menores que compartilham características semelhantes. Esses segmentos podem ser avaliados posteriormente para fornecer uma melhor análise sobre [!DNL Real-Time Customer Profile] dados. [!DNL Query Service] pode ser usado para fornecer essa análise executando consultas nesses dados de segmento na [!DNL Data Lake]. Leia as [!DNL Segmentation Service] visão geral para obter mais informações sobre segmentação e a [!DNL Profile Query Language] (PQL) para obter mais informações sobre como analisar segmentos.
+Adobe Experience Platform [!DNL Segmentation Service] O permite que os usuários dividam seus clientes em grupos menores que compartilham características semelhantes. Esses públicos-alvo podem ser avaliados posteriormente para fornecer uma melhor análise sobre [!DNL Real-Time Customer Profile] dados. [!DNL Query Service] pode ser usado para fornecer essa análise executando consultas nesses dados de público-alvo na [!DNL Data Lake]. Leia as [!DNL Segmentation Service] visão geral para obter mais informações sobre segmentação e a [!DNL Profile Query Language] (PQL) para obter mais informações sobre como analisar públicos-alvo.
 
 ## Casos de uso
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Segmentation Service] O permite que os usuários
 
 ### Abandono de navegação do Adobe Analytics
 
-Este [o exemplo de abandono de navegação se concentra no uso do Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) para criar um público-alvo acionável específico. [!DNL Query Service] O acomoda uma lógica complexa para segmentação, a fim de calcular vários atributos personalizados para uso downstream ou para simplificar muito a criação de segmentos.
+Este [o exemplo de abandono de navegação se concentra no uso do Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) para criar um público-alvo acionável específico. [!DNL Query Service] O acomoda uma lógica complexa para segmentação, a fim de calcular vários atributos personalizados para uso downstream ou para simplificar muito a criação de públicos-alvo.
 
 ### Painéis do Looker BI
 

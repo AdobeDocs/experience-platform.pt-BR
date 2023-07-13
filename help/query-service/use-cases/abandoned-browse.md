@@ -3,9 +3,9 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;consulta
 title: Exemplo de caso de uso para o serviço de consulta do Adobe Experience Platform
 description: Um exemplo completo para demonstrar a versatilidade e os benefícios do Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Este documento e a apresentação em vídeo que o acompanha fornecem um fluxo de
 * Maneiras de criar a consulta com base na arquitetura de dados existente.
 * Garanta a qualidade dos dados que atenda às suas necessidades e métodos para atenuar qualquer falha.
 * O processo para agendar uma consulta para execução em uma frequência definida para uso downstream na segmentação e destinos para personalização.
-* A facilidade de os profissionais de marketing incluírem atributos derivados em seus segmentos por meio do poder do [!DNL Query Service].
+* A facilidade de os profissionais de marketing incluírem atributos derivados em seus públicos-alvo por meio do poder do [!DNL Query Service].
 
 ## Objetivos {#objectives}
 
@@ -63,9 +63,9 @@ A apresentação em vídeo vista abaixo fornece um caso de uso holístico e real
 
 ## Benefícios do [!DNL Query Service] {#benefits}
 
-Os recursos fornecidos pelo [!DNL Query Service] serve muitos propósitos. Você pode usá-lo para acomodar uma lógica complexa para segmentação, para calcular vários atributos personalizados para uso downstream ou para simplificar bastante a criação de seus segmentos.
+Os recursos fornecidos pelo [!DNL Query Service] serve muitos propósitos. Você pode usá-lo para acomodar uma lógica complexa para segmentação, para calcular vários atributos personalizados para uso downstream ou para simplificar bastante a criação de seus públicos-alvo.
 
-[!DNL Query Service] O permite incluir restrições em suas consultas para simplificar o processo de criação de segmento. Isso melhora a qualidade dos dados, garantindo que os dados corretos sejam qualificados para seus segmentos e crie públicos mais precisos. Manter a qualidade da sua consulta resulta em um público-alvo preciso e ajuda na confiabilidade dos dados. Você também pode salvar seu público-alvo criando esquemas e tabelas personalizadas com base em atributos derivados de sua consulta. Uma tabela personalizada pode ser ativada para o Perfil e você pode usar esses pontos de dados para segmentação e personalização. Esse recurso auxilia profissionais de marketing que desejam criar um público-alvo claro de pessoas.
+[!DNL Query Service] O permite incluir restrições nas consultas para simplificar o processo de criação de público-alvo. Isso melhora a qualidade dos dados, garantindo que os dados certos se qualifiquem para seus públicos-alvo. Manter a qualidade da sua consulta resulta em um público-alvo preciso e ajuda na confiabilidade dos dados. Você também pode salvar seu público-alvo criando esquemas e tabelas personalizadas com base em atributos derivados de sua consulta. Uma tabela personalizada pode ser ativada para o Perfil e você pode usar esses pontos de dados para segmentação e personalização. Esse recurso auxilia profissionais de marketing que desejam criar um público-alvo claro de pessoas.
 
 Além disso, ao incluir a lógica em sua query que satisfaz quaisquer condições recorrentes ou estáticas, [!DNL Query Service] extrai o fardo de uma segmentação elaborada.
 

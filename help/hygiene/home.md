@@ -2,7 +2,7 @@
 title: Visão geral da higiene de dados
 description: A Limpeza de dados da Adobe Experience Platform permite gerenciar o ciclo de vida dos dados, atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 1%
@@ -51,7 +51,7 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 | A solicitação foi enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação para que um conjunto de dados expire em um determinado momento. A solicitação está visível no [!UICONTROL Interface de higiene de dados] após ser enviada, e permanece em um status pendente até o tempo de expiração programado, após o qual a solicitação será executada. |
 | Conjunto de dados descartado | 1 hora | O conjunto de dados é descartado da variável [página inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. Os dados no data lake são excluídos apenas por software e permanecerão assim até o final do processo, após o qual serão excluídos com dificuldade. |
 | Contagem de perfis atualizada | 30 horas | Dependendo do conteúdo do conjunto de dados que está sendo excluído, alguns perfis podem ser removidos do sistema se todos os atributos do componente estiverem vinculados a esse conjunto de dados. 30 horas após a exclusão do conjunto de dados, todas as alterações resultantes nas contagens gerais de perfis são refletidas no [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
-| Segmentos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [segmentos](../segmentation/home.md) são atualizadas para refletir seu novo tamanho. Dependendo do conjunto de dados que foi removido e dos atributos nos quais você está segmentando, o tamanho de cada segmento pode aumentar ou diminuir como resultado da exclusão. |
+| Públicos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [públicos](../segmentation/home.md) são atualizadas para refletir seu novo tamanho. Dependendo do conjunto de dados removido e dos atributos nos quais você está segmentando, o tamanho de cada público pode aumentar ou diminuir como resultado da exclusão. |
 | Jornadas e destinos atualizados | 50 horas | [Jornadas](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
 | Exclusão forçada concluída | 14 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake. A variável [status do trabalho de higiene](./ui/browse.md#view-details) que excluiu o conjunto de dados é atualizado para refletir isso. |
 

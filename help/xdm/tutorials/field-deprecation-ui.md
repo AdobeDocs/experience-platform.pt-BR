@@ -2,7 +2,7 @@
 title: Substituir um campo XDM na interface do usuário
 description: Saiba como descontinuar campos do Experience Data Model (XDM) usando o Editor de esquemas no Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 O Experience Data Model (XDM) oferece a flexibilidade de gerenciar o modelo de dados à medida que as necessidades da sua empresa mudam, substituindo os campos de esquema após a assimilação dos dados. Campos indesejados podem ser descontinuados para removê-los da visualização da interface e também ocultá-los das interfaces downstream. Convenientemente, uma caixa de seleção no Editor de esquemas permite exibir campos obsoletos e, se necessário, você também pode reprová-los.
 
-Como os campos obsoletos estão ocultos da interface do usuário por padrão, isso simplifica o esquema no Editor de esquemas e impede que campos indesejados sejam adicionados a dependências downstream, como o construtor de segmentos, o designer de jornadas e assim por diante. A descontinuação de campo também é compatível com versões anteriores. Outros sistemas que usam campos obsoletos, como segmentos e consultas, continuarão a avaliá-los conforme esperado. Se um campo obsoleto for usado em um segmento existente, ele será tratado normalmente, o que significa que o campo é exibido conforme esperado na tela do construtor de segmentos ou é avaliado com base em quaisquer dados disponíveis nos campos obsoletos. Essa é uma alteração ininterrupta que não afeta negativamente nenhum fluxo de dados existente.
+Como os campos obsoletos estão ocultos da interface do usuário por padrão, isso simplifica o esquema no Editor de esquemas e impede que campos indesejados sejam adicionados a dependências downstream, como o Construtor de segmentos, o Designer de jornadas e assim por diante. A descontinuação de campo também é compatível com versões anteriores. Outros sistemas que usam campos obsoletos, como públicos-alvo e consultas, continuarão a avaliá-los conforme esperado. Se um campo obsoleto for usado em um público-alvo existente, ele será tratado normalmente, o que significa que o campo é exibido conforme esperado na tela do Construtor de segmentos ou avaliado com base em quaisquer dados disponíveis nos campos obsoletos. Essa é uma alteração ininterrupta que não afeta negativamente nenhum fluxo de dados existente.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ O campo agora é removido da visualização da interface do usuário.
 
 >[!NOTE]
 >
->Depois de descontinuadas, as interfaces do usuário downstream, como painéis de segmentação, Customer Journey Analytics e Adobe Journey Optimizer, não exibem mais campos descontinuados como parte do fluxo de trabalho. No entanto, as interfaces do usuário downstream têm a opção de mostrar campos obsoletos se necessário e continuar a tratar o campo obsoleto como normal. Consulte a respectiva documentação para obter mais informações. Consultas e segmentos que usam o campo obsoleto continuarão a ser executados conforme esperado.
+>Depois de descontinuadas, as interfaces do usuário downstream, como painéis de segmentação, Customer Journey Analytics e Adobe Journey Optimizer, não exibem mais campos descontinuados como parte do fluxo de trabalho. No entanto, as interfaces do usuário downstream têm a opção de mostrar campos obsoletos se necessário e continuar a tratar o campo obsoleto como normal. Consulte a respectiva documentação para obter mais informações. As consultas e os públicos que usam o campo obsoleto continuarão a ser executados conforme esperado.
 
 ## Mostrar campos obsoletos {#show-deprecated}
 

@@ -2,7 +2,7 @@
 title: Modelos de relatório do Power BI para painéis da plataforma
 description: Use modelos de relatório para explorar dados do Experience Platform usando o Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%

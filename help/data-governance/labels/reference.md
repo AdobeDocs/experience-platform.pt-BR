@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário de rótulos de uso de dados
 description: Este documento descreve todos os rótulos de uso de dados atualmente compatíveis com o Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -134,11 +134,11 @@ Alguns contratos incluem proibições explícitas sobre o uso de dados para ciê
 
 #### C10 {#c10}
 
-Algumas políticas de governança de dados restringem o uso de dados de identidade compilados para personalização. O rótulo C10 é aplicado automaticamente aos segmentos se suas políticas de mesclagem usarem a opção &quot;gráfico privado&quot;.
+Algumas políticas de governança de dados restringem o uso de dados de identidade compilados para personalização. O rótulo C10 é aplicado automaticamente a públicos se suas políticas de mesclagem usarem a opção &quot;gráfico privado&quot;.
 
 #### C11 {#c11}
 
-A correspondência de segmentos do Adobe Experience Platform permite combinar segmentos primários com preferências de privacidade e consentimento, facilitando a criação de perfis aprimorados e insights de downstream. O rótulo C11 indica dados que não devem ser usados em [!DNL Segment Match] processos. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir da Correspondência de segmentos e adicionar o rótulo C11 adequadamente, o rótulo é aplicado automaticamente pelo fluxo de trabalho da Correspondência de segmentos.
+A correspondência de segmentos do Adobe Experience Platform permite combinar públicos-alvo gerados pela Platform com preferências de privacidade e consentimento, facilitando a criação de perfis aprimorados e insights downstream. O rótulo C11 indica dados que não devem ser usados em [!DNL Segment Match] processos. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir da Correspondência de segmentos e adicionar o rótulo C11 adequadamente, o rótulo é aplicado automaticamente pelo fluxo de trabalho da Correspondência de segmentos.
 
 #### C12 {#c12}
 

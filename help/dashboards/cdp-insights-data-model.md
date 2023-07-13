@@ -2,16 +2,16 @@
 title: Modelo de dados do Real-time Customer Data Platform Insights
 description: Saiba como usar consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Modelo de dados do Real-time Customer Data Platform Insights
 
-O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação do query accelerated store reporting insights para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório da loja acelerada de consulta para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Pré-requisitos
 
@@ -19,7 +19,7 @@ Este guia requer uma compreensão funcional do [recurso de painéis definido pel
 
 ## Relatórios e casos de uso do Real-Time CDP Insights
 
-Os relatórios do Real-Time CDP fornecem insights sobre os dados do perfil e sua relação com segmentos e destinos. Vários modelos de esquema estrela foram desenvolvidos para responder a uma variedade de casos de uso comuns de marketing e cada modelo de dados pode suportar vários casos de uso.
+Os relatórios do Real-Time CDP fornecem insights sobre os dados do perfil e sua relação com públicos e destinos. Vários modelos de esquema estrela foram desenvolvidos para responder a uma variedade de casos de uso comuns de marketing e cada modelo de dados pode suportar vários casos de uso.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### Modelo de segmento {#segment-model}
+### Modelo de público {#audience-model}
 
-O modelo de segmento é composto pelos seguintes conjuntos de dados:
+O modelo de público-alvo é composto pelos seguintes conjuntos de dados:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ O modelo de segmento é composto pelos seguintes conjuntos de dados:
 
 A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
-![Um ERD do modelo de segmento.](./images/cdp-insights/segment-model.png)
+![Um ERD do modelo de público-alvo.](./images/cdp-insights/audience-model.png)
 
 #### Caso de uso de tamanho do público
 
-A lógica usada para o [!UICONTROL Tamanho do público] O widget retorna o número total de perfis mesclados no segmento selecionado no momento do instantâneo mais recente. Consulte a [[!UICONTROL Tamanho do público] documentação do widget](./guides/segments.md#audience-size) para obter mais informações.
+A lógica usada para o [!UICONTROL Tamanho do público] O widget retorna o número total de perfis mesclados no público selecionado no momento do instantâneo mais recente. Consulte a [[!UICONTROL Tamanho do público] documentação do widget](./guides/audiences.md#audience-size) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Tamanho do público] o widget está na seção recolhível abaixo.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### Caso de uso de tendência de alteração de tamanho do público
 
-A lógica usada para o [!UICONTROL Tendência de alteração de tamanho do público] O widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado segmento entre os instantâneos diários mais recentes. Consulte a [[!UICONTROL Tendência de alteração de tamanho do público] documentação do widget](./guides/segments.md#audience-size-change-trend) para obter mais informações.
+A lógica usada para o [!UICONTROL Tendência de alteração de tamanho do público] O widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado público-alvo entre os instantâneos diários mais recentes. Consulte a [[!UICONTROL Tendência de alteração de tamanho do público] documentação do widget](./guides/audiences.md#audience-size-change-trend) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Tendência de alteração de tamanho do público] o widget está na seção recolhível abaixo.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Caso de uso dos destinos mais usados
 
-A lógica usada no [!UICONTROL Destinos mais usados] O widget lista os destinos mais usados de sua organização de acordo com o número de segmentos mapeados para eles. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados. Consulte a documentação no [[!UICONTROL Destinos mais usados] widget](./guides/destinations.md#most-used-destinations) para obter mais informações.
+A lógica usada no [!UICONTROL Destinos mais usados] O widget lista os destinos mais usados de sua organização de acordo com o número de públicos-alvo mapeados para eles. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados. Consulte a documentação no [[!UICONTROL Destinos mais usados] widget](./guides/destinations.md#most-used-destinations) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Destinos mais usados] o widget está na seção recolhível abaixo.
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### Caso de uso de segmentos ativados recentemente
+#### Caso de uso de públicos ativado recentemente
 
-A lógica para o [!UICONTROL Segmentos ativados recentemente] O widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Segmentos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-segments) para obter mais informações.
+A lógica para o [!UICONTROL Públicos ativados recentemente] O widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Públicos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-audiences) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Segmentos ativados recentemente] o widget está na seção recolhível abaixo.
+O SQL que gera a variável [!UICONTROL Públicos ativados recentemente] o widget está na seção recolhível abaixo.
 
 Consulta +++SQL
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Modelo de segmento de namespace
+### Modelo de namespace-público
 
-O modelo de segmento de namespace é composto pelos seguintes conjuntos de dados:
+O modelo de namespace-público é composto pelos seguintes conjuntos de dados:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ O modelo de segmento de namespace é composto pelos seguintes conjuntos de dados
 
 A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
-![Um ERD do modelo de segmento de namespace.](./images/cdp-insights/namespace-segment-model.png)
+![Um ERD do modelo de namespace-público.](./images/cdp-insights/namespace-audience-model.png)
 
-#### Perfis por identidade para um caso de uso de segmento
+#### Perfis por identidade para um caso de uso de público-alvo
 
-A lógica usada no [!UICONTROL Perfis por identidade] O widget fornece um detalhamento das identidades em todos os perfis mesclados na sua Loja de perfis para um determinado segmento. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](./guides/segments.md#profiles-by-identity) para obter mais informações.
+A lógica usada no [!UICONTROL Perfis por identidade] O widget fornece um detalhamento de identidades em todos os perfis mesclados na sua Loja de perfis para um determinado público-alvo. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](./guides/audiences.md#profiles-by-identity) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Perfis por identidade] o widget está na seção recolhível abaixo.
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Sobrepor namespace por modelo de segmento
+### Sobrepor namespace por modelo de público
 
-O namespace de sobreposição por modelo de segmento é composto pelos seguintes conjuntos de dados:
+O namespace de sobreposição por modelo de público é composto pelos seguintes conjuntos de dados:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ O namespace de sobreposição por modelo de segmento é composto pelos seguintes
 
 A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
-![Um ERD do namespace de sobreposição por modelo de segmento.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Um ERD do namespace de sobreposição por modelo de público-alvo.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### Caso de uso de sobreposição de identidade (segmentos)
+#### Caso de uso de sobreposição de identidade (públicos-alvo)
 
-A lógica usada no [!UICONTROL Segmentos] painel [!UICONTROL Sobreposição de identidade] O widget ilustra a sobreposição de perfis que contém as duas identidades selecionadas para um segmento específico. Para obter mais informações, consulte [[!UICONTROL Sobreposição de identidade] seção widget do [!UICONTROL Segmentação] documentação do painel](./guides/segments.md#identity-overlap).
+A lógica usada no [!UICONTROL Públicos-alvo] painel [!UICONTROL Sobreposição de identidade] O widget ilustra a sobreposição de perfis que contém as duas identidades selecionadas para um público em particular. Para obter mais informações, consulte [[!UICONTROL Sobreposição de identidade] seção widget do [!UICONTROL Públicos-alvo] documentação do painel](./guides/audiences.md#identity-overlap).
 
 O SQL que gera a variável [!UICONTROL Sobreposição de identidade] o widget está na seção recolhível abaixo.
 

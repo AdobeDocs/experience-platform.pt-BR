@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 6%
@@ -285,12 +285,12 @@ Para obter mais informações sobre como trabalhar com [!DNL Profile], consulte 
 
 Todos os arquivos de dados assimilados na [!DNL Experience Platform] deve estar em conformidade com a estrutura de um esquema XDM. Para obter mais informações sobre como formatar arquivos de dados para estar em conformidade com hierarquias XDM (incluindo arquivos de amostra), consulte o documento em [exemplos de transformações ETL](../../etl/transformations.md). Para obter informações gerais sobre a assimilação de arquivos de dados em [!DNL Experience Platform], consulte o [visão geral da assimilação em lote](../../ingestion/batch-ingestion/overview.md).
 
-## Esquemas para segmentos externos
+## Esquemas para públicos externos
 
-Se estiver trazendo segmentos de sistemas externos para a Platform, você deve usar os seguintes componentes para capturá-los em seus esquemas:
+Se estiver trazendo públicos-alvo de sistemas externos para a Platform, você deve usar os seguintes componentes para capturá-los em seus esquemas:
 
 * [[!UICONTROL Definição de segmento] classe](../classes/segment-definition.md): use essa classe padrão para capturar os principais atributos de uma definição de segmento externo.
-* [[!UICONTROL Detalhes da associação do segmento] grupo de campos](../field-groups/profile/segmentation.md): adicione este grupo de campos ao [!UICONTROL Perfil individual XDM] para associar perfis de clientes a segmentos específicos.
+* [[!UICONTROL Detalhes da associação do segmento] grupo de campos](../field-groups/profile/segmentation.md): adicione este grupo de campos ao [!UICONTROL Perfil individual XDM] para associar perfis de clientes a públicos-alvo específicos.
 
 ## Próximas etapas
 

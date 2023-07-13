@@ -2,7 +2,7 @@
 title: Tipo de dados de detalhes da conta
 description: Este documento fornece uma visão geral do tipo de dados XDM (Account Details Experience Data Model).
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 5%
@@ -29,7 +29,7 @@ ht-degree: 5%
 | `jigsaw` | String | A chave Data.com da organização. |
 | `linkedinPageUrl` | String | Um link de site para a conta da LinkedIn da organização. |
 | `logoUrl` | String | Um caminho a ser combinado com o URL de uma instância do Salesforce (por exemplo, `https://yourInstance.salesforce.com/`) para gerar um URL para solicitar a imagem do perfil da rede social associada à organização. O URL gerado retorna um redirecionamento HTTP (código 302) para a imagem de perfil da rede social da organização. |
-| `marketSegment` | String | O segmento de mercado nomeado do qual a organização participa. Este é um campo de forma livre, e é aconselhável usar um valor estruturado para consultas ou usar o `xdm:identifier` propriedade. |
+| `marketSegment` | String | O público-alvo de mercado nomeado do qual a organização participa. Este é um campo de forma livre, e é aconselhável usar um valor estruturado para consultas ou usar o `xdm:identifier` propriedade. |
 | `numberOfEmployees` | Número inteiro | O número de funcionários na organização. |
 | `organizationType` | String | Um rótulo que descreve o tipo de organização. |
 | `primaryEmailDomain` | String | O domínio de email principal que a organização usa para sua equipe. |

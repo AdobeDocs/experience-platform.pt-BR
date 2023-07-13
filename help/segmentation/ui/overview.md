@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Na interface do Experience Platform, selecione **[!UICONTROL Públicos-alvo]** n
 
 A variável **[!UICONTROL Públicos-alvo]** O painel descreve as principais métricas relacionadas aos dados de público-alvo de sua organização.
 
-Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/guides/segments.md).
+Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/guides/audiences.md).
 
 ![O painel do público-alvo é exibido. Ele mostra vários widgets, incluindo o tamanho do público, perfis por identidade, sobreposição de identidade e a tendência de alteração do tamanho do público.](../../dashboards/images/segments/dashboard-overview.png)
 

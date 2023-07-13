@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de abril de 2022
 description: As notas de versão de abril de 2022 do Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 **Data de lançamento: 27 de abril de 2022**
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -57,7 +57,7 @@ Os seguintes widgets estão disponíveis na Biblioteca de widgets nos respectivo
 
 {style="table-layout:auto"}
 
-Consulte a documentação para obter mais informações sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), e [[!DNL Segments]](../../dashboards/guides/segments.md) painéis.
+Consulte a documentação para obter mais informações sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), e [[!DNL Segments]](../../dashboards/guides/audiences.md) painéis.
 
 ## Fluxos de dados {#dataflows}
 
@@ -88,7 +88,7 @@ Para obter mais informações sobre [!DNL Data Prep], consulte o [[!DNL Data Pre
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Recursos novos ou atualizados**
 
@@ -114,7 +114,7 @@ Se você estiver utilizando esses destinos na fase Beta, observe o seguinte:
 | [!DNL Criteo] | Conectar e ativar dados à [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) plataforma de publicidade. |
 | [!DNL Sendgrid] | Conectar e ativar dados à [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) para emails transacionais e de marketing. |
 
-Para obter informações mais gerais sobre destinos, consulte o [visão geral dos destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -173,7 +173,7 @@ Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral 
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Os serviços de IA/ML permitem que analistas e profissionais de marketing aproveitem o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de uma especialização em ciência de dados.
+Os serviços de IA/ML permitem que analistas e profissionais de marketing aproveitem o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de conhecimento especializado em ciência de dados.
 
 ### IA de atribuição
 
@@ -216,14 +216,14 @@ Para saber mais sobre o Real-time Customer Data Platform B2B Edition, consulte a
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte para [!DNL OneTrust Integration] | Agora você pode usar o [!DNL OneTrust Integration] fonte para assimilar dados de consentimento e preferências de seu [!DNL OneTrust] para a Platform. Consulte a documentação em [criação de um [!DNL OneTrust Integration] conexão de origem](../../sources/connectors/consent-and-preferences/onetrust.md) para obter mais informações. |
-| Suporte para [!DNL Square] | Agora você pode usar o [!DNL Square] origem para assimilar dados de pagamentos de seu [!DNL Square] para a Platform. |
+| Compatibilidade com o [!DNL OneTrust Integration] | Agora você pode usar o [!DNL OneTrust Integration] fonte para assimilar dados de consentimento e preferências de seu [!DNL OneTrust] para a Platform. Consulte a documentação em [criação de um [!DNL OneTrust Integration] conexão de origem](../../sources/connectors/consent-and-preferences/onetrust.md) para obter mais informações. |
+| Compatibilidade com o [!DNL Square] | Agora você pode usar o [!DNL Square] origem para assimilar dados de pagamentos de seu [!DNL Square] para a Platform. |
 | Suporte para exclusão de fluxos de dados de atributos do cliente | Agora é possível excluir fluxos de dados criados com o conector de origem de Atributos do cliente. |
 
 Para saber mais sobre fontes, consulte a [visão geral das origens](../../sources/home.md).

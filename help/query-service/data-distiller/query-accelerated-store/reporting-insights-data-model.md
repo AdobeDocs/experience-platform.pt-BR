@@ -2,7 +2,7 @@
 title: Consultar Guia de insights de relatórios da loja acelerada
 description: Saiba como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para usar com dados de armazenamento acelerados e painéis definidos pelo usuário.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 0%
@@ -15,7 +15,7 @@ O armazenamento acelerado de consultas permite reduzir o tempo e o poder de proc
 
 O armazenamento acelerado de query permite criar um modelo de dados personalizado e/ou estender um modelo de dados existente do Adobe Real-time Customer Data Platform. Em seguida, é possível envolver ou incorporar seus insights de relatório em uma estrutura de relatórios/visualização de sua escolha. Consulte a documentação do Modelo de dados do Real-time Customer Data Platform Insights para saber como [personalizar seus modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador principal de desempenho)](../../../dashboards/cdp-insights-data-model.md).
 
-O modelo de dados do Real-Time CDP da Adobe Experience Platform fornece insights sobre perfis, segmentos e destinos e ativa os painéis de insights do Real-Time CDP. Este documento orienta você pelo processo de criação do modelo de dados de insights do relatório e também sobre como estender modelos de dados do Real-Time CDP, conforme necessário.
+O modelo de dados do Real-Time CDP da Adobe Experience Platform fornece insights sobre perfis, públicos e destinos e habilita os painéis de insights do Real-Time CDP. Este documento orienta você pelo processo de criação do modelo de dados de insights do relatório e também sobre como estender modelos de dados do Real-Time CDP, conforme necessário.
 
 ## Pré-requisitos
 
@@ -37,7 +37,7 @@ No início, você tem um modelo de dados inicial de suas fontes (possivelmente d
 
 ![Um diagrama relacional de entidade (ERD) do modelo de usuário do audience insight.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-Neste exemplo, a variável `externalaudiencereach` A tabela/conjunto de dados é baseada em uma ID e rastreia os limites inferior e superior para a contagem de correspondência. A variável `externalaudiencemapping` a tabela/conjunto de dados de dimensão mapeia a ID externa para um destino e segmento na Platform.
+Neste exemplo, a variável `externalaudiencereach` A tabela/conjunto de dados é baseada em uma ID e rastreia os limites inferior e superior para a contagem de correspondência. A variável `externalaudiencemapping` a tabela/conjunto de dados de dimensão mapeia a ID externa para um destino e público-alvo na Platform.
 
 ## Crie um modelo para relatar insights com o Data Distiller
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Estender seu modelo de dados com o modelo de dados do Real-Time CDP Insights
 
-É possível estender seu modelo de público-alvo com detalhes adicionais para criar uma tabela de dimensão mais avançada. Por exemplo, é possível mapear o nome do segmento e o nome do destino para o identificador de público-alvo externo. Para fazer isso, use o Serviço de consulta para criar ou atualizar um novo conjunto de dados e adicioná-lo ao modelo de público-alvo que combina segmentos e destinos com uma identidade externa. O diagrama abaixo ilustra o conceito dessa extensão do modelo de dados.
+É possível estender seu modelo de público-alvo com detalhes adicionais para criar uma tabela de dimensão mais avançada. Por exemplo, é possível mapear o nome do público-alvo e o nome do destino para o identificador de público-alvo externo. Para fazer isso, use o Serviço de consulta para criar ou atualizar um novo conjunto de dados e adicioná-lo ao modelo de público-alvo que combina públicos-alvo e destinos com uma identidade externa. O diagrama abaixo ilustra o conceito dessa extensão do modelo de dados.
 
 ![Um diagrama ERD que vincula o modelo de dados de insight do Real-Time CDP e o modelo de armazenamento acelerado do Query.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ Use o Serviço de consulta para adicionar os principais atributos descritivos do
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ Use o `SHOW datagroups;` comando para confirmar a criação da variável adicion
 
 ## Consulte seu modelo de dados de insights de relatório de armazenamento acelerado estendido
 
-Agora que o `audienceinsight` O modelo de dados foi aprimorado e está pronto para ser consultado. O SQL a seguir mostra a lista de destinos e segmentos mapeados.
+Agora que o `audienceinsight` O modelo de dados foi aprimorado e está pronto para ser consultado. O SQL a seguir mostra a lista de destinos e públicos mapeados.
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 A consulta retorna todos os conjuntos de dados no armazenamento acelerado de consultas:
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 Agora que criou seu modelo de dados personalizado, você está pronto para visualizar seus dados com consultas personalizadas e painéis definidos pelo usuário.
 
-O código SQL a seguir fornece um detalhamento da contagem de correspondências por públicos-alvo em um destino e um detalhamento de cada destino de públicos-alvo por segmento.
+O SQL a seguir fornece um detalhamento da contagem de correspondências por públicos-alvo em um destino e um detalhamento de cada destino de públicos-alvo por público-alvo.
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 A imagem abaixo fornece um exemplo das possíveis visualizações personalizadas usando seu modelo de dados de insights de relatórios.
 
-![Uma contagem de correspondência por destino e widget de segmento criado a partir do novo modelo de dados de insights de relatório.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![Uma contagem de correspondências por destino e widget de público-alvo criado a partir do novo modelo de dados de insights de relatório.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 Seu modelo de dados personalizado pode ser encontrado na lista de modelos de dados disponíveis no espaço de trabalho do painel definido pelo usuário. Consulte a [guia de painel definido pelo usuário](../../../dashboards/user-defined-dashboards.md) para obter orientação sobre como utilizar seu modelo de dados personalizado.

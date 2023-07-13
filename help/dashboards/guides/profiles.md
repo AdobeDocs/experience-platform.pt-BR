@@ -4,10 +4,10 @@ title: Guia do painel de perfis
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '3385'
-ht-degree: 10%
+source-wordcount: '3393'
+ht-degree: 8%
 
 ---
 
@@ -49,7 +49,7 @@ Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de w
 
 ![A visão geral do painel Perfis com a opção adicionar widget realçada.](../images/profiles/profiles-overview-add-widget.png)
 
-Na biblioteca de widgets você pode navegar pela seleção de widgets de segmentos padrão e personalizados.Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
+Na biblioteca de widgets, você pode navegar pela seleção de widgets de público-alvo padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,7 +67,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Procurar perfis {#browse-profiles}
 
-A variável [!UICONTROL Procurar] permite pesquisar e visualizar os perfis somente leitura assimilados em sua organização. Aqui você pode ver informações importantes pertencentes ao perfil sobre suas preferências, eventos anteriores, interações e segmentos
+A variável [!UICONTROL Procurar] permite pesquisar e visualizar os perfis somente leitura assimilados em sua organização. Aqui você pode ver informações importantes pertencentes ao perfil sobre suas preferências, eventos anteriores, interações e públicos.
 
 Para saber mais sobre os recursos de visualização de perfil fornecidos na interface do usuário da plataforma, consulte a documentação em [procurar perfis no Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -256,9 +256,9 @@ Passe o mouse sobre barras individuais para ver uma caixa de diálogo detalhando
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfis não segmentados"
->abstract="Esse widget fornece o número total de perfis não anexados a nenhum segmento e representa a oportunidade para a ativação de perfis em sua organização."
+>abstract="Este widget fornece o número total de todos os perfis não anexados a nenhum público-alvo e representa a oportunidade de ativação de perfis em sua organização."
 
-A variável [!UICONTROL Perfis não segmentados] O widget fornece o número total de todos os perfis não anexados a nenhum segmento. O número gerado é preciso desde o último instantâneo e representa a oportunidade de ativação de perfil em sua organização. Também indica a oportunidade de eliminar perfis que não fornecem ROI adequado.
+A variável [!UICONTROL Perfis não segmentados] widget fornece o número total de todos os perfis não anexados a nenhum público-alvo. O número gerado é preciso desde o último instantâneo e representa a oportunidade de ativação de perfil em sua organização. Também indica a oportunidade de eliminar perfis que não fornecem ROI adequado.
 
 ![O widget Perfis não segmentados.](../images/profiles/unsegmented-profiles.png)
 
@@ -267,9 +267,9 @@ A variável [!UICONTROL Perfis não segmentados] O widget fornece o número tota
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendência de perfis não segmentados"
->abstract="Esse widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência dos perfis não anexados a nenhum segmento pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses."
+>abstract="Este widget fornece uma ilustração de gráfico de linhas para o número de perfis que não são anexados a nenhum público-alvo em um determinado período. A tendência dos perfis não anexados a um público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses."
 
-A variável [!UICONTROL Tendência de alteração de perfis não segmentados] O widget usa um gráfico de linhas para ilustrar o número de perfis adicionados desde o último instantâneo diário que não estão anexados a nenhum segmento. A tendência de alteração dos perfis não anexados a nenhum segmento pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. A contagem de perfis é refletida no eixo y e a hora no eixo x.
+A variável [!UICONTROL Tendência de alteração de perfis não segmentados] O widget usa um gráfico de linhas para ilustrar o número de perfis adicionados desde o último instantâneo diário que não estão anexados a nenhum público-alvo. A tendência de alteração dos perfis não anexados a nenhum público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. A contagem de perfis é refletida no eixo y e a hora no eixo x.
 
 ![O widget Tendência de alteração de perfis não segmentados.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -292,7 +292,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL Públicos-alvo] {#audiences}
 
-Este widget fornece o número total de segmentos que estão prontos para serem ativados, de acordo com a política de mesclagem escolhida aplicada aos dados do seu perfil.
+Este widget fornece o número total de públicos-alvo que estão prontos para serem ativados, de acordo com a política de mesclagem escolhida aplicada aos dados do seu perfil.
 
 Selecionar **[!UICONTROL Públicos-alvo]** para navegar até o [!UICONTROL Segmentos] painel [!UICONTROL Procurar] guia. A partir daí, você pode ver uma lista de todas as definições de segmento para sua organização.
 
@@ -311,9 +311,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Relatório de sobreposição de público] {#audience-overlap-report}
 
-Este widget tabula os dados de sobreposição de público-alvo de todos os segmentos disponíveis filtrados pela política de mesclagem. Uma lista de cinco públicos-alvo classificados das porcentagens de sobreposição mais alta para a mais baixa é fornecida para a política de mesclagem escolhida no menu suspenso na parte superior da tela. Os dois segmentos analisados estão listados na [!UICONTROL NOME DO SEGMENTO A] e [!UICONTROL NOME DO SEGMENTO B] colunas. A percentagem de sobreposição é indicada na terceira coluna, com uma precisão de doze casas decimais.
+Esse widget tabula a sobreposição de dados de todos os públicos-alvo disponíveis filtrados pela política de mesclagem. Uma lista de cinco públicos-alvo classificados das porcentagens de sobreposição mais alta para a mais baixa é fornecida para a política de mesclagem escolhida no menu suspenso na parte superior da tela. Os dois públicos-alvo analisados estão listados na [!UICONTROL NOME DO PÚBLICO-ALVO] e [!UICONTROL AUDIENCE B NAME] colunas. A percentagem de sobreposição é indicada na terceira coluna, com uma precisão de doze casas decimais.
 
-O relatório de sobreposição de público-alvo ajuda você a criar segmentos novos e de alto desempenho. A observação de sobreposições de alta porcentagem permite suprimir públicos-alvo e impedir o envio do mesmo público-alvo para destinos diferentes. Elas também ajudam a identificar insights ocultos que podem ajudar com uma melhor segmentação. A baixa porcentagem de sobreposição ajuda a localizar perfis únicos a serem perseguidos.
+O relatório de sobreposição de público-alvo ajuda você a criar públicos-alvo novos e de alto desempenho. A observação de sobreposições de alta porcentagem permite suprimir públicos-alvo e impedir o envio do mesmo público-alvo para destinos diferentes. Elas também ajudam a identificar insights ocultos que podem ajudar com uma melhor segmentação. A baixa porcentagem de sobreposição ajuda a localizar perfis únicos a serem perseguidos.
 
 Selecionar **[!UICONTROL Exibir mais]** para abrir uma caixa de diálogo em tela cheia que contém mais dados de sobreposição de público-alvo.
 
@@ -347,23 +347,23 @@ As contagens individuais para públicos mapeados ou não mapeados são exibidas 
 
 ### [!UICONTROL Tamanho dos públicos] {#audiences-size}
 
-A variável [!UICONTROL Tamanho dos públicos] O widget fornece uma tabela de duas colunas que lista até 20 segmentos e o número total de públicos-alvo contidos em cada segmento. A lista é ordenada de cima para baixo de acordo com o número total de públicos-alvo. O número de tamanho total do público-alvo depende da política de mesclagem aplicada.
+A variável [!UICONTROL Tamanho dos públicos] O widget fornece uma tabela de duas colunas que lista os nomes de até 20 públicos-alvo e o número total de perfis contidos em cada público-alvo. A lista é ordenada de cima para baixo de acordo com o número total de perfis contidos no público-alvo. A contagem total do tamanho do público depende da política de mesclagem aplicada.
 
 ![O widget Tamanho do público.](../images/profiles/audiences-size.png)
 
-Para ver informações abrangentes sobre um segmento, selecione um nome de segmento na lista fornecida para navegar até o [!UICONTROL Segmentos] [!UICONTROL Detalhe] página. Além disso, ao selecionar **[!UICONTROL Exibir todos os segmentos]** no final do widget, você pode navegar até a página [!UICONTROL Segmentos] [!UICONTROL Procurar] para localizar qualquer segmento existente.
+Para ver informações abrangentes sobre um público-alvo, selecione um nome de público-alvo na lista fornecida para navegar até o [!UICONTROL Públicos-alvo] [!UICONTROL Detalhe] página. Além disso, ao selecionar **[!UICONTROL Exibir todos os públicos-alvo]** no final do widget, você pode navegar até a página [!UICONTROL Públicos-alvo] [!UICONTROL Procurar] para localizar qualquer público-alvo existente.
 
-![O widget de tamanho Públicos-alvo com um nome de segmento e o texto de todos os segmentos exibido.](../images/profiles/audiences-size-view-all-segments.png)
+![O widget Tamanho do público-alvo com um nome de público-alvo e o texto Exibir todos os públicos-alvo destacado.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Consulte a documentação para obter mais informações sobre o [[!UICONTROL Segmentos] [!UICONTROL  Procurar] guia](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Consulte a documentação para obter mais informações sobre o [[!UICONTROL Públicos-alvo] [!UICONTROL  Procurar] guia](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL Sobreposição de público por política de mesclagem] {#audience-overlap-by-merge-policy}
 
-Este widget usa um diagrama Venn para exibir a sobreposição de dois segmentos selecionados. A política de mesclagem é escolhida na lista suspensa visão geral na parte superior da página e os segmentos para análise são selecionados em dois menus suspensos no widget. O número total de perfis contidos na definição de segmento relevante pode ser visto ao passar o mouse sobre um círculo ou a interseção.
+Este widget usa um diagrama Venn para exibir a sobreposição de dois públicos-alvo selecionados. A política de mesclagem é escolhida na lista suspensa visão geral na parte superior da página, e os públicos-alvo para análise são selecionados em dois menus suspensos no widget. O número total de perfis contidos na definição de segmento relevante pode ser visto ao passar o mouse sobre um círculo ou a interseção.
 
 À medida que o widget exibe o cruzamento visual das definições de segmento, você pode otimizar sua estratégia de segmentação estudando as semelhanças entre suas definições de segmento.
 
-![O painel Perfis da interface do usuário da plataforma com a lista suspensa Política de mesclagem e as listas suspensas de segmento de widget realçadas.](../images/profiles/audience-overlap-by-merge-policy.png)
+![O painel Perfis de interface do usuário da Platform com a lista suspensa Política de mesclagem e as listas suspensas de público-alvo do widget destacadas.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

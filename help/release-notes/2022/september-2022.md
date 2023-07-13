@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2940'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
@@ -17,16 +17,16 @@ Novos recursos na Adobe Experience Platform:
 
 - [Controle de acesso baseado em atributos](#abac)
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Logs de auditoria](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
-- [Coleta de dados](#data-collection)
+- [Coleção de dados](#data-collection)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
-- [Serviço de query](#query-service)
+- [Query Service](#query-service)
 - [Fontes](#sources)
 
 ## Controle de acesso baseado em atributos {#abac}
@@ -95,13 +95,13 @@ O Adobe Experience Platform fornece vários painéis por meio dos quais você po
 | Rótulo em uso | Quando visualizado na biblioteca de widgets, o rótulo em uso identifica facilmente a presença de widgets existentes no painel. Isso facilita evitar a duplicação, embora ainda seja possível adicionar o mesmo widget mais de uma vez, se desejar. |
 | Painéis definidos pelo usuário | Os painéis definidos pelo usuário ajudam a acelerar insights e personalizar visualizações, permitindo que você crie e gerencie painéis personalizados. Com painéis definidos pelo usuário, você pode criar, adicionar e editar widgets personalizados para visualizar as principais métricas relevantes para sua organização. Leia o [guia de recursos](../../dashboards/user-defined-dashboards.md) para saber mais. |
 | Modelo de dados de insights da plataforma de dados do cliente | O recurso Modelo de dados de insights da Plataforma de dados do cliente (CDP) expõe os modelos de dados e o SQL que potencializa os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios CDP para seus casos de uso de marketing e indicadores principais de desempenho. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Leia o [Guia de recursos do Modelo de dados do CDP Insights](../../dashboards/cdp-insights-data-model.md) para saber mais. |
-| Widget de relatório de sobreposição de público | Este widget está disponível para ambos [!UICONTROL Perfis] e [!UICONTROL Segmentos] painéis. O relatório fornece uma lista ordenada de públicos-alvo classificados pelas porcentagens de sobreposição mais alta ou mais baixa para o segmento escolhido. No [!UICONTROL Perfis] painel é possível filtrar e visualizar a sobreposição de público-alvo pela política de mesclagem de todos os segmentos disponíveis. A variável [!UICONTROL Segmentos] os painéis permitem filtrar a sobreposição de público por um segmento específico.<br>Use essa análise para criar segmentos novos e de alto desempenho e evitar o envio do mesmo público-alvo para destinos diferentes. O relatório também ajuda a identificar insights ocultos para melhorar a segmentação ou localizar perfis únicos a serem perseguidos. Leia as respectivas [perfis](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmentos](../../dashboards/guides/segments.md#audience-overlap-report) guias de widget para saber mais. |
+| Widget de relatório de sobreposição de público | Este widget está disponível para ambos [!UICONTROL Perfis] e [!UICONTROL Segmentos] painéis. O relatório fornece uma lista ordenada de públicos-alvo classificados pelas porcentagens de sobreposição mais alta ou mais baixa para o segmento escolhido. No [!UICONTROL Perfis] painel é possível filtrar e visualizar a sobreposição de público-alvo pela política de mesclagem de todos os segmentos disponíveis. A variável [!UICONTROL Segmentos] os painéis permitem filtrar a sobreposição de público por um segmento específico.<br>Use essa análise para criar segmentos novos e de alto desempenho e evitar o envio do mesmo público-alvo para destinos diferentes. O relatório também ajuda a identificar insights ocultos para melhorar a segmentação ou localizar perfis únicos a serem perseguidos. Leia as respectivas [perfis](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmentos](../../dashboards/guides/audiences.md#audience-overlap-report) guias de widget para saber mais. |
 
 Para obter mais informações sobre [!DNL Dashboards], consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
-## Coleta de dados {#data-collection}
+## Coleção de dados {#data-collection}
 
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
 
 **Recursos novos ou atualizados**
 
@@ -120,7 +120,7 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Recursos novos ou atualizados**
 
@@ -145,7 +145,7 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 | ----------- | ----------- |
 | Documentação da API do serviço de fluxo de destinos | A variável [Documentação de referência da API de destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/) O foi atualizado para incluir orientações sobre como executar operações em destinos baseados em arquivo. As operações para destinos de transmissão serão adicionadas posteriormente. |
 
-Para obter informações mais gerais sobre destinos, consulte o [visão geral dos destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -206,7 +206,7 @@ O Serviço de identidade da Adobe Experience Platform ajuda você a ter uma melh
 
 Para saber mais sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
 
-## Serviço de query {#query-service}
+## Query Service {#query-service}
 
 O Serviço de consulta permite usar o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
@@ -225,7 +225,7 @@ Consulte a [documentação de alertas de consulta](../../query-service/api/alert
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Recursos atualizados**
 
@@ -237,4 +237,4 @@ O Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Suporte de API para repetição de execuções de fluxo de dados com falha para fontes em lote | Use o `re-trigger` para repetir o fluxo de dados com falha por meio da API. Leia o guia em [tentar novamente execuções de fluxo de dados com falha usando a API](../../sources/tutorials/api/retry-flows.md) para obter mais informações. |
 | Suporte de API para filtragem de dados em nível de linha para o [!DNL Google BigQuery] e [!DNL Snowflake] origens | Usar operadores lógicos e de comparação para filtrar dados no nível da linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes. Leia o guia em [filtragem de dados de uma origem usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
 
-Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).
+Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

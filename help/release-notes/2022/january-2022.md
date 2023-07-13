@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de janeiro de 2022
 description: As notas de versão de janeiro de 2022 para o Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 3%
+ht-degree: 12%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 3%
 
 **Data de lançamento: 26 de janeiro de 2022**
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 - [Alertas](#alerts)
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [Serviço de query](#query-service)
+- [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
@@ -43,7 +43,7 @@ O Adobe Experience Platform fornece vários painéis por meio dos quais você po
 
 | Recurso | Descrição |
 | --- | --- |
-| Legendas inteligentes | Um algoritmo de aprendizado de máquina fornece automaticamente insights sobre seus dados de perfil e público-alvo e ilustra padrões e tendências ao longo de um período de 30 a 90 dias ou 12 meses. As legendas incluem informações sobre <ul><li>Forma geral e estatísticas</li><li>Tendências e alterações bruscas</li><li>Padrões sazonais</li><li>Anomalias inesperadas</li></ul> Mais informações podem ser encontradas no [painéis de perfis](../../dashboards/guides/profiles.md#profiles-count-trend) e [painéis de segmentos](../../dashboards/guides/segments.md#audience-size-trend) documentação. |
+| Legendas inteligentes | Um algoritmo de aprendizado de máquina fornece automaticamente insights sobre seus dados de perfil e público-alvo e ilustra padrões e tendências ao longo de um período de 30 a 90 dias ou 12 meses. As legendas incluem informações sobre <ul><li>Forma geral e estatísticas</li><li>Tendências e alterações bruscas</li><li>Padrões sazonais</li><li>Anomalias inesperadas</li></ul> Mais informações podem ser encontradas no [painéis de perfis](../../dashboards/guides/profiles.md#profiles-count-trend) e [painéis de segmentos](../../dashboards/guides/audiences.md#audience-size-trend) documentação. |
 | Inventário de painéis | Acesse os relatórios pré-configurados de painéis de perfil, segmentos e destinos, incluindo qualquer integração instalada, como o Power BI, em um local centralizado. Para obter mais informações, consulte [[!DNL Dashboards] documentação do inventário](../../dashboards/inventory.md). |
 | Modelos de relatório do Power BI | Crie, personalize ou estenda métricas dos modelos de dados de relatório de perfil, segmentos e destino usando novos gráficos do Power BI. O fluxo de trabalho de instalação automatizada permite compartilhar seus insights de marketing em toda a organização no ambiente do Power BI. Para obter mais informações, consulte [Documentação do modelo de relatório do Power BI](../../dashboards/integrations/power-bi.md). |
 
@@ -63,7 +63,7 @@ Para obter mais informações sobre [!DNL Data Prep], consulte o [[!DNL Data Pre
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Recursos novos ou atualizados**
 
@@ -81,9 +81,9 @@ Para obter mais informações sobre [!DNL Data Prep], consulte o [[!DNL Data Pre
 | [Conexão com o Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | O Adobe Target é um aplicativo que fornece personalização e experimentação em tempo real e alimentadas por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais. O Adobe Target é uma conexão de personalização no Adobe Experience Platform. |
 | [Conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md) | Essa conexão de personalização fornece uma maneira de recuperar informações de segmento do Adobe Experience Platform para plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados nos sites do cliente. |
 
-Para obter informações mais gerais sobre destinos, consulte o [visão geral dos destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
-## Serviço de query {#query-service}
+## Query Service {#query-service}
 
 [!DNL Query Service] permite usar SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
@@ -124,7 +124,7 @@ Para obter mais informações sobre [!DNL Segmentation Service], consulte o [Vis
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 | Recurso | Descrição |
 | --- | --- |

@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Práticas Recomendadas Para Modelagem De Dados
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2709'
 ht-degree: 1%
 
 ---
 
 # Práticas recomendadas para modelagem de dados
 
-[!DNL Experience Data Model] O (XDM) é a estrutura principal que padroniza os dados de experiência do cliente fornecendo estruturas e definições comuns para uso nos serviços downstream da Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum que permite obter insights valiosos das ações do cliente, definir públicos-alvo por meio de segmentos e expressar atributos do cliente para fins de personalização.
+[!DNL Experience Data Model] O (XDM) é a estrutura principal que padroniza os dados de experiência do cliente fornecendo estruturas e definições comuns para uso nos serviços downstream da Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum que permite obter insights valiosos das ações do cliente, definir públicos-alvo do cliente e expressar atributos do cliente para fins de personalização.
 
 Como o XDM é extremamente versátil e personalizável por design, é importante seguir as práticas recomendadas para a modelagem de dados ao projetar seus esquemas. Este documento aborda as principais decisões e considerações que você deve tomar ao mapear os dados de experiência do cliente para o XDM.
 
@@ -92,24 +92,24 @@ Se você quiser analisar como determinados atributos em uma entidade mudam ao lo
 
 #### Casos de uso de segmentação
 
-Ao categorizar suas entidades, é importante pensar nos segmentos de público-alvo que você pode querer criar para abordar seus casos de uso de negócios específicos.
+Ao categorizar suas entidades, é importante pensar nos públicos que você pode querer criar para atender aos casos de uso específicos da empresa.
 
-Por exemplo, uma empresa quer conhecer todos os membros &quot;Ouro&quot; ou &quot;Platina&quot; de seu programa de fidelidade que fizeram mais de cinco compras no ano passado. Com base nesta lógica de segmento, podem ser tiradas as seguintes conclusões sobre a forma como as entidades relevantes devem ser representadas:
+Por exemplo, uma empresa quer conhecer todos os membros &quot;Ouro&quot; ou &quot;Platina&quot; de seu programa de fidelidade que fizeram mais de cinco compras no ano passado. Com base nesta lógica de segmentação, podem ser tiradas as seguintes conclusões sobre a forma como as entidades relevantes devem ser representadas:
 
-* &quot;Ouro&quot; e &quot;Platina&quot; representam status de fidelidade aplicáveis a um cliente individual. Como a lógica do segmento só se preocupa com o status atual de fidelidade dos clientes, esses dados podem ser modelados como parte de um esquema de perfil. Se você quiser rastrear as alterações no status de fidelidade ao longo do tempo, também poderá criar um esquema de evento adicional para as alterações no status de fidelidade.
-* Compras são eventos que ocorrem em um momento específico e a lógica de segmento se refere a eventos de compra em uma janela de tempo especificada. Portanto, esses dados devem ser modelados como um schema de evento.
+* &quot;Ouro&quot; e &quot;Platina&quot; representam status de fidelidade aplicáveis a um cliente individual. Como a lógica de segmentação só se preocupa com o status de fidelidade atual dos clientes, esses dados podem ser modelados como parte de um esquema de perfil. Se você quiser rastrear as alterações no status de fidelidade ao longo do tempo, também poderá criar um esquema de evento adicional para as alterações no status de fidelidade.
+* Compras são eventos que ocorrem em um momento específico e a lógica de segmentação se refere a eventos de compra em uma janela de tempo especificada. Portanto, esses dados devem ser modelados como um schema de evento.
 
 #### Casos de uso de ativação
 
-Além das considerações relacionadas aos casos de uso de segmentação, você também deve revisar os casos de uso de ativação desses segmentos para identificar atributos relevantes adicionais.
+Além de considerações relacionadas aos casos de uso de segmentação, você também deve revisar os casos de uso de ativação para esses públicos-alvo para identificar atributos relevantes adicionais.
 
-Por exemplo, uma empresa criou um segmento de público-alvo com base na regra que `country = US`. Em seguida, ao ativar esse segmento para determinados destinos downstream, a empresa deseja filtrar todos os perfis exportados com base no estado inicial. Por conseguinte, uma `state` O atributo também deve ser capturado na entidade de perfil aplicável.
+Por exemplo, uma empresa criou um público-alvo com base na regra que `country = US`. Em seguida, ao ativar esse público-alvo para determinados destinos downstream, a empresa deseja filtrar todos os perfis exportados com base no estado inicial. Por conseguinte, uma `state` O atributo também deve ser capturado na entidade de perfil aplicável.
 
 #### Valores agregados
 
 Com base no caso de uso e na granularidade dos dados, você deve decidir se determinados valores precisam ser pré-agregados antes de serem incluídos em um perfil ou entidade de evento.
 
-Por exemplo, uma empresa deseja criar um segmento com base no número de compras de carrinho. Você pode optar por incorporar esses dados na menor granularidade ao incluir cada evento de compra com carimbo de data e hora como sua própria entidade. No entanto, às vezes isso pode aumentar o número de eventos registrados exponencialmente. Para reduzir o número de eventos assimilados, é possível optar por criar um valor agregado `numberOfPurchases` durante um período de uma semana ou de um mês. Outras funções agregadas, como MIN e MAX, também podem ser aplicadas a essas situações.
+Por exemplo, uma empresa deseja criar um público-alvo com base no número de compras de carrinho. Você pode optar por incorporar esses dados na menor granularidade ao incluir cada evento de compra com carimbo de data e hora como sua própria entidade. No entanto, às vezes isso pode aumentar o número de eventos registrados exponencialmente. Para reduzir o número de eventos assimilados, é possível optar por criar um valor agregado `numberOfPurchases` durante um período de uma semana ou de um mês. Outras funções agregadas, como MIN e MAX, também podem ser aplicadas a essas situações.
 
 >[!CAUTION]
 >
@@ -173,7 +173,7 @@ A segunda abordagem seria usar schemas de evento para representar assinaturas. I
 
 **Pontos negativos**
 
-* A segmentação se torna mais complexa para o caso de uso pretendido original (identificando o status das assinaturas mais recentes dos clientes). O segmento agora precisa de lógica adicional para sinalizar o último evento de assinatura para um cliente para verificar seu status.
+* A segmentação se torna mais complexa para o caso de uso pretendido original (identificando o status das assinaturas mais recentes dos clientes). O público-alvo agora precisa de lógica adicional para sinalizar o último evento de assinatura para um cliente para verificar seu status.
 * Os eventos têm um risco maior de expiração automática e de serem removidos da loja de perfis. Consulte o guia sobre [Expirações do evento de experiência](../../profile/event-expirations.md) para obter mais informações.
 
 ## Criar esquemas com base nas entidades categorizadas

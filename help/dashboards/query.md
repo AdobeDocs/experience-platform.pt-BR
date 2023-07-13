@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: Explorar, verificar e processar conjuntos de dados do painel usando o serviço de consulta
 type: Documentation
-description: Saiba como usar o Serviço de consulta para explorar e processar conjuntos de dados brutos que alimentam o perfil, o segmento e os painéis de destino no Experience Platform.
+description: Saiba como usar o Serviço de consulta para explorar e processar conjuntos de dados brutos que potencializam o perfil, o público-alvo e os painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
 # Explore, verifique e processe conjuntos de dados de painel usando [!DNL Query Service]
 
-A Adobe Experience Platform fornece informações importantes sobre os dados de perfil, segmento e destinos de sua organização por meio de painéis disponíveis na interface do usuário do Experience Platform. Em seguida, você pode usar o Adobe Experience Platform [!DNL Query Service] para explorar, verificar e processar os conjuntos de dados brutos que alimentam esses painéis no data lake.
+A Adobe Experience Platform fornece informações importantes sobre os dados de perfil, público-alvo e destinos de sua organização por meio dos painéis disponíveis na interface do usuário do Experience Platform. Em seguida, você pode usar o Adobe Experience Platform [!DNL Query Service] para explorar, verificar e processar os conjuntos de dados brutos que alimentam esses painéis no data lake.
 
 ## Introdução ao [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Para saber mais sobre [!DNL Query Service] e sua função no Experience Platform
 
 ## Acesso aos conjuntos de dados disponíveis
 
-Você pode usar [!DNL Query Service] para consultar conjuntos de dados brutos para painéis de perfil, segmento e destinos. Para exibir seus conjuntos de dados disponíveis, na interface do usuário do Experience Platform, selecione **Conjuntos de dados** no painel de navegação esquerdo para abrir o painel Conjuntos de dados. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
+Você pode usar [!DNL Query Service] para consultar conjuntos de dados brutos para painéis de perfil, público-alvo e destinos. Para exibir seus conjuntos de dados disponíveis, na interface do usuário do Experience Platform, selecione **Conjuntos de dados** no painel de navegação esquerdo para abrir o painel Conjuntos de dados. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
 
 ![O painel Navegação pelo conjunto de dados com a guia Conjuntos de dados realçada na navegação à esquerda.](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ A variável `adwh_dim_merge_policies` O conjunto de dados contém os seguintes c
 
 Esse conjunto de dados pode ser explorado usando a interface do Editor de consultas no Experience Platform. Para saber mais sobre o uso do Editor de consultas, consulte a [Guia da interface do Editor de consultas](../query-service/ui/user-guide.md).
 
-### Conjunto de dados de metadados do segmento
+### Conjunto de dados de metadados de público
 
-Há um conjunto de dados de metadados de segmento disponível no data lake contendo metadados para cada um dos segmentos de sua organização.
+Há um conjunto de dados de metadados de público-alvo disponível no data lake que contém metadados para cada um dos públicos-alvo de sua organização.
 
 A convenção de nomenclatura deste conjunto de dados é **Definição de segmento-Instantâneo-Exportar** seguido por um valor alfanumérico. Por exemplo: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Para entender o esquema completo de cada conjunto de dados de exportação de instantâneo de definição de segmento, você pode visualizar e explorar os conjuntos de dados [usar o visualizador do conjunto de dados](../catalog/datasets/user-guide.md) na interface do Experience Platform.
-
-![Uma visualização do conjunto de dados Definição de segmento, Instantâneo e Exportação.](images/query/segment-metadata.png)
 
 ### Conjunto de dados de metadados de destino
 
@@ -92,7 +90,7 @@ Para entender o esquema completo do conjunto de dados de destino do DIM, você p
 
 O recurso Modelos de dados de insights da CDP expõe o SQL que habilita os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios CDP para seus casos de uso de marketing e KPI.
 
-Os relatórios da CDP fornecem insights sobre os dados do perfil e sua relação com segmentos e destinos. Consulte a documentação do Modelo de dados de insights da CDP para obter informações detalhadas sobre como [aplique os Modelos de dados dos Insights de CDP a seus casos de uso de KPI específicos](./cdp-insights-data-model.md).
+Os relatórios da CDP fornecem insights sobre os dados do perfil e sua relação com públicos-alvo e destinos. Consulte a documentação do Modelo de dados de insights da CDP para obter informações detalhadas sobre como [aplique os Modelos de dados dos Insights de CDP a seus casos de uso de KPI específicos](./cdp-insights-data-model.md).
 
 ## Exemplo de consultas
 
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### Contagem de perfis por segmento
+### Contagem de perfis por público
 
-Este insight de público-alvo fornece o número total de perfis mesclados em cada segmento no conjunto de dados. Esse número é o resultado da aplicação da política de mesclagem de segmentos aos dados do seu Perfil para mesclar fragmentos de perfil e formar um único perfil para cada indivíduo no segmento.
+Este insight de público-alvo fornece o número total de perfis mesclados em cada público-alvo no conjunto de dados. Esse número é o resultado da aplicação da política de mesclagem de público-alvo aos dados do seu Perfil para mesclar fragmentos de perfil e formar um único perfil para cada indivíduo no público-alvo.
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## Próximas etapas
 
-Ao ler este guia, agora é possível usar [!DNL Query Service] para executar várias consultas para explorar e processar os conjuntos de dados brutos que alimentam seu perfil, segmento e painéis de destinos.
+Ao ler este guia, agora é possível usar [!DNL Query Service] para executar várias consultas para explorar e processar os conjuntos de dados brutos que alimentam seu perfil, público-alvo e painéis de destinos.
 
 Para saber mais sobre cada painel e suas métricas, selecione um painel na lista de painéis disponíveis na navegação da documentação.

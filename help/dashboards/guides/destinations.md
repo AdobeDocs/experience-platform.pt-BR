@@ -4,10 +4,10 @@ title: Guia do Painel de destinos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 20%
+ht-degree: 8%
 
 ---
 
@@ -49,31 +49,31 @@ Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de w
 
 ![A visão geral do painel Destinos com o widget Adicionar é realçada.](../images/destinations/destinations-overview-add-widget.png)
 
-Na biblioteca de widgets, você pode navegar pela seleção de widgets de segmentos padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
+Na biblioteca de widgets, você pode navegar pela seleção de widgets de público-alvo padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
 ## Widgets padrão {#standard-widgets}
 
-O Adobe fornece vários widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus destinos e avaliar a integridade dos segmentos disponíveis para sua análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
+O Adobe fornece vários widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus destinos e avaliar a integridade dos públicos-alvo disponíveis para sua análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
 
 ### Pré-requisitos {#prerequisites}
 
 Antes de continuar com as descrições dos widgets padrão, verifique se você está familiarizado com as definições dos seguintes termos principais usados na documentação:
 
-* **Segmento:** Um segmento é **o conjunto de regras** que incluem atributos e dados de evento que qualificam vários perfis como um público-alvo.
-* **Público**: um público-alvo é **o conjunto de perfis** que atendem aos critérios de uma definição de segmento.
+* **Definição de segmento:** Uma definição de segmento é uma **conjunto de regras** usado para descrever as principais características ou comportamento de um público-alvo. Essas regras incluem dados de atributo e evento que qualificam os perfis como parte de um público-alvo.
+* **Público**: um conjunto de pessoas, contas, famílias ou outras entidades que compartilham características e comportamentos comuns.
 * **Mapeado/Mapeamento**: o mapeamento de dados é o processo de mapear campos de dados de origem para campos de destino relacionados em um destino.
 * **Identidade**: uma identidade é um identificador que representa exclusivamente um cliente individual, como uma ID de cookie, ID de dispositivo ou ID de email.
-* **Ativar**: Ativar é a ação realizada por um usuário para mapear um segmento ou perfis para um destino, como o Oracle Eloqua, Google ou Marketing Cloud do Salesforce.
+* **Ativar**: Ativar é a ação realizada por um usuário para mapear um público-alvo ou perfis para um destino, como o Oracle Eloqua, o Google ou o Marketing Cloud Salesforce.
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
 * [[!UICONTROL Destinos mais usados]](#most-used-destinations)
 * [[!UICONTROL Destinos criados recentemente]](#recently-created-destinations)
-* [[!UICONTROL Segmentos ativados recentemente]](#recently-activated-segments)
-* [[!UICONTROL Segmentos ativados recentemente por destino]](#recently-activated-segments-by-destination)
+* [[!UICONTROL Públicos ativados recentemente]](#recently-activated-audiences)
+* [[!UICONTROL Públicos ativados recentemente por destino]](#recently-activated-audiences-by-destination)
 * [[!UICONTROL Tendência de tamanho do público]](#audience-size-trend)
-* [[!UICONTROL Segmentos não mapeados por identidade]](#unmapped-segments-by-identity)
-* [[!UICONTROL Segmentos mapeados por identidade]](#mapped-segments-by-identity)
+* [[!UICONTROL Públicos não mapeados por identidade]](#unmapped-audiences-by-identity)
+* [[!UICONTROL Públicos mapeados por identidade]](#mapped-audiences-by-identity)
 * [[!UICONTROL Públicos comuns]](#common-audiences)
 * [[!UICONTROL Públicos mapeados]](#mapped-audiences)
 * [[!UICONTROL Integridade do público mapeado]](#mapped-audience-health)
@@ -88,15 +88,15 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Destinos mais usados"
->abstract="Esse widget exibe os destinos mais ativos da sua organização pelo número de segmentos mapeados. Esses números são precisos no momento do último instantâneo. Essa classificação fornece informações sobre quais destinos são mais usados atualmente, destacando os que podem ser subutilizados."
+>abstract="Esse widget exibe os destinos mais ativos da sua organização pelo número de públicos-alvo mapeados. Esses números são precisos no momento do último instantâneo. Essa classificação fornece informações sobre quais destinos são mais usados atualmente, destacando os que podem ser subutilizados."
 
-A variável **[!UICONTROL Destinos mais usados]** O widget exibe os principais destinos da sua organização pelo número de segmentos mapeados, a partir do último instantâneo. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados.
+A variável **[!UICONTROL Destinos mais usados]** O widget exibe os principais destinos da sua organização pelo número de públicos mapeados, a partir do último instantâneo. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados.
 
-Por exemplo, se você configurou um destino ontem, mas não mapeou nenhum segmento para ele, é possível ver que o destino está subutilizado no momento.
+Por exemplo, se você configurou um destino ontem, mas não mapeou nenhum público para ele, é possível ver que o destino está subutilizado no momento.
 
-O número de segmentos mapeados exibido na coluna de contagem de segmentos é preciso desde o último instantâneo diário. Mapear um novo segmento para o destino não atualizará a contagem até que o próximo instantâneo seja tirado.
+O número de públicos mapeados exibidos na variável [!UICONTROL Contagem de público] é preciso a partir do último instantâneo diário. Mapear um novo público para o destino não atualiza a contagem até que o próximo instantâneo seja tirado.
 
-Selecionar o nome de um destino na lista mostrada no widget levará você aos detalhes do destino, como vinculado a partir do **[!UICONTROL Procurar]** guia. Também é possível selecionar **[!UICONTROL Exibir todos]** para navegar até o **[!UICONTROL Procurar]** e selecione o nome de um destino para exibir seus detalhes.
+Selecione o nome de um destino na lista mostrada no widget para navegar até os detalhes do destino para esse destino em particular. Também é possível selecionar **[!UICONTROL Exibir todos]** para navegar até o **[!UICONTROL Procurar]** e selecione o nome de um destino para exibir seus detalhes.
 
 ![A guia Visão geral do painel Destinos com o widget Destinos mais usados é realçada.](../images/destinations/most-used-destinations.png)
 
@@ -117,37 +117,37 @@ Para saber mais sobre como configurar tipos específicos de destinos, visite o [
 
 ![A guia Visão geral do painel Destinos com o widget Destinos criados recentemente destacado.](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL Segmentos ativados recentemente] {#recently-activated-segments}
+### [!UICONTROL Públicos ativados recentemente] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
->title="Segmentos ativados recentemente"
->abstract="Esse widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos."
+>title="Públicos ativados recentemente"
+>abstract="Este widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos."
 
-A variável **[!UICONTROL Segmentos ativados recentemente]** O widget fornece uma lista dos segmentos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos segmentos e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos.
+A variável **[!UICONTROL Públicos ativados recentemente]** O widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos.
 
-A data atualizada mostrada exibe a última vez que o segmento foi ativado para o destino e é precisa para o último instantâneo diário. Em outras palavras, se você ativar um segmento para o destino, a data atualizada não será alterada até que o próximo instantâneo seja tirado.
+A variável [!UICONTROL Atualizado] a data exibida exibe a última vez que o público-alvo foi ativado para o destino e tem precisão para o último instantâneo diário. Em outras palavras, se você ativar um público-alvo para o destino, a data atualizada não será alterada até que o próximo instantâneo seja tirado.
 
-Selecionar o nome de um segmento na lista mostrada no widget levará você aos detalhes do segmento. Também é possível selecionar **[!UICONTROL Exibir todos]** para navegar até a guia navegação de segmento e, em seguida, selecione o nome de um segmento para exibir seus detalhes.
+Selecionar o nome de um público-alvo na lista mostrada no widget direciona você aos detalhes do público-alvo. Também é possível selecionar **[!UICONTROL Exibir todos]** para navegar até o [!UICONTROL Públicos-alvo] [!UICONTROL Procurar] e selecione o nome de um público-alvo para ver seus detalhes.
 
-Para obter mais informações sobre como trabalhar com segmentos no Experience Platform, consulte o [Visão geral do serviço de segmentação](../../segmentation/home.md).
+Para obter mais informações sobre como trabalhar com públicos-alvo no Experience Platform, consulte a [Visão geral do serviço de segmentação](../../segmentation/home.md).
 
-![A guia Visão geral do painel Destinos com o widget Segmentos ativados recentemente realçado.](../images/destinations/recently-activated-segments.png)
+![A guia Visão geral do painel Destinos com o widget Públicos-alvo ativados recentemente realçado.](../images/destinations/recently-activated-audiences.png)
 
-### [!UICONTROL Segmentos ativados recentemente por destino] {#recently-activated-segments-by-destination}
+### [!UICONTROL Públicos ativados recentemente por destino] {#recently-activated-audiences-by-destination}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
->title="Segmentos ativados recentemente por destino"
->abstract="Esse widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido na lista suspensa de visão geral."
+>title="Públicos ativados recentemente por destino"
+>abstract="Este widget exibe os cinco principais públicos-alvo ativados mais recentemente em ordem decrescente, de acordo com o destino escolhido na lista suspensa visão geral."
 
-A variável **[!UICONTROL Segmentos ativados recentemente por destino]** O widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido na lista suspensa visão geral. É semelhante ao [!UICONTROL Segmentos ativados recentemente] mas os dados exibidos **somente** se aplica ao destino selecionado.
+A variável **[!UICONTROL Públicos ativados recentemente por destino]** O widget exibe os cinco principais públicos-alvo ativados mais recentemente em ordem decrescente de acordo com o destino escolhido na lista suspensa visão geral. É semelhante ao [!UICONTROL Públicos ativados recentemente] mas os dados exibidos **somente** se aplica ao destino selecionado.
 
-Este widget contém duas métricas: o nome do segmento e a data em que o segmento foi ativado pela última vez no destino. Os dados exibidos estão corretos desde o último instantâneo diário.
+Esse widget contém duas métricas: o nome dos públicos-alvo e a data em que eles foram ativados pela última vez no destino. Os dados exibidos estão corretos desde o último instantâneo diário.
 
-Você pode visualizar os detalhes de um segmento selecionando o nome de um segmento na lista mostrada.
+Para exibir os detalhes de um público-alvo, selecione o nome dele na lista exibida.
 
-![O widget Segmentos ativados recentemente por destino.](../images/destinations/recently-activated-segments-by-destination.png)
+![O widget Públicos-alvo ativados recentemente por destino.](../images/destinations/recently-activated-audiences-by-destination.png)
 
 Consulte a seção de pré-requisitos para [definições de termos usados](#prerequisites) nesta descrição.
 
@@ -156,60 +156,60 @@ Consulte a seção de pré-requisitos para [definições de termos usados](#prer
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="Tendência de tamanho do público"
->abstract="Esse widget ilustra o número de perfis contidos no segmento, que está sendo enviado para a conta de destino diariamente. O primeiro menu suspenso ajusta o período da tendência do público. O segundo menu suspenso do dispositivo seleciona o segmento para análise. O destino é escolhido na lista suspensa de visão geral."
+>abstract="Este widget ilustra o número de perfis contidos no público-alvo, que está sendo enviado para a conta de destino diariamente. O primeiro menu suspenso ajusta o período da tendência do público. O segundo menu suspenso do widget seleciona o público-alvo para análise. O destino é escolhido na lista suspensa de visão geral."
 
-A variável **[!UICONTROL Tendência de tamanho do público]** O widget representa a relação da contagem de perfis durante um período de tempo para um segmento que foi mapeado para essa conta de destino. O widget usa um gráfico de linhas para ilustrar o número de perfis contidos no segmento, que estão sendo enviados para a conta de destino diariamente.
+A variável **[!UICONTROL Tendência de tamanho do público]** O widget descreve a relação da contagem de perfis durante um período para um público-alvo que foi mapeado para essa conta de destino. O widget usa um gráfico de linhas para ilustrar o número de perfis contidos no público-alvo, que estão sendo enviados para a conta de destino diariamente.
 
 Um período para a tendência do público-alvo nos últimos 30 dias, 90 dias ou 12 meses pode ser ajustado usando o primeiro menu suspenso.
 
-O segundo menu suspenso lista cada segmento disponível que pode ser enviado para a conta de destino escolhida na parte superior do painel.
+O segundo menu suspenso lista cada público-alvo disponível que pode ser enviado para a conta de destino escolhida na parte superior do painel.
 
 ![O widget Tendência de tamanho do público-alvo.](../images/destinations/audience-size-trend.png)
 
-A variável **[!UICONTROL Tendência de tamanho do público]** o widget fornece um [!UICONTROL Legendas] no canto superior direito do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo legendas automáticas. Um modelo de aprendizado de máquina gera legendas automaticamente para descrever as principais tendências e eventos importantes, analisando o gráfico e os dados de segmento.
+A variável **[!UICONTROL Tendência de tamanho do público]** o widget fornece um [!UICONTROL Legendas] no canto superior direito do widget. Selecionar **[!UICONTROL Legendas]** para abrir a caixa de diálogo legendas automáticas. Um modelo de aprendizado de máquina gera legendas automaticamente para descrever as principais tendências e eventos importantes, analisando o gráfico e os dados do público-alvo.
 
 ![A caixa de diálogo de legendas automáticas do widget de tendência de tamanho de Público-alvo.](../images/destinations/audience-size-trend-captions.png)
 
-### [!UICONTROL Segmentos não mapeados por identidade] {#unmapped-segments-by-identity}
+### [!UICONTROL Públicos não mapeados por identidade] {#unmapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
->title="Segmentos não mapeados por identidade"
->abstract="Esse widget lista os cinco principais segmentos **não mapeados** classificados por contagem de identidade decrescente para um determinado destino e identidade. As IDs de filtro listadas na lista suspensa do dispositivo mudam dependendo da conta de destino selecionada na parte superior da página de visão geral."
+>title="Públicos não mapeados por identidade"
+>abstract="Este widget lista os cinco principais **não mapeado** públicos-alvo classificados por contagem decrescente de identidades para um determinado destino e identidade. As IDs de filtro listadas na lista suspensa do dispositivo mudam dependendo da conta de destino selecionada na parte superior da página de visão geral."
 
-A variável **[!UICONTROL Segmentos não mapeados por identidade]** o widget lista os cinco principais **não mapeado** segmentos classificados por contagem decrescente de identidades para um determinado destino e identidade. Ele destaca os segmentos que são os mais benéficos a serem mapeados para a conta de destino escolhida com base na ID escolhida.
+A variável **[!UICONTROL Públicos não mapeados por identidade]** o widget lista os cinco principais **não mapeado** públicos-alvo classificados por contagem decrescente de identidades para um determinado destino e identidade. Ele destaca os públicos-alvo que são os mais benéficos a serem mapeados para a conta de destino escolhida com base na ID escolhida.
 
-A lista suspensa ID de destino filtra os segmentos disponíveis. As IDs de filtro listadas na lista suspensa mudam, dependendo da conta de destino selecionada na parte superior da página de visão geral.
+A lista suspensa ID de destino filtra os públicos-alvo disponíveis. As IDs de filtro listadas na lista suspensa mudam, dependendo da conta de destino selecionada na parte superior da página de visão geral.
 
-A coluna de identidades conta o número de IDs de origem no segmento que podem mapear para a ID escolhida na lista suspensa de ID do widget.
+A coluna Identidades conta o número de IDs de origem no público-alvo que podem ser mapeadas para a ID escolhida na lista suspensa de ID do widget.
 
-![O widget Segmentos não mapeados por identidade.](../images/destinations/unmapped-segments-by-identity.png)
+![O widget Públicos não mapeados por identidade.](../images/destinations/unmapped-audiences-by-identity.png)
 
 Consulte a seção de pré-requisitos para [definições de termos usados](#prerequisites) nesta descrição.
 
-### [!UICONTROL Segmentos mapeados por identidade] {#mapped-segments-by-identity}
+### [!UICONTROL Públicos mapeados por identidade] {#mapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
->title="Segmentos mapeados por identidade"
->abstract="Esse widget fornece uma lista dos cinco principais segmentos **mapeados**. A lista é ordenada de mais alto a mais baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget dependem do destino escolhido na parte superior do painel de visão geral."
+>title="Públicos mapeados por identidade"
+>abstract="Este widget fornece uma lista dos cinco principais **mapeado** públicos-alvo. A lista é ordenada de cima para baixo de acordo com o número de IDs de origem contidas nos públicos-alvo. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget dependem do destino escolhido na parte superior do painel de visão geral."
 
-Esse widget fornece uma lista dos cinco principais segmentos **mapeados**. A lista é ordenada de mais alto a mais baixo de acordo com o número de IDs de origem contidas nos segmentos. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
+Este widget fornece uma lista dos cinco principais **mapeado** públicos-alvo. A lista é ordenada de cima para baixo de acordo com o número de IDs de origem contidas nos públicos-alvo. A ID de destino a ser contada é selecionada no menu suspenso abaixo do título do widget. As IDs de destino disponíveis no menu suspenso do widget serão alteradas de acordo com o filtro de conta de destino escolhido na parte superior do painel de visão geral.
 
-![O widget Segmentos mapeados por identidade.](../images/destinations/mapped-segments-by-identity.png)
+![O widget Públicos mapeados por identidade.](../images/destinations/mapped-audiences-by-identity.png)
 
-A variável **[!UICONTROL Segmentos mapeados por identidade]** principais características do widget, a probabilidade de direcionar com sucesso as oportunidades de perfil para uma campanha no destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas às IDs de destino para fornecer dados úteis e acionáveis.
+A variável **[!UICONTROL Públicos mapeados por identidade]** principais características do widget, a probabilidade de direcionar com sucesso as oportunidades de perfil para uma campanha no destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas às IDs de destino para fornecer dados úteis e acionáveis.
 
 ### Públicos comuns {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Públicos comuns"
->abstract="Esse widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de segmentos é ordenada de acordo com a data mais recente de ativação. O segmento ativado mais recentemente é exibido na parte superior."
+>abstract="Este widget fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de públicos-alvo é ordenada de acordo com a recente ativação. O público ativado mais recentemente é exibido na parte superior."
 
-A variável **[!UICONTROL Públicos comuns]** O widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa widget. A lista de segmentos é ordenada de acordo com a data mais recente de ativação. O segmento ativado mais recentemente é exibido na parte superior.
+A variável **[!UICONTROL Públicos comuns]** O widget fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa widget. A lista de públicos-alvo é ordenada de acordo com a recente ativação. O público ativado mais recentemente é exibido na parte superior.
 
-A variável [!UICONTROL TAMANHO DO PÚBLICO] fornece a contagem total de perfis de cada segmento listado.
+A variável [!UICONTROL TAMANHO DO PÚBLICO] fornece a contagem total de perfis de cada público-alvo listado.
 
 ![O widget Públicos-alvo comuns.](../images/destinations/common-audiences.png)
 
@@ -217,7 +217,7 @@ A variável [!UICONTROL TAMANHO DO PÚBLICO] fornece a contagem total de perfis 
 
 A variável [!UICONTROL Públicos mapeados] O widget exibe o número total de públicos mapeados que podem ser ativados para o destino selecionado na parte superior da página.
 
-Selecionar **[!UICONTROL Segmentos]** para navegar até o painel Segmentos [!UICONTROL Procurar] guia. Este espaço de trabalho exibe uma lista de todas as definições de segmento para sua organização.
+Selecionar **[!UICONTROL Públicos-alvo]** para navegar até o painel Públicos-alvo [!UICONTROL Procurar] guia. Este espaço de trabalho exibe uma lista de todas as definições de segmento para sua organização.
 
 ![O widget Públicos mapeados.](../images/destinations/mapped-audiences.png)
 
@@ -226,21 +226,21 @@ Selecionar **[!UICONTROL Segmentos]** para navegar até o painel Segmentos [!UIC
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="Integridade do público mapeado"
->abstract="Esse widget fornece uma lista de até 20 segmentos mapeados cujas contagens totais de perfil se desviam por um fator de pelo menos um desvio padrão do tamanho médio de público de 30 dias mapeado para esse destino. Ele fornece uma métrica calculada para a dispersão dos tamanhos do público da média nos últimos 30 dias. Os tamanhos do público são classificados do maior ao menor."
+>abstract="Este widget fornece uma lista de até 20 públicos-alvo mapeados cujas contagens totais de perfis se desviam por um fator de pelo menos um desvio padrão do tamanho médio do público-alvo de 30 dias mapeado para esse destino. Ele fornece uma métrica calculada para a dispersão dos tamanhos do público da média nos últimos 30 dias. Os tamanhos do público são classificados do maior ao menor."
 
-O widget fornece uma lista de até 20 segmentos mapeados cujas contagens totais de perfil, desde o último instantâneo diário, desviam-se por um fator de pelo menos um desvio padrão do tamanho médio do público-alvo de 30 dias mapeado para esse destino.
+O widget fornece uma lista de até 20 públicos-alvo mapeados cujo total de perfis conta, a partir do último instantâneo diário, desvio por um fator de pelo menos um desvio padrão do tamanho médio do público-alvo de 30 dias mapeado para esse destino.
 
 Em resumo, fornece uma métrica calculada para a dispersão dos tamanhos de público-alvo da média nos últimos 30 dias. Ela compara se o tamanho do público-alvo de hoje está fora do desvio padrão histórico visto nos dados nos últimos 30 dias.
 
 Todos os tamanhos de público no sistema são classificados de alto a baixo, conforme indicado na [!UICONTROL TAMANHO MAIS RECENTE] coluna.
 
-Se a contagem de perfis mapeados do segmento estiver fora de um desvio padrão do tamanho médio do perfil mapeado nos últimos 30 dias, isso indica uma anomalia no sistema e deve ser investigado.
+Se a contagem de perfis de público-alvo mapeada estiver fora de um desvio padrão do tamanho médio do perfil mapeado nos últimos 30 dias, isso indica uma anomalia no sistema e deve ser investigado.
 
-Se um segmento dentro do [!UICONTROL Integridade do público mapeado] O widget está se desviando por uma grande margem. Você deve consultar o gráfico de tendência de tamanho de público e localizar o segmento anômalo. A tendência pode fornecer mais informações sobre a saúde do seu segmento.
+Se um público-alvo dentro do [!UICONTROL Integridade do público mapeado] O widget está se desviando por uma grande margem. Você deve consultar o gráfico de tendência de tamanho de público e localizar o público anômalo. A tendência pode fornecer mais informações sobre a saúde do seu público-alvo.
 
 >[!NOTE]
 >
->O tamanho padrão do widget de integridade Público-alvo mapeado pode obstruir as informações da tabela. Modifique o tamanho do widget para melhorar a legibilidade dos nomes de segmento e títulos de coluna mapeados. Consulte a documentação de modificação de painéis para obter orientação sobre [como redimensionar um widget](../customize/modify.md).
+>O tamanho padrão do widget de integridade Público-alvo mapeado pode obstruir as informações da tabela. Modifique o tamanho do widget para melhorar a legibilidade dos nomes dos públicos-alvo e títulos de coluna mapeados. Consulte a documentação de modificação de painéis para obter orientação sobre [como redimensionar um widget](../customize/modify.md).
 
 ![O widget de integridade Público-alvo mapeado.](../images/destinations/mapped-audience-health.png)
 
@@ -273,13 +273,7 @@ O widget fornece uma tabela de duas colunas para mostrar uma lista de plataforma
 
 ### [!UICONTROL Públicos ativados em todos os destinos] {#activated-audiences-across-all-destinations}
 
-A variável [!UICONTROL Públicos ativados em todos os destinos] O widget fornece o número total de públicos ativados em todos os destinos em uma única métrica.
-
->[!NOTE]
->
->Este widget mostra a contagem de públicos-alvo, e não a contagem de segmentos.
-
-Esse número é preciso para o instantâneo mais recente.
+A variável [!UICONTROL Públicos ativados em todos os destinos] O widget fornece o número total de públicos ativados em todos os destinos em uma única métrica. Esse número é preciso para o instantâneo mais recente.
 
 ![O widget Públicos ativados em todos os destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
 
@@ -293,7 +287,7 @@ Esse widget fornece uma única métrica para o número total de públicos-alvo a
 
 ![O widget Públicos ativados.](../images/destinations/activated-audiences.png)
 
-Selecionar **[!UICONTROL Públicos-alvo]** para navegar até a página de detalhes do painel de destinos. A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data inicial e a data final (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um segmento específico, selecione o nome dele na lista.
+Selecionar **[!UICONTROL Públicos-alvo]** para navegar até a página de detalhes do painel de destinos. A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de públicos-alvo que foram mapeados para o destino, incluindo a data inicial e a data final (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um público-alvo específico, selecione o nome no campo [!UICONTROL Nome do público] coluna.
 
 ![A página de detalhes do painel de destinos com a guia de dados Ativação destacada.](../images/destinations/activation-data-tab.png)
 

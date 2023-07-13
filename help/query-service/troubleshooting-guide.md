@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Perguntas frequentes
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -231,7 +231,7 @@ AS SELECT '1' as _id,
 
 ### Por que há uma diferença entre os números mostrados na interface do usuário do perfil e os números calculados do conjunto de dados de exportação de perfil?
 
-+++Resposta Os números exibidos no painel do perfil são precisos a partir do último instantâneo. Os números gerados na tabela de exportação de perfis dependem totalmente da consulta de exportação. Como resultado, consultar o número de perfis qualificados para um segmento específico é uma causa comum para essa discrepância.
++++Resposta Os números exibidos no painel do perfil são precisos a partir do último instantâneo. Os números gerados na tabela de exportação de perfis dependem totalmente da consulta de exportação. Como resultado, consultar o número de perfis qualificados para um público específico é uma causa comum para essa discrepância.
 
 >[!NOTE]
 >

@@ -3,7 +3,7 @@ title: (Beta) Públicos-Alvo Do Experience Cloud
 description: Saiba como compartilhar públicos do Experience Platform com várias soluções de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### Para clientes que estão usando a solução de compartilhamento de público-alvo herdada
 
-Se você já estiver compartilhando públicos-alvo do Experience Platform para o Audience Manager e outras soluções de Experience Cloud pelo [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), entre em contato com o Atendimento ao cliente ou com a equipe de conta do Adobe para desativar a integração herdada. As equipes de atendimento ao cliente e de conta Adobe devem registrar um ticket Jira (consulte ticket de modelo AAM-52354) para desativar a integração.
+Se você já estiver compartilhando públicos-alvo do Experience Platform para o Audience Manager e outras soluções de Experience Cloud pelo [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), entre em contato com o Atendimento ao cliente ou com a equipe de conta do Adobe para desativar a integração herdada. As equipes de atendimento ao cliente e de conta Adobe devem registrar um tíquete Jira (consulte o tíquete modelo PLAT-160986) para desativar a integração.
 
 O tempo de resposta para resolver o tíquete de desprovisionamento para clientes beta é de seis dias úteis ou menos. Depois que a integração herdada existente for desativada, você poderá prosseguir para [criação de uma conexão](#connect) por meio do cartão de destino de autoatendimento.
 

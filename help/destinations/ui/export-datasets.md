@@ -3,7 +3,7 @@ title: (Beta) Exportar conjuntos de dados para destinos de armazenamento na nuve
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 5%
@@ -35,14 +35,14 @@ Atualmente, você pode exportar conjuntos de dados para os destinos de armazenam
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Quando ativar segmentos ou exportar conjuntos de dados {#when-to-activate-segments-or-activate-datasets}
+## Quando ativar públicos ou exportar conjuntos de dados {#when-to-activate-audiences-or-activate-datasets}
 
-Alguns destinos baseados em arquivo no catálogo de Experience Platform suportam ativação de segmento e exportação de conjunto de dados.
+Alguns destinos baseados em arquivo no catálogo do Experience Platform são compatíveis com a ativação de público-alvo e a exportação de conjunto de dados.
 
-* Considere ativar segmentos quando quiser que seus dados sejam estruturados em perfis agrupados por interesses ou qualificações de público-alvo.
+* Considere ativar públicos-alvo quando quiser que seus dados sejam estruturados em perfis agrupados por interesses ou qualificações de público-alvo.
 * Como alternativa, considere as exportações de conjunto de dados ao procurar exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Você pode usar esses dados para relatórios, workflows de ciência de dados, para atender aos requisitos de conformidade e muitos outros casos de uso.
 
-Este documento contém todas as informações necessárias para exportar conjuntos de dados. Se quiser ativar segmentos para destinos de marketing por email ou armazenamento na nuvem, leia [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
+Este documento contém todas as informações necessárias para exportar conjuntos de dados. Se quiser ativar públicos para armazenamento na nuvem ou destinos de marketing por email, leia [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Pré-requisitos {#prerequisites}
 

@@ -2,9 +2,9 @@
 title: Conexão com Medallia
 description: Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para entender melhor as necessidades e expectativas dos clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1095'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros recém-qualificados de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil da [workflow de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
 * **[!UICONTROL URL do gateway da API]**: obtenha junto à equipe de delivery do Medallia. Normalmente assume a forma de https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Importar nome da API]**: obtenha junto à equipe de delivery do Medallia. Nome da API de importação do Medallia (também conhecido como Feed da Web) a ser usada nesta conexão. Você pode ativar segmentos diferentes para APIs de importação diferentes para acionar programas de pesquisa diferentes.
+* **[!UICONTROL Importar nome da API]**: obtenha junto à equipe de delivery do Medallia. Nome da API de importação do Medallia (também conhecido como Feed da Web) a ser usada nesta conexão. Você pode ativar públicos diferentes para APIs de importação diferentes para acionar programas de pesquisa diferentes.
 
 ![Imagem mostrando a tela de detalhes do destino para este destino.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -99,13 +99,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Mapear atributos e identidades {#map}
 

@@ -2,9 +2,9 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do destino
 description: Use este template para criar uma documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substituir pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1525'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 1%
 >
 >* Preencha todas as seções neste modelo, na ordem em que estão descritas no modelo.
 >* Esse modelo é atualizado com pouca frequência, com base no feedback do parceiro. Antes de começar a criar a documentação para o seu destino, verifique se você baixou o [versão mais recente do modelo](../assets/docs-framework/yourdestination-template.zip).
-
 
 ## Visão geral {#overview}
 
@@ -43,7 +42,7 @@ Para ajudá-lo a entender melhor como e quando você deve usar o *SeuDestino* de
 
 *Para plataformas de rede social:*
 
-*Uma marca de vestuário esportivo quer alcançar clientes existentes por meio de suas contas de mídia social. A marca de vestuário pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar segmentos a partir de seus próprios dados offline e enviar esses segmentos para o seu destino, para exibir anúncios nos feeds de redes sociais de seus clientes.*
+*Uma marca de vestuário esportivo quer alcançar clientes existentes por meio de suas contas de mídia social. A marca de vestuário pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para o Seu destino, para exibir anúncios nos feeds de redes sociais de seus clientes.*
 
 ## Pré-requisitos {#prerequisites}
 
@@ -81,10 +80,10 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no *SeuDestino* destino. |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no *SeuDestino* destino. |
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil da [workflow de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Tipo de exportação | **[!UICONTROL Exportação do conjunto de dados]** | Você está exportando conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 | Frequência de exportação | **[!UICONTROL Lote]** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos baseados em arquivo em lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -125,7 +124,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
@@ -133,9 +132,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 *Exclua conforme apropriado - Se estiver documentando um novo destino de transmissão, mantenha o primeiro parágrafo abaixo. Se estiver documentando um novo destino baseado em arquivo, mantenha o segundo parágrafo. Se você estiver documentando um destino que exporta conjuntos de dados, mantenha o terceiro parágrafo.*
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 Ler [(Beta) Exportar conjuntos de dados](/help/destinations/ui/export-datasets.md) para obter instruções detalhadas sobre como exportar conjuntos de dados para esse destino.
 
@@ -148,7 +147,7 @@ Ler [(Beta) Exportar conjuntos de dados](/help/destinations/ui/export-datasets.m
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
-*Adicione um parágrafo sobre como os dados são exportados para o seu destino. Isso ajudaria o cliente a garantir que ele se integrou corretamente ao seu destino. Por exemplo, você pode fornecer uma amostra de JSON como a abaixo. Ou você pode fornecer capturas de tela e informações da interface do destino que mostram como os clientes devem esperar que os segmentos sejam preenchidos na plataforma de destino.*
+*Adicione um parágrafo sobre como os dados são exportados para o seu destino. Isso ajudaria o cliente a garantir que ele se integrou corretamente ao seu destino. Por exemplo, você pode fornecer uma amostra de JSON como a abaixo. Ou você pode fornecer capturas de tela e informações da interface do destino que mostram como os clientes devem esperar que os públicos-alvo sejam preenchidos na plataforma de destino.*
 
 ```
 {

@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexão com o Google Ad Manager
 description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que fornece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 5%
+source-wordcount: '992'
+ht-degree: 2%
 
 ---
 
@@ -22,8 +22,8 @@ Observe os seguintes detalhes, específicos do [!DNL Google Ad Manager] Destinos
 
 * Os públicos ativados são criados programaticamente no [!DNL Google] plataforma.
 * [!DNL Platform] no momento, o não inclui uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público no Google para validar a integração e entender o tamanho do direcionamento de público.
-* Depois de mapear um segmento para um [!DNL Google Ad Manager] destino, o nome do segmento aparece imediatamente no campo [!DNL Google Ad Manager] interface do usuário.
-* A população do segmento precisa de 24 a 48 horas para ser exibida no [!DNL Google Ad Manager]. Além disso, os segmentos devem ter um público-alvo de pelo menos 50 perfis para serem exibidos no [!DNL Google Ad Manager]. Segmentos com tamanhos de público menores que 50 perfis não serão preenchidos em [!DNL Google Ad Manager].
+* Depois de mapear um público-alvo para um [!DNL Google Ad Manager] destino, o nome do público-alvo aparece imediatamente no campo [!DNL Google Ad Manager] interface do usuário.
+* A população do segmento precisa de 24 a 48 horas para ser exibida no [!DNL Google Ad Manager]. Além disso, para serem exibidos no [!DNL Google Ad Manager]. Públicos-alvo com tamanhos menores do que 50 perfis não serão preenchidos em [!DNL Google Ad Manager].
 
 ## Identidades suportadas {#supported-identities}
 
@@ -41,14 +41,28 @@ Observe os seguintes detalhes, específicos do [!DNL Google Ad Manager] Destinos
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público) para o destino do Google. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público para o destino do Google. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,8 +89,8 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Anexar a ID do segmento ao nome do segmento"
->abstract="Selecione essa opção para que o nome do segmento no Google Ad Manager inclua a ID do segmento na Experience Platform, assim: `Segment Name (Segment ID)`"
+>title="Anexar ID de público-alvo ao nome do público-alvo"
+>abstract="Selecione esta opção para que o nome do público-alvo no Google Ad Manager inclua a ID do público-alvo do Experience Platform, desta forma: `Audience Name (Audience ID)`"
 
 Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
 
@@ -86,7 +100,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 * **[!UICONTROL Tipo de conta]**: selecione uma opção, dependendo da sua conta com o Google:
    * Uso `DFP by Google` para [!DNL DoubleClick] para editores
    * Uso `AdX buyer` para [!DNL Google AdX]
-* **[!UICONTROL Anexar ID do segmento ao nome do segmento]**: selecione esta opção para que o nome do segmento no Google Ad Manager inclua a ID do segmento do Experience Platform, desta forma: `Segment Name (Segment ID)`.
+* **[!UICONTROL Anexar ID de público-alvo ao nome do público-alvo]**: selecione esta opção para que o nome do público-alvo no Google Ad Manager inclua a ID de público-alvo do Experience Platform, desta forma: `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
@@ -98,13 +112,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Dados exportados {#exported-data}
 

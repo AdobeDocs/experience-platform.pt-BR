@@ -3,9 +3,9 @@ keywords: Gerenciador de Lance do DoubleClick;Gerenciador de lance do DoubleClic
 title: Conexão do Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas por redirecionamento e público-alvo em fontes de inventário de vídeo, dispositivos móveis e exibição.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 326127996a27df41383ef67da765f7b0818f17f2
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360] Destinos:
 
 * Os públicos ativados são criados programaticamente na plataforma do Google.
-* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino é programado para ocorrer de 24 a 48 horas depois que um segmento é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre a Real-time CDP e [!DNL Google Display & Video 360]. Observe que essa é uma configuração de backend aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface do usuário do.
+* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre a Real-time CDP e [!DNL Google Display & Video 360]. Observe que essa é uma configuração de backend aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface do usuário do.
 
 >[!IMPORTANT]
 >
@@ -41,14 +41,28 @@ Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360]
 | EMPREGADA | ID de publicidade da Microsoft. Esta ID identifica exclusivamente os dispositivos que executam o Windows 10. |  |
 | ID do Amazon Fire TV | Esta ID identifica exclusivamente as TVs Amazon Fire. |  |
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público) para o destino do Google. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público para o destino do Google. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Pré-requisitos {#prerequisites}
 
@@ -94,13 +108,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Dados exportados
 

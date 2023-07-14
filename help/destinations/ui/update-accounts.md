@@ -4,7 +4,7 @@ title: Atualizar contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para atualizar contas de destino na interface do usuário do Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Siga as etapas abaixo para atualizar os detalhes da conexão com os destinos exi
 
    ![Filtrar contas de destino](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selecione as reticências (`...`) ao lado do nome da conta que você pretende atualizar. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar segmentos]**, **[!UICONTROL Editar detalhes]**, e **[!UICONTROL Excluir]** a conta. Selecione o ![Botão Editar detalhes](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Editar detalhes]** botão para editar as informações da conta.
+3. Selecione as reticências (`...`) ao lado do nome da conta que você pretende atualizar. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos]**, **[!UICONTROL Editar detalhes]**, e **[!UICONTROL Excluir]** a conta. Selecione o ![Botão Editar detalhes](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Editar detalhes]** botão para editar as informações da conta.
 
    ![Editar conta](../assets/ui/update-accounts/accounts-edit.png)
 

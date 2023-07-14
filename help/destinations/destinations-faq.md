@@ -3,10 +3,10 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 3%
+source-wordcount: '1395'
+ht-degree: 4%
 
 ---
 
@@ -22,9 +22,9 @@ Este documento fornece respostas a perguntas frequentes sobre destinos do Adobe 
 
 +++Resposta Esse é um comportamento normal devido à forma como o Experience Platform executa a segmentação.
 
-A segmentação de transmissão atualiza a contagem de perfis para segmentos de transmissão ao longo do dia, enquanto a segmentação em lote atualiza a contagem de perfis para segmentos em lote uma vez a cada 24 horas.
+A segmentação de transmissão atualiza a contagem de perfis para públicos-alvo de transmissão ao longo do dia, enquanto a segmentação em lote atualiza a contagem de perfis para públicos-alvo em lote uma vez a cada 24 horas.
 
-Quando a programação de exportação de segmento for diferente da programação de segmentação, o perfil será contado entre a interface do usuário e a exportada [!DNL CSV] O arquivo será diferente, especialmente quando se trata de segmentos de transmissão.
+Quando o agendamento de exportação de público-alvo é diferente do agendamento de segmentação, o perfil é contado entre a interface do usuário e o exportado [!DNL CSV] O arquivo será diferente, especialmente quando se trata de públicos de transmissão.
 
 Consulte a [Documentação do Serviço de segmentação](../segmentation/home.md) para obter mais detalhes.
 +++
@@ -33,7 +33,7 @@ Consulte a [Documentação do Serviço de segmentação](../segmentation/home.md
 
 ### O que preciso fazer antes de ativar públicos no [!DNL Facebook Custom Audiences]?
 
-+++Resposta Antes de enviar os segmentos de público-alvo para o [!DNL Facebook], certifique-se de atender aos seguintes requisitos:
++++Resposta Antes de enviar os públicos-alvo para [!DNL Facebook], certifique-se de atender aos seguintes requisitos:
 
 * Seu [!DNL Facebook] a conta de usuário deve ter o **[!DNL Manage campaigns]** permissão ativada para a conta de anúncio que você planeja usar.
 * A variável **Adobe Experience Cloud** conta comercial deve ser adicionada como um parceiro de publicidade em sua [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
@@ -91,9 +91,9 @@ Para obter explicações detalhadas sobre os requisitos de correspondência de I
 
 ## Correspondência de cliente do Google {#google-customer-match}
 
-### Ao exportar segmentos para a Correspondência de clientes do Google, por que vejo números extras anexados ao final dos nomes de segmentos na interface do Google?
+### Ao exportar públicos para o Google Customer Match, por que vejo números extras anexados ao final dos nomes de público na interface do Google?
 
-+++O Answer Google exige que os nomes dos segmentos sejam exclusivos. Os números que você está vendo são [Carimbos de data e hora UNIX](https://www.unixtimestamp.com/) e são anexados para manter os nomes de segmento exclusivos, se você mapeou o mesmo segmento para vários destinos do Google.
++++O Answer Google exige que os nomes dos públicos-alvo sejam exclusivos. Os números que você está vendo são [Carimbos de data e hora UNIX](https://www.unixtimestamp.com/) além disso, elas são anexadas para manter os nomes de público-alvo exclusivos, caso você tenha mapeado o mesmo público-alvo para vários destinos do Google.
 +++
 
 ## Públicos-alvo correspondentes do linkedIn {#linkedin}
@@ -130,7 +130,7 @@ Para obter explicações detalhadas sobre os requisitos de correspondência de I
 
 +++Número de resposta, [SDK da Web](../edge/home.md) não é necessário ativar públicos para [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) é usada em vez do SDK da Web, somente a personalização da próxima sessão é compatível.
+No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR) é usada em vez do SDK da Web, somente a personalização da próxima sessão é compatível.
 
 Para [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md) casos de uso, você deve usar [SDK da Web](../edge/home.md) ou o [API do servidor de rede de borda](../server-api/overview.md). Consulte a documentação em [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes sobre a implementação.
 +++
@@ -174,7 +174,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++Responda Sim, a API do servidor de rede de borda funciona com o destino de Personalização personalizada. Como os atributos de perfil podem conter dados confidenciais, para protegê-los, o destino da Personalização personalizada exige que você use a API do servidor de rede de borda para a coleta de dados. Além disso, todas as chamadas de API devem ser feitas em um [contexto autenticado](../server-api/authentication.md).
 +++
 
-### Só posso ter uma política de mesclagem que esteja ativa no edge. Posso criar públicos-alvo que usem uma política de mesclagem diferente e ainda enviá-los para a Adobe Target como segmentos de transmissão?
+### Só posso ter uma política de mesclagem que esteja ativa no edge. Posso criar públicos-alvo que usem uma política de mesclagem diferente e ainda enviá-los para a Adobe Target como públicos-alvo de transmissão?
 
 +++Número de resposta Todos os públicos-alvo que você deseja ativar para o Adobe Target devem usar uma interface ativa na borda [política de mesclagem](../profile/merge-policies/ui-guide.md).
 +++

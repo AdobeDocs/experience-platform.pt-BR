@@ -3,9 +3,9 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita dados de público-alvo do Adobe para o dirigível como atributos de público-alvo para direcionamento no dirigível.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Para saber mais sobre [!DNL Airship], consulte o [Documentação do dirigível](
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de enviar os segmentos de público-alvo para [!DNL Airship], você deve:
+Antes de enviar os públicos-alvo para [!DNL Airship], você deve:
 
 * Habilitar atributos no [!DNL Airship] projeto.
 * Gerar um token de portador para autenticação.
@@ -35,6 +35,18 @@ Antes de enviar os segmentos de público-alvo para [!DNL Airship], você deve:
 >
 >Criar um [!DNL Airship] conta via [este link de inscrição](https://go.airship.eu/accounts/register/plan/starter/) caso ainda não o tenha feito.
 
+## Suporte a públicos externos {#external-audiences-support}
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também oferece suporte à ativação dos públicos-alvo externos descritos na tabela abaixo.
+
+| Tipo de público externo | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
@@ -42,7 +54,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campos. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -72,7 +84,7 @@ Aproveite os dados de perfil coletados no Adobe Experience Platform para persona
 
 ### Caso de uso #2
 
-Aproveite os atributos do Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] perfis e combine-os com o SDK ou [!DNL Airship] dados preditivos. Por exemplo, um varejista pode criar um segmento com status de fidelidade e dados de local (atributos da Platform) e [!DNL Airship] A previsão é de que os dados de churn enviem mensagens altamente direcionadas a usuários no status de fidelidade ouro que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
+Aproveite os atributos do Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] perfis e combine-os com o SDK ou [!DNL Airship] dados preditivos. Por exemplo, um varejista pode criar um público-alvo com dados de status de fidelidade e localização (atributos da Platform) e [!DNL Airship] A previsão é de que os dados de churn enviem mensagens altamente direcionadas a usuários no status de fidelidade ouro que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
 
 ## Conectar ao destino {#connect}
 
@@ -102,13 +114,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Considerações de mapeamento {#mapping-considerations}
 

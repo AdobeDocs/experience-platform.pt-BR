@@ -3,10 +3,10 @@ keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
 description: Com o destino da conexão do Microsoft Bing, é possível executar redirecionamento e campanhas digitais direcionadas por público em anúncios de exibição do Microsoft.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 8%
+source-wordcount: '670'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Para enviar dados de perfil para [!DNL Microsoft Bing], você deve primeiro se c
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, quero poder usar segmentos criados com o [!DNL Microsoft Advertising IDs] para direcionar usuários por meio de publicidade de exibição em [!DNL Microsoft Advertising] canais.
+Como profissional de marketing, quero poder usar públicos-alvo criados com o [!DNL Microsoft Advertising IDs] para direcionar usuários por meio de publicidade de exibição em [!DNL Microsoft Advertising] canais.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -32,16 +32,30 @@ Como profissional de marketing, quero poder usar segmentos criados com o [!DNL M
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
-**[!DNL Segment Export]** - você está exportando todos os membros de um segmento (público-alvo) para a [!DNL Microsoft Bing] destino.
+**[!DNL Audience Export]** - você estiver exportando todos os membros de um público-alvo para a [!DNL Microsoft Bing] destino.
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) para a [!DNL Microsoft Bing] destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo para a [!DNL Microsoft Bing] destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,22 +91,22 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID de mapeamento"
->abstract="Insira a ID de segmento numérica do Bing para a qual deseja mapear o segmento selecionado. Se a [!UICONTROL ID de mapeamento] fornecida não corresponde a uma ID de segmento no destino do Bing, você não verá os dados de público esperados na conta do Bing."
+>abstract="Insira a ID numérica de público-alvo do Bing para a qual você deseja mapear o segmento selecionado. Se a variável fornecida [!UICONTROL ID do mapeamento] não corresponde a uma ID de público-alvo no destino do Bing, você não verá os dados de público-alvo esperados em sua conta do Bing."
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-No [Programação de segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) etapa, você deve mapear manualmente o nome do segmento no campo [!UICONTROL ID do mapeamento] campo. Isso garante que os metadados do segmento sejam transmitidos corretamente para [!DNL Bing].
+No [Programação de público](../../ui/activate-segment-streaming-destinations.md#scheduling) etapa, você deve mapear manualmente o nome do público-alvo na [!UICONTROL ID do mapeamento] campo. Isso garante que os metadados do público-alvo sejam transmitidos corretamente para o [!DNL Bing].
 
-![Imagem da interface do usuário mostrando a tela de agendamento de segmento com um exemplo de como mapear o nome do segmento para a ID de mapeamento do Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+![Imagem da interface do usuário mostrando a tela de agendamento de público-alvo com um exemplo de como mapear o nome do público-alvo para a ID de mapeamento do Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Dados exportados {#exported-data}
 

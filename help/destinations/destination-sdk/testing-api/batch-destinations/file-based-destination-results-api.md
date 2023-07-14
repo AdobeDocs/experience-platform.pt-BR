@@ -2,7 +2,7 @@
 description: Esta página explica como usar o endpoint da API /testing/destinationInstance para exibir os detalhes completos dos resultados de seus testes. Esse ponto de extremidade de API retorna o mesmo resultado que você obteria ao usar a API de serviço de fluxo para monitorar os fluxos de dados.
 title: Exibir resultados detalhados da ativação
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -35,12 +35,12 @@ Antes de poder usar o `/testing/destinationInstance` verifique se você atende �
 * Você criou pelo menos um fluxo de ativação para o destino na interface do usuário do Experience Platform.
 * Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do Platform.
 
-   ![Imagem da interface mostrando como obter a ID da instância de destino do URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Imagem da interface mostrando como obter a ID da instância de destino do URL.](../../assets/testing-api/get-destination-instance-id.png)
 * Você já [testou a configuração de destino](file-based-destination-testing-api.md)e recebeu uma resposta de API válida, que inclui uma `results` propriedade. Você usará este `results` para testar ainda mais seu destino.
 
 ## Exibir resultados detalhados do teste de destino {#test-activation-results}
 
-Depois de [validou sua configuração de destino](file-based-destination-testing-api.md), você poderá ver os resultados detalhados da ativação fazendo uma solicitação GET ao `authoring/testing/destinationInstance/` e fornecer a ID de instância de destino do destino que você está testando, bem como as IDs de execução de fluxo dos segmentos ativados.
+Depois de [validou sua configuração de destino](file-based-destination-testing-api.md), você poderá ver os resultados detalhados da ativação fazendo uma solicitação GET ao `authoring/testing/destinationInstance/` e fornecer a ID de instância de destino do destino que você está testando, bem como as IDs de execução de fluxo dos públicos ativados.
 
 Você pode encontrar o URL completo da API que precisa usar no `results` propriedade retornada na variável [resposta da chamada de teste de destino](file-based-destination-testing-api.md).
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Parâmetros da string de consulta | Descrição |
 | -------- | ----------- |
-| `flowRunIds` | As IDs de execução do fluxo correspondentes aos segmentos ativados. Você pode encontrar as IDs de execução de fluxo na `results` propriedade retornada na variável [resposta da chamada de teste de destino](file-based-destination-testing-api.md). |
+| `flowRunIds` | As IDs de execução do fluxo correspondentes aos públicos ativados. Você pode encontrar as IDs de execução de fluxo na `results` propriedade retornada na variável [resposta da chamada de teste de destino](file-based-destination-testing-api.md). |
 
 **Solicitação**
 

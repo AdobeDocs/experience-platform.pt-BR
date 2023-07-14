@@ -2,10 +2,10 @@
 title: Conexão com o Amazon S3
 description: Crie uma conexão de saída ativa com seu armazenamento Amazon Web Services (AWS) S3 para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 13%
+source-wordcount: '1110'
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 13%
 >Com a versão beta da funcionalidade de exportação de conjuntos de dados e a funcionalidade aprimorada de exportação de arquivos, agora você pode estar vendo dois [!DNL Amazon S3] no catálogo de destinos.
 >* Se você já estiver exportando arquivos para o **[!UICONTROL Amazon S3]** destino, crie novos fluxos de dados para a nova **[!UICONTROL Amazon S3 beta]** destino.
 >* Se você ainda não tiver criado nenhum fluxo de dados para a variável **[!UICONTROL Amazon S3]** destino, use o novo **[!UICONTROL Amazon S3 beta]** cartão para o qual exportar arquivos **[!UICONTROL Amazon S3]**.
-
 
 ![Imagem dos dois cartões de destino do Amazon S3 em uma visualização lado a lado.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -35,8 +34,22 @@ Crie uma conexão de saída ativa com o seu [!DNL Amazon S3] armazenamento para 
 
 ## Conecte-se ao seu [!DNL Amazon S3] armazenamento por meio da API ou da interface {#connect-api-or-ui}
 
-* Para se conectar ao seu [!DNL Amazon S3] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar segmentos para este destino](#activate) abaixo.
-* Para se conectar ao seu [!DNL Amazon S3] local de armazenamento de dados de forma programática, leia as [Ative segmentos para destinos baseados em arquivo usando o tutorial da API do serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+* Para se conectar ao seu [!DNL Amazon S3] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar públicos para este destino](#activate) abaixo.
+* Para se conectar ao seu [!DNL Amazon S3] local de armazenamento de dados de forma programática, leia as [Ative públicos para destinos baseados em arquivo usando o tutorial da API do Serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -71,7 +84,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 * **[!DNL Amazon S3]chave de acesso** e **[!DNL Amazon S3]chave secreta**: Em [!DNL Amazon S3], gerar um `access key - secret access key` emparelhe para conceder acesso à Platform ao seu [!DNL Amazon S3] conta. Saiba mais na [Documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
-   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -83,7 +96,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="Caminho da pasta"
->abstract="Deve conter somente caracteres A-Z, a-z, 0-9 e pode incluir os seguintes caracteres especiais: `/!-_.'()"^[]+$%.*"`. Para criar uma pasta por arquivo de segmento, insira a macro `/%SEGMENT_NAME%` ou `/%SEGMENT_ID%` ou `/%SEGMENT_NAME%/%SEGMENT_ID%` no campo de texto. Macros só podem ser inseridas no final do caminho da pasta. Veja exemplos de macro na documentação."
+>abstract="Deve conter somente caracteres A-Z, a-z, 0-9 e pode incluir os seguintes caracteres especiais: `/!-_.'()"^[]+$%.*"`. Para criar uma pasta por arquivo de público-alvo, insira a macro `/%SEGMENT_NAME%` ou `/%SEGMENT_ID%` ou `/%SEGMENT_NAME%/%SEGMENT_ID%` no campo de texto. Macros só podem ser inseridas no final do caminho da pasta. Veja exemplos de macro na documentação."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Use macros para criar uma pasta no seu local de armazenamento"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
@@ -98,7 +111,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 >[!TIP]
 >
->No workflow de destino da conexão, é possível criar uma pasta personalizada no armazenamento do Amazon S3 por arquivo de segmento exportado. Ler [Usar macros para criar uma pasta no local de armazenamento](overview.md#use-macros) para obter instruções.
+>No workflow de destino de conexão, é possível criar uma pasta personalizada no armazenamento Amazon S3 por arquivo de público exportado. Ler [Usar macros para criar uma pasta no local de armazenamento](overview.md#use-macros) para obter instruções.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -127,13 +140,13 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## (Beta) Exportar conjuntos de dados {#export-datasets}
 
@@ -144,4 +157,4 @@ Esse destino suporta exportações de conjunto de dados. Para obter informaçõe
 
 ## Dados exportados {#exported-data}
 
-Para [!DNL Amazon S3] destinos, [!DNL Platform] cria um arquivo de dados no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de segmentos.
+Para [!DNL Amazon S3] destinos, [!DNL Platform] cria um arquivo de dados no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de público-alvo.

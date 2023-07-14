@@ -3,10 +3,10 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais direcionadas por público e redirecionamento em fontes de inventário para exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 2%
+source-wordcount: '725'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ Para enviar dados de perfil para [!DNL Trade Desk], você deve primeiro se conec
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, quero poder usar segmentos criados com o [!DNL Trade Desk IDs] ou IDs de dispositivo para criar campanhas digitais direcionadas por redirecionamento ou público-alvo.
+Como profissional de marketing, quero poder usar públicos-alvo criados com o [!DNL Trade Desk IDs] ou IDs de dispositivo para criar campanhas digitais direcionadas por redirecionamento ou público-alvo.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -36,14 +36,28 @@ Como profissional de marketing, quero poder usar segmentos criados com o [!DNL T
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) para o destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo para o destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,17 +96,17 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-No [Programação de segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) etapa, você deve mapear manualmente os segmentos à ID correspondente ou ao nome amigável na plataforma de destino.
+No [Programação de público](../../ui/activate-segment-streaming-destinations.md#scheduling) etapa, mapeie manualmente os públicos-alvo à ID correspondente ou ao nome amigável na plataforma de destino.
 
-Ao mapear segmentos, recomendamos usar o nome do segmento da Platform ou uma forma mais curta, para facilitar o uso. No entanto, a ID ou o nome do segmento no destino não precisa corresponder ao da sua conta da Platform. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
+Ao mapear segmentos, recomendamos usar o nome de público-alvo da Platform ou uma forma mais curta, para facilitar o uso. No entanto, a ID ou o nome do público-alvo no seu destino não precisa corresponder ao da sua conta da Platform. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 
 Se estiver usando vários mapeamentos de dispositivo (IDs de cookie, [!DNL IDFA], [!DNL GAID]), use o mesmo valor de mapeamento para todos os três mapeamentos. [!DNL The Trade Desk] A agregará todos eles em um único segmento, com um detalhamento no nível do dispositivo.
 

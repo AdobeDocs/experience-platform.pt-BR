@@ -1,11 +1,11 @@
 ---
 title: Conexão com o Adobe Advertising Cloud DSP
-description: O Adobe Advertising Cloud DSP é um destino integrado do Adobe Real-time Customer Data Platform, permitindo que você compartilhe segmentos primários autenticados com anunciantes e usuários aprovados para ativação de campanha.
+description: O Adobe Advertising Cloud DSP é um destino integrado para o Adobe Real-time Customer Data Platform, permitindo que você compartilhe públicos autenticados primários com anunciantes e usuários aprovados para ativação de campanha.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 1%
+source-wordcount: '1047'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-O ADOBE ADVERTISING CLOUD [!DNL Demand-Side Platform] (DSP) permite compartilhar segmentos primários autenticados com anunciantes e usuários aprovados para ativação de campanha com o DSP. Para saber mais sobre a integração do Real-Time CDP com o DSP, consulte [Sobre a ativação de segmentos autenticados de fontes de público-alvo](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+O ADOBE ADVERTISING CLOUD [!DNL Demand-Side Platform] (DSP) permite compartilhar públicos-alvo primários autenticados com anunciantes e usuários aprovados para ativação de campanha com DSP. Para saber mais sobre a integração do Real-Time CDP com o DSP, consulte [Sobre a ativação de públicos autenticados de fontes de público-alvo](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -25,17 +25,17 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino do Adve
 
 ### Caso de uso de anúncio de marca
 
-Um varejista online deseja redirecionar seus clientes de alto valor por meio de uma campanha de exibição sem usar cookies para direcionamento. O varejista compartilha um segmento que consiste nas IDs de email com hash de seus clientes de alto valor, desde sua conta do Adobe Real-time Customer Data Platform (Real-Time CDP) até sua conta do DSP. O DSP converte as IDs de email com hash para autenticadas [!DNL RampIDs] por meio de uma parceria entre DSP e LiveRamp. O resultado [!DNL RampIDs] O pode ser usado em uma campanha de exibição para direcionar o público-alvo.
+Um varejista online deseja redirecionar seus clientes de alto valor por meio de uma campanha de exibição sem usar cookies para direcionamento. O varejista compartilha um público-alvo que consiste nas IDs de email com hash de seus clientes de alto valor da conta do Adobe Real-time Customer Data Platform (Real-Time CDP) para a conta do DSP. O DSP converte as IDs de email com hash para autenticadas [!DNL RampIDs] por meio de uma parceria entre DSP e LiveRamp. O resultado [!DNL RampIDs] O pode ser usado em uma campanha de exibição para direcionar o público-alvo.
 
 ### Caso de uso de agência
 
-Uma agência de mídia com uma conta DSP está realizando uma campanha de redirecionamento em nome de seu cliente, uma marca líder no setor de hotelaria e restauração. A marca quer redirecionar todos os seus convidados no último ano com uma nova oferta promocional. A marca hospeda todas as informações do convidado no [!DNL Real-Time CDP]. A marca pode compartilhar um segmento que consiste nas IDs de email com hash de seus convidados de sua [!DNL Real-Time CDP] para a conta DSP da agência de mídia para redirecionar os convidados por meio de uma campanha de mídia.
+Uma agência de mídia com uma conta DSP está realizando uma campanha de redirecionamento em nome de seu cliente, uma marca líder no setor de hotelaria e restauração. A marca quer redirecionar todos os seus convidados no último ano com uma nova oferta promocional. A marca hospeda todas as informações do convidado no [!DNL Real-Time CDP]. A marca pode compartilhar um público que consiste nas IDs de email com hash de seus convidados de sua [!DNL Real-Time CDP] para a conta DSP da agência de mídia para redirecionar os convidados por meio de uma campanha de mídia.
 
 ## Pré-requisitos {#prerequisites}
 
-* Configurações no nível da conta e no nível da campanha do DSP para permitir o compartilhamento de segmentos com o [!DNL LiveRamp RampID], que traduzirá os dados do cliente para [!DNL RampIDs] para criar segmentos direcionáveis. Sua equipe de conta DSP executará essa configuração. [!DNL RampID] está disponível por meio de uma parceria entre o DSP e a [!DNL LiveRamp]e você não precisa de sua própria [!DNL LiveRamp] associação para usá-lo.
+* Configurações no nível da conta e da campanha do DSP para permitir o compartilhamento do público-alvo com [!DNL LiveRamp RampID], que traduzirá os dados do cliente para [!DNL RampIDs] para criar segmentos direcionáveis. Sua equipe de conta DSP executará essa configuração. [!DNL RampID] está disponível por meio de uma parceria entre o DSP e a [!DNL LiveRamp]e você não precisa de sua própria [!DNL LiveRamp] associação para usá-lo.
 * A ID da organização Experience Cloud para a conta Experience Platform. Você pode encontrar sua ID no seu [!DNL Real-Time CDP] página de perfil do usuário.
-* A [[!DNL Real-Time CDP] fonte no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) para receber segmentos para ativação de campanha. Sua equipe de conta DSP criará a fonte usando sua ID de organização da Experience Cloud.
+* A [[!DNL Real-Time CDP] fonte no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) para receber públicos-alvo para ativação de campanha. Sua equipe de conta DSP criará a fonte usando sua ID de organização da Experience Cloud.
 * A chave de origem da conta ou anunciante do DSP, que é gerada quando um [[!DNL Real-Time CDP] a origem é criada no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Sua equipe de conta DSP compartilhará essa chave com você. Você o usará no Experience Platform para criar uma conexão de destino com o destino do Advertising Cloud DSP, como [explicado abaixo](#authenticate).
 * Dados do cliente que consistem em emails ou emails com hash.
 
@@ -55,8 +55,8 @@ Consulte a tabela a seguir para obter informações sobre o tipo e a frequência
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público) com os identificadores (email ou email com hash) usados no destino do Advertising Cloud DSP. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Quando um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público com os identificadores (email ou email com hash) usados no destino do Advertising Cloud DSP. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Quando um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -91,23 +91,23 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Validar exportação de dados {#exported-data}
 
-Para verificar se o segmento de dados foi compartilhado com o Advertising Cloud, verifique o seguinte:
+Para verificar se o público-alvo de dados foi compartilhado com o Advertising Cloud, verifique o seguinte:
 
 * O fluxo de dados em seu [!DNL Real-Time CDP] destino bem-sucedido.
 
-* No DSP, o segmento fica disponível ao criar ou editar um público-alvo no [!UICONTROL Públicos-alvo] > [!UICONTROL Todos os públicos-alvo] ou dentro de [!UICONTROL Direcionamento de público] seção de configurações de posicionamento. O segmento deve estar visível no [!UICONTROL Segmentos Adobe] na guia [!UICONTROL Real-Time CDP] pasta.
+* No DSP, o público-alvo fica disponível quando você cria ou edita um público-alvo no [!UICONTROL Públicos-alvo] > [!UICONTROL Todos os públicos-alvo] ou dentro de [!UICONTROL Direcionamento de público] seção de configurações de posicionamento. O público-alvo deve estar visível na [!UICONTROL Segmentos Adobe] na guia [!UICONTROL Real-Time CDP] pasta.
 
-![Segmentos do Real-Time CDP nas configurações de público-alvo do DSP](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Públicos do Real-Time CDP nas configurações de público-alvo do DSP](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Uso e governança de dados {#data-usage-governance}
 

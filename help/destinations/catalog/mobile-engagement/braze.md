@@ -3,9 +3,9 @@ keywords: mobile; braze; mensagens;
 title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1041'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Para enviar dados de perfil para [!DNL Braze], você deve primeiro se conectar a
 
 Observe os seguintes detalhes específicos do [!DNL Braze] destino:
 
-* [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
+* [!DNL Adobe Experience Platform] os públicos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Observe os seguintes detalhes específicos do [!DNL Braze] destino:
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, desejo direcionar usuários em um destino de engajamento móvel, com segmentos integrados [!DNL Adobe Experience Platform]. Além disso, desejo oferecer experiências personalizadas a eles, com base nos atributos de seus [!DNL Adobe Experience Platform] perfis, assim que os segmentos e perfis forem atualizados no [!DNL Adobe Experience Platform].
+Como profissional de marketing, desejo direcionar os usuários em um destino de envolvimento móvel, com públicos-alvo integrados [!DNL Adobe Experience Platform]. Além disso, desejo oferecer experiências personalizadas a eles, com base nos atributos de seus [!DNL Adobe Experience Platform] perfis, assim que públicos-alvo e perfis forem atualizados no [!DNL Adobe Experience Platform].
 
 ## Identidades suportadas {#supported-identities}
 
@@ -44,14 +44,26 @@ Como profissional de marketing, desejo direcionar usuários em um destino de eng
 
 {style="table-layout:auto"}
 
+## Suporte a públicos externos {#external-audiences-support}
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também oferece suporte à ativação dos públicos-alvo externos descritos na tabela abaixo.
+
+| Tipo de público externo | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campos.[!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campos.[!DNL Adobe Experience Platform] os públicos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -83,13 +95,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Considerações de mapeamento {#mapping-considerations}
 
@@ -142,8 +154,8 @@ Digamos que seu esquema de perfil XDM e seu [!DNL Braze] instância contém os s
 
 |  | Esquema de perfil XDM | [!DNL Braze] Instância |
 |---|---|---|
-| Atributos | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>Nome</code></li><li>Sobrenome</code></li><li>PhoneNumber</code></li></ul> |
-| Identidades | <ul><li>Email</code></li><li>ID de anúncio do Google (GAID)</code></li><li>Apple ID para anunciantes (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Atributos | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>Nome</code></li><li><code>Sobrenome</code></li><li><code>PhoneNumber</code></li></ul> |
+| Identidades | <ul><li><code>Email</code></li><li><code>ID de anúncio do Google (GAID)</code></li><li><code>Apple ID para anunciantes (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 O mapeamento correto seria semelhante a:
 
@@ -151,7 +163,7 @@ O mapeamento correto seria semelhante a:
 
 ## Dados exportados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito para o [!DNL Braze] destino, verifique seu [!DNL Braze] conta. [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
+Para verificar se os dados foram exportados com êxito para o [!DNL Braze] destino, verifique seu [!DNL Braze] conta. [!DNL Adobe Experience Platform] os públicos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
 
 ## Uso e governança de dados {#data-usage-governance}
 

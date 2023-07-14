@@ -2,11 +2,11 @@
 keywords: ativar destinos;ativar dados;ativate destinations;ativate data
 title: Visão geral de Activation
 type: Tutorial
-description: Saiba como ativar os dados de público-alvo que você tem no Adobe Experience Platform para vários tipos de destinos.
+description: Saiba como ativar os públicos-alvo no Adobe Experience Platform para vários tipos de destinos.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '323'
 ht-degree: 1%
 
 ---
@@ -21,13 +21,13 @@ O Adobe Experience Platform é compatível com uma grande variedade de destinos.
 
 ## Métodos de ativação {#activation-methods}
 
-Depois que você [configurar seu destino](connect-destination.md), você pode ativar segmentos de público-alvo de várias maneiras:
+Depois que você [configurar seu destino](connect-destination.md), você pode ativar públicos-alvo de várias maneiras:
 
 ### Ativar públicos-alvo do catálogo de destinos
 
 Consulte os guias a seguir para obter informações detalhadas sobre como ativar públicos-alvo para o destino no catálogo de destinos:
 
-* [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](activate-segment-streaming-destinations.md)
+* [Ativar dados do público-alvo para streaming de destinos de exportação de público](activate-segment-streaming-destinations.md)
 * [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](activate-streaming-profile-destinations.md)
 * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](activate-batch-profile-destinations.md)
 
@@ -39,22 +39,22 @@ Siga as etapas abaixo para ativar dados para seus destinos no **[!UICONTROL Proc
 
    ![Guia Procurar](../assets/ui/activation-overview/browse-tab.png)
 
-1. Localize a conexão de destino que deseja usar para ativar seus segmentos, selecione os três pontos no [!UICONTROL Nome] e selecione **[!UICONTROL Ativar segmentos]**.
+1. Localize a conexão de destino que deseja usar para ativar seus segmentos, selecione os três pontos no [!UICONTROL Nome] e selecione **[!UICONTROL Ativar públicos]**.
 
-   ![Botão Ativar segmentos](../assets/ui/activation-overview/activate-segments.png)
+   ![Botão Ativar públicos](../assets/ui/activation-overview/activate-segments.png)
 
 1. Dependendo do destino selecionado, siga as etapas descritas nos artigos abaixo, começando com a variável **[!UICONTROL Selecionar segmentos]** para concluir o fluxo de trabalho de ativação:
 
-   * [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](activate-segment-streaming-destinations.md)
+   * [Ativar dados do público-alvo para streaming de destinos de exportação de público](activate-segment-streaming-destinations.md)
    * [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](activate-streaming-profile-destinations.md)
    * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](activate-batch-profile-destinations.md)
 
-### Ativar públicos-alvo na página de detalhes do segmento {#activate-segment-details}
+### Ativar públicos-alvo na página audiencedetails {#activate-segment-details}
 
-Você pode ativar segmentos para destinos na página de detalhes do segmento. Consulte [Detalhes do segmento](../../segmentation/ui/overview.md#segment-details) para obter mais informações.
+Você pode ativar públicos para destinos na página audiencedetails. Consulte [Detalhes do segmento](../../segmentation/ui/overview.md#segment-details) para obter mais informações.
 
 Dependendo do destino selecionado, siga as etapas descritas nos artigos abaixo para concluir o fluxo de trabalho de ativação:
 
-* [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](activate-segment-streaming-destinations.md)
+* [Ativar dados do público-alvo para streaming de destinos de exportação de público](activate-segment-streaming-destinations.md)
 * [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](activate-streaming-profile-destinations.md)
 * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](activate-batch-profile-destinations.md)

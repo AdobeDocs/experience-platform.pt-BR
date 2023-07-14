@@ -2,7 +2,7 @@
 description: Saiba como usar a API de teste de destino para gerar um modelo de transformação de mensagem de teste para seu destino.
 title: Gerar um modelo de transformação de mensagem de amostra
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 2%
@@ -29,7 +29,6 @@ Você pode obter um modelo de amostra fazendo uma solicitação GET para a `auth
 >[!TIP]
 >
 >* A ID de destino que você deve usar aqui é a `instanceId` que corresponde a uma configuração de destino, criada usando o `/destinations` terminal. Consulte a [recuperar uma configuração de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obter mais detalhes.
-
 
 **Formato da API**
 
@@ -83,7 +82,7 @@ Se a ID de destino fornecida corresponder a uma configuração de destino com [a
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -119,7 +118,7 @@ Se a ID de destino fornecida corresponder a um modelo de servidor de destino com
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

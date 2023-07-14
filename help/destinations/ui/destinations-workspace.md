@@ -3,7 +3,7 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 2%
@@ -41,13 +41,13 @@ A variável [!DNL Platform] A interface do usuário do fornece várias opções 
 
 ![Catálogo de destinos que mostra alguns destinos de anúncios e armazenamento em nuvem.](../assets/ui/workspace/catalog.png)
 
-Os cartões de destino contêm opções de controle primário e secundário. Os controles primários incluem [!UICONTROL Configurar], [!UICONTROL Ativar], [!UICONTROL Ativar segmentos]ou [!UICONTROL Exportar conjuntos de dados]. Os controles secundários permitem opções de exibição. Esses controles estão descritos abaixo:
+Os cartões de destino contêm opções de controle primário e secundário. Os controles primários incluem [!UICONTROL Configurar], [!UICONTROL Ativar], [!UICONTROL Ativar públicos]ou [!UICONTROL Exportar conjuntos de dados]. Os controles secundários permitem opções de exibição. Esses controles estão descritos abaixo:
 
 | Controle | Descrição |
 |---------|----------|
 | [!UICONTROL Configurar] | Permite criar uma conexão com o destino. |
-| [!UICONTROL Ativar] | Depois de estabelecer uma conexão com o destino, você poderá ativar segmentos ou exportar conjuntos de dados para esse destino. |
-| [!UICONTROL Ativar segmentos] | Depois de estabelecer uma conexão com o destino, você pode ativar segmentos para esse destino. |
+| [!UICONTROL Ativar] | Depois de estabelecer uma conexão com o destino, você pode ativar públicos ou exportar conjuntos de dados para esse destino. |
+| [!UICONTROL Ativar públicos] | Depois de estabelecer uma conexão com o destino, você poderá ativar os públicos para esse destino. |
 | [!UICONTROL Exportar conjuntos de dados] | Depois de estabelecer uma conexão com o destino, você poderá exportar conjuntos de dados para esse destino. |
 | [!UICONTROL Exibir conta] | Exibir as contas conectadas a um destino. |
 | [!UICONTROL Exibir fluxos de dados] | Exibir os fluxos de ativação de dados existentes para um destino. |
@@ -69,10 +69,9 @@ A variável **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões es
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) no [!UICONTROL Platform] e use o ![Ativar controle](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**/**[!UICONTROL  Ativar segmentos ]**/**[!UICONTROL  Exportar conjuntos de dados ]**para exportar segmentos ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) no [!UICONTROL Platform] e use o ![Ativar controle](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**/**[!UICONTROL  Ativar públicos ]**/**[!UICONTROL  Exportar conjuntos de dados ]**para exportar públicos ou conjuntos de dados para esse destino.
 > * Selecione as reticências (`...`) no [!UICONTROL Platform] e use o ![Editar controle de detalhes](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalhes ]**controle para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
 > * Selecione as reticências (`...`) no [!UICONTROL Platform] e use o ![Excluir controle](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**controle para [excluir](delete-destination-account.md) uma conta de destino existente.
-
 
 ![Guia Contas](../assets/ui/workspace/destination-account-options.png)
 
@@ -88,27 +87,26 @@ A variável **[!UICONTROL Contas]** A guia mostra detalhes sobre as conexões es
 
 ## [!UICONTROL Navegar] {#browse}
 
-A variável **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Destinos com o **[!UICONTROL Ativado/Desativado]** alternância ativada: definir o destino como ativo ou inativo, respectivamente. Você também pode exibir os destinos nos quais há dados fluindo selecionando **[!UICONTROL Segmentos]** > **[!UICONTROL Procurar]** e selecionar um segmento a ser inspecionado. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na [!UICONTROL Procurar] guia:
+A variável **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Destinos com o **[!UICONTROL Ativado/Desativado]** alternância ativada: definir o destino como ativo ou inativo, respectivamente. Você também pode exibir os destinos nos quais há dados fluindo selecionando **[!UICONTROL Públicos-alvo]** > **[!UICONTROL Procurar]** e selecionar um público-alvo a ser inspecionado. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na [!UICONTROL Procurar] guia:
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) no [!UICONTROL Nome] e use o ![Ativar controle de segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**para exportar segmentos ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) no [!UICONTROL Nome] e use o ![Ativar controle de públicos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**para exportar públicos ou conjuntos de dados para esse destino.
 > * Selecione as reticências (`...`) no [!UICONTROL Nome] e use o ![Excluir controle](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**controle para [remover](delete-destinations.md) uma conexão existente com um destino.
 > * Selecione as reticências (`...`) no [!UICONTROL Nome] e use o ![Exibir no controle de monitoramento](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Exibir no monitoramento ]**controle para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Selecione as reticências (`...`) no [!UICONTROL Nome] e use o ![Assinar alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Assinar alertas ]**controle para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
-
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descrição |
 |---------|----------|
-| Nome | O nome fornecido para o fluxo de ativação para esse destino. A mesma coluna inclui dois controles: [!UICONTROL Ativar ] e [!UICONTROL Excluir destino]. |
+| Nome | O nome fornecido para o fluxo de ativação para esse destino. A mesma coluna inclui dois controles: [!UICONTROL Ativar] e [!UICONTROL Excluir destino]. |
 | [!UICONTROL Status da Última Execução de Fluxo] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Data da Última Execução do Fluxo] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Destino] | A plataforma de destino selecionada para o fluxo de ativação. |
 | [!UICONTROL Tipo de conexão] | Representa o tipo de conexão para seu bucket de armazenamento ou destino. <ul><li>Para destinos de marketing por email: pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: de servidor para servidor.</li><li>Para destinos de transmissão: pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nome de usuário] | As credenciais de conta selecionadas para o fluxo de destino. |
-| [!UICONTROL Dados de ativação] | Indica o número de segmentos que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os segmentos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página detalhes do destino, para obter mais informações sobre os segmentos ativados. |
+| [!UICONTROL Dados de ativação] | Indica o número de públicos-alvo que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os públicos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os públicos ativados. |
 | [!UICONTROL Criado] | A data e hora UTC quando o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação pelo mais recente primeiro ou pelo mais antigo primeiro. |
 | [!UICONTROL Status] | `Enabled` ou `Disabled`. Indica se os dados estão sendo ativados para este destino. |
 
@@ -116,7 +114,7 @@ Clique em uma linha de destino para exibir mais informações sobre o destino no
 
 ![Clique na linha de destino](../assets/ui/workspace/click-destination-row.png)
 
-Selecione o nome do destino para ver informações sobre os segmentos ativados para esse destino. Clique em **[!UICONTROL Editar ativação]** para modificar ou adicionar aos segmentos que estão sendo enviados a este destino.
+Selecione o nome do destino para ver informações sobre os públicos ativados para esse destino. Clique em **[!UICONTROL Editar ativação]** para modificar ou adicionar aos públicos-alvo que estão sendo enviados a este destino.
 
 ## [!UICONTROL Exibição do sistema] {#system-view}
 

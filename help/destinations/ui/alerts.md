@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares; alertas;destin
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de destino em contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -22,7 +22,7 @@ Este documento fornece etapas sobre como assinar mensagens de alertas de recebim
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+* [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 * [Observabilidade](../../observability/home.md): [!DNL Observability Insights] O permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
    * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema viola um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles.
 
@@ -51,10 +51,10 @@ Os alertas disponíveis para fluxos de dados de destino são descritos na tabela
 
 | Alertas | Descrição |
 | --- | --- |
-| Atraso na execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino demora mais de 150 minutos para ativar um segmento. |
-| Falha na execução do fluxo de destino | Esse alerta notifica quando ocorre um erro ao ativar um segmento para um destino. |
-| Êxito na execução do fluxo de destino | Esse alerta notifica quando um segmento é ativado com êxito para um destino. |
-| Início da execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino começa a ativar um segmento. |
+| Atraso na execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino demora mais de 150 minutos para ativar um público-alvo. |
+| Falha na execução do fluxo de destino | Este alerta notifica quando ocorre um erro ao ativar um público-alvo para um destino. |
+| Êxito na execução do fluxo de destino | Este alerta notifica quando um público-alvo é ativado com êxito para um destino. |
+| Início da execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino começa a ativar um público-alvo. |
 | Taxa de Ativação Ignorada Excedida | Este alerta notifica quando a taxa de ativação ignorada excede 1% do total de ativações. As identidades são ignoradas durante a ativação quando têm atributos ausentes ou violação de consentimento. |
 
 ## Recebimento de alertas {#receiving-alerts}

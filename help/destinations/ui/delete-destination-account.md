@@ -4,7 +4,7 @@ title: Excluir contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para excluir contas de destino na interface do usuário do Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Siga as etapas abaixo para excluir contas de destino existentes.
 
    ![Filtrar destinos](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Selecione as reticências (`...`) ao lado do nome da conta que deseja excluir. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar segmentos]**, **[!UICONTROL Editar detalhes]**, e **[!UICONTROL Excluir]** a conta. Selecione o ![Botão Excluir](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Excluir]** botão para excluir a conta desejada.
+3. Selecione as reticências (`...`) ao lado do nome da conta que deseja excluir. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos]**, **[!UICONTROL Editar detalhes]**, e **[!UICONTROL Excluir]** a conta. Selecione o ![Botão Excluir](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Excluir]** botão para excluir a conta desejada.
 
    ![Excluir conta de destino](../assets/ui/delete-accounts/delete-accounts.png)
 

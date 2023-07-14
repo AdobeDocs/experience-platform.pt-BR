@@ -2,7 +2,7 @@
 description: Esta página explica como usar o endpoint da API /testing/destinationInstance para testar se o destino baseado em arquivo está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Teste seu destino baseado em arquivo com perfis de amostra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Antes de poder usar o `/testing/destinationInstance` verifique se você atende �
 * Você criou pelo menos um fluxo de ativação para o destino na interface do usuário do Experience Platform.
 * Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do Platform.
 
-   ![Imagem da interface mostrando como obter a ID da instância de destino do URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Imagem da interface mostrando como obter a ID da instância de destino do URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Opcional*: se você quiser testar a configuração de destino com uma amostra de perfil adicionada à chamada de API, use o [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint para gerar um perfil de amostra com base no esquema de origem existente. Se você não fornecer um perfil de amostra, a API gerará um e o retornará na resposta.
 
 ## Testar a configuração de destino sem adicionar perfis à chamada {#test-without-adding-profiles}
@@ -111,7 +111,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `activations` | Retorna a ID do segmento e a ID de execução do fluxo para cada segmento ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de segmentos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois segmentos para a instância de destino, a variável `activations` A matriz conterá duas entradas. Cada segmento ativado corresponderá a um arquivo exportado. |
+| `activations` | Retorna a ID de público-alvo e a ID de execução de fluxo para cada público-alvo ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de públicos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois públicos-alvo para a instância de destino, a variável `activations` A matriz conterá duas entradas. Cada público ativado corresponderá a um arquivo exportado. |
 | `results` | Retorna a ID da instância de destino e as IDs de execução de fluxo que você pode usar para chamar a [API de resultados](file-based-destination-results-api.md), para testar ainda mais a integração. |
 | `inputProfiles` | Retorna os perfis de amostra gerados automaticamente pela API. |
 
@@ -232,7 +232,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `activations` | Retorna a ID do segmento e a ID de execução do fluxo para cada segmento ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de segmentos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois segmentos para a instância de destino, a variável `activations` A matriz conterá duas entradas. Cada segmento ativado corresponderá a um arquivo exportado. |
+| `activations` | Retorna a ID de público-alvo e a ID de execução de fluxo para cada público-alvo ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de públicos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois públicos-alvo para a instância de destino, a variável `activations` A matriz conterá duas entradas. Cada público ativado corresponderá a um arquivo exportado. |
 | `results` | Retorna a ID da instância de destino e as IDs de execução de fluxo que você pode usar para chamar a [API de resultados](file-based-destination-results-api.md), para testar ainda mais a integração. |
 | `inputProfiles` | Retorna os perfis de amostra personalizados passados na solicitação de API. |
 

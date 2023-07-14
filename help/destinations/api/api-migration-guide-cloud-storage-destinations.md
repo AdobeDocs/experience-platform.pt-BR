@@ -4,7 +4,7 @@ title: Guia de migração de API para destinos de armazenamento em nuvem
 description: Saiba mais sobre as alterações no fluxo de trabalho para ativar destinos de armazenamento em nuvem como parte da migração para os novos cartões de destino de armazenamento em nuvem com funcionalidade adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Observe que, atualmente na interface do usuário do Experience Platform, você pode ver dois cartões de destino lado a lado dos três destinos. Abaixo estão mostrados os [!DNL Amazon S3] destinos antigos e novos. Em todos os casos, os cartões **Beta** são os novos cartões de destino.
+Observe que, atualmente na interface do usuário do Experience Platform, você pode ver dois cartões de destino lado a lado dos três destinos. Abaixo estão mostrados os [!DNL Amazon S3] destinos antigos e novos. Em todos os casos, os cartões marcados com **Beta** são os novos cartões de destino.
 
 ![Imagem dos dois cartões de destino do Amazon S3 em uma visualização lado a lado.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -67,7 +67,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 -->
-* [Tutorial de API para exportar segmentos para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [Tutorial de API para exportar públicos-alvo para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Documentação de referência da API do serviço de fluxo de destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Resumo das alterações incompatíveis com versões anteriores {#summary-backwards-incompatible-changes}
@@ -684,7 +684,7 @@ Encontre informações completas sobre a configuração do `profileMapping` obje
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -752,7 +752,7 @@ Observe no exemplo de configuração abaixo como `profileSelectors` Os campos fo
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",

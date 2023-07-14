@@ -1,10 +1,10 @@
 ---
 title: Destino da Data Landing Zone
-description: Saiba como se conectar à Data Landing Zone para ativar segmentos e exportar conjuntos de dados.
+description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
@@ -27,8 +27,22 @@ A Platform impõe um TTL (time-to-live) rigoroso de sete dias em todos os arquiv
 
 ## Conecte-se ao seu [!UICONTROL Data Landing Zone] armazenamento por meio da API ou da interface {#connect-api-or-ui}
 
-* Para se conectar ao seu [!UICONTROL Data Landing Zone] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar segmentos para este destino](#activate) abaixo.
-* Para se conectar ao seu [!UICONTROL Data Landing Zone] local de armazenamento de dados de forma programática, leia as [Ative segmentos para destinos baseados em arquivo usando o tutorial da API do serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+* Para se conectar ao seu [!UICONTROL Data Landing Zone] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar públicos para este destino](#activate) abaixo.
+* Para se conectar ao seu [!UICONTROL Data Landing Zone] local de armazenamento de dados de forma programática, leia as [Ative públicos para destinos baseados em arquivo usando o tutorial da API do Serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -201,13 +215,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Programação
 

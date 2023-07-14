@@ -1,9 +1,9 @@
 ---
 keywords: destinos;destino;página detalhes de destinos;página detalhes de destinos
 title: Exibir detalhes do destino
-description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e para ativar e desativar o fluxo de dados.
+description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 1%
@@ -50,8 +50,8 @@ A tabela a seguir abrange os controles e os detalhes fornecidos pelo painel dire
 
 | Item do painel direito | Descrição |
 | --- | --- |
-| [!UICONTROL Ativar segmentos] | Selecione este controle para editar quais segmentos estão mapeados para o destino, atualizar agendas de exportação ou adicionar e remover atributos e identidades mapeados. Consulte as guias sobre [ativação de dados de público-alvo para destinos de transmissão de segmento](./activate-segment-streaming-destinations.md), [ativação de dados de público-alvo para destinos baseados em perfil de lote](./activate-batch-profile-destinations.md), e [ativação de dados de público-alvo para destinos com base em perfil de transmissão](./activate-streaming-profile-destinations.md) para obter mais informações. |
-| [!UICONTROL Excluir] | Permite excluir esse fluxo de dados e cancela o mapeamento dos segmentos que foram ativados anteriormente, se houver. |
+| [!UICONTROL Ativar públicos] | Selecione este controle para editar quais públicos-alvo estão mapeados para o destino, atualizar agendas de exportação ou adicionar e remover atributos e identidades mapeados. Consulte as guias sobre [ativação de dados do público-alvo para destinos de transmissão de público-alvo](./activate-segment-streaming-destinations.md), [ativação de dados de público-alvo para destinos baseados em perfil de lote](./activate-batch-profile-destinations.md), e [ativação de dados de público-alvo para destinos com base em perfil de transmissão](./activate-streaming-profile-destinations.md) para obter mais informações. |
+| [!UICONTROL Excluir] | Permite excluir esse fluxo de dados e desmapeia os públicos-alvo que foram ativados anteriormente, se houver. |
 | [!UICONTROL Nome do destino] | Este campo pode ser editado para atualizar o nome do destino. |
 | [!UICONTROL Descrição] | Este campo pode ser editado para atualizar ou adicionar uma descrição opcional ao destino. |
 | [!UICONTROL Destino] | Representa a plataforma de destino para a qual os públicos-alvo são enviados. Consulte a [catálogo de destinos](../catalog/overview.md) para obter mais informações. |
@@ -81,7 +81,6 @@ A variável [!UICONTROL O fluxo de dados é executado] A guia fornece dados de m
 >* No momento, a funcionalidade de monitoramento de destinos é compatível com todos os destinos no Experience Platform *exceto* o [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Públicos do Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
 >* Para o [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, as métricas relacionadas às identidades excluídas, com falha e ativadas são estimadas. Volumes maiores de dados de ativação levam a uma maior precisão das métricas.
 
-
 ![Exibição de execuções de fluxo de dados](../assets/ui/details-page/dataflow-runs.png)
 
 ### Duração das execuções de fluxo de dados {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ Para obter mais informações, leia sobre [o fluxo de dados é executado para de
 
 ### Destinos baseados em arquivo {#file-based}
 
-Para execuções de fluxo de dados para destinos baseados em arquivo, a variável **[!UICONTROL Duração do processamento]** depende do tamanho dos dados que estão sendo exportados e do carregamento do sistema. Observe também que o fluxo de dados é executado para destinos baseados em arquivo e é detalhado por segmento.
+Para execuções de fluxo de dados para destinos baseados em arquivo, a variável **[!UICONTROL Duração do processamento]** depende do tamanho dos dados que estão sendo exportados e do carregamento do sistema. Observe também que o fluxo de dados executado para destinos baseados em arquivo é detalhado por público-alvo.
 
 ![Imagem da página Execuções do fluxo de dados com a coluna Tempo de processamento destacada para um destino baseado em arquivo.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ Para obter mais informações, leia sobre [o fluxo de dados é executado para de
 
 ## [!UICONTROL Dados de ativação] {#activation-data}
 
-A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data inicial e a data final (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um segmento específico, selecione o nome dele na lista.
+A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de públicos-alvo que foram mapeados para o destino, incluindo a data inicial e a data final (se aplicável) e outras informações relevantes para a exportação de dados, como tipo de exportação, programação e frequência. Para exibir os detalhes sobre um público-alvo específico, selecione o nome na lista.
 
 >[!TIP]
 >
->Para exibir e editar detalhes sobre os atributos e identidades mapeados para um destino, selecione **[!UICONTROL Ativar segmentos]** no [painel direito](#right-rail).
+>Para exibir e editar detalhes sobre os atributos e identidades mapeados para um destino, selecione **[!UICONTROL Ativar públicos]** no [painel direito](#right-rail).
 
 ![Destino do lote da visualização de dados de ativação](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de segmentos
 
 >[!NOTE]
 >
->Para obter detalhes sobre como explorar a página de detalhes de um segmento, consulte a [Visão geral da interface de segmentação](../../segmentation/ui/overview.md#segment-details).
+>Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral da interface de segmentação](../../segmentation/ui/overview.md#segment-details).

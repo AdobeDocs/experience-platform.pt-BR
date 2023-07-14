@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1833'
 ht-degree: 2%
 
 ---
@@ -130,6 +130,14 @@ Após concluir os pré-requisitos, agora é possível selecionar o destino de pe
 ## Selecione seus públicos-alvo {#select-audiences}
 
 Use as caixas de seleção à esquerda dos nomes dos públicos-alvo para selecionar os públicos-alvo que você deseja ativar para o destino e selecione **[!UICONTROL Próxima]**.
+
+Para selecionar os públicos que deseja ativar para o destino, use as caixas de seleção à esquerda dos nomes dos públicos e selecione **[!UICONTROL Próxima]**.
+
+Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
+
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
+* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/overview.md#import-audience).
+* Outros tipos de públicos-alvo, provenientes de outras soluções de Adobe, como [!DNL Audience Manager].
 
 ![Selecionar públicos](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

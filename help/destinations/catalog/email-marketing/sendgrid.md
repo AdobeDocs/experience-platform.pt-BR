@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;destinos de e-mail;sendgrid;destino sendgrid
 title: Conexão SendGrid
 description: O destino do SendGrid permite exportar seus dados primários e ativá-los no SendGrid para atender às suas necessidades comerciais.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1541'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [SendGrid](https://www.sendgrid.com) O é uma plataforma popular de comunicação com o cliente para emails transacionais e de marketing.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), que permite exportar seus perfis de email primários e ativá-los em um novo segmento do SendGrid para atender às suas necessidades comerciais.
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), que permite exportar seus perfis de email primários e ativá-los em um novo público do SendGrid para as necessidades comerciais.
 
 O SendGrid usa tokens de portador de API como um mecanismo de autenticação para se comunicar com a API SendGrid.
 
@@ -40,8 +40,7 @@ Antes de ativar os dados para o destino do SendGrid, você deve ter um [schema](
 >
 >* A API SendGrid usada para criar a lista de endereçamento a partir de perfis de email requer que endereços de email exclusivos sejam fornecidos em cada perfil. Isso ocorre independentemente de ser usado como um valor para *email* ou *email alternativo*. Como a conexão SendGrid suporta mapeamentos para valores de email e de email alternativos, certifique-se de que todos os endereços de email usados sejam exclusivos em cada perfil do *Conjunto de dados*. Caso contrário, quando os perfis de email forem enviados para o SendGrid, isso resultará em um erro e esse perfil de email não estará presente na exportação de dados.
 >
->* Atualmente, não há nenhuma funcionalidade em vigor para remover perfis do SendGrid quando eles são removidos de segmentos no Experience Platform.
-
+>* Atualmente, não há nenhuma funcionalidade em vigor para remover perfis do SendGrid quando eles são removidos dos públicos-alvo no Experience Platform.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -60,7 +59,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil da [workflow de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -112,29 +111,27 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 Consulte as imagens abaixo para obter detalhes específicos desse destino.
 
-1. Selecione um ou mais segmentos a serem exportados para SendGrid.
+1. Selecione um ou mais públicos-alvo para exportar para SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. No **[!UICONTROL Mapeamento]** etapa, após selecionar **[!UICONTROL Adicionar novo mapeamento]**, você verá a página de mapeamento para mapear os campos XDM de origem para os campos de destino da API SendGrid. As imagens abaixo demonstram como mapear namespaces de identidade entre Experience Platform e SendGrid. Verifique se **[!UICONTROL Campo de origem]** *E-mail* deve ser mapeado para o **[!UICONTROL Campo de destino]** *external_id* conforme mostrado abaixo.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. Da mesma forma, mapeie a variável [!DNL Adobe Experience Platform] atributos que você deseja exportar para o destino do SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. Após concluir os mapeamentos, selecione **[!UICONTROL Próxima]** para avançar para a tela de revisão.
@@ -155,7 +152,7 @@ A lista abrangente de mapeamentos de atributos compatíveis que podem ser config
 | identityMap:<br/> E-mail | Identidade:<br/> external_id | String | O email principal do contato. Este email precisa ser válido. | Comprimento máximo:<br/> 254 caracteres |
 | xdm<br/> person.name.firstName | xdm<br/> first_name | String | O nome do contato | Comprimento máximo:<br/> 50 caracteres |
 | xdm<br/> person.name.lastName | xdm<br/> last_name | String | O nome da família do contato | Comprimento máximo:<br/> 50 caracteres |
-| xdm<br/> homeAddress.postalCode | xdm<br/> postal_code | String | O CEP ou outro código postal do contato. |  |
+| xdm<br/> homeAddress.postalCode | xdm<br/> postal_code | String | O CEP ou outro código postal do contato. | |
 | xdm<br/> homeAddress.stateProvince | xdm<br/> state_Province_region | String | O estado, província ou região do contato. | Comprimento máximo:<br/> 50 caracteres |
 
 ## Validar a exportação de dados no SendGrid {#validate}
@@ -168,22 +165,20 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Selecionar o destino e validar se o status é **[!UICONTROL habilitado]**.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Alterne para a **[!DNL Activation data]** e selecione um nome de segmento.
+1. Alterne para a **[!DNL Activation data]** e selecione um nome de público-alvo.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
-1. Monitore o resumo do segmento e verifique se a contagem de perfis corresponde à contagem criada no conjunto de dados.
+1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem criada no conjunto de dados.
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. A variável [SendGrid Marketing Lists > Criar API de lista](https://docs.sendgrid.com/api-reference/lists/create-list) é usado para criar listas de contatos exclusivas dentro do SendGrid unindo o valor do *list_name* e o carimbo de data e hora da exportação de dados. Navegue até o site SendGrid e verifique se a nova lista de contatos em conformidade com o padrão de nome foi criada.
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Selecione a lista de contatos recém-criada e verifique se o novo registro de email do conjunto de dados criado está sendo preenchido na nova lista de contatos.
 
 1. Além disso, verifique alguns emails para validar se o mapeamento de campo está correto.
    ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Uso e governança de dados {#data-usage-governance}

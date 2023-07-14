@@ -3,7 +3,7 @@ keywords: extensões de tag;extensão de tag;destinos de lançamento; extensões
 title: Extensões de tag no Adobe Experience Platform
 description: A Adobe Experience Platform oferece a próxima geração de recursos de gerenciamento de tags do Adobe. O Platform oferece uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%
@@ -37,7 +37,7 @@ A [extensão de tag](../../../tags/home.md#extensions) O é um pacote de código
 
 Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
 
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
 
 ![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 Os recursos de tag da Platform são gratuitos para clientes do Experience Cloud existentes. O sistema simplifica a implantação de tags no site por meio de extensões fáceis de usar que você pode instalar, configurar, atualizar e excluir. As tags ocupam pouco espaço no site e permitem que você mantenha suas páginas carregando rapidamente.
 
-Embora não seja possível ativar segmentos para marcar extensões, você pode configurar regras para encaminhar apenas dados do evento em determinadas situações. Essa poderosa funcionalidade permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar dados do evento em cada interação. Para obter mais informações, leia sobre as regras na seção [documentação das tags](../../../tags/ui/managing-resources/rules.md).
+Embora não seja possível ativar públicos para extensões de tag, você pode configurar regras para encaminhar apenas dados do evento em determinadas situações. Essa poderosa funcionalidade permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar dados do evento em cada interação. Para obter mais informações, leia sobre as regras na seção [documentação das tags](../../../tags/ui/managing-resources/rules.md).
 
 ## Exemplo de casos de uso para extensões {#extensions-use-cases}
 

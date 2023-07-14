@@ -1,22 +1,21 @@
 ---
 solution: Experience Platform
-title: Ative segmentos para destinos baseados em arquivo usando a API do Serviço de fluxo
+title: Ative públicos para destinos baseados em arquivo usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '4442'
 ht-degree: 3%
 
 ---
 
-# Ative segmentos para destinos baseados em arquivo usando a API do Serviço de fluxo
+# Ative públicos para destinos baseados em arquivo usando a API do Serviço de fluxo
 
 >[!IMPORTANT]
 >
 >* Essa funcionalidade beta está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
-
 
 Use os recursos aprimorados de exportação de arquivos (atualmente na versão beta) para acessar a funcionalidade aprimorada de personalização ao exportar arquivos do Experience Platform:
 
@@ -46,12 +45,12 @@ Se você já estava usando a API do Serviço de fluxo para exportar perfis para 
 
 ## Introdução {#get-started}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] O permite criar segmentos e gerar públicos-alvo no [!DNL Adobe Experience Platform] do seu [!DNL Real-Time Customer Profile] dados.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] O permite criar e gerar públicos-alvo no [!DNL Adobe Experience Platform] do seu [!DNL Real-Time Customer Profile] dados.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisa saber para ativar dados para destinos baseados em arquivo na Platform.
@@ -92,11 +91,11 @@ Você pode encontrar a documentação de referência de acompanhamento para toda
 
 Para obter descrições dos termos que você encontrará neste tutorial sobre APIs, leia as [seção de glossário](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) da documentação de referência da API.
 
-## Selecionar destino para o qual exportar segmentos {#select-destination}
+## Selecionar destino para o qual exportar públicos {#select-destination}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
-Antes de iniciar o fluxo de trabalho para exportar perfis, identifique a especificação da conexão e as IDs de especificação do fluxo do destino para o qual você pretende exportar segmentos. Use a tabela abaixo como referência.
+Antes de iniciar o fluxo de trabalho para exportar perfis, identifique a especificação da conexão e as IDs de especificação do fluxo do destino para o qual você pretende exportar públicos. Use a tabela abaixo como referência.
 
 | Destino | Especificação da conexão | Especificação de fluxo |
 ---------|----------|---------|
@@ -319,13 +318,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Siga as etapas abaixo para configurar um fluxo de dados de exportação de segmento para um destino de armazenamento na nuvem. Para algumas etapas, as solicitações e respostas diferem entre os vários destinos de armazenamento na nuvem. Nesses casos, use as guias da página para recuperar as solicitações e respostas específicas ao destino ao qual deseja se conectar e exportar segmentos. Certifique-se de usar o método correto `connection spec` e `flow spec` para o destino que você está configurando.
+Siga as etapas abaixo para configurar um fluxo de dados de exportação de público-alvo para um destino de armazenamento na nuvem. Para algumas etapas, as solicitações e respostas diferem entre os vários destinos de armazenamento na nuvem. Nesses casos, use as guias na página para recuperar as solicitações e respostas específicas ao destino ao qual você deseja se conectar e exportar públicos. Certifique-se de usar o método correto `connection spec` e `flow spec` para o destino que você está configurando.
 
 ## Criar uma conexão de origem {#create-source-connection}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Após decidir para qual destino você está exportando segmentos, é necessário criar uma conexão de origem. A variável [conexão de origem](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa a conexão com a interface interna [Loja de perfis do Experience Platform](/help/profile/home.md#profile-data-store).
+Depois de decidir para qual destino você está exportando públicos, é necessário criar uma conexão de origem. A variável [conexão de origem](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa a conexão com a interface interna [Loja de perfis do Experience Platform](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -373,9 +372,9 @@ Uma resposta bem-sucedida retorna a ID (`id`) da conexão de origem recém-criad
 
 ## Criar uma conexão básica {#create-base-connection}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [conexão básica](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) armazena com segurança as credenciais no destino. Dependendo do tipo de destino, as credenciais necessárias para a autenticação nesse destino podem variar. Para localizar esses parâmetros de autenticação, primeiro recupere o `connection spec` para o destino desejado, conforme descrito na seção [Selecionar destino para o qual exportar segmentos](#select-destination) e, em seguida, olhe para o `authSpec` da resposta. Consulte as guias abaixo para a `authSpec` propriedades de todos os destinos compatíveis.
+A [conexão básica](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) armazena com segurança as credenciais no destino. Dependendo do tipo de destino, as credenciais necessárias para a autenticação nesse destino podem variar. Para localizar esses parâmetros de autenticação, primeiro recupere o `connection spec` para o destino desejado, conforme descrito na seção [Selecionar destino para o qual exportar públicos](#select-destination) e, em seguida, olhe para o `authSpec` da resposta. Consulte as guias abaixo para a `authSpec` propriedades de todos os destinos compatíveis.
 
 >[!BEGINTABS]
 
@@ -1144,9 +1143,9 @@ Observe a ID de conexão da resposta. Essa ID será necessária na próxima etap
 
 ## Criar uma conexão de destino {#create-target-connection}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-Em seguida, é necessário criar uma conexão de destino. [Conexões do Target](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) armazene os parâmetros de exportação dos segmentos exportados. Os parâmetros de exportação incluem local de exportação, formato de arquivo, compactação e outros detalhes. Por exemplo, para arquivos CSV, é possível selecionar várias opções de exportação. Obtenha informações abrangentes sobre todas as opções de exportação de CSV compatíveis no [página configurações de formatação de arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+Em seguida, é necessário criar uma conexão de destino. [Conexões do Target](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) armazene os parâmetros de exportação para os públicos exportados. Os parâmetros de exportação incluem local de exportação, formato de arquivo, compactação e outros detalhes. Por exemplo, para arquivos CSV, é possível selecionar várias opções de exportação. Obtenha informações abrangentes sobre todas as opções de exportação de CSV compatíveis no [página configurações de formatação de arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Consulte a `targetSpec` propriedades fornecidas no destino do `connection spec` para entender as propriedades compatíveis com cada tipo de destino. Consulte as guias abaixo para a `targetSpec` propriedades de todos os destinos compatíveis.
 
@@ -1156,7 +1155,7 @@ Consulte a `targetSpec` propriedades fornecidas no destino do `connection spec` 
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] exibição de parâmetros de conexão de destino
 
-Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de segmentos.
+Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de público.
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1214,7 +1213,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1367,7 +1366,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] exibição de parâmetros de conexão de destino
 
-Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de segmentos.
+Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de público.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1413,7 +1412,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1567,7 +1566,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] exibição de parâmetros de conexão de destino
 
-Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de segmentos.
+Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de público.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1606,7 +1605,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1758,7 +1757,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] exibição de parâmetros de conexão de destino
 
-Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de segmentos.
+Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de público.
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -1796,7 +1795,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1948,7 +1947,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] exibição de parâmetros de conexão de destino
 
-Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de segmentos.
+Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de público.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1994,7 +1993,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2147,7 +2146,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
 
 +++SFTP - [!DNL Connection spec] exibição de parâmetros de conexão de destino
 
-Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de segmentos.
+Observe as linhas realçadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar o [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino são *não* aplicável a destinos de exportação de público.
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2186,7 +2185,7 @@ Observe as linhas realçadas com comentários em linha no [!DNL connection spec]
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2891,15 +2890,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Observe que `target connection ID` da resposta. Essa ID será necessária na próxima etapa ao criar o fluxo de dados para exportar segmentos.
+Observe que `target connection ID` da resposta. Essa ID será necessária na próxima etapa, ao criar o fluxo de dados para exportar públicos.
 
 Uma resposta bem-sucedida retorna a ID (`id`) da conexão de origem de destino recém-criada e um `etag`. Anote a ID de conexão de destino, pois ela será necessária posteriormente ao criar o fluxo de dados.
 
 ## Criar um fluxo de dados {#create-dataflow}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-A próxima etapa na configuração de destino é criar um fluxo de dados. A [fluxo de dados](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) une entidades criadas anteriormente e também fornece opções para configurar a programação de exportação de segmentos. Para criar o fluxo de dados, use as cargas abaixo, dependendo do destino do armazenamento na nuvem desejado, e substitua as IDs de entidade de fluxo das etapas anteriores. Observe que, nessa etapa, você não está adicionando informações relacionadas ao mapeamento de atributo ou identidade para o fluxo de dados. Isso seguirá na próxima etapa.
+A próxima etapa na configuração de destino é criar um fluxo de dados. A [fluxo de dados](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) une entidades criadas anteriormente e também fornece opções para configurar o agendamento de exportação de público. Para criar o fluxo de dados, use as cargas abaixo, dependendo do destino do armazenamento na nuvem desejado, e substitua as IDs de entidade de fluxo das etapas anteriores. Observe que, nessa etapa, você não está adicionando informações relacionadas ao mapeamento de atributo ou identidade para o fluxo de dados. Isso seguirá na próxima etapa.
 
 >[!BEGINTABS]
 
@@ -2907,7 +2906,7 @@ A próxima etapa na configuração de destino é criar um fluxo de dados. A [flu
 
 **Solicitação**
 
-+++Criar fluxo de dados de exportação de segmento para [!DNL Amazon S3] destino - Solicitação
++++Criar fluxo de dados de exportação de público para [!DNL Amazon S3] destino - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -2920,8 +2919,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Amazon S3 cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Amazon S3 cloud storage destination",
+    "name": "Activate audiences to an Amazon S3 cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Amazon S3 cloud storage destination",
     "flowSpec": {
         "id": "1a0514a6-33d4-4c7f-aff8-594799c47549", // Amazon S3 flow spec ID
         "version": "1.0"
@@ -2955,7 +2954,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++Criar fluxo de dados de exportação de segmento para [!DNL Azure Blob Storage] destino - Solicitação
++++Criar fluxo de dados de exportação de público para [!DNL Azure Blob Storage] destino - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -2968,8 +2967,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Blob Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Blob Storage cloud storage destination",
+    "name": "Activate audiences to an Azure Blob Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Blob Storage cloud storage destination",
     "flowSpec": {
         "id": "752d422f-b16f-4f0d-b1c6-26e448e3b388", // Azure Blob Storage flow spec ID
         "version": "1.0"
@@ -3015,7 +3014,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++Criar fluxo de dados de exportação de segmento para [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destino - Solicitação
++++Criar fluxo de dados de exportação de público para [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destino - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -3028,8 +3027,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "name": "Activate audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
     "flowSpec": {
         "id": "17be2013-2549-41ce-96e7-a70363bec293", // Azure Data Lake Gen 2(ADLS Gen2) flow spec ID
         "version": "1.0"
@@ -3063,7 +3062,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++Criar fluxo de dados de exportação de segmento para [!DNL Data Landing Zone] destino - Solicitação
++++Criar fluxo de dados de exportação de público para [!DNL Data Landing Zone] destino - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -3076,8 +3075,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Data Landing Zone cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Data Landing Zone cloud storage destination",
+    "name": "Activate audiences to a Data Landing Zone cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Data Landing Zone cloud storage destination",
     "flowSpec": {
         "id": "cd2fc47e-e838-4f38-a581-8fff2f99b63a", // Data Landing Zone flow spec ID
         "version": "1.0"
@@ -3111,7 +3110,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++Criar fluxo de dados de exportação de segmento para [!DNL Google Cloud Storage] destino - Solicitação
++++Criar fluxo de dados de exportação de público para [!DNL Google Cloud Storage] destino - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -3124,8 +3123,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Google Cloud Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Google Cloud Storage destination",
+    "name": "Activate audiences to a Google Cloud Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Google Cloud Storage destination",
     "flowSpec": {
         "id": "585c15c4-6cbf-4126-8f87-e26bff78b657", // Google Cloud Storage flow spec ID
         "version": "1.0"
@@ -3159,7 +3158,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++Criar fluxo de dados de exportação de segmento para destino SFTP - Solicitação
++++Criar fluxo de dados de exportação de público para destino SFTP - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -3172,8 +3171,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an SFTP cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an SFTP cloud storage destination",
+    "name": "Activate audiences to an SFTP cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an SFTP cloud storage destination",
     "flowSpec": {
         "id": "fd36aaa4-bf2b-43fb-9387-43785eeeb799", // SFTP flow spec ID
         "version": "1.0"
@@ -3207,14 +3206,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Observe a ID de fluxo de dados na resposta. Essa ID será necessária em etapas posteriores.
 
-### Adicionar segmentos à exportação
+### Adicionar públicos-alvo à exportação
 
-Nesta etapa, você também pode selecionar quais segmentos deseja exportar para o destino. Para obter informações extensas sobre essa etapa e o formato da solicitação para adicionar um segmento ao fluxo de dados, veja os exemplos na [Atualizar um fluxo de dados de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) seção da documentação de referência da API.
+Nesta etapa, também é possível selecionar quais públicos-alvo você deseja exportar para o destino. Para obter informações abrangentes sobre esta etapa e o formato de solicitação para adicionar um público-alvo ao fluxo de dados, veja os exemplos na [Atualizar um fluxo de dados de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) seção da documentação de referência da API.
 
 
 ## Configurar mapeamento de atributo e identidade {#attribute-and-identity-mapping}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
 Depois de criar o fluxo de dados, é necessário configurar o mapeamento dos atributos e identidades que deseja exportar. Isso consiste em três etapas, listadas abaixo:
 
@@ -3346,7 +3345,7 @@ A resposta abaixo foi encurtada por questões de brevidade.
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "First name",
-                            "description": "The first segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The first audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "fullName": {
                             "type": "string",
@@ -3358,7 +3357,7 @@ A resposta abaixo foi encurtada por questões de brevidade.
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "Last name",
-                            "description": "The last segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The last audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "middleName": {
                             "type": "string",
@@ -3783,7 +3782,7 @@ Inspect a resposta que você obtém ao executar a chamada acima. Você precisa d
                         "exited":"Entity is exiting the segment.",
                         "realized":"Entity is entering the segment."
                      },
-                     "description":"Is the segment participation realized as part of the current request.",
+                     "description":"Is the audience participation realized as part of the current request.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:status"
                   },
@@ -3844,14 +3843,14 @@ Inspect a resposta que você obtém ao executar a chamada acima. Você precisa d
                            "exclusiveMinimum":0
                         }
                      },
-                     "description":"Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                     "description":"Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:payload"
                   },
                   "version":{
                      "type":"string",
                      "title":"Version",
-                     "description":"The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                     "description":"The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:version"
                   },
@@ -3863,7 +3862,7 @@ Inspect a resposta que você obtém ao executar a chamada acima. Você precisa d
                            "type":"string",
                            "title":"Identifier",
                            "format":"uri-reference",
-                           "description":"Identity of the segment in the related namespace.",
+                           "description":"Identity of the audience in the related namespace.",
                            "meta:xdmType":"string",
                            "meta:xdmField":"@id"
                         },
@@ -3895,7 +3894,7 @@ Inspect a resposta que você obtém ao executar a chamada acima. Você precisa d
                            "meta:referencedFrom":"https://ns.adobe.com/xdm/context/namespace"
                         }
                      },
-                     "description":"The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                     "description":"The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                      "meta:status":"deprecated",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:segmentID",
@@ -3905,7 +3904,7 @@ Inspect a resposta que você obtém ao executar a chamada acima. Você precisa d
                      "type":"string",
                      "title":"Valid until",
                      "format":"date-time",
-                     "description":"The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                     "description":"The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:validUntil"
                   },
@@ -3956,7 +3955,7 @@ Inspect a resposta que você obtém ao executar a chamada acima. Você precisa d
                      "type":"string",
                      "title":"Last qualification time",
                      "format":"date-time",
-                     "description":"The timestamp when the assertion of segment membership was made.",
+                     "description":"The timestamp when the assertion of audience membership was made.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:lastQualificationTime"
                   }
@@ -4070,14 +4069,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                             "version": {
                                 "meta:xdmField": "xdm:version",
                                 "meta:xdmType": "string",
-                                "description": "The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                                "description": "The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                                 "type": "string",
                                 "title": "Version"
                             },
                             "validUntil": {
                                 "meta:xdmField": "xdm:validUntil",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                                "description": "The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Valid until"
@@ -4094,7 +4093,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "exited"
                                 ],
                                 "default": "realized",
-                                "description": "Is the segment participation realized as part of the current request.",
+                                "description": "Is the audience participation realized as part of the current request.",
                                 "type": "string",
                                 "title": "Status"
                             },
@@ -4132,7 +4131,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "_id": {
                                         "meta:xdmField": "@id",
                                         "meta:xdmType": "string",
-                                        "description": "Identity of the segment in the related namespace.",
+                                        "description": "Identity of the audience in the related namespace.",
                                         "format": "uri-reference",
                                         "type": "string",
                                         "title": "Identifier"
@@ -4140,7 +4139,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 },
                                 "meta:xdmType": "object",
                                 "type": "object",
-                                "description": "The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                                "description": "The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                                 "meta:status": "deprecated",
                                 "title": "Segment ID"
                             },
@@ -4245,13 +4244,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     }
                                 },
                                 "type": "object",
-                                "description": "Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                                "description": "Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                                 "title": "Payload"
                             },
                             "lastQualificationTime": {
                                 "meta:xdmField": "xdm:lastQualificationTime",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp when the assertion of segment membership was made.",
+                                "description": "The timestamp when the assertion of audience membership was made.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Last qualification time"
@@ -4323,7 +4322,6 @@ Em seguida, use o [API de preparação de dados](https://developer.adobe.com/exp
 >* No objeto de mapeamentos mostrado abaixo, a variável `destination` o parâmetro não aceita pontos `"."`. Por exemplo, você precisaria usar personalEmail_address ou segmentMembership_status como destacado no exemplo de configuração.
 >* Há um caso específico quando o atributo de origem é um atributo de identidade e contém um ponto. Nesse caso, o atributo precisa ser escapado com `//`, conforme destacado abaixo.
 >* Observe também que mesmo que o exemplo de configuração abaixo inclua `Email` e `Phone_E.164`, você só pode exportar um atributo de identidade por fluxo de dados.
-
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
@@ -4449,7 +4447,7 @@ A resposta da API do Serviço de fluxo retorna a ID do fluxo de dados atualizado
 
 ## Fazer outras atualizações de fluxo de dados {#other-dataflow-updates}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
 Para fazer atualizações no fluxo de dados, use o `PATCH` operation.Por exemplo, você pode atualizar seus fluxos de dados para selecionar campos como chaves obrigatórias ou chaves de desduplicação.
 
@@ -4599,7 +4597,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## Validar fluxo de dados (obter as execuções do fluxo de dados) {#get-dataflow-runs}
 
-![Etapas para ativar segmentos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 Para verificar as execuções de um fluxo de dados, use a API de execuções de fluxo de dados:
 
@@ -4679,7 +4677,7 @@ Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de e
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você conectou com sucesso o Platform a um de seus destinos de armazenamento na nuvem preferidos e configurou um fluxo de dados para o respectivo destino para exportar segmentos. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
+Seguindo este tutorial, você conectou com sucesso o Platform a um dos seus destinos de armazenamento em nuvem preferidos e configurou um fluxo de dados para o respectivo destino para exportar públicos. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
 
 * [Visão geral dos destinos](../home.md)
 * [Visão geral do Catálogo de destinos](../catalog/overview.md)

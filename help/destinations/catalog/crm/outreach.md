@@ -3,9 +3,9 @@ keywords: destino do crm;CRM;crm destinos;Outreach;Destino do Outreach crm
 title: Conexão de alcance
 description: O destino do Outreach permite exportar os dados da sua conta e ativá-los no Outreach para as suas necessidades comerciais.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1710'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 [[!DNL Outreach]](https://www.outreach.io/) O é uma Plataforma de execução de vendas com a maioria dos dados de interação comprador-vendedor B2B no mundo e investimentos significativos em tecnologias de IA proprietárias para traduzir dados de vendas em inteligência. [!DNL Outreach] O ajuda as organizações a automatizar o envolvimento de vendas e agir com base na inteligência de receita para melhorar a eficiência, a previsibilidade e o crescimento.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [API de recurso de atualização do Outreach](https://api.outreach.io/api/v2/docs#update-an-existing-resource), que permite atualizar identidades em um segmento correspondente a prospetos no [!DNL Outreach].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [API de recurso de atualização do Outreach](https://api.outreach.io/api/v2/docs#update-an-existing-resource), que permite atualizar identidades em um público-alvo correspondente a clientes potenciais no [!DNL Outreach].
 
 [!DNL Outreach] O usa o OAuth 2 com concessão de autorização como mecanismo de autenticação para se comunicar com o [!DNL Outreach] [!DNL Update Resource API]. Instruções para autenticar em seu [!DNL Outreach] instância estão mais abaixo, dentro de [Autenticar para destino](#authenticate) seção.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, você pode fornecer experiências personalizadas aos seus clientes potenciais, com base em atributos de seus perfis do Adobe Experience Platform. Você pode criar segmentos a partir de dados offline e enviar esses segmentos para o [!DNL Outreach], para ser exibido nos feeds de prospetos assim que os segmentos e perfis forem atualizados no Adobe Experience Platform.
+Como profissional de marketing, você pode fornecer experiências personalizadas aos seus clientes potenciais, com base em atributos de seus perfis do Adobe Experience Platform. Você pode criar públicos-alvo com base nos dados offline e enviá-los para [!DNL Outreach], para ser exibido nos feeds de clientes potenciais assim que os públicos-alvo e perfis forem atualizados no Adobe Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -30,7 +30,7 @@ Como profissional de marketing, você pode fornecer experiências personalizadas
 
 Antes de ativar os dados para o [!DNL Outreach] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) criado em [!DNL Experience Platform].
 
-Consulte a documentação do Adobe para [Grupo de campos de esquema Detalhes da associação do segmento](/help/xdm/field-groups/profile/segmentation.md) se você precisar de orientação sobre os status do segmento.
+Consulte a documentação do Adobe para [Grupo de campos de esquema Detalhes da associação do público](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
 ### Pré-requisitos do Outreach {#prerequisites-destination}
 
@@ -49,12 +49,12 @@ Anote os itens abaixo antes de autenticar na [!DNL Outreach] Destino do CRM:
 
 #### Configurar rótulos de campo personalizados {#prerequisites-custom-fields}
 
-[!DNL Outreach] suporta campos personalizados para [clientes potenciais](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Consulte [Como adicionar um campo personalizado no Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) para obter orientação adicional. Para facilitar a identificação, é recomendável atualizar manualmente os rótulos para os nomes de segmento correspondentes, em vez de manter os padrões. Por exemplo, como abaixo:
+[!DNL Outreach] suporta campos personalizados para [clientes potenciais](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Consulte [Como adicionar um campo personalizado no Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) para obter orientação adicional. Para facilitar a identificação, é recomendável atualizar manualmente os rótulos para os nomes de público correspondentes, em vez de manter os padrões. Por exemplo, como abaixo:
 
 [!DNL Outreach] página de configurações para clientes potenciais que exibem campos personalizados.
 ![Captura de tela da interface do usuário do Outreach mostrando os campos personalizados na página de configurações.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
-[!DNL Outreach] página de configurações para clientes potenciais que exibem campos personalizados com *fácil de usar* rótulos que correspondem aos nomes de segmento. É possível visualizar o status do segmento na página de prospecto em relação a esses rótulos.
+[!DNL Outreach] página de configurações para clientes potenciais que exibem campos personalizados com *fácil de usar* rótulos que correspondem aos nomes de público-alvo. Você pode visualizar o status do público-alvo na página de prospecto em relação a esses rótulos.
 ![Captura de tela da interface do usuário do Outreach mostrando campos personalizados com rótulos associados na página de configurações.](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
@@ -65,7 +65,7 @@ Anote os itens abaixo antes de autenticar na [!DNL Outreach] Destino do CRM:
 
 A variável [!DNL Outreach] A API tem um limite de taxa de 10.000 solicitações por hora por usuário. Se atingir esse limite, você receberá uma `429` resposta com a seguinte mensagem: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
-Se você recebeu essa mensagem, deve atualizar sua programação de exportação de segmento para estar em conformidade com o limite de taxa.
+Se você recebeu esta mensagem, deve atualizar seu cronograma de exportação de público para estar em conformidade com o limite de taxa.
 
 Consulte a [[!DNL Outreach] documentação](https://api.outreach.io/api/v2/docs#rate-limiting) para obter detalhes adicionais.
 
@@ -83,8 +83,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li> Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campo.</li><li> Cada status de segmento em [!DNL Outreach] é atualizado com o status de segmento correspondente da Platform, com base no [!UICONTROL ID do mapeamento] valor fornecido durante o [programação de segmentos](#schedule-segment-export-example) etapa.</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li> Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li> Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campo.</li><li> Cada status de segmento em [!DNL Outreach] é atualizado com o status de público-alvo correspondente na Platform, com base no [!UICONTROL ID do mapeamento] valor fornecido durante o [agendamento de público](#schedule-segment-export-example) etapa.</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li> Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -131,13 +131,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 > Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
@@ -151,39 +151,38 @@ Para enviar corretamente os dados do público-alvo do Adobe Experience Platform 
 
 1. No [!UICONTROL Selecionar campo de destino] selecione o tipo de campo de destino para o qual deseja mapear seu campo de origem.
    * **[!UICONTROL Selecionar namespace de identidade]**: selecione esta opção para mapear o campo de origem para um namespace de identidade da lista.
-      ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping usando OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping usando OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Adicione o mapeamento a seguir entre o esquema de perfil XDM e o [!DNL Outreach] instância: |Esquema do perfil XDM|[!DNL Outreach] Instância| Obrigatório| |—|—|—| |`Oid`|`OutreachId`| Sim |
 
    * **[!UICONTROL Selecionar atributos personalizados]**: selecione esta opção para mapear o campo de origem para um atributo personalizado definido na variável [!UICONTROL Nome do atributo] campo. Consulte [[!DNL Outreach] documentação de prospecto](https://api.outreach.io/api/v2/docs#prospect) para obter uma lista abrangente dos atributos suportados.
-      ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping usando LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping usando LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Por exemplo, dependendo dos valores que você deseja atualizar, adicione o seguinte mapeamento entre o esquema de perfil XDM e o [!DNL Outreach] instância: |Esquema do perfil XDM|[!DNL Outreach] Instância| |—|—| |`person.name.firstName`|`firstName`| |`person.name.lastName`|`lastName`|
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
-      ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/outreach/mappings.png)
+     ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/outreach/mappings.png)
 
-### Programar exportação de segmento e exemplo {#schedule-segment-export-example}
+### Agendar exportação de público e exemplo {#schedule-segment-export-example}
 
-* Ao executar a [Agendar exportação de segmento](../../ui/activate-segment-streaming-destinations.md) etapa você deve mapear manualmente os segmentos da Platform para o atributo de campo personalizado em [!DNL Outreach].
+* Ao executar a [Agendar exportação de público](../../ui/activate-segment-streaming-destinations.md) etapa você deve mapear manualmente os públicos-alvo da Platform para o atributo de campo personalizado em [!DNL Outreach].
 
 * Para fazer isso, selecione cada segmento e insira o valor numérico correspondente que corresponde à variável *Campo personalizado `N` Rótulo* campo de [!DNL Outreach] no **[!UICONTROL ID do mapeamento]** campo.
 
-   >[!IMPORTANT]
-   >
-   > * O valor numérico *(`N`)* usado dentro do [!UICONTROL ID do mapeamento] deve corresponder à chave de atributo personalizado com o sufixo do valor numérico em [!DNL Outreach]. Exemplo: *Campo personalizado `N` Rótulo*.
-   > * Você só precisa especificar o valor numérico, não todo o rótulo do campo personalizado.
-   > * [!DNL Outreach] O suporta um máximo de 150 campos de rótulo personalizados.
-   > * Consulte [[!DNL Outreach] documentação de prospecto](https://api.outreach.io/api/v2/docs#prospect) para obter detalhes.
-
+  >[!IMPORTANT]
+  >
+  > * O valor numérico *(`N`)* usado dentro do [!UICONTROL ID do mapeamento] deve corresponder à chave de atributo personalizado com o sufixo do valor numérico em [!DNL Outreach]. Exemplo: *Campo personalizado `N` Rótulo*.
+  > * Você só precisa especificar o valor numérico, não todo o rótulo do campo personalizado.
+  > * [!DNL Outreach] O suporta um máximo de 150 campos de rótulo personalizados.
+  > * Consulte [[!DNL Outreach] documentação de prospecto](https://api.outreach.io/api/v2/docs#prospect) para obter detalhes.
 
    * Por exemplo:
 
-      | [!DNL Outreach] Campo | ID de mapeamento da plataforma |
-      |---|---|
-      | Campo personalizado `4` Rótulo | `4` |
+     | [!DNL Outreach] Campo | ID de mapeamento da plataforma |
+     |---|---|
+     | Campo personalizado `4` Rótulo | `4` |
 
-      ![Captura de tela da interface do usuário da plataforma mostrando um exemplo de ID de mapeamento durante a exportação de segmentos do cronograma.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![Captura de tela da interface do usuário da plataforma mostrando um exemplo de ID de mapeamento durante a exportação de público-alvo do cronograma.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## Validar exportação de dados {#exported-data}
 
@@ -195,15 +194,15 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Selecionar o destino e validar se o status é **[!UICONTROL habilitado]**.
    ![Captura de tela da interface do usuário da plataforma mostrando a execução do fluxo de dados de destinos para o destino selecionado.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. Alterne para a **[!DNL Activation data]** e selecione um nome de segmento.
+1. Alterne para a **[!DNL Activation data]** e selecione um nome de público-alvo.
    ![Captura de tela da interface do usuário da plataforma mostrando dados da Ativação de destinos.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
-1. Monitore o resumo do segmento e verifique se a contagem de perfis corresponde à contagem criada no segmento.
+1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem criada no segmento.
    ![Captura de tela da interface do usuário da plataforma mostrando o Resumo do segmento.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Faça logon no [!DNL Outreach] site e, em seguida, navegue até o [!DNL Apps] > [!DNL Contacts] e verifique se os perfis do segmento foram adicionados. Você pode ver que cada status de segmento em [!DNL Outreach] foi atualizado com o status de segmento correspondente da Platform, com base na [!UICONTROL ID do mapeamento] valor fornecido durante o [programação de segmentos](#schedule-segment-export-example) etapa.
+1. Faça logon no [!DNL Outreach] site e, em seguida, navegue até o [!DNL Apps] > [!DNL Contacts] e verifique se os perfis do público-alvo foram adicionados. Você pode ver que cada status de público-alvo em [!DNL Outreach] foi atualizado com o status de público-alvo correspondente na Platform, com base na [!UICONTROL ID do mapeamento] valor fornecido durante o [agendamento de público](#schedule-segment-export-example) etapa.
 
-![Captura de tela da interface do usuário do Outreach mostrando a página de clientes potenciais do Outreach com os status de segmento atualizados.](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![Captura de tela da interface do usuário do Outreach mostrando a página de clientes potenciais do Outreach com os status de público atualizados.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## Uso e governança de dados {#data-usage-governance}
 
@@ -215,7 +214,7 @@ Ao verificar uma execução de fluxo de dados, você pode ver a seguinte mensage
 
 ![Captura de tela da interface do usuário do Platform mostrando o erro de solicitação inválida.](../../assets/catalog/crm/outreach/error.png)
 
-Para corrigir esse erro, verifique se [!UICONTROL ID do mapeamento] você forneceu na Platform para a sua [!DNL Outreach] o segmento é válido e existe em [!DNL Outreach].
+Para corrigir esse erro, verifique se [!UICONTROL ID do mapeamento] você forneceu na Platform para a sua [!DNL Outreach] o público-alvo é válido e existe em [!DNL Outreach].
 
 ## Recursos adicionais {#additional-resources}
 

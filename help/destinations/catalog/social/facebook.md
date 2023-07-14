@@ -3,10 +3,10 @@ keywords: conexão facebook;conexão facebook;destinos do facebook;facebook;inst
 title: Conexão com o facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1856'
-ht-degree: 6%
+source-wordcount: '1906'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Ativar perfis para o [!DNL Facebook] campanhas para direcionamento de público, personalização e supressão com base em emails com hash.
 
-Você pode usar esse destino para direcionamento de público-alvo em [!DNL Facebook’s] família de aplicativos compatíveis com [!DNL Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], e [!DNL Messenger]. A seleção do aplicativo no qual você deseja executar a campanha é indicada no nível de posicionamento no [!DNL Facebook Ads Manager].
+Você pode usar esse destino para direcionamento de público-alvo em [!DNL Facebook's] família de aplicativos compatíveis com [!DNL Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], e [!DNL Messenger]. A seleção do aplicativo no qual você deseja executar a campanha é indicada no nível de posicionamento no [!DNL Facebook Ads Manager].
 
 ![Destino do facebook na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
@@ -26,7 +26,7 @@ Para ajudá-lo a entender melhor como e quando usar o [!DNL Facebook] destino, a
 
 ### Caso de uso #1
 
-Um varejista online deseja alcançar os clientes existentes por meio de plataformas sociais e mostrar ofertas personalizadas com base em seus pedidos anteriores. O varejista online pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar segmentos com base em seus próprios dados offline e enviar esses segmentos para a [!DNL Facebook] social, otimizando seus gastos com publicidade.
+Um varejista online deseja alcançar os clientes existentes por meio de plataformas sociais e mostrar ofertas personalizadas com base em seus pedidos anteriores. O varejista online pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para a [!DNL Facebook] social, otimizando seus gastos com publicidade.
 
 ### Caso de uso #2
 
@@ -34,7 +34,7 @@ Uma companhia aérea tem diferentes níveis de clientes (Bronze, Prata e Ouro) e
 
 Para direcioná-los nas redes sociais, eles podem integrar os dados do cliente do CRM no Adobe Experience Platform, usando os endereços de email como identificadores.
 
-Em seguida, eles podem usar seus dados offline, incluindo IDs de associação associadas e camadas de clientes, para criar novos segmentos de público-alvo que eles podem direcionar por meio da [!DNL Facebook] destino.
+Em seguida, eles podem usar seus dados offline, incluindo IDs de associação associadas e camadas de clientes, para criar novos públicos-alvo que podem direcionar por meio da [!DNL Facebook] destino.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -48,30 +48,44 @@ Em seguida, eles podem usar seus dados offline, incluindo IDs de associação as
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções em [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto simples e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
 | extern_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público) com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Pré-requisitos da conta do facebook {#facebook-account-prerequisites}
 
-Antes de enviar os segmentos de público-alvo para [!DNL Facebook], certifique-se de atender aos seguintes requisitos:
+Antes de enviar os públicos-alvo para [!DNL Facebook], certifique-se de atender aos seguintes requisitos:
 
 * Seu [!DNL Facebook] a conta de usuário deve ter o **[!DNL Manage campaigns]** permissão ativada para a conta de anúncio que você planeja usar.
 * A variável **Adobe Experience Cloud** conta comercial deve ser adicionada como um parceiro de publicidade em sua [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
-   >[!IMPORTANT]
-   >
-   > Ao configurar as permissões para o Adobe Experience Cloud, você deve ativar o **Gerenciar campanhas** permissão. A permissão é necessária para o [!DNL Adobe Experience Platform] integração.
+  >[!IMPORTANT]
+  >
+  > Ao configurar as permissões para o Adobe Experience Cloud, você deve ativar o **Gerenciar campanhas** permissão. A permissão é necessária para o [!DNL Adobe Experience Platform] integração.
 * Leia e assine o [!DNL Facebook Custom Audiences] Termos de serviço. Para fazer isso, acesse `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, onde `accountID` é seu [!DNL Facebook Ad Account ID].
-   >[!IMPORTANT]
-   >
-   >Ao assinar o [!DNL Facebook Custom Audiences] Termos de serviço, certifique-se de usar a mesma conta de usuário usada para autenticar na API do Facebook.
+  >[!IMPORTANT]
+  >
+  >Ao assinar o [!DNL Facebook Custom Audiences] Termos de serviço, certifique-se de usar a mesma conta de usuário usada para autenticar na API do Facebook.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
@@ -125,7 +139,7 @@ Antes de poder usar o `Extern_ID` namespace para enviar dados [!DNL Facebook], c
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-O vídeo abaixo também demonstra as etapas para configurar um [!DNL Facebook] destino e ativar segmentos.
+O vídeo abaixo também demonstra as etapas para configurar um [!DNL Facebook] direcionar e ativar públicos-alvo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -159,12 +173,12 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origem do público"
->abstract="Escolha como os dados do cliente no segmento foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
+>abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -185,9 +199,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-No **[!UICONTROL Programação de segmento]** etapa, você deve fornecer a [!UICONTROL Origem do público] ao enviar segmentos para o [!DNL Facebook Custom Audiences].
+No **[!UICONTROL Programação de segmento]** etapa, você deve fornecer a [!UICONTROL Origem do público] ao enviar públicos-alvo para [!DNL Facebook Custom Audiences].
 
 ![Origem facebook do público-alvo](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -222,11 +236,11 @@ Selecionar campos de destino:
 
 ## Dados exportados {#exported-data}
 
-Para [!DNL Facebook], uma ativação bem-sucedida significa que um [!DNL Facebook] o público-alvo personalizado seria criado programaticamente no [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento no público-alvo seria adicionada e removida à medida que os usuários fossem qualificados ou desqualificados para os segmentos ativados.
+Para [!DNL Facebook], uma ativação bem-sucedida significa que um [!DNL Facebook] o público-alvo personalizado seria criado programaticamente no [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de público-alvo seria adicionada e removida à medida que os usuários fossem qualificados ou desqualificados para os públicos ativados.
 
 >[!TIP]
 >
->A integração entre o Adobe Experience Platform e o [!DNL Facebook] O suporta preenchimentos retroativos de público-alvo histórico. Todas as qualificações do segmento histórico são enviadas para [!DNL Facebook] ao ativar os segmentos para o destino.
+>A integração entre o Adobe Experience Platform e o [!DNL Facebook] O suporta preenchimentos retroativos de público-alvo histórico. Todas as qualificações históricas de público são enviadas para o [!DNL Facebook] quando você ativa os públicos-alvo para o destino.
 
 ## Solução de problemas {#troubleshooting}
 

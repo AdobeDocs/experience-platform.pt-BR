@@ -4,7 +4,7 @@ title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -18,10 +18,9 @@ ht-degree: 0%
 >* Para se conectar a um destino, é necessário o **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 >* Para se conectar a um destino compatível com exportações de conjunto de dados, é necessário **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-
 ## Visão geral {#overview}
 
-Antes de enviar dados do público-alvo para um destino, é necessário configurar uma conexão com a plataforma de destino. Este artigo mostra como configurar uma nova conexão de destino, para a qual você pode ativar segmentos ou exportar conjuntos de dados usando a interface do usuário do Adobe Experience Platform.
+Antes de enviar dados do público-alvo para um destino, é necessário configurar uma conexão com a plataforma de destino. Este artigo mostra como configurar uma nova conexão de destino, para a qual você pode ativar públicos ou exportar conjuntos de dados usando a interface do usuário do Adobe Experience Platform.
 
 ## Localize o destino desejado no catálogo {#setup}
 
@@ -29,23 +28,23 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
 
    ![Captura de tela da interface do Experience Platform, mostrando a página do catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
 
-2. Os cartões de destino no catálogo podem ter controles de ação diferentes, dependendo se você tem uma conexão existente com o destino e se os destinos oferecem suporte à ativação de segmentos, exportação de conjuntos de dados ou ambos. Você pode ver qualquer um dos seguintes controles para cartões de destino:
+2. Os cartões de destino no catálogo podem ter controles de ação diferentes, dependendo se você tem uma conexão existente com o destino e se os destinos oferecem suporte à ativação de públicos, exportação de conjuntos de dados ou ambos. Você pode ver qualquer um dos seguintes controles para cartões de destino:
 
-   * **[!UICONTROL Configurar]**. Primeiro, é necessário configurar uma conexão com esse destino para que você possa ativar segmentos ou exportar conjuntos de dados.
-   * **[!UICONTROL Ativar]**. Já foi configurada uma conexão com este destino. Esse destino oferece suporte à ativação de segmentos e exportações de conjuntos de dados.
-   * **[!UICONTROL Ativar segmentos]**. Já foi configurada uma conexão com este destino. Esse destino oferece suporte somente à ativação de segmentos.
+   * **[!UICONTROL Configurar]**. Primeiro, é necessário configurar uma conexão com esse destino para que você possa ativar públicos ou exportar conjuntos de dados.
+   * **[!UICONTROL Ativar]**. Já foi configurada uma conexão com este destino. Esse destino oferece suporte à ativação de públicos-alvo e exportações de conjunto de dados.
+   * **[!UICONTROL Ativar públicos]**. Já foi configurada uma conexão com este destino. Este destino oferece suporte somente à ativação de público-alvo.
 
    Para obter mais informações sobre a diferença entre esses controles, consulte [Catálogo](../ui/destinations-workspace.md#catalog) seção da documentação do espaço de trabalho de destino.
 
-   Selecione **[!UICONTROL Configurar]**, **[!UICONTROL Ativar]** ou **[!UICONTROL Ativar segmentos]**, dependendo do controle que estiver disponível.
+   Selecione **[!UICONTROL Configurar]**, **[!UICONTROL Ativar]** ou **[!UICONTROL Ativar públicos]**, dependendo do controle que estiver disponível.
 
    ![Captura de tela da interface do Experience Platform, mostrando a página de catálogo de destinos com o controle Configurar realçado.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Captura de tela da interface do Experience Platform, mostrando a página de catálogo de destinos com o controle Ativar segmentos destacado.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Captura de tela da interface do Experience Platform, mostrando a página de catálogo de destinos com o controle Ativar públicos destacado.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Se você selecionou **[!UICONTROL Configurar]**, pule para a próxima etapa, para [autenticar](#authenticate) para o destino.
 
-   Se você selecionou **[!UICONTROL Ativar]**, **[!UICONTROL Ativar segmentos]** ou **[!UICONTROL Exportar conjuntos de dados]**, agora você pode ver uma lista de conexões de destino existentes.
+   Se você selecionou **[!UICONTROL Ativar]**, **[!UICONTROL Ativar públicos]** ou **[!UICONTROL Exportar conjuntos de dados]**, agora você pode ver uma lista de conexões de destino existentes.
 
    Selecionar **[!UICONTROL Configurar novo destino]** para estabelecer uma nova conexão com o destino.
 
@@ -85,11 +84,11 @@ Para destinos baseados em arquivo, é possível definir várias configurações 
 
 ![Imagem que mostra a seleção do tipo de arquivo e várias opções para arquivos CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurar conexão de destino para ativação de segmentos ou exportações de conjunto de dados {#segment-activation-or-dataset-exports}
+### Configurar conexão de destino para ativação de público ou exportações de conjunto de dados {#segment-activation-or-dataset-exports}
 
-Alguns destinos baseados em arquivo oferecem suporte à ativação de segmentos, bem como a exportações de conjuntos de dados. Para esses destinos, você pode escolher se deseja criar uma conexão que permita ativar segmentos ou exportar conjuntos de dados.
+Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-alvo, bem como a exportações de conjuntos de dados. Para esses destinos, você pode escolher se deseja criar uma conexão que permita ativar públicos ou exportar conjuntos de dados.
 
-![Imagem mostrando o controle de seleção do tipo de dados, que permite aos usuários escolher entre ativação de segmento e exportações de conjunto de dados.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Imagem mostrando o controle de seleção do tipo de dados, que permite aos usuários escolher entre ativação de público-alvo e exportações de conjunto de dados.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Ativar alertas de destino {#enable-alerts}
 
@@ -113,4 +112,4 @@ Alguns destinos baseados em arquivo oferecem suporte à ativação de segmentos,
 
 Ao ler este documento, você aprendeu a usar a interface do usuário do Experience Platform para estabelecer uma conexão com um destino. Lembrando que os parâmetros de conexão disponíveis e necessários variam de destino para destino. Você também deve consultar a página da documentação de destino no [catálogo de destinos](/help/destinations/catalog/overview.md) para obter informações específicas sobre as entradas necessárias e as opções disponíveis por tipo de destino.
 
-Em seguida, você pode prosseguir para [ativação de segmentos](/help/destinations/ui/activation-overview.md) ou [exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md) para o seu destino.
+Em seguida, você pode prosseguir para [ativação de públicos](/help/destinations/ui/activation-overview.md) ou [exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md) para o seu destino.

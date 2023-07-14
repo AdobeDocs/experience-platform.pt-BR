@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 3%
@@ -22,7 +22,6 @@ Esta página fornece limites de uso e taxa padrão em relação ao comportamento
 >* A maioria dos clientes não excede esses limites padrão. Se quiser saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.
 >* Os limites descritos neste documento estão sendo constantemente melhorados. Verifique regularmente se há atualizações.
 >* Dependendo das limitações individuais de downstream, alguns destinos podem ter medidas de proteção mais rigorosas do que as documentadas nesta página. Verifique também o [catálogo](/help/destinations/catalog/overview.md) página do destino ao qual você está conectando e ativando dados.
-
 
 ## Tipos de limite {#limit-types}
 
@@ -42,7 +41,7 @@ As medidas de proteção abaixo geralmente se aplicam à ativação por meio de 
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Número máximo de segmentos para um único destino | 250 | Suave | A recomendação é mapear um máximo de 250 segmentos para um único destino em um fluxo de dados. <br><br> Se você precisar ativar mais de 250 segmentos para um destino, é possível: <ul><li> Desmapeie os segmentos que você não deseja mais ativar ou</li><li>Crie um novo fluxo de dados para o destino desejado e mapeie os segmentos para esse novo fluxo de dados.</li></ul> <br> Observe que, no caso de alguns destinos, você pode estar limitado a menos de 250 segmentos mapeados para o destino. Esses destinos são chamados mais abaixo na página, em suas respectivas seções. |
+| Número máximo de públicos-alvo para um único destino | 250 | Suave | A recomendação é mapear um máximo de 250 públicos-alvo para um único destino em um fluxo de dados. <br><br> Se você precisar ativar mais de 250 públicos-alvo para um destino, é possível: <ul><li> Desmapeie os públicos-alvo que você não deseja mais ativar ou</li><li>Crie um novo fluxo de dados para o destino desejado e mapeie os públicos para esse novo fluxo de dados.</li></ul> <br> Observe que, no caso de alguns destinos, você pode estar limitado a menos de 250 públicos-alvo mapeados para o destino. Esses destinos são chamados mais abaixo na página, em suas respectivas seções. |
 | Número máximo de destinos | 100 | Suave | A recomendação é criar um máximo de 100 destinos aos quais você pode conectar e ativar dados *por sandbox*. [Destinos de personalização da borda (Personalização personalizada)](#edge-destinations-activation) O pode representar, no máximo, 10 dos 100 destinos recomendados. |
 | Número máximo de atributos mapeados para um destino | 50 | Suave | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados em um fluxo de dados para um destino. |
 | Tipo de dados ativados para destinos | Dados de perfil, incluindo identidades e mapa de identidade | Grave | Atualmente, só é possível exportar *atributos de registro de perfil* para destinos. No momento, não há suporte para atributos XDM que descrevem dados de evento para exportação. |
@@ -67,7 +66,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos e
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Frequência de ativação | Uma exportação completa diária ou exportações incrementais mais frequentes a cada 3, 6, 8 ou 12 horas. | Grave | Leia o [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) seções de documentação para obter mais informações sobre os incrementos de frequência para exportações em lote. |
-| Número máximo de segmentos que podem ser exportados em uma determinada hora | 100 | Suave | A recomendação é adicionar no máximo 100 segmentos aos fluxos de dados de destino em lote. |
+| Número máximo de públicos que podem ser exportados em uma determinada hora | 100 | Suave | A recomendação é adicionar no máximo 100 públicos-alvo aos fluxos de dados de destino em lote. |
 | Número máximo de linhas (registros) por arquivo a serem ativados | 5 milhões | Grave | O Adobe Experience Platform divide automaticamente os arquivos exportados em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil. Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obter mais informações, leia a [seção de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) do tutorial ativar destinos em lote. |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ As medidas de proteção a seguir [ativação ad-hoc](/help/destinations/api/ad-
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Segmentos ativados por trabalho de ativação ad-hoc | 80 | Grave | Atualmente, cada trabalho de ativação ad-hoc pode ativar até 80 segmentos. Tentar ativar mais de 80 segmentos por trabalho causará falha no trabalho. Esse comportamento está sujeito a alterações em versões futuras. |
-| Trabalhos de ativação ad-hoc simultâneos por segmento | 1 | Grave | Não execute mais de um trabalho de ativação ad-hoc simultâneo por segmento. |
+| Públicos ativados por trabalho de ativação ad-hoc | 80 | Grave | Atualmente, cada trabalho de ativação ad-hoc pode ativar até 80 públicos-alvo. Tentar ativar mais de 80 públicos-alvo por trabalho causará falha no trabalho. Esse comportamento está sujeito a alterações em versões futuras. |
+| Trabalhos de ativação ad-hoc simultâneos por público-alvo | 1 | Grave | Não execute mais de um trabalho de ativação ad-hoc simultâneo por público-alvo. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos d
 | --- | --- | --- | --- |
 | Número máximo de [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos | 10 | Suave | Você pode configurar fluxos de dados para 10 destinos de personalização personalizados por sandbox. |
 | Número máximo de atributos mapeados para um destino de personalização por sandbox | 30 | Grave | No máximo 30 atributos podem ser mapeados em um fluxo de dados para um destino de personalização, por sandbox. |
-| Número máximo de segmentos mapeados para um único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50 | Suave | É possível ativar no máximo 50 segmentos em um fluxo de ativação para um único destino do Adobe Target. |
+| Número máximo de públicos mapeados para um único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50 | Suave | É possível ativar no máximo 50 públicos-alvo em um fluxo de ativação para um único destino do Adobe Target. |
 
 {style="table-layout:auto"}
 

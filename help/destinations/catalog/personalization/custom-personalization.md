@@ -1,12 +1,12 @@
 ---
 keywords: personalização personalizada, destino, destino personalizado da experience platform,
 title: Conexão de personalização personalizada
-description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de segmento do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do segmento do perfil do usuário.
+description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 9%
+source-wordcount: '935'
+ht-degree: 7%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 9%
 >
 ><br>Se você já estiver usando o SDK da Web ou o SDK móvel para a integração, poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
 >
-><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação do segmento.
+><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo.
 
 ## Visão geral {#overview}
 
-Esse destino fornece uma maneira de recuperar informações de segmento do Adobe Experience Platform para plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados nos sites do cliente.
+Esse destino fornece uma maneira de recuperar informações de público-alvo do Adobe Experience Platform para plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados nos sites do cliente.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -41,19 +41,33 @@ Essa integração é viabilizada pelo [Adobe Experience Platform Web SDK](../../
 >
 >Antes de criar uma conexão de personalização personalizada, leia o guia sobre como [ativar dados do público-alvo para destinos de personalização de borda](../../ui/activate-edge-personalization-destinations.md). Este guia orienta você sobre as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página, em vários componentes do Experience Platform.
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os segmentos mapeados no destino de personalização personalizado para um único perfil. Diferentes destinos de personalização personalizados podem ser configurados para diferentes [Fluxos de dados de Coleção de dados do Adobe](../../../edge/datastreams/overview.md). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino de personalização personalizado para um único perfil. Diferentes destinos de personalização personalizados podem ser configurados para diferentes [Fluxos de dados de Coleção de dados do Adobe](../../../edge/datastreams/overview.md). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Conectar ao destino {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="Sobre IDs de sequência de dados"
->abstract="Essa opção determina em qual sequência de coleção de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
+>abstract="Essa opção determina em qual sequência de dados de coleta de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=br" text="Saiba como configurar uma sequência de dados"
 
 >[!IMPORTANT]
@@ -69,7 +83,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
 * **[!UICONTROL Descrição]**: digite uma descrição para o destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
 * **[!UICONTROL Alias de integração]**: esse valor é enviado para o SDK da Web do Experience Platform como um nome de objeto JSON.
-* **[!UICONTROL ID da sequência de dados]**: determina em qual sequência de dados de Coleção de dados os segmentos serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurar um fluxo de dados](../../../edge/datastreams/overview.md) para obter mais detalhes.
+* **[!UICONTROL ID da sequência de dados]**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurar um fluxo de dados](../../../edge/datastreams/overview.md) para obter mais detalhes.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -77,13 +91,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e destinos de personalização de borda de segmentos](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar destinos de personalização de borda de perfis e públicos](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Dados exportados {#exported-data}
 
@@ -111,7 +125,7 @@ Este é um exemplo de valor para a variável `event.destinations` Variável:
 
 Se você não estiver usando [Tags](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [tratamento de respostas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) funcionalidade para ver os dados exportados.
 
-A resposta JSON do Adobe Experience Platform pode ser analisada para encontrar o alias de integração correspondente do aplicativo que você está integrando com o Adobe Experience Platform. As IDs de segmento podem ser transmitidas no código do aplicativo como parâmetros de direcionamento. Abaixo está uma amostra do que isso pareceria específico para a resposta de destino.
+A resposta JSON do Adobe Experience Platform pode ser analisada para encontrar o alias de integração correspondente do aplicativo que você está integrando com o Adobe Experience Platform. As IDs de público-alvo podem ser passadas para o código do aplicativo como parâmetros de direcionamento. Abaixo está uma amostra do que isso pareceria específico para a resposta de destino.
 
 ```
 alloy("sendEvent", {
@@ -132,11 +146,11 @@ alloy("sendEvent", {
         // Get the destination with a particular alias
         var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
-             // Code to pass the segment IDs into the system that corresponds to personalizationAlias
+             // Code to pass the audience IDs into the system that corresponds to personalizationAlias
         }
         var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
-            // Code to pass the segment ids into the system that corresponds to adServerAlias
+            // Code to pass the audience IDs into the system that corresponds to adServerAlias
         }
      }
    })

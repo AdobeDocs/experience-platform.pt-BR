@@ -1,7 +1,7 @@
 ---
 description: Saiba como formatar as solicitações HTTP enviadas para seu endpoint. Use o endpoint /authoring/destination-servers para configurar as especificações dos modelos de servidor de destino no Adobe Experience Platform Destination SDK.
 title: Especificações de modelos para destinos criados com o Destination SDK
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 4%
@@ -46,7 +46,7 @@ Adobe usa uma linguagem de modelo semelhante a [Jinja](https://jinja.palletsproj
 Para obter mais informações sobre a transformação, visite os links abaixo:
 
 * [Formato de mensagem](message-format.md)
-* [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento ](message-format.md#using-templating)
+* [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público](message-format.md#using-templating)
 
 >[!TIP]
 >

@@ -1,9 +1,9 @@
 ---
 description: Esta página exemplifica a chamada à API usada para criar um modelo de público-alvo por meio do Adobe Experience Platform Destination SDK.
 title: Criar um modelo de público-alvo
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '624'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >**Ponto de acesso da API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Para alguns destinos criados usando o Destination SDK, é necessário criar uma configuração de metadados de público-alvo para criar, atualizar ou excluir programaticamente metadados de segmento no destino. Esta página mostra como usar a variável `/authoring/audience-templates` Endpoint da API para criar a configuração.
+Para alguns destinos criados usando o Destination SDK, é necessário criar uma configuração de metadados de público-alvo para criar, atualizar ou excluir programaticamente metadados de público-alvo no destino. Esta página mostra como usar a variável `/authoring/audience-templates` Endpoint da API para criar a configuração.
 
 Para obter uma descrição detalhada dos recursos que você pode configurar por meio desse endpoint, consulte [gerenciamento de metadados de público](../functionality/audience-metadata-management.md).
 
@@ -190,14 +190,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Propriedade | Tipo | Descrição |
 | -------- | ----------- | ----------- |
 | `name` | String | O nome do modelo de metadados de público-alvo para o seu destino. Esse nome aparecerá em qualquer mensagem de erro específica do parceiro na interface do usuário do Experience Platform, seguida pela mensagem de erro analisada em `metadataTemplate.create.errorSchemaMap`. |
-| `url` | String | O URL e o endpoint da API, usados para criar, atualizar, excluir ou validar públicos-alvo/segmentos na plataforma. Dois exemplos de setor são: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | String | O método usado no endpoint para criar, atualizar, excluir ou validar programaticamente o segmento/público-alvo no destino. Por exemplo: `POST`, `PUT`, `DELETE` |
+| `url` | String | O URL e o endpoint da API, usados para criar, atualizar, excluir ou validar públicos-alvo na sua plataforma. Dois exemplos de setor são: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | String | O método usado no endpoint para criar, atualizar, excluir ou validar de forma programática o público-alvo no destino. Por exemplo: `POST`, `PUT`, `DELETE` |
 | `headers.header` | String | Especifica os cabeçalhos HTTP que devem ser adicionados à chamada para a API. Por exemplo, `"Content-Type"` |
 | `headers.value` | String | Especifica o valor de cabeçalhos HTTP que devem ser adicionados à chamada para a API. Por exemplo, `"application/x-www-form-urlencoded"` |
 | `requestBody` | String | Especifica o conteúdo do corpo da mensagem que deve ser enviado para a API. Os parâmetros que devem ser adicionados ao `requestBody` objetos dependem de quais campos sua API aceita. Para obter um exemplo, consulte as [primeiro exemplo de modelo](../functionality/audience-metadata-management.md#example-1) no documento Funcionalidade de metadados de público-alvo. |
 | `responseFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte as [exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento Funcionalidade de metadados de público-alvo. |
 | `responseFields.value` | String | Especifique o valor de quaisquer campos de resposta que sua API retorna quando chamada. |
-| `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte as [ exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento Funcionalidade de metadados de público-alvo. |
+| `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para obter um exemplo, consulte as [exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento Funcionalidade de metadados de público-alvo. |
 | `responseErrorFields.value` | String | Analisa todas as mensagens de erro retornadas nas respostas de chamada da API do seu destino. Essas mensagens de erro serão exibidas para os usuários na interface do usuário do Experience Platform. |
 | `validations.field` | String | Indica se as validações devem ser executadas para qualquer campo antes que as chamadas de API sejam feitas ao destino. Por exemplo, você pode usar `{{validations.accountId}}` para validar a ID da conta do usuário. |
 | `validations.regex` | String | Indica como o campo deve ser estruturado para que a validação seja aprovada. |

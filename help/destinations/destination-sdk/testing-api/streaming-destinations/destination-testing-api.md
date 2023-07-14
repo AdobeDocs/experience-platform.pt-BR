@@ -2,7 +2,7 @@
 description: Saiba como usar a API de teste de destino para testar se o destino de transmissão está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Teste seu destino de streaming com perfis de amostra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 2%
@@ -26,10 +26,9 @@ Você pode usar o [Amostra da API de geração de perfil](sample-profile-generat
 
 >[!IMPORTANT]
 >
->* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Ler [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [ativar perfis e segmentos para um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obter mais informações.
+>* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Ler [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [ativar perfis e públicos para um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obter mais informações.
 > * Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar nas chamadas de API para esse endpoint quando [procurar uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![Imagem da interface do usuário sobre como obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
-
+>![Imagem da interface do usuário sobre como obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introdução às operações de API de teste de destino {#get-started}
 

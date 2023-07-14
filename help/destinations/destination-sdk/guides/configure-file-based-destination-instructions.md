@@ -2,7 +2,7 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 1%
@@ -384,10 +384,10 @@ Dependendo de você especificar ou não `"authenticationRule": "CUSTOMER_AUTHENT
 
 Depois de definir seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar o [ferramenta de teste de destino](../testing-api/batch-destinations/file-based-destination-testing-overview.md) para testar a integração entre o Adobe Experience Platform e o seu destino.
 
-Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar segmentos no Experience Platform:
+Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
-* [Criar uma página de documentação de segmento](/help/segmentation/ui/overview.md#create-segment)
-* [Criar uma apresentação de vídeo de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Criar uma página de documentação de público-alvo](/help/segmentation/ui/overview.md#create-segment)
+* [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Etapa 6: publicar seu destino {#publish-destination}
 

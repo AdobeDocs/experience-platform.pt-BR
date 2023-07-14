@@ -1,26 +1,25 @@
 ---
 title: (Beta) Públicos-Alvo Do Experience Cloud
-description: Saiba como compartilhar segmentos do Experience Platform para várias soluções de Experience Platform.
+description: Saiba como compartilhar públicos do Experience Platform com várias soluções de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1631'
 ht-degree: 2%
 
 ---
 
 # (Beta) [!UICONTROL Públicos do Experience Cloud] conexão
 
-Esse destino permite compartilhar segmentos do Experience Platform com várias soluções de Experience Cloud, como Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target ou Marketo.
+Esse destino permite compartilhar públicos-alvo do Experience Platform com várias soluções de Experience Cloud, como Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target ou Marketo.
 
 ![O destino do Experience Cloud Audiences, destacado no catálogo de destinos.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
 >[!IMPORTANT]
 >
->* Esse destino substitui o [integração de compartilhamento de segmento herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) de Experience Platform para várias soluções de Experience Cloud.
+>* Esse destino substitui o [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) de Experience Platform para várias soluções de Experience Cloud.
 >* Este destino está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
 
 ## Casos de uso e benefícios {#use-cases}
 
@@ -28,21 +27,21 @@ Para ajudá-lo a entender melhor como e quando você deve usar o [!UICONTROL Pú
 
 ### Habilitar casos de uso da Plataforma de Gerenciamento de Dados {#dmp-use-cases}
 
-No Audience Manager, você pode usar segmentos de Experience Platform para casos de uso da Plataforma de gerenciamento de dados, como:
+No Audience Manager, você pode usar públicos-alvo do Experience Platform para casos de uso da Plataforma de gerenciamento de dados, como:
 
 * Adicionar [dados de terceiros](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) aos seus segmentos;
 * [Modelagem algorítmica](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
-* Ative seus segmentos para destinos baseados em cookies que ainda não são compatíveis com o catálogo de destinos Experience Platform.
+* Ative seus públicos para destinos baseados em cookies que ainda não são compatíveis com o catálogo de destinos Experience Platform.
 
-### Controle granular de segmentos exportados {#segments-control}
+### Controle granular de públicos exportados {#segments-control}
 
-Use a nova integração de compartilhamento de segmento de autoatendimento por meio do destino Experience Cloud Audiences para selecionar quais segmentos serão exportados para Audience Manager e além. Isso permite determinar quais segmentos você deseja compartilhar com outras soluções de Experience Cloud e quais segmentos você deseja manter exclusivamente no Experience Platform.
+Use a nova integração de compartilhamento de público-alvo de autoatendimento por meio do destino Experience Cloud Audiences para selecionar quais públicos-alvo serão exportados para Audience Manager e além. Isso permite determinar quais públicos-alvo você deseja compartilhar com outras soluções Experience Cloud e quais públicos-alvo você deseja manter exclusivamente no Experience Platform.
 
-A integração de compartilhamento de segmento herdado não permitiu um controle granular de quais segmentos devem ser exportados para Audience Manager e além.
+A integração de compartilhamento de público-alvo herdada não permitiu um controle granular de quais públicos-alvo devem ser exportados para Audience Manager e além.
 
-### Compartilhar segmentos de Experience Platform com outras soluções de Experience Cloud {#share-segments-with-other-solutions}
+### Compartilhar públicos-alvo do Experience Platform com outras soluções de Experience Cloud {#share-segments-with-other-solutions}
 
-Além de compartilhar segmentos com o Audience Manager, o cartão de destino do Experience Platform Audiences permite compartilhar segmentos com qualquer outra solução Experience Cloud provisionada para você, incluindo:
+Além de compartilhar públicos-alvo com o Audience Manager, o cartão de destino do Experience Platform Audiences permite compartilhar públicos-alvo com qualquer outra solução Experience Cloud que você tenha provisionado para, incluindo:
 
 * Adobe Campaign
 * Adobe Target
@@ -52,7 +51,7 @@ Além de compartilhar segmentos com o Audience Manager, o cartão de destino do 
 
 <!--
 
-Note: briefly talk about when to share segments to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
+Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
 
 -->
 
@@ -62,18 +61,17 @@ Note: briefly talk about when to share segments to these destinations using the 
 >
 > * Este destino está disponível para [Adobe Real-time Customer Data Platform Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
 > * Você precisa de uma licença de Audience Manager para ativar o [Casos de uso da Plataforma de gerenciamento de dados](#dmp-use-cases) acima referidos.
-> * Você *não precisam* uma licença de Audience Manager para compartilhar segmentos de Experience Platform com Adobe Advertising Cloud, Adobe Target, Marketo e outras soluções de Experience Cloud, mencionadas na [seção acima](#share-segments-with-other-solutions).
+> * Você *não precisam* uma licença de Audience Manager para compartilhar públicos-alvo do Experience Platform com a Adobe Advertising Cloud, Adobe Target, Marketo e outras soluções de Experience Cloud, mencionadas na [seção acima](#share-segments-with-other-solutions).
 
+### Para clientes que estão usando a solução de compartilhamento de público-alvo herdada
 
-### Para clientes que estão usando a solução de compartilhamento de segmentos herdada
-
-Se você já estiver compartilhando segmentos de Experience Platform para Audience Manager e outras soluções de Experience Cloud através da [integração de compartilhamento de segmento herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), entre em contato com o Atendimento ao cliente ou com a equipe de conta do Adobe para desativar a integração herdada. As equipes de atendimento ao cliente e de conta Adobe devem registrar um ticket Jira (consulte ticket de modelo AAM-52354) para desativar a integração.
+Se você já estiver compartilhando públicos-alvo do Experience Platform para o Audience Manager e outras soluções de Experience Cloud pelo [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), entre em contato com o Atendimento ao cliente ou com a equipe de conta do Adobe para desativar a integração herdada. As equipes de atendimento ao cliente e de conta Adobe devem registrar um ticket Jira (consulte ticket de modelo AAM-52354) para desativar a integração.
 
 O tempo de resposta para resolver o tíquete de desprovisionamento para clientes beta é de seis dias úteis ou menos. Depois que a integração herdada existente for desativada, você poderá prosseguir para [criação de uma conexão](#connect) por meio do cartão de destino de autoatendimento.
 
 >[!IMPORTANT]
 >
->A exportação de segmentos do Experience Platform para outras soluções será interrompida no tempo entre a resolução do tíquete Jira e o momento em que uma nova conexão é estabelecida por meio do cartão de destino. Você pode minimizar esse tempo de inatividade criando a conexão através do cartão de destino assim que o tíquete Jira for fechado.
+>A exportação de público do Experience Platform para outras soluções será interrompida no tempo entre a resolução do tíquete Jira e o momento em que uma nova conexão é estabelecida por meio do cartão de destino. Você pode minimizar esse tempo de inatividade criando a conexão através do cartão de destino assim que o tíquete Jira for fechado.
 
 ## Limitações e chamadas de retorno conhecidas {#known-limitations}
 
@@ -81,7 +79,7 @@ Observe as seguintes limitações conhecidas e chamadas importantes na versão b
 
 * [Monitoramento de fluxos de dados](/help/dataflows/ui/monitor-destinations.md) não é compatível.
 * Ao se conectar ao destino, você pode ver uma opção para [ativar alertas de fluxo de dados](#enable-alerts). Embora visível na interface do usuário, a variável **a opção ativar alertas não é suportada** na versão beta.
-* **Preenchimentos retroativos não são suportados**. A primeira exportação para Audience Manager ou outras soluções de Experience Cloud não inclui uma população histórica dos segmentos.
+* **Preenchimentos retroativos não são suportados**. A primeira exportação para Audience Manager ou outras soluções de Experience Cloud não inclui uma população histórica dos públicos-alvo.
 * Na versão beta, é possível criar **uma única conexão de destino com o destino do Experience Cloud Audiences**, em todas as sandboxes pertencentes à sua organização do Experience Platform.
 
 ### Latência ao ativar públicos {#audience-activation-latency}
@@ -90,7 +88,7 @@ Há uma latência de quatro horas entre o momento em que os públicos-alvo são 
 
 Pode levar até 24 horas para que os públicos-alvo estejam totalmente disponíveis em Audience Manager para todos os casos de uso e até 48 horas para que os públicos-alvo dos públicos-alvo de Experience Cloud apareçam nos relatórios de Audience Manager.
 
-Os metadados, como nomes de segmentos, estão disponíveis no Audience Manager em minutos após a configuração da exportação para o destino do Experience Cloud Audiences.
+Os metadados, como nomes de público-alvo, estão disponíveis no Audience Manager em minutos após a configuração da exportação para o destino do Experience Cloud Audiences.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -105,14 +103,28 @@ Os perfis exportados para o [!UICONTROL Públicos do Experience Cloud] destino s
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 |---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com as identidades listadas na seção acima. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com as identidades listadas na seção acima. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -155,33 +167,33 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino. Observe que nenhuma [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) é obrigatório e não [etapa de agendamento](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) O está disponível para este destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino. Observe que nenhuma [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) é obrigatório e não [etapa de agendamento](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) O está disponível para este destino.
 
 ## Validar exportação de dados {#exported-data}
 
-Para validar uma exportação de dados bem-sucedida, você pode verificar se os segmentos conseguiram chegar à solução de Experience Cloud desejada.
+Para validar uma exportação de dados bem-sucedida, você pode verificar se os públicos-alvo conseguiram chegar à solução de Experience Cloud desejada.
 
 ### Validar dados no Audience Manager
 
-Seus segmentos de Experience Platform aparecem no Audience Manager como [sinais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [características](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), e [segmentos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Você pode verificar no Audience Manager se os dados foram exibidos conforme descrito nos links de documentação acima.
+Os públicos-alvo do Experience Platform aparecem no Audience Manager como [sinais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [características](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), e [segmentos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Você pode verificar no Audience Manager se os dados foram exibidos conforme descrito nos links de documentação acima.
 
 ## Uso e governança de dados {#data-usage-governance}
 
 Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia o [Visão geral da governança de dados](/help/data-governance/home.md).
 
 A governança de dados no Experience Platform é aplicada por ambos [rótulos de uso de dados](/help/data-governance/labels/reference.md) e de marketing.
-Os rótulos de uso de dados serão transferidos para os aplicativos, mas as ações de marketing não. Isso significa que uma vez aterrissados na Audience Manager, os segmentos da Experience Platform podem ser exportados para qualquer destino disponível. No Audience Manager, é possível usar [controles de exportação de dados](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) para bloquear segmentos de exportação para determinados destinos.
+Os rótulos de uso de dados serão transferidos para os aplicativos, mas as ações de marketing não. Isso significa que uma vez direcionados ao Audience Manager, os públicos-alvo do Experience Platform podem ser exportados para qualquer destino disponível. No Audience Manager, é possível usar [controles de exportação de dados](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) para bloquear a exportação de públicos para determinados destinos.
 
 ### Gerenciamento de permissões no Audience Manager
 
-Segmentos e características no Audience Manager estão sujeitos a [Controles de acesso com base em função](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=pt-BR) (RBAC).
+Os públicos-alvo e características no Audience Manager estão sujeitos a [Controles de acesso com base em função](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=pt-BR) (RBAC).
 
-Segmentos exportados do Experience Platform são atribuídos a uma fonte de dados específica no Audience Manager, chamada **[!UICONTROL Segmentos Experience Platform]**.
+Os públicos exportados do Experience Platform são atribuídos a uma fonte de dados específica no Audience Manager, chamada **[!UICONTROL Segmentos Experience Platform]**.
 
-Para permitir que apenas determinados usuários acessem os segmentos, você pode aplicar controles de acesso aos segmentos pertencentes à origem de dados. Você deve definir novas permissões de controle de acesso no Audience Manager para esses segmentos e características criadas a partir de segmentos Experience Platform.
+Para permitir que apenas determinados usuários acessem os públicos-alvo, você pode aplicar controles de acesso aos públicos-alvo pertencentes à fonte de dados. Você deve definir novas permissões de controle de acesso no Audience Manager para esses públicos-alvo e características criadas a partir de segmentos de Experience Platform.

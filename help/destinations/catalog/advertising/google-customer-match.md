@@ -3,9 +3,9 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Para ajudá-lo a entender melhor como e quando usar o [!DNL Google Customer Matc
 
 ### Caso de uso #1
 
-Uma marca de vestuário esportivo deseja alcançar clientes existentes por meio de [!DNL Google Search] e [!DNL Google Shopping] para personalizar ofertas e itens com base em suas compras anteriores e histórico de navegação. A marca Apparel pode assimilar endereços de email de seu próprio CRM para o Experience Platform e criar segmentos a partir de seus próprios dados offline. Em seguida, eles podem enviar esses segmentos para [!DNL Google Customer Match] para ser usado em [!DNL Search] e [!DNL Shopping], otimizando seus gastos com publicidade.
+Uma marca de vestuário esportivo deseja alcançar clientes existentes por meio de [!DNL Google Search] e [!DNL Google Shopping] para personalizar ofertas e itens com base em suas compras anteriores e histórico de navegação. A marca apparel pode assimilar endereços de email de seu próprio CRM para o Experience Platform e criar públicos-alvo a partir de seus próprios dados offline. Em seguida, eles podem enviar esses públicos-alvo para [!DNL Google Customer Match] para ser usado em [!DNL Search] e [!DNL Shopping], otimizando seus gastos com publicidade.
 
 ### Caso de uso #2
 
 Uma proeminente empresa de tecnologia lançou um novo telefone. Para promover esse novo modelo de telefone, eles estão procurando conscientizar os clientes sobre os novos recursos e funcionalidades do telefone para os clientes que possuem modelos anteriores de seus telefones.
 
-Para promover a versão, eles carregam endereços de email do banco de dados do CRM no Experience Platform, usando os endereços de email como identificadores. Os segmentos são criados com base nos clientes que possuem modelos de telefone mais antigos. Em seguida, os segmentos são enviados para [!DNL Google Customer Match], para que a empresa possa direcionar os clientes atuais, os clientes que possuem modelos de telefone mais antigos e clientes semelhantes no [!DNL YouTube].
+Para promover a versão, eles carregam endereços de email do banco de dados do CRM no Experience Platform, usando os endereços de email como identificadores. Os públicos-alvo são criados com base nos clientes que possuem modelos de telefone mais antigos. Depois, os públicos-alvo são enviados para o [!DNL Google Customer Match], para que a empresa possa direcionar os clientes atuais, os clientes que possuem modelos de telefone mais antigos e clientes semelhantes no [!DNL YouTube].
 
 ## Governança de dados para [!DNL Google Customer Match] destinos {#data-governance}
 
@@ -50,14 +50,28 @@ Alguns destinos no Experience Platform têm determinadas regras e obrigações p
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone e outros) usados no [!DNL Google Customer Match] destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone e outros) usados no [!DNL Google Customer Match] destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 >
 > * A variável **[!UICONTROL Combinar com PII]** a ação de marketing é selecionada por padrão para o [!DNL Google Customer Match] destino e não podem ser removidos.
 
-
 ### Ativar alertas {#enable-alerts}
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-No **[!UICONTROL Programação de segmento]** etapa, você deve fornecer a [!UICONTROL ID do aplicativo] ao enviar [!DNL IDFA] ou [!DNL GAID] segmentos para [!DNL Google Customer Match].
+No **[!UICONTROL Programação de segmento]** etapa, você deve fornecer a [!UICONTROL ID do aplicativo] ao enviar [!DNL IDFA] ou [!DNL GAID] públicos-alvo para [!DNL Google Customer Match].
 
 ![ID do aplicativo de correspondência do cliente da Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ Os dados de origem do atributo não são automaticamente transformados em hash. 
 
 ![Transformação de mapeamento de identidade](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## Verificar se a ativação do segmento foi bem-sucedida {#verify-activation}
+## Verificar se a ativação do público-alvo foi bem-sucedida {#verify-activation}
 
-Após concluir o fluxo de ativação, alterne para o **[!UICONTROL Anúncios do Google]** conta. Os segmentos ativados são mostrados na sua conta do Google como listas de clientes. Observe que, dependendo do tamanho do segmento, alguns públicos-alvo não são preenchidos, a menos que haja mais de 100 usuários ativos para atender.
+Após concluir o fluxo de ativação, alterne para o **[!UICONTROL Anúncios do Google]** conta. Os públicos ativados são mostrados na sua conta do Google como listas de clientes. Observe que, dependendo do tamanho do público, alguns públicos-alvo não são preenchidos, a menos que haja mais de 100 usuários ativos para atender.
 
-Ao mapear um segmento para ambos [!DNL IDFA] e [!DNL GAID] IDs móveis, [!DNL Google Customer Match] O cria um segmento separado para cada mapeamento de ID. Seu [!DNL Google Ads] mostra dois segmentos diferentes, um para o [!DNL IDFA], e um para o [!DNL GAID] mapeamento.
+Ao mapear um público-alvo para ambos [!DNL IDFA] e [!DNL GAID] IDs móveis, [!DNL Google Customer Match] O cria um público-alvo separado para cada mapeamento de ID. Seu [!DNL Google Ads] mostra dois segmentos diferentes, um para o [!DNL IDFA], e um para o [!DNL GAID] mapeamento.
 
 ## Solução de problemas {#troubleshooting}
 

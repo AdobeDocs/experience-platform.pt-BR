@@ -3,10 +3,10 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2c3a70df57af2045f03c8d4a22cdc33f3c449fb3
+source-git-commit: 387d47fd073456d73fc6aafd58d382398ff2c235
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 17%
+source-wordcount: '1118'
+ht-degree: 15%
 
 ---
 
@@ -58,8 +58,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os segmentos mapeados no destino do Adobe Target para um único perfil. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino do Adobe Target para um único perfil. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Sobre IDs de sequência de dados"
->abstract="Essa opção determina em qual sequência de dados de coleção de dados os segmentos serão incluídos. O menu suspenso mostra apenas as sequências de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de sequência de dados. Selecionar Nenhum desabilita todos os casos de uso que usam segmentação de borda."
+>abstract="Essa opção determina em qual sequência de dados de coleta de dados os públicos-alvo serão incluídos. O menu suspenso mostra apenas as sequências de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de sequência de dados. Selecionar Nenhum desabilita todos os casos de uso que usam segmentação de borda."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de sequências de dados"
 
 >[!IMPORTANT]
@@ -91,12 +91,12 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 
 * **Nome**: Preencha o nome preferencial para este destino.
 * **Descrição**: digite uma descrição para o destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **ID da sequência de dados**: determina em qual sequência de dados de Coleção de dados os segmentos serão incluídos. O menu suspenso mostra somente os fluxos de dados que têm os serviços Target e Adobe Experience Platform ativados. Consulte [configurar um fluxo de dados](../../../edge/datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar um fluxo de dados para o Adobe Experience Platform e o Adobe Target.
-   * **[!UICONTROL Nenhum]**: selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os segmentos exportados do Experience Platform para o Target suportam apenas a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela abaixo para obter mais informações.
+* **ID da sequência de dados**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos. O menu suspenso mostra somente os fluxos de dados que têm os serviços Target e Adobe Experience Platform ativados. Consulte [configurar um fluxo de dados](../../../edge/datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar um fluxo de dados para o Adobe Experience Platform e o Adobe Target.
+   * **[!UICONTROL Nenhum]**: selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os públicos-alvo exportados do Experience Platform para o Target serão compatíveis apenas com a personalização da próxima sessão e a segmentação de borda será desativada. Consulte a tabela abaixo para obter mais informações.
 
   | Nenhum fluxo de dados selecionado | Sequência de dados selecionada |
   |---|---|
-  | <ul><li>[Segmentação de borda](../../../segmentation/ui/edge-segmentation.md) não é compatível.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md) não são compatíveis.</li><li>Você pode compartilhar segmentos com a conexão do Adobe Target somente para o *sandbox de produção padrão*.</li><li>Para configurar a personalização da próxima sessão sem usar uma ID de fluxo de dados, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>A segmentação de borda funciona conforme esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md) são compatíveis.</li><li>O compartilhamento de segmentos é compatível com outras sandboxes.</li></ul> |
+  | <ul><li>[Segmentação de borda](../../../segmentation/ui/edge-segmentation.md) não é compatível.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md) não são compatíveis.</li><li>Você pode compartilhar públicos-alvo com a conexão do Adobe Target somente para o *sandbox de produção padrão*.</li><li>Para configurar a personalização da próxima sessão sem usar uma ID de fluxo de dados, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>A segmentação de borda funciona conforme esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md) são compatíveis.</li><li>O compartilhamento de público-alvo é compatível com outras sandboxes.</li></ul> |
 
 * **Workspace**: selecione a Adobe Target [espaço de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR) para os quais os públicos-alvo serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão do Adobe Target. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado enquanto seguem o caminho [rótulos de uso de dados do Experience Platform](../../../data-governance/labels/overview.md).
 
@@ -112,13 +112,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de solicitação de perfil](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar públicos para destinos de personalização de borda](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Dados exportados {#exported-data}
 

@@ -3,9 +3,9 @@ title: Conector do perfil Pega
 description: Use o Conector de perfil Pega para Amazon S3 no Adobe Experience Platform para exportar dados de perfil completos ou incrementais, ou ambos, para o armazenamento em nuvem do Amazon S3. No Pega Customer Decision Hub, os trabalhos de dados podem ser agendados no Customer Profile Designer para importar dados do perfil periodicamente do armazenamento do Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e sele
 
 >[!TIP]
 >
->No workflow de destino da conexão, é possível criar uma pasta personalizada no armazenamento do Amazon S3 por arquivo de segmento exportado. Ler [Usar macros para criar uma pasta no local de armazenamento](/help/destinations/catalog/cloud-storage/overview.md#use-macros) para obter instruções.
+>No workflow de destino de conexão, é possível criar uma pasta personalizada no armazenamento Amazon S3 por arquivo de público exportado. Ler [Usar macros para criar uma pasta no local de armazenamento](/help/destinations/catalog/cloud-storage/overview.md#use-macros) para obter instruções.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -102,13 +102,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Mapear atributos e identidades {#map}
 
@@ -116,7 +116,7 @@ No **[!UICONTROL Mapeamento]** etapa, você pode selecionar quais campos de atri
 
 ## Validar exportação de dados {#exported-data}
 
-Para [!DNL Pega Profile Connector] destinos, [!DNL Platform] cria um `.csv` arquivo no local de armazenamento do Amazon S3 fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de segmentos.
+Para [!DNL Pega Profile Connector] destinos, [!DNL Platform] cria um `.csv` arquivo no local de armazenamento do Amazon S3 fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de público-alvo.
 
 Uma importação bem-sucedida de dados de perfil do S3 insere dados no [!DNL Pega Customer] armazenamento de dados do perfil. Os dados importados do perfil do cliente podem ser validados no [!DNL Pega Customer Profile Designer] , conforme mostrado na figura a seguir.
 ![Imagem da tela da interface do usuário na qual você pode validar os dados de perfil do Adobe no Designer de perfil do cliente](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

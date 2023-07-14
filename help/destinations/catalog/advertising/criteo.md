@@ -3,9 +3,9 @@ keywords: publicidade, critério,
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais ricas para cada consumidor através da internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1005'
 ht-degree: 3%
 
 ---
@@ -48,8 +48,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 | --- | --- | --- |
-| Tipo de exportação | Exportar segmento | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no [!DNL Criteo] destino. |
-| Frequência de exportação | Streaming | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](../../destination-types.md#streaming-destinations). |
+| Tipo de exportação | Exportação de público | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no [!DNL Criteo] destino. |
+| Frequência de exportação | Streaming | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](../../destination-types.md#streaming-destinations). |
 
 ## Casos de uso {#use-cases}
 
@@ -61,7 +61,7 @@ Mostre sua empresa com ofertas de produtos relevantes e criações flexíveis. C
 
 ### Caso de uso 2: aumentar as conversões de site
 
-Quando os visitantes saírem do site, lembre-os do que estão perdendo com anúncios de redirecionamento que aumentam as conversões ao mostrar ofertas especiais e ofertas hiper-relevantes, onde quer que estejam. Conecte seu segmento de CDP do Adobe para reengajar clientes existentes ou direcionar consumidores semelhantes aos seus compradores mais fiéis.
+Quando os visitantes saírem do site, lembre-os do que estão perdendo com anúncios de redirecionamento que aumentam as conversões ao mostrar ofertas especiais e ofertas hiper-relevantes, onde quer que estejam. Conecte seu público-alvo da CDP do Adobe para reengajar clientes existentes ou direcionar consumidores semelhantes aos seus compradores mais fiéis.
 
 ## Conectar-se ao critério {#connect}
 
@@ -107,17 +107,17 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate-segments}
+## Ativar públicos para este destino {#activate-segments}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Dados exportados {#exported-data}
 
-Você pode ver os segmentos exportados na [Centro de gerenciamento de critérios](https://marketing.criteo.com/audience-manager/dashboard).
+Você pode ver os públicos-alvo exportados na [Centro de gerenciamento de critérios](https://marketing.criteo.com/audience-manager/dashboard).
 
 O corpo da solicitação de adição de um perfil de usuário recebido pelo [!DNL Criteo] A conexão do é semelhante a esta:
 

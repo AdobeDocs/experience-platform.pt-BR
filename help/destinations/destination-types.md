@@ -3,7 +3,7 @@ keywords: destinos;destino;destinos tipos;destinations;destination;destination t
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Por fim, as conexões também podem ser diferenciadas entre destinos públicos d
 
 ## Conexões {#connections}
 
-**[!UICONTROL Exportação de perfil]**, **[!UICONTROL Exportação do segmento de transmissão]**, e **[!DNL Edge Personalization]** destinos na Adobe Experience Platform capturam dados do evento, combinam-nos com outras fontes de dados para formar a [Perfil do cliente em tempo real](../profile/home.md), aplique a segmentação e exporte segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportação de perfil]**, **[!UICONTROL Exportação de público-alvo de streaming]**, e **[!DNL Edge Personalization]** destinos na Adobe Experience Platform capturam dados do evento, combinam-nos com outras fontes de dados para formar a [Perfil do cliente em tempo real](../profile/home.md), aplique a segmentação e exporte públicos-alvo e perfis qualificados para destinos.
 
 ## Destinos de exportação de perfil {#profile-export}
 
@@ -41,7 +41,7 @@ Os destinos de exportação de perfil recebem dados brutos, geralmente com o end
 
 Use os conectores de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
 
-Esses destinos recebem dados de segmento e perfil como fluxos de dados de Experience Platform.
+Esses destinos recebem dados de público-alvo e perfil como fluxos de dados de Experience Platform.
 
 Os destinos empresariais incluem:
 
@@ -53,9 +53,9 @@ Os destinos empresariais incluem:
 
 Os destinos baseados em arquivo recebem `.csv` arquivos contendo perfis e/ou atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) O é um exemplo de destino em que você pode exportar arquivos contendo exportações de perfil.
 
-## Destinos de exportação de segmento de transmissão {#streaming-destinations}
+## Destinos de exportação de público para transmissão {#streaming-destinations}
 
-Os destinos de exportação de segmento recebem dados de segmento de Experience Platform. Esses destinos usam IDs de segmento ou IDs de usuário. Destinos publicitários e sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
+Os destinos de exportação de público-alvo recebem dados de público-alvo de Experience Platform. Esses destinos usam IDs de público-alvo ou IDs de usuário. Destinos publicitários e sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
 
 ## Destinos de personalização da borda {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ Os destinos de personalização de borda no Experience Platform incluem [Adobe T
 
 Leia mais sobre como [configurar destinos de personalização para personalização de mesma página e próxima página](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## Destinos de exportação de perfis e de segmentos - visão geral do vídeo {#video}
+## Destinos de exportação de perfil e de público-alvo - visão geral do vídeo {#video}
 
 O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
@@ -91,7 +91,7 @@ As extensões de tag encaminham dados de evento brutos para vários tipos de des
 
 Como profissional de marketing, você pode usar uma combinação de conexões e extensões para lidar com seus casos de uso.
 
-As conexões são úteis quando é necessário aproveitar um perfil de cliente centralizado completo ou um segmento de cliente para ativação. Por exemplo, use conexões se estiver unindo dados comportamentais de um sistema de análise com dados de CRM carregados para qualificar um usuário para um determinado segmento antes de enviar uma mensagem personalizada para esse usuário.
+As conexões são úteis quando é necessário aproveitar um perfil de cliente centralizado completo ou um público-alvo de cliente para ativação. Por exemplo, use conexões se estiver unindo dados comportamentais de um sistema de análise com dados de CRM carregados para qualificar um usuário para um determinado público-alvo antes de enviar uma mensagem personalizada para esse usuário.
 
 As extensões são úteis quando os dados do evento são usados para acionar uma ação ou conduzir a segmentação em um ambiente externo. Por exemplo, se os dados comportamentais precisarem ser encaminhados a um sistema externo sem serem unidos a outras fontes de dados no arquivo para um determinado usuário.
 

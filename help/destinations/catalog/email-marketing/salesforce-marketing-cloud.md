@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;email targets;salesforce;salesforce destination
 title: Conexão do Marketing Cloud do Salesforce
 description: O Salesforce Marketing Cloud é uma suíte de marketing digital, anteriormente conhecida como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '803'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,21 @@ ht-degree: 2%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) O é uma suíte de marketing digital, anteriormente conhecida como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes personalizarem suas experiências.
 
-Para enviar dados de segmento para o [!DNL Salesforce Marketing Cloud], você deve primeiro [conectar o destino](#connect-destination) no Platform e, em seguida, [configurar uma importação de dados](#import-data-into-salesforce) do local de armazenamento para [!DNL Salesforce Marketing Cloud].
+Para enviar dados do público-alvo para [!DNL Salesforce Marketing Cloud], você deve primeiro [conectar o destino](#connect-destination) no Platform e, em seguida, [configurar uma importação de dados](#import-data-into-salesforce) do local de armazenamento para [!DNL Salesforce Marketing Cloud].
+
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -83,21 +97,21 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Atributos de destino {#destination-attributes}
 
-Ao ativar segmentos para esse destino, o Adobe recomenda selecionar um identificador exclusivo do [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [práticas recomendadas ao ativar públicos para destinos de marketing por email](overview.md#best-practices).
+Ao ativar públicos para esse destino, o Adobe recomenda selecionar um identificador exclusivo dentre os [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [práticas recomendadas ao ativar públicos para destinos de marketing por email](overview.md#best-practices).
 
 ## Dados exportados {#exported-data}
 
-Para [!DNL Salesforce Marketing Cloud] destinos, a Platform cria uma `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [verificar ativação de segmento](../../ui/activate-batch-profile-destinations.md#verify) no tutorial de ativação de segmentos.
+Para [!DNL Salesforce Marketing Cloud] destinos, a Platform cria uma `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [verificar ativação de público](../../ui/activate-batch-profile-destinations.md#verify) no tutorial de ativação de público-alvo.
 
 ## Configurar importação de dados para o [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 

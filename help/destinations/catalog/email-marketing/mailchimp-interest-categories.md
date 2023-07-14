@@ -2,9 +2,9 @@
 title: Categorias de interesse do Mailchimp
 description: O Mailchimp (também conhecido como Intuit Mailchimp) é uma plataforma de automação de marketing popular e um serviço de marketing por email usado pelas empresas para gerenciar e conversar com contatos (clientes, clientes ou outras partes interessadas) usando listas de endereçamento e campanhas de marketing por email. Use esse conector para classificar seus contatos com base em seus interesses e preferências.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2357'
+source-wordcount: '2356'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 [[!DNL Mailchimp]](https://mailchimp.com) é uma plataforma de automação de marketing popular e um serviço de marketing por email usado pelas empresas para gerenciar e conversar com contatos *(clientes, clientes ou outras partes interessadas)* usando listas de endereçamento e campanhas de marketing por email. Use esse conector para classificar seus contatos com base em seus interesses e preferências.
 
-[!DNL Mailchimp Interest Categories] usos [públicos](https://mailchimp.com/help/getting-started-audience/), [grupos](https://mailchimp.com/help/getting-started-with-groups/), e categorias de juros *(também conhecidos como nomes de grupo ou títulos de grupo)*. Each [!DNL Mailchimp] grupo é uma lista de categorias de interesse. Os contatos são associados a uma categoria de interesse quando assinam uma ou mais categorias de interesse por meio de um formulário de inscrição em seu site. Em um público-alvo, você também pode organizar os contatos em grupos e associá-los a categorias de interesse, que podem ser usadas para criar segmentos. Você pode usar esses segmentos para transmitir emails de campanha direcionados aos contatos inscritos.
+[!DNL Mailchimp Interest Categories] usos [públicos](https://mailchimp.com/help/getting-started-audience/), [grupos](https://mailchimp.com/help/getting-started-with-groups/), e categorias de juros *(também conhecidos como nomes de grupo ou títulos de grupo)*. Each [!DNL Mailchimp] grupo é uma lista de categorias de interesse. Os contatos são associados a uma categoria de interesse quando assinam uma ou mais categorias de interesse por meio de um formulário de inscrição em seu site. Em um público-alvo, você também pode organizar os contatos em grupos e associá-los a categorias de interesse, que podem ser usadas para criar segmentos. Você pode usar esses públicos para transmitir emails de campanha direcionados aos contatos inscritos.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa o [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API a ser criada [categorias de juros](https://mailchimp.com/developer/marketing/api/interest-categories/) e, em seguida, adicione contatos de cada um dos segmentos selecionados da Platform em uma categoria de interesse correspondente. Você pode **adicionar novos contatos** ou **atualizar as informações de [!DNL Mailchimp] contatos**, depois **adicione-os ou remova-os dos grupos desejados** em um existente [!DNL Mailchimp] público-alvo depois de ativá-los em um novo segmento. [!DNL Mailchimp Interest Groups] usa os nomes de segmento selecionados da Platform como categorias de interesse no [!DNL Mailchimp].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa o [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API a ser criada [categorias de juros](https://mailchimp.com/developer/marketing/api/interest-categories/) e, em seguida, adicione contatos de cada um dos públicos-alvo selecionados da Platform em uma categoria de interesse correspondente. Você pode **adicionar novos contatos** ou **atualizar as informações de [!DNL Mailchimp] contatos**, depois **adicione-os ou remova-os dos grupos desejados** em um existente [!DNL Mailchimp] público-alvo depois de ativá-los em um novo segmento. [!DNL Mailchimp Interest Groups] O usa os nomes de público-alvo selecionados da Platform como categorias de interesse no [!DNL Mailchimp].
 
 ## Casos de uso {#use-cases}
 
@@ -27,7 +27,7 @@ Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Mailchimp
 
 ### Enviar emails para contatos de campanhas de marketing {#use-case-send-emails}
 
-O departamento de vendas de um site de artigos esportivos quer transmitir uma campanha de marketing por email para uma lista de contatos que se identificaram como interessados em futebol. As listas de contatos são segregadas como lotes na exportação de dados recebida da equipe de desenvolvimento do site e, portanto, precisam ser rastreadas. A equipe identifica uma [!DNL Mailchimp] e começa a criar os segmentos de Experience Platform nos quais os contatos de cada lista são adicionados. Depois de enviar esses segmentos para o [!DNL Mailchimp Interest Categories], se algum contato não existir no [!DNL Mailchimp] público-alvo que são adicionados a um grupo com o nome do segmento ao qual o contato pertence. Se algum contato já existir no [!DNL Mailchimp] público-alvo ou grupo, então as informações são atualizadas. Depois que os dados forem enviados para [!DNL Mailchimp Interest Categories], a equipe de Vendas pode selecionar e enviar o email da campanha de marketing para o grupo de interesse de futebol na [!DNL Mailchimp] público-alvo.
+O departamento de vendas de um site de artigos esportivos quer transmitir uma campanha de marketing por email para uma lista de contatos que se identificaram como interessados em futebol. As listas de contatos são segregadas como lotes na exportação de dados recebida da equipe de desenvolvimento do site e, portanto, precisam ser rastreadas. A equipe identifica uma [!DNL Mailchimp] e começa a criar os públicos-alvo do Experience Platform nos quais os contatos de cada lista são adicionados. Depois de enviar esses públicos-alvo para o [!DNL Mailchimp Interest Categories], se algum contato não existir no [!DNL Mailchimp] público ao qual são adicionados em um grupo com o nome do público ao qual o contato pertence. Se algum contato já existir no [!DNL Mailchimp] público-alvo ou grupo, então as informações são atualizadas. Depois que os dados forem enviados para [!DNL Mailchimp Interest Categories], a equipe de Vendas pode selecionar e enviar o email da campanha de marketing para o grupo de interesse de futebol na [!DNL Mailchimp] público-alvo.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -91,8 +91,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campo.</li><li> Para cada segmento selecionado na Platform, a variável correspondente [!DNL Mailchimp Interest Categories] O status do segmento é atualizado com seu status de segmento da Platform.</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Quando um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campo.</li><li> Para cada público selecionado na Platform, a variável correspondente [!DNL Mailchimp Interest Categories] O status do segmento é atualizado com o status de público-alvo da Platform.</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Quando um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -147,13 +147,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
 ![Captura de tela da interface do usuário do Mailchimp mostrando a página do grupo de público-alvo.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* Selecione o Grupo e verifique se os segmentos selecionados são criados como categorias com o nome do segmento da Platform, que pode ser seguido por um sufixo gerado automaticamente.
-   * Esse destino usa os nomes dos segmentos selecionados para criar a categoria de interesse usando o [[!DNL Mailchimp] Adicionar API de categoria de juros](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Se você criar um novo destino e ativar os mesmos segmentos novamente, [!DNL Mailchimp] adiciona um sufixo para distinguir entre os segmentos existentes e os novos.
+* Selecione o Grupo e verifique se os públicos-alvo selecionados são criados como categorias com o nome do público-alvo da Platform, que pode ser seguido por um sufixo gerado automaticamente.
+   * Esse destino usa os nomes dos segmentos selecionados para criar a categoria de interesse usando o [[!DNL Mailchimp] Adicionar API de categoria de juros](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Se você criar um novo destino e ativar os mesmos públicos-alvo novamente, [!DNL Mailchimp] adiciona um sufixo para distinguir entre os segmentos existentes e os novos.
 * Contatos cujos emails não existiam no grupo são adicionados à categoria recém-criada.
 * Para contatos que já existem no grupo, os dados do campo de atributo são atualizados e o contato é adicionado à categoria recém-criada.
 

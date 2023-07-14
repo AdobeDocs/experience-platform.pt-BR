@@ -4,7 +4,7 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. O Adobe Experience Platform integra-se aos ESPs permitindo ativar segmentos para destinos de marketing por email.
+Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. O Adobe Experience Platform integra-se aos ESPs permitindo ativar públicos-alvo para destinos de marketing por email.
 
 ## Destinos de marketing por email compatíveis {#supported-destinations}
 
@@ -34,7 +34,7 @@ O Adobe Experience Platform é compatível com os seguintes destinos de marketin
 
 ## Conectar-se a um novo destino de marketing por email {#connect-destination}
 
-Para enviar segmentos para destinos de marketing por email para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar públicos-alvo para destinos de marketing por email de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
 
 ## Práticas recomendadas ao ativar públicos para destinos de marketing por email {#best-practices}
 
@@ -67,13 +67,13 @@ No seletor de campo Esquema, escolha quais outros campos você deseja exportar p
 
 {style="table-layout:auto"}
 
-## Ativar segmentos para destinos de marketing por email {#activate}
+## Ativar públicos para destinos de marketing por email {#activate}
 
 Alguns destinos de marketing por email no catálogo exportam perfis de maneira contínua por meio de uma integração de API com o destino.
 
 Outros destinos exportam arquivos para um local de armazenamento na nuvem. Após concluir a exportação, é necessário importar os dados do local de armazenamento na nuvem para o destino de marketing por email.
 
-Siga os links no [destinos de marketing por email compatíveis](#supported-destinations) para saber como ativar segmentos para cada destino de marketing por email.
+Siga os links no [destinos de marketing por email compatíveis](#supported-destinations) para saber como ativar públicos-alvo para cada destino de marketing por email.
 
 ## Recursos adicionais {#additional-resources}
 

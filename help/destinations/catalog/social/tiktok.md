@@ -1,11 +1,11 @@
 ---
 title: Conexão com o TikTok
-description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre o segmento desejado do Adobe Experience Platform para o TikTok de forma rápida e segura usando a integração em tempo real do Adobe com o TikTok Ads Manager.
+description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '978'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre o segmento desejado do Adobe Experience Platform para o TikTok de forma rápida e segura usando a integração em tempo real do Adobe com o TikTok Ads Manager. Visita [Centro de ajuda empresarial da TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obter mais informações.
+Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager. Visita [Centro de ajuda empresarial da TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obter mais informações.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino do TikT
 
 ### Caso de uso {#use-case-1}
 
-Uma marca de vestuário esportivo quer alcançar clientes existentes por meio de suas contas de mídia social. A marca apparel pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar segmentos a partir de seus próprios dados offline e enviar esses segmentos para o TikTok para exibir anúncios nos feeds de redes sociais de seus clientes.
+Uma marca de vestuário esportivo quer alcançar clientes existentes por meio de suas contas de mídia social. A marca de vestuário pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para o TikTok para exibir anúncios nos feeds de redes sociais de seus clientes.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -51,8 +51,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público) com os identificadores (nome, número de telefone ou outros) usados no destino do TikTok. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino do TikTok. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,17 +88,17 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Mapear identidades {#map}
 
-Veja abaixo um exemplo do mapeamento de identidade correto ao exportar segmentos para o TikTok Ads Manager.
+Veja abaixo um exemplo do mapeamento de identidade correto ao exportar públicos para o TikTok Ads Manager.
 
 Selecionar campos de origem:
 
@@ -112,7 +112,7 @@ Selecionar campos de destino:
 
 ## Dados exportados {#exported-data}
 
-Verifique o seu [!DNL TikTok Ads Manager] conta (em **Ativos > Públicos**) para verificar se o segmento Experience Platform foi exportado com êxito. O público será preenchido como um tipo de público: `Partner Audience`.
+Verifique o seu [!DNL TikTok Ads Manager] conta (em **Ativos > Públicos**) para verificar se o público-alvo do Experience Platform foi exportado com êxito. O público será preenchido como um tipo de público: `Partner Audience`.
 
 ## Uso e governança de dados {#data-usage-governance}
 

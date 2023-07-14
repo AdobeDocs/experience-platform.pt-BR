@@ -1,10 +1,10 @@
 ---
 title: Conexão Snap Inc
-description: Saiba como se conectar à plataforma Snapchat Ads e exportar seus segmentos de público do Experience Platform.
+description: Saiba como se conectar à plataforma Snapchat Ads e exportar seus públicos do Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## Casos de uso {#use-cases}
 
-Esse destino permite que os profissionais de marketing importem segmentos de usuários criados no Experience Platform para o Snapchat Ads e os usem para direcionar seus anúncios.
+Esse destino permite que os profissionais de marketing importem públicos-alvo de usuários criados no Experience Platform para o Snapchat Ads e os usem para direcionar seus anúncios.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -33,7 +33,7 @@ Para usar este destino, você precisa ter uma conta do Snapchat Ads. Consulte es
 
 * A Snap Inc não oferece suporte a várias identidades para um determinado segmento de público-alvo. Mapeie apenas uma identidade ao ativar um segmento.
 * O Snap Inc não oferece suporte à renomeação de segmentos. Para renomear um segmento, você deve desativá-lo, renomeá-lo e ativá-lo.
-* Não é possível definir um período de retenção para os membros de um segmento de público-alvo. Todos os membros têm retenção de duração e estarão no segmento até serem removidos.
+* Não é possível definir um período de retenção para os membros de um segmento de público-alvo. Todos os membros têm retenção de duração e estarão no público-alvo até serem removidos.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -65,8 +65,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no *SEUDESTINO* destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no *SEUDESTINO* destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,11 +98,11 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e sele
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
-* **[!UICONTROL ID da conta]**: a ID da conta de anúncio associada à conta de anúncio para a qual você deseja importar seus segmentos. Para obter mais informações sobre como encontrar isso, consulte [esta documentação está disponível no Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL ID da conta]**: a ID da conta de anúncio associada à conta de anúncio para a qual você desejará importar os públicos. Para obter mais informações sobre como encontrar isso, consulte [esta documentação está disponível no Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Inserir uma ID de conta de anúncio do Snapchat incorreta ou inválida causará falha na ativação do segmento. Verifique se você inseriu a ID da conta de anúncio correta.
+>Inserir uma ID de conta de anúncio do Snapchat incorreta ou inválida causará falha na ativação do público-alvo. Verifique se você inseriu a ID da conta de anúncio correta.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -110,24 +110,24 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Validar exportação de dados {#exported-data}
 
-Depois de ativar segmentos para a variável *Snap Inc* destino, você poderá ver os segmentos no Gerenciador de anúncios do Snap [**Públicos-alvo** seção](https://businesshelp.snapchat.com/s/article/audience-sharing). Para navegar até esta seção, siga estas etapas:
+Depois de ativar os públicos-alvo para a variável *Snap Inc* destino, você poderá ver os públicos-alvo no Gerenciador de anúncios do Snap [**Públicos-alvo** seção](https://businesshelp.snapchat.com/s/article/audience-sharing). Para navegar até esta seção, siga estas etapas:
 
 1. Faça logon na [Gerenciador de anúncios instantâneos](https://ads.snapchat.com/)
-2. Selecionar **Públicos-alvo** no menu suspenso no canto superior esquerdo da tela. Você verá os segmentos ativados no Adobe Experience Platform na Biblioteca de público-alvo:
+2. Selecionar **Públicos-alvo** no menu suspenso no canto superior esquerdo da tela. Você verá os públicos ativados no Adobe Experience Platform na Biblioteca de público-alvo:
 
 ![Públicos-alvo](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Observe que, quando um segmento Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque a Adobe Experience Platform não exporta dados de membros para a Snap Inc até avaliar o segmento. Para obter mais informações sobre como os segmentos são avaliados em Experience Platform, consulte [Visão geral do serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Observe que, quando um público-alvo Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque a Adobe Experience Platform não exporta dados de membros para a Snap Inc até avaliar o público-alvo. Para obter mais informações sobre como os públicos-alvo são avaliados em Experience Platform, consulte [Visão geral do serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Uso e governança de dados {#data-usage-governance}
 

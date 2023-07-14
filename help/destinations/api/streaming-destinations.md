@@ -5,7 +5,7 @@ title: Conecte-se aos destinos de transmissão e ative os dados usando a API de 
 description: Este documento aborda a criação de destinos de transmissão usando a API do Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 2%
@@ -26,9 +26,9 @@ Este tutorial demonstra como usar chamadas de API para se conectar aos dados do 
 
 Este tutorial usa o [!DNL Amazon Kinesis] destino em todos os exemplos, mas as etapas são idênticas para [!DNL Azure Event Hubs].
 
-![Visão geral - as etapas para criar um destino de transmissão e ativar segmentos](../assets/api/streaming-destination/overview.png)
+![Visão geral - as etapas para criar um destino de transmissão e ativar públicos](../assets/api/streaming-destination/overview.png)
 
-Se preferir usar a interface do usuário na Platform para se conectar a um destino e ativar dados, consulte a [Conectar um destino](../ui/connect-destination.md) e [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../ui/activate-segment-streaming-destinations.md) tutoriais.
+Se preferir usar a interface do usuário na Platform para se conectar a um destino e ativar dados, consulte a [Conectar um destino](../ui/connect-destination.md) e [Ativar dados do público-alvo para streaming de destinos de exportação de público](../ui/activate-segment-streaming-destinations.md) tutoriais.
 
 ## Introdução
 
@@ -42,7 +42,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Coletar credenciais necessárias
 
-Para concluir as etapas deste tutorial, você deve ter as credenciais a seguir prontas, dependendo do tipo de destinos aos quais você está se conectando e ativando segmentos.
+Para concluir as etapas deste tutorial, você deve ter as credenciais a seguir prontas, dependendo do tipo de destinos aos quais você está se conectando e ativando públicos.
 
 * Para [!DNL Amazon Kinesis] conexões: `accessKeyId`, `secretKey`, `region` ou `connectionUrl`
 * Para [!DNL Azure Event Hubs] conexões: `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ Você pode encontrar a documentação de referência que acompanha todas as cham
 
 ![Visão geral das etapas de destino etapa 1](../assets/api/streaming-destination/step1.png)
 
-Como primeira etapa, você deve decidir para qual destino de streaming ativar os dados. Para começar, execute uma chamada para solicitar uma lista de destinos disponíveis aos quais você pode conectar e ativar segmentos. Execute a seguinte solicitação do GET para o `connectionSpecs` para retornar uma lista de destinos disponíveis:
+Como primeira etapa, você deve decidir para qual destino de streaming ativar os dados. Para começar, execute uma chamada para solicitar uma lista de destinos disponíveis aos quais você pode se conectar e ativar públicos. Execute a seguinte solicitação do GET para o `connectionSpecs` para retornar uma lista de destinos disponíveis:
 
 **Formato da API**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Resposta**
 
-Uma resposta bem-sucedida contém uma lista de destinos disponíveis e seus identificadores exclusivos (`id`). Armazene o valor do destino que você planeja usar, pois ele será necessário em outras etapas. Por exemplo, se você deseja conectar e entregar segmentos a [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs], procure o seguinte trecho na resposta:
+Uma resposta bem-sucedida contém uma lista de destinos disponíveis e seus identificadores exclusivos (`id`). Armazene o valor do destino que você planeja usar, pois ele será necessário em outras etapas. Por exemplo, se você deseja se conectar e entregar públicos-alvo para [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs], procure o seguinte trecho na resposta:
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado e uma `etag`. Anote os dois valores. como você fará com eles na próxima etapa, para ativar segmentos.
+Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado e uma `etag`. Anote os dois valores. como você os verá na próxima etapa, para ativar públicos-alvo.
 
 ```json
 {
@@ -423,9 +423,9 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado e 
 
 ![Etapa 5 da visão geral das etapas de destino](../assets/api/streaming-destination/step5.png)
 
-Após criar todas as conexões e o fluxo de dados, agora é possível ativar os dados do perfil para a plataforma de streaming. Nesta etapa, você seleciona quais segmentos e quais atributos de perfil está enviando para o destino e pode agendar e enviar dados para o destino.
+Após criar todas as conexões e o fluxo de dados, agora é possível ativar os dados do perfil para a plataforma de streaming. Nesta etapa, você seleciona quais públicos-alvo e atributos de perfil está enviando para o destino e pode agendar e enviar dados para o destino.
 
-Para ativar segmentos para o novo destino, você deve executar uma operação PATCH JSON, semelhante ao exemplo abaixo. Você pode ativar vários segmentos e atributos de perfil em uma chamada. Para saber mais sobre o PATCH JSON, consulte a [Especificação RFC](https://tools.ietf.org/html/rfc6902).
+Para ativar públicos para o novo destino, você deve executar uma operação PATCH JSON, semelhante ao exemplo abaixo. Você pode ativar vários públicos-alvo e atributos de perfil em uma chamada. Para saber mais sobre o PATCH JSON, consulte a [Especificação RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato da API**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | No URL, use a ID do fluxo de dados criado na etapa anterior. |
 | `{ETAG}` | Obtenha o `{ETAG}` da resposta da etapa anterior, [Criar um fluxo de dados](#create-dataflow). O formato de resposta na etapa anterior tem aspas em escape. Você deve usar os valores sem escape no cabeçalho da solicitação. Consulte o exemplo abaixo: <br> <ul><li>Exemplo de resposta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valor a ser usado na solicitação: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> O valor da tag é atualizado com cada atualização bem-sucedida de um fluxo de dados. |
-| `{SEGMENT_ID}` | Forneça a ID de segmento que você deseja exportar para esse destino. Para recuperar IDs de segmento para os segmentos que você deseja ativar, consulte [recuperar uma definição de segmento](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) na referência da API Experience Platform. |
+| `{SEGMENT_ID}` | Forneça a ID de público-alvo que você deseja exportar para este destino. Para recuperar as IDs de público-alvo para os públicos que você deseja ativar, consulte [recuperar uma definição de público-alvo](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) na referência da API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Por exemplo, `"person.lastName"` |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para adicionar um segmento a um fluxo de dados, use o `add` operação. |
-| `path` | Define a parte do fluxo que deve ser atualizada. Ao adicionar um segmento a um fluxo de dados, use o caminho especificado no exemplo. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para adicionar um público-alvo a um fluxo de dados, use o `add` operação. |
+| `path` | Define a parte do fluxo que deve ser atualizada. Ao adicionar um público-alvo a um fluxo de dados, use o caminho especificado no exemplo. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
-| `id` | Especifique a ID do segmento que você está adicionando ao fluxo de dados de destino. |
-| `name` | *Opcional*. Especifique o nome do segmento que você está adicionando ao fluxo de dados de destino. Observe que esse campo não é obrigatório e que você pode adicionar um segmento com êxito ao fluxo de dados de destino sem fornecer seu nome. |
+| `id` | Especifique a ID do público-alvo que você está adicionando ao fluxo de dados de destino. |
+| `name` | *Opcional*. Especifique o nome do público-alvo que você está adicionando ao fluxo de dados de destino. Observe que esse campo não é obrigatório e que você pode adicionar um público-alvo ao fluxo de dados de destino com êxito sem fornecer seu nome. |
 
 **Resposta**
 
@@ -490,7 +490,7 @@ Procure uma resposta 202 OK. Nenhum corpo de resposta é retornado. Para validar
 
 ![Etapa 6 da visão geral das etapas de destino](../assets/api/streaming-destination/step6.png)
 
-Como etapa final do tutorial, você deve validar se os segmentos e atributos de perfil foram mapeados corretamente para o fluxo de dados.
+Como etapa final do tutorial, você deve validar se os públicos-alvo e os atributos de perfil foram realmente mapeados corretamente para o fluxo de dados.
 
 Para validar isso, execute a seguinte solicitação GET:
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Resposta**
 
-A resposta retornada deve incluir na variável `transformations` parâmetro os segmentos e atributos de perfil que você submeteu na etapa anterior. Uma amostra `transformations` O parâmetro da resposta do pode ser semelhante ao seguinte:
+A resposta retornada deve incluir na variável `transformations` defina os parâmetros de públicos-alvo e atributos de perfil enviados na etapa anterior. Uma amostra `transformations` O parâmetro da resposta do pode ser semelhante ao seguinte:
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ A resposta retornada deve incluir na variável `transformations` parâmetro os s
 
 >[!IMPORTANT]
 >
-> Além dos atributos de perfil e dos segmentos na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados no [!DNL AWS Kinesis] e [!DNL Azure Event Hubs] também incluirá informações sobre o mapa de identidade. Representa as identidades dos perfis exportados (por exemplo, [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID móvel, Google ID, endereço de email, etc.). Veja um exemplo abaixo.
+> Além dos atributos do perfil e dos públicos-alvo na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados no [!DNL AWS Kinesis] e [!DNL Azure Event Hubs] também incluirá informações sobre o mapa de identidade. Representa as identidades dos perfis exportados (por exemplo, [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID móvel, Google ID, endereço de email, etc.). Veja um exemplo abaixo.
 
 ```json
 {

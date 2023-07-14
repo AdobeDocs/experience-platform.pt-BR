@@ -1,10 +1,10 @@
 ---
 title: (Beta) Conexão Gen2 do Armazenamento Azure Data Lake
-description: Saiba como se conectar ao Azure Data Lake Storage Gen2 para ativar segmentos e exportar conjuntos de dados.
+description: Saiba como se conectar ao Azure Data Lake Storage Gen2 para ativar públicos e exportar conjuntos de dados.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,22 @@ Leia esta página para saber como criar uma conexão de saída ativa com o seu [
 
 ## Conecte-se ao seu [!DNL ADLS Gen2] armazenamento por meio da API ou da interface {#connect-api-or-ui}
 
-* Para se conectar ao seu [!DNL ADLS Gen2] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar segmentos para este destino](#activate) abaixo.
-* Para se conectar ao seu [!DNL ADLS Gen2] local de armazenamento de dados de forma programática, leia as [Ative segmentos para destinos baseados em arquivo usando o tutorial da API do serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+* Para se conectar ao seu [!DNL ADLS Gen2] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar públicos para este destino](#activate) abaixo.
+* Para se conectar ao seu [!DNL ADLS Gen2] local de armazenamento de dados de forma programática, leia as [Ative públicos para destinos baseados em arquivo usando o tutorial da API do Serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -55,7 +69,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 * **[!UICONTROL Chave principal de serviço]**: a chave do aplicativo.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
-   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -74,13 +88,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Programação {#scheduling}
 

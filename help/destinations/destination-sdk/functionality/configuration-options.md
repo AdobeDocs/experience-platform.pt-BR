@@ -1,9 +1,9 @@
 ---
 description: O serviço de destinos no Adobe Experience Platform usa endpoints de configuração para vários componentes que criam a funcionalidade de destinos. Saiba como esses componentes combinados permitem que o Experience Platform se conecte a parceiros de destino, envie mensagens personalizadas e ative dados de perfil no ecossistema digital.
 title: Opções de configuração no Destination SDK
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,14 @@ Consulte a documentação abaixo para obter detalhes sobre cada um dos component
 * [Configuração de esquema](destination-configuration/schema-configuration.md): saiba como definir o esquema de destino do seu destino para o qual os usuários podem mapear atributos de perfil e identidades.
 * [Configuração do namespace de identidade](destination-configuration/identity-namespace-configuration.md): saiba como configurar as identidades compatíveis com seu destino. Essa configuração preenche as identidades do público-alvo no [etapa de mapeamento](../../ui/activate-segment-streaming-destinations.md#mapping) da interface do usuário do Experience Platform, em que os usuários mapeiam identidades e atributos de seus esquemas XDM para o esquema em seu destino.
 * [Entrega de destino](destination-configuration/destination-delivery.md): saiba como configurar exatamente para onde os dados exportados vão e qual regra de autenticação é usada no local onde os dados serão direcionados.
-* [Configuração de metadados de público](destination-configuration/audience-metadata-configuration.md): saiba como os metadados de segmento, como nomes de segmentos ou IDs, devem ser compartilhados entre o Experience Platform e o destino.
+* [Configuração de metadados de público](destination-configuration/audience-metadata-configuration.md): saiba como os metadados de público, como nomes de público-alvo ou IDs, devem ser compartilhados entre o Experience Platform e o seu destino.
 * [Política de agregação](destination-configuration/aggregation-policy.md): saiba como configurar uma política de agregação para determinar como as solicitações HTTP para o seu destino devem ser agrupadas e armazenadas em lote.
 * [Configuração em lote](destination-configuration/batch-configuration.md): Defina várias configurações de nomenclatura de arquivos e agendamento de exportação disponíveis para os usuários ao se conectarem ao seu destino na interface de usuário do Experience Platform.
 * [Qualificações do perfil histórico](destination-configuration/historical-profile-qualifications.md): saiba mais sobre as qualificações de perfil históricas compatíveis com destinos criados com o Destination SDK.
 
 ## Configuração de metadados de público {#audience-metadata-configuration}
 
-Este componente permite configurar como públicos-alvo/segmentos são criados, atualizados ou excluídos de forma programática no destino. Para destinos baseados em arquivo, permite configurar uma notificação sempre que os arquivos forem entregues com êxito ao destino. Você pode configurar essa funcionalidade por meio da [endpoint de templates de público](../metadata-api/create-audience-template.md).
+Esse componente permite configurar como os públicos-alvo são criados, atualizados ou excluídos de forma programática no destino. Para destinos baseados em arquivo, permite configurar uma notificação sempre que os arquivos forem entregues com êxito ao destino. Você pode configurar essa funcionalidade por meio da [endpoint de templates de público](../metadata-api/create-audience-template.md).
 
 ## Próximas etapas {#next-steps}
 

@@ -3,7 +3,7 @@ keywords: extensão contentsquare;destino contentsquare;contentsquare
 title: Extensão Contentsquare
 description: A extensão Contentsquare é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## Visão geral {#overview}
 
-Visualize comportamentos na página, veja POR QUE os clientes abandonam e COMO você pode melhorar. Atribuir receita a UX e elementos de conteúdo para cada segmento do Analytics e teste do Target. Instale o [!DNL Contentsquare] tag, configure variáveis e eventos personalizados. Comece a coletar dados para a análise de UX com alguns cliques.
+Visualize comportamentos na página, veja POR QUE os clientes abandonam e COMO você pode melhorar. Atribuir receita a UX e elementos de conteúdo para cada público-alvo do Analytics e teste do Target. Instale o [!DNL Contentsquare] tag, configure variáveis e eventos personalizados. Comece a coletar dados para a análise de UX com alguns cliques.
 
 [!DNL Contentsquare] é uma extensão do analytics no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 

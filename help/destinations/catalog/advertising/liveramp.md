@@ -4,9 +4,9 @@ description: Saiba como usar o conector do LiveRamp para integrar públicos do A
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1736'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,6 @@ Use a conexão LiveRamp para integrar públicos do Adobe Real-time Customer Data
 >
 ><p>No momento, essa conexão de destino está em um estágio alfa e só está disponível para uma seleção limitada de clientes. A funcionalidade e a documentação estão sujeitas a alterações.</p>
 &gt;<p>A versão final desta conexão de destino pode exigir a migração do cliente.</p>
-
 
 ## Casos de uso {#use-cases}
 
@@ -45,8 +44,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no [!DNL LiveRamp SFTP] destino. |
-| Frequência de exportação | **[!UICONTROL Lote diário]** | À medida que os perfis são atualizados no Experience Platform com base na avaliação do segmento, eles (identidades) são atualizados uma vez por dia downstream para a plataforma de destino. Leia mais sobre [destinos baseados em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no [!DNL LiveRamp SFTP] destino. |
+| Frequência de exportação | **[!UICONTROL Lote diário]** | Como os perfis são atualizados em Experience Platform com base na avaliação do público-alvo, os perfis (identidades) são atualizados uma vez por dia downstream para a plataforma de destino. Leia mais sobre [destinos baseados em arquivo em lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 * **[!UICONTROL Senha]**: A senha do [!DNL LiveRamp SFTP] local de armazenamento.
 * **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo. Se você fornecer uma chave de criptografia, deverá também fornecer uma **[!UICONTROL ID da subchave de criptografia]** no [detalhes do destino](#destination-details) seção.
 
-   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP com autenticação de chave SSH** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 * **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Se você fornecer uma chave de criptografia, deverá também fornecer uma **[!UICONTROL ID da subchave de criptografia]** no [detalhes do destino](#destination-details) seção. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
-   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -110,28 +109,28 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Programação {#scheduling}
 
-No [!UICONTROL Agendamento] crie uma programação de exportação para cada segmento, com as configurações mostradas abaixo.
+No [!UICONTROL Agendamento] crie um agendamento de exportação para cada público-alvo, com as configurações mostradas abaixo.
 
 >[!IMPORTANT]
 >
->Todos os segmentos ativados para esse destino devem ser configurados exatamente com o mesmo agendamento, conforme mostrado abaixo.
+>Todos os públicos-alvo ativados para esse destino devem ser configurados com exatamente o mesmo agendamento, conforme mostrado abaixo.
 
 * **[!UICONTROL Opções de exportação de arquivo]**: [!UICONTROL Exportar arquivos completos]. [Exportações incrementais de arquivos](../../ui/activate-batch-profile-destinations.md#export-incremental-files) no momento, não são compatíveis com o [!DNL LiveRamp] destino.
 * **[!UICONTROL Frequência]**: [!UICONTROL Diariamente]
-* Defina o tempo de exportação para **[!UICONTROL Após a avaliação do segmento]**. Exportações de segmentos programados e [exportações de arquivos por demanda](../../ui/export-file-now.md) no momento, não são compatíveis com o [!DNL LiveRamp] destino.
+* Defina o tempo de exportação para **[!UICONTROL Após a avaliação do segmento]**. Exportações de público-alvo programadas e [exportações de arquivos por demanda](../../ui/export-file-now.md) no momento, não são compatíveis com o [!DNL LiveRamp] destino.
 * **[!UICONTROL Data]**: selecione as horas de início e término da exportação conforme desejado.
 
-![Captura de tela da interface do usuário da Platform mostrando a etapa de agendamento de segmento.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Captura de tela da interface do usuário da Platform mostrando a etapa de agendamento de público-alvo.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 O nome do arquivo exportado não pode ser configurado pelo usuário no momento. Todos os arquivos exportados para o [!DNL LiveRamp SFTP] Os destinos são nomeados automaticamente com base no seguinte modelo:
 
@@ -179,28 +178,28 @@ Seus dados são exportados para o [!DNL LiveRamp SFTP] local de armazenamento qu
 
 Ao exportar arquivos para o [!DNL LiveRamp SFTP] destino, a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md).
 
-Por exemplo, vamos considerar os seguintes segmentos:
+Por exemplo, vamos considerar os seguintes públicos-alvo:
 
-* Segmento A (política de mesclagem 1)
-* Segmento B (política de mesclagem 2)
-* Segmento C (política de mesclagem 1)
-* Segmento D (política de mesclagem 1)
+* Público-alvo A (política de mesclagem 1)
+* Público-alvo B (política de mesclagem 2)
+* Público-alvo C (política de mesclagem 1)
+* Audience D (política de mesclagem 1)
 
 A Platform exportará dois arquivos CSV para [!DNL LiveRamp SFTP]:
 
-* Um arquivo CSV contendo os segmentos A, C e D;
-* Um arquivo CSV contendo o segmento B.
+* Um arquivo CSV contendo os públicos-alvo A, C e D;
+* Um arquivo CSV contendo o público-alvo B.
 
-Os arquivos CSV exportados contêm perfis com os atributos selecionados e o status de segmento correspondente, em colunas separadas, com o nome do atributo e as IDs de segmento como cabeçalhos de coluna.
+Os arquivos CSV exportados contêm perfis com os atributos selecionados e o status de público-alvo correspondente, em colunas separadas, com o nome do atributo e as IDs de público-alvo como cabeçalhos de coluna.
 
-Os perfis incluídos nos arquivos exportados podem corresponder a um dos seguintes status de qualificação de segmento:
+Os perfis incluídos nos arquivos exportados podem corresponder a um dos seguintes status de qualificação de público-alvo:
 
-* `Active`: O perfil está qualificado para o segmento no momento.
-* `Expired`: o perfil não está mais qualificado para o segmento, mas se qualificou no passado.
-* `""`(sequência de caracteres vazia): o perfil nunca se qualificou para o segmento.
+* `Active`: o perfil está qualificado para o público-alvo no momento.
+* `Expired`: o perfil não está mais qualificado para o público-alvo, mas se qualificou no passado.
+* `""`(sequência de caracteres vazia): o perfil nunca se qualificou para o público-alvo.
 
 
-Por exemplo, um arquivo CSV exportado com um `email` o atributo e três segmentos podem ter esta aparência:
+Por exemplo, um arquivo CSV exportado com um `email` o atributo e três públicos-alvo podem ser assim:
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Como a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md), ele também gera um fluxo de dados separado para cada ID de política de mesclagem.
 
-Isto significa que a **[!UICONTROL Identidades ativadas]** e **[!UICONTROL Perfis recebidos]** métricas no [execuções de fluxo de dados](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) As páginas são agregadas para cada grupo de segmentos que usam a mesma política de mesclagem, em vez de serem exibidas para cada segmento.
+Isto significa que a **[!UICONTROL Identidades ativadas]** e **[!UICONTROL Perfis recebidos]** métricas no [execuções de fluxo de dados](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) As páginas são agregadas para cada grupo de públicos-alvo que usam a mesma política de mesclagem, em vez de serem exibidas para cada público-alvo.
 
-Como consequência da geração de execuções de fluxo de dados para um grupo de segmentos que usam a mesma política de mesclagem, os nomes dos segmentos não são exibidos no [painel de monitoramento](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+Como consequência da geração de execuções de fluxo de dados para um grupo de públicos-alvo que usam a mesma política de mesclagem, os nomes dos públicos-alvo não são exibidos no [painel de monitoramento](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Captura de tela da interface do Experience Platform mostrando a métrica de identidades ativadas.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

@@ -3,9 +3,9 @@ keywords: destino do crm;CRM;destinos do crm;crm do salesforce;destino do salesf
 title: Conexão com o Salesforce CRM
 description: O destino do Salesforce CRM permite exportar seus dados de conta e ativá-los no Salesforce CRM para suas necessidades comerciais.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: edf49d8a52eeddea65a18c1dad0035ec7e5d2c12
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '3086'
+source-wordcount: '3085'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [[!DNL Salesforce composite API]](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm), que aceita os dois tipos de perfis descritos acima.
 
-Quando [ativação de segmentos](#activate), você pode selecionar entre clientes potenciais ou contatos e atualizar atributos e dados de segmento no [!DNL Salesforce CRM].
+Quando [ativação de segmentos](#activate), você pode selecionar entre clientes potenciais ou contatos e atualizar atributos e dados de público-alvo no [!DNL Salesforce CRM].
 
 [!DNL Salesforce CRM] O usa o OAuth 2 com Concessão de senha como um mecanismo de autenticação para se comunicar com a API REST do Salesforce. Instruções para autenticar em seu [!DNL Salesforce CRM] exemplo, são apresentados mais abaixo, no [Autenticar para destino](#authenticate) seção.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, você pode fornecer experiências personalizadas aos seus usuários com base em atributos de seus perfis do Adobe Experience Platform. Você pode criar segmentos a partir de seus dados offline e enviar esses segmentos para o Salesforce CRM, para exibição nos feeds dos usuários, assim que os segmentos e perfis forem atualizados no Adobe Experience Platform.
+Como profissional de marketing, você pode fornecer experiências personalizadas aos seus usuários com base em atributos de seus perfis do Adobe Experience Platform. Você pode criar públicos-alvo a partir de seus dados offline e enviá-los para o Salesforce CRM, para exibição nos feeds dos usuários, assim que os públicos-alvo e os perfis forem atualizados no Adobe Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -70,16 +70,16 @@ Por último, devem assegurar que o `password` a concessão está ativada em seu 
 
 #### Criar campos personalizados em [!DNL Salesforce] {#prerequisites-custom-field}
 
-Ao ativar segmentos para a variável [!DNL Salesforce CRM] destino, você deve inserir um valor no campo **[!UICONTROL ID do mapeamento]** para cada segmento ativado, no campo **[Programação de segmento](#schedule-segment-export-example)** etapa.
+Ao ativar públicos-alvo para a variável [!DNL Salesforce CRM] destino, você deve inserir um valor no campo **[!UICONTROL ID do mapeamento]** para cada público-alvo ativado, no campo **[Programação de público](#schedule-segment-export-example)** etapa.
 
-[!DNL Salesforce CRM] exige que esse valor leia e interprete corretamente os segmentos provenientes do Experience Platform e atualize seu status de segmento no [!DNL Salesforce]. Consulte a documentação do Experience Platform para [Grupo de campos de esquema Detalhes da associação do segmento](/help/xdm/field-groups/profile/segmentation.md) se você precisar de orientação sobre os status do segmento.
+[!DNL Salesforce CRM] exige que esse valor leia e interprete corretamente os públicos-alvo provenientes do Experience Platform e atualize o status dos públicos-alvo dentro de [!DNL Salesforce]. Consulte a documentação do Experience Platform para [Grupo de campos de esquema Detalhes da associação do público](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
-Para cada segmento que você ativar da Platform para o [!DNL Salesforce CRM], é necessário criar um campo personalizado do tipo `Text Area (Long)` no prazo de [!DNL Salesforce]. Você pode definir o comprimento de caracteres de qualquer tamanho entre 256 e 131.072 caracteres de acordo com suas necessidades comerciais. Consulte a [!DNL Salesforce] [Tipos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) página de documentação para obter informações adicionais sobre tipos de campos personalizados. Consulte também a [!DNL Salesforce] documentação para [criar campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) se precisar de assistência na criação do campo.
+Para cada público-alvo que você ativar da Platform para o [!DNL Salesforce CRM], é necessário criar um campo personalizado do tipo `Text Area (Long)` no prazo de [!DNL Salesforce]. Você pode definir o comprimento de caracteres de qualquer tamanho entre 256 e 131.072 caracteres de acordo com suas necessidades comerciais. Consulte a [!DNL Salesforce] [Tipos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) página de documentação para obter informações adicionais sobre tipos de campos personalizados. Consulte também a [!DNL Salesforce] documentação para [criar campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) se precisar de assistência na criação do campo.
 
 >[!IMPORTANT]
 >
 >Não inclua caracteres de espaço em branco no nome do campo. Em vez disso, use sublinhado `(_)` como separador.
->Dentro de [!DNL Salesforce] você deve criar campos personalizados com um **[!UICONTROL Nome do campo]** que corresponde exatamente ao valor especificado em **[!UICONTROL ID do mapeamento]** para cada segmento ativado da Platform. Por exemplo, a captura de tela abaixo mostra um campo personalizado chamado `crm_2_seg`. Ao ativar um segmento para esse destino, adicione `crm_2_seg` as **[!UICONTROL ID do mapeamento]** para preencher públicos do segmento do Experience Platform nesse campo personalizado.
+>Dentro de [!DNL Salesforce] você deve criar campos personalizados com um **[!UICONTROL Nome do campo]** que corresponde exatamente ao valor especificado em **[!UICONTROL ID do mapeamento]** para cada segmento ativado da Platform. Por exemplo, a captura de tela abaixo mostra um campo personalizado chamado `crm_2_seg`. Ao ativar um público-alvo para esse destino, adicione `crm_2_seg` as **[!UICONTROL ID do mapeamento]** para preencher públicos-alvo do Experience Platform nesse campo personalizado.
 
 Um exemplo de criação de campo personalizado em [!DNL Salesforce], *Etapa 1 - Selecionar o tipo de dados*, é mostrado abaixo:
 ![Captura de tela da interface do usuário do Salesforce mostrando a criação de campo personalizado, Etapa 1 - Selecione o tipo de dados.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -89,16 +89,14 @@ Um exemplo de criação de campo personalizado em [!DNL Salesforce], *Etapa 2 - 
 
 >[!TIP]
 >
->* Para distinguir entre campos personalizados usados para segmentos da Platform e outros campos personalizados dentro do [!DNL Salesforce] você pode incluir um prefixo ou sufixo reconhecível ao criar o campo personalizado. Por exemplo, em vez de `test_segment`, use `Adobe_test_segment` ou `test_segment_Adobe`
->* Se você já tiver outros campos personalizados criados no [!DNL Salesforce], você pode usar o mesmo nome do segmento da Platform para identificá-lo facilmente no [!DNL Salesforce].
-
+>* Para distinguir entre campos personalizados usados para públicos da Platform e outros campos personalizados dentro do [!DNL Salesforce] você pode incluir um prefixo ou sufixo reconhecível ao criar o campo personalizado. Por exemplo, em vez de `test_segment`, use `Adobe_test_segment` ou `test_segment_Adobe`
+>* Se você já tiver outros campos personalizados criados no [!DNL Salesforce], você pode usar o mesmo nome do segmento da Platform para identificar facilmente o público-alvo no [!DNL Salesforce].
 
 >[!NOTE]
 >
 >* Os objetos no Salesforce estão restritos a 25 campos externos, consulte [Atributos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
->* Essa restrição implica que você só pode ter um máximo de 25 associações de segmento de Experience Platform ativas a qualquer momento.
->* Se você atingiu esse limite no Salesforce, deve remover os atributos personalizados do Salesforce que foram usados para armazenar o status do segmento em relação a segmentos mais antigos no Experience Platform antes de um novo **[!UICONTROL ID do mapeamento]** pode ser usado.
-
+>* Essa restrição implica que você só pode ter um máximo de 25 associações de público-alvo de Experience Platform ativas a qualquer momento.
+>* Se você atingiu esse limite no Salesforce, deve remover os atributos personalizados do Salesforce que foram usados para armazenar o status do público-alvo em relação a públicos-alvo mais antigos no Experience Platform antes de um novo **[!UICONTROL ID do mapeamento]** pode ser usado.
 
 #### Coletar [!DNL Salesforce CRM] credenciais {#gather-credentials}
 
@@ -106,12 +104,12 @@ Anote os itens abaixo antes de autenticar na [!DNL Salesforce CRM] destino:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
-| `Username` | Seu [!DNL Salesforce] usuário da conta. |  |
-| `Password` | Seu [!DNL Salesforce] senha da conta. |  |
+| `Username` | Seu [!DNL Salesforce] usuário da conta. | |
+| `Password` | Seu [!DNL Salesforce] senha da conta. | |
 | `Security Token` | Seu [!DNL Salesforce] token de segurança que você anexará posteriormente ao final da [!DNL Salesforce] Senha para criar uma cadeia concatenada a ser usada como **[!UICONTROL Senha]** quando [autenticando no destino](#authenticate).<br> Consulte a [!DNL Salesforce] documentação para [redefinir seu token de segurança](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) para saber como gerá-la novamente a partir do [!DNL Salesforce] se você não tiver o token de segurança. |  |
 | `Custom Domain` | Seu [!DNL Salesforce] prefixo do domínio. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) para saber como obter esse valor do [!DNL Salesforce] interface. | Se o seu [!DNL Salesforce] o domínio é<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> você precisará `d5i000000isb4eak-dev-ed` como o valor. |
-| `Client ID` | Seu Salesforce `Consumer Key`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para saber como obter esse valor do [!DNL Salesforce] interface. |  |
-| `Client Secret` | Seu Salesforce `Consumer Secret`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para saber como obter esse valor do [!DNL Salesforce] interface. |  |
+| `Client ID` | Seu Salesforce `Consumer Key`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para saber como obter esse valor do [!DNL Salesforce] interface. | |
+| `Client Secret` | Seu Salesforce `Consumer Secret`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para saber como obter esse valor do [!DNL Salesforce] interface. | |
 
 ### Medidas de proteção {#guardrails}
 
@@ -121,7 +119,7 @@ Se o seu [!DNL Salesforce] administrador da conta impôs restrições de IP, ser
 
 >[!IMPORTANT]
 >
->Quando [ativação de segmentos](#activate) você deve selecionar entre *Contato* ou *Lead* tipos. É necessário garantir que seus segmentos tenham o mapeamento de dados apropriado de acordo com o tipo selecionado.
+>Quando [ativação de segmentos](#activate) você deve selecionar entre *Contato* ou *Lead* tipos. É necessário garantir que seus públicos-alvo tenham o mapeamento de dados apropriado de acordo com o tipo selecionado.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -137,8 +135,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campo.</li><li> Cada status de segmento em [!DNL Salesforce CRM] é atualizado com o status de segmento correspondente da Platform, com base no **[!UICONTROL ID do mapeamento]** valor fornecido durante o [programação de segmentos](#schedule-segment-export-example) etapa.</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li>Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campo.</li><li> Cada status de público-alvo no [!DNL Salesforce CRM] é atualizado com o status de público-alvo correspondente na Platform, com base no **[!UICONTROL ID do mapeamento]** valor fornecido durante o [agendamento de público](#schedule-segment-export-example) etapa.</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li>Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -178,13 +176,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
@@ -207,42 +205,40 @@ Para mapear corretamente os campos XDM para o [!DNL (API) Salesforce CRM] campos
    * Se você estiver trabalhando com *Contatos* no seu segmento, consulte a Referência a objetos no Salesforce para [Contato](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) para definir mapeamentos para os campos que serão atualizados.
    * Você pode identificar campos obrigatórios pesquisando a palavra *Obrigatório*, que é mencionado nas descrições dos campos no link acima.
    * Dependendo dos campos que deseja exportar ou atualizar, adicione mapeamentos entre o esquema de perfil XDM e [!DNL (API) Salesforce CRM]: Notas do Campo de origem/Campo de destino | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Sobrenome do contato com até 80 caracteres. |\
-      |`xdm: person.name.firstName`|`Attribute: FirstName`| O nome do contato tem até 40 caracteres. | |`xdm: personalEmail.address`|`Attribute: Email`| O endereço de email do contato. |
+     |`xdm: person.name.firstName`|`Attribute: FirstName`| O nome do contato tem até 40 caracteres. | |`xdm: personalEmail.address`|`Attribute: Email`| O endereço de email do contato. |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
-      ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+     ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Trabalhar com clientes em potencial**
 
    * Se você estiver trabalhando com *Clientes potenciais* no seu segmento, consulte a Referência a objetos no Salesforce para [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) para definir mapeamentos para os campos que serão atualizados.
    * Você pode identificar campos obrigatórios pesquisando a palavra *Obrigatório*, que é mencionado nas descrições dos campos no link acima.
    * Dependendo dos campos que deseja exportar ou atualizar, adicione mapeamentos entre o esquema de perfil XDM e [!DNL (API) Salesforce CRM]: Notas do Campo de origem/Campo de destino | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Sobrenome do lead com até 80 caracteres. |\
-      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. A empresa do lead. | |`xdm: personalEmail.address`|`Attribute: Email`| O endereço de email do lead. |
+     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. A empresa do lead. | |`xdm: personalEmail.address`|`Attribute: Email`| O endereço de email do lead. |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
-      ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
-
-
+     ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-### Programar exportação de segmento e exemplo {#schedule-segment-export-example}
+### Agendar exportação de público e exemplo {#schedule-segment-export-example}
 
-Ao executar a [Agendar exportação de segmento](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) etapa você deve mapear manualmente os segmentos ativados da Platform para o campo personalizado correspondente em [!DNL Salesforce].
+Ao executar a [Agendar exportação de público](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) etapa você deve mapear manualmente os públicos-alvo ativados da Platform para o campo personalizado correspondente em [!DNL Salesforce].
 
 Para fazer isso, selecione cada segmento e insira o nome do campo personalizado em [!DNL Salesforce] no [!DNL Salesforce CRM] **[!UICONTROL ID do mapeamento]** campo. Consulte a [Criar campos personalizados em [!DNL Salesforce]](#prerequisites-custom-field) seção para obter orientação e práticas recomendadas sobre a criação de campos personalizados no [!DNL Salesforce].
 
-Por exemplo, se o [!DNL Salesforce] o campo personalizado é `crm_2_seg`, especifique esse valor no campo [!DNL Salesforce CRM] **[!UICONTROL ID do mapeamento]** para preencher públicos do segmento do Experience Platform nesse campo personalizado.
+Por exemplo, se o [!DNL Salesforce] o campo personalizado é `crm_2_seg`, especifique esse valor no campo [!DNL Salesforce CRM] **[!UICONTROL ID do mapeamento]** para preencher públicos-alvo do Experience Platform nesse campo personalizado.
 
 Um exemplo de campo personalizado de [!DNL Salesforce] é mostrado abaixo:
 ![[!DNL Salesforce] Captura de tela da interface do usuário mostrando o campo personalizado.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 Um exemplo indicando a localização do [!DNL Salesforce CRM] **[!UICONTROL ID do mapeamento]** é mostrado abaixo:
-![Exemplo de captura de tela da interface do Platform mostrando a exportação de segmento do cronograma.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![Exemplo de captura de tela da interface do Platform mostrando Programar exportação de público-alvo.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 Como mostrado acima, o [!DNL Salesforce] **[!UICONTROL Nome do campo]** corresponde exatamente ao valor especificado em [!DNL Salesforce CRM] **[!UICONTROL ID do mapeamento]**.
 
-Dependendo do caso de uso, todos os segmentos ativados podem ser mapeados para o mesmo [!DNL Salesforce] campo personalizado ou para diferente **[!UICONTROL Nome do campo]** in [!DNL Salesforce CRM]. Um exemplo típico com base na imagem mostrada acima pode ser.
+Dependendo do caso de uso, todos os públicos ativados podem ser mapeados para o mesmo [!DNL Salesforce] campo personalizado ou para diferente **[!UICONTROL Nome do campo]** in [!DNL Salesforce CRM]. Um exemplo típico com base na imagem mostrada acima pode ser.
 | [!DNL Salesforce CRM] nome do segmento | [!DNL Salesforce] **[!UICONTROL Nome do campo]** | [!DNL Salesforce CRM] **[!UICONTROL ID do mapeamento]** | | — | — | — | | crm_1_seg | `crm_1_seg` | `crm_1_seg` | | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
 Repita esta seção para cada segmento da Platform ativado.
@@ -257,30 +253,29 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Selecionar o destino e validar se o status é **[!UICONTROL habilitado]**.
    ![Captura de tela da interface do usuário da plataforma mostrando a execução do fluxo de dados de destinos.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. Alterne para a **[!UICONTROL Dados de ativação]** e selecione um nome de segmento.
+1. Alterne para a **[!UICONTROL Dados de ativação]** e selecione um nome de público-alvo.
    ![Exemplo de captura de tela da interface do Platform mostrando Dados de ativação de destinos.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
-1. Monitore o resumo do segmento e verifique se a contagem de perfis corresponde à contagem criada no segmento.
+1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem criada no segmento.
    ![Exemplo de captura de tela da interface do Platform mostrando o segmento.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Por fim, faça logon no site do Salesforce e valide se os perfis do segmento foram adicionados ou atualizados.
+1. Por fim, faça logon no site do Salesforce e valide se os perfis do público-alvo foram adicionados ou atualizados.
 
    **Trabalhar com contatos**
 
    * Se você selecionou *Contatos* no segmento da Platform, navegue até a **[!DNL Apps]** > **[!DNL Contacts]** página.
-      ![Captura de tela do Salesforce CRM mostrando a página Contatos com os perfis do segmento.](../../assets/catalog/crm/salesforce/contacts.png)
+     ![Captura de tela do Salesforce CRM mostrando a página Contatos com os perfis do segmento.](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * Selecione um *Contato* e verifique se os campos foram atualizados. Você pode ver que cada status de segmento em [!DNL Salesforce CRM] foi atualizado com o status de segmento correspondente da Platform, com base na **[!UICONTROL ID do mapeamento]** valor fornecido durante o [programação de segmentos](#schedule-segment-export-example).
-      ![Captura de tela do Salesforce CRM mostrando a página Detalhes do contato com status de segmento atualizados.](../../assets/catalog/crm/salesforce/contact-info.png)
+   * Selecione um *Contato* e verifique se os campos foram atualizados. Você pode ver que cada status de público-alvo em [!DNL Salesforce CRM] foi atualizado com o status de público-alvo correspondente na Platform, com base na **[!UICONTROL ID do mapeamento]** valor fornecido durante o [agendamento de público](#schedule-segment-export-example).
+     ![Captura de tela do Salesforce CRM mostrando a página Detalhes do contato com status de público-alvo atualizados.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Trabalhar com clientes em potencial**
 
    * Se você selecionou *Clientes potenciais* no seu segmento da Platform, em seguida, navegue até a **[!DNL Apps]** > **[!DNL Leads]** página.
-      ![Captura de tela do Salesforce CRM mostrando a página de clientes potenciais com os perfis do segmento.](../../assets/catalog/crm/salesforce/leads.png)
+     ![Captura de tela do Salesforce CRM mostrando a página de clientes potenciais com os perfis do segmento.](../../assets/catalog/crm/salesforce/leads.png)
 
-   * Selecione um *Lead* e verifique se os campos foram atualizados. Você pode ver que cada status de segmento em [!DNL Salesforce CRM] foi atualizado com o status de segmento correspondente da Platform, com base na **[!UICONTROL ID do mapeamento]** valor fornecido durante o [programação de segmentos](#schedule-segment-export-example).
-      ![Captura de tela do Salesforce CRM mostrando a página Detalhes do cliente potencial com status de segmento atualizados.](../../assets/catalog/crm/salesforce/lead-info.png)
-
+   * Selecione um *Lead* e verifique se os campos foram atualizados. Você pode ver que cada status de público-alvo em [!DNL Salesforce CRM] foi atualizado com o status de público-alvo correspondente na Platform, com base na **[!UICONTROL ID do mapeamento]** valor fornecido durante o [agendamento de público](#schedule-segment-export-example).
+     ![Captura de tela do Salesforce CRM mostrando a página Detalhes do cliente potencial com status de público-alvo atualizados.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Uso e governança de dados {#data-usage-governance}
 
@@ -291,8 +286,7 @@ Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as
 ### Erros desconhecidos encontrados ao enviar eventos para o destino {#unknown-errors}
 
 * Ao verificar uma execução de fluxo de dados, você pode encontrar a seguinte mensagem de erro: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-
-   ![Captura de tela da interface do usuário da plataforma mostrando erro.](../../assets/catalog/crm/salesforce/error.png)
+  ![Captura de tela da interface do usuário da plataforma mostrando erro.](../../assets/catalog/crm/salesforce/error.png)
 
    * Para corrigir esse erro, verifique se **[!UICONTROL ID do mapeamento]** que você forneceu no fluxo de trabalho de ativação para a [!DNL Salesforce CRM] destino corresponde exatamente ao valor do tipo de campo personalizado que você criou no [!DNL Salesforce]. Consulte a [Criar campos personalizados em [!DNL Salesforce]](#prerequisites-custom-field) para obter orientação.
 

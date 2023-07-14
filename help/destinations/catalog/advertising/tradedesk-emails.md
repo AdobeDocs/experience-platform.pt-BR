@@ -3,9 +3,9 @@ title: (Beta) A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Este documento foi criado para ajudar você a ativar perfis para o seu [!DNL Tra
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de poder ativar segmentos para [!DNL The Trade Desk], você deve entrar em contato com [!DNL The Trade Desk] Gerente de conta para assinar o contrato de integração do CRM. [!DNL The Trade Desk] O fornecerá permissão e compartilhará sua ID de anunciante para configurar seu destino.
+Antes de poder ativar públicos para [!DNL The Trade Desk], você deve entrar em contato com [!DNL The Trade Desk] Gerente de conta para assinar o contrato de integração do CRM. [!DNL The Trade Desk] O fornecerá permissão e compartilhará sua ID de anunciante para configurar seu destino.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (email ou email com hash) usados no destino da Trade Desk. |
-| Frequência de exportação | **[!UICONTROL Lote diário]** | Como um perfil é atualizado no Experience Platform com base na avaliação do segmento, o perfil (identidades) é atualizado uma vez por dia downstream para a plataforma de destino. Leia mais sobre [exportações em lote](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (email ou email com hash) usados no destino da Trade Desk. |
+| Frequência de exportação | **[!UICONTROL Lote diário]** | Como um perfil é atualizado no Experience Platform com base na avaliação do público-alvo, o perfil (identidades) é atualizado uma vez por dia downstream para a plataforma de destino. Leia mais sobre [exportações em lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ Antes de enviar ou ativar dados de público-alvo para um destino, você deve con
 
 Ao se conectar ao destino, definir uma política de governança de dados é totalmente opcional. Revise o Experience Platform [visão geral da governança de dados](/help/data-governance/policies/overview.md) para obter mais detalhes.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
-Ler [ativar dados do público-alvo para destinos de exportação de perfis em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para um destino.
+Ler [ativar dados do público-alvo para destinos de exportação de perfis em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para um destino.
 
-No **[!UICONTROL Agendamento]** você pode configurar a programação e os nomes de arquivo para cada segmento que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
+No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
 
-![Captura de tela da interface do usuário do Platform para agendar a ativação de segmentos.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Captura de tela da interface do usuário da Platform para agendar a ativação do público-alvo.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Todos os segmentos ativados para [!DNL The Trade Desk] O Destino do CRM é automaticamente definido como uma frequência diária e exportação completa de arquivo.
+>Todos os públicos-alvo ativados para [!DNL The Trade Desk] O Destino do CRM é automaticamente definido como uma frequência diária e exportação completa de arquivo.
 
-![Captura de tela da interface do usuário do Platform para agendar a ativação de segmentos.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Captura de tela da interface do usuário da Platform para agendar a ativação do público-alvo.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 No **[!UICONTROL Mapeamento]** , você deve selecionar atributos ou namespaces de identidade na coluna de origem e mapear para a coluna de destino.
 
-![Captura de tela da interface do usuário da plataforma para mapear a ativação de segmentos.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Captura de tela da interface do usuário da Platform para mapear a ativação de público-alvo.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Veja abaixo um exemplo do mapeamento de identidade correto ao ativar segmentos para [!DNL The Trade Desk] Destino do CRM.
+Veja abaixo um exemplo do mapeamento de identidade correto ao ativar públicos para [!DNL The Trade Desk] Destino do CRM.
 
 >[!IMPORTANT]
 >
@@ -133,11 +133,11 @@ Selecionar campos de destino:
 
 ## Validar exportação de dados {#validate}
 
-Para validar se os dados foram exportados corretamente do Experience Platform e para [!DNL The Trade Desk], encontre os segmentos no bloco de dados Adobe 1PD em [!DNL The Trade Desk] Plataforma de gerenciamento de dados (DMP). Estas são as etapas para encontrar a ID correspondente no [!DNL Trade Desk] Interface do usuário:
+Para validar se os dados foram exportados corretamente do Experience Platform e para [!DNL The Trade Desk], encontre os públicos-alvo no bloco de dados Adobe 1PD em [!DNL The Trade Desk] Plataforma de gerenciamento de dados (DMP). Estas são as etapas para encontrar a ID correspondente no [!DNL Trade Desk] Interface do usuário:
 
 1. Primeiro, clique no link **[!UICONTROL Dados]** Guia e revisar **[!UICONTROL Primário]**.
 2. Role para baixo na página, em **[!UICONTROL Dados importados]**, você encontrará a **[!UICONTROL Mosaico Adobe 1PD]**.
-3. Clique no **[!UICONTROL Adobe 1PD]** bloco e listará todos os segmentos ativados para o [!DNL Trade Desk] destino do seu anunciante. Você também pode usar a função de pesquisa.
+3. Clique no **[!UICONTROL Adobe 1PD]** bloco e listará todos os públicos-alvo ativados para o [!DNL Trade Desk] destino do seu anunciante. Você também pode usar a função de pesquisa.
 4. O ID de segmento nº do Experience Platform será exibido como o Nome do segmento na [!DNL Trade Desk] IU.
 
 ## Uso e governança de dados {#data-usage-governance}

@@ -3,10 +3,10 @@ keywords: destinos;adobe experience platform;plataforma;visão geral de destinos
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![Banner de visão geral dos destinos](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+**[!DNL Destinations]** são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -30,7 +30,7 @@ Uma das funcionalidades principais da Platform é assimilar seus dados primário
 ## Etapas de destinos {#steps}
 
 * Escolha em um [catálogo de autoatendimento](./catalog/overview.md) de todos os destinos disponíveis na Platform.
-* Use destinos para enviar perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
+* Use destinos para enviar perfis ou públicos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Agende exportações de dados para seus destinos preferidos regularmente.
 
 ## Controles {#controls}
@@ -40,8 +40,8 @@ Os controles no [espaço de trabalho de destinos](./ui/destinations-workspace.md
 * Navegue pelo catálogo de plataformas de destino onde você pode ativar seus dados;
 * Criar, editar, ativar e desativar fluxos de dados para os destinos no catálogo;
 * Criar uma conta em um local de armazenamento ou vincular a Platform à conta na plataforma de destino;
-* Selecione quais segmentos devem ser ativados para destinos;
-* Selecione qual [Campos do Experience Data Model (XDM)](../xdm/home.md) para exportar ao ativar segmentos para destinos de marketing por email.
+* Selecione quais públicos-alvo devem ser ativados para destinos;
+* Selecione qual [Campos do Experience Data Model (XDM)](../xdm/home.md) para exportar ao ativar públicos para destinos de marketing por email.
 
 ## Tipos e categorias de destino {#types-and-categories}
 
@@ -56,8 +56,8 @@ A tabela a seguir descreve as permissões e as combinações de permissões nece
 | Nível de permissão | Descrição |
 | ---- | ----|
 | **[!UICONTROL Gerenciar destinos]** | Para se conectar a destinos, é necessário ter a **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar segmentos para destinos e ativar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar segmentos para destinos e ocultar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e habilitar a opção [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e ocultar a variável [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Consulte a Documentação de governança de dados na plataforma para obter mais 
 
 Para obter mais informações sobre como selecionar ações de marketing no fluxo de trabalho de criação de destino, consulte as seguintes páginas para os diferentes tipos de destino na Platform:
 
-* [Destinos de publicidade - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Destinos de publicidade - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinos de publicidade - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Destinos de publicidade - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Destinos de publicidade - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
 * [Destinos de marketing por email](./catalog/email-marketing/overview.md)
 * [Destinos sociais](./catalog/social/overview.md)
 
-Para obter mais informações sobre violações de política de dados no workflow de ativação de segmento, consulte **[!UICONTROL Revisão]** etapa nos seguintes guias:
+Para obter mais informações sobre violações de política de dados no fluxo de trabalho de ativação de público, consulte **[!UICONTROL Revisão]** etapa nos seguintes guias:
 
-* [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](./ui/activate-segment-streaming-destinations.md#review)
+* [Ativar dados do público-alvo para streaming de públicos-alvo exportar destinos](./ui/activate-segment-streaming-destinations.md#review)
 * [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](./ui/activate-streaming-profile-destinations.md#review)
 * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](./ui/activate-batch-profile-destinations.md#review)

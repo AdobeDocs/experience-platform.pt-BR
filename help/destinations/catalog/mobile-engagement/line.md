@@ -1,12 +1,12 @@
 ---
 keywords: móvel;destino do engajamento móvel;LINE;destino do engajamento móvel LINE
 title: Conexão LINE
-description: O destino LINE permite adicionar perfis ao seu segmento da Platform e fornecer experiências personalizadas aos usuários conectados.
+description: O destino LINE permite adicionar perfis ao público-alvo da Platform e fornecer experiências personalizadas aos usuários conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 [[!DNL LINE]](https://line.me/en/) O é uma plataforma de comunicação popular que conecta pessoas, serviços e informações e cresceu de um aplicativo de bate-papo para um centro de atividades sociais, diárias, de entretenimento.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [[!DNL LINE] API de mensagens](https://developers.line.biz/en/reference/messaging-api/). Você pode ativar perfis de seus segmentos do Experience Platform como conexões dentro do [!DNL LINE] para as necessidades da sua empresa.
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [[!DNL LINE] API de mensagens](https://developers.line.biz/en/reference/messaging-api/). Você pode ativar perfis dos públicos-alvo do Experience Platform como conexões no [!DNL LINE] para as necessidades da sua empresa.
 
 [!DNL LINE] O usa Tokens de portador como mecanismo de autenticação para se comunicar com o [!DNL LINE] API de mensagens. Instruções para autenticar em seu [!DNL LINE] instância estão mais abaixo, dentro de [Autenticar para destino](#authenticate) seção.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, você pode direcionar usuários em um destino de engajamento móvel, com segmentos integrados [!DNL Adobe Experience Platform]. Além disso, você pode fornecer experiências personalizadas para eles, com base nos atributos deles [!DNL Adobe Experience Platform] perfis, assim que os segmentos e perfis forem atualizados no [!DNL Adobe Experience Platform].
+Como profissional de marketing, você pode direcionar usuários em um destino de engajamento móvel, com públicos-alvo integrados [!DNL Adobe Experience Platform]. Além disso, você pode fornecer experiências personalizadas para eles, com base nos atributos deles [!DNL Adobe Experience Platform] perfis, assim que públicos-alvo e perfis forem atualizados no [!DNL Adobe Experience Platform].
 
 ## Pré-requisitos {#prerequisites}
 
@@ -67,8 +67,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no [!DNL LINE] destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no [!DNL LINE] destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -107,13 +107,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e segmentos para destinos de exportação de segmento de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Mapear atributos e identidades {#map}
 
@@ -129,13 +129,13 @@ Se sua identidade de público alvo for *ID para anunciantes (IFAs)* você precis
 
 ## Validar exportação de dados {#exported-data}
 
-Após uma exportação de dados bem-sucedida fora do Experience Platform, a variável [!DNL LINE] o destino cria um novo público-alvo no [!DNL LINE] usando o nome de segmento selecionado.
+Após uma exportação de dados bem-sucedida fora do Experience Platform, a variável [!DNL LINE] o destino cria um novo público-alvo no [!DNL LINE] usando o nome de público-alvo selecionado.
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
 1. Entrada [!DNL LINE], faça logon na [Console do gerenciador](https://manager.line.biz/).
 
-1. Em seguida, acesse **[!UICONTROL Controles de dados]** > **[!UICONTROL Públicos-alvo]** e verifique o nome correspondente ao segmento selecionado na variável **[!UICONTROL Nome do público]** coluna.
+1. Em seguida, acesse **[!UICONTROL Controles de dados]** > **[!UICONTROL Públicos-alvo]** e verifique o nome correspondente ao público selecionado na variável **[!UICONTROL Nome do público]** coluna.
 
 1. O volume atualizado corresponderia à contagem no segmento.
 

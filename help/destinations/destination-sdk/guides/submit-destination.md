@@ -2,7 +2,7 @@
 description: Esta página fornece todas as informações necessárias para enviar para revisão um destino produzido criado por meio do Destination SDK.
 title: Enviar para análise um destino produzido criado no Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -22,7 +22,6 @@ ht-degree: 0%
 >* Se a equipe do Adobe solicitar que você faça atualizações em suas configurações após o envio inicial, será necessário enviar outra solicitação de publicação de destino depois de fazer as atualizações.
 >
 >* Mesmo depois que o destino estiver ativo no catálogo de Experience Platform, se precisar fazer atualizações nas configurações, você deverá enviar uma nova solicitação de publicação de destino para que as atualizações sejam refletidas nas configurações.
-
 
 Antes que seu destino possa ser publicado na [catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md), você deve fornecer ao Adobe determinadas informações sobre o destino e os testes realizados, para garantir que os usuários desfrutem da melhor experiência possível ao ativar dados na sua plataforma.
 
@@ -46,7 +45,7 @@ Você pode encontrar informações detalhadas sobre cada item nas seções abaix
 Forneça uma descrição dos casos de uso que seu destino resolve para clientes do Experience Platform. Suas descrições podem ser semelhantes aos casos de uso de parceiros existentes:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crie públicos-alvo a partir de suas listas de clientes, de pessoas que visitaram seu site ou de pessoas que já interagiram com seu conteúdo no Pinterest.
-* [Dados X do Yahoo](/help/destinations/catalog/advertising/datax.md#use-cases): as APIs DataX estão disponíveis para anunciantes que desejam direcionar um grupo de público-alvo específico destacado de endereços de email na Verizon Media (VMG). Elas podem criar rapidamente um novo segmento e enviar o grupo de público-alvo desejado usando a API quase em tempo real do VMG.
+* [Dados X do Yahoo](/help/destinations/catalog/advertising/datax.md#use-cases): as APIs DataX estão disponíveis para anunciantes que desejam direcionar um grupo de público-alvo específico destacado de endereços de email na Verizon Media (VMG). Elas podem criar rapidamente um novo público-alvo e enviar o grupo de público-alvo desejado usando a API quase em tempo real do VMG.
 
 ## Motivo da atualização {#reason-for-update}
 

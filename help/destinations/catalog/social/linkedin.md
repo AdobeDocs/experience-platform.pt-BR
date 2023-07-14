@@ -3,9 +3,9 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1087'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Ativar perfis para o [!DNL LinkedIn] campanhas para direcionamento, personaliza�
 
 Para ajudá-lo a entender melhor como e quando usar o [!DNL LinkedIn Matched Audiences] destino, este é um caso de uso que os clientes do Adobe Experience Platform podem resolver usando esse recurso.
 
-Uma empresa de software organiza uma conferência e deseja manter contato com os participantes, além de mostrar ofertas personalizadas com base no status de participação na conferência. A empresa pode assimilar endereços de email ou IDs de dispositivos móveis por conta própria [!DNL CRM] no Adobe Experience Platform. Em seguida, eles podem criar segmentos com base em seus próprios dados offline e enviá-los para a [!DNL LinkedIn] social, otimizando seus gastos com publicidade.
+Uma empresa de software organiza uma conferência e deseja manter contato com os participantes, além de mostrar ofertas personalizadas com base no status de participação na conferência. A empresa pode assimilar endereços de email ou IDs de dispositivos móveis por conta própria [!DNL CRM] no Adobe Experience Platform. Em seguida, eles podem criar públicos-alvo a partir de seus próprios dados offline e enviá-los para a [!DNL LinkedIn] social, otimizando seus gastos com publicidade.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -36,14 +36,28 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportar segmento]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone e outros) usados no [!DNL LinkedIn Matched Audiences] destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone e outros) usados no [!DNL LinkedIn Matched Audiences] destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +107,7 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Matched Audiences] destino e ativar segmentos.
+O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Matched Audiences] direcionar e ativar públicos-alvo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -127,18 +141,18 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Consulte [Ativar dados do público-alvo para destinos de exportação de segmento de transmissão](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
+Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Dados exportados {#exported-data}
 
-Uma ativação bem-sucedida significa que uma [!DNL LinkedIn] o público-alvo personalizado seria criado programaticamente no [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). A associação de segmento no público-alvo seria adicionada e removida à medida que os usuários fossem qualificados ou desqualificados para os segmentos ativados.
+Uma ativação bem-sucedida significa que uma [!DNL LinkedIn] o público-alvo personalizado seria criado programaticamente no [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). A associação de público-alvo seria adicionada e removida à medida que os usuários fossem qualificados ou desqualificados para os públicos ativados.
 
 >[!TIP]
 >
->A integração entre o Adobe Experience Platform e o [!DNL LinkedIn Matched Audiences] O suporta preenchimentos retroativos de público-alvo histórico. Todas as qualificações do segmento histórico são enviadas para [!DNL LinkedIn] ao ativar os segmentos para o destino.
+>A integração entre o Adobe Experience Platform e o [!DNL LinkedIn Matched Audiences] O suporta preenchimentos retroativos de público-alvo histórico. Todas as qualificações históricas de público são enviadas para o [!DNL LinkedIn] quando você ativa os públicos-alvo para o destino.

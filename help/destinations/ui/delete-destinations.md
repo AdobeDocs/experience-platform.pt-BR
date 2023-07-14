@@ -4,7 +4,7 @@ title: Excluir destinos
 type: Tutorial
 description: Este tutorial lista as etapas para excluir um destino existente na interface do usuário do Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Na interface do usuário do Adobe Experience Platform, é possível excluir conexões existentes com destinos.
 
-A exclusão de um destino remove todos os fluxos de dados existentes para esse destino. Todos os segmentos ativados para os destinos excluídos são desmapeados antes da exclusão do fluxo de dados.
+A exclusão de um destino remove todos os fluxos de dados existentes para esse destino. Todos os públicos ativados para os destinos excluídos são desmapeados antes da exclusão do fluxo de dados.
 
 Há duas maneiras de excluir destinos da lista [!DNL Platform] [!DNL UI]. É possível:
 
@@ -61,11 +61,11 @@ Siga as etapas abaixo para excluir um destino da página de detalhes do destino.
 
    * Se o destino tiver fluxos de dados existentes, você será levado para a [!UICONTROL O fluxo de dados é executado] guia.
 
-      ![Guia Execuções de fluxo de dados](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Guia Execuções de fluxo de dados](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Se o destino não tiver fluxos de dados existentes, você será direcionado para uma página vazia onde poderá começar a ativar públicos.
 
-      ![Detalhes do destino](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Detalhes do destino](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Selecionar **[!UICONTROL Excluir]** no painel direito.
 

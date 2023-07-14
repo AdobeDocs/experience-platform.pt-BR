@@ -1,10 +1,10 @@
 ---
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 5%
+source-wordcount: '1892'
+ht-degree: 4%
 
 ---
 
@@ -91,7 +91,10 @@ Para criar um esquema estático com atributos de perfil, defina os atributos de 
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Para criar um esquema estático com atributos de perfil, defina os atributos de 
 | `profileRequired` | Booleano | Opcional | Uso `true` se os usuários precisarem mapear atributos de perfil do Experience Platform para atributos personalizados na plataforma de destino. |
 | `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pelo Destination SDK e sempre deve ser definido como `true`. |
 | `identityRequired` | Booleano | Obrigatório | Defina como `true` se os usuários devem ser capazes de mapear [tipos de identidade](identity-namespace-configuration.md) de Experience Platform para os atributos definidos na variável `profileFields` matriz . |
+| `segmentNamespaceAllowList` | Matriz | Opcional | Define namespaces de público-alvo específicos a partir dos quais os usuários podem mapear públicos-alvo para o destino. Use esse parâmetro para restringir os usuários do Platform a exportar públicos-alvo somente dos namespaces de público-alvo definidos na matriz. Este parâmetro não pode ser usado junto com `segmentNamespaceDenyList`.<br> <br> Exemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá que os usuários mapeiem apenas os públicos-alvo da `AudienceManager` para este destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar esse parâmetro. <br> <br> Se ambos `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos-alvo originários da [Serviço de segmentação](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários no mapeamento de públicos-alvo para o destino, a partir dos namespaces de público-alvo definidos na matriz. Não pode ser usado com `segmentNamespaceAllowed`. <br> <br> Exemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` bloquearão os usuários de mapear públicos-alvo da `AudienceManager` para este destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar esse parâmetro. <br> <br> Se ambos `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos-alvo originários da [Serviço de segmentação](../../../../segmentation/home.md). <br> <br> Para permitir a exportação de todos os públicos-alvo, independentemente da origem, defina `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 

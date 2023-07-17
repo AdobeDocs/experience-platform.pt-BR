@@ -1,9 +1,9 @@
 ---
 description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint `/destination-servers`.
 title: Configuração da formatação de arquivo
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1001'
 ht-degree: 4%
 
 ---
@@ -159,7 +159,8 @@ No exemplo de configuração abaixo, nenhuma das opções de CSV é predefinida.
             "templatingStrategy":"PEBBLE_V1",
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
-      }
+      },
+      "maxFileRowCount":5000000
    }
 }
 ```
@@ -190,6 +191,7 @@ Abaixo está uma referência completa de todas as opções de formatação de ar
 | `csvOptions.timestampFormat.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define a cadeia de caracteres que indica um formato de carimbo de data e hora. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um único caractere usado para escapar do escape para o caractere de citação. | `\` quando os caracteres de escape e aspas são diferentes. `\0` quando os caracteres escape e aspas são iguais. | - | - |
 | `csvOptions.emptyValue.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define a representação da cadeia de caracteres de um valor vazio. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
+| `maxFileRowCount` | Opcional | Indica o número máximo de linhas por arquivo exportado, entre 1.000.000 e 10.000.000 linhas. | 5,000,000 |
 
 {style="table-layout:auto"}
 

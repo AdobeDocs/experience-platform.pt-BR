@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ A relação entre o Perfil do cliente em tempo real e outros serviços no Experi
 
 ### Composição da entidade de perfil
 
-Um Perfil de cliente em tempo real é composto por uma entidade principal, chamada **entidade principal** e várias entidades de suporte. No contexto do Experience Platform, a entidade primária é normalmente uma **entidade de perfil**, que é composto por características, comportamentos e associações de segmento de uma pessoa individual. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade principal do perfil e incluem o seguinte:
+Um Perfil de cliente em tempo real é composto por uma entidade principal, chamada **entidade principal** e várias entidades de suporte. No contexto do Experience Platform, a entidade primária é normalmente uma **entidade de perfil**, que é composto por características, comportamentos e associações de público-alvo de uma pessoa individual. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade principal do perfil e incluem o seguinte:
 
 - **Entidade dimensional**: a entidade usada para simplificar o processo de modelagem de dados para informações compartilhadas entre eventos ou registros de perfil. Também é conhecida como entidade de pesquisa ou entidade de classificação.
 - **Entidade B2B**: entidades que descrevem o relacionamento do perfil com contas e oportunidades de negócios para negócios.
@@ -98,13 +98,13 @@ Para saber mais sobre esquemas de união, incluindo como acessar esquemas de uni
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Perfis e segmentos
+## Perfis e públicos-alvo
 
-Adobe Experience Platform [!DNL Segmentation Service] O produz os públicos-alvo necessários para potencializar experiências para seus clientes individuais. Quando um segmento de público-alvo é criado, a ID desse segmento é adicionada à lista de associações de segmento para todos os perfis qualificados. As regras de segmento são criadas e aplicadas a [!DNL Real-Time Customer Profile] dados usando APIs RESTful e a interface do usuário do Construtor de segmentos. Para saber mais sobre segmentação, comece lendo o [Visão geral do serviço de segmentação](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] O produz os públicos-alvo necessários para potencializar experiências para seus clientes individuais. Quando um público-alvo é criado, a ID dele é adicionada à lista de associações de público-alvo para todos os perfis qualificados. As regras de segmento são criadas e aplicadas a [!DNL Real-Time Customer Profile] dados usando APIs RESTful e a interface do usuário do Construtor de segmentos. Para saber mais sobre segmentação, comece lendo o [Visão geral do serviço de segmentação](../segmentation/home.md).
 
 ### Assimilação e segmentação de transmissão
 
-A entrada em tempo real é possibilitada por meio de um processo chamado assimilação de streaming. À medida que os dados de perfil e série temporal são assimilados, [!DNL Real-Time Customer Profile] O decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado segmentação por transmissão, antes de mesclá-los com os dados existentes e atualizar a visualização de união. Como resultado, você pode realizar cálculos instantaneamente e tomar decisões para fornecer experiências aprimoradas e individualizadas aos clientes, à medida que eles interagem com sua marca. Enquanto são assimilados, os dados também são submetidos a validação para garantir que sejam assimilados corretamente e estejam em conformidade com o esquema no qual o conjunto de dados se baseia. Para obter mais informações sobre qual validação é feita durante a assimilação, comece lendo o [visão geral da qualidade de assimilação de dados](../ingestion/quality/overview.md).
+A entrada em tempo real é possibilitada por meio de um processo chamado assimilação de streaming. À medida que os dados de perfil e série temporal são assimilados, [!DNL Real-Time Customer Profile] O decide automaticamente incluir ou excluir esses dados dos públicos-alvo por meio de um processo contínuo chamado segmentação por transmissão, antes de mesclá-los aos dados existentes e atualizar a visualização de união. Como resultado, você pode realizar cálculos instantaneamente e tomar decisões para fornecer experiências aprimoradas e individualizadas aos clientes, à medida que eles interagem com sua marca. Enquanto são assimilados, os dados também são submetidos a validação para garantir que sejam assimilados corretamente e estejam em conformidade com o esquema no qual o conjunto de dados se baseia. Para obter mais informações sobre qual validação é feita durante a assimilação, comece lendo o [visão geral da qualidade de assimilação de dados](../ingestion/quality/overview.md).
 
 ## Projeções de borda
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -134,7 +134,7 @@ Os campos padrão mostrados também podem ser alterados em um nível organizacio
 
 ![A guia Details (Detalhes) é realçada. Os detalhes do perfil são exibidos.](../images/user-guide/profile-detail.png)
 
-Você pode exibir informações adicionais relacionadas ao perfil de cliente individual selecionando outra das guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de segmento que mostra os segmentos para os quais o perfil está qualificado no momento.
+Você pode exibir informações adicionais relacionadas ao perfil de cliente individual selecionando outra das guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de público-alvo que mostra os públicos para os quais o perfil está qualificado no momento.
 
 ### Guia Atributos
 
@@ -152,13 +152,13 @@ Os eventos também podem ser exibidos como um objeto JSON ao selecionar: **[!UIC
 
 ![A guia Eventos é realçada. Os eventos de perfil são exibidos.](../images/user-guide/events.png)
 
-### Guia Associação de segmento
+### Guia Associação de público
 
-A variável **[!UICONTROL Associação de segmento]** A guia exibe uma lista com o nome e a descrição dos segmentos aos quais o perfil de cliente individual pertence no momento. Essa lista é atualizada automaticamente conforme o perfil se qualifica ou expira nos segmentos. A contagem total de segmentos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia.
+A variável **[!UICONTROL associação de público]** A guia exibe uma lista com o nome e a descrição dos públicos-alvo aos quais o perfil de cliente individual pertence atualmente. Essa lista é atualizada automaticamente conforme o perfil se qualifica ou expira dos públicos-alvo. A contagem total de públicos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia.
 
 Para obter mais informações sobre segmentação em Experience Platform, consulte a [Documentação do Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![A guia Segmento de afiliação é realçada. Os detalhes de associação do segmento de perfil são exibidos.](../images/user-guide/segment-membership.png)
+![A guia Associação de público-alvo é realçada. Os detalhes de associação do público-alvo do perfil são exibidos.](../images/user-guide/segment-membership.png)
 
 ## Políticas de mesclagem
 

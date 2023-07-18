@@ -4,7 +4,7 @@ title: Visão geral das políticas de mesclagem
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a visualização unificada.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -60,14 +60,14 @@ Para criar uma política de mesclagem usando **[!UICONTROL Prioridade de conjunt
 
 Identificação de identidade ([!UICONTROL Identificação de ID]) é o processo de identificar fragmentos de dados e combiná-los para formar um registro de perfil completo. Para ajudar a ilustrar os diferentes comportamentos de compilação, considere um único cliente que interage com uma marca usando dois endereços de email diferentes.
 
-* **[!UICONTROL Nenhum]:** Quando essa opção é selecionada, as IDs não são compiladas. Quando a segmentação ocorre, as identidades que podem pertencer à mesma pessoa não serão unidas e a segmentação só considerará os atributos anexados a cada ID individual ao determinar se um cliente se qualifica para associação ao segmento. Isso pode resultar em um único cliente ter vários perfis, e cada perfil pode se qualificar para segmentos diferentes, resultando no envio de várias mensagens de marketing para o mesmo cliente.
-* **[!UICONTROL Gráfico privado]:** Quando o gráfico privado é selecionado, várias identidades relacionadas ao mesmo indivíduo são unidas. Isso faz com que o cliente tenha um único perfil e permite que a segmentação considere vários atributos de várias identidades relacionadas ao determinar a qualificação do segmento. Nesse cenário, o cliente provavelmente terá um único perfil, se qualificará para um segmento com base na combinação de atributos entre as identidades e receberá apenas uma mensagem de marketing.
+* **[!UICONTROL Nenhum]:** Quando essa opção é selecionada, as IDs não são compiladas. Quando a segmentação ocorre, as identidades que podem pertencer à mesma pessoa não serão unidas e a segmentação só considerará os atributos anexados a cada ID individual ao determinar se um cliente se qualifica para associação de público-alvo. Isso pode resultar em um único cliente ter vários perfis, e cada perfil pode se qualificar para públicos diferentes, resultando no envio de várias mensagens de marketing para o mesmo cliente.
+* **[!UICONTROL Gráfico privado]:** Quando o gráfico privado é selecionado, várias identidades relacionadas ao mesmo indivíduo são unidas. Isso faz com que o cliente tenha um único perfil e permite que a segmentação considere vários atributos de várias identidades relacionadas ao determinar a qualificação do segmento. Nesse cenário, o cliente provavelmente terá um único perfil, se qualificará para um público-alvo com base na combinação de atributos entre as identidades e receberá apenas uma mensagem de marketing.
 
-Para saber mais sobre identidades e sua função na geração de perfis e segmentos, comece lendo o [Visão geral do serviço de identidade](../../identity-service/home.md).
+Para saber mais sobre identidades e seu papel na geração de perfis e públicos, comece lendo o [Visão geral do serviço de identidade](../../identity-service/home.md).
 
 ## Política de mesclagem padrão {#default-merge-policy}
 
-Uma organização pode criar uma política de mesclagem padrão para que sua organização use ao mesclar fragmentos de perfil. Isso permite que os usuários selecionem facilmente a política padrão ao executar ações no Experience Platform, como visualizar perfis de clientes ou criar segmentos. Na maioria dos casos, a menos que outra política de mesclagem seja especificada, a política de mesclagem padrão será usada.
+Uma organização pode criar uma política de mesclagem padrão para que sua organização use ao mesclar fragmentos de perfil. Isso permite que os usuários selecionem facilmente a política padrão ao executar ações no Experience Platform, como visualizar perfis de clientes ou criar públicos. Na maioria dos casos, a menos que outra política de mesclagem seja especificada, a política de mesclagem padrão será usada.
 
 Cada organização pode criar várias políticas de mesclagem relacionadas a uma única classe de esquema XDM. No entanto, elas só podem ter uma política de mesclagem padrão declarada para cada classe. Por exemplo, sua organização pode ter uma política de mesclagem padrão relacionada ao [!DNL XDM Individual Profile] e uma política de mesclagem padrão diferente para uma classe de Inventário de produto personalizada.
 
@@ -75,7 +75,7 @@ Se você criar uma nova política de mesclagem e defini-la como padrão, a polí
 
 >[!WARNING]
 >
->As contagens de perfis e os segmentos com uma política de mesclagem padrão associada existente podem ser afetados. Qualquer segmento que tenha uma política de mesclagem padrão aplicada será atualizado para a nova política de mesclagem padrão.
+>As contagens de perfis e os públicos-alvo com uma política de mesclagem padrão associada existente podem ser afetados. Qualquer público-alvo que tenha uma política de mesclagem padrão aplicada será atualizado para a nova política de mesclagem padrão.
 
 ## Próximas etapas
 

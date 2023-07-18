@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Visualizar ponto de extremidade da API Status de amostra (Visualização de perfil)
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Os resultados deste trabalho de amostra podem ser exibidos usando o `/previewsam
 
 >[!NOTE]
 >
->Há endpoints de estimativa e pré-visualização disponíveis como parte da API do Serviço de segmentação da Adobe Experience Platform que permitem exibir informações de nível de resumo sobre definições de segmento para ajudar a garantir que você esteja isolando o público-alvo esperado. Para encontrar etapas detalhadas para trabalhar com endpoints de visualização e estimativa de segmento, visite o [guia de visualizações e estimativas de endpoints](../../segmentation/api/previews-and-estimates.md), parte da [!DNL Segmentation] Guia do desenvolvedor de API.
+>Há endpoints de estimativa e pré-visualização disponíveis como parte da API do Serviço de segmentação da Adobe Experience Platform que permitem exibir informações de nível de resumo sobre definições de segmento para ajudar a garantir que você esteja isolando o público-alvo esperado. Para encontrar etapas detalhadas para trabalhar com endpoints de pré-visualização e estimativa, visite o [guia de visualizações e estimativas de endpoints](../../segmentation/api/previews-and-estimates.md), parte da [!DNL Segmentation] Guia do desenvolvedor de API.
 
 ## Introdução
 
@@ -592,5 +592,5 @@ Esse relatório fornece as seguintes informações:
 
 ## Próximas etapas
 
-Agora que você sabe como visualizar dados de amostra no Armazenamento de perfis e executar vários relatórios sobre os dados, também é possível usar os endpoints de estimativa e pré-visualização da API do serviço de segmentação para exibir informações de nível de resumo sobre as definições de segmento. Essas informações ajudam a garantir que você esteja isolando o público-alvo esperado em seu segmento. Para saber mais sobre como trabalhar com visualizações e estimativas de segmentos usando a API de segmentação, visite o [guia de visualização e estimativa de endpoints](../../segmentation/api/previews-and-estimates.md).
+Agora que você sabe como visualizar dados de amostra no Armazenamento de perfis e executar vários relatórios sobre os dados, também é possível usar os endpoints de estimativa e pré-visualização da API do serviço de segmentação para exibir informações de nível de resumo sobre as definições de segmento. Essas informações ajudam a garantir que você esteja isolando o público-alvo esperado. Para saber mais sobre como trabalhar com visualizações e estimativas usando a API de segmentação, visite o [guia de visualização e estimativa de endpoints](../../segmentation/api/previews-and-estimates.md).
 

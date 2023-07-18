@@ -4,7 +4,7 @@ title: Guia de solução de problemas do Perfil do cliente em tempo real
 type: Documentation
 description: Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns ao trabalhar com dados de perfil usando o Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -47,13 +47,13 @@ Há vários métodos de exibição de Dados de perfil, dependendo se você está
 
 Se você souber as IDs das entidades de Perfil que deseja acessar, poderá usar a variável `/entities` (Acesso ao perfil) na API do perfil para pesquisar essas entidades. Consulte a seção sobre [entidades](./api/entities.md) no guia do desenvolvedor para obter mais informações.
 
-Você também pode usar a API do Serviço de segmentação da Adobe Experience Platform para acessar perfis individuais de clientes que se qualificaram para uma associação de segmento. Consulte a [Visão geral do serviço de segmentação](../segmentation/home.md) para obter mais informações.
+Você também pode usar a API do Serviço de segmentação do Adobe Experience Platform para acessar perfis individuais de clientes que se qualificaram para uma associação de público-alvo. Consulte a [Visão geral do serviço de segmentação](../segmentation/home.md) para obter mais informações.
 
 #### Uso da interface
 
 Na interface do Experience Platform, a variável **[!UICONTROL Procurar]** na guia **[!UICONTROL Perfis]** o workspace permite exibir a contagem total de perfis e pesquisar perfis individuais pelo valor de identidade. Consulte a [Guia do usuário do perfil](./ui/user-guide.md) para obter mais informações.
 
-Você também pode exibir uma lista de segmentos na **[!UICONTROL Procurar]** na guia **[!UICONTROL Segmentos]** espaço de trabalho. Depois de selecionar um segmento, uma amostra de perfis qualificados para esse segmento é exibida. Em seguida, você pode selecionar qualquer um desses perfis listados para exibir seus detalhes. Consulte a [Visão geral da interface de segmentação](../segmentation/ui/overview.md) para obter mais informações.
+Você também pode exibir uma lista de públicos-alvo na **[!UICONTROL Procurar]** na guia **[!UICONTROL Públicos-alvo]** espaço de trabalho. Após selecionar um público-alvo, uma amostra de perfis qualificados para esse público-alvo é exibida. Em seguida, você pode selecionar qualquer um desses perfis listados para exibir seus detalhes. Consulte a [Visão geral da interface de segmentação](../segmentation/ui/overview.md) para obter mais informações.
 
 ## Códigos de erro
 

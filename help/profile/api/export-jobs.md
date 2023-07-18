@@ -4,16 +4,16 @@ title: Ponto de extremidade da API de trabalhos de exportação de perfil
 type: Documentation
 description: O Perfil do cliente em tempo real permite criar uma única visualização de clientes individuais no Adobe Experience Platform, reunindo dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 2%
 
 ---
 
 # Ponto de extremidade de trabalhos de exportação de perfil
 
-[!DNL Real-Time Customer Profile] O permite criar uma única visualização de clientes individuais reunindo dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional. Por exemplo, segmentos de público-alvo de [!DNL Profile] os dados podem ser exportados para ativação e os atributos do perfil podem ser exportados para relatórios.
+[!DNL Real-Time Customer Profile] O permite criar uma única visualização de clientes individuais reunindo dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional. Por exemplo, [!DNL Profile] os dados podem ser exportados para ativação criando públicos-alvo, e os atributos de perfil podem ser exportados para relatórios.
 
 Este documento fornece instruções passo a passo para criar e gerenciar trabalhos de exportação usando o [API de perfil](https://www.adobe.com/go/profile-apis-en).
 
@@ -37,7 +37,7 @@ Ao exportar [!DNL Profile] dados, um conjunto de dados de destino deve ser criad
 
 Uma das principais considerações é o esquema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar dados do perfil, o conjunto de dados deve ser baseado na variável [!DNL XDM Individual Profile] Esquema de união (`https://ns.adobe.com/xdm/context/profile__union`). Um esquema de união é um esquema somente leitura gerado pelo sistema que agrega os campos de esquemas que compartilham a mesma classe. No caso em apreço, [!DNL XDM Individual Profile] classe. Para obter mais informações sobre esquemas de visualização de união, consulte a [seção união no guia de noções básicas da composição de esquema](../../xdm/schema/composition.md#union).
 
-As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faça referência ao [!DNL XDM Individual Profile] Esquema de união usando o [!DNL Catalog] API. Você também pode usar o [!DNL Platform] para criar um conjunto de dados que faça referência ao esquema de união. As etapas para usar a interface do usuário estão descritas em [este tutorial de interface do usuário para exportar segmentos](../../segmentation/tutorials/create-dataset-export-segment.md) mas também são aplicáveis aqui. Depois de concluído, você pode retornar a este tutorial para prosseguir com as etapas para [iniciar um novo trabalho de exportação](#initiate).
+As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faça referência ao [!DNL XDM Individual Profile] Esquema de união usando o [!DNL Catalog] API. Você também pode usar o [!DNL Platform] para criar um conjunto de dados que faça referência ao esquema de união. As etapas para usar a interface do usuário estão descritas em [este tutorial de interface do usuário para exportação de públicos](../../segmentation/tutorials/create-dataset-export-segment.md) mas também são aplicáveis aqui. Depois de concluído, você pode retornar a este tutorial para prosseguir com as etapas para [iniciar um novo trabalho de exportação](#initiate).
 
 Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa para [iniciar um novo trabalho de exportação](#initiate).
 
@@ -132,11 +132,11 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `fields` | *(Opcional)* Limita os campos de dados a serem incluídos na exportação somente aos fornecidos neste parâmetro. A omissão desse valor resultará na inclusão de todos os campos nos dados exportados. |
-| `mergePolicy` | *(Opcional)* Especifica a política de mesclagem para controlar os dados exportados. Inclua esse parâmetro quando houver vários segmentos sendo exportados. |
+| `mergePolicy` | *(Opcional)* Especifica a política de mesclagem para controlar os dados exportados. Inclua esse parâmetro quando houver vários públicos-alvo sendo exportados. |
 | `mergePolicy.id` | A ID da política de mesclagem. |
 | `mergePolicy.version` | A versão específica da política de mesclagem a ser usada. A omissão desse valor assumirá como padrão a versão mais recente. |
 | `additionalFields.eventList` | *(Opcional)* Controla os campos de evento de série temporal exportados para objetos filho ou associados fornecendo uma ou mais das seguintes configurações:<ul><li>`eventList.fields`: controle os campos que serão exportados.</li><li>`eventList.filter`: Especifica critérios que limitam os resultados incluídos de objetos associados. Espera um valor mínimo necessário para a exportação, normalmente uma data.</li><li>`eventList.filter.fromIngestTimestamp`: Filtra os eventos de série temporal para aqueles que foram assimilados após o carimbo de data e hora fornecido. Esse não é o tempo do evento em si, mas o tempo de assimilação dos eventos.</li></ul> |
-| `destination` | **(Obrigatório)** Informações de destino dos dados exportados:<ul><li>`destination.datasetId`: **(Obrigatório)** A ID do conjunto de dados para o qual os dados devem ser exportados.</li><li>`destination.segmentPerBatch`: *(Opcional)* Um valor booleano que, se não for fornecido, assumirá como padrão `false`. Um valor de `false` O exporta todas as IDs de segmento em uma única ID de lote. Um valor de `true` O exporta uma ID de segmento para uma ID de lote. Observe que definir o valor como `true` podem afetar o desempenho da exportação em lote.</li></ul> |
+| `destination` | **(Obrigatório)** Informações de destino dos dados exportados:<ul><li>`destination.datasetId`: **(Obrigatório)** A ID do conjunto de dados para o qual os dados devem ser exportados.</li><li>`destination.segmentPerBatch`: *(Opcional)* Um valor booleano que, se não for fornecido, assumirá como padrão `false`. Um valor de `false` O exporta todas as IDs de definição de segmento em uma única ID de lote. Um valor de `true` O exporta uma ID de definição de segmento para uma ID de lote. Observe que definir o valor como `true` podem afetar o desempenho da exportação em lote.</li></ul> |
 | `schema.name` | **(Obrigatório)** O nome do esquema associado ao conjunto de dados para o qual os dados devem ser exportados. |
 
 >[!NOTE]
@@ -494,6 +494,6 @@ Para criar um trabalho de exportação que contenha apenas dados do evento (sem 
   }
 ```
 
-### Exportação de segmentos
+### Exportação de públicos
 
-Você também pode usar o endpoint de trabalhos de exportação para exportar segmentos de público-alvo em vez de [!DNL Profile] dados. Consulte o guia sobre [exportar trabalhos na API de segmentação](../../segmentation/api/export-jobs.md) para obter mais informações.
+Você também pode usar o endpoint de trabalhos de exportação para exportar públicos em vez de [!DNL Profile] dados. Consulte o guia sobre [exportar trabalhos na API de segmentação](../../segmentation/api/export-jobs.md) para obter mais informações.

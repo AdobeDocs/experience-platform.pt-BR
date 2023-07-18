@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;segmento;segmentMembership;segmento membership;Schema design;map;Map;
 solution: Experience Platform
 title: Grupo de campos Esquema de detalhes da associação do segmento
 description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes da associação do segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '419'
 ht-degree: 2%
 
 ---

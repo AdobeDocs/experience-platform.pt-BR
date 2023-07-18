@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Expirações do evento de experiência
 description: Este documento fornece orientação geral sobre como configurar tempos de expiração para eventos de experiência individuais em um conjunto de dados do Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Por exemplo, se você aplicasse um valor de expiração de 30 dias em 15 de maio
 
 ## Efeitos na segmentação
 
-Você deve garantir que as janelas de retrospectiva dos segmentos estejam dentro dos limites de expiração de seus conjuntos de dados dependentes para manter os resultados precisos. Por exemplo, se você aplicar um valor de expiração de 30 dias e tiver um segmento que tenta visualizar dados de até 45 dias atrás, o público-alvo resultante provavelmente será impreciso.
+Você deve garantir que as janelas de retrospectiva para seus públicos-alvo estejam dentro dos limites de expiração de seus conjuntos de dados dependentes para manter os resultados precisos. Por exemplo, se você aplicar um valor de expiração de 30 dias e tiver um público-alvo que tente visualizar dados de até 45 dias atrás, o público-alvo resultante provavelmente será impreciso.
 
 Portanto, você deve manter o mesmo valor de expiração do evento de experiência para todos os conjuntos de dados, se possível, para evitar o impacto de valores de expiração diferentes em conjuntos de dados diferentes na lógica de segmentação.
 

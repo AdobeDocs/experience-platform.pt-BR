@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Expiração de dados do perfil pseudônimo
 description: Este documento fornece orientação geral sobre como configurar a expiração de dados para Perfis pseudônimos no Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Um perfil é considerado para expiração de dados pseudônimos se atender às s
 - Os namespaces de identidade do perfil compilado correspondem ao que o cliente especificou como um namespace de identidade pseudônimo ou desconhecido.
    - Por exemplo, se o namespace de identidade do perfil for `ECID`, `GAID`ou `AAID`. O perfil compilado não tem IDs de nenhum outro namespace de identidade. Neste exemplo, um perfil compilado faz **não** têm uma identidade de email ou CRM.
 - Nenhuma atividade ocorreu em um período definido pelo usuário. A atividade é definida por qualquer evento de experiência que esteja sendo assimilado ou por atualizações iniciadas pelo cliente nos atributos do perfil.
-   - Por exemplo, um novo evento de exibição de página ou atualização de atributo de página é considerado uma atividade. No entanto, uma atualização de associação de segmento iniciada por não usuários é **não** como uma atividade. Atualmente, para calcular a expiração dos dados, o rastreamento em nível de perfil se baseia na hora do evento para Eventos de experiência e na hora da assimilação dos atributos de perfil.
+   - Por exemplo, um novo evento de exibição de página ou atualização de atributo de página é considerado uma atividade. No entanto, uma atualização de associação de público-alvo iniciada por não usuários é **não** como uma atividade. Atualmente, para calcular a expiração dos dados, o rastreamento em nível de perfil se baseia na hora do evento para Eventos de experiência e na hora da assimilação dos atributos de perfil.
 
 ## Access {#access}
 

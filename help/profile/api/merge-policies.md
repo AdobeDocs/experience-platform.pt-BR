@@ -4,9 +4,9 @@ title: Ponto de Extremidade da API de Políticas de Mesclagem
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2467'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Embora cada organização possa ter várias políticas de mesclagem por classe d
 >
 >Ao definir uma nova política de mesclagem como padrão, qualquer política de mesclagem existente definida anteriormente como padrão será atualizada automaticamente para não ser mais usada como padrão.
 
-Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um segmento seja ativado na borda (marcado como um segmento de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativa na borda. Se um segmento for **não** vinculado a uma política de mesclagem marcada como ativa na borda, o segmento não será marcado como ativo na borda e será marcado como um segmento de transmissão.
+Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um público-alvo seja ativado na borda (marcado como um público-alvo de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativo na borda. Se um público-alvo for **não** vinculado a uma política de mesclagem marcada como ativa na borda, o público-alvo não será marcado como ativo na borda e será marcado como um público de transmissão.
 
 Além disso, cada organização só pode ter **um** política de mesclagem ativa no edge. Se uma política de mesclagem estiver ativa na borda, ela poderá ser usada para outros sistemas na borda, como Perfil da borda, Segmentação da borda e Destinos na borda.
 
@@ -761,6 +761,6 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes na Platform e criar segmentos de público-alvo a partir do seu [!DNL Real-Time Customer Profile] dados.
+Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes na Platform e criar públicos-alvo a partir de seus [!DNL Real-Time Customer Profile] dados.
 
-Consulte a [Documentação do Serviço de segmentação da Adobe Experience Platform](../../segmentation/home.md) para começar a definir e trabalhar com segmentos.
+Consulte a [Documentação do Serviço de segmentação da Adobe Experience Platform](../../segmentation/home.md) para começar a definir e trabalhar com públicos.

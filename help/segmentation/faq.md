@@ -1,9 +1,9 @@
 ---
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo.
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ O componente de composição &quot;colocação&quot; segue uma estrutura rígida
 
 1. Você **sempre** comece com o [!UICONTROL Público] para selecionar sua atividade inicial. Você pode ter no máximo **um** [!UICONTROL Público] bloco.
 2. Opcionalmente, é possível adicionar um [!UICONTROL Excluir] bloco que segue o [!UICONTROL Público] bloco.
-3. Opcionalmente, é possível adicionar um [!UICONTROL Classificação] ou [!UICONTROL Split] bloco. Você pode **somente** têm um desses blocos por composição.
-4. Você **sempre** terminar com um [!UICONTROL Salvar] bloco para salvar o público-alvo.
+3. Opcionalmente, é possível adicionar um [!UICONTROL Enriquecer] bloco que segue o [!UICONTROL Excluir] bloco.
+4. Opcionalmente, é possível adicionar um [!UICONTROL Classificação] ou [!UICONTROL Split] bloco. Você pode **somente** têm um desses blocos por composição.
+5. Você **sempre** terminar com um [!UICONTROL Salvar] bloco para salvar o público-alvo.
 
 Para obter mais detalhes sobre como usar a Composição de público-alvo, leia a [Guia da interface do usuário da Composição de público-alvo](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Para obter mais informações sobre o bloco Split, leia o [Guia da interface do 
 
 ## Posso usar todos os tipos de segmentação no fluxo de trabalho de Composição de público-alvo?
 
-Sim, todos os tipos de segmentação (segmentação em lote, segmentação de transmissão e segmentação de borda) são compatíveis com o fluxo de trabalho Composição de público-alvo. No entanto, como as composições atualmente são executadas apenas uma vez por dia, mesmo se os públicos avaliados por transmissão ou borda forem incluídos, o resultado será baseado na associação do público no momento em que a composição foi executada.
+Sim, todos os tipos de segmentação ([segmentação em lote, segmentação por transmissão e segmentação de borda](./home.md#evaluate-segments)) são compatíveis com o fluxo de trabalho Composição de público-alvo. No entanto, como as composições atualmente são executadas apenas uma vez por dia, mesmo se os públicos avaliados por transmissão ou borda forem incluídos, o resultado será baseado na associação do público no momento em que a composição foi executada.
 
 ## Como posso confirmar a associação de um perfil em um público-alvo?
 

@@ -4,9 +4,9 @@ title: Guia da interface de políticas de mesclagem
 type: Documentation
 description: Ao reunir dados de várias fontes no Experience Platform, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a visualização unificada. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2321'
+source-wordcount: '2320'
 ht-degree: 0%
 
 ---
@@ -58,8 +58,8 @@ A primeira etapa do fluxo de trabalho permite configurar a política de mesclage
    * **[!UICONTROL Nenhum]**: não executa compilação de identidade.
    * **[!UICONTROL Gráfico privado]**: execute a compilação de identidade com base no seu gráfico de identidade privado.
 * **[!UICONTROL Política de mesclagem padrão]**: um botão que permite selecionar se essa política de mesclagem será ou não o padrão da sua organização. Se o seletor estiver ativado, um aviso será exibido solicitando que você confirme se deseja alterar a política de mesclagem padrão da organização. Consulte a [visão geral das políticas de mesclagem](overview.md) para saber mais sobre as políticas de mesclagem padrão.
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Política de mesclagem ativa na borda]**: um botão que permite selecionar se essa política de mesclagem estará ou não ativa na borda. Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um segmento seja ativado na borda (marcado como um segmento de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativa na borda. Se um segmento for **não** vinculado a uma política de mesclagem marcada como ativa na borda, o segmento não será marcado como ativo na borda e será marcado como um segmento de transmissão. Além disso, cada sandbox em uma organização só pode ter **um** política de mesclagem ativa no edge.
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Política de mesclagem ativa na borda]**: um botão que permite selecionar se essa política de mesclagem estará ou não ativa na borda. Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um público-alvo seja ativado na borda (marcado como um público-alvo de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativo na borda. Se um público-alvo for **não** vinculado a uma política de mesclagem marcada como ativa na borda, o público-alvo não será marcado como ativo na borda e será marcado como um público de transmissão. Além disso, cada sandbox em uma organização só pode ter **um** política de mesclagem ativa no edge.
 
 Depois que os campos obrigatórios forem preenchidos, você poderá selecionar **[!UICONTROL Próxima]** para continuar com o fluxo de trabalho.
 
@@ -193,7 +193,7 @@ Depois de fazer as alterações necessárias, revise a política de mesclagem e 
 
 ## Violações da política de governança de dados
 
-Ao criar ou atualizar uma política de mesclagem, uma verificação é executada para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados do Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição de realizar em [!DNL Platform] dados. Por exemplo, se uma política de mesclagem fosse usada para criar um segmento que fosse ativado para um destino de terceiros e sua organização tivesse uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma **[!UICONTROL Violação da política de governança de dados detectada]** ao tentar salvar sua política de mesclagem.
+Ao criar ou atualizar uma política de mesclagem, uma verificação é executada para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados do Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição de realizar em [!DNL Platform] dados. Por exemplo, se uma política de mesclagem fosse usada para criar um público-alvo que fosse ativado para um destino de terceiros e sua organização tivesse uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma **[!UICONTROL Violação da política de governança de dados detectada]** ao tentar salvar sua política de mesclagem.
 
 Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite exibir os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a **[!UICONTROL Linhagem de dados]** A guia fornece o motivo da violação e as ativações afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
 
@@ -203,4 +203,4 @@ Para saber mais sobre como o controle de dados é executado no Adobe Experience 
 
 ## Próximas etapas
 
-Agora que você criou e configurou políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes na Platform e para criar segmentos de público-alvo com base nos dados do perfil. Consulte a [visão geral da segmentação](../../segmentation/home.md) para obter mais informações sobre como criar e trabalhar com segmentos usando o [!DNL Experience Platform] Interface do usuário e APIs.
+Agora que você criou e configurou políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes na Platform e para criar públicos-alvo a partir dos dados do perfil. Consulte a [visão geral da segmentação](../../segmentation/home.md) para obter mais informações sobre como criar e trabalhar com públicos-alvo usando o [!DNL Experience Platform] Interface do usuário e APIs.

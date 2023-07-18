@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 5%
@@ -30,7 +30,7 @@ Os seguintes serviços de Experience Platform estão envolvidos na modelagem de 
 * [[!DNL Real-Time Customer Profile]](home.md): crie perfis de consumidores unificados usando dados de várias fontes.
 * [Identidades](../identity-service/home.md): identidades de ponte de fontes de dados diferentes, à medida que são assimiladas na Platform.
 * [Esquemas](../xdm/home.md): os esquemas do Experience Data Model (XDM) são a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
-* [Segmentos](../segmentation/home.md): o mecanismo de segmentação na Platform é usado para criar segmentos a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
+* [Públicos-alvo](../segmentation/home.md): o mecanismo de segmentação na Platform é usado para criar públicos-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
 
 ## Tipos de limite
 
@@ -108,14 +108,14 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 ## Proteções de segmentação
 
-As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos segmentos que uma organização pode criar no Experience Platform, bem como mapear e ativar segmentos para destinos.
+As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos públicos que uma organização pode criar no Experience Platform, bem como mapear e ativar públicos para destinos.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Segmentos por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 segmentos no total, desde que haja menos de 4000 segmentos em cada sandbox individual. Tentar criar segmentos adicionais pode afetar o desempenho do sistema. |
-| Segmentos de borda por sandbox | 150 | Suave | Uma organização pode ter mais de 150 segmentos de borda no total, desde que haja menos de 150 segmentos de borda em cada sandbox individual. Tentar criar segmentos de borda adicionais pode afetar o desempenho do sistema. |
-| Segmentos de transmissão por sandbox | 500 | Suave | Uma organização pode ter mais de 500 segmentos de transmissão no total, desde que haja menos de 500 segmentos de transmissão em cada sandbox individual. Tentar criar segmentos de transmissão adicionais pode afetar o desempenho do sistema. |
-| Segmentos em lote por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 segmentos em lote no total, desde que haja menos de 4000 segmentos em lote em cada sandbox individual. Tentar criar segmentos em lote adicionais pode afetar o desempenho do sistema. |
+| Públicos-alvo por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Tentar criar públicos adicionais pode afetar o desempenho do sistema. |
+| Públicos-alvo da borda por sandbox | 150 | Suave | Uma organização pode ter mais de 150 públicos-alvo de borda no total, desde que haja menos de 150 públicos-alvo de borda em cada sandbox individual. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. |
+| Públicos-alvo de transmissão por sandbox | 500 | Suave | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. |
+| Públicos em lote por sandbox | 4000 | Suave | Uma organização pode ter mais de 4000 públicos-alvo em lote no total, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox individual. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ Os atributos independentes do tempo, também conhecidos como &quot;dados de regi
 
 #### entidade Dimension
 
-Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
+Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar públicos-alvo de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
 
 Sua organização também pode definir classes XDM para descrever coisas que não sejam indivíduos, como lojas, produtos ou propriedades. Esses programas,[!DNL XDM Individual Profile] os esquemas são chamados de &quot;entidades de dimensão&quot; (também conhecidas como &quot;entidades de pesquisa&quot;) e não contêm dados de série temporal. Os esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relacionamentos de esquema](../xdm/tutorials/relationship-ui.md).
 

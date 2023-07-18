@@ -5,10 +5,10 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 32%
+source-wordcount: '194'
+ht-degree: 31%
 
 ---
 
@@ -72,6 +72,7 @@ ht-degree: 32%
       * [Visão geral](consent/iab-tcf/overview.md)
       * [Integrar a tags](consent/iab-tcf/with-launch.md)
       * [Integrar sem tags](consent/iab-tcf/without-launch.md)
+* [Extensão de tag do SDK da Web](web-sdk-tag-extension-overview.md)
 * [Notas de versão](release-notes.md)
 * [Perguntas frequentes](web-sdk-faq.md)
 * [Recursos](resources.md)

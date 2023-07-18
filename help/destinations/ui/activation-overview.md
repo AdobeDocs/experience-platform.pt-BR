@@ -4,9 +4,9 @@ title: Visão geral de Activation
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform para vários tipos de destinos.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -49,9 +49,9 @@ Siga as etapas abaixo para ativar dados para seus destinos no **[!UICONTROL Proc
    * [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](activate-streaming-profile-destinations.md)
    * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](activate-batch-profile-destinations.md)
 
-### Ativar públicos-alvo na página audiencedetails {#activate-segment-details}
+### Ativar públicos-alvo na página de detalhes do público-alvo {#activate-audience-details}
 
-Você pode ativar públicos para destinos na página audiencedetails. Consulte [Detalhes do segmento](../../segmentation/ui/overview.md#segment-details) para obter mais informações.
+Você pode ativar públicos para destinos na página de detalhes do público. Consulte [Detalhes do público](../../segmentation/ui/overview.md#audience-details) para obter mais informações.
 
 Dependendo do destino selecionado, siga as etapas descritas nos artigos abaixo para concluir o fluxo de trabalho de ativação:
 

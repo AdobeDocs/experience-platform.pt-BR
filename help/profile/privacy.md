@@ -5,7 +5,7 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -189,7 +189,7 @@ Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL
 
 >[!IMPORTANT]
 >
->As solicitações de exclusão de privacidade não são instantâneas e podem variar dependendo dos serviços envolvidos e de outros fatores de impacto, como localização geográfica. O período para a conclusão de trabalhos de privacidade pode variar de 15 a 45 dias, mas não é garantido.
+>As solicitações de exclusão de privacidade não são instantâneas e podem variar dependendo dos serviços envolvidos e de outros fatores de impacto, como localização geográfica. O período para a conclusão de processos de privacidade pode variar de 15 a 45 dias, mas não é garantido.
 
 Se você também incluiu o Serviço de identidade (`identity`) e o data lake (`aepDataLake`) como produtos em sua solicitação de privacidade para o Perfil (`ProfileService`), diferentes conjuntos de dados relacionados ao perfil são removidos do sistema em momentos potencialmente diferentes:
 
@@ -213,7 +213,8 @@ Para remover o perfil e todas as associações de identidade de um determinado c
 ### Limitações da política de mesclagem {#merge-policy-limitations}
 
 O Privacy Service só pode ser processado [!DNL Profile] dados usando uma política de mesclagem que não executa a compilação de identidade. Se você estiver usando a interface do para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como seu [!UICONTROL Identificação de ID] tipo. Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Identificação de ID] está definida como [!UICONTROL Gráfico privado].
->![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
+>>
+![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
 >
 ## Próximas etapas
 

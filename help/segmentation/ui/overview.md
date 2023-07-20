@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -50,17 +50,17 @@ Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/gu
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Churn"
->abstract="O churn representa a porcentagem de perfis que estão mudando em um público em comparação à última vez que o trabalho do segmento foi executado."
+>abstract="O churn representa a porcentagem de perfis que estão mudando em um público-alvo em comparação à última vez que a tarefa do segmento foi executada."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de avaliação"
->abstract="Os métodos de avaliação para públicos-alvo incluem lote, streaming e borda."
+>abstract="Os métodos de avaliação de públicos-alvo incluem lote, transmissão e borda."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Adicionar todos os públicos-alvo ao agendamento"
->abstract="Permite incluir todos os públicos avaliados usando a segmentação em lote na atualização diária agendada. Desativar para remover todos os públicos-alvo da atualização agendada."
+>title="Adicionar todos os públicos-alvo à programação"
+>abstract="Permite incluir todos os públicos-alvo avaliados usando a segmentação em lote na atualização diária programada. Desabilite para remover todos os públicos-alvo da atualização programada."
 
 Selecione o **[!UICONTROL Procurar]** para ver uma lista de todos os públicos-alvo da sua organização.
 

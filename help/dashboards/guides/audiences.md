@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -79,9 +79,9 @@ O Adobe fornece vários widgets padrão que você pode usar para visualizar mét
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
-* [[!UICONTROL Tamanho do público]](#audience-size)
+* [[!UICONTROL Tamanho do público-alvo]](#audience-size)
 * [[!UICONTROL Ordem de ativação de público]](#audience-activation-order)
-* [[!UICONTROL Tendência de tamanho do público]](#audience-size-trend)
+* [[!UICONTROL Tendência de tamanho do público-alvo]](#audience-size-trend)
 * [[!UICONTROL Tendência de alteração de tamanho do público]](#audience-size-change-trend)
 * [[!UICONTROL Tendência de tamanho do público por identidade]](#audience-size-trend-by-identity)
 * [[!UICONTROL Sobreposição de público]](#audience-overlap)
@@ -90,12 +90,12 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Ativações programadas]](#scheduled-activations)
 
-### [!UICONTROL Tamanho do público] {#audience-size}
+### [!UICONTROL Tamanho do público-alvo] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="Tamanho do público"
->abstract="Este widget exibe o número total de perfis mesclados dentro do público-alvo selecionado. Esse número depende da política de mesclagem aplicada aos seus dados e é correto no momento do instantâneo mais recente."
+>title="Tamanho do público-alvo"
+>abstract="Esse dispositivo exibe o número total de perfis mesclados no público-alvo selecionado. Esse número depende da política de mesclagem aplicada aos seus dados e é correto no momento do instantâneo mais recente."
 
 A variável **[!UICONTROL Tamanho do público]** O widget exibe o número total de perfis mesclados no público selecionado no momento em que o instantâneo foi tirado. Esse número é o resultado da aplicação da política de mesclagem de público-alvo aos dados do seu Perfil para mesclar fragmentos de perfil e formar um único perfil para cada indivíduo no público-alvo.
 
@@ -103,7 +103,7 @@ Para obter mais informações sobre fragmentos e perfis mesclados, consulte [Vis
 
 ![A variável [!UICONTROL Públicos-alvo] visão geral do painel com o [!UICONTROL Tamanho do público] widget realçado.](../images/audiences/audience-size.png)
 
-### [!UICONTROL Tendência de tamanho do público] {#audience-size-trend}
+### [!UICONTROL Tendência de tamanho do público-alvo] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
@@ -181,7 +181,7 @@ Selecionar **[!UICONTROL Fechar]** para retornar ao [!UICONTROL Públicos-alvo] 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Sobreposição de identidade"
->abstract="Este widget mostra a sobreposição de perfis no seu público-alvo contendo as identidades escolhidas. Os círculos exibem o tamanho relativo de cada identidade. O número de perfis que contém ambos os namespaces é representado pela sobreposição entre os círculos."
+>abstract="Esse dispositivo mostra a sobreposição de perfis em seu público-alvo que contém ambas as identidades escolhidas. Os círculos exibem o tamanho relativo de cada identidade. O número de perfis que contém ambos os namespaces é representado pela sobreposição entre os círculos."
 
 A variável **[!UICONTROL Sobreposição de identidade]** O widget exibe um diagrama de Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis no seu público-alvo contendo várias identidades.
 
@@ -198,7 +198,7 @@ Para saber mais sobre identidades, visite o [Documentação do Serviço de ident
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Perfis por identidade"
->abstract="Este widget exibe o detalhamento das identidades em cada perfil mesclado no público-alvo selecionado."
+>abstract="Esse dispositivo exibe o detalhamento das identidades em cada perfil mesclado no público-alvo selecionado."
 
 A variável **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em cada perfil mesclado no público-alvo selecionado. O número total de perfis por identidade pode ser maior que o número total de perfis no público-alvo, pois um perfil pode ter várias identidades associadas a ele. Em outras palavras, a adição dos valores mostrados para cada identidade pode totalizar mais do que o tamanho total do público-alvo. Isso ocorre porque se um cliente interagir com sua marca em mais de um canal, várias identidades podem ser associadas a esse cliente individual.
 

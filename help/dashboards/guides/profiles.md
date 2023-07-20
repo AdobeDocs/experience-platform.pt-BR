@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -256,7 +256,7 @@ Passe o mouse sobre barras individuais para ver uma caixa de diálogo detalhando
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfis não segmentados"
->abstract="Este widget fornece o número total de todos os perfis não anexados a nenhum público-alvo e representa a oportunidade de ativação de perfis em sua organização."
+>abstract="Esse dispositivo fornece o número total de perfis que não estão conectados a um público-alvo e representa a oportunidade de ativação de perfis em sua organização."
 
 A variável [!UICONTROL Perfis não segmentados] widget fornece o número total de todos os perfis não anexados a nenhum público-alvo. O número gerado é preciso desde o último instantâneo e representa a oportunidade de ativação de perfil em sua organização. Também indica a oportunidade de eliminar perfis que não fornecem ROI adequado.
 
@@ -267,7 +267,7 @@ A variável [!UICONTROL Perfis não segmentados] widget fornece o número total 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendência de perfis não segmentados"
->abstract="Este widget fornece uma ilustração de gráfico de linhas para o número de perfis que não são anexados a nenhum público-alvo em um determinado período. A tendência dos perfis não anexados a um público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses."
+>abstract="Esse dispositivo fornece uma ilustração de gráfico de linhas para o número de perfis que não estão conectados a um público-alvo em um determinado período. A tendência dos perfis não conectados a um público-alvo pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses."
 
 A variável [!UICONTROL Tendência de alteração de perfis não segmentados] O widget usa um gráfico de linhas para ilustrar o número de perfis adicionados desde o último instantâneo diário que não estão anexados a nenhum público-alvo. A tendência de alteração dos perfis não anexados a nenhum público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. A contagem de perfis é refletida no eixo y e a hora no eixo x.
 

@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
 source-wordcount: '3308'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
->abstract="Os três tipos de campo que compõem uma definição de segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos permitem usar públicos importados de fontes externas."
+>abstract="Os três tipos de campo que compõem uma definição de segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos-alvo permitem usar públicos importados de fontes externas."
 
 Os blocos fundamentais das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes podem ser usados como componentes para novas definições.
 
@@ -224,7 +224,7 @@ Depois de selecionar **[!UICONTROL Decodificar contêiner]** o contêiner filho 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Políticas de mesclagem"
->abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Platform forneceu uma política de mesclagem padrão ou você pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
+>abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Platform fornece uma política de mesclagem padrão, mas você também pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
 
 [!DNL Experience Platform] O permite reunir dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] O usa o para determinar como os dados serão priorizados e quais dados serão combinados para criar um perfil.
 
@@ -234,17 +234,17 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 
 ![O seletor de política de mesclagem é realçado. Isso permite escolher qual política de mesclagem selecionar para a definição de segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriedades de definição de segmento {#segment-properties}
+## Propriedades de definição do segmento {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Propriedades de definição de segmento"
->abstract="A seção de propriedades da definição de segmento exibe uma estimativa do tamanho da definição de segmento resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o público."
+>title="Propriedades de definição do segmento"
+>abstract="A seção de propriedades de definição do segmento exibe uma estimativa do tamanho da definição do segmento, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Atualizar estimativas"
->abstract="É possível atualizar as estimativas da definição de segmento para visualizar imediatamente quantos perfis se qualificariam para a definição de segmento proposta. As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia."
+>abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma visualização de quantos perfis se qualificariam para a definição do segmento proposto. As estimativas de público são geradas usando um tamanho de amostra dos dados de amostra desse dia."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Estimar e visualizar um público"
 
 Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.

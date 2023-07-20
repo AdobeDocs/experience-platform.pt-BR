@@ -4,9 +4,9 @@ description: Saiba como complementar perfis primários com atributos de parceiro
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Complemente perfis primários com atributos de parceiros de dados confiáveis para melhorar sua base de dados e obter novos insights sobre sua base de clientes e obter uma melhor otimização do público-alvo.
 
-![Enriqueça os perfis com atributos fornecidos pelo parceiro usando a visão geral de alto nível do caso de uso.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Enriqueça os perfis com atributos fornecidos pelo parceiro usando a visão geral de alto nível do caso de uso.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Pré-requisitos e planejamento {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ Ao considerar complementar seus próprios perfis primários com atributos de par
 
 ## Como obter o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
-![Enriqueça os perfis com atributos fornecidos pelo parceiro usando a visão geral de alto nível do caso de uso.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Enriqueça os perfis com atributos fornecidos pelo parceiro usando a visão geral de alto nível do caso de uso.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. Como um **cliente**, os atributos de licença do **parceiro de dados**.
 2. Como um **cliente**, você pode estender os dados do seu perfil e o modelo de governança para acomodar **parceiro** atributos fornecidos pelo.

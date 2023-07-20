@@ -3,14 +3,18 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 8%
 
 ---
 
 # Visão geral do encaminhamento de eventos
+
+>[!NOTE]
+>
+>O encaminhamento de eventos é um recurso pago incluído como parte das ofertas do Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
 
 >[!NOTE]
 >

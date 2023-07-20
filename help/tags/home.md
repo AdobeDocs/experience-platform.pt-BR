@@ -2,18 +2,14 @@
 title: Visão geral das tags
 description: As tags no Adobe Experience Platform são a última palavra em gerenciamento de tags da Adobe. As tags oferecem aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 92%
+source-wordcount: '562'
+ht-degree: 96%
 
 ---
 
 # Visão geral das tags
-
->[!NOTE]
->
->O encaminhamento de eventos é um recurso pago incluído como parte das ofertas do Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
 
 >[!NOTE]
 >

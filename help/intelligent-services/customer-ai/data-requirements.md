@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;introdução;ia do cliente;tópicos populares;entrada de ia do cliente;saída de ia do cliente; requisitos de dados
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Requisitos de dados na IA do cliente
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela IA do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
 ht-degree: 2%

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;baixar pontuações;ia do cliente;tópicos populares;Exportar;exportar;download de ia do cliente;pontuações de ia do cliente
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Baixar pontuações na IA do cliente
 description: A IA do cliente permite baixar pontuações no formato de arquivo Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 3%

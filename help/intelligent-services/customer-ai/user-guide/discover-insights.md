@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;ia do cliente;tópicos populares;insights de ia do cliente
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Descubra insights com a IA do cliente
 description: Este documento serve como um guia para interagir com insights da instância do serviço na interface do usuário da IA do cliente dos Serviços inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%

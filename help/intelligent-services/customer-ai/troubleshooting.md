@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;introdução;ia do cliente;tópicos populares;entrada da ia do cliente;saída da ia do cliente;solução de problemas da ia do cliente;erros da ia do cliente
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Solução de problemas de erro do Customer AI
 description: Encontre respostas para erros comuns na IA do cliente.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%

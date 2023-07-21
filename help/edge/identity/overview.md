@@ -3,9 +3,9 @@ title: Dados de identidade no SDK da Web da plataforma
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
 keywords: Identidade;Identidade própria;Serviço de identidade;Identidade de terceiros;Migração de ID;ID de visitante;identidade de terceiros;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;id de namespace;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
+source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ alloy("sendEvent", {
       "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
         {
           "id": "1234",
-          "authenticatedState": "ambiguous",
+          "authenticatedState": "authenticated",
           "primary": true
         }
       ]
@@ -99,6 +99,11 @@ alloy("sendEvent", {
   }
 });
 ```
+
+>[!NOTE]
+>
+>A Adobe recomenda enviar namespaces que representam uma pessoa, como `CRMID`, como a identidade principal.
+
 
 Cada propriedade dentro de `identityMap` representa identidades pertencentes a um determinado [namespace de identidade](../../identity-service/namespaces.md). O nome da propriedade deve ser o símbolo de namespace de identidade, que pode ser encontrado listado na interface do usuário do Adobe Experience Platform em &quot;[!UICONTROL Identidades]&quot;. O valor da propriedade deve ser uma matriz de identidades pertencentes a esse namespace de identidade.
 

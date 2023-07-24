@@ -3,7 +3,7 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 7%
@@ -59,7 +59,7 @@ Além disso, esse destino também suporta a ativação dos públicos-alvo descri
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino de personalização personalizado para um único perfil. Diferentes destinos de personalização personalizados podem ser configurados para diferentes [Fluxos de dados de Coleção de dados do Adobe](../../../edge/datastreams/overview.md). |
+| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino de personalização personalizado para um único perfil. Diferentes destinos de personalização personalizados podem ser configurados para diferentes [Fluxos de dados de Coleção de dados do Adobe](../../../datastreams/overview.md). |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Conectar ao destino {#connect}
@@ -83,7 +83,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
 * **[!UICONTROL Descrição]**: digite uma descrição para o destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
 * **[!UICONTROL Alias de integração]**: esse valor é enviado para o SDK da Web do Experience Platform como um nome de objeto JSON.
-* **[!UICONTROL ID da sequência de dados]**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurar um fluxo de dados](../../../edge/datastreams/overview.md) para obter mais detalhes.
+* **[!UICONTROL ID da sequência de dados]**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurar um fluxo de dados](../../../datastreams/overview.md) para obter mais detalhes.
 
 ### Ativar alertas {#enable-alerts}
 

@@ -3,7 +3,7 @@ title: Personalização híbrida usando o SDK da Web e a API do servidor de rede
 description: Este artigo demonstra como você pode usar o SDK da Web em conjunto com a API do servidor para implantar personalização híbrida em suas propriedades da Web.
 keywords: personalização; híbrido; api do servidor; lado do servidor; implementação híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 3%
@@ -65,7 +65,7 @@ As solicitações de API do servidor são necessárias para obter apresentaçõe
 
 Ao implementar a personalização híbrida, você deve prestar atenção especial para que as ocorrências de página não sejam contadas várias vezes no Analytics.
 
-Quando você [configurar um fluxo de dados](../datastreams/overview.md) no Analytics, os eventos são encaminhados automaticamente para que as ocorrências de página sejam capturadas.
+Quando você [configurar um fluxo de dados](../../datastreams/overview.md) no Analytics, os eventos são encaminhados automaticamente para que as ocorrências de página sejam capturadas.
 
 A amostra dessa implementação usa dois fluxos de dados diferentes:
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sim. | A ID do fluxo de dados que você usa para transmitir as interações para a Rede de borda. Consulte a [visão geral dos fluxos de dados](../datastreams/overview.md) para saber como configurar um fluxo de dados. |
+| `dataStreamId` | `String` | Sim. | A ID do fluxo de dados que você usa para transmitir as interações para a Rede de borda. Consulte a [visão geral dos fluxos de dados](../../datastreams/overview.md) para saber como configurar um fluxo de dados. |
 | `requestId` | `String` | Não | Uma ID aleatória para correlacionar solicitações internas do servidor. Se nenhum for fornecido, a rede de borda gerará um e o retornará na resposta. |
 
 ### Resposta do lado do servidor {#server-response}

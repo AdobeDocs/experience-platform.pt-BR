@@ -2,7 +2,7 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para soluções da Adobe Experience Cloud usando os recursos de coleta de dados da Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2621'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Selecionar **[!UICONTROL Datastreams]** no painel de navegação esquerdo. Aqui,
 
 ![Datastreams](./images/e2e/datastreams.png)
 
-Os requisitos de configuração para uma sequência de dados dependem dos produtos e recursos para os quais você está enviando dados. Para obter informações detalhadas sobre as opções de configuração de cada produto, consulte [visão geral dos fluxos de dados](../edge/datastreams/overview.md).
+Os requisitos de configuração para uma sequência de dados dependem dos produtos e recursos para os quais você está enviando dados. Para obter informações detalhadas sobre as opções de configuração de cada produto, consulte [visão geral dos fluxos de dados](../datastreams/overview.md).
 
 ## Instalar e configurar o SDK da Web {#install}
 

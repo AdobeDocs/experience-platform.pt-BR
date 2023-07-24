@@ -2,9 +2,9 @@
 title: Conector de origem do Adobe Commerce
 description: Saiba como usar a fonte do Adobe Commerce para trazer seus dados comerciais para o Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 49098cd11249a44ad7780857e85d054ece864046
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,6 @@ Para integrar completamente sua conta de origem do Adobe Commerce, siga as etapa
 * Depois de instalar com êxito a extensão do conector, entre na sua conta do Adobe no Experience Cloud e [confirmar a ID da organização](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html?lang=en#concept_EA8AEE5B02CF46ACBDAD6A8508646255). Essa ID está associada à empresa de Experience Cloud provisionados. Ele é formatado como uma sequência de 24 caracteres alfanuméricos e inclui um caractere `@AdobeOrg`.
 * Em seguida, crie ou atualize seu esquema do Experience Data Model (XDM) com seus grupos de campos específicos do Commerce. Para obter etapas detalhadas sobre como adicionar grupos de campos específicos do Commerce ao esquema XDM, leia o guia em [adicionar grupos de campos a um esquema XDM](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html).
 * Depois que o esquema for configurado, você deverá criar um conjunto de dados com base no novo esquema. Esse conjunto de dados conterá a variável [!DNL Commerce] dados que você envia. Para obter etapas detalhadas sobre como criar um conjunto de dados para [!DNL Commerce] dados, leia o guia em [envio de dados para o Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html?lang=en#create-a-dataset).
-* Em seguida, crie um fluxo de dados e selecione o esquema XDM que contém seus grupos de campos específicos do Commerce. Para obter mais informações sobre sequências de dados, leia o [visão geral dos fluxos de dados](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=pt-BR).
+* Em seguida, crie um fluxo de dados e selecione o esquema XDM que contém seus grupos de campos específicos do Commerce. Para obter mais informações sobre sequências de dados, leia o [visão geral dos fluxos de dados](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=pt-BR).
 * Em seguida, você deve conectar sua instância do Adobe Commerce à [Conector dos Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). Isso permite que sua instância do Commerce seja implantada como SaaS (Software as a Service).
 * Com todas as configurações acima concluídas, agora é possível conectar-se ao Experience Platform configurando o Conector dos Commerce Services e o Conector do Experience Platform usando o [!DNL Commerce Admin]. Para obter mais informações sobre esta etapa final, leia o guia em [conexão de dados do Commerce ao Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).

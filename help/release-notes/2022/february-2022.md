@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de fevereiro de 2022
 description: As notas de versão de fevereiro de 2022 do Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 9%
+ht-degree: 23%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 9%
 >
 >Essa versão foi transferida da data original de 23 de fevereiro para 7 de março.
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data collection]](#data-collection)
@@ -33,27 +33,27 @@ O Adobe Experience Platform fornece vários [!DNL dashboards] por meio do qual v
 
 | Recurso | Descrição |
 | --- | --- |
-| Novos widgets de destinos padrão | Os widgets padrão a seguir permitem visualizar diferentes métricas relacionadas aos seus destinos.<ul><li>Segmentos ativados recentemente por destino. Este widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido.</li><li>Tendência de tamanho do público. Este widget descreve a relação da contagem de perfis durante um período de tempo para um segmento que foi mapeado para essa conta de destino.</li><li>Segmentos não mapeados por identidade. Esse widget lista os cinco principais segmentos não mapeados classificados por contagem de identidade decrescente para um determinado destino e identidade.</li><li>Segmentos mapeados por identidade. Este widget lista os cinco principais segmentos mapeados. Os segmentos são ordenados de cima para baixo de acordo com suas respectivas contagens de IDs de origem que correspondem à ID de destino selecionada no menu suspenso do widget.</li><li>Públicos comuns. Esse widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget.</li></ul> Para obter mais informações sobre widgets padrão disponíveis, consulte [documentação do painel de destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+| Novos widgets de destinos padrão | Os widgets padrão a seguir permitem visualizar diferentes métricas relacionadas aos seus destinos.<ul><li>Segmentos ativados recentemente por destino. Este widget exibe os cinco principais segmentos ativados mais recentemente em ordem decrescente de acordo com o destino escolhido.</li><li>Tendência de tamanho do público-alvo. Este widget descreve a relação da contagem de perfis durante um período de tempo para um segmento que foi mapeado para essa conta de destino.</li><li>Segmentos não mapeados por identidade. Esse widget lista os cinco principais segmentos não mapeados classificados por contagem de identidade decrescente para um determinado destino e identidade.</li><li>Segmentos mapeados por identidade. Este widget lista os cinco principais segmentos mapeados. Os segmentos são ordenados de cima para baixo de acordo com suas respectivas contagens de IDs de origem que correspondem à ID de destino selecionada no menu suspenso do widget.</li><li>Públicos comuns. Esse widget fornece uma lista dos cinco principais segmentos ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget.</li></ul> Para obter mais informações sobre widgets padrão disponíveis, consulte [documentação do painel de destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
 
 Para obter mais informações sobre [!DNL Dashboards], consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
-## Coleta de dados {#data-collection}
+## Coleção de dados {#data-collection}
 
-A Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+A Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | --- | --- |
-| Fluxo de trabalho de interface do usuário aprimorado para configuração de sequência de dados | O fluxo de trabalho para criar um novo fluxo de dados na interface da Coleção de dados foi atualizado. Ao adicionar serviços a um fluxo de dados, somente os serviços aos quais você tem acesso serão incluídos na lista de opções. Consulte o guia sobre [configurar um fluxo de dados](../../edge/datastreams/overview.md) para obter mais informações. |
-| Preparação de dados para coleção de dados | Se você estiver usando o SDK da Web da Adobe Experience Platform, agora é possível aproveitar os recursos de Preparo de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleção de dados](../../edge/datastreams/data-prep.md) no guia datastreams para obter mais informações. |
+| Fluxo de trabalho de interface do usuário aprimorado para configuração de sequência de dados | O fluxo de trabalho para criar um novo fluxo de dados na interface da Coleção de dados foi atualizado. Ao adicionar serviços a um fluxo de dados, somente os serviços aos quais você tem acesso serão incluídos na lista de opções. Consulte o guia sobre [configurar um fluxo de dados](../../datastreams/overview.md) para obter mais informações. |
+| Preparação de dados para coleção de dados | Se você estiver usando o SDK da Web da Adobe Experience Platform, agora é possível aproveitar os recursos de Preparo de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleção de dados](../../datastreams/data-prep.md) no guia datastreams para obter mais informações. |
 | IDs de dispositivo próprio | Agora é possível enviar suas próprias IDs de dispositivo para a Rede de borda da Adobe Experience Platform ao coletar dados do cliente usando o SDK da Web da plataforma, fornecendo uma solução alternativa para as restrições recentes do navegador sobre a duração dos cookies de terceiros. Consulte o guia sobre [IDs de dispositivo primário](../../edge/identity/first-party-device-ids.md) para obter mais informações. |
 
 Para obter mais informações sobre a coleta de dados na Platform, consulte a [visão geral da coleção de dados](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Recursos novos ou atualizados**
 
@@ -79,7 +79,7 @@ Para obter informações mais gerais sobre [!DNL Identity Service], consulte o [
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Recursos atualizados**
 

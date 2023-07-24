@@ -3,7 +3,7 @@ title: Rastrear eventos usando o SDK da Web da Adobe Experience Platform
 description: Saiba como rastrear eventos do Adobe Experience Platform Web SDK.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 1%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->A variável `datasetId` opção compatível com o `sendEvent` comando foi descontinuado. Para substituir uma ID de conjunto de dados, use [sobreposições de configuração](../datastreams/overrides.md) em vez disso.
+>A variável `datasetId` opção compatível com o `sendEvent` comando foi descontinuado. Para substituir uma ID de conjunto de dados, use [sobreposições de configuração](../../datastreams/overrides.md) em vez disso.
 
 Em alguns casos de uso, convém enviar um evento para um conjunto de dados diferente daquele configurado na interface do usuário de configuração. Para isso, é necessário definir o `datasetId` opção no `sendEvent` comando:
 
@@ -254,20 +254,20 @@ Algumas observações sobre `onBeforeEventSend` retorno de chamada:
 
 * O XDM do evento pode ser modificado durante o retorno de chamada. Depois que o retorno de chamada é retornado, os campos e valores modificados dos objetos content.xdm e content.data são enviados com o evento.
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * Se o retorno de chamada lançar uma exceção, o processamento do evento descontinuará e o evento não será enviado.
 * Se o retorno de chamada retornar o valor booleano de `false`, o processamento do evento será interrompido, sem um erro, e o evento não será enviado. Esse mecanismo permite que determinados eventos sejam facilmente ignorados, examinando os dados do evento e retornando `false` caso o evento não deva ser enviado.
 
-   >[!NOTE]
-   >Tenha cuidado para evitar retornar falso no primeiro evento em uma página. Retornar false no primeiro evento pode afetar negativamente a personalização.
+  >[!NOTE]
+  >Tenha cuidado para evitar retornar falso no primeiro evento em uma página. Retornar false no primeiro evento pode afetar negativamente a personalização.
 
 ```javascript
    onBeforeEventSend: function(content) {

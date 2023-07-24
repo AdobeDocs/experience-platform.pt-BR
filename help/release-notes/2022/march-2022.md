@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de março de 2022
 description: As notas de versão de março de 2022 para o Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 8%
+ht-degree: 15%
 
 ---
 
@@ -18,11 +18,11 @@ Novos recursos na Adobe Experience Platform:
 - [Logs de auditoria](#audit-logs)
 - [Contas relacionadas no Real-Time CDP B2B Edition](#related-accounts)
 
-Atualizações dos recursos existentes na Adobe Experience Platform:
+Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 - [Alertas](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Coleta de dados](#data-collection)
+- [Coleção de dados](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Fontes](#sources)
 
@@ -106,20 +106,20 @@ O painel Destinos exibe um instantâneo dos destinos que sua organização ativo
 
 Para obter mais informações sobre Painéis de destinos na Platform, consulte o [Visão geral dos painéis de destinos](../../dashboards/guides/destinations.md).
 
-## Coleta de dados {#data-collection}
+## Coleção de dados {#data-collection}
 
-A Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+A Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | --- | --- |
-| Configurações globais de sequência de dados | Agora você pode definir várias novas configurações globais ao configurar um fluxo de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configurar um fluxo de dados](../../edge/datastreams/overview.md#create) no guia da interface dos fluxos de dados para obter mais informações. |
+| Configurações globais de sequência de dados | Agora você pode definir várias novas configurações globais ao configurar um fluxo de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configurar um fluxo de dados](../../datastreams/overview.md#create) no guia da interface dos fluxos de dados para obter mais informações. |
 | [API do servidor da rede de borda](../../server-api/overview.md) | A API do servidor permite que os clientes interajam com a Rede de borda do Experience Platform usando um novo endpoint autenticado para potencializar uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. |
 
 Para obter mais informações sobre a coleta de dados na Platform, consulte a [visão geral da coleção de dados](../../collection/home.md).
 
-## Serviço de query {#query-service}
+## Query Service {#query-service}
 
 [!DNL Query Service] permite usar SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
@@ -137,7 +137,7 @@ Para obter mais informações sobre recursos disponíveis, consulte [Visão gera
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar-se a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a assimilação de dados em todo o.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar-se a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a assimilação de dados em todo o.
 
 **Recursos atualizados**
 

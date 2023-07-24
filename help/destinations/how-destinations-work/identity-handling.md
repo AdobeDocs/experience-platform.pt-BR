@@ -2,7 +2,7 @@
 title: Manuseio de identidade no workflow de ativação de destinos
 description: Saiba como a exportação de identidade é tratada no fluxo de trabalho de ativação, dependendo do tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 2%
@@ -82,7 +82,7 @@ Destinos de publicidade que dependem de cookies de terceiros (por exemplo: [!DNL
 
 Esses destinos exigem uma sincronização de ID para ocorrer por meio de [!UICONTROL Serviço de ID do Experience Cloud] ou por meio de [!UICONTROL Experience Platform Web SDK].
 
-Se você estiver usando [!UICONTROL Experience Platform Web SDK] e o legado [!UICONTROL Serviço de ID do Experience Cloud] não estiver implementado na página, será necessário garantir que a sequência de dados do site em questão esteja ativada para permitir a sincronização de ID de terceiros, conforme descrito na seção [configurar documentação de sequência de dados](/help/edge/datastreams/configure.md#create).
+Se você estiver usando [!UICONTROL Experience Platform Web SDK] e o legado [!UICONTROL Serviço de ID do Experience Cloud] não estiver implementado na página, será necessário garantir que a sequência de dados do site em questão esteja ativada para permitir a sincronização de ID de terceiros, conforme descrito na seção [configurar documentação de sequência de dados](/help/datastreams/configure.md#create).
 
 Ao configurar um fluxo de dados conforme descrito na documentação vinculada acima, você precisa garantir que o **[!UICONTROL Sincronização de ID de terceiros]** o controle deslizante está ativado. A maioria dos clientes deixaria o `container_id` campo em branco (o padrão será 0). Você só precisará alterar esse valor se sua implementação de Audience Manager herdada usar uma ID de contêiner específica (observe, no entanto, que essa seria a grande minoria de clientes).
 

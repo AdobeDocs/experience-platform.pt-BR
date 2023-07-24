@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Introdução às APIs do Media Edge
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 6%
+source-wordcount: '959'
+ht-degree: 5%
 
 ---
 
@@ -60,7 +60,7 @@ Para iniciar a sessão de mídia no servidor, use o endpoint de Início de sess�
 
 Antes de fazer a solicitação de início de sessão, você precisará do seguinte:
 
-* A variável `datastreamId`—um parâmetro obrigatório para a solicitação POST Session Start. Para recuperar um `datastreamId`, consulte [Configurar um fluxo de dados](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=pt-BR).
+* A variável `datastreamId`—um parâmetro obrigatório para a solicitação POST Session Start. Para recuperar um `datastreamId`, consulte [Configurar um fluxo de dados](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=pt-BR).
 
 * Um objeto JSON para a carga da solicitação que contém os dados mínimos necessários (como mostrado no exemplo de solicitação abaixo).
 
@@ -164,7 +164,7 @@ x-content-type-options: nosniff
 
 No exemplo de resposta acima, a variável `sessionId` é exibido como `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. Você usará essa ID em solicitações de evento subsequentes como um parâmetro obrigatório.
 
-Para obter mais informações sobre parâmetros de endpoint de Início da Sessão e exemplos, consulte [Media Edge Swagger](swagger.md) arquivo.
+Para obter mais informações sobre parâmetros de endpoint de Início da Sessão e exemplos, consulte a [Media Edge Swagger](swagger.md) arquivo.
 
 Para obter mais informações sobre parâmetros de dados de mídia XDM, consulte [Esquema de Informações de Detalhes de Mídia](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 

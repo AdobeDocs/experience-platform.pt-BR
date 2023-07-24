@@ -3,7 +3,7 @@ title: Utilização do Offer Decisioning com o SDK da Web da plataforma
 description: O SDK da Web da Adobe Experience Platform pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. Você pode criar suas ofertas e outros objetos relacionados usando a interface do usuário ou a API do Offer Decisioning.
 keywords: offer decisioning;decisão;SDK da Web;SDK da Web da plataforma;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalização de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -32,28 +32,28 @@ Adobe Experience Platform [!DNL Web SDK] O pode entregar e renderizar ofertas pe
 
 * **Escopos de decisão:** Para o Offer Decisioning, os escopos de decisão são as cadeias de caracteres codificadas na Base64 de JSON que contêm as IDs de atividade e posicionamento que você deseja que o serviço do offer decisioning use para propor ofertas.
 
-   *Escopo de decisão JSON:*
+  *Escopo de decisão JSON:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *Sequência de caracteres codificada Base64 do escopo de decisão:*
+  *Sequência de caracteres codificada Base64 do escopo de decisão:*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >Você pode copiar o valor do escopo de decisão do **Visão geral da atividade** na interface do usuário do.
+  >[!TIP]
+  >
+  >Você pode copiar o valor do escopo de decisão do **Visão geral da atividade** na interface do usuário do.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **Sequências de dados:** Para obter mais informações, leia a [sequências de dados](../../datastreams/overview.md) documentação.
+* **Sequências de dados:** Para obter mais informações, leia a [sequências de dados](../../../datastreams/overview.md) documentação.
 
 * **Identidade**: para obter mais informações, leia esta documentação descrevendo como [O SDK da Web da Platform usa o Serviço de identidade](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Web SDK] O pode entregar e renderizar ofertas pe
 
 Para ativar o Offer Decisioning, execute as seguintes etapas:
 
-1. Ativação do Adobe Experience Platform no [sequência de dados](../../datastreams/overview.md) e marque a caixa &quot;Offer Decisioning&quot;
+1. Ativação do Adobe Experience Platform no [sequência de dados](../../../datastreams/overview.md) e marque a caixa &quot;Offer Decisioning&quot;
 
    ![offer-decisão-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,6 +81,7 @@ Para ativar o Offer Decisioning, execute as seguintes etapas:
              ]
           })
          ```
+
    * Instalar o SDK por meio de tags
 
       1. [Criar uma propriedade de tag](../../../tags/ui/administration/companies-and-properties.md)
@@ -101,10 +102,9 @@ Para ativar o Offer Decisioning, execute as seguintes etapas:
 
          * Adicione uma ação Enviar evento do SDK da Web da plataforma e adicione as ações relevantes `decisionScopes` à configuração dessa ação
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [Criar e publicar uma biblioteca](../../../tags/ui/publishing/libraries.md) contendo todas as Regras, Elementos de dados e Extensões relevantes que você configurou
-
-
 
 ## Solicitações e respostas de exemplo
 

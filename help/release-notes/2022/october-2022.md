@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1328'
-ht-degree: 2%
+ht-degree: 15%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 2%
 **Data de lançamento: 26 de outubro de 2022**
 
 - [Chaves gerenciadas pelo cliente](#cmk)
-- [Coleta de dados](#data-collection)
+- [Coleção de dados](#data-collection)
 - [Destinos](#destinations)
 - [Experience Data Model](#xdm)
-- [Serviço de query](#query-service)
+- [Query Service](#query-service)
 - [Fontes](#sources-sources)
 
 ## Chaves gerenciadas pelo cliente {#cmk}
@@ -26,15 +26,15 @@ Todos os dados armazenados no Adobe Experience Platform são criptografados em r
 
 Consulte a visão geral em [chaves gerenciadas pelo cliente](../../landing/governance-privacy-security/customer-managed-keys.md) para obter detalhes sobre o recurso.
 
-## Coleta de dados {#data-collection}
+## Coleção de dados {#data-collection}
 
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Manuseio de dados confidenciais para fluxos de dados | As sequências de dados agora usam várias tecnologias da Platform para lidar adequadamente com dados confidenciais, conforme aplicado por regulamentações como a HIPAA (Health Insurance Portability and Accountability Act, Lei de Portabilidade e Responsabilidade do Seguro de Saúde). Consulte a seção sobre [tratamento de dados confidenciais em fluxos de dados](../../edge/datastreams/overview.md#sensitive) para obter mais informações. |
+| Manuseio de dados confidenciais para fluxos de dados | As sequências de dados agora usam várias tecnologias da Platform para lidar adequadamente com dados confidenciais, conforme aplicado por regulamentações como a HIPAA (Health Insurance Portability and Accountability Act, Lei de Portabilidade e Responsabilidade do Seguro de Saúde). Consulte a seção sobre [tratamento de dados confidenciais em fluxos de dados](../../datastreams/overview.md#sensitive) para obter mais informações. |
 | [!DNL Splunk] extensão para encaminhamento de eventos | Agora você pode enviar dados para [!DNL Splunk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Splunk] visão geral da extensão](../../tags/extensions/server/splunk/overview.md) para obter mais informações. |
 | [!DNL Zendesk] extensão para encaminhamento de eventos | Agora você pode enviar dados para [!DNL Zendesk] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Zendesk] visão geral da extensão](../../tags/extensions/server/zendesk/overview.md) para obter mais informações. |
 
@@ -42,7 +42,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Recursos novos ou atualizados**
 
@@ -75,7 +75,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | ----------- | ----------- |
 | [Medidas de proteção de destinos](../../destinations/guardrails.md) | Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. |
 
-Para obter informações mais gerais sobre destinos, consulte o [visão geral dos destinos](../../destinations/home.md).
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -93,7 +93,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md).
 
-## Serviço de query {#query-service}
+## Query Service {#query-service}
 
 O Serviço de consulta permite usar o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
@@ -113,7 +113,7 @@ Novos recursos na Adobe Experience Platform:
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Recursos atualizados**
 
@@ -121,4 +121,4 @@ O Experience Platform fornece uma API RESTful e uma interface interativa que per
 | --- | --- | 
 | Disponibilidade beta da fonte do Adobe Workfront | Use o [Origem do Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) para trazer seus dados do Workfront para o Experience Platform e executar casos de uso, como combinar seus registros de trabalho com dados de terceiros, aplicar análises de séries históricas e de tempo em registros de trabalho e consultar dados de trabalho usando SQL padrão. Para obter mais informações, leia o guia em [criação de uma conexão de origem do Workfront na interface](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
 
-Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).
+Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

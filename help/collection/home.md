@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da coleção de dados
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 9%
@@ -25,7 +25,7 @@ A coleta de dados se concentra na descoberta e na acessibilidade de conjuntos de
 
 * [Rede de borda da Adobe Experience Platform](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
-* [Datastreams](../edge/datastreams/overview.md)
+* [Datastreams](../datastreams/overview.md)
 * [Encaminhamento de evento](../tags/ui/event-forwarding/overview.md)
 * [SDK da Web da Adobe Experience Platform](../edge/home.md)
 * [SDK móvel da Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
@@ -45,9 +45,9 @@ A compactação dessas bibliotecas acelera a coleta de dados e consolida as oper
 
 ## Rede de borda de plataforma e fluxos de dados {#edge}
 
-A Platform Edge Network é uma rede de servidores distribuída globalmente, rápida e confiável, capaz de receber e processar dados em grande escala. Usando tags, você pode configurar [sequências de dados](../edge/datastreams/overview.md) para produtos como Adobe Target, Adobe Audience Manager e Adobe Analytics, que permitem ativar esses produtos no lado do servidor sem alterar o código do lado do cliente.
+A Platform Edge Network é uma rede de servidores distribuída globalmente, rápida e confiável, capaz de receber e processar dados em grande escala. Usando tags, você pode configurar [sequências de dados](../datastreams/overview.md) para produtos como Adobe Target, Adobe Audience Manager e Adobe Analytics, que permitem ativar esses produtos no lado do servidor sem alterar o código do lado do cliente.
 
-Além disso, os fluxos de dados são integrados a vários recursos da Platform que ajudam a garantir que todos os dados confidenciais enviados sejam tratados adequadamente de acordo com as políticas organizacionais e os regulamentos legais. Consulte a seção sobre [tratamento de dados confidenciais](../edge/datastreams/overview.md#sensitive) na documentação de sequências de dados para obter mais informações.
+Além disso, os fluxos de dados são integrados a vários recursos da Platform que ajudam a garantir que todos os dados confidenciais enviados sejam tratados adequadamente de acordo com as políticas organizacionais e os regulamentos legais. Consulte a seção sobre [tratamento de dados confidenciais](../datastreams/overview.md#sensitive) na documentação de sequências de dados para obter mais informações.
 
 ![Soluções de fluxos de dados e Adobe](./images/home/adobe-solutions.png)
 

@@ -2,7 +2,7 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 45%
@@ -46,7 +46,7 @@ A tabela a seguir descreve quais ações, em quais recursos do , são registrada
 | Atributo calculado | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Instância da IA do cliente](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li></ul> |
 | [Conjunto de dados](../../../catalog/datasets/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar para [Perfil do cliente em tempo real](../../../profile/home.md)</li><li>Desativar para perfil</li><li>Adicionar dados</li><li>Excluir lote</li></ul> |
-| [Sequência de dados](../../../edge/datastreams/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li><li>[Editar mapeamento](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Sequência de dados](../../../datastreams/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li><li>[Editar mapeamento](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipos de dados](../../../xdm/schema/composition.md#data-type) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li><li>Ativar conjunto de dados</li><li>Remoção do conjunto de dados</li><li>Ativar perfil</li><li>Remover perfil</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
@@ -90,6 +90,7 @@ Selecione um evento na lista para exibir seus detalhes no painel direito.
 ### Filtrar logs de auditoria
 
 >[!NOTE]
+>
 Como esse é um novo recurso, os dados exibidos só retornam a março de 2022. Dependendo do recurso selecionado, dados anteriores poderão estar disponíveis a partir de janeiro de 2022.
 
 

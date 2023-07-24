@@ -2,7 +2,7 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 6%
@@ -36,7 +36,7 @@ As permissões no Adobe Experience Platform incluem acesso a sequências de dado
 | Modelagem de dados | Visualizar esquemas | Concede acesso somente leitura a esquemas. |
 | Gerenciamento de identidade | Gerenciar namespaces de identidade | Concede a capacidade de exibir, criar e editar [namespaces de identidade](../identity-service/namespaces.md). |
 | Gerenciamento de identidade | Exibir namespaces de identidade | Concede acesso somente leitura a namespaces de identidade. |
-| Coleção de dados | Gerenciar fluxos de dados | Concede a capacidade de exibir, criar e editar [sequências de dados](../edge/datastreams/overview.md). |
+| Coleção de dados | Gerenciar fluxos de dados | Concede a capacidade de exibir, criar e editar [sequências de dados](../datastreams/overview.md). |
 | Coleção de dados | Exibir fluxos de dados | Concede acesso somente leitura a sequências de dados. |
 
 {style="table-layout:auto"}
@@ -54,7 +54,7 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 | Direitos de propriedade | Aprovar | Concede a capacidade de aprovar um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos de propriedade | Desenvolver | Concede a capacidade de desenvolver um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos de propriedade | Editar propriedade | Concede a capacidade de editar a configuração básica das propriedades às quais um usuário tem acesso. |
-| Direitos de propriedade | Gerenciar ambientes | Concede a capacidade de gerenciar o [ambientes](../tags/ui/publishing/environments.md) para as propriedades às quais um usuário tem acesso. |
+| Direitos de propriedade | Gerenciamento de ambientes | Concede a capacidade de gerenciar o [ambientes](../tags/ui/publishing/environments.md) para as propriedades às quais um usuário tem acesso. |
 | Direitos de propriedade | Gerenciar extensões | Concede a capacidade de gerenciar o [extensões](../tags/ui/managing-resources/extensions/overview.md) para as propriedades às quais um usuário tem acesso. |
 | Direitos de propriedade | Publicar | Concede a capacidade de publicar um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos da empresa | Desenvolver extensões | Concede a capacidade de criar e modificar pacotes de extensão de propriedade de sua organização, incluindo versões privadas e solicitações de lançamento de versão pública. |

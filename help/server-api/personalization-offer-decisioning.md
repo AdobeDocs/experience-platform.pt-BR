@@ -2,7 +2,7 @@
 title: Personalização via Offer Decisioning
 description: Saiba como usar a API do servidor para fornecer e renderizar experiências personalizadas por meio do Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 4%
@@ -25,7 +25,7 @@ Personalização via [!DNL Offer Decisioning] exige que você tenha acesso a [Ad
 
 Antes de usar a API do servidor em conjunto com o Offer Decisioning, é necessário habilitar a personalização do Adobe Experience Platform na configuração do fluxo de dados e habilitar a **[!UICONTROL Offer decisioning]** opção.
 
-Consulte a [guia sobre como adicionar serviços a um fluxo de dados](../edge/datastreams/overview.md#adobe-experience-platform-settings), para obter informações detalhadas sobre como ativar o Offer Decisioning.
+Consulte a [guia sobre como adicionar serviços a um fluxo de dados](../datastreams/overview.md#adobe-experience-platform-settings), para obter informações detalhadas sobre como ativar o Offer Decisioning.
 
 ![Imagem da interface do usuário mostrando a tela de configuração do serviço de sequência de dados, com o Offer Decisioning selecionado](assets/aep-od-datastream.png)
 

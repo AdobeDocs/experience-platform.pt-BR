@@ -2,7 +2,7 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 38%
@@ -27,7 +27,7 @@ Este documento aborda as notas de versão da extensão de tag do SDK da Web da A
 **Novos recursos**
 
 * Contém a versão 2.16.0 do SDK da Web do Adobe Experience Platform.
-* Suporte adicionado para [substituições de configuração da sequência de dados](../../../../edge/datastreams/overrides.md).
+* Suporte adicionado para [substituições de configuração da sequência de dados](../../../../datastreams/overrides.md).
 * Adicionar aviso de desativação à `datasetId` opção no `sendEvent` comando.
 
 

@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 2%
@@ -80,7 +80,7 @@ Ao configurar o fluxo de dados, em **[!UICONTROL Adobe Experience Platform]** ve
 
 ![Configuração da sequência de dados](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Para obter mais detalhes sobre como configurar um fluxo de dados, siga as instruções descritas em [Documentação do SDK da Web da Platform](../../edge/datastreams/configure.md#aep).
+Para obter mais detalhes sobre como configurar um fluxo de dados, siga as instruções descritas em [Documentação do SDK da Web da Platform](../../datastreams/configure.md#aep).
 
 ### Criar um [!DNL Active-On-Edge] política de mesclagem {#create-merge-policy}
 

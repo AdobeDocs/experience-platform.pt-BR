@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 11%
@@ -112,7 +112,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | [[!DNL Snap Conversions API] extensão](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos | Agora você pode enviar dados para o [!DNL Snapchat Conversions API] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Para obter mais informações sobre como autenticar e usar a API, consulte o [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] no SDK da Web](../../edge/fundamentals/user-agent-client-hints.md) | O SDK da Web agora é compatível [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente permitem que os proprietários de sites acessem muitas das informações disponíveis no [!DNL User-Agent] sequência de caracteres, mas de uma forma mais preservadora da privacidade. |
 | [Migração página por página do SDK da Web](../../edge/home.md#migrating-to-web-sdk) | Agora você pode migrar suas propriedades da Web existentes de outras bibliotecas do Experience Cloud, como [!DNL at.js], para o SDK da Web, uma página por vez. Isso permite uma abordagem em fases para a migração do SDK da Web, sem a necessidade de migrar todas as suas páginas de uma só vez. |
-| [[!DNL Adobe Journey Optimizer] suporte para sequências de dados](../../edge/datastreams/overview.md#aep) | O serviço Adobe Experience Platform para fluxos de dados agora oferece suporte a [!DNL Adobe Journey Optimizer]. Essa opção permite usar canais de entrada baseados na Web e em aplicativos no [!DNL Adobe Journey Optimizer]. |
+| [[!DNL Adobe Journey Optimizer] suporte para sequências de dados](../../datastreams/overview.md#aep) | O serviço Adobe Experience Platform para fluxos de dados agora oferece suporte a [!DNL Adobe Journey Optimizer]. Essa opção permite usar canais de entrada baseados na Web e em aplicativos no [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 

@@ -3,7 +3,7 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c111b712e24dd9e4280abfe882e6d7f5eb8493d1
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 15%
@@ -91,7 +91,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 
 * **Nome**: Preencha o nome preferencial para este destino.
 * **Descrição**: digite uma descrição para o destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **ID da sequência de dados**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos. O menu suspenso mostra somente os fluxos de dados que têm os serviços Target e Adobe Experience Platform ativados. Consulte [configurar um fluxo de dados](../../../edge/datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar um fluxo de dados para o Adobe Experience Platform e o Adobe Target.
+* **ID da sequência de dados**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos. O menu suspenso mostra somente os fluxos de dados que têm os serviços Target e Adobe Experience Platform ativados. Consulte [configurar um fluxo de dados](../../../datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar um fluxo de dados para o Adobe Experience Platform e o Adobe Target.
    * **[!UICONTROL Nenhum]**: selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [Experience Platform Web SDK](../../../edge/home.md). Ao usar essa opção, os públicos-alvo exportados do Experience Platform para o Target serão compatíveis apenas com a personalização da próxima sessão e a segmentação de borda será desativada. Consulte a tabela abaixo para obter mais informações.
 
   | Implementação do Adobe Target (sem o SDK da Web) | Implementação do SDK da Web |

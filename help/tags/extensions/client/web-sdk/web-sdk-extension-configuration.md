@@ -2,7 +2,7 @@
 title: Configurar a extensão SDK da Web do Adobe Experience Platform
 description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário do.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 6%
@@ -52,7 +52,7 @@ A variável [!UICONTROL Domínio de borda] é o domínio do qual a extensão do 
 
 Quando uma solicitação é enviada para a Rede de borda da Adobe Experience Platform, uma ID de sequência de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código no site.
 
-Consulte o guia sobre [sequências de dados](../../../../edge/datastreams/overview.md) para obter mais informações.
+Consulte o guia sobre [sequências de dados](../../../../datastreams/overview.md) para obter mais informações.
 
 
 ## [!UICONTROL Privacidade]
@@ -112,10 +112,10 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrã
 
 A substituição da configuração da sequência de dados é um processo de duas etapas:
 
-1. Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](../../../../edge/datastreams/configure.md).
+1. Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](../../../../datastreams/configure.md).
 2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
 
-Ver a sequência de dados [documentação de substituições de configuração](../../../../edge/datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
+Ver a sequência de dados [documentação de substituições de configuração](../../../../datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
 
 Como alternativa à transmissão de sobreposições por meio de um comando do SDK da Web, você pode configurar as sobreposições na tela de extensão de tag mostrada abaixo.
 

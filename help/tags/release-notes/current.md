@@ -2,7 +2,7 @@
 title: Notas de versão para tags e encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 3%
@@ -54,7 +54,7 @@ Novas extensões foram lançadas:
 
 ## 26 de outubro de 2022
 
-* **Manuseio de dados confidenciais para fluxos de dados**: as sequências de dados agora usam várias tecnologias da Platform para lidar adequadamente com dados confidenciais, conforme aplicado por regulamentações como a HIPAA (Health Insurance Portability and Accountability Act, Lei de Portabilidade e Responsabilidade do Seguro de Saúde). Consulte a seção sobre [tratamento de dados confidenciais em fluxos de dados](../../edge/datastreams/overview.md#sensitive) para obter mais informações.
+* **Manuseio de dados confidenciais para fluxos de dados**: as sequências de dados agora usam várias tecnologias da Platform para lidar adequadamente com dados confidenciais, conforme aplicado por regulamentações como a HIPAA (Health Insurance Portability and Accountability Act, Lei de Portabilidade e Responsabilidade do Seguro de Saúde). Consulte a seção sobre [tratamento de dados confidenciais em fluxos de dados](../../datastreams/overview.md#sensitive) para obter mais informações.
 * **[!DNL Splunk]extensão para encaminhamento de eventos**: Agora você pode enviar dados para o [!DNL Splunk] usando um [encaminhamento de eventos](../ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Splunk] visão geral da extensão](../extensions/server/splunk/overview.md) para obter mais informações.
 * **[!DNL Zendesk]extensão para encaminhamento de eventos**: Agora você pode enviar dados para o [!DNL Zendesk] usando um [encaminhamento de eventos](../ui/event-forwarding/overview.md) extensão. Consulte a [[!DNL Zendesk] visão geral da extensão](../extensions/server/zendesk/overview.md) para obter mais informações.
 
@@ -74,5 +74,5 @@ Novas extensões foram lançadas:
 Novas extensões foram lançadas:
 
 * [Extensão de tag da Camada de dados do Google](../extensions/client/google-data-layer/overview.md): permite usar uma camada de dados do Google na implementação de tags.
-* [Extensão de encaminhamento de eventos de Conversões aprimoradas do Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): permite aprimorar as conversões de anúncios do Google em tempo real.
+* [Extensão de encaminhamento de eventos de Conversões aprimoradas do Google Ads](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.108630.html): permite aprimorar as conversões de anúncios do Google em tempo real.
 * [Extensão de encaminhamento de eventos do Mailchimp](../extensions/server/mailchimp/overview.md): envia eventos para a API de marketing do Mailchimp, que pode acionar emails para campanhas de marketing, jornadas ou transações do Mailchimp.

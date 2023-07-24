@@ -1,7 +1,7 @@
 ---
 description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 title: Formato de mensagem
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Para entender o formato da mensagem e o processo de configuração e transforma�
 * **Experience Data Model (XDM)**. [Visão geral do XDM](../../../../xdm/home.md) e  [Como criar um esquema XDM no Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Classe**. [Criar e editar classes na interface](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. O mapa de identidade representa um mapa de todas as identidades de usuários finais no Adobe Experience Platform. Consulte `xdm:identityMap` no [Dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. A variável [segmentMembership](../../../../xdm/schema/field-dictionary.md) O atributo XDM informa a quais segmentos um perfil é membro. Para os três valores diferentes no `status` , leia a documentação em [Grupo de campos de esquema Detalhes da associação do segmento](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. A variável [segmentMembership](../../../../xdm/schema/field-dictionary.md) O atributo XDM informa a quais públicos-alvo um perfil é membro. Para os três valores diferentes no `status` , leia a documentação em [Grupo de campos de esquema Detalhes da associação do público](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Para entender os exemplos mais abaixo na página, é importante conhecer a estru
 Os perfis têm três seções:
 
 * `segmentMembership` (sempre presente em um perfil)
-   * esta seção contém todos os segmentos presentes no perfil. Os segmentos podem ter um de dois status: `realized` ou `exited`.
+   * esta seção contém todos os públicos-alvo presentes no perfil. Os públicos-alvo podem ter um destes dois status: `realized` ou `exited`.
 * `identityMap` (sempre presente em um perfil)
    * esta seção contém todas as identidades presentes no perfil (email, Google GAID, Apple IDFA e assim por diante) e que o usuário mapeou para exportação no fluxo de trabalho de ativação.
 * atributos (dependendo da configuração de destino, eles podem estar presentes no perfil). Também há uma pequena diferença a ser observada entre atributos predefinidos e atributos de forma livre:
@@ -170,15 +170,15 @@ Veja abaixo dois exemplos de perfis no Experience Platform:
 }
 ```
 
-## Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de segmento {#using-templating}
+## Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público {#using-templating}
 
 Usos do Adobe [Modelos Pebble](https://pebbletemplates.io/), um idioma de modelo semelhante a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), para transformar os campos do esquema XDM do Experience Platform em um formato compatível com seu destino.
 
 Esta seção fornece vários exemplos de como essas transformações são feitas, desde o esquema XDM de entrada, passando pelo modelo, até a saída nos formatos de carga útil aceitos pelo seu destino. Os exemplos abaixo são apresentados por complexidade crescente, como se segue:
 
-1. Exemplos simples de transformação. Saiba como a modelagem funciona com transformações simples para [Atributos do perfil](#attributes), [Associação de segmento](#segment-membership), e [Identidade](#identities) campos.
-2. Exemplos de maior complexidade de modelos que combinam os campos acima: [Criar um modelo que envia segmentos e identidades](./message-format.md#segments-and-identities) e [Criar um modelo que envia segmentos, identidades e atributos de perfil](#segments-identities-attributes).
-3. Modelos que incluem a chave de agregação. Quando você usa [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para o seu destino com base em critérios como ID de segmento, status do segmento ou namespaces de identidade.
+1. Exemplos simples de transformação. Saiba como a modelagem funciona com transformações simples para [Atributos do perfil](#attributes), [associação de público](#segment-membership), e [Identidade](#identities) campos.
+2. Exemplos de maior complexidade de modelos que combinam os campos acima: [Criar um modelo que envia públicos e identidades](./message-format.md#segments-and-identities) e [Criar um modelo que envia segmentos, identidades e atributos de perfil](#segments-identities-attributes).
+3. Modelos que incluem a chave de agregação. Quando você usa [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para o seu destino com base em critérios como ID de público-alvo, status do público-alvo ou namespaces de identidade.
 
 ### Atributos do perfil {#attributes}
 
@@ -263,10 +263,10 @@ Perfil 2:
 }
 ```
 
-### Segmento de afiliação {#segment-membership}
+### associação de público {#audience-membership}
 
-A variável [segmentMembership](../../../../xdm/schema/field-dictionary.md) O atributo XDM informa a quais segmentos um perfil é membro.
-Para os três valores diferentes no `status` , leia a documentação em [Grupo de campos de esquema Detalhes da associação do segmento](../../../../xdm/field-groups/profile/segmentation.md).
+A variável [segmentMembership](../../../../xdm/schema/field-dictionary.md) O atributo XDM informa a quais públicos-alvo um perfil é membro.
+Para os três valores diferentes no `status` , leia a documentação em [Grupo de campos de esquema Detalhes da associação do público](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Entrada**
 
@@ -335,7 +335,7 @@ Perfil 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -490,10 +490,10 @@ Perfil 2:
 }
 ```
 
-### Criar um modelo que envia segmentos e identidades {#segments-and-identities}
+### Criar um modelo que envia públicos e identidades {#segments-and-identities}
 
 Esta seção fornece um exemplo de uma transformação comumente usada entre o esquema XDM do Adobe e o esquema de destino do parceiro.
-O exemplo abaixo mostra como transformar o formato de associação de segmento e identidades e enviá-los para o seu destino.
+O exemplo abaixo mostra como transformar a associação de público-alvo e o formato de identidades e exibi-los no seu destino.
 
 **Entrada**
 
@@ -595,7 +595,7 @@ Perfil 2:
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -661,7 +661,7 @@ A variável `json` abaixo representa os dados exportados do Adobe Experience Pla
 
 Esta seção fornece um exemplo de uma transformação comumente usada entre o esquema XDM do Adobe e o esquema de destino do parceiro.
 
-Outro caso de uso comum é a exportação de dados que contêm associação de segmento, identidades (por exemplo: endereço de email, número de telefone, ID de publicidade) e atributos de perfil. Para exportar dados dessa maneira, consulte o exemplo abaixo:
+Outro caso de uso comum é a exportação de dados que contêm associação de público-alvo, identidades (por exemplo: endereço de email, número de telefone, ID de publicidade) e atributos de perfil. Para exportar dados dessa maneira, consulte o exemplo abaixo:
 
 **Entrada**
 
@@ -788,7 +788,7 @@ Perfil 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,21 +859,21 @@ A variável `json` abaixo representa os dados exportados do Adobe Experience Pla
 
 ### Inclua a chave de agregação no modelo para acessar perfis exportados agrupados por vários critérios {#template-aggregation-key}
 
-Quando você usa [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, você pode agrupar os perfis exportados para o seu destino com base em critérios como ID de segmento, alias de segmento, associação de segmento ou namespaces de identidade.
+Quando você usa [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, você pode agrupar os perfis exportados para o seu destino com base em critérios como ID de público-alvo, alias de público-alvo, associação de público-alvo ou namespaces de identidade.
 
 No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos das seções a seguir. Use chaves de agregação para estruturar a mensagem HTTP exportada do Experience Platform para corresponder ao formato e aos limites de taxa esperados pelo seu destino.
 
-#### Usar chave de agregação de ID de segmento no modelo {#aggregation-key-segment-id}
+#### Usar chave de agregação de ID de público-alvo no modelo {#aggregation-key-segment-id}
 
-Se você usar [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e defina `includeSegmentId` como verdadeiro, os perfis nas mensagens HTTP exportadas para o seu destino são agrupados pela ID do segmento. Veja abaixo como acessar a ID do segmento no modelo.
+Se você usar [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e defina `includeSegmentId` como verdadeiro, os perfis nas mensagens HTTP exportadas para o seu destino são agrupados pela ID do público-alvo. Veja abaixo como acessar a ID de público-alvo no modelo.
 
 **Entrada**
 
 Considere os quatro perfis abaixo, em que:
 
-* os dois primeiros fazem parte do segmento com a ID do segmento `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* o terceiro perfil faz parte do segmento com a ID do segmento `8f812592-3f06-416b-bd50-e7831848a31a`
-* o quarto perfil faz parte dos dois segmentos acima.
+* os dois primeiros fazem parte do público-alvo com a ID de público-alvo `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* o terceiro perfil faz parte do público-alvo com a ID de público-alvo `8f812592-3f06-416b-bd50-e7831848a31a`
+* o quarto perfil faz parte dos dois públicos-alvo acima.
 
 Perfil 1:
 
@@ -965,7 +965,7 @@ Perfil 4:
 >
 >Para todos os modelos que você usa, você deve omitir os caracteres ilegais, como aspas duplas `""` antes de inserir o [modelo](../../functionality/destination-server/templating-specs.md) no [configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obter mais informações sobre como evitar aspas duplas, consulte o Capítulo 9 na [JSON padrão](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe abaixo como `audienceId` é usado no modelo para acessar IDs de segmento. Este exemplo pressupõe que você use `audienceId` para associação de segmento na taxonomia de destino. Você pode usar qualquer outro nome de campo, dependendo da sua própria taxonomia.
+Observe abaixo como `audienceId` é usado no modelo para acessar IDs de público-alvo. Este exemplo pressupõe que você use `audienceId` para associação de público-alvo na taxonomia de destino. Você pode usar qualquer outro nome de campo, dependendo da sua própria taxonomia.
 
 ```python
 {
@@ -982,7 +982,7 @@ Observe abaixo como `audienceId` é usado no modelo para acessar IDs de segmento
 
 **Resultado**
 
-Quando exportados para o seu destino, os perfis são divididos em dois grupos, com base na ID do segmento.
+Quando exportados para seu destino, os perfis são divididos em dois grupos, com base na ID do público-alvo.
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Quando exportados para o seu destino, os perfis são divididos em dois grupos, c
 }
 ```
 
-#### Usar chave de agregação de alias de segmento no modelo {#aggregation-key-segment-alias}
+#### Usar chave de agregação de alias de público-alvo no modelo {#aggregation-key-segment-alias}
 
-Se você usar [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e defina `includeSegmentId` como true, também é possível acessar o alias de segmento no modelo.
+Se você usar [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e defina `includeSegmentId` como true, você também pode acessar o alias de público-alvo no modelo.
 
-Adicione a linha abaixo ao modelo para acessar os perfis exportados agrupados pelo alias do segmento.
+Adicione a linha abaixo ao template para acessar os perfis exportados agrupados pelo alias do público-alvo.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Usar chave de agregação de status de segmento no modelo {#aggregation-key-segment-status}
+#### Usar chave de agregação de status de público-alvo no modelo {#aggregation-key-segment-status}
 
-Se você usar [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e defina `includeSegmentId` e `includeSegmentStatus` como verdadeiro, você pode acessar o status do segmento no modelo. Dessa forma, você pode agrupar perfis nas mensagens HTTP exportadas para o seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
+Se você usar [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e defina `includeSegmentId` e `includeSegmentStatus` como true, você pode acessar o status do público-alvo no modelo. Dessa forma, você pode agrupar perfis nas mensagens HTTP exportadas para o seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
 
 Os valores possíveis são:
 
@@ -1206,10 +1206,10 @@ A tabela abaixo fornece descrições para as funções dos exemplos acima.
 | Função | Descrição |
 |---------|----------|
 | `input.profile` | O perfil, representado como um [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue o esquema XDM do parceiro mencionado mais acima nesta página. |
-| `destination.segmentAliases` | Mapear IDs de segmento no namespace do Adobe Experience Platform para aliases de segmento no sistema do parceiro. |
-| `destination.segmentNames` | Mapear nomes de segmento no namespace do Adobe Experience Platform para nomes de segmento no sistema do parceiro. |
-| `addedSegments(listOfSegments)` | Retorna somente os segmentos com status `realized`. |
-| `removedSegments(listOfSegments)` | Retorna somente os segmentos com status `exited`. |
+| `destination.segmentAliases` | Mapear IDs de público-alvo no namespace do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. |
+| `destination.segmentNames` | Mapear de nomes de público-alvo no namespace do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. |
+| `addedSegments(listOfSegments)` | Retorna somente os públicos-alvo com status `realized`. |
+| `removedSegments(listOfSegments)` | Retorna somente os públicos-alvo com status `exited`. |
 
 {style="table-layout:auto"}
 

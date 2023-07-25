@@ -1,9 +1,9 @@
 ---
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1898'
 ht-degree: 4%
 
 ---
@@ -48,7 +48,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 O Destination SDK suporta várias configurações de esquema:
 
 * Os esquemas estáticos são definidos por meio da variável `profileFields` matriz no `schemaConfig` seção. Em um esquema estático, você define cada atributo de destino que deve ser mostrado na interface do usuário do Experience Platform na `profileFields` matriz. Se precisar atualizar seu esquema, você deve [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Os esquemas dinâmicos usam um tipo de servidor de destino adicional, chamado de [servidor de esquema dinâmico](../../authoring-api/destination-server/create-destination-server.md), para gerar esquemas dinamicamente com base em sua própria API. Os esquemas dinâmicos não usam o `profileFields` matriz. Se precisar atualizar o esquema, não há necessidade de [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md). Em vez disso, o servidor de esquema dinâmico recupera o esquema atualizado da API.
+* Os esquemas dinâmicos usam um tipo de servidor de destino adicional, chamado de [servidor de esquema dinâmico](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), para recuperar dinamicamente os atributos de destino compatíveis e gerar esquemas com base em sua própria API. Os esquemas dinâmicos não usam o `profileFields` matriz. Se precisar atualizar o esquema, não há necessidade de [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md). Em vez disso, o servidor de esquema dinâmico recupera o esquema atualizado da API.
 * Na configuração do esquema, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar na interface do usuário da Platform, mas não podem modificá-los ao configurar uma conexão com o seu destino. Por exemplo, é possível impor que o campo de endereço de email sempre seja enviado ao destino.
 
 A variável `schemaConfig` A seção usa vários parâmetros de configuração, dependendo do tipo de esquema necessário, conforme mostrado nas seções abaixo.
@@ -126,7 +126,7 @@ O Destination SDK oferece suporte à criação de esquemas de parceiros dinâmic
 
 >[!IMPORTANT]
 >
->Antes de criar um esquema dinâmico, você deve [criar um servidor de esquema dinâmico](../../authoring-api/destination-server/create-destination-server.md).
+>Antes de criar um esquema dinâmico, você deve [criar um servidor de esquema dinâmico](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 Em uma configuração de esquema dinâmico, a variável `profileFields` matriz é substituída pela variável `dynamicSchemaConfig` conforme mostrado abaixo.
 

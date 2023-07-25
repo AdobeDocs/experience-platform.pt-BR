@@ -4,9 +4,9 @@ description: Saiba como usar o conector do LiveRamp para integrar públicos do A
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1834'
 ht-degree: 3%
 
 ---
@@ -37,6 +37,20 @@ Antes de enviar dados do Experience Platform para [!DNL LiveRamp SFTP], você pr
 O LiveRamp SFTP é compatível com a ativação de identidades, como identificadores baseados em PII, identificadores conhecidos e IDs personalizadas, descritos no [Documentação do LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 No [etapa de mapeamento](#map) do workflow de ativação, você deve definir os target mappings como atributos personalizados.
+
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#importing-an-audience) para o Experience Platform de arquivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -190,7 +204,9 @@ A Platform exportará dois arquivos CSV para [!DNL LiveRamp SFTP]:
 * Um arquivo CSV contendo os públicos-alvo A, C e D;
 * Um arquivo CSV contendo o público-alvo B.
 
-Os arquivos CSV exportados contêm perfis com os atributos selecionados e o status de público-alvo correspondente, em colunas separadas, com o nome do atributo e as IDs de público-alvo como cabeçalhos de coluna.
+Os arquivos CSV exportados contêm perfis com os atributos selecionados e o status de público-alvo correspondente, em colunas separadas, com o nome do atributo e `audience_namespace:audience_ID` pares como cabeçalhos de coluna, conforme mostrado no exemplo abaixo:
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 Os perfis incluídos nos arquivos exportados podem corresponder a um dos seguintes status de qualificação de público-alvo:
 
@@ -198,11 +214,10 @@ Os perfis incluídos nos arquivos exportados podem corresponder a um dos seguint
 * `Expired`: o perfil não está mais qualificado para o público-alvo, mas se qualificou no passado.
 * `""`(sequência de caracteres vazia): o perfil nunca se qualificou para o público-alvo.
 
-
-Por exemplo, um arquivo CSV exportado com um `email` o atributo e três públicos-alvo podem ser assim:
+Por exemplo, um arquivo CSV exportado com um `email` atributo, dois públicos-alvo originados do Experience Platform [Serviço de segmentação](../../../segmentation/home.md), e um [importado](../../../segmentation/ui/overview.md#importing-an-audience) público externo, pode ter esta aparência:
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+No exemplo acima, a variável `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrevem os públicos-alvo provenientes do Serviço de segmentação, enquanto `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` descreve um público-alvo importado para o Platform as a [upload personalizado](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Como a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md), ele também gera um fluxo de dados separado para cada ID de política de mesclagem.
 

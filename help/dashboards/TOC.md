@@ -4,10 +4,10 @@ user-guide-title: Ajuda de painéis da Adobe Experience Platform
 breadcrumb-title: Manual de painéis
 user-guide-description: Saiba como visualizar dados na Experience Platform por meio de painéis personalizáveis.
 feature: Dashboards
-source-git-commit: 32f3383d87a7fc4920b9551df434a2fc26f73fea
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 38%
+source-wordcount: '88'
+ht-degree: 35%
 
 ---
 
@@ -25,6 +25,8 @@ ht-degree: 38%
    * [Públicos-alvo](guides/audiences.md)
    * [Destinos](guides/destinations.md)
    * [Uso da licença](guides/license-usage.md)
+   * [Insights do perfil da IA do cliente](guides/customer-ai-profiles.md)
+   * [Insights de público-alvo da IA do cliente](guides/customer-ai-audiences.md)
 * Personalizar painéis {#customize}
    * [Visão geral da personalização](customize/overview.md)
    * [Modificar painéis](customize/modify.md)

@@ -3,10 +3,10 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d8c1e41b90b5b81dd8475bd697f31ba27551e7fa
+source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 6%
+source-wordcount: '934'
+ht-degree: 7%
 
 ---
 
@@ -68,7 +68,7 @@ Além disso, esse destino também suporta a ativação dos públicos-alvo descri
 >id="platform_destinations_custom_personalization_datastream"
 >title="Sobre IDs de sequência de dados"
 >abstract="Essa opção determina em qual sequência de dados de coleta de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
->additional-url="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream.html" text="Saiba como configurar uma sequência de dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=pt-BR" text="Saiba como configurar uma sequência de dados"
 
 >[!IMPORTANT]
 > 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
+source-git-commit: c9fb9320c7ef1da5aba41b3d01bca44b07ec6c17
 workflow-type: tm+mt
-source-wordcount: '4916'
+source-wordcount: '5221'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | upper /<br>ucase | Converte uma cadeia de caracteres em maiúsculas. | <ul><li>ENTRADA: **Obrigatório** A cadeia de caracteres que será convertida em maiúsculas.</li></ul> | upper(ENTRADA) | upper(&quot;HeLo&quot;)<br>ucase(&quot;HeLo&quot;) | &quot;OLÁ&quot; |
 | split | Divide uma cadeia de caracteres de entrada em um separador. O seguinte separador **necessidades** para ser evitada com `\`: `\`. Se você incluir vários delimitadores, a cadeia de caracteres será dividida em **qualquer** dos delimitadores presentes na string. | <ul><li>ENTRADA: **Obrigatório** A cadeia de caracteres de entrada que será dividida.</li><li>SEPARADOR: **Obrigatório** A cadeia de caracteres usada para dividir a entrada.</li></ul> | split(ENTRADA, SEPARADOR) | split(&quot;Olá mundo&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | ingressar | Une uma lista de objetos usando o separador. | <ul><li>SEPARADOR: **Obrigatório** A string que será usada para unir os objetos.</li><li>OBJETOS: **Obrigatório** Uma matriz de cadeias de caracteres que serão unidas.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Olá, mundo&quot; |
-| lpad | Preenche o lado esquerdo de uma cadeira de caracteres com a outra cadeia de caracteres especificada. | <ul><li>ENTRADA: **Obrigatório** A string que será preenchida. Esta cadeia de caracteres pode ser nula.</li><li>CONTAGEM: **Obrigatório** O tamanho da cadeia de caracteres a ser preenchida.</li><li>PREENCHIMENTO: **Obrigatório** A sequência de caracteres com a qual preencher a entrada. Se for nulo ou estiver vazio, será tratado como um único espaço.</li></ul> | lpad(ENTRADA, CONTAGEM, PREENCHIMENTO) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
+| lpad | Preenche o lado esquerdo de uma cadeira de caracteres com a outra cadeira de caracteres especificada. | <ul><li>ENTRADA: **Obrigatório** A string que será preenchida. Esta cadeia de caracteres pode ser nula.</li><li>CONTAGEM: **Obrigatório** O tamanho da cadeia de caracteres a ser preenchida.</li><li>PREENCHIMENTO: **Obrigatório** A sequência de caracteres com a qual preencher a entrada. Se for nulo ou estiver vazio, será tratado como um único espaço.</li></ul> | lpad(ENTRADA, CONTAGEM, PREENCHIMENTO) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Preenche o lado direito de uma cadeia de caracteres com a outra cadeia de caracteres fornecida. | <ul><li>ENTRADA: **Obrigatório** A string que será preenchida. Esta cadeia de caracteres pode ser nula.</li><li>CONTAGEM: **Obrigatório** O tamanho da cadeia de caracteres a ser preenchida.</li><li>PREENCHIMENTO: **Obrigatório** A sequência de caracteres com a qual preencher a entrada. Se for nulo ou estiver vazio, será tratado como um único espaço.</li></ul> | rpad(ENTRADA, CONTAGEM, PREENCHIMENTO) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Obtém os primeiros caracteres &quot;n&quot; da cadeira de caracteres fornecida. | <ul><li>STRING: **Obrigatório** A string para a qual você está obtendo os primeiros caracteres &quot;n&quot;.</li><li>CONTAGEM: **Obrigatório** Os caracteres &quot;n&quot; que você deseja obter da cadeia de caracteres.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
 | direita | Obtém os últimos caracteres &quot;n&quot; da cadeira de caracteres fornecida. | <ul><li>STRING: **Obrigatório** A string para a qual você está obtendo os últimos caracteres &quot;n&quot;.</li><li>CONTAGEM: **Obrigatório** Os caracteres &quot;n&quot; que você deseja obter da cadeia de caracteres.</li></ul> | right(STRING, COUNT) | right(&quot;abcde&quot;, 2) | &quot;de&quot; |
@@ -117,8 +117,8 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| now | Recupera a hora atual. |  | now() | now() | `2021-10-26T10:10:24Z` |
-| carimbo de data e hora | Recupera o horário Unix atual. |  | carimbo de data e hora() | carimbo de data e hora() | 1571850624571 |
+| now | Recupera a hora atual. | | now() | now() | `2021-10-26T10:10:24Z` |
+| carimbo de data e hora | Recupera o horário Unix atual. | | carimbo de data e hora() | carimbo de data e hora() | 1571850624571 |
 | formato | Formata a data de entrada de acordo com um formato especificado. | <ul><li>DATA: **Obrigatório** A data de entrada, como um objeto ZonedDateTime, que você deseja formatar.</li><li>FORMATO: **Obrigatório** O formato para o qual você deseja alterar a data.</li></ul> | format(DATA, FORMATO) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | Converte um carimbo de data e hora em uma cadeia de caracteres de data de acordo com um formato especificado. | <ul><li>CARIMBO DE DATA/HORA: **Obrigatório** O carimbo de data e hora que você deseja formatar. Isso é gravado em milissegundos.</li><li>FORMATO: **Obrigatório** O formato em que você deseja que o carimbo de data e hora se torne.</li></ul> | dformat(CARIMBO DE DATA E HORA, FORMATO) | dformat(1571829875000, &quot;aaaa-MM-dd&#39;T&#39;HH:mm:ss.SSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | data | Converte uma string de data em um objeto ZonedDateTime (formato ISO 8601). | <ul><li>DATA: **Obrigatório** A cadeia de caracteres que representa a data.</li><li>FORMATO: **Obrigatório** A cadeia de caracteres que representa o formato da data de origem.**Nota:** Isso faz **não** representa o formato em que você deseja converter a cadeia de caracteres de data. </li><li>DATA_PADRÃO: **Obrigatório** A data padrão retornada, se a data fornecida for nula.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -145,9 +145,12 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | to_object | Cria um objeto com base nos pares de chave/valor simples fornecidos. | <ul><li>ENTRADA: **Obrigatório** Uma lista simples de pares de chave/valor.</li></ul> | to_object(ENTRADA) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Cria um objeto a partir da cadeia de caracteres de entrada. | <ul><li>STRING: **Obrigatório** A cadeia de caracteres que está sendo analisada para criar um objeto.</li><li>VALUE_DELIMITER: *Opcional* O delimitador que separa um campo do valor. O delimitador padrão é `:`.</li><li>FIELD_DELIMITER: *Opcional* O delimitador que separa pares de valores de campo. O delimitador padrão é `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Nota**: Você pode usar o `get()` junto com `str_to_object()` para recuperar valores para as chaves na string. | <ul><li>Exemplo #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Exemplo #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Exemplo #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemplo #2: &quot;John&quot;</li></ul> |
 | contains_key | Verifica se o objeto existe nos dados de origem. **Nota:** Essa função substitui a função `is_set()` função. | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se ele existir nos dados de origem.</li></ul> | contains_key(ENTRADA) | contains_key(&quot;evars.evar.field1&quot;) | true |
-| nullify | Define o valor do atributo como `null`. Isso deve ser usado quando você não deseja copiar o campo para o schema de destino. |  | nullify() | nullify() | `null` |
+| nullify | Define o valor do atributo como `null`. Isso deve ser usado quando você não deseja copiar o campo para o schema de destino. | | nullify() | nullify() | `null` |
 | get_keys | Analisa os pares chave/valor e retorna todas as chaves. | <ul><li>OBJETO: **Obrigatório** O objeto do qual as chaves serão extraídas.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Orgulho e Preconceito&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analisa os pares chave/valor e retorna o valor da string, com base na chave fornecida. | <ul><li>STRING: **Obrigatório** A sequência de caracteres que você deseja analisar.</li><li>CHAVE: **Obrigatório** A chave para a qual o valor deve ser extraído.</li><li>VALUE_DELIMITER: **Obrigatório** O delimitador que separa o campo e o valor. Se um dos dois `null` ou uma string vazia for fornecida, esse valor será `:`.</li><li>FIELD_DELIMITER: *Opcional* O delimitador que separa pares de campo e valor. Se um dos dois `null` ou uma string vazia for fornecida, esse valor será `,`.</li></ul> | get_values(STRING, CHAVE, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
+| map_get_values | Pega um mapa e uma entrada de chave. Se a entrada for uma única chave, a função retornará o valor associado a essa chave. Se a entrada for uma matriz de sequência, a função retornará todos os valores correspondentes às chaves fornecidas. Se o mapa de entrada tiver chaves duplicadas, o valor de retorno deverá desduplicar as chaves e retornar valores exclusivos. | <ul><li>MAPA: **Obrigatório** Os dados do mapa de entrada.</li><li>CHAVE:  **Obrigatório** A chave pode ser uma única string ou uma matriz de string. Se qualquer outro tipo primitivo (dados / número) for fornecido, ele será tratado como uma string.</li></ul> | get_values(MAP, KEY) | Consulte a [apêndice](#map_get_values) para obter uma amostra de código. | |
+| map_has_keys | Se uma ou mais chaves de entrada forem fornecidas, a função retornará true. Se uma matriz de string for fornecida como entrada, a função retornará true na primeira chave encontrada. | <ul><li>MAPA:  **Obrigatório** Os dados do mapa de entrada</li><li>CHAVE:  **Obrigatório** A chave pode ser uma única string ou uma matriz de string. Se qualquer outro tipo primitivo (dados / número) for fornecido, ele será tratado como uma string.</li></ul> | map_has_keys(MAP, KEY) | Consulte a [apêndice](#map_has_keys) para obter uma amostra de código. | |
+| add_to_map | Aceita pelo menos duas entradas. Qualquer número de mapas pode ser fornecido como entrada. O Preparo de dados retorna um único mapa que tem todos os pares de valores-chave de todas as entradas. Se uma ou mais chaves forem repetidas (no mesmo mapa ou entre mapas), o Preparo de dados desduplica as chaves para que o primeiro par de valores-chave persista na ordem em que foram passadas na entrada. | MAPA: **Obrigatório** Os dados do mapa de entrada. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Consulte a [apêndice](#add_to_map) para obter uma amostra de código. | |
 
 {style="table-layout:auto"}
 
@@ -234,7 +237,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| uuid /<br>guid | Gera uma ID pseudo-aleatória. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| uuid /<br>guid | Gera uma ID pseudo-aleatória. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Essa função pega uma sequência de caracteres FPID e a converte em uma ECID para ser usada em aplicativos Adobe Experience Platform e Adobe Experience Cloud. | <ul><li>STRING: **Obrigatório** A sequência de caracteres FPID a ser convertida em ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
@@ -378,3 +381,77 @@ A tabela abaixo descreve uma lista de valores de campo de dispositivo e suas des
 | Hacker | Este valor de dispositivo é usado caso scripts sejam detectados no `useragent` string. |
 
 {style="table-layout:auto"}
+
+### Amostras de código {#code-samples}
+
+#### map_get_values {#map-get-values}
+
++++Selecione para exibir o exemplo
+
+```json
+ example = "map_get_values(book_details,\"author\") where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\"author\": \"George R. R. Martin\"}"
+```
+
++++
+
+#### map_has_keys {#map_has_keys}
+
++++Selecione para exibir o exemplo
+
+```json
+ example = "map_has_keys(book_details,\"author\")where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "true"
+```
+
++++
+
+#### add_to_map {#add_to_map}
+
++++Selecione para exibir o exemplo
+
+```json
+example = "add_to_map(book_details, book_details2) where input is {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}" +
+        "{\n" +
+        "    \"book_details2\":\n" +
+        "    {\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      returns = "A new map with all elements from map and addends"
+```
+
++++

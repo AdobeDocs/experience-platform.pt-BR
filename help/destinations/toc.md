@@ -4,23 +4,23 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 5%
+source-wordcount: '1164'
+ht-degree: 9%
 
 ---
 
 
 # Destinos {#destinations}
 
-* [Destinos visão geral](./home.md)
+* [Visão geral dos destinos](./home.md)
 * [Tipos e categorias de destino](./destination-types.md)
 * [Medidas de proteção de destinos (ativação)](./guardrails.md)
 * Como os destinos funcionam {#how-destinations-work}
-   * [Configurações de exportação configuráveis e comuns em destinos](./how-destinations-work/destinations-configurations.md)
+   * [Configurações de exportação comuns e alteráveis em destinos](./how-destinations-work/destinations-configurations.md)
    * [Comportamento de exportação de perfil para diferentes tipos de destino](./how-destinations-work/profile-export-behavior.md)
-   * [Manuseio de identidade no workflow de ativação de destinos](./how-destinations-work/identity-handling.md)
+   * [Manuseio de identidade no fluxo de trabalho de ativação de destinos](./how-destinations-work/identity-handling.md)
 * Tutoriais da API {#api}
    * [Guia de migração de API para destinos de armazenamento em nuvem](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Conectar-se a destinos de streaming e ativar dados usando a API de Serviço de Fluxo](./api/streaming-destinations.md)
@@ -32,7 +32,7 @@ ht-degree: 5%
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
    * [(Beta) Ativar dados para destinos baseados em arquivo usando a API do Serviço de fluxo](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta) Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
-* Guias de interface do usuário {#ui}
+* Guias de interface {#ui}
    * [Espaço de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
    * Ativar dados do público-alvo para destinos{#activate}
@@ -87,7 +87,7 @@ ht-degree: 5%
       * [Conexão com a Lista de clientes do pinterest](./catalog/advertising/pinterest.md)
       * [Conexão com o Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [A conexão com a Trade Desk](./catalog/advertising/tradedesk.md)
-      * [(Beta) A conexão CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) Conexão CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extensão de tag do site universal do twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexão de dadosX Yahoo/Verizon](./catalog/advertising/datax.md)
    * Destinos do Analytics {#analytics}
@@ -116,17 +116,17 @@ ht-degree: 5%
       * [Conexão com o Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexão com o Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexão do Blob do Azure](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Armazenamento do Azure Data Lake Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Armazenamento Azure Data Lake Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Conexão do Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
-      * [(Beta) Zona de aterrissagem de dados](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Beta) Armazenamento em nuvem do Google](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Zona de aterrissagem de dados](./catalog/cloud-storage/data-landing-zone.md)
+      * [Armazenamento em nuvem Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
       * [Endereço IP relacionado à inclui na lista de permissões para destinos SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
       * [Conexão com o Salesforce CRM](./catalog/crm/salesforce.md)
       * [Conexão com o Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexão de alcance](catalog/crm/outreach.md)
-      * [Conexão do Zendesk](catalog/crm/zendesk.md)
+      * [Conexão com o Zendesk](catalog/crm/zendesk.md)
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
@@ -140,7 +140,7 @@ ht-degree: 5%
       * [Conexão com o Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Conexão com o Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Categorias de interesse do Mailchimp](./catalog/email-marketing/mailchimp-interest-categories.md)
-      * [(API) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [(API) Conexão com o Oracle Eloqua](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Arquivos) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Conexão do Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Conexão do Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
@@ -169,14 +169,14 @@ ht-degree: 5%
       * [Extensão do KickFire](./catalog/personalization/kickfire.md)
       * [Extensão do Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
       * [Conexão do Hub de decisão do cliente Pega](./catalog/personalization/pega.md)
-      * [Conexão do Perfil Pega](./catalog/personalization/pega-profile.md)
+      * [Conexão do Pega Profile](./catalog/personalization/pega-profile.md)
    * Destinos sociais{#social}
       * [Visão geral de destinos sociais](./catalog/social/overview.md)
       * [Extensão Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Conexão com o facebook](./catalog/social/facebook.md)
       * [Conexão de Públicos-alvo correspondentes do linkedIn](./catalog/social/linkedin.md)
       * [Conexão com o TikTok](./catalog/social/tiktok.md)
-      * [[!DNL Twitter Custom Audiences] conexão](./catalog/social/twitter.md)
+      * [Conexão com o [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinos de transmissão {#streaming}
       * [Conexão da API HTTP](./catalog/streaming/http-destination.md)
       * [INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](./catalog/streaming/ip-address-allow-list.md)

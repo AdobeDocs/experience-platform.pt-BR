@@ -3,10 +3,10 @@ keywords: destino de armazenamento na nuvem;armazenamento na nuvem
 title: Visão geral dos destinos do Cloud Storage
 description: A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de dados para seus locais de armazenamento na nuvem do Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 3%
+source-wordcount: '385'
+ht-degree: 4%
 
 ---
 
@@ -20,15 +20,15 @@ A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de d
 
 ## Destinos de armazenamento na nuvem compatíveis {#supported-destinations}
 
-O Adobe Experience Platform é compatível com os seguintes destinos de armazenamento na nuvem:
+O Adobe Experience Platform oferece suporte a exportações de dados para os seguintes destinos de armazenamento na nuvem:
 
 * [Conexão com o Amazon Kinesis](amazon-kinesis.md)
 * [Conexão com o Amazon S3](amazon-s3.md)
 * [Conexão do Blob do Azure](azure-blob.md)
-* [(Beta) Armazenamento do Azure Data Lake Gen2](adls-gen2.md)
+* [Armazenamento Azure Data Lake Gen2](adls-gen2.md)
 * [Conexão do Azure Event Hubs](azure-event-hubs.md)
-* [(Beta) Zona de aterrissagem de dados](data-landing-zone.md)
-* [(Beta) Armazenamento em nuvem do Google](google-cloud-storage.md)
+* [Zona de aterrissagem de dados](data-landing-zone.md)
+* [Armazenamento em nuvem Google](google-cloud-storage.md)
 * [Conexão SFTP](sftp.md)
 
 ## Conectar-se a um novo destino de armazenamento na nuvem {#connect-destination}
@@ -65,4 +65,10 @@ Caminho da pasta no local de armazenamento: `acme/campaigns/2021/Luxury Audience
 
 ## Tipo de exportação de dados {#export-type}
 
-Suporte a destinos de armazenamento na nuvem **Exportação baseada em perfil**. Isso significa que você está exportando detalhes sobre os indivíduos no público-alvo. Esses detalhes são necessários para personalização e podem incluir atributos, eventos, associações de público-alvo e muito mais.
+Os destinos de armazenamento na nuvem são compatíveis com os seguintes tipos de exportação:
+* **Exportação baseada em perfil**. Isso significa que você está exportando detalhes sobre os indivíduos no público-alvo. Esses detalhes são necessários para personalização e podem incluir atributos, eventos, associações de público-alvo e muito mais.
+* [!BADGE Beta]{type=Informative}**Exportação do conjunto de dados**. Essa funcionalidade permite exportar conjuntos de dados inteiros para destinos de armazenamento na nuvem. [Leia mais](/help/destinations/ui/export-datasets.md) sobre a funcionalidade.
+
+## Próximas etapas {#next-steps}
+
+Depois de selecionar qual dos [destinos na nuvem compatíveis](#supported-destinations) que você deseja usar, leia as [tutorial conectar-se a destinos](/help/destinations/ui/connect-destination.md) para saber como estabelecer uma conexão com o destino. Em seguida, leia o tutorial de ativação nos destinos baseados em arquivo para saber como iniciar [exportação](/help/destinations/ui/activate-batch-profile-destinations.md) para seu destino de armazenamento na nuvem.

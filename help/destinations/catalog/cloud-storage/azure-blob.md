@@ -2,28 +2,20 @@
 title: Conexão do Blob do Azure
 description: Crie uma conexão de saída ativa com seu armazenamento Azure Blob para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 3%
+source-wordcount: '973'
+ht-degree: 4%
 
 ---
 
-# [!DNL Azure Blob] conexão
+# Conexão com o [!DNL Azure Blob]
 
 ## Log de alterações de destino {#changelog}
 
->[!IMPORTANT]
->
->Com a versão beta da funcionalidade de exportação de conjuntos de dados e a funcionalidade aprimorada de exportação de arquivos, agora você pode estar vendo dois [!DNL Azure Blob] no catálogo de destinos.
->* Se você já estiver exportando arquivos para o **[!UICONTROL Azure Blob]** destino: crie novos fluxos de dados para a nova **[!UICONTROL Azure Blob beta]** destino.
->* Se você ainda não tiver criado nenhum fluxo de dados para a variável **[!UICONTROL Azure Blob]** destino, use o novo **[!UICONTROL Azure Blob beta]** cartão para o qual exportar arquivos **[!UICONTROL Azure Blob]**.
+Com a versão de julho de 2023 do Experience Platform, a [!DNL Azure Blob] O destino fornece novas funcionalidades, conforme listado abaixo:
 
-![Imagem dos dois cartões de destino do Azure Blob em uma exibição lado a lado.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
-
-As melhorias no novo [!DNL Azure Blob] cartão de destino incluem:
-
-* [Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
 * Adicional [opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorada](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -110,9 +102,9 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: digite uma descrição desse destino.
 * **[!UICONTROL Caminho da pasta]**: digite o caminho para a pasta de destino que hospedará os arquivos exportados.
 * **[!UICONTROL Container]**: digite o nome do [!DNL Azure Blob Storage] contêiner a ser usado por este destino.
-* **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para o **[!UICONTROL Azure Blob beta]** destino. Ao selecionar a variável [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para o **[!UICONTROL Azure Blob beta]** destino.
-* **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais. Essa opção só está disponível para o **[!UICONTROL Azure Blob beta]** destino.
+* **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Ao selecionar a variável [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados.
+* **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais.
 
 ### Ativar alertas {#enable-alerts}
 

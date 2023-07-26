@@ -2,10 +2,10 @@
 title: Conexão SFTP
 description: Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de dados delimitados da Adobe Experience Platform periodicamente.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 3%
+source-wordcount: '940'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## Log de alterações de destino {#changelog}
 
->[!IMPORTANT]
->
->Com a versão beta da funcionalidade de exportação de conjuntos de dados e a funcionalidade aprimorada de exportação de arquivos, agora você pode estar vendo dois [!DNL SFTP] no catálogo de destinos.
->* Se você já estiver exportando arquivos para o **[!UICONTROL SFTP]** destino: crie novos fluxos de dados para a nova **[!UICONTROL Beta do SFTP]** destino.
->* Se você ainda não tiver criado nenhum fluxo de dados para a variável **[!UICONTROL SFTP]** destino, use o novo **[!UICONTROL Beta do SFTP]** cartão para o qual exportar arquivos **[!UICONTROL SFTP]**.
+Com a versão de Experience Platform de julho de 2023, o destino SFTP fornece novas funcionalidades, conforme listado abaixo:
 
-![Imagem dos dois cartões de destino SFTP em uma visualização lado a lado.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-As melhorias no novo [!DNL SFTP] cartão de destino incluem:
-
-* [Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
 * Adicional [opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorada](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -122,9 +114,9 @@ Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as
 * **[!UICONTROL Nome]**: digite um nome que ajude a identificar esse destino na interface do usuário do Experience Platform;
 * **[!UICONTROL Descrição]**: digite uma descrição para esse destino;
 * **[!UICONTROL Caminho da pasta]**: digite o caminho para a pasta no local SFTP onde os arquivos serão exportados.
-* **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para o **[!UICONTROL Beta do SFTP]** destino. Ao selecionar a variável [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. Essa opção só está disponível para o **[!UICONTROL Beta do SFTP]** destino.
-* **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais. Essa opção só está disponível para o **[!UICONTROL Beta do SFTP]** destino.
+* **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Ao selecionar a variável [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados.
+* **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais.
 
 ## Ativar públicos para este destino {#activate}
 

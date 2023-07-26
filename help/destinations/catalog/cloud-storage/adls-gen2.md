@@ -1,19 +1,15 @@
 ---
-title: (Beta) Conexão Gen2 do Armazenamento Azure Data Lake
+title: Conexão Gen2 do Armazenamento Azure Data Lake
 description: Saiba como se conectar ao Azure Data Lake Storage Gen2 para ativar públicos e exportar conjuntos de dados.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 0%
+source-wordcount: '805'
+ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL Azure Data Lake Storage Gen2] conexão
-
->[!IMPORTANT]
->
->No momento, esse destino está na versão beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Azure Data Lake Storage Gen2] conexão, entre em contato com o representante da Adobe e forneça [!DNL Organization ID].
+# Conexão com o [!DNL Azure Data Lake Storage Gen2]
 
 ## Visão geral {#overview}
 

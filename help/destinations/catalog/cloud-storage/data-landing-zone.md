@@ -2,19 +2,18 @@
 title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1404'
 ht-degree: 1%
 
 ---
 
-# (Beta) Destino da zona de aterrissagem de dados
+# Destino da Data Landing Zone
 
 >[!IMPORTANT]
 >
->* No momento, esse destino está na versão beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Data Landing Zone] conexão, entre em contato com o representante da Adobe e forneça [!DNL Organization ID].
->* Esta página de documentação se refere ao [!DNL Data Landing Zone] *destino*. Existe também uma [!DNL Data Landing Zone] *origem* no catálogo de origens. Para obter mais informações, leia a [[!DNL Data Landing Zone] origem](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentação.
+>Esta página de documentação se refere ao [!DNL Data Landing Zone] *destino*. Existe também uma [!DNL Data Landing Zone] *origem* no catálogo de origens. Para obter mais informações, leia a [[!DNL Data Landing Zone] origem](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentação.
 
 
 ## Visão geral {#overview}

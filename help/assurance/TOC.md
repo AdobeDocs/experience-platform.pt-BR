@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Assurance
 user-guide-description: O Adobe Experience Platform Assurance permite inspecionar, testar, simular e validar como você coleta dados ou veicula experiências em seus aplicativos móveis.
 feature: Assurance
 source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '65'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 66%
    - [Transações de evento](./views/event-transactions.md)
    - [Versões de extensão](./views/extension-versions.md)
    - [Mensagens no aplicativo](./views/in-app-messaging.md)
-   - [Em visualizações do dispositivo](./views/on-device-views.md)
-   - [Serviço de Places](./views/places-service.md)
-   - [Exibição da depuração de push](./views/push-debug-view.md)
+   - [Visualizações no dispositivo](./views/on-device-views.md)
+   - [Places Service](./views/places-service.md)
+   - [Visualização da depuração de push](./views/push-debug-view.md)
    - [Resumo da validação](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
-   - [Mídia de transmissão do Adobe Analytics](./views/adobe-analytics-streaming-media.md)
+   - [Adobe Analytics para mídia de transmissão](./views/adobe-analytics-streaming-media.md)
 - Tutoriais {#tutorials}
-   - [Implementar o Assurance](./tutorials/implement-assurance.md)
-   - [Use o Assurance](./tutorials/using-assurance.md)
+   - [Implementação do Assurance](./tutorials/implement-assurance.md)
+   - [Utilização do Assurance](./tutorials/using-assurance.md)
 - [Solução de problemas](./troubleshooting.md)

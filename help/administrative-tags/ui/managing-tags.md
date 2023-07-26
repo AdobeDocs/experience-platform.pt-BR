@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;gerenciamento de tags;tags;
 title: Gerenciamento de tags unificadas
-description: Este documento fornece informações sobre o gerenciamento de tags unificadas no Adobe Experience Cloud
+description: Este documento fornece informações sobre o gerenciamento de tags unificadas na Adobe Experience Cloud
 exl-id: 179b0618-3bd3-435c-9d17-63681177ca47
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1070'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Guia de gerenciamento de tags
+# Manual de gerenciamento de tags
 
-As tags permitem gerenciar taxonomias de metadados para classificar objetos de negócios para facilitar a descoberta e a categorização. As tags podem ajudar a identificar atributos taxonômicos importantes para os públicos com os quais suas equipes trabalharão, para que possam encontrá-los mais rapidamente e também agrupar públicos comuns em um descritor. Você deve identificar categorias de tags comuns, como regiões geográficas, unidades de negócios, linhas de produtos, projetos, equipes, intervalos de tempo (trimestres, meses, anos) ou qualquer outra coisa que possa ajudar a aplicar significado e facilitar a descoberta de públicos-alvo para sua equipe. 
+As tags permitem gerenciar taxonomias de metadados para classificar objetos de negócios para facilitar a descoberta e a categorização. As tags podem ajudar a identificar atributos taxonômicos importantes para os públicos-alvo com os quais suas equipes trabalharão, para que possam encontrá-los mais rapidamente e também agrupar públicos-alvo comuns em um descritor. É recomendado identificar categorias de tags comuns, como regiões geográficas, unidades de negócios, linhas de produtos, projetos, equipes, intervalos de tempo (trimestres, meses, anos) ou qualquer outra coisa que possa ajudar a aplicar um significado e facilitar a descoberta de públicos-alvo pela sua equipe. 
 
-## Criar uma tag {#create-tag}
+## Criação de uma tag {#create-tag}
 
-Para criar uma nova tag, selecione **[!UICONTROL tags]** na navegação à esquerda, selecione a categoria de tag desejada.
+Para criar uma nova tag, selecione **[!UICONTROL tags]** no painel de navegação esquerdo e selecione a categoria de tag desejada.
 
 ![Selecionar uma categoria de tag](./images/tag-selection.png)
 
@@ -24,116 +24,116 @@ Selecionar **[!UICONTROL Criar tag]** para criar uma nova tag.
 
 ![Criar uma nova tag](./images/new-tag.png)
 
-A variável **[!UICONTROL Criar tag]** será exibida, solicitando que você insira um nome de tag exclusivo. Quando terminar, selecione **[!UICONTROL Salvar]**.
+A caixa de diálogo **[!UICONTROL Criar tag]** será exibida, solicitando a inserção de um nome de tag exclusivo. Quando terminar, clique em **[!UICONTROL Salvar]**.
 
 ![Caixa de diálogo Criar tag com um novo nome de tag](./images/create-tag-dialog.png)
 
-A nova tag foi criada com sucesso e você é redirecionado para a tela de tags, onde a tag recém-criada será exibida na lista.
+A nova tag foi criada com sucesso e você será redirecionado para a tela de tags, onde a tag recém-criada aparecerá na lista.
 
 ![Tag recém-criada para a categoria de tag](./images/new-tag-listed.png)
 
-## Editar uma tag {#edit-tag}
+## Edição de uma tag {#edit-tag}
 
-A edição de uma tag ajuda quando há erros ortográficos, atualizações de convenção de nomenclatura ou atualizações de terminologia. A edição de uma tag manterá a associação da tag com qualquer objeto no qual ela esteja aplicada no momento.
+A edição de uma tag ajuda quando há erros ortográficos, atualizações da convenção de nomeação ou da terminologia. A edição de uma tag manterá sua associação com qualquer objeto no qual ela esteja aplicada no momento.
 
-Para editar uma tag existente, na lista de categorias de tags, selecione as reticências (`...`) ao lado do nome da tag que você deseja editar. Uma lista suspensa exibe controles para editar, mover ou arquivar a tag. Selecionar **[!UICONTROL Editar]** na lista suspensa.
+Para editar uma tag já existente, na lista de categorias de tags, clique nas reticências (`...`) ao lado do nome da tag que deseja editar. Um menu suspenso exibe os controles para editar, mover ou arquivar a tag. Selecionar **[!UICONTROL Editar]** na lista suspensa.
 
-![Editar ação mostrada na lista suspensa](./images/edit-action.png)
+![Ação Editar exibida no menu suspenso](./images/edit-action.png)
 
-A variável **[!UICONTROL Editar tag]** será exibida, solicitando que você edite o nome da tag. Quando terminar, selecione **[!UICONTROL Salvar]**.
+A caixa de diálogo **[!UICONTROL Editar tag]** será exibida, solicitando a edição do nome da tag. Quando terminar, clique em **[!UICONTROL Salvar]**.
 
-![Caixa de diálogo Editar tag com nome de tag atualizado](./images/edit-dialog.png)
+![Caixa de diálogo Editar tag com o nome da tag atualizado](./images/edit-dialog.png)
 
 O nome da tag foi atualizado com sucesso e você será redirecionado para a tela tags, onde a tag atualizada aparecerá na lista.
 
 ![Tag atualizada para a categoria de tag](./images/updated-tag-listed.png)
 
-## Mover uma tag entre categorias {#move-tag}
+## Deslocamento de uma tag entre categorias {#move-tag}
 
-As tags podem ser movidas para outras categorias de tag. Mover uma tag manterá a associação da tag com qualquer objeto no qual ela esteja aplicada no momento.
+As tags podem ser deslocadas para outras categorias de tag. Deslocar uma tag manterá sua associação com qualquer objeto no qual ela esteja aplicada no momento.
 
-Para mover uma tag existente, na lista de categorias de tag, selecione as reticências (`...`) ao lado do nome da tag que você deseja mover. Uma lista suspensa exibe controles para editar, mover ou arquivar a tag. Selecionar **[!UICONTROL Editar]** na lista suspensa.
+Para mover uma tag já existente, na lista de categorias de tag, clique nas reticências (`...`) ao lado do nome da tag que deseja deslocar. Um menu suspenso exibe os controles para editar, mover ou arquivar a tag. Selecionar **[!UICONTROL Editar]** no menu suspenso.
 
-![Ação de movimentação mostrada na lista suspensa](./images/move-action.png)
+![Ação Deslocar exibida na lista suspensa](./images/move-action.png)
 
-A variável **[!UICONTROL Mover tag]** será exibida, solicitando que você selecione a categoria da tag para onde a tag selecionada deve ser movida.
+A caixa de diálogo **[!UICONTROL Deslocar tag]** será exibida, solicitando a seleção da categoria para onde a tag selecionada deverá ser deslocada.
 
-Você pode rolar a tela e selecionar itens na lista ou, como alternativa, usar o recurso de pesquisa para inserir o nome da categoria. Quando terminar, selecione **[!UICONTROL Mover]**.
+É possível rolar a tela e selecionar itens da lista ou usar o recurso de pesquisa para inserir o nome da categoria. Quando terminar, clique em **[!UICONTROL Deslocar]**.
 
-![Mover caixa de diálogo de tag com critérios de pesquisa para localizar categoria de tag](./images/move-dialog.png)
+![Caixa de diálogo Deslocar tag com critérios de pesquisa para localizar a categoria de tag](./images/move-dialog.png)
 
-A tag é movida com sucesso e você é redirecionado para a tela tags, onde você verá a lista de tags atualizada, onde a tag não é mais exibida.
+A tag foi deslocada com sucesso e você será redirecionado para a tela tags, onde você verá a lista atualizada na qual a tag não está mais exibida.
 
 ![Lista de tags atualizada para a categoria de tag atual](./images/current-tag-category.png)
 
 A tag agora aparecerá na categoria de tag selecionada anteriormente.
 
-![Lista de tags da categoria de tags selecionada para mover a tag](./images/moved-to-tag-category.png)
+![Lista de tags da categoria de tags selecionada para deslocar a tag](./images/moved-to-tag-category.png)
 
-## Arquivar uma tag {#archive-tag}
+## Arquivamento de uma tag {#archive-tag}
 
-O status de uma tag pode ser alternado entre ativa e arquivada. As tags arquivadas não são removidas dos objetos nos quais já foram aplicadas, mas não podem mais ser aplicadas a novos objetos. Para cada tag, o mesmo status é refletido em todos os objetos. Isso é particularmente útil quando você deseja manter as associações atuais de objeto de tag, mas não deseja que a tag seja usada no futuro.
+O status de uma tag pode ser alternado entre ativa e arquivada. As tags arquivadas não são removidas dos objetos nos quais já foram aplicadas, mas não podem mais ser aplicadas a novos objetos. Cada tag terá o mesmo status em todos os objetos. Isso é particularmente útil quando desejar manter as associações atuais da tag nos objetos, mas não quiser que ela seja usada no futuro.
 
-Para arquivar uma tag existente, na lista de categorias de tags, selecione as reticências (`...`) ao lado do nome da tag que você deseja arquivar. Uma lista suspensa exibe controles para editar, mover ou arquivar a tag. Selecionar **[!UICONTROL Arquivar]** na lista suspensa.
+Para arquivar uma tag já existente, na lista de categorias de tags, clique nas reticências (`...`) ao lado do nome da tag que você deseja arquivar. Um menu suspenso exibe os controles para editar, mover ou arquivar a tag. Selecione **[!UICONTROL Arquivar]** no menu suspenso.
 
-![Ação de arquivamento mostrada na lista suspensa](./images/archive-action.png)
+![Ação Arquivar exibida no menu suspenso](./images/archive-action.png)
 
-A variável **[!UICONTROL Arquivar tag]** será exibida, solicitando que você confirme o arquivamento de tags. Selecionar **[!UICONTROL Arquivar]**.
+A caixa de diálogo **[!UICONTROL Arquivar tag]** será exibida, solicitando a confirmação do arquivamento da tag. Selecione **[!UICONTROL Arquivar]**.
 
-![Caixa de diálogo Arquivar tag solicitando confirmação](./images/archive-dialog.png)
+![Caixa de diálogo Arquivar tag solicitando a confirmação](./images/archive-dialog.png)
 
-A tag foi arquivada com êxito e você será redirecionado para a tela de tags. Você verá que a lista de tags atualizada agora mostra o status da tag como `Archived`.
+A tag foi arquivada com sucesso e você será redirecionado para a tela de tags. Você verá que a lista de tags atualizada agora mostra o status da tag como `Archived`.
 
 ![Lista de tags atualizada para a categoria de tag atual que mostra a tag como arquivada](./images/archive-status.png)
 
-## Restaurar uma tag arquivada {#restore-archived-tag}
+## Restauração de uma tag arquivada {#restore-archived-tag}
 
-Se quiser aplicar uma `Archived` para novos objetos, a tag deve estar em uma `Active` estado. Restaurar uma tag arquivada retornará uma tag a sua `Active` estado.
+Se quiser aplicar uma tag `Archived` para novos objetos, ela deve estar no estado `Active`. Restaurar uma tag arquivada fará com que ela volte a seu estado `Active`.
 
-Para restaurar uma tag arquivada, na lista de categorias de tags, selecione as reticências (`...`) ao lado do nome da tag que você deseja restaurar. Uma lista suspensa exibe controles para restaurar ou excluir a tag. Selecionar **[!UICONTROL Restaurar]** na lista suspensa.
+Para restaurar uma tag arquivada, na lista de categorias de tags, clique nas reticências (`...`) ao lado do nome da tag que deseja restaurar. Um menu suspenso exibe os controles para restaurar ou excluir a tag. Selecione **[!UICONTROL Restaurar]** no menu suspenso.
 
-![Ação de restauração mostrada na lista suspensa](./images/restore-action.png)
+![Ação Restaurar exibida no menu suspenso](./images/restore-action.png)
 
-A variável **[!UICONTROL Restaurar tag]** será exibida, solicitando que você confirme a restauração da tag. Selecionar **[!UICONTROL Restaurar]**.
+A caixa de diálogo **[!UICONTROL Restaurar tag]** será exibida, solicitando a confirmação da restauração da tag. Selecione **[!UICONTROL Restaurar]**.
 
-![Caixa de diálogo Restaurar tag solicitando confirmação](./images/restore-dialog.png)
+![Caixa de diálogo Restaurar tag solicitando a confirmação](./images/restore-dialog.png)
 
-A tag foi restaurada com sucesso e você foi redirecionado para a tela de tags. Você verá que a lista de tags atualizada agora mostra o status da tag como `Active`.
+A tag foi restaurada com sucesso e você será redirecionado para a tela de tags. Você verá que a lista de tags atualizada agora mostra o status da tag como `Active`.
 
-![Lista de tags atualizada para a categoria de tag atual que mostra a tag como ativa](./images/restored-active-status.png)
+![Lista de tags atualizada para a categoria de tag atual mostrando a tag como ativa](./images/restored-active-status.png)
 
-## Excluir uma tag {#delete-tag}
+## Exclusão de uma tag {#delete-tag}
 
 >[!NOTE]
 >
->Somente as tags que estão em um `Archived` e não estão associados a nenhum objeto podem ser excluídos.
+>Somente as tags que estão no estado `Archived` e não estão associadas a nenhum objeto, podem ser excluídas.
 
 A exclusão de uma tag a removerá completamente do sistema.
 
-Para excluir uma tag arquivada, na lista de categorias de tags, selecione as reticências (`...`) ao lado do nome da tag que você deseja excluir. Uma lista suspensa exibe controles para restaurar ou excluir a tag. Selecionar **[!UICONTROL Excluir]** na lista suspensa.
+Para excluir uma tag arquivada, na lista de categorias de tags, clique nas reticências (`...`) ao lado do nome da tag que deseja excluir. Um menu suspenso exibe os controles para restaurar ou excluir a tag. Selecione **[!UICONTROL Excluir]** no menu suspenso.
 
-![Excluir ação mostrada na lista suspensa](./images/delete-action.png)
+![Ação Excluir exibida no menu suspenso](./images/delete-action.png)
 
-A variável **[!UICONTROL Excluir tag]** será exibida, solicitando que você confirme a exclusão da tag. Clique em **[!UICONTROL Excluir]**.
+A caixa de diálogo **[!UICONTROL Excluir tag]** será exibida, solicitando a confirmação da exclusão da tag. Clique em **[!UICONTROL Excluir]**.
 
-![Caixa de diálogo Excluir tag solicitando confirmação](./images/delete-dialog.png)
+![Caixa de diálogo Excluir tag solicitando a confirmação](./images/delete-dialog.png)
 
-A tag foi excluída com sucesso e você será redirecionado para a tela de tags. A tag do não aparece mais na lista e foi completamente removida.
+A tag foi excluída com sucesso e você será redirecionado para a tela de tags. A tag não aparecerá mais na lista pois foi completamente removida.
 
-![A lista de tags atualizada para a categoria de tag atual que mostra a tag não aparece mais na lista](./images/deleted-updated-list.png)
+![A lista de tags atualizada para a categoria de tag atual, que mostra a que tag não aparece mais na lista](./images/deleted-updated-list.png)
 
-## Exibição de objetos marcados {#view-tagged}
+## Visualização de objetos marcados {#view-tagged}
 
-Cada tag tem uma página detalhada que pode ser acessada no inventário de tags. Esta página lista todos os objetos que atualmente têm essa tag aplicada, permitindo que os usuários vejam objetos relacionados de diferentes aplicativos e recursos em uma única visualização.
+Cada tag tem uma página de detalhes, que pode ser acessada no inventário de tags. Esta página lista todos os objetos que atualmente têm essa tag aplicada, permitindo que os usuários vejam os objetos relacionados de diferentes aplicativos e recursos em uma única visualização.
 
-Para exibir a lista de objetos com marcas de formatação, localize a marca de formatação em uma categoria de marca de formatação e selecione-a.
+Para exibir a lista de objetos com a tag, localize a tag em uma categoria de tag e a selecione.
 
 ![Seleção de tag na categoria de tag](./images/view-tag-selection.png)
 
-A variável [!UICONTROL Objetos marcados] será exibida, mostrando um inventário de objetos marcados.
+A caixa de diálogo [!UICONTROL Objetos marcados] será exibida, mostrando um inventário de objetos com a tag.
 
 ![Inventário de objetos marcados](./images/tagged-objects.png)
 
 ## Próximas etapas
 
-Agora você aprendeu a gerenciar tags. Para obter uma visão geral de alto nível das tags no Experience Platform, consulte o [documentação da visão geral das tags](../overview.md).
+Você aprendeu a gerenciar tags. Para obter uma visão geral de alto nível das tags na Experience Platform, consulte a [documentação da visão geral das tags](../overview.md).

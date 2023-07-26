@@ -4,9 +4,9 @@ description: Os endereços IP devem ser adicionados a uma lista de permissões a
 solution: Experience Platform
 title: LISTA DE PERMISSÕES de Endereço IP para Conexões de Origem
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 908cc5c4ff290efdb07cf33cdaa1577280802f9a
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -51,3 +51,14 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+
+## CAN2: Canadá
+
+- `13.71.175.80/28`
+- `20.38.147.224/28`
+- `20.48.201.0/26`
+- `20.116.47.72/29`
+- `52.228.80.128/25`
+- `52.228.81.0/26`
+- `52.228.86.144/29`
+- `52.246.155.224/28`

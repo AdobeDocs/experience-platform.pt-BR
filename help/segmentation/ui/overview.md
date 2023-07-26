@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3606'
+source-wordcount: '3607'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ Você também deve compreender dois termos principais usados neste documento e a
 
 - **Público**: um conjunto de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento ou composição de público-alvo (público-alvo gerado pela Platform) ou de fontes externas, como uploads personalizados (público-alvo gerado externamente).
 - **Definição de segmento**: as regras que o Adobe Experience Platform usa para descrever as principais características ou comportamento de um público-alvo.
-- **Segmento**: o ato de separar perfis em públicos.
+- **Segmentar**: o ato de separar perfis em públicos-alvo.
 
 ## Visão geral
 
@@ -125,7 +125,7 @@ Selecionar **[!UICONTROL Criar público]** O permitirá a criação de um públi
 >
 > Você vai **não** ser capaz de excluir um público-alvo usado em uma ativação de destino.
 
-### Filtragem e marcação {#manage-audiences}
+### Filtragem, pastas e marcação {#manage-audiences}
 
 Para melhorar a eficiência do trabalho, você pode pesquisar públicos existentes, adicionar tags definidas pelo usuário a públicos, colocar públicos em pastas e filtrar os públicos exibidos.
 
@@ -294,7 +294,7 @@ Um popover é exibido, permitindo que você escolha entre compor um público-alv
 
 ![Um popover que exibe os dois tipos de públicos-alvo que você pode criar.](../images/ui/overview/create-audience-type.png)
 
-**Composição de público** {#audience-composition}
+**Composição de público-alvo** {#audience-composition}
 
 Selecionar **[!UICONTROL Compor públicos]** leva você à Composição de público-alvo. Esse espaço de trabalho fornece controles intuitivos para criar e editar públicos, como arrastar e soltar blocos usados para representar ações diferentes. Para saber mais sobre como criar públicos-alvo, leia o [Guia de composição de público-alvo](./audience-composition.md).
 

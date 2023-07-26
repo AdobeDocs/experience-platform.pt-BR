@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
 
 # Guia da interface do usuário da Composição de público-alvo
+
+>[!NOTE]
+>
+>Este guia explica como criar públicos-alvo usando a Composição de público-alvo. Para saber como criar públicos-alvo por meio de definições de segmento usando o Construtor de segmentos, leia o [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md).
 
 A Composição de público-alvo fornece um espaço de trabalho para criar e editar públicos-alvo, usando blocos usados para representar ações diferentes.
 

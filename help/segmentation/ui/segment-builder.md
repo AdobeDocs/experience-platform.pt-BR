@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
-ht-degree: 8%
+source-wordcount: '3338'
+ht-degree: 7%
 
 ---
 
 # [!DNL Segment Builder] Guia da interface do usuário
+
+>[!NOTE]
+>
+>Este guia explica como criar públicos-alvo por meio do **definições de segmento** usando o Construtor de segmentos. Para saber como criar públicos-alvo usando a Composição de público-alvo, leia o [Guia da interface do usuário da Composição de público-alvo](./audience-composition.md).
 
 [!DNL Segment Builder] O fornece um espaço de trabalho avançado que permite a você interagir com o [!DNL Profile] elementos de dados. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 

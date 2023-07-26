@@ -1,14 +1,14 @@
 ---
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
-source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
+source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
 
-# Consultas com parâmetros
+# Consultas parametrizadas (versão limitada)
 
 >[!IMPORTANT]
 >

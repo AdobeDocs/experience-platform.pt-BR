@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
+source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Para obter mais informações sobre os conceitos e recursos do [!DNL Query Servi
 
 ### Como as consultas são executadas a partir de [!DNL Query Editor] {#run-a-query}
 
-Consultas executadas a partir de [!DNL Query Editor] executar interativamente. Isso significa que se você fechar o navegador ou sair, a consulta será cancelada. Isso também é verdadeiro para consultas feitas para gerar conjuntos de dados a partir de saídas de consultas.
+Consultas executadas a partir de [!DNL Query Editor] executar interativamente, o que significa que se você fechar o navegador ou sair, a consulta será cancelada. O mesmo é verdadeiro para consultas feitas para gerar conjuntos de dados a partir de saídas de consulta.
 
 ## Criação de consulta usando [!DNL Query Editor] {#query-authoring}
 
@@ -37,9 +37,30 @@ Usar [!DNL Query Editor], você pode gravar, executar e salvar consultas para da
 
 ### Acessar o [!DNL Query Editor] {#accessing-query-editor}
 
-No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo, para abrir a [!DNL Query Service] espaço de trabalho. Em seguida, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela para começar a gravar consultas. Esse link está disponível em qualquer uma das páginas no [!DNL Query Service] espaço de trabalho.
+No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo, para abrir a [!DNL Query Service] espaço de trabalho. Em seguida, para começar a gravar consultas, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela. Esse link está disponível em qualquer uma das páginas no [!DNL Query Service] espaço de trabalho.
 
 ![A guia de visão geral do espaço de trabalho Consultas com Create query realçado.](../images/ui/query-editor/create-query.png)
+
+### Alternância do Editor de Consulta Aprimorado {#enhanced-editor-toggle}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_enhancedEditorToggle"
+>title="Alternância do editor aprimorado"
+>abstract="Alternar entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é ativada por padrão, embora a versão aprimorada forneça melhor acessibilidade e suporte a vários temas. Para saber mais sobre essas alterações, consulte a documentação."
+
+Um botão de alternância de interface permite alternar entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é ativada por padrão, embora a versão aprimorada forneça melhor acessibilidade e suporte a vários temas. Ative a versão aprimorada para acessar as configurações do Editor de consultas.
+
+![O Editor de consultas com a opção aprimorada Editor de consultas está realçado.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
+
+A ativação do botão alterna o editor para o tema claro e melhora a legibilidade da sintaxe. Um ícone de configurações também aparece acima do campo de entrada do Editor de consultas que incorpora a opção de preenchimento automático. No ícone de configurações, é possível ativar o tema escuro ou desativar/ativar o preenchimento automático.
+
+>[!TIP]
+>
+>Com o Editor de consultas aprimorado, você pode [!UICONTROL Desativar preenchimento automático de sintaxe] ao criar uma consulta sem perder seu progresso. Normalmente, se você desativar o recurso de preenchimento automático durante a edição, todas as alterações no query serão perdidas.
+
+Para ativar temas escuros ou claros, selecione o ícone de configurações (![Um ícone de configurações.](../images/ui/query-editor/settings-icon.png)) seguido pela opção no menu suspenso que é exibida.
+
+![O Editor de consultas com o ícone de configurações e a opção de menu suspenso Ativar tema escuro estão realçados.](../images/ui/query-editor/query-editor-settings.png)
 
 ### Gravação de consultas {#writing-queries}
 
@@ -59,7 +80,7 @@ Para minimizar o tempo de desenvolvimento, é recomendável desenvolver as consu
 
 ![Alguns caracteres de SQL com o menu suspenso de preenchimento automático fornecendo opções do Editor de consultas.](../images/ui/query-editor/syntax-auto.png)
 
-- **Preenchimento automático de tabela e campo:** Comece a digitar o nome da tabela que deseja `SELECT` do, em seguida, use as teclas de seta para navegar até a tabela que você está procurando e pressione **Enter**. Depois que uma tabela é selecionada, o preenchimento automático reconhecerá os campos nessa tabela.
+- **Preenchimento automático de tabela e campo:** Comece a digitar o nome da tabela que deseja `SELECT` do, em seguida, use as teclas de seta para navegar até a tabela que você está procurando e pressione **Enter**. Depois que uma tabela é selecionada, o preenchimento automático reconhece os campos nessa tabela.
 
 ![A entrada do Editor de consultas exibindo sugestões de nome de tabela suspensa.](../images/ui/query-editor/tables-auto.png)
 
@@ -87,7 +108,7 @@ Se você desativar o recurso de preenchimento automático, será necessária uma
 
 ![A caixa de diálogo de confirmação para desativar o recurso de preenchimento automático.](../images/ui/query-editor/confirmation-dialog.png)
 
-Selecione a opção apropriada para desativar o recurso de preenchimento automático.
+Para desativar o recurso de preenchimento automático, selecione a opção de confirmação apropriada.
 
 ### Detecção de erro {#error-detection}
 
@@ -101,7 +122,7 @@ Quando erros são detectados, é possível exibir as mensagens de erro específi
 
 ### Detalhes da consulta {#query-details}
 
-Selecione qualquer modelo salvo na [!UICONTROL Modelos] para exibi-la no Editor de consultas. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada.
+Para exibir uma consulta no Editor de consultas, selecione qualquer modelo salvo na [!UICONTROL Modelos] guia. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada.
 
 ![O Editor de consultas com o painel de detalhes da consulta realçado.](../images/ui/query-editor/query-details.png)
 
@@ -111,13 +132,13 @@ Esse painel também mostra metadados úteis, como a última vez que a consulta f
 
 ### Consultas programadas {#scheduled-queries}
 
-As consultas que foram salvas como um modelo podem ser agendadas no Editor de consultas. Isso permite automatizar as execuções de consulta em uma cadência personalizada. Você pode agendar consultas com base na frequência, data e hora e também escolher um conjunto de dados de saída para seus resultados, se necessário. Os agendamentos de query também podem ser desativados ou excluídos por meio da interface do usuário.
+As consultas que foram salvas como um modelo podem ser agendadas no Editor de consultas. O agendamento de consultas permite automatizar as execuções de consultas em uma cadência personalizada. Você pode agendar consultas com base na frequência, data e hora e também escolher um conjunto de dados de saída para seus resultados, se necessário. Os agendamentos de query também podem ser desativados ou excluídos por meio da interface do usuário.
 
-Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. Isso não se aplica à [!DNL Query Service] API:
+Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. A mesma limitação não se aplica ao [!DNL Query Service] API:
 
 Consulte a documentação dos cronogramas de consulta para saber como [criar agendamentos de consulta na interface](./query-schedules.md). Como alternativa, para saber como adicionar agendas usando a API, leia o [guia de endpoint de consultas programadas](../api/scheduled-queries.md).
 
-Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consultas programadas] guia. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas programadas] guia, você pode encontrar informações importantes sobre as execuções de consulta e assinar alertas. As informações disponíveis incluem o status, os detalhes da programação e as mensagens/códigos de erro em caso de falha na execução. Consulte a [Monitorar documento de consultas programadas](./monitor-queries.md) para obter mais informações.
+Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consultas programadas] guia. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas programadas] você pode encontrar informações importantes sobre as execuções de consulta e assinar alertas. As informações disponíveis incluem status, detalhes da programação e mensagens/códigos de erro se uma execução falhar. Consulte a [Monitorar documento de consultas programadas](./monitor-queries.md) para obter mais informações.
 
 ### Salvamento de consultas {#saving-queries}
 
@@ -149,7 +170,7 @@ O console fornece informações sobre o status e a operação do [!DNL Query Ser
 
 >[!NOTE]
 >
->O console mostra apenas os erros resultantes da execução de um query. Não mostra erros de validação de consulta antes da execução de uma consulta.
+>O console mostra apenas os erros que resultaram da execução de um query. Ele não mostra os erros de validação de consulta que ocorrem antes da execução de uma consulta.
 
 ### Resultados da consulta {#query-results}
 
@@ -159,7 +180,7 @@ Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Res
 
 ## Executar consultas com [!DNL Query Service] vídeo tutorial {#query-tutorial-video}
 
-O vídeo a seguir mostra como executar queries na interface do Adobe Experience Platform e em um cliente PSQL. Além disso, é demonstrado o uso de propriedades individuais em um objeto XDM, o uso de funções definidas por Adobe e o uso de CREATE TABLE AS SELECT (CTAS).
+O vídeo a seguir mostra como executar queries na interface do Adobe Experience Platform e em um cliente PSQL. O vídeo também demonstra o uso de propriedades individuais em um objeto XDM, funções definidas por Adobe e como usar consultas CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

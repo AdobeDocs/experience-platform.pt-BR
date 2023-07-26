@@ -1,68 +1,72 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Salesforce;salesforce
-solution: Experience Platform
-title: Criar uma conexão de origem do Salesforce na interface
-type: Tutorial
-description: Saiba como criar uma conexão de origem do Salesforce usando a interface do Adobe Experience Platform.
+title: Conecte sua conta do Salesforce usando a interface do Experience Platform
+description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 1%
+source-wordcount: '524'
+ht-degree: 0%
 
 ---
 
-# Criar um [!DNL Salesforce] conexão de origem na interface
+# Conecte seu [!DNL Salesforce] conta para Experience Platform usando a interface do usuário
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de CRM de origem externa de forma programada. Este tutorial fornece etapas para a criação de um [!DNL Salesforce] conector de origem usando o [!DNL Platform] interface do usuário.
+Este tutorial fornece etapas sobre como conectar seus [!DNL Salesforce] e traga seus dados do CRM para a Adobe Experience Platform usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver um [!DNL Salesforce] conta, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/crm.md).
+Se você já tiver um [!DNL Salesforce] conta, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados para dados do CRM](../../dataflow/crm.md).
 
-### Coletar credenciais necessárias
+### Coletar credenciais necessárias {#gather-required-credentials}
+
+Para autenticar seu [!DNL Salesforce] conta em relação ao Experience Platform, você deve fornecer valores que correspondam ao seguinte [!DNL Salesforce] credenciais:
 
 | Credencial | Descrição |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | O URL do [!DNL Salesforce] instância de origem. |
 | `username` | O nome de usuário para o [!DNL Salesforce] conta de usuário. |
 | `password` | A senha para o [!DNL Salesforce] conta de usuário. |
 | `securityToken` | O token de segurança para o [!DNL Salesforce] conta de usuário. |
+| `apiVersion` | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
-Para obter mais informações sobre a introdução, consulte [este documento do Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Para obter mais informações sobre autenticação, consulte [este [!DNL Salesforce] guia de autenticação](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+Depois de obter as credenciais necessárias, siga as etapas abaixo para conectar seu [!DNL Salesforce] conta para Experience Platform.
 
 ## Conecte seu [!DNL Salesforce] account
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Salesforce] conta para [!DNL Platform].
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar o espaço de trabalho de fontes. A variável *[!UICONTROL Catálogo]* A tela exibe uma variedade de fontes disponíveis no catálogo de fontes do Experience Platform.
 
-Efetue logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a **[!UICONTROL Origens]** espaço de trabalho. A variável **[!UICONTROL Catálogo]** A tela exibe uma variedade de fontes com as quais você pode criar uma conta.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar uma fonte específica usando a opção de pesquisa.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Selecionar **[!UICONTROL CRM]** na lista de categorias de origens e selecione **[!UICONTROL Adicionar dados]** do [!DNL Salesforce] cartão.
 
-No **[!UICONTROL Bancos de dados]** categoria, selecione **[!UICONTROL Salesforce]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector do Salesforce.
-
-![catálogo](../../../../images/tutorials/create/salesforce/catalog.png)
+![O catálogo de origens na interface do usuário do Experience Platform com o cartão de origem do Salesforce selecionado.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 A variável **[!UICONTROL Conectar-se ao Salesforce]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
-### Nova conta
+>[!BEGINTABS]
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome, uma descrição opcional e [!DNL Salesforce] credenciais. Quando terminar, selecione **[!UICONTROL Conectar]** e aguarde algum tempo para estabelecer a nova conexão.
+>[!TAB Usar uma conta existente do Salesforce]
 
-![conectar](../../../../images/tutorials/create/salesforce/new.png)
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista exibida. Quando terminar, selecione **[!UICONTROL Próxima]** para continuar.
 
-### Conta existente
+![Uma lista de contas autenticadas do Salesforce que já existem em sua organização.](../../../../images/tutorials/create/salesforce/existing.png)
 
-Para conectar uma conta existente, selecione a [!DNL Salesforce] conta à qual deseja se conectar e selecione **[!UICONTROL Próxima]** no canto superior direito para continuar.
+>[!TAB Criar uma nova conta do Salesforce]
 
-![existente](../../../../images/tutorials/create/salesforce/existing.png)
+Para usar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição e sua [!DNL Salesforce] credenciais de autenticação. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns segundos para que a nova conexão seja estabelecida.
+
+![A interface na qual você pode criar uma nova conta do Salesforce fornecendo as credenciais de autenticação apropriadas.](../../../../images/tutorials/create/salesforce/new.png)
+
+>[!ENDTABS]
 
 ## Próximas etapas
 

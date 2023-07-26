@@ -1,17 +1,15 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;esquema crm;crm;CRM;salesforce;Salesforce
-solution: Experience Platform
 title: Visão geral do Conector de origem do Salesforce
 description: Saiba como conectar o Salesforce ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
 
-# [!DNL Salesforce] conector
+# [!DNL Salesforce]
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
@@ -57,7 +55,7 @@ A tabela a seguir contém valores de exemplo, bem como informações adicionais 
 | `ACCESS_TOKEN` | O token de autorização necessário para completar chamadas para APIs de Experience Platform. Veja o tutorial sobre [autenticação e acesso às APIs do Experience Platform](../../../landing/api-authentication.md) para obter informações sobre como recuperar o `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | No que diz respeito a [!DNL Marketo], esse valor é fixo e sempre é definido como: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | A variável `global` o container contém todas as classes padrão fornecidas por Adobe e parceiros de Experience Platform, grupos de campos de esquema, tipos de dados e esquemas. No que diz respeito a [!DNL Marketo], esse valor é fixo e sempre é definido como `global`. | `global` |
-| `PRIVATE_KEY` | Uma credencial usada para autenticar seu [!DNL Postman] para APIs Experience Platform. Consulte o tutorial sobre a configuração do console do desenvolvedor e [configuração do console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md) para obter instruções sobre como recuperar sua {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Uma credencial usada para autenticar seu [!DNL Postman] para APIs Experience Platform. Consulte o tutorial sobre a configuração do console do desenvolvedor e [configuração do console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md) para obter instruções sobre como recuperar o {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Uma credencial usada para integrar ao Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | O Sistema Identity Management (IMS) fornece a estrutura para autenticação de serviços da Adobe. No que diz respeito a [!DNL Marketo], esse valor é fixo e sempre é definido como: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Uma entidade corporativa que pode ser proprietária ou licenciar produtos e serviços e permitir acesso a seus membros. Veja o tutorial sobre [configuração do console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md) para obter instruções sobre como recuperar o `{ORG_ID}` informações. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |

@@ -5,9 +5,9 @@ title: Criar uma conexão básica do Salesforce usando a API do serviço de flux
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Salesforce usando a API do Serviço de fluxo.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '498'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,8 @@ A fim de [!DNL Flow Service] para se conectar a [!DNL Salesforce], você deve fo
 | `username` | O nome de usuário para o [!DNL Salesforce] conta de usuário. |
 | `password` | A senha para o [!DNL Salesforce] conta de usuário. |
 | `securityToken` | O token de segurança para o [!DNL Salesforce] conta de usuário. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL AdWords] é: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `apiVersion` | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Salesforce] é: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Para obter mais informações sobre a introdução, visite [este documento do Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
@@ -49,8 +50,7 @@ Para obter informações sobre como fazer chamadas para APIs da Platform com êx
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Salesforce] credenciais de autenticação como parte dos parâmetros de solicitação.
-
+Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` e forneça seu [!DNL Salesforce] credenciais de autenticação no corpo da solicitação.
 
 **Formato da API**
 
@@ -64,28 +64,28 @@ A solicitação a seguir cria uma conexão básica para [!DNL Salesforce]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce Connection",
-        "description": "Connection for Salesforce account",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}",
-                "securityToken": "{SECURITY_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Salesforce Connection",
+      "description": "Connection for Salesforce account",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {****
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "securityToken": "{SECURITY_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriedade | Descrição |

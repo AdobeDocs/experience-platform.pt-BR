@@ -1,70 +1,73 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Salesforce Service Cloud;salesforce service cloud
-solution: Experience Platform
-title: Criar uma conexão de origem do Salesforce Service Cloud na interface
-type: Tutorial
-description: Saiba como criar uma conexão de origem do Salesforce Service Cloud usando a interface do Adobe Experience Platform.
+title: Conecte sua conta da Salesforce Service Cloud usando a interface do usuário do Experience Platform
+description: Saiba como conectar sua conta do Salesforce Service Cloud e trazer seus dados de sucesso do cliente para o Experience Platform usando a interface do usuário.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 1%
+source-wordcount: '540'
+ht-degree: 0%
 
 ---
 
-# Criar um [!DNL Salesforce Service Cloud] conexão de origem na interface
+# Conecte seu [!DNL Salesforce Service Cloud] conta para Experience Platform usando a interface do usuário
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados originados externamente de forma programada. Este tutorial fornece etapas para a criação de um [!DNL Salesforce Service Cloud] (a seguir denominado &quot;SSC&quot;) utilizando o conector de origem [!DNL Platform] interface do usuário.
+Este tutorial fornece etapas sobre como conectar seus [!DNL Salesforce Service Cloud] e traga seus dados de sucesso do cliente para a Adobe Experience Platform usando a interface do Experience Platform.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão SSC válida, ignore o restante deste documento e prossiga para o tutorial em [configuração de um fluxo de dados](../../dataflow/customer-success.md)
+Se você já tiver um [!DNL Salesforce Service Cloud] conexão, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados para o sucesso de um cliente](../../dataflow/customer-success.md)
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do SSC em [!DNL Platform], você deve fornecer os seguintes valores:
+Para acessar seu [!DNL Salesforce Service Cloud] conta no Experience Platform, você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
-| ---------- | ----------- |
-| `username` | O nome de usuário da conta de usuário. |
-| `password` | A senha da conta de usuário. |
-| `securityToken` | O token de segurança da conta de usuário. |
+| --- | --- |
+| `environmentUrl` | O URL do [!DNL Salesforce Service Cloud] instância de origem. |
+| `username` | O nome de usuário para o [!DNL Salesforce Service Cloud] conta de usuário. |
+| `password` | A senha para o [!DNL Salesforce Service Cloud] conta de usuário. |
+| `securityToken` | O token de segurança para o [!DNL Salesforce Service Cloud] conta de usuário. |
+| `apiVersion` | (Opcional) A versão da API REST do [!DNL Salesforce Service Cloud] instância que você está usando. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
-Para obter mais informações sobre a introdução, consulte [este [!DNL Salesforce Service Cloud] documento](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
+Para obter mais informações sobre autenticação, consulte [este [!DNL Salesforce] guia de autenticação](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
 ## Conecte seu [!DNL Salesforce Service Cloud] account
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do SSC ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Salesforce] conta para Experience Platform.
 
-Efetue logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a **[!UICONTROL Origens]** espaço de trabalho. A variável **[!UICONTROL Catálogo]** A tela exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar o espaço de trabalho de fontes. A variável *[!UICONTROL Catálogo]* exibe uma variedade de fontes disponíveis no catálogo de fontes do Experience Platform.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar uma fonte específica usando a opção de pesquisa.
 
-No **[!UICONTROL Sucesso do cliente]** categoria, selecione **[!UICONTROL Salesforce Service Cloud]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector SSC.
+Selecionar **[!UICONTROL Sucesso do cliente]** na lista de categorias de origens e selecione **[!UICONTROL Adicionar dados]** do [!DNL Salesforce Service Cloud] cartão.
 
-![catálogo](../../../../images/tutorials/create/ssc/catalog.png)
+![O catálogo de origens na interface do usuário do Experience Platform com o cartão de origem do Salesforce Service Cloud selecionado.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
 A variável **[!UICONTROL Conectar-se à Salesforce Service Cloud]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
-### Nova conta
+>[!BEGINTABS]
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que é exibido, forneça um nome, uma descrição opcional e suas credenciais de SSC. Quando terminar, selecione **[!UICONTROL Conectar]** e aguarde algum tempo para estabelecer a nova conexão.
+>[!TAB Usar uma conta existente da Salesforce Service Cloud]
 
-![conectar](../../../../images/tutorials/create/ssc/connect.png)
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista exibida. Quando terminar, selecione **[!UICONTROL Próxima]** para continuar.
 
-### Conta existente
+![Uma lista de contas autenticadas do Salesforce que já existem em sua organização.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
-Para conectar uma conta existente, selecione a conta do SSC à qual deseja se conectar e selecione **[!UICONTROL Próxima]** para continuar.
+>[!TAB Criar uma nova conta da Salesforce Service Cloud]
 
-![existente](../../../../images/tutorials/create/ssc/existing.png)
+Para usar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição e sua [!DNL Salesforce Service Cloud] credenciais de autenticação. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns segundos para que a nova conexão seja estabelecida.
+
+![A interface na qual você pode criar uma nova conta do Salesforce fornecendo as credenciais de autenticação apropriadas.](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+
+>[!ENDTABS]
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do SSC. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer os dados de Sucesso do cliente para o [!DNL Platform]](../../dataflow/customer-success.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Salesforce Service Cloud] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer os dados de sucesso do cliente para o Experience Platform](../../dataflow/customer-success.md).

@@ -1,10 +1,8 @@
 ---
 title: Criar uma conexão de origem e um fluxo de dados para o SAP Commerce usando a API do Serviço de Fluxo
 description: Saiba como criar uma conexão de origem e um fluxo de dados para trazer dados do SAP Commerce para o Experience Platform usando a API do Serviço de Fluxo.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 2%

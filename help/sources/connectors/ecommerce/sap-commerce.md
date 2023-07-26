@@ -2,10 +2,8 @@
 title: Visão geral da origem do SAP Commerce
 description: Saiba como conectar o SAP Commerce ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%

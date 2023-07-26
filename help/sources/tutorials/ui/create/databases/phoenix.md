@@ -1,77 +1,82 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Phoenix;phoenix
-solution: Experience Platform
-title: Criar uma conexão de origem Phoenix na interface
-type: Tutorial
-description: Saiba como criar uma conexão de origem Phoenix usando a interface do Adobe Experience Platform.
+title: Conecte sua conta Phoenix usando a interface do usuário do Experience Platform
+description: Saiba como conectar sua conta Phoenix e trazer dados do banco de dados Phoenix para o Experience Platform usando a interface do usuário do.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 0%
+source-wordcount: '604'
+ht-degree: 1%
 
 ---
 
-# Criar um [!DNL Phoenix] conexão de origem na interface
+# Conecte seu [!DNL Phoenix] conta para Experience Platform usando a interface do usuário
 
->[!NOTE]
->
-> A variável [!DNL Phoenix] o conector está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
-
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados originados externamente de forma programada. Este tutorial fornece etapas para a criação de um [!DNL Phoenix] conector de origem usando o [!DNL Platform] interface do usuário.
+Este tutorial fornece etapas sobre como conectar seus [!DNL Phoenix] e traga dados de sua conta [!DNL Phoenix] banco de dados para Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver um [!DNL Phoenix] conexão, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/databases.md)
+Se você já tiver um [!DNL Phoenix] conta, ignore o restante deste documento e prossiga para o tutorial em [configuração de um fluxo de dados para um banco de dados](../../dataflow/databases.md).
 
 ### Coletar credenciais necessárias
 
-Para acessar seu [!DNL Phoenix] conta em [!DNL Platform], você deve fornecer os seguintes valores:
+Para acessar seu [!DNL Phoenix] conta no Experience Platform, você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
-| ---------- | ----------- |
-| `host` | O endereço IP ou o nome de host do [!DNL Phoenix] servidor. |
-| `port` | A porta TCP que o [!DNL Phoenix] O servidor usa o para detectar conexões de clientes. Se você se conectar a [!DNL Azure HDInsights], especifique a porta como 443. |
-| `httpPath` | O URL parcial correspondente à variável [!DNL Phoenix] servidor. Especifique /hbasephoenix0 se estiver usando o [!DNL Azure HDInsights] cluster. |
-| `username` | O nome de usuário que você usa para acessar o [!DNL Phoenix] servidor. |
-| `password` | A senha que corresponde ao usuário. |
-| `enableSsl` | Um botão que especifica se as conexões com o servidor são criptografadas usando SSL. |
+| --- | --- |
+| Host | O endereço IP ou o nome de host do [!DNL Phoenix] servidor. |
+| Porta | A porta TCP que o [!DNL Phoenix] O servidor usa o para detectar conexões de clientes. Se você estiver se conectando ao [!DNL Azure HDInsights]e especifique a porta como 443. Se esse parâmetro não for fornecido, o valor padrão será 8765. |
+| Caminho HTTP | O URL parcial correspondente à variável [!DNL Phoenix] servidor. Especifique /hbasephoenix0 se estiver usando o [!DNL Azure HDInsights] cluster. |
+| Nome de usuário | O nome de usuário que você usa para acessar o [!DNL Phoenix] servidor. |
+| Senha | A senha que corresponde ao usuário. |
+| Enable SSL | Um botão que especifica se as conexões com o servidor são criptografadas usando SSL. |
 
 Para obter mais informações sobre a introdução, consulte [este [!DNL Phoenix] documento](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
+Depois de obter as credenciais necessárias, siga as etapas abaixo para conectar seu [!DNL Phoenix] conta para Experience Platform.
+
 ## Conecte seu [!DNL Phoenix] account
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Phoenix] conta à qual se conectar [!DNL Platform].
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar o espaço de trabalho de fontes. A variável *[!UICONTROL Catálogo]* A tela exibe uma variedade de fontes disponíveis no catálogo de fontes do Experience Platform.
 
-Efetue logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a **[!UICONTROL Origens]** espaço de trabalho. A variável **[!UICONTROL Catálogo]** A tela exibe uma variedade de fontes com as quais você pode criar uma conta.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar uma fonte específica usando a opção de pesquisa.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Selecionar **[!UICONTROL Bancos de dados]** na lista de categorias de origens e selecione **[!UICONTROL Adicionar dados]** do [!DNL Phoenix] cartão.
 
-No **[!UICONTROL Bancos de dados]** categoria, selecione **[!UICONTROL Phoenix]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Phoenix] conta.
+>[!TIP]
+>
+>As origens no catálogo de origens podem exibir prompts diferentes, dependendo do status da origem.
+> 
+>* **[!UICONTROL Adicionar dados]** significa que há contas autenticadas existentes associadas à origem selecionada.
+>
+>* **[!UICONTROL Configurar]** significa que você deve fornecer credenciais e autenticar uma nova conta para usar a fonte selecionada.
 
-![catálogo](../../../../images/tutorials/create/phoenix/catalog.png)
+![O catálogo de origens na interface do usuário do Experience Platform com o cartão de origem Phoenix selecionado.](../../../../images/tutorials/create/phoenix/catalog.png)
 
 A variável **[!UICONTROL Conectar-se a Phoenix]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
-### Nova conta
+>[!BEGINTABS]
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome, uma descrição opcional e [!DNL Phoenix] credenciais. Quando terminar, selecione **[!UICONTROL Conectar]** e aguarde algum tempo para estabelecer a nova conexão.
+>[!TAB Usar uma conta existente do Phoenix]
 
-![conectar](../../../../images/tutorials/create/phoenix/new.png)
+Para usar uma conta existente, selecione [!UICONTROL Conta existente] e, em seguida, selecione a conta que deseja usar na lista exibida. Quando terminar, selecione [!UICONTROL Próxima] para continuar.
 
-### Conta existente
+![Uma lista de contas autenticadas do banco de dados Phoenix que já existem em sua organização.](../../../../images/tutorials/create/phoenix/existing.png)
 
-Para conectar uma conta existente, selecione a [!DNL Phoenix] conta à qual deseja se conectar e selecione **[!UICONTROL Próxima]** para continuar.
+>[!TAB Criar uma nova conta do Phoenix]
 
-![existente](../../../../images/tutorials/create/phoenix/existing.png)
+Para usar uma nova conta, selecione [!UICONTROL Nova conta] e forneça um nome, uma descrição e sua [!DNL Phoenix] credenciais de autenticação. Quando terminar, selecione [!UICONTROL Conectar à origem] e aguarde alguns segundos para que a nova conexão seja estabelecida.
+
+![A nova interface de conta, onde você pode fornecer credenciais de autenticação e criar uma conta Phoenix.](../../../../images/tutorials/create/phoenix/new.png)
+
+>[!ENDTABS]
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Phoenix] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o [!DNL Platform]](../../dataflow/databases.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Phoenix] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o Experience Platform](../../dataflow/databases.md).

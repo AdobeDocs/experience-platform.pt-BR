@@ -1,39 +1,32 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Phoenix;phoenix
-solution: Experience Platform
-title: Visão geral do conector de origem do Phoenix
-description: Saiba como conectar o Phoenix ao Adobe Experience Platform usando APIs ou a interface do usuário do.
+title: Visão geral da origem do Phoenix
+description: Saiba como conectar sua conta do Phoenix ao Adobe Experience Platform usando APIs ou a interface do usuário do.
+last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Phoenix] conector
+# [!DNL Phoenix]
 
->[!NOTE]
->
->A variável [!DNL Phoenix] o conector está na versão beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
-
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
-
-[!DNL Experience Platform] O fornece suporte para assimilação de dados de um banco de dados de terceiros. [!DNL Platform] O pode se conectar a diferentes tipos de bancos de dados, como bancos relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Phoenix].
+As Fontes do Adobe Experience Platform oferecem suporte à assimilação de dados de bancos de dados de terceiros, como [[!DNL Phoenix]](https://phoenix.apache.org/index.html). Este documento fornece as informações de pré-requisito antes de conectar [!DNL Phoenix] conta por meio da [!DNL Flow Service] API ou a interface de usuário do Experience Platform.
 
 ## LISTA DE PERMISSÕES de endereço IP
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Phoenix] para [!DNL Platform] uso de APIs ou da interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Phoenix] para Experience Platform usando APIs ou a interface do usuário:
 
-## Conectar [!DNL Phoenix] para [!DNL Platform] uso de APIs
+## Conectar [!DNL Phoenix] para Experience Platform usando APIs
 
-- [Criar uma conexão básica Phoenix usando a API do serviço de fluxo](../../tutorials/api/create/databases/phoenix.md)
-- [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
-- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
+* [Criar uma conexão básica Phoenix usando a API do serviço de fluxo](../../tutorials/api/create/databases/phoenix.md)
+* [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
+* [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar [!DNL Phoenix] para [!DNL Platform] uso da interface
+## Conectar [!DNL Phoenix] para o Experience Platform usando a interface do usuário
 
-- [Criar uma conexão de origem Phoenix na interface](../../tutorials/ui/create/databases/phoenix.md)
-- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)
+* [Conecte seu [!DNL Phoenix] conta usando a interface de usuário do Experience Platform](../../tutorials/ui/create/databases/phoenix.md)
+* [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)

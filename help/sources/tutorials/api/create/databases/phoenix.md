@@ -1,46 +1,39 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Phoenix;phoenix
-solution: Experience Platform
 title: Criar uma conexão de base Phoenix usando a API do serviço de fluxo
-type: Tutorial
 description: Saiba como conectar um banco de dados Phoenix ao Adobe Experience Platform usando a API do serviço de fluxo.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 1%
+source-wordcount: '549'
+ht-degree: 2%
 
 ---
 
 # Criar um [!DNL Phoenix] conexão básica usando o [!DNL Flow Service] API
 
->[!NOTE]
->
->A variável [!DNL Phoenix] o conector está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
+Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
-
-Este tutorial usa o [!DNL Flow Service] API para orientá-lo pelas etapas de conexão de um [!DNL Phoenix] banco de dados para [!DNL Experience Platform].
+Este tutorial fornece etapas sobre como criar uma conexão base e conectar seu [!DNL Phoenix] para a Adobe Experience Platform usando a variável [!DNL Flow Service] API.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância de Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Phoenix] usando o [!DNL Flow Service] API.
 
 ### Coletar credenciais necessárias
 
-A fim de [!DNL Flow Service] para se conectar com [!DNL Phoenix], você deve fornecer valores para as seguintes propriedades de conexão:
+Você deve fornecer as credenciais de autenticação a seguir para se conectar ao [!DNL Phoenix] conta para Experience Platform.
 
 | Credencial | Descrição |
 | ---------- | ----------- |
 | `host` | O endereço IP ou o nome de host do [!DNL Phoenix] servidor. |
 | `username` | O nome de usuário que você usa para acessar [!DNL Phoenix] Servidor. |
 | `password` | A senha correspondente ao usuário. |
-| `port` | A porta TCP que o [!DNL Phoenix] O servidor usa o para detectar conexões de clientes. Se você se conectar a [!DNL Azure] HDInsights, especifique a porta como 443. |
+| `port` | A porta TCP que o [!DNL Phoenix] O servidor usa o para detectar conexões de clientes. Se você estiver se conectando ao [!DNL Azure HDInsights]e especifique a porta como 443. Se esse parâmetro não for fornecido, o valor padrão será 8765. |
 | `httpPath` | O URL parcial correspondente à variável [!DNL Phoenix] servidor. Especifique /hbasephoenix0 se estiver usando [!DNL Azure] Cluster HDInsights. |
 | `enableSsl` | Um valor booleano. Especifica se as conexões com o servidor são criptografadas usando SSL. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Phoenix] é: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
@@ -55,7 +48,7 @@ Para obter informações sobre como fazer chamadas para APIs da Platform com êx
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Phoenix] credenciais de autenticação como parte dos parâmetros de solicitação.
+Para criar uma conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Phoenix] credenciais de autenticação no corpo da solicitação.
 
 **Formato da API**
 
@@ -69,31 +62,31 @@ A solicitação a seguir cria uma conexão básica para [!DNL Phoenix]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Phoenix test connection",
-        "description": "Phoenix test connection",
-        "auth": {
-            "specName": "Basic Authentication",
-        "params": {
-            "host":  "{HOST}",
-            "username": "{USERNAME}",
-            "password":"{PASSWORD}",
-            "port": {PORT},
-            "httpPath": "{PATH}",
-            "enableSsl": {SSL}
-            }
-        },
-        "connectionSpec": {
-            "id": "102706fb-a5cd-42ee-afe0-bc42f017ff43",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Phoenix test connection",
+      "description": "Phoenix test connection",
+      "auth": {
+          "specName": "Basic Authentication",
+      "params": {
+          "host":  "{HOST}",
+          "username": "{USERNAME}",
+          "password":"{PASSWORD}",
+          "port": {PORT},
+          "httpPath": "{PATH}",
+          "enableSsl": {SSL}
+          }
+      },
+      "connectionSpec": {
+          "id": "102706fb-a5cd-42ee-afe0-bc42f017ff43",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriedade | Descrição |

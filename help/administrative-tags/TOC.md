@@ -4,16 +4,16 @@ user-guide-title: Tags unificadas na Ajuda da Adobe Experience Platform
 breadcrumb-title: Guia de tags unificadas
 user-guide-description: Use tags unificadas para gerenciar taxonomias de metadados. Saiba como criar categorias de tags e tags.
 source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
 
-# Tags unificadas (beta){#administrative-tags}
+# Tags unificadas (Beta){#administrative-tags}
 
-* [Visão geral de tags unificadas (beta)](overview.md)
-* Interface do usuário de tags unificadas {#ui}
+* [Visão geral das tags unificadas (beta)](overview.md)
+* Interface das tags unificadas {#ui}
    * [Gerenciamento de tags](ui/managing-tags.md)
    * [Categorias de tags](ui/tags-categories.md)

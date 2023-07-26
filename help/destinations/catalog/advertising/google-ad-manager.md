@@ -6,11 +6,11 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
-# [!DNL Google Ad Manager] conexão
+# Conexão com o [!DNL Google Ad Manager]
 
 ## Visão geral {#overview}
 
@@ -90,7 +90,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="Anexar ID de público-alvo ao nome do público-alvo"
->abstract="Selecione esta opção para que o nome do público-alvo no Google Ad Manager inclua a ID do público-alvo do Experience Platform, desta forma: `Audience Name (Audience ID)`"
+>abstract="Selecione essa opção para que o nome do público-alvo no Google Ad Manager inclua a ID do público-alvo da Experience Platform, assim: `Audience Name (Audience ID)`"
 
 Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
 

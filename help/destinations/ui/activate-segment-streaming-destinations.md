@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -103,7 +103,7 @@ Ao mapear atributos de origem com hash não atribuídos para atributos de destin
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Data de término"
->abstract="A adição de uma data de término para o agendamento de público-alvo não está disponível."
+>abstract="A adição de uma data final para a programação de público-alvo não está disponível."
 
 Por padrão, a variável **[!UICONTROL Programação de público]** A página mostra apenas os públicos-alvo recém-selecionados que você escolheu no fluxo de ativação atual.
 

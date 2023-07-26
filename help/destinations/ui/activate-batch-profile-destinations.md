@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -87,12 +87,12 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao públi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opções de exportação de arquivo"
->abstract="Selecionar **Exportar arquivos completos** para exportar um instantâneo completo de todos os perfis qualificados para o público-alvo. Selecionar **Exportar arquivos incrementais** para exportar apenas os perfis qualificados para o público-alvo desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o público-alvo, agindo como um preenchimento retroativo. Os arquivos incrementais futuros incluem somente os perfis qualificados para o público-alvo desde a primeira exportação de arquivo incremental."
+>abstract="Selecione **Exportar arquivos completos** para exportar um instantâneo completo de todos os perfis qualificados para o público-alvo. Selecione **Exportar arquivos incrementais** para exportar apenas os perfis que se qualificaram para o público-alvo desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os perfis qualificados para o público-alvo, atuando como um preenchimento retroativo. Os arquivos incrementais posteriores incluirão apenas os perfis que se qualificaram para o público-alvo desde a primeira exportação de arquivos incrementais."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Exportar arquivos incrementais"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Ativar após a avaliação do público"
+>title="Ativar após avaliação do público-alvo"
 >abstract="A ativação é executada imediatamente após a conclusão do processo diário de segmentação. Isso garante que os perfis mais atualizados sejam exportados."
 
 >[!CONTEXTUALHELP]
@@ -170,7 +170,7 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="Configurar nome de arquivo"
->abstract="Para destinos baseados em arquivo, um nome de arquivo exclusivo é gerado por público-alvo. Use o editor de nome de arquivo para criar e editar um nome de arquivo exclusivo ou manter o nome padrão."
+>abstract="Para destinos com base em arquivo, um nome de arquivo exclusivo é gerado por público-alvo. Use o editor de nome de arquivo para criar e editar um nome de arquivo exclusivo ou manter o nome padrão."
 
 Para a maioria dos destinos, os nomes de arquivo padrão consistem no nome do destino, ID do público-alvo e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para anexar o tempo de exportação de dados aos arquivos. Observe que alguns desenvolvedores de destino podem optar por ter diferentes opções de anexação de nome de arquivo padrão mostradas para seus destinos.
 
@@ -247,7 +247,7 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="Sobre atributos obrigatórios"
->abstract="Selecione os atributos de esquema XDM que todos os perfis exportados devem incluir. Os perfis sem a chave obrigatória não são exportados para o destino. Se você não selecionar uma chave obrigatória, exportará todos os perfis qualificados, independentemente dos atributos."
+>abstract="Selecione os atributos de esquema XDM que todos os perfis exportados devem incluir. Os perfis sem a chave obrigatória não são exportados para o destino. Não selecionar uma chave obrigatória exportará todos os perfis qualificados, independentemente de seus atributos."
 
 Um atributo obrigatório é uma caixa de seleção ativada pelo usuário que garante que todos os registros de perfil contenham o atributo selecionado. Por exemplo: todos os perfis exportados contêm um endereço de email.&#x200B;
 
@@ -477,8 +477,8 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Excluir atributos de enriquecimento"
->abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados carregados selecionados para o seu destino, enquanto exclui todos os atributos deles."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Saiba mais na documentação"
+>abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#select-enrichment-attributes" text="Saiba mais na documentação"
 
 >[!IMPORTANT]
 >

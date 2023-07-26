@@ -6,17 +6,17 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2118'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# [!DNL Azure Event Hubs] conexão
+# Conexão com o [!DNL Azure Event Hubs]
 
 ## Visão geral {#overview}
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
+> Este destino está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
 
 [!DNL Azure Event Hubs] O é uma plataforma de transmissão de big data e um serviço de assimilação de eventos. Ele pode receber e processar milhões de eventos por segundo. Os dados enviados para um hub de eventos podem ser transformados e armazenados usando qualquer provedor de análise em tempo real ou adaptadores de armazenamento/agrupamento.
 
@@ -61,7 +61,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo [!DNL Azure Event Hubs] destino. Consulte [LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo [!DNL Azure Event Hubs] destino. Consulte [LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## Conectar ao destino {#connect}
 
@@ -99,12 +99,12 @@ Se você selecionar a variável **[!UICONTROL Autenticação padrão]** digite p
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua o carimbo de data e hora UNIX de quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX de quando os públicos-alvo foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

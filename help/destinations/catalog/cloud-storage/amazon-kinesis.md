@@ -6,17 +6,17 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2000'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# [!DNL Amazon Kinesis] conexão
+# Conexão com o [!DNL Amazon Kinesis]
 
 ## Visão geral {#overview}
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
+> Este destino está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
 
 A variável [!DNL Kinesis Data Streams] serviço de [!DNL Amazon Web Services] O permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
@@ -61,7 +61,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo [!DNL Amazon Kinesis] destino. Consulte [LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo [!DNL Amazon Kinesis] destino. Consulte [LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## Obrigatório [!DNL Amazon Kinesis] permissões {#required-kinesis-permission}
 
@@ -126,12 +126,12 @@ Insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua o carimbo de data e hora UNIX de quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX de quando os públicos-alvo foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

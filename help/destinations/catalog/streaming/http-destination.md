@@ -6,7 +6,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2486'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
+> Este destino está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
 
 O destino da API HTTP é um [!DNL Adobe Experience Platform] destino de transmissão que ajuda a enviar dados do perfil para endpoints HTTP de terceiros.
 
@@ -167,12 +167,12 @@ Se você selecionar a variável **[!UICONTROL Credenciais de cliente OAuth 2]** 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua o carimbo de data e hora UNIX de quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX de quando os públicos-alvo foram mapeados para o destino para ativação. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"

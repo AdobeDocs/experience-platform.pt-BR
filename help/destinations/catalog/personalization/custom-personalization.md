@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
 source-wordcount: '934'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -66,8 +66,8 @@ Além disso, esse destino também suporta a ativação dos públicos-alvo descri
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Sobre IDs de sequência de dados"
->abstract="Essa opção determina em qual sequência de dados de coleta de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
+>title="Sobre IDs de sequências de dados"
+>abstract="Essa opção determina em qual sequência de coleção de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=pt-BR" text="Saiba como configurar uma sequência de dados"
 
 >[!IMPORTANT]

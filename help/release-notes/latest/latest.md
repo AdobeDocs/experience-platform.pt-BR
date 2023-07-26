@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de julho de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85240b7d8f187e3d95762b9afbd8b8507869dabc
+source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 32%
+source-wordcount: '659'
+ht-degree: 33%
 
 ---
 
@@ -29,6 +29,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
 | Tags e encaminhamento de eventos | Logs de auditoria da coleção de dados | Agora você pode ver quando uma ação foi executada e quem executou essa ação em Tags e no Encaminhamento de eventos. Isso facilita a solução de problemas do produto, o controle adequado e as atividades de auditoria interna. Esses dados de auditoria são exibidos por meio de menus deslizantes no contexto que também incluem ações rápidas e atualizações de status de recursos. Esses dados estão disponíveis na interface das Tags e do Encaminhamento de eventos nas seguintes telas:<br><ul><li>[Visão geral da propriedade](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[Regras](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[Elementos de dados](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[Extensões](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[Revisão da biblioteca](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[Última build e publicação da biblioteca](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| Datastreams | [Pesquisa geográfica](../../datastreams/configure.md#advanced-options) | Agora é possível configurar a geolocalização e a pesquisa de rede para que os fluxos de dados incluam informações como: <ul><li>País</li><li>Código postal</li><li>Estado/Província</li><li>DMA</li><li>Cidade</li><li>Latitude </li><li>Longitude</li><li>Operadora</li><li>Domain</li><li>ISP</li></ul> Você é responsável por garantir que obteve todas as permissões, consentimentos, autorizações e a autorização necessários, exigidos pelas leis e regulamentos aplicáveis, para coletar, processar e transmitir dados pessoais, incluindo informações precisas de geolocalização. <br> A seleção de ofuscação do endereço IP não afeta o nível de informações de geolocalização que serão derivadas do endereço IP e enviadas para as soluções de Adobe configuradas. As pesquisas de geolocalização devem ser limitadas ou desabilitadas separadamente. <br> Consulte a [documentação dos datastreams](../../datastreams/configure.md#advanced-options) para obter mais detalhes. |
 
 {style="table-layout:auto"}
 
@@ -36,7 +37,7 @@ Para obter mais informações sobre a coleta de dados, leia o [visão geral das 
 
 ## Preparação de dados {#data-prep}
 
-O Preparo de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
+A preparação de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
 **Recursos novos ou atualizados**
 
@@ -46,7 +47,7 @@ O Preparo de dados permite que os engenheiros de dados mapeiem, transformem e va
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o Preparo de dados, leia o [Visão geral do Preparo de dados](../../data-prep/home.md).
+Para obter mais informações sobre a preparação de dados, leia a [Visão geral da preparação de dados](../../data-prep/home.md).
 
 ## Serviço de segmentação {#segmentation}
 

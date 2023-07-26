@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
+source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2745'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ Selecione o nome de um conjunto de dados na [!UICONTROL Procurar] para acessar s
 
 ## Ações embutidas do conjunto de dados {#inline-actions}
 
-A interface dos conjuntos de dados agora oferece uma coleção de ações em linha para cada conjunto de dados disponível. Selecione as reticências de um conjunto de dados que você deseja gerenciar para ver as opções disponíveis em um menu pop-up. As ações disponíveis incluem: [[!UICONTROL Visualizar conjunto de dados]](#preview), [[!UICONTROL Gerenciar dados e acessar rótulos]](#manage-and-enforce-data-governance), [[!UICONTROL Ativar perfil unificado]](#enable-profile), [[!UICONTROL Gerenciar tags]](#add-tags), e [[!UICONTROL Excluir]](#delete). Mais informações sobre essas ações disponíveis podem ser encontradas nas respectivas seções.
+A interface dos conjuntos de dados agora oferece uma coleção de ações em linha para cada conjunto de dados disponível. Selecione as reticências (...) de um conjunto de dados que você deseja gerenciar para ver as opções disponíveis em um menu pop-up. As ações disponíveis incluem: [[!UICONTROL Visualizar conjunto de dados]](#preview), [[!UICONTROL Gerenciar dados e acessar rótulos]](#manage-and-enforce-data-governance), [[!UICONTROL Ativar perfil unificado]](#enable-profile), [[!UICONTROL Gerenciar tags]](#add-tags), [[!UICONTROL Mover para pastas]](#move-to-folders), e [[!UICONTROL Excluir]](#delete). Mais informações sobre essas ações disponíveis podem ser encontradas nas respectivas seções.
 
 ### Adicionar tags de conjunto de dados {#add-tags}
 
@@ -116,7 +116,7 @@ Conjuntos de dados na [!UICONTROL Procurar] pode ser classificada por datas cres
 
 ## Visualizar um conjunto de dados {#preview}
 
-Você pode visualizar dados de amostra do conjunto de dados a partir das opções em linha do [!UICONTROL Procurar] e também a guia [!UICONTROL Atividade do conjunto de dados] exibição. No [!UICONTROL Procurar] selecione as reticências ao lado do nome do conjunto de dados que deseja visualizar. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Visualizar conjunto de dados]** na lista de opções disponíveis. Se o conjunto de dados estiver vazio, o link de visualização será desativado e indicará que a visualização não está disponível.
+Você pode visualizar dados de amostra do conjunto de dados a partir das opções em linha do [!UICONTROL Procurar] e também a guia [!UICONTROL Atividade do conjunto de dados] exibição. No [!UICONTROL Procurar] selecione as reticências (...) ao lado do nome do conjunto de dados que deseja visualizar. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Visualizar conjunto de dados]** na lista de opções disponíveis. Se o conjunto de dados estiver vazio, o link de visualização será desativado e indicará que a visualização não está disponível.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de dados com a opção de conjunto de dados reticências e Visualização realçada para o conjunto de dados escolhido.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -203,17 +203,37 @@ Os conjuntos de dados que foram ativados para o Perfil também podem ser filtrad
 
 ## Gerenciar e aplicar a governança de dados em um conjunto de dados {#manage-and-enforce-data-governance}
 
-Você pode gerenciar os rótulos de governança de dados para um conjunto de dados selecionando as opções em linha do [!UICONTROL Procurar] guia. Selecione as reticências ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Gerenciar dados e acessar rótulos]** no menu suspenso.
+Você pode gerenciar os rótulos de governança de dados para um conjunto de dados selecionando as opções em linha do [!UICONTROL Procurar] guia. Selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Gerenciar dados e acessar rótulos]** no menu suspenso.
 
 Os rótulos de uso de dados, aplicados no nível do esquema, permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Consulte a [Visão geral da governança de dados](../../data-governance/home.md) para saber mais sobre rótulos ou consulte o [guia do usuário de rótulos de uso de dados](../../data-governance/labels/overview.md) para obter instruções sobre como aplicar rótulos a esquemas para propagação em conjuntos de dados.
 
+### Mover para pastas {#move-to-folders}
+
+Você pode colocar conjuntos de dados em pastas para melhorar o gerenciamento do conjunto de dados. Para mover um conjunto de dados para uma pasta, selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Mover para a pasta]** no menu suspenso.
+
+![A variável [!UICONTROL Conjuntos de dados] painel com as reticências e [!UICONTROL Mover para a pasta] destacado.](../images/datasets/user-guide/move-to-folder.png)
+
+A variável [!UICONTROL Mover] conjunto de dados para pasta é exibida. Selecione a pasta para a qual deseja mover o público-alvo e selecione **[!UICONTROL Mover]**. Uma notificação pop-up informa que a movimentação do conjunto de dados foi bem-sucedida.
+
+![A variável [!UICONTROL Mover] caixa de diálogo do conjunto de dados com [!UICONTROL Mover] destacado.](../images/datasets/user-guide/move-dialog.png)
+
+>
+>
+>Você também pode criar pastas diretamente na caixa de diálogo Mover conjunto de dados. Para criar uma pasta, selecione o ícone criar pasta (![O ícone criar pasta.](../images/datasets/user-guide/create-folder-icon.png)) na parte superior direita da caixa de diálogo.
+>
+>![A variável [!UICONTROL Mover] caixa de diálogo conjunto de dados com o ícone criar pasta realçado.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Quando o conjunto de dados estiver em uma pasta, você poderá optar por exibir somente os conjuntos de dados que pertencem a uma pasta específica. Para abrir a estrutura de pastas, selecione o ícone mostrar pastas (![O ícone show folders](../images/datasets/user-guide/show-folders-icon.png)). Em seguida, selecione a pasta escolhida para ver todos os conjuntos de dados associados.
+
+![A variável [!UICONTROL Conjuntos de dados] painéis com a estrutura de pastas dos conjuntos de dados exibida, o ícone mostrar pastas e uma pasta selecionada realçada.](../images/datasets/user-guide/folder-structure.png)
+
 ## Excluir um conjunto de dados {#delete}
 
-É possível excluir um conjunto de dados das ações em linha do conjunto de dados na [!UICONTROL Procurar] ou na parte superior direita do [!UICONTROL Atividade do conjunto de dados] exibição. No [!UICONTROL Procurar] selecione as reticências ao lado do nome do conjunto de dados que deseja excluir. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Excluir]** no menu suspenso.
+É possível excluir um conjunto de dados das ações em linha do conjunto de dados na [!UICONTROL Procurar] ou na parte superior direita do [!UICONTROL Atividade do conjunto de dados] exibição. No [!UICONTROL Procurar] selecione as reticências (...) ao lado do nome do conjunto de dados que deseja excluir. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Excluir]** no menu suspenso.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de dados com as reticências e a opção Excluir realçada para o conjunto de dados escolhido.](../images/datasets/user-guide/inline-delete-dataset.png)
 
-Uma caixa de diálogo de confirmação é exibida. Selecionar **[!UICONTROL Excluir]** para confirmar.
+Uma caixa de diálogo de confirmação é exibida. Selecione **[!UICONTROL Excluir]** para confirmar.
 
 Como alternativa, selecione **[!UICONTROL Excluir conjunto de dados]** do **[!UICONTROL Atividade do conjunto de dados]** tela.
 

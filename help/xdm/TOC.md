@@ -4,10 +4,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e os grupos de campos de esquema do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 19%
+source-wordcount: '519'
+ht-degree: 21%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 19%
    * [Plano](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Produto](./classes/product.md)
+   * [Cliente Potencial](./classes/prospect.md)
    * [Provedor](./classes/provider.md)
    * [Definição de segmento](./classes/segment-definition.md)
    * Classes B2B {#b2b}
@@ -57,7 +58,7 @@ ht-degree: 19%
       * [Detalhes do membro da área de saúde](./field-groups/profile/healthcare-member-details.md)
       * [Detalhes de fidelidade](./field-groups/profile/loyalty-details.md)
       * [Detalhes de contato pessoal](./field-groups/profile/personal-contact-details.md)
-      * [Detalhes da associação do segmento](./field-groups/profile/segmentation.md)
+      * [Detalhes da associação de segmento](./field-groups/profile/segmentation.md)
       * [Assinatura de serviço de telecomunicação](./field-groups/profile/telecom-subscription.md)
       * [Detalhes de contato comercial](./field-groups/profile/work-contact-details.md)
       * [Componentes de pessoa de negócios XDM](./field-groups/profile/business-person-components.md)
@@ -200,6 +201,6 @@ ht-degree: 19%
    * [Definir uma relação de esquema no Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Gerenciar rótulos de uso de dados para um esquema](tutorials/labels.md)
    * [Criar um esquema ad hoc](tutorials/ad-hoc.md)
-* [Guia de solução de problemas](troubleshooting-guide.md)
+* [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

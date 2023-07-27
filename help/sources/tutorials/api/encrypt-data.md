@@ -4,9 +4,9 @@ description: Saiba como assimilar arquivos criptografados por meio de fontes de 
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1343'
 ht-degree: 2%
 
 ---
@@ -111,6 +111,65 @@ Uma resposta bem-sucedida retorna a chave pública codificada na Base64, a ID da
 }
 ```
 
+| Propriedade | Descrição |
+| --- | --- |
+| `publicKey` | A chave pública é usada para criptografar os dados no armazenamento na nuvem. Essa chave corresponde à chave privada que também foi criada durante essa etapa. No entanto, a chave privada vai imediatamente para Experience Platform. |
+| `publicKeyId` | A ID da chave pública é usada para criar um fluxo de dados e assimilar os dados criptografados do armazenamento na nuvem no Experience Platform. |
+| `expiryTime` | O tempo de expiração define a data de expiração do par de chaves de criptografia. Essa data é definida automaticamente para 180 dias após a data de geração da chave e é exibida no formato de carimbo de data e hora unix. |
+
++++(Opcional) Criar par de chaves de verificação de assinatura para dados assinados
+
+### Criar par de chaves gerenciado pelo cliente
+
+Opcionalmente, é possível criar um par de chaves de verificação de assinatura para assinar e assimilar os dados criptografados.
+
+Durante esse estágio, você deve gerar sua própria combinação de chave privada e chave pública e usar sua chave privada para assinar seus dados criptografados. Em seguida, você deve codificar sua chave pública em Base64 e, em seguida, compartilhá-la no Experience Platform para que a Platform verifique sua assinatura.
+
+### Compartilhar sua chave pública no Experience Platform
+
+Para compartilhar sua chave pública, faça uma solicitação POST para o `/customer-keys` ao fornecer seu algoritmo de criptografia e sua chave pública codificada na Base64.
+
+**Formato da API**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia compatíveis são `PGP` e `GPG`. |
+| `publicKey` | A chave pública que corresponde às chaves gerenciadas pelo cliente usadas para assinar o criptografado. Essa chave deve ser codificada na Base64. |
+
+**Resposta**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `publicKeyId` | Essa ID de chave pública é retornada em resposta ao compartilhamento da chave gerenciada pelo cliente com o Experience Platform. Você pode fornecer essa ID de chave pública como a ID de chave de verificação de assinatura ao criar um fluxo de dados para dados assinados e criptografados. |
+
++++
+
 ## Conecte sua fonte de armazenamento em nuvem ao Experience Platform usando o [!DNL Flow Service] API
 
 Depois de recuperar o par de chaves de criptografia, você pode continuar e criar uma conexão de origem para sua fonte de armazenamento na nuvem e trazer seus dados criptografados para a Platform.
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **Solicitação**
+
+>[!BEGINTABS]
+
+>[!TAB Criar um fluxo de dados para assimilação de dados criptografados]
 
 A solicitação a seguir cria um fluxo de dados para assimilar dados criptografados de uma fonte de armazenamento na nuvem.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | A hora de início do fluxo de dados em época. |
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. O valor do intervalo deve ser um inteiro diferente de zero. O intervalo não é necessário quando a frequência está definida como `once` e deve ser maior ou igual a `15` para outros valores de frequência. |
+
+
+>[!TAB Criar um fluxo de dados para assimilar dados criptografados e assinados]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `params.signVerificationKeyId` | A ID da chave de verificação de sinal é a mesma que a ID da chave pública que foi recuperada após compartilhar sua chave pública codificada em Base64 com o Experience Platform. |
+
+>[!ENDTABS]
 
 **Resposta**
 

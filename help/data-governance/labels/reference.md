@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário de rótulos de uso de dados
 description: Este documento descreve todos os rótulos de uso de dados atualmente compatíveis com o Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2207'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de 
 
 Este documento descreve os rótulos de uso de dados principais fornecidos atualmente pelo Experience Platform.
 
-## Rótulos de contrato
+## Rótulos de contrato {#contract}
 
 Os rótulos de contrato (C) são usados para categorizar dados que contêm obrigações contratuais ou estão relacionados às políticas de governança de dados da sua organização.
 
@@ -42,7 +42,7 @@ Os rótulos de contrato (C) são usados para categorizar dados que contêm obrig
 | [C11](#c11) | Os dados não podem ser compartilhados com parceiros de correspondência de segmentos. |
 | [C12](#c12) | Os dados não podem ser exportados de forma alguma. |
 
-## Rótulos de identidade
+## Rótulos de identidade {#identity}
 
 Os rótulos de identidade (I) são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica.
 
@@ -63,6 +63,20 @@ Um tipo de dados que você pode considerar confidenciais pode ser o de diferente
 | **S2** | Dados que podem ser usados para determinar uma área de cerca geográfica amplamente definida. |
 | **PSPD** | Dados pessoais confidenciais permitidos (PSPD) refere-se aos dados que você tem permissão contratual do Adobe para carregar e que são considerados &quot;confidenciais&quot;, &quot;categoria especial de dados&quot; ou um termo semelhante usado pelas leis aplicáveis. Isso exclui especificamente as Informações de Saúde Protegidas (PHI) e outros dados de saúde regulamentados. |
 | **RHD** | Dados que se referem a PHI (Protected Health Information, informações protegidas de saúde) ou informações sobre um paciente que você tem permissão contratual para carregar por Adobe. |
+
+## (Beta) Rótulos de ecossistema de parceiros {#partner}
+
+>[!IMPORTANT]
+>
+>O rótulo de dados de terceiros está na versão beta. Não está disponível para todos os usuários e a documentação está sujeita a alterações.
+
+Os rótulos do ecossistema do parceiro são usados para categorizar dados obtidos de fontes externas à sua organização.
+
+Este rótulo é usado para controlar o uso de dados de prospecto.
+
+| Rótulo | Definição |
+| --- | --- |
+| **Terceiros** | Dados de terceiros são dados fornecidos a você por um fornecedor de dados de terceiros. Um fornecedor de dados de terceiros é uma entidade que celebrou um contrato com sua organização autorizando você a acessar, usar, exibir e transmitir os dados de terceiros em conjunto com a Platform. |
 
 ## Apêndice
 

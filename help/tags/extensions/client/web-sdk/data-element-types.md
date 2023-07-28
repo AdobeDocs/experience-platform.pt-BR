@@ -2,10 +2,10 @@
 title: Tipos de elementos de dados na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 6%
+source-wordcount: '603'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ Depois de definir o [tipos de ação](action-types.md) no [Extensão de tag do S
 
 ## Mapa de identidade {#identity-map}
 
-Um mapa de identidade permite estabelecer identidades para o visitante da página da Web. Um mapa de identidade consiste em namespaces, como _telefone_ ou _email_, com cada namespace contendo um ou mais identificadores. Por exemplo, se o indivíduo em seu site tiver fornecido dois números de telefone, o namespace do telefone deverá conter dois identificadores.
+Um mapa de identidade permite estabelecer identidades para o visitante da página da Web. Um mapa de identidade consiste em namespaces, como `CRMID`, `Phone` ou `Email`, com cada namespace contendo um ou mais identificadores. Por exemplo, se o indivíduo em seu site tiver fornecido dois números de telefone, o namespace do telefone deverá conter dois identificadores.
 
 No [!UICONTROL Mapa de identidade] elemento de dados, você fornecerá as seguintes informações para cada identificador:
 
@@ -25,6 +25,12 @@ No [!UICONTROL Mapa de identidade] elemento de dados, você fornecerá as seguin
 * **[!UICONTROL Principal]**: uma seleção que indica se o identificador deve ser usado como o identificador principal do indivíduo. Se nenhum identificador for marcado como principal, a ECID será usada como o identificador principal.
 
 ![Imagem da interface mostrando a tela Editar elemento de dados.](assets/identity-map-data-element.png)
+
+>[!TIP]
+>
+>Adobe recomenda enviar identidades que representam uma pessoa, como `Luma CRM Id` como a identidade principal.
+>
+>Se o mapa de identidade contiver o identificador de pessoa (por exemplo, `Luma CRM Id`), então o identificador de pessoa se tornará o identificador principal. Caso contrário, `ECID` torna-se a identidade principal.
 
 Você não deve fornecer um [!DNL ECID] ao criar um mapa de identidade. Ao usar o SDK, uma variável [!DNL ECID] é gerado automaticamente no servidor e incluído no mapa de identidade.
 

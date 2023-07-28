@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para origens de protocolos usando a API de servi�
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1338'
 ht-degree: 2%
 
 ---
@@ -196,8 +196,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `data.schema.id` | A variável `$id` do esquema XDM do público-alvo. |
-| `params.dataSetId` | A ID do conjunto de dados de destino. |
-| `connectionSpec.id` | A ID de especificação da conexão usada para se conectar ao Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | A ID do conjunto de dados de destino gerado na etapa anterior. **Nota**: você deve fornecer uma ID de conjunto de dados válida ao criar uma conexão de destino. Uma ID de conjunto de dados inválida resultará em um erro. |
+| `connectionSpec.id` | A ID de especificação da conexão usada para se conectar ao data lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Resposta**
 
@@ -699,7 +699,7 @@ Uma resposta bem-sucedida retorna a ID `id` do fluxo de dados recém-criado.
 
 ## Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados na API ](../monitor.md)
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados na API](../monitor.md)
 
 ## Próximas etapas
 

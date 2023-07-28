@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para fontes de CRM usando a API do serviço de fl
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema CRM de terceiros e trazê-los para a Platform usando conectores de origem e APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1374'
 ht-degree: 2%
 
 ---
@@ -183,8 +183,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | A variável `$id` do esquema XDM do público-alvo. |
 | `data.schema.version` | A versão do esquema. Este valor deve ser definido `application/vnd.adobe.xed-full+json;version=1`, que retorna a versão secundária mais recente do esquema. |
-| `params.dataSetId` | A ID do conjunto de dados de destino. |
-| `connectionSpec.id` | A ID de especificação da conexão usada para se conectar ao Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | A ID do conjunto de dados de destino gerado na etapa anterior. **Nota**: você deve fornecer uma ID de conjunto de dados válida ao criar uma conexão de destino. Uma ID de conjunto de dados inválida resultará em um erro. |
+| `connectionSpec.id` | A ID de especificação da conexão usada para se conectar ao data lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -675,7 +675,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ## Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados na API ](../monitor.md)
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados na API](../monitor.md)
 
 ## Próximas etapas
 

@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guia do Perfil do cliente em tempo real
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Profiles
-source-git-commit: 52836892736a075981ee06f28fbdf178f4492e09
+source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 28%
+source-wordcount: '141'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 28%
 * Interface do usuário do perfil {#ui}
    * [[!DNL Profile] Guia da interface do usuário](ui/user-guide.md)
    * [[!DNL Profile] personalização de detalhes](ui/profile-customization.md)
+   * [Perfis de cliente potencial](ui/prospect-profile.md)
 * (Beta) Atributos computados {#computed-attributes}
    * [Visão geral](computed-attributes/overview.md)
    * [Guia da API de atributos computados](computed-attributes/api.md)

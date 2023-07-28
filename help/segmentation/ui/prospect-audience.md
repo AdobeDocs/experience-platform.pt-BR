@@ -4,9 +4,9 @@ description: Saiba como criar e usar públicos-alvo potenciais para direcionar c
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -64,4 +64,4 @@ Para saber como você pode usar a funcionalidade de públicos-alvo potenciais no
 
 ## Próximas etapas
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+Depois de ler este guia, agora você sabe como criar e gerenciar públicos-alvo potenciais no Adobe Experience Platform. Para saber como ativar um público-alvo potencial para outros serviços downstream, leia o guia em [ativação de públicos-alvo potenciais](../../destinations/ui/activate-prospect-audiences.md).

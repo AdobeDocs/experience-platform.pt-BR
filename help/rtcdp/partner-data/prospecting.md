@@ -4,10 +4,10 @@ description: Saiba como envolver e adquirir novos clientes por meio de casos de 
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
 workflow-type: tm+mt
 source-wordcount: '1953'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade beta está disponível para clientes que possuem Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes no [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html) e entre em contato com o representante da Adobe para obter mais informações.
+>* Essa funcionalidade beta está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Use o suporte a dados de terceiros no Real-Time CDP para expandir sua base de perfis com perfis de prospecto de parceiros de dados e interagir com eles para adquirir ou alcançar novos clientes.
 
@@ -31,7 +31,7 @@ Ao considerar entrar em contato com novos clientes e adquiri-los usando o suport
 * Os dados do parceiro que você está assimilando estão vinculados a um identificador durável amplamente aceito, como Informações pessoais identificáveis (PII), PII com hash ou um identificador de parceiro?
 * Quais políticas de uso de dados você precisa conhecer da perspectiva do parceiro e de sua própria equipe jurídica, de privacidade ou de conformidade?
 
-## Como obter o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
+## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
 Antes de expandir o Real-Time CDP para engajar e adquirir novos clientes, certifique-se de usar o Real-Time CDP para criar uma base robusta para seus dados originais. Os fluxos de trabalho para obter esse caso de uso são semelhantes aos fluxos de trabalho para interagir com seus clientes conhecidos.
 
@@ -44,7 +44,7 @@ Antes de expandir o Real-Time CDP para engajar e adquirir novos clientes, certif
 5. Como um **cliente**, você ativa públicos-alvo de prospecto para destinos que estão aceitando as identidades disponíveis em sua lista de prospetos.
 6. Se necessário, trabalhe com a **parceiro de dados** para ativação da última milha de públicos-alvo para os destinos de mídia paga desejados.
 
-## Como obter o caso de uso: instruções passo a passo {#step-by-step-instructions}
+## Como atingir o caso de uso: instruções passo a passo {#step-by-step-instructions}
 
 Leia as seções abaixo, que incluem links para documentação adicional, para concluir cada uma das etapas da visão geral de alto nível acima.
 
@@ -83,7 +83,7 @@ Comece criando um novo tipo de identidade para os perfis que você receberá do 
 ![Criar um novo namespace de identidade da ID de parceiro.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Leia mais sobre os namespaces da ID de parceiro na [seção de tipos de identidade](/help/identity-service/namespaces.md).
-* Ler sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface do usuário do Experience Platform.
+* Leia sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface da Experience Platform.
 
 #### Crie um novo esquema com o **[!UICONTROL Perfil de cliente potencial individual XDM]** classe
 
@@ -125,10 +125,10 @@ Para fazer isso, siga as etapas abaixo:
 >
 >Seu esquema agora está pronto para uso e você pode prosseguir para a próxima etapa para assimilar dados de prospecto do seu parceiro de dados.
 
-Além disso, nesta etapa, pense em como seu modelo de governança de dados muda à medida que você expande sua estratégia de gerenciamento de dados para incluir dados de terceiros fornecidos pelo parceiro. Explore as considerações nos links de documentação abaixo:
+Além disso, nesta etapa, pense em como seu modelo de governança de dados mudará à medida que você expande sua estratégia de gerenciamento de dados para incluir dados de terceiros fornecidos por parceiros. Explore as considerações nos links da documentação abaixo:
 
 * (**Em breve**) Mantenha os dados de terceiros em um conjunto de dados separado para que seja fácil excluí-los e desfazer integrações.
-* (**Em breve**) Use o [expiração do conjunto de dados](/help/hygiene/ui/dataset-expiration.md) no conjunto de dados para clientes que compraram o complemento de higiene de dados.
+* (**Em breve**) Use a funcionalidade [expiração do conjunto de dados](/help/hygiene/ui/dataset-expiration.md) no conjunto de dados para clientes que adquiriram o complemento de higiene de dados.
 * (**Em breve**) Tenha cuidado ao criar conjuntos de dados derivados que extraem dados de terceiros, pois uma vez misturados, a única solução para remover os dados de terceiros é excluir todo o conjunto de dados derivado.
 
 ### Carregar a lista de perfis de cliente potencial e inspecionar a exibição de perfis de cliente potencial
@@ -204,11 +204,11 @@ Observe que a experiência de criação de público-alvo para perfis de prospect
 
 ### Ativar perfis de cliente potencial para destinos {#activate-to-destinations}
 
-Use os públicos potenciais exportando-os para destinos. Atualmente, apenas certos destinos, como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) ou o [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) suporte de destino à ativação de perfis de cliente potencial.
+Use os públicos potenciais exportando-os para destinos. Atualmente, apenas certos destinos, como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) ou o [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) suporte de destino à ativação de perfis de cliente potencial.
 
-## Outros casos de uso obtidos por meio do suporte a dados de parceiros {#other-use-cases}
+## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
 
-Explore outros casos de uso ativados por meio do suporte a dados de parceiros no Real-Time CDP:
+Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative}[Suplemente perfis primários com atributos de parceiros de dados confiáveis](/help/rtcdp/partner-data/supplement-first-party-profiles.md) para melhorar sua base de dados, obter novos insights sobre sua base de clientes e obter uma melhor otimização do público-alvo.
-* (**Em breve**) [!BADGE Beta]{type=Informative}**Aproveitar o reconhecimento auxiliado pelo parceiro** para personalizar experiências no site durante a visita e para redirecionamento fora do site após a visita, sem a autenticação do usuário ou um histórico anterior com sua marca.
+* [!BADGE Beta]{type=Informative}[Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* (**Em breve**) [!BADGE Beta]{type=Informative}**Aproveite o reconhecimento auxiliado por parceiros** para personalizar experiências no site durante a visita e para redirecionamento fora do site após a visita, sem a necessidade de autenticação do usuário ou um histórico anterior com sua marca.

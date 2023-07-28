@@ -3,7 +3,7 @@ title: Informações coletadas automaticamente no Adobe Experience Platform Web 
 description: Uma visão geral de cada informação que o SDK da Adobe Experience Platform coleta automaticamente.
 keywords: coletar informações;contexto;configurar;dispositivo;screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screen Width;ambiente;viewportHeight;viewportWidth;viewportWidth;crowserDetails;detalhes do navegador;detalhes da implementação;detalhes da implementação;nome;versão;placeContext;localTime;hora local;localTimezoneOffset;deslocamento do fuso horário local;carimbo de data e hora;web;url;webPageDetails;página da web;webReferrer;referenciador da web;paisagem;portador da paisagem característica;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 6%
@@ -92,7 +92,7 @@ O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um 
 
 Quando a biblioteca independente é usada, o valor é simplesmente a versão da biblioteca. Quando a biblioteca é usada como parte da extensão de tag, essa é a versão da biblioteca e a versão da extensão de tag unida com um &quot;+&quot;. Por exemplo, se a versão da biblioteca fosse 2.1.0 e a versão da extensão de tag fosse 2.1.3, o valor seria `2.1.0+2.1.3`.
 
-### Ambiente
+### Ambiente {#environment}
 
 | **Caminho na carga:** | **Exemplo:** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Quando a biblioteca independente é usada, o valor é simplesmente a versão da 
 
 O ambiente onde os dados foram coletados. Sempre definida como `browser`.
 
-## Contexto do local (`placeContext`)
+## Contexto do local (`placeContext`) {#place-context}
 
 Informações sobre a localização do usuário final.
 

@@ -3,7 +3,7 @@ title: Widgets da IA do cliente do painel de públicos
 description: Saiba como a IA do cliente fornece insights importantes sobre churn ou propensão dos públicos-alvo de perfil do cliente em tempo real da sua organização.
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 13%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL Distribuição de pontuações da IA do cliente] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Distribuição das pontuações"
 >abstract="Este dispositivo visualiza a distribuição do número total de perfis por suas pontuações de propensão em incrementos de cinco por cento. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada. É possível alterar o modelo de IA no menu suspenso sob o título do dispositivo."
 
@@ -52,7 +52,7 @@ Mais informações sobre a IA do cliente podem ser encontradas no [guia da inter
 ## [!UICONTROL Resumo de pontuação do Customer AI] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Resumo da pontuação"
 >abstract="Este dispositivo exibe o número total de perfis pontuados e os categoriza em compartimentos de propensão alta, média e baixa. O gráfico de rosquinha ilustra a composição proporcional dos perfis totais de propensão alta, média e baixa."
 

@@ -4,15 +4,19 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3673'
 ht-degree: 11%
 
 ---
 
 
 # Ativar públicos para destinos de exportação de perfil em lote
+
+>[!IMPORTANT]
+> 
+> A funcionalidade descrita na página ainda não está geralmente disponível para os clientes. No momento, esta página destina-se às equipes internas de Adobe como uma pré-leitura sobre a próxima funcionalidade. Não compartilhe fora do Adobe até que esta nota seja removida.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ Use o **[!UICONTROL Agendado]** opção para que o trabalho de ativação seja e
 
    ![Imagem destacando a opção Programado no fluxo de ativação para destinos em lote e mostrando o seletor de tempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >Devido à forma como os processos de Experience Platform internos são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, a Adobe recomenda definir a primeira hora de exportação de arquivo após as 12h GMT do dia seguinte. Essa limitação será abordada em versões futuras.
-
 1. Use o **[!UICONTROL Data]** seletor para escolher o dia ou intervalo em que a exportação deve ocorrer. Para exportações diárias, a prática recomendada é definir a data de início e término para alinhar-se à duração das campanhas em suas plataformas downstream.
 
    >[!IMPORTANT]
@@ -150,10 +150,6 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
    * **[!UICONTROL Por hora]**: agende exportações de arquivos incrementais a cada 3, 6, 8 ou 12 horas.
 
 1. Use o **[!UICONTROL Hora]** seletor para escolher a hora do dia, em [!DNL UTC] formato, quando a exportação deve ocorrer.
-
-   >[!IMPORTANT]
-   >
-   >Devido à forma como os processos de Experience Platform internos são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, a Adobe recomenda definir a primeira hora de exportação de arquivo após as 12h GMT do dia seguinte. Essa limitação será abordada em versões futuras.
 
 1. Use o **[!UICONTROL Data]** seletor para escolher o intervalo em que a exportação deve ocorrer. A prática recomendada é definir as datas de início e término para que se alinhem à duração das campanhas nas plataformas downstream.
 

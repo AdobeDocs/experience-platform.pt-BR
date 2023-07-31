@@ -2,9 +2,9 @@
 description: Saiba como configurar opções de formatação de arquivo ao ativar dados para destinos baseados em arquivo
 title: (Beta) Configurar opções de formatação de arquivo para destinos baseados em arquivo
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1190'
 ht-degree: 19%
 
 ---
@@ -12,9 +12,6 @@ ht-degree: 19%
 # (Beta) Configurar opções de formatação de arquivo para destinos baseados em arquivo
 
 >[!IMPORTANT]
->
->A variável **[!UICONTROL Opções de formatação de arquivo]** No momento, a funcionalidade no Adobe Experience Platform está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
->Entre em contato com o representante da Adobe para obter acesso a essa funcionalidade.
 > 
 >As opções de formatação de arquivo descritas neste documento estão disponíveis somente para arquivos CSV.
 
@@ -35,7 +32,7 @@ Para exibir as opções de formatação de arquivo, inicie o [conectar ao destin
 >
 >O destino ao qual você está se conectando pode não ter todas essas opções disponíveis. Cabe ao desenvolvedor de destino determinar quais opções de formatação de arquivo ele deseja suportar em seu destino. O desenvolvedor de destino pode determinar quais opções estão disponíveis ao se conectar ao destino. As opções obrigatórias estão marcadas com um asterisco na interface do usuário do Experience Platform.
 > 
->Os novos destinos de armazenamento na nuvem - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Armazenamento do Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Zona de aterrissagem de dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Armazenamento em nuvem do Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - atualmente, o suporta apenas as seis opções de CSV destacadas abaixo.
+>Os destinos de armazenamento na nuvem criados pelo Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Armazenamento Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Armazenamento em nuvem Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - atualmente, o suporta apenas as seis opções de CSV destacadas abaixo.
 
 ![Imagem mostrando algumas das opções de formatação de arquivo disponíveis.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 

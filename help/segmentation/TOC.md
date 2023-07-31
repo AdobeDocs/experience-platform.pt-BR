@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Serviço de segmentação da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de segmentação
-user-guide-description: Crie públicos a partir dos dados do Perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
+user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 26%
+ht-degree: 36%
 
 ---
 

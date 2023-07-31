@@ -6,7 +6,7 @@ hidefromtoc: true
 source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 2%
+ht-degree: 13%
 
 ---
 
@@ -24,8 +24,8 @@ THe links when required
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_audiences_distributionOfScores"
->title="Distribuição de pontuações"
->abstract="Este widget visualiza a distribuição do número total de perfis por suas pontuações de propensão em incrementos de cinco por cento. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada. Você pode alterar o modelo de IA no menu suspenso sob o título do widget."
+>title="Distribuição das pontuações"
+>abstract="Este dispositivo visualiza a distribuição do número total de perfis por suas pontuações de propensão em incrementos de cinco por cento. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada. É possível alterar o modelo de IA no menu suspenso sob o título do dispositivo."
 
 A variável [!UICONTROL Distribuição de pontuações da IA do cliente] O widget categoriza o número total de perfis por suas pontuações de propensão. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada e, em seguida, visualizada em incrementos de cinco por cento que indicam sua propensão. A contagem de perfis é fornecida ao longo do eixo Y e as pontuações de propensão são fornecidas ao longo do eixo X.
 
@@ -53,8 +53,8 @@ Mais informações sobre a IA do cliente podem ser encontradas no [guia da inter
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_audiences_scoringSummary"
->title="Resumo de pontuação"
->abstract="Este widget exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão. O gráfico de rosca ilustra a composição proporcional dos perfis totais em alta, média e baixa propensão."
+>title="Resumo da pontuação"
+>abstract="Este dispositivo exibe o número total de perfis pontuados e os categoriza em compartimentos de propensão alta, média e baixa. O gráfico de rosquinha ilustra a composição proporcional dos perfis totais de propensão alta, média e baixa."
 
 Este widget exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão como verde, amarelo e vermelho, respectivamente. Um gráfico de rosca é usado para ilustrar a composição proporcional dos perfis totais entre propensões alta, média e baixa como verde, amarelo e vermelho, respectivamente. Um perfil se qualifica para alta propensão acima de 75, média propensão entre 25 e 74 e baixa propensão abaixo de 24. Uma legenda indica o código de cor e os limites de propensões. As contagens de perfil para as tendências alta, média e baixa são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 

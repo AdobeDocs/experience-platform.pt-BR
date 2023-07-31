@@ -7,7 +7,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
 source-wordcount: '1901'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -45,10 +45,10 @@ No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Alternância do editor aprimorado"
->abstract="Alternar entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é ativada por padrão, embora a versão aprimorada forneça melhor acessibilidade e suporte a vários temas. Para saber mais sobre essas alterações, consulte a documentação."
+>title="Botão de alternância do editor aprimorado"
+>abstract="Alterne entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é habilitada por padrão, embora a versão aprimorada forneça melhor acessibilidade e compatibilidade com multitemas. Para saber mais sobre essas alterações, consulte a documentação."
 
-Um botão de alternância de interface permite alternar entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é ativada por padrão, embora a versão aprimorada forneça melhor acessibilidade e suporte a vários temas. Ative a versão aprimorada para acessar as configurações do Editor de consultas.
+Um botão de alternância de interface permite alternar entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é habilitada por padrão, embora a versão aprimorada forneça melhor acessibilidade e compatibilidade com multitemas. Ative a versão aprimorada para acessar as configurações do Editor de consultas.
 
 ![O Editor de consultas com a opção aprimorada Editor de consultas está realçado.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
 

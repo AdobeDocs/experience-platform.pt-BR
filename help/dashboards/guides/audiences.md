@@ -4,9 +4,9 @@ title: Guia do Painel de públicos-alvo
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os públicos-alvo criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2232'
 ht-degree: 7%
 
 ---
@@ -72,6 +72,20 @@ A variável [!UICONTROL Públicos-alvo] o painel é composto por widgets, que s�
 A data e a hora do snapshot mais recente são exibidas na parte superior do [!UICONTROL Visão geral] ao lado da lista suspensa público-alvo. Todos os dados do widget são precisos a partir dessa data e hora. O carimbo de data e hora do instantâneo é fornecido em UTC; ele não está no fuso horário do usuário ou organização individual.
 
 ![A guia Visão geral de públicos-alvo com um carimbo de data e hora de widget realçado.](../images/audiences/widget-timestamp.png)
+
+## Widgets padrão {#default-widgets}
+
+Uma transferência de widget padrão é fornecida para todas as novas instâncias do Adobe Experience Platform que destacam os insights mais recentes disponíveis de seus dados. Os widgets a seguir são pré-configurados na visualização de segmentos desde o início. Detalhes completos sobre a finalidade e a função dos dispositivos podem ser encontrados nas respectivas seções.
+
+* [[!UICONTROL Tamanho do público-alvo]](#audience-size)
+* [[!UICONTROL Tendência de alteração de tamanho do público]](#audience-size-change-trend)
+* [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
+* [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>Em 26 de julho de 2023, [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] Os painéis de visão geral foram redefinidos para uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
+>Consulte a documentação no [Perfis](./profiles.md#default-widgets) e [Destinos](./destinations.md#default-widgets) seções de widget padrão para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
 
 ## Widgets padrão {#standard-widgets}
 

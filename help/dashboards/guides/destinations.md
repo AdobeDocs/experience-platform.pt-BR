@@ -4,9 +4,9 @@ title: Guia do Painel de destinos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '3031'
+source-wordcount: '3171'
 ht-degree: 20%
 
 ---
@@ -39,7 +39,7 @@ A data e a hora do snapshot mais recente são exibidas na parte superior do [!UI
 
 ### Modifique o [!UICONTROL Destinos] painel {#modify}
 
-Selecionar **[!UICONTROL Modificar painel]** para alterar a aparência do painel de destinos. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a biblioteca de widgets. Na biblioteca de widgets, você pode explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+Selecionar **[!UICONTROL Modificar painel]** para alterar a aparência do painel de destinos. As alterações no painel são por usuário e não por toda a organização. Você pode mover, adicionar, redimensionar e remover widgets do painel e acessar a biblioteca de widgets para personalizar seu painel. Na biblioteca de widgets, você pode explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
 Consulte a [modificação de painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
 
@@ -51,6 +51,19 @@ Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de w
 
 Na biblioteca de widgets, você pode navegar pela seleção de widgets de público-alvo padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
+## Widgets padrão {#default-widgets}
+
+Uma transferência de widget padrão é fornecida para todas as novas instâncias do Adobe Experience Platform que destacam os insights mais recentes disponíveis de seus dados. Os widgets a seguir são pré-configurados na visualização de segmentos desde o início. Veja abaixo detalhes completos sobre a finalidade e a função dos dispositivos.
+
+* [[!UICONTROL Destinos mais usados]](#most-used-destinations)
+* [[!UICONTROL Destinos criados recentemente]](#recently-created-destinations)
+* [[!UICONTROL Segmentos ativados recentemente]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>Em 26 de julho de 2023, [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] Os painéis de visão geral foram redefinidos para uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
+>Consulte a documentação no [Perfis](./profiles.md#default-widgets) e [Públicos-alvo](./audiences.md#default-widgets) seções de widget padrão para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
+
 ## Widgets padrão {#standard-widgets}
 
 O Adobe fornece vários widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus destinos e avaliar a integridade dos públicos-alvo disponíveis para sua análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando o [!UICONTROL Biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo o [Visão geral da biblioteca de widgets](../customize/widget-library.md).
@@ -60,7 +73,7 @@ O Adobe fornece vários widgets padrão que você pode usar para visualizar mét
 Antes de continuar com as descrições dos widgets padrão, verifique se você está familiarizado com as definições dos seguintes termos principais usados na documentação:
 
 * **Definição de segmento:** Uma definição de segmento é uma **conjunto de regras** usado para descrever as principais características ou comportamento de um público-alvo. Essas regras incluem dados de atributo e evento que qualificam os perfis como parte de um público-alvo.
-* **Público**: um conjunto de pessoas, contas, famílias ou outras entidades que compartilham características e comportamentos comuns.
+* **Público-alvo**: um conjunto de pessoas, contas, famílias ou outras entidades que compartilham características e comportamentos comuns.
 * **Mapeado/Mapeamento**: o mapeamento de dados é o processo de mapear campos de dados de origem para campos de destino relacionados em um destino.
 * **Identidade**: uma identidade é um identificador que representa exclusivamente um cliente individual, como uma ID de cookie, ID de dispositivo ou ID de email.
 * **Ativar**: Ativar é a ação realizada por um usuário para mapear um público-alvo ou perfis para um destino, como o Oracle Eloqua, o Google ou o Marketing Cloud Salesforce.

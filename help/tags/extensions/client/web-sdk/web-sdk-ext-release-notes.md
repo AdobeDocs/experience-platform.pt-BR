@@ -2,10 +2,10 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 38%
+source-wordcount: '1723'
+ht-degree: 37%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 38%
 # Notas de versão da extensão SDK da Web da Adobe Experience Platform
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR).
+
+## Versão 2.20.0 - 31 de julho de 2023
+
+**Novos recursos**
+
+* Suporte adicionado para [substituições por comando da ID do fluxo de dados](../../../../datastreams/overrides.md).
+
+**Correções e melhorias**
+
+* Obsoleto `edgeConfigId` a favor de `datastreamId` na configuração do SDK.
+* Várias melhorias na experiência do usuário para a configuração da sequência de dados substitui a interface do usuário.
 
 ## Versão 2.19.0 - 21 de junho de 2023
 

@@ -3,14 +3,14 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita dados de público-alvo do Adobe para o dirigível como atributos de público-alvo para direcionamento no dirigível.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
 
-# [!DNL Airship Attributes] conexão {#airship-attributes-destination}
+# Conexão com o [!DNL Airship Attributes] {#airship-attributes-destination}
 
 ## Visão geral {#overview}
 
@@ -22,7 +22,7 @@ Para saber mais sobre [!DNL Airship], consulte o [Documentação do dirigível](
 
 >[!TIP]
 >
->Esta página de documentação foi criada pelo [!DNL Airship] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em [support.airship.com](https://support.airship.com/).
+>Esse conector de destino e a página de documentação são criados e mantidos pelo [!DNL Airship] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em [support.airship.com](https://support.airship.com/).
 
 ## Pré-requisitos {#prerequisites}
 

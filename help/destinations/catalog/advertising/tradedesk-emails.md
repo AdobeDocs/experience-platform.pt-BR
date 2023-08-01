@@ -3,10 +3,10 @@ title: (Beta) A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 0%
+source-wordcount: '1081'
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 0%
 >
 >[!DNL The Trade Desk - CRM] O destino na Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 >
->Com o lançamento da EUID (European Unified ID), você verá agora duas [!DNL The Trade Desk - CRM] destinos na [catálogo de destinos](/help/destinations/catalog/overview.md).
->* Se você obtiver dados na UE, use o **[!DNL The Trade Desk - CRM (EU)]** destino.
->* Se você originar dados nas regiões APAC ou NAMER, use o **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destino.
+>Com o lançamento da EUID (European Unified ID), você verá agora dois destinos do [!DNL The Trade Desk - CRM] no [catálogo de destinos](/help/destinations/catalog/overview.md).
+>* Se seus dados se originarem da UE, use o destino **[!DNL The Trade Desk - CRM (EU)]**.
+>* Se seus dados se originarem das regiões da Ásia-Pacífico ou América do Norte, use o destino **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
->Ambos os destinos em Experience Platform estão atualmente em beta. Esta página de documentação foi criada pelo *[!DNL Trade Desk]* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato com o [!DNL Trade Desk] representante da, a documentação e a funcionalidade estão sujeitas a alterações.
+>Ambos os destinos em Experience Platform estão atualmente em beta. Esse conector de destino e a página de documentação são criados e mantidos pelo *[!DNL Trade Desk]* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato com o [!DNL Trade Desk] representante da, a documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 

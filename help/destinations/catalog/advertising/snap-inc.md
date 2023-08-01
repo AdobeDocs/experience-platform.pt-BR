@@ -2,9 +2,9 @@
 title: Conexão Snap Inc
 description: Saiba como se conectar à plataforma Snapchat Ads e exportar seus públicos do Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pelo *Snap Inc* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *dev-support@snap.com*
+>Esse conector de destino e a página de documentação são criados e mantidos pelo *Snap Inc* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *dev-support@snap.com*
 
 ## Casos de uso {#use-cases}
 

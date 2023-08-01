@@ -2,9 +2,9 @@
 title: Conexão do Hub de decisão do cliente Pega
 description: Use o destino do Pega Customer Decision Hub no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para o Pega Customer Decision Hub para a próxima melhor ação de decisão.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Associação de público-alvo de perfil do Adobe Experience Platform, quando car
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pela Pegasystems. Para qualquer consulta ou pedido de atualização, entre em contato diretamente com Pega [aqui](mailto:support@pega.com).
+>Esse conector de destino e a página de documentação são criados e mantidos pela Pegasystems. Para qualquer consulta ou pedido de atualização, entre em contato diretamente com Pega [aqui](mailto:support@pega.com).
 
 ## Casos de uso
 
@@ -123,7 +123,7 @@ Selecionar campos de destino:
 Uma atualização bem-sucedida da associação de público-alvo de um perfil inseriria o identificador de público-alvo, o nome e os status no armazenamento de dados de associação de público de marketing da Pega. Os dados de associação são associados a um cliente usando o Designer de perfil do cliente no [!DNL Pega Customer Decision Hub], conforme mostrado abaixo.
 ![Imagem da tela da interface do usuário onde você pode associar dados de associação do público-alvo do Adobe ao cliente, usando o Designer de perfil do cliente](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-Os dados de associação de público-alvo são usados nas políticas de Envolvimento do Designer de próxima ação do Pega para decisões de próxima ação, conforme mostrado abaixo.
+Os dados de associação de público-alvo são usados nas políticas de Envolvimento do Designer de próxima ação do Pega para a tomada de decisões de próxima ação, conforme mostrado abaixo.
 ![Imagem da tela da interface do usuário na qual você pode adicionar campos de associação de público-alvo como condições nas Políticas de envolvimento do Designer de próxima ação Pega](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
 Os campos de dados de associação de público-alvo do cliente são adicionados como preditores em modelos adaptáveis, conforme mostrado abaixo.

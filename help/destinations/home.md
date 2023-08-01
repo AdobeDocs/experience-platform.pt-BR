@@ -3,10 +3,10 @@ keywords: destinos;adobe experience platform;plataforma;visão geral de destinos
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '925'
+ht-degree: 4%
 
 ---
 
@@ -46,6 +46,12 @@ Os controles no [espaço de trabalho de destinos](./ui/destinations-workspace.md
 ## Tipos e categorias de destino {#types-and-categories}
 
 Com o Experience Platform, você pode ativar dados para vários tipos de destinos para atender aos casos de uso de ativação. Os destinos variam de integrações baseadas em API a integrações com sistemas de recepção de arquivos, destinos de pesquisa de perfil e muito mais. Para obter informações detalhadas sobre todos os destinos disponíveis, consulte a [visão geral de tipos e categorias de destino](./destination-types.md).
+
+## Destinos criados pelo Adobe e por parceiros {#adobe-and-partner-built-destinations}
+
+Alguns dos conectores no catálogo de destinos de Experience Platform são criados e mantidos pelo Adobe, enquanto outros são criados e mantidos por empresas parceiras usando [Destination SDK](/help/destinations/destination-sdk/overview.md). Uma observação na parte superior da página de documentação para cada conector criado pelo parceiro chama se um destino é criado e mantido pelo parceiro. Por exemplo, a variável [Conector Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) é criada pelo Adobe, enquanto a variável [Conector do TikTok](/help/destinations/catalog/social/tiktok.md) O é criado e mantido pela equipe do TikTok.
+
+Para conectores criados e mantidos pelo parceiro, isso significa que os problemas com o conector podem precisar ser resolvidos pela equipe do parceiro (método de contato fornecido na observação na página de documentação). No caso de problemas com conectores criados e mantidos pelo Adobe, entre em contato com o representante da Adobe ou com o Atendimento ao cliente.
 
 ## Destinos e controles de acesso {#access-controls}
 

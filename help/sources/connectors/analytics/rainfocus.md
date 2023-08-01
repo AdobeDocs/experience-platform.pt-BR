@@ -3,10 +3,10 @@ title: Visão geral da origem do RainFocus
 description: Saiba como transferir dados de gestão de eventos e análise da sua conta RainFocus para o Experience Platform
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Beta
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 5%
+source-wordcount: '998'
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ Use o [!DNL RainFocus] fonte no Adobe Experience Platform e no Real-time Custome
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pelo [!DNL RainFocus] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente com o atendimento ao cliente<span>@rainfocus.com ou visite o [[!DNL RainFocus] Centro de ajuda](https://help.rainfocus.com/hc/en-us)
+>Esse conector de origem e a página de documentação são criados e mantidos pelo [!DNL RainFocus] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente com o atendimento ao cliente<span>@rainfocus.com ou visite o [[!DNL RainFocus] Centro de ajuda](https://help.rainfocus.com/hc/en-us)
 
 ## Pré-requisitos
 

@@ -4,9 +4,9 @@ description: Saiba como trazer dados de transmissão de uma origem para a Adobe 
 hide: true
 hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1198'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial fornece etapas para a criação de um *SUA FONTE* conector de orig
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pelo *SUA FONTE* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *Inserir link ou endereço de email no qual você pode ser contatado para obter atualizações*.
+>Esse conector de origem e a página de documentação são criados e mantidos pelo *SUA FONTE* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *Inserir link ou endereço de email no qual você pode ser contatado para obter atualizações*.
 
 ## Pré-requisitos
 
@@ -95,7 +95,7 @@ Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 A variável [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte [Guia da interface de preparação de dados](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Depois que os dados de origem forem mapeados com sucesso, selecione **[!UICONTROL Próxima]**.
 

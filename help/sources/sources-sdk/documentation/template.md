@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Modelo de autoatendimento de documentação
 description: Saiba como conectar o Adobe Experience Platform ao YOURSOURCE usando a API do serviço de fluxo.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 74e9774009d086a04351c8ff04cde29348c90c09
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2139'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pelo *SUA FONTE* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *Inserir link ou endereço de email no qual você pode ser contatado para obter atualizações*.
+>Esse conector de origem e a página de documentação são criados e mantidos pelo *SuaOrigem* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *Inserir link ou endereço de email no qual você pode ser contatado para obter atualizações*.
 
 ## Pré-requisitos
 

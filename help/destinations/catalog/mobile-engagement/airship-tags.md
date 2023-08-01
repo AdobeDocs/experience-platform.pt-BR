@@ -3,14 +3,14 @@ keywords: etiquetas do dirigível;destino do dirigível
 title: Conexão com as Tags do Aeróstato
 description: Transmita dados de público-alvo do Adobe para o dirigível sem interrupções como tags de público-alvo para direcionamento no dirigível.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
 
-# [!DNL Airship Tags] conexão {#airship-tags-destination}
+# Conexão com o [!DNL Airship Tags] {#airship-tags-destination}
 
 ## Visão geral
 
@@ -23,7 +23,7 @@ Para saber mais sobre [!DNL Airship], consulte o [Documentação do dirigível](
 
 >[!TIP]
 >
->Esta página de documentação foi criada pelo [!DNL Airship] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em [support.airship.com](https://support.airship.com/).
+>Esse conector de destino e a página de documentação são criados e mantidos pelo [!DNL Airship] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em [support.airship.com](https://support.airship.com/).
 
 ## Pré-requisitos
 

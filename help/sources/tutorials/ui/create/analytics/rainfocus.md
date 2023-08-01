@@ -2,9 +2,9 @@
 title: Conectar sua conta RainFocus ao Experience Platform usando a interface
 description: Saiba como conectar sua conta RainFocus ao Experience Platform usando a interface do usuário.
 badge: Beta
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1007'
 ht-degree: 1%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 1%
 >
 >A variável [!DNL RainFocus] a fonte está na versão beta. Consulte a [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
-Este tutorial fornece etapas sobre como conectar seu [!DNL RainFocus] gerenciamento de eventos de conta e transmissão e dados do analytics para a Adobe Experience Platform.
+Este tutorial fornece etapas sobre como conectar seus [!DNL RainFocus] gerenciamento de eventos de conta e transmissão e dados do analytics para a Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pelo [!DNL RainFocus] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente com o atendimento ao cliente<span>@rainfocus.com ou visite o [[!DNL RainFocus] Centro de ajuda](https://help.rainfocus.com/hc/en-us)
+>Esse conector de origem e a página de documentação são criados e mantidos pelo [!DNL RainFocus] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente com o atendimento ao cliente<span>@rainfocus.com ou visite o [[!DNL RainFocus] Centro de ajuda](https://help.rainfocus.com/hc/en-us)
 
 ## Introdução
 
@@ -81,7 +81,7 @@ Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 A etapa Mapeamento é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
 
 Depois que os dados de origem forem mapeados com sucesso, selecione **[!UICONTROL Próxima]**.
 

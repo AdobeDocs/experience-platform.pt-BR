@@ -1,12 +1,12 @@
 ---
 title: Conexão com o TikTok
-description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager.
+description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 2%
+source-wordcount: '983'
+ht-degree: 5%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager. Visita [Centro de ajuda empresarial da TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obter mais informações.
+Crie públicos-alvo personalizados no TikTok com seus dados para direcionar suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager. Visita [Centro de ajuda empresarial da TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obter mais informações.
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pela equipe do TikTok. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>Esse conector de destino e a página de documentação são criados e mantidos pela equipe do TikTok. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Casos de uso {#use-cases}
 

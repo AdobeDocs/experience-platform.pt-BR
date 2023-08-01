@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Modelo de documentação de autoatendimento para a interface do
 description: Saiba como criar uma conexão de origem YOURSOURCE usando a interface do usuário do Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Este tutorial fornece etapas para a criação de um *SUA FONTE* conector de orig
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pelo *SUA FONTE* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *Inserir link ou endereço de email no qual você pode ser contatado para obter atualizações*.
+>Esse conector de origem e a página de documentação são criados e mantidos pelo *SuaOrigem* equipe. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *Inserir link ou endereço de email no qual você pode ser contatado para obter atualizações*.
 
 ## Pré-requisitos
 

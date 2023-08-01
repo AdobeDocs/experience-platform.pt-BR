@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1449'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,12 @@ Com o Experience Platform, é possível centralizar os dados coletados de fontes
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## origens desenvolvidas por Adobe e parceiros {#adobe-and-partner-built-sources}
+
+Alguns dos conectores no catálogo de fontes de Experience Platform são criados e mantidos pelo Adobe, enquanto outros são criados e mantidos por empresas parceiras usando [SDK de origens](/help/sources/sources-sdk/overview.md). Uma observação na parte superior da página de documentação para cada conector criado pelo parceiro chama se uma origem é criada e mantida pelo parceiro. Por exemplo, a variável [Conector Amazon S3](/help/sources/connectors/cloud-storage/s3.md) é criada pelo Adobe, enquanto a variável [Conector RainFocus](/help/sources/connectors/analytics/rainfocus.md) O é criado e mantido pela equipe do RainFocus.
+
+Para conectores criados e mantidos pelo parceiro, isso significa que os problemas com o conector podem precisar ser resolvidos pela equipe do parceiro (método de contato fornecido na observação na página de documentação). No caso de problemas com conectores criados e mantidos pelo Adobe, entre em contato com o representante da Adobe ou com o Atendimento ao cliente.
 
 ## Tipos de origens
 

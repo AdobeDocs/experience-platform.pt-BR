@@ -3,10 +3,10 @@ title: Conector do perfil Pega
 description: Use o Conector de perfil Pega para Amazon S3 no Adobe Experience Platform para exportar dados de perfil completos ou incrementais, ou ambos, para o armazenamento em nuvem do Amazon S3. No Pega Customer Decision Hub, os trabalhos de dados podem ser agendados no Customer Profile Designer para importar dados do perfil periodicamente do armazenamento do Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 1%
+source-wordcount: '1084'
+ht-degree: 2%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-Use o [!DNL Pega Profile Connector] no Adobe Experience Platform para criar uma conexão de saída ativa com o seu [!DNL Amazon Web Services] (AWS) Armazenamento S3 para exportar periodicamente dados de perfil para arquivos CSV do Adobe Experience Platform em seus próprios buckets S3. Entrada [!DNL Pega Customer Decision Hub], você pode agendar trabalhos de dados para importar esses dados de perfil do armazenamento S3 para atualizar o [!DNL Pega Customer Decision Hub] perfil.
+Use o [!DNL Pega Profile Connector] no Adobe Experience Platform para criar uma conexão de saída ativa com o seu [!DNL Amazon Web Services] (AWS) Armazenamento S3 para exportar periodicamente dados de perfil para arquivos CSV do Adobe Experience Platform em seus próprios buckets S3. No [!DNL Pega Customer Decision Hub], você pode agendar processos para importar esses dados de perfil do armazenamento S3 para atualizar o perfil do [!DNL Pega Customer Decision Hub].
 
 Esse conector ajuda a configurar a exportação inicial de dados de perfil e também ajuda a sincronizar novos perfis periodicamente no [!DNL Pega Customer Decision Hub].  Ter dados atualizados no Hub de decisão do cliente fornece uma visualização melhor e atualizada da base de clientes para a tomada de decisões de próxima ação.
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pela Pegasystems. Para qualquer consulta ou pedido de atualização, entre em contato diretamente com Pega [aqui](mailto:support@pega.com).
+>Esse conector de destino e a página de documentação são criados e mantidos pela Pegasystems. Para qualquer consulta ou pedido de atualização, entre em contato diretamente com Pega [aqui](mailto:support@pega.com).
 
 ## Casos de uso
 

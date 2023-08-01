@@ -2,9 +2,9 @@
 title: Conexão com Medallia
 description: Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para entender melhor as necessidades e expectativas dos clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para e
 
 >[!IMPORTANT]
 >
->Esta página de documentação foi criada pela equipe do Medallia. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em adobe-integrations@medallia.com.
+>Esse conector de destino e a página de documentação são criados e mantidos pela equipe do Medallia. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em adobe-integrations@medallia.com.
 
 ## Casos de uso {#use-cases}
 
@@ -76,7 +76,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
-* **[!UICONTROL URL do ponto de extremidade do token OAuth]**: geralmente assume a forma de https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL URL do ponto de extremidade do token OAuth]**: normalmente toma a forma de https://instance.medallia.tld/oauth/tenant/token.
 * **[!UICONTROL ID do cliente]**: obtenha junto à equipe de delivery do Medallia.
 * **[!UICONTROL Segredo do cliente]**: obtenha junto à equipe de delivery do Medallia.
 
@@ -140,8 +140,8 @@ Um exemplo de JSON dos dados exportados é fornecido abaixo, que usa o mapeament
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]

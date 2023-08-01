@@ -3,9 +3,9 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -36,9 +36,9 @@ No [etapa de mapeamento](#map) do workflow de ativação, você deve definir os 
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino oferece suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+Além disso, esse destino também suporta a ativação dos públicos-alvo adicionais descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
@@ -129,13 +129,8 @@ Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lo
 
 No [!UICONTROL Agendamento] crie um agendamento de exportação para cada público-alvo, com as configurações mostradas abaixo.
 
->[!IMPORTANT]
->
->Todos os públicos-alvo ativados para esse destino devem ser configurados com exatamente o mesmo agendamento, conforme mostrado abaixo.
-
 * **[!UICONTROL Opções de exportação de arquivo]**: [!UICONTROL Exportar arquivos completos]. [Exportações incrementais de arquivos](../../ui/activate-batch-profile-destinations.md#export-incremental-files) no momento, não são compatíveis com o [!DNL LiveRamp] destino.
 * **[!UICONTROL Frequência]**: [!UICONTROL Diariamente]
-* Defina o tempo de exportação para **[!UICONTROL Após a avaliação do segmento]**. Exportações de público-alvo programadas e [exportações de arquivos por demanda](../../ui/export-file-now.md) no momento, não são compatíveis com o [!DNL LiveRamp] destino.
 * **[!UICONTROL Data]**: selecione as horas de início e término da exportação conforme desejado.
 
 ![Captura de tela da interface do usuário da Platform mostrando a etapa de agendamento de público-alvo.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)

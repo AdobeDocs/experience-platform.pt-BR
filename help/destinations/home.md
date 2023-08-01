@@ -3,10 +3,10 @@ keywords: destinos;adobe experience platform;plataforma;visão geral de destinos
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -54,10 +54,10 @@ A funcionalidade de destinos na Platform funciona com permissões de controle de
 A tabela a seguir descreve as permissões e as combinações de permissões necessárias para executar determinadas ações nos destinos:
 
 | Nível de permissão | Descrição |
-| ---- | ----|
+| ---- | ---- |
 | **[!UICONTROL Gerenciar destinos]** | Para se conectar a destinos, é necessário ter a **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e habilitar a opção [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e ocultar a variável [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e ocultar a variável [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
-ht-degree: 3%
+source-wordcount: '3610'
+ht-degree: 4%
 
 ---
 
@@ -80,7 +80,7 @@ Essa exibição lista as informações sobre os públicos-alvo, incluindo a cont
 | [!UICONTROL Tags] | As tags definidas pelo usuário que pertencem ao público. Mais informações sobre essas tags podem ser encontradas no [seção sobre tags](#tags). |
 | [!UICONTROL Detalhamento] | O detalhamento do status do perfil para o público-alvo. Uma descrição mais detalhada desse detalhamento do status do perfil pode ser encontrada abaixo. |
 | [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
-| [!UICONTROL Frequência das atualizações] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem `On Demand`, `Scheduled`, e `Continuous`. |
+| [!UICONTROL Frequência das atualizações] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem `On Demand` (Lote), `Scheduled` (Transmissão) e `Continuous` (Borda). |
 | [!UICONTROL Última atualização realizada por] | O nome da última pessoa que atualizou o público. |
 | [!UICONTROL Descrição] | A descrição do público. |
 | [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
@@ -101,7 +101,7 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | Ação | Origens | Descrição |
 | ------ | ------- | ----------- |
 | Editar | Serviço de segmentação | Permite abrir o Construtor de segmentos para editar o público-alvo. Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md). |
-| Abrir composição | Composição de público | Permite abrir a composição de público-alvo para ver seu público-alvo. Para obter mais informações sobre a composição do público-alvo, leia a [guia da interface de composição de público-alvo](./audience-composition.md). |
+| Abrir composição | Composição de público-alvo | Permite abrir a composição de público-alvo para ver seu público-alvo. Para obter mais informações sobre a composição do público-alvo, leia a [guia da interface de composição de público-alvo](./audience-composition.md). |
 | Ativar para destino | Serviço de segmentação | Permite ativar o público para um destino. Para obter informações mais detalhadas sobre como ativar um público-alvo para um destino, leia o [visão geral da ativação](../../destinations/ui/activation-overview.md). |
 | Compartilhar com parceiros | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite compartilhar seu público-alvo com outros usuários da Platform. Para obter mais informações sobre esse recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
 | Gerenciar tags | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar as tags definidas pelo usuário que pertencem ao público-alvo. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
@@ -224,7 +224,7 @@ Selecionar **[!UICONTROL Aplicar rótulos de acesso]** permite gerenciar os rót
 
 >[!BEGINTABS]
 
->[!TAB Composição de público]
+>[!TAB Composição de público-alvo]
 
 ![A página de detalhes do público-alvo é exibida, com a tag [!UICONTROL Abrir composição] botão realçado.](../images/ui/overview/audience-details-open-composition.png)
 

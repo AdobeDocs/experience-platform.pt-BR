@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '987'
 ht-degree: 12%
 
 ---
@@ -24,7 +24,6 @@ ht-degree: 12%
       - [Origem do Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origem de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fonte da coleção de dados](connectors/adobe-applications/data-collection.md)
-      - [Origem do Workfront](connectors/adobe-applications/workfront.md)
       - Mapeamentos de campo {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -234,7 +233,6 @@ ht-degree: 12%
          - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Atividades personalizadas do Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Anúncios do Google](tutorials/ui/create/advertising/ads.md)
          - [Anúncios do pinterest](tutorials/ui/create/advertising/pinterest-ads.md)

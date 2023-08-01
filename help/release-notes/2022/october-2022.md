@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 15%
+source-wordcount: '1159'
+ht-degree: 26%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 15%
 - [Destinos](#destinations)
 - [Experience Data Model](#xdm)
 - [Query Service](#query-service)
-- [Fontes](#sources-sources)
 
 ## Chaves gerenciadas pelo cliente {#cmk}
 
@@ -79,9 +78,9 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Experience Data Model (XDM) {#xdm}
 
-O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos das ações do cliente, definir públicos do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados inseridos na Adobe Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
-**Componentes XDM atualizados**
+**Componentes de XDM atualizados**
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
@@ -91,11 +90,11 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
-O Serviço de consulta permite usar o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
@@ -106,19 +105,6 @@ O Serviço de consulta permite usar o SQL padrão para consultar dados no Adobe 
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre os Serviços de consulta, consulte [Visão geral do Serviço de consulta](../../query-service/home.md).
+Para obter mais informações sobre o Query Service, acesse a [Visão geral do Query Service](../../query-service/home.md).
 Novos recursos na Adobe Experience Platform:
 
-## Fontes {#sources}
-
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
-
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
-
-**Recursos atualizados**
-
-| Recurso | Descrição |
-| --- | --- | 
-| Disponibilidade beta da fonte do Adobe Workfront | Use o [Origem do Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) para trazer seus dados do Workfront para o Experience Platform e executar casos de uso, como combinar seus registros de trabalho com dados de terceiros, aplicar análises de séries históricas e de tempo em registros de trabalho e consultar dados de trabalho usando SQL padrão. Para obter mais informações, leia o guia em [criação de uma conexão de origem do Workfront na interface](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

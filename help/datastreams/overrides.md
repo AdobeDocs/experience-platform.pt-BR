@@ -2,10 +2,10 @@
 title: Configurar substituições de fluxo de dados
 description: Saiba como configurar substituições de sequência de dados na interface do usuário de sequências de dados e ativá-las por meio do SDK da Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 0%
+source-wordcount: '997'
+ht-degree: 4%
 
 ---
 
@@ -17,10 +17,14 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrã
 
 A substituição da configuração da sequência de dados é um processo de duas etapas:
 
-1. Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](configure.md).
-2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando o SDK da Web [extensão de tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](configure.md).
+2. Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a [extensão de tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do SDK da Web.
 
 Este artigo explica o processo completo de substituição de configuração de sequência de dados para cada tipo de substituição compatível.
+
+>[!IMPORTANT]
+>
+>As substituições de fluxo de dados são compatíveis somente com [SDK da Web](../edge/home.md) integrações. [SDK móvel](https://developer.adobe.com/client-sdks/documentation/) e [API do servidor](../server-api/overview.md) atualmente, as integrações não aceitam substituições de fluxo de dados.
 
 ## Configurar substituições de fluxo de dados na interface dos fluxos de dados {#configure-overrides}
 

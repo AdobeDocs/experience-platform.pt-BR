@@ -3,14 +3,14 @@ keywords: mobile; braze; mensagens;
 title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
 
-# [!DNL Braze] conexão
+# Conexão com o [!DNL Braze]
 
 ## Visão geral {#overview}
 
@@ -44,15 +44,15 @@ Como profissional de marketing, desejo direcionar os usuários em um destino de 
 
 {style="table-layout:auto"}
 
-## Suporte a públicos externos {#external-audiences-support}
+## Públicos-alvo compatíveis {#supported-audiences}
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também oferece suporte à ativação dos públicos-alvo externos descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público externo | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

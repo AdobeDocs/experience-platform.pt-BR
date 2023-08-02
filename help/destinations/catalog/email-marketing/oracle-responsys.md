@@ -3,14 +3,14 @@ keywords: email;Email;e-mail;destinos de e-mail;destino do oracle responsys
 title: Conexão do Oracle Responsys
 description: O Responsys é uma ferramenta corporativa de marketing por email para campanhas de marketing em vários canais oferecida pelo Oracle para personalizar interações por email, dispositivos móveis, exibição e redes sociais.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 1%
+source-wordcount: '699'
+ht-degree: 2%
 
 ---
 
-# [!DNL Oracle Responsys] conexão
+# Conexão com o [!DNL Oracle Responsys]
 
 ## Visão geral {#overview}
 
@@ -22,13 +22,13 @@ Para enviar dados do público-alvo para [!DNL Oracle Responsys], você deve prim
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

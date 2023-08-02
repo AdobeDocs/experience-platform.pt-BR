@@ -3,9 +3,9 @@ keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
 description: Com o destino da conexão do Microsoft Bing, é possível executar redirecionamento e campanhas digitais direcionadas por público em anúncios de exibição do Microsoft.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 8%
 
 ---
@@ -36,13 +36,13 @@ Como profissional de marketing, quero poder usar públicos-alvo criados com o [!
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

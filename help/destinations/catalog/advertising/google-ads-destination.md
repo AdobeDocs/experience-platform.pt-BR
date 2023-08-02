@@ -3,14 +3,14 @@ keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Conexão do Google Ads
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade on-line que permite que as empresas façam anúncios pagos por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '995'
 ht-degree: 2%
 
 ---
 
-# [!DNL Google Ads] conexão
+# Conexão com o [!DNL Google Ads]
 
 ## Visão geral {#overview}
 
@@ -47,13 +47,13 @@ Observe os seguintes detalhes, específicos do [!DNL Google Ads] Destinos:
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

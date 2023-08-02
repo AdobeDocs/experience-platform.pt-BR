@@ -3,9 +3,9 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita dados de público-alvo do Adobe para o dirigível como atributos de público-alvo para direcionamento no dirigível.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,15 @@ Antes de enviar os públicos-alvo para [!DNL Airship], você deve:
 >
 >Criar um [!DNL Airship] conta via [este link de inscrição](https://go.airship.eu/accounts/register/plan/starter/) caso ainda não o tenha feito.
 
-## Suporte a públicos externos {#external-audiences-support}
+## Públicos-alvo compatíveis {#supported-audiences}
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também oferece suporte à ativação dos públicos-alvo externos descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público externo | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

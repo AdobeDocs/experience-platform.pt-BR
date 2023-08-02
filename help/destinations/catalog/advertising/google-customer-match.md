@@ -3,14 +3,14 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 1%
 
 ---
 
-# [!DNL Google Customer Match] conexão
+# Conexão com o [!DNL Google Customer Match]
 
 ## Visão geral {#overview}
 
@@ -54,13 +54,13 @@ Alguns destinos no Experience Platform têm determinadas regras e obrigações p
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 
 * **[!UICONTROL Nome]**: forneça um nome para esta conexão de destino
 * **[!UICONTROL Descrição]**: forneça uma descrição para esta conexão de destino
-* **[!UICONTROL ID da conta]**: seu [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). O formato da ID é xxx-xxx-xxxx. Se você estiver usando o [!DNL Google Ads Manager Account (My Client Center)], não use sua ID de conta de gerente. Use o [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) em vez disso.
+* **[!UICONTROL ID da conta]**: seu [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). O formato da ID é xxx-xxx-xxxx. Se você estiver usando a variável [!DNL Google Ads Manager Account (My Client Center)], não use sua ID de conta de gerente. Use o [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) em vez disso.
 
 >[!IMPORTANT]
 >

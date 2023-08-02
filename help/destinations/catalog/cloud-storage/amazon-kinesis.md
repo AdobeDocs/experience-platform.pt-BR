@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino kinesis;kinesis
 title: Conexão com o Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2001'
 ht-degree: 4%
 
 ---
@@ -38,13 +38,13 @@ Por exemplo, um cliente potencial baixou um white paper que os qualifica em um s
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

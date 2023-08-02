@@ -3,14 +3,14 @@ keywords: email;Email;e-mail;destinos de e-mail;oracle eloqua;oracle;email;Email
 title: (Arquivos) Conexão Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pelo Oracle, que tem como objetivo ajudar profissionais e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '716'
 ht-degree: 1%
 
 ---
 
-# [!DNL (Files) Oracle Eloqua] conexão
+# Conexão com o [!DNL (Files) Oracle Eloqua]
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pela [!DNL Oracle] que tem como objetivo ajudar profissionais de marketing e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 
@@ -20,13 +20,13 @@ Para enviar dados do público-alvo para [!DNL Oracle Eloqua], você deve primeir
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

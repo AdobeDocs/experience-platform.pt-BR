@@ -3,14 +3,14 @@ keywords: Gerenciador de Lance do DoubleClick;Gerenciador de lance do DoubleClic
 title: Conexão do Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas por redirecionamento e público-alvo em fontes de inventário de vídeo, dispositivos móveis e exibição.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 2%
+source-wordcount: '1043'
+ht-degree: 4%
 
 ---
 
-# [!DNL Google Display & Video 360] conexão
+# Conexão com o [!DNL Google Display & Video 360]
 
 ## Visão geral {#overview}
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360] Destinos:
 
 * Os públicos ativados são criados programaticamente na plataforma do Google.
-* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre a Real-time CDP e [!DNL Google Display & Video 360]. Observe que essa é uma configuração de backend aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface do usuário do.
+* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre a Real-time CDP e [!DNL Google Display & Video 360]. Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.
 
 >[!IMPORTANT]
 >
@@ -45,13 +45,13 @@ Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360]
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

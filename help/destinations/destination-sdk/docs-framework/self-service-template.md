@@ -2,9 +2,9 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do destino
 description: Use este template para criar uma documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substituir pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1645'
 ht-degree: 1%
 
 ---
@@ -69,6 +69,24 @@ Para ajudá-lo a entender melhor como e quando você deve usar o *SeuDestino* de
 | phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
 | extern_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
+
+{style="table-layout:auto"}
+
+## Públicos-alvo compatíveis {#supported-audiences}
+
+*Adicione informações nesta seção sobre os públicos-alvo compatíveis com o seu destino. Preenchemos previamente a tabela com alguns valores padrão. Exclua os valores que não se aplicam ao seu destino e quaisquer valores que não sejam pré-preenchidos.*
+
+Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+
+*Se o destino não for compatível com a ativação de qualquer público externo, remova a frase abaixo junto com a tabela.*
+
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+
+| Tipo de público | Descrição |
+---------|----------|
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

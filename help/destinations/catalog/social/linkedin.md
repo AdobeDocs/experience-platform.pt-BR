@@ -3,14 +3,14 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1088'
 ht-degree: 2%
 
 ---
 
-# [!DNL LinkedIn Matched Audiences] conexão
+# Conexão com o [!DNL LinkedIn Matched Audiences]
 
 ## Visão geral {#overview}
 
@@ -40,13 +40,13 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
 
-Todos os destinos oferecem suporte à ativação de públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
+*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
 ---------|----------|
-| Uploads personalizados | Públicos-alvo assimilados em Experience Platform de arquivos CSV. |
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

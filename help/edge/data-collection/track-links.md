@@ -3,7 +3,7 @@ title: Rastrear links usando o SDK da Web da Adobe Experience Platform
 description: Saiba como enviar dados de links para o Adobe Analytics com o SDK da Web do Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;rastreamento de links;links;rastrear links;clickCollection;coleção de cliques;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # Rastrear links
 
-Os links podem ser definidos manualmente ou rastreados [automaticamente](#automaticLinkTracking). O rastreamento manual é feito adicionando os detalhes em `web.webInteraction` parte do esquema. Há três variáveis necessárias:
+Os links podem ser definidos manualmente ou rastreados [automaticamente](#automaticLinkTracking). O rastreamento manual é feito adicionando os detalhes em `web.webInteraction` parte do esquema. Há duas variáveis necessárias:
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 

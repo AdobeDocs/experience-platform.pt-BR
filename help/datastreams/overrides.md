@@ -2,10 +2,10 @@
 title: Configurar substituições de fluxo de dados
 description: Saiba como configurar substituições de sequência de dados na interface do usuário de sequências de dados e ativá-las por meio do SDK da Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -25,6 +25,26 @@ Este artigo explica o processo completo de substituição de configuração de s
 >[!IMPORTANT]
 >
 >As substituições de fluxo de dados são compatíveis somente com [SDK da Web](../edge/home.md) integrações. [SDK móvel](https://developer.adobe.com/client-sdks/documentation/) e [API do servidor](../server-api/overview.md) atualmente, as integrações não aceitam substituições de fluxo de dados.
+><br><br>
+>As substituições de fluxo de dados devem ser usadas quando você precisa que dados diferentes sejam enviados para fluxos de dados diferentes. Você não deve usar substituições de fluxo de dados para casos de uso de personalização ou dados de consentimento.
+
+## Casos de uso {#use-cases}
+
+Para ajudá-lo a entender melhor como e quando usar substituições de fluxo de dados, veja alguns casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse recurso.
+
+**Coleta de dados de várias regiões**
+
+Uma empresa tem sites ou subdomínios diferentes para países diferentes nos quais opera. Eles têm [configurado](configure.md) separe as sequências de dados com conjuntos de relatórios correspondentes específicos do analytics, tokens de propriedade do Adobe Target específicos do país, esquemas específicos do país, conjuntos de dados, configurações do Journey Optimizer e assim por diante. A empresa também tem um conjunto global de configurações em que todos os dados específicos do país são agregados.
+
+Ao usar substituições de fluxo de dados, a empresa pode alternar dinamicamente o fluxo de dados para fluxos de dados diferentes, em vez do comportamento padrão de enviar dados para um fluxo de dados.
+
+Um caso de uso comum pode ser o envio de dados para uma sequência específica de um país e também o envio de dados para uma sequência global de dados em que os clientes executam uma ação importante, como fazer um pedido ou atualizar o perfil do usuário.
+
+**Diferenciação de perfis e identidades para diferentes unidades de negócios**
+
+Uma empresa com várias unidades de negócios deseja usar várias sandboxes de Experience Platform para armazenar dados específicos de cada unidade de negócios.
+
+Em vez de enviar dados para um fluxo de dados padrão, a empresa pode usar substituições de fluxo de dados para garantir que cada unidade de negócios tenha seu próprio fluxo de dados para receber dados por meio do.
 
 ## Configurar substituições de fluxo de dados na interface dos fluxos de dados {#configure-overrides}
 

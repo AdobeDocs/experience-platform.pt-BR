@@ -3,9 +3,9 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1531'
 ht-degree: 4%
 
 ---
@@ -28,6 +28,27 @@ Quando o agendamento de exportação de público-alvo é diferente do agendament
 
 Consulte a [Documentação do Serviço de segmentação](../segmentation/home.md) para obter mais detalhes.
 +++
+
+### Por que vejo taxas de correspondência baixas ao desativar e reativar um público atualizado para o mesmo destino?
+
++++Resposta
+
+A desativação e a remoção de um público-alvo de um destino de transmissão não acionam um preenchimento retroativo na reativação do público-alvo para o mesmo destino de transmissão.
+
+**Exemplo**
+
+Você ativou um público-alvo que consiste em 10 perfis para um destino de transmissão.
+
+Depois de ativar o público-alvo, você percebe que deseja alterar a configuração do público-alvo e, portanto, desativa-o e altera seus critérios de população, resultando em uma população de público-alvo de 100 perfis.
+
+Você reativa o público-alvo atualizado para o mesmo destino, mas como não há preenchimento retroativo acionado, seu destino não recebe os 90 perfis adicionais.
+
+**Solução**
+
+Para garantir que todos os perfis sejam enviados para o seu destino, você deve criar um novo público-alvo com a nova configuração e ativá-lo para o seu destino.
+
++++
+
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 

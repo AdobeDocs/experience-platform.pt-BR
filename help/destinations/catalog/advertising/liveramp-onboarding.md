@@ -3,9 +3,9 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1814'
 ht-degree: 3%
 
 ---
@@ -75,9 +75,9 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 * **[!UICONTROL Nome de usuário]**: O nome de usuário do [!DNL LiveRamp - Onboarding] local de armazenamento.
 * **[!UICONTROL Senha]**: A senha do [!DNL LiveRamp - Onboarding] local de armazenamento.
-* **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo. Se você fornecer uma chave de criptografia, deverá também fornecer uma **[!UICONTROL ID da subchave de criptografia]** no [detalhes do destino](#destination-details) seção.
-
+* **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL ID da subchave]**:Se você fornecer uma chave de criptografia, deverá fornecer também uma chave de criptografia **[!UICONTROL ID da subchave]**. Consulte a [!DNL LiveRamp] [documentação de criptografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) para saber como obter a ID da subchave.
 
 **SFTP com autenticação de chave SSH** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
    * Para conectar seu [!DNL SSH] chave para o [!DNL LiveRamp - Onboarding] , você deve enviar um tíquete por meio do [!DNL LiveRamp]do portal de suporte técnico da e forneça sua chave pública. Veja mais informações na seção [Documentação do LiveRamp](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Se você fornecer uma chave de criptografia, deverá também fornecer uma **[!UICONTROL ID da subchave de criptografia]** no [detalhes do destino](#destination-details) seção. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
-
+* **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL ID da subchave]**:Se você fornecer uma chave de criptografia, deverá fornecer também uma chave de criptografia **[!UICONTROL ID da subchave]**. Consulte a [!DNL LiveRamp] [documentação de criptografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) para saber como obter a ID da subchave.
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -109,7 +109,6 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Caminho da pasta]**: O caminho para o [!DNL LiveRamp] `uploads` que hospedará os arquivos exportados. A variável `uploads` O prefixo é adicionado automaticamente ao caminho da pasta. [!DNL LiveRamp] A recomenda a criação de uma subpasta dedicada para deliveries do Adobe Real-Time CDP para manter os arquivos separados de quaisquer outros feeds existentes e garantir que toda a automação seja executada sem problemas.
    * Por exemplo, se você deseja exportar seus arquivos para `uploads/my_export_folder`, digite `my_export_folder` no **[!UICONTROL Caminho da pasta]** campo.
 * **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. As opções disponíveis são **[!UICONTROL GZIP]** ou **[!UICONTROL Nenhum]**.
-* **[!UICONTROL ID da subchave de criptografia]**: A subchave usada para criptografia, com base no [!DNL LiveRamp] chave de criptografia pública. Este campo será necessário se você tiver fornecido uma chave de criptografia na [autenticação](#authenticate) etapa. Consulte a [!DNL LiveRamp] [documentação de criptografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) para saber como obter a ID da subchave.
 
 ### Ativar alertas {#enable-alerts}
 

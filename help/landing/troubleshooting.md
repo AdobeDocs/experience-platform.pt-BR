@@ -7,9 +7,9 @@ landing-page-description: Encontre respostas para perguntas frequentes e um guia
 short-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1905'
 ht-degree: 5%
 
 ---
@@ -90,7 +90,7 @@ Os seguintes códigos de status podem ser encontrados em qualquer [!DNL Experien
 |--- | --- | ---|
 | 400 | Solicitação inválida | A solicitação foi construída incorretamente, informações de chave ausentes e/ou continha sintaxe incorreta. |
 | 401 | Falha na autenticação | A solicitação não passou em uma verificação de autenticação. Seu token de acesso pode estar ausente ou ser inválido. Consulte a [Erros de token OAuth](#oauth-token-is-missing) abaixo para obter mais detalhes. |
-| 403 | Proibido | O recurso foi encontrado, mas você não tem as credenciais corretas para exibi-lo. |
+| 403 | Proibido | <p>O recurso foi encontrado, mas você não tem as credenciais corretas para exibi-lo.</p><p> Uma causa provável desse erro é que você pode não ter o necessário [permissões de controle de acesso](/help/access-control/home.md) para acessar ou editar o recurso. Ler como [obter as permissões de controle de acesso baseadas em atributos necessárias](/help/landing/api-authentication.md#get-abac-permissions) para usar APIs da plataforma. </p> |
 | 404 | Não encontrado | O recurso solicitado não foi encontrado no servidor. O recurso pode ter sido excluído ou o caminho solicitado foi inserido incorretamente. |
 | 500 | Erro interno do servidor | Esse é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, talvez esteja atingindo o limite da API e precise filtrar seus resultados. (Consulte a [!DNL Catalog Service] Subguia do guia do desenvolvedor de API em [filtragem de dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar sua solicitação novamente e entre em contato com o administrador se o problema persistir. |
 

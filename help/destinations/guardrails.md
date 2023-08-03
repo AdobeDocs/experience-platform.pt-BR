@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 2%
@@ -94,7 +94,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos d
 
 {style="table-layout:auto"}
 
-## [!BADGE Beta]Exportações de conjunto de dados {type=Informative} {#dataset-exports}
+### [!BADGE Beta]Exportações de conjunto de dados {type=Informative} {#dataset-exports}
 
 Atualmente, as exportações de conjuntos de dados são compatíveis com um **[!UICONTROL Primeiro Completa e, em seguida, Incremental]** [padrão](/help/destinations/ui/export-datasets.md#scheduling). As medidas de proteção descritas nesta seção se aplicam à primeira exportação completa que ocorre após a configuração de um fluxo de trabalho de exportação do conjunto de dados.
 

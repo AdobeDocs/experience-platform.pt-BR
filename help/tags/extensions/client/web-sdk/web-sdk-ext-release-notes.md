@@ -2,9 +2,9 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
+source-git-commit: 1de2776fbdfc7b32a1660a01ca6df21eb0cb9104
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1736'
 ht-degree: 37%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 37%
 # Notas de versão da extensão SDK da Web da Adobe Experience Platform
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR).
+
+## Versão 2.20.1 - 3 de agosto de 2023
+
+**Correções e melhorias**
+
+* Aprimorada a validação das configurações salvas de substituição de fluxo de dados.
 
 ## Versão 2.20.0 - 31 de julho de 2023
 

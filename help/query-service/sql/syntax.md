@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3860'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,6 @@ Além disso, você pode usar `HEAD` e `TAIL` como valores de deslocamento especi
 >- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo disponível mais antigo, definirá-o como o instantâneo inicial e retornará os dados entre o instantâneo disponível mais antigo e o instantâneo final especificado. Esses dados são **inclusivo** do instantâneo mais antigo disponível.
 >
 >- Se o sinalizador de comportamento de fallback opcional não estiver definido, um erro será retornado.
-
 
 ### Cláusula WHERE
 
@@ -541,7 +540,7 @@ Os valores obtidos de `source_dataset` são usados para preencher a tabela do ta
 | SKU | _experiência | quantidade | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot; | 5 | 10.5 |
-| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot; |  |  |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot; |          |              |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot; | 3 | 12 |
 
@@ -600,7 +599,7 @@ Veja a seguir uma lista de cálculos estatísticos que estão disponíveis após
 
 Agora você pode calcular estatísticas em nível de coluna em [!DNL Azure Data Lake Storage] (ADLS) com a variável `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandos SQL. Calcular estatísticas de coluna em todo o conjunto de dados, um subconjunto de um conjunto de dados, todas as colunas ou um subconjunto de colunas.
 
-`COMPUTE STATISTICS` estende a `ANALYZE TABLE` comando. No entanto, a `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` não há suporte para comandos em tabelas do data warehouse. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS.
+`COMPUTE STATISTICS` estende a `ANALYZE TABLE` comando. No entanto, a `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` não há suporte para comandos em tabelas de armazenamento aceleradas. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS.
 
 **Exemplo**
 
@@ -608,28 +607,43 @@ Agora você pode calcular estatísticas em nível de coluna em [!DNL Azure Data 
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
+A variável `FILTER CONTEXT` O comando calcula estatísticas em um subconjunto do conjunto de dados com base na condição de filtro fornecida. A variável `FOR COLUMNS` comando direciona colunas específicas para análise.
+
 >[!NOTE]
 >
->`FILTER CONTEXT` calcula estatísticas em um subconjunto do conjunto de dados com base na condição de filtro fornecida e `FOR COLUMNS` segmenta colunas específicas para análise.
+>A variável `Statistics ID` e as estatísticas geradas são válidas apenas para cada sessão e não podem ser acessadas em diferentes sessões PSQL.<br><br>Limitações:<ul><li>A geração de estatísticas não é suportada para tipos de dados de matriz ou mapa</li><li>As estatísticas computadas não são persistentes</li></ul><br><br>Opções:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Por padrão, o sinalizador é definido como verdadeiro. Como resultado, quando as estatísticas são solicitadas em um tipo de dados que não é compatível, não ocorre erro, mas, em vez disso, ocorre uma falha silenciosa.<br>Para habilitar notificações de erros quando forem solicitadas estatísticas em tipos de dados não compatíveis, use: `SET skip_stats_for_complex_datatypes = false`.
 
 A saída do console é exibida conforme visto abaixo.
 
 ```console
-  Statistics ID 
-------------------
- ULKQiqgUlGbTJWhO
+|     Statistics ID      | 
+| ---------------------- |
+| adc_geometric_stats_1  |
 (1 row)
 ```
 
-Você pode usar a ID de estatística retornada para pesquisar as estatísticas calculadas com a variável `SHOW STATISTICS` comando.
+Você pode consultar as estatísticas calculadas diretamente fazendo referência à `Statistics ID`. A instrução de exemplo abaixo permite visualizar a saída completamente quando usada com o `Statistics ID` ou o nome do alias. Para saber mais sobre esse recurso, consulte [documentação do nome do alias](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
-SHOW STATISTICS FOR <statistics_ID>
+-- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
+SELECT * FROM adc_geometric_stats_1;
 ```
 
->[!NOTE]
->
->`COMPUTE STATISTICS` não suporta os tipos de dados matriz ou mapa. Você pode definir um `skip_stats_for_complex_datatypes` sinalizador a ser notificado ou erro se o quadro de dados de entrada tiver colunas com matrizes e tipos de dados de mapa. Por padrão, o sinalizador é definido como verdadeiro. Para habilitar notificações ou erros, use o seguinte comando: `SET skip_stats_for_complex_datatypes = false`.
+Use o `SHOW STATISTICS` comando para exibir os metadados de todas as tabelas de estatísticas temporárias geradas na sessão. Este comando pode ajudá-lo a refinar o escopo da análise estatística.
+
+```sql
+SHOW STATISTICS;
+```
+
+Um exemplo de saída de SHOW STATISTICS é visto abaixo.
+
+```console
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
 
 Consulte a [documentação de estatísticas do conjunto de dados](../essential-concepts/dataset-statistics.md) para obter mais informações.
 

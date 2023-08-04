@@ -1,9 +1,9 @@
 ---
 title: Computação de estatísticas do conjunto de dados
 description: Este documento descreve como calcular estatísticas em nível de coluna nos conjuntos de dados do Azure Data Lake Storage (ADLS) com comandos SQL.
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Para ver as estatísticas que foram calculadas com a variável `ANALYZE TABLE CO
 
 >[!IMPORTANT]
 >
->A variável `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` não há suporte para comandos em tabelas do data warehouse. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS. Para obter mais informações, consulte [seção ANALISAR TABELA](../sql/syntax.md#analyze-table) do guia de sintaxe SQL.
+>A variável `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` não há suporte para comandos em tabelas de armazenamento aceleradas. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS. Para obter mais informações, consulte [seção ANALISAR TABELA](../sql/syntax.md#analyze-table) do guia de sintaxe SQL.
 
 Este guia ajuda a estruturar suas consultas para que você possa calcular as estatísticas de coluna de um conjunto de dados ADLS. Usando esses comandos, você pode ver as estatísticas geradas na sua sessão por meio de um cliente PSQL usando uma consulta SQL.
 
@@ -95,7 +95,7 @@ A saída de estatísticas computadas pode ser semelhante ao exemplo abaixo.
 
 ## Mostrar os metadados da análise estatística {#show-statistics}
 
-Você pode usar o `SHOW STATISTICS` comando para exibir os metadados de todas as tabelas de estatísticas temporárias geradas na sessão. Este comando pode ajudá-lo a refinar o escopo da análise estatística.
+Você pode usar o `SHOW STATISTICS` comando para exibir os metadados de todas as estatísticas temporárias geradas na sessão. Este comando pode ajudá-lo a refinar o escopo da análise estatística.
 
 Um exemplo de saída de `SHOW STATISTICS` é visto abaixo.
 

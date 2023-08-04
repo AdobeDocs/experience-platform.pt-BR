@@ -4,7 +4,7 @@ description: Saiba como envolver e adquirir novos clientes por meio de casos de 
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 15%
@@ -76,7 +76,7 @@ Os componentes de identidade, gerenciamento de dados e governança que você usa
 * **(A documentação será disponibilizada em breve)** Grupos de campos personalizados para o suporte a dados de parceiros
 * **(A documentação será disponibilizada em breve)** Rótulos de terceiros que você adicionará aos atributos provenientes de parceiros
 
-#### Criar um namespace de identidade da ID de parceiro
+#### Criar um namespace de identidade da ID de parceiro {#create-partner-id-namespace}
 
 Comece criando um novo tipo de identidade para os perfis que você receberá do parceiro. Para fazer isso, na seção Identity, você deve criar um novo namespace de identidade do tipo **[!UICONTROL ID do Parceiro]**.
 
